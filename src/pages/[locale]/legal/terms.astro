@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { LOCALES, getTranslations } from '../../../i18n';
+import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
 export async function getStaticPaths() {
@@ -8,36 +8,71 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params as { locale: Locale };
-const t = await getTranslations(locale);
+
+interface LegalSection { heading: string; body: string[] }
+interface LegalDoc {
+  title: string;
+  description: string;
+  lastUpdated: string;
+  lastUpdatedLabel: string;
+  seeLabel: string;
+  sections: LegalSection[];
+}
+
+const mod = await import(`../../../i18n/messages/${locale}/legal.json`).catch(
+  () => import(`../../../i18n/messages/en/legal.json`),
+);
+const doc = (mod as { default: { terms: LegalDoc } }).default.terms;
+
+// §6 (index 5) links to the privacy page; §8 (index 7) is the contact section.
+const LINKS: Record<number, { label: string; href: string }[]> = {
+  5: [{ label: doc.title, href: `/${locale}/legal/privacy/` }],
+  7: [{ label: 'support@oiyo.net', href: 'mailto:support@oiyo.net' }],
+};
 ---
 
-<Layout
-  title={t('legal.terms.title') || 'Terms of Service'}
-  description={t('legal.terms.description')}
-  locale={locale}
->
+<Layout title={doc.title || 'Terms of Service'} description={doc.description} locale={locale}>
   <section class="bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
     <div class="max-w-2xl mx-auto animate-fadeInUp">
-      <h1 class="text-4xl font-serif font-black text-foreground mb-2">
-        {t('legal.terms.title')}
-      </h1>
-      <p class="text-xs text-green-500">{t('legal.terms.lastUpdated')}</p>
+      <h1 class="text-4xl font-serif font-black text-foreground mb-2">{doc.title}</h1>
+      <p class="text-xs text-green-500">{doc.lastUpdatedLabel}: {doc.lastUpdated}</p>
     </div>
   </section>
 
   <section class="max-w-2xl mx-auto px-4 py-8">
     <div class="prose prose-green max-w-none">
       <div class="bg-card rounded-2xl border border-green-50 p-8 space-y-6">
-        <div>
-          <h2 class="text-lg font-bold text-foreground mb-2">Overview</h2>
-          <p class="text-sm text-green-700 leading-relaxed">
-            {t('legal.terms.sections.overview.content')}
-          </p>
-        </div>
-        <hr class="border-green-50" />
-        <p class="text-xs text-green-500">
-          {t('legal.terms.description')}
-        </p>
+        {
+          doc.sections.map((section, index) => (
+            <div>
+              <h2 class="text-lg font-bold text-foreground mb-2">{section.heading}</h2>
+              {section.body.map((paragraph) => (
+                <p class="text-sm text-green-700 leading-relaxed mb-2">{paragraph}</p>
+              ))}
+              {LINKS[index] && (
+                <p class="text-sm text-green-700 leading-relaxed">
+                  {doc.seeLabel}{' '}
+                  {LINKS[index].map((link, i) => (
+                    <>
+                      {i > 0 && ' · '}
+                      <a
+                        class="underline"
+                        href={link.href}
+                        {...(link.href.startsWith('http')
+                          ? { target: '_blank', rel: 'noopener noreferrer' }
+                          : {})}
+                      >
+                        {link.label}
+                      </a>
+                    </>
+                  ))}
+                </p>
+              )}
+              <hr class="border-green-50 mt-6" />
+            </div>
+          ))
+        }
+        <p class="text-xs text-green-500">{doc.description}</p>
       </div>
     </div>
   </section>

@@ -1,39 +1,137 @@
 {
   "terms": {
-    "sections": {
-      "overview": {
-        "content": "OIYO 遵守数据保护法以保护用户权利。"
+    "sections": [
+      {
+        "heading": "1. 条款的接受",
+        "body": [
+          "使用 OIYO（\"本服务\"）即表示您同意本服务条款。如不同意，请勿使用本服务。"
+        ]
+      },
+      {
+        "heading": "2. 服务的使用",
+        "body": [
+          "OIYO 提供性格测评、象征与本体论工具以及相关互动内容。您可以将其用于个人、非商业目的，并在注明出处的情况下进行链接。",
+          "未经书面许可，不得复制、再发布或再分发我们的内容；不得使用自动化工具批量抓取或复制本服务；不得将其用于任何非法目的。"
+        ]
+      },
+      {
+        "heading": "3. 知识产权",
+        "body": [
+          "OIYO 的所有内容（文本、图形、标识和设计）归 Oiyo Tech 或其贡献者所有，受著作权法保护。未经授权不得使用。"
+        ]
+      },
+      {
+        "heading": "4. 内容准确性",
+        "body": [
+          "OIYO 的内容仅供一般参考。测评结果和象征解读用于自我反思和兴趣，不构成专业、医疗、法律或财务建议。在据此行动前，请咨询合格的专业人士。"
+        ]
+      },
+      {
+        "heading": "5. 广告",
+        "body": [
+          "OIYO 通过 Google AdSense 展示广告。Oiyo Tech 不对第三方广告的内容负责，也不对所宣传的产品或服务作出推荐。"
+        ]
+      },
+      {
+        "heading": "6. 免责声明与责任限制",
+        "body": [
+          "本服务按\"现状\"提供，不作任何明示或暗示的保证。",
+          "在法律允许的最大范围内，对于因您使用或无法使用本服务而产生的任何间接、附带、特殊、后果性或惩罚性损害，Oiyo Tech 概不负责。您的使用还受我们的隐私政策约束。"
+        ]
+      },
+      {
+        "heading": "7. 适用法律",
+        "body": [
+          "本条款受大韩民国法律管辖。因本条款产生的任何争议，将由根据适用法律具有管辖权的大韩民国法院处理。"
+        ]
+      },
+      {
+        "heading": "8. 联系我们",
+        "body": [
+          "对本条款有疑问？请发送邮件至 support@oiyo.net。最新变更日期显示在本页面顶部。"
+        ]
       }
-    },
+    ],
     "test": {
       "progress": "进度",
       "next": "下一步",
       "previous": "上一步",
-      "submit": "确认",
+      "submit": "同意并继续",
       "loading": "加载中",
       "selectOption": "请选择",
-      "insightBullets": ["核心公约"]
+      "insightBullets": [
+        "要点"
+      ]
     },
     "result": {
-      "title": "服务条款",
-      "description": "OIYO 珍惜您的个人信息。"
+      "title": "已确认",
+      "description": "已查看条款。"
     },
     "meta": {
       "title": "服务条款",
-      "description": "OIYO 珍惜您的个人信息。",
+      "description": "查看 OIYO 服务条款。",
       "keywords": "条款, 规定, 服务"
     },
     "title": "服务条款",
-    "description": "OIYO 珍惜您的个人信息。",
+    "description": "使用 OIYO 的条款与条件。",
     "keywords": "条款, 规定, 服务",
-    "lastUpdated": "2024年1月1日"
+    "lastUpdated": "2026年9月7日",
+    "lastUpdatedLabel": "最后更新",
+    "seeLabel": "参见：",
+    "badge": "法律信息"
   },
   "privacy": {
-    "sections": {
-      "overview": {
-        "content": "OIYO 遵守数据保护法以保护用户权利。"
+    "sections": [
+      {
+        "heading": "1. 我们收集的信息",
+        "body": [
+          "当您使用 OIYO 时，我们可能通过 Google Analytics 4 自动收集使用数据，包括访问的页面、停留时间、浏览器类型、设备类型和来源网址。",
+          "如果您通过 support@oiyo.net 向我们发送邮件，我们会收到您的邮箱地址和邮件内容。",
+          "您在测评或工具中输入的出生信息、答案等，会在您的浏览器中处理以生成结果。除非您选择保存或分享该结果，否则这些信息不会发送给我们。",
+          "我们不收集姓名、密码或支付信息，使用本网站也无需注册账户。"
+        ]
+      },
+      {
+        "heading": "2. 我们如何使用信息",
+        "body": [
+          "我们使用这些信息来衡量访问量并改进网站、通过 Google AdSense 展示广告、回复您发送的消息，以及履行法律义务。",
+          "我们不会出售您的个人信息。"
+        ]
+      },
+      {
+        "heading": "3. 第三方与 Cookie",
+        "body": [
+          "我们使用 Google Analytics 4 了解访问者如何使用本网站。它以汇总方式收集使用数据，不会识别您的身份。您可以通过 Google Analytics 停用插件在所有网站上停用收集。",
+          "我们使用 Google AdSense 展示广告。Google 及其合作伙伴使用 Cookie 及类似技术来投放和衡量广告，包括基于您在本网站及其他网站以往访问记录的广告。您可以在 Google 账户中或通过行业退出页面关闭个性化广告。关闭个性化不会去除广告，只会使其与您的相关性降低。",
+          "您可以在浏览器设置中阻止或删除 Cookie。没有 Cookie，网站的部分功能可能无法正常运行。"
+        ]
+      },
+      {
+        "heading": "4. 数据保留",
+        "body": [
+          "分析数据按 Google 的保留设置（默认 14 个月）保留。您发送给我们的消息仅在回复所需的期间内保留。"
+        ]
+      },
+      {
+        "heading": "5. 您的权利",
+        "body": [
+          "根据您所在地区，您可能有权查看我们持有的关于您的数据、要求删除这些数据、退出分析跟踪，以及撤回您对 Cookie 的同意。",
+          "如需提出请求，请发送邮件至 support@oiyo.net。"
+        ]
+      },
+      {
+        "heading": "6. 儿童隐私",
+        "body": [
+          "OIYO 不面向 14 周岁以下儿童，我们不会在知情的情况下收集其信息。如果您认为儿童向我们提供了个人信息，请与我们联系，我们将予以删除。"
+        ]
+      },
+      {
+        "heading": "7. 联系我们",
+        "body": [
+          "对本隐私政策有疑问？请发送邮件至 support@oiyo.net。最新变更日期显示在本页面顶部。"
+        ]
       }
-    },
+    ],
     "test": {
       "progress": "进度",
       "next": "下一步",
@@ -41,28 +139,30 @@
       "submit": "确认",
       "loading": "加载中",
       "selectOption": "请选择",
-      "insightBullets": ["隐私核心"]
+      "insightBullets": [
+        "要点"
+      ]
     },
     "result": {
-      "title": "隐私政策",
-      "description": "OIYO 珍惜您的个人信息。"
+      "title": "已确认",
+      "description": "已查看隐私政策。"
     },
     "meta": {
       "title": "隐私政策",
-      "description": "OIYO 珍惜您的个人信息。",
+      "description": "查看 OIYO 隐私政策。",
       "keywords": "隐私, 安全, 数据保护"
     },
-    "point1": "姓名和电子邮件等个人数据将被加密。",
-    "point2": "结果将匿名使用。",
-    "point3": "您可以随时请求删除数据。",
     "title": "隐私政策",
-    "description": "OIYO 珍惜您的个人信息。",
+    "description": "我们如何收集、使用和保护您的信息。",
     "keywords": "隐私, 安全, 数据保护",
-    "lastUpdated": "2024年1月1日"
+    "lastUpdated": "2026年9月7日",
+    "lastUpdatedLabel": "最后更新",
+    "seeLabel": "参见：",
+    "badge": "法律信息"
   },
-  "cookieTitle": "Sacred Covenant",
-  "cookieTextEu": "To preserve the sanctity of your digital soul, we request permission to use cookies for resonance tracking. Your data remains ancient and protected.",
-  "cookieTextDefault": "This sanctuary uses cookies to harmonize your experience with the cosmic web.",
-  "cookieDeny": "Deny",
-  "cookieAccept": "Accept Covenant"
+  "cookieTitle": "Cookie 说明",
+  "cookieTextEu": "我们使用 Cookie 进行分析（Google Analytics）和广告（Google AdSense）。可以在您的设备上设置吗？",
+  "cookieTextDefault": "我们使用 Cookie 进行分析和广告。可以在您的设备上设置吗？",
+  "cookieDeny": "拒绝",
+  "cookieAccept": "接受"
 }

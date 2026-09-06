@@ -1,10 +1,57 @@
 {
   "terms": {
-    "sections": {
-      "overview": {
-        "content": "Estos términos rigen su uso del Santuario OIYO. Al ingresar al Vacío, aceptas estos convenios."
+    "sections": [
+      {
+        "heading": "1. Aceptación de las condiciones",
+        "body": [
+          "Al usar OIYO (\"el Servicio\"), aceptas estas Condiciones de Servicio. Si no estás de acuerdo, no uses el Servicio."
+        ]
+      },
+      {
+        "heading": "2. Uso del Servicio",
+        "body": [
+          "OIYO ofrece pruebas de personalidad, herramientas simbólicas y de ontología y contenido interactivo relacionado. Puedes usarlo con fines personales y no comerciales y enlazar a él citando la fuente.",
+          "No puedes reproducir, volver a publicar ni redistribuir nuestro contenido sin permiso por escrito, usar herramientas automatizadas para extraer o copiar el Servicio de forma masiva, ni usarlo con fines ilícitos."
+        ]
+      },
+      {
+        "heading": "3. Propiedad intelectual",
+        "body": [
+          "Todo el contenido de OIYO —texto, gráficos, logotipos y diseño— pertenece a Oiyo Tech o a sus colaboradores y está protegido por los derechos de autor. No se permite el uso no autorizado."
+        ]
+      },
+      {
+        "heading": "4. Exactitud del contenido",
+        "body": [
+          "El contenido de OIYO se ofrece solo con fines de información general. Los resultados de las pruebas y las interpretaciones simbólicas son para la reflexión personal y el interés, y no constituyen asesoramiento profesional, médico, legal ni financiero. Consulta a un profesional cualificado antes de actuar."
+        ]
+      },
+      {
+        "heading": "5. Publicidad",
+        "body": [
+          "OIYO muestra anuncios a través de Google AdSense. Oiyo Tech no es responsable del contenido de los anuncios de terceros ni respalda los productos o servicios anunciados."
+        ]
+      },
+      {
+        "heading": "6. Renuncia de garantías y limitación de responsabilidad",
+        "body": [
+          "El Servicio se ofrece \"tal cual\", sin garantías de ningún tipo, expresas o implícitas.",
+          "En la máxima medida permitida por la ley, Oiyo Tech no será responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos derivados de tu uso del Servicio o de la imposibilidad de usarlo. Tu uso también se rige por nuestra Política de Privacidad."
+        ]
+      },
+      {
+        "heading": "7. Legislación aplicable",
+        "body": [
+          "Estas Condiciones se rigen por las leyes de la República de Corea. Cualquier disputa que surja de ellas se someterá a los tribunales de la República de Corea competentes según la ley aplicable."
+        ]
+      },
+      {
+        "heading": "8. Contacto",
+        "body": [
+          "¿Tienes preguntas sobre estas Condiciones? Escríbenos a support@oiyo.net. La fecha del último cambio aparece en la parte superior de esta página."
+        ]
       }
-    },
+    ],
     "test": {
       "progress": "Progreso",
       "next": "Próxima",
@@ -12,28 +59,79 @@
       "submit": "Aceptar y continuar",
       "loading": "Tratamiento...",
       "selectOption": "Por favor seleccione",
-      "insightBullets": ["Pactos clave"]
+      "insightBullets": [
+        "Puntos clave"
+      ]
     },
     "result": {
-      "title": "Pacto sellado",
-      "description": "Has aceptado los términos."
+      "title": "Revisado",
+      "description": "Condiciones revisadas."
     },
     "meta": {
       "title": "Términos de servicio",
-      "description": "Revise los Términos de servicio de Oiyo.",
+      "description": "Consulta los Términos de Servicio de OIYO.",
       "keywords": "términos, política"
     },
     "title": "Términos de servicio",
-    "description": "Términos y condiciones de uso del Santuario.",
+    "description": "Términos y condiciones de uso de OIYO.",
     "keywords": "términos, condiciones, política, servicio",
-    "lastUpdated": "1 de enero de 2026"
+    "lastUpdated": "7 de septiembre de 2026",
+    "lastUpdatedLabel": "Última actualización",
+    "seeLabel": "Consulta:",
+    "badge": "Aviso legal"
   },
   "privacy": {
-    "sections": {
-      "overview": {
-        "content": "OIYO respeta su privacidad. Cumplimos con las leyes universales de protección de datos para salvaguardar su modelo ontológico."
+    "sections": [
+      {
+        "heading": "1. Información que recopilamos",
+        "body": [
+          "Cuando utilizas OIYO, podemos recopilar datos de uso —páginas visitadas, tiempo de permanencia, tipo de navegador, tipo de dispositivo y URL de procedencia— automáticamente mediante Google Analytics 4.",
+          "Si nos escribes a support@oiyo.net, recibimos tu dirección de correo y el contenido de tu mensaje.",
+          "Los datos de nacimiento, las respuestas y otras entradas que introduces en una prueba o herramienta se procesan en tu navegador para generar un resultado. Salvo que elijas guardar o compartir ese resultado, no se nos envían.",
+          "No recopilamos nombres, contraseñas ni datos de pago, y usar el sitio no requiere una cuenta."
+        ]
+      },
+      {
+        "heading": "2. Cómo usamos tu información",
+        "body": [
+          "Usamos la información para medir el tráfico y mejorar el sitio, mostrar publicidad a través de Google AdSense, responder a tus mensajes y cumplir obligaciones legales.",
+          "No vendemos tu información personal."
+        ]
+      },
+      {
+        "heading": "3. Terceros y cookies",
+        "body": [
+          "Usamos Google Analytics 4 para entender cómo se utiliza el sitio. Recopila datos de uso de forma agregada y no te identifica. Puedes inhabilitar esta recopilación en todos los sitios con el complemento de inhabilitación de Google Analytics.",
+          "Usamos Google AdSense para mostrar anuncios. Google y sus socios usan cookies y tecnologías similares para publicar y medir anuncios, incluidos anuncios basados en tus visitas anteriores a este y otros sitios. Puedes desactivar la publicidad personalizada en tu cuenta de Google o mediante la página de exclusión del sector. Desactivar la personalización no elimina los anuncios; solo hace que sean menos específicos.",
+          "Puedes bloquear o eliminar las cookies en la configuración de tu navegador. Sin ellas, algunas partes del sitio pueden no funcionar correctamente."
+        ]
+      },
+      {
+        "heading": "4. Conservación de datos",
+        "body": [
+          "Los datos analíticos se conservan según la configuración de conservación de Google (14 meses de forma predeterminada). Los mensajes que nos envías se conservan solo el tiempo necesario para responderlos."
+        ]
+      },
+      {
+        "heading": "5. Tus derechos",
+        "body": [
+          "Según el lugar donde residas, puedes tener derecho a ver los datos que tenemos sobre ti, solicitar su eliminación, excluirte del seguimiento analítico y retirar tu consentimiento para las cookies.",
+          "Para ejercer estos derechos, escríbenos a support@oiyo.net."
+        ]
+      },
+      {
+        "heading": "6. Privacidad de los menores",
+        "body": [
+          "OIYO no está dirigido a menores de 14 años y no recopilamos su información de forma consciente. Si crees que un menor nos ha facilitado datos personales, contáctanos y los eliminaremos."
+        ]
+      },
+      {
+        "heading": "7. Contacto",
+        "body": [
+          "¿Tienes preguntas sobre esta Política de Privacidad? Escríbenos a support@oiyo.net. La fecha del último cambio aparece en la parte superior de esta página."
+        ]
       }
-    },
+    ],
     "test": {
       "progress": "Progreso",
       "next": "Próxima",
@@ -41,28 +139,30 @@
       "submit": "Confirmar",
       "loading": "Cargando",
       "selectOption": "Por favor seleccione",
-      "insightBullets": ["Núcleo de privacidad"]
+      "insightBullets": [
+        "Puntos clave"
+      ]
     },
     "result": {
-      "title": "Admitida",
+      "title": "Revisado",
       "description": "Política de privacidad revisada."
     },
     "meta": {
       "title": "política de privacidad",
-      "description": "Revise la Política de Privacidad de Oiyo.",
+      "description": "Consulta la Política de Privacidad de OIYO.",
       "keywords": "privacidad, seguridad"
     },
-    "point1": "Los datos personales como el nombre y el correo electrónico están cifrados.",
-    "point2": "Los resultados se utilizan de forma anónima para la resonancia colectiva.",
-    "point3": "Podrá solicitar la supresión de datos en cualquier momento.",
-    "title": "política de privacidad",
-    "description": "Tratamos los datos de su alma con reverencia.",
+    "title": "Política de privacidad",
+    "description": "Cómo recopilamos, usamos y protegemos tu información.",
     "keywords": "privacidad, seguridad, protección de datos",
-    "lastUpdated": "1 de enero de 2026"
+    "lastUpdated": "7 de septiembre de 2026",
+    "lastUpdatedLabel": "Última actualización",
+    "seeLabel": "Consulta:",
+    "badge": "Aviso legal"
   },
-  "cookieTitle": "Sacred Covenant",
-  "cookieTextEu": "To preserve the sanctity of your digital soul, we request permission to use cookies for resonance tracking. Your data remains ancient and protected.",
-  "cookieTextDefault": "This sanctuary uses cookies to harmonize your experience with the cosmic web.",
-  "cookieDeny": "Deny",
-  "cookieAccept": "Accept Covenant"
+  "cookieTitle": "Aviso sobre cookies",
+  "cookieTextEu": "Usamos cookies para la analítica (Google Analytics) y la publicidad (Google AdSense). ¿Podemos guardarlas en tu dispositivo?",
+  "cookieTextDefault": "Usamos cookies para la analítica y la publicidad. ¿Podemos guardarlas en tu dispositivo?",
+  "cookieDeny": "Rechazar",
+  "cookieAccept": "Aceptar"
 }
