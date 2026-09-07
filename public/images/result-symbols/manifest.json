@@ -8,6 +8,72 @@
   "style": "OIYO tactile paper-cut and translucent glass symbolic emblems",
   "usage": "Decorative result-screen and share-card assets. Keep result labels and explanations as accessible HTML text.",
   "collections": {
+    "mbti": {
+      "directory": "mbti",
+      "width": 512,
+      "height": 512,
+      "note": "Sixteen original transparent symbolic miniatures. No official MBTI characters, logos, letters, or type labels are embedded in the artwork.",
+      "items": [
+        { "id": "intj", "file": "intj.webp" },
+        { "id": "intp", "file": "intp.webp" },
+        { "id": "entj", "file": "entj.webp" },
+        { "id": "entp", "file": "entp.webp" },
+        { "id": "infj", "file": "infj.webp" },
+        { "id": "infp", "file": "infp.webp" },
+        { "id": "enfj", "file": "enfj.webp" },
+        { "id": "enfp", "file": "enfp.webp" },
+        { "id": "istj", "file": "istj.webp" },
+        { "id": "istp", "file": "istp.webp" },
+        { "id": "estj", "file": "estj.webp" },
+        { "id": "estp", "file": "estp.webp" },
+        { "id": "isfj", "file": "isfj.webp" },
+        { "id": "isfp", "file": "isfp.webp" },
+        { "id": "esfj", "file": "esfj.webp" },
+        { "id": "esfp", "file": "esfp.webp" }
+      ]
+    },
+    "enneagram": {
+      "directory": "enneagram",
+      "width": 512,
+      "height": 512,
+      "note": "Nine original transparent motivation symbols. Type numerals remain accessible HTML and are not embedded in the artwork.",
+      "items": [
+        { "id": "1", "file": "type-1.webp" },
+        { "id": "2", "file": "type-2.webp" },
+        { "id": "3", "file": "type-3.webp" },
+        { "id": "4", "file": "type-4.webp" },
+        { "id": "5", "file": "type-5.webp" },
+        { "id": "6", "file": "type-6.webp" },
+        { "id": "7", "file": "type-7.webp" },
+        { "id": "8", "file": "type-8.webp" },
+        { "id": "9", "file": "type-9.webp" }
+      ]
+    },
+    "bloodType": {
+      "directory": "blood-type",
+      "width": 512,
+      "height": 512,
+      "note": "Four entertainment-only cultural profile symbols. No blood, anatomy, laboratory, or medical imagery.",
+      "items": [
+        { "id": "a", "file": "a.webp" },
+        { "id": "b", "file": "b.webp" },
+        { "id": "o", "file": "o.webp" },
+        { "id": "ab", "file": "ab.webp" }
+      ]
+    },
+    "fiveElements": {
+      "directory": "five-elements",
+      "width": 512,
+      "height": 512,
+      "note": "Five contemporary reflective symbols using distinct forms as well as color. No written Chinese characters are embedded.",
+      "items": [
+        { "id": "wood", "file": "wood.webp" },
+        { "id": "fire", "file": "fire.webp" },
+        { "id": "earth", "file": "earth.webp" },
+        { "id": "metal", "file": "metal.webp" },
+        { "id": "water", "file": "water.webp" }
+      ]
+    },
     "chineseZodiac": {
       "directory": "chinese-zodiac",
       "width": 512,

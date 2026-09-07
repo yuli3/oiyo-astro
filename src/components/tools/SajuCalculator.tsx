@@ -823,7 +823,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             aria-live="polite"
           >
             <div className="flex items-center gap-3">
-              <ResultSymbol id="saju" fallback="☯️" className="h-16 w-16 shrink-0" />
+              <ResultSymbol id="five-elements" variant={result.sortedElements[0]} fallback="☯️" className="h-16 w-16 shrink-0" />
               <h2 className="text-base font-bold text-gray-900 sm:text-lg">{reading.quickAnswerTitle}</h2>
             </div>
             <p className="mt-1 text-sm font-medium leading-relaxed text-gray-800 sm:text-base">

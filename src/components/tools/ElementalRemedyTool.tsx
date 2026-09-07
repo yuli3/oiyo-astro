@@ -227,7 +227,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
           </div>
 
           <div className="text-center space-y-2">
-            <ResultSymbol id="five-elements" fallback="🌀" className="mx-auto h-24 w-24" />
+            <ResultSymbol id="five-elements" variant={weak} fallback="🌀" className="mx-auto h-24 w-24" />
             <p className="text-sm text-muted-foreground">{t.lacking}</p>
             <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-xl font-bold text-white"
               style={{ backgroundColor: EL_COLOR[weak] }}>

@@ -340,7 +340,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
       <section className="not-prose rounded-2xl border border-slate-200 bg-card p-6 shadow-sm md:p-8">
         <div className="text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-blue-600">{labels.resultLabel}</p>
-          <ResultSymbol id="mbti" fallback={profile.emoji} className="mx-auto mt-4 h-28 w-28" />
+          <ResultSymbol id="mbti" variant={mbtiType} fallback={profile.emoji} className="mx-auto mt-4 h-28 w-28" />
           <h2 className="mt-4 text-3xl font-black text-slate-950">{title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-slate-700">{profile.desc[l]}</p>
         </div>
