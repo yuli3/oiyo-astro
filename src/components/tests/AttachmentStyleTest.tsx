@@ -15,6 +15,7 @@ import { recordTestResult } from "@/lib/user/test-results";
 import RelatedReading from "../shared/RelatedReading";
 import ResultNextSteps from "../shared/ResultNextSteps";
 import AttachmentAxesChart from "../shared/AttachmentAxesChart";
+import ShareResultButton from "../shared/ShareResultButton";
 
 type Locale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const LOCALES: Locale[] = ["ko", "en", "ja", "zh", "fr", "es"];
@@ -191,6 +192,7 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
       })}
     </div>
     <div className="rounded-xl border bg-card p-4 text-xs leading-6 text-muted-foreground"><p>{RESPONSE_POSITION[locale]}</p><p>{DRAFT_BASIS[locale]}</p><p>{new Intl.DateTimeFormat(locale, { dateStyle: "medium" }).format(new Date(result.observedAt))} · {ATTACHMENT_INSTRUMENT.version}</p></div>
+    <ShareResultButton locale={locale} heading={t.result} resultTitle={t.title} description={t.conclusion(t.level[anxietyLevel], t.level[avoidanceLevel])} analyticsId="adult_attachment" visual={{ kind: "attachment", anxiety: result.anxiety, avoidance: result.avoidance, anxietyLabel: t.anxiety, avoidanceLabel: t.avoidance }} />
     <div className="rounded-xl border border-green-200 bg-surface-subtle p-5 text-foreground">
       <p className="text-xs font-bold uppercase tracking-wider text-green-700">{t.nextLabel}</p>
       <p className="mt-2 text-base leading-7 font-medium">{t.next}</p>

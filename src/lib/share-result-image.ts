@@ -11,6 +11,10 @@ export interface ShareCardPayload {
   /** Big result line, e.g. "INFP — 중재자" */
   resultTitle: string;
   emoji?: string;
+  symbolSrc?: string;
+  visual?:
+    | { kind: 'riasec'; scores: Record<'R' | 'I' | 'A' | 'S' | 'E' | 'C', number> }
+    | { kind: 'attachment'; anxiety: number; avoidance: number; anxietyLabel: string; avoidanceLabel: string };
   /** Wrapped body text under the title */
   description?: string;
   /** Shown in the footer, e.g. "oiyo.net/ko/mbti/test" */
@@ -56,7 +60,50 @@ function wrapText(
   return lines;
 }
 
-export function renderShareCard(payload: ShareCardPayload): Promise<Blob> {
+function loadImage(src: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error(`image load failed: ${src}`));
+    image.src = src;
+  });
+}
+
+function drawProfileVisual(ctx: CanvasRenderingContext2D, visual: NonNullable<ShareCardPayload['visual']>, centerY: number) {
+  const cx = W / 2;
+  if (visual.kind === 'riasec') {
+    const types = ['R', 'I', 'A', 'S', 'E', 'C'] as const;
+    const point = (index: number, radius: number) => {
+      const angle = (Math.PI * 2 * index) / 6 - Math.PI / 2;
+      return [cx + Math.cos(angle) * radius, centerY + Math.sin(angle) * radius] as const;
+    };
+    ctx.strokeStyle = '#c7c9bd';
+    ctx.lineWidth = 3;
+    for (const radius of [70, 130, 190]) {
+      ctx.beginPath();
+      types.forEach((_, index) => { const [x, y] = point(index, radius); index ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+      ctx.closePath(); ctx.stroke();
+    }
+    ctx.beginPath();
+    types.forEach((type, index) => { const radius = 35 + Math.max(0, Math.min(100, visual.scores[type])) * 1.55; const [x, y] = point(index, radius); index ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+    ctx.closePath(); ctx.fillStyle = 'rgba(67,93,49,0.22)'; ctx.fill(); ctx.strokeStyle = '#435d31'; ctx.lineWidth = 7; ctx.stroke();
+    ctx.fillStyle = '#35452b'; ctx.font = `800 30px ${FONT}`;
+    types.forEach((type, index) => { const [x, y] = point(index, 225); ctx.fillText(`${type} ${Math.round(visual.scores[type])}`, x, y + 10); });
+    return;
+  }
+  const left = cx - 205; const top = centerY - 205; const size = 410;
+  ctx.fillStyle = '#f7f7f2'; ctx.fillRect(left, top, size, size);
+  ctx.strokeStyle = '#a8a29e'; ctx.lineWidth = 3; ctx.setLineDash([12, 12]);
+  ctx.beginPath(); ctx.moveTo(cx, top); ctx.lineTo(cx, top + size); ctx.moveTo(left, centerY); ctx.lineTo(left + size, centerY); ctx.stroke(); ctx.setLineDash([]);
+  const x = left + Math.max(0, Math.min(100, visual.avoidance)) * 4.1;
+  const y = top + size - Math.max(0, Math.min(100, visual.anxiety)) * 4.1;
+  ctx.beginPath(); ctx.arc(x, y, 22, 0, Math.PI * 2); ctx.fillStyle = '#435d31'; ctx.fill();
+  ctx.fillStyle = '#35452b'; ctx.font = `700 26px ${FONT}`;
+  ctx.fillText(`${visual.avoidanceLabel} ${Math.round(visual.avoidance)}%`, cx, top + size + 46);
+  ctx.save(); ctx.translate(left - 46, centerY); ctx.rotate(-Math.PI / 2); ctx.fillText(`${visual.anxietyLabel} ${Math.round(visual.anxiety)}%`, 0, 0); ctx.restore();
+}
+
+export async function renderShareCard(payload: ShareCardPayload): Promise<Blob> {
   const canvas = document.createElement('canvas');
   canvas.width = W;
   canvas.height = H;
@@ -100,9 +147,16 @@ export function renderShareCard(payload: ShareCardPayload): Promise<Blob> {
   ctx.font = `800 36px ${FONT}`;
   ctx.fillText(payload.heading, W / 2, 330);
 
-  // ── Emoji ──
+  // ── Result visual ──
   let y = 470;
-  if (payload.emoji) {
+  if (payload.symbolSrc) {
+    const image = await loadImage(payload.symbolSrc);
+    ctx.drawImage(image, W / 2 - 135, 385, 270, 270);
+    y = 735;
+  } else if (payload.visual) {
+    drawProfileVisual(ctx, payload.visual, 560);
+    y = 830;
+  } else if (payload.emoji) {
     ctx.font = `160px ${FONT}`;
     ctx.fillText(payload.emoji, W / 2, 560);
     y = 680;

@@ -475,6 +475,8 @@ export default function RiasecQuickTest({ locale: lp = 'ko' }: Props) {
         emoji="🧭"
         resultTitle={resultTitle}
         description={resultProfile.isMixed ? lb.mixedBody : sorted.slice(0, 3).map(t => lb.typeNames[t]).join(' · ')}
+        analyticsId="riasec-quick"
+        visual={{ kind: 'riasec', scores: Object.fromEntries(resultProfile.ranked.map(({ type, percent }) => [type, percent])) as Record<RiasecType, number> }}
       />
       <a
         href={`/${locale}/riasec-career-test/`}

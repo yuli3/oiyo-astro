@@ -5,7 +5,7 @@ import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
 } from 'recharts'
 import ShareResultButton from '../shared/ShareResultButton'
-import ResultSymbol from '../shared/ResultSymbol'
+import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type DiscType = 'D' | 'I' | 'S' | 'C'
@@ -784,6 +784,8 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
         heading={lb.title}
         resultTitle={`${result.type} — ${r.title}`}
         description={chartData.map(d => `${d.subject} ${d.value}%`).join(' · ')}
+        symbolSrc={resultSymbolSrc('disc', result.type)}
+        analyticsId="disc-personality"
       />
 
       <div className="flex gap-3">

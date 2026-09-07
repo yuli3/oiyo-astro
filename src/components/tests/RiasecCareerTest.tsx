@@ -367,6 +367,8 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
         emoji="🧭"
         resultTitle={resultTitle}
         description={resultProfile.isMixed ? lb.mixedBody : sorted.slice(0, 3).map(t => lb.typeNames[t]).join(' · ')}
+        analyticsId="riasec"
+        visual={{ kind: 'riasec', scores: Object.fromEntries(resultProfile.ranked.map(({ type, percent }) => [type, percent])) as Record<RiasecType, number> }}
       />
       <div className="flex gap-3">
         <button onClick={restart} aria-label={lb.restart} className="min-h-11 flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors">{lb.restart}</button>

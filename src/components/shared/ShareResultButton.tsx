@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { shareResultImage, type ShareCardPayload } from '../../lib/share-result-image';
+import { gaEvent } from '@/lib/analytics/ga-event';
 
 type Locale = 'en' | 'ko' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -9,6 +10,9 @@ interface Props {
   resultTitle: string;
   emoji?: string;
   description?: string;
+  symbolSrc?: string;
+  visual?: ShareCardPayload['visual'];
+  analyticsId?: string;
   // Fired on click, before the (async) image work — lets callers with no
   // local share()/writeResultHash of their own (MBTI, Natal chart) still
   // measure a share-button click. Optional so other callers are unaffected.
@@ -24,25 +28,29 @@ const LABELS: Record<Locale, { share: string; working: string; downloaded: strin
   es: { share: 'Guardar y compartir imagen', working: 'Creando imagen…', downloaded: '¡Imagen guardada!', failed: 'No se pudo crear la imagen' },
 };
 
-export default function ShareResultButton({ locale, heading, resultTitle, emoji, description, onShareClick }: Props) {
+export default function ShareResultButton({ locale, heading, resultTitle, emoji, description, symbolSrc, visual, analyticsId, onShareClick }: Props) {
   const t = LABELS[(locale as Locale)] ?? LABELS.en;
   const [state, setState] = useState<'idle' | 'working' | 'done' | 'error'>('idle');
 
   const onShare = async () => {
     if (state === 'working') return;
     onShareClick?.();
+    if (analyticsId) gaEvent('share_click', { test_id: analyticsId, share_surface: 'image' });
     setState('working');
     const payload: ShareCardPayload = {
       heading,
       resultTitle,
       emoji,
       description,
+      symbolSrc,
+      visual,
       url: typeof location !== 'undefined'
         ? `oiyo.net${location.pathname.replace(/\/$/, '')}`
         : 'oiyo.net',
     };
     try {
-      await shareResultImage(payload);
+      const outcome = await shareResultImage(payload);
+      if (analyticsId) gaEvent('share_completed', { test_id: analyticsId, share_surface: 'image', share_outcome: outcome });
       setState('done');
       setTimeout(() => setState('idle'), 2500);
     } catch {

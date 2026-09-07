@@ -5,7 +5,7 @@ import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recha
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
 import RelatedReading from '../shared/RelatedReading';
-import ResultSymbol from '../shared/ResultSymbol'
+import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Lang = 'words' | 'acts' | 'gifts' | 'time' | 'touch'
@@ -475,6 +475,8 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
         resultTitle={r.title}
         emoji={r.emoji}
         description={r.description}
+        symbolSrc={resultSymbolSrc('love-language', result.primary)}
+        analyticsId="love-language"
       />
       <ResultNextSteps
         locale={locale}
