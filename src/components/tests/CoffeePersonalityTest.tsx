@@ -515,7 +515,7 @@ export default function CoffeePersonalityTest({ locale: lp = 'ko' }: Props) {
       navigator.clipboard.writeText(url).then(() => {
         setCopied(true)
         setTimeout(() => setCopied(false), 2000)
-      })
+      }).catch(() => {})
     }
   }
 

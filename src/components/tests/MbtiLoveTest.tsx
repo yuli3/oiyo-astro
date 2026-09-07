@@ -1006,7 +1006,7 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
     navigator.clipboard.writeText(url).then(() => {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-    })
+    }).catch(() => {})
   }
 
   // ── Result View ──────────────────────────────────────────────────────────────
