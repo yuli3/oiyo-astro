@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-07",
+  "format": "webp",
+  "width": 768,
+  "height": 768,
+  "background": "transparent",
+  "style": "OIYO tactile paper-cut and translucent glass symbolic emblems",
+  "usage": "Decorative result-screen and share-card assets. Keep result labels and explanations as accessible HTML text.",
+  "collections": {
+    "chineseZodiac": {
+      "directory": "chinese-zodiac",
+      "width": 512,
+      "height": 512,
+      "note": "Twelve individual transparent icons. The goat image is intentionally text-free so locale copy can use the culturally appropriate sheep/goat term.",
+      "items": [
+        { "id": "rat", "file": "rat.webp" },
+        { "id": "ox", "file": "ox.webp" },
+        { "id": "tiger", "file": "tiger.webp" },
+        { "id": "rabbit", "file": "rabbit.webp" },
+        { "id": "dragon", "file": "dragon.webp" },
+        { "id": "snake", "file": "snake.webp" },
+        { "id": "horse", "file": "horse.webp" },
+        { "id": "goat", "file": "goat.webp" },
+        { "id": "monkey", "file": "monkey.webp" },
+        { "id": "rooster", "file": "rooster.webp" },
+        { "id": "dog", "file": "dog.webp" },
+        { "id": "boar", "file": "boar.webp" }
+      ]
+    },
+    "westernZodiac": {
+      "directory": "western-zodiac",
+      "width": 512,
+      "height": 512,
+      "note": "Twelve individual transparent celestial icons. Decorative reflective symbolism only; not a prediction claim.",
+      "items": [
+        { "id": "aries", "file": "aries.webp" },
+        { "id": "taurus", "file": "taurus.webp" },
+        { "id": "gemini", "file": "gemini.webp" },
+        { "id": "cancer", "file": "cancer.webp" },
+        { "id": "leo", "file": "leo.webp" },
+        { "id": "virgo", "file": "virgo.webp" },
+        { "id": "libra", "file": "libra.webp" },
+        { "id": "scorpio", "file": "scorpio.webp" },
+        { "id": "sagittarius", "file": "sagittarius.webp" },
+        { "id": "capricorn", "file": "capricorn.webp" },
+        { "id": "aquarius", "file": "aquarius.webp" },
+        { "id": "pisces", "file": "pisces.webp" }
+      ]
+    }
+  },
+  "assets": [
+    { "id": "mbti", "file": "mbti.webp", "concept": "four preference pathways", "note": "Original illustration; not an official MBTI logo." },
+    { "id": "big-five", "file": "big-five.webp", "concept": "five broad dimensions", "note": "Non-diagnostic self-reflection symbol." },
+    { "id": "enneagram", "file": "enneagram.webp", "concept": "nine connected perspectives", "note": "Original nonliteral geometry; not an official logo." },
+    { "id": "hexaco", "file": "hexaco.webp", "concept": "six faceted dimensions", "note": "Non-diagnostic self-reflection symbol." },
+    { "id": "tci", "file": "tci.webp", "concept": "temperament and character currents", "note": "Non-diagnostic self-reflection symbol." },
+    { "id": "blood-type", "file": "blood-type.webp", "concept": "four playful cultural profiles", "note": "Entertainment-only cultural symbol; not medical imagery or guidance." },
+    { "id": "saju", "file": "saju.webp", "concept": "four seasonal pillars", "note": "Contemporary reflective symbol; not a historical artifact or claim of certainty." },
+    { "id": "palja", "file": "palja.webp", "concept": "eight tiles in four pairs", "note": "Contemporary reflective symbol; contains no written characters." },
+    { "id": "five-elements", "file": "five-elements.webp", "concept": "wood, fire, earth, metal, and water cycle", "note": "Contemporary reflective symbol." },
+    { "id": "western-zodiac", "file": "western-zodiac.webp", "concept": "twelve celestial perspectives", "note": "Reflective symbolism; not a prediction claim." },
+    { "id": "chinese-zodiac", "file": "chinese-zodiac.webp", "concept": "twelve-animal cycle", "note": "Contemporary respectful illustration; not a historical artifact." },
+    { "id": "maya-inspired", "file": "maya-inspired.webp", "concept": "stepped solar cycle", "note": "Contemporary Maya-inspired geometry; not an authentic glyph, deity, inscription, calendar, or artifact." },
+    { "id": "celtic-inspired", "file": "celtic-inspired.webp", "concept": "interwoven seasonal continuity", "note": "Contemporary Celtic-inspired form; not a copy of a sacred or historical symbol." },
+    { "id": "akashic-records", "file": "akashic-records.webp", "concept": "open book of memory and possibility", "note": "Imaginative metaphor for reflection; not a supernatural certainty claim." }
+  ]
+}
