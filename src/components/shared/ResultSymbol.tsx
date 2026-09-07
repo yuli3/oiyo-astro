@@ -1,0 +1,71 @@
+import { useState } from 'react'
+
+export type ResultSymbolId =
+  | 'mbti'
+  | 'big-five'
+  | 'enneagram'
+  | 'hexaco'
+  | 'tci'
+  | 'blood-type'
+  | 'saju'
+  | 'palja'
+  | 'five-elements'
+  | 'western-zodiac'
+  | 'chinese-zodiac'
+  | 'maya-inspired'
+  | 'celtic-inspired'
+  | 'akashic-records'
+
+const CHINESE_ZODIAC_FILES: Record<string, string> = {
+  boar: 'boar', dog: 'dog', dragon: 'dragon', goat: 'goat', horse: 'horse',
+  monkey: 'monkey', ox: 'ox', pig: 'boar', rabbit: 'rabbit', rat: 'rat',
+  rooster: 'rooster', snake: 'snake', tiger: 'tiger',
+}
+
+const WESTERN_ZODIAC_FILES: Record<string, string> = {
+  aquarius: 'aquarius', aries: 'aries', cancer: 'cancer', capricorn: 'capricorn',
+  gemini: 'gemini', leo: 'leo', libra: 'libra', pisces: 'pisces',
+  sagittarius: 'sagittarius', scorpio: 'scorpio', taurus: 'taurus', virgo: 'virgo',
+}
+
+export function resultSymbolSrc(id: ResultSymbolId, variant?: string): string {
+  if (id === 'chinese-zodiac' && variant) {
+    const file = CHINESE_ZODIAC_FILES[variant]
+    if (file) return `/images/result-symbols/chinese-zodiac/${file}.webp`
+  }
+  if (id === 'western-zodiac' && variant) {
+    const file = WESTERN_ZODIAC_FILES[variant]
+    if (file) return `/images/result-symbols/western-zodiac/${file}.webp`
+  }
+  return `/images/result-symbols/${id}.webp`
+}
+
+interface Props {
+  alt?: string
+  className?: string
+  fallback?: string
+  id: ResultSymbolId
+  variant?: string
+}
+
+export default function ResultSymbol({ alt = '', className = '', fallback, id, variant }: Props) {
+  const [failed, setFailed] = useState(false)
+
+  if (failed) {
+    return fallback ? <span aria-hidden="true" className={className}>{fallback}</span> : null
+  }
+
+  return (
+    <img
+      alt={alt}
+      className={`object-contain ${className}`}
+      decoding="async"
+      draggable={false}
+      height={96}
+      loading="lazy"
+      onError={() => setFailed(true)}
+      src={resultSymbolSrc(id, variant)}
+      width={96}
+    />
+  )
+}

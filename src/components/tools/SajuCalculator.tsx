@@ -21,6 +21,7 @@ import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
+import ResultSymbol from '../shared/ResultSymbol';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
@@ -821,7 +822,10 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             role="status"
             aria-live="polite"
           >
-            <h2 className="text-base font-bold text-gray-900 sm:text-lg">{reading.quickAnswerTitle}</h2>
+            <div className="flex items-center gap-3">
+              <ResultSymbol id="saju" fallback="☯️" className="h-16 w-16 shrink-0" />
+              <h2 className="text-base font-bold text-gray-900 sm:text-lg">{reading.quickAnswerTitle}</h2>
+            </div>
             <p className="mt-1 text-sm font-medium leading-relaxed text-gray-800 sm:text-base">
               {reading.quickAnswerBody.replace('%s', ELEMENTS[result.sortedElements[0]][locale])}
             </p>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useUserStore } from "@/lib/user/store/user-store";
 import type { Locale } from "../../i18n";
+import ResultSymbol from "../shared/ResultSymbol";
 
 interface Props {
   locale: Locale;
@@ -388,7 +389,7 @@ export default function BloodTypePersonality({ locale }: Props) {
                 onClick={() => choose(type)}
                 className={`flex flex-col items-center justify-center p-8 rounded-2xl border-2 ${data.bg} ${data.border} hover:shadow-md transition-all hover:scale-105 cursor-pointer`}
               >
-                <span className="text-5xl mb-3">{data.emoji}</span>
+                <ResultSymbol id="blood-type" fallback={data.emoji} className="mb-3 h-20 w-20" />
                 <span className={`text-2xl font-bold ${data.color}`}>{ui.types[type]}</span>
               </button>
             );
@@ -415,7 +416,7 @@ export default function BloodTypePersonality({ locale }: Props) {
     <div className="space-y-6">
       {/* Header */}
       <div className={`rounded-2xl p-6 text-center ${data.bg} border-2 ${data.border}`}>
-        <div className="text-6xl mb-2">{data.emoji}</div>
+        <ResultSymbol id="blood-type" fallback={data.emoji} className="mx-auto mb-2 h-24 w-24" />
         <h1 className={`text-3xl font-bold ${data.color}`}>{ui.types[selected]}</h1>
         <p className="mt-3 text-gray-700 text-sm leading-relaxed">{data.description[locale]}</p>
       </div>

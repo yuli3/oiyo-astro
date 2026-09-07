@@ -9,6 +9,7 @@ import { readResultCode, writeResultCode, clearResultCode } from '../../lib/resu
 import { recordTestResult } from '@/lib/user/test-results';
 import { gaEvent } from '@/lib/analytics/ga-event';
 import { getBigFiveResultSummary } from './big-five-result-summary'
+import ResultSymbol from '../shared/ResultSymbol'
 import {
   bigFiveClassifications,
   bigFivePlugin,
@@ -425,6 +426,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
   return (
     <div className="space-y-6 animate-fadeInUp">
       <div className="text-center space-y-2">
+        <ResultSymbol id="big-five" fallback="🌊" className="mx-auto h-24 w-24" />
         <p className="text-sm text-muted-foreground">{lb.yourProfile}</p>
         <h1 className="text-2xl font-bold">{lb.title}</h1>
         <p className="mx-auto max-w-2xl text-base leading-7 text-foreground/80">{resultSummary.conclusion}</p>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Locale } from "../../lib/i18n";
 import { BirthDateField } from "../shared/BirthDateField";
+import ResultSymbol from "../shared/ResultSymbol";
 
 interface Props {
   locale: Locale;
@@ -816,7 +817,7 @@ export default function ZodiacPersonality({ locale }: Props) {
                 onClick={() => setSelected(key)}
                 className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 ${ELEMENT_BG[z.element]} hover:shadow-md transition-all hover:scale-105 cursor-pointer`}
               >
-                <span className="text-3xl">{z.emoji}</span>
+                <ResultSymbol id="western-zodiac" variant={key} fallback={z.emoji} className="h-12 w-12" />
                 <span className={`text-xs font-bold mt-1 ${ELEMENT_COLOR[z.element]}`}>{z.name[locale]}</span>
               </button>
             );
@@ -842,7 +843,7 @@ export default function ZodiacPersonality({ locale }: Props) {
     <div className="space-y-5">
       {/* Header */}
       <div className={`rounded-2xl p-6 text-center border-2 ${ELEMENT_BG[el]}`}>
-        <div className="text-6xl mb-1">{z.emoji}</div>
+        <ResultSymbol id="western-zodiac" variant={selected} fallback={z.emoji} className="mx-auto mb-1 h-24 w-24" />
         <h1 className={`text-3xl font-bold ${ELEMENT_COLOR[el]}`}>{z.name[locale]}</h1>
         <div className="flex justify-center gap-4 mt-2 text-xs text-gray-500">
           <span>{ui.dateRangeLabel}: {z.dateRange[locale]}</span>

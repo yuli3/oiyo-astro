@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
+import ResultSymbol from '../shared/ResultSymbol';
 import ShareResultButton from '../shared/ShareResultButton';
 import { interpretHexacoDeep } from '@/lib/engines/interpretation/engines/hexaco-deep';
 
@@ -357,6 +358,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
     return (
       <div className="space-y-5">
         <div className="text-center">
+          <ResultSymbol id="hexaco" fallback="🧭" className="mx-auto mb-3 h-24 w-24" />
           <h1 className="text-2xl font-bold text-gray-900">{t.yourProfile}</h1>
           <p className="text-gray-500 mt-1">{t.title}</p>
         </div>

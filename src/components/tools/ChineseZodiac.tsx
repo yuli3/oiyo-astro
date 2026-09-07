@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Locale } from "../../i18n";
+import ResultSymbol from "../shared/ResultSymbol";
 
 interface Props {
   locale: Locale;
@@ -1143,7 +1144,7 @@ export default function ChineseZodiac({ locale }: Props) {
                     : "bg-card border-gray-100 hover:border-gray-300"
                 }`}
               >
-                <span className="text-2xl">{z.emoji}</span>
+                <ResultSymbol id="chinese-zodiac" variant={animal} fallback={z.emoji} className="h-10 w-10" />
                 <span className="text-xs text-gray-700">{z.name[locale]}</span>
               </button>
             );
@@ -1156,7 +1157,7 @@ export default function ChineseZodiac({ locale }: Props) {
         <div className={`rounded-2xl border-2 ${elemColors.border} ${elemColors.bg} p-5 space-y-5`}>
           {/* Header */}
           <div className="flex items-center gap-4">
-            <span className="text-5xl">{data.emoji}</span>
+            <ResultSymbol id="chinese-zodiac" variant={data.animal} fallback={data.emoji} className="h-20 w-20 shrink-0" />
             <div className="space-y-1">
               <h2 className={`text-2xl font-black ${elemColors.text}`}>{data.name[locale]}</h2>
               <div className="flex flex-wrap gap-1.5">

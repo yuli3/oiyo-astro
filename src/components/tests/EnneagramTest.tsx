@@ -8,6 +8,7 @@ import AnimatedNumber from '../ui/AnimatedNumber'
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
 import { gaEvent } from '@/lib/analytics/ga-event';
+import ResultSymbol from '../shared/ResultSymbol';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -666,6 +667,7 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
+        <ResultSymbol id="enneagram" fallback={result.emoji} className="mx-auto h-24 w-24" />
         <p className="text-sm text-muted-foreground">{lb.yourType}</p>
         <div
           className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-xl font-bold text-white"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
+import ResultSymbol from '../shared/ResultSymbol';
 import ShareResultButton from '../shared/ShareResultButton';
 import { interpretTCIDeep } from '@/lib/engines/interpretation/engines/tci-deep';
 
@@ -367,6 +368,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
     return (
       <div className="space-y-6">
         <div className="text-center">
+          <ResultSymbol id="tci" fallback="🧭" className="mx-auto mb-3 h-24 w-24" />
           <h1 className="text-2xl font-bold text-gray-900">{t.yourProfile}</h1>
           <p className="text-gray-500 mt-1">{t.title}</p>
         </div>
