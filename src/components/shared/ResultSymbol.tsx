@@ -15,6 +15,8 @@ export type ResultSymbolId =
   | 'maya-inspired'
   | 'celtic-inspired'
   | 'akashic-records'
+  | 'disc'
+  | 'love-language'
 
 const CHINESE_ZODIAC_FILES: Record<string, string> = {
   boar: 'boar', dog: 'dog', dragon: 'dragon', goat: 'goat', horse: 'horse',
@@ -38,8 +40,18 @@ const MBTI_FILES = new Set([
 const ENNEAGRAM_FILES = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9'])
 const BLOOD_TYPE_FILES = new Set(['a', 'b', 'o', 'ab'])
 const FIVE_ELEMENT_FILES = new Set(['wood', 'fire', 'earth', 'metal', 'water'])
+const DISC_FILES = new Set(['d', 'i', 's', 'c'])
+const LOVE_LANGUAGE_FILES = new Set(['words', 'acts', 'gifts', 'time', 'touch'])
 
 export function resultSymbolSrc(id: ResultSymbolId, variant?: string): string {
+  if (id === 'disc' && variant) {
+    const file = variant.toLowerCase()
+    if (DISC_FILES.has(file)) return `/images/result-symbols/disc/${file}.webp`
+  }
+  if (id === 'love-language' && variant) {
+    const file = variant.toLowerCase()
+    if (LOVE_LANGUAGE_FILES.has(file)) return `/images/result-symbols/love-language/${file}.webp`
+  }
   if (id === 'mbti' && variant) {
     const file = variant.toLowerCase()
     if (MBTI_FILES.has(file)) return `/images/result-symbols/mbti/${file}.webp`

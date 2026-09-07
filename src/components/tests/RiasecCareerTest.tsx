@@ -4,6 +4,7 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { recordTestResult } from '@/lib/user/test-results'
 import { gaEvent } from '@/lib/analytics/ga-event'
 import { buildRiasecProfile, type RiasecType } from '../../lib/riasec-profile'
+import RiasecHexagonChart from '../shared/RiasecHexagonChart'
 import {
   buildRiasecResult,
   recordAssessmentResult,
@@ -328,6 +329,7 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
         ))}</div>}
         <p className="text-sm text-muted-foreground">{resultBody}</p>
       </div>
+      <RiasecHexagonChart labels={lb.typeNames} scores={Object.fromEntries(resultProfile.ranked.map(({ type, percent }) => [type, percent])) as Record<RiasecType, number>} title={lb.profile} />
       <div className="rounded-xl border bg-card p-4 space-y-3">
         <h3 className="font-bold text-sm">{lb.profile}</h3>
         <p className="text-xs text-muted-foreground">{lb.rawRange(minScore, maxScore)}</p>

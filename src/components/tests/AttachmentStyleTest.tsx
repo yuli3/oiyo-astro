@@ -14,6 +14,7 @@ import { gaEvent } from "@/lib/analytics/ga-event";
 import { recordTestResult } from "@/lib/user/test-results";
 import RelatedReading from "../shared/RelatedReading";
 import ResultNextSteps from "../shared/ResultNextSteps";
+import AttachmentAxesChart from "../shared/AttachmentAxesChart";
 
 type Locale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const LOCALES: Locale[] = ["ko", "en", "ja", "zh", "fr", "es"];
@@ -177,6 +178,7 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
     <header className="space-y-2 text-center"><p className="text-sm text-muted-foreground">{t.result}</p><h1 className="text-2xl font-bold">{t.title}</h1></header>
     <p className="rounded-2xl border bg-card p-5 text-base leading-7 font-medium text-foreground">{t.conclusion(t.level[anxietyLevel], t.level[avoidanceLevel])}</p>
     <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{t.safety}</p>
+    <AttachmentAxesChart anxiety={result.anxiety} anxietyLabel={t.anxiety} avoidance={result.avoidance} avoidanceLabel={t.avoidance} title={t.result} />
     <div className="grid gap-4 md:grid-cols-2">
       {dimensions.map(({ id, label, value, level }) => {
         const responseMean = (1 + (value * 4) / 100).toFixed(1);

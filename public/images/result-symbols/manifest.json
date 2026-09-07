@@ -74,6 +74,35 @@
         { "id": "water", "file": "water.webp" }
       ]
     },
+    "disc": {
+      "directory": "disc",
+      "width": 512,
+      "height": 512,
+      "generatedAt": "2026-09-07",
+      "generation": "OpenAI built-in image generation; one transparent 2×2 source sheet cropped and optimized with cwebp.",
+      "note": "Four original behavior-style emblems. Letters remain accessible HTML; no official DISC logo or diagnostic claim is embedded.",
+      "items": [
+        { "id": "d", "file": "d.webp", "concept": "decisive forward movement" },
+        { "id": "i", "file": "i.webp", "concept": "outward social energy" },
+        { "id": "s", "file": "s.webp", "concept": "steady shelter and support" },
+        { "id": "c", "file": "c.webp", "concept": "precise structure and quality" }
+      ]
+    },
+    "loveLanguage": {
+      "directory": "love-language",
+      "width": 512,
+      "height": 512,
+      "generatedAt": "2026-09-07",
+      "generation": "OpenAI built-in image generation; one transparent 3×2 source sheet cropped, padded, and optimized with cwebp.",
+      "note": "Five inclusive affection-preference emblems. Touch is represented non-sexually; these are conversation prompts, not relationship diagnoses.",
+      "items": [
+        { "id": "words", "file": "words.webp", "concept": "supportive words" },
+        { "id": "acts", "file": "acts.webp", "concept": "helpful action" },
+        { "id": "gifts", "file": "gifts.webp", "concept": "thoughtful giving" },
+        { "id": "time", "file": "time.webp", "concept": "undivided presence" },
+        { "id": "touch", "file": "touch.webp", "concept": "safe respectful connection" }
+      ]
+    },
     "chineseZodiac": {
       "directory": "chinese-zodiac",
       "width": 512,

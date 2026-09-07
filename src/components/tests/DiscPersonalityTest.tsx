@@ -5,6 +5,7 @@ import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
 } from 'recharts'
 import ShareResultButton from '../shared/ShareResultButton'
+import ResultSymbol from '../shared/ResultSymbol'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type DiscType = 'D' | 'I' | 'S' | 'C'
@@ -715,6 +716,7 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
     <div className="space-y-6">
       <div className="text-center space-y-2">
         <p className="text-sm text-muted-foreground">{lb.yourType}</p>
+        <ResultSymbol id="disc" variant={result.type} fallback={result.type} className="mx-auto h-28 w-28" />
         <div className="inline-flex items-center gap-2 rounded-full px-6 py-2 text-2xl font-bold text-white"
           style={{ backgroundColor: color }}>
           {result.type}

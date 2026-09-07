@@ -27,6 +27,11 @@ describe('resultSymbolSrc', () => {
     expect(resultSymbolSrc('five-elements', 'water')).toBe('/images/result-symbols/five-elements/water.webp')
   })
 
+  it('resolves DISC and love-language result assets', () => {
+    expect(resultSymbolSrc('disc', 'D')).toBe('/images/result-symbols/disc/d.webp')
+    expect(resultSymbolSrc('love-language', 'touch')).toBe('/images/result-symbols/love-language/touch.webp')
+  })
+
   it('maps the application pig key to the boar asset', () => {
     expect(resultSymbolSrc('chinese-zodiac', 'pig')).toBe('/images/result-symbols/chinese-zodiac/boar.webp')
   })

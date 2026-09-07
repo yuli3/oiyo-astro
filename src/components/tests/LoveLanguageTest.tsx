@@ -5,6 +5,7 @@ import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recha
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
 import RelatedReading from '../shared/RelatedReading';
+import ResultSymbol from '../shared/ResultSymbol'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Lang = 'words' | 'acts' | 'gifts' | 'time' | 'touch'
@@ -428,7 +429,7 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
     <div className="space-y-6">
       <div className="text-center space-y-2">
         <p className="text-sm text-muted-foreground">{lb.yourPrimary}</p>
-        <div className="text-5xl">{r.emoji}</div>
+        <ResultSymbol id="love-language" variant={result.primary} fallback={r.emoji} className="mx-auto h-28 w-28" />
         <div className="inline-block rounded-full px-5 py-2 text-xl font-bold text-white"
           style={{ backgroundColor: LANG_COLORS[result.primary] }}>{r.title}</div>
         <p className="text-sm text-muted-foreground leading-relaxed">{r.description}</p>
