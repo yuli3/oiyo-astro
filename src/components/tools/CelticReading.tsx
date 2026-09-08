@@ -5,6 +5,7 @@ import { CELTIC_TREES } from "@/lib/ontology/celtic/types";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import { BirthDateField } from "@/components/shared/BirthDateField";
 import CelticWheel from "./celtic/CelticWheel";
+import ResultSymbol from "../shared/ResultSymbol";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const COPY: Record<Lang, { birthDate: string; tree: string }> = {
@@ -34,7 +35,10 @@ export default function CelticReading({ locale = "ko" }: { locale?: string }) {
 
   return (
     <div className="rounded-2xl bg-emerald-50 p-5">
-      <p className="text-sm font-black text-emerald-950">{t.tree} · {result.name}</p>
+      <div className="flex items-center gap-3">
+        <ResultSymbol id="celtic-inspired" alt="" className="h-16 w-16 shrink-0" />
+        <p className="text-sm font-black text-emerald-950">{t.tree} · {result.name}</p>
+      </div>
       <p className="mt-2 text-sm text-emerald-800">{result.ogham} · {result.celticName}</p>
       <CelticWheel
         locale={lang}

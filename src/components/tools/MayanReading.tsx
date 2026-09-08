@@ -3,6 +3,7 @@
 import { calculateMayanKin } from "@/lib/ontology/mayan/calculator";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import { BirthDateField } from "@/components/shared/BirthDateField";
+import ResultSymbol from "@/components/shared/ResultSymbol";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const COPY: Record<Lang, { birthDate: string; kin: string; tone: string }> = {
@@ -32,7 +33,10 @@ export default function MayanReading({ locale = "ko" }: { locale?: string }) {
 
   return (
     <div className="rounded-2xl bg-amber-50 p-5">
-      <p className="text-sm font-black text-amber-950">{t.kin} {result.kinNumber} · {result.kinName[lang === "ko" ? "ko" : "en"]}</p>
+      <div className="flex items-center gap-3">
+        <ResultSymbol id="maya-inspired" alt="" className="h-16 w-16 shrink-0" />
+        <p className="text-sm font-black text-amber-950">{t.kin} {result.kinNumber} · {result.kinName[lang === "ko" ? "ko" : "en"]}</p>
+      </div>
       <p className="mt-2 text-sm text-amber-800">{t.tone} {result.tone.number} · {result.seal.mayanName}</p>
     </div>
   );
