@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { EarthlyBranch, FiveElement } from "@/lib/ontology/saju/types";
 import { COMPATIBILITY_LENSES, type SymbolicComparisonProfile } from "./types";
-import { allPairEdges, createSymbolicGroupSnapshot, decodeSymbolicGroupSnapshot, encodeSymbolicGroupSnapshot, starEdges } from "./group-snapshot";
+import { allPairEdges, createSymbolicGroupSnapshot, decodeSymbolicGroupSnapshot, encodeSymbolicGroupSnapshot, resolveGroupCenterId, starEdges } from "./group-snapshot";
 
 const profile = (seed: number): SymbolicComparisonProfile => ({
   chineseZodiac: { branch: ([EarthlyBranch.JA, EarthlyBranch.CHUK, EarthlyBranch.IN, EarthlyBranch.MYO] as const)[seed % 4] },
@@ -46,5 +46,11 @@ describe("symbolic group snapshot", () => {
     expect(() => createSymbolicGroupSnapshot(people(11))).toThrow();
     const snapshot = createSymbolicGroupSnapshot(people(3), { now: new Date("2026-08-14T00:00:00Z") });
     expect(decodeSymbolicGroupSnapshot(encodeSymbolicGroupSnapshot(snapshot), new Date("2026-08-22T00:00:01Z"))).toBeNull();
+  });
+
+  it("falls back to a remaining participant when the center is removed", () => {
+    expect(resolveGroupCenterId(people(3), "p-1")).toBe("p-1");
+    expect(resolveGroupCenterId(people(2), "removed")).toBe("p-0");
+    expect(resolveGroupCenterId([], "removed")).toBe("");
   });
 });

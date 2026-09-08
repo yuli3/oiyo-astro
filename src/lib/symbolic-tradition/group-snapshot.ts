@@ -93,6 +93,15 @@ export function allPairEdges(snapshot: SymbolicGroupSnapshot, lens: Compatibilit
   return snapshot.edges.filter((edge) => edge.lens === lens);
 }
 
+export function resolveGroupCenterId(
+  participants: SymbolicGroupParticipant[],
+  preferredCenterId: string,
+): string {
+  return participants.some(({ id }) => id === preferredCenterId)
+    ? preferredCenterId
+    : participants[0]?.id ?? "";
+}
+
 export function encodeSymbolicGroupSnapshot(snapshot: SymbolicGroupSnapshot): string {
   return LZString.compressToEncodedURIComponent(JSON.stringify(snapshot));
 }
