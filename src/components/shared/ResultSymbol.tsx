@@ -96,7 +96,12 @@ export default function ResultSymbol({ alt = '', className = '', fallback, id, v
   return (
     <img
       alt={alt}
-      className={`object-contain ${className}`}
+      // Five of the eight collections (blood type, five elements, DISC, love
+      // language, western zodiac) are mascot art drawn on a solid ground, not
+      // the transparent emblems the manifest claims for the whole set — they
+      // render as beige squares otherwise. The transparent ones have empty
+      // corners, so the same rounding costs them nothing.
+      className={`object-contain rounded-[18%] ${className}`}
       decoding="async"
       draggable={false}
       height={96}

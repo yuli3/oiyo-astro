@@ -60,6 +60,19 @@ function wrapText(
   return lines;
 }
 
+function roundedRectPath(
+  ctx: CanvasRenderingContext2D,
+  x: number, y: number, w: number, h: number, r: number,
+) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
 function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const image = new Image();
@@ -162,7 +175,14 @@ export async function renderShareCard(payload: ShareCardPayload): Promise<Blob> 
     }
   }
   if (symbol) {
+    // Same reason as ResultSymbol: some collections ship on a solid ground, so
+    // an unclipped draw puts a beige square on the card. Transparent art has
+    // empty corners and is unaffected.
+    ctx.save();
+    roundedRectPath(ctx, W / 2 - 135, 385, 270, 270, 48);
+    ctx.clip();
     ctx.drawImage(symbol, W / 2 - 135, 385, 270, 270);
+    ctx.restore();
     y = 735;
   } else if (payload.visual) {
     drawProfileVisual(ctx, payload.visual, 560);

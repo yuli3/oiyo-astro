@@ -4,7 +4,7 @@
   "format": "webp",
   "width": 768,
   "height": 768,
-  "background": "transparent",
+  "background": "mixed — see each collection. Not all assets are transparent.",
   "style": "OIYO tactile paper-cut and translucent glass symbolic emblems",
   "usage": "Decorative result-screen and share-card assets. Keep result labels and explanations as accessible HTML text.",
   "collections": {
@@ -14,23 +14,73 @@
       "height": 512,
       "note": "Sixteen original transparent symbolic miniatures. No official MBTI characters, logos, letters, or type labels are embedded in the artwork.",
       "items": [
-        { "id": "intj", "file": "intj.webp" },
-        { "id": "intp", "file": "intp.webp" },
-        { "id": "entj", "file": "entj.webp" },
-        { "id": "entp", "file": "entp.webp" },
-        { "id": "infj", "file": "infj.webp" },
-        { "id": "infp", "file": "infp.webp" },
-        { "id": "enfj", "file": "enfj.webp" },
-        { "id": "enfp", "file": "enfp.webp" },
-        { "id": "istj", "file": "istj.webp" },
-        { "id": "istp", "file": "istp.webp" },
-        { "id": "estj", "file": "estj.webp" },
-        { "id": "estp", "file": "estp.webp" },
-        { "id": "isfj", "file": "isfj.webp" },
-        { "id": "isfp", "file": "isfp.webp" },
-        { "id": "esfj", "file": "esfj.webp" },
-        { "id": "esfp", "file": "esfp.webp" }
-      ]
+        {
+          "id": "intj",
+          "file": "intj.webp"
+        },
+        {
+          "id": "intp",
+          "file": "intp.webp"
+        },
+        {
+          "id": "entj",
+          "file": "entj.webp"
+        },
+        {
+          "id": "entp",
+          "file": "entp.webp"
+        },
+        {
+          "id": "infj",
+          "file": "infj.webp"
+        },
+        {
+          "id": "infp",
+          "file": "infp.webp"
+        },
+        {
+          "id": "enfj",
+          "file": "enfj.webp"
+        },
+        {
+          "id": "enfp",
+          "file": "enfp.webp"
+        },
+        {
+          "id": "istj",
+          "file": "istj.webp"
+        },
+        {
+          "id": "istp",
+          "file": "istp.webp"
+        },
+        {
+          "id": "estj",
+          "file": "estj.webp"
+        },
+        {
+          "id": "estp",
+          "file": "estp.webp"
+        },
+        {
+          "id": "isfj",
+          "file": "isfj.webp"
+        },
+        {
+          "id": "isfp",
+          "file": "isfp.webp"
+        },
+        {
+          "id": "esfj",
+          "file": "esfj.webp"
+        },
+        {
+          "id": "esfp",
+          "file": "esfp.webp"
+        }
+      ],
+      "background": "transparent",
+      "measuredOn": "2026-09-09"
     },
     "enneagram": {
       "directory": "enneagram",
@@ -38,16 +88,45 @@
       "height": 512,
       "note": "Nine original transparent motivation symbols. Type numerals remain accessible HTML and are not embedded in the artwork.",
       "items": [
-        { "id": "1", "file": "type-1.webp" },
-        { "id": "2", "file": "type-2.webp" },
-        { "id": "3", "file": "type-3.webp" },
-        { "id": "4", "file": "type-4.webp" },
-        { "id": "5", "file": "type-5.webp" },
-        { "id": "6", "file": "type-6.webp" },
-        { "id": "7", "file": "type-7.webp" },
-        { "id": "8", "file": "type-8.webp" },
-        { "id": "9", "file": "type-9.webp" }
-      ]
+        {
+          "id": "1",
+          "file": "type-1.webp"
+        },
+        {
+          "id": "2",
+          "file": "type-2.webp"
+        },
+        {
+          "id": "3",
+          "file": "type-3.webp"
+        },
+        {
+          "id": "4",
+          "file": "type-4.webp"
+        },
+        {
+          "id": "5",
+          "file": "type-5.webp"
+        },
+        {
+          "id": "6",
+          "file": "type-6.webp"
+        },
+        {
+          "id": "7",
+          "file": "type-7.webp"
+        },
+        {
+          "id": "8",
+          "file": "type-8.webp"
+        },
+        {
+          "id": "9",
+          "file": "type-9.webp"
+        }
+      ],
+      "background": "transparent",
+      "measuredOn": "2026-09-09"
     },
     "bloodType": {
       "directory": "blood-type",
@@ -58,11 +137,29 @@
       "style": "OIYO warm olive cute flat 2.5D character with bold charcoal outline on cream paper",
       "note": "Four entertainment-only cultural profile characters of one mascot. No blood, anatomy, laboratory, letters A/B/O/AB, or medical imagery. Labels stay in HTML. Not a diagnosis.",
       "items": [
-        { "id": "a", "file": "a.webp", "concept": "tidy stack of three leaves" },
-        { "id": "b", "file": "b.webp", "concept": "playful pose with one blossom" },
-        { "id": "o", "file": "o.webp", "concept": "open wave inside a round ring" },
-        { "id": "ab", "file": "ab.webp", "concept": "two tiny matching friends together" }
-      ]
+        {
+          "id": "a",
+          "file": "a.webp",
+          "concept": "tidy stack of three leaves"
+        },
+        {
+          "id": "b",
+          "file": "b.webp",
+          "concept": "playful pose with one blossom"
+        },
+        {
+          "id": "o",
+          "file": "o.webp",
+          "concept": "open wave inside a round ring"
+        },
+        {
+          "id": "ab",
+          "file": "ab.webp",
+          "concept": "two tiny matching friends together"
+        }
+      ],
+      "background": "opaque",
+      "measuredOn": "2026-09-09"
     },
     "fiveElements": {
       "directory": "five-elements",
@@ -73,12 +170,34 @@
       "style": "OIYO warm olive cute flat 2.5D character with bold charcoal outline on cream paper",
       "note": "Five original element characters of one mascot. No written Chinese characters. Labels stay in HTML. Reflection, not diagnosis or fortune-telling.",
       "items": [
-        { "id": "wood", "file": "wood.webp", "concept": "growth holding a sapling" },
-        { "id": "fire", "file": "fire.webp", "concept": "warmth holding a lantern" },
-        { "id": "earth", "file": "earth.webp", "concept": "ground sitting on soil with a pebble" },
-        { "id": "metal", "file": "metal.webp", "concept": "clarity holding an unlettered bell" },
-        { "id": "water", "file": "water.webp", "concept": "flow sitting in a small puddle" }
-      ]
+        {
+          "id": "wood",
+          "file": "wood.webp",
+          "concept": "growth holding a sapling"
+        },
+        {
+          "id": "fire",
+          "file": "fire.webp",
+          "concept": "warmth holding a lantern"
+        },
+        {
+          "id": "earth",
+          "file": "earth.webp",
+          "concept": "ground sitting on soil with a pebble"
+        },
+        {
+          "id": "metal",
+          "file": "metal.webp",
+          "concept": "clarity holding an unlettered bell"
+        },
+        {
+          "id": "water",
+          "file": "water.webp",
+          "concept": "flow sitting in a small puddle"
+        }
+      ],
+      "background": "opaque",
+      "measuredOn": "2026-09-09"
     },
     "disc": {
       "directory": "disc",
@@ -89,11 +208,29 @@
       "style": "OIYO warm olive cute flat 2.5D character with bold charcoal outline on cream paper",
       "note": "Four original behavior-style characters of one mascot. Letters D/I/S/C remain accessible HTML; no official DISC logo or diagnostic claim is embedded.",
       "items": [
-        { "id": "d", "file": "d.webp", "concept": "decisive forward movement with a small flag" },
-        { "id": "i", "file": "i.webp", "concept": "outward social energy waving with sparkles" },
-        { "id": "s", "file": "s.webp", "concept": "steady shelter wrapping a smaller friend" },
-        { "id": "c", "file": "c.webp", "concept": "precise structure lining up three blocks" }
-      ]
+        {
+          "id": "d",
+          "file": "d.webp",
+          "concept": "decisive forward movement with a small flag"
+        },
+        {
+          "id": "i",
+          "file": "i.webp",
+          "concept": "outward social energy waving with sparkles"
+        },
+        {
+          "id": "s",
+          "file": "s.webp",
+          "concept": "steady shelter wrapping a smaller friend"
+        },
+        {
+          "id": "c",
+          "file": "c.webp",
+          "concept": "precise structure lining up three blocks"
+        }
+      ],
+      "background": "opaque",
+      "measuredOn": "2026-09-09"
     },
     "loveLanguage": {
       "directory": "love-language",
@@ -104,12 +241,34 @@
       "style": "OIYO warm olive cute flat 2.5D character with bold charcoal outline on cream paper",
       "note": "Five inclusive affection-preference characters of one mascot. Touch is a wholesome hug, not sexual. Conversation prompts, not relationship diagnoses. Labels stay in HTML.",
       "items": [
-        { "id": "words", "file": "words.webp", "concept": "supportive words as an empty heart speech bubble" },
-        { "id": "acts", "file": "acts.webp", "concept": "helpful action watering a seedling" },
-        { "id": "gifts", "file": "gifts.webp", "concept": "thoughtful giving of a small wrapped box" },
-        { "id": "time", "file": "time.webp", "concept": "undivided presence sharing tea" },
-        { "id": "touch", "file": "touch.webp", "concept": "safe respectful connection as a gentle hug" }
-      ]
+        {
+          "id": "words",
+          "file": "words.webp",
+          "concept": "supportive words as an empty heart speech bubble"
+        },
+        {
+          "id": "acts",
+          "file": "acts.webp",
+          "concept": "helpful action watering a seedling"
+        },
+        {
+          "id": "gifts",
+          "file": "gifts.webp",
+          "concept": "thoughtful giving of a small wrapped box"
+        },
+        {
+          "id": "time",
+          "file": "time.webp",
+          "concept": "undivided presence sharing tea"
+        },
+        {
+          "id": "touch",
+          "file": "touch.webp",
+          "concept": "safe respectful connection as a gentle hug"
+        }
+      ],
+      "background": "opaque",
+      "measuredOn": "2026-09-09"
     },
     "chineseZodiac": {
       "directory": "chinese-zodiac",
@@ -117,19 +276,57 @@
       "height": 512,
       "note": "Twelve individual transparent icons. The goat image is intentionally text-free so locale copy can use the culturally appropriate sheep/goat term.",
       "items": [
-        { "id": "rat", "file": "rat.webp" },
-        { "id": "ox", "file": "ox.webp" },
-        { "id": "tiger", "file": "tiger.webp" },
-        { "id": "rabbit", "file": "rabbit.webp" },
-        { "id": "dragon", "file": "dragon.webp" },
-        { "id": "snake", "file": "snake.webp" },
-        { "id": "horse", "file": "horse.webp" },
-        { "id": "goat", "file": "goat.webp" },
-        { "id": "monkey", "file": "monkey.webp" },
-        { "id": "rooster", "file": "rooster.webp" },
-        { "id": "dog", "file": "dog.webp" },
-        { "id": "boar", "file": "boar.webp" }
-      ]
+        {
+          "id": "rat",
+          "file": "rat.webp"
+        },
+        {
+          "id": "ox",
+          "file": "ox.webp"
+        },
+        {
+          "id": "tiger",
+          "file": "tiger.webp"
+        },
+        {
+          "id": "rabbit",
+          "file": "rabbit.webp"
+        },
+        {
+          "id": "dragon",
+          "file": "dragon.webp"
+        },
+        {
+          "id": "snake",
+          "file": "snake.webp"
+        },
+        {
+          "id": "horse",
+          "file": "horse.webp"
+        },
+        {
+          "id": "goat",
+          "file": "goat.webp"
+        },
+        {
+          "id": "monkey",
+          "file": "monkey.webp"
+        },
+        {
+          "id": "rooster",
+          "file": "rooster.webp"
+        },
+        {
+          "id": "dog",
+          "file": "dog.webp"
+        },
+        {
+          "id": "boar",
+          "file": "boar.webp"
+        }
+      ],
+      "background": "transparent",
+      "measuredOn": "2026-09-09"
     },
     "westernZodiac": {
       "directory": "western-zodiac",
@@ -140,35 +337,156 @@
       "style": "navy astronomical star chart, gold-olive constellation lines, no cute mascot",
       "note": "Twelve celestial medallions. Decorative reflective symbolism only; not a prediction claim. Gemini is two pillars of light, Virgo is grain and a leaf, Aquarius is a pouring vessel. Labels stay in HTML.",
       "items": [
-        { "id": "aries", "file": "aries.webp", "concept": "ram horns in star lines" },
-        { "id": "taurus", "file": "taurus.webp", "concept": "bull head in star lines" },
-        { "id": "gemini", "file": "gemini.webp", "concept": "two star pillars linked by light" },
-        { "id": "cancer", "file": "cancer.webp", "concept": "crab in star lines" },
-        { "id": "leo", "file": "leo.webp", "concept": "lion in star lines" },
-        { "id": "virgo", "file": "virgo.webp", "concept": "grain sheaf and leaf" },
-        { "id": "libra", "file": "libra.webp", "concept": "balance scales" },
-        { "id": "scorpio", "file": "scorpio.webp", "concept": "scorpion in star lines" },
-        { "id": "sagittarius", "file": "sagittarius.webp", "concept": "bow and arrow" },
-        { "id": "capricorn", "file": "capricorn.webp", "concept": "sea-goat in star lines" },
-        { "id": "aquarius", "file": "aquarius.webp", "concept": "pouring vessel" },
-        { "id": "pisces", "file": "pisces.webp", "concept": "two fish linked by stars" }
-      ]
+        {
+          "id": "aries",
+          "file": "aries.webp",
+          "concept": "ram horns in star lines"
+        },
+        {
+          "id": "taurus",
+          "file": "taurus.webp",
+          "concept": "bull head in star lines"
+        },
+        {
+          "id": "gemini",
+          "file": "gemini.webp",
+          "concept": "two star pillars linked by light"
+        },
+        {
+          "id": "cancer",
+          "file": "cancer.webp",
+          "concept": "crab in star lines"
+        },
+        {
+          "id": "leo",
+          "file": "leo.webp",
+          "concept": "lion in star lines"
+        },
+        {
+          "id": "virgo",
+          "file": "virgo.webp",
+          "concept": "grain sheaf and leaf"
+        },
+        {
+          "id": "libra",
+          "file": "libra.webp",
+          "concept": "balance scales"
+        },
+        {
+          "id": "scorpio",
+          "file": "scorpio.webp",
+          "concept": "scorpion in star lines"
+        },
+        {
+          "id": "sagittarius",
+          "file": "sagittarius.webp",
+          "concept": "bow and arrow"
+        },
+        {
+          "id": "capricorn",
+          "file": "capricorn.webp",
+          "concept": "sea-goat in star lines"
+        },
+        {
+          "id": "aquarius",
+          "file": "aquarius.webp",
+          "concept": "pouring vessel"
+        },
+        {
+          "id": "pisces",
+          "file": "pisces.webp",
+          "concept": "two fish linked by stars"
+        }
+      ],
+      "background": "opaque",
+      "measuredOn": "2026-09-09"
     }
   },
   "assets": [
-    { "id": "mbti", "file": "mbti.webp", "concept": "four preference pathways", "note": "Original illustration; not an official MBTI logo." },
-    { "id": "big-five", "file": "big-five.webp", "concept": "five broad dimensions", "note": "Non-diagnostic self-reflection symbol." },
-    { "id": "enneagram", "file": "enneagram.webp", "concept": "nine connected perspectives", "note": "Original nonliteral geometry; not an official logo." },
-    { "id": "hexaco", "file": "hexaco.webp", "concept": "six faceted dimensions", "note": "Non-diagnostic self-reflection symbol." },
-    { "id": "tci", "file": "tci.webp", "concept": "temperament and character currents", "note": "Non-diagnostic self-reflection symbol." },
-    { "id": "blood-type", "file": "blood-type.webp", "concept": "four playful cultural profiles", "note": "Entertainment-only cultural symbol; not medical imagery or guidance." },
-    { "id": "saju", "file": "saju.webp", "concept": "four seasonal pillars", "note": "Contemporary reflective symbol; not a historical artifact or claim of certainty." },
-    { "id": "palja", "file": "palja.webp", "concept": "eight tiles in four pairs", "note": "Contemporary reflective symbol; contains no written characters." },
-    { "id": "five-elements", "file": "five-elements.webp", "concept": "wood, fire, earth, metal, and water cycle", "note": "Contemporary reflective symbol." },
-    { "id": "western-zodiac", "file": "western-zodiac.webp", "concept": "twelve celestial perspectives", "note": "Reflective symbolism; not a prediction claim." },
-    { "id": "chinese-zodiac", "file": "chinese-zodiac.webp", "concept": "twelve-animal cycle", "note": "Contemporary respectful illustration; not a historical artifact." },
-    { "id": "maya-inspired", "file": "maya-inspired.webp", "concept": "stepped solar cycle", "note": "Contemporary Maya-inspired geometry; not an authentic glyph, deity, inscription, calendar, or artifact." },
-    { "id": "celtic-inspired", "file": "celtic-inspired.webp", "concept": "interwoven seasonal continuity", "note": "Contemporary Celtic-inspired form; not a copy of a sacred or historical symbol." },
-    { "id": "akashic-records", "file": "akashic-records.webp", "concept": "open book of memory and possibility", "note": "Imaginative metaphor for reflection; not a supernatural certainty claim." }
-  ]
+    {
+      "id": "mbti",
+      "file": "mbti.webp",
+      "concept": "four preference pathways",
+      "note": "Original illustration; not an official MBTI logo."
+    },
+    {
+      "id": "big-five",
+      "file": "big-five.webp",
+      "concept": "five broad dimensions",
+      "note": "Non-diagnostic self-reflection symbol."
+    },
+    {
+      "id": "enneagram",
+      "file": "enneagram.webp",
+      "concept": "nine connected perspectives",
+      "note": "Original nonliteral geometry; not an official logo."
+    },
+    {
+      "id": "hexaco",
+      "file": "hexaco.webp",
+      "concept": "six faceted dimensions",
+      "note": "Non-diagnostic self-reflection symbol."
+    },
+    {
+      "id": "tci",
+      "file": "tci.webp",
+      "concept": "temperament and character currents",
+      "note": "Non-diagnostic self-reflection symbol."
+    },
+    {
+      "id": "blood-type",
+      "file": "blood-type.webp",
+      "concept": "four playful cultural profiles",
+      "note": "Entertainment-only cultural symbol; not medical imagery or guidance."
+    },
+    {
+      "id": "saju",
+      "file": "saju.webp",
+      "concept": "four seasonal pillars",
+      "note": "Contemporary reflective symbol; not a historical artifact or claim of certainty."
+    },
+    {
+      "id": "palja",
+      "file": "palja.webp",
+      "concept": "eight tiles in four pairs",
+      "note": "Contemporary reflective symbol; contains no written characters."
+    },
+    {
+      "id": "five-elements",
+      "file": "five-elements.webp",
+      "concept": "wood, fire, earth, metal, and water cycle",
+      "note": "Contemporary reflective symbol."
+    },
+    {
+      "id": "western-zodiac",
+      "file": "western-zodiac.webp",
+      "concept": "twelve celestial perspectives",
+      "note": "Reflective symbolism; not a prediction claim."
+    },
+    {
+      "id": "chinese-zodiac",
+      "file": "chinese-zodiac.webp",
+      "concept": "twelve-animal cycle",
+      "note": "Contemporary respectful illustration; not a historical artifact."
+    },
+    {
+      "id": "maya-inspired",
+      "file": "maya-inspired.webp",
+      "concept": "stepped solar cycle",
+      "note": "Contemporary Maya-inspired geometry; not an authentic glyph, deity, inscription, calendar, or artifact."
+    },
+    {
+      "id": "celtic-inspired",
+      "file": "celtic-inspired.webp",
+      "concept": "interwoven seasonal continuity",
+      "note": "Contemporary Celtic-inspired form; not a copy of a sacred or historical symbol."
+    },
+    {
+      "id": "akashic-records",
+      "file": "akashic-records.webp",
+      "concept": "open book of memory and possibility",
+      "note": "Imaginative metaphor for reflection; not a supernatural certainty claim."
+    }
+  ],
+  "backgroundNote": "2026-09-09 실측: 81개 중 31개에 알파 채널이 없다. 마스코트 캐릭터 계열은 단색 바탕 위에 그려져 있어 투명이 아니다. 최상위 background 가 전부 transparent 라고 선언하고 있었고 그것은 사실이 아니었다. 렌더링 쪽(ResultSymbol, share-result-image)은 둥근 클립을 적용해 두 계열을 함께 쓴다 — 투명 자산은 모서리가 비어 있어 영향이 없다."
 }
