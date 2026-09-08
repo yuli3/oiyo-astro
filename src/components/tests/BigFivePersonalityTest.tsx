@@ -9,7 +9,7 @@ import { readResultCode, writeResultCode, clearResultCode } from '../../lib/resu
 import { recordTestResult } from '@/lib/user/test-results';
 import { gaEvent } from '@/lib/analytics/ga-event';
 import { getBigFiveResultSummary } from './big-five-result-summary'
-import ResultSymbol from '../shared/ResultSymbol'
+import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
 import {
   bigFiveClassifications,
   bigFivePlugin,
@@ -490,6 +490,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
         heading={lb.title}
         resultTitle={`${DIM_META[dominant][locale].label} ${scores[dominant]}%`}
         emoji="🌊"
+        symbolSrc={resultSymbolSrc('big-five')}
         description={`${lb.secondaryTrait}: ${DIM_META[secondary][locale].label} ${scores[secondary]}%`}
       />
       <CopyResultLink locale={locale} />

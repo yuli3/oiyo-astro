@@ -8,7 +8,7 @@ import AnimatedNumber from '../ui/AnimatedNumber'
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
 import { gaEvent } from '@/lib/analytics/ga-event';
-import ResultSymbol from '../shared/ResultSymbol';
+import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -735,6 +735,7 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
         resultTitle={`${lb.typeLabel} ${dominant} — ${result.name}`}
         emoji={result.emoji}
         description={result.tagline}
+        symbolSrc={resultSymbolSrc('enneagram', dominant)}
       />
       <CopyResultLink locale={lp} />
 

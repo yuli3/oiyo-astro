@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
-import ResultSymbol from '../shared/ResultSymbol';
+import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol';
 import ShareResultButton from '../shared/ShareResultButton';
 import { interpretTCIDeep } from '@/lib/engines/interpretation/engines/tci-deep';
 
@@ -400,6 +400,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           locale={locale}
           heading={t.title}
           emoji={DIMENSIONS[(Object.keys(DIMENSIONS) as DimensionKey[]).sort((a, b) => scores[b] - scores[a])[0]].emoji}
+          symbolSrc={resultSymbolSrc('tci')}
           resultTitle={(() => { const top = (Object.keys(DIMENSIONS) as DimensionKey[]).sort((a, b) => scores[b] - scores[a])[0]; return `${DIMENSIONS[top].label[locale]} ${scores[top]}%`; })()}
           description={(Object.keys(DIMENSIONS) as DimensionKey[]).sort((a, b) => scores[b] - scores[a]).slice(1, 3).map(d => `${DIMENSIONS[d].label[locale]} ${scores[d]}%`).join(' · ')}
         />

@@ -14,7 +14,7 @@ import {
 } from '@/assessments';
 import { interpretMBTIDeep } from '@/lib/engines/interpretation/engines/mbti-deep';
 import { Questionnaire } from '@/components/ui/questionnaire';
-import ResultSymbol from '../shared/ResultSymbol';
+import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol';
 
 export type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -412,6 +412,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           resultTitle={title}
           emoji={profile.emoji}
           description={profile.desc[l]}
+          symbolSrc={resultSymbolSrc('mbti', mbtiType)}
           onShareClick={() => gaEvent('share_click', { test_id: 'mbti' })}
         />
         <CopyResultLink locale={l} onCopyClick={() => gaEvent('share_click', { test_id: 'mbti' })} />

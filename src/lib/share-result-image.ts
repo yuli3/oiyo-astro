@@ -149,9 +149,20 @@ export async function renderShareCard(payload: ShareCardPayload): Promise<Blob> 
 
   // ── Result visual ──
   let y = 470;
+  // The symbol is a network image, so it can fail for reasons that have nothing
+  // to do with the result (offline, cache miss, a variant we forgot to ship).
+  // Losing the whole share card over that is worse than losing the illustration,
+  // so fall through to the emoji instead of rejecting.
+  let symbol: HTMLImageElement | null = null;
   if (payload.symbolSrc) {
-    const image = await loadImage(payload.symbolSrc);
-    ctx.drawImage(image, W / 2 - 135, 385, 270, 270);
+    try {
+      symbol = await loadImage(payload.symbolSrc);
+    } catch {
+      symbol = null;
+    }
+  }
+  if (symbol) {
+    ctx.drawImage(symbol, W / 2 - 135, 385, 270, 270);
     y = 735;
   } else if (payload.visual) {
     drawProfileVisual(ctx, payload.visual, 560);

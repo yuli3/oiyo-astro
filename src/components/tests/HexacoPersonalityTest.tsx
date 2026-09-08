@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
-import ResultSymbol from '../shared/ResultSymbol';
+import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol';
 import ShareResultButton from '../shared/ShareResultButton';
 import { interpretHexacoDeep } from '@/lib/engines/interpretation/engines/hexaco-deep';
 
@@ -374,6 +374,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
           locale={locale}
           heading={t.title}
           emoji={DIM_INFO[[...DIM_ORDER].sort((a, b) => scores[b] - scores[a])[0]].emoji}
+          symbolSrc={resultSymbolSrc('hexaco')}
           resultTitle={(() => { const top = [...DIM_ORDER].sort((a, b) => scores[b] - scores[a])[0]; return `${DIM_INFO[top].label[locale]} ${scores[top]}%`; })()}
           description={[...DIM_ORDER].sort((a, b) => scores[b] - scores[a]).slice(1, 3).map(d => `${DIM_INFO[d].label[locale]} ${scores[d]}%`).join(' · ')}
         />
