@@ -92,15 +92,16 @@
       "directory": "love-language",
       "width": 512,
       "height": 512,
-      "generatedAt": "2026-09-07",
-      "generation": "OpenAI built-in image generation; one transparent 3×2 source sheet cropped, padded, and optimized with cwebp.",
-      "note": "Five inclusive affection-preference emblems. Touch is represented non-sexually; these are conversation prompts, not relationship diagnoses.",
+      "generatedAt": "2026-09-08",
+      "generation": "xAI Imagine image_gen canonical olive seed-sprout mascot, then image_edit poses; sharp 512 WebP q82. No locale text in artwork.",
+      "style": "OIYO warm olive cute flat 2.5D character with bold charcoal outline on cream paper",
+      "note": "Five inclusive affection-preference characters of one mascot. Touch is a wholesome hug, not sexual. Conversation prompts, not relationship diagnoses. Labels stay in HTML.",
       "items": [
-        { "id": "words", "file": "words.webp", "concept": "supportive words" },
-        { "id": "acts", "file": "acts.webp", "concept": "helpful action" },
-        { "id": "gifts", "file": "gifts.webp", "concept": "thoughtful giving" },
-        { "id": "time", "file": "time.webp", "concept": "undivided presence" },
-        { "id": "touch", "file": "touch.webp", "concept": "safe respectful connection" }
+        { "id": "words", "file": "words.webp", "concept": "supportive words as an empty heart speech bubble" },
+        { "id": "acts", "file": "acts.webp", "concept": "helpful action watering a seedling" },
+        { "id": "gifts", "file": "gifts.webp", "concept": "thoughtful giving of a small wrapped box" },
+        { "id": "time", "file": "time.webp", "concept": "undivided presence sharing tea" },
+        { "id": "touch", "file": "touch.webp", "concept": "safe respectful connection as a gentle hug" }
       ]
     },
     "chineseZodiac": {
