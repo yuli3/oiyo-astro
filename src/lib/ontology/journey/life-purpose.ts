@@ -69,7 +69,7 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 개념 사전 (wiki.oiyo.net)',
+          heading: '📚 개념 사전',
           items: [
             { href: o('archetypes/about'), label: '원형(아키타입)이란', external: true },
             { href: o('enneagram/test'), label: '에니어그램의 기원과 구조', external: true },
@@ -153,7 +153,7 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 概念辞典 (wiki.oiyo.net)',
+          heading: '📚 概念辞典',
           items: [
             { href: o('archetypes/about'), label: 'アーキタイプ(元型)とは', external: true },
             { href: o('enneagram/test'), label: 'エニアグラムの起源と構造', external: true },
@@ -237,7 +237,7 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 概念词典 (wiki.oiyo.net)',
+          heading: '📚 概念词典',
           items: [
             { href: o('archetypes/about'), label: '什么是原型', external: true },
             { href: o('enneagram/test'), label: '九型人格的起源与结构', external: true },
@@ -320,7 +320,7 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Dictionnaire (wiki.oiyo.net)',
+          heading: '📚 Dictionnaire',
           items: [
             { href: o('archetypes/about'), label: 'Que sont les archétypes', external: true },
             { href: o('enneagram/test'), label: 'Origine et structure de l\'ennéagramme', external: true },
@@ -403,7 +403,7 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Diccionario (wiki.oiyo.net)',
+          heading: '📚 Diccionario',
           items: [
             { href: o('archetypes/about'), label: 'Qué son los arquetipos', external: true },
             { href: o('enneagram/test'), label: 'Origen y estructura del eneagrama', external: true },
@@ -487,7 +487,7 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Concept dictionary (wiki.oiyo.net)',
+          heading: '📚 Concept dictionary',
           items: [
             { href: o('archetypes/about'), label: 'What are archetypes', external: true },
             { href: o('enneagram/test'), label: 'Origin & structure of the Enneagram', external: true },

@@ -8,7 +8,6 @@ import { features } from "@/registry/features";
 export const FAMILY_SITES = [
   { host: "oiyo.net", localePath: true, name: "OIYO tests", tag: { en: "Psychology tests", es: "Tests psicológicos", fr: "Tests psychologiques", ja: "心理テスト", ko: "심리테스트", zh: "心理测试" } },
   { host: "blog.oiyo.net", localePath: true, name: "OIYO blog", tag: { en: "Courses", es: "Cursos", fr: "Cours", ja: "講座", ko: "강의", zh: "课程" } },
-  { host: "wiki.oiyo.net", localePath: true, name: "OIYO wiki", tag: { en: "Knowledge repository", es: "Archivo de conocimiento", fr: "Réserve de connaissances", ja: "知識倉庫", ko: "지식창고", zh: "知识库" } },
   { host: "game.oiyo.net", localePath: true, name: "OIYO game", tag: { en: "Games", es: "Juegos", fr: "Jeux", ja: "ゲーム", ko: "게임", zh: "游戏" } },
   { host: "news.oiyo.net", localePath: false, name: "OIYO news", tag: { en: "News & AI", es: "Noticias e IA", fr: "Actualités et IA", ja: "ニュース・AI", ko: "뉴스·AI", zh: "新闻·AI" } },
 ] as const;

@@ -83,7 +83,6 @@ function createPlugin(
       routes: {
         blog: "https://blog.oiyo.net/{locale}/riasec-career-guide/",
         execution: quick ? "/{locale}/riasec-quick" : "/{locale}/riasec-career-test",
-        wiki: "https://wiki.oiyo.net/{locale}/meaning-of-riasec/",
       },
       status: "review",
       tags: ["career", "holland-code", "oiyo-original-items", quick ? "quick" : "full"],

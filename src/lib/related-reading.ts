@@ -28,17 +28,9 @@ const O = (slug: string, label: L3, locales?: string[]): ReadingLink => ({ site:
 const B = (slug: string, label: L3, locales?: string[]): ReadingLink => ({ site: 'blog', slug, label, locales });
 
 const wikiMbti = O('mbti/about', { ko: 'MBTI란 무엇인가', en: 'What is MBTI', ja: 'MBTIとは何か' });
-const wikiSelfCompassion = W('meaning-of-self-compassion', { ko: '자기 자비란', en: 'What is self-compassion', ja: 'セルフコンパッションとは' });
-const wikiSelfEfficacy = W('meaning-of-self-efficacy', { ko: '자기효능감이란', en: 'What is self-efficacy', ja: '自己効力感とは' });
-const wikiEmotionReg = W('meaning-of-emotion-regulation', { ko: '감정 조절이란', en: 'What is emotion regulation', ja: '感情調節とは' });
-const wikiRumination = W('meaning-of-rumination', { ko: '반추 사고란', en: 'What is rumination', ja: '反芻思考とは' });
-const wikiDopamine = W('meaning-of-dopamine-loop', { ko: '도파민 루프란', en: 'The dopamine loop', ja: 'ドーパミンループとは' });
-const wikiHelplessness = W('meaning-of-learned-helplessness', { ko: '학습된 무기력이란', en: 'Learned helplessness', ja: '学習性無力感とは' });
-const wikiBehavioralAct = W('meaning-of-behavioral-activation', { ko: '행동 활성화 기법', en: 'Behavioral activation', ja: '行動活性化とは' });
+const wikiEmotionReg = O('emotion-regulation/about', { ko: '감정 조절이란', en: 'What is emotion regulation', ja: '感情調節とは' });
 const wikiBiases = O('cognitive-bias/about', { ko: '인지 편향 사전', en: 'Cognitive biases', ja: '認知バイアスとは' });
-const wikiDecisionFatigue = W('meaning-of-decision-fatigue', { ko: '결정 피로란', en: 'Decision fatigue', ja: '決定疲れとは' });
 const wikiAttachment = O('attachment-style/about', { ko: '애착 이론이란', en: 'Attachment theory', ja: '愛着理論とは' });
-const wikiAnxiety = W('meaning-of-anxiety', { ko: '불안이란 무엇인가', en: 'What is anxiety', ja: '不安とは何か' });
 
 const blogDarkTriad = B('dark-triad-human-nature-shadow', { ko: '다크 트라이어드 — 인간 본성의 그림자', en: 'The Dark Triad — shadow of human nature', ja: 'ダークトライアド — 人間性の影' });
 const blogAbilene = B('abilene-paradox-groupthink', { ko: '애빌린 패러독스와 집단사고', en: 'The Abilene paradox & groupthink', ja: 'アビリーンのパラドックスと集団思考' });
@@ -54,13 +46,12 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
     wikiMbti,
   ],
   'mbti-career': [
-    W('meaning-of-riasec', { ko: 'RIASEC 직업 흥미 모델', en: 'The RIASEC career model', ja: 'RIASEC職業興味モデル' }),
     blogPurpose,
     wikiMbti,
   ],
   big5: [
     O('big5/about', { ko: '빅파이브 5요인 모델', en: 'The Big Five model', ja: 'ビッグファイブ5因子モデル' }),
-    W('meaning-of-hexaco', { ko: 'HEXACO 6요인 모델', en: 'The HEXACO model', ja: 'HEXACO 6因子モデル' }),
+    O('hexaco/about', { ko: 'HEXACO 6요인 모델', en: 'The HEXACO model', ja: 'HEXACO 6因子モデル' }),
     O('evolving-self-saju-mbti', { ko: '사주와 MBTI로 보는 진화하는 나', en: 'The evolving self: Saju & MBTI', ja: '四柱とMBTIで見る進化する自分' }),
   ],
   enneagram: [
@@ -80,27 +71,19 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
   ],
   'self-esteem': [
     blogLookingGlass,
-    wikiSelfEfficacy,
-    wikiSelfCompassion,
   ],
-  burnout: [blogBurnoutDopamine, O('burnout/about', { ko: '번아웃이란 무엇인가', en: 'What is burnout', ja: 'バーンアウトとは' }), wikiDopamine],
+  burnout: [blogBurnoutDopamine, O('burnout/about', { ko: '번아웃이란 무엇인가', en: 'What is burnout', ja: 'バーンアウトとは' })],
   sleep: [
     B('chronotypes-sleep-biology-optimization', { ko: '크로노타입 — 수면 생물학 최적화', en: 'Chronotypes & sleep biology', ja: 'クロノタイプと睡眠生物学' }),
-    W('meaning-of-chronotypes', { ko: '크로노타입이란', en: 'What are chronotypes', ja: 'クロノタイプとは' }),
-    W('meaning-of-sleep-debt', { ko: '수면 부채란', en: 'What is sleep debt', ja: '睡眠負債とは' }),
+    O('chronotypes/about', { ko: '크로노타입이란', en: 'What are chronotypes', ja: 'クロノタイプとは' }),
   ],
   adhd: [
-    W('meaning-of-adhd', { ko: 'ADHD란 무엇인가', en: 'What is ADHD', ja: 'ADHDとは何か' }),
-    W('meaning-of-executive-function', { ko: '실행 기능이란', en: 'Executive function', ja: '実行機能とは' }),
-    wikiDopamine,
   ],
-  anxiety: [wikiAnxiety, wikiRumination, wikiEmotionReg],
-  'social-anxiety': [wikiAnxiety, blogLookingGlass, wikiSelfCompassion],
-  depression: [wikiHelplessness, wikiBehavioralAct, wikiRumination],
+  anxiety: [ wikiEmotionReg],
+  'social-anxiety': [ blogLookingGlass],
   narcissism: [
     B('mythology-narcissus-echo-self-love', { ko: '나르키소스와 에코 — 자기애의 신화', en: 'Narcissus & Echo — the myth of self-love', ja: 'ナルキッソスとエコー — 自己愛の神話' }),
     blogDarkTriad,
-    wikiSelfCompassion,
   ],
   anger: [
     O('jung-shadow-psychology', { ko: '융의 그림자 심리학', en: "Jung's shadow psychology", ja: 'ユングの影の心理学' }),
@@ -110,32 +93,27 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
   empathy: [
     B('magazine-empathy-types-and-test', { ko: '인지·정서·자비적 공감 이해하기', en: 'Cognitive, affective & compassionate empathy', ja: '認知・情動・思いやりの共感を理解する' }),
     B('empathy-types-and-boundaries', { ko: '공감 유형과 건강한 경계', en: 'Empathy styles & healthy boundaries', ja: '' }, ['ko', 'en']),
-    wikiSelfCompassion,
   ],
   eq: [
     wikiEmotionReg,
-    W('meaning-of-tci', { ko: 'TCI 기질·성격 검사란', en: 'The TCI model', ja: 'TCI気質・性格検査とは' }),
+    O('tci/about', { ko: 'TCI 기질·성격 검사란', en: 'The TCI model', ja: 'TCI気質・性格検査とは' }),
     B('mbti-loops-grips-mental-rut', { ko: 'MBTI 루프와 그립 — 마음의 수렁', en: 'MBTI loops & grips', ja: 'MBTIループとグリップ' }),
   ],
   'inner-strength': [
     O('viktor-frankl-purpose', { ko: '빅터 프랭클 — 의미를 찾아서', en: 'Viktor Frankl — the search for meaning', ja: 'フランクル — 意味を求めて' }),
     blogPurpose,
-    wikiSelfEfficacy,
   ],
   'lazy-perfectionist': [
-    W('meaning-of-lazy-perfectionism', { ko: '게으른 완벽주의란', en: 'Lazy perfectionism', ja: '怠け完璧主義とは' }),
-    W('meaning-of-implementation-intention', { ko: '실행 의도 기법', en: 'Implementation intentions', ja: '実行意図とは' }),
+    O('habit-builder/about', { ko: '실행 의도 기법', en: 'Implementation intentions', ja: '実行意図とは' }),
     B('dont-postpone-yourself', { ko: '자신을 미루지 마세요', en: "Don't postpone yourself", ja: '自分を後回しにしない' }),
   ],
-  lethargy: [wikiHelplessness, wikiBehavioralAct, blogBurnoutDopamine],
+  lethargy: [ blogBurnoutDopamine],
   commute: [
-    W('meaning-of-cognitive-load', { ko: '인지 부하란', en: 'Cognitive load', ja: '認知負荷とは' }),
-    wikiDecisionFatigue,
+    O('cognitive-load/about', { ko: '인지 부하란', en: 'Cognitive load', ja: '認知負荷とは' }),
     O('flow-state-happiness-psychology', { ko: '몰입과 행복의 심리학', en: 'Flow & the psychology of happiness', ja: 'フローと幸福の心理学' }),
   ],
   investor: [
     wikiBiases,
-    wikiDecisionFatigue,
   ],
   political: [blogAbilene, wikiBiases, blogDarkTriad],
   authoritarian: [blogDarkTriad, wikiBiases, blogAbilene],

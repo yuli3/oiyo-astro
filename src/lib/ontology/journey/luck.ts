@@ -69,7 +69,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 개념 사전 (wiki.oiyo.net)',
+          heading: '📚 개념 사전',
           items: [
             { href: o('tarot/reading'), label: '타로 메이저 아르카나', external: true },
           ],
@@ -151,7 +151,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 概念辞典 (wiki.oiyo.net)',
+          heading: '📚 概念辞典',
           items: [
             { href: o('archetypes/about'), label: 'アーキタイプ(元型)とは', external: true },
           ],
@@ -233,7 +233,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 概念词典 (wiki.oiyo.net)',
+          heading: '📚 概念词典',
           items: [
             { href: o('archetypes/about'), label: '什么是原型', external: true },
           ],
@@ -315,7 +315,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Dictionnaire (wiki.oiyo.net)',
+          heading: '📚 Dictionnaire',
           items: [
             { href: o('archetypes/about'), label: 'Que sont les archétypes', external: true },
           ],
@@ -397,7 +397,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Diccionario (wiki.oiyo.net)',
+          heading: '📚 Diccionario',
           items: [
             { href: o('archetypes/about'), label: 'Qué son los arquetipos', external: true },
           ],
@@ -479,7 +479,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Concept dictionary (wiki.oiyo.net)',
+          heading: '📚 Concept dictionary',
           items: [
             { href: o('archetypes/about'), label: 'What are archetypes', external: true },
           ],

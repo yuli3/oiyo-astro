@@ -34,11 +34,9 @@ export const GET: APIRoute = async () => {
     network: {
       description: "Part of the Oiyo network. Canonical route owners are selected per user intent rather than by content format.",
       conceptGraph: {
-        url: "https://wiki.oiyo.net/knowledge/relations.json",
         description: "Canonical cross-site concept graph (hub ownership, relations, cross-locale links).",
       },
       sites: [
-        { role: "reference-and-knowledge", name: "Oiyo Wiki", url: "https://wiki.oiyo.net", knowledge: "https://wiki.oiyo.net/knowledge/index.json" },
         { role: "publishing-and-utility", name: "Oiyo Blog", url: "https://blog.oiyo.net", knowledge: "https://blog.oiyo.net/knowledge/index.json" },
         { role: "interactive-tools", name: "Oiyo", url: "https://oiyo.net", knowledge: "https://oiyo.net/knowledge/index.json" },
       ],

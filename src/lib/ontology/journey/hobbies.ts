@@ -68,7 +68,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 개념 사전 (wiki.oiyo.net)',
+          heading: '📚 개념 사전',
           items: [
             { href: o('mbti/about'), label: 'MBTI란 무엇인가', external: false },
             { href: o('big5/about'), label: '빅파이브와 개방성', external: false },
@@ -153,7 +153,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 概念辞典 (wiki.oiyo.net)',
+          heading: '📚 概念辞典',
           items: [
             { href: o('mbti/about'), label: 'MBTIとは何か', external: false },
             { href: o('big5/about'), label: 'ビッグファイブと開放性', external: false },
@@ -238,7 +238,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 概念词典 (wiki.oiyo.net)',
+          heading: '📚 概念词典',
           items: [
             { href: o('mbti/about'), label: '什么是MBTI', external: false },
             { href: o('big5/about'), label: '大五人格与开放性', external: false },
@@ -323,7 +323,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Dictionnaire (wiki.oiyo.net)',
+          heading: '📚 Dictionnaire',
           items: [
             { href: o('mbti/about'), label: 'Qu\'est-ce que le MBTI', external: true },
             { href: o('big5/about'), label: 'Big Five et ouverture', external: false },
@@ -408,7 +408,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Diccionario (wiki.oiyo.net)',
+          heading: '📚 Diccionario',
           items: [
             { href: o('mbti/about'), label: 'Qué es el MBTI', external: false },
             { href: o('big5/about'), label: 'Big Five y apertura', external: false },
@@ -493,7 +493,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         wiki: {
-          heading: '📚 Concept dictionary (wiki.oiyo.net)',
+          heading: '📚 Concept dictionary',
           items: [
             { href: o('mbti/about'), label: 'What is MBTI', external: false },
             { href: o('big5/about'), label: 'Big Five and openness', external: false },
