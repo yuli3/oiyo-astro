@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { withTrailingSlash } from '../../i18n';
 import { LOCALES } from "../../i18n";
 import type { Locale } from "../../i18n";
 import IncomeTaxFlowCalculator from "../../components/tools/IncomeTaxFlowCalculator";
@@ -65,7 +66,7 @@ const content: Record<string, {
   },
 };
 const c = content[locale] ?? content.en;
-const related = c.related.map((r) => ({ ...r, href: r.external ? r.href : `/${locale}${r.href}` }));
+const related = c.related.map((r) => ({ ...r, href: r.external ? r.href : withTrailingSlash(`/${locale}${r.href}`) }));
 
 const faqJsonLd = JSON.stringify({
   "@context": "https://schema.org",

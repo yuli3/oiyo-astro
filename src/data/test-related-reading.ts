@@ -333,18 +333,20 @@ export function getRelatedReading(
   const entry = TEST_RELATED_READING[key];
   if (!entry) return null;
   const cl = contentLocale(locale);
+  // 패밀리 정본 URL 은 후행 슬래시를 쓴다 — 없으면 각 호스트가 301/308 로 넘긴다.
+  const slash = (u: string) => (u.endsWith('/') ? u : `${u}/`);
   const out: { blog?: string; wiki?: string } = {};
   if (entry.blog) {
     const loc = resolveLocale(cl, entry.blogLocales ?? ['ko']);
-    out.blog = `${BLOG_HOST}/${loc}${entry.blog}`;
+    out.blog = slash(`${BLOG_HOST}/${loc}${entry.blog}`);
   }
   if (entry.wiki) {
     // oiyo 자체 해설은 6로케일 전부 있으므로 화이트리스트를 타지 않는다.
     if (entry.defSite === 'oiyo') {
-      out.wiki = `${OIYO_HOST}/${locale}${entry.wiki}`;
+      out.wiki = slash(`${OIYO_HOST}/${locale}${entry.wiki}`);
     } else {
       const loc = resolveLocale(cl, entry.wikiLocales ?? ['ko']);
-      out.wiki = `${WIKI_HOST}/${loc}${entry.wiki}`;
+      out.wiki = slash(`${WIKI_HOST}/${loc}${entry.wiki}`);
     }
   }
   return (out.blog || out.wiki) ? out : null;
