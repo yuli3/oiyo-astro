@@ -65,13 +65,16 @@
       "directory": "five-elements",
       "width": 512,
       "height": 512,
-      "note": "Five contemporary reflective symbols using distinct forms as well as color. No written Chinese characters are embedded.",
+      "generatedAt": "2026-09-08",
+      "generation": "xAI Imagine image_edit poses from the 2026-09-08 olive seed-sprout mascot; sharp 512 WebP q82. No locale text in artwork.",
+      "style": "OIYO warm olive cute flat 2.5D character with bold charcoal outline on cream paper",
+      "note": "Five original element characters of one mascot. No written Chinese characters. Labels stay in HTML. Reflection, not diagnosis or fortune-telling.",
       "items": [
-        { "id": "wood", "file": "wood.webp" },
-        { "id": "fire", "file": "fire.webp" },
-        { "id": "earth", "file": "earth.webp" },
-        { "id": "metal", "file": "metal.webp" },
-        { "id": "water", "file": "water.webp" }
+        { "id": "wood", "file": "wood.webp", "concept": "growth holding a sapling" },
+        { "id": "fire", "file": "fire.webp", "concept": "warmth holding a lantern" },
+        { "id": "earth", "file": "earth.webp", "concept": "ground sitting on soil with a pebble" },
+        { "id": "metal", "file": "metal.webp", "concept": "clarity holding an unlettered bell" },
+        { "id": "water", "file": "water.webp", "concept": "flow sitting in a small puddle" }
       ]
     },
     "disc": {
