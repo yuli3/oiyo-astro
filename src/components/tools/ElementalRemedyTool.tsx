@@ -3,6 +3,8 @@ import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/
 import { birthCivilToInstant } from '../../lib/ontology/kernel/time'
 import { calculateSaju, analyzeSaju, STANDARD_MERIDIAN_KST } from '../../lib/ontology/saju/logic'
 import { FiveElement } from '../../lib/ontology/saju/types'
+import { fiveElementCountsToOrbit } from '../../lib/ontology/saju/orbit-from-counts'
+import FiveElementsOrbit from './saju/FiveElementsOrbit'
 import ResultSymbol from '../shared/ResultSymbol'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -158,6 +160,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
 
   const weak = analysis?.weakElement ?? FiveElement.WOOD
   const counts = analysis?.elementCounts
+  const orbit = fiveElementCountsToOrbit(counts)
   const maxCount = counts ? Math.max(...ORDER.map((e) => counts[e]), 1) : 1
   const r = REMEDY[weak][l]
   const luckyNumber = analysis?.luckyAttributes?.number
@@ -225,6 +228,15 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
               ))}
             </div>
           </div>
+
+          {orbit && (
+            <FiveElementsOrbit
+              locale={lp}
+              elementCount={orbit.elementCount}
+              dominantElement={orbit.dominantElement}
+              missingElements={orbit.missingElements}
+            />
+          )}
 
           <div className="text-center space-y-2">
             <ResultSymbol id="five-elements" variant={weak} fallback="🌀" className="mx-auto h-24 w-24" />

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { resolveYearStem } from "@/lib/ontology/saju/year-stem";
+import { compatibilityPairPeople } from "@/lib/ontology/saju/orbit-from-counts";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
+import CompatibilityOrbit from "@/components/profile/CompatibilityOrbit";
 import type { Locale } from "../../i18n";
 
 interface Props { locale: Locale; }
@@ -385,6 +387,12 @@ export default function SajuCompatibility({ locale }: Props) {
             <div className={`text-5xl font-black ${SCORE_COLOR(result.score)}`}>{result.score}</div>
             <div className="text-sm text-gray-500">/ 100</div>
           </div>
+
+          <CompatibilityOrbit
+            locale={locale}
+            mode="pair"
+            people={compatibilityPairPeople(ui.person1, ui.person2, result.score)}
+          />
 
           {/* Compatibility detail */}
           <div className="bg-card border border-gray-100 rounded-2xl p-5 shadow-sm space-y-4">
