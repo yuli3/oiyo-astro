@@ -53,12 +53,15 @@
       "directory": "blood-type",
       "width": 512,
       "height": 512,
-      "note": "Four entertainment-only cultural profile symbols. No blood, anatomy, laboratory, or medical imagery.",
+      "generatedAt": "2026-09-08",
+      "generation": "xAI Imagine image_edit poses from the 2026-09-08 olive seed-sprout mascot; sharp 512 WebP q82. No locale text in artwork.",
+      "style": "OIYO warm olive cute flat 2.5D character with bold charcoal outline on cream paper",
+      "note": "Four entertainment-only cultural profile characters of one mascot. No blood, anatomy, laboratory, letters A/B/O/AB, or medical imagery. Labels stay in HTML. Not a diagnosis.",
       "items": [
-        { "id": "a", "file": "a.webp" },
-        { "id": "b", "file": "b.webp" },
-        { "id": "o", "file": "o.webp" },
-        { "id": "ab", "file": "ab.webp" }
+        { "id": "a", "file": "a.webp", "concept": "tidy stack of three leaves" },
+        { "id": "b", "file": "b.webp", "concept": "playful pose with one blossom" },
+        { "id": "o", "file": "o.webp", "concept": "open wave inside a round ring" },
+        { "id": "ab", "file": "ab.webp", "concept": "two tiny matching friends together" }
       ]
     },
     "fiveElements": {
