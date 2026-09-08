@@ -1,13 +1,13 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, oiyoUrl, wikiUrl } from './types';
+import { blogUrl, oiyoArticleUrl, wikiUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function personalityContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
   const b = (s: string) => blogUrl(locale, s);
   const w = (s: string) => wikiUrl(locale, s);
-  const o = (s: string) => oiyoUrl(locale, s);
+  const o = (s: string) => oiyoArticleUrl(locale, s);
 
   switch (locale) {
     case 'ko':
@@ -63,11 +63,11 @@ export function personalityContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 더 깊이 읽기 (blog.oiyo.net)',
           items: [
-            { href: b('mbti-complete-deep-guide'), label: 'MBTI 완전 정복 가이드', external: true },
-            { href: b('8-cognitive-functions-deep-dive'), label: '8가지 인지기능 깊이 읽기', external: true },
-            { href: b('enneagram-mbti-integration'), label: '에니어그램 × MBTI 통합하기', external: true },
-            { href: b('evolving-self-saju-mbti'), label: '사주와 MBTI로 보는 진화하는 나', external: true },
-            { href: b('jung-shadow-psychology'), label: '융의 그림자 심리학', external: true },
+            { href: o('mbti-complete-deep-guide'), label: 'MBTI 완전 정복 가이드', external: true },
+            { href: o('8-cognitive-functions-deep-dive'), label: '8가지 인지기능 깊이 읽기', external: true },
+            { href: o('enneagram-mbti-integration'), label: '에니어그램 × MBTI 통합하기', external: true },
+            { href: o('evolving-self-saju-mbti'), label: '사주와 MBTI로 보는 진화하는 나', external: true },
+            { href: o('jung-shadow-psychology'), label: '융의 그림자 심리학', external: true },
           ],
         },
         wiki: {
@@ -75,8 +75,8 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('mbti/about'), label: 'MBTI란 무엇인가', external: false },
             { href: o('big5/about'), label: '빅파이브 5요인 모델', external: false },
-            { href: w('meaning-of-enneagram'), label: '에니어그램의 기원과 구조', external: true },
-            { href: w('meaning-of-archetypes'), label: '원형(아키타입)이란', external: true },
+            { href: o('enneagram/test'), label: '에니어그램의 기원과 구조', external: true },
+            { href: o('archetypes/about'), label: '원형(아키타입)이란', external: true },
           ],
         },
         faq: {
@@ -152,10 +152,10 @@ export function personalityContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 深く読む (blog.oiyo.net)',
           items: [
-            { href: b('8-cognitive-functions-deep-dive'), label: '8つの認知機能を深く読む', external: true },
-            { href: b('enneagram-mbti-integration'), label: 'エニアグラム×MBTIの統合', external: true },
-            { href: b('evolving-self-saju-mbti'), label: '四柱推命とMBTIで見る進化する自分', external: true },
-            { href: b('jung-shadow-psychology'), label: 'ユングの影の心理学', external: true },
+            { href: o('8-cognitive-functions-deep-dive'), label: '8つの認知機能を深く読む', external: true },
+            { href: o('enneagram-mbti-integration'), label: 'エニアグラム×MBTIの統合', external: true },
+            { href: o('evolving-self-saju-mbti'), label: '四柱推命とMBTIで見る進化する自分', external: true },
+            { href: o('jung-shadow-psychology'), label: 'ユングの影の心理学', external: true },
           ],
         },
         wiki: {
@@ -163,8 +163,8 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('mbti/about'), label: 'MBTIとは何か', external: false },
             { href: o('big5/about'), label: 'ビッグファイブ5因子モデル', external: false },
-            { href: w('meaning-of-enneagram'), label: 'エニアグラムの起源と構造', external: true },
-            { href: w('meaning-of-archetypes'), label: 'アーキタイプ(元型)とは', external: true },
+            { href: o('enneagram/test'), label: 'エニアグラムの起源と構造', external: true },
+            { href: o('archetypes/about'), label: 'アーキタイプ(元型)とは', external: true },
           ],
         },
         faq: {
@@ -240,10 +240,10 @@ export function personalityContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 深入阅读 (blog.oiyo.net)',
           items: [
-            { href: b('8-cognitive-functions-deep-dive'), label: '深入解读8种认知功能', external: true },
-            { href: b('enneagram-mbti-integration'), label: '九型人格 × MBTI 整合', external: true },
-            { href: b('evolving-self-saju-mbti'), label: '八字与MBTI中进化的自我', external: true },
-            { href: b('jung-shadow-psychology'), label: '荣格的阴影心理学', external: true },
+            { href: o('8-cognitive-functions-deep-dive'), label: '深入解读8种认知功能', external: true },
+            { href: o('enneagram-mbti-integration'), label: '九型人格 × MBTI 整合', external: true },
+            { href: o('evolving-self-saju-mbti'), label: '八字与MBTI中进化的自我', external: true },
+            { href: o('jung-shadow-psychology'), label: '荣格的阴影心理学', external: true },
           ],
         },
         wiki: {
@@ -251,8 +251,8 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('mbti/about'), label: '什么是MBTI', external: false },
             { href: o('big5/about'), label: '大五人格五因子模型', external: false },
-            { href: w('meaning-of-enneagram'), label: '九型人格的起源与结构', external: true },
-            { href: w('meaning-of-archetypes'), label: '什么是原型', external: true },
+            { href: o('enneagram/test'), label: '九型人格的起源与结构', external: true },
+            { href: o('archetypes/about'), label: '什么是原型', external: true },
           ],
         },
         faq: {
@@ -328,10 +328,10 @@ export function personalityContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Lire plus loin (blog.oiyo.net)',
           items: [
-            { href: b('8-cognitive-functions-deep-dive'), label: 'Les 8 fonctions cognitives en profondeur', external: true },
-            { href: b('enneagram-mbti-integration'), label: 'Intégrer ennéagramme et MBTI', external: true },
-            { href: b('evolving-self-saju-mbti'), label: 'Le soi en évolution : Saju et MBTI', external: true },
-            { href: b('jung-shadow-psychology'), label: 'La psychologie de l\'ombre de Jung', external: true },
+            { href: o('8-cognitive-functions-deep-dive'), label: 'Les 8 fonctions cognitives en profondeur', external: true },
+            { href: o('enneagram-mbti-integration'), label: 'Intégrer ennéagramme et MBTI', external: true },
+            { href: o('evolving-self-saju-mbti'), label: 'Le soi en évolution : Saju et MBTI', external: true },
+            { href: o('jung-shadow-psychology'), label: 'La psychologie de l\'ombre de Jung', external: true },
           ],
         },
         wiki: {
@@ -339,8 +339,8 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('mbti/about'), label: 'Qu\'est-ce que le MBTI', external: true },
             { href: o('big5/about'), label: 'Le modèle Big Five', external: false },
-            { href: w('meaning-of-enneagram'), label: 'Origine et structure de l\'ennéagramme', external: true },
-            { href: w('meaning-of-archetypes'), label: 'Que sont les archétypes', external: true },
+            { href: o('enneagram/test'), label: 'Origine et structure de l\'ennéagramme', external: true },
+            { href: o('archetypes/about'), label: 'Que sont les archétypes', external: true },
           ],
         },
         faq: {
@@ -416,10 +416,10 @@ export function personalityContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Leer más (blog.oiyo.net)',
           items: [
-            { href: b('8-cognitive-functions-deep-dive'), label: 'Las 8 funciones cognitivas a fondo', external: true },
-            { href: b('enneagram-mbti-integration'), label: 'Integrar eneagrama y MBTI', external: true },
-            { href: b('evolving-self-saju-mbti'), label: 'El yo en evolución: Saju y MBTI', external: true },
-            { href: b('jung-shadow-psychology'), label: 'La psicología de la sombra de Jung', external: true },
+            { href: o('8-cognitive-functions-deep-dive'), label: 'Las 8 funciones cognitivas a fondo', external: true },
+            { href: o('enneagram-mbti-integration'), label: 'Integrar eneagrama y MBTI', external: true },
+            { href: o('evolving-self-saju-mbti'), label: 'El yo en evolución: Saju y MBTI', external: true },
+            { href: o('jung-shadow-psychology'), label: 'La psicología de la sombra de Jung', external: true },
           ],
         },
         wiki: {
@@ -427,8 +427,8 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('mbti/about'), label: 'Qué es el MBTI', external: false },
             { href: o('big5/about'), label: 'El modelo Big Five', external: false },
-            { href: w('meaning-of-enneagram'), label: 'Origen y estructura del eneagrama', external: true },
-            { href: w('meaning-of-archetypes'), label: 'Qué son los arquetipos', external: true },
+            { href: o('enneagram/test'), label: 'Origen y estructura del eneagrama', external: true },
+            { href: o('archetypes/about'), label: 'Qué son los arquetipos', external: true },
           ],
         },
         faq: {
@@ -504,10 +504,10 @@ export function personalityContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Read deeper (blog.oiyo.net)',
           items: [
-            { href: b('mbti-complete-deep-guide'), label: 'The complete MBTI deep guide', external: true },
-            { href: b('8-cognitive-functions-deep-dive'), label: '8 cognitive functions, in depth', external: true },
-            { href: b('enneagram-mbti-integration'), label: 'Integrating Enneagram × MBTI', external: true },
-            { href: b('jung-shadow-psychology'), label: 'Jung\'s shadow psychology', external: true },
+            { href: o('mbti-complete-deep-guide'), label: 'The complete MBTI deep guide', external: true },
+            { href: o('8-cognitive-functions-deep-dive'), label: '8 cognitive functions, in depth', external: true },
+            { href: o('enneagram-mbti-integration'), label: 'Integrating Enneagram × MBTI', external: true },
+            { href: o('jung-shadow-psychology'), label: 'Jung\'s shadow psychology', external: true },
           ],
         },
         wiki: {
@@ -515,8 +515,8 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('mbti/about'), label: 'What is MBTI', external: false },
             { href: o('big5/about'), label: 'The Big Five model', external: false },
-            { href: w('meaning-of-enneagram'), label: 'Origin & structure of the Enneagram', external: true },
-            { href: w('meaning-of-archetypes'), label: 'What are archetypes', external: true },
+            { href: o('enneagram/test'), label: 'Origin & structure of the Enneagram', external: true },
+            { href: o('archetypes/about'), label: 'What are archetypes', external: true },
           ],
         },
         faq: {

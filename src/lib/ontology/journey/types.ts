@@ -48,3 +48,13 @@ export function wikiUrl(locale: Locale, slug: string): string {
 export function oiyoUrl(locale: Locale, path: string): string {
   return `/${locale}/${path}/`;
 }
+
+/**
+ * blog 에서 oiyo 로 이관된 **기사**. 호스트만 바뀌었을 뿐 같은 글이라 로케일 커버리지도
+ * 그대로 ko/en/ja 다 — 2026-09-08 에 blogUrl 을 그냥 oiyoUrl 로 바꿨더니 zh/fr/es 에서
+ * 12개의 404 가 생겼다. blogUrl 이 하던 접기를 유지한다.
+ */
+export function oiyoArticleUrl(locale: Locale, slug: string): string {
+  const l = locale === 'ko' || locale === 'ja' ? locale : 'en';
+  return `/${l}/${slug}/`;
+}

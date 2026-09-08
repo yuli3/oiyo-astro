@@ -44,12 +44,12 @@ const blogDarkTriad = B('dark-triad-human-nature-shadow', { ko: '다크 트라�
 const blogAbilene = B('abilene-paradox-groupthink', { ko: '애빌린 패러독스와 집단사고', en: 'The Abilene paradox & groupthink', ja: 'アビリーンのパラドックスと集団思考' });
 const blogLookingGlass = B('looking-glass-self-cooley', { ko: '거울 자아 — 쿨리의 사회심리학', en: 'The looking-glass self', ja: '鏡映自己 — クーリーの社会心理学' });
 const blogBurnoutDopamine = B('burnout-recovery-dopamine-reset', { ko: '번아웃 회복 — 도파민 리셋', en: 'Burnout recovery — dopamine reset', ja: 'バーンアウト回復 — ドーパミンリセット' });
-const blogPurpose = B('power-of-purpose', { ko: '목적의 힘', en: 'The power of purpose', ja: '目的の力' });
+const blogPurpose = O('power-of-purpose', { ko: '목적의 힘', en: 'The power of purpose', ja: '目的の力' });
 const blogFiveLove = B('five-love-languages-connection', { ko: '5가지 사랑의 언어', en: 'The five love languages', ja: '5つの愛の言語' });
 
 const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
   mbti: [
-    B('8-cognitive-functions-deep-dive', { ko: '8가지 인지기능 깊이 읽기', en: '8 cognitive functions, in depth', ja: '8つの認知機能を深く読む' }),
+    O('8-cognitive-functions-deep-dive', { ko: '8가지 인지기능 깊이 읽기', en: '8 cognitive functions, in depth', ja: '8つの認知機能を深く読む' }),
     B('mbti-loops-grips-mental-rut', { ko: 'MBTI 루프와 그립 — 마음의 수렁', en: 'MBTI loops & grips', ja: 'MBTIループとグリップ' }),
     wikiMbti,
   ],
@@ -61,12 +61,12 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
   big5: [
     O('big5/about', { ko: '빅파이브 5요인 모델', en: 'The Big Five model', ja: 'ビッグファイブ5因子モデル' }),
     W('meaning-of-hexaco', { ko: 'HEXACO 6요인 모델', en: 'The HEXACO model', ja: 'HEXACO 6因子モデル' }),
-    B('evolving-self-saju-mbti', { ko: '사주와 MBTI로 보는 진화하는 나', en: 'The evolving self: Saju & MBTI', ja: '四柱とMBTIで見る進化する自分' }),
+    O('evolving-self-saju-mbti', { ko: '사주와 MBTI로 보는 진화하는 나', en: 'The evolving self: Saju & MBTI', ja: '四柱とMBTIで見る進化する自分' }),
   ],
   enneagram: [
-    B('enneagram-mbti-integration', { ko: '에니어그램 × MBTI 통합하기', en: 'Integrating Enneagram × MBTI', ja: 'エニアグラム×MBTIの統合' }),
+    O('enneagram-mbti-integration', { ko: '에니어그램 × MBTI 통합하기', en: 'Integrating Enneagram × MBTI', ja: 'エニアグラム×MBTIの統合' }),
     B('enneagram-love-relationships', { ko: '에니어그램과 사랑의 관계', en: 'Enneagram in love & relationships', ja: 'エニアグラムと愛の関係' }),
-    W('meaning-of-enneagram', { ko: '에니어그램의 기원과 구조', en: 'Origin of the Enneagram', ja: 'エニアグラムの起源と構造' }),
+    O('enneagram/test', { ko: '에니어그램의 기원과 구조', en: 'Origin of the Enneagram', ja: 'エニアグラムの起源と構造' }),
   ],
   attachment: [
     B('attachment-theory-adults', { ko: '성인 애착 이론', en: 'Attachment theory for adults', ja: '大人の愛着理論' }),
@@ -103,7 +103,7 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
     wikiSelfCompassion,
   ],
   anger: [
-    B('jung-shadow-psychology', { ko: '융의 그림자 심리학', en: "Jung's shadow psychology", ja: 'ユングの影の心理学' }),
+    O('jung-shadow-psychology', { ko: '융의 그림자 심리학', en: "Jung's shadow psychology", ja: 'ユングの影の心理学' }),
     wikiEmotionReg,
     B('anger-management-psychology', { ko: '분노 관리의 심리학', en: 'The psychology of anger management', ja: '怒りの心理学' }, ['ko', 'en', 'zh', 'fr', 'es']),
   ],
@@ -118,7 +118,7 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
     B('mbti-loops-grips-mental-rut', { ko: 'MBTI 루프와 그립 — 마음의 수렁', en: 'MBTI loops & grips', ja: 'MBTIループとグリップ' }),
   ],
   'inner-strength': [
-    B('viktor-frankl-purpose', { ko: '빅터 프랭클 — 의미를 찾아서', en: 'Viktor Frankl — the search for meaning', ja: 'フランクル — 意味を求めて' }),
+    O('viktor-frankl-purpose', { ko: '빅터 프랭클 — 의미를 찾아서', en: 'Viktor Frankl — the search for meaning', ja: 'フランクル — 意味を求めて' }),
     blogPurpose,
     wikiSelfEfficacy,
   ],
@@ -131,19 +131,17 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
   commute: [
     W('meaning-of-cognitive-load', { ko: '인지 부하란', en: 'Cognitive load', ja: '認知負荷とは' }),
     wikiDecisionFatigue,
-    B('flow-state-happiness-psychology', { ko: '몰입과 행복의 심리학', en: 'Flow & the psychology of happiness', ja: 'フローと幸福の心理学' }),
+    O('flow-state-happiness-psychology', { ko: '몰입과 행복의 심리학', en: 'Flow & the psychology of happiness', ja: 'フローと幸福の心理学' }),
   ],
   investor: [
     wikiBiases,
-    B('meaningful-consumption', { ko: '의미 있는 소비의 기술', en: 'The art of meaningful consumption', ja: '意味ある消費の技術' }),
     wikiDecisionFatigue,
   ],
   political: [blogAbilene, wikiBiases, blogDarkTriad],
   authoritarian: [blogDarkTriad, wikiBiases, blogAbilene],
   'personal-color': [
-    W('meaning-of-color-psychology', { ko: '색채 심리학이란', en: 'What is color psychology', ja: '色彩心理学とは' }),
     B('color-psychology-complete-guide', { ko: '색채 심리학 완전 가이드', en: '', ja: '' }, ['ko']),
-    B('moon-sign-secret-self', { ko: '월 별자리 — 숨겨진 자아', en: 'Moon sign — the secret self', ja: '月星座 — 秘められた自分' }),
+    O('moon-sign-secret-self', { ko: '월 별자리 — 숨겨진 자아', en: 'Moon sign — the secret self', ja: '月星座 — 秘められた自分' }),
   ],
 };
 

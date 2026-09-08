@@ -1,12 +1,14 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, wikiUrl } from './types';
+import { blogUrl, oiyoArticleUrl, wikiUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function luckContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
   const b = (s: string) => blogUrl(locale, s);
   const w = (s: string) => wikiUrl(locale, s);
+  // 이관된 해설은 oiyo 에 있다 — blog/wiki 경로로 두면 301 이다(2026-09-08).
+  const o = (p: string) => oiyoArticleUrl(locale, p);
 
   switch (locale) {
     case 'ko':
@@ -59,19 +61,17 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 더 깊이 읽기 (blog.oiyo.net)',
           items: [
-            { href: b('lucky-numbers-by-birth-guide'), label: '생년월일로 보는 행운 숫자', external: true },
-            { href: b('entrance-wealth-luck'), label: '현관과 재물운 — 풍수의 지혜', external: true },
-            { href: b('science-synchronicity-jung-pauli'), label: '동시성의 과학 — 융과 파울리', external: true },
-            { href: b('semun-yearly-luck-strategy'), label: '세운 — 한 해 운의 전략', external: true },
-            { href: b('lotto-luck-science'), label: '로또와 행운의 과학', external: true },
+            { href: o('lucky-numbers-by-birth-guide'), label: '생년월일로 보는 행운 숫자', external: true },
+            { href: o('entrance-wealth-luck'), label: '현관과 재물운 — 풍수의 지혜', external: true },
+            { href: o('science-synchronicity-jung-pauli'), label: '동시성의 과학 — 융과 파울리', external: true },
+            { href: o('semun-yearly-luck-strategy'), label: '세운 — 한 해 운의 전략', external: true },
+            { href: b('lotto-generator'), label: '로또와 행운의 과학', external: true },
           ],
         },
         wiki: {
           heading: '📚 개념 사전 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-saju-dictionary'), label: '사주 대사전 — 천간·지지·십신', external: true },
-            { href: w('meaning-of-tarot-major-arcana'), label: '타로 메이저 아르카나', external: true },
-            { href: w('meaning-of-color-psychology'), label: '색채 심리학이란', external: true },
+            { href: o('tarot/reading'), label: '타로 메이저 아르카나', external: true },
           ],
         },
         faq: {
@@ -144,17 +144,16 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 深く読む (blog.oiyo.net)',
           items: [
-            { href: b('entrance-wealth-luck'), label: '玄関と金運 — 風水の知恵', external: true },
-            { href: b('science-synchronicity-jung-pauli'), label: 'シンクロニシティの科学 — ユングとパウリ', external: true },
-            { href: b('saturn-return-meaning'), label: 'サターンリターンの意味', external: true },
-            { href: b('moon-sign-secret-self'), label: '月星座 — 秘められた自分', external: true },
+            { href: o('entrance-wealth-luck'), label: '玄関と金運 — 風水の知恵', external: true },
+            { href: o('science-synchronicity-jung-pauli'), label: 'シンクロニシティの科学 — ユングとパウリ', external: true },
+            { href: o('saturn-return-meaning'), label: 'サターンリターンの意味', external: true },
+            { href: o('moon-sign-secret-self'), label: '月星座 — 秘められた自分', external: true },
           ],
         },
         wiki: {
           heading: '📚 概念辞典 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-color-psychology'), label: '色彩心理学とは', external: true },
-            { href: w('meaning-of-archetypes'), label: 'アーキタイプ(元型)とは', external: true },
+            { href: o('archetypes/about'), label: 'アーキタイプ(元型)とは', external: true },
           ],
         },
         faq: {
@@ -227,17 +226,16 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 深入阅读 (blog.oiyo.net)',
           items: [
-            { href: b('entrance-wealth-luck'), label: '玄关与财运——风水的智慧', external: true },
-            { href: b('science-synchronicity-jung-pauli'), label: '共时性的科学——荣格与泡利', external: true },
-            { href: b('saturn-return-meaning'), label: '土星回归的意义', external: true },
-            { href: b('moon-sign-secret-self'), label: '月亮星座——隐秘的自我', external: true },
+            { href: o('entrance-wealth-luck'), label: '玄关与财运——风水的智慧', external: true },
+            { href: o('science-synchronicity-jung-pauli'), label: '共时性的科学——荣格与泡利', external: true },
+            { href: o('saturn-return-meaning'), label: '土星回归的意义', external: true },
+            { href: o('moon-sign-secret-self'), label: '月亮星座——隐秘的自我', external: true },
           ],
         },
         wiki: {
           heading: '📚 概念词典 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-color-psychology'), label: '什么是色彩心理学', external: true },
-            { href: w('meaning-of-archetypes'), label: '什么是原型', external: true },
+            { href: o('archetypes/about'), label: '什么是原型', external: true },
           ],
         },
         faq: {
@@ -310,17 +308,16 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Lire plus loin (blog.oiyo.net)',
           items: [
-            { href: b('entrance-wealth-luck'), label: 'Entrée et fortune — sagesse du feng shui', external: true },
-            { href: b('science-synchronicity-jung-pauli'), label: 'La science de la synchronicité — Jung et Pauli', external: true },
-            { href: b('saturn-return-meaning'), label: 'Le retour de Saturne', external: true },
-            { href: b('moon-sign-secret-self'), label: 'Signe lunaire — le moi secret', external: true },
+            { href: o('entrance-wealth-luck'), label: 'Entrée et fortune — sagesse du feng shui', external: true },
+            { href: o('science-synchronicity-jung-pauli'), label: 'La science de la synchronicité — Jung et Pauli', external: true },
+            { href: o('saturn-return-meaning'), label: 'Le retour de Saturne', external: true },
+            { href: o('moon-sign-secret-self'), label: 'Signe lunaire — le moi secret', external: true },
           ],
         },
         wiki: {
           heading: '📚 Dictionnaire (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-color-psychology'), label: 'La psychologie des couleurs', external: true },
-            { href: w('meaning-of-archetypes'), label: 'Que sont les archétypes', external: true },
+            { href: o('archetypes/about'), label: 'Que sont les archétypes', external: true },
           ],
         },
         faq: {
@@ -393,17 +390,16 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Leer más (blog.oiyo.net)',
           items: [
-            { href: b('entrance-wealth-luck'), label: 'La entrada y la fortuna — sabiduría del feng shui', external: true },
-            { href: b('science-synchronicity-jung-pauli'), label: 'La ciencia de la sincronicidad — Jung y Pauli', external: true },
-            { href: b('saturn-return-meaning'), label: 'El retorno de Saturno', external: true },
-            { href: b('moon-sign-secret-self'), label: 'Signo lunar — el yo secreto', external: true },
+            { href: o('entrance-wealth-luck'), label: 'La entrada y la fortuna — sabiduría del feng shui', external: true },
+            { href: o('science-synchronicity-jung-pauli'), label: 'La ciencia de la sincronicidad — Jung y Pauli', external: true },
+            { href: o('saturn-return-meaning'), label: 'El retorno de Saturno', external: true },
+            { href: o('moon-sign-secret-self'), label: 'Signo lunar — el yo secreto', external: true },
           ],
         },
         wiki: {
           heading: '📚 Diccionario (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-color-psychology'), label: 'La psicología del color', external: true },
-            { href: w('meaning-of-archetypes'), label: 'Qué son los arquetipos', external: true },
+            { href: o('archetypes/about'), label: 'Qué son los arquetipos', external: true },
           ],
         },
         faq: {
@@ -476,17 +472,16 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Read deeper (blog.oiyo.net)',
           items: [
-            { href: b('entrance-wealth-luck'), label: 'Entrances and wealth luck — feng shui wisdom', external: true },
-            { href: b('science-synchronicity-jung-pauli'), label: 'The science of synchronicity — Jung & Pauli', external: true },
-            { href: b('saturn-return-meaning'), label: 'The meaning of the Saturn return', external: true },
-            { href: b('moon-sign-secret-self'), label: 'Moon sign — the secret self', external: true },
+            { href: o('entrance-wealth-luck'), label: 'Entrances and wealth luck — feng shui wisdom', external: true },
+            { href: o('science-synchronicity-jung-pauli'), label: 'The science of synchronicity — Jung & Pauli', external: true },
+            { href: o('saturn-return-meaning'), label: 'The meaning of the Saturn return', external: true },
+            { href: o('moon-sign-secret-self'), label: 'Moon sign — the secret self', external: true },
           ],
         },
         wiki: {
           heading: '📚 Concept dictionary (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-color-psychology'), label: 'What is color psychology', external: true },
-            { href: w('meaning-of-archetypes'), label: 'What are archetypes', external: true },
+            { href: o('archetypes/about'), label: 'What are archetypes', external: true },
           ],
         },
         faq: {

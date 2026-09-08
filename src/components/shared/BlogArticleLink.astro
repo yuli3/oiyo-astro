@@ -11,7 +11,9 @@ const { testId, locale } = Astro.props;
 const bridge = BLOG_ARTICLE_BRIDGES[testId];
 const available = bridge && bridge.locales.includes(locale);
 const utm = 'utm_source=oiyo&utm_medium=tool_page&utm_campaign=hybrid_bridge';
-const url = available ? `https://blog.oiyo.net/${locale}/${bridge.slug}/?${utm}` : '';
+// 이관된 해설은 oiyo 에 있다 — 표의 site 가 호스트를 정한다(2026-09-08).
+const host = bridge?.site === 'oiyo' ? 'https://oiyo.net' : 'https://blog.oiyo.net';
+const url = available ? `${host}/${locale}/${bridge.slug}/?${utm}` : '';
 
 const copy: Record<string, { eyebrow: string; title: string; body: string; cta: string }> = {
   ko: { eyebrow: '하이브리드 — 도구는 여기, 깊이는 블로그', title: '이 주제를 더 깊이 읽기', body: '검사를 마쳤다면, 블로그의 심층 해설(이론·FAQ·사례)에서 결과를 더 풍부하게 이해할 수 있습니다.', cta: '블로그에서 이어 읽기' },

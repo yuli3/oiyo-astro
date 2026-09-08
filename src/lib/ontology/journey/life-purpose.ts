@@ -1,12 +1,14 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, wikiUrl } from './types';
+import { blogUrl, oiyoArticleUrl, wikiUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function lifePurposeContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
   const b = (s: string) => blogUrl(locale, s);
   const w = (s: string) => wikiUrl(locale, s);
+  // 이관된 해설은 oiyo 에 있다 — blog/wiki 경로로 두면 301 이다(2026-09-08).
+  const o = (p: string) => oiyoArticleUrl(locale, p);
 
   switch (locale) {
     case 'ko':
@@ -61,17 +63,16 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           heading: '📖 더 깊이 읽기 (blog.oiyo.net)',
           items: [
             { href: b('ikigai-life-purpose-guide'), label: '이키가이 — 삶의 목적 가이드', external: true },
-            { href: b('viktor-frankl-purpose'), label: '빅터 프랭클 — 의미를 찾아서', external: true },
-            { href: b('individuation-process-self-realization'), label: '개성화 — 자기실현의 과정', external: true },
-            { href: b('purpose-and-mental-health'), label: '목적과 정신 건강', external: true },
-            { href: b('power-of-purpose'), label: '목적의 힘', external: true },
+            { href: o('viktor-frankl-purpose'), label: '빅터 프랭클 — 의미를 찾아서', external: true },
+            { href: o('individuation-process-self-realization'), label: '개성화 — 자기실현의 과정', external: true },
+            { href: o('power-of-purpose'), label: '목적의 힘', external: true },
           ],
         },
         wiki: {
           heading: '📚 개념 사전 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-archetypes'), label: '원형(아키타입)이란', external: true },
-            { href: w('meaning-of-enneagram'), label: '에니어그램의 기원과 구조', external: true },
+            { href: o('archetypes/about'), label: '원형(아키타입)이란', external: true },
+            { href: o('enneagram/test'), label: '에니어그램의 기원과 구조', external: true },
           ],
         },
         faq: {
@@ -146,17 +147,16 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           heading: '📖 深く読む (blog.oiyo.net)',
           items: [
             { href: b('ikigai-art-of-purpose'), label: '生きがい — 目的の技法', external: true },
-            { href: b('viktor-frankl-purpose'), label: 'フランクル — 意味を求めて', external: true },
-            { href: b('individuation-process-self-realization'), label: '個性化 — 自己実現の過程', external: true },
-            { href: b('purpose-and-mental-health'), label: '目的とメンタルヘルス', external: true },
-            { href: b('power-of-purpose'), label: '目的の力', external: true },
+            { href: o('viktor-frankl-purpose'), label: 'フランクル — 意味を求めて', external: true },
+            { href: o('individuation-process-self-realization'), label: '個性化 — 自己実現の過程', external: true },
+            { href: o('power-of-purpose'), label: '目的の力', external: true },
           ],
         },
         wiki: {
           heading: '📚 概念辞典 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-archetypes'), label: 'アーキタイプ(元型)とは', external: true },
-            { href: w('meaning-of-enneagram'), label: 'エニアグラムの起源と構造', external: true },
+            { href: o('archetypes/about'), label: 'アーキタイプ(元型)とは', external: true },
+            { href: o('enneagram/test'), label: 'エニアグラムの起源と構造', external: true },
           ],
         },
         faq: {
@@ -231,17 +231,16 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           heading: '📖 深入阅读 (blog.oiyo.net)',
           items: [
             { href: b('ikigai-art-of-purpose'), label: 'Ikigai——目的的艺术', external: true },
-            { href: b('viktor-frankl-purpose'), label: '弗兰克尔——寻找意义', external: true },
-            { href: b('individuation-process-self-realization'), label: '个体化——自我实现之路', external: true },
-            { href: b('purpose-and-mental-health'), label: '目的与心理健康', external: true },
-            { href: b('power-of-purpose'), label: '目的的力量', external: true },
+            { href: o('viktor-frankl-purpose'), label: '弗兰克尔——寻找意义', external: true },
+            { href: o('individuation-process-self-realization'), label: '个体化——自我实现之路', external: true },
+            { href: o('power-of-purpose'), label: '目的的力量', external: true },
           ],
         },
         wiki: {
           heading: '📚 概念词典 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-archetypes'), label: '什么是原型', external: true },
-            { href: w('meaning-of-enneagram'), label: '九型人格的起源与结构', external: true },
+            { href: o('archetypes/about'), label: '什么是原型', external: true },
+            { href: o('enneagram/test'), label: '九型人格的起源与结构', external: true },
           ],
         },
         faq: {
@@ -316,16 +315,15 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           heading: '📖 Lire plus loin (blog.oiyo.net)',
           items: [
             { href: b('ikigai-art-of-purpose'), label: 'Ikigai — l\'art du but', external: true },
-            { href: b('viktor-frankl-purpose'), label: 'Viktor Frankl — la quête de sens', external: true },
-            { href: b('individuation-process-self-realization'), label: 'L\'individuation, chemin de réalisation', external: true },
-            { href: b('purpose-and-mental-health'), label: 'But et santé mentale', external: true },
+            { href: o('viktor-frankl-purpose'), label: 'Viktor Frankl — la quête de sens', external: true },
+            { href: o('individuation-process-self-realization'), label: 'L\'individuation, chemin de réalisation', external: true },
           ],
         },
         wiki: {
           heading: '📚 Dictionnaire (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-archetypes'), label: 'Que sont les archétypes', external: true },
-            { href: w('meaning-of-enneagram'), label: 'Origine et structure de l\'ennéagramme', external: true },
+            { href: o('archetypes/about'), label: 'Que sont les archétypes', external: true },
+            { href: o('enneagram/test'), label: 'Origine et structure de l\'ennéagramme', external: true },
           ],
         },
         faq: {
@@ -400,16 +398,15 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           heading: '📖 Leer más (blog.oiyo.net)',
           items: [
             { href: b('ikigai-art-of-purpose'), label: 'Ikigai — el arte del propósito', external: true },
-            { href: b('viktor-frankl-purpose'), label: 'Viktor Frankl — en busca de sentido', external: true },
-            { href: b('individuation-process-self-realization'), label: 'La individuación, camino de realización', external: true },
-            { href: b('purpose-and-mental-health'), label: 'Propósito y salud mental', external: true },
+            { href: o('viktor-frankl-purpose'), label: 'Viktor Frankl — en busca de sentido', external: true },
+            { href: o('individuation-process-self-realization'), label: 'La individuación, camino de realización', external: true },
           ],
         },
         wiki: {
           heading: '📚 Diccionario (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-archetypes'), label: 'Qué son los arquetipos', external: true },
-            { href: w('meaning-of-enneagram'), label: 'Origen y estructura del eneagrama', external: true },
+            { href: o('archetypes/about'), label: 'Qué son los arquetipos', external: true },
+            { href: o('enneagram/test'), label: 'Origen y estructura del eneagrama', external: true },
           ],
         },
         faq: {
@@ -484,17 +481,16 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           heading: '📖 Read deeper (blog.oiyo.net)',
           items: [
             { href: b('ikigai-art-of-purpose'), label: 'Ikigai — the art of purpose', external: true },
-            { href: b('viktor-frankl-purpose'), label: 'Viktor Frankl — the search for meaning', external: true },
-            { href: b('individuation-process-self-realization'), label: 'Individuation — the path of self-realization', external: true },
-            { href: b('purpose-and-mental-health'), label: 'Purpose and mental health', external: true },
-            { href: b('power-of-purpose'), label: 'The power of purpose', external: true },
+            { href: o('viktor-frankl-purpose'), label: 'Viktor Frankl — the search for meaning', external: true },
+            { href: o('individuation-process-self-realization'), label: 'Individuation — the path of self-realization', external: true },
+            { href: o('power-of-purpose'), label: 'The power of purpose', external: true },
           ],
         },
         wiki: {
           heading: '📚 Concept dictionary (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-archetypes'), label: 'What are archetypes', external: true },
-            { href: w('meaning-of-enneagram'), label: 'Origin & structure of the Enneagram', external: true },
+            { href: o('archetypes/about'), label: 'What are archetypes', external: true },
+            { href: o('enneagram/test'), label: 'Origin & structure of the Enneagram', external: true },
           ],
         },
         faq: {

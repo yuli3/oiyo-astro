@@ -9,7 +9,6 @@ import { OntologyExportPopover } from '../../../components/ontology/OntologyExpo
 import { OntologySharedProfileBanner } from '../../../components/ontology/OntologySharedProfileBanner';
 import { AssessmentSignalSummary } from '../../../components/ontology/AssessmentSignalSummary';
 import { ONTOLOGY_CONCEPTS, LAYER_LABELS, CONCEPT_SECTION } from '../../../data/ontology-concepts';
-import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
 import { DISCLAIMERS } from '../../../data/disclaimers';
 import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
 import type { Lane, OntologySystem } from '../../../lib/ontology/registry/ontology-systems';
@@ -199,11 +198,9 @@ const ABOUT_LABEL: Record<Locale, string> = {
                 </div>
               ))}
             </dl>
-            {c.aboutPath ? (
+            {c.aboutPath && (
               <a class="mt-3 inline-block text-sm text-primary-strong underline underline-offset-4"
                  href={`/${locale}${c.aboutPath}/`}>{ABOUT_LABEL[locale] ?? ABOUT_LABEL.en}</a>
-            ) : (
-              <WikiDefinitionLink slug={c.wikiSlug} locale={locale} compact />
             )}
           </li>
         ))}

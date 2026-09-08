@@ -101,7 +101,7 @@ export function getPeriodicPageCopy(domain: FortuneDomain, period: Period, local
           { href: `/${locale}/saju/calculator/`, label: '사주 계산기', desc: '팔자와 오행 분포를 자세히 봅니다.' },
           { href: `/${locale}/saju/fortune/`, label: '사주 오늘의 운세', desc: '기존 일일 사주 운세를 확인합니다.' },
           { href: `/${locale}/fortune/${period}/`, label: '종합 운세', desc: '사주·12지신·별자리를 한 화면에서 비교합니다.' },
-          { href: 'https://oiyo.net/ko/saju/calculator/', label: '사주팔자 계산기', desc: '내 사주 여덟 글자를 직접 뽑아 구조를 확인합니다.' },
+          { href: 'https://oiyo.net/ko/saju/calculator//', label: '사주팔자 계산기', desc: '내 사주 여덟 글자를 직접 뽑아 구조를 확인합니다.' },
         ],
         disclaimer: '사주 운세는 오락과 자기 성찰 목적입니다. 진로, 투자, 의료, 법률 결정을 대신하지 않습니다.',
       },

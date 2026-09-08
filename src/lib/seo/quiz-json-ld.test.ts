@@ -7,7 +7,7 @@ describe("buildQuizJsonLd", () => {
     const quiz = buildQuizJsonLd({
       name: "MBTI Personality Test",
       description: "Answer 16 questions to map your four personality preferences.",
-      url: "https://oiyo.net/en/mbti/test",
+      url: "https://oiyo.net/en/mbti/test/",
       inLanguage: "en",
       questionCount: 2,
       questions: [
@@ -32,7 +32,7 @@ describe("buildQuizJsonLd", () => {
     expect(quiz["@context"]).toBe("https://schema.org");
     expect(quiz["@type"]).toBe("Quiz");
     expect(quiz.name).toBe("MBTI Personality Test");
-    expect(quiz.url).toBe("https://oiyo.net/en/mbti/test");
+    expect(quiz.url).toBe("https://oiyo.net/en/mbti/test/");
     expect(quiz.inLanguage).toBe("en");
     expect(quiz.numberOfQuestions).toBe(2);
     expect(quiz.educationalAlignment).toEqual(

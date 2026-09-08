@@ -268,7 +268,9 @@ export default function DailyUniverse({ locale }: Props) {
             <p className="text-sm leading-relaxed text-white/70">{lt(DAY_GUIDE[pillar.element], locale)}</p>
             {locale === "ko" && (
               <a
-                href={`https://wiki.oiyo.net/ko/meaning-of-saju-ilju-${iljuSlug}/`}
+                // 일주별 wiki 해설은 더 이상 없다 — wiki 는 문서를 0건 보유한다.
+                // 60갑자 정본은 oiyo 안에 있으므로 그쪽으로 보낸다(2026-09-08).
+                href={`https://oiyo.net/ko/saju/60gapja/`}
                 className="mt-auto text-xs font-semibold text-amber-300 hover:text-amber-200 transition-colors"
               >
                 {ui.wikiLink} →

@@ -16,7 +16,7 @@
   "topics": {
     "tarot": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/tarot-beginners-complete-guide",
         "locales": [
           "ko"
@@ -28,8 +28,8 @@
         "locales": "all"
       },
       "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-tarot-major-arcana",
+        "site": "oiyo",
+        "path": "/tarot/reading",
         "locales": [
           "ko",
           "en",
@@ -39,7 +39,7 @@
     },
     "saju": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-saju-complete-guide",
         "locales": [
           "ko",
@@ -50,22 +50,11 @@
         "site": "oiyo",
         "path": "/saju/calculator",
         "locales": "all"
-      },
-      "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-saju-dictionary",
-        "locales": [
-          "ko",
-          "en",
-          "zh",
-          "fr",
-          "es"
-        ]
       }
     },
     "zodiac": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/zodiac-rising-sign-guide",
         "locales": [
           "ko",
@@ -76,16 +65,11 @@
         "site": "oiyo",
         "path": "/zodiac/fortune",
         "locales": "all"
-      },
-      "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-zodiac-signs",
-        "locales": "all"
       }
     },
     "chinese-zodiac": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/chinese-zodiac-compatibility-complete-guide",
         "locales": [
           "ko"
@@ -97,14 +81,14 @@
         "locales": "all"
       },
       "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-chinese-zodiac",
+        "site": "oiyo",
+        "path": "/chinese-zodiac",
         "locales": "all"
       }
     },
     "astrology": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/academy-astrology-basics-ch1",
         "locales": [
           "ko",
@@ -120,7 +104,7 @@
     },
     "numerology": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-numerology-complete-guide",
         "locales": [
           "ko"
@@ -134,7 +118,7 @@
     },
     "blood-type": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-2026-blood-type-annual",
         "locales": [
           "ko"
@@ -146,33 +130,33 @@
         "locales": "all"
       },
       "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-blood-type",
+        "site": "oiyo",
+        "path": "/blood-type",
         "locales": "all"
       }
     },
     "dream": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-dream-interpretation-guide",
         "locales": [
           "ko"
         ]
       },
       "try": {
-        "site": "wiki",
+        "site": "blog",
         "path": "/dream-interpreter",
         "locales": "all"
       },
       "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-dream",
+        "site": "oiyo",
+        "path": "/dream/about",
         "locales": "all"
       }
     },
     "palmistry": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/palm-reading-complete-guide",
         "locales": [
           "ko",
@@ -183,7 +167,7 @@
     },
     "physiognomy": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/face-reading-physiognomy-guide",
         "locales": [
           "ko"
@@ -197,7 +181,7 @@
     },
     "fortune": {
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/fortune-2026-monthly-forecast",
         "locales": [
           "ko"
@@ -216,7 +200,7 @@
         "locales": "all"
       },
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/mbti-complete-deep-guide",
         "locales": [
           "ko",
@@ -231,12 +215,12 @@
     },
     "riasec": {
       "lookup": {
-        "site": "wiki",
-        "path": "/meaning-of-riasec",
+        "site": "oiyo",
+        "path": "/riasec-career-test",
         "locales": "all"
       },
       "learn": {
-        "site": "blog",
+        "site": "oiyo",
         "path": "/riasec-career-complete-guide",
         "locales": [
           "ko",

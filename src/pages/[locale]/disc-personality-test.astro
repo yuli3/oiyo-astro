@@ -6,7 +6,6 @@ import TestExplainer from '../../components/shared/TestExplainer.astro';
 import { TEST_EXPLAINERS } from '../../data/test-explainers';
 import DiscPersonalityTest from '../../components/tests/DiscPersonalityTest';
 import BlogArticleLink from '../../components/shared/BlogArticleLink.astro';
-import WikiDefinitionLink from '../../components/shared/WikiDefinitionLink.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -48,7 +47,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
     <TestExplainer content={TEST_EXPLAINERS['disc-personality']} locale={locale} />
     <div class="mt-4 flex flex-wrap items-center gap-3">
       <BlogArticleLink testId="disc-personality-test" locale={locale} />
-      <WikiDefinitionLink slug="meaning-of-disc" locale={locale} compact />
     </div>
   </div>
 </Layout>
