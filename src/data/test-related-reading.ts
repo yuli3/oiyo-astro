@@ -119,7 +119,11 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/boundary-style-test": { blog: "/magazine-boundary-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/color-personality-test": { blog: "/color-psychology-complete-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
-  "/coping-style-test": { blog: "/magazine-coping-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  // 이 해설은 blog 가 아니라 oiyo 에 있고 6로케일 전부 200 이다. blog 경로로 두면
+  // 다섯 로케일은 301 을 타고 ja 는 링크 자체가 없어 페이지가 더 얇아졌다(2026-09-08).
+  "/coping-style-test": { wiki: "/magazine-coping-style-psychology/", defSite: 'oiyo' },
+  // 색 재인 게임의 짝은 작업기억 해설이다 — 왜 뒤 라운드가 어려워지는지 설명한다.
+  "/color-memory-test": { wiki: "/cognitive-load/about/", defSite: 'oiyo' },
   "/creativity-type-test": { blog: "/magazine-creativity-type-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/disc-personality-test": { blog: "/magazine-disc-personality-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/egogram-test": { blog: "/magazine-egogram-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },

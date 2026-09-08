@@ -30,6 +30,23 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     basis: ['Big Five / Five-Factor Model', 'IPIP-style public-domain personality item structure'],
     caution: 'reflection',
   },
+  'coping-style-test': {
+    basis: [
+      'Lazarus & Folkman transactional model of stress and coping (problem-focused vs emotion-focused)',
+      'Brief COPE subscale structure (support seeking, disengagement)',
+      'meaning-focused coping literature (Folkman)',
+      '6-scenario OIYO-authored items — educational reference, not a validated instrument',
+    ],
+    caution: 'reflection',
+  },
+  'color-memory-test': {
+    basis: [
+      'casual visual recognition game: 4-8 colours shown briefly, then recognised',
+      'set size grows with level, which is why later rounds feel harder',
+      'not a memory assessment and not diagnostic of anything',
+    ],
+    caution: 'reflection',
+  },
   burnout: {
     basis: ['Maslach Burnout Inventory (MBI) model', 'occupational stress and recovery literature'],
     caution: 'clinical',
