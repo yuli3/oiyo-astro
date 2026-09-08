@@ -1,7 +1,8 @@
 import { useState } from "react";
 import type { Locale } from "../../lib/i18n";
 import { BirthDateField } from "../shared/BirthDateField";
-import ResultSymbol from "../shared/ResultSymbol";
+import ResultSymbol, { resultSymbolSrc } from "../shared/ResultSymbol";
+import ShareResultButton from "../shared/ShareResultButton";
 
 interface Props {
   locale: Locale;
@@ -920,6 +921,15 @@ export default function ZodiacPersonality({ locale }: Props) {
           </div>
         </div>
       </div>
+
+      <ShareResultButton
+        locale={locale}
+        heading={ui.title}
+        resultTitle={z.name[locale]}
+        description={z.description[locale]}
+        symbolSrc={resultSymbolSrc("western-zodiac", selected)}
+        analyticsId="zodiac-personality"
+      />
 
       {/* Reset */}
       <button

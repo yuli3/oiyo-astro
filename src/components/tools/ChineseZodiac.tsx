@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Locale } from "../../i18n";
-import ResultSymbol from "../shared/ResultSymbol";
+import ResultSymbol, { resultSymbolSrc } from "../shared/ResultSymbol";
+import ShareResultButton from "../shared/ShareResultButton";
 
 interface Props {
   locale: Locale;
@@ -1293,6 +1294,15 @@ export default function ChineseZodiac({ locale }: Props) {
               ))}
             </div>
           </div>
+
+          <ShareResultButton
+            locale={locale}
+            heading={t.title}
+            resultTitle={data.name[locale]}
+            description={data.traits[locale].join(" · ")}
+            symbolSrc={resultSymbolSrc("chinese-zodiac", data.animal)}
+            analyticsId="chinese-zodiac"
+          />
         </div>
       )}
     </div>

@@ -667,7 +667,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
       const toPillar = (p: { label: string; stem: number; branch: number }) => ({ label: p.label, stem: STEMS[p.stem], branch: BRANCHES[p.branch], animal: BRANCH_ANIMALS[locale][p.branch], element: ELEMENTS[STEM_ELEMENT[p.stem]][locale] });
       const known = result.pillars.map(toPillar);
       const hour = known[3] ?? { label: t.hourPillar, stem: null, branch: null, animal: '', element: SHARE_LABELS[locale]?.privacyNote ?? 'Unknown time' };
-      await shareSajuCard({ locale, title: t.fourPillars, disclaimer: t.disclaimer, pillars: [known[0], known[1], known[2], hour] });
+      await shareSajuCard({ locale, title: t.fourPillars, disclaimer: t.disclaimer, pillars: [known[0], known[1], known[2], hour], dominantElement: result.sortedElements[0] });
       gaEvent('share_click', { test_id: 'saju', share_surface: 'image' });
     } finally { setImageSharing(false); }
   }

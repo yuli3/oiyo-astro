@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useUserStore } from "@/lib/user/store/user-store";
 import type { Locale } from "../../i18n";
-import ResultSymbol from "../shared/ResultSymbol";
+import ResultSymbol, { resultSymbolSrc } from "../shared/ResultSymbol";
+import ShareResultButton from "../shared/ShareResultButton";
 
 interface Props {
   locale: Locale;
@@ -483,6 +484,15 @@ export default function BloodTypePersonality({ locale }: Props) {
           ))}
         </div>
       </div>
+
+      <ShareResultButton
+        locale={locale}
+        heading={ui.title}
+        resultTitle={ui.types[selected]}
+        description={data.description[locale]}
+        symbolSrc={resultSymbolSrc("blood-type", selected)}
+        analyticsId="blood-type"
+      />
 
       {/* Reset */}
       <button

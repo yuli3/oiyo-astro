@@ -5,7 +5,8 @@ import { calculateSaju, analyzeSaju, STANDARD_MERIDIAN_KST } from '../../lib/ont
 import { FiveElement } from '../../lib/ontology/saju/types'
 import { fiveElementCountsToOrbit } from '../../lib/ontology/saju/orbit-from-counts'
 import FiveElementsOrbit from './saju/FiveElementsOrbit'
-import ResultSymbol from '../shared/ResultSymbol'
+import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -291,6 +292,15 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
             </div>
             <p className="text-sm font-medium text-green-700 leading-relaxed">{r.advice}</p>
           </div>
+
+          <ShareResultButton
+            locale={l}
+            heading={t.title}
+            resultTitle={`${t.lacking} · ${EL_NAME[weak][l]}`}
+            description={r.advice}
+            symbolSrc={resultSymbolSrc('five-elements', weak)}
+            analyticsId="elemental-remedy"
+          />
         </>
       )}
 

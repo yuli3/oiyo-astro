@@ -5,16 +5,17 @@ import { CELTIC_TREES } from "@/lib/ontology/celtic/types";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import { BirthDateField } from "@/components/shared/BirthDateField";
 import CelticWheel from "./celtic/CelticWheel";
-import ResultSymbol from "../shared/ResultSymbol";
+import ResultSymbol, { resultSymbolSrc } from "../shared/ResultSymbol";
+import ShareResultButton from "../shared/ShareResultButton";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
-const COPY: Record<Lang, { birthDate: string; tree: string }> = {
-  ko: { birthDate: "생년월일", tree: "수호 나무" },
-  en: { birthDate: "Birth date", tree: "Guardian tree" },
-  ja: { birthDate: "生年月日", tree: "守護樹" },
-  zh: { birthDate: "出生日期", tree: "守护树" },
-  fr: { birthDate: "Date de naissance", tree: "Arbre gardien" },
-  es: { birthDate: "Fecha de nacimiento", tree: "Árbol guardián" },
+const COPY: Record<Lang, { birthDate: string; tree: string; heading: string }> = {
+  ko: { birthDate: "생년월일", tree: "수호 나무", heading: "켈트 수호 나무" },
+  en: { birthDate: "Birth date", tree: "Guardian tree", heading: "Celtic Guardian Tree" },
+  ja: { birthDate: "生年月日", tree: "守護樹", heading: "ケルト守護樹" },
+  zh: { birthDate: "出生日期", tree: "守护树", heading: "凯尔特守护树" },
+  fr: { birthDate: "Date de naissance", tree: "Arbre gardien", heading: "Arbre gardien celtique" },
+  es: { birthDate: "Fecha de nacimiento", tree: "Árbol guardián", heading: "Árbol guardián celta" },
 };
 
 export default function CelticReading({ locale = "ko" }: { locale?: string }) {
@@ -45,6 +46,16 @@ export default function CelticReading({ locale = "ko" }: { locale?: string }) {
         total={CELTIC_TREES.length}
         myIndex={CELTIC_TREES.findIndex((sign) => sign.id === result.id)}
       />
+      <div className="mt-4">
+        <ShareResultButton
+          locale={lang}
+          heading={t.heading}
+          resultTitle={`${t.tree} · ${result.name}`}
+          description={`${result.ogham} · ${result.celticName}`}
+          symbolSrc={resultSymbolSrc("celtic-inspired")}
+          analyticsId="celtic-reading"
+        />
+      </div>
     </div>
   );
 }
