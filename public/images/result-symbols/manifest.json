@@ -78,14 +78,15 @@
       "directory": "disc",
       "width": 512,
       "height": 512,
-      "generatedAt": "2026-09-07",
-      "generation": "OpenAI built-in image generation; one transparent 2×2 source sheet cropped and optimized with cwebp.",
-      "note": "Four original behavior-style emblems. Letters remain accessible HTML; no official DISC logo or diagnostic claim is embedded.",
+      "generatedAt": "2026-09-08",
+      "generation": "xAI Imagine image_edit poses from the 2026-09-08 olive seed-sprout mascot; sharp 512 WebP q82. No locale text in artwork.",
+      "style": "OIYO warm olive cute flat 2.5D character with bold charcoal outline on cream paper",
+      "note": "Four original behavior-style characters of one mascot. Letters D/I/S/C remain accessible HTML; no official DISC logo or diagnostic claim is embedded.",
       "items": [
-        { "id": "d", "file": "d.webp", "concept": "decisive forward movement" },
-        { "id": "i", "file": "i.webp", "concept": "outward social energy" },
-        { "id": "s", "file": "s.webp", "concept": "steady shelter and support" },
-        { "id": "c", "file": "c.webp", "concept": "precise structure and quality" }
+        { "id": "d", "file": "d.webp", "concept": "decisive forward movement with a small flag" },
+        { "id": "i", "file": "i.webp", "concept": "outward social energy waving with sparkles" },
+        { "id": "s", "file": "s.webp", "concept": "steady shelter wrapping a smaller friend" },
+        { "id": "c", "file": "c.webp", "concept": "precise structure lining up three blocks" }
       ]
     },
     "loveLanguage": {
