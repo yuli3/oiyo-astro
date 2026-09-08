@@ -1,0 +1,24 @@
+---
+interface Props {
+  fallback: string;
+  src?: string;
+}
+
+const { fallback, src } = Astro.props;
+---
+
+{src ? (
+  <img
+    src={src}
+    alt=""
+    aria-hidden="true"
+    width="48"
+    height="48"
+    loading="lazy"
+    decoding="async"
+    draggable="false"
+    class="size-full object-contain"
+  />
+) : (
+  <span aria-hidden="true">{fallback}</span>
+)}

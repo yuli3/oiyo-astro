@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "updated": "2026-09-08",
+  "format": "512x512 transparent WebP",
+  "generator": "OpenAI built-in image generation",
+  "style": "OIYO warm olive cute flat 2.5D pictogram with bold charcoal outline",
+  "constraints": [
+    "no text, letters, numbers, logo, or watermark",
+    "non-diagnostic symbolic imagery",
+    "familiar objects and bold silhouette readable at 40px",
+    "two to four large shapes with no ornamental filler"
+  ],
+  "assets": {
+    "anxiety": "tangled thread resolving into a straight line",
+    "attachment-style": "two familiar interlocking links",
+    "burnout": "desk lamp beside a charging plug",
+    "curiosity": "magnifying glass examining a bright discovery",
+    "emotional-intelligence": "brain and heart connected in balance",
+    "emotional-expressiveness": "speech bubble releasing recognizable emotion symbols",
+    "empathy": "two speech bubbles sharing a heart",
+    "inner-child": "teddy bear holding a heart",
+    "jealousy": "watchful eye, heart, and question bubble",
+    "money-anxiety": "wallet, coins, worry cloud, and check mark",
+    "relationship-boredom": "tired heart beside a repetitive calendar",
+    "self-control": "a hand pausing before taking a cookie",
+    "self-efficacy": "three steps leading to a success flag",
+    "self-esteem": "handheld mirror reflecting a heart",
+    "social-comparison": "two profile cards comparing unequal charts",
+    "workaholic": "laptop beside a late-hours clock"
+  }
+}
