@@ -1,5 +1,13 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import type { Locale } from '../../lib/i18n';
+import {
+  BREATHING_LOG_KEY,
+  consecutiveStreak,
+  localDay,
+  parseDailyLog,
+  recordToday,
+  serializeDailyLog,
+} from '../../lib/session-return/daily-log';
 
 interface Props {
   locale: Locale;
@@ -227,6 +235,38 @@ const UI_LABELS = {
     fr: 'Minuteur de Respiration',
     es: 'Temporizador de Respiración',
   },
+  todayDone: {
+    ko: '오늘 한 사이클을 남겼습니다. 기록은 이 브라우저에만 있습니다.',
+    en: 'You logged a cycle today. It stays in this browser.',
+    ja: '今日のサイクルを残しました。記録はこのブラウザだけにあります。',
+    zh: '今天已记下一次循环。记录只留在这个浏览器。',
+    fr: 'Un cycle est noté pour aujourd’hui. Il reste dans ce navigateur.',
+    es: 'Registraste un ciclo hoy. Se queda en este navegador.',
+  },
+  todayHint: {
+    ko: '한 사이클을 마치면 오늘이 기록됩니다. 가입은 없습니다.',
+    en: 'Finish one cycle to mark today. No account.',
+    ja: '1サイクル終わると今日が記録されます。登録はありません。',
+    zh: '完成一次循环就会记下今天。不用注册。',
+    fr: 'Terminez un cycle pour noter aujourd’hui. Pas de compte.',
+    es: 'Termina un ciclo para marcar hoy. Sin cuenta.',
+  },
+  streak: {
+    ko: '연속',
+    en: 'in a row',
+    ja: '連続',
+    zh: '连续',
+    fr: 'd’affilée',
+    es: 'seguidos',
+  },
+  practiceNote: {
+    ko: '연습이지 치료가 아닙니다.',
+    en: 'This is practice, not treatment.',
+    ja: '練習であり治療ではありません。',
+    zh: '这是练习，不是治疗。',
+    fr: 'C’est un exercice, pas un traitement.',
+    es: 'Es práctica, no un tratamiento.',
+  },
 } as const;
 
 function t(label: Record<Locale, string>, locale: Locale): string {
@@ -249,6 +289,8 @@ export default function BreathingTimer({ locale }: Props) {
   const [countdown, setCountdown] = useState(0);
   const [cycles, setCycles] = useState(0);
   const [circleScale, setCircleScale] = useState(0.5);
+  const [days, setDays] = useState<string[]>([]);
+  const loggedToday = useRef(false);
 
   const phaseIndexRef = useRef(0);
   const timeLeftRef = useRef(0);
@@ -257,6 +299,31 @@ export default function BreathingTimer({ locale }: Props) {
 
   const pattern = PATTERNS[selectedPattern];
   const sequence = getPhaseSequence(pattern);
+  const today = localDay();
+  const didToday = days.includes(today);
+  const streak = consecutiveStreak(days, today);
+
+  useEffect(() => {
+    try {
+      const log = parseDailyLog(window.localStorage.getItem(BREATHING_LOG_KEY));
+      setDays(log.days);
+      loggedToday.current = log.days.includes(localDay());
+    } catch {
+      setDays([]);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (cycles < 1 || loggedToday.current) return;
+    const next = recordToday(days, localDay());
+    loggedToday.current = true;
+    setDays(next);
+    try {
+      window.localStorage.setItem(BREATHING_LOG_KEY, serializeDailyLog({ days: next }));
+    } catch {
+      /* private mode */
+    }
+  }, [cycles, days]);
 
   const stopTimer = useCallback(() => {
     if (intervalRef.current) {
@@ -416,6 +483,10 @@ export default function BreathingTimer({ locale }: Props) {
           <span className="text-slate-500 text-sm">
             {t(UI_LABELS.cycles, locale)}: <span className="font-bold text-teal-600 text-lg">{cycles}</span>
           </span>
+          <p className="mt-2 text-xs leading-5 text-slate-600">
+            {didToday ? t(UI_LABELS.todayDone, locale) : t(UI_LABELS.todayHint, locale)}
+            {streak >= 2 ? ` · ${streak} ${t(UI_LABELS.streak, locale)}` : ''}
+          </p>
         </div>
 
         {/* Controls */}
@@ -449,6 +520,9 @@ export default function BreathingTimer({ locale }: Props) {
             ))}
           </div>
         </div>
+        <p className="mt-4 text-center text-xs leading-5 text-slate-500">
+          {t(UI_LABELS.practiceNote, locale)}
+        </p>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@
  */
 
 export const PRANAYAMA_LOG_KEY = "oiyo.pranayama.v1";
+export const BREATHING_LOG_KEY = "oiyo.breathing.v1";
 const DAY_CAP = 60;
 
 export function localDay(date = new Date()): string {
