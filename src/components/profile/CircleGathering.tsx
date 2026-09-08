@@ -9,6 +9,7 @@ import {
   allPairEdges,
   createSymbolicGroupSnapshot,
   decodeSymbolicGroupSnapshot,
+  resolveGroupCenterId,
   starEdges,
   symbolicGroupFragment,
   type SymbolicGroupParticipant,
@@ -231,9 +232,10 @@ export default function CircleGathering({ locale }: { locale: string }) {
     void boot();
   }, [copy.friend]);
 
+  const activeCenterId = resolveGroupCenterId(people, centerId);
   const snapshot = useMemo(
-    () => (people.length >= 2 ? createSymbolicGroupSnapshot(people, { centerId: centerId || people[0]?.id }) : null),
-    [centerId, people],
+    () => (people.length >= 2 ? createSymbolicGroupSnapshot(people, { centerId: activeCenterId }) : null),
+    [activeCenterId, people],
   );
   const edges = snapshot ? (view === "star" ? starEdges(snapshot, lens) : allPairEdges(snapshot, lens)) : [];
 
@@ -296,8 +298,8 @@ export default function CircleGathering({ locale }: { locale: string }) {
   };
 
   const positions = people.map((item) => {
-    if (item.id === (centerId || people[0]?.id)) return { id: item.id, x: 50, y: 50 };
-    const others = people.filter((row) => row.id !== (centerId || people[0]?.id));
+    if (item.id === activeCenterId) return { id: item.id, x: 50, y: 50 };
+    const others = people.filter((row) => row.id !== activeCenterId);
     const angle = (Math.PI * 2 * others.findIndex((row) => row.id === item.id)) / Math.max(others.length, 1) - Math.PI / 2;
     return { id: item.id, x: 50 + Math.cos(angle) * 38, y: 50 + Math.sin(angle) * 38 };
   });
@@ -334,7 +336,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
           })}
           {positions.map((point) => {
             const who = people.find((item) => item.id === point.id)!;
-            const isCenter = point.id === (centerId || people[0]?.id);
+            const isCenter = point.id === activeCenterId;
             return <g key={point.id} onClick={() => setCenterId(point.id)} className="cursor-pointer">
               <circle cx={point.x} cy={point.y} r={isCenter ? 7 : 5.5} fill={isCenter ? "var(--primary-strong)" : "var(--accent)"} stroke="var(--primary-strong)" strokeWidth="0.6" />
               <text x={point.x} y={point.y + 0.8} textAnchor="middle" fontSize="3" fontWeight="800" fill={isCenter ? "white" : "var(--foreground)"}>{who.label.slice(0, 8)}</text>
@@ -345,11 +347,11 @@ export default function CircleGathering({ locale }: { locale: string }) {
       <CompatibilityOrbit
         locale={locale}
         mode="system"
-        centerId={centerId || people[0]?.id}
+        centerId={activeCenterId}
         people={people.map((item) => ({
           id: item.id,
           label: item.label,
-          score: scoreAgainstCenter(snapshot.edges, centerId || people[0]?.id, item.id, lens),
+          score: scoreAgainstCenter(snapshot.edges, activeCenterId, item.id, lens),
         }))}
       />
       {pairCopy && pickedEdge && <article className="mt-4 rounded-3xl bg-card p-4">
@@ -368,7 +370,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
 
     <ul className="mt-5 space-y-2">{people.map((item) => (
       <li key={item.id} className="flex min-h-12 items-center gap-3 rounded-2xl bg-card px-4">
-        <button type="button" onClick={() => setCenterId(item.id)} className="min-w-0 flex-1 truncate text-left text-sm font-black text-foreground">{item.id === centerId ? "◎ " : "○ "}{item.label}</button>
+        <button type="button" onClick={() => setCenterId(item.id)} className="min-w-0 flex-1 truncate text-left text-sm font-black text-foreground">{item.id === activeCenterId ? "◎ " : "○ "}{item.label}</button>
         <button type="button" aria-label="remove" onClick={() => setPeople((current) => current.filter((row) => row.id !== item.id))} className="h-11 w-11 text-muted-foreground"><Trash2 className="mx-auto h-4 w-4" /></button>
       </li>
     ))}</ul>
