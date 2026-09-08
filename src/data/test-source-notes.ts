@@ -47,6 +47,107 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     ],
     caution: 'reflection',
   },
+  'loneliness-test': {
+    basis: [
+      'UCLA Loneliness Scale 구조를 참고한 30문항',
+      '주관적 외로움은 사회적 접촉의 양이 아니라 기대와 현실의 간극을 잰다',
+      '임상 진단이 아니라 자기관찰용',
+    ],
+    caution: 'reflection',
+  },
+  'conflict-style-test': {
+    basis: [
+      'OIYO 자작 문항 — 갈등 상황에서의 대응 경향을 유형으로 정리한다',
+      '검증된 갈등관리 도구(TKI 등)를 사용하지 않았고 그 점수와 비교할 수 없다',
+    ],
+    caution: 'style',
+  },
+  'breakup-recovery-test': {
+    basis: [
+      'OIYO 자작 문항 — 이별 후 회복 국면을 폭풍기·성장기·고독기·전환기로 나눈다',
+      '애도 단계 이론에서 착안했으나 단계가 순서대로 온다고 보지 않는다',
+      '상실 반응이 일상 기능을 무너뜨린다면 이 결과가 아니라 전문가를 본다',
+    ],
+    caution: 'reflection',
+  },
+  'emotional-eating-test': {
+    basis: [
+      'OIYO 자작 문항 — 정서 상태와 먹는 행동의 연결을 자기보고로 본다',
+      '섭식장애 선별 도구가 아니다',
+    ],
+    caution: 'clinical',
+  },
+  'coffee-personality-test': {
+    basis: [
+      '오락용 유형 분류 — 커피 취향을 성격 은유로 쓴다',
+      '취향과 성격의 상관을 주장하지 않는다. 결과는 대화거리이지 진단이 아니다',
+    ],
+    caution: 'style',
+  },
+  'animal-personality-test': {
+    basis: [
+      '오락용 유형 분류 — 동물 상징으로 행동 경향을 이야기한다',
+      '동물 비유는 기억을 돕는 장치이고 분류학적 근거가 없다',
+    ],
+    caution: 'style',
+  },
+  'chimp-test': {
+    basis: [
+      '숫자 위치를 순간 기억하는 캐주얼 게임',
+      '교토대 침팬지 연구에서 이름을 따왔을 뿐 그 실험 절차를 재현하지 않는다',
+      '작업기억 측정이 아니고 아무것도 진단하지 않는다',
+    ],
+    caution: 'reflection',
+  },
+  'typing-speed-test': {
+    basis: [
+      '입력 속도(WPM)와 정확도 측정 — 심리 검사가 아니다',
+      '키보드·언어·지문에 따라 값이 달라지므로 절대 비교에 쓰지 않는다',
+    ],
+    caution: 'style',
+  },
+  'productivity-style-test': {
+    basis: [
+      'OIYO 자작 문항 — 몰입형·멀티태스커·협업형·유연형 중 작업 성향을 본다',
+      '업무 성과를 예측하지 않는다. 환경에 따라 바뀌는 선호에 가깝다',
+    ],
+    caution: 'style',
+  },
+  'thinking-patterns-test': {
+    basis: [
+      'OIYO 자작 문항 — 분석·창의·실용·관계 중 어디로 먼저 기우는지 본다',
+      '인지 능력 검사가 아니라 접근 방식의 선호다',
+    ],
+    caution: 'style',
+  },
+  'work-life-balance-test': {
+    basis: [
+      'OIYO 자작 문항 — 시간·에너지·경계의 배분을 자기보고로 본다',
+      '번아웃 선별 도구가 아니다. 소진이 의심되면 burnout 검사를 본다',
+    ],
+    caution: 'reflection',
+  },
+  'digital-wellness-test': {
+    basis: [
+      'OIYO 자작 문항 — 디지털 기기 사용이 수면·집중·관계에 닿는 지점을 본다',
+      '중독 진단 기준(예: IGD)을 쓰지 않았고 그것으로 읽어서도 안 된다',
+    ],
+    caution: 'clinical',
+  },
+  'risk-tolerance-test': {
+    basis: [
+      'OIYO 자작 문항 — 불확실성 앞에서의 선택 경향을 본다',
+      '투자 적합성 평가가 아니다. 금융 상품 선택의 근거로 쓰지 않는다',
+    ],
+    caution: 'finance',
+  },
+  'focus-blocker-test': {
+    basis: [
+      'OIYO 자작 10문항 — 집중을 끊는 요인이 어디에서 오는지 나눈다',
+      'ADHD 선별이 아니다. 지속적인 주의 곤란은 adhd 검사와 전문가 상담으로',
+    ],
+    caution: 'clinical',
+  },
   burnout: {
     basis: ['Maslach Burnout Inventory (MBI) model', 'occupational stress and recovery literature'],
     caution: 'clinical',
