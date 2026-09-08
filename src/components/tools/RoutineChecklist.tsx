@@ -1,4 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import {
+  ROUTINE_LOG_KEY,
+  consecutiveStreak,
+  localDay,
+  parseDailyLog,
+  recordToday,
+  serializeDailyLog,
+} from '../../lib/session-return/daily-log';
 
 type Locale = 'en' | 'ko' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -10,6 +18,7 @@ const T: Record<Locale, {
   heading: string; sub: string; placeholder: string; add: string;
   templates: { morning: string; evening: string }; remove: string;
   progress: (d: number, t: number) => string; empty: string; allDone: string;
+  todayDone: string; todayHint: string; streak: string;
   morningItems: string[]; eveningItems: string[];
 }> = {
   ko: {
@@ -17,6 +26,9 @@ const T: Record<Locale, {
     placeholder: '루틴 항목 추가 (예: 물 한 잔 마시기)', add: '추가',
     templates: { morning: '☀️ 아침 템플릿', evening: '🌙 저녁 템플릿' }, remove: '삭제',
     progress: (d, t) => `오늘 ${d}/${t} 완료`, empty: '템플릿을 누르거나 직접 항목을 추가해 보세요.', allDone: '🎉 오늘 루틴 완주!',
+    todayDone: '오늘 루틴을 마쳤습니다. 기록은 이 브라우저에만 있습니다.',
+    todayHint: '오늘 항목을 모두 체크하면 기록이 남습니다. 가입은 없습니다.',
+    streak: '연속',
     morningItems: ['기상 직후 물 한 잔', '5분 스트레칭', '오늘의 최우선 1가지 적기', '아침 햇빛 쐬기'],
     eveningItems: ['내일 할 일 3가지 메모', '10분 정리정돈', '취침 1시간 전 화면 끄기', '감사한 일 1가지 적기'],
   },
@@ -25,6 +37,9 @@ const T: Record<Locale, {
     placeholder: 'Add a routine item (e.g. drink a glass of water)', add: 'Add',
     templates: { morning: '☀️ Morning template', evening: '🌙 Evening template' }, remove: 'Remove',
     progress: (d, t) => `${d}/${t} done today`, empty: 'Tap a template or add your own items.', allDone: '🎉 Routine complete for today!',
+    todayDone: 'You finished today’s routine. It stays in this browser.',
+    todayHint: 'Check every item to mark today. No account.',
+    streak: 'in a row',
     morningItems: ['Glass of water after waking', '5-minute stretch', 'Write today\'s #1 priority', 'Get morning sunlight'],
     eveningItems: ['Note 3 tasks for tomorrow', '10-minute tidy-up', 'Screens off 1h before bed', 'Write one gratitude'],
   },
@@ -33,6 +48,9 @@ const T: Record<Locale, {
     placeholder: 'ルーティン項目を追加(例:水を一杯飲む)', add: '追加',
     templates: { morning: '☀️ 朝テンプレート', evening: '🌙 夜テンプレート' }, remove: '削除',
     progress: (d, t) => `今日 ${d}/${t} 完了`, empty: 'テンプレートを押すか、自分で項目を追加しましょう。', allDone: '🎉 今日のルーティン完走!',
+    todayDone: '今日のルーティンを終えました。記録はこのブラウザだけにあります。',
+    todayHint: '今日の項目を全部チェックすると記録されます。登録はありません。',
+    streak: '連続',
     morningItems: ['起床後に水を一杯', '5分ストレッチ', '今日の最優先1つを書く', '朝の日光を浴びる'],
     eveningItems: ['明日のタスクを3つメモ', '10分片付け', '就寝1時間前に画面オフ', '感謝を1つ書く'],
   },
@@ -41,6 +59,9 @@ const T: Record<Locale, {
     placeholder: '添加例程项目(如:喝一杯水)', add: '添加',
     templates: { morning: '☀️ 晨间模板', evening: '🌙 晚间模板' }, remove: '删除',
     progress: (d, t) => `今天完成 ${d}/${t}`, empty: '点击模板或自行添加项目。', allDone: '🎉 今日例程完成!',
+    todayDone: '今天的例程已完成。记录只留在这个浏览器。',
+    todayHint: '勾完今天的项目就会记下。不用注册。',
+    streak: '连续',
     morningItems: ['起床后喝杯水', '拉伸5分钟', '写下今天的第一要务', '晒晒早晨的阳光'],
     eveningItems: ['记下明天的3件事', '整理10分钟', '睡前1小时关闭屏幕', '写下一件感恩的事'],
   },
@@ -49,6 +70,9 @@ const T: Record<Locale, {
     placeholder: 'Ajouter un élément (ex. boire un verre d\'eau)', add: 'Ajouter',
     templates: { morning: '☀️ Modèle du matin', evening: '🌙 Modèle du soir' }, remove: 'Supprimer',
     progress: (d, t) => `${d}/${t} faits aujourd'hui`, empty: 'Choisissez un modèle ou ajoutez vos éléments.', allDone: '🎉 Routine du jour accomplie !',
+    todayDone: 'Routine du jour notée. Elle reste dans ce navigateur.',
+    todayHint: 'Cochez tous les éléments pour noter aujourd’hui. Pas de compte.',
+    streak: 'd’affilée',
     morningItems: ['Un verre d\'eau au réveil', '5 minutes d\'étirements', 'Noter la priorité n°1 du jour', 'Prendre la lumière du matin'],
     eveningItems: ['Noter 3 tâches pour demain', '10 minutes de rangement', 'Écrans éteints 1h avant le coucher', 'Écrire une gratitude'],
   },
@@ -57,6 +81,9 @@ const T: Record<Locale, {
     placeholder: 'Añade un elemento (p. ej., beber un vaso de agua)', add: 'Añadir',
     templates: { morning: '☀️ Plantilla de mañana', evening: '🌙 Plantilla de noche' }, remove: 'Eliminar',
     progress: (d, t) => `${d}/${t} hechos hoy`, empty: 'Toca una plantilla o añade tus propios elementos.', allDone: '🎉 ¡Rutina de hoy completada!',
+    todayDone: 'Terminaste la rutina de hoy. Se queda en este navegador.',
+    todayHint: 'Marca todos los elementos para registrar hoy. Sin cuenta.',
+    streak: 'seguidos',
     morningItems: ['Vaso de agua al despertar', '5 minutos de estiramientos', 'Anotar la prioridad nº1 del día', 'Tomar luz de la mañana'],
     eveningItems: ['Anotar 3 tareas para mañana', '10 minutos de orden', 'Pantallas fuera 1h antes de dormir', 'Escribir una gratitud'],
   },
@@ -76,6 +103,11 @@ export default function RoutineChecklist({ locale }: Props) {
   const [items, setItems] = useState<Item[]>([]);
   const [checked, setChecked] = useState<string[]>([]);
   const [input, setInput] = useState('');
+  const [days, setDays] = useState<string[]>([]);
+  const loggedToday = useRef(false);
+  const today = localDay();
+  const didToday = days.includes(today);
+  const streak = consecutiveStreak(days, today);
 
   useEffect(() => {
     try {
@@ -86,6 +118,9 @@ export default function RoutineChecklist({ locale }: Props) {
         const { date, ids } = JSON.parse(rawChecks);
         if (date === todayStr()) setChecked(ids); // otherwise: new day, fresh checks
       }
+      const log = parseDailyLog(localStorage.getItem(ROUTINE_LOG_KEY));
+      setDays(log.days);
+      loggedToday.current = log.days.includes(localDay());
     } catch { /* private mode etc. */ }
   }, []);
 
@@ -117,6 +152,17 @@ export default function RoutineChecklist({ locale }: Props) {
     saveChecks(checked.includes(id) ? checked.filter((c) => c !== id) : [...checked, id]);
 
   const doneCount = items.filter((i) => checked.includes(i.id)).length;
+  const allComplete = items.length > 0 && doneCount === items.length;
+
+  useEffect(() => {
+    if (!allComplete || loggedToday.current) return;
+    const next = recordToday(days, localDay());
+    loggedToday.current = true;
+    setDays(next);
+    try {
+      localStorage.setItem(ROUTINE_LOG_KEY, serializeDailyLog({ days: next }));
+    } catch { /* private mode */ }
+  }, [allComplete, days]);
 
   return (
     <div className="mt-10 rounded-2xl border-2 border-green-200 bg-card p-6">
@@ -164,9 +210,13 @@ export default function RoutineChecklist({ locale }: Props) {
         </ul>
       )}
 
-      {items.length > 0 && doneCount === items.length && (
+      {allComplete && (
         <p className="mt-4 text-sm font-bold text-green-700">{t.allDone}</p>
       )}
+      <p className="mt-2 text-xs text-slate-500">
+        {didToday ? t.todayDone : t.todayHint}
+        {streak >= 2 ? ` · ${streak} ${t.streak}` : ''}
+      </p>
 
       <form
         className="mt-5 flex gap-2"
