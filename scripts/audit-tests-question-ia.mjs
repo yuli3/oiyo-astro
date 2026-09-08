@@ -8,6 +8,8 @@
 //
 // usage: node scripts/audit-tests-question-ia.mjs
 import { readFileSync } from "node:fs";
+import { TEST_DIRECTORY_EXTRA } from "../src/data/test-directory-extra.ts";
+import { SEARCH_ONLY_PATHS } from "../src/data/test-question-lanes.ts";
 
 const PAGE = "src/pages/[locale]/tests/index.astro";
 const LANES = "src/data/test-question-lanes.ts";
@@ -65,8 +67,31 @@ if (!/visibleLanes\.map/.test(page)) fail("visibleLanes 를 렌더하지 않는�
 // 6) "지금 마음"은 YMYL 이라 묶음 단위 비진단 경계를 유지한다.
 if (!/MOOD_BOUNDARY\[locale\]/.test(page)) fail("'지금 마음' 묶음의 비진단 경계 문구가 없다");
 
+// 추가 항목이 분류나 검색 양쪽에서 빠지는 조용한 손실을 막는다.
+const mappedPaths = new Set(mapped.map(({ path }) => path));
+if (mappedPaths.size !== mapped.length) fail("중복 lane 경로가 있다");
+const corePaths = new Set([...page.matchAll(/href: localePath\(locale, '([^']+)'\)/g)].map((m) => m[1]));
+const extraPaths = new Set(TEST_DIRECTORY_EXTRA.map((entry) => `/${entry.slug}`));
+for (const path of corePaths) {
+  if (!FORTUNE.some((prefix) => path.startsWith(prefix)) && !mappedPaths.has(path)) fail(`대표 목록의 분류 누락: ${path}`);
+}
+if (extraPaths.size !== TEST_DIRECTORY_EXTRA.length) fail("추가 디렉터리에 중복 경로가 있다");
+for (const path of mappedPaths) {
+  if (!corePaths.has(path) && !extraPaths.has(path)) fail(`매핑의 실제 검사 데이터가 없다: ${path}`);
+  if (path in SEARCH_ONLY_PATHS) fail(`분류와 검색 전용에 중복 등록됐다: ${path}`);
+}
+for (const path of extraPaths) {
+  if (!mappedPaths.has(path) && !(path in SEARCH_ONLY_PATHS)) fail(`분류·검색에서 누락: ${path}`);
+}
+for (const [path, reason] of Object.entries(SEARCH_ONLY_PATHS)) {
+  if (!extraPaths.has(path) || !reason.trim()) fail(`검색 전용 경로의 데이터·제외 사유 부재: ${path}`);
+}
+if (/TEST_DIRECTORY_EXTRA\.map\(\(entry\) => \(/.test(page)) fail("추가 목록이 별도 덤프로 다시 렌더된다");
+if (!page.includes('lane.tests.slice(0, 3)') || !page.includes('lane.tests.slice(3)') || !page.includes('<details')) fail("대표 3개·나머지 펼침 구조가 없다");
+if (!page.includes('Object.keys(SEARCH_ONLY_PATHS)') || !page.includes('data-search-results')) fail("검색 전용 도구의 탐색 경로가 없다");
+
 for (const f of failures) console.error(`FAIL ${f}`);
 console.log(failures.length
   ? `/tests 질문 IA 감사: ${failures.length}건 실패`
-  : `/tests 질문 IA 감사: PASS — lane 4 · 매핑 ${mapped.length}건 · 운세 재진입 0 · 약어 노출 0`);
+  : `/tests 질문 IA 감사: PASS — lane 4 · 매핑 ${mapped.length}건 · 운세 재진입 0 · 약어 노출 0 · 추가 ${extraPaths.size}건 분류/검색 보존`);
 process.exitCode = failures.length ? 1 : 0;

@@ -7,7 +7,7 @@ import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import TestIcon from '../../../components/shared/TestIcon.astro';
 import { TEST_DIRECTORY_EXTRA } from '../../../data/test-directory-extra';
 import { testIconSrc } from '../../../data/test-icons';
-import { QUESTION_LANES, LANE_BY_PATH, MOOD_BOUNDARY } from '../../../data/test-question-lanes';
+import { QUESTION_LANES, LANE_BY_PATH, SEARCH_ONLY_PATHS, MOOD_BOUNDARY } from '../../../data/test-question-lanes';
 import { Card, CardContent, CardHeader } from '../../../components/ui/card';
 import { routeTransitionName } from '../../../lib/system/view-transition-name';
 import {
@@ -62,22 +62,22 @@ const subheading: Record<Locale, string> = {
   es: 'Empieza por tu pregunta, no por el nombre de una escala',
 };
 
-const startLabel: Record<Locale, string> = {
-  ko: '시작하기 →',
-  en: 'Start →',
-  ja: '始める →',
-  zh: '开始 →',
-  fr: 'Commencer →',
-  es: 'Empezar →',
+const moreInLane: Record<Locale, (count: number) => string> = {
+  ko: (count) => `이 질문의 검사 ${count}개 더 보기`,
+  en: (count) => `Show ${count} more tests for this question`,
+  ja: (count) => `この質問のテストをあと${count}件見る`,
+  zh: (count) => `查看此问题的另外${count}项测试`,
+  fr: (count) => `Voir ${count} autres tests pour cette question`,
+  es: (count) => `Ver ${count} pruebas más para esta pregunta`,
 };
 
-const moreTestsLabel: Record<Locale, string> = {
-  ko: '더 많은 테스트',
-  en: 'More Tests',
-  ja: 'その他のテスト',
-  zh: '更多测试',
-  fr: 'Plus de tests',
-  es: 'Más pruebas',
+const searchCopy: Record<Locale, { label: string; hint: string; empty: string; count: string }> = {
+  ko: { label: '이름으로 검사·도구 찾기', hint: '검사 이름이나 궁금한 주제를 입력하세요.', empty: '일치하는 항목이 없습니다. 짧은 단어로 다시 찾아보세요.', count: '검색 결과 {count}개' },
+  en: { label: 'Find a test or tool by name', hint: 'Enter a test name or a topic.', empty: 'No matches. Try a shorter search term.', count: '{count} results' },
+  ja: { label: '名前でテスト・ツールを探す', hint: 'テスト名や気になるテーマを入力してください。', empty: '該当する項目がありません。短い言葉でお試しください。', count: '検索結果 {count}件' },
+  zh: { label: '按名称查找测试或工具', hint: '输入测试名称或感兴趣的主题。', empty: '没有匹配项，请尝试更短的关键词。', count: '{count}项结果' },
+  fr: { label: 'Trouver un test ou un outil par son nom', hint: 'Saisissez le nom d’un test ou un sujet.', empty: 'Aucun résultat. Essayez un terme plus court.', count: '{count} résultats' },
+  es: { label: 'Buscar una prueba o herramienta por nombre', hint: 'Escribe el nombre de una prueba o un tema.', empty: 'Sin coincidencias. Prueba con una palabra más corta.', count: '{count} resultados' },
 };
 
 const categories = [
@@ -559,21 +559,38 @@ const categories = [
   },
 ];
 
-// 질문 분류 view model. `categories` 를 복제하지 않고 **재배열만** 한다 —
-// 검사 항목의 정본은 위 배열 하나로 유지된다. 운세·전통(fortune·traditional)은
-// LANE_BY_PATH 에 없으므로 자연히 빠진다: 허브에서 내리는 것이지 삭제가 아니며
-// 각 canonical route 는 그대로 살아 있다.
-const testsByPath = new Map(
-  categories.flatMap((cat) => cat.tests.map((test) => [test.href, test] as const)),
-);
+// 제목·설명은 기존 정본을 참조하고 분류만 합친다. 대표 검사가 먼저 온다.
+interface HubTest {
+  href: string;
+  title: Record<Locale, string>;
+  desc: Record<Locale, string>;
+  icon: string;
+  bg: string;
+}
+const testsByPath = new Map<string, HubTest>([
+  ...TEST_DIRECTORY_EXTRA.map((entry) => {
+    const href = localePath(locale, `/${entry.slug}`);
+    return [href, { href, title: entry.title, desc: entry.description, icon: '', bg: 'bg-surface-subtle' }] as const;
+  }),
+  ...categories.flatMap((cat) => cat.tests.map((test) => [test.href, test] as const)),
+]);
+
+const testForPath = (path: string) => {
+  const test = testsByPath.get(localePath(locale, path));
+  if (!test) throw new Error(`Missing test directory entry: ${path}`);
+  return test;
+};
 
 const lanes = QUESTION_LANES.map((lane) => ({
   ...lane,
   tests: Object.entries(LANE_BY_PATH)
     .filter(([, id]) => id === lane.id)
-    .map(([path]) => testsByPath.get(localePath(locale, path)))
-    .filter((test): test is NonNullable<typeof test> => Boolean(test)),
+    .map(([path]) => testForPath(path)),
 }));
+
+const searchableTests = [...Object.keys(LANE_BY_PATH), ...Object.keys(SEARCH_ONLY_PATHS)]
+  .map(testForPath);
+const searchText = searchCopy[locale];
 
 // 빈 분류는 렌더하지 않는다. 다만 조용히 비면 매핑이 끊긴 것이므로 빌드에서
 // 드러나야 한다 — scripts/audit-tests-question-ia.mjs 가 이 계약을 강제한다.
@@ -586,9 +603,6 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
   <!-- Hero -->
   <section class="bg-gradient-to-b from-green-50/80 to-white pt-16 pb-10 px-4">
     <div class="max-w-2xl mx-auto text-center">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 border border-green-100 text-green-700 text-xs font-bold mb-5">
-        OIYO Tests
-      </div>
       <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3 leading-tight">
         {heading[locale]}
       </h1>
@@ -603,12 +617,40 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
     </div>
   </section>
 
-  <!-- Test categories -->
+  <nav aria-label={heading[locale]} class="max-w-5xl mx-auto px-4 pt-6 flex flex-wrap gap-2">
+    {visibleLanes.map((lane) => (
+      <a href={`#${lane.id}`} class="min-h-11 inline-flex items-center rounded-full border border-primary/20 px-4 text-sm font-medium text-primary hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+        {lane.label[locale]}
+      </a>
+    ))}
+  </nav>
+
+  <section class="max-w-5xl mx-auto px-4 pt-5">
+    <details id="test-search" class="rounded-xl border border-primary/15 bg-card px-4">
+      <summary class="min-h-11 cursor-pointer py-3 text-sm font-semibold text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">{searchText.label}</summary>
+      <div class="pb-4">
+        <div data-search-control hidden>
+          <label for="test-search-input" class="block pb-2 text-sm text-foreground">{searchText.hint}</label>
+          <input id="test-search-input" type="search" autocomplete="off" class="w-full min-h-11 rounded-md border border-input bg-background px-3 py-2 text-base text-foreground placeholder:text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring" />
+          <p data-search-status role="status" class="pt-3 text-sm text-muted-foreground" data-empty={searchText.empty} data-count={searchText.count}></p>
+        </div>
+        <ul data-search-results class="divide-y divide-primary/10">
+          {searchableTests.map((test) => (
+            <li data-search-entry data-search-text={`${test.title[locale]} ${test.desc[locale]}`}>
+              <a href={test.href} class="block min-h-11 rounded-md px-3 py-3 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">{test.title[locale]}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- 질문별 대표 3개, 나머지는 네이티브 details로 탐색한다. JS 없이도 링크가 남는다. -->
   <section class="max-w-5xl mx-auto px-4 py-10 grid gap-6 lg:grid-cols-2 lg:items-start">
     {visibleLanes.map((lane) => (
       <Card className="border-primary/10 bg-card/95 shadow-sm">
         <CardHeader className="border-b border-primary/10 pb-4">
-          <h2 class="text-base font-semibold text-foreground">
+          <h2 id={lane.id} class="scroll-mt-24 text-base font-semibold text-foreground">
             {lane.question[locale]}
           </h2>
           <p class="text-xs text-muted-foreground">{lane.label[locale]} · {lane.tests.length}</p>
@@ -618,7 +660,7 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
         </CardHeader>
         <CardContent className="p-3">
           <ItemGroup className="gap-1">
-            {lane.tests.map((test) => (
+            {lane.tests.slice(0, 3).map((test) => (
               <Item role="listitem" size="sm" className="p-0 hover:bg-primary/5 focus-within:ring-2 focus-within:ring-ring/40">
                 <a href={test.href} class="group flex min-w-0 flex-1 items-start gap-3 rounded-md px-3 py-3 outline-none">
                   <ItemMedia className={`size-10 rounded-md ${test.bg} p-1 text-lg`} aria-hidden="true">
@@ -642,36 +684,25 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
               </Item>
             ))}
           </ItemGroup>
+          {lane.tests.length > 3 && (
+            <details class="mt-3 border-t border-primary/10">
+              <summary class="min-h-11 cursor-pointer rounded-md px-3 py-3 text-sm font-semibold text-primary hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                {moreInLane[locale](lane.tests.length - 3)}
+              </summary>
+              <ul class="divide-y divide-primary/10 px-1">
+                {lane.tests.slice(3).map((test) => (
+                  <li>
+                    <a href={test.href} class="block min-h-11 rounded-md px-3 py-3 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                      {test.title[locale]}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
         </CardContent>
       </Card>
     ))}
-  </section>
-
-  <!-- More tests: 2026-07-20 IA audit found 90+ real test/tool pages with zero internal inbound
-       links (only discoverable via sitemap.xml). This grid closes that gap — see
-       src/data/test-directory-extra.ts and company-brain/.../ontology-ux-audit-and-jarvis-vision-2026-07-20.md. -->
-  <section class="max-w-5xl mx-auto px-4 pb-4">
-    <h2 class="text-sm font-bold text-green-500 uppercase tracking-widest mb-5">
-      {moreTestsLabel[locale]}
-    </h2>
-    <Card className="border-primary/10 bg-card/95 shadow-sm">
-      <CardContent className="p-3">
-        <ItemGroup className="grid gap-1 sm:grid-cols-2 lg:grid-cols-3">
-          {TEST_DIRECTORY_EXTRA.map((entry) => (
-            <Item role="listitem" size="sm" className="min-w-0 p-0 hover:bg-primary/5 focus-within:ring-2 focus-within:ring-ring/40">
-              <a href={localePath(locale, `/${entry.slug}`)} class="group flex min-h-11 min-w-0 flex-1 items-center gap-2 rounded-md px-3 py-2 outline-none">
-                <ItemContent className="min-w-0">
-                  <ItemTitle className="text-xs text-foreground group-hover:text-primary">
-                    {entry.title[locale] ?? entry.title.en}
-                  </ItemTitle>
-                </ItemContent>
-                <ItemActions className="text-xs text-primary" aria-hidden="true">→</ItemActions>
-              </a>
-            </Item>
-          ))}
-        </ItemGroup>
-      </CardContent>
-    </Card>
   </section>
 
   <section class="max-w-5xl mx-auto px-4 pb-12">
@@ -679,3 +710,40 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
     <WisdomNotes topic="test-hub" locale={locale} />
   </section>
 </Layout>
+
+<script>
+  function initTestSearch() {
+    const root = document.querySelector<HTMLDetailsElement>('#test-search');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = 'true';
+    const input = root.querySelector<HTMLInputElement>('#test-search-input')!;
+    const control = root.querySelector<HTMLElement>('[data-search-control]')!;
+    const status = root.querySelector<HTMLElement>('[data-search-status]')!;
+    const results = root.querySelector<HTMLElement>('[data-search-results]')!;
+    const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase().trim();
+    const entries = Array.from(root.querySelectorAll<HTMLElement>('[data-search-entry]'))
+      .map((element) => ({ element, text: normalize(element.dataset.searchText || '') }));
+    control.hidden = false;
+    const filter = () => {
+      const terms = normalize(input.value).split(/\s+/).filter(Boolean);
+      let count = 0;
+      for (const { element, text } of entries) {
+        const match = terms.length > 0 && terms.every((term) => text.includes(term));
+        element.hidden = !match;
+        if (match) count++;
+      }
+      results.hidden = !terms.length;
+      status.textContent = !terms.length ? '' : count
+        ? status.dataset.count!.replace('{count}', String(count)) : status.dataset.empty!;
+    };
+    // 한 프레임에 한 번만 필터한다. 서버 렌더 링크는 JS가 없어도 펼쳐 볼 수 있다.
+    let frame = 0;
+    input.addEventListener('input', () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(filter);
+    });
+    filter();
+  }
+  initTestSearch();
+  document.addEventListener('astro:page-load', initTestSearch);
+</script>
