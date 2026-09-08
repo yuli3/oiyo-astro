@@ -1,5 +1,13 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import type { Locale } from '../../i18n';
+import {
+  PRANAYAMA_LOG_KEY,
+  consecutiveStreak,
+  localDay,
+  parseDailyLog,
+  recordToday,
+  serializeDailyLog,
+} from '../../lib/session-return/daily-log';
 
 /**
  * Pranayama (yoga breathing) guide. A curated library of traditional yogic
@@ -195,6 +203,10 @@ const UI: Record<string, L<string>> = {
   steps: { ko: '하는 법', en: 'How to', ja: 'やり方', zh: '方法', fr: 'Mode d’emploi', es: 'Cómo hacerlo' },
   caution: { ko: '주의', en: 'Caution', ja: '注意', zh: '注意', fr: 'Attention', es: 'Precaución' },
   rhythm: { ko: '리듬(초)', en: 'Rhythm (sec)', ja: 'リズム（秒）', zh: '节奏（秒）', fr: 'Rythme (s)', es: 'Ritmo (s)' },
+  todayDone: { ko: '오늘 한 라운드를 남겼습니다. 기록은 이 브라우저에만 있습니다.', en: 'You logged a round today. It stays in this browser.', ja: '今日のラウンドを残しました。記録はこのブラウザだけにあります。', zh: '今天已记下一轮。记录只留在这个浏览器。', fr: 'Un cycle est noté pour aujourd’hui. Il reste dans ce navigateur.', es: 'Registraste una ronda hoy. Se queda en este navegador.' },
+  todayHint: { ko: '한 라운드를 마치면 오늘이 기록됩니다. 가입은 없습니다.', en: 'Finish one round to mark today. No account.', ja: '1ラウンド終わると今日が記録されます。登録はありません。', zh: '完成一轮就会记下今天。不用注册。', fr: 'Terminez un cycle pour noter aujourd’hui. Pas de compte.', es: 'Termina una ronda para marcar hoy. Sin cuenta.' },
+  streak: { ko: '연속', en: 'in a row', ja: '連続', zh: '连续', fr: 'd’affilée', es: 'seguidos' },
+  practiceNote: { ko: '연습이지 치료가 아닙니다.', en: 'This is practice, not treatment.', ja: '練習であり治療ではありません。', zh: '这是练习，不是治疗。', fr: 'C’est un exercice, pas un traitement.', es: 'Es práctica, no un tratamiento.' },
 };
 
 function getSequence(t: Technique): { phase: Phase; duration: number }[] {
@@ -214,6 +226,8 @@ export default function PranayamaGuide({ locale }: Props) {
   const [countdown, setCountdown] = useState(0);
   const [rounds, setRounds] = useState(0);
   const [scale, setScale] = useState(0.5);
+  const [days, setDays] = useState<string[]>([]);
+  const loggedToday = useRef(false);
 
   const phaseIdx = useRef(0);
   const timeLeft = useRef(0);
@@ -222,6 +236,31 @@ export default function PranayamaGuide({ locale }: Props) {
 
   const technique = TECHNIQUES[selected];
   const sequence = getSequence(technique);
+  const today = localDay();
+  const didToday = days.includes(today);
+  const streak = consecutiveStreak(days, today);
+
+  useEffect(() => {
+    try {
+      const log = parseDailyLog(window.localStorage.getItem(PRANAYAMA_LOG_KEY));
+      setDays(log.days);
+      loggedToday.current = log.days.includes(localDay());
+    } catch {
+      setDays([]);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (rounds < 1 || loggedToday.current) return;
+    const next = recordToday(days, localDay());
+    loggedToday.current = true;
+    setDays(next);
+    try {
+      window.localStorage.setItem(PRANAYAMA_LOG_KEY, serializeDailyLog({ days: next }));
+    } catch {
+      /* private mode */
+    }
+  }, [rounds, days]);
 
   const stop = useCallback(() => {
     if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
@@ -315,6 +354,10 @@ export default function PranayamaGuide({ locale }: Props) {
       <div className="mb-4 text-center text-sm text-green-600">
         {u('rounds')}: <span className="text-lg font-bold text-green-700">{rounds}</span>
       </div>
+      <p className="mb-4 text-center text-xs leading-5 text-green-800">
+        {didToday ? u('todayDone') : u('todayHint')}
+        {streak >= 2 ? ` · ${streak} ${u('streak')}` : ''}
+      </p>
       <div className="flex justify-center gap-3">
         <button type="button" onClick={startPause}
           className={`rounded-xl px-8 py-3 font-semibold text-primary-foreground shadow-sm transition-all ${isRunning ? 'bg-amber-500 hover:bg-amber-600' : 'bg-primary hover:bg-primary-strong'}`}>
@@ -353,6 +396,7 @@ export default function PranayamaGuide({ locale }: Props) {
             <span className="font-semibold">{u('caution')}: </span>{tt(technique.caution, locale)}
           </p>
         )}
+        <p className="text-xs leading-5 text-green-700">{u('practiceNote')}</p>
       </div>
     </div>
   );
