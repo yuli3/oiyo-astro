@@ -2,6 +2,7 @@
 import { FAMILY_SITES, familySiteHref, familySiteTag } from '../config/navigation';
 import type { Locale } from '../i18n';
 import { getTranslations, LOCALES, LOCALE_LABELS, localePath } from '../i18n';
+import { localesForPath } from '../lib/article-locales';
 
 interface Props {
   locale: Locale;
@@ -41,6 +42,14 @@ const LANG_ITEMS: { code: Locale; flag: string; name: string }[] = [
 
 const currentLangItem = LANG_ITEMS.find((item) => item.code === locale) ?? LANG_ITEMS[0];
 
+// 글은 로케일마다 있지 않다. 없는 로케일을 제시하면 그 링크는 404 다 — 2026-09-08
+// 실측 4,566건. 현재 경로가 이관된 글이면 실제 있는 로케일로만 좁힌다. 정적 라우트는
+// 이 표에 없으므로 null 이 오고, 그때는 지금까지처럼 전부 보여준다.
+const pathLocales = await localesForPath(currentPath);
+const langItems = pathLocales
+  ? LANG_ITEMS.filter((item) => pathLocales.has(item.code) || item.code === locale)
+  : LANG_ITEMS;
+
 // 2026-08-25 /grill-me: 방문자가 보는 이름은 검사 / 내 지도 / 오늘 세 개가 우선이고
 // (존재론은 부제로만 남김), 소개·FAQ는 같은 서랍 안에서 아래쪽 보조 그룹으로 내린다.
 // company-brain/AI-Sessions/wiki/design/oiyo-landing-ux-consistency-2026-08-25.md §4.1.
@@ -76,7 +85,7 @@ const secondaryNavLinks = [
           <span aria-hidden="true">{currentLangItem.flag}</span><span class="hidden sm:inline">{currentLangItem.name}</span><span aria-hidden="true">⌄</span>
         </summary>
         <div class="absolute right-0 top-full z-50 mt-2 flex min-w-[140px] flex-col gap-1 rounded-lg border border-border bg-background p-2 shadow-lg">
-          {LANG_ITEMS.map(({ code, flag, name }) => (
+          {langItems.map(({ code, flag, name }) => (
             <a href={localePath(code, currentPath)} data-locale={code} aria-label={name} title={name} aria-current={code === locale ? 'true' : undefined} class:list={['flex items-center gap-1.5 rounded-md px-2 py-1.5 text-[11px] font-bold whitespace-nowrap', code === locale ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:text-primary hover:bg-primary/5']}>
               <span aria-hidden="true">{flag}</span><span>{name}</span>
             </a>
