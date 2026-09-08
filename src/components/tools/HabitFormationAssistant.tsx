@@ -1,4 +1,12 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import {
+  HABIT_LOG_KEY,
+  consecutiveStreak,
+  localDay,
+  parseDailyLog,
+  recordToday,
+  serializeDailyLog,
+} from '../../lib/session-return/daily-log'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 
@@ -15,6 +23,9 @@ const LABELS: Record<SupportedLang, {
   reset: string
   week: string
   tip: string
+  todayDone: string
+  todayHint: string
+  streak: string
 }> = {
   ko: {
     title: '30일 습관형성 도우미',
@@ -25,6 +36,9 @@ const LABELS: Record<SupportedLang, {
     reset: '초기화',
     week: '주차',
     tip: '하루를 놓쳐도 실패가 아닙니다. 다음 체크인을 유지하는 것이 습관의 핵심입니다.',
+    todayDone: '오늘 체크인을 남겼습니다. 기록은 이 브라우저에만 있습니다.',
+    todayHint: '하루를 체크하면 오늘이 기록됩니다. 가입은 없습니다.',
+    streak: '연속',
   },
   en: {
     title: '30-Day Habit Formation Helper',
@@ -35,6 +49,9 @@ const LABELS: Record<SupportedLang, {
     reset: 'Reset',
     week: 'week',
     tip: 'Missing a day is not failure. Returning to the next check-in is the habit.',
+    todayDone: 'You checked in today. It stays in this browser.',
+    todayHint: 'Check one day to mark today. No account.',
+    streak: 'in a row',
   },
   ja: {
     title: '30日習慣形成ヘルパー',
@@ -45,6 +62,9 @@ const LABELS: Record<SupportedLang, {
     reset: 'リセット',
     week: '週',
     tip: '1日抜けても失敗ではありません。次のチェックインに戻ることが習慣です。',
+    todayDone: '今日のチェックインを残しました。記録はこのブラウザだけにあります。',
+    todayHint: '1日チェックすると今日が記録されます。登録はありません。',
+    streak: '連続',
   },
 }
 
@@ -83,16 +103,29 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
   const storageKey = `oiyo-habit-helper-${locale}`
   const [habit, setHabit] = useState('')
   const [checked, setChecked] = useState<boolean[]>(Array.from({ length: 30 }, () => false))
+  const [logDays, setLogDays] = useState<string[]>([])
+  const loggedToday = useRef(false)
+  const today = localDay()
+  const didToday = logDays.includes(today)
+  const streak = consecutiveStreak(logDays, today)
 
   useEffect(() => {
     const saved = window.localStorage.getItem(storageKey)
-    if (!saved) return
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved) as { habit?: string; checked?: boolean[] }
+        setHabit(parsed.habit ?? '')
+        setChecked(Array.from({ length: 30 }, (_, i) => Boolean(parsed.checked?.[i])))
+      } catch {
+        window.localStorage.removeItem(storageKey)
+      }
+    }
     try {
-      const parsed = JSON.parse(saved) as { habit?: string; checked?: boolean[] }
-      setHabit(parsed.habit ?? '')
-      setChecked(Array.from({ length: 30 }, (_, i) => Boolean(parsed.checked?.[i])))
+      const log = parseDailyLog(window.localStorage.getItem(HABIT_LOG_KEY))
+      setLogDays(log.days)
+      loggedToday.current = log.days.includes(localDay())
     } catch {
-      window.localStorage.removeItem(storageKey)
+      setLogDays([])
     }
   }, [storageKey])
 
@@ -105,8 +138,22 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
   const days = DAYS[locale]
   const weeks = useMemo(() => [0, 1, 2, 3, 4].map((week) => days.slice(week * 6, week * 6 + 6)), [days])
 
+  function markToday() {
+    if (loggedToday.current) return
+    const next = recordToday(logDays, localDay())
+    loggedToday.current = true
+    setLogDays(next)
+    try {
+      window.localStorage.setItem(HABIT_LOG_KEY, serializeDailyLog({ days: next }))
+    } catch {
+      /* private mode */
+    }
+  }
+
   function toggle(index: number) {
+    const turningOn = !checked[index]
     setChecked((current) => current.map((value, i) => i === index ? !value : value))
+    if (turningOn) markToday()
   }
 
   function reset() {
@@ -138,6 +185,10 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
         <div className="h-3 rounded-full bg-muted overflow-hidden">
           <div className="h-full bg-primary transition-all" style={{ width: `${percent}%` }} />
         </div>
+        <p className="text-xs text-muted-foreground">
+          {didToday ? labels.todayDone : labels.todayHint}
+          {streak >= 2 ? ` · ${streak} ${labels.streak}` : ''}
+        </p>
       </div>
       <div className="space-y-4">
         {weeks.map((weekDays, weekIndex) => (
