@@ -78,6 +78,15 @@ const limits: Record<Locale, { title: string; body: string }> = {
 };
 
 const l = limits[locale] ?? limits.en;
+
+const heroAlt: Record<Locale, string> = {
+  ko: '이름 소리가 파동처럼 퍼지는 성명학 상징 그림. 글자는 없음',
+  en: 'Symbolic name-reading illustration of sound-like waves, with no letters',
+  ja: '名前の音が波のように広がる姓名判断の象徴画。文字はなし',
+  zh: '姓名读音如波纹散开的姓名学象征图，不含文字',
+  fr: "Illustration d’onomancie : des ondes sonores sans lettres",
+  es: 'Ilustración de onomancia: ondas de sonido sin letras',
+};
 ---
 
 <Layout
@@ -90,6 +99,18 @@ const l = limits[locale] ?? limits.en;
 >
   <div class="mx-auto w-full max-w-3xl px-4 py-8 sm:py-12">
     <NameEnergyReading client:load locale={locale} copy={copy} />
+
+    <figure class="mx-auto mt-10 w-full max-w-md overflow-hidden rounded-2xl border border-green-100 bg-card">
+      <img
+        src="/images/mystic/onomancy-hero.webp"
+        alt={heroAlt[locale] ?? heroAlt.en}
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full"
+      />
+    </figure>
 
     <section class="mx-auto mt-10 w-full max-w-md rounded-[28px] border border-amber-200 bg-amber-50/60 p-5">
       <h2 class="text-sm font-black text-amber-900">{l.title}</h2>

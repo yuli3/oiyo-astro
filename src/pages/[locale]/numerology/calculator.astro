@@ -266,6 +266,15 @@ const content: Record<Locale, {
   },
 };
 
+const heroAlt: Record<Locale, string> = {
+  ko: '숫자 돌이 나무를 중심으로 궤도를 그리는 수비학 상징 그림',
+  en: 'Symbolic numerology illustration of unmarked stones orbiting a tree',
+  ja: '数字の石が木のまわりを回る数秘術の象徴画',
+  zh: '石子绕着树木运行的数字命理象征图',
+  fr: 'Illustration symbolique de numérologie : des pierres sans inscription orbitent un arbre',
+  es: 'Ilustración simbólica de numerología: piedras sin marcas orbitan un árbol',
+};
+
 const c = content[locale] ?? content.en;
 const localizedRelated = c.related.map((item) => ({
   ...item,
@@ -290,6 +299,18 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="mx-auto max-w-3xl px-4 py-10">
     <NumerologyCalculator client:load locale={locale} />
+
+    <figure class="mt-10 overflow-hidden rounded-2xl border border-green-100 bg-card">
+      <img
+        src="/images/mystic/numerology-hero.webp"
+        alt={heroAlt[locale] ?? heroAlt.en}
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full"
+      />
+    </figure>
 
     <section class="mt-10 border-t border-green-100 pt-8">
       <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>
