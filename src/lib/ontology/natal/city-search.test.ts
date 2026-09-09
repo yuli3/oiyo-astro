@@ -71,18 +71,30 @@ describe('searchRows', () => {
 describe('searchCities', () => {
   it('경도·시간대를 그대로 실어 준다 — 이 값이 진태양시 계산으로 간다', async () => {
     const hits = await searchCities('seoul', 20, bundle());
-    const seoul = hits.find((h) => h.city.label.ko === 'Seoul')!;
+    const seoul = hits.find((h) => h.latin === 'Seoul')!;
     expect(seoul.city.lon).toBe(126.978);
     expect(seoul.city.zoneId).toBe('Asia/Seoul');
     expect(seoul.countryCode).toBe('KR');
   });
 
-  it('6 로케일 라벨이 모두 같은 값이고 번역을 지어내지 않는다', async () => {
+  it('현지 표기가 없으면 라틴 표기로 6 로케일을 채우고 번역을 지어내지 않는다', async () => {
     const [hit] = await searchCities('bogota', 1, bundle());
     const labels = Object.values(hit.city.label);
     expect(labels).toHaveLength(6);
     expect(new Set(labels).size).toBe(1);
     expect(hit.untranslated).toBe(true);
+  });
+
+  it('ko/ja/zh 는 GeoNames 현지 표기로 보여 준다', async () => {
+    // 예전에는 여섯 로케일을 전부 라틴 표기로 채웠다. 한국어 사용자가 "서울"로
+    // 검색해 놓고 결과에서 "Seoul"만 보면 자기 도시인지 확신하지 못한다.
+    const hits = await searchCities('seoul', 20, bundle());
+    const seoul = hits.find((h) => h.latin === 'Seoul')!;
+    expect(seoul.city.label.ja).toBe('ソウル');
+    expect(seoul.city.label.zh).toBe('首尔');
+    expect(seoul.city.label.en).toBe('Seoul');
+    expect(seoul.city.label.fr).toBe('Seoul'); // 없는 번역은 지어내지 않는다
+    expect(seoul.untranslated).toBe(false);
   });
 
   it('tz 숫자 오프셋을 추정하지 않는다 — DST 때문에 고정값은 틀린다', async () => {

@@ -42,8 +42,21 @@ type Row = [string, string, string, number, number, string, string];
 export interface CitySearchHit {
   city: City;
   countryCode: string;
-  /** 이 이름은 번역본이 아니다. GeoNames 의 단일 표기다. */
-  untranslated: true;
+  /** GeoNames 의 라틴 표기. 현지 표기와 나란히 보여 어느 도시인지 확인시킨다. */
+  latin: string;
+  /** ko/ja/zh 는 GeoNames 현지 표기가 있으면 그것을 쓴다. 나머지는 라틴 표기다. */
+  untranslated: boolean;
+}
+
+/** row[6] = "한글|かな|汉字" (빈 칸이면 그 언어 표기가 없다). 검사로 확인한 순서다. */
+const NATIVE_SLOT: Partial<Record<NatalLocale, number>> = { ko: 0, ja: 1, zh: 2 };
+
+/** 로케일별 표시 이름. 없는 번역을 지어내지 않고, 없으면 라틴 표기로 떨어진다. */
+export function nativeLabel(row: Row, locale: NatalLocale): string {
+  const latin = row[0] || row[1];
+  const slot = NATIVE_SLOT[locale];
+  if (slot === undefined || !row[6]) return latin;
+  return row[6].split('|')[slot]?.trim() || latin;
 }
 
 let cache: null | Row[] = null;
@@ -97,9 +110,11 @@ export function parseSynthesizedId(id: string): null | { lat: number; lon: numbe
 
 function toCity(row: Row): City {
   const [name, ascii, , lat, lon, zoneId] = row;
-  // 6 로케일 라벨을 같은 값으로 채운다. **번역을 지어내지 않는다** — GeoNames 는
-  // 표기 하나만 주고, 없는 번역을 만들어 넣으면 그것이 정본처럼 보인다.
-  const label = Object.fromEntries(LOCALES.map((l) => [l, name || ascii])) as Record<NatalLocale, string>;
+  // ko/ja/zh 는 GeoNames 가 실제로 들고 있는 현지 표기를 쓴다. 예전에는 6 로케일을
+  // 전부 라틴 표기로 채워, 한국어 사용자가 "대구"로 검색해 놓고 결과에서는
+  // "Daegu"만 보고 자기 도시가 아니라고 판단했다. (2026-09-09)
+  // 그 밖의 로케일은 여전히 라틴 표기다 — 없는 번역을 지어내지 않는다.
+  const label = Object.fromEntries(LOCALES.map((l) => [l, nativeLabel(row, l)])) as Record<NatalLocale, string>;
   return {
     id: synthesizeId(row),
     label,
@@ -130,12 +145,18 @@ export function searchRows(rows: Row[], query: string, limit = 20): Row[] {
   return [...starts, ...contains].slice(0, limit);
 }
 
+/** GeoNames 가 이 도시의 현지 표기를 하나라도 들고 있는가. */
+function hasNativeName(row: Row): boolean {
+  return Boolean(row[6] && row[6].split('|').some((v) => v.trim()));
+}
+
 export async function searchCities(query: string, limit = 20, fetcher?: typeof fetch): Promise<CitySearchHit[]> {
   const rows = await loadCityBundle(fetcher);
   return searchRows(rows, query, limit).map((row) => ({
     city: toCity(row),
     countryCode: row[2],
-    untranslated: true as const,
+    latin: row[0] || row[1],
+    untranslated: !hasNativeName(row),
   }));
 }
 

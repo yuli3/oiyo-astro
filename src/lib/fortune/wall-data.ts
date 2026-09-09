@@ -1,6 +1,7 @@
 // 홈 랜딩의 "운세 도배" 섹션 전용. 생년월일 없이, 12지신·별자리 각각을
 // reading() 엔진에 직접 색인으로 넣어 전체 케이스(기간×띠×별자리)를 만든다.
 import { reading, type Period, type Locale as FortuneLocale } from './periodic';
+import { animalRanking, signRanking, scores, delta, grade, lucky, type Grade } from './score';
 
 type Lang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -47,6 +48,17 @@ export interface WallCard {
   emoji: string;
   opening: string;
   advice: string;
+  /** 운세 점수 1~99. 순위와 같은 엔진에서 나온다. */
+  score: number;
+  grade: Grade;
+  /** 1~12위. 랜딩에서 가장 강한 재방문 훅이다. */
+  rank: number;
+  /** 직전 주기 대비 총운 변화. 0 이면 보합. */
+  delta: number;
+  keyword: string;
+  caution: string;
+  luckyColorHex: string;
+  luckyNumber: number;
 }
 
 export interface WallSection {
@@ -56,21 +68,78 @@ export interface WallSection {
   signs: WallCard[];
 }
 
+export const GRADE_LABELS: Record<Lang, Record<Grade, string>> = {
+  ko: { great: '대길', good: '길', normal: '평', careful: '주의' },
+  en: { great: 'Excellent', good: 'Good', normal: 'Fair', careful: 'Take care' },
+  ja: { great: '大吉', good: '吉', normal: '平', careful: '注意' },
+  zh: { great: '大吉', good: '吉', normal: '平', careful: '注意' },
+  fr: { great: 'Excellent', good: 'Bon', normal: 'Moyen', careful: 'Prudence' },
+  es: { great: 'Excelente', good: 'Bueno', normal: 'Regular', careful: 'Precaución' },
+};
+
+export const GRADE_COLORS: Record<Grade, string> = {
+  great: '#d97706', good: '#16a34a', normal: '#0891b2', careful: '#7c3aed',
+};
+
 const PERIODS: Period[] = ['today', 'weekly', 'monthly', 'yearly'];
 
-export function buildFortuneWall(locale: string): WallSection[] {
+/**
+ * 카드는 늘 같은 자리(쥐→돼지 / 양자리→물고기자리)에 둔다. 순위대로 재배열하면
+ * 자기 띠를 매번 다른 곳에서 찾아야 해서, 순위를 확인하러 온 사람에게도
+ * 자기 띠를 보러 온 사람에게도 불편하다. 순위는 배지로만 표기한다.
+ */
+function rankedCards(
+  rows: { idx: number; rank: number; score: number }[],
+  period: Period,
+  at: Date,
+  prefix: 'animal' | 'sign',
+  names: string[],
+  emoji: string[],
+  fortuneLocale: FortuneLocale,
+  elementOfIndex: (i: number) => number,
+  used: { opening: Set<string>; advice: Set<string> },
+): WallCard[] {
+  const byIndex = [...rows].sort((a, b) => a.idx - b.idx);
+  return byIndex.map((row) => {
+    const base = `${prefix}-${row.idx}`;
+    const g = grade(row.score);
+    // 한 화면에 24장이 함께 놓이므로, 같은 문장이 두 카드에 동시에 뜨면
+    // 코퍼스가 얕아 보인다. 겹치면 소금을 쳐서 다시 뽑는다.
+    let r = reading(elementOfIndex(row.idx), period, base, fortuneLocale, at, g);
+    for (let salt = 1; salt < 12 && (used.opening.has(r.opening) || used.advice.has(r.advice)); salt++) {
+      r = reading(elementOfIndex(row.idx), period, `${base}~${salt}`, fortuneLocale, at, g);
+    }
+    used.opening.add(r.opening);
+    used.advice.add(r.advice);
+    return {
+      name: names[row.idx],
+      emoji: emoji[row.idx],
+      opening: r.opening,
+      advice: r.advice,
+      caution: r.caution,
+      keyword: r.keyword,
+      score: row.score,
+      grade: g,
+      rank: row.rank,
+      delta: delta(base, period, at),
+      luckyColorHex: lucky(base, period, fortuneLocale, at).colorHex,
+      luckyNumber: lucky(base, period, fortuneLocale, at).number,
+    };
+  });
+}
+
+export function buildFortuneWall(locale: string, at = new Date()): WallSection[] {
   const lang = (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(locale) ? locale : 'en') as Lang;
   const fortuneLocale = lang as FortuneLocale;
+  // 같은 주기 섹션 안에서만 중복을 피한다. 주기가 다르면 겹쳐도 함께 보이지 않는다.
+  const seen: Record<Period, { opening: Set<string>; advice: Set<string> }> =
+    Object.fromEntries(PERIODS.map((k) => [k, { opening: new Set<string>(), advice: new Set<string>() }])) as never;
   return PERIODS.map((key) => ({
     period: key,
     periodLabel: PERIOD_LABELS[lang][key],
-    animals: ANIMAL_NAMES[lang].map((name, i) => {
-      const r = reading((i * 2 + 1) % 5, key, `animal-${i}`, fortuneLocale);
-      return { name, emoji: ANIMAL_EMOJI[i], opening: r.opening, advice: r.advice };
-    }),
-    signs: SIGN_NAMES[lang].map((name, i) => {
-      const r = reading((i + 2) % 5, key, `sign-${i}`, fortuneLocale);
-      return { name, emoji: SIGN_SYMBOL[i], opening: r.opening, advice: r.advice };
-    }),
+    // 순위가 높은 순으로 낸다. 12개를 무순으로 늘어놓는 것보다 "오늘 1위는
+    // 누구인가"가 훨씬 강한 훅이고, 매일 순위가 바뀌므로 재방문 이유가 된다.
+    animals: rankedCards(animalRanking(key, at), key, at, 'animal', ANIMAL_NAMES[lang], ANIMAL_EMOJI, fortuneLocale, (i) => (i * 2 + 1) % 5, seen[key]),
+    signs: rankedCards(signRanking(key, at), key, at, 'sign', SIGN_NAMES[lang], SIGN_SYMBOL, fortuneLocale, (i) => (i + 2) % 5, seen[key]),
   }));
 }

@@ -4,8 +4,9 @@ import { Calendar, Check, Pencil } from "lucide-react";
 import { useState } from "react";
 import { useUserProfile } from "@/lib/user/context/UserContext";
 import { createBirthRecord, resolveBirthRecord } from "@/lib/user/birth-record";
-import { searchCities, parseSynthesizedId, type CitySearchHit } from "@/lib/ontology/natal/city-search";
-import { CITIES } from "@/lib/ontology/natal/signs";
+import { parseSynthesizedId } from "@/lib/ontology/natal/city-search";
+import { CITIES, type City } from "@/lib/ontology/natal/signs";
+import { CityField } from "@/components/shared/CityField";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 type Copy = {
@@ -48,11 +49,8 @@ export function OntologyBirthInput({
   const [name, setName] = useState("");
   const [cityId, setCityId] = useState("");
   // 검색으로 고른 도시. CITIES 에 없으므로 따로 들고 있어야 저장 때 경도·시간대를
-  // 실어 보낼 수 있다. 번들은 이 상태가 처음 필요해질 때 받는다.
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchHits, setSearchHits] = useState<CitySearchHit[]>([]);
-  const [searchBusy, setSearchBusy] = useState(false);
-  const [pickedCity, setPickedCity] = useState<null | CitySearchHit>(null);
+  // 실어 보낼 수 있다.
+  const [pickedCity, setPickedCity] = useState<null | City>(null);
 
   const seed = () => {
     setDate(birthRecord?.civilDate ?? "");
@@ -72,7 +70,7 @@ export function OntologyBirthInput({
     // unconfirmed) as before.
     // 큐레이션 목록 우선, 없으면 검색으로 고른 도시. 둘 다 City 형태라 아래는 동일하다.
     const city = CITIES.find((c) => c.id === cityId)
-      ?? (pickedCity && pickedCity.city.id === cityId ? pickedCity.city : undefined);
+      ?? (pickedCity && pickedCity.id === cityId ? pickedCity : undefined);
     saveBirthRecord(createBirthRecord({
       civilDate: d,
       civilTime: time || null,
@@ -95,7 +93,7 @@ export function OntologyBirthInput({
   const cityLabel = (id: string) => {
     const curated = CITIES.find((c) => c.id === id)?.label[lang];
     if (curated) return curated;
-    if (pickedCity && pickedCity.city.id === id) return pickedCity.city.label[lang];
+    if (pickedCity && pickedCity.id === id) return pickedCity.label[lang];
     // 새로고침 뒤에는 이름이 없다. 계산에 쓰이는 경도·시간대는 BirthRecord 에
     // 따로 저장돼 있으므로 결과는 그대로다 — 여기서는 좌표를 보여 준다.
     const coords = parseSynthesizedId(id);
@@ -139,59 +137,14 @@ export function OntologyBirthInput({
               value={name} onChange={(e) => setName(e.target.value)}
               className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
-          <div>
-            <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-city">{c.place}</label>
-            <select id="ob-city" value={cityId} onChange={(e) => setCityId(e.target.value)}
-              className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10">
-              <option value="">{c.placePlaceholder}</option>
-              {CITIES.map((city) => (
-                <option key={city.id} value={city.id}>{city.label[lang]}</option>
-              ))}
-            </select>
-            <details className="mt-2">
-              <summary className="cursor-pointer text-[11px] font-bold text-green-700">{c.searchTitle}</summary>
-              <div className="mt-2 space-y-2">
-                <input
-                  type="search"
-                  value={searchQuery}
-                  placeholder={c.searchPlaceholder}
-                  aria-label={c.searchPlaceholder}
-                  onChange={async (e) => {
-                    const q = e.target.value;
-                    setSearchQuery(q);
-                    if (q.trim().length < 2) { setSearchHits([]); return; }
-                    // 번들은 여기서 처음 받는다. 검색을 열지 않으면 한 바이트도 받지 않는다.
-                    setSearchBusy(true);
-                    try { setSearchHits(await searchCities(q, 12)); }
-                    catch { setSearchHits([]); }
-                    finally { setSearchBusy(false); }
-                  }}
-                  className="w-full rounded-lg border border-green-200 px-3 py-2 text-sm"
-                />
-                <p className="text-[11px] leading-5 text-green-600">{c.searchHint}</p>
-                {searchBusy && <p className="text-[11px] text-green-500">…</p>}
-                {!searchBusy && searchQuery.trim().length >= 2 && searchHits.length === 0 && (
-                  <p className="text-[11px] text-green-500">{c.searchEmpty}</p>
-                )}
-                {searchHits.length > 0 && (
-                  <ul className="max-h-48 divide-y divide-green-50 overflow-y-auto rounded-lg border border-green-100">
-                    {searchHits.map((hit) => (
-                      <li key={hit.city.id}>
-                        <button
-                          type="button"
-                          onClick={() => { setPickedCity(hit); setCityId(hit.city.id); setSearchHits([]); setSearchQuery(""); }}
-                          className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-sm hover:bg-surface-subtle"
-                        >
-                          <span className="truncate">{hit.city.label[lang]}</span>
-                          <span className="shrink-0 text-[11px] text-green-500">{hit.countryCode}</span>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </details>
-          </div>
+          <CityField
+            id="ob-city"
+            locale={lang}
+            value={cityId}
+            selected={pickedCity}
+            onChange={(id, city) => { setCityId(id); setPickedCity(city); }}
+            copy={{ label: c.place }}
+          />
           <div>
             <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{c.gender}</span>
             <div className="grid grid-cols-2 gap-2">

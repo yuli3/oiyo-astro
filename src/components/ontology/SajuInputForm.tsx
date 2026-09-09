@@ -1,12 +1,13 @@
 "use client";
 
 import { m } from "framer-motion";
-import { Calendar, Clock, Fingerprint, MapPin, User } from "lucide-react";
+import { Calendar, Clock, Fingerprint, User } from "lucide-react";
 import { useLocale } from "next-intl";
 import React, { useState } from "react";
 
 import { useNamespacedFallback } from "@/lib/i18n/use-namespaced-fallback";
-import { CITIES, type NatalLocale } from "@/lib/ontology/natal/signs";
+import { CITIES, type City, type NatalLocale } from "@/lib/ontology/natal/signs";
+import { CityField } from "@/components/shared/CityField";
 import { useUserProfile } from "@/lib/user/context/UserContext";
 import {
   createBirthRecord,
@@ -39,13 +40,16 @@ export function SajuInputForm({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [locationError, setLocationError] = useState("");
+  // 검색으로 고른 도시는 CITIES 에 없으므로 여기에 들고 있어야 제출 때 좌표를 쓴다.
+  const [pickedCity, setPickedCity] = useState<City | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setLocationError("");
 
-    const city = CITIES.find((candidate) => candidate.id === formData.city);
+    const city = CITIES.find((candidate) => candidate.id === formData.city)
+      ?? (pickedCity && pickedCity.id === formData.city ? pickedCity : undefined);
     if (!city) {
       setLocationError({
         ko: "정확한 시간대 계산을 위해 출생 도시를 선택해 주세요.",
@@ -209,27 +213,14 @@ export function SajuInputForm({
         </div>
 
         <div className="space-y-2 text-left">
-          <label
-            className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1"
-            htmlFor="saju-birth-city"
-          >
-            {{ ko: "출생지", en: "Birthplace", ja: "出生地", zh: "出生地", fr: "Lieu de naissance", es: "Lugar de nacimiento" }[locale] || "Birthplace"}
-          </label>
-          <div className="relative">
-            <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-300 pointer-events-none" />
-            <select
-              className="w-full pl-12 pr-4 py-4 bg-slate-50 rounded-2xl border border-slate-200 focus:outline-none focus:ring-4 focus:ring-green-500/10 focus:border-green-500 transition-all font-bold text-slate-900 shadow-sm"
-              id="saju-birth-city"
-              onChange={(e) => setFormData((prev) => ({ ...prev, city: e.target.value }))}
-              required
-              value={formData.city}
-            >
-              <option value="">{{ ko: "도시 선택", en: "Select a city", ja: "都市を選択", zh: "选择城市", fr: "Choisir une ville", es: "Elegir una ciudad" }[locale] || "Select a city"}</option>
-              {CITIES.map((city) => (
-                <option key={city.id} value={city.id}>{city.label[locale] || city.label.en}</option>
-              ))}
-            </select>
-          </div>
+          <CityField
+            id="saju-birth-city"
+            locale={locale}
+            value={formData.city}
+            selected={pickedCity}
+            required
+            onChange={(id, city) => { setFormData((prev) => ({ ...prev, city: id })); setPickedCity(city); }}
+          />
           {locationError && <p className="text-sm font-medium text-rose-600" role="alert">{locationError}</p>}
         </div>
 

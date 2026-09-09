@@ -1,6 +1,12 @@
 ---
 // 홈 랜딩의 운세 도배 섹션. 생년월일 없이 모든 띠·별자리를 기간별로 보여준다.
-import { buildFortuneWall, SECTION_LABELS } from '../../lib/fortune/wall-data';
+//
+// 2026-09-09: 카드에 순위·점수·등급·전일 대비 변화를 얹었다. 순서는 고정(무순)
+// 이고 순위는 배지로만 표기한다 — 순위대로 재배열하면 자기 띠가 매일 다른 자리로
+// 옮겨 다녀 찾기 어려워진다. 점수는 PeriodicFortune 과 같은 엔진에서 나오므로
+// 랜딩과 상세 페이지의 숫자가 어긋나지 않는다.
+import { buildFortuneWall, SECTION_LABELS, GRADE_LABELS, GRADE_COLORS } from '../../lib/fortune/wall-data';
+import { CORPUS_COMBINATIONS, MIN_CYCLE_BEFORE_REPEAT } from '../../lib/fortune/periodic';
 import type { Locale } from '../../i18n';
 
 interface Props { locale: Locale }
@@ -8,35 +14,82 @@ const { locale } = Astro.props;
 const lang = (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(locale) ? locale : 'en') as keyof typeof SECTION_LABELS;
 const sections = buildFortuneWall(locale);
 const t = SECTION_LABELS[lang];
+const g = GRADE_LABELS[lang];
+
+// 규모는 코퍼스에서 직접 읽는다. 손으로 적은 숫자는 문장을 더할 때마다 낡는다.
+const combos = new Intl.NumberFormat(lang).format(CORPUS_COMBINATIONS);
+const noRepeat = MIN_CYCLE_BEFORE_REPEAT;
+
+const UI = {
+  ko: { rank: '위', top: '1위', deltaUp: '상승', deltaDown: '하락', lucky: '행운의 수', more: '내 생년월일로 자세히 보기', scale: `문장 조합 ${combos}가지 — 같은 문장은 풀을 한 바퀴 다 돈 뒤에야 나옵니다. 매일 확인해도 ${noRepeat}일 안에는 같은 조언이 반복되지 않습니다.` },
+  en: { rank: '', top: 'Top', deltaUp: 'up', deltaDown: 'down', lucky: 'Lucky no.', more: 'See it in detail with your birth date', scale: `${combos} sentence combinations — each line cycles through the whole pool before returning. Visit daily and no advice repeats within ${noRepeat} days.` },
+  ja: { rank: '位', top: '1位', deltaUp: '上昇', deltaDown: '下降', lucky: 'ラッキー数', more: '生年月日で詳しく見る', scale: `文の組み合わせ ${combos} 通り — 各文はプールを一巡してから再登場します。毎日見ても ${noRepeat} 日以内に同じ助言は繰り返されません。` },
+  zh: { rank: '名', top: '第一', deltaUp: '上升', deltaDown: '下降', lucky: '幸运数', more: '用出生日期查看详情', scale: `${combos} 种句子组合 — 每句都要走完整个池子才会再次出现。每天查看，${noRepeat} 天内也不会重复同一条建议。` },
+  fr: { rank: 'e', top: 'Top', deltaUp: 'hausse', deltaDown: 'baisse', lucky: 'Nombre', more: 'Voir en détail avec votre date de naissance', scale: `${combos} combinaisons de phrases — chaque ligne parcourt tout le réservoir avant de revenir. En venant chaque jour, aucun conseil ne se répète avant ${noRepeat} jours.` },
+  es: { rank: 'º', top: 'Top', deltaUp: 'sube', deltaDown: 'baja', lucky: 'Número', more: 'Verlo en detalle con tu fecha de nacimiento', scale: `${combos} combinaciones de frases — cada línea recorre todo el conjunto antes de volver. Visitando a diario, ningún consejo se repite en ${noRepeat} días.` },
+}[lang];
+
+const detailHref = `/${locale}/fortune/today/`;
 ---
 
 <div class="max-w-4xl mx-auto px-4">
+  <p class="mb-3 text-center text-[11px] font-semibold text-green-600">{UI.scale}</p>
+
   {sections.map((s, i) => (
     <details class="mb-4 rounded-2xl border border-green-100 bg-card" open={i === 0}>
       <summary class="cursor-pointer select-none px-5 py-4 text-lg font-black text-foreground">
         {s.periodLabel} {t.fortuneSuffix} <span class="ml-2 text-xs font-semibold text-green-600">{t.animals} · {t.signs}</span>
       </summary>
       <div class="px-5 pb-5">
-        <p class="mb-2 text-xs font-bold uppercase tracking-widest text-green-600">{t.animals}</p>
-        <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 mb-6">
-          {s.animals.map((c) => (
-            <div class="rounded-xl bg-green-50/60 p-3">
-              <p class="text-sm font-black text-foreground">{c.emoji} {c.name}</p>
-              <p class="mt-1 text-xs leading-5 text-green-800">{c.opening}</p>
-              <p class="mt-1 text-[11px] font-semibold text-green-600">{c.advice}</p>
-            </div>
-          ))}
-        </div>
-        <p class="mb-2 text-xs font-bold uppercase tracking-widest text-green-600">{t.signs}</p>
-        <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
-          {s.signs.map((c) => (
-            <div class="rounded-xl bg-green-50/60 p-3">
-              <p class="text-sm font-black text-foreground">{c.emoji} {c.name}</p>
-              <p class="mt-1 text-xs leading-5 text-green-800">{c.opening}</p>
-              <p class="mt-1 text-[11px] font-semibold text-green-600">{c.advice}</p>
-            </div>
-          ))}
-        </div>
+        {[{ label: t.animals, cards: s.animals }, { label: t.signs, cards: s.signs }].map((group) => (
+          <>
+            <p class="mb-2 mt-4 text-xs font-bold uppercase tracking-widest text-green-600 first:mt-0">{group.label}</p>
+            <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
+              {group.cards.map((c) => (
+                <li
+                  class="rounded-xl border p-3"
+                  style={`border-color:${GRADE_COLORS[c.grade]}33; background:${GRADE_COLORS[c.grade]}0d`}
+                >
+                  <div class="flex items-baseline gap-2">
+                    <span class="min-w-0 flex-1 truncate text-sm font-black text-foreground">{c.emoji} {c.name}</span>
+                    <span
+                      class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-black tabular-nums"
+                      style={`background:${GRADE_COLORS[c.grade]}1a;color:${GRADE_COLORS[c.grade]}`}
+                    >{c.rank}{UI.rank}</span>
+                    <span class="shrink-0 text-sm font-black tabular-nums" style={`color:${GRADE_COLORS[c.grade]}`}>{c.score}</span>
+                  </div>
+
+                  <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-green-100/70">
+                    <span class="block h-full rounded-full" style={`width:${c.score}%;background:${GRADE_COLORS[c.grade]}`}></span>
+                  </div>
+
+                  <p class="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-bold">
+                    <span style={`color:${GRADE_COLORS[c.grade]}`}>{g[c.grade]}</span>
+                    <span class="text-green-700">#{c.keyword}</span>
+                    {c.delta !== 0 && (
+                      <span class={c.delta > 0 ? 'text-emerald-600' : 'text-rose-500'}>
+                        {c.delta > 0 ? '▲' : '▼'}{Math.abs(c.delta)}
+                      </span>
+                    )}
+                    <span class="inline-flex items-center gap-1 text-green-600">
+                      <span class="inline-block h-2.5 w-2.5 rounded-full border" style={`background:${c.luckyColorHex}`} aria-hidden="true"></span>
+                      {UI.lucky} {c.luckyNumber}
+                    </span>
+                  </p>
+
+                  <p class="mt-1.5 text-xs leading-5 text-green-900">{c.opening}</p>
+                  <p class="mt-1 text-[11px] font-semibold text-green-600">{c.advice}</p>
+                  <p class="mt-1 text-[11px] leading-5 text-green-700/80">{c.caution}</p>
+                </li>
+              ))}
+            </ul>
+          </>
+        ))}
+
+        <a
+          href={detailHref}
+          class="mt-4 block rounded-xl border border-green-200 px-4 py-2.5 text-center text-sm font-bold text-green-700 hover:bg-green-50"
+        >{UI.more}</a>
       </div>
     </details>
   ))}
