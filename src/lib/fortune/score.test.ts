@@ -5,7 +5,7 @@ import {
 } from './score';
 import {
   seedHash, elementOf, FIVE_ELEMENTS, CORPUS_COMBINATIONS, MIN_CYCLE_BEFORE_REPEAT,
-  reading, pickCycled,
+  reading, pickCycled, guaranteedGap,
 } from './periodic';
 import { buildFortuneWall } from './wall-data';
 
@@ -183,10 +183,20 @@ describe('corpus depth — 반복이 눈에 띄지 않아야 한다', () => {
     expect(seen.size).toBe(20); // 20주기 안에 중복 0
   });
 
-  it('never repeats the same item back-to-back across a cycle boundary', () => {
-    const pool = Array.from({ length: 12 }, (_, i) => i);
-    for (let t = 1; t < 400; t++) {
-      expect(pickCycled(pool, 'seed', t)).not.toBe(pickCycled(pool, 'seed', t - 1));
+  it('honours guaranteedGap at every pool size', () => {
+    // 회차 경계가 진짜 구멍이었다. 앞뒤로 붙은 두 회차 사이에서 같은 항목이
+    // 이틀 만에 돌아오면 풀이 아무리 커도 "봤던 것 같은데"가 남는다.
+    for (const n of [5, 8, 12, 16, 32, 48, 96, 97, 140]) {
+      const pool = Array.from({ length: n }, (_, i) => i);
+      for (const seed of ['a', 'b', 'c']) {
+        const last = new Map<number, number>();
+        for (let t = 0; t < n * 40; t++) {
+          const v = pickCycled(pool, seed, t);
+          const prev = last.get(v);
+          if (prev !== undefined) expect(t - prev).toBeGreaterThan(guaranteedGap(n));
+          last.set(v, t);
+        }
+      }
     }
   });
 
@@ -197,8 +207,8 @@ describe('corpus depth — 반복이 눈에 띄지 않아야 한다', () => {
   });
 
   it('keeps a daily visitor from seeing a repeat within a month', () => {
-    expect(MIN_CYCLE_BEFORE_REPEAT).toBeGreaterThanOrEqual(28);
-    expect(CORPUS_COMBINATIONS).toBeGreaterThan(100_000_000);
+    expect(MIN_CYCLE_BEFORE_REPEAT).toBeGreaterThanOrEqual(30);
+    expect(CORPUS_COMBINATIONS).toBeGreaterThan(10_000_000_000);
 
     for (const idx of [0, 6, 11]) {
       const advice = new Set<string>();
@@ -229,6 +239,56 @@ describe('corpus depth — 반복이 눈에 띄지 않아야 한다', () => {
     for (const section of buildFortuneWall('ko', D)) {
       expect(section.animals.map((c) => c.name)).toEqual(buildFortuneWall('ko', D)[0].animals.map((c) => c.name));
       expect(new Set(section.animals.map((c) => c.rank)).size).toBe(12);
+    }
+  });
+});
+
+
+describe('no-repeat guarantee holds through the real reading path', () => {
+  it('never re-serves a line within MIN_CYCLE_BEFORE_REPEAT days', () => {
+    // 등급이 매일 바뀌면 오프닝 풀도 바뀐다. 예전에는 등급별로 스트림을 나눠
+    // 풀이 겹쳤고, 같은 문장이 어제는 great 스트림에서 오늘은 good 스트림에서
+    // 나와 **하루 만에** 재등장했다. 지금은 어조당 스트림이 하나다.
+    for (let idx = 0; idx < 12; idx++) {
+      const seen: Record<string, Map<string, number>> = { opening: new Map(), advice: new Map(), caution: new Map() };
+      for (let d = 0; d < 400; d++) {
+        const at = shift('today', D, d);
+        const row = animalRanking('today', at).find((r) => r.idx === idx)!;
+        const r = reading((idx * 2 + 1) % 5, 'today', `animal-${idx}`, 'ko', at, grade(row.score));
+        for (const axis of ['opening', 'advice', 'caution'] as const) {
+          const prev = seen[axis].get(r[axis]);
+          if (prev !== undefined) expect(d - prev).toBeGreaterThan(MIN_CYCLE_BEFORE_REPEAT);
+          seen[axis].set(r[axis], d);
+        }
+      }
+    }
+  });
+
+  it('fills a whole month with distinct lines on every axis', () => {
+    for (const idx of [0, 5, 11]) {
+      const axes = { opening: new Set<string>(), advice: new Set<string>(), caution: new Set<string>(), keyword: new Set<string>() };
+      for (let d = 0; d < 30; d++) {
+        const at = shift('today', D, d);
+        const row = signRanking('today', at).find((r) => r.idx === idx)!;
+        const r = reading((idx + 2) % 5, 'today', `sign-${idx}`, 'ko', at, grade(row.score));
+        for (const axis of Object.keys(axes) as (keyof typeof axes)[]) axes[axis].add(r[axis]);
+      }
+      for (const axis of Object.keys(axes) as (keyof typeof axes)[]) expect(axes[axis].size).toBe(30);
+    }
+  });
+
+  it('translates every line in all six locales', () => {
+    const LOCALES = ['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const;
+    for (let d = 0; d < 120; d++) {
+      const at = shift('today', D, d);
+      for (const loc of LOCALES) {
+        const r = reading(d % 5, 'today', 'animal-6', loc, at, 'good');
+        for (const axis of ['opening', 'focus', 'advice', 'caution', 'keyword'] as const) {
+          expect(r[axis], `${loc} ${axis} day ${d}`).toBeTruthy();
+          // 한국어가 아닌 로케일에 한글이 새면 안 된다.
+          if (loc !== 'ko') expect(r[axis]).not.toMatch(/[가-힣]/);
+        }
+      }
     }
   });
 });
