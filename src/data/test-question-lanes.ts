@@ -102,6 +102,7 @@ export const LANE_BY_PATH: Record<string, LaneId> = {
   "/assertiveness-test": "relationships",
 
   // 어떻게 일하고 선택하는가
+  "/riasec-career-test": "work",
   "/mbti/career": "work",
   "/workaholic-test": "work",
   "/self-efficacy-test": "work",
@@ -175,6 +176,7 @@ export const LANE_BY_PATH: Record<string, LaneId> = {
   "/problem-solver-test": "work",
   "/procrastination-type-test": "work",
   "/productivity-style-test": "work",
+  "/riasec-quick": "work",
   "/risk-tolerance-test": "work",
   "/spending-habits-test": "work",
   "/work-life-balance-test": "work",
