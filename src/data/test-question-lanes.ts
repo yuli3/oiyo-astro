@@ -103,6 +103,13 @@ export const LANE_BY_PATH: Record<string, LaneId> = {
 
   // 어떻게 일하고 선택하는가
   "/riasec-career-test": "work",
+
+  // 나는 어떤 사람인가 — 라이브인데 허브에 없던 표준 척도들
+  "/hexaco-personality-test": "self",
+  "/tci-personality-test": "self",
+  "/authoritarian/test": "self",
+  "/joseon-faction-test": "self",
+  "/economics-school-test": "self",
   "/mbti/career": "work",
   "/workaholic-test": "work",
   "/self-efficacy-test": "work",
