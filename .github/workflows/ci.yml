@@ -72,6 +72,13 @@ jobs:
       - name: Audit page structure
         run: npm run audit:page-structure
 
+      # 검사 페이지가 라이브인데 /tests 허브에서 닿을 수 없는 상태를 막는다.
+      # 2026-09-09 에 RIASEC·HEXACO·TCI 등 6건이 그렇게 빠져 있었고, 허브 목록이
+      # 손으로 관리되는 한 반복된다. 기존 질문 IA 감사는 '디렉터리에 있는' 검사만
+      # 보므로 애초에 없는 검사는 잡지 못한다.
+      - name: Audit tests hub reachability
+        run: npm run audit:test-hub-coverage
+
 
       - name: Audit assessment analytics contracts
         run: npm run audit:assessment-analytics
