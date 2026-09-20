@@ -42,12 +42,12 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 const m = meta[locale] ?? meta.en;
 const ontologyContextMap = {
-  ko: { badge: '가치 지도', title: '정치성향은 정당 선택이 아니라, 가치 충돌에서 무엇을 먼저 보는지 알려주는 좌표입니다.', body: '이 결과는 OIYO Ontology 안에서 사회와 공동체를 바라보는 렌즈입니다. 경제관, 조선붕당, 삶의 가치와 함께 읽으면 나의 존재 지도가 더 선명해집니다.', status: '아직 열지 않음', time: '소요 시간 5분', count: '41문항' },
-  en: { badge: 'Values map', title: 'Political orientation is not a party choice; it is a coordinate for what you prioritize in value conflicts.', body: 'Inside OIYO Ontology, this result is a lens for how you read society and community. It becomes clearer with economic worldview, Joseon factions, and life values.', status: 'Not opened yet', time: '5 min', count: '41 questions' },
-  ja: { badge: '価値地図', title: '政治性向は政党選択ではなく、価値の衝突で何を先に見るかの座標です。', body: 'OIYO Ontologyでは、社会と共同体を見るレンズです。経済観、朝鮮派閥、人生価値と重ねると存在地図がより明確になります。', status: 'まだ開いていません', time: '5分', count: '41問' },
-  zh: { badge: '价值地图', title: '政治倾向不是政党选择，而是你在价值冲突中优先看见什么的坐标。', body: '在 OIYO Ontology 中，它是理解社会与共同体的镜片。与经济观、朝鲜派系和人生价值一起阅读会更清晰。', status: '尚未打开', time: '5分钟', count: '41题' },
-  fr: { badge: 'Carte des valeurs', title: 'L’orientation politique n’est pas un choix de parti, mais une coordonnée de vos priorités dans les conflits de valeurs.', body: 'Dans OIYO Ontology, c’est une lentille pour lire société et communauté. Elle se précise avec économie, factions Joseon et valeurs de vie.', status: 'Pas encore ouvert', time: '5 min', count: '41 questions' },
-  es: { badge: 'Mapa de valores', title: 'La orientación política no es elegir partido, sino una coordenada de lo que priorizas en conflictos de valor.', body: 'Dentro de OIYO Ontology, es una lente para leer sociedad y comunidad. Se aclara con economía, facciones Joseon y valores de vida.', status: 'Aún no abierto', time: '5 min', count: '41 preguntas' },
+  ko: { badge: '가치 지도', title: '정치성향은 정당 선택이 아니라, 가치 충돌에서 무엇을 먼저 보는지 알려주는 좌표입니다.', body: '이 결과는 OIYO 내 지도 안에서 사회와 공동체를 바라보는 렌즈입니다. 경제관, 조선붕당, 삶의 가치와 함께 읽으면 나의 존재 지도가 더 선명해집니다.', status: '아직 열지 않음', time: '소요 시간 5분', count: '41문항' },
+  en: { badge: 'Values map', title: 'Political orientation is not a party choice; it is a coordinate for what you prioritize in value conflicts.', body: 'Inside your OIYO map, this result is a lens for how you read society and community. It becomes clearer with economic worldview, Joseon factions, and life values.', status: 'Not opened yet', time: '5 min', count: '41 questions' },
+  ja: { badge: '価値地図', title: '政治性向は政党選択ではなく、価値の衝突で何を先に見るかの座標です。', body: 'OIYOの「私の地図」では、社会と共同体を見るレンズです。経済観、朝鮮派閥、人生価値と重ねると存在地図がより明確になります。', status: 'まだ開いていません', time: '5分', count: '41問' },
+  zh: { badge: '价值地图', title: '政治倾向不是政党选择，而是你在价值冲突中优先看见什么的坐标。', body: '在 OIYO 我的地图中，它是理解社会与共同体的镜片。与经济观、朝鲜派系和人生价值一起阅读会更清晰。', status: '尚未打开', time: '5分钟', count: '41题' },
+  fr: { badge: 'Carte des valeurs', title: 'L’orientation politique n’est pas un choix de parti, mais une coordonnée de vos priorités dans les conflits de valeurs.', body: 'Dans votre carte OIYO, c’est une lentille pour lire société et communauté. Elle se précise avec économie, factions Joseon et valeurs de vie.', status: 'Pas encore ouvert', time: '5 min', count: '41 questions' },
+  es: { badge: 'Mapa de valores', title: 'La orientación política no es elegir partido, sino una coordenada de lo que priorizas en conflictos de valor.', body: 'Dentro de tu mapa OIYO, es una lente para leer sociedad y comunidad. Se aclara con economía, facciones Joseon y valores de vida.', status: 'Aún no abierto', time: '5 min', count: '41 preguntas' },
 } as const;
 const oc = ontologyContextMap[locale] ?? ontologyContextMap.en;
 

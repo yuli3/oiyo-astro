@@ -8,9 +8,9 @@ import ZiWeiWheel from "./ziwei/ZiWeiWheel";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const COPY: Record<Lang, { birthDate: string; needTime: string; bureau: string; life: string; auxTitle: string; star: string }> = {
-  ko: { birthDate: "생년월일", needTime: "생년월일은 저장돼 있지만, 자미두수는 태어난 시각까지 있어야 계산됩니다. 온톨로지에서 시각을 입력해 주세요.", bureau: "오행국", life: "명궁", auxTitle: "명궁의 별", star: "지지" },
+  ko: { birthDate: "생년월일", needTime: "생년월일은 저장돼 있지만, 자미두수는 태어난 시각까지 있어야 계산됩니다. 내 지도에서 시각을 입력해 주세요.", bureau: "오행국", life: "명궁", auxTitle: "명궁의 별", star: "지지" },
   en: { birthDate: "Birth date", needTime: "Your birth date is saved, but Zi Wei Dou Shu also needs your birth time. Add it on the ontology page.", bureau: "Five-element bureau", life: "Life palace", auxTitle: "Star in the life palace", star: "Earthly branch" },
-  ja: { birthDate: "生年月日", needTime: "生年月日は保存されていますが、紫微斗数の計算には出生時刻も必要です。オントロジーページで時刻を入力してください。", bureau: "五行局", life: "命宮", auxTitle: "命宮の星", star: "地支" },
+  ja: { birthDate: "生年月日", needTime: "生年月日は保存されていますが、紫微斗数の計算には出生時刻も必要です。「私の地図」で時刻を入力してください。", bureau: "五行局", life: "命宮", auxTitle: "命宮の星", star: "地支" },
   zh: { birthDate: "出生日期", needTime: "已保存出生日期，但紫微斗数还需要出生时间。请在本体页面中输入时间。", bureau: "五行局", life: "命宫", auxTitle: "命宫之星", star: "地支" },
   fr: { birthDate: "Date de naissance", needTime: "Votre date de naissance est enregistrée, mais Zi Wei Dou Shu a aussi besoin de l'heure de naissance. Ajoutez-la sur la page d'ontologie.", bureau: "Bureau des cinq éléments", life: "Palais de vie", auxTitle: "Étoile du palais de vie", star: "Branche terrestre" },
   es: { birthDate: "Fecha de nacimiento", needTime: "Tu fecha de nacimiento está guardada, pero Zi Wei Dou Shu también necesita la hora de nacimiento. Agrégala en la página de ontología.", bureau: "Oficina de cinco elementos", life: "Palacio de vida", auxTitle: "Estrella del palacio de vida", star: "Rama terrestre" },

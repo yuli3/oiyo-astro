@@ -1263,8 +1263,8 @@ export default function PersonalColorTest({ locale }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/ontology/hobbies/`, label: locale === 'ko' ? '🎨 취미 온톨로지' : locale === 'ja' ? '🎨 趣味オントロジー' : '🎨 Hobbies ontology' },
-          { href: `/${locale}/ontology/luck/`, label: locale === 'ko' ? '🍀 운 온톨로지' : locale === 'ja' ? '🍀 運のオントロジー' : '🍀 Luck ontology' },
+          { href: `/${locale}/ontology/hobbies/`, label: locale === 'ko' ? '🎨 취미 지도' : locale === 'ja' ? '🎨 趣味マップ' : '🎨 Hobbies map' },
+          { href: `/${locale}/ontology/luck/`, label: locale === 'ko' ? '🍀 운 지도' : locale === 'ja' ? '🍀 運のマップ' : '🍀 Luck map' },
           { href: `/${locale}/mbti/test/`, label: locale === 'ko' ? '🧩 MBTI 성격 테스트' : locale === 'ja' ? '🧩 MBTI性格テスト' : '🧩 MBTI personality test' },
         ]}
       />

@@ -90,7 +90,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           heading: '다음 탐구',
           items: [
             { href: l('/ontology/hobbies'), emoji: '🎨', label: '내가 좋아하는 것' },
-            { href: l('/ontology/life-purpose'), emoji: '🧭', label: '나의 존재론적 목표' },
+            { href: l('/ontology/life-purpose'), emoji: '🧭', label: '나의 삶의 목적 지도' },
             { href: l('/ontology/luck'), emoji: '🍀', label: '나에게 행운을 주는 것' },
             { href: l('/today'), emoji: '🌌', label: '오늘의 나' },
           ],

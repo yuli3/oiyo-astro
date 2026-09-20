@@ -12,7 +12,7 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
     case 'ko':
       return {
         badge: '🌟 존재 탐구 · 3단계',
-        title: '나의 존재론적 목표',
+        title: '나의 삶의 목적 지도',
         intro: '직업 추천이 아니라 "삶의 문장"을 만드는 페이지입니다. 나는 무엇을 위해, 어떤 방식으로 존재하는 사람인지 한 문장으로 빚어 보세요.',
         question: {
           heading: '이 페이지가 답하는 질문',

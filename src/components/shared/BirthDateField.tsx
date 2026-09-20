@@ -41,12 +41,12 @@ interface BirthDateFieldProps {
 }
 
 const COPY = {
-  ko: { using: "내 정보", edit: "수정", missing: "생년월일이 아직 없어요", enter: "내 정보 입력", page: "온톨로지에서 입력" },
-  en: { using: "Your info", edit: "Edit", missing: "No birth date saved yet", enter: "Enter your info", page: "Enter on Ontology" },
+  ko: { using: "내 정보", edit: "수정", missing: "생년월일이 아직 없어요", enter: "내 정보 입력", page: "내 지도에서 입력" },
+  en: { using: "Your info", edit: "Edit", missing: "No birth date saved yet", enter: "Enter your info", page: "Enter on My Map" },
   ja: { using: "あなたの情報", edit: "編集", missing: "生年月日がまだありません", enter: "情報を入力", page: "存在論で入力" },
   zh: { using: "你的信息", edit: "修改", missing: "尚未填写出生日期", enter: "填写信息", page: "到存在论填写" },
-  fr: { using: "Vos infos", edit: "Modifier", missing: "Aucune date de naissance enregistrée", enter: "Saisir vos infos", page: "Saisir dans Ontologie" },
-  es: { using: "Tus datos", edit: "Editar", missing: "Aún no hay fecha de nacimiento", enter: "Introducir tus datos", page: "Completar en Ontología" },
+  fr: { using: "Vos infos", edit: "Modifier", missing: "Aucune date de naissance enregistrée", enter: "Saisir vos infos", page: "Saisir dans Ma carte" },
+  es: { using: "Tus datos", edit: "Editar", missing: "Aún no hay fecha de nacimiento", enter: "Introducir tus datos", page: "Completar en Mi mapa" },
 } as const;
 
 function BirthDateInput({ id, label, value, onChange, min, max, className }: BirthDateFieldProps) {

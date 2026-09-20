@@ -7,9 +7,9 @@ interface Props { locale: Locale; }
 const { locale } = Astro.props;
 
 const copy: Record<string, { title: string; sub: string; cta: string; empty: string }> = {
-  ko: { title: '내 온톨로지', sub: '지금까지 기록한 나의 좌표', cta: '존재 지도 열기', empty: '아직 기록이 없어요. 테스트로 나를 채워보세요.' },
+  ko: { title: '내 지도', sub: '지금까지 기록한 나의 좌표', cta: '내 지도 열기', empty: '아직 기록이 없어요. 테스트로 나를 채워보세요.' },
   en: { title: 'My ontology', sub: 'The coordinates you have recorded so far', cta: 'Open your map', empty: 'No records yet. Take a test to fill yourself in.' },
-  ja: { title: '私のオントロジー', sub: 'これまでに記録した座標', cta: '存在地図を開く', empty: 'まだ記録がありません。テストで自分を埋めてみましょう。' },
+  ja: { title: '私の地図', sub: 'これまでに記録した座標', cta: '私の地図を開く', empty: 'まだ記録がありません。テストで自分を埋めてみましょう。' },
   zh: { title: '我的本体', sub: '你目前记录的坐标', cta: '打开存在地图', empty: '还没有记录。做个测验来填充自己吧。' },
   fr: { title: 'Mon ontologie', sub: 'Les coordonnées que vous avez enregistrées', cta: 'Ouvrir votre carte', empty: 'Aucun enregistrement. Faites un test pour vous compléter.' },
   es: { title: 'Mi ontología', sub: 'Las coordenadas que has registrado', cta: 'Abre tu mapa', empty: 'Sin registros aún. Haz un test para completarte.' },

@@ -85,7 +85,7 @@ export function luckContent(locale: Locale): JourneyContent {
           items: [
             { href: l('/ontology/personality'), emoji: '🧭', label: '나의 존재 지도' },
             { href: l('/ontology/hobbies'), emoji: '🎨', label: '내가 좋아하는 것' },
-            { href: l('/ontology/life-purpose'), emoji: '🌟', label: '나의 존재론적 목표' },
+            { href: l('/ontology/life-purpose'), emoji: '🌟', label: '나의 삶의 목적 지도' },
             { href: l('/today'), emoji: '🌌', label: '오늘의 나' },
           ],
         },

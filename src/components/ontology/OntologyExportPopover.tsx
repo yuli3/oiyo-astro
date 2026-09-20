@@ -58,7 +58,7 @@ const UI: Record<
   }
 > = {
   ko: {
-    title: "내 존재론 프로필 내보내기",
+    title: "내 지도 프로필 내보내기",
     sub: "지금까지 모은 신호·테스트 기록·추천·관계 스냅샷을 통째로 저장하세요.",
     formats: { md: "MD", json: "JSON", csv: "CSV" },
     copy: "복사하기",

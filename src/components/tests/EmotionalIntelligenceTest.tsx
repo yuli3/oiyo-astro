@@ -220,12 +220,12 @@ const relatedLabels: Record<SupportedLocale, {
   big5: string;
   ontology: string;
 }> = {
-  ko: { empathy: "🤝 공감 능력 테스트", big5: "🧬 Big5 성격 테스트", ontology: "🧭 성격 온톨로지" },
+  ko: { empathy: "🤝 공감 능력 테스트", big5: "🧬 Big5 성격 테스트", ontology: "🧭 성격 지도" },
   en: { empathy: "🤝 Empathy test", big5: "🧬 Big Five personality test", ontology: "🧭 Personality ontology" },
-  ja: { empathy: "🤝 共感能力テスト", big5: "🧬 Big5性格テスト", ontology: "🧭 性格オントロジー" },
-  zh: { empathy: "🤝 共情能力测试", big5: "🧬 Big Five人格测试", ontology: "🧭 人格本体论" },
-  fr: { empathy: "🤝 Test d'empathie", big5: "🧬 Test de personnalité Big Five", ontology: "🧭 Ontologie de la personnalité" },
-  es: { empathy: "🤝 Test de empatía", big5: "🧬 Test de personalidad Big Five", ontology: "🧭 Ontología de la personalidad" },
+  ja: { empathy: "🤝 共感能力テスト", big5: "🧬 Big5性格テスト", ontology: "🧭 性格マップ" },
+  zh: { empathy: "🤝 共情能力测试", big5: "🧬 Big Five人格测试", ontology: "🧭 人格地图" },
+  fr: { empathy: "🤝 Test d'empathie", big5: "🧬 Test de personnalité Big Five", ontology: "🧭 Carte de personnalité" },
+  es: { empathy: "🤝 Test de empatía", big5: "🧬 Test de personalidad Big Five", ontology: "🧭 Mapa de personalidad" },
 };
 
 export default function EmotionalIntelligenceTest({ locale: localeProp }: Props) {
