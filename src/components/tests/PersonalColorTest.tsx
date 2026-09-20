@@ -3,7 +3,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import type { Locale } from "../../i18n";
@@ -1269,7 +1268,6 @@ export default function PersonalColorTest({ locale }: Props) {
           { href: `/${locale}/mbti/test/`, label: locale === 'ko' ? '🧩 MBTI 성격 테스트' : locale === 'ja' ? '🧩 MBTI性格テスト' : '🧩 MBTI personality test' },
         ]}
       />
-      <RelatedReading locale={locale} topic="personal-color" />
 
       {/* Retake */}
       <button

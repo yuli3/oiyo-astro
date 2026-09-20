@@ -78,7 +78,7 @@ const quizJsonLd = buildQuizJsonLd({
       <a class="underline underline-offset-2" href="https://www.apa.org/topics/testing-assessment-measurement" rel="noopener noreferrer" target="_blank">APA — Testing, Assessment, and Measurement</a>
       {' '}— {assessmentSourceBoundary[locale]}
     </p>
-    <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
+    <TestContentBridge content={bridge.content} />
     <RelatedTools locale={locale} tools={['loveLanguage', 'mbti', 'enneagram']} current="attachment" />
   <PrintReportButton locale={locale} />
   <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['attachment-style']} />

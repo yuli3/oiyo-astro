@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
-import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
@@ -431,7 +430,6 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
             { href: `https://blog.oiyo.net/${l}/mbti-compatibility/`, label: l === 'ko' ? '💞 유형 궁합 보기' : '💞 Type compatibility', external: true },
           ]}
         />
-        <RelatedReading locale={l} topic="mbti" />
         <button
           type="button"
           onClick={() => { setAnswers({}); setCurrent(0); setShowResult(false); setForcedType(null); clearResultCode('type') }}

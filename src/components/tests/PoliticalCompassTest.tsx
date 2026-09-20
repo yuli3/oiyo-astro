@@ -5,7 +5,6 @@ import { gaEvent } from '@/lib/analytics/ga-event'
 import { POLITICAL_STEP_KEYS, scorePoliticalCompass } from '@/lib/engines/political-compass'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh'
 const POLITICAL_INSTRUMENT_VERSION = 'political-compass-oiyo-41-v2'
@@ -403,7 +402,6 @@ export default function PoliticalCompassTest({ locale }: Props) {
             { href: `/${L}/ontology/personality/`, label: L === 'ko' ? '🧭 성격 온톨로지' : L === 'ja' ? '🧭 性格オントロジー' : '🧭 Personality ontology' },
           ]}
         />
-        <RelatedReading locale={L} topic="political" />
 
         <button
           onClick={handleRestart}

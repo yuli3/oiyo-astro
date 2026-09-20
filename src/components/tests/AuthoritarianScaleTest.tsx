@@ -5,7 +5,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja';
 
@@ -244,7 +243,6 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
             { href: `/${l}/big5/test/`, label: l === 'ko' ? '🧪 빅파이브 성격 테스트' : '🧪 Big Five personality test' },
           ]}
         />
-        <RelatedReading locale={locale} topic="authoritarian" />
 
         <button
           onClick={restart}

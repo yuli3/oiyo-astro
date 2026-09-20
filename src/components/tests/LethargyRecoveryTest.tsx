@@ -3,7 +3,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type ResultKey = 'rest' | 'activation' | 'meaning' | 'support'
@@ -198,7 +197,6 @@ export default function LethargyRecoveryTest({ locale: rawLocale = 'ko' }: Props
             { href: `/${locale}/sleep-type/test/`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
           ]}
         />
-        <RelatedReading locale={locale} topic="lethargy" />
         <div className="flex gap-3">
           <button onClick={restart} className="flex-1 rounded-xl border bg-card px-4 py-3 text-sm font-bold hover:bg-accent">{labels.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl bg-primary px-4 py-3 text-sm font-bold text-primary-foreground hover:opacity-90">{labels.share}</button>

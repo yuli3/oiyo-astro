@@ -3,7 +3,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
@@ -495,7 +494,6 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
             { href: `/${locale}/inner-strength/test/`, label: nextLabels.innerStrength },
           ]}
         />
-        <RelatedReading locale={locale} topic="social-anxiety" />
 
         <div className="flex gap-3">
           <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">

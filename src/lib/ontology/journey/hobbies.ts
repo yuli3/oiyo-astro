@@ -1,12 +1,10 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, oiyoArticleUrl, wikiUrl } from './types';
+import { oiyoArticleUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function hobbiesContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
-  const b = (s: string) => blogUrl(locale, s);
-  const w = (s: string) => wikiUrl(locale, s);
   const o = (s: string) => oiyoArticleUrl(locale, s);
 
   switch (locale) {
@@ -60,11 +58,10 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 더 깊이 읽기 (blog.oiyo.net)',
+          heading: '📖 더 읽을거리',
           items: [
             { href: o('flow-state-happiness-psychology'), label: '몰입과 행복의 심리학', external: true },
             { href: o('psychology-of-flow'), label: '플로우 — 최적 경험의 심리학', external: true },
-            { href: b('taoism-wu-wei-flow'), label: '무위(無爲) — 애쓰지 않는 몰입', external: true },
           ],
         },
         wiki: {
@@ -145,11 +142,10 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 深く読む (blog.oiyo.net)',
+          heading: '📖 深く読む ',
           items: [
             { href: o('flow-state-happiness-psychology'), label: 'フローと幸福の心理学', external: true },
             { href: o('psychology-of-flow'), label: 'フロー — 最適経験の心理学', external: true },
-            { href: b('taoism-wu-wei-flow'), label: '無為 — 頑張らない没入', external: true },
           ],
         },
         wiki: {
@@ -230,11 +226,10 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 深入阅读 (blog.oiyo.net)',
+          heading: '📖 深入阅读 ',
           items: [
             { href: o('flow-state-happiness-psychology'), label: '心流与幸福的心理学', external: true },
             { href: o('psychology-of-flow'), label: '心流——最优体验的心理学', external: true },
-            { href: b('taoism-wu-wei-flow'), label: '无为——不费力的沉浸', external: true },
           ],
         },
         wiki: {
@@ -315,11 +310,10 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Lire plus loin (blog.oiyo.net)',
+          heading: '📖 Lire plus loin ',
           items: [
             { href: o('flow-state-happiness-psychology'), label: 'Flow et psychologie du bonheur', external: true },
             { href: o('psychology-of-flow'), label: 'Le flow, expérience optimale', external: true },
-            { href: b('taoism-wu-wei-flow'), label: 'Wu wei — l\'immersion sans effort', external: true },
           ],
         },
         wiki: {
@@ -400,11 +394,10 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Leer más (blog.oiyo.net)',
+          heading: '📖 Leer más ',
           items: [
             { href: o('flow-state-happiness-psychology'), label: 'Flow y psicología de la felicidad', external: true },
             { href: o('psychology-of-flow'), label: 'El flow, la experiencia óptima', external: true },
-            { href: b('taoism-wu-wei-flow'), label: 'Wu wei — inmersión sin esfuerzo', external: true },
           ],
         },
         wiki: {
@@ -485,11 +478,10 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Read deeper (blog.oiyo.net)',
+          heading: '📖 Read deeper ',
           items: [
             { href: o('flow-state-happiness-psychology'), label: 'Flow and the psychology of happiness', external: true },
             { href: o('psychology-of-flow'), label: 'Flow — the psychology of optimal experience', external: true },
-            { href: b('taoism-wu-wei-flow'), label: 'Wu wei — effortless immersion', external: true },
           ],
         },
         wiki: {

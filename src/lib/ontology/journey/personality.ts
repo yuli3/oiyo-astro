@@ -1,12 +1,10 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, oiyoArticleUrl, wikiUrl } from './types';
+import { oiyoArticleUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function personalityContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
-  const b = (s: string) => blogUrl(locale, s);
-  const w = (s: string) => wikiUrl(locale, s);
   const o = (s: string) => oiyoArticleUrl(locale, s);
 
   switch (locale) {
@@ -61,7 +59,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 더 깊이 읽기 (blog.oiyo.net)',
+          heading: '📖 더 읽을거리',
           items: [
             { href: o('mbti-complete-deep-guide'), label: 'MBTI 완전 정복 가이드', external: true },
             { href: o('8-cognitive-functions-deep-dive'), label: '8가지 인지기능 깊이 읽기', external: true },
@@ -150,7 +148,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 深く読む (blog.oiyo.net)',
+          heading: '📖 深く読む ',
           items: [
             { href: o('8-cognitive-functions-deep-dive'), label: '8つの認知機能を深く読む', external: true },
             { href: o('enneagram-mbti-integration'), label: 'エニアグラム×MBTIの統合', external: true },
@@ -238,7 +236,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 深入阅读 (blog.oiyo.net)',
+          heading: '📖 深入阅读 ',
           items: [
             { href: o('8-cognitive-functions-deep-dive'), label: '深入解读8种认知功能', external: true },
             { href: o('enneagram-mbti-integration'), label: '九型人格 × MBTI 整合', external: true },
@@ -326,7 +324,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Lire plus loin (blog.oiyo.net)',
+          heading: '📖 Lire plus loin ',
           items: [
             { href: o('8-cognitive-functions-deep-dive'), label: 'Les 8 fonctions cognitives en profondeur', external: true },
             { href: o('enneagram-mbti-integration'), label: 'Intégrer ennéagramme et MBTI', external: true },
@@ -414,7 +412,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Leer más (blog.oiyo.net)',
+          heading: '📖 Leer más ',
           items: [
             { href: o('8-cognitive-functions-deep-dive'), label: 'Las 8 funciones cognitivas a fondo', external: true },
             { href: o('enneagram-mbti-integration'), label: 'Integrar eneagrama y MBTI', external: true },
@@ -502,7 +500,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Read deeper (blog.oiyo.net)',
+          heading: '📖 Read deeper ',
           items: [
             { href: o('mbti-complete-deep-guide'), label: 'The complete MBTI deep guide', external: true },
             { href: o('8-cognitive-functions-deep-dive'), label: '8 cognitive functions, in depth', external: true },

@@ -3,7 +3,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
 import { gaEvent } from '@/lib/analytics/ga-event';
 import {
@@ -531,7 +530,6 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
             { href: `/${locale}/ontology/personality/`, label: locale === 'ko' ? '🧭 성격 온톨로지' : locale === 'ja' ? '🧭 性格オントロジー' : locale === 'zh' ? '🧭 人格本体论' : locale === 'fr' ? '🧭 Ontologie de la personnalité' : locale === 'es' ? '🧭 Ontología de la personalidad' : '🧭 Personality ontology' },
           ]}
         />
-        <RelatedReading locale={locale} topic="empathy" />
 
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
           <button onClick={restart}

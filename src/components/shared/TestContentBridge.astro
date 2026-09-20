@@ -3,11 +3,11 @@ import type { TestBridgeContent } from '../../data/test-content-bridges';
 
 interface Props {
   content: TestBridgeContent;
-  blogUrl: string;
-  wikiUrl?: string;
 }
 
-const { content, blogUrl, wikiUrl } = Astro.props;
+// 2026-09-20: blog/wiki 로 내보내는 링크 카드는 뺐다(세운 지시). 이 컴포넌트는
+// 이제 oiyo 자체 설명(도입·방법)만 보여준다.
+const { content } = Astro.props;
 ---
 
 <section class="mt-12 rounded-lg border border-green-100 bg-card p-6 shadow-sm">
@@ -24,19 +24,6 @@ const { content, blogUrl, wikiUrl } = Astro.props;
     ))}
   </ul>
 
-  <h3 class="mt-8 text-lg font-semibold text-green-900">{content.linksTitle}</h3>
-  <div class:list={['mt-3 grid gap-3', wikiUrl && 'sm:grid-cols-2']}>
-    <a href={blogUrl} class="rounded-lg border border-green-100 bg-green-50/60 p-4 transition hover:border-green-300 hover:bg-surface-subtle">
-      <span class="text-xs font-semibold uppercase tracking-wide text-green-700">{content.blogLabel}</span>
-      <p class="mt-2 text-sm leading-6 text-slate-700">{content.blogText}</p>
-    </a>
-    {wikiUrl && (
-      <a href={wikiUrl} class="rounded-lg border border-green-100 bg-slate-50 p-4 transition hover:border-green-300 hover:bg-surface-subtle">
-        <span class="text-xs font-semibold uppercase tracking-wide text-green-700">{content.wikiLabel}</span>
-        <p class="mt-2 text-sm leading-6 text-slate-700">{content.wikiText}</p>
-      </a>
-    )}
-  </div>
 
   <p class="mt-6 rounded-lg bg-slate-50 p-4 text-xs leading-6 text-slate-600">{content.note}</p>
 </section>

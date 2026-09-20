@@ -3,7 +3,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 import {
   RadarChart,
   PolarGrid,
@@ -359,7 +358,6 @@ export default function EmotionalIntelligenceTest({ locale: localeProp }: Props)
             { href: `/${locale}/ontology/personality/`, label: related.ontology },
           ]}
         />
-        <RelatedReading locale={locale} topic="eq" />
         <div className="flex gap-3 justify-center">
           <button onClick={restart} className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
           <button onClick={share} className="px-5 py-2 text-white rounded-full font-medium text-sm" style={{ backgroundColor: ld.color }}>{copied ? t.copied : t.share}</button>

@@ -1,5 +1,6 @@
 ---
-import { FAMILY_SITES, familySiteHref, familySiteTag } from '../config/navigation';
+// 2026-09-20: 패밀리 사이트 크로스링크는 푸터에만 둔다(세운 지시). 헤더와
+// 헤더에서 여는 드로어에는 이 도메인 메뉴만 남긴다.
 import type { Locale } from '../i18n';
 import { getTranslations, LOCALES, LOCALE_LABELS, localePath } from '../i18n';
 import { localesForPath } from '../lib/article-locales';
@@ -143,17 +144,6 @@ const secondaryNavLinks = [
     <div class="pt-3 mt-1 border-t border-green-50 space-y-1">
       {secondaryNavLinks.map(({ href, label }) => (
         <a href={href} class="flex items-center h-9 px-2 rounded-lg text-sm font-semibold text-green-700 hover:bg-surface-subtle transition-colors">{label}</a>
-      ))}
-    </div>
-    <div class="pt-2 border-t border-green-50 mt-4">
-      <p class="px-2 pt-2 pb-1 text-[11px] font-bold uppercase tracking-widest text-green-600">Oiyo Family</p>
-      {FAMILY_SITES.map((f) => (
-        <a href={familySiteHref(f, locale, 'menu')}
-           target="_blank" rel="noopener noreferrer"
-           class="flex flex-col justify-center min-h-11 px-2 py-1.5 rounded-lg text-sm font-bold text-green-700 hover:bg-surface-subtle transition-colors">
-          <span>{f.name} ↗</span>
-          <span class="text-[11px] font-normal normal-case tracking-normal text-green-500">{familySiteTag(f, locale)}</span>
-        </a>
       ))}
     </div>
   </nav>

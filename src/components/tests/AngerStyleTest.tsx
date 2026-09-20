@@ -3,7 +3,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -367,7 +366,6 @@ export default function AngerStyleTest({ locale: localeProp }: Props) {
             { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : locale === 'zh' ? '✅ 习惯养成指南' : locale === 'fr' ? '✅ Guide de création d’habitudes' : locale === 'es' ? '✅ Guía para crear hábitos' : '✅ Habit builder guide' },
           ]}
         />
-        <RelatedReading locale={locale} topic="anger" />
         <div className="flex gap-3 justify-center">
           <button onClick={restart} className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
           <button onClick={share} className="px-5 py-2 text-white rounded-full font-medium text-sm" style={{ backgroundColor: d.color }}>{copied ? t.copied : t.share}</button>

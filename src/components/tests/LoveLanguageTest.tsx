@@ -4,7 +4,6 @@ import { Questionnaire } from '@/components/ui/questionnaire'
 import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
-import RelatedReading from '../shared/RelatedReading';
 import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -486,7 +485,6 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
           { href: `/${locale}/enneagram/test/`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
         ]}
       />
-      <RelatedReading locale={locale} topic="love-language" />
 
       <div className="flex gap-3">
         <button onClick={restart}

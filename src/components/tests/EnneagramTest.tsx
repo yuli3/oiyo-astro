@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultNextSteps from '../shared/ResultNextSteps'
-import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import AnimatedNumber from '../ui/AnimatedNumber'
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
@@ -746,7 +745,6 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
           { href: `/${lp}/mbti/test/`, label: lp === 'ko' ? '🧭 MBTI 테스트도 해보기' : '🧭 Try the MBTI test' },
         ]}
       />
-      <RelatedReading locale={lp} topic="enneagram" />
 
       <div className="flex gap-3">
         <button

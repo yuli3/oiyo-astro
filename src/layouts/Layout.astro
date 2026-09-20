@@ -8,8 +8,6 @@ import { routeTransitionName } from '../lib/system/view-transition-name';
 import Footer from '../components/Footer.astro';
 import TestSourceNote from '../components/shared/TestSourceNote.astro';
 import { getTestSourceNote } from '../data/test-source-notes';
-import TestRelatedReading from '../components/shared/TestRelatedReading.astro';
-import { getRelatedReading } from '../data/test-related-reading';
 import TestPlayBeacon from '../components/shared/TestPlayBeacon';
 
 interface Props {
@@ -57,7 +55,6 @@ const alternateRouteWithoutLocale = canonicalPath
   ? canonicalPath.replace(/^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/, '') || '/'
   : routeWithoutLocale;
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
-const relatedReading = getRelatedReading(routeWithoutLocale, locale);
 // Deindexed locales are dropped from the hreflang cluster: Google discards
 // hreflang annotations pointing at noindex URLs.
 const alternateLinks = LOCALES.filter((l) => !DEINDEXED_LOCALES.has(l)).map((alternateLocale) => ({
@@ -218,7 +215,6 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
         </div>
       )}
       <slot />
-      {relatedReading && <TestRelatedReading locale={locale} blog={relatedReading.blog} wiki={relatedReading.wiki} />}
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
     </main>
     <Footer locale={locale} />

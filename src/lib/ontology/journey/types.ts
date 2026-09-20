@@ -22,26 +22,14 @@ export interface JourneyContent {
   interpret: { heading: string; steps: { title: string; body: string }[] };
   /** 5. Related tests */
   tests: { heading: string; items: JourneyLink[] };
-  /** 6. Related blog.oiyo.net articles */
+  /** 6. 더 읽을거리 (oiyo 자체 해설) */
   blog: { heading: string; items: JourneyLink[] };
-  /** 7. Related wiki.oiyo.net concepts */
+  /** 7. 개념 사전 (oiyo 자체 해설) */
   wiki: { heading: string; items: JourneyLink[] };
   /** 8. FAQ (also emitted as FAQPage JSON-LD) */
   faq: { heading: string; items: { q: string; a: string }[] };
   /** Cross-links to sibling journey pages */
   next: { heading: string; items: JourneyLink[] };
-}
-
-/** blog.oiyo.net only has full coverage in ko/en/ja — map the rest to en. */
-export function blogUrl(locale: Locale, slug: string): string {
-  const l = locale === 'ko' || locale === 'ja' ? locale : 'en';
-  return `https://blog.oiyo.net/${l}/${slug}/`;
-}
-
-/** wiki.oiyo.net concept pages exist in ko/en/ja — map the rest to en. */
-export function wikiUrl(locale: Locale, slug: string): string {
-  const l = locale === 'ko' || locale === 'ja' ? locale : 'en';
-  return `https://wiki.oiyo.net/${l}/${slug}/`;
 }
 
 /** oiyo 자체 개념 해설. 6로케일 전부 존재하므로 en 으로 접지 않는다. */

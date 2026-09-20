@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type Level = 'minimal' | 'mild' | 'moderate' | 'severe'
@@ -351,7 +350,6 @@ export default function DepressionScreeningTest({ locale: lp = 'ko' }: Props) {
           { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
         ]}
       />
-      <RelatedReading locale={locale} topic="depression" />
       <button
         onClick={restart}
         aria-label={lb.restart}

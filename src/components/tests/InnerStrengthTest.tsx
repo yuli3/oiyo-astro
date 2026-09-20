@@ -5,7 +5,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja';
 
@@ -266,7 +265,6 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
             { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
           ]}
         />
-        <RelatedReading locale={locale} topic="inner-strength" />
 
         <button onClick={handleRestart} className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary-strong transition-colors">
           {lb.restart}

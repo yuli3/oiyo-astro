@@ -1,7 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
-import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
 import { LOCALES, withTrailingSlash } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import { ZODIACS, ZODIAC_ORDER, type ZodiacAnimal } from '../../../components/tools/ChineseZodiac';
@@ -283,8 +282,6 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
         ))}
       </div>
     </section>
-
-    <MysticTrinity topic="chinese-zodiac" locale={locale} />
     <MentalBoost locale={locale} />
   </div>
 </Layout>

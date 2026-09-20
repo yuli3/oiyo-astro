@@ -3,7 +3,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
-import RelatedReading from '../shared/RelatedReading';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Level = 'high' | 'medium' | 'low'
@@ -373,7 +372,6 @@ export default function SelfEsteemTest({ locale: lp = 'ko' }: Props) {
           { href: `/${locale}/today/`, label: locale === 'ko' ? '🌌 오늘의 우주' : locale === 'ja' ? '🌌 今日の宇宙' : "🌌 Today's Universe" },
         ]}
       />
-      <RelatedReading locale={locale} topic="self-esteem" />
 
       <div className="flex gap-3">
         <button onClick={restart}

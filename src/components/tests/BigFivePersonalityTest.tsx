@@ -3,7 +3,6 @@ import AnimatedNumber from '../ui/AnimatedNumber'
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultNextSteps from '../shared/ResultNextSteps'
-import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
@@ -508,7 +507,6 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
           { href: `/${locale}/enneagram/test/`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
         ]}
       />
-      <RelatedReading locale={locale} topic="big5" />
 
       <div className="flex gap-3">
         <button

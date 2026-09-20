@@ -12,7 +12,6 @@ import {
 import { Questionnaire } from "@/components/ui/questionnaire";
 import { gaEvent } from "@/lib/analytics/ga-event";
 import { recordTestResult } from "@/lib/user/test-results";
-import RelatedReading from "../shared/RelatedReading";
 import ResultNextSteps from "../shared/ResultNextSteps";
 import AttachmentAxesChart from "../shared/AttachmentAxesChart";
 import ShareResultButton from "../shared/ShareResultButton";
@@ -204,7 +203,6 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
       { href: `/${locale}/love-language/test/`, label: locale === "ko" ? "사랑의 언어 살펴보기" : "Love language reflection" },
       { href: `/${locale}/personal-boundaries-test/`, label: locale === "ko" ? "관계 경계 살펴보기" : "Personal boundaries reflection" },
     ]} />
-    <RelatedReading locale={locale} topic="attachment" />
     <button onClick={restart} className="w-full rounded-lg border bg-card px-4 py-3 text-sm font-medium hover:bg-accent">{t.restart}</button>
   </div>;
 }

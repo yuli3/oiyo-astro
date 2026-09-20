@@ -1,12 +1,10 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, oiyoArticleUrl, wikiUrl } from './types';
+import { oiyoArticleUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function luckContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
-  const b = (s: string) => blogUrl(locale, s);
-  const w = (s: string) => wikiUrl(locale, s);
   // 이관된 해설은 oiyo 에 있다 — blog/wiki 경로로 두면 301 이다(2026-09-08).
   const o = (p: string) => oiyoArticleUrl(locale, p);
 
@@ -59,13 +57,12 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 더 깊이 읽기 (blog.oiyo.net)',
+          heading: '📖 더 읽을거리',
           items: [
             { href: o('lucky-numbers-by-birth-guide'), label: '생년월일로 보는 행운 숫자', external: true },
             { href: o('entrance-wealth-luck'), label: '현관과 재물운 — 풍수의 지혜', external: true },
             { href: o('science-synchronicity-jung-pauli'), label: '동시성의 과학 — 융과 파울리', external: true },
             { href: o('semun-yearly-luck-strategy'), label: '세운 — 한 해 운의 전략', external: true },
-            { href: b('lotto-generator'), label: '로또와 행운의 과학', external: true },
           ],
         },
         wiki: {
@@ -142,7 +139,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 深く読む (blog.oiyo.net)',
+          heading: '📖 深く読む ',
           items: [
             { href: o('entrance-wealth-luck'), label: '玄関と金運 — 風水の知恵', external: true },
             { href: o('science-synchronicity-jung-pauli'), label: 'シンクロニシティの科学 — ユングとパウリ', external: true },
@@ -224,7 +221,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 深入阅读 (blog.oiyo.net)',
+          heading: '📖 深入阅读 ',
           items: [
             { href: o('entrance-wealth-luck'), label: '玄关与财运——风水的智慧', external: true },
             { href: o('science-synchronicity-jung-pauli'), label: '共时性的科学——荣格与泡利', external: true },
@@ -306,7 +303,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Lire plus loin (blog.oiyo.net)',
+          heading: '📖 Lire plus loin ',
           items: [
             { href: o('entrance-wealth-luck'), label: 'Entrée et fortune — sagesse du feng shui', external: true },
             { href: o('science-synchronicity-jung-pauli'), label: 'La science de la synchronicité — Jung et Pauli', external: true },
@@ -388,7 +385,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Leer más (blog.oiyo.net)',
+          heading: '📖 Leer más ',
           items: [
             { href: o('entrance-wealth-luck'), label: 'La entrada y la fortuna — sabiduría del feng shui', external: true },
             { href: o('science-synchronicity-jung-pauli'), label: 'La ciencia de la sincronicidad — Jung y Pauli', external: true },
@@ -470,7 +467,7 @@ export function luckContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Read deeper (blog.oiyo.net)',
+          heading: '📖 Read deeper ',
           items: [
             { href: o('entrance-wealth-luck'), label: 'Entrances and wealth luck — feng shui wisdom', external: true },
             { href: o('science-synchronicity-jung-pauli'), label: 'The science of synchronicity — Jung & Pauli', external: true },

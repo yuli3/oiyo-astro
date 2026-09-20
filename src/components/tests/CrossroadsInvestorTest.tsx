@@ -5,7 +5,6 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
-import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
@@ -314,7 +313,6 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
             { href: `/${locale}/today/`, label: locale === 'ko' ? '📅 오늘의 운세' : locale === 'ja' ? '📅 今日の運勢' : '📅 Today' },
           ]}
         />
-        <RelatedReading locale={locale} topic="investor" />
 
         <button onClick={handleRestart} className="w-full py-3 rounded-xl bg-slate-800 text-white font-bold hover:bg-slate-900 transition-colors">
           {lb.restart}

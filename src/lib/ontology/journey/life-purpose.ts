@@ -1,12 +1,10 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, oiyoArticleUrl, wikiUrl } from './types';
+import { oiyoArticleUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function lifePurposeContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
-  const b = (s: string) => blogUrl(locale, s);
-  const w = (s: string) => wikiUrl(locale, s);
   // 이관된 해설은 oiyo 에 있다 — blog/wiki 경로로 두면 301 이다(2026-09-08).
   const o = (p: string) => oiyoArticleUrl(locale, p);
 
@@ -60,9 +58,8 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 더 깊이 읽기 (blog.oiyo.net)',
+          heading: '📖 더 읽을거리',
           items: [
-            { href: b('ikigai-life-purpose-guide'), label: '이키가이 — 삶의 목적 가이드', external: true },
             { href: o('viktor-frankl-purpose'), label: '빅터 프랭클 — 의미를 찾아서', external: true },
             { href: o('individuation-process-self-realization'), label: '개성화 — 자기실현의 과정', external: true },
             { href: o('power-of-purpose'), label: '목적의 힘', external: true },
@@ -144,9 +141,8 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 深く読む (blog.oiyo.net)',
+          heading: '📖 深く読む ',
           items: [
-            { href: b('ikigai-art-of-purpose'), label: '生きがい — 目的の技法', external: true },
             { href: o('viktor-frankl-purpose'), label: 'フランクル — 意味を求めて', external: true },
             { href: o('individuation-process-self-realization'), label: '個性化 — 自己実現の過程', external: true },
             { href: o('power-of-purpose'), label: '目的の力', external: true },
@@ -228,9 +224,8 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 深入阅读 (blog.oiyo.net)',
+          heading: '📖 深入阅读 ',
           items: [
-            { href: b('ikigai-art-of-purpose'), label: 'Ikigai——目的的艺术', external: true },
             { href: o('viktor-frankl-purpose'), label: '弗兰克尔——寻找意义', external: true },
             { href: o('individuation-process-self-realization'), label: '个体化——自我实现之路', external: true },
             { href: o('power-of-purpose'), label: '目的的力量', external: true },
@@ -312,9 +307,8 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Lire plus loin (blog.oiyo.net)',
+          heading: '📖 Lire plus loin ',
           items: [
-            { href: b('ikigai-art-of-purpose'), label: 'Ikigai — l\'art du but', external: true },
             { href: o('viktor-frankl-purpose'), label: 'Viktor Frankl — la quête de sens', external: true },
             { href: o('individuation-process-self-realization'), label: 'L\'individuation, chemin de réalisation', external: true },
           ],
@@ -395,9 +389,8 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Leer más (blog.oiyo.net)',
+          heading: '📖 Leer más ',
           items: [
-            { href: b('ikigai-art-of-purpose'), label: 'Ikigai — el arte del propósito', external: true },
             { href: o('viktor-frankl-purpose'), label: 'Viktor Frankl — en busca de sentido', external: true },
             { href: o('individuation-process-self-realization'), label: 'La individuación, camino de realización', external: true },
           ],
@@ -478,9 +471,8 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           ],
         },
         blog: {
-          heading: '📖 Read deeper (blog.oiyo.net)',
+          heading: '📖 Read deeper ',
           items: [
-            { href: b('ikigai-art-of-purpose'), label: 'Ikigai — the art of purpose', external: true },
             { href: o('viktor-frankl-purpose'), label: 'Viktor Frankl — the search for meaning', external: true },
             { href: o('individuation-process-self-realization'), label: 'Individuation — the path of self-realization', external: true },
             { href: o('power-of-purpose'), label: 'The power of purpose', external: true },
