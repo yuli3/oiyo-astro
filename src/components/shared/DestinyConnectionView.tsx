@@ -22,10 +22,9 @@ import {
   CorrelationEngine,
   type CorrelationInsight,
 } from "@/lib/engines/correlation-engine";
-import { heavenlyStems } from "@/lib/ontology/saju/data";
-import { calculateSaju } from "@/lib/ontology/saju/logic";
+import { resolveBirthDayMasterElement } from "@/lib/ontology/saju/birth-contract";
 import { useUserProfile } from "@/lib/user/context/UserContext";
-import { resolveBirthInstant, resolveBirthRecord } from "@/lib/user/birth-record";
+import { resolveBirthRecord } from "@/lib/user/birth-record";
 import { ROUTES } from "@/registry/routes";
 
 interface DestinyConnectionViewProps {
@@ -47,17 +46,7 @@ export function DestinyConnectionView({
     const record = resolveBirthRecord(profile);
     if (record) {
       try {
-        const resolution = resolveBirthInstant(record);
-        if (resolution.status === "resolved") {
-          const result = calculateSaju(
-            resolution.instant,
-            false,
-            undefined,
-            resolution.longitude,
-          );
-          const stem = heavenlyStems[result.dayMaster];
-          return stem?.element; // wood, fire, earth, metal, water
-        }
+        return resolveBirthDayMasterElement(record);
       } catch (e) {
         console.error("Saju Calc Error", e);
       }

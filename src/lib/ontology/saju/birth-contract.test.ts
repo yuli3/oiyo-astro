@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { createBirthRecord } from "@/lib/user/birth-record";
 
-import { calculateBirthSaju } from "./birth-contract";
+import { calculateBirthSaju, resolveBirthDayMasterElement } from "./birth-contract";
 import { EarthlyBranch } from "./types";
 
 describe("canonical birth-to-saju contract", () => {
@@ -50,5 +50,29 @@ describe("canonical birth-to-saju contract", () => {
       utcOffsetMinutesAtBirth: null,
       zoneId: null,
     }))).toEqual({ status: "needs-offset", reason: "time-known-offset-missing" });
+  });
+
+  it("projects the same day element regardless of longitude", () => {
+    const base = {
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      needsConfirmation: false,
+      utcOffsetMinutesAtBirth: -240,
+      zoneId: "America/New_York",
+    } as const;
+    const dc = createBirthRecord({ ...base, longitude: -77.0369 });
+    const farWest = createBirthRecord({ ...base, longitude: -120 });
+    expect(resolveBirthDayMasterElement(dc)).toBe(resolveBirthDayMasterElement(farWest));
+    expect(resolveBirthDayMasterElement(dc)).not.toBeNull();
+  });
+
+  it("does not invent an offset for the lightweight day-element projection", () => {
+    expect(resolveBirthDayMasterElement(createBirthRecord({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: -77.0369,
+      needsConfirmation: true,
+      zoneId: "America/New_York",
+    }))).toBeNull();
   });
 });

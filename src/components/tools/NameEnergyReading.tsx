@@ -5,8 +5,9 @@ import { useMemo, useState } from "react";
 import { ProfileNameField } from "@/components/shared/BirthDateField";
 import { ProfileInputDialog } from "@/components/shared/ProfileInputDialog";
 import { analyzeNameEnergy, type PrimalElement } from "@/lib/ontology/onomancy/analysis";
-import { analyzeSaju, calculateSaju, STANDARD_MERIDIAN_KST } from "@/lib/ontology/saju/logic";
-import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
+import { calculateBirthSaju } from "@/lib/ontology/saju/birth-contract";
+import { analyzeSaju } from "@/lib/ontology/saju/logic";
+import { resolveBirthRecord } from "@/lib/user/birth-record";
 import { useUserStore } from "@/lib/user/store/user-store";
 import type { Locale } from "@/i18n";
 
@@ -63,7 +64,7 @@ const ELEMENT_TONE: Record<PrimalElement, string> = {
 const UI: Record<Lang, {
   nameLabel: string; soundTitle: string; soundSub: string;
   carries: string; absent: string; none: string;
-  fillTitle: string; fillSub: string; fillNothing: string; needBirth: string; addBirth: string;
+  fillTitle: string; fillSub: string; fillNothing: string; needBirth: string; needDetails: string; addBirth: string;
   scoreLabel: string; empty: string;
 }> = {
   ko: {
@@ -72,6 +73,7 @@ const UI: Record<Lang, {
     fillTitle: "사주와 겹쳐 보기", fillSub: "사주에서 비어 있는 기운을 이름이 채우는지",
     fillNothing: "사주에 비어 있는 오행이 없습니다. 채울 것이 없으므로 점수를 매기지 않습니다.",
     needBirth: "생년월일을 입력하면 사주에서 부족한 기운을 이름이 채우는지 함께 봅니다.",
+    needDetails: "태어난 시각과 도시를 확인하면 사주에서 부족한 기운을 정확히 비교할 수 있어요.",
     addBirth: "생년월일 입력", scoreLabel: "채움 정도",
     empty: "이름을 입력하면 소리 오행을 읽어드립니다.",
   },
@@ -81,6 +83,7 @@ const UI: Record<Lang, {
     fillTitle: "Against your chart", fillSub: "Whether the name supplies what the chart lacks",
     fillNothing: "Your chart is missing no element, so there is nothing to fill and no score to give.",
     needBirth: "Add a birth date to see whether your name supplies what your chart lacks.",
+    needDetails: "Confirm your birth time and city to compare the elements your chart lacks accurately.",
     addBirth: "Add birth date", scoreLabel: "Supplied",
     empty: "Enter a name to read its sound elements.",
   },
@@ -90,6 +93,7 @@ const UI: Record<Lang, {
     fillTitle: "四柱と重ねて見る", fillSub: "四柱に欠けた気を名前が補うか",
     fillNothing: "四柱に欠けている五行がありません。補うものがないため点数は出しません。",
     needBirth: "生年月日を入力すると、四柱に足りない気を名前が補うかを一緒に見られます。",
+    needDetails: "出生時刻と都市を確認すると、四柱に足りない気を正確に比較できます。",
     addBirth: "生年月日を入力", scoreLabel: "補い度",
     empty: "名前を入力すると音の五行を読みます。",
   },
@@ -99,6 +103,7 @@ const UI: Record<Lang, {
     fillTitle: "与八字对照", fillSub: "姓名是否补足八字所缺",
     fillNothing: "八字没有缺失的五行，无可补足，因此不给出分数。",
     needBirth: "填写出生日期后，可一并查看姓名是否补足八字所缺之气。",
+    needDetails: "确认出生时间和城市后，才能准确比较八字所缺的五行。",
     addBirth: "填写出生日期", scoreLabel: "补足程度",
     empty: "填写姓名后即可读取其声音五行。",
   },
@@ -108,6 +113,7 @@ const UI: Record<Lang, {
     fillTitle: "Face à votre thème", fillSub: "Si le nom apporte ce qui manque au thème",
     fillNothing: "Aucun élément ne manque à votre thème : rien à compléter, donc aucun score.",
     needBirth: "Ajoutez une date de naissance pour voir si votre nom apporte ce qui manque à votre thème.",
+    needDetails: "Confirmez l’heure et la ville de naissance pour comparer précisément les éléments manquants.",
     addBirth: "Ajouter la date", scoreLabel: "Apporté",
     empty: "Saisissez un nom pour lire ses éléments sonores.",
   },
@@ -117,6 +123,7 @@ const UI: Record<Lang, {
     fillTitle: "Frente a tu carta", fillSub: "Si el nombre aporta lo que le falta a la carta",
     fillNothing: "A tu carta no le falta ningún elemento: no hay nada que completar, así que no damos puntuación.",
     needBirth: "Añade una fecha de nacimiento para ver si tu nombre aporta lo que falta en tu carta.",
+    needDetails: "Confirma la hora y la ciudad de nacimiento para comparar con precisión los elementos que faltan.",
     addBirth: "Añadir fecha", scoreLabel: "Aportado",
     empty: "Escribe un nombre para leer sus elementos sonoros.",
   },
@@ -137,24 +144,36 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
   const ui = UI[lang];
   const labels = ELEMENT_LABEL[lang];
 
-  const storedName = useUserStore((state) => state.profile.name) ?? "";
-  const gender = useUserStore((state) => state.profile.gender);
-  const { parsed } = useProfilePrefill();
+  const profile = useUserStore((state) => state.profile);
+  const storedName = profile.name ?? "";
+  const gender = profile.gender;
+  const birthRecord = resolveBirthRecord(profile);
   const [name, setName] = useState(storedName);
   const [dialogOpen, setDialogOpen] = useState(false);
 
   // Missing elements come from the chart, so they only exist once a birth date
   // does. Without one the reading stays descriptive rather than scored.
-  const missing = useMemo<PrimalElement[]>(() => {
-    if (!parsed) return [];
-    const birth = new Date(Date.UTC(parsed.year, parsed.month - 1, parsed.day, parsed.hour ?? 12, parsed.minute ?? 0));
+  const chart = useMemo<{ missing: PrimalElement[]; ready: boolean }>(() => {
+    if (!birthRecord) return { missing: [], ready: false };
     try {
-      const saju = calculateSaju(birth, false, gender === "female" ? "female" : "male", STANDARD_MERIDIAN_KST);
-      return analyzeSaju(saju).missingElements as unknown as PrimalElement[];
+      const resolution = calculateBirthSaju(birthRecord);
+      if (resolution.status !== "resolved" || !resolution.standard.hour) return { missing: [], ready: false };
+      const saju = {
+        birthDate: resolution.instant,
+        day: resolution.standard.day,
+        dayMaster: resolution.standard.day.heavenlyStem,
+        gender: gender === "female" ? "female" as const : "male" as const,
+        hour: resolution.standard.hour,
+        isLunar: false,
+        month: resolution.standard.month,
+        year: resolution.standard.year,
+      };
+      return { missing: analyzeSaju(saju).missingElements as unknown as PrimalElement[], ready: true };
     } catch {
-      return [];
+      return { missing: [], ready: false };
     }
-  }, [parsed, gender]);
+  }, [birthRecord, gender]);
+  const missing = chart.missing;
 
   const reading = useMemo(() => (name.trim() ? analyzeNameEnergy(name, missing) : null), [name, missing]);
 
@@ -198,9 +217,9 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
             <h2 className="text-sm font-black text-slate-950">{ui.fillTitle}</h2>
             <p className="mt-1 text-xs leading-5 text-slate-500">{ui.fillSub}</p>
 
-            {!parsed ? (
+            {!chart.ready ? (
               <div className="mt-4 rounded-2xl border border-dashed border-green-200 px-4 py-4 text-center">
-                <p className="text-sm font-bold text-slate-500 [word-break:keep-all]">{ui.needBirth}</p>
+                <p className="text-sm font-bold text-slate-500 [word-break:keep-all]">{birthRecord ? ui.needDetails : ui.needBirth}</p>
                 <button
                   type="button"
                   onClick={() => setDialogOpen(true)}

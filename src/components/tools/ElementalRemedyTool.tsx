@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField'
-import { birthCivilToInstant } from '../../lib/ontology/kernel/time'
-import { calculateSaju, analyzeSaju, STANDARD_MERIDIAN_KST } from '../../lib/ontology/saju/logic'
+import CityField from '../shared/CityField'
+import { calculateBirthSaju } from '../../lib/ontology/saju/birth-contract'
+import { analyzeSaju } from '../../lib/ontology/saju/logic'
 import { FiveElement } from '../../lib/ontology/saju/types'
+import { CITIES, type City } from '../../lib/ontology/natal/signs'
+import { createBirthRecord, resolveBirthLocation, resolveBirthRecord, updateBirthRecordFromParts, type BirthRecordV2 } from '../../lib/user/birth-record'
+import { useProfilePrefill } from '../../lib/user/useProfilePrefill'
 import { fiveElementCountsToOrbit } from '../../lib/ontology/saju/orbit-from-counts'
 import FiveElementsOrbit from './saju/FiveElementsOrbit'
 import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
@@ -123,6 +127,15 @@ const L: Record<SupportedLang, {
 
 interface Props { locale?: string }
 
+const INPUT_COPY: Record<string, { cityRequired: string; timeRequired: string; invalidTime: string; saved: string; clear: string }> = {
+  ko: { cityRequired: '정확한 오행 분포를 계산하려면 태어난 도시를 선택해 주세요.', timeRequired: '보완 기운은 네 기둥을 모두 사용해요. 태어난 시각을 입력해 주세요.', invalidTime: '이 시각은 출생지의 시간대 전환과 겹쳐요. 인접한 정확한 시각을 확인해 주세요.', saved: '저장된 출생지 시간대를 사용해요', clear: '저장 위치 지우기' },
+  en: { cityRequired: 'Choose your birth city to calculate the Five-Element balance accurately.', timeRequired: 'This reading uses all four pillars. Enter your birth time to continue.', invalidTime: 'This time overlaps a local clock transition. Confirm a nearby exact time.', saved: 'Using your saved birthplace time zone', clear: 'Clear saved place' },
+  ja: { cityRequired: '五行の分布を正確に計算するため、出生都市を選んでください。', timeRequired: 'この解釈は四柱すべてを使います。出生時刻を入力してください。', invalidTime: 'この時刻は現地の時刻変更と重なります。近い正確な時刻を確認してください。', saved: '保存済みの出生地タイムゾーンを使用します', clear: '保存場所を消去' },
+  zh: { cityRequired: '请选择出生城市，以准确计算五行分布。', timeRequired: '此解读需要完整四柱，请输入出生时间。', invalidTime: '该时间与当地时制切换重叠，请确认邻近的准确时间。', saved: '正在使用已保存的出生地时区', clear: '清除已保存地点' },
+  fr: { cityRequired: 'Choisissez votre ville de naissance pour calculer précisément l’équilibre des cinq éléments.', timeRequired: 'Cette lecture utilise les quatre piliers. Saisissez votre heure de naissance.', invalidTime: 'Cette heure chevauche un changement d’heure local. Confirmez une heure voisine exacte.', saved: 'Fuseau du lieu de naissance enregistré utilisé', clear: 'Effacer le lieu enregistré' },
+  es: { cityRequired: 'Elige tu ciudad de nacimiento para calcular con precisión el equilibrio de los cinco elementos.', timeRequired: 'Esta lectura usa los cuatro pilares. Introduce tu hora de nacimiento.', invalidTime: 'Esta hora coincide con un cambio horario local. Confirma una hora cercana exacta.', saved: 'Se usa la zona horaria del lugar guardado', clear: 'Borrar lugar guardado' },
+}
+
 export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
   const l = lang(lp ?? 'ko')
   const t = L[l]
@@ -131,31 +144,83 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
   const [month, setMonth] = useState(6)
   const [day, setDay] = useState(15)
   const [hour, setHour] = useState<number | null>(null)
+  const [minute, setMinute] = useState<number | null>(null)
   const [gender, setGender] = useState<'male' | 'female'>('female')
   const [done, setDone] = useState(false)
+  const [analysis, setAnalysis] = useState<ReturnType<typeof analyzeSaju> | null>(null)
+  const [selectedCity, setSelectedCity] = useState<City | null>(null)
+  const [cityId, setCityId] = useState('')
+  const [savedLocationRecord, setSavedLocationRecord] = useState<BirthRecordV2 | null>(null)
+  const [ignoreProfileLocation, setIgnoreProfileLocation] = useState(false)
+  const [inputError, setInputError] = useState('')
+  const { profile, parsed, saveBirthRecord, setProfile } = useProfilePrefill()
+  const inputCopy = INPUT_COPY[lp] ?? INPUT_COPY.en
+
+  useEffect(() => {
+    if (!parsed) return
+    setYear(parsed.year)
+    setMonth(parsed.month)
+    setDay(parsed.day)
+    setHour(parsed.hour)
+    setMinute(parsed.hour === null ? null : (parsed.minute ?? 0))
+    if (profile.gender === 'male' || profile.gender === 'female') setGender(profile.gender)
+    const record = resolveBirthRecord(profile)
+    const city = CITIES.find((candidate) => candidate.zoneId === record?.zoneId && candidate.lon === record?.longitude) ?? null
+    setSelectedCity(city)
+    setCityId(city?.id ?? '')
+    setSavedLocationRecord(city ? null : record?.zoneId ? record : null)
+    setIgnoreProfileLocation(false)
+  }, [parsed, profile])
 
   const daysInMonth = new Date(year, month, 0).getDate()
 
   function compute() {
     const clampedDay = Math.min(day, daysInMonth)
     if (day !== clampedDay) setDay(clampedDay)
-    setDone(true)
-  }
-
-  let analysis: ReturnType<typeof analyzeSaju> | null = null
-  if (done) {
+    setInputError('')
+    if (hour === null) {
+      setInputError(inputCopy.timeRequired)
+      setDone(false)
+      setAnalysis(null)
+      return
+    }
+    const civilDate = `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(clampedDay).padStart(2, '0')}`
+    const civilTime = `${String(hour).padStart(2, '0')}:${String(minute ?? 0).padStart(2, '0')}`
     try {
-      const birth = birthCivilToInstant({
-        day: Math.min(day, daysInMonth),
-        hour: hour ?? 12,
-        minute: 0,
-        month,
-        year,
-      })
-      const saju = calculateSaju(birth, false, gender, STANDARD_MERIDIAN_KST)
-      analysis = analyzeSaju(saju)
+      let record: BirthRecordV2
+      if (selectedCity) {
+        const location = resolveBirthLocation({ civilDate, civilTime, longitude: selectedCity.lon, zoneId: selectedCity.zoneId })
+        if (location.status !== 'resolved') throw new RangeError('invalid-local-time')
+        record = createBirthRecord({ civilDate, civilTime, ...location.location })
+      } else {
+        record = updateBirthRecordFromParts(savedLocationRecord ?? (ignoreProfileLocation ? null : resolveBirthRecord(profile)), {
+          year, month, day: clampedDay, hour, minute,
+        })
+      }
+      const resolution = calculateBirthSaju(record)
+      if (resolution.status !== 'resolved' || !resolution.standard.hour) {
+        setInputError(inputCopy.cityRequired)
+        setDone(false)
+        setAnalysis(null)
+        return
+      }
+      setAnalysis(analyzeSaju({
+        birthDate: resolution.instant,
+        day: resolution.standard.day,
+        dayMaster: resolution.standard.day.heavenlyStem,
+        gender,
+        hour: resolution.standard.hour,
+        isLunar: false,
+        month: resolution.standard.month,
+        year: resolution.standard.year,
+      }))
+      saveBirthRecord(record)
+      setProfile({ gender })
+      setDone(true)
     } catch {
-      analysis = null
+      setInputError(selectedCity || savedLocationRecord ? inputCopy.invalidTime : inputCopy.cityRequired)
+      setDone(false)
+      setAnalysis(null)
     }
   }
 
@@ -186,17 +251,47 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
             setMonth(Number(m[2]))
             setDay(Number(m[3]))
             setDone(false)
+            setAnalysis(null)
           }}
         />
         <ProfileTimeField
           locale={l}
-          value={hour === null ? '' : `${String(hour).padStart(2, '0')}:00`}
+          value={hour === null ? '' : `${String(hour).padStart(2, '0')}:${String(minute ?? 0).padStart(2, '0')}`}
           onChange={(v) => {
-            if (!v) { setHour(null); setDone(false); return }
-            const m = /^(\d{2}):/.exec(v)
-            if (m) { setHour(Number(m[1])); setDone(false) }
+            if (!v) { setHour(null); setMinute(null); setDone(false); setAnalysis(null); return }
+            const m = /^(\d{2}):(\d{2})$/.exec(v)
+            if (m) { setHour(Number(m[1])); setMinute(Number(m[2])); setDone(false); setAnalysis(null) }
           }}
         />
+        <CityField
+          id="elemental-birth-city"
+          locale={lp}
+          value={cityId}
+          selected={selectedCity}
+          required
+          onChange={(id, city) => {
+            setCityId(id)
+            setSelectedCity(city)
+            setSavedLocationRecord(null)
+            setIgnoreProfileLocation(!city)
+            setInputError('')
+            setDone(false)
+            setAnalysis(null)
+          }}
+        />
+        {savedLocationRecord?.zoneId && !selectedCity && (
+          <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-primary/20 bg-primary/[0.04] px-3 py-2 text-xs text-foreground">
+            <span className="min-w-0 break-words">{inputCopy.saved}: <strong>{savedLocationRecord.zoneId}</strong></span>
+            <button
+              type="button"
+              className="min-h-11 rounded-xl border border-primary/30 px-3 font-bold text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              onClick={() => { setSavedLocationRecord(null); setIgnoreProfileLocation(true); setDone(false); setAnalysis(null) }}
+            >
+              {inputCopy.clear}
+            </button>
+          </div>
+        )}
+        {inputError && <p role="alert" className="rounded-xl bg-red-50 px-3 py-2 text-sm font-medium leading-6 text-red-800">{inputError}</p>}
         <ProfileGenderField
           locale={l}
           label={t.gender}
@@ -204,10 +299,11 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
           onChange={(g) => {
             if (g === 'male' || g === 'female') setGender(g)
             setDone(false)
+            setAnalysis(null)
           }}
         />
-        <button onClick={compute}
-          className="w-full rounded-xl bg-primary text-primary-foreground px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity">
+        <button type="button" onClick={compute}
+          className="min-h-12 w-full rounded-xl bg-primary px-4 py-3 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
           {done ? t.recompute : t.calc}
         </button>
       </div>

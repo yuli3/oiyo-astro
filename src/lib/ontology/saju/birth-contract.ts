@@ -1,6 +1,7 @@
 import { BRANCH_ORDER } from "@/manifest/data/saju/branches";
 import { STEM_ORDER } from "@/manifest/data/saju/stems";
 import type { BirthRecordV2 } from "@/lib/user/birth-record";
+import { heavenlyStems } from "./data";
 
 import { birthCivilToInstant } from "../kernel/time";
 import { getSolarLongitude, getSolarTermDate } from "../kernel/astronomy";
@@ -101,4 +102,11 @@ export function calculateBirthSaju(record: BirthRecordV2): BirthSajuResolution {
       zoneId: record.zoneId,
     },
   };
+}
+
+/** Lightweight canonical projection for surfaces that only need the day element. */
+export function resolveBirthDayMasterElement(record: BirthRecordV2): string | null {
+  const resolution = calculateBirthSaju(record);
+  if (resolution.status !== "resolved") return null;
+  return heavenlyStems[resolution.standard.day.heavenlyStem]?.element ?? null;
 }
