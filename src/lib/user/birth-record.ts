@@ -112,7 +112,7 @@ export function createBirthRecord(input: {
   };
 }
 
-type BirthLocationUpdate = Pick<
+export type BirthLocationUpdate = Pick<
   BirthRecordV2,
   "longitude" | "needsConfirmation" | "utcOffsetMinutesAtBirth" | "zoneId"
 >;
@@ -234,6 +234,44 @@ export function resolveZonedCivilTime(input: {
   if (candidates.length === 0) return { status: "nonexistent" };
   if (candidates.length > 1) return { status: "ambiguous", candidates };
   return { status: "resolved", ...candidates[0] };
+}
+
+/** Resolve the exact location payload stored with a civil birth record. */
+export function resolveBirthLocation(input: {
+  civilDate: string;
+  civilTime: null | string;
+  longitude: number;
+  zoneId: string;
+}): { status: Exclude<ZonedCivilResolution["status"], "resolved"> } | {
+  status: "resolved";
+  location: BirthLocationUpdate;
+} {
+  if (input.civilTime === null) {
+    return {
+      status: "resolved",
+      location: {
+        longitude: input.longitude,
+        needsConfirmation: false,
+        utcOffsetMinutesAtBirth: null,
+        zoneId: input.zoneId,
+      },
+    };
+  }
+  const resolution = resolveZonedCivilTime({
+    civilDate: input.civilDate,
+    civilTime: input.civilTime,
+    zoneId: input.zoneId,
+  });
+  if (resolution.status !== "resolved") return { status: resolution.status };
+  return {
+    status: "resolved",
+    location: {
+      longitude: input.longitude,
+      needsConfirmation: false,
+      utcOffsetMinutesAtBirth: resolution.offsetMinutes,
+      zoneId: input.zoneId,
+    },
+  };
 }
 
 export function migrateLegacyBirth(profile: LegacyBirthProfile): BirthRecordV2 | null {

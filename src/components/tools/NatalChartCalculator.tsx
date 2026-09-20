@@ -4,7 +4,8 @@ import CopyResultLink from '../shared/CopyResultLink';
 import { BirthDateField, ProfilePlaceField, ProfileTimeField } from '../shared/BirthDateField';
 import { computeNatalChart, type NatalChart } from '../../lib/ontology/natal/calculator';
 import { computeAstroCartoMeridians, computeHorizonCurves, type CartoMeridian, type CartoHorizon } from '../../lib/ontology/natal/astrocartography';
-import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/signs';
+import { SIGN_INFO, CITIES, type City, type NatalLocale } from '../../lib/ontology/natal/signs';
+import { parseSynthesizedId } from '../../lib/ontology/natal/city-search';
 import AstroCartoMap from './AstroCartoMap';
 // `readResultCode` is kept for one thing only: reading pre-T6 `?d=&c=&t=`
 // share links that may still be circulating, so they never 404. Natal no
@@ -17,7 +18,7 @@ import { readResultCode } from '../../lib/result-url';
 import { decodeResult } from '../../lib/result-permalink';
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
-import { createBirthRecord, resolveZonedCivilTime } from '../../lib/user/birth-record';
+import { createBirthRecord, resolveBirthRecord, resolveZonedCivilTime } from '../../lib/user/birth-record';
 import { gaEvent } from '../../lib/analytics/ga-event';
 
 interface Props {
@@ -288,6 +289,22 @@ export default function NatalChartCalculator({ locale }: Props) {
 
   // 온톨로지 프로필의 생년월일·시·출생지를 재사용(URL 복원이 없을 때만) — 재입력 제거.
   const { parsed, saveBirthRecord, profile, setProfile } = useProfilePrefill();
+  const storedBirth = resolveBirthRecord(profile);
+  const findCity = (id: string): City | undefined => {
+    const curated = CITIES.find((city) => city.id === id);
+    if (curated) return curated;
+    const coordinates = parseSynthesizedId(id);
+    if (!coordinates || profile.birthCityId !== id || !storedBirth?.zoneId) return undefined;
+    const label = `${coordinates.lat}, ${coordinates.lon}`;
+    return {
+      id,
+      label: { ko: label, en: label, ja: label, zh: label, fr: label, es: label },
+      lat: coordinates.lat,
+      lon: coordinates.lon,
+      tz: 0,
+      zoneId: storedBirth.zoneId,
+    };
+  };
   useEffect(() => {
     if (!parsed) return;
     setForm((f) => {
@@ -342,7 +359,7 @@ export default function NatalChartCalculator({ locale }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function compute(date: string, time: string, city: (typeof CITIES)[number], hasTime: boolean) {
+  function compute(date: string, time: string, city: City, hasTime: boolean) {
     const resolution = resolveZonedCivilTime({
       civilDate: date,
       civilTime: hasTime ? time : '12:00',
@@ -363,7 +380,7 @@ export default function NatalChartCalculator({ locale }: Props) {
     setError(null);
     if (!form.date) { setError(t.needDate); return; }
     if (!form.city) { setError(t.needCity); return; }
-    const city = CITIES.find((x) => x.id === form.city);
+    const city = findCity(form.city);
     if (!city) { setError(t.needCity); return; }
     const hasTime = !form.unknown && !!form.time;
     const resolution = compute(form.date, form.time, city, hasTime);

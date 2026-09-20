@@ -5,7 +5,7 @@ import {
   calculateGreatFortune,
   calculateTrueSolarTime,
 } from "../../ontology/saju-core/advanced-logic";
-import { calculateSaju } from "./logic";
+import { calculateSaju, STANDARD_MERIDIAN_KST } from "./logic";
 import { EarthlyBranch, HeavenlyStem } from "./types";
 
 // The golden data below is cut in KST, but nothing in the engine may depend on the
@@ -19,6 +19,20 @@ describe("Saju Logic Golden Suite", () => {
   });
 
   describe("Layer 2.1: True Solar Time (TST) Correction", () => {
+    it("keeps 09:00 in the Sa hour for 120 standard-time samples", () => {
+      for (let index = 0; index < 120; index += 1) {
+        const birthDate = new Date(Date.UTC(2024, 0, 1 + index, 0, 0));
+        expect(
+          calculateSaju(
+            birthDate,
+            false,
+            "male",
+            STANDARD_MERIDIAN_KST,
+          ).hour.earthlyBranch,
+        ).toBe(EarthlyBranch.SA);
+      }
+    });
+
     // TC-03: Global Longitude Check
     it("should derive the solar clock from the birth longitude, not the runtime timezone", () => {
       // Birth instant: 2024-01-01 11:20 KST (= 02:20 UTC).
@@ -38,7 +52,7 @@ describe("Saju Logic Golden Suite", () => {
       //
       // 이 테스트의 의도(경도 32분 차가 시주를 옮긴다)는 그대로 지킨다. 정시 경계에서
       // 그 성질이 드러나는 시각으로 옮겼을 뿐이다:
-      //   Tokyo (135.0E): 02:20 + 9h00m - 3.5m ~ 11:16 -> O (Horse)
+      //   Standard time: 02:20 + 9h00m = 11:20 -> O (Horse)
       //   Seoul (127.0E): 02:20 + 8h28m - 3.5m ~ 10:44 -> Sa (Snake)
       // 근거: company-brain saju-engine-unification-policy-2026-09-01.md §2
       const birthDate = new Date("2024-01-01T11:20:00+09:00");

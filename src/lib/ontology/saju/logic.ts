@@ -241,12 +241,12 @@ export function calculateSaju(
   gender: "female" | "male" = "male",
   longitude: number = 135.0, // Default to KST/JST standard meridian
 ): SajuResult {
-  // 0. True Solar Time Correction
-  // Adjust the birth date to the solar time at the birth longitude before
-  // calculating pillars. The TST wall clock lives in the result's UTC fields
-  // (see getTrueSolarTime) — reading local fields here would let the visitor's
-  // browser timezone move the pillars.
-  const trueBirthDate = calculateTrueSolarTime(birthDate, longitude);
+  // The standard result is mean civil time at the approved KST meridian. Do
+  // not add Equation of Time here: true solar time is a separate, optional
+  // comparison and must never overwrite the default pillars.
+  const trueBirthDate = longitude === STANDARD_MERIDIAN_KST
+    ? new Date(birthDate.getTime() + STANDARD_MERIDIAN_KST * 4 * 60_000)
+    : calculateTrueSolarTime(birthDate, longitude);
 
   const year = trueBirthDate.getUTCFullYear();
   const month = trueBirthDate.getUTCMonth() + 1;

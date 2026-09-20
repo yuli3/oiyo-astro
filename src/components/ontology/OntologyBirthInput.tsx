@@ -3,7 +3,7 @@
 import { Calendar, Check, Pencil } from "lucide-react";
 import { useState } from "react";
 import { useUserProfile } from "@/lib/user/context/UserContext";
-import { createBirthRecord, resolveBirthRecord, updateBirthRecord } from "@/lib/user/birth-record";
+import { createBirthRecord, resolveBirthLocation, resolveBirthRecord, updateBirthRecord } from "@/lib/user/birth-record";
 import { parseSynthesizedId } from "@/lib/ontology/natal/city-search";
 import { CITIES, type City } from "@/lib/ontology/natal/signs";
 import { CityField } from "@/components/shared/CityField";
@@ -15,10 +15,11 @@ type Copy = {
   blood: string; unknown: string; opens: string; precision: string; name: string; nameHint: string;
   place: string; placePlaceholder: string;
   searchTitle: string; searchPlaceholder: string; searchHint: string; searchEmpty: string;
+  timeZoneError?: string;
 };
 const COPY: Record<Lang, Copy> = {
-  ko: { cancel: "취소", edit: "수정", prompt: "정보를 입력할수록 더 많은 좌표가 열립니다. 모두 이 브라우저에만 저장됩니다.", save: "저장", saved: "프로필이 기록되었습니다", title: "나의 출생 정보", date: "생년월일", time: "태어난 시각", timeHint: "모르면 비워두세요", gender: "성별", male: "남성", female: "여성", blood: "혈액형", unknown: "모름", opens: "사주·출생차트·오행·별자리 등에 사용됩니다", precision: "정밀 사주·천문 계산은 출생지 확인이 추가로 필요합니다.", name: "이름", nameHint: "이름풀이·수비학에 사용", place: "출생지", placePlaceholder: "도시 선택 (선택)" , searchTitle: "찾는 도시가 없나요?", searchPlaceholder: "도시 이름으로 검색", searchHint: "한글로 안 나오면 로마자로도 찾아보세요", searchEmpty: "검색 결과 없음"},
-  en: { cancel: "Cancel", edit: "Edit", prompt: "The more you enter, the more coordinates unlock. All stays in this browser.", save: "Save", saved: "Profile saved", title: "Your birth info", date: "Birth date", time: "Birth time", timeHint: "Leave blank if unknown", gender: "Gender", male: "Male", female: "Female", blood: "Blood type", unknown: "Unknown", opens: "Used for Saju, natal chart, Five Elements, zodiac & more", precision: "Precise Saju and astronomy calculations also require a confirmed birthplace.", name: "Name", nameHint: "Used for name reading & numerology", place: "Birthplace", placePlaceholder: "Select a city (optional)" , searchTitle: "City not listed?", searchPlaceholder: "Search by city name", searchHint: "If a local spelling finds nothing, try the Latin name", searchEmpty: "No matches"},
+  ko: { cancel: "취소", edit: "수정", prompt: "정보를 입력할수록 더 많은 좌표가 열립니다. 모두 이 브라우저에만 저장됩니다.", save: "저장", saved: "프로필이 기록되었습니다", title: "나의 출생 정보", date: "생년월일", time: "태어난 시각", timeHint: "모르면 비워두세요", gender: "성별", male: "남성", female: "여성", blood: "혈액형", unknown: "모름", opens: "사주·출생차트·오행·별자리 등에 사용됩니다", precision: "정밀 사주·천문 계산은 출생지 확인이 추가로 필요합니다.", name: "이름", nameHint: "이름풀이·수비학에 사용", place: "출생지", placePlaceholder: "도시 선택 (선택)" , searchTitle: "찾는 도시가 없나요?", searchPlaceholder: "도시 이름으로 검색", searchHint: "한글로 안 나오면 로마자로도 찾아보세요", searchEmpty: "검색 결과 없음", timeZoneError: "이 시각은 출생지의 시간 전환과 겹쳐요. 정확한 시각을 확인하거나 시각을 비워 주세요."},
+  en: { cancel: "Cancel", edit: "Edit", prompt: "The more you enter, the more coordinates unlock. All stays in this browser.", save: "Save", saved: "Profile saved", title: "Your birth info", date: "Birth date", time: "Birth time", timeHint: "Leave blank if unknown", gender: "Gender", male: "Male", female: "Female", blood: "Blood type", unknown: "Unknown", opens: "Used for Saju, natal chart, Five Elements, zodiac & more", precision: "Precise Saju and astronomy calculations also require a confirmed birthplace.", name: "Name", nameHint: "Used for name reading & numerology", place: "Birthplace", placePlaceholder: "Select a city (optional)" , searchTitle: "City not listed?", searchPlaceholder: "Search by city name", searchHint: "If a local spelling finds nothing, try the Latin name", searchEmpty: "No matches", timeZoneError: "This time overlaps a local clock transition. Confirm the exact time or leave it blank."},
   ja: { cancel: "キャンセル", edit: "編集", prompt: "入力するほど多くの座標が開きます。すべてこのブラウザだけに保存。", save: "保存", saved: "プロフィールを記録しました", title: "出生情報", date: "生年月日", time: "出生時刻", timeHint: "不明なら空欄", gender: "性別", male: "男性", female: "女性", blood: "血液型", unknown: "不明", opens: "四柱・出生図・五行・星座などに使用", precision: "精密な四柱・天文計算には出生地の確認も必要です。", name: "名前", nameHint: "姓名判断・数秘術に使用", place: "出生地", placePlaceholder: "都市を選択（任意）" , searchTitle: "都市が見つかりませんか？", searchPlaceholder: "都市名で検索", searchHint: "現地表記で出ない場合はローマ字でもお試しください", searchEmpty: "該当なし"},
   zh: { cancel: "取消", edit: "修改", prompt: "输入越多，解锁的坐标越多。全部只保存在此浏览器。", save: "保存", saved: "资料已记录", title: "出生信息", date: "出生日期", time: "出生时间", timeHint: "不知道可留空", gender: "性别", male: "男", female: "女", blood: "血型", unknown: "未知", opens: "用于八字、星盘、五行、星座等", precision: "精确的八字与天文计算还需要确认出生地。", name: "姓名", nameHint: "用于姓名学·数字命理", place: "出生地", placePlaceholder: "选择城市（可选）" , searchTitle: "找不到城市？", searchPlaceholder: "按城市名搜索", searchHint: "本地写法找不到时可试拉丁拼写", searchEmpty: "无结果"},
   fr: { cancel: "Annuler", edit: "Modifier", prompt: "Plus vous saisissez, plus de coordonnées se débloquent. Tout reste dans ce navigateur.", save: "Enregistrer", saved: "Profil enregistré", title: "Vos infos de naissance", date: "Date de naissance", time: "Heure de naissance", timeHint: "Laissez vide si inconnu", gender: "Genre", male: "Homme", female: "Femme", blood: "Groupe sanguin", unknown: "Inconnu", opens: "Utilisé pour Saju, thème natal, Cinq Éléments, zodiaque…", precision: "Les calculs précis de Saju et d’astronomie exigent aussi un lieu de naissance confirmé.", name: "Prénom", nameHint: "Pour l'onomancie et la numérologie", place: "Lieu de naissance", placePlaceholder: "Choisir une ville (optionnel)" , searchTitle: "Ville absente de la liste ?", searchPlaceholder: "Rechercher une ville", searchHint: "Si l'orthographe locale ne donne rien, essayez le nom latin", searchEmpty: "Aucun résultat"},
@@ -26,6 +27,14 @@ const COPY: Record<Lang, Copy> = {
 };
 
 const BLOODS = ["A", "B", "O", "AB"] as const;
+const TIME_ZONE_ERROR: Record<Lang, string> = {
+  ko: "이 시각은 출생지의 시간 전환과 겹쳐요. 정확한 시각을 확인하거나 시각을 비워 주세요.",
+  en: "This time overlaps a local clock transition. Confirm the exact time or leave it blank.",
+  ja: "この時刻は現地の時刻変更と重なります。正確な時刻を確認するか、空欄にしてください。",
+  zh: "该时间与当地时钟切换重叠。请确认准确时间，或将时间留空。",
+  fr: "Cette heure chevauche un changement d’heure local. Confirmez l’heure exacte ou laissez-la vide.",
+  es: "Esta hora coincide con un cambio horario local. Confirma la hora exacta o déjala vacía.",
+};
 
 export function OntologyBirthInput({
   locale,
@@ -51,6 +60,7 @@ export function OntologyBirthInput({
   // 검색으로 고른 도시. CITIES 에 없으므로 따로 들고 있어야 저장 때 경도·시간대를
   // 실어 보낼 수 있다.
   const [pickedCity, setPickedCity] = useState<null | City>(null);
+  const [locationError, setLocationError] = useState("");
 
   const seed = () => {
     setDate(birthRecord?.civilDate ?? "");
@@ -62,6 +72,7 @@ export function OntologyBirthInput({
   };
 
   const save = () => {
+    setLocationError("");
     const d = date || birthRecord?.civilDate || "";
     if (!d) return;
     // A confirmed city gives us the timezone/longitude the natal-chart engine
@@ -74,28 +85,41 @@ export function OntologyBirthInput({
     const placeIsUnchanged = !!birthRecord
       && cityId === profile.birthCityId
       && pickedCity === null;
+    const locationSource = city
+      ? { longitude: city.lon, zoneId: city.zoneId }
+      : placeIsUnchanged && birthRecord?.longitude != null && birthRecord.zoneId
+        ? { longitude: birthRecord.longitude, zoneId: birthRecord.zoneId }
+        : null;
+    const locationResolution = locationSource
+      ? resolveBirthLocation({
+          civilDate: d,
+          civilTime: time || null,
+          ...locationSource,
+        })
+      : null;
+    if (locationResolution && locationResolution.status !== "resolved") {
+      setLocationError(TIME_ZONE_ERROR[lang]);
+      return;
+    }
+    const location = locationResolution?.status === "resolved"
+      ? locationResolution.location
+      : null;
     const nextBirthRecord = birthRecord
       ? updateBirthRecord(birthRecord, {
           civilDate: d,
           civilTime: time || null,
-          location: placeIsUnchanged
-            ? undefined
-            : city
-              ? {
-                  longitude: city.lon,
-                  needsConfirmation: false,
-                  utcOffsetMinutesAtBirth: null,
-                  zoneId: city.zoneId,
-                }
-              : null,
+          location,
         })
       : createBirthRecord({
           civilDate: d,
           civilTime: time || null,
-          longitude: city?.lon ?? null,
-          zoneId: city?.zoneId ?? null,
-          needsConfirmation: !city,
           provenance: "user-confirmed-v2",
+          ...(location ?? {
+            longitude: null,
+            needsConfirmation: true,
+            utcOffsetMinutesAtBirth: null,
+            zoneId: null,
+          }),
         });
     saveBirthRecord(nextBirthRecord);
     setProfileData({
@@ -181,6 +205,7 @@ export function OntologyBirthInput({
           </div>
           <p className="text-[11px] leading-5 text-slate-400">{c.opens}</p>
           <p className="text-[11px] leading-5 text-amber-700">{c.precision}</p>
+          {locationError && <p role="alert" className="text-sm font-semibold text-red-700">{locationError}</p>}
           <div className="flex items-center gap-2">
             <button onClick={save} disabled={!(date || birthRecord?.civilDate)}
               className="h-12 flex-1 rounded-2xl bg-primary text-sm font-black text-primary-foreground transition hover:bg-primary-strong active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50">{c.save}</button>

@@ -8,6 +8,7 @@ import {
   isBirthRecordV2,
   migrateLegacyBirth,
   resolveBirthInstant,
+  resolveBirthLocation,
   resolveZonedCivilTime,
   updateBirthRecord,
 } from "./birth-record";
@@ -146,6 +147,23 @@ describe("BirthRecord V2", () => {
       expect(result.offsetMinutes).toBe(offset);
       expect(result.instant.toISOString()).toBe(iso);
     }
+  });
+
+  it("builds a confirmed Washington birth location with the historical EDT offset", () => {
+    expect(resolveBirthLocation({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: -77.0369,
+      zoneId: "America/New_York",
+    })).toEqual({
+      status: "resolved",
+      location: {
+        longitude: -77.0369,
+        needsConfirmation: false,
+        utcOffsetMinutesAtBirth: -240,
+        zoneId: "America/New_York",
+      },
+    });
   });
 
   it("does not guess across DST gaps or overlaps", () => {
