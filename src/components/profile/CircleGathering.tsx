@@ -52,6 +52,7 @@ const COPY = {
     noTotal: "모임 총점·순위 없음",
     disclaimer: "전통 상징을 대화 소재로 보는 놀이입니다. 관계의 성공을 예측하지 않습니다.",
     error: "날짜를 확인해 주세요.",
+    locationError: "태어난 시각을 입력했다면 출생도시도 선택해 주세요.",
   },
   en: {
     title: "Our circle",
@@ -76,6 +77,7 @@ const COPY = {
     noTotal: "No group total or ranking",
     disclaimer: "A playful reading of traditional symbols. It does not predict a relationship.",
     error: "Check the date.",
+    locationError: "If you enter a birth time, choose the birth city too.",
   },
   ja: {
     title: "みんなの円",
@@ -100,6 +102,7 @@ const COPY = {
     noTotal: "総合点・順位はありません",
     disclaimer: "伝統的な象徴を話のきっかけとして楽しむものです。関係の成否を予測するものではありません。",
     error: "日付を確認してください。",
+    locationError: "出生時刻を入力した場合は、出生都市も選んでください。",
   },
   zh: {
     title: "我们的圆",
@@ -124,6 +127,7 @@ const COPY = {
     noTotal: "没有总分与排名",
     disclaimer: "这是把传统象征当作聊天话题的玩法，并不预测关系的成败。",
     error: "请检查日期。",
+    locationError: "如果填写了出生时间，也请选择出生城市。",
   },
   fr: {
     title: "Notre cercle",
@@ -148,6 +152,7 @@ const COPY = {
     noTotal: "Ni total ni classement",
     disclaimer: "Une lecture ludique de symboles traditionnels. Elle ne prédit pas une relation.",
     error: "Vérifiez la date.",
+    locationError: "Si vous indiquez l’heure de naissance, choisissez aussi la ville de naissance.",
   },
   es: {
     title: "Nuestro círculo",
@@ -172,6 +177,7 @@ const COPY = {
     noTotal: "Sin total ni clasificación",
     disclaimer: "Una lectura lúdica de símbolos tradicionales. No predice una relación.",
     error: "Revisa la fecha.",
+    locationError: "Si introduces la hora de nacimiento, elige también la ciudad de nacimiento.",
   },
 } as const;
 
@@ -290,6 +296,10 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const edges = snapshot ? (view === "star" ? starEdges(snapshot, lens) : allPairEdges(snapshot, lens)) : [];
 
   const addByDate = () => {
+    if (time && !selectedCity && !cityId) {
+      setError(copy.locationError);
+      return;
+    }
     try {
       const profile = comparisonFromCivil({ city: selectedCity ?? undefined, cityId: cityId || undefined, date, time: time || undefined });
       const next = person(alias || copy.friend, profile);
@@ -329,6 +339,10 @@ export default function CircleGathering({ locale }: { locale: string }) {
 
   const acceptPendingFriend = () => {
     if (!pendingFriend) return;
+    if (pendingFriend.time && !pendingFriend.city) {
+      setError(copy.locationError);
+      return;
+    }
     try {
       const profile = comparisonFromCivil({ city: pendingFriend.city, date: pendingFriend.date, time: pendingFriend.time || undefined });
       setPeople((current) => current.length >= 10 ? current : [...current, person(pendingFriend.alias, profile)]);

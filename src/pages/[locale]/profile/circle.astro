@@ -19,11 +19,134 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Nuestro círculo — compatibilidad entre amistades', description: 'Dibuja de 2 a 10 personas con cinco elementos, yin-yang, zodiaco y signo. Sin total ni ranking.' },
 };
 const m = meta[locale] ?? meta.en;
+const guide = {
+  ko: {
+    heading: '우리 원은 이렇게 읽어요',
+    intro: '여러 사람의 생년월일을 같은 기준으로 바꾼 뒤, 오행·음양·띠·태양궁을 관점별로 비교해요. 관계의 점수나 미래를 판정하지 않아요.',
+    steps: ['각 사람의 별칭과 생년월일을 입력해요.', '태어난 시각을 안다면 출생도시도 함께 선택해요.', '중심 인물과 관점을 바꾸며 관계의 공통점과 차이를 살펴봐요.'],
+    note: '태어난 시각을 모르면 비워 두세요. 이때는 시주를 만들지 않고 확인 가능한 여섯 좌표만 사용해요. 입력한 정보와 원은 이 브라우저에 저장되며, 친구 링크는 암호화해서 만들어요.',
+    faq: [
+      ['왜 시각을 입력하면 도시도 필요한가요?', '출생도시는 그 날짜의 현지 시각과 UTC 오프셋을 확인하는 데 필요해요. 도시 없이 한국 시간으로 추정하지 않아요.'],
+      ['궁합 총점이 있나요?', '없어요. 오행·음양·띠·태양궁은 서로 다른 질문을 다루므로 하나의 점수나 순위로 합치지 않아요.'],
+      ['결과가 관계의 성공을 예측하나요?', '아니요. 전통 상징을 대화와 자기 성찰의 소재로 보는 오락용 도구예요. 중요한 관계 결정을 대신하지 않아요.'],
+    ],
+  },
+  en: {
+    heading: 'How to read your circle',
+    intro: 'The circle puts everyone on the same input basis, then compares five elements, yin–yang, Chinese zodiac, and sun sign as separate lenses. It does not score a relationship or predict its future.',
+    steps: ['Enter a nickname and birth date for each person.', 'If you know the birth time, choose the birth city too.', 'Change the center person and lens to explore shared patterns and differences.'],
+    note: 'Leave the time blank when it is unknown. The circle then omits the hour pillar and uses only six observable coordinates. Your entries and circle stay in this browser, and friend links are encrypted.',
+    faq: [
+      ['Why is a city required with a birth time?', 'The city identifies the historical local time and UTC offset. The tool does not silently assume Korean time.'],
+      ['Is there an overall compatibility score?', 'No. Each lens asks a different question, so the tool does not combine them into one score or ranking.'],
+      ['Does the result predict relationship success?', 'No. This is an entertainment and reflection tool using traditional symbols, not a substitute for important relationship decisions.'],
+    ],
+  },
+  ja: {
+    heading: 'みんなの円の読み方',
+    intro: '全員の入力条件をそろえ、五行・陰陽・干支・太陽星座を別々の視点で比べます。関係を採点したり、未来を予測したりはしません。',
+    steps: ['一人ずつニックネームと生年月日を入力します。', '出生時刻がわかる場合は、出生都市も選びます。', '中心人物と視点を切り替え、共通点と違いを見てみましょう。'],
+    note: '出生時刻が不明なら空欄のままで大丈夫です。その場合は時柱を作らず、確認できる6つの座標だけを使います。入力と円はこのブラウザに保存され、友だちリンクは暗号化されます。',
+    faq: [
+      ['出生時刻と一緒に都市が必要なのはなぜですか？', 'その日の現地時刻とUTCオフセットを確認するためです。都市がない場合に韓国時間を仮定しません。'],
+      ['相性の総合点はありますか？', 'ありません。各視点は異なる問いを扱うため、一つの点数や順位にまとめません。'],
+      ['関係の成功を予測できますか？', 'できません。伝統的な象徴を会話や振り返りに使う娯楽ツールで、重要な判断の代わりにはなりません。'],
+    ],
+  },
+  zh: {
+    heading: '怎样查看我们的圆',
+    intro: '系统先统一每个人的输入条件，再分别从五行、阴阳、生肖和太阳星座进行比较。它不会给关系打总分，也不会预测未来。',
+    steps: ['为每个人填写昵称和出生日期。', '如果知道出生时间，也请选择出生城市。', '切换中心人物和观察角度，查看共同点与差异。'],
+    note: '不知道出生时间时可以留空。系统不会生成时柱，只使用能够确认的六个坐标。资料和关系圈保存在当前浏览器中，好友链接会加密生成。',
+    faq: [
+      ['为什么填写出生时间时还需要城市？', '城市用于确认当时的当地时间和UTC偏移。工具不会在缺少城市时默认采用韩国时间。'],
+      ['有综合合拍分数吗？', '没有。每个角度回答的问题不同，因此不会合并成一个分数或排名。'],
+      ['结果能预测关系是否成功吗？', '不能。这是运用传统象征进行交流和自我反思的娱乐工具，不能代替重要的关系决定。'],
+    ],
+  },
+  fr: {
+    heading: 'Comment lire votre cercle',
+    intro: 'Le cercle place chaque personne sur une même base, puis compare séparément les cinq éléments, le yin-yang, le zodiaque chinois et le signe solaire. Il ne note pas la relation et ne prédit pas son avenir.',
+    steps: ['Saisissez un surnom et une date de naissance pour chaque personne.', 'Si vous connaissez l’heure de naissance, choisissez aussi la ville.', 'Changez de personne centrale et de point de vue pour observer ressemblances et différences.'],
+    note: 'Laissez l’heure vide si elle est inconnue. Le pilier de l’heure est alors omis et seuls six repères observables sont utilisés. Les données et le cercle restent dans ce navigateur, et les liens d’amis sont chiffrés.',
+    faq: [
+      ['Pourquoi faut-il une ville avec l’heure de naissance ?', 'La ville permet de retrouver l’heure locale historique et le décalage UTC. L’outil ne suppose pas l’heure coréenne.'],
+      ['Existe-t-il un score global de compatibilité ?', 'Non. Chaque point de vue pose une question différente ; ils ne sont donc pas fusionnés en un score ou un classement.'],
+      ['Le résultat prédit-il la réussite d’une relation ?', 'Non. C’est un outil ludique de réflexion fondé sur des symboles traditionnels, pas un substitut aux décisions importantes.'],
+    ],
+  },
+  es: {
+    heading: 'Cómo leer vuestro círculo',
+    intro: 'El círculo coloca a todas las personas sobre la misma base y compara por separado cinco elementos, yin-yang, zodiaco chino y signo solar. No puntúa la relación ni predice su futuro.',
+    steps: ['Introduce un apodo y la fecha de nacimiento de cada persona.', 'Si conoces la hora de nacimiento, elige también la ciudad.', 'Cambia la persona central y el enfoque para observar coincidencias y diferencias.'],
+    note: 'Deja la hora vacía si no la sabes. El círculo omitirá el pilar de la hora y usará solo seis coordenadas observables. Los datos y el círculo permanecen en este navegador, y los enlaces de amistad se cifran.',
+    faq: [
+      ['¿Por qué hace falta una ciudad junto con la hora?', 'La ciudad permite determinar la hora local histórica y el desfase UTC. La herramienta no supone la hora de Corea.'],
+      ['¿Hay una puntuación total de compatibilidad?', 'No. Cada enfoque responde a una pregunta distinta, por lo que no se combinan en una puntuación ni una clasificación.'],
+      ['¿El resultado predice el éxito de una relación?', 'No. Es una herramienta de entretenimiento y reflexión basada en símbolos tradicionales, no sustituye decisiones importantes.'],
+    ],
+  },
+} satisfies Record<Locale, { heading: string; intro: string; steps: string[]; note: string; faq: string[][] }>;
+const g = guide[locale] ?? guide.en;
+const canonicalUrl = `https://oiyo.net/${locale}/profile/circle/`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebApplication',
+      name: m.title,
+      description: m.description,
+      url: canonicalUrl,
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'Any',
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+    },
+    {
+      '@type': 'HowTo',
+      name: g.heading,
+      description: g.intro,
+      step: g.steps.map((text, index) => ({ '@type': 'HowToStep', position: index + 1, text })),
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: g.faq.map(([name, text]) => ({
+        '@type': 'Question',
+        name,
+        acceptedAnswer: { '@type': 'Answer', text },
+      })),
+    },
+  ],
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
     <CircleGathering client:load locale={locale} />
+    <section aria-labelledby="circle-guide" class="mx-auto mt-14 max-w-3xl border-t border-border pt-10 sm:mt-20 sm:pt-14">
+      <h2 id="circle-guide" class="text-balance text-2xl font-black tracking-tight text-foreground sm:text-3xl">{g.heading}</h2>
+      <p class="mt-4 max-w-2xl text-pretty leading-7 text-muted-foreground">{g.intro}</p>
+      <ol class="mt-7 space-y-4">
+        {g.steps.map((step, index) => (
+          <li class="flex gap-4 text-sm leading-6 text-foreground sm:text-base">
+            <span aria-hidden="true" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent font-black text-foreground">{index + 1}</span>
+            <span class="pt-1">{step}</span>
+          </li>
+        ))}
+      </ol>
+      <p class="mt-7 rounded-2xl bg-surface-subtle px-5 py-4 text-sm leading-6 text-muted-foreground">{g.note}</p>
+    </section>
+    <section aria-labelledby="circle-faq" class="mx-auto mt-12 max-w-3xl sm:mt-16">
+      <h2 id="circle-faq" class="text-2xl font-black tracking-tight text-foreground sm:text-3xl">FAQ</h2>
+      <div class="mt-5 divide-y divide-border border-y border-border">
+        {g.faq.map(([question, answer]) => (
+          <details class="group py-4">
+            <summary class="cursor-pointer list-none pr-8 font-bold leading-6 text-foreground marker:hidden">{question}</summary>
+            <p class="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">{answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
     <RelatedTools locale={locale} tools={['fortunePeriodic', 'sajuPeriodic', 'chineseZodiac']} current="circle" />
   </div>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 </Layout>

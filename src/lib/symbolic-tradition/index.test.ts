@@ -111,4 +111,24 @@ describe("symbolic tradition module", () => {
     expect(() => deriveSymbolicProfile({ ...golden.profiles[0].birth, civilDate: "2024-02-31" })).toThrow(RangeError);
     expect(() => deriveSymbolicProfile({ ...golden.profiles[0].birth, utcOffsetMinutes: 900 })).toThrow(RangeError);
   });
+
+  it("keeps Washington 09:00 on the birthplace wall-clock hour pillar", () => {
+    const profile = deriveSymbolicProfile({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: -77.0369,
+      utcOffsetMinutes: -240,
+    });
+
+    expect(profile.saju.hour?.earthlyBranch).toBe("SA");
+  });
+
+  it("does not invent an exact chart when time is known but offset is missing", () => {
+    expect(() => deriveSymbolicProfile({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: null,
+      utcOffsetMinutes: null,
+    })).toThrow(/UTC offset/);
+  });
 });
