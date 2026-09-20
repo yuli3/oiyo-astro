@@ -133,8 +133,10 @@
     "vite": "^7"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "ajv": "^8.20.0",
     "fast-check": "^4.8.0",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.8"
   }
 }
