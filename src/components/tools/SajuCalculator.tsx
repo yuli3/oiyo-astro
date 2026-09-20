@@ -17,7 +17,8 @@ import type { SajuResult, HeavenlyStem, EarthlyBranch } from '../../lib/ontology
 import YongsinSection from './saju/YongsinSection';
 import LifeCategoriesSection from './saju/LifeCategoriesSection';
 import FiveElementsOrbit from './saju/FiveElementsOrbit';
-import { decodeResult, writeResultHash } from '../../lib/result-permalink';
+import { decodeResult } from '../../lib/result-permalink';
+import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
@@ -31,13 +32,13 @@ const PERMALINK_TOOL_ID = 'saju-calculator';
 // useMemo below), so that is all the permalink needs to encode.
 
 
-const SHARE_LABELS: Record<Locale, { share: string; shareCopied: string; privacyNote: string; imageShare: string; imageSharing: string; imagePrivacy: string; actions: string }> = {
-  ko: { share: '결과 링크 공유', shareCopied: '링크를 복사했어요!', privacyNote: '이 링크에는 입력한 생년월일시 정보가 포함됩니다.', imageShare: '사주 이미지 저장·공유', imageSharing: '이미지를 준비하고 있어요…', imagePrivacy: '출생정보는 이미지에 포함되지 않습니다.', actions: '결과 저장과 공유' },
-  en: { share: 'Share result link', shareCopied: 'Link copied!', privacyNote: 'This link contains the birth date/time you entered.', imageShare: 'Save or share result image', imageSharing: 'Preparing image…', imagePrivacy: 'Your birth details are not included in the image.', actions: 'Save and share your result' },
-  ja: { share: '結果リンクを共有', shareCopied: 'リンクをコピーしました!', privacyNote: 'このリンクには入力した生年月日時の情報が含まれます。', imageShare: '結果画像を保存・共有', imageSharing: '画像を準備中…', imagePrivacy: '生年月日時は画像に含まれません。', actions: '結果の保存と共有' },
-  fr: { share: 'Partager le lien du résultat', shareCopied: 'Lien copié !', privacyNote: 'Ce lien contient la date/heure de naissance saisie.', imageShare: "Enregistrer ou partager l’image", imageSharing: 'Préparation de l’image…', imagePrivacy: "Les données de naissance ne figurent pas dans l’image.", actions: 'Enregistrer et partager le résultat' },
-  es: { share: 'Compartir enlace del resultado', shareCopied: '¡Enlace copiado!', privacyNote: 'Este enlace contiene la fecha/hora de nacimiento que ingresaste.', imageShare: 'Guardar o compartir la imagen', imageSharing: 'Preparando la imagen…', imagePrivacy: 'Los datos de nacimiento no aparecen en la imagen.', actions: 'Guardar y compartir el resultado' },
-  zh: { share: '分享结果链接', shareCopied: '链接已复制!', privacyNote: '此链接包含您输入的出生日期与时间信息。', imageShare: '保存或分享结果图片', imageSharing: '正在生成图片…', imagePrivacy: '图片中不会包含出生信息。', actions: '保存并分享结果' },
+const SHARE_LABELS: Record<Locale, { share: string; shareCopied: string; shareFailed: string; privacyNote: string; legacyTitle: string; legacyBody: string; legacyOpen: string; imageShare: string; imageSharing: string; imagePrivacy: string; actions: string }> = {
+  ko: { share: '암호화 링크 공유', shareCopied: '링크를 복사했어요!', shareFailed: '암호화 링크를 만들지 못했어요. 다시 시도해 주세요.', privacyNote: '출생정보는 암호화되며 복호화 키는 링크 조각에만 들어갑니다.', legacyTitle: '예전 형식의 공유 링크예요', legacyBody: '이 평문 링크에는 생년월일시가 복원 가능한 형태로 들어 있습니다. 내용을 확인한 뒤에만 여세요.', legacyOpen: '내용 열기', imageShare: '사주 이미지 저장·공유', imageSharing: '이미지를 준비하고 있어요…', imagePrivacy: '출생정보는 이미지에 포함되지 않습니다.', actions: '결과 저장과 공유' },
+  en: { share: 'Share encrypted link', shareCopied: 'Link copied!', shareFailed: 'Could not create an encrypted link. Please try again.', privacyNote: 'Birth details are encrypted; the decryption key stays only in the URL fragment.', legacyTitle: 'This is an older share link', legacyBody: 'This plaintext link can reconstruct birth date and time. Open it only after reviewing this notice.', legacyOpen: 'Open result', imageShare: 'Save or share result image', imageSharing: 'Preparing image…', imagePrivacy: 'Your birth details are not included in the image.', actions: 'Save and share your result' },
+  ja: { share: '暗号化リンクを共有', shareCopied: 'リンクをコピーしました!', shareFailed: '暗号化リンクを作成できませんでした。もう一度お試しください。', privacyNote: '出生情報は暗号化され、復号鍵はURLフラグメントだけに入ります。', legacyTitle: '旧形式の共有リンクです', legacyBody: 'この平文リンクから生年月日時を復元できます。確認してから開いてください。', legacyOpen: '結果を開く', imageShare: '結果画像を保存・共有', imageSharing: '画像を準備中…', imagePrivacy: '生年月日時は画像に含まれません。', actions: '結果の保存と共有' },
+  fr: { share: 'Partager un lien chiffré', shareCopied: 'Lien copié !', shareFailed: 'Impossible de créer le lien chiffré. Réessayez.', privacyNote: 'Les données de naissance sont chiffrées ; la clé reste uniquement dans le fragment URL.', legacyTitle: 'Ancien format de lien', legacyBody: 'Ce lien en clair permet de reconstituer la date et l’heure de naissance. Ouvrez-le seulement après cet avertissement.', legacyOpen: 'Ouvrir le résultat', imageShare: "Enregistrer ou partager l’image", imageSharing: 'Préparation de l’image…', imagePrivacy: "Les données de naissance ne figurent pas dans l’image.", actions: 'Enregistrer et partager le résultat' },
+  es: { share: 'Compartir enlace cifrado', shareCopied: '¡Enlace copiado!', shareFailed: 'No se pudo crear el enlace cifrado. Inténtalo de nuevo.', privacyNote: 'Los datos de nacimiento se cifran; la clave permanece solo en el fragmento de la URL.', legacyTitle: 'Este enlace usa el formato anterior', legacyBody: 'Este enlace en texto claro permite reconstruir la fecha y hora de nacimiento. Ábrelo solo tras revisar este aviso.', legacyOpen: 'Abrir resultado', imageShare: 'Guardar o compartir la imagen', imageSharing: 'Preparando la imagen…', imagePrivacy: 'Los datos de nacimiento no aparecen en la imagen.', actions: 'Guardar y compartir el resultado' },
+  zh: { share: '分享加密链接', shareCopied: '链接已复制!', shareFailed: '无法创建加密链接，请重试。', privacyNote: '出生信息会被加密，解密密钥只保留在网址片段中。', legacyTitle: '这是旧格式分享链接', legacyBody: '此明文链接可以还原出生日期和时间。请阅读提示后再打开。', legacyOpen: '打开结果', imageShare: '保存或分享结果图片', imageSharing: '正在生成图片…', imagePrivacy: '图片中不会包含出生信息。', actions: '保存并分享结果' },
 };
 
 // ─── Heavenly Stems (天干) ────────────────────────────────────────────────────
@@ -606,6 +607,8 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [gender, setGender] = useState<'male' | 'female'>('male');
   const [done, setDone] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
+  const [shareFailed, setShareFailed] = useState(false);
+  const [legacyShare, setLegacyShare] = useState<SajuInputState | null>(null);
   const [imageSharing, setImageSharing] = useState(false);
   const restoredFromPermalink = useRef(false);
   const resultTopRef = useRef<HTMLDivElement>(null);
@@ -629,10 +632,8 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   // (deliberately) skipping saveBirth(), so a shared link never overwrites
   // the viewer's own locally-saved profile. Runs after the profile-prefill
   // effect above so a permalink always wins over the viewer's own saved data.
-  useEffect(() => {
-    const decoded = decodeResult<unknown>(window.location.hash);
-    if (decoded?.toolId !== PERMALINK_TOOL_ID || !decoded.state) return;
-    const s = parseSajuInputState(decoded.state);
+  function restoreSharedState(value: unknown) {
+    const s = parseSajuInputState(value);
     if (!s) return;
     restoredFromPermalink.current = true;
     setYear(s.year);
@@ -643,19 +644,39 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     if (s.gender === 'male' || s.gender === 'female') setGender(s.gender);
     setPrefilled(true); // block the profile-prefill effect above from overwriting this
     setDone(true);
+  }
+
+  useEffect(() => {
+    const restore = async () => {
+      const id = new URL(window.location.href).searchParams.get('result');
+      if (id) {
+        const encrypted = await readEncryptedResultPermalink(id, window.location.hash);
+        if (encrypted.ok && encrypted.result.toolId === PERMALINK_TOOL_ID) restoreSharedState(encrypted.result.state);
+        return;
+      }
+      const decoded = decodeResult<unknown>(window.location.hash);
+      if (decoded?.toolId !== PERMALINK_TOOL_ID || !decoded.state) return;
+      const legacy = parseSajuInputState(decoded.state);
+      if (legacy) setLegacyShare(legacy);
+    };
+    void restore();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function share() {
+  async function share() {
     gaEvent('share_click', { test_id: 'saju' });
     const state: SajuInputState = { schemaVersion: 2, year, month, day, hour, minute, gender };
-    const url = writeResultHash<SajuInputState>(PERMALINK_TOOL_ID, state) ?? window.location.href;
-    if (navigator.share) {
-      navigator.share({ title: t.title, url });
-    } else {
-      navigator.clipboard.writeText(url);
-      setShareCopied(true);
-      setTimeout(() => setShareCopied(false), 2500);
+    setShareFailed(false);
+    try {
+      const { url } = await createEncryptedResultPermalink(PERMALINK_TOOL_ID, state, { pageUrl: window.location.href });
+      if (navigator.share) await navigator.share({ title: t.title, url });
+      else {
+        await navigator.clipboard.writeText(url);
+        setShareCopied(true);
+        setTimeout(() => setShareCopied(false), 2500);
+      }
+    } catch {
+      setShareFailed(true);
     }
   }
 
@@ -768,6 +789,15 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
   return (
     <div className="space-y-6">
+      {legacyShare && !done && (
+        <div role="alert" className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-amber-950">
+          <p className="font-bold">{shareLabels.legacyTitle}</p>
+          <p className="mt-1 text-sm leading-6">{shareLabels.legacyBody}</p>
+          <Button className="mt-3" variant="outline" onClick={() => { restoreSharedState(legacyShare); setLegacyShare(null); }}>
+            {shareLabels.legacyOpen}
+          </Button>
+        </div>
+      )}
       {/* Input */}
       <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card to-primary/[0.04] shadow-md">
         <CardHeader className="border-b border-primary/10 bg-primary/[0.03] text-center">
@@ -1070,6 +1100,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                 {shareCopied ? `✅ ${shareLabels.shareCopied}` : `🔗 ${shareLabels.share}`}
               </Button>
               <p className="text-center text-xs text-amber-700">{shareLabels.privacyNote}</p>
+              {shareFailed && <p role="alert" className="text-center text-xs text-red-700">{shareLabels.shareFailed}</p>}
             </CardContent>
             <CardFooter>
               <Button onClick={() => setDone(false)} variant="secondary" className="w-full">

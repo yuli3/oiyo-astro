@@ -2,13 +2,23 @@ import { useEffect, useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultShareImage from '../shared/ResultShareImage'
-import { decodeResult, writeResultHash } from '../../lib/result-permalink'
+import { decodeResult } from '../../lib/result-permalink'
+import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink'
 import { gaEvent } from '../../lib/analytics/ga-event'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
 // T6/#32 permalink tool id — must stay stable, it is embedded in shared URLs.
 const PERMALINK_TOOL_ID = 'workaholic-test'
 interface PermalinkState { answers: number[] }
+
+const SHARE_LABELS: Record<'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh', { failed: string; legacyTitle: string; legacyBody: string; legacyOpen: string }> = {
+  ko: { failed: '암호화 링크를 만들지 못했어요. 다시 시도해 주세요.', legacyTitle: '예전 형식의 공유 링크예요', legacyBody: '이 링크에는 검사 응답이 암호화되지 않은 형태로 들어 있습니다. 내용을 확인한 뒤에만 여세요.', legacyOpen: '결과 열기' },
+  en: { failed: 'Could not create an encrypted link. Please try again.', legacyTitle: 'This is an older share link', legacyBody: 'This link contains test responses in plaintext. Open it only after reviewing this notice.', legacyOpen: 'Open result' },
+  ja: { failed: '暗号化リンクを作成できませんでした。もう一度お試しください。', legacyTitle: '旧形式の共有リンクです', legacyBody: 'このリンクには回答が平文で含まれています。確認してから開いてください。', legacyOpen: '結果を開く' },
+  fr: { failed: 'Impossible de créer le lien chiffré. Réessayez.', legacyTitle: 'Ancien format de lien', legacyBody: 'Ce lien contient les réponses en clair. Ouvrez-le seulement après cet avertissement.', legacyOpen: 'Ouvrir le résultat' },
+  es: { failed: 'No se pudo crear el enlace cifrado. Inténtalo de nuevo.', legacyTitle: 'Este enlace usa el formato anterior', legacyBody: 'Este enlace contiene las respuestas en texto claro. Ábrelo solo tras revisar este aviso.', legacyOpen: 'Abrir resultado' },
+  zh: { failed: '无法创建加密链接，请重试。', legacyTitle: '这是旧格式分享链接', legacyBody: '此链接以明文形式包含测试回答。请阅读提示后再打开。', legacyOpen: '打开结果' },
+}
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type WorkLevel = 'balanced' | 'engaged' | 'driven' | 'workaholic'
@@ -291,17 +301,41 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [done, setDone] = useState(false)
+  const [legacyShare, setLegacyShare] = useState<PermalinkState | null>(null)
+  const [shareFailed, setShareFailed] = useState(false)
+  const shareLocale = (['ko', 'en', 'ja', 'fr', 'es', 'zh'].includes(lp) ? lp : 'en') as keyof typeof SHARE_LABELS
+  const shareLabels = SHARE_LABELS[shareLocale]
   useRecordFinishedTest({ testId: "workaholic", title: "WorkaholicTest", finished: Boolean(done) });
 
-  // T6/#32: entering via a shared #r= permalink restores the result view
-  // directly, skipping the question flow. Safe no-op if there is no hash,
-  // the hash is for a different tool, or decoding fails.
+  function parsePermalinkState(value: unknown): PermalinkState | null {
+    if (!value || typeof value !== 'object') return null
+    const candidate = value as Partial<PermalinkState>
+    if (!Array.isArray(candidate.answers) || candidate.answers.length !== questions.length) return null
+    if (!candidate.answers.every(answer => Number.isInteger(answer) && answer >= 1 && answer <= 5)) return null
+    return { answers: candidate.answers }
+  }
+
+  function restoreSharedState(value: unknown) {
+    const state = parsePermalinkState(value)
+    if (!state) return
+    setAnswers(state.answers)
+    setDone(true)
+  }
+
   useEffect(() => {
-    const decoded = decodeResult<PermalinkState>(window.location.hash)
-    if (decoded?.toolId === PERMALINK_TOOL_ID && Array.isArray(decoded.state?.answers)) {
-      setAnswers(decoded.state.answers)
-      setDone(true)
+    const restore = async () => {
+      const id = new URL(window.location.href).searchParams.get('result')
+      if (id) {
+        const encrypted = await readEncryptedResultPermalink(id, window.location.hash)
+        if (encrypted.ok && encrypted.result.toolId === PERMALINK_TOOL_ID) restoreSharedState(encrypted.result.state)
+        return
+      }
+      const decoded = decodeResult<PermalinkState>(window.location.hash)
+      if (decoded?.toolId !== PERMALINK_TOOL_ID) return
+      const legacy = parsePermalinkState(decoded.state)
+      if (legacy) setLegacyShare(legacy)
     }
+    void restore()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -342,23 +376,36 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
     return { aScore, bScore, overall }
   }
 
-  function share() {
+  async function share() {
     gaEvent('share_click', { test_id: 'workaholic' })
     const { overall } = calcScores(answers)
-    // T6/#32: prefer a permalink that reproduces this exact result; fall back
-    // to the plain page URL (prior behavior) if encoding fails or is too large.
-    const url = writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { answers }) ?? window.location.href
     const level = calcLevel(overall)
     const text = `${lb.shareMsg} ${overall.toFixed(1)} ${lb.outOf} — ${LEVEL_DATA[level][l].title}`
-    if (navigator.share) navigator.share({ title: lb.title, text, url })
-    else navigator.clipboard.writeText(url)
+    setShareFailed(false)
+    try {
+      const { url } = await createEncryptedResultPermalink(PERMALINK_TOOL_ID, { answers }, { pageUrl: window.location.href })
+      if (navigator.share) await navigator.share({ title: lb.title, text, url })
+      else await navigator.clipboard.writeText(url)
+    } catch {
+      setShareFailed(true)
+    }
   }
 
   if (!done) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <Questionnaire
+      <div className="space-y-6">
+        {legacyShare && (
+          <div role="alert" className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-amber-950">
+            <p className="font-bold">{shareLabels.legacyTitle}</p>
+            <p className="mt-1 text-sm leading-6">{shareLabels.legacyBody}</p>
+            <button type="button" className="mt-3 rounded-xl border border-amber-500 px-4 py-2 text-sm font-bold" onClick={() => { restoreSharedState(legacyShare); setLegacyShare(null) }}>
+              {shareLabels.legacyOpen}
+            </button>
+          </div>
+        )}
+        <Questionnaire
         title={lb.title}
         subtitle={lb.subtitle}
         question={q.text}
@@ -370,7 +417,8 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
         previousLabel={l === 'ko' ? '이전 질문' : l === 'ja' ? '前の質問' : 'Previous question'}
         onPrevious={current > 0 ? previous : undefined}
         onSelect={pick}
-      />
+        />
+      </div>
     )
   }
 
@@ -476,13 +524,14 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
           {lb.restart}
         </button>
         <button
-          onClick={share}
+          onClick={() => void share()}
           aria-label={lb.share}
           className="flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
         >
           {lb.share}
         </button>
       </div>
+      {shareFailed && <p role="alert" className="text-center text-sm text-destructive">{shareLabels.failed}</p>}
         <ShareResultButton locale={lp} heading={lb.title} resultTitle={ld.title} />
     </div>
   )

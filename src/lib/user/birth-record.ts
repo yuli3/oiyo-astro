@@ -112,6 +112,45 @@ export function createBirthRecord(input: {
   };
 }
 
+type BirthLocationUpdate = Pick<
+  BirthRecordV2,
+  "longitude" | "needsConfirmation" | "utcOffsetMinutesAtBirth" | "zoneId"
+>;
+
+/**
+ * Update editable civil fields without silently discarding a confirmed place.
+ * Pass `location` only when the user explicitly changes or clears the place.
+ */
+export function updateBirthRecord(
+  existing: BirthRecordV2,
+  input: {
+    civilDate: string;
+    civilTime?: null | string;
+    location?: BirthLocationUpdate | null;
+  },
+): BirthRecordV2 {
+  const location = input.location === undefined
+    ? {
+        longitude: existing.longitude,
+        needsConfirmation: existing.needsConfirmation,
+        utcOffsetMinutesAtBirth: existing.utcOffsetMinutesAtBirth,
+        zoneId: existing.zoneId,
+      }
+    : input.location ?? {
+        longitude: null,
+        needsConfirmation: true,
+        utcOffsetMinutesAtBirth: null,
+        zoneId: null,
+      };
+
+  return createBirthRecord({
+    civilDate: input.civilDate,
+    civilTime: input.civilTime ?? null,
+    provenance: "user-confirmed-v2",
+    ...location,
+  });
+}
+
 export function isBirthRecordV2(value: unknown): value is BirthRecordV2 {
   if (!value || typeof value !== "object") return false;
   const record = value as Partial<BirthRecordV2>;

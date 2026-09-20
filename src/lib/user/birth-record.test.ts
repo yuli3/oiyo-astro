@@ -9,6 +9,7 @@ import {
   migrateLegacyBirth,
   resolveBirthInstant,
   resolveZonedCivilTime,
+  updateBirthRecord,
 } from "./birth-record";
 import { useUserStore } from "./store/user-store";
 
@@ -87,6 +88,31 @@ describe("BirthRecord V2", () => {
       return resolution.status === "resolved" ? resolution.instant.toISOString() : "";
     });
     expect(new Set(instants)).toEqual(new Set(["1990-05-15T10:00:00.000Z"]));
+  });
+
+  it("keeps a confirmed birthplace when an edit changes only civil fields", () => {
+    const existing = createBirthRecord({
+      civilDate: "1991-02-03",
+      civilTime: "14:37",
+      longitude: -77.0369,
+      needsConfirmation: false,
+      provenance: "user-confirmed-v2",
+      utcOffsetMinutesAtBirth: -300,
+      zoneId: "America/New_York",
+    });
+
+    const updated = updateBirthRecord(existing, {
+      civilDate: existing.civilDate,
+      civilTime: existing.civilTime,
+    });
+
+    expect(updated).toMatchObject({
+      longitude: -77.0369,
+      needsConfirmation: false,
+      utcOffsetMinutesAtBirth: -300,
+      zoneId: "America/New_York",
+    });
+    expect(resolveBirthInstant(updated).status).toBe("resolved");
   });
 
   it("keeps date-only consumers on the selected civil day in each runtime timezone", () => {

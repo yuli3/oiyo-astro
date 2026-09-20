@@ -3,7 +3,9 @@
 import { Network, Plus, Share2, Star, Trash2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
-import { CITIES } from "@/lib/ontology/natal/signs";
+import type { City } from "@/lib/ontology/natal/signs";
+import CityField from "@/components/shared/CityField";
+import { loadCircleDraft, saveCircleDraft } from "@/lib/symbolic-tradition/circle-draft";
 import { comparisonFromCivil } from "@/lib/symbolic-tradition/circle-input";
 import {
   allPairEdges,
@@ -16,6 +18,8 @@ import {
 } from "@/lib/symbolic-tradition/group-snapshot";
 import { readSymbolicShareFragment } from "@/lib/symbolic-tradition/share-artifact";
 import { readEncryptedShortShare } from "@/lib/symbolic-tradition/short-share";
+import { createEncryptedResultPermalink, readEncryptedResultPermalink } from "@/lib/encrypted-result-permalink";
+import { FRIEND_BIRTH_SHARE_TOOL_ID, parseFriendBirthShare, type FriendBirthShare } from "@/lib/symbolic-tradition/friend-birth-share";
 import CompatibilityOrbit from "@/components/profile/CompatibilityOrbit";
 import { scoreAgainstCenter } from "@/lib/symbolic-tradition/orbit-layout";
 import { gaEvent } from "@/lib/analytics/ga-event";
@@ -173,6 +177,15 @@ const COPY = {
 
 const FALLBACK = COPY.en;
 
+const FRIEND_SHARE_UI: Record<Lang, { accept: string; copied: string; failed: string; inviteBody: string; inviteTitle: string; share: string }> = {
+  ko: { share: "이 친구 정보 암호화 링크", copied: "친구 링크를 복사했어요", failed: "암호화 링크를 만들지 못했어요", inviteTitle: "친구가 출생정보를 공유했어요", inviteBody: "별칭·생년월일·시각·출생도시가 암호화되어 전달됐어요. 확인하면 이 브라우저의 원에 추가됩니다.", accept: "확인하고 원에 추가" },
+  en: { share: "Copy encrypted friend link", copied: "Friend link copied", failed: "Could not create the encrypted link", inviteTitle: "A friend shared birth details", inviteBody: "A nickname, birth date, time, and city arrived encrypted. Accepting adds them to this browser's circle.", accept: "Review and add to circle" },
+  ja: { share: "友だち情報の暗号化リンク", copied: "友だちリンクをコピーしました", failed: "暗号化リンクを作成できませんでした", inviteTitle: "友だちが出生情報を共有しました", inviteBody: "ニックネーム・生年月日・時刻・出生都市が暗号化されています。確認するとこのブラウザの円に追加されます。", accept: "確認して円に追加" },
+  zh: { share: "复制好友信息加密链接", copied: "已复制好友链接", failed: "无法创建加密链接", inviteTitle: "好友分享了出生信息", inviteBody: "昵称、出生日期、时间和城市已加密传送。确认后会加入此浏览器中的关系圈。", accept: "确认并加入关系圈" },
+  fr: { share: "Copier le lien chiffré de l’ami", copied: "Lien de l’ami copié", failed: "Impossible de créer le lien chiffré", inviteTitle: "Un ami a partagé ses données de naissance", inviteBody: "Un surnom, la date, l’heure et la ville de naissance ont été transmis chiffrés. Accepter les ajoute au cercle de ce navigateur.", accept: "Vérifier et ajouter au cercle" },
+  es: { share: "Copiar enlace cifrado del amigo", copied: "Enlace del amigo copiado", failed: "No se pudo crear el enlace cifrado", inviteTitle: "Un amigo compartió datos de nacimiento", inviteBody: "El apodo, la fecha, la hora y la ciudad de nacimiento llegaron cifrados. Al aceptar se añaden al círculo de este navegador.", accept: "Revisar y añadir al círculo" },
+};
+
 const LENS: Record<Lang, Record<CompatibilityLensId, string>> = {
   ko: { "five-elements": "오행", "yin-yang": "음양", "chinese-zodiac": "띠", "sun-sign": "태양궁", "element-complement": "채움" },
   en: { "five-elements": "Five elements", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiac", "sun-sign": "Sun sign", "element-complement": "Filling in" },
@@ -201,36 +214,73 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [cityId, setCityId] = useState("");
+  const [selectedCity, setSelectedCity] = useState<City | null>(null);
   const [link, setLink] = useState("");
   const [error, setError] = useState("");
   const [picked, setPicked] = useState<null | { from: string; to: string }>(null);
   const [copied, setCopied] = useState(false);
+  const [friendShareState, setFriendShareState] = useState<"copied" | "failed" | "idle">("idle");
+  const [pendingFriend, setPendingFriend] = useState<FriendBirthShare | null>(null);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     const boot = async () => {
-      const hash = window.location.hash;
-      const group = new URLSearchParams(hash.replace(/^#/, "")).get("group");
-      if (group) {
-        const snapshot = decodeSymbolicGroupSnapshot(group);
-        if (snapshot) {
-          setPeople(snapshot.participants);
-          setCenterId(snapshot.centerId);
+      try {
+        const hash = window.location.hash;
+        const group = new URLSearchParams(hash.replace(/^#/, "")).get("group");
+        if (group) {
+          const snapshot = decodeSymbolicGroupSnapshot(group);
+          if (snapshot) {
+            setPeople(snapshot.participants);
+            setCenterId(snapshot.centerId);
+            return;
+          }
+        }
+        const direct = readSymbolicShareFragment(hash);
+        let profile: SymbolicComparisonProfile | null = direct?.ok ? direct.artifact.profile : null;
+        if (!profile) {
+          const share = new URL(window.location.href).searchParams.get("share");
+          if (share) {
+            const encrypted = await readEncryptedShortShare(share, hash);
+            if (encrypted.ok) profile = encrypted.artifact.profile;
+          }
+        }
+        if (profile) {
+          setPeople([person(copy.friend, profile)]);
           return;
         }
-      }
-      const direct = readSymbolicShareFragment(hash);
-      let profile: SymbolicComparisonProfile | null = direct?.ok ? direct.artifact.profile : null;
-      if (!profile) {
-        const share = new URL(window.location.href).searchParams.get("share");
-        if (share) {
-          const encrypted = await readEncryptedShortShare(share, hash);
-          if (encrypted.ok) profile = encrypted.artifact.profile;
+        const encryptedResultId = new URL(window.location.href).searchParams.get("result");
+        if (encryptedResultId) {
+          const encryptedResult = await readEncryptedResultPermalink(encryptedResultId, hash);
+          if (encryptedResult.ok && encryptedResult.result.toolId === FRIEND_BIRTH_SHARE_TOOL_ID) {
+            const friend = parseFriendBirthShare(encryptedResult.result.state);
+            if (friend) {
+              setPendingFriend(friend);
+              return;
+            }
+          }
         }
+        const draft = loadCircleDraft(window.localStorage);
+        if (draft) {
+          setPeople(draft.participants);
+          setCenterId(draft.centerId);
+        }
+      } finally {
+        setHydrated(true);
       }
-      if (profile) setPeople([person(copy.friend, profile)]);
     };
     void boot();
   }, [copy.friend]);
+
+  useEffect(() => {
+    if (!hydrated || pendingFriend) return;
+    try {
+      saveCircleDraft(window.localStorage, { centerId, participants: people });
+    } catch {
+      // Private browsing and storage quotas may reject writes. The circle still
+      // works for this session, so persistence remains a progressive feature.
+    }
+  }, [centerId, hydrated, pendingFriend, people]);
 
   const activeCenterId = resolveGroupCenterId(people, centerId);
   const snapshot = useMemo(
@@ -241,7 +291,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
 
   const addByDate = () => {
     try {
-      const profile = comparisonFromCivil({ cityId: cityId || undefined, date, time: time || undefined });
+      const profile = comparisonFromCivil({ city: selectedCity ?? undefined, cityId: cityId || undefined, date, time: time || undefined });
       const next = person(alias || copy.friend, profile);
       setPeople((current) => {
         if (current.length >= 10) return current;
@@ -252,6 +302,37 @@ export default function CircleGathering({ locale }: { locale: string }) {
       setAlias("");
       setDate("");
       setTime("");
+      setCityId("");
+      setSelectedCity(null);
+      setError("");
+    } catch {
+      setError(copy.error);
+    }
+  };
+
+  const shareFriendBirth = async () => {
+    setFriendShareState("idle");
+    const friend = parseFriendBirthShare({ alias, city: selectedCity, date, schemaVersion: 1, time: time || null });
+    if (!friend) {
+      setError(copy.error);
+      return;
+    }
+    try {
+      const { url } = await createEncryptedResultPermalink(FRIEND_BIRTH_SHARE_TOOL_ID, friend, { pageUrl: window.location.href });
+      await navigator.clipboard.writeText(url);
+      setFriendShareState("copied");
+      window.setTimeout(() => setFriendShareState("idle"), 2500);
+    } catch {
+      setFriendShareState("failed");
+    }
+  };
+
+  const acceptPendingFriend = () => {
+    if (!pendingFriend) return;
+    try {
+      const profile = comparisonFromCivil({ city: pendingFriend.city, date: pendingFriend.date, time: pendingFriend.time || undefined });
+      setPeople((current) => current.length >= 10 ? current : [...current, person(pendingFriend.alias, profile)]);
+      setPendingFriend(null);
       setError("");
     } catch {
       setError(copy.error);
@@ -319,6 +400,20 @@ export default function CircleGathering({ locale }: { locale: string }) {
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{copy.sub}</p>
     </header>
 
+    {pendingFriend && <div className="mt-6 rounded-2xl border border-amber-300 bg-amber-50 p-4 text-amber-950" role="alert">
+      <p className="font-black">{FRIEND_SHARE_UI[lang].inviteTitle}</p>
+      <p className="mt-1 text-sm leading-6">{FRIEND_SHARE_UI[lang].inviteBody}</p>
+      <dl className="mt-3 grid gap-1 text-sm sm:grid-cols-2">
+        <div><dt className="inline font-bold">{copy.alias}: </dt><dd className="inline">{pendingFriend.alias}</dd></div>
+        <div><dt className="inline font-bold">{copy.date}: </dt><dd className="inline">{pendingFriend.date}</dd></div>
+        <div><dt className="inline font-bold">{copy.time}: </dt><dd className="inline">{pendingFriend.time ?? "—"}</dd></div>
+        <div><dt className="inline font-bold">{copy.city}: </dt><dd className="inline">{pendingFriend.city.label[lang]}</dd></div>
+      </dl>
+      <button type="button" onClick={acceptPendingFriend} className="mt-3 min-h-11 rounded-xl bg-amber-800 px-4 py-2 text-sm font-black text-white">
+        {FRIEND_SHARE_UI[lang].accept}
+      </button>
+    </div>}
+
     {snapshot && <section className="mt-8 rounded-[2rem] border border-border bg-[var(--surface-subtle)] p-4 sm:p-7">
       <div className="flex gap-2 overflow-x-auto pb-1">{(Object.keys(LENS[lang]) as CompatibilityLensId[]).map((id) => (
         <button key={id} type="button" onClick={() => { setLens(id); gaEvent("circle_lens_select", { lens: id }); }} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-primary-strong text-white" : "border border-border bg-card text-foreground"}`}>{LENS[lang][id]}</button>
@@ -379,11 +474,19 @@ export default function CircleGathering({ locale }: { locale: string }) {
       <input aria-label={copy.alias} placeholder={copy.alias} value={alias} maxLength={24} onChange={(event) => setAlias(event.target.value)} className={field} />
       <input aria-label={copy.date} type="date" value={date} onChange={(event) => setDate(event.target.value)} className={field} />
       <input aria-label={copy.time} type="time" value={time} onChange={(event) => setTime(event.target.value)} className={field} />
-      <select aria-label={copy.city} value={cityId} onChange={(event) => setCityId(event.target.value)} className={field}>
-        <option value="">{copy.city}</option>
-        {CITIES.map((city) => <option key={city.id} value={city.id}>{city.label[lang]}</option>)}
-      </select>
+      <CityField
+        id="circle-city"
+        locale={lang}
+        value={cityId}
+        selected={selectedCity}
+        onChange={(id, city) => { setCityId(id); setSelectedCity(city); }}
+        copy={{ label: copy.city }}
+      />
       <button type="button" onClick={addByDate} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Plus className="h-4 w-4" />{copy.add}</button>
+      <button type="button" onClick={() => void shareFriendBirth()} className="min-h-11 w-full rounded-2xl border border-primary text-sm font-black text-primary">
+        {friendShareState === "copied" ? FRIEND_SHARE_UI[lang].copied : FRIEND_SHARE_UI[lang].share}
+      </button>
+      {friendShareState === "failed" && <p role="alert" className="text-xs text-red-700">{FRIEND_SHARE_UI[lang].failed}</p>}
       <input aria-label={copy.link} placeholder={copy.link} value={link} onChange={(event) => setLink(event.target.value)} className={field} />
       <button type="button" onClick={() => void addByLink()} className="min-h-11 w-full rounded-2xl border border-primary text-sm font-black text-primary">{copy.link}</button>
       {error && <p role="alert" className="text-sm font-bold text-red-700">{error}</p>}

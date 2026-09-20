@@ -41,12 +41,29 @@ const LENSES: CompatibilityLensId[] = ["five-elements", "yin-yang", "chinese-zod
 const ID = /^[a-z0-9-]{1,24}$/;
 
 function validProfile(profile: SymbolicComparisonProfile): boolean {
+  const counts = profile?.fiveElements?.counts;
   return typeof profile?.chineseZodiac?.branch === "string"
+    && !!counts
+    && ["wood", "fire", "earth", "metal", "water"].every((element) => {
+      const count = counts[element as keyof typeof counts];
+      return Number.isInteger(count) && count >= 0;
+    })
     && typeof profile?.fiveElements?.dominant === "string"
     && (profile.fiveElements.observedCoordinates === 6 || profile.fiveElements.observedCoordinates === 8)
     && typeof profile?.sunSign?.sign === "string"
     && Number.isInteger(profile?.yinYang?.yin)
     && Number.isInteger(profile?.yinYang?.yang);
+}
+
+export function isSymbolicGroupParticipant(value: unknown): value is SymbolicGroupParticipant {
+  if (!value || typeof value !== "object") return false;
+  const participant = value as Partial<SymbolicGroupParticipant>;
+  return typeof participant.id === "string"
+    && ID.test(participant.id)
+    && typeof participant.label === "string"
+    && !!participant.label.trim()
+    && participant.label.length <= 24
+    && validProfile(participant.profile as SymbolicComparisonProfile);
 }
 
 export function createSymbolicGroupSnapshot(
@@ -59,7 +76,7 @@ export function createSymbolicGroupSnapshot(
     );
   }
   const ids = new Set(participants.map(({ id }) => id));
-  if (ids.size !== participants.length || participants.some(({ id, label, profile }) => !ID.test(id) || !label.trim() || label.length > 24 || !validProfile(profile))) {
+  if (ids.size !== participants.length || participants.some((participant) => !isSymbolicGroupParticipant(participant))) {
     throw new TypeError("Invalid group participant");
   }
   const centerId = options.centerId ?? participants[0].id;

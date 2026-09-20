@@ -14,7 +14,8 @@ import AstroCartoMap from './AstroCartoMap';
 // a PII surface for AI crawlers, which respect canonical less than search
 // engines do).
 import { readResultCode } from '../../lib/result-url';
-import { decodeResult, writeResultHash } from '../../lib/result-permalink';
+import { decodeResult } from '../../lib/result-permalink';
+import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { createBirthRecord, resolveZonedCivilTime } from '../../lib/user/birth-record';
 import { gaEvent } from '../../lib/analytics/ga-event';
@@ -34,12 +35,21 @@ interface PermalinkState {
 }
 
 const PRIVACY_NOTE: Record<NatalLocale, string> = {
-  ko: '이 링크에는 입력한 생년월일·출생지·시각 정보가 포함됩니다.',
-  en: 'This link contains the birth date, place, and time you entered.',
-  ja: 'このリンクには入力した生年月日・出生地・時刻の情報が含まれます。',
-  zh: '此链接包含您输入的出生日期、地点与时间信息。',
-  fr: 'Ce lien contient la date, le lieu et l’heure de naissance que vous avez saisis.',
-  es: 'Este enlace contiene la fecha, el lugar y la hora de nacimiento que ingresaste.',
+  ko: '생년월일·출생지·시각은 암호화되며 복호화 키는 링크 조각에만 들어갑니다.',
+  en: 'Birth date, place, and time are encrypted; the key stays only in the URL fragment.',
+  ja: '生年月日・出生地・時刻は暗号化され、鍵はURLフラグメントだけに入ります。',
+  zh: '出生日期、地点和时间会被加密，密钥只保留在网址片段中。',
+  fr: 'La date, le lieu et l’heure de naissance sont chiffrés ; la clé reste dans le fragment URL.',
+  es: 'La fecha, el lugar y la hora de nacimiento se cifran; la clave queda en el fragmento de la URL.',
+};
+
+const LEGACY_WARNING: Record<NatalLocale, { body: string; open: string; title: string }> = {
+  ko: { title: '예전 형식의 공유 링크예요', body: '이 평문 링크에서 생년월일·출생지·시각을 복원할 수 있습니다. 내용을 확인한 뒤에만 여세요.', open: '내용 열기' },
+  en: { title: 'This is an older share link', body: 'This plaintext link can reconstruct birth date, place, and time. Open it only after reviewing this notice.', open: 'Open result' },
+  ja: { title: '旧形式の共有リンクです', body: 'この平文リンクから生年月日・出生地・時刻を復元できます。確認してから開いてください。', open: '結果を開く' },
+  zh: { title: '这是旧格式分享链接', body: '此明文链接可以还原出生日期、地点和时间。请阅读提示后再打开。', open: '打开结果' },
+  fr: { title: 'Ancien format de lien', body: 'Ce lien en clair permet de reconstituer la date, le lieu et l’heure de naissance. Ouvrez-le seulement après cet avertissement.', open: 'Ouvrir le résultat' },
+  es: { title: 'Este enlace usa el formato anterior', body: 'Este enlace en texto claro permite reconstruir la fecha, el lugar y la hora de nacimiento. Ábrelo solo tras revisar este aviso.', open: 'Abrir resultado' },
 };
 
 const COPY: Record<NatalLocale, {
@@ -267,6 +277,7 @@ export default function NatalChartCalculator({ locale }: Props) {
 
   const [form, setForm] = useState<FormState>({ date: '', time: '', unknown: false, city: '' });
   const [error, setError] = useState<string | null>(null);
+  const [legacyShare, setLegacyShare] = useState<PermalinkState | null>(null);
   const [result, setResult] = useState<{
     chart: NatalChart;
     hasTime: boolean;
@@ -298,35 +309,36 @@ export default function NatalChartCalculator({ locale }: Props) {
   //    as before, then migrate the URL in place: write the same state into
   //    the `#r=` hash and strip the plaintext query keys, so the address bar
   //    never keeps showing birth date/time/place. See T6 addendum decision.
-  useEffect(() => {
-    const decoded = decodeResult<PermalinkState>(window.location.hash);
-    if (decoded?.toolId === PERMALINK_TOOL_ID && decoded.state) {
-      const s = decoded.state;
+  function restoreSharedState(s: PermalinkState) {
       const city = CITIES.find((x) => x.id === s.city);
       if (city && /^\d{4}-\d{2}-\d{2}$/.test(s.date)) {
         const hasTime = !!s.time && /^\d{2}:\d{2}$/.test(s.time);
         setForm({ date: s.date, time: hasTime ? s.time! : '', unknown: !hasTime, city: s.city });
         compute(s.date, hasTime ? s.time! : '', city, hasTime);
       }
-      return;
-    }
+  }
 
-    const d = readResultCode('d');
-    const c = readResultCode('c');
-    if (!d || !c) return;
-    const city = CITIES.find((x) => x.id === c);
-    if (!city || !/^\d{4}-\d{2}-\d{2}$/.test(d)) return;
-    const time = readResultCode('t');
-    const hasTime = !!time && /^\d{2}:\d{2}$/.test(time);
-    setForm({ date: d, time: hasTime ? time! : '', unknown: !hasTime, city: c });
-    compute(d, hasTime ? time! : '', city, hasTime);
+  useEffect(() => {
+    const restore = async () => {
+      const id = new URL(window.location.href).searchParams.get('result');
+      if (id) {
+        const encrypted = await readEncryptedResultPermalink(id, window.location.hash);
+        if (encrypted.ok && encrypted.result.toolId === PERMALINK_TOOL_ID) restoreSharedState(encrypted.result.state as PermalinkState);
+        return;
+      }
+      const decoded = decodeResult<PermalinkState>(window.location.hash);
+      if (decoded?.toolId === PERMALINK_TOOL_ID && decoded.state) {
+        setLegacyShare(decoded.state);
+        return;
+      }
 
-    writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { date: d, time: hasTime ? time! : null, city: c });
-    const url = new URL(window.location.href);
-    url.searchParams.delete('d');
-    url.searchParams.delete('c');
-    url.searchParams.delete('t');
-    window.history.replaceState(null, '', url.toString());
+      const d = readResultCode('d');
+      const c = readResultCode('c');
+      if (!d || !c || !CITIES.some((city) => city.id === c) || !/^\d{4}-\d{2}-\d{2}$/.test(d)) return;
+      const time = readResultCode('t');
+      setLegacyShare({ date: d, time: time && /^\d{2}:\d{2}$/.test(time) ? time : null, city: c });
+    };
+    void restore();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -369,7 +381,6 @@ export default function NatalChartCalculator({ locale }: Props) {
     // Feeds back into the ontology profile so its birth-input card shows the
     // same confirmed city rather than only date/time (2026-07-30 unification).
     setProfile({ birthCityId: form.city });
-    writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { date: form.date, time: hasTime ? form.time : null, city: form.city });
     gaEvent('test_completed', { test_id: 'natal' });
   }
 
@@ -454,7 +465,15 @@ export default function NatalChartCalculator({ locale }: Props) {
           description={shareDesc}
           onShareClick={() => gaEvent('share_click', { test_id: 'natal' })}
         />
-        <CopyResultLink locale={loc} onCopyClick={() => gaEvent('share_click', { test_id: 'natal' })} />
+        <CopyResultLink
+          locale={loc}
+          getUrl={async () => (await createEncryptedResultPermalink(PERMALINK_TOOL_ID, {
+            date: form.date,
+            time: hasTime ? form.time : null,
+            city: form.city,
+          }, { pageUrl: window.location.href })).url}
+          onCopyClick={() => gaEvent('share_click', { test_id: 'natal' })}
+        />
         <p className="mt-1.5 text-center text-xs text-amber-600">{PRIVACY_NOTE[loc]}</p>
 
         <div className="mt-5 text-center text-sm">
@@ -476,6 +495,15 @@ export default function NatalChartCalculator({ locale }: Props) {
 
   return (
     <section className="mx-auto w-full max-w-xl">
+      {legacyShare && (
+        <div role="alert" className="mb-4 rounded-2xl border border-amber-300 bg-amber-50 p-4 text-amber-950">
+          <p className="font-bold">{LEGACY_WARNING[loc].title}</p>
+          <p className="mt-1 text-sm leading-6">{LEGACY_WARNING[loc].body}</p>
+          <button type="button" className="mt-3 rounded-xl border border-amber-500 px-4 py-2 text-sm font-bold" onClick={() => { restoreSharedState(legacyShare); setLegacyShare(null); }}>
+            {LEGACY_WARNING[loc].open}
+          </button>
+        </div>
+      )}
       <header className="mb-6 text-center">
         <h2 className="text-2xl font-extrabold text-green-900">{t.title}</h2>
         <p className="mt-2 text-sm text-slate-600">{t.subtitle}</p>

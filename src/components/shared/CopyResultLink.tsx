@@ -5,6 +5,7 @@ type Locale = 'en' | 'ko' | 'ja' | 'zh' | 'fr' | 'es';
 
 interface Props {
   locale: string;
+  getUrl?: () => Promise<string> | string;
   // Fired on click, before the copy resolves — see ShareResultButton.onShareClick.
   onCopyClick?: () => void;
 }
@@ -18,14 +19,14 @@ const LABELS: Record<Locale, { copy: string; copied: string; failed: string; hin
   es: { copy: 'Copiar enlace del resultado', copied: '¡Enlace copiado!', failed: 'No se pudo copiar', hint: 'Abrir este enlace muestra el mismo resultado.' },
 };
 
-export default function CopyResultLink({ locale, onCopyClick }: Props) {
+export default function CopyResultLink({ locale, getUrl, onCopyClick }: Props) {
   const t = LABELS[(locale as Locale)] ?? LABELS.en;
   const [state, setState] = useState<'idle' | 'done' | 'error'>('idle');
 
   const onCopy = async () => {
     onCopyClick?.();
     try {
-      await navigator.clipboard.writeText(currentShareUrl());
+      await navigator.clipboard.writeText(getUrl ? await getUrl() : currentShareUrl());
       setState('done');
       setTimeout(() => setState('idle'), 2500);
     } catch {

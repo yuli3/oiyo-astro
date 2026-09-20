@@ -31,12 +31,40 @@ describe("symbolic share artifact", () => {
     expect(artifact.profile).toEqual({
       chineseZodiac: profile.chineseZodiac,
       fiveElements: {
+        counts: profile.fiveElements.counts,
         dominant: profile.fiveElements.dominant,
         observedCoordinates: 8,
       },
       sunSign: profile.sunSign,
       yinYang: profile.yinYang,
     });
+  });
+
+  it("rejects a shared comparison profile that cannot be compared", () => {
+    const artifact = createSymbolicShareArtifact(profile, { now: NOW });
+    const incomplete = {
+      ...artifact,
+      profile: {
+        ...artifact.profile,
+        fiveElements: {
+          dominant: artifact.profile.fiveElements.dominant,
+          observedCoordinates: artifact.profile.fiveElements.observedCoordinates,
+        },
+      },
+    };
+    const encoded = encodeSymbolicShareArtifact(incomplete as typeof artifact);
+
+    expect(decodeSymbolicShareArtifact(encoded, { now: NOW })).toEqual({ ok: false, reason: "damaged" });
+  });
+
+  it("reports the previous payload shape as unsupported instead of damaged", () => {
+    const artifact = createSymbolicShareArtifact(profile, { now: NOW });
+    const encoded = encodeSymbolicShareArtifact({
+      ...artifact,
+      schemaVersion: 1,
+    } as typeof artifact);
+
+    expect(decodeSymbolicShareArtifact(encoded, { now: NOW })).toEqual({ ok: false, reason: "unsupported" });
   });
 
   it("expires after seven days by default", () => {

@@ -3,7 +3,7 @@
 import { Calendar, Check, Pencil } from "lucide-react";
 import { useState } from "react";
 import { useUserProfile } from "@/lib/user/context/UserContext";
-import { createBirthRecord, resolveBirthRecord } from "@/lib/user/birth-record";
+import { createBirthRecord, resolveBirthRecord, updateBirthRecord } from "@/lib/user/birth-record";
 import { parseSynthesizedId } from "@/lib/ontology/natal/city-search";
 import { CITIES, type City } from "@/lib/ontology/natal/signs";
 import { CityField } from "@/components/shared/CityField";
@@ -71,14 +71,33 @@ export function OntologyBirthInput({
     // 큐레이션 목록 우선, 없으면 검색으로 고른 도시. 둘 다 City 형태라 아래는 동일하다.
     const city = CITIES.find((c) => c.id === cityId)
       ?? (pickedCity && pickedCity.id === cityId ? pickedCity : undefined);
-    saveBirthRecord(createBirthRecord({
-      civilDate: d,
-      civilTime: time || null,
-      longitude: city?.lon ?? null,
-      zoneId: city?.zoneId ?? null,
-      needsConfirmation: !city,
-      provenance: "user-confirmed-v2",
-    }));
+    const placeIsUnchanged = !!birthRecord
+      && cityId === profile.birthCityId
+      && pickedCity === null;
+    const nextBirthRecord = birthRecord
+      ? updateBirthRecord(birthRecord, {
+          civilDate: d,
+          civilTime: time || null,
+          location: placeIsUnchanged
+            ? undefined
+            : city
+              ? {
+                  longitude: city.lon,
+                  needsConfirmation: false,
+                  utcOffsetMinutesAtBirth: null,
+                  zoneId: city.zoneId,
+                }
+              : null,
+        })
+      : createBirthRecord({
+          civilDate: d,
+          civilTime: time || null,
+          longitude: city?.lon ?? null,
+          zoneId: city?.zoneId ?? null,
+          needsConfirmation: !city,
+          provenance: "user-confirmed-v2",
+        });
+    saveBirthRecord(nextBirthRecord);
     setProfileData({
       gender: gender || null,
       bloodType: (blood || null) as "A" | "B" | "O" | "AB" | null,

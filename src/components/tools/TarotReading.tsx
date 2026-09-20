@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { decodeResult, writeResultHash } from '../../lib/result-permalink';
+import { decodeResult } from '../../lib/result-permalink';
+import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
 import { TarotCardFace, romanMajor, tarotMajorImageSrc } from './TarotCardFace';
 import TarotSpread from './tarot/TarotSpread';
@@ -13,6 +14,15 @@ interface PermalinkState {
   spread: Spread;
   drawn: { id: number; reversed: boolean }[];
 }
+
+const SHARE_LABELS: Record<'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh', { failed: string; legacyTitle: string; legacyBody: string; legacyOpen: string }> = {
+  ko: { failed: '암호화 링크를 만들지 못했어요. 다시 시도해 주세요.', legacyTitle: '예전 형식의 공유 링크예요', legacyBody: '이 링크에는 카드 결과가 암호화되지 않은 형태로 들어 있습니다. 내용을 확인한 뒤에만 여세요.', legacyOpen: '결과 열기' },
+  en: { failed: 'Could not create an encrypted link. Please try again.', legacyTitle: 'This is an older share link', legacyBody: 'This link contains the card result in plaintext. Open it only after reviewing this notice.', legacyOpen: 'Open result' },
+  ja: { failed: '暗号化リンクを作成できませんでした。もう一度お試しください。', legacyTitle: '旧形式の共有リンクです', legacyBody: 'このリンクにはカード結果が平文で含まれています。確認してから開いてください。', legacyOpen: '結果を開く' },
+  fr: { failed: 'Impossible de créer le lien chiffré. Réessayez.', legacyTitle: 'Ancien format de lien', legacyBody: 'Ce lien contient le résultat des cartes en clair. Ouvrez-le seulement après cet avertissement.', legacyOpen: 'Ouvrir le résultat' },
+  es: { failed: 'No se pudo crear el enlace cifrado. Inténtalo de nuevo.', legacyTitle: 'Este enlace usa el formato anterior', legacyBody: 'Este enlace contiene el resultado de las cartas en texto claro. Ábrelo solo tras revisar este aviso.', legacyOpen: 'Abrir resultado' },
+  zh: { failed: '无法创建加密链接，请重试。', legacyTitle: '这是旧格式分享链接', legacyBody: '此链接以明文形式包含牌面结果。请阅读提示后再打开。', legacyOpen: '打开结果' },
+};
 
 interface TarotCard {
   id: number;
@@ -311,28 +321,49 @@ function cardsFromIds(ids: PermalinkState['drawn'], positionLabels: string[]): D
     .filter((d): d is DrawnCard => d !== null);
 }
 
+function parsePermalinkState(value: unknown): PermalinkState | null {
+  if (!value || typeof value !== 'object') return null;
+  const candidate = value as Partial<PermalinkState>;
+  if (![1, 3, 5].includes(candidate.spread ?? 0) || !Array.isArray(candidate.drawn) || candidate.drawn.length !== candidate.spread) return null;
+  if (!candidate.drawn.every(card => card && Number.isInteger(card.id) && card.id >= 0 && card.id < MAJOR_ARCANA.length && typeof card.reversed === 'boolean')) return null;
+  return candidate as PermalinkState;
+}
+
 export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
   const t = L[locale] ?? L.ko;
   const [spread, setSpread] = useState<Spread>(1);
   const [drawn, setDrawn] = useState<DrawnCard[] | null>(null);
   const [flipped, setFlipped] = useState<Set<number>>(new Set());
   const [shareCopied, setShareCopied] = useState(false);
+  const [shareFailed, setShareFailed] = useState(false);
+  const [legacyShare, setLegacyShare] = useState<PermalinkState | null>(null);
+  const shareLabels = SHARE_LABELS[locale === 'cn' ? 'zh' : locale] ?? SHARE_LABELS.en;
 
-  // T6/#32: entering via a shared #r= permalink restores the exact draw
-  // (same cards, same orientation) and reveals it immediately, skipping the
-  // draw step. Safe no-op if there is no hash or decoding fails.
+  function restoreSharedState(value: unknown) {
+    const state = parsePermalinkState(value);
+    if (!state) return;
+    const labels = SPREAD_LABELS[state.spread]?.[locale] ?? SPREAD_LABELS[1][locale];
+    const cards = cardsFromIds(state.drawn, labels);
+    if (cards.length !== state.spread) return;
+    setSpread(state.spread);
+    setDrawn(cards);
+    setFlipped(new Set(cards.map((_, i) => i)));
+  }
+
   useEffect(() => {
-    const decoded = decodeResult<PermalinkState>(window.location.hash);
-    if (decoded?.toolId === PERMALINK_TOOL_ID && Array.isArray(decoded.state?.drawn)) {
-      const restoredSpread = decoded.state.spread;
-      const labels = SPREAD_LABELS[restoredSpread]?.[locale] ?? SPREAD_LABELS[1][locale];
-      const cards = cardsFromIds(decoded.state.drawn, labels);
-      if (cards.length > 0) {
-        setSpread(restoredSpread);
-        setDrawn(cards);
-        setFlipped(new Set(cards.map((_, i) => i)));
+    const restore = async () => {
+      const id = new URL(window.location.href).searchParams.get('result');
+      if (id) {
+        const encrypted = await readEncryptedResultPermalink(id, window.location.hash);
+        if (encrypted.ok && encrypted.result.toolId === PERMALINK_TOOL_ID) restoreSharedState(encrypted.result.state);
+        return;
       }
-    }
+      const decoded = decodeResult<PermalinkState>(window.location.hash);
+      if (decoded?.toolId !== PERMALINK_TOOL_ID) return;
+      const legacy = parsePermalinkState(decoded.state);
+      if (legacy) setLegacyShare(legacy);
+    };
+    void restore();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -342,17 +373,21 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
     setFlipped(new Set());
   }
 
-  function share() {
+  async function share() {
     if (!drawn) return;
     gaEvent('share_click', { test_id: 'tarot' });
     const state: PermalinkState = { spread, drawn: drawn.map(d => ({ id: d.card.id, reversed: d.reversed })) };
-    const url = writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, state) ?? window.location.href;
-    if (navigator.share) {
-      navigator.share({ title: t.title, url });
-    } else {
-      navigator.clipboard.writeText(url);
-      setShareCopied(true);
-      setTimeout(() => setShareCopied(false), 2500);
+    setShareFailed(false);
+    try {
+      const { url } = await createEncryptedResultPermalink(PERMALINK_TOOL_ID, state, { pageUrl: window.location.href });
+      if (navigator.share) await navigator.share({ title: t.title, url });
+      else {
+        await navigator.clipboard.writeText(url);
+        setShareCopied(true);
+        setTimeout(() => setShareCopied(false), 2500);
+      }
+    } catch {
+      setShareFailed(true);
     }
   }
 
@@ -376,6 +411,15 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
 
   return (
     <div className="space-y-6">
+      {legacyShare && (
+        <div role="alert" className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-amber-950">
+          <p className="font-bold">{shareLabels.legacyTitle}</p>
+          <p className="mt-1 text-sm leading-6">{shareLabels.legacyBody}</p>
+          <button type="button" className="mt-3 rounded-xl border border-amber-500 px-4 py-2 text-sm font-bold" onClick={() => { restoreSharedState(legacyShare); setLegacyShare(null); }}>
+            {shareLabels.legacyOpen}
+          </button>
+        </div>
+      )}
       {/* Header */}
       <div className="text-center">
         <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
@@ -490,12 +534,15 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       )}
 
       {drawn && flipped.size === drawn.length && (
-        <button
-          onClick={share}
-          className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-surface-subtle text-sm font-bold text-green-700 hover:bg-green-100 transition-colors"
-        >
-          {shareCopied ? `✅ ${t.shareCopied}` : `🔗 ${t.shareBtn}`}
-        </button>
+        <div>
+          <button
+            onClick={() => void share()}
+            className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-surface-subtle text-sm font-bold text-green-700 hover:bg-green-100 transition-colors"
+          >
+            {shareCopied ? `✅ ${t.shareCopied}` : `🔗 ${t.shareBtn}`}
+          </button>
+          {shareFailed && <p role="alert" className="mt-2 text-center text-sm text-red-600">{shareLabels.failed}</p>}
+        </div>
       )}
     </div>
   );

@@ -18,7 +18,7 @@ import {
   type ExportLabels,
 } from "@/lib/ontology/export-serializers";
 import { resolveNodeLabel } from "@/lib/ontology/graph/label";
-import { writeResultHash } from "@/lib/result-permalink";
+import { createEncryptedResultPermalink } from "@/lib/encrypted-result-permalink";
 import { gaEvent } from "@/lib/analytics/ga-event";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -64,15 +64,15 @@ const UI: Record<
     copy: "복사하기",
     copied: "복사됨",
     download: "다운로드",
-    share: "공유링크",
+    share: "암호화 공유링크",
     shareCopied: "링크를 복사했어요!",
-    shareUnavailable: "공유 링크를 만들기엔 신호가 너무 많아요. 다운로드로 공유해 주세요.",
+    shareUnavailable: "암호화 공유 링크를 만들지 못했어요. 다시 시도하거나 다운로드로 공유해 주세요.",
     png: "이미지로 내보내기",
     pngBusy: "이미지 만드는 중…",
     pngUnavailable: "이미지를 만들지 못했어요. 다시 시도해 주세요.",
     pdf: "PDF로 내보내기", text: "텍스트로 내보내기",
-    privacyNote: "이 파일/링크에는 생년월일 등 입력한 정보가 포함될 수 있습니다.",
-    localOnly: "🔒 이 브라우저에서만 생성 · 서버 전송 없음",
+    privacyNote: "파일에는 입력 정보가 포함될 수 있습니다. 공유 링크의 프로필은 암호화되며 복호화 키는 URL 조각에만 들어갑니다.",
+    localOnly: "🔒 서버에는 암호문만 임시 저장됩니다",
   },
   en: {
     title: "Export my ontology profile",
@@ -81,15 +81,15 @@ const UI: Record<
     copy: "Copy",
     copied: "Copied",
     download: "Download",
-    share: "Share link",
+    share: "Encrypted share link",
     shareCopied: "Link copied!",
-    shareUnavailable: "Too many signals for a share link — download instead.",
+    shareUnavailable: "Couldn't create the encrypted link. Try again or share a download instead.",
     png: "Save card as image",
     pngBusy: "Generating image…",
     pngUnavailable: "Couldn't generate the image — try again.",
     pdf: "Export as PDF", text: "Export as text",
-    privacyNote: "This file/link may contain information you entered, such as your birth date.",
-    localOnly: "🔒 Generated locally in this browser only — nothing is uploaded",
+    privacyNote: "Files may contain information you entered. Shared profiles are encrypted, and the decryption key stays only in the URL fragment.",
+    localOnly: "🔒 Only ciphertext is stored temporarily on the server",
   },
   ja: {
     title: "存在論プロフィールを書き出す",
@@ -98,15 +98,15 @@ const UI: Record<
     copy: "コピー",
     copied: "コピーしました",
     download: "ダウンロード",
-    share: "共有リンク",
+    share: "暗号化共有リンク",
     shareCopied: "リンクをコピーしました!",
-    shareUnavailable: "信号が多すぎて共有リンクを作れません。ダウンロードしてください。",
+    shareUnavailable: "暗号化共有リンクを作成できませんでした。再試行するか、ダウンロードして共有してください。",
     png: "カード画像を保存",
     pngBusy: "画像を作成中…",
     pngUnavailable: "画像を作成できませんでした。もう一度お試しください。",
     pdf: "PDFで書き出す", text: "テキストで書き出す",
-    privacyNote: "このファイル・リンクには生年月日など入力した情報が含まれる場合があります。",
-    localOnly: "🔒 このブラウザ内でのみ生成 · サーバー送信なし",
+    privacyNote: "ファイルには入力情報が含まれる場合があります。共有プロフィールは暗号化され、復号鍵はURLフラグメントだけに入ります。",
+    localOnly: "🔒 サーバーには暗号文だけが一時保存されます",
   },
   zh: {
     title: "导出我的存在论资料",
@@ -115,15 +115,15 @@ const UI: Record<
     copy: "复制",
     copied: "已复制",
     download: "下载",
-    share: "分享链接",
+    share: "加密分享链接",
     shareCopied: "链接已复制!",
-    shareUnavailable: "信号太多，无法生成分享链接，请改用下载。",
+    shareUnavailable: "无法生成加密分享链接。请重试或改用下载分享。",
     png: "保存卡片图片",
     pngBusy: "正在生成图片…",
     pngUnavailable: "图片生成失败，请重试。",
     pdf: "导出为 PDF", text: "导出为文本",
-    privacyNote: "此文件/链接可能包含您输入的信息，例如出生日期。",
-    localOnly: "🔒 仅在此浏览器本地生成 · 不会上传",
+    privacyNote: "文件可能包含您输入的信息。共享资料会被加密，解密密钥只保留在网址片段中。",
+    localOnly: "🔒 服务器仅临时保存密文",
   },
   fr: {
     title: "Exporter mon profil ontologique",
@@ -132,15 +132,15 @@ const UI: Record<
     copy: "Copier",
     copied: "Copié",
     download: "Télécharger",
-    share: "Lien de partage",
+    share: "Lien partagé chiffré",
     shareCopied: "Lien copié !",
-    shareUnavailable: "Trop de signaux pour un lien de partage — téléchargez plutôt.",
+    shareUnavailable: "Impossible de créer le lien chiffré. Réessayez ou partagez le fichier téléchargé.",
     png: "Enregistrer la carte en image",
     pngBusy: "Génération de l’image…",
     pngUnavailable: "Impossible de générer l’image — réessayez.",
     pdf: "Exporter en PDF", text: "Exporter en texte",
-    privacyNote: "Ce fichier/lien peut contenir les informations saisies, comme votre date de naissance.",
-    localOnly: "🔒 Généré localement dans ce navigateur uniquement — rien n’est envoyé",
+    privacyNote: "Le fichier peut contenir vos saisies. Le profil partagé est chiffré et la clé reste uniquement dans le fragment URL.",
+    localOnly: "🔒 Seul le texte chiffré est stocké temporairement sur le serveur",
   },
   es: {
     title: "Exportar mi perfil ontológico",
@@ -149,15 +149,15 @@ const UI: Record<
     copy: "Copiar",
     copied: "Copiado",
     download: "Descargar",
-    share: "Enlace para compartir",
+    share: "Enlace cifrado",
     shareCopied: "¡Enlace copiado!",
-    shareUnavailable: "Demasiadas señales para un enlace — descarga el archivo en su lugar.",
+    shareUnavailable: "No se pudo crear el enlace cifrado. Inténtalo de nuevo o comparte el archivo descargado.",
     png: "Guardar tarjeta como imagen",
     pngBusy: "Generando imagen…",
     pngUnavailable: "No se pudo generar la imagen — inténtalo de nuevo.",
     pdf: "Exportar como PDF", text: "Exportar como texto",
-    privacyNote: "Este archivo/enlace puede contener información que ingresaste, como tu fecha de nacimiento.",
-    localOnly: "🔒 Generado localmente en este navegador únicamente — nada se envía",
+    privacyNote: "El archivo puede contener datos ingresados. El perfil compartido se cifra y la clave queda solo en el fragmento de la URL.",
+    localOnly: "🔒 El servidor solo almacena temporalmente el texto cifrado",
   },
 };
 
@@ -235,25 +235,28 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
     download(content, filename, FORMAT_MIME[format]);
   }
 
-  // T6/#32 reuse: encode a light subset (signals only — the full export
-  // blows past `encodeResult`'s ~1500-char guard) into a `#r=` permalink.
-  // `writeResultHash` returns null on the size guard or server-side call —
-  // surfaced as a disabled/explained state, never a crash.
-  function handleShare() {
+  // Share only the light signal subset. The server receives ciphertext; the
+  // AES key remains in the URL fragment and is never sent with the request.
+  async function handleShare() {
     gaEvent("ontology_export", { format: "permalink" });
-    const state = collectResultPermalinkState();
-    const url = writeResultHash(ONTOLOGY_EXPORT_PERMALINK_TOOL_ID, state);
-    if (!url) {
+    setShareState("idle");
+    try {
+      const { url } = await createEncryptedResultPermalink(
+        ONTOLOGY_EXPORT_PERMALINK_TOOL_ID,
+        collectResultPermalinkState(),
+        { pageUrl: window.location.href },
+      );
+      if (navigator.share) {
+        await navigator.share({ title: t.title, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      setShareState("copied");
+      window.setTimeout(() => setShareState("idle"), 1400);
+    } catch {
+      // Encryption/storage failures must never fall back to a plaintext URL.
       setShareState("unavailable");
-      return;
     }
-    if (navigator.share) {
-      navigator.share({ title: t.title, url });
-      return;
-    }
-    navigator.clipboard.writeText(url);
-    setShareState("copied");
-    window.setTimeout(() => setShareState("idle"), 1400);
   }
 
   async function handleDownloadPng() {

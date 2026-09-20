@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { MapPin, X } from "lucide-react";
+import { Clock3, Globe2, MapPin, Navigation, X } from "lucide-react";
 import { searchCities, type CitySearchHit } from "@/lib/ontology/natal/city-search";
 import { CITIES, type City, type NatalLocale } from "@/lib/ontology/natal/signs";
 
@@ -25,15 +25,18 @@ export interface CityFieldCopy {
   hint: string;
   popular: string;
   clear: string;
+  coordinates: string;
+  timeZone: string;
+  verified: string;
 }
 
 const COPY: Record<NatalLocale, CityFieldCopy> = {
-  ko: { label: "출생지", placeholder: "도시 이름을 입력하세요 (예: 대구)", empty: "검색 결과가 없습니다. 로마자로도 찾아보세요 (예: Seogwipo)", hint: "전 세계 34,000여 개 도시에서 찾습니다", popular: "자주 찾는 도시", clear: "지우기" },
-  en: { label: "Birthplace", placeholder: "Type a city name (e.g. Daegu)", empty: "No matches. Try the Latin spelling instead.", hint: "Searches 34,000+ cities worldwide", popular: "Popular cities", clear: "Clear" },
-  ja: { label: "出生地", placeholder: "都市名を入力（例: 大邱）", empty: "該当なし。ローマ字表記でもお試しください。", hint: "世界 34,000 以上の都市から検索します", popular: "よく選ばれる都市", clear: "クリア" },
-  zh: { label: "出生地", placeholder: "输入城市名（例：大邱）", empty: "无结果。可试试拉丁拼写。", hint: "从全球 34,000 多个城市中搜索", popular: "常选城市", clear: "清除" },
-  fr: { label: "Lieu de naissance", placeholder: "Saisissez une ville (ex. Daegu)", empty: "Aucun résultat. Essayez l'orthographe latine.", hint: "Recherche parmi plus de 34 000 villes", popular: "Villes fréquentes", clear: "Effacer" },
-  es: { label: "Lugar de nacimiento", placeholder: "Escribe una ciudad (ej. Daegu)", empty: "Sin resultados. Prueba la grafía latina.", hint: "Busca entre más de 34.000 ciudades", popular: "Ciudades frecuentes", clear: "Borrar" },
+  ko: { label: "출생지", placeholder: "도시 이름을 입력하세요 (예: 대구)", empty: "검색 결과가 없습니다. 로마자로도 찾아보세요 (예: Seogwipo)", hint: "전 세계 34,000여 개 도시에서 찾습니다", popular: "자주 찾는 도시", clear: "지우기", coordinates: "위치 좌표", timeZone: "시간대", verified: "계산 위치 확인" },
+  en: { label: "Birthplace", placeholder: "Type a city name (e.g. Daegu)", empty: "No matches. Try the Latin spelling instead.", hint: "Searches 34,000+ cities worldwide", popular: "Popular cities", clear: "Clear", coordinates: "Coordinates", timeZone: "Time zone", verified: "Calculation location" },
+  ja: { label: "出生地", placeholder: "都市名を入力（例: 大邱）", empty: "該当なし。ローマ字表記でもお試しください。", hint: "世界 34,000 以上の都市から検索します", popular: "よく選ばれる都市", clear: "クリア", coordinates: "位置座標", timeZone: "タイムゾーン", verified: "計算地点" },
+  zh: { label: "出生地", placeholder: "输入城市名（例：大邱）", empty: "无结果。可试试拉丁拼写。", hint: "从全球 34,000 多个城市中搜索", popular: "常选城市", clear: "清除", coordinates: "位置坐标", timeZone: "时区", verified: "计算位置" },
+  fr: { label: "Lieu de naissance", placeholder: "Saisissez une ville (ex. Daegu)", empty: "Aucun résultat. Essayez l'orthographe latine.", hint: "Recherche parmi plus de 34 000 villes", popular: "Villes fréquentes", clear: "Effacer", coordinates: "Coordonnées", timeZone: "Fuseau horaire", verified: "Lieu de calcul" },
+  es: { label: "Lugar de nacimiento", placeholder: "Escribe una ciudad (ej. Daegu)", empty: "Sin resultados. Prueba la grafía latina.", hint: "Busca entre más de 34.000 ciudades", popular: "Ciudades frecuentes", clear: "Borrar", coordinates: "Coordenadas", timeZone: "Zona horaria", verified: "Lugar de cálculo" },
 };
 
 export interface CityOption {
@@ -87,6 +90,9 @@ export function CityField({
     if (!value) return null;
     return CITIES.find((x) => x.id === value) ?? selected ?? null;
   }, [value, selected]);
+  const marker = chosen
+    ? { x: ((chosen.lon + 180) / 360) * 180, y: ((90 - chosen.lat) / 180) * 72 }
+    : null;
 
   // 두 글자부터 번들을 검색한다. 요청이 뒤바뀌어 낡은 결과가 덮어쓰지 않도록
   // 이 실행이 아직 최신인지 확인하고 반영한다.
@@ -144,23 +150,55 @@ export function CityField({
       </label>
 
       {chosen && !open ? (
-        <div className="flex h-12 w-full items-center gap-2 rounded-2xl border border-green-300 bg-surface-subtle px-4">
-          <MapPin className="h-4 w-4 shrink-0 text-green-600" aria-hidden="true" />
-          <button
-            type="button"
-            onClick={() => { setOpen(true); setQuery(""); }}
-            className="min-w-0 flex-1 truncate text-left text-base font-black text-slate-900"
-          >
-            {chosen.label[lang] || chosen.label.en}
-          </button>
-          <button
-            type="button"
-            aria-label={c.clear}
-            onClick={() => { onChange("", null); setQuery(""); }}
-            className="shrink-0 rounded-lg p-1 text-slate-400 hover:bg-card hover:text-slate-700"
-          >
-            <X className="h-4 w-4" aria-hidden="true" />
-          </button>
+        <div className="overflow-hidden rounded-2xl border border-green-300 bg-surface-subtle">
+          <div className="flex min-h-12 w-full items-center gap-2 px-4">
+            <MapPin className="h-4 w-4 shrink-0 text-green-600" aria-hidden="true" />
+            <button
+              type="button"
+              onClick={() => { setOpen(true); setQuery(""); }}
+              className="min-w-0 flex-1 truncate text-left text-base font-black text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
+            >
+              {chosen.label[lang] || chosen.label.en}
+            </button>
+            <button
+              type="button"
+              aria-label={c.clear}
+              onClick={() => { onChange("", null); setQuery(""); }}
+              className="shrink-0 rounded-lg p-2 text-slate-500 hover:bg-card hover:text-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
+            >
+              <X className="h-4 w-4" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="grid gap-3 border-t border-green-200/80 bg-green-950 px-3 py-3 text-green-50 sm:grid-cols-[9rem_1fr]">
+            <div className="relative overflow-hidden rounded-xl bg-green-900" aria-hidden="true">
+              <svg viewBox="0 0 180 72" className="h-20 w-full" role="img">
+                <title>{c.verified}</title>
+                <g fill="none" stroke="rgba(187,247,208,0.22)" strokeWidth="0.6">
+                  <path d="M0 18H180M0 36H180M0 54H180" />
+                  <path d="M30 0V72M60 0V72M90 0V72M120 0V72M150 0V72" />
+                </g>
+                <path d={`M90 36L${marker?.x ?? 90} ${marker?.y ?? 36}`} stroke="rgba(134,239,172,0.65)" strokeDasharray="2 2" strokeWidth="0.8" />
+                <circle cx={marker?.x ?? 90} cy={marker?.y ?? 36} r="4.5" fill="rgba(74,222,128,0.2)" />
+                <circle cx={marker?.x ?? 90} cy={marker?.y ?? 36} r="2" fill="#86efac" stroke="#052e16" strokeWidth="0.8" />
+              </svg>
+            </div>
+            <div className="grid content-center gap-2 text-xs">
+              <p className="flex items-center gap-2">
+                <Navigation className="h-4 w-4 text-green-300" aria-hidden="true" />
+                <span className="text-green-200">{c.coordinates}</span>
+                <span className="ml-auto font-bold tabular-nums">{chosen.lat.toFixed(2)}°, {chosen.lon.toFixed(2)}°</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Clock3 className="h-4 w-4 text-green-300" aria-hidden="true" />
+                <span className="text-green-200">{c.timeZone}</span>
+                <span className="ml-auto truncate font-bold">{chosen.zoneId}</span>
+              </p>
+              <p className="flex items-center gap-2 text-green-200">
+                <Globe2 className="h-4 w-4 text-green-300" aria-hidden="true" />
+                {c.verified}
+              </p>
+            </div>
+          </div>
         </div>
       ) : (
         <div className="relative">

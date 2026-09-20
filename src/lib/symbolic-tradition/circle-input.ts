@@ -1,14 +1,15 @@
-import { CITIES } from "@/lib/ontology/natal/signs";
+import { CITIES, type City } from "@/lib/ontology/natal/signs";
 import { resolveZonedCivilTime } from "@/lib/user/birth-record";
 import { deriveSymbolicProfile, type SymbolicComparisonProfile } from "@/lib/symbolic-tradition";
 
 export function comparisonFromCivil(input: {
+  city?: City;
   cityId?: string;
   date: string;
   time?: string;
 }): SymbolicComparisonProfile {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(input.date)) throw new RangeError("Need a civil date");
-  const city = CITIES.find((item) => item.id === input.cityId);
+  const city = input.city ?? CITIES.find((item) => item.id === input.cityId);
   const civilTime = input.time || null;
   const resolution = city
     ? resolveZonedCivilTime({ civilDate: input.date, civilTime: civilTime ?? "12:00", zoneId: city.zoneId })

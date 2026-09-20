@@ -2,7 +2,7 @@ import LZString from "lz-string";
 
 import type { SymbolicComparisonProfile, SymbolicProfile } from "./types";
 
-export const SYMBOLIC_SHARE_SCHEMA_VERSION = 1 as const;
+export const SYMBOLIC_SHARE_SCHEMA_VERSION = 2 as const;
 export const SYMBOLIC_SHARE_FRAGMENT_KEY = "symbolic";
 export const SYMBOLIC_SHARE_DEFAULT_TTL_DAYS = 7;
 export const SYMBOLIC_SHARE_MAX_TTL_DAYS = 30;
@@ -37,6 +37,7 @@ function profileForShare(profile: SymbolicProfile): SymbolicComparisonProfile {
   return {
     chineseZodiac: profile.chineseZodiac,
     fiveElements: {
+      counts: profile.fiveElements.counts,
       dominant: profile.fiveElements.dominant,
       observedCoordinates: profile.fiveElements.observedCoordinates,
     },
@@ -48,7 +49,13 @@ function profileForShare(profile: SymbolicProfile): SymbolicComparisonProfile {
 function hasComparisonProfile(value: unknown): value is SymbolicComparisonProfile {
   if (!value || typeof value !== "object") return false;
   const profile = value as Partial<SymbolicComparisonProfile>;
+  const counts = profile.fiveElements?.counts;
   return typeof profile.chineseZodiac?.branch === "string"
+    && !!counts
+    && ["wood", "fire", "earth", "metal", "water"].every((element) => {
+      const count = counts[element as keyof typeof counts];
+      return Number.isInteger(count) && count >= 0;
+    })
     && typeof profile.fiveElements?.dominant === "string"
     && (profile.fiveElements.observedCoordinates === 6 || profile.fiveElements.observedCoordinates === 8)
     && typeof profile.sunSign?.element === "string"
