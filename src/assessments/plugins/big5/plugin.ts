@@ -90,7 +90,6 @@ export const bigFivePlugin: AssessmentPlugin = {
     indexable: true,
     kind: "psychometric",
     routes: {
-      blog: "https://blog.oiyo.net/{locale}/psychology-big-five-test/",
       execution: "/{locale}/big5/test",
       wiki: "https://oiyo.net/{locale}/big5/about/",
     },

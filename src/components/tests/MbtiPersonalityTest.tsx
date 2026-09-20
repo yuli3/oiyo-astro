@@ -427,7 +427,6 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           links={[
             { href: `/${l}/profile/relationship-comparison/`, label: FRIEND_COMPARE_LABEL[l] },
             { href: `/${l}/mbti/hobbies/`, label: l === 'ko' ? `✨ ${mbtiType} 추천 취미` : `✨ ${mbtiType} hobbies` },
-            { href: `https://blog.oiyo.net/${l}/mbti-compatibility/`, label: l === 'ko' ? '💞 유형 궁합 보기' : '💞 Type compatibility', external: true },
           ]}
         />
         <button

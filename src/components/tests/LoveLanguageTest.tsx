@@ -481,7 +481,6 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
         locale={locale}
         links={[
           { href: `/${locale}/attachment-style/test/`, label: locale === 'ko' ? '💚 애착유형 테스트' : locale === 'ja' ? '💚 愛着スタイルテスト' : '💚 Attachment style test' },
-          { href: `https://blog.oiyo.net/${locale}/mbti-compatibility/`, label: locale === 'ko' ? '💞 유형 궁합 보기' : locale === 'ja' ? '💞 タイプ相性' : '💞 Type compatibility', external: true },
           { href: `/${locale}/enneagram/test/`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
         ]}
       />

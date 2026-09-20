@@ -81,7 +81,6 @@ function createPlugin(
       indexable: true,
       kind: "psychometric",
       routes: {
-        blog: "https://blog.oiyo.net/{locale}/riasec-career-guide/",
         execution: quick ? "/{locale}/riasec-quick" : "/{locale}/riasec-career-test",
       },
       status: "review",

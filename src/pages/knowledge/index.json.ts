@@ -37,7 +37,6 @@ export const GET: APIRoute = async () => {
         description: "Canonical cross-site concept graph (hub ownership, relations, cross-locale links).",
       },
       sites: [
-        { role: "publishing-and-utility", name: "Oiyo Blog", url: "https://blog.oiyo.net", knowledge: "https://blog.oiyo.net/knowledge/index.json" },
         { role: "interactive-tools", name: "Oiyo", url: "https://oiyo.net", knowledge: "https://oiyo.net/knowledge/index.json" },
       ],
     },

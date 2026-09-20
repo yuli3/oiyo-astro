@@ -40,7 +40,6 @@ export const attachmentPlugin: AssessmentPlugin = {
     indexable: ADULT_ATTACHMENT_RELEASE_GATE.indexable,
     kind: "psychometric",
     routes: {
-      blog: "https://blog.oiyo.net/{locale}/psychology-attachment-style-test/",
       execution: "/{locale}/attachment-style/test",
       wiki: "https://oiyo.net/{locale}/attachment-style/about/",
     },
