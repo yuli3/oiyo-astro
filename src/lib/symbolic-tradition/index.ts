@@ -1,9 +1,9 @@
 import { BRANCHES } from "@/manifest/data/saju/branches";
 import { STEMS } from "@/manifest/data/saju/stems";
-import { birthCivilToInstant } from "@/lib/ontology/kernel/time";
-import { calculateSaju } from "@/lib/ontology/saju/logic";
+import { calculateBirthSaju } from "@/lib/ontology/saju/birth-contract";
 import { FiveElement } from "@/lib/ontology/saju/types";
 import type { EarthlyBranch, SajuPillar } from "@/lib/ontology/saju/types";
+import { createBirthRecord } from "@/lib/user/birth-record";
 
 import { SYMBOLIC_PROFILE_SCHEMA_VERSION } from "./types";
 import type {
@@ -95,12 +95,19 @@ function sunSignOf(month: number, day: number): SymbolicProfile["sunSign"] {
 export function deriveSymbolicProfile(input: BirthMoment): SymbolicProfile {
   const civil = parseBirthMoment(input);
   const locationDefaulted = input.longitude === null || input.utcOffsetMinutes === null;
-  const longitude = input.longitude ?? 135;
-  const utcOffsetMinutes = input.utcOffsetMinutes ?? 540;
-  const instant = birthCivilToInstant(civil, utcOffsetMinutes);
-  const result = calculateSaju(instant, false, "male", longitude);
+  const resolution = calculateBirthSaju(createBirthRecord({
+    civilDate: input.civilDate,
+    civilTime: input.civilTime,
+    longitude: input.longitude,
+    needsConfirmation: locationDefaulted,
+    utcOffsetMinutesAtBirth: input.utcOffsetMinutes,
+  }));
+  if (resolution.status !== "resolved") {
+    throw new RangeError("Birth UTC offset is required when birth time is known");
+  }
+  const result = resolution.standard;
   const pillars = [result.year, result.month, result.day];
-  if (input.civilTime !== null) pillars.push(result.hour);
+  if (result.hour) pillars.push(result.hour);
 
   const counts: Record<FiveElement, number> = {
     [FiveElement.EARTH]: 0,
@@ -140,7 +147,7 @@ export function deriveSymbolicProfile(input: BirthMoment): SymbolicProfile {
     uncertainties,
     saju: {
       day: pillarOf(result.day),
-      hour: input.civilTime === null ? null : pillarOf(result.hour),
+      hour: result.hour ? pillarOf(result.hour) : null,
       month: pillarOf(result.month),
       year: pillarOf(result.year),
     },

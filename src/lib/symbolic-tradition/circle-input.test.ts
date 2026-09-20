@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { deriveSymbolicProfile } from "./index";
 import { comparisonFromCivil } from "./circle-input";
 import type { City } from "@/lib/ontology/natal/signs";
 
@@ -32,11 +33,27 @@ describe("circle civil input", () => {
       time: "02:30",
     })).toThrow(/Ambiguous birth moment/);
 
-    expect(comparisonFromCivil({
+    const circle = comparisonFromCivil({
       city: washington,
       date: "2002-09-01",
       time: "09:00",
-    }).fiveElements.observedCoordinates).toBe(8);
+    });
+    const canonical = deriveSymbolicProfile({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: washington.lon,
+      utcOffsetMinutes: -240,
+    });
+    expect(circle.fiveElements).toEqual(canonical.fiveElements);
+    expect(circle.yinYang).toEqual(canonical.yinYang);
+    expect(circle.fiveElements.observedCoordinates).toBe(8);
+  });
+
+  it("requires a city when an exact birth time is supplied", () => {
+    expect(() => comparisonFromCivil({
+      date: "2002-09-01",
+      time: "09:00",
+    })).toThrow(/UTC offset/);
   });
 
   it("rejects a broken date", () => {
