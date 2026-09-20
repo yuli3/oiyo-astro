@@ -58,6 +58,9 @@ const primaryNavLinks = [
   { href: localePath(locale, '/tests'), label: { ko: '검사', en: 'Tests', ja: 'テスト', zh: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests' },
   { href: localePath(locale, '/ontology'), label: { ko: '내 지도', en: 'My Map', ja: '私の地図', zh: '我的地图', fr: 'Ma carte', es: 'Mi mapa' }[locale] ?? 'My Map' },
   { href: localePath(locale, '/fortune/today'), label: { ko: '오늘', en: 'Today', ja: '今日', zh: '今日', fr: "Aujourd'hui", es: 'Hoy' }[locale] ?? 'Today' },
+  // 2026-09-21: 아티클 697편(ko)에 헤더 진입점이 없어 65%가 고아였다.
+  // 색인 한 장이 topic 페이지 전부에 인바운드를 준다.
+  { href: localePath(locale, '/articles'), label: { ko: '읽을거리', en: 'Articles', ja: '記事', zh: '文章', fr: 'Articles', es: 'Artículos' }[locale] ?? 'Articles' },
 ];
 const secondaryNavLinks = [
   { href: localePath(locale, '/about'), label: t('nav.about') },

@@ -6,6 +6,7 @@
 // 새 글을 넣을 때도 그 확인을 먼저 한다.
 import Layout from '../../layouts/Layout.astro';
 import ArticleBody from '../../components/shared/ArticleBody.astro';
+import RelatedArticles from '../../components/shared/RelatedArticles.astro';
 import { getCollection } from 'astro:content';
 import type { Locale } from '../../i18n';
 
@@ -16,9 +17,14 @@ export async function getStaticPaths() {
     props: { entry },
   }));
 }
-const { locale } = Astro.params as { locale: Locale };
+const { locale, article: currentSlug } = Astro.params as { locale: Locale; article: string };
 const { entry } = Astro.props;
 ---
 <Layout title={entry.data.title} description={entry.data.description} locale={locale}>
   <ArticleBody entry={entry} locale={locale} />
+  <RelatedArticles
+    locale={locale}
+    topic={entry.data.topic}
+    currentSlug={currentSlug}
+  />
 </Layout>

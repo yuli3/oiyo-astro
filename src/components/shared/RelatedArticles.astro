@@ -1,0 +1,116 @@
+---
+// 같은 topic 의 다른 글. 이 컴포넌트가 아티클끼리 그물을 만든다.
+//
+// 2026-09-21 실측: ko 아티클 697편 중 458편(65%)이 자기 링크를 제외하면
+// 인바운드 0 이었다. 색인만 만들면 색인→topic→글 3단계지만, 글끼리 서로
+// 걸리면 어느 글로 들어와도 옆 글로 갈 수 있다.
+//
+// 유사도 계산은 하지 않는다. 같은 topic 최신순으로 충분하고, 근거 없는
+// 알고리즘은 복잡도만 올린다(PRD §6).
+import { getCollection } from "astro:content";
+import { topicName } from "../../lib/articles/topics";
+
+interface Props {
+  locale: string;
+  topic?: string;
+  /** 자기 자신을 빼기 위한 현재 글 slug */
+  currentSlug: string;
+  limit?: number;
+}
+
+const { locale, topic, currentSlug, limit = 6 } = Astro.props;
+
+const HEADING: Record<string, string> = {
+  ko: "같은 주제의 다른 글",
+  en: "More in this topic",
+  ja: "同じテーマの記事",
+  zh: "同主题的其他文章",
+  fr: "Autres articles sur ce thème",
+  es: "Más sobre este tema",
+};
+const ALL: Record<string, string> = {
+  ko: "전체 보기",
+  en: "See all",
+  ja: "すべて見る",
+  zh: "查看全部",
+  fr: "Tout voir",
+  es: "Ver todo",
+};
+
+const slugOf = (id: string) => id.split("/").pop()!.replace(/\.mdx$/, "");
+
+let related: { slug: string; title: string; description?: string }[] = [];
+let total = 0;
+
+if (topic) {
+  const all = await getCollection("articles");
+  const same = all
+    .filter((e) => e.data.locale === locale && e.data.topic === topic)
+    .filter((e) => slugOf(e.id) !== currentSlug);
+  total = same.length;
+  related = same
+    .sort(
+      (a, b) =>
+        new Date(b.data.pubDate ?? 0).valueOf() - new Date(a.data.pubDate ?? 0).valueOf(),
+    )
+    .slice(0, limit)
+    .map((e) => ({
+      slug: slugOf(e.id),
+      title: e.data.title,
+      description: e.data.description,
+    }));
+}
+---
+
+{related.length > 0 && (
+  <nav
+    aria-labelledby="related-articles-heading"
+    class="mx-auto mt-12 w-full max-w-3xl px-4 sm:mt-16"
+  >
+    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+      <h2
+        id="related-articles-heading"
+        class="text-base font-bold tracking-tight text-neutral-900 sm:text-lg"
+      >
+        {HEADING[locale] ?? HEADING.en}
+      </h2>
+      {topic && total > related.length && (
+        <a
+          href={`/${locale}/topic/${topic}/`}
+          class="text-sm font-semibold text-emerald-700 underline-offset-4 hover:underline"
+        >
+          {ALL[locale] ?? ALL.en} ({total})
+        </a>
+      )}
+    </div>
+
+    <ul class="divide-y divide-neutral-200 rounded-2xl border border-neutral-200 bg-white">
+      {related.map((a) => (
+        <li>
+          <a
+            href={`/${locale}/${a.slug}/`}
+            class="block px-4 py-3.5 transition-colors hover:bg-neutral-50"
+          >
+            <span class="block text-sm font-semibold leading-snug text-neutral-900">
+              {a.title}
+            </span>
+            {a.description && (
+              <span class="mt-1 line-clamp-2 block text-xs leading-relaxed text-neutral-500">
+                {a.description}
+              </span>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    {topic && (
+      <p class="mt-3 text-xs text-neutral-500">
+        <a
+          href={`/${locale}/articles/`}
+          class="underline-offset-4 hover:underline"
+        >{topicName(topic, locale)}</a>
+      </p>
+    )}
+  </nav>
+)}
