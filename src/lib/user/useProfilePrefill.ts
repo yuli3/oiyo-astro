@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
-  createBirthRecordFromParts,
   resolveBirthRecord,
+  updateBirthRecordFromParts,
 } from "./birth-record";
 import { useUserStore, type UserProfile } from "./store/user-store";
 
@@ -53,7 +53,7 @@ export function useProfilePrefill() {
     gender?: "male" | "female";
   }) {
     const { gender } = input;
-    const record = createBirthRecordFromParts(input);
+    const record = updateBirthRecordFromParts(resolveBirthRecord(profile), input);
     saveBirthRecord(record);
     if (gender) setProfile({ gender });
   }

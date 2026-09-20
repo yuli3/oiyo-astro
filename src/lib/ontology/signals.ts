@@ -19,11 +19,12 @@
  * these adapters until the `/ontology` UI finishes its V2 signal migration.
  */
 
-import { calculateSaju, analyzeSaju } from "@/lib/ontology/saju/logic";
+import { analyzeSaju } from "@/lib/ontology/saju/logic";
+import { calculateBirthSaju } from "@/lib/ontology/saju/birth-contract";
 import { useUserStore } from "@/lib/user/store/user-store";
 import { listStoredTestResults, type StoredTestResult } from "@/lib/user/test-results";
 import { collectAssessmentSignals, type OntologySignal } from "@/assessments";
-import { resolveBirthInstant, resolveBirthRecord } from "@/lib/user/birth-record";
+import { resolveBirthRecord } from "@/lib/user/birth-record";
 import type { UserProfile } from "@/lib/user/store/user-store";
 
 export interface ProfileSignals {
@@ -151,19 +152,23 @@ export function mergeAssessmentSignals(
   return next;
 }
 
-/** `calculateSaju` + `analyzeSaju` (`@/lib/ontology/saju/logic`) → the light `{element, tenGods}` signal shape. */
+/** Canonical birthplace-wall-clock pillars → the light `{element, tenGods}` signal shape. */
 function computeSajuSignal(profile: UserProfile): ProfileSignals["saju"] | null {
   const record = resolveBirthRecord(profile);
   if (!record) return null;
-  const resolution = resolveBirthInstant(record);
-  if (resolution.status !== "resolved") return null;
+  const resolution = calculateBirthSaju(record);
+  if (resolution.status !== "resolved" || !resolution.standard.hour) return null;
   try {
-    const saju = calculateSaju(
-      resolution.instant,
-      false,
-      profile.gender === "female" ? "female" : "male",
-      resolution.longitude,
-    );
+    const saju = {
+      birthDate: resolution.instant,
+      day: resolution.standard.day,
+      dayMaster: resolution.standard.day.heavenlyStem,
+      gender: profile.gender === "female" ? "female" as const : "male" as const,
+      hour: resolution.standard.hour,
+      isLunar: false,
+      month: resolution.standard.month,
+      year: resolution.standard.year,
+    };
     const analysis = analyzeSaju(saju);
     const tenGods = Object.entries(analysis.tenGodCounts)
       .filter(([, count]) => count > 0)

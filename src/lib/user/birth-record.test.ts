@@ -11,6 +11,7 @@ import {
   resolveBirthLocation,
   resolveZonedCivilTime,
   updateBirthRecord,
+  updateBirthRecordFromParts,
 } from "./birth-record";
 import { useUserStore } from "./store/user-store";
 
@@ -114,6 +115,32 @@ describe("BirthRecord V2", () => {
       zoneId: "America/New_York",
     });
     expect(resolveBirthInstant(updated).status).toBe("resolved");
+  });
+
+  it("keeps a confirmed birthplace when a numeric tool saves the same person", () => {
+    const existing = createBirthRecord({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: -77.0369,
+      needsConfirmation: false,
+      utcOffsetMinutesAtBirth: -240,
+      zoneId: "America/New_York",
+    });
+
+    expect(updateBirthRecordFromParts(existing, {
+      year: 2002,
+      month: 9,
+      day: 1,
+      hour: 9,
+      minute: 0,
+    })).toMatchObject({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: -77.0369,
+      needsConfirmation: false,
+      utcOffsetMinutesAtBirth: -240,
+      zoneId: "America/New_York",
+    });
   });
 
   it("keeps date-only consumers on the selected civil day in each runtime timezone", () => {

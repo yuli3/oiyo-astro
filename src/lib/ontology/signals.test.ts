@@ -143,6 +143,31 @@ describe("collectSignals", () => {
     expect(signals.saju?.tenGods.length).toBeGreaterThan(0);
   });
 
+  it("uses Washington birthplace wall time instead of longitude-shifted solar time", () => {
+    useUserStore.getState().setProfile({ gender: "male" });
+    useUserStore.getState().saveBirthRecord(createBirthRecord({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: -77.0369,
+      needsConfirmation: false,
+      utcOffsetMinutesAtBirth: -240,
+      zoneId: "America/New_York",
+    }));
+
+    expect(collectSignals().saju).toEqual({
+      element: "fire",
+      tenGods: [
+        "PYEON_GWAN",
+        "BI_GYEON",
+        "PYEON_IN",
+        "PYEON_JAE",
+        "JEONG_GWAN",
+        "JEONG_JAE",
+        "SANG_GWAN",
+      ],
+    });
+  });
+
   it("prefers a quiz-recorded mbti signal over the profile-store fallback", () => {
     useUserStore.getState().setProfile({ mbtiType: "entp" });
     recordTestResult({ kind: "psychometric", testId: "mbti", title: "MBTI", resultLabel: "INFJ", result: { type: "infj" } });

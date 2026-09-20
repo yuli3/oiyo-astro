@@ -151,6 +151,38 @@ export function updateBirthRecord(
   });
 }
 
+/** Numeric tool input -> canonical record without discarding a confirmed place. */
+export function updateBirthRecordFromParts(
+  existing: BirthRecordV2 | null,
+  input: {
+    year: number; month: number; day: number;
+    hour?: number | null; minute?: number | null;
+  },
+): BirthRecordV2 {
+  const draft = createBirthRecordFromParts(input);
+  if (
+    !existing
+    || existing.needsConfirmation
+    || existing.longitude === null
+    || existing.zoneId === null
+  ) return draft;
+
+  const resolved = resolveBirthLocation({
+    civilDate: draft.civilDate,
+    civilTime: draft.civilTime,
+    longitude: existing.longitude,
+    zoneId: existing.zoneId,
+  });
+  if (resolved.status !== "resolved") {
+    throw new RangeError(`Birth time is ${resolved.status} in ${existing.zoneId}`);
+  }
+  return updateBirthRecord(existing, {
+    civilDate: draft.civilDate,
+    civilTime: draft.civilTime,
+    location: resolved.location,
+  });
+}
+
 export function isBirthRecordV2(value: unknown): value is BirthRecordV2 {
   if (!value || typeof value !== "object") return false;
   const record = value as Partial<BirthRecordV2>;
