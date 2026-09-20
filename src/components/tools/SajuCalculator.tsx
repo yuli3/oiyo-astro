@@ -1,19 +1,21 @@
 import { parseSajuInputState, parseSajuTime, type SajuInputState } from '../../lib/ontology/saju/input-contract';
-import { getDayStem, getDayBranch, getHourBranch, getHourStem } from '../../lib/ontology/saju/calculator-civil';
-// 연·월주는 절기 기반이다. 역법상 연도·월 번호를 쓰면 월주가 연중 2지지
-// 어긋나고 입춘 이전 출생의 연주가 한 해 밀린다(2026-09-01 실측).
-// 일·시주는 calculator-civil 그대로다 — KASI 일주 20건과 일치하고, 시주는
-// 두 엔진이 합의했다.
-import { getSolarYearPillar, getSolarMonthPillar } from '../../lib/ontology/saju/calculator-solar';
-import { resolveJeolgiBadge } from '../../lib/ontology/saju/jeolgi-badge';
+import { calculateBirthSaju } from '../../lib/ontology/saju/birth-contract';
+import { projectSajuCalculator } from '../../lib/ontology/saju/calculator-projection';
+import { resolveJeolgiBadgeAtInstant } from '../../lib/ontology/saju/jeolgi-badge';
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField';
+import CityField from '../shared/CityField';
 import { analyzeLifeCategories } from '../../lib/ontology/saju/categories';
-import { birthCivilToInstant } from '../../lib/ontology/kernel/time';
-import { STEM_ORDER } from '../../manifest/data/saju/stems';
-import { BRANCH_ORDER } from '../../manifest/data/saju/branches';
-import type { SajuResult, HeavenlyStem, EarthlyBranch } from '../../lib/ontology/saju/types';
+import type { SajuResult } from '../../lib/ontology/saju/types';
+import { CITIES, type City } from '../../lib/ontology/natal/signs';
+import {
+  createBirthRecord,
+  resolveBirthLocation,
+  resolveBirthRecord,
+  updateBirthRecordFromParts,
+  type BirthRecordV2,
+} from '../../lib/user/birth-record';
 import YongsinSection from './saju/YongsinSection';
 import LifeCategoriesSection from './saju/LifeCategoriesSection';
 import FiveElementsOrbit from './saju/FiveElementsOrbit';
@@ -28,8 +30,8 @@ type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
 // T6/#32 permalink tool id — must stay stable, it is embedded in shared URLs.
 const PERMALINK_TOOL_ID = 'saju-calculator';
-// Birth date/time/gender fully determine the result (see `result`/`analysis`
-// useMemo below), so that is all the permalink needs to encode.
+// Version 3 encrypted links also carry the resolved birthplace record. The
+// historical offset is required to replay solar-term boundaries exactly.
 
 
 const SHARE_LABELS: Record<Locale, { share: string; shareCopied: string; shareFailed: string; privacyNote: string; legacyTitle: string; legacyBody: string; legacyOpen: string; imageShare: string; imageSharing: string; imagePrivacy: string; actions: string }> = {
@@ -39,6 +41,15 @@ const SHARE_LABELS: Record<Locale, { share: string; shareCopied: string; shareFa
   fr: { share: 'Partager un lien chiffré', shareCopied: 'Lien copié !', shareFailed: 'Impossible de créer le lien chiffré. Réessayez.', privacyNote: 'Les données de naissance sont chiffrées ; la clé reste uniquement dans le fragment URL.', legacyTitle: 'Ancien format de lien', legacyBody: 'Ce lien en clair permet de reconstituer la date et l’heure de naissance. Ouvrez-le seulement après cet avertissement.', legacyOpen: 'Ouvrir le résultat', imageShare: "Enregistrer ou partager l’image", imageSharing: 'Préparation de l’image…', imagePrivacy: "Les données de naissance ne figurent pas dans l’image.", actions: 'Enregistrer et partager le résultat' },
   es: { share: 'Compartir enlace cifrado', shareCopied: '¡Enlace copiado!', shareFailed: 'No se pudo crear el enlace cifrado. Inténtalo de nuevo.', privacyNote: 'Los datos de nacimiento se cifran; la clave permanece solo en el fragmento de la URL.', legacyTitle: 'Este enlace usa el formato anterior', legacyBody: 'Este enlace en texto claro permite reconstruir la fecha y hora de nacimiento. Ábrelo solo tras revisar este aviso.', legacyOpen: 'Abrir resultado', imageShare: 'Guardar o compartir la imagen', imageSharing: 'Preparando la imagen…', imagePrivacy: 'Los datos de nacimiento no aparecen en la imagen.', actions: 'Guardar y compartir el resultado' },
   zh: { share: '分享加密链接', shareCopied: '链接已复制!', shareFailed: '无法创建加密链接，请重试。', privacyNote: '出生信息会被加密，解密密钥只保留在网址片段中。', legacyTitle: '这是旧格式分享链接', legacyBody: '此明文链接可以还原出生日期和时间。请阅读提示后再打开。', legacyOpen: '打开结果', imageShare: '保存或分享结果图片', imageSharing: '正在生成图片…', imagePrivacy: '图片中不会包含出生信息。', actions: '保存并分享结果' },
+};
+
+const LOCATION_COPY: Record<Locale, { required: string; invalid: string; timeNeeded: string; saved: string; clear: string; unknownTime: string }> = {
+  ko: { required: '태어난 시각이 있다면 정확한 절기 계산을 위해 출생 도시도 선택해 주세요.', invalid: '이 시각은 출생지의 시간대 전환과 겹쳐요. 정확한 인접 시각을 확인하거나 시각을 비워 주세요.', timeNeeded: '용신과 항목별 해석은 태어난 시각을 알아야 계산할 수 있어요. 절기가 바뀌는 날에는 연주·월주도 실제 출생 시각에 따라 달라질 수 있어요.', saved: '저장된 출생지 시간대를 사용해요', clear: '저장 위치 지우기', unknownTime: '태어난 시각 미상' },
+  en: { required: 'Choose a birth city when the birth time is known so solar-term boundaries can be resolved accurately.', invalid: 'This time overlaps a local clock transition. Confirm a nearby exact time or leave the time blank.', timeNeeded: 'A known birth time is required for the element and life-category analysis. On a solar-term transition date, the year or month pillar may also depend on the exact time.', saved: 'Using your saved birthplace time zone', clear: 'Clear saved place', unknownTime: 'Birth time unknown' },
+  ja: { required: '出生時刻が分かる場合は、節気の境界を正確に計算するため出生都市も選んでください。', invalid: 'この時刻は現地の時刻変更と重なります。正確な近接時刻を確認するか、時刻を空欄にしてください。', timeNeeded: '用神と項目別の解釈には出生時刻が必要です。節気の切替日には、年柱・月柱も実際の出生時刻で変わる場合があります。', saved: '保存済みの出生地タイムゾーンを使用します', clear: '保存場所を消去', unknownTime: '出生時刻不明' },
+  zh: { required: '如果知道出生时间，请选择出生城市，以便准确计算节气边界。', invalid: '该时间与当地时制切换重叠。请确认邻近的准确时间，或将时间留空。', timeNeeded: '用神和分类解读需要准确的出生时间。若出生日期正逢节气交接，年柱或月柱也可能随具体时刻变化。', saved: '正在使用已保存的出生地时区', clear: '清除已保存地点', unknownTime: '出生时间未知' },
+  fr: { required: 'Si l’heure de naissance est connue, choisissez aussi la ville afin de calculer précisément les limites des termes solaires.', invalid: 'Cette heure chevauche un changement d’heure local. Confirmez une heure voisine ou laissez l’heure vide.', timeNeeded: 'L’heure de naissance est nécessaire pour l’analyse des éléments et des domaines de vie. Le jour d’un changement de terme solaire, le pilier de l’année ou du mois peut aussi varier selon l’heure exacte.', saved: 'Fuseau du lieu de naissance enregistré utilisé', clear: 'Effacer le lieu enregistré', unknownTime: 'Heure de naissance inconnue' },
+  es: { required: 'Si conoces la hora de nacimiento, elige también la ciudad para calcular con precisión los límites de los términos solares.', invalid: 'Esta hora coincide con un cambio horario local. Confirma una hora cercana o deja la hora en blanco.', timeNeeded: 'La hora de nacimiento es necesaria para el análisis de elementos y áreas de vida. En una fecha de cambio de término solar, el pilar del año o del mes también puede variar según la hora exacta.', saved: 'Se usa la zona horaria del lugar guardado', clear: 'Borrar lugar guardado', unknownTime: 'Hora de nacimiento desconocida' },
 };
 
 // ─── Heavenly Stems (天干) ────────────────────────────────────────────────────
@@ -581,6 +592,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const reading = READING_COPY[locale] ?? READING_COPY.ko;
   const roles = PILLAR_ROLES[locale] ?? PILLAR_ROLES.ko;
   const shareLabels = SHARE_LABELS[locale] ?? SHARE_LABELS.en;
+  const locationCopy = LOCATION_COPY[locale] ?? LOCATION_COPY.en;
 
   const [year, setYear] = useState(1990);
   const [month, setMonth] = useState(6);
@@ -610,11 +622,18 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [shareFailed, setShareFailed] = useState(false);
   const [legacyShare, setLegacyShare] = useState<SajuInputState | null>(null);
   const [imageSharing, setImageSharing] = useState(false);
+  const [selectedCity, setSelectedCity] = useState<City | null>(null);
+  const [cityId, setCityId] = useState('');
+  const [locationError, setLocationError] = useState('');
+  const [calculationRecord, setCalculationRecord] = useState<BirthRecordV2 | null>(null);
+  const [sharedRecord, setSharedRecord] = useState<BirthRecordV2 | null>(null);
+  const [savedLocationRecord, setSavedLocationRecord] = useState<BirthRecordV2 | null>(null);
+  const [ignoreProfileLocation, setIgnoreProfileLocation] = useState(false);
   const restoredFromPermalink = useRef(false);
   const resultTopRef = useRef<HTMLDivElement>(null);
 
   // 온톨로지에서 입력한 프로필(생년월일·시·성별)을 재사용 — 재입력 제거.
-  const { profile, parsed, saveBirth } = useProfilePrefill();
+  const { profile, parsed, saveBirthRecord, setProfile } = useProfilePrefill();
   const [prefilled, setPrefilled] = useState(false);
   useEffect(() => {
     if (prefilled || !parsed) return;
@@ -623,6 +642,12 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     setDay(parsed.day);
     setHour(parsed.hour);
     setMinute(parsed.hour === null ? null : (parsed.minute ?? 0));
+    const record = resolveBirthRecord(profile);
+    const city = CITIES.find((candidate) => candidate.zoneId === record?.zoneId && candidate.lon === record?.longitude) ?? null;
+    setSelectedCity(city);
+    setCityId(city?.id ?? '');
+    setSavedLocationRecord(city ? null : record?.zoneId ? record : null);
+    setIgnoreProfileLocation(false);
     if (profile.gender === 'male' || profile.gender === 'female') setGender(profile.gender);
     setPrefilled(true);
   }, [parsed, profile.gender, prefilled]);
@@ -641,9 +666,30 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     setDay(s.day);
     setHour(s.hour);
     setMinute(s.minute);
+    const record = s.schemaVersion === 3 ? s.birthRecord : null;
+    setSharedRecord(record);
+    setCalculationRecord(record);
+    const city = CITIES.find((candidate) => candidate.zoneId === record?.zoneId && candidate.lon === record?.longitude) ?? null;
+    setSelectedCity(city);
+    setCityId(city?.id ?? '');
+    setSavedLocationRecord(city ? null : record?.zoneId ? record : null);
+    setIgnoreProfileLocation(false);
     if (s.gender === 'male' || s.gender === 'female') setGender(s.gender);
     setPrefilled(true); // block the profile-prefill effect above from overwriting this
-    setDone(true);
+    if (record || s.hour === null) {
+      if (!record) {
+        const dateOnlyRecord = createBirthRecord({
+          civilDate: `${String(s.year).padStart(4, '0')}-${String(s.month).padStart(2, '0')}-${String(s.day).padStart(2, '0')}`,
+          civilTime: null,
+          needsConfirmation: true,
+        });
+        setCalculationRecord(dateOnlyRecord);
+      }
+      setDone(true);
+    } else {
+      setLocationError(locationCopy.required);
+      setDone(false);
+    }
   }
 
   useEffect(() => {
@@ -665,7 +711,8 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
   async function share() {
     gaEvent('share_click', { test_id: 'saju' });
-    const state: SajuInputState = { schemaVersion: 2, year, month, day, hour, minute, gender };
+    if (!calculationRecord) return;
+    const state: SajuInputState = { schemaVersion: 3, year, month, day, hour, minute, gender, birthRecord: calculationRecord };
     setShareFailed(false);
     try {
       const { url } = await createEncryptedResultPermalink(PERMALINK_TOOL_ID, state, { pageUrl: window.location.href });
@@ -681,77 +728,62 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   }
 
   async function shareImage() {
-    if (imageSharing) return;
+    if (imageSharing || !result) return;
     setImageSharing(true);
     try {
       const { shareSajuCard } = await import('../../lib/saju-share-card');
       const toPillar = (p: { label: string; stem: number; branch: number }) => ({ label: p.label, stem: STEMS[p.stem], branch: BRANCHES[p.branch], animal: BRANCH_ANIMALS[locale][p.branch], element: ELEMENTS[STEM_ELEMENT[p.stem]][locale] });
       const known = result.pillars.map(toPillar);
-      const hour = known[3] ?? { label: t.hourPillar, stem: null, branch: null, animal: '', element: SHARE_LABELS[locale]?.privacyNote ?? 'Unknown time' };
+      const hour = known[3] ?? { label: t.hourPillar, stem: null, branch: null, animal: '', element: locationCopy.unknownTime };
       await shareSajuCard({ locale, title: t.fourPillars, disclaimer: t.disclaimer, pillars: [known[0], known[1], known[2], hour], dominantElement: result.sortedElements[0] });
       gaEvent('share_click', { test_id: 'saju', share_surface: 'image' });
     } finally { setImageSharing(false); }
   }
 
+  const resolution = useMemo(
+    () => calculationRecord ? calculateBirthSaju(calculationRecord) : null,
+    [calculationRecord],
+  );
+  const projection = useMemo(
+    () => resolution ? projectSajuCalculator(resolution) : null,
+    [resolution],
+  );
   const result = useMemo(() => {
-    const yp = getSolarYearPillar(year, month, day, hour);
-    const mp = getSolarMonthPillar(year, month, day, hour);
-    const yStem = yp.stem, yBranch = yp.branch;
-    const mStem = mp.stem, mBranch = mp.branch;
-    const dStem = getDayStem(year, month, day);
-    const dBranch = getDayBranch(year, month, day);
-    const hBranch = hour !== null ? getHourBranch(hour) : null;
-    const hStem = hour !== null ? getHourStem(dStem, getHourBranch(hour)) : null;
+    if (!projection || projection.status !== 'resolved') return null;
+    const p = projection.pillars;
+    return {
+      ...projection,
+      pillars: [
+        { key: 'year', label: t.yearPillar, ...p.year },
+        { key: 'month', label: t.monthPillar, ...p.month },
+        { key: 'day', label: t.dayPillar, ...p.day },
+        ...(p.hour ? [{ key: 'hour', label: t.hourPillar, ...p.hour }] : []),
+      ],
+    };
+  }, [projection, t.yearPillar, t.monthPillar, t.dayPillar, t.hourPillar]);
 
-    const pillars = [
-      { key: 'year', label: t.yearPillar, stem: yStem, branch: yBranch },
-      { key: 'month', label: t.monthPillar, stem: mStem, branch: mBranch },
-      { key: 'day', label: t.dayPillar, stem: dStem, branch: dBranch },
-      ...(hStem !== null && hBranch !== null ? [{ key: 'hour', label: t.hourPillar, stem: hStem, branch: hBranch }] : []),
-    ];
-
-    // Dominant element: count stems + branches
-    const elementCount: Record<string, number> = { Wood: 0, Fire: 0, Earth: 0, Metal: 0, Water: 0 };
-    pillars.forEach(p => {
-      elementCount[STEM_ELEMENT[p.stem]] = (elementCount[STEM_ELEMENT[p.stem]] || 0) + 1;
-      elementCount[BRANCH_ELEMENT[p.branch]] = (elementCount[BRANCH_ELEMENT[p.branch]] || 0) + 1;
-    });
-    const dominant = Object.entries(elementCount).sort(([, a], [, b]) => b - a)[0][0];
-    const sortedElements = [...ELEMENT_ORDER].sort((a, b) => elementCount[b] - elementCount[a]);
-    const scarceElements = [...ELEMENT_ORDER].sort((a, b) => elementCount[a] - elementCount[b]);
-    const missingElements = ELEMENT_ORDER.filter(el => elementCount[el] === 0);
-
-    return { pillars, elementCount, dominant, sortedElements, scarceElements, missingElements };
-  }, [year, month, day, hour, t.yearPillar, t.monthPillar, t.dayPillar, t.hourPillar]);
-
-  // ── 용신/항목별 구조 분석 (bridge index pillars → SajuResult enum) ──
+  // 용신과 항목별 분석은 네 기둥이 모두 있을 때만 제공한다. 시각 미상에
+  // 정오 시주를 몰래 보충하면 표시(3주)와 해석(4주)이 서로 다른 결과가 된다.
   const analysis = useMemo(() => {
-    const yp2 = getSolarYearPillar(year, month, day, hour);
-    const mp2 = getSolarMonthPillar(year, month, day, hour);
-    const yStem = yp2.stem, yBranch = yp2.branch;
-    const mStem = mp2.stem, mBranch = mp2.branch;
-    const dStem = getDayStem(year, month, day), dBranch = getDayBranch(year, month, day);
-    const hKnown = hour !== null;
-    const hB = getHourBranch(hKnown ? (hour as number) : 12);
-    const hS = getHourStem(dStem, hB);
-    const S = (i: number) => STEM_ORDER[i] as unknown as HeavenlyStem;
-    const B = (i: number) => BRANCH_ORDER[i] as unknown as EarthlyBranch;
+    if (!resolution || resolution.status !== 'resolved' || !resolution.standard.hour) return null;
     const saju: SajuResult = {
-      birthDate: birthCivilToInstant({ year, month, day, hour: hKnown ? (hour as number) : 12, minute: hKnown ? (minute ?? 0) : 0 }),
-      year: { heavenlyStem: S(yStem), earthlyBranch: B(yBranch) },
-      month: { heavenlyStem: S(mStem), earthlyBranch: B(mBranch) },
-      day: { heavenlyStem: S(dStem), earthlyBranch: B(dBranch) },
-      hour: { heavenlyStem: S(hS), earthlyBranch: B(hB) },
-      dayMaster: S(dStem),
+      birthDate: resolution.instant,
+      year: resolution.standard.year,
+      month: resolution.standard.month,
+      day: resolution.standard.day,
+      hour: resolution.standard.hour,
+      dayMaster: resolution.standard.day.heavenlyStem,
       gender,
       isLunar: false,
     };
-    return { data: analyzeLifeCategories(saju), hourKnown: hKnown };
-  }, [year, month, day, hour, minute, gender]);
+    return analyzeLifeCategories(saju);
+  }, [resolution, gender]);
 
   const jeolgiBadge = useMemo(
-    () => resolveJeolgiBadge(year, month, day, hour),
-    [year, month, day, hour],
+    () => hour !== null && resolution?.status === 'resolved'
+      ? resolveJeolgiBadgeAtInstant(resolution.instant, year)
+      : null,
+    [hour, resolution, year],
   );
 
   const daysInMonth = new Date(year, month, 0).getDate();
@@ -759,8 +791,37 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   function handleCalc() {
     const clampedDay = Math.min(day, daysInMonth);
     if (day !== clampedDay) setDay(clampedDay);
-    // 입력을 프로필에 저장 → 다른 도구(별자리·바이오리듬·주기형 운세)로 전파.
-    saveBirth({ year, month, day: clampedDay, hour, minute, gender });
+    setLocationError('');
+    const civilDate = `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(clampedDay).padStart(2, '0')}`;
+    const civilTime = hour === null ? null : `${String(hour).padStart(2, '0')}:${String(minute ?? 0).padStart(2, '0')}`;
+    let record: BirthRecordV2;
+    if (selectedCity) {
+      const location = resolveBirthLocation({ civilDate, civilTime, longitude: selectedCity.lon, zoneId: selectedCity.zoneId });
+      if (location.status !== 'resolved') {
+        setLocationError(locationCopy.invalid);
+        setDone(false);
+        return;
+      }
+      record = createBirthRecord({ civilDate, civilTime, ...location.location });
+    } else {
+      try {
+        record = updateBirthRecordFromParts(savedLocationRecord ?? sharedRecord ?? (ignoreProfileLocation ? null : resolveBirthRecord(profile)), {
+          year, month, day: clampedDay, hour, minute,
+        });
+      } catch {
+        setLocationError(locationCopy.invalid);
+        setDone(false);
+        return;
+      }
+    }
+    if (calculateBirthSaju(record).status === 'needs-offset') {
+      setLocationError(locationCopy.required);
+      setDone(false);
+      return;
+    }
+    setCalculationRecord(record);
+    if (!restoredFromPermalink.current) saveBirthRecord(record);
+    if (!restoredFromPermalink.current) setProfile({ gender });
     setDone(true);
     gaEvent('test_completed', { test_id: 'saju' });
     // Direct answer must land first in the viewport after calculate.
@@ -822,6 +883,36 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           syncProfile={!restoredFromPermalink.current}
         />
 
+        <CityField
+          id="saju-calculator-city"
+          locale={locale}
+          value={cityId}
+          selected={selectedCity}
+          required={hour !== null}
+          onChange={(id, city) => {
+            setCityId(id);
+            setSelectedCity(city);
+            setSharedRecord(null);
+            setSavedLocationRecord(null);
+            setIgnoreProfileLocation(!city);
+            setLocationError('');
+            setDone(false);
+          }}
+        />
+        {savedLocationRecord?.zoneId && !selectedCity && (
+          <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-primary/20 bg-primary/[0.04] px-3 py-2 text-xs text-gray-700">
+            <span>{locationCopy.saved}: <strong>{savedLocationRecord.zoneId}</strong></span>
+            <button
+              type="button"
+              className="min-h-9 rounded-lg border border-primary/30 px-3 font-semibold text-primary"
+              onClick={() => { setSavedLocationRecord(null); setSharedRecord(null); setIgnoreProfileLocation(true); setLocationError(''); setDone(false); }}
+            >
+              {locationCopy.clear}
+            </button>
+          </div>
+        )}
+        {locationError && <p role="alert" className="text-sm font-medium leading-6 text-rose-700">{locationError}</p>}
+
         <ProfileGenderField
           locale={locale}
           label={({ ko: '성별', en: 'Gender', ja: '性別', zh: '性别', fr: 'Sexe', es: 'Sexo' } as Record<Locale, string>)[locale]}
@@ -843,7 +934,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
       </Card>
 
       {/* Results */}
-      {done && (
+      {done && result && (
         <>
           {/* Direct answer FIRST — sticky highlight, before orbit / pillars / 용신 */}
           <div
@@ -913,10 +1004,17 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           </div>
 
           {/* 용신/기신 — 이로운/해로운 기운 */}
-          <YongsinSection locale={locale} analysis={analysis.data} hourKnown={analysis.hourKnown} />
-
-          {/* 항목별 분석 — 재물/진로/연애/건강 */}
-          <LifeCategoriesSection locale={locale} analysis={analysis.data} />
+          {analysis ? (
+            <>
+              <YongsinSection locale={locale} analysis={analysis} hourKnown />
+              {/* 항목별 분석 — 재물/진로/연애/건강 */}
+              <LifeCategoriesSection locale={locale} analysis={analysis} />
+            </>
+          ) : (
+            <p className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
+              {locationCopy.timeNeeded}
+            </p>
+          )}
 
           {/* Reading map */}
           <div className="bg-card rounded-2xl border border-gray-200 p-4">
@@ -1023,7 +1121,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
           {/* Dominant element profile */}
           {(() => {
-            const el = result.dominant;
+            const el = result.dominantElement;
             const c = ELEMENT_COLORS[el];
             const traits = ELEMENT_TRAITS[el][locale];
             const lucky = LUCKY[el][locale];

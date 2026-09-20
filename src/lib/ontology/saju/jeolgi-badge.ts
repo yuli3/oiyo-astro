@@ -183,3 +183,22 @@ export function resolveJeolgiBadge(
     return null;
   }
 }
+
+/** Resolve a badge from the same absolute instant used by the canonical engine. */
+export function resolveJeolgiBadgeAtInstant(
+  birth: Date,
+  civilYear: number,
+): JeolgiBadgeResult | null {
+  try {
+    if (Number.isNaN(birth.getTime()) || !Number.isFinite(civilYear)) return null;
+    if (civilYear < KASI_YEAR_MIN || civilYear > KASI_YEAR_MAX) return { status: "unavailable" };
+    const fixtureYears = yearsInFixture();
+    if ([civilYear - 1, civilYear, civilYear + 1].some((year) => fixtureYears.has(year))) {
+      const fromKasi = fromFixture(birth);
+      if (fromKasi) return fromKasi;
+    }
+    return fromLocal(birth, civilYear);
+  } catch {
+    return null;
+  }
+}

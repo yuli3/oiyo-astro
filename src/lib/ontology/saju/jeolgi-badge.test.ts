@@ -6,6 +6,7 @@ import {
   TERM_NAMES_KO,
   monthBranchForTermIndex,
   resolveJeolgiBadge,
+  resolveJeolgiBadgeAtInstant,
 } from "./jeolgi-badge";
 import golden from "./solar-terms-kasi.json";
 
@@ -35,6 +36,16 @@ describe("resolveJeolgiBadge", () => {
     if (r?.status !== "ok") return;
     expect(r.nameKo).toBe("대한");
     expect(r.source).toBe("kasi");
+  });
+
+  it("uses the canonical instant instead of assuming the birthplace clock is KST", () => {
+    const beforeIpchun = resolveJeolgiBadgeAtInstant(new Date("2000-02-04T12:00:00Z"), 2000);
+    const afterIpchun = resolveJeolgiBadgeAtInstant(new Date("2000-02-04T14:00:00Z"), 2000);
+    expect(beforeIpchun?.status).toBe("ok");
+    expect(afterIpchun?.status).toBe("ok");
+    if (beforeIpchun?.status !== "ok" || afterIpchun?.status !== "ok") return;
+    expect(beforeIpchun.nameKo).toBe("대한");
+    expect(afterIpchun.nameKo).toBe("입춘");
   });
 
   it("falls back to local kernel for in-range years missing from fixture", () => {
