@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import type { Locale } from "../../i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
-import { signOf } from "../../lib/fortune/periodic";
+import { civilDateString, signOf } from "../../lib/fortune/periodic";
 
 interface Props {
   locale: Locale;
@@ -24,7 +24,9 @@ function todaySeed(sign: number): number {
 }
 
 function getToday(): string {
-  return new Date().toISOString().slice(0, 10);
+  // 시드(todaySeed)는 로컬 날짜를 쓰는데 화면 날짜만 UTC 였다. 한국 새벽에는
+  // 오늘 운세 옆에 어제 날짜가 찍혔다. 둘 다 로컬로 맞춘다.
+  return civilDateString();
 }
 
 // ─── Zodiac Signs ─────────────────────────────────────────────────────────────

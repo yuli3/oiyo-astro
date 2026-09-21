@@ -1,6 +1,6 @@
 // 홈 랜딩의 "운세 도배" 섹션 전용. 생년월일 없이, 12지신·별자리 각각을
 // reading() 엔진에 직접 색인으로 넣어 전체 케이스(기간×띠×별자리)를 만든다.
-import { reading, type Period, type Locale as FortuneLocale } from './periodic';
+import { civilDay, reading, type Period, type Locale as FortuneLocale } from './periodic';
 import { animalRanking, signRanking, scores, delta, grade, lucky, type Grade } from './score';
 
 type Lang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es';
@@ -128,7 +128,7 @@ function rankedCards(
   });
 }
 
-export function buildFortuneWall(locale: string, at = new Date()): WallSection[] {
+export function buildFortuneWall(locale: string, at = civilDay()): WallSection[] {
   const lang = (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(locale) ? locale : 'en') as Lang;
   const fortuneLocale = lang as FortuneLocale;
   // 같은 주기 섹션 안에서만 중복을 피한다. 주기가 다르면 겹쳐도 함께 보이지 않는다.

@@ -2,7 +2,7 @@
 // periodic.ts 의 문장 코퍼스가 "무엇을 말하는가"를 담당한다면, 이 파일은
 // "얼마나·어떤 방향으로 움직이는가"를 담당한다. 전부 결정론적(시드 = 대상+주기키)
 // 이라 같은 날 같은 사람은 항상 같은 값을 보고, 날이 바뀌면 갱신된다.
-import { periodKey, seedHash, stepIndex, type Locale, type Period } from './periodic';
+import { civilDay, periodKey, seedHash, stepIndex, type Locale, type Period } from './periodic';
 
 const hash = seedHash;
 /** 0~1 실수 */
@@ -68,7 +68,7 @@ export function axisScoreAt(base: string, period: Period, axis: Axis, t: number,
   return Math.min(99, Math.max(5, v));
 }
 
-export function scores(base: string, period: Period, d = new Date(), anchor?: FortuneAnchor): Scores {
+export function scores(base: string, period: Period, d = civilDay(), anchor?: FortuneAnchor): Scores {
   const t = stepIndex(period, d);
   const anchors = anchor?.(period, d) ?? null;
   const s = {} as Scores;
@@ -87,7 +87,7 @@ export function scores(base: string, period: Period, d = new Date(), anchor?: Fo
 export interface FlowPoint { offset: number; score: number; label: string; }
 export function flow(
   base: string, period: Period, axis: Axis = 'overall',
-  before = 3, after = 3, d = new Date(), locale: Locale = 'en', anchor?: FortuneAnchor,
+  before = 3, after = 3, d = civilDay(), locale: Locale = 'en', anchor?: FortuneAnchor,
 ): FlowPoint[] {
   const out: FlowPoint[] = [];
   for (let o = -before; o <= after; o++) {
@@ -131,7 +131,7 @@ function flowLabel(period: Period, d: Date, locale: Locale): string {
 }
 
 /** 어제(또는 지난주·지난달) 대비 총운 변화량 */
-export function delta(base: string, period: Period, d = new Date(), anchor?: FortuneAnchor): number {
+export function delta(base: string, period: Period, d = civilDay(), anchor?: FortuneAnchor): number {
   const prev = shift(period, d, -1);
   return scores(base, period, d, anchor).overall - scores(base, period, prev, anchor).overall;
 }
@@ -144,9 +144,9 @@ function rankBy(prefix: string, count: number, period: Period, d: Date): RankRow
     .map((r, i) => ({ ...r, rank: i + 1 }));
 }
 /** 12지신 순위 1~12위 */
-export function animalRanking(period: Period, d = new Date()): RankRow[] { return rankBy('animal', 12, period, d); }
+export function animalRanking(period: Period, d = civilDay()): RankRow[] { return rankBy('animal', 12, period, d); }
 /** 별자리 순위 1~12위 */
-export function signRanking(period: Period, d = new Date()): RankRow[] { return rankBy('sign', 12, period, d); }
+export function signRanking(period: Period, d = civilDay()): RankRow[] { return rankBy('sign', 12, period, d); }
 
 // ── 행운 아이템 ──
 const LUCKY_COLORS: { hex: string; name: Record<Locale, string> }[] = [
@@ -192,7 +192,7 @@ const LUCKY_ITEMS: Record<Locale, string[]> = {
 };
 
 export interface Lucky { colorHex: string; colorName: string; number: number; direction: string; time: string; item: string; }
-export function lucky(base: string, period: Period, locale: Locale, d = new Date()): Lucky {
+export function lucky(base: string, period: Period, locale: Locale, d = civilDay()): Lucky {
   const pk = periodKey(period, d);
   const at = <T,>(arr: T[], axis: string): T => arr[hash(`${base}|${pk}|${axis}`) % arr.length];
   const c = at(LUCKY_COLORS, 'color');

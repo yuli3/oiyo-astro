@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react';
-import { reading, periodKey, animalOf, signOf, FIVE_ELEMENTS, type Locale, type Period } from '../../lib/fortune/periodic';
+import { reading, periodKey, animalOf, signOf, FIVE_ELEMENTS, civilDay, civilDateString, type Locale, type Period } from '../../lib/fortune/periodic';
 import { comparisonFromCivil, dayMasterElement } from '@/lib/symbolic-tradition/circle-input';
 import { makeFortuneAnchor } from '@/lib/symbolic-tradition/day-harmony';
 import { AXES, scores, flow, delta, grade, lucky, animalRanking, signRanking, type Axis, type Grade } from '../../lib/fortune/score';
@@ -172,11 +172,12 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
   // 연속 방문 기록. 서버로 나가지 않고 이 브라우저에만 남는 가벼운 재방문 장치다.
   useEffect(() => {
     try {
-      const today = new Date().toISOString().slice(0, 10);
+      const today = civilDateString();
       const raw = localStorage.getItem('oiyo:fortune-streak');
       const prev = raw ? (JSON.parse(raw) as { last: string; n: number }) : null;
       if (prev?.last === today) { setStreak(prev.n); return; }
-      const yday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+      const now = new Date();
+      const yday = civilDateString(new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1));
       const n = prev?.last === yday ? prev.n + 1 : 1;
       localStorage.setItem('oiyo:fortune-streak', JSON.stringify({ last: today, n }));
       setStreak(n);
@@ -220,17 +221,21 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
     // 카드마다 자기 점수 등급을 넘겨, 85점 카드에 소모적인 문장이 뜨는 모순을 막는다.
     const distinct = (el: number, base: string, g: Grade) => {
       for (let salt = 0; salt < 8; salt++) {
-        const r = reading(el, period, salt === 0 ? base : `${base}~${salt}`, locale, new Date(), g);
+        const r = reading(el, period, salt === 0 ? base : `${base}~${salt}`, locale, now, g);
         if (!used.has(r.opening)) { used.add(r.opening); return r; }
       }
-      return reading(el, period, base, locale, new Date(), g);
+      return reading(el, period, base, locale, now, g);
     };
     // 점수의 뼈대는 그날과 이 사람의 실제 관계다(세운 결정 1안, 2026-09-22).
     // 예전에는 생년월일을 해시 시드로만 써서 숫자가 사주와 무관했다 — 관계와의
     // 상관이 -0.015 였다. 이제 아홉 렌즈에서 나온 앵커가 방향을 정하고 노이즈는
     // 흐름을 매끄럽게 하는 결로만 남는다(새 점수와 관계의 상관 0.848).
     const anchor = makeFortuneAnchor(comparisonFromCivil({ date: birthDate }));
-    const sc = scores(seed, period, new Date(), anchor);
+    // "오늘"은 보는 사람의 로컬 날짜다. 한 번만 잡아 카드·흐름·변화량이 같은
+    // 날을 보게 한다 — 예전에는 new Date() 를 곳곳에서 넘겨 UTC 날짜가 오늘이
+    // 됐고, 한국 새벽에는 어제 운세가 떴다.
+    const now = civilDay();
+    const sc = scores(seed, period, now, anchor);
     const aRank = animalRanking(period);
     const sRank = signRanking(period);
     const aScore = aRank.find((r) => r.idx === aIdx)!.score;
@@ -239,12 +244,13 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
       pk: periodKey(period),
       seed,
       anchor,
+      now,
       saju: { el: FIVE_ELEMENTS[elemIdx], r: distinct(elemIdx, seed, grade(sc.overall)) },
       // 12지신·별자리도 오행에 매핑해 어조를 달리(축을 바꿔 다른 문장이 나오게 base 다르게)
       animal: { idx: aIdx, r: distinct((aIdx * 2 + 1) % 5, `animal-${aIdx}`, grade(aScore)) },
       sign: { idx: sIdx, r: distinct((sIdx + 2) % 5, `sign-${sIdx}`, grade(sScore)) },
       sc,
-      dl: delta(seed, period, new Date(), anchor),
+      dl: delta(seed, period, now, anchor),
       lk: lucky(seed, period, locale),
       animalRank: aRank,
       signRank: sRank,
@@ -252,7 +258,7 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
   }, [birth, period, locale]);
 
   const flowPoints = useMemo(
-    () => (result ? flow(result.seed, period, flowAxis, 3, 3, new Date(), locale, result.anchor) : []),
+    () => (result ? flow(result.seed, period, flowAxis, 3, 3, result.now, locale, result.anchor) : []),
     [result, period, flowAxis, locale],
   );
 
@@ -330,7 +336,7 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
             label={t.birthDate}
             value={dateInput}
             onChange={setDateInput}
-            max={new Date().toISOString().slice(0, 10)}
+            max={civilDateString()}
             className="w-full"
           />
           <button

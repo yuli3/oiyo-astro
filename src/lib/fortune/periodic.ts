@@ -5,7 +5,32 @@ export type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es';
 export type Period = 'today' | 'weekly' | 'monthly' | 'yearly';
 
 // ── 결정론적 시드 ──
-export function periodKey(p: Period, d = new Date()): string {
+/**
+ * "오늘"의 단일 기준 — 보는 사람의 **로컬 달력 날짜**를 UTC 자정 Date 에 담는다.
+ *
+ * 이 엔진의 함수들은 UTC 필드(getUTCFullYear 등)로 날짜를 읽는다. 그런데
+ * 호출자가 `new Date()` 를 그대로 넘기면 UTC 날짜가 "오늘"이 되어, 한국에서는
+ * 자정부터 오전 9시까지 **어제 운세**가 떴다(2026-09-22 오전에 화면이 9-21).
+ *
+ * 내부 로직을 바꾸는 대신 입구에서 뜻을 바로잡는다. 로컬 연·월·일을 읽어 그
+ * 날짜의 UTC 자정으로 만들면, 이후 UTC 필드를 읽는 모든 함수가 로컬 날짜를
+ * 보게 된다.
+ *
+ * **한 번만 적용한다.** 이미 이 함수를 거친 값에 다시 적용하면 서반구(UTC-)
+ * 에서는 하루가 밀린다 — UTC 자정은 그쪽 로컬로 전날 저녁이기 때문이다.
+ * 그래서 엔진 안에서는 부르지 않고, 인자를 생략했을 때의 기본값과 호출부의
+ * "지금"에서만 쓴다.
+ */
+export function civilDay(d: Date = new Date()): Date {
+  return new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+}
+
+/** 로컬 달력 날짜 문자열(YYYY-MM-DD). toISOString 은 UTC 라 쓰지 않는다. */
+export function civilDateString(d: Date = new Date()): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+export function periodKey(p: Period, d = civilDay()): string {
   const y = d.getUTCFullYear();
   if (p === 'yearly') return `${y}`;
   if (p === 'monthly') return `${y}-M${d.getUTCMonth() + 1}`;
@@ -36,7 +61,7 @@ export function seedHash(s: string): number {
 const hash = seedHash;
 
 /** 주기 순번(오늘=일수, 주간=주차, 월간=월수, 연간=연수). 순환 추첨의 x축이다. */
-export function stepIndex(p: Period, d = new Date()): number {
+export function stepIndex(p: Period, d = civilDay()): number {
   const ms = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
   if (p === 'today') return Math.floor(ms / 86400000);
   if (p === 'weekly') return Math.floor(ms / (7 * 86400000));
@@ -929,7 +954,7 @@ export interface FortuneReading {
   opening: string; focus: string; advice: string; caution: string; keyword: string;
 }
 export function reading(
-  elementIdx: number, period: Period, base: string, locale: Locale, d = new Date(),
+  elementIdx: number, period: Period, base: string, locale: Locale, d = civilDay(),
   /** 점수 등급. 주면 오프닝 어조를 등급에 맞춰 고른다. */
   scoreGrade?: 'great' | 'good' | 'normal' | 'careful',
 ): FortuneReading {
