@@ -28,6 +28,13 @@ const EL_COLOR: Record<string, string> = {
 const T: Record<Lang, Record<string, string>> = {
   ko: {
     title: "우리 기운",
+    polarityYang: "양이 뚜렷하게 앞서요 — 이 기질이 밖으로 크게 드러나는 모임이에요.",
+    polarityYin: "음이 뚜렷하게 깊어요 — 이 기질이 안으로 쌓이는 모임이에요.",
+    tagsTitle: "이 모임의 결",
+    oddOne: "혼자 다른 결",
+    pairShared: "둘 다 가진 기운",
+    pairOnly: "{name}만 가진 기운",
+    pairNeither: "둘 다 없는 기운",
     abundant: "몰린 기운",
     scarce: "얇은 기운",
     missing: "아무도 없는 기운",
@@ -50,6 +57,13 @@ const T: Record<Lang, Record<string, string>> = {
   },
   en: {
     title: "Our energies",
+    polarityYang: "Yang clearly leads — this temperament shows outwardly.",
+    polarityYin: "Yin clearly runs deep — this temperament builds up inside.",
+    tagsTitle: "This group’s grain",
+    oddOne: "The one who differs",
+    pairShared: "Both of you have",
+    pairOnly: "Only {name} has",
+    pairNeither: "Neither of you has",
     abundant: "Concentrated", scarce: "Thin", missing: "Nobody has it",
     spreadEven: "The five spread evenly",
     spreadLeaning: "Tilted a little to one side",
@@ -65,6 +79,13 @@ const T: Record<Lang, Record<string, string>> = {
   },
   ja: {
     title: "わたしたちの気",
+    polarityYang: "陽がはっきり先行 — この気質が外に大きく出る集まりです。",
+    polarityYin: "陰がはっきり深い — この気質が内に積もる集まりです。",
+    tagsTitle: "この集まりの質",
+    oddOne: "ひとりだけ違う質",
+    pairShared: "二人とも持つ気",
+    pairOnly: "{name}だけが持つ気",
+    pairNeither: "二人とも持たない気",
     abundant: "偏った気", scarce: "薄い気", missing: "誰も持たない気",
     spreadEven: "五つが均等に散っています",
     spreadLeaning: "少し片寄っています",
@@ -80,6 +101,13 @@ const T: Record<Lang, Record<string, string>> = {
   },
   zh: {
     title: "我们的气",
+    polarityYang: "阳明显占先——这种气质向外显露。",
+    polarityYin: "阴明显深沉——这种气质向内积累。",
+    tagsTitle: "这个组合的质地",
+    oddOne: "唯一不同的质地",
+    pairShared: "两人都有的气",
+    pairOnly: "只有{name}有的气",
+    pairNeither: "两人都没有的气",
     abundant: "偏多的气", scarce: "偏薄的气", missing: "无人具备的气",
     spreadEven: "五行分布均匀",
     spreadLeaning: "略微偏向一侧",
@@ -95,6 +123,13 @@ const T: Record<Lang, Record<string, string>> = {
   },
   fr: {
     title: "Nos énergies",
+    polarityYang: "Le yang domine nettement : ce tempérament se montre au dehors.",
+    polarityYin: "Le yin est nettement profond : ce tempérament s’accumule au dedans.",
+    tagsTitle: "Le grain de ce groupe",
+    oddOne: "Celui qui diffère",
+    pairShared: "Vous l’avez tous les deux",
+    pairOnly: "Seul·e {name} l’a",
+    pairNeither: "Aucun de vous ne l’a",
     abundant: "Concentrée", scarce: "Mince", missing: "Personne ne l’a",
     spreadEven: "Les cinq se répartissent également",
     spreadLeaning: "Légèrement penché d’un côté",
@@ -110,6 +145,13 @@ const T: Record<Lang, Record<string, string>> = {
   },
   es: {
     title: "Nuestras energías",
+    polarityYang: "El yang domina con claridad: este temperamento se muestra hacia fuera.",
+    polarityYin: "El yin es claramente profundo: este temperamento se acumula por dentro.",
+    tagsTitle: "El grano de este grupo",
+    oddOne: "Quien es distinto",
+    pairShared: "Lo tenéis los dos",
+    pairOnly: "Solo {name} lo tiene",
+    pairNeither: "Ninguno lo tiene",
     abundant: "Concentrada", scarce: "Escasa", missing: "Nadie la tiene",
     spreadEven: "Los cinco se reparten por igual",
     spreadLeaning: "Algo inclinado a un lado",
@@ -192,6 +234,24 @@ const SKEW_CARE: Record<Lang, Record<string, string>> = {
   },
 };
 
+
+/**
+ * 모임에 없거나 얇은 기운이 부르는 것. 몰린 기운의 함정(SKEW_CARE)만 말하던
+ * 것을 보강했다 — 없는 기운은 채울 사람이 아예 없다는 뜻이라 더 중요하다.
+ * 원소 순서: 목 · 화 · 토 · 금 · 수.
+ */
+const THIN_CARE: Record<Lang, string[]> = {"ko": ["시작하는 힘이 비어요. 누가 먼저 판을 벌일지 정해 두세요.", "달아오르는 힘이 비어요. 분위기를 띄울 사람이 필요해요.", "받쳐 주는 바닥이 비어요. 약속과 살림을 맡을 사람을 정해 두세요.", "끊고 맺는 힘이 비어요. 결론을 낼 사람을 정해 두세요.", "한 번 더 생각하는 힘이 비어요. 속도를 늦출 사람이 필요해요."], "en": ["The starting force is missing. Decide who opens things.", "The warming force is missing. Someone needs to lift the mood.", "The ground beneath is missing. Name who keeps promises and house.", "The force that cuts and concludes is missing. Name who closes.", "The second-thought force is missing. Someone needs to slow things down."], "ja": ["始める力が空いています。誰が先に動くか決めておきましょう。", "温める力が空いています。場を盛り上げる人が要ります。", "支える土台が空いています。約束と切り盛りの担当を決めましょう。", "断ち結ぶ力が空いています。結論を出す人を決めましょう。", "もう一度考える力が空いています。速度を落とす人が要ります。"], "zh": ["起步的力量空着。先定好谁来开局。", "升温的力量空着。需要有人带动气氛。", "托底的力量空着。定好谁管约定和日常。", "决断收尾的力量空着。定好谁来下结论。", "再想一遍的力量空着。需要有人把速度放慢。"], "fr": ["La force de départ manque. Décidez qui lance.", "La force qui réchauffe manque. Il faut quelqu’un pour élever l’ambiance.", "Le socle manque. Nommez qui tient promesses et maison.", "La force qui tranche et conclut manque. Nommez qui clôt.", "La force du second regard manque. Il faut quelqu’un pour ralentir."], "es": ["Falta la fuerza de arranque. Decidid quién abre.", "Falta la fuerza que calienta. Hace falta quien suba el ánimo.", "Falta el suelo que sostiene. Nombrad quién lleva promesas y casa.", "Falta la fuerza que corta y concluye. Nombrad quién cierra.", "Falta la fuerza de pensarlo dos veces. Hace falta quien frene."]};
+
+/**
+ * 오행 밖의 체계에서 모임이 몰렸을 때의 한 줄. 몰림은 우연 확률 5% 미만일
+ * 때만 선다(group-synthesis.ts). 마야 색 계열의 뜻은 드림스펠의 네 계열
+ * (시작·정제·변형·성숙), 삼합은 각 국(局)의 오행에서 온다.
+ */
+const TAG_TEXT: Record<Lang, Record<string, Record<string, string>>> = {"ko": {"mayanColor": {"red": "마야 · 붉은 계열이 모였어요 — 시작하고 불붙이는 결", "white": "마야 · 흰 계열이 모였어요 — 다듬고 정리하는 결", "blue": "마야 · 푸른 계열이 모였어요 — 바꾸고 변형하는 결", "yellow": "마야 · 노란 계열이 모였어요 — 무르익혀 거두는 결"}, "zodiacTrine": {"0": "띠 · 원숭이·쥐·용(물의 삼합)이 모였어요 — 흐르고 모으는 결", "1": "띠 · 돼지·토끼·양(나무의 삼합)이 모였어요 — 자라고 넓히는 결", "2": "띠 · 호랑이·말·개(불의 삼합)가 모였어요 — 타오르고 밀어붙이는 결", "3": "띠 · 뱀·닭·소(쇠의 삼합)가 모였어요 — 다듬고 결단하는 결"}, "celticSeason": {"0": "켈트 · 겨울 나무가 모였어요 — 움츠려 준비하는 결", "1": "켈트 · 봄 나무가 모였어요 — 싹 틔우는 결", "2": "켈트 · 여름 나무가 모였어요 — 한창 뻗는 결", "3": "켈트 · 가을 나무가 모였어요 — 거두고 맺는 결"}}, "en": {"mayanColor": {"red": "Mayan · red family gathered — the grain that starts and ignites", "white": "Mayan · white family gathered — the grain that refines and sorts", "blue": "Mayan · blue family gathered — the grain that changes and transforms", "yellow": "Mayan · yellow family gathered — the grain that ripens and harvests"}, "zodiacTrine": {"0": "Zodiac · Monkey, Rat, Dragon (water trine) gathered — flowing and collecting", "1": "Zodiac · Pig, Rabbit, Goat (wood trine) gathered — growing and widening", "2": "Zodiac · Tiger, Horse, Dog (fire trine) gathered — blazing and pushing", "3": "Zodiac · Snake, Rooster, Ox (metal trine) gathered — refining and deciding"}, "celticSeason": {"0": "Celtic · winter trees gathered — the grain that gathers in and prepares", "1": "Celtic · spring trees gathered — the grain that sprouts", "2": "Celtic · summer trees gathered — the grain in full reach", "3": "Celtic · autumn trees gathered — the grain that harvests and concludes"}}, "ja": {"mayanColor": {"red": "マヤ · 赤の系統が集まった — 始めて火をつける質", "white": "マヤ · 白の系統が集まった — 磨いて整える質", "blue": "マヤ · 青の系統が集まった — 変えて変容させる質", "yellow": "マヤ · 黄の系統が集まった — 熟して刈り取る質"}, "zodiacTrine": {"0": "干支 · 申子辰（水の三合）が集まった — 流れて集める質", "1": "干支 · 亥卯未（木の三合）が集まった — 育ち広げる質", "2": "干支 · 寅午戌（火の三合）が集まった — 燃えて押し進む質", "3": "干支 · 巳酉丑（金の三合）が集まった — 磨いて決断する質"}, "celticSeason": {"0": "ケルト · 冬の木が集まった — 身を縮めて備える質", "1": "ケルト · 春の木が集まった — 芽吹く質", "2": "ケルト · 夏の木が集まった — 盛んに伸びる質", "3": "ケルト · 秋の木が集まった — 刈り取り結ぶ質"}}, "zh": {"mayanColor": {"red": "玛雅 · 红色系聚集——开创点燃的质地", "white": "玛雅 · 白色系聚集——打磨整理的质地", "blue": "玛雅 · 蓝色系聚集——改变转化的质地", "yellow": "玛雅 · 黄色系聚集——成熟收获的质地"}, "zodiacTrine": {"0": "生肖 · 申子辰（水三合）聚集——流动汇聚", "1": "生肖 · 亥卯未（木三合）聚集——生长扩展", "2": "生肖 · 寅午戌（火三合）聚集——燃烧推进", "3": "生肖 · 巳酉丑（金三合）聚集——打磨决断"}, "celticSeason": {"0": "凯尔特 · 冬之树聚集——收敛准备", "1": "凯尔特 · 春之树聚集——萌发", "2": "凯尔特 · 夏之树聚集——正当伸展", "3": "凯尔特 · 秋之树聚集——收获收束"}}, "fr": {"mayanColor": {"red": "Maya · famille rouge réunie — le grain qui lance et allume", "white": "Maya · famille blanche réunie — le grain qui affine et range", "blue": "Maya · famille bleue réunie — le grain qui change et transforme", "yellow": "Maya · famille jaune réunie — le grain qui mûrit et récolte"}, "zodiacTrine": {"0": "Zodiaque · Singe, Rat, Dragon (trigone de l’eau) — couler et rassembler", "1": "Zodiaque · Cochon, Lièvre, Chèvre (trigone du bois) — croître et s’étendre", "2": "Zodiaque · Tigre, Cheval, Chien (trigone du feu) — brûler et pousser", "3": "Zodiaque · Serpent, Coq, Bœuf (trigone du métal) — affiner et trancher"}, "celticSeason": {"0": "Celte · arbres d’hiver réunis — se replier et préparer", "1": "Celte · arbres de printemps réunis — germer", "2": "Celte · arbres d’été réunis — pleine extension", "3": "Celte · arbres d’automne réunis — récolter et conclure"}}, "es": {"mayanColor": {"red": "Maya · familia roja reunida — el grano que inicia y enciende", "white": "Maya · familia blanca reunida — el grano que pule y ordena", "blue": "Maya · familia azul reunida — el grano que cambia y transforma", "yellow": "Maya · familia amarilla reunida — el grano que madura y cosecha"}, "zodiacTrine": {"0": "Zodiaco · Mono, Rata, Dragón (trígono del agua) — fluir y reunir", "1": "Zodiaco · Cerdo, Conejo, Cabra (trígono de la madera) — crecer y ampliar", "2": "Zodiaco · Tigre, Caballo, Perro (trígono del fuego) — arder y empujar", "3": "Zodiaco · Serpiente, Gallo, Buey (trígono del metal) — pulir y decidir"}, "celticSeason": {"0": "Celta · árboles de invierno reunidos — recogerse y preparar", "1": "Celta · árboles de primavera reunidos — brotar", "2": "Celta · árboles de verano reunidos — en plena extensión", "3": "Celta · árboles de otoño reunidos — cosechar y cerrar"}}};
+
+/** 혼자 다른 사람 칩에 쓰는 짧은 칸 이름. */
+const CATEGORY_NAME: Record<Lang, Record<string, Record<string, string>>> = {"ko": {"mayanColor": {"red": "마야 붉은 계열", "white": "마야 흰 계열", "blue": "마야 푸른 계열", "yellow": "마야 노란 계열"}, "zodiacTrine": {"0": "띠 물의 삼합", "1": "띠 나무의 삼합", "2": "띠 불의 삼합", "3": "띠 쇠의 삼합"}, "celticSeason": {"0": "켈트 겨울", "1": "켈트 봄", "2": "켈트 여름", "3": "켈트 가을"}}, "en": {"mayanColor": {"red": "Mayan red", "white": "Mayan white", "blue": "Mayan blue", "yellow": "Mayan yellow"}, "zodiacTrine": {"0": "water trine", "1": "wood trine", "2": "fire trine", "3": "metal trine"}, "celticSeason": {"0": "Celtic winter", "1": "Celtic spring", "2": "Celtic summer", "3": "Celtic autumn"}}, "ja": {"mayanColor": {"red": "マヤ赤", "white": "マヤ白", "blue": "マヤ青", "yellow": "マヤ黄"}, "zodiacTrine": {"0": "水の三合", "1": "木の三合", "2": "火の三合", "3": "金の三合"}, "celticSeason": {"0": "ケルト冬", "1": "ケルト春", "2": "ケルト夏", "3": "ケルト秋"}}, "zh": {"mayanColor": {"red": "玛雅红", "white": "玛雅白", "blue": "玛雅蓝", "yellow": "玛雅黄"}, "zodiacTrine": {"0": "水三合", "1": "木三合", "2": "火三合", "3": "金三合"}, "celticSeason": {"0": "凯尔特冬", "1": "凯尔特春", "2": "凯尔特夏", "3": "凯尔特秋"}}, "fr": {"mayanColor": {"red": "maya rouge", "white": "maya blanc", "blue": "maya bleu", "yellow": "maya jaune"}, "zodiacTrine": {"0": "trigone de l’eau", "1": "trigone du bois", "2": "trigone du feu", "3": "trigone du métal"}, "celticSeason": {"0": "hiver celte", "1": "printemps celte", "2": "été celte", "3": "automne celte"}}, "es": {"mayanColor": {"red": "maya rojo", "white": "maya blanco", "blue": "maya azul", "yellow": "maya amarillo"}, "zodiacTrine": {"0": "trígono del agua", "1": "trígono de la madera", "2": "trígono del fuego", "3": "trígono del metal"}, "celticSeason": {"0": "invierno celta", "1": "primavera celta", "2": "verano celta", "3": "otoño celta"}}};
+
 export default function CircleSynthesis({
   locale,
   synthesis,
@@ -209,8 +269,17 @@ export default function CircleSynthesis({
   const spreadLine = spread === "even" ? t.spreadEven : spread === "leaning" ? t.spreadLeaning : t.spreadSkewed;
   const tiltLine = polarity.tilt === "balanced" ? t.tiltBalanced : polarity.tilt === "yang" ? t.tiltYang : t.tiltYin;
   const polarityTotal = Math.max(1, polarity.yang + polarity.yin);
-  const cares = elements.abundant.map((element) => SKEW_CARE[lang][element]).filter(Boolean);
-  const helpers = contributions.filter((item) => item.supplies.length || item.sole.length);
+  // 조심할 점 — 몰린 기운의 함정과, 없는·얇은 기운이 부르는 빈자리를 함께 말한다.
+  const cares = [
+    ...elements.abundant.map((element) => ({ element, line: SKEW_CARE[lang][element] })),
+    ...[...elements.missing, ...elements.scarce].map((element) => ({
+      element,
+      line: THIN_CARE[lang][GROUP_ELEMENT_ORDER.indexOf(element)],
+    })),
+  ].filter((item) => item.line);
+  const helpers = contributions.filter((item) => item.supplies.length || item.sole.length || item.distinctions.length);
+  const { pair, tags } = synthesis;
+  const labelOf = (id: string) => contributions.find((item) => item.id === id)?.label ?? id;
 
   const chips = (label: string, list: FiveElement[], tone: string) =>
     list.length ? (
@@ -230,6 +299,25 @@ export default function CircleSynthesis({
       {/* 모임의 이름이 먼저 온다. 숫자는 그 이름의 근거로 아래에 따라붙는다. */}
       <h2 className="mt-1 text-2xl font-black leading-tight text-foreground sm:text-3xl">{epithet.title}</h2>
       <p className="mt-2 text-sm leading-relaxed text-foreground">{epithet.line}</p>
+      {/* 별명은 오행 축에서 나온다. 음양이 우연으로 보기 어려울 만큼 기울었으면
+          같은 별명이라도 결이 달라서 한 줄로 덧붙인다. */}
+      {polarity.pronounced && (
+        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+          {polarity.yang > polarity.yin ? t.polarityYang : t.polarityYin}
+        </p>
+      )}
+      {tags.length > 0 && (
+        <div className="mt-3">
+          <p className="text-[11px] font-bold text-muted-foreground">{t.tagsTitle}</p>
+          <ul className="mt-1 space-y-1">
+            {tags.map((tag) => (
+              <li key={`${tag.system}-${tag.category}`} className="text-xs leading-relaxed text-foreground">
+                {TAG_TEXT[lang][tag.system]?.[tag.category]}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* 오행 막대. 기대값에서 많이 벗어난 것일수록 진하게 둔다. */}
       <div className="mt-4 space-y-2">
@@ -263,16 +351,35 @@ export default function CircleSynthesis({
 
       <div className="mt-3 space-y-1.5">
         {chips(t.abundant, elements.abundant, "bg-primary/15 text-primary-strong")}
-        {chips(t.scarce, elements.scarce, "bg-muted text-muted-foreground")}
-        {chips(t.missing, elements.missing, "bg-red-50 text-red-800")}
+        {pair ? (
+          // 둘뿐이면 좌표가 열여섯이라 "얇다"는 판정이 설 수 없다. 대신 누가
+          // 무엇을 가졌는지로 말한다.
+          <>
+            {chips(t.pairShared, pair.shared, "bg-primary/10 text-primary-strong")}
+            {Object.entries(pair.only).map(([id, list]) => (
+              <div key={id}>{chips(t.pairOnly.replace("{name}", labelOf(id)), list, "bg-amber-100 text-amber-900")}</div>
+            ))}
+            {chips(t.pairNeither, pair.neither, "bg-red-50 text-red-800")}
+          </>
+        ) : (
+          <>
+            {chips(t.scarce, elements.scarce, "bg-muted text-muted-foreground")}
+            {chips(t.missing, elements.missing, "bg-red-50 text-red-800")}
+          </>
+        )}
       </div>
 
       {cares.length > 0 && (
         <div className="mt-4 rounded-2xl bg-muted/40 p-3">
           <p className="text-[11px] font-bold text-muted-foreground">{t.careTitle}</p>
           <ul className="mt-1 space-y-1">
-            {cares.map((line) => (
-              <li key={line} className="text-sm leading-relaxed text-foreground">{line}</li>
+            {cares.map((item) => (
+              <li key={`${item.element}-${item.line}`} className="flex gap-2 text-sm leading-relaxed text-foreground">
+                <span className="mt-0.5 shrink-0 rounded-full px-2 py-0.5 text-[10px] font-black text-white" style={{ backgroundColor: EL_COLOR[item.element] }}>
+                  {name(item.element)}
+                </span>
+                <span>{item.line}</span>
+              </li>
             ))}
           </ul>
         </div>
@@ -314,6 +421,12 @@ export default function CircleSynthesis({
                 {item.sole.map((element) => (
                   <span key={`o${element}`} className="rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-900">
                     {t.sole} · {name(element)}
+                  </span>
+                ))}
+                {/* 모두가 한쪽에 몰린 체계에서 혼자 다른 사람 — 모임에 다른 결을 넣는다. */}
+                {item.distinctions.map((d) => (
+                  <span key={`d${d.system}`} className="rounded-full bg-sky-100 px-2 py-0.5 text-[11px] font-bold text-sky-900">
+                    {t.oddOne} · {CATEGORY_NAME[lang][d.system]?.[d.category]}
                   </span>
                 ))}
               </li>

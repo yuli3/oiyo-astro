@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 
 import { comparisonFromCivil } from "./circle-input";
-import { GROUP_ELEMENT_ORDER, synthesizeGroup, type GroupMember } from "./group-synthesis";
+import { CATEGORY_BASE_RATE, GROUP_ELEMENT_ORDER, synthesizeGroup, type GroupMember } from "./group-synthesis";
+import { CELTIC_SEASON, TRINE_GROUPS } from "./index";
 
 /** 1960~2010 에 흩뿌린 모임을 만든다. 격자를 쓰지 않는 이유는 lens-quality 와 같다. */
 function groups(size: number, count: number): GroupMember[][] {
@@ -124,3 +125,78 @@ describe("모임 종합 — 판정이 흔해지지 않는가", () => {
     expect(skewed / all.length).toBeLessThan(0.3);
   });
 });
+
+describe("모임 종합 — 오행 밖의 체계", () => {
+  it("체계별 기저 비율 표가 실제와 맞다", () => {
+    const start = Date.UTC(1950, 0, 1);
+    const tally = { mayanColor: {} as Record<string, number>, zodiacTrine: {} as Record<string, number>, celticSeason: {} as Record<string, number> };
+    const days = 4383; // 12년 — 삼합이 네 무리를 고르게 돈다
+    for (let d = 0; d < days; d += 1) {
+      const p = comparisonFromCivil({ date: new Date(start + d * 86_400_000).toISOString().slice(0, 10) });
+      const trine = String(TRINE_GROUPS.findIndex((g) => g.includes(p.chineseZodiac.branch)));
+      const season = String(CELTIC_SEASON[p.celticTree.id] ?? 0);
+      tally.mayanColor[p.mayanKin.color] = (tally.mayanColor[p.mayanKin.color] ?? 0) + 1;
+      tally.zodiacTrine[trine] = (tally.zodiacTrine[trine] ?? 0) + 1;
+      tally.celticSeason[season] = (tally.celticSeason[season] ?? 0) + 1;
+    }
+    for (const [system, rates] of Object.entries(CATEGORY_BASE_RATE)) {
+      for (const [category, expected] of Object.entries(rates)) {
+        const actual = (tally[system as keyof typeof tally][category] ?? 0) / days;
+        expect(Math.abs(actual - expected), `${system}:${category} 표 ${expected} 실측 ${actual.toFixed(3)}`).toBeLessThan(0.02);
+      }
+    }
+  });
+
+  it("2인에게는 태그를 세우지 않고 따로 말한다", () => {
+    for (const people of groups(2, 200)) {
+      const result = synthesizeGroup(people);
+      expect(result.tags).toEqual([]);
+      expect(result.pair).not.toBeNull();
+    }
+    for (const people of groups(3, 20)) expect(synthesizeGroup(people).pair).toBeNull();
+  });
+
+  it("2인 보기는 다섯 기운을 겹치지 않게 나눈다", () => {
+    for (const people of groups(2, 100)) {
+      const pair = synthesizeGroup(people).pair!;
+      const all = [...pair.shared, ...pair.neither, ...Object.values(pair.only).flat()];
+      expect(all.sort()).toEqual([...GROUP_ELEMENT_ORDER].sort());
+      // 둘 다 없는 기운은 모임의 없는 기운과 같다.
+      expect(pair.neither.sort()).toEqual(synthesizeGroup(people).elements.missing.sort());
+    }
+  });
+
+  it("태그는 어느 인원에서도 드물다", () => {
+    // 처음 문턱(몫 60%·셋 이상)에서는 5인 모임의 80% 에 태그가 붙었다.
+    for (const size of [3, 4, 5, 6, 8, 10]) {
+      const all = groups(size, 300);
+      const tagged = all.filter((people) => synthesizeGroup(people).tags.length > 0).length;
+      expect(tagged / all.length, `n=${size}`).toBeLessThan(0.45);
+    }
+  });
+
+  it("혼자 다른 사람은 모두가 몰린 체계에서 한 명만 바깥일 때다", () => {
+    for (const size of [4, 5, 6]) {
+      for (const people of groups(size, 200)) {
+        const result = synthesizeGroup(people);
+        for (const contribution of result.contributions) {
+          for (const d of contribution.distinctions) {
+            const tag = result.tags.find((t) => t.system === d.system);
+            expect(tag, `${d.system} 태그가 있어야 한다`).toBeDefined();
+            expect(tag!.count).toBe(size - 1);
+            expect(tag!.category).not.toBe(d.category);
+          }
+        }
+      }
+    }
+  });
+
+  it("음양이 뚜렷하다는 말은 드물다", () => {
+    for (const size of [2, 3, 5, 8]) {
+      const all = groups(size, 300);
+      const n = all.filter((people) => synthesizeGroup(people).polarity.pronounced).length;
+      expect(n / all.length, `n=${size}`).toBeLessThan(0.3);
+    }
+  });
+});
+

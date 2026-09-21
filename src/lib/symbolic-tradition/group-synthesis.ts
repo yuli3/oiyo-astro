@@ -15,6 +15,7 @@
  */
 import { FiveElement } from "../ontology/saju/types";
 import type { SymbolicComparisonProfile } from "./types";
+import { CELTIC_SEASON, TRINE_GROUPS } from "./index";
 
 export const GROUP_ELEMENT_ORDER: FiveElement[] = [
   FiveElement.WOOD,
@@ -96,6 +97,7 @@ export interface GroupSynthesis {
   /** 음양 */
   polarity: {
     tilt: "balanced" | "yang" | "yin";
+    pronounced: boolean;
     yang: number;
     yin: number;
   };
@@ -117,8 +119,82 @@ export interface GroupSynthesis {
     supplies: FiveElement[];
     /** 그 원소를 가진 사람이 이 사람뿐인가 */
     sole: FiveElement[];
+    /** 오행 밖의 체계에서 모두가 한쪽에 몰렸는데 혼자 다른 칸 (3인 이상) */
+    distinctions: Array<{ system: DistinctionSystem; category: string }>;
   }>;
   memberCount: number;
+  /**
+   * 오행 밖의 체계에서 모임이 한쪽에 몰린 것. 별명은 오행 축에서 나오므로,
+   * 다른 축은 여기서 "이 모임은 이런 결도 있다"로 덧붙인다. 몰렸을 때만 선다.
+   */
+  tags: GroupTag[];
+  /** 2인 모임 전용. 사람이 둘이면 "얇다"는 판정이 설 수 없어 다르게 말한다. */
+  pair: GroupPair | null;
+}
+
+export type DistinctionSystem = "mayanColor" | "zodiacTrine" | "celticSeason";
+
+export interface GroupTag {
+  system: DistinctionSystem;
+  /** 체계 안의 칸. 마야는 색 이름, 나머지는 0~3 번호 */
+  category: string;
+  count: number;
+}
+
+export interface GroupPair {
+  /** 둘 다 가진 기운 */
+  shared: FiveElement[];
+  /** 한 사람만 가진 기운 — 사람 id 별 */
+  only: Record<string, FiveElement[]>;
+  /** 둘 다 없는 기운 */
+  neither: FiveElement[];
+}
+
+/** 사람마다 세 체계에서 어느 칸에 드는가. 모두 네 칸짜리 체계다. */
+function categoriesOf(profile: SymbolicComparisonProfile): Record<DistinctionSystem, string> {
+  const trine = TRINE_GROUPS.findIndex((group) => group.includes(profile.chineseZodiac.branch));
+  return {
+    mayanColor: profile.mayanKin.color,
+    zodiacTrine: String(trine),
+    celticSeason: String(CELTIC_SEASON[profile.celticTree.id] ?? 0),
+  };
+}
+
+const SYSTEMS: DistinctionSystem[] = ["mayanColor", "zodiacTrine", "celticSeason"];
+
+/**
+ * 칸마다 한 사람이 거기 들 기저 확률. 1940~1980 연속 14,610일 실측이다
+ * (group-synthesis.test 가 다시 잰다). 켈트 겨울만 구간이 길어(11/25~3/17) 크다.
+ */
+export const CATEGORY_BASE_RATE: Record<DistinctionSystem, Record<string, number>> = {
+  mayanColor: { red: 0.25, white: 0.25, blue: 0.25, yellow: 0.25 },
+  zodiacTrine: { "0": 0.25, "1": 0.25, "2": 0.25, "3": 0.25 },
+  celticSeason: { "0": 0.31, "1": 0.23, "2": 0.23, "3": 0.23 },
+};
+
+/** 이항분포 꼬리 P(X ≥ k), X ~ B(n, p). 모임은 열 명이 상한이라 그대로 센다. */
+function binomialTail(n: number, k: number, p: number): number {
+  let total = 0;
+  let choose = 1;
+  for (let i = 0; i <= n; i += 1) {
+    if (i > 0) choose = (choose * (n - i + 1)) / i;
+    if (i >= k) total += choose * p ** i * (1 - p) ** (n - i);
+  }
+  return total;
+}
+
+/**
+ * 몰렸다고 말하는 문턱. 우연히 그만큼 몰릴 확률이 5% 미만일 때만 선다.
+ *
+ * 처음에는 "몫 60% 이상, 셋 이상"으로 갈랐다. 그러자 태그가 3인 16%, 5인 80%,
+ * 2인 60% 로 인원에 따라 들쭉날쭉했다 — 5인에서 셋이 겹치는 일은 흔하다.
+ * 우연의 확률로 재면 인원이 달라도 드문 정도가 같아진다. 오행 쪽이 기저 비율
+ * 대비 표준편차로 재는 것과 같은 원리다.
+ */
+const CONCENTRATION_P = 0.05;
+
+function concentrated(system: DistinctionSystem, category: string, count: number, members: number): boolean {
+  return binomialTail(members, count, CATEGORY_BASE_RATE[system][category] ?? 0.25) < CONCENTRATION_P;
 }
 
 function emptyCounts(): Record<FiveElement, number> {
@@ -168,8 +244,14 @@ export function synthesizeGroup(members: GroupMember[]): GroupSynthesis {
     : worst >= DEVIATION_LEANING ? "leaning" : "even";
 
   const polarityGap = Math.abs(yang - yin) / Math.max(1, yang + yin);
+  // 한 기둥의 천간·지지는 극성이 같아서(60갑자) 음양은 기둥 단위로 움직인다.
+  // 기둥 하나를 동전 하나로 보고 양·음 기둥 차이를 표준편차로 잰다.
+  const pillars = Math.max(1, (yang + yin) / 2);
+  const polarityZ = (yang - yin) / 2 / Math.sqrt(pillars);
   const polarity = {
     tilt: polarityGap < 0.15 ? ("balanced" as const) : yang > yin ? ("yang" as const) : ("yin" as const),
+    /** 우연으로 보기 어려울 만큼 기울었나 — 별명 아래 한 줄을 여기서 정한다 */
+    pronounced: Math.abs(polarityZ) >= 1.5,
     yang,
     yin,
   };
@@ -183,7 +265,28 @@ export function synthesizeGroup(members: GroupMember[]): GroupSynthesis {
     );
   }
 
-  const contributions = members.map((member) => {
+  // 다른 체계의 분포
+  const cats = members.map((member) => categoriesOf(member.profile));
+  const tally = Object.fromEntries(SYSTEMS.map((system) => [system, new Map<string, number>()])) as Record<DistinctionSystem, Map<string, number>>;
+  for (const c of cats) for (const system of SYSTEMS) tally[system].set(c[system], (tally[system].get(c[system]) ?? 0) + 1);
+
+  // 몰린 체계에서 모두가 한 칸인데 한 사람만 바깥이면, 그 사람이 모임에 다른
+  // 결을 넣는다. 네 칸짜리 체계에서 "그냥 혼자인 칸"은 3인의 92% 가 해당해
+  // 정보가 아니었다 — 모두가 몰렸을 때 혼자 다른 것만 드물고 뜻이 있다.
+  const odd = new Map<number, Array<{ system: DistinctionSystem; category: string }>>();
+  if (members.length >= 3) {
+    for (const system of SYSTEMS) {
+      for (const [category, count] of tally[system]) {
+        if (count !== members.length - 1 || !concentrated(system, category, count, members.length)) continue;
+        const outsider = cats.findIndex((c) => c[system] !== category);
+        if (outsider >= 0) {
+          odd.set(outsider, [...(odd.get(outsider) ?? []), { system, category: cats[outsider][system] }]);
+        }
+      }
+    }
+  }
+
+  const contributions = members.map((member, index) => {
     const has = GROUP_ELEMENT_ORDER.filter(
       (e) => (member.profile.fiveElements.counts[e] ?? 0) > 0,
     );
@@ -192,8 +295,36 @@ export function synthesizeGroup(members: GroupMember[]): GroupSynthesis {
       label: member.label,
       supplies: has.filter((e) => thin.has(e)),
       sole: has.filter((e) => (holders.get(e) ?? []).length === 1),
+      distinctions: odd.get(index) ?? [],
     };
   });
+
+  // 2인은 태그를 세우지 않는다 — 둘이 같은 칸인 것은 모임의 쏠림이 아니라 두
+  // 사람의 닮음이고, 그건 렌즈(쌍 비교)가 말한다.
+  const tags: GroupTag[] = [];
+  if (members.length >= 3) {
+    for (const system of SYSTEMS) {
+      for (const [category, count] of tally[system]) {
+        if (concentrated(system, category, count, members.length)) tags.push({ system, category, count });
+      }
+    }
+  }
+
+  const pair: GroupPair | null = members.length === 2
+    ? (() => {
+        const [a, b] = members;
+        const hasA = (e: FiveElement) => (a.profile.fiveElements.counts[e] ?? 0) > 0;
+        const hasB = (e: FiveElement) => (b.profile.fiveElements.counts[e] ?? 0) > 0;
+        return {
+          shared: GROUP_ELEMENT_ORDER.filter((e) => hasA(e) && hasB(e)),
+          only: {
+            [a.id]: GROUP_ELEMENT_ORDER.filter((e) => hasA(e) && !hasB(e)),
+            [b.id]: GROUP_ELEMENT_ORDER.filter((e) => hasB(e) && !hasA(e)),
+          },
+          neither: GROUP_ELEMENT_ORDER.filter((e) => !hasA(e) && !hasB(e)),
+        };
+      })()
+    : null;
 
   const topOf = <K extends string>(record: Record<K, number>, order: K[]): K =>
     order.reduce((best, key) => (record[key] > record[best] ? key : best), order[0]);
@@ -208,7 +339,9 @@ export function synthesizeGroup(members: GroupMember[]): GroupSynthesis {
     contributions,
     elements: { abundant, counts, deviation, missing, scarce, share },
     memberCount: members.length,
+    pair,
     polarity,
     spread,
+    tags,
   };
 }

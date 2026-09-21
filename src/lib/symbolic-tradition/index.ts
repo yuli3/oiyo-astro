@@ -279,7 +279,8 @@ function mayanRelation(
  * 사인 자체가 아니라 그 사인이 놓인 **계절**로 묶어 본다. 12분할(태양궁)과
  * 14분할(수목)은 경계가 어긋나 계절 배당이 일치하지 않는다.
  */
-const CELTIC_SEASON: Record<string, number> = {
+/** 켈트 계절 번호: 0 겨울 · 1 봄 · 2 여름 · 3 가을. 모임 종합도 이 표를 쓴다. */
+export const CELTIC_SEASON: Record<string, number> = {
   birch: 0, rowan: 0, ash: 0,
   alder: 1, willow: 1, hawthorn: 1,
   oak: 2, holly: 2, hazel: 2,
@@ -322,8 +323,10 @@ function dayMasterRelation(a: FiveElement, b: FiveElement): string {
  * 모두 양지-음지 짝이고 육충은 모두 같은 극성이라, 합·충을 세면 사실상
  * 음양 거리를 다시 재는 것이었다 — 같은 말을 두 번 하는 렌즈다.
  * 삼합은 한 무리가 모두 같은 극성이라(申子辰 양, 亥卯未 음) 극성을 타지 않는다.
+ *
+ * 번호: 0 수(申子辰) · 1 목(亥卯未) · 2 화(寅午戌) · 3 금(巳酉丑). 모임 종합도 이 표를 쓴다.
  */
-const TRINE_GROUPS: EarthlyBranch[][] = ([
+export const TRINE_GROUPS: EarthlyBranch[][] = ([
   ["SIN", "JA", "JIN"], ["HAE", "MYO", "MI"],
   ["IN", "O", "SUL"], ["SA", "YU", "CHUK"],
 ] as unknown) as EarthlyBranch[][];
