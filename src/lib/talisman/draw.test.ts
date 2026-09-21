@@ -19,12 +19,23 @@ describe("오행 부적 — 결정론", () => {
     expect(a).not.toBe(b);
   });
 
-  it("오행이 다르면 색이 달라진다", () => {
+  it("오행이 달라도 획은 주사 붉은색이다", () => {
+    // 부적의 획은 목적·오행과 무관하게 붉다. 오행은 색이 아니라 글자와
+    // 문양으로 구분한다 — 2026-09-21 재설계에서 바뀐 규칙이다.
+    for (const el of ALL) {
+      expect(drawTalisman({ element: el, seed: 7 })).toContain("#a3271f");
+    }
+  });
+
+  it("오행마다 본자와 보조자가 다르다", () => {
     const seen = new Set<string>();
     for (const el of ALL) {
+      const s = ELEMENT_SYMBOLS[el];
       const svg = drawTalisman({ element: el, seed: 7 });
-      expect(svg).toContain(ELEMENT_SYMBOLS[el].color);
-      seen.add(ELEMENT_SYMBOLS[el].color);
+      expect(svg, `${el} 본자`).toContain(`>${s.glyph}</text>`);
+      expect(svg, `${el} 좌`).toContain(`>${s.sideGlyphs[0]}</text>`);
+      expect(svg, `${el} 우`).toContain(`>${s.sideGlyphs[1]}</text>`);
+      seen.add(s.glyph);
     }
     expect(seen.size).toBe(ALL.length);
   });
@@ -61,12 +72,23 @@ describe("오행 부적 — 출력 형태", () => {
     }
   });
 
-  it("glyph 를 주면 새기고, 주지 않으면 text 를 만들지 않는다", () => {
-    const withGlyph = drawTalisman({ element: FiveElement.FIRE, seed: 3, glyph: "火" });
-    expect(withGlyph).toContain("火");
-    expect(withGlyph).toContain("<text");
-    const without = drawTalisman({ element: FiveElement.FIRE, seed: 3 });
-    expect(without).not.toContain("<text");
+  it("glyph 를 주면 본자를 바꾸고, 주지 않으면 오행 본자를 쓴다", () => {
+    const custom = drawTalisman({ element: FiveElement.FIRE, seed: 3, glyph: "福" });
+    expect(custom).toContain(">福</text>");
+    const base = drawTalisman({ element: FiveElement.FIRE, seed: 3 });
+    expect(base).toContain(">火</text>");
+  });
+
+  it("부적의 시각 문법을 갖춘다", () => {
+    // 2026-09-21 첫 시안은 정사각형·옅은 선·한자 없음이라 "부적 느낌이
+    // 아예 없다"는 판정을 받았다. 형식 요소를 회귀로 잠근다.
+    const svg = drawTalisman({ element: FiveElement.WATER, seed: 1 });
+    expect(svg).toContain(`viewBox="0 0 200 340"`); // 세로로 긴 판
+    expect(svg).toContain("#e6d3a3"); // 누런 한지
+    for (const ch of ELEMENT_SYMBOLS[FiveElement.WATER].tailGlyphs) {
+      expect(svg, `꼬리 ${ch}`).toContain(`>${ch}</text>`);
+    }
+    expect(svg.split(`r="3.8"`).length - 1).toBe(7); // 북두칠성
   });
 
   it("생수와 성수를 합한 만큼 도형을 그린다", () => {

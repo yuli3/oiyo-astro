@@ -41,6 +41,16 @@ export interface ElementSymbol {
    * 생수·성수를 겹치면 오행 근거를 유지하면서 어느 오행이든 고르게 찬다.
    */
   outer: number;
+  /** 부적 한가운데 새기는 오행 본자 */
+  glyph: string;
+  /**
+   * 본자 좌우에 세우는 보조 한자 두 자. 그 오행의 상응에서 고른다 —
+   * 방위·계절·오상(五常)·성질. 실제 부적이 쓰는 문자를 베끼지 않고
+   * 오행 배당에서 직접 가져온다.
+   */
+  sideGlyphs: [string, string];
+  /** 아래쪽에 세로로 새기는 네 자 — 그 오행이 더하는 기운 */
+  tailGlyphs: string;
 }
 
 export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
@@ -50,6 +60,9 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
     shape: "trunk",
     count: 3,
     outer: 8,
+    glyph: "木",
+    sideGlyphs: ["青", "東"],
+    tailGlyphs: "生長不息",
     name: { ko: "목(木)", en: "Wood", ja: "木", zh: "木", fr: "Bois", es: "Madera" },
     direction: { ko: "동(東)", en: "East", ja: "東", zh: "东", fr: "Est", es: "Este" },
     season: { ko: "봄", en: "Spring", ja: "春", zh: "春", fr: "Printemps", es: "Primavera" },
@@ -68,6 +81,9 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
     shape: "flame",
     count: 2,
     outer: 7,
+    glyph: "火",
+    sideGlyphs: ["赤", "南"],
+    tailGlyphs: "光明遍照",
     name: { ko: "화(火)", en: "Fire", ja: "火", zh: "火", fr: "Feu", es: "Fuego" },
     direction: { ko: "남(南)", en: "South", ja: "南", zh: "南", fr: "Sud", es: "Sur" },
     season: { ko: "여름", en: "Summer", ja: "夏", zh: "夏", fr: "Été", es: "Verano" },
@@ -86,6 +102,9 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
     shape: "ring",
     count: 5,
     outer: 10,
+    glyph: "土",
+    sideGlyphs: ["黃", "中"],
+    tailGlyphs: "厚德載物",
     name: { ko: "토(土)", en: "Earth", ja: "土", zh: "土", fr: "Terre", es: "Tierra" },
     direction: { ko: "중앙(中)", en: "Center", ja: "中央", zh: "中", fr: "Centre", es: "Centro" },
     season: { ko: "환절기", en: "Between seasons", ja: "土用", zh: "季夏", fr: "Intersaison", es: "Entre estaciones" },
@@ -104,6 +123,9 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
     shape: "blade",
     count: 4,
     outer: 9,
+    glyph: "金",
+    sideGlyphs: ["白", "西"],
+    tailGlyphs: "剛正不屈",
     name: { ko: "금(金)", en: "Metal", ja: "金", zh: "金", fr: "Métal", es: "Metal" },
     direction: { ko: "서(西)", en: "West", ja: "西", zh: "西", fr: "Ouest", es: "Oeste" },
     season: { ko: "가을", en: "Autumn", ja: "秋", zh: "秋", fr: "Automne", es: "Otoño" },
@@ -122,6 +144,9 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
     shape: "wave",
     count: 1,
     outer: 6,
+    glyph: "水",
+    sideGlyphs: ["玄", "北"],
+    tailGlyphs: "上善若水",
     name: { ko: "수(水)", en: "Water", ja: "水", zh: "水", fr: "Eau", es: "Agua" },
     direction: { ko: "북(北)", en: "North", ja: "北", zh: "北", fr: "Nord", es: "Norte" },
     season: { ko: "겨울", en: "Winter", ja: "冬", zh: "冬", fr: "Hiver", es: "Invierno" },
