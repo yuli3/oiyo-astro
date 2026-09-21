@@ -25,30 +25,8 @@ export interface ElementSymbol {
   name: Record<string, string>;
   /** 이 오행을 보완한다는 것이 무슨 뜻인지 */
   meaning: Record<string, string>;
-  /** 도형 생성의 기하 규칙 */
-  shape: "trunk" | "flame" | "ring" | "blade" | "wave";
-  /**
-   * 하도(河圖)의 생수(生數) — 안쪽 고리의 도형 수.
-   * 天一生水 地二生火 天三生木 地四生金 天五生土.
-   */
-  count: number;
-  /**
-   * 성수(成數) — 바깥 고리의 도형 수. 생수에 5를 더한 수다.
-   * 地六成水 天七成火 地八成木 天九成金 地十成土.
-   *
-   * 두 고리를 쓰는 이유는 미학이 아니라 밀도다. 생수만 쓰면 수(水)가 도형
-   * 하나로 끝나 화면이 비어 보였다 — 2026-09-21 첫 시안에서 확인했다.
-   * 생수·성수를 겹치면 오행 근거를 유지하면서 어느 오행이든 고르게 찬다.
-   */
-  outer: number;
   /** 부적 한가운데 새기는 오행 본자 */
   glyph: string;
-  /**
-   * 본자 좌우에 세우는 보조 한자 두 자. 그 오행의 상응에서 고른다 —
-   * 방위·계절·오상(五常)·성질. 실제 부적이 쓰는 문자를 베끼지 않고
-   * 오행 배당에서 직접 가져온다.
-   */
-  sideGlyphs: [string, string];
   /** 아래쪽에 세로로 새기는 네 자 — 그 오행이 더하는 기운 */
   tailGlyphs: string;
 }
@@ -57,11 +35,7 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
   [FiveElement.WOOD]: {
     color: "#3f7a53",
     accent: "#8fc79a",
-    shape: "trunk",
-    count: 3,
-    outer: 8,
     glyph: "木",
-    sideGlyphs: ["青", "東"],
     tailGlyphs: "生長不息",
     name: { ko: "목(木)", en: "Wood", ja: "木", zh: "木", fr: "Bois", es: "Madera" },
     direction: { ko: "동(東)", en: "East", ja: "東", zh: "东", fr: "Est", es: "Este" },
@@ -78,11 +52,7 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
   [FiveElement.FIRE]: {
     color: "#b4452f",
     accent: "#e79273",
-    shape: "flame",
-    count: 2,
-    outer: 7,
     glyph: "火",
-    sideGlyphs: ["赤", "南"],
     tailGlyphs: "光明遍照",
     name: { ko: "화(火)", en: "Fire", ja: "火", zh: "火", fr: "Feu", es: "Fuego" },
     direction: { ko: "남(南)", en: "South", ja: "南", zh: "南", fr: "Sud", es: "Sur" },
@@ -99,11 +69,7 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
   [FiveElement.EARTH]: {
     color: "#8a6c3d",
     accent: "#d3b785",
-    shape: "ring",
-    count: 5,
-    outer: 10,
     glyph: "土",
-    sideGlyphs: ["黃", "中"],
     tailGlyphs: "厚德載物",
     name: { ko: "토(土)", en: "Earth", ja: "土", zh: "土", fr: "Terre", es: "Tierra" },
     direction: { ko: "중앙(中)", en: "Center", ja: "中央", zh: "中", fr: "Centre", es: "Centro" },
@@ -120,11 +86,7 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
   [FiveElement.METAL]: {
     color: "#6f7780",
     accent: "#c9d2da",
-    shape: "blade",
-    count: 4,
-    outer: 9,
     glyph: "金",
-    sideGlyphs: ["白", "西"],
     tailGlyphs: "剛正不屈",
     name: { ko: "금(金)", en: "Metal", ja: "金", zh: "金", fr: "Métal", es: "Metal" },
     direction: { ko: "서(西)", en: "West", ja: "西", zh: "西", fr: "Ouest", es: "Oeste" },
@@ -141,11 +103,7 @@ export const ELEMENT_SYMBOLS: Record<FiveElement, ElementSymbol> = {
   [FiveElement.WATER]: {
     color: "#2f4f6f",
     accent: "#8fb3cf",
-    shape: "wave",
-    count: 1,
-    outer: 6,
     glyph: "水",
-    sideGlyphs: ["玄", "北"],
     tailGlyphs: "上善若水",
     name: { ko: "수(水)", en: "Water", ja: "水", zh: "水", fr: "Eau", es: "Agua" },
     direction: { ko: "북(北)", en: "North", ja: "北", zh: "北", fr: "Nord", es: "Norte" },
