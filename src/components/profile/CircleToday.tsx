@@ -13,6 +13,7 @@
 import { useEffect, useState } from "react";
 
 import { groupToday, type GroupToday } from "@/lib/symbolic-tradition/group-today";
+import { PAIR_COPY } from "@/lib/symbolic-tradition/pair-copy";
 import type { GroupMember, GroupSynthesis } from "@/lib/symbolic-tradition/group-synthesis";
 import { ELEMENT_SYMBOLS } from "@/lib/talisman/symbols";
 import type { FiveElement } from "@/lib/ontology/saju/types";
@@ -28,8 +29,6 @@ const T: Record<Lang, Record<string, string>> = {
     title: "오늘의 우리",
     dayIs: "오늘의 기운",
     who: "오늘 각자",
-    aligned: "결이 같아요", fed: "받는 날", feeding: "내주는 날",
-    pressed: "눌리는 날", pressing: "누르는 날",
     fillsGap: "오늘은 우리에게 가장 모자란 기운이 들어오는 날이에요. 미뤄 둔 이야기를 꺼내기 좋아요.",
     easesPeak: "우리에게 몰려 있던 기운을 오늘이 눌러 줘요. 평소보다 한쪽으로 쏠리지 않아요.",
     doublesDown: "우리가 이미 센 쪽에 오늘이 더 얹혀요. 잘하던 건 더 잘되고, 늘 걸리던 데서 더 걸려요.",
@@ -38,8 +37,6 @@ const T: Record<Lang, Record<string, string>> = {
   },
   en: {
     title: "Us today", dayIs: "Today’s energy", who: "Each of you today",
-    aligned: "Same grain", fed: "Receiving", feeding: "Giving",
-    pressed: "Under pressure", pressing: "Applying pressure",
     fillsGap: "Today brings the energy this group has least of. A good day to raise what you’ve been putting off.",
     easesPeak: "Today presses down on what this group has too much of. Less one-sided than usual.",
     doublesDown: "Today piles onto what this group is already strong in. What works works harder; what snags, snags harder.",
@@ -48,8 +45,6 @@ const T: Record<Lang, Record<string, string>> = {
   },
   ja: {
     title: "今日のわたしたち", dayIs: "今日の気", who: "今日のそれぞれ",
-    aligned: "同じ質", fed: "受け取る日", feeding: "渡す日",
-    pressed: "抑えられる日", pressing: "抑える日",
     fillsGap: "今日は、この集まりに最も足りない気が入る日です。先送りにしていた話を出すのに向きます。",
     easesPeak: "偏っていた気を今日が抑えてくれます。いつもより片寄りません。",
     doublesDown: "もともと強い側に今日が重なります。得意はより得意に、詰まる所はより詰まります。",
@@ -58,8 +53,6 @@ const T: Record<Lang, Record<string, string>> = {
   },
   zh: {
     title: "今天的我们", dayIs: "今日之气", who: "今天的各位",
-    aligned: "同质", fed: "受益之日", feeding: "付出之日",
-    pressed: "被压之日", pressing: "施压之日",
     fillsGap: "今天进来的，正是这个组合最缺的气。适合把一直拖着的话题摊开。",
     easesPeak: "今天压住了偏多的那股气，比平时不那么一边倒。",
     doublesDown: "今天叠在本来就强的一侧。顺的更顺，卡的更卡。",
@@ -68,8 +61,6 @@ const T: Record<Lang, Record<string, string>> = {
   },
   fr: {
     title: "Nous aujourd’hui", dayIs: "L’énergie du jour", who: "Chacun aujourd’hui",
-    aligned: "Même grain", fed: "Reçoit", feeding: "Donne",
-    pressed: "Sous pression", pressing: "Met la pression",
     fillsGap: "Aujourd’hui apporte ce qui manque le plus au groupe. Bon jour pour sortir ce qu’on remet à plus tard.",
     easesPeak: "Aujourd’hui tempère ce dont le groupe a trop. Moins unilatéral que d’habitude.",
     doublesDown: "Aujourd’hui s’ajoute au point déjà fort. Ce qui marche marche mieux ; ce qui coince coince plus.",
@@ -78,8 +69,6 @@ const T: Record<Lang, Record<string, string>> = {
   },
   es: {
     title: "Nosotros hoy", dayIs: "La energía de hoy", who: "Cada uno hoy",
-    aligned: "Mismo grano", fed: "Recibe", feeding: "Da",
-    pressed: "Bajo presión", pressing: "Presiona",
     fillsGap: "Hoy llega justo lo que más le falta al grupo. Buen día para sacar lo que venís aplazando.",
     easesPeak: "Hoy aprieta lo que al grupo le sobra. Menos unilateral que de costumbre.",
     doublesDown: "Hoy se suma al lado ya fuerte. Lo que funciona funciona más; lo que se atasca, más.",
@@ -143,13 +132,22 @@ export default function CircleToday({
 
       <div className="mt-4">
         <p className="text-[11px] font-bold text-muted-foreground">{t.who}</p>
-        <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
-          {today.members.map((item) => (
-            <li key={item.id} className="flex items-center justify-between gap-2 rounded-xl border border-border px-3 py-2 text-xs">
-              <span className="min-w-0 truncate font-bold text-foreground">{item.label}</span>
-              <span className="shrink-0 font-black text-primary-strong">{t[item.stance]}</span>
-            </li>
-          ))}
+        <ul className="mt-2 space-y-1.5">
+          {today.members.map((item) => {
+            // 오늘과 이 사람 사이에서 가장 할 말이 있는 관점 하나. 해설은
+            // 쌍 해설(PAIR_COPY)을 그대로 쓴다 — 오늘도 참가자이므로 사람끼리
+            // 쓰던 문구가 그대로 맞고, 새로 쓸 것이 없다.
+            const copy = PAIR_COPY[lang][`${item.highlight.id}:${item.highlight.relation}`];
+            return (
+              <li key={item.id} className="rounded-xl border border-border px-3 py-2">
+                <div className="flex items-center justify-between gap-2 text-xs">
+                  <span className="min-w-0 truncate font-black text-foreground">{item.label}</span>
+                  <span className="shrink-0 font-bold text-primary-strong">{copy?.label ?? item.highlight.relation}</span>
+                </div>
+                {copy && <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{copy.help}</p>}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

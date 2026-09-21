@@ -5,17 +5,31 @@
  * 이쪽은 날마다 바뀌는 "오늘 우리가 모이면"이다. 두 층을 한 패널에 섞으면
  * "우리"가 매일 달라지는 것처럼 읽히므로 따로 둔다.
  *
- * 바이오리듬을 쓰지 않은 이유. 바이오리듬은 출생일로부터의 일수가 필요한데,
- * 비교 프로필에는 생년월일이 없다 — 공유 링크가 원자료가 아니라 좌표만
- * 담도록 일부러 그렇게 설계돼 있다. 그 설계를 깨면서까지 넣을 값은 아니다.
+ * ## 오늘도 참가자다
  *
- * 대신 오늘의 일진(日辰)을 쓴다. 오늘 날짜와 각자의 기존 좌표만 있으면 되고,
- * 같은 날 같은 모임이면 누가 열어도 같은 결과가 나온다.
+ * 2026-09-21 처음 만들 때는 오늘의 일간에서 오행 하나만 뽑아 사람마다 생·극을
+ * 따지는 전용 코드를 썼다. 그래서 일진 두 글자 중 지지를 버렸고, 사람도
+ * 최빈 오행 하나로 뭉갰고, 렌즈 아홉이 쌓아 둔 것을 하나도 쓰지 못했다.
+ *
+ * 다시 보니 `comparisonFromCivil` 은 **출생일이 아니라 임의의 날짜**를 좌표로
+ * 바꾼다. 오늘도 좌표를 가질 수 있다는 뜻이고, 그러면 오늘과 사람의 관계는
+ * 사람과 사람의 관계와 같은 것이 된다 — 이미 있는 `compareSymbolicProfiles`
+ * 가 그대로 답한다. 전용 코드가 사라지고 지지 합·충도, 오행 분포 전체도,
+ * 마야·켈트도 공짜로 따라온다.
+ *
+ * 바이오리듬을 쓰지 않은 이유는 그대로다. 출생일로부터의 일수가 필요한데
+ * 비교 프로필에는 생년월일이 없다 — 공유 링크가 원자료가 아니라 좌표만
+ * 담도록 일부러 그렇게 설계돼 있다.
+ *
+ * 날짜를 인자로 받으므로 오늘만의 것이 아니다. 이번 주·이번 달도 같은 함수에
+ * 다른 날짜를 넣으면 된다.
  */
 import { STEMS } from "@/manifest/data/saju/stems";
 import { FiveElement } from "../ontology/saju/types";
-import { deriveSymbolicProfile } from "./index";
+import { comparisonFromCivil } from "./circle-input";
+import { compareSymbolicProfiles } from "./index";
 import { GROUP_ELEMENT_ORDER, type GroupMember, type GroupSynthesis } from "./group-synthesis";
+import type { SymbolicCompatibilityLens, SymbolicComparisonProfile } from "./types";
 
 /** 상생 — 목생화 화생토 토생금 금생수 수생목. */
 const GENERATES: Record<FiveElement, FiveElement> = {
@@ -36,7 +50,8 @@ const CONTROLS: Record<FiveElement, FiveElement> = {
 };
 
 /**
- * 오늘의 기운이 이 모임에 어떻게 작용하는가.
+ * 오늘의 기운이 이 모임 전체에 어떻게 걸리는가. 이쪽은 쌍이 아니라 모임
+ * 단위의 진술이라 렌즈가 답할 수 없다 — 모임의 분포와 오늘을 견준다.
  *
  *   fills-gap     모임에서 가장 얇은 자리를 오늘이 채운다
  *   eases-peak    모임에서 가장 두꺼운 기운을 오늘이 눌러 준다
@@ -46,41 +61,90 @@ const CONTROLS: Record<FiveElement, FiveElement> = {
  *
  * 처음에는 "몰렸다·얇다"로 **판정된** 원소만 봤는데, 기저 비율을 바로잡은
  * 뒤로 그 판정이 드물어져 73.9% 가 neutral 이 됐다. 대부분의 날에 "별 작용
- * 없음"이라고 말하는 카드는 볼 이유가 없다. 그래서 판정 대신 **모임 안에서
- * 상대적으로 가장 두꺼운·가장 얇은** 기운을 쓴다. 둘은 언제나 존재하고,
- * "이 모임에서 제일 적은 기운"은 판정 문턱과 무관하게 참인 진술이다.
+ * 없음"이라고 말하는 카드는 볼 이유가 없다. 그래서 판정 대신 모임 안에서
+ * **상대적으로** 가장 두꺼운·얇은 기운을 쓴다.
  */
 export type TodayEffect = "fills-gap" | "eases-peak" | "doubles-down" | "feeds-peak" | "neutral";
 
-/** 오늘 기운과 한 사람의 관계. */
-export type TodayStance = "aligned" | "fed" | "feeding" | "pressed" | "pressing";
+export interface TodayMember {
+  id: string;
+  label: string;
+  /**
+   * 오늘과 이 사람 사이에서 가장 두드러진 렌즈. 아홉을 다 보여 주면 읽히지
+   * 않으므로 하나를 고른다. 고르는 법은 pickHighlight 에 있다.
+   */
+  highlight: SymbolicCompatibilityLens;
+  /** 오늘과 이 사람의 아홉 관점 전부 */
+  lenses: SymbolicCompatibilityLens[];
+}
 
 export interface GroupToday {
-  /** 오늘 일간의 오행 */
-  element: FiveElement;
-  effect: TodayEffect;
-  members: Array<{ id: string; label: string; stance: TodayStance }>;
   /** 계산에 쓴 날짜 (YYYY-MM-DD, 달력 기준) */
   date: string;
+  /** 오늘 일간의 오행. 배지에 쓴다. */
+  element: FiveElement;
+  effect: TodayEffect;
+  members: TodayMember[];
+  /** 오늘의 좌표. 사람의 것과 같은 형식이다 — 오늘도 참가자이기 때문이다. */
+  profile: SymbolicComparisonProfile;
 }
 
-/** 오늘 일간의 오행. 달력 날짜만 쓰므로 시각·장소가 필요 없다. */
+/** 어떤 날짜든 그날의 좌표를 만든다. 달력 날짜만 쓰므로 시각·장소가 없어도 된다. */
+export function profileOfDay(civilDate: string): SymbolicComparisonProfile {
+  return comparisonFromCivil({ date: civilDate });
+}
+
+/** 그날 일간의 오행. */
 export function dayElementOf(civilDate: string): FiveElement {
-  const profile = deriveSymbolicProfile({
-    civilDate,
-    civilTime: null,
-    longitude: null,
-    utcOffsetMinutes: null,
-  });
-  return STEMS[profile.saju.day.heavenlyStem].element as FiveElement;
+  return STEMS[profileOfDay(civilDate).saju.day.heavenlyStem].element as FiveElement;
 }
 
-function stanceOf(today: FiveElement, mine: FiveElement): TodayStance {
-  if (today === mine) return "aligned";
-  if (GENERATES[today] === mine) return "fed";
-  if (GENERATES[mine] === today) return "feeding";
-  if (CONTROLS[today] === mine) return "pressed";
-  return "pressing";
+/**
+ * 오늘 대 한 사람에서 각 관계가 나오는 빈도. 40,000쌍 실측이다
+ * (group-today.test 가 다시 재서 어긋나면 실패한다).
+ *
+ * 왜 필요한가. 아홉 중 하나를 고를 때 harmonyIndex 의 크기나 값 폭으로
+ * 고르면 안 된다. 처음에는 렌즈 자신의 폭으로 정규화해 가운데에서 가장 먼
+ * 것을 골랐는데, 오행 렌즈가 하이라이트의 77.9% 를 먹었다. 관계가 셋뿐이고
+ * 그중 둘이 양 극단이라 거의 항상 최댓값이 나오기 때문이다.
+ *
+ * "오늘 가장 할 말이 있는 관점"은 값이 큰 쪽이 아니라 **드문 쪽**이다.
+ * 오늘 대부분의 사람에게 일어나는 일은 이 사람에 대해 아무것도 말해 주지
+ * 않는다.
+ */
+const RELATION_RARITY: Record<string, Record<string, number>> = {
+  "five-elements": { "generating-cycle": 0.4182, "controlling-cycle": 0.35, same: 0.2318 },
+  "yin-yang": { "near-balance": 0.4924, "same-balance": 0.271, "contrasting-balance": 0.2366 },
+  "chinese-zodiac": { distinct: 0.6635, "same-trine": 0.183, opposite: 0.0884, same: 0.065 },
+  "sun-sign": { distinct: 0.5352, "same-modality": 0.2233, "same-element": 0.1671, "same-sign": 0.0744 },
+  "element-complement": { "one-way-complement": 0.3873, "mutual-complement": 0.2673, "deep-mutual": 0.2661, "shared-gap": 0.0603, "no-gap": 0.0189 },
+  "day-master": { controlling: 0.4057, generating: 0.3893, same: 0.205 },
+  "branch-harmony": { mixed: 0.4189, "harmony-leaning": 0.2906, "harmony-rich": 0.1356, "clash-leaning": 0.1288, "clash-rich": 0.0261 },
+  "mayan-kin": { "opposite-color": 0.2604, "near-color-near-tone": 0.2482, "near-color-far-tone": 0.202, "same-color-near-tone": 0.1545, "same-color-far-tone": 0.1348 },
+  "celtic-tree": { distinct: 0.4622, "facing-season": 0.2682, "same-season": 0.2044, "same-tree": 0.0652 },
+};
+
+/** 실측표를 테스트가 다시 잴 수 있도록 내보낸다. */
+export const TODAY_RELATION_RARITY = RELATION_RARITY;
+
+/**
+ * 아홉 렌즈 중 오늘 가장 할 말이 있는 하나를 고른다 — 가장 드문 관계다.
+ *
+ * 표에 없는 관계는 새로 더해진 것이다. 그때는 가장 드문 것으로 쳐서 눈에
+ * 띄게 한다 — 조용히 묻히면 표를 갱신해야 한다는 사실도 함께 묻힌다.
+ */
+export function pickHighlight(lenses: SymbolicCompatibilityLens[]): SymbolicCompatibilityLens {
+  let best = lenses[0];
+  let rarest = Number.POSITIVE_INFINITY;
+  for (const lens of lenses) {
+    const rate = RELATION_RARITY[lens.id]?.[lens.relation] ?? 0;
+    // 같은 값이면 앞선 렌즈를 쓴다 — 순서가 고정이라 결과도 고정이다.
+    if (rate < rarest) {
+      best = lens;
+      rarest = rate;
+    }
+  }
+  return best;
 }
 
 export function groupToday(
@@ -88,7 +152,9 @@ export function groupToday(
   members: GroupMember[],
   civilDate: string,
 ): GroupToday {
-  const element = dayElementOf(civilDate);
+  const profile = profileOfDay(civilDate);
+  const element = STEMS[profile.saju.day.heavenlyStem].element as FiveElement;
+
   const { deviation } = synthesis.elements;
   let peak = GROUP_ELEMENT_ORDER[0];
   let trough = GROUP_ELEMENT_ORDER[0];
@@ -107,10 +173,17 @@ export function groupToday(
     date: civilDate,
     element,
     effect,
-    members: members.map((member) => ({
-      id: member.id,
-      label: member.label,
-      stance: stanceOf(element, member.profile.fiveElements.dominant),
-    })),
+    members: members.map((member) => {
+      // 오늘을 오른쪽에 둔다. 렌즈는 대칭이라 순서가 결과를 바꾸지 않지만,
+      // 읽는 사람 기준으로 "나와 오늘"이 자연스럽다.
+      const lenses = compareSymbolicProfiles(member.profile, profile).lenses;
+      return {
+        id: member.id,
+        label: member.label,
+        highlight: pickHighlight(lenses),
+        lenses,
+      };
+    }),
+    profile,
   };
 }
