@@ -24,6 +24,7 @@
  * 날짜를 인자로 받으므로 오늘만의 것이 아니다. 이번 주·이번 달도 같은 함수에
  * 다른 날짜를 넣으면 된다.
  */
+import { BRANCHES } from "@/manifest/data/saju/branches";
 import { STEMS } from "@/manifest/data/saju/stems";
 import { FiveElement } from "../ontology/saju/types";
 import { comparisonFromCivil, dayMasterElement } from "./circle-input";
@@ -66,9 +67,38 @@ const CONTROLS: Record<FiveElement, FiveElement> = {
  */
 export type TodayEffect = "fills-gap" | "eases-peak" | "doubles-down" | "feeds-peak" | "neutral";
 
+/**
+ * 오늘 일간과 이 사람 일간의 관계 — 십성(十星)의 다섯 무리.
+ *
+ *   peer      비겁  오늘이 나와 같은 기운이다
+ *   support   인성  오늘이 나를 생한다 — 받는 날
+ *   output    식상  내가 오늘을 생한다 — 내주는 날
+ *   pressure  관성  오늘이 나를 극한다 — 눌리는 날
+ *   wealth    재성  내가 오늘을 극한다 — 다루는 날
+ *
+ * 2026-09-21 첫 버전은 비슷한 다섯 칸을 **최빈 원소** 기준으로 냈다. 명리에서
+ * 사람을 대표하는 것은 일간이므로 일간 대 일간으로 다시 세웠다.
+ */
+export type TodayStance = "peer" | "support" | "output" | "pressure" | "wealth";
+
+/**
+ * 오늘 기운이 지금 계절에서 받는 힘 — 왕상휴수사(旺相休囚死).
+ * 월지의 오행이 계절이고, 월지는 절기 기준으로 이미 계산돼 있다.
+ *
+ *   prosperous  旺  계절과 같다
+ *   rising      相  계절이 생해 준다
+ *   resting     休  계절을 생하느라 힘을 뺀다
+ *   confined    囚  계절을 극하느라 묶인다
+ *   dead        死  계절에 극을 당한다
+ */
+export type SeasonStrength = "prosperous" | "rising" | "resting" | "confined" | "dead";
+
 export interface TodayMember {
   id: string;
   label: string;
+  /** 이 사람의 일간 오행 */
+  dayMaster: FiveElement;
+  stance: TodayStance;
   /**
    * 오늘과 이 사람 사이에서 가장 두드러진 렌즈. 아홉을 다 보여 주면 읽히지
    * 않으므로 하나를 고른다. 고르는 법은 pickHighlight 에 있다.
@@ -81,6 +111,8 @@ export interface TodayMember {
 export interface GroupToday {
   /** 계산에 쓴 날짜 (YYYY-MM-DD, 달력 기준) */
   date: string;
+  /** 오늘 기운이 계절에서 받는 힘 */
+  season: { element: FiveElement; strength: SeasonStrength };
   /** 오늘 일간의 오행. 배지에 쓴다. */
   element: FiveElement;
   effect: TodayEffect;
@@ -122,6 +154,22 @@ const RELATION_RARITY: Record<string, Record<string, number>> = {
   "celtic-tree": { distinct: 0.4622, "facing-season": 0.2682, "same-season": 0.2044, "same-tree": 0.0652 },
 };
 
+export function stanceOf(today: FiveElement, mine: FiveElement): TodayStance {
+  if (today === mine) return "peer";
+  if (GENERATES[today] === mine) return "support";
+  if (GENERATES[mine] === today) return "output";
+  if (CONTROLS[today] === mine) return "pressure";
+  return "wealth";
+}
+
+export function seasonStrengthOf(element: FiveElement, season: FiveElement): SeasonStrength {
+  if (element === season) return "prosperous";
+  if (GENERATES[season] === element) return "rising";
+  if (GENERATES[element] === season) return "resting";
+  if (CONTROLS[element] === season) return "confined";
+  return "dead";
+}
+
 /** 실측표를 테스트가 다시 잴 수 있도록 내보낸다. */
 export const TODAY_RELATION_RARITY = RELATION_RARITY;
 
@@ -145,6 +193,26 @@ export function pickHighlight(lenses: SymbolicCompatibilityLens[]): SymbolicComp
   return best;
 }
 
+/**
+ * 모임에서 가장 두꺼운(또는 얇은) 기운들. **하나가 아니라 집합이다.**
+ *
+ * 처음에는 편차가 가장 큰 원소 하나를 골랐다. 그런데 1·2위가 사실상 동점인
+ * 모임이 흔했다 — 2인 31%, 5인 20% 에서 차이가 0.25 표준편차 미만이었다.
+ * 그때 "가장 센 기운"은 원소 배열 순서가 정하고 있었다. 근거 없는 단정이다.
+ *
+ * 그래서 최댓값에서 TIE_MARGIN 안에 드는 원소를 모두 묶는다. 셋 이상이
+ * 엉켜 있으면 "센 쪽"이라고 부를 것이 없으므로 빈 집합을 돌려준다.
+ */
+const TIE_MARGIN = 0.25;
+const MAX_EXTREME = 2;
+
+function extremeSet(deviation: Record<FiveElement, number>, side: "high" | "low"): Set<FiveElement> {
+  const values = GROUP_ELEMENT_ORDER.map((e) => deviation[e]);
+  const edge = side === "high" ? Math.max(...values) : Math.min(...values);
+  const picked = GROUP_ELEMENT_ORDER.filter((e) => Math.abs(deviation[e] - edge) < TIE_MARGIN);
+  return picked.length <= MAX_EXTREME ? new Set(picked) : new Set();
+}
+
 export function groupToday(
   synthesis: GroupSynthesis,
   members: GroupMember[],
@@ -154,30 +222,32 @@ export function groupToday(
   const element = STEMS[profile.saju.day.heavenlyStem].element as FiveElement;
 
   const { deviation } = synthesis.elements;
-  let peak = GROUP_ELEMENT_ORDER[0];
-  let trough = GROUP_ELEMENT_ORDER[0];
-  for (const candidate of GROUP_ELEMENT_ORDER) {
-    if (deviation[candidate] > deviation[peak]) peak = candidate;
-    if (deviation[candidate] < deviation[trough]) trough = candidate;
-  }
+  const peaks = extremeSet(deviation, "high");
+  const troughs = extremeSet(deviation, "low");
 
   let effect: TodayEffect = "neutral";
-  if (element === trough) effect = "fills-gap";
-  else if (element === peak) effect = "doubles-down";
-  else if (CONTROLS[element] === peak) effect = "eases-peak";
-  else if (GENERATES[element] === peak) effect = "feeds-peak";
+  if (troughs.has(element)) effect = "fills-gap";
+  else if (peaks.has(element)) effect = "doubles-down";
+  else if ([...peaks].some((e) => CONTROLS[element] === e)) effect = "eases-peak";
+  else if ([...peaks].some((e) => GENERATES[element] === e)) effect = "feeds-peak";
+
+  const seasonElement = BRANCHES[profile.saju.month.earthlyBranch].element as FiveElement;
 
   return {
     date: civilDate,
     element,
     effect,
+    season: { element: seasonElement, strength: seasonStrengthOf(element, seasonElement) },
     members: members.map((member) => {
       // 오늘을 오른쪽에 둔다. 렌즈는 대칭이라 순서가 결과를 바꾸지 않지만,
       // 읽는 사람 기준으로 "나와 오늘"이 자연스럽다.
       const lenses = compareSymbolicProfiles(member.profile, profile).lenses;
+      const dayMaster = STEMS[member.profile.saju.day.heavenlyStem].element as FiveElement;
       return {
         id: member.id,
         label: member.label,
+        dayMaster,
+        stance: stanceOf(element, dayMaster),
         highlight: pickHighlight(lenses),
         lenses,
       };

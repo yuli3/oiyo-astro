@@ -27,11 +27,28 @@ const EL_COLOR: Record<string, string> = {
 const T: Record<Lang, Record<string, string>> = {
   ko: {
     title: "오늘의 우리",
-    titleFillsGap: "{el} 기운이 빈자리를 채우는 날",
-    titleEasesPeak: "{el} 기운이 쏠림을 누그러뜨리는 날",
-    titleDoublesDown: "원래 센 쪽에 {el} 기운이 한 겹 더 쌓이는 날",
-    titleFeedsPeak: "{el} 기운이 우리의 센 쪽을 밀어주는 날",
-    titleNeutral: "평소의 우리로 흘러가는 날",
+    titleFillsGap: "빈자리에 손님이 드는 날",
+    titleEasesPeak: "기울었던 배가 균형을 찾는 날",
+    titleDoublesDown: "잘하는 걸 더 잘하게 되는 날",
+    titleFeedsPeak: "순풍에 돛 단 날",
+    titleNeutral: "잔잔한 물결의 날",
+    seasonProsperous: "오늘의 {el} 기운은 계절을 만나 가장 힘이 셉니다.",
+    seasonRising: "계절이 오늘의 {el} 기운을 밀어 줘 힘이 오릅니다.",
+    seasonResting: "오늘의 {el} 기운은 계절을 돕느라 힘이 빠져 있어요.",
+    seasonConfined: "오늘의 {el} 기운은 계절에 맞서느라 묶여 있어요.",
+    seasonDead: "오늘의 {el} 기운은 계절에 눌려 약합니다.",
+    stancePeer: "같은 기운의 날",
+    stanceSupport: "받는 날",
+    stanceOutput: "내주는 날",
+    stancePressure: "눌리는 날",
+    stanceWealth: "다루는 날",
+    doPeer: "혼자 밀어붙이기 쉬운 날이에요. 도움을 먼저 청해 보세요.",
+    doSupport: "받기 좋은 날이에요. 조언을 듣거나 배운 것을 바로 써 보세요.",
+    doOutput: "표현이 잘 풀리는 날이에요. 미뤄 둔 말이나 만들던 것을 내놓아 보세요.",
+    doPressure: "약속과 규칙이 무겁게 느껴질 수 있어요. 무리한 일정은 줄이세요.",
+    doWealth: "정리하고 챙기기 좋은 날이에요. 끝내지 못한 일을 마무리해 보세요.",
+    dayMaster: "일간",
+    lens: "눈에 띄는 관점",
     try: "오늘 해 볼 것",
     tryFillsGap: "늘 미루던 이야기 하나를 꺼내 보세요. 오늘은 받아 줄 기운이 있어요.",
     tryEasesPeak: "평소 한 사람이 도맡던 역할을 오늘은 돌려 맡아 보세요.",
@@ -49,11 +66,28 @@ const T: Record<Lang, Record<string, string>> = {
   },
   en: {
     title: "Us today",
-    titleFillsGap: "{el} fills the gap today",
-    titleEasesPeak: "{el} softens the tilt today",
-    titleDoublesDown: "Another layer of {el} on your strong side",
-    titleFeedsPeak: "{el} pushes your strong side today",
-    titleNeutral: "Business as usual today",
+    titleFillsGap: "A guest fills the empty seat",
+    titleEasesPeak: "The tilted boat finds its balance",
+    titleDoublesDown: "What you do well gets even better",
+    titleFeedsPeak: "Wind in your sails",
+    titleNeutral: "A day of calm water",
+    seasonProsperous: "Today’s {el} meets its season and is at full strength.",
+    seasonRising: "The season lifts today’s {el}; its strength is rising.",
+    seasonResting: "Today’s {el} spends itself feeding the season and runs low.",
+    seasonConfined: "Today’s {el} is tied up pushing against the season.",
+    seasonDead: "The season presses down on today’s {el}; it is weak.",
+    stancePeer: "Same-energy day",
+    stanceSupport: "Receiving day",
+    stanceOutput: "Giving day",
+    stancePressure: "Under-pressure day",
+    stanceWealth: "Handling day",
+    doPeer: "Easy to push on alone today. Ask for help first.",
+    doSupport: "Good for receiving. Take advice, or use what you just learned.",
+    doOutput: "Expression flows today. Say the thing you held back, or ship what you were making.",
+    doPressure: "Promises and rules may feel heavy. Cut back an overloaded schedule.",
+    doWealth: "Good for sorting and collecting. Finish something left undone.",
+    dayMaster: "Day master",
+    lens: "Standout lens",
     try: "Try today",
     tryFillsGap: "Raise the conversation you keep putting off. Today there’s room to receive it.",
     tryEasesPeak: "Swap the role one person usually carries.",
@@ -69,11 +103,28 @@ const T: Record<Lang, Record<string, string>> = {
   },
   ja: {
     title: "今日のわたしたち",
-    titleFillsGap: "{el}の気が空いた席を埋める日",
-    titleEasesPeak: "{el}の気が偏りを和らげる日",
-    titleDoublesDown: "強い側に{el}の気がもう一層重なる日",
-    titleFeedsPeak: "{el}の気が強い側を後押しする日",
-    titleNeutral: "いつものわたしたちで流れる日",
+    titleFillsGap: "空いた席に客が来る日",
+    titleEasesPeak: "傾いた舟が釣り合いを取る日",
+    titleDoublesDown: "得意なことがさらに冴える日",
+    titleFeedsPeak: "順風満帆の日",
+    titleNeutral: "凪の日",
+    seasonProsperous: "今日の{el}の気は季節に出会い、最も力が強い。",
+    seasonRising: "季節が今日の{el}の気を押し上げ、力が増している。",
+    seasonResting: "今日の{el}の気は季節を助けて力が抜けている。",
+    seasonConfined: "今日の{el}の気は季節に逆らって縛られている。",
+    seasonDead: "今日の{el}の気は季節に押さえられて弱い。",
+    stancePeer: "同じ気の日",
+    stanceSupport: "受け取る日",
+    stanceOutput: "渡す日",
+    stancePressure: "抑えられる日",
+    stanceWealth: "扱う日",
+    doPeer: "一人で押し切りやすい日。先に助けを求めてみましょう。",
+    doSupport: "受け取るのに良い日。助言を聞くか、学んだことをすぐ使ってみましょう。",
+    doOutput: "表現がよく通る日。言いそびれたことや作りかけのものを出してみましょう。",
+    doPressure: "約束や決まりが重く感じられるかも。無理な予定は減らしましょう。",
+    doWealth: "整理して取りまとめるのに良い日。やり残しを片づけましょう。",
+    dayMaster: "日干",
+    lens: "目立つ視点",
     try: "今日やってみること",
     tryFillsGap: "ずっと先送りにしていた話を一つ出してみましょう。今日は受け止める気があります。",
     tryEasesPeak: "いつも一人が担う役を、今日は交代してみましょう。",
@@ -89,11 +140,28 @@ const T: Record<Lang, Record<string, string>> = {
   },
   zh: {
     title: "今天的我们",
-    titleFillsGap: "{el}之气补上空缺的一天",
-    titleEasesPeak: "{el}之气缓和偏向的一天",
-    titleDoublesDown: "强的一侧再叠一层{el}之气的一天",
-    titleFeedsPeak: "{el}之气推一把强项的一天",
-    titleNeutral: "照平常样子过的一天",
+    titleFillsGap: "空位迎来客人的一天",
+    titleEasesPeak: "倾斜的船找回平衡的一天",
+    titleDoublesDown: "擅长的事更出彩的一天",
+    titleFeedsPeak: "一帆风顺的一天",
+    titleNeutral: "风平浪静的一天",
+    seasonProsperous: "今日的{el}之气逢其时令，力量最盛。",
+    seasonRising: "时令托起今日的{el}之气，力量上升。",
+    seasonResting: "今日的{el}之气为生时令而泄力，偏弱。",
+    seasonConfined: "今日的{el}之气与时令相抗，受困。",
+    seasonDead: "今日的{el}之气被时令所克，最弱。",
+    stancePeer: "同气之日",
+    stanceSupport: "受益之日",
+    stanceOutput: "付出之日",
+    stancePressure: "受压之日",
+    stanceWealth: "掌控之日",
+    doPeer: "容易一个人硬撑，先开口求助。",
+    doSupport: "适合接受。听听建议，或把刚学到的马上用起来。",
+    doOutput: "表达顺畅的一天。把憋着的话说出来，或把做到一半的东西拿出来。",
+    doPressure: "约定和规矩可能显得沉重，减掉过满的日程。",
+    doWealth: "适合整理收拢。把没做完的事收个尾。",
+    dayMaster: "日干",
+    lens: "突出视角",
     try: "今天可以试试",
     tryFillsGap: "把一直拖着的话题拿出来一个。今天有接得住的气。",
     tryEasesPeak: "平常一个人包揽的角色，今天换人来做。",
@@ -109,11 +177,28 @@ const T: Record<Lang, Record<string, string>> = {
   },
   fr: {
     title: "Nous aujourd’hui",
-    titleFillsGap: "{el} · le manque se comble",
-    titleEasesPeak: "{el} · le penchant s’adoucit",
-    titleDoublesDown: "{el} · une couche de plus sur votre point fort",
-    titleFeedsPeak: "{el} · votre point fort prend de l’élan",
-    titleNeutral: "Une journée comme les autres",
+    titleFillsGap: "Un invité occupe la place vide",
+    titleEasesPeak: "Le bateau penché retrouve l’équilibre",
+    titleDoublesDown: "Ce que vous faites bien s’améliore encore",
+    titleFeedsPeak: "Vent en poupe",
+    titleNeutral: "Une journée d’eau calme",
+    seasonProsperous: "L’énergie {el} du jour rencontre sa saison : pleine force.",
+    seasonRising: "La saison porte l’énergie {el} du jour : sa force monte.",
+    seasonResting: "L’énergie {el} du jour s’épuise à nourrir la saison.",
+    seasonConfined: "L’énergie {el} du jour est entravée à lutter contre la saison.",
+    seasonDead: "La saison écrase l’énergie {el} du jour : elle est faible.",
+    stancePeer: "Jour de même énergie",
+    stanceSupport: "Jour où l’on reçoit",
+    stanceOutput: "Jour où l’on donne",
+    stancePressure: "Jour sous pression",
+    stanceWealth: "Jour où l’on gère",
+    doPeer: "Facile de foncer seul aujourd’hui. Demandez de l’aide d’abord.",
+    doSupport: "Bon pour recevoir. Écoutez un conseil ou appliquez ce que vous venez d’apprendre.",
+    doOutput: "L’expression coule. Dites ce que vous reteniez, livrez ce que vous prépariez.",
+    doPressure: "Promesses et règles peuvent peser. Allégez un agenda trop plein.",
+    doWealth: "Bon pour trier et récolter. Terminez une chose laissée en suspens.",
+    dayMaster: "Maître du jour",
+    lens: "Perspective marquante",
     try: "À essayer",
     tryFillsGap: "Sortez la conversation que vous repoussez. Aujourd’hui, il y a de la place pour la recevoir.",
     tryEasesPeak: "Échangez le rôle qu’une seule personne porte d’habitude.",
@@ -129,11 +214,28 @@ const T: Record<Lang, Record<string, string>> = {
   },
   es: {
     title: "Nosotros hoy",
-    titleFillsGap: "{el} · se cubre el hueco",
-    titleEasesPeak: "{el} · se suaviza la inclinación",
-    titleDoublesDown: "{el} · otra capa sobre vuestro lado fuerte",
-    titleFeedsPeak: "{el} · vuestro lado fuerte coge impulso",
-    titleNeutral: "Un día como cualquier otro",
+    titleFillsGap: "Un invitado ocupa el asiento vacío",
+    titleEasesPeak: "El barco inclinado recupera el equilibrio",
+    titleDoublesDown: "Lo que hacéis bien sale aún mejor",
+    titleFeedsPeak: "Viento en popa",
+    titleNeutral: "Un día de agua en calma",
+    seasonProsperous: "La energía {el} de hoy encuentra su estación: fuerza plena.",
+    seasonRising: "La estación impulsa la energía {el} de hoy: su fuerza sube.",
+    seasonResting: "La energía {el} de hoy se gasta alimentando la estación.",
+    seasonConfined: "La energía {el} de hoy queda atada luchando contra la estación.",
+    seasonDead: "La estación aplasta la energía {el} de hoy: está débil.",
+    stancePeer: "Día de la misma energía",
+    stanceSupport: "Día de recibir",
+    stanceOutput: "Día de dar",
+    stancePressure: "Día bajo presión",
+    stanceWealth: "Día de gestionar",
+    doPeer: "Hoy es fácil tirar solo. Pide ayuda primero.",
+    doSupport: "Bueno para recibir. Escucha un consejo o usa lo que acabas de aprender.",
+    doOutput: "La expresión fluye. Di lo que callabas o saca lo que estabas haciendo.",
+    doPressure: "Promesas y normas pueden pesar. Recorta una agenda demasiado llena.",
+    doWealth: "Bueno para ordenar y recoger. Termina algo que dejaste a medias.",
+    dayMaster: "Tronco del día",
+    lens: "Perspectiva destacada",
     try: "Para probar hoy",
     tryFillsGap: "Sacad la conversación que venís aplazando. Hoy hay espacio para recibirla.",
     tryEasesPeak: "Cambiad el papel que suele cargar una sola persona.",
@@ -221,9 +323,13 @@ export default function CircleToday({
 
       {/* 오늘치 이름. 우리 기운의 별명처럼 한 줄로 먼저 말하고, 설명이 따라온다. */}
       <p className="mt-3 text-xl font-black leading-snug text-foreground">
-        {t[`title${cap(EFFECT_KEY[today.effect])}`].replace("{el}", name(today.element))}
+        {t[`title${cap(EFFECT_KEY[today.effect])}`]}
       </p>
       <p className="mt-1 text-sm leading-relaxed text-foreground">{t[EFFECT_KEY[today.effect]]}</p>
+      {/* 같은 원소라도 계절에 따라 세기가 다르다(월령). 월지는 절기 기준이다. */}
+      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+        {t[`season${cap(today.season.strength)}`].replace("{el}", name(today.element))}
+      </p>
 
       {/* 오늘의 기운이 모임 분포 어디에 꽂히는지. 막대는 우리 기운과 같은
           자(기저 비율 대비 편차)를 쓰고, 오늘의 원소만 테두리로 짚는다. */}
@@ -266,11 +372,24 @@ export default function CircleToday({
             const copy = PAIR_COPY[lang][`${item.highlight.id}:${item.highlight.relation}`];
             return (
               <li key={item.id} className="rounded-xl border border-border px-3 py-2">
-                <div className="flex items-center justify-between gap-2 text-xs">
+                <div className="flex flex-wrap items-center gap-1.5 text-xs">
                   <span className="min-w-0 truncate font-black text-foreground">{item.label}</span>
-                  <span className="shrink-0 font-bold text-primary-strong">{copy?.label ?? item.highlight.relation}</span>
+                  {/* 이 사람의 일간. 오늘과의 관계는 이 글자와 오늘 일간 사이에서 나온다. */}
+                  <span
+                    className="rounded-full px-2 py-0.5 text-[10px] font-black text-white"
+                    style={{ backgroundColor: EL_COLOR[item.dayMaster] }}
+                    title={t.dayMaster}
+                  >
+                    {name(item.dayMaster)}
+                  </span>
+                  <span className="ml-auto shrink-0 font-black text-primary-strong">{t[`stance${cap(item.stance)}`]}</span>
                 </div>
-                {copy && <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{copy.help}</p>}
+                <p className="mt-1 text-xs leading-relaxed text-foreground">{t[`do${cap(item.stance)}`]}</p>
+                {copy && (
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                    {t.lens} · {copy.label}
+                  </p>
+                )}
               </li>
             );
           })}

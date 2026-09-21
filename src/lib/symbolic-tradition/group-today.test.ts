@@ -5,7 +5,9 @@ import { synthesizeGroup, type GroupMember } from "./group-synthesis";
 import { COMPATIBILITY_LENSES } from "./types";
 import { compareSymbolicProfiles } from "./index";
 import { comparisonFromCivil as dayProfile } from "./circle-input";
-import { TODAY_RELATION_RARITY, dayElementOf, groupToday, pickHighlight, profileOfDay, type TodayEffect } from "./group-today";
+import { TODAY_RELATION_RARITY, dayElementOf, groupToday, pickHighlight, profileOfDay, seasonStrengthOf, stanceOf, type TodayEffect } from "./group-today";
+import { FiveElement } from "../ontology/saju/types";
+import type { GroupSynthesis } from "./group-synthesis";
 
 function groups(size: number, count: number): GroupMember[][] {
   const start = Date.UTC(1960, 0, 1);
@@ -158,4 +160,73 @@ describe("오늘의 우리", () => {
     expect(tally.size).toBeGreaterThanOrEqual(5);
   });
 
+
+  it("동점인 두 원소는 둘 다 센 쪽이다 — 배열 순서가 정하지 않는다", () => {
+    // 1·2위가 사실상 동점인 모임이 2인 31%, 5인 20% 였다. 예전에는 원소 배열
+    // 순서가 그중 하나를 "가장 센 기운"으로 골랐다.
+    const people = groups(3, 1)[0];
+    const base = synthesizeGroup(people);
+    const tied = {
+      ...base,
+      elements: {
+        ...base.elements,
+        deviation: { wood: 2, fire: 2.1, earth: -1, metal: -0.2, water: 0 } as Record<FiveElement, number>,
+      },
+    } as GroupSynthesis;
+    // 목·화가 동점 1위다. 목 날이든 화 날이든 "센 쪽에 얹힌다"여야 한다.
+    const days = Array.from({ length: 20 }, (_, i) => new Date(Date.UTC(2026, 8, 1 + i)).toISOString().slice(0, 10));
+    for (const day of days) {
+      const today = groupToday(tied, people, day);
+      if (today.element === FiveElement.WOOD || today.element === FiveElement.FIRE) {
+        expect(today.effect, `${day} ${today.element}`).toBe("doubles-down");
+      }
+    }
+  });
+
+  it("셋 이상이 엉켜 있으면 센 쪽이라 부르지 않는다", () => {
+    const people = groups(3, 1)[0];
+    const base = synthesizeGroup(people);
+    const flat = {
+      ...base,
+      elements: { ...base.elements, deviation: { wood: 0.1, fire: 0.05, earth: 0, metal: 0.12, water: -2 } as Record<FiveElement, number> },
+    } as GroupSynthesis;
+    const days = Array.from({ length: 20 }, (_, i) => new Date(Date.UTC(2026, 8, 1 + i)).toISOString().slice(0, 10));
+    for (const day of days) {
+      const today = groupToday(flat, people, day);
+      expect(["doubles-down", "eases-peak", "feeds-peak"], `${day}`).not.toContain(today.effect);
+    }
+  });
+
+  it("십성 다섯 무리를 일간 대 일간으로 가른다", () => {
+    expect(stanceOf(FiveElement.WOOD, FiveElement.WOOD)).toBe("peer");
+    expect(stanceOf(FiveElement.WATER, FiveElement.WOOD)).toBe("support"); // 수생목
+    expect(stanceOf(FiveElement.FIRE, FiveElement.WOOD)).toBe("output"); // 목생화
+    expect(stanceOf(FiveElement.METAL, FiveElement.WOOD)).toBe("pressure"); // 금극목
+    expect(stanceOf(FiveElement.EARTH, FiveElement.WOOD)).toBe("wealth"); // 목극토
+  });
+
+  it("사람의 관계는 그 사람의 일간에서 나온다", () => {
+    const people = groups(4, 1)[0];
+    const today = groupToday(synthesizeGroup(people), people, "2026-09-22");
+    for (const member of today.members) {
+      expect(member.stance).toBe(stanceOf(today.element, member.dayMaster));
+    }
+  });
+
+  it("왕상휴수사를 계절 오행으로 가른다", () => {
+    // 봄(목)에 목은 旺, 화는 相, 수는 休, 금은 囚, 토는 死.
+    expect(seasonStrengthOf(FiveElement.WOOD, FiveElement.WOOD)).toBe("prosperous");
+    expect(seasonStrengthOf(FiveElement.FIRE, FiveElement.WOOD)).toBe("rising");
+    expect(seasonStrengthOf(FiveElement.WATER, FiveElement.WOOD)).toBe("resting");
+    expect(seasonStrengthOf(FiveElement.METAL, FiveElement.WOOD)).toBe("confined");
+    expect(seasonStrengthOf(FiveElement.EARTH, FiveElement.WOOD)).toBe("dead");
+  });
+
+  it("계절은 절기로 바뀐다 — 입춘 앞뒤로 월지가 넘어간다", () => {
+    // 2026 입춘은 2월 4일 무렵. 1월 말은 丑월(토), 2월 중순은 寅월(목)이다.
+    const winter = groupToday(synthesizeGroup(groups(2, 1)[0]), groups(2, 1)[0], "2026-01-25").season.element;
+    const spring = groupToday(synthesizeGroup(groups(2, 1)[0]), groups(2, 1)[0], "2026-02-15").season.element;
+    expect(winter).toBe(FiveElement.EARTH);
+    expect(spring).toBe(FiveElement.WOOD);
+  });
 });
