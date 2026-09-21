@@ -16,12 +16,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+# saju/compatibility 는 2026-09-21 우리 원(/{locale}/circle/)으로 통합되며
+# 은퇴했다(_redirects). 통합 목적지는 이 목록에 넣지 않았다 — 이 감사는
+# introTitle·conceptTitle·faqJsonLd 같은 고정 템플릿을 요구하는데 우리 원은
+# 자체 가이드·FAQ 구조를 쓴다. 템플릿을 맞추는 건 별건으로 남긴다.
 TARGETS = [
     "src/pages/[locale]/saju/calculator.astro",
     "src/pages/[locale]/natal/chart.astro",
     "src/pages/[locale]/zodiac/personality.astro",
     "src/pages/[locale]/tarot/reading.astro",
-    "src/pages/[locale]/saju/compatibility.astro",
     "src/pages/[locale]/saju/fortune.astro",
     "src/pages/[locale]/zodiac/compatibility.astro",
     "src/pages/[locale]/zodiac/fortune.astro",

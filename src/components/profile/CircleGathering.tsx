@@ -379,7 +379,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const share = async () => {
     gaEvent("circle_share", { people: String(people.length) });
     if (!snapshot) return;
-    const url = `${window.location.origin}/${locale}/profile/circle/${symbolicGroupFragment(snapshot)}`;
+    const url = `${window.location.origin}/${locale}/circle/${symbolicGroupFragment(snapshot)}`;
     if (navigator.share) {
       try {
         await navigator.share({ title: copy.title, url });

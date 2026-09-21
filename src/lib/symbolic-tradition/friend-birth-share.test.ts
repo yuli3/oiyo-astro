@@ -61,7 +61,7 @@ describe("encrypted friend birth browser journey", () => {
         return Response.json({ deleteToken: TOKEN, id: ID });
       },
       now: NOW,
-      pageUrl: "https://oiyo.net/ko/profile/circle/",
+      pageUrl: "https://oiyo.net/ko/circle/",
     });
 
     expect(created.url).toContain(`?result=${ID}#k=`);

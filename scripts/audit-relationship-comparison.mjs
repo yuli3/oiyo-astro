@@ -55,7 +55,9 @@ if (contract.integrity?.artifact !== "unsigned-self-asserted-local" || contract.
 const expectedContexts = ["couple", "family", "friend"];
 if (JSON.stringify(contract.eligibility?.allowedContexts) !== JSON.stringify(expectedContexts)) errors.push("allowed relationship contexts drift");
 if (!panel.includes('useState<RelationshipContext>("friend")')) errors.push("friend must remain the comparison panel's first-use context");
-if (!mbtiResult.includes('href: `/${l}/profile/relationship-comparison/`')) errors.push("MBTI result must link to the relationship comparison route");
+// 2026-09-21: 이 엔진의 공개 경로를 접고 궁합을 우리 원으로 모았으므로,
+// MBTI 결과는 더 이상 이쪽을 가리키지 않는다. 대신 통합 목적지를 지킨다.
+if (!mbtiResult.includes('href: `/${l}/circle/`')) errors.push("MBTI result must link to the consolidated circle route");
 for (const blocked of ["minor", "political-signal", "health-signal", "workplace-evaluation", "employment", "hiring"]) {
   if (!contract.eligibility?.blocked?.includes(blocked)) errors.push(`missing blocked context/signal: ${blocked}`);
 }

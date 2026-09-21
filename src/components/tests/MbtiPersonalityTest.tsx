@@ -425,7 +425,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
         <ResultNextSteps
           locale={l}
           links={[
-            { href: `/${l}/profile/relationship-comparison/`, label: FRIEND_COMPARE_LABEL[l] },
+            { href: `/${l}/circle/`, label: FRIEND_COMPARE_LABEL[l] },
             { href: `/${l}/mbti/hobbies/`, label: l === 'ko' ? `✨ ${mbtiType} 추천 취미` : `✨ ${mbtiType} hobbies` },
           ]}
         />

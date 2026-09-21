@@ -1,9 +1,9 @@
 {
   "schema": "oiyo.relationship-comparison-contract",
   "schemaVersion": 1,
-  "stage": "noindex-pilot",
+  "stage": "non-public-foundation",
   "stageDecision": "2026-07-19 세운이 동의/프라이버시 문구를 승인하고 구현을 지시(personal-ontology relationship-comparison 서브골). 공개 마케팅 명칭·색인 여부는 여전히 별도 사람 결정 대기 상태이므로 noindex를 유지한다.",
-  "publicRoutes": ["src/pages/[locale]/profile/relationship-comparison.astro"],
+  "publicRoutes": [],
   "indexable": false,
   "a3Compatibility": {
     "acceptedSchema": "oiyo.personal-profile-export",
@@ -29,15 +29,48 @@
     "browserPersistenceByEngine": false
   },
   "eligibility": {
-    "allowedContexts": ["couple", "family", "friend"],
-    "required": ["adult-confirmation", "explicit-owner-self-export", "bilateral-active-acknowledgement", "mutual-reflection-purpose", "active-revocation-set"],
-    "blocked": ["minor", "political-signal", "health-signal", "workplace-evaluation", "employment", "hiring"]
+    "allowedContexts": [
+      "couple",
+      "family",
+      "friend"
+    ],
+    "required": [
+      "adult-confirmation",
+      "explicit-owner-self-export",
+      "bilateral-active-acknowledgement",
+      "mutual-reflection-purpose",
+      "active-revocation-set"
+    ],
+    "blocked": [
+      "minor",
+      "political-signal",
+      "health-signal",
+      "workplace-evaluation",
+      "employment",
+      "hiring"
+    ]
   },
   "comparison": {
     "signalValuePolicy": "finite normalized numeric canonical signals from the exact allowlist only; no free text is compared",
     "independencePolicy": "codeId and canonical profile payload fingerprint must both differ",
-    "allowedOutputs": ["shared-items", "different-items", "unmatched-items", "conversation-questions", "bilateral-origin", "bilateral-provenance"],
-    "forbiddenOutputs": ["aggregate-score", "compatibility-judgment", "success-rate", "ranking", "career-judgment", "job-judgment", "employment-judgment", "hiring-judgment"]
+    "allowedOutputs": [
+      "shared-items",
+      "different-items",
+      "unmatched-items",
+      "conversation-questions",
+      "bilateral-origin",
+      "bilateral-provenance"
+    ],
+    "forbiddenOutputs": [
+      "aggregate-score",
+      "compatibility-judgment",
+      "success-rate",
+      "ranking",
+      "career-judgment",
+      "job-judgment",
+      "employment-judgment",
+      "hiring-judgment"
+    ]
   },
   "lifecycle": {
     "defaultExpiryDays": 7,
@@ -50,7 +83,20 @@
   },
   "validation": {
     "library": "ajv",
-    "artifacts": ["resultCode", "comparisonInput", "comparisonReport", "withdrawalReceipt"],
-    "mutationsRequired": ["additional-property", "wrong-const", "forbidden-construct", "missing-revocation-set", "forged-report-guardrail", "false-deletion-status"]
-  }
+    "artifacts": [
+      "resultCode",
+      "comparisonInput",
+      "comparisonReport",
+      "withdrawalReceipt"
+    ],
+    "mutationsRequired": [
+      "additional-property",
+      "wrong-const",
+      "forbidden-construct",
+      "missing-revocation-set",
+      "forged-report-guardrail",
+      "false-deletion-status"
+    ]
+  },
+  "stageNote": "2026-09-21 궁합을 \"우리 원\"(/{locale}/circle/) 하나로 모으면서 noindex 파일럿 경로를 접었다. 엔진·스키마·동의 패널은 그대로 두고 공개 경로만 거둔 것이라 단계가 non-public-foundation 으로 돌아간다. 검사 결과 기반이 아니라 생년월일 기반으로 통일하기로 한 결정에 따른다."
 }

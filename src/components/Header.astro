@@ -61,6 +61,10 @@ const primaryNavLinks = [
   // 2026-09-21: 아티클 697편(ko)에 헤더 진입점이 없어 65%가 고아였다.
   // 색인 한 장이 topic 페이지 전부에 인바운드를 준다.
   { href: localePath(locale, '/articles'), label: { ko: '읽을거리', en: 'Articles', ja: '記事', zh: '文章', fr: 'Articles', es: 'Artículos' }[locale] ?? 'Articles' },
+  // 2026-09-21: 궁합을 우리 원 하나로 모으면서 헤더로 꺼냈다. /profile/ 아래
+  // 묻혀 있어, 정작 사람들이 만나는 건 출생 연도 둘로 한 점수를 내던 옛
+  // 도구 쪽이었다.
+  { href: localePath(locale, '/circle'), label: { ko: '우리 원', en: 'Our Circle', ja: '私たちの円', zh: '我们的圆', fr: 'Notre cercle', es: 'Nuestro círculo' }[locale] ?? 'Our Circle' },
 ];
 const secondaryNavLinks = [
   { href: localePath(locale, '/about'), label: t('nav.about') },

@@ -1,9 +1,9 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import CircleGathering from '../../../components/profile/CircleGathering';
-import RelatedTools from '../../../components/shared/RelatedTools.astro';
-import { LOCALES } from '../../../i18n';
-import type { Locale } from '../../../i18n';
+import Layout from '../../layouts/Layout.astro';
+import CircleGathering from '../../components/profile/CircleGathering';
+import RelatedTools from '../../components/shared/RelatedTools.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -88,7 +88,7 @@ const guide = {
   },
 } satisfies Record<Locale, { heading: string; intro: string; steps: string[]; note: string; faq: string[][] }>;
 const g = guide[locale] ?? guide.en;
-const canonicalUrl = `https://oiyo.net/${locale}/profile/circle/`;
+const canonicalUrl = `https://oiyo.net/${locale}/circle/`;
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
