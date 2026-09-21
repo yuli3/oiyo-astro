@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   resolveBirthRecord,
   updateBirthRecordFromParts,
@@ -42,7 +42,17 @@ export function useProfilePrefill() {
 
   useEffect(() => setHydrated(true), []);
 
-  const parsed = hydrated ? parseBirth(profile) : null;
+  // parsed 는 반드시 메모해야 한다. parseBirth 는 호출할 때마다 새 객체
+  // 리터럴을 만들고, 도구 9개가 이 값을 useEffect 의존성에 그대로 넣는다.
+  // 메모하지 않으면 렌더마다 의존성이 달라져 프리필 effect 가 계속 다시
+  // 돌고, 사용자가 화면에서 고른 값(출생 도시 등)을 저장된 프로필 값으로
+  // 즉시 덮어쓴다 — 도시를 골라도 곧바로 지워지고 "도시를 골라 주세요"
+  // 오류가 뜨는 증상이 이것이었다(2026-09-21 액땜 부적 도구에서 확인).
+  // profile 은 zustand 셀렉터라 이미 안정적이므로 이 의존성으로 충분하다.
+  const parsed = useMemo(
+    () => (hydrated ? parseBirth(profile) : null),
+    [hydrated, profile],
+  );
 
   function saveBirth(input: {
     year: number;

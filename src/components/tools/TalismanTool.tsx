@@ -9,7 +9,7 @@
  * 이 화면은 그것을 사람이 읽을 수 있게 풀어 준다("왜 이 모양인가"를 답하지
  * 못하는 결과는 내지 않는다).
  */
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { BirthDateField, ProfileTimeField } from '../shared/BirthDateField'
 import CityField from '../shared/CityField'
 import { calculateBirthSaju } from '../../lib/ontology/saju/birth-contract'
@@ -179,15 +179,9 @@ export default function TalismanTool({ locale = 'ko' }: { locale?: string }) {
   const [error, setError] = useState('')
   const [reading, setReading] = useState<TalismanReading | null>(null)
   const { profile, parsed, saveBirthRecord } = useProfilePrefill()
-  const svgRef = useRef<HTMLDivElement>(null)
-
-  // 프로필 프리필은 사용자가 손대기 전까지만 적용한다. useProfilePrefill 이
-  // 렌더마다 새 profile 객체를 주기 때문에, 의존성만 걸어 두면 사용자가 고른
-  // 도시를 곧바로 덮어써 "골라도 지워지는" 입력이 된다 — 2026-09-21 확인.
-  const touched = useRef(false)
 
   useEffect(() => {
-    if (!parsed || touched.current) return
+    if (!parsed) return
     setYear(parsed.year)
     setMonth(parsed.month)
     setDay(parsed.day)
@@ -201,7 +195,7 @@ export default function TalismanTool({ locale = 'ko' }: { locale?: string }) {
     setIgnoreProfileLocation(false)
   }, [parsed, profile])
 
-  const reset = () => { touched.current = true; setReading(null); setError('') }
+  const reset = () => { setReading(null); setError('') }
 
   function compute() {
     setError('')
@@ -345,7 +339,6 @@ export default function TalismanTool({ locale = 'ko' }: { locale?: string }) {
         <>
           <div className="flex justify-center">
             <div
-              ref={svgRef}
               className="rounded-lg shadow-lg [&>svg]:h-auto [&>svg]:w-[240px] sm:[&>svg]:w-[280px]"
               dangerouslySetInnerHTML={{ __html: svg }}
             />
