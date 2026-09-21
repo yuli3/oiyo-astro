@@ -37,8 +37,13 @@ export interface SymbolicGroupSnapshot {
   schemaVersion: typeof SYMBOLIC_GROUP_SCHEMA_VERSION;
 }
 
-const LENSES: CompatibilityLensId[] = ["five-elements", "yin-yang", "chinese-zodiac", "sun-sign"];
 const ID = /^[a-z0-9-]{1,24}$/;
+
+function validPillar(value: unknown): boolean {
+  if (!value || typeof value !== "object") return false;
+  const pillar = value as { earthlyBranch?: unknown; heavenlyStem?: unknown };
+  return typeof pillar.earthlyBranch === "string" && typeof pillar.heavenlyStem === "string";
+}
 
 function validProfile(profile: SymbolicComparisonProfile): boolean {
   const counts = profile?.fiveElements?.counts;
@@ -52,7 +57,15 @@ function validProfile(profile: SymbolicComparisonProfile): boolean {
     && (profile.fiveElements.observedCoordinates === 6 || profile.fiveElements.observedCoordinates === 8)
     && typeof profile?.sunSign?.sign === "string"
     && Number.isInteger(profile?.yinYang?.yin)
-    && Number.isInteger(profile?.yinYang?.yang);
+    && Number.isInteger(profile?.yinYang?.yang)
+    // 2026-09-21: 일간·지지 렌즈가 기둥을 읽는다. 이 검사를 넣지 않으면 그
+    // 전에 저장된 원(사주 자리가 없다)을 복원하다 비교에서 터져 화면 전체가
+    // 뜨지 않는다 — 실제로 그렇게 깨지는 것을 확인하고 막았다. 걸러내면 옛
+    // 원은 조용히 버려지고 사용자는 다시 입력하면 된다.
+    && validPillar(profile?.saju?.year)
+    && validPillar(profile?.saju?.month)
+    && validPillar(profile?.saju?.day)
+    && (profile?.saju?.hour === null || validPillar(profile?.saju?.hour));
 }
 
 export function isSymbolicGroupParticipant(value: unknown): value is SymbolicGroupParticipant {
@@ -138,5 +151,3 @@ export function decodeSymbolicGroupSnapshot(encoded: string, now = new Date()): 
 export function symbolicGroupFragment(snapshot: SymbolicGroupSnapshot): string {
   return `#group=${encodeSymbolicGroupSnapshot(snapshot)}`;
 }
-
-export { LENSES as SYMBOLIC_GROUP_LENSES };

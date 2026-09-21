@@ -27,6 +27,7 @@ const participant: SymbolicGroupParticipant = {
   profile: {
     chineseZodiac: profile.chineseZodiac,
     fiveElements: profile.fiveElements,
+    saju: profile.saju,
     sunSign: profile.sunSign,
     yinYang: profile.yinYang,
   },

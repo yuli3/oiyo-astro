@@ -35,6 +35,10 @@ describe("symbolic share artifact", () => {
         dominant: profile.fiveElements.dominant,
         observedCoordinates: 8,
       },
+      // 2026-09-21: 일간·지지 렌즈가 기둥을 읽으므로 공유 대상에 들어왔다.
+      // 벽시계 시각 자체는 여전히 나가지 않는다(위의 "08:30" 단언) — 나가는
+      // 것은 파생된 간지이고, 시주는 두 시간 폭까지만 좁힌다.
+      saju: profile.saju,
       sunSign: profile.sunSign,
       yinYang: profile.yinYang,
     });

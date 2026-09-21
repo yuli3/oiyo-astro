@@ -1,8 +1,15 @@
 import { describe, expect, it } from "vitest";
 
-import { EarthlyBranch, FiveElement } from "@/lib/ontology/saju/types";
+import { EarthlyBranch, FiveElement, HeavenlyStem } from "@/lib/ontology/saju/types";
 import { COMPATIBILITY_LENSES, type SymbolicComparisonProfile } from "./types";
-import { allPairEdges, createSymbolicGroupSnapshot, decodeSymbolicGroupSnapshot, encodeSymbolicGroupSnapshot, resolveGroupCenterId, starEdges } from "./group-snapshot";
+import { allPairEdges, createSymbolicGroupSnapshot, decodeSymbolicGroupSnapshot, encodeSymbolicGroupSnapshot, isSymbolicGroupParticipant, resolveGroupCenterId, starEdges } from "./group-snapshot";
+
+const STEM_LIST = Object.values(HeavenlyStem);
+const BRANCH_LIST = Object.values(EarthlyBranch);
+const pillar = (seed: number) => ({
+  earthlyBranch: BRANCH_LIST[seed % BRANCH_LIST.length],
+  heavenlyStem: STEM_LIST[seed % STEM_LIST.length],
+});
 
 const profile = (seed: number): SymbolicComparisonProfile => ({
   chineseZodiac: { branch: ([EarthlyBranch.JA, EarthlyBranch.CHUK, EarthlyBranch.IN, EarthlyBranch.MYO] as const)[seed % 4] },
@@ -16,6 +23,11 @@ const profile = (seed: number): SymbolicComparisonProfile => ({
     },
     dominant: ([FiveElement.WOOD, FiveElement.FIRE, FiveElement.EARTH, FiveElement.METAL, FiveElement.WATER] as const)[seed % 5],
     observedCoordinates: seed % 2 ? 6 : 8,
+  },
+  // 일간·지지 렌즈가 기둥을 읽는다. seed 로 간지가 갈리게 만들어 관계가
+  // 한 값으로 뭉치지 않게 한다. 시주는 생시 미상을 흉내내 비운다.
+  saju: {
+    year: pillar(seed), month: pillar(seed + 1), day: pillar(seed + 2), hour: null,
   },
   sunSign: { element: (["air", "earth", "fire", "water"] as const)[seed % 4], modality: (["cardinal", "fixed", "mutable"] as const)[seed % 3], sign: (["aries", "taurus", "gemini", "cancer"] as const)[seed % 4] },
   yinYang: { yang: seed % 5, yin: 8 - (seed % 5) },
@@ -52,5 +64,21 @@ describe("symbolic group snapshot", () => {
     expect(resolveGroupCenterId(people(3), "p-1")).toBe("p-1");
     expect(resolveGroupCenterId(people(2), "removed")).toBe("p-0");
     expect(resolveGroupCenterId([], "removed")).toBe("");
+  });
+});
+
+describe("옛 저장본 호환", () => {
+  it("사주 기둥이 없는 참가자는 받지 않는다", () => {
+    // 2026-09-21 일간·지지 렌즈를 더하면서 기둥이 비교의 입력이 됐다.
+    // 그 전에 브라우저에 저장된 원에는 이 자리가 없다. 걸러내지 않으면
+    // 복원하다 비교에서 터져 페이지 전체가 뜨지 않는다 — 실제로 그렇게
+    // 깨지는 것을 확인하고 막았다.
+    const { saju: _dropped, ...legacy } = profile(1);
+    expect(isSymbolicGroupParticipant({ id: "p-0", label: "옛 친구", profile: legacy })).toBe(false);
+  });
+
+  it("생시를 모르는 참가자(시주 null)는 그대로 받는다", () => {
+    const withoutHour = { ...profile(2), saju: { ...profile(2).saju, hour: null } };
+    expect(isSymbolicGroupParticipant({ id: "p-1", label: "시간 모름", profile: withoutHour })).toBe(true);
   });
 });

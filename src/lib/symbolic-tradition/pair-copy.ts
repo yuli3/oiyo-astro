@@ -16,6 +16,15 @@ export interface PairCopy { ask: string; care: string; help: string; label: stri
 
 export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`, PairCopy>> = {
   ko: {
+    // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
+    "day-master:same": { label: "같은 일간", help: "기질이 닮아 설명이 짧아도 통합니다.", care: "같은 자리에서 같이 막힙니다.", ask: "우리가 똑같이 피하는 일은 뭐야?" },
+    "day-master:generating": { label: "서로를 키우는 일간", help: "한쪽의 기운이 다른 쪽의 재료가 됩니다.", care: "주는 쪽만 계속 주면 비워집니다.", ask: "요즘 나한테서 뭘 받아 가는 것 같아?" },
+    "day-master:controlling": { label: "맞서는 일간", help: "서로의 과한 부분을 눌러 줍니다.", care: "눌림이 반복되면 위축됩니다.", ask: "내가 너를 가장 많이 말리는 순간은 언제야?" },
+    "branch-harmony:harmony-rich": { label: "여러 자리에서 합", help: "띠 말고도 맞물리는 자리가 많습니다.", care: "편해서 서로 확인을 안 하게 됩니다.", ask: "말 안 해도 된다고 그냥 넘긴 게 있을까?" },
+    "branch-harmony:harmony-leaning": { label: "합이 조금 더", help: "부딪히는 자리보다 맞는 자리가 하나 많습니다.", care: "그 한 자리가 늘 같은 사람 몫일 수 있습니다.", ask: "주로 누가 맞춰 주는 편이야?" },
+    "branch-harmony:mixed": { label: "합과 충이 반반", help: "맞는 자리와 부딪히는 자리가 비슷합니다.", care: "그날 컨디션이 분위기를 정합니다.", ask: "좋을 때랑 아닐 때, 뭐가 달라?" },
+    "branch-harmony:clash-leaning": { label: "충이 조금 더", help: "부딪히는 자리가 하나 더 있어 긴장이 남습니다.", care: "같은 주제로 반복해 부딪히기 쉽습니다.", ask: "우리가 자꾸 돌아오는 주제는 뭐야?" },
+    "branch-harmony:clash-rich": { label: "여러 자리에서 충", help: "부딪히는 자리가 많아 서로를 선명하게 봅니다.", care: "쉬는 방법을 정해 두지 않으면 소모됩니다.", ask: "다투고 나서 우리는 어떻게 돌아와?" },
     "five-elements:generating-cycle": { label: "이어지는 생성", help: "한쪽이 피우면 다른 쪽이 키웁니다.", care: "속도가 다르면 답답해질 수 있습니다.", ask: "요즘 내가 너에게 넘기는 일은 뭐야?" },
     "five-elements:controlling-cycle": { label: "서로 조절", help: "한쪽이 과하면 다른 쪽이 줄을 잡습니다.", care: "잔소리로 들릴 수 있습니다.", ask: "내가 너무 말리는 순간이 있어?" },
     "five-elements:same": { label: "같은 기운", help: "같은 리듬이라 말이 잘 통합니다.", care: "같은 약점도 겹칩니다.", ask: "우리 둘 다 미루는 일은?" },
@@ -38,6 +47,15 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   en: {
+    // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
+    "day-master:same": { label: "Same day master", help: "Similar temperament, so short explanations land.", care: "You also get stuck in the same places.", ask: "What do we both avoid?" },
+    "day-master:generating": { label: "One feeds the other", help: "One side's energy becomes material for the other.", care: "If only one gives, that side empties out.", ask: "What do you take from me these days?" },
+    "day-master:controlling": { label: "Day masters that push back", help: "Each of you checks the other when it gets excessive.", care: "Repeated checking turns into shrinking.", ask: "When do I rein you in the most?" },
+    "branch-harmony:harmony-rich": { label: "Harmony in several places", help: "Beyond the zodiac sign, many positions interlock.", care: "It is easy, so you stop checking in.", ask: "What did we skip saying because it felt obvious?" },
+    "branch-harmony:harmony-leaning": { label: "Slightly more harmony", help: "One more position fits than clashes.", care: "That one position may always fall to the same person.", ask: "Who usually does the adjusting?" },
+    "branch-harmony:mixed": { label: "Harmony and clash, even", help: "Fitting and clashing positions are about equal.", care: "The mood of the day decides the mood of the room.", ask: "What changes between our good days and bad ones?" },
+    "branch-harmony:clash-leaning": { label: "Slightly more clash", help: "One more position clashes, so tension lingers.", care: "You can circle the same subject again and again.", ask: "What subject do we keep returning to?" },
+    "branch-harmony:clash-rich": { label: "Clash in several places", help: "Many positions collide, so you see each other sharply.", care: "Without an agreed way to rest, it wears you down.", ask: "How do we come back after a fight?" },
     "five-elements:generating-cycle": { label: "One feeds the other", help: "One of you starts it, the other grows it.", care: "Different speeds can feel like stalling.", ask: "What am I handing over to you lately?" },
     "five-elements:controlling-cycle": { label: "Mutual check", help: "When one goes too far, the other pulls the rein.", care: "It can land as nagging.", ask: "When do I hold you back too much?" },
     "five-elements:same": { label: "Same current", help: "Same rhythm, so talk comes easily.", care: "The same weak spots overlap too.", ask: "What do we both keep putting off?" },
@@ -60,6 +78,15 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   ja: {
+    // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
+    "day-master:same": { label: "同じ日干", help: "気質が似ていて、短い説明でも通じます。", care: "同じ場所で同じように詰まります。", ask: "二人とも避けていることは何？" },
+    "day-master:generating": { label: "互いを育てる日干", help: "一方の気がもう一方の材料になります。", care: "与える側ばかりだと空になります。", ask: "最近わたしから何を受け取っている？" },
+    "day-master:controlling": { label: "向き合う日干", help: "互いの過剰なところを抑えます。", care: "抑えが続くと萎縮します。", ask: "わたしが一番止めてしまう場面はいつ？" },
+    "branch-harmony:harmony-rich": { label: "複数の位置で合", help: "干支以外にも噛み合う位置が多いです。", care: "楽なので確認しなくなります。", ask: "言わなくていいと流したことはある？" },
+    "branch-harmony:harmony-leaning": { label: "合がやや多い", help: "ぶつかる位置より合う位置が一つ多いです。", care: "その一つが、いつも同じ人の役になりがちです。", ask: "いつも合わせているのはどっち？" },
+    "branch-harmony:mixed": { label: "合と沖が半々", help: "合う位置とぶつかる位置が同じくらいです。", care: "その日の調子が空気を決めます。", ask: "良い時と、そうでない時の違いは？" },
+    "branch-harmony:clash-leaning": { label: "沖がやや多い", help: "ぶつかる位置が一つ多く、緊張が残ります。", care: "同じ話題で繰り返しぶつかりやすいです。", ask: "何度も戻ってくる話題は何？" },
+    "branch-harmony:clash-rich": { label: "複数の位置で沖", help: "ぶつかる位置が多く、互いをくっきり見ます。", care: "休み方を決めておかないと消耗します。", ask: "揉めたあと、どうやって戻る？" },
     "five-elements:generating-cycle": { label: "つながる生成", help: "片方が咲かせ、もう片方が育てます。", care: "速さが違うともどかしくなります。", ask: "最近わたしがあなたに渡していることは？" },
     "five-elements:controlling-cycle": { label: "たがいに調整", help: "片方が行きすぎると、もう片方が手綱を引きます。", care: "小言に聞こえることがあります。", ask: "わたしが止めすぎる場面はある？" },
     "five-elements:same": { label: "同じ気", help: "同じリズムなので話が通じます。", care: "弱いところも重なります。", ask: "二人とも先延ばしにしていることは？" },
@@ -82,6 +109,15 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   zh: {
+    // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
+    "day-master:same": { label: "相同日干", help: "性情相近，说得少也能懂。", care: "也会在同样的地方卡住。", ask: "我们都在回避什么？" },
+    "day-master:generating": { label: "彼此滋养的日干", help: "一方的气成为另一方的材料。", care: "只有一方付出就会被掏空。", ask: "最近你从我这里拿到了什么？" },
+    "day-master:controlling": { label: "相抗的日干", help: "各自压住对方过头的部分。", care: "压得久了会让人退缩。", ask: "我最常拦住你的时候是什么时候？" },
+    "branch-harmony:harmony-rich": { label: "多处相合", help: "除了生肖，还有很多位置咬合。", care: "太顺了，反而不再确认。", ask: "有没有觉得不用说就略过的事？" },
+    "branch-harmony:harmony-leaning": { label: "合略多一些", help: "相合的位置比相冲的多一个。", care: "那一个位置可能总由同一个人承担。", ask: "通常是谁在迁就？" },
+    "branch-harmony:mixed": { label: "合冲各半", help: "相合与相冲的位置差不多。", care: "当天的状态决定气氛。", ask: "好的时候和不好的时候，差别在哪？" },
+    "branch-harmony:clash-leaning": { label: "冲略多一些", help: "相冲的位置多一个，张力会留下。", care: "容易围绕同一话题反复争执。", ask: "我们总会绕回哪个话题？" },
+    "branch-harmony:clash-rich": { label: "多处相冲", help: "相冲的位置多，因此看彼此很清楚。", care: "不先约好怎么休息就会耗损。", ask: "吵过之后我们怎么回来？" },
     "five-elements:generating-cycle": { label: "相生相续", help: "一方开花，另一方培育。", care: "步调不同时会觉得憋闷。", ask: "最近我交给你的事情是什么？" },
     "five-elements:controlling-cycle": { label: "彼此约束", help: "一方过头时，另一方拉住缰绳。", care: "听起来可能像唠叨。", ask: "我有拦你拦得太多的时候吗？" },
     "five-elements:same": { label: "同一股气", help: "节奏相同，说话容易通。", care: "弱点也一样重叠。", ask: "我们俩都在拖延的事是什么？" },
@@ -104,6 +140,15 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   fr: {
+    // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
+    "day-master:same": { label: "Même maître du jour", help: "Tempéraments proches : peu de mots suffisent.", care: "Vous bloquez aussi aux mêmes endroits.", ask: "Qu'est-ce que nous évitons tous les deux ?" },
+    "day-master:generating": { label: "L'un nourrit l'autre", help: "L'énergie de l'un devient la matière de l'autre.", care: "Si un seul donne, ce côté se vide.", ask: "Qu'est-ce que tu prends chez moi en ce moment ?" },
+    "day-master:controlling": { label: "Maîtres du jour qui se freinent", help: "Chacun tempère l'excès de l'autre.", care: "Freiner sans cesse finit par rétrécir.", ask: "Quand est-ce que je te retiens le plus ?" },
+    "branch-harmony:harmony-rich": { label: "Accord à plusieurs endroits", help: "Au-delà du signe, beaucoup de positions s'emboîtent.", care: "C'est facile, donc on arrête de vérifier.", ask: "Qu'avons-nous laissé passer parce que ça semblait évident ?" },
+    "branch-harmony:harmony-leaning": { label: "Un peu plus d'accord", help: "Une position de plus s'accorde qu'elle ne heurte.", care: "Cette position revient peut-être toujours à la même personne.", ask: "Qui s'adapte le plus souvent ?" },
+    "branch-harmony:mixed": { label: "Accord et heurt à égalité", help: "Positions qui s'accordent et qui heurtent : presque autant.", care: "L'humeur du jour décide de l'ambiance.", ask: "Qu'est-ce qui change entre nos bons et nos mauvais jours ?" },
+    "branch-harmony:clash-leaning": { label: "Un peu plus de heurt", help: "Une position de plus heurte, la tension demeure.", care: "On peut tourner sans fin autour du même sujet.", ask: "Sur quel sujet revenons-nous toujours ?" },
+    "branch-harmony:clash-rich": { label: "Heurt à plusieurs endroits", help: "Beaucoup de positions se heurtent : on se voit nettement.", care: "Sans façon convenue de souffler, cela use.", ask: "Comment revenons-nous après une dispute ?" },
     "five-elements:generating-cycle": { label: "L'un nourrit l'autre", help: "L'un lance, l'autre fait grandir.", care: "Des rythmes différents donnent l'impression de piétiner.", ask: "Qu'est-ce que je te passe en ce moment ?" },
     "five-elements:controlling-cycle": { label: "Régulation mutuelle", help: "Quand l'un va trop loin, l'autre tient la bride.", care: "Cela peut sonner comme un reproche.", ask: "Quand est-ce que je te freine trop ?" },
     "five-elements:same": { label: "Même courant", help: "Même rythme : la parole passe facilement.", care: "Les mêmes points faibles se superposent.", ask: "Qu'est-ce qu'on repousse tous les deux ?" },
@@ -126,6 +171,15 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   es: {
+    // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
+    "day-master:same": { label: "Mismo tronco del día", help: "Temperamentos parecidos: bastan pocas palabras.", care: "También os atascáis en los mismos sitios.", ask: "¿Qué evitamos los dos?" },
+    "day-master:generating": { label: "Uno alimenta al otro", help: "La energía de uno se vuelve material del otro.", care: "Si solo da uno, ese lado se vacía.", ask: "¿Qué tomas de mí últimamente?" },
+    "day-master:controlling": { label: "Troncos que se frenan", help: "Cada uno contiene el exceso del otro.", care: "Frenar sin parar acaba encogiendo.", ask: "¿Cuándo te freno más?" },
+    "branch-harmony:harmony-rich": { label: "Armonía en varios sitios", help: "Más allá del signo, encajan muchas posiciones.", care: "Es fácil, así que dejáis de comprobarlo.", ask: "¿Qué dimos por hablado sin hablarlo?" },
+    "branch-harmony:harmony-leaning": { label: "Algo más de armonía", help: "Encaja una posición más de las que chocan.", care: "Esa posición quizá recae siempre en la misma persona.", ask: "¿Quién suele ceder?" },
+    "branch-harmony:mixed": { label: "Armonía y choque a partes iguales", help: "Las posiciones que encajan y las que chocan se igualan.", care: "El ánimo del día decide el ambiente.", ask: "¿Qué cambia entre los días buenos y los malos?" },
+    "branch-harmony:clash-leaning": { label: "Algo más de choque", help: "Choca una posición más y queda tensión.", care: "Es fácil dar vueltas al mismo tema.", ask: "¿A qué tema volvemos siempre?" },
+    "branch-harmony:clash-rich": { label: "Choque en varios sitios", help: "Chocan muchas posiciones: os veis con nitidez.", care: "Sin una forma pactada de parar, desgasta.", ask: "¿Cómo volvemos después de discutir?" },
     "five-elements:generating-cycle": { label: "Uno alimenta al otro", help: "Uno lo enciende y el otro lo hace crecer.", care: "Ritmos distintos pueden sentirse como un freno.", ask: "¿Qué te estoy pasando últimamente?" },
     "five-elements:controlling-cycle": { label: "Ajuste mutuo", help: "Cuando uno se pasa, el otro sujeta las riendas.", care: "Puede sonar a regaño.", ask: "¿Cuándo te freno demasiado?" },
     "five-elements:same": { label: "La misma corriente", help: "Mismo ritmo: hablar resulta fácil.", care: "También se solapan los mismos puntos débiles.", ask: "¿Qué estamos dejando para después los dos?" },

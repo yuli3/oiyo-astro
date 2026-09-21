@@ -28,6 +28,7 @@ export function comparisonFromCivil(input: {
       dominant: profile.fiveElements.dominant,
       observedCoordinates: profile.fiveElements.observedCoordinates,
     },
+    saju: profile.saju,
     sunSign: profile.sunSign,
     yinYang: profile.yinYang,
   };

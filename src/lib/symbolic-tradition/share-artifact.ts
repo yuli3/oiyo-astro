@@ -41,9 +41,16 @@ function profileForShare(profile: SymbolicProfile): SymbolicComparisonProfile {
       dominant: profile.fiveElements.dominant,
       observedCoordinates: profile.fiveElements.observedCoordinates,
     },
+    saju: profile.saju,
     sunSign: profile.sunSign,
     yinYang: profile.yinYang,
   };
+}
+
+function isPillar(value: unknown): boolean {
+  if (!value || typeof value !== "object") return false;
+  const pillar = value as { earthlyBranch?: unknown; heavenlyStem?: unknown };
+  return typeof pillar.earthlyBranch === "string" && typeof pillar.heavenlyStem === "string";
 }
 
 function hasComparisonProfile(value: unknown): value is SymbolicComparisonProfile {
@@ -62,7 +69,12 @@ function hasComparisonProfile(value: unknown): value is SymbolicComparisonProfil
     && typeof profile.sunSign.modality === "string"
     && typeof profile.sunSign.sign === "string"
     && Number.isInteger(profile.yinYang?.yin)
-    && Number.isInteger(profile.yinYang?.yang);
+    && Number.isInteger(profile.yinYang?.yang)
+    // 사주 기둥은 일간·지지 렌즈의 입력이다. 옛 링크에는 이 자리가 없으므로
+    // 여기서 걸러야 비교 도중에 터지지 않는다(시주는 생시 미상이면 null).
+    && isPillar(profile.saju?.year) && isPillar(profile.saju?.month)
+    && isPillar(profile.saju?.day)
+    && (profile.saju?.hour === null || isPillar(profile.saju?.hour));
 }
 
 export function createSymbolicShareArtifact(

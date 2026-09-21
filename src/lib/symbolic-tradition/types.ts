@@ -19,6 +19,8 @@ export const COMPATIBILITY_LENSES = [
   "chinese-zodiac",
   "sun-sign",
   "element-complement",
+  "day-master",
+  "branch-harmony",
 ] as const;
 
 export type CompatibilityLensId = (typeof COMPATIBILITY_LENSES)[number];
@@ -85,6 +87,12 @@ export interface SymbolicProfile {
 export interface SymbolicComparisonProfile {
   chineseZodiac: SymbolicProfile["chineseZodiac"];
   fiveElements: Pick<SymbolicProfile["fiveElements"], "counts" | "dominant" | "observedCoordinates">;
+  /**
+   * 네 기둥 그대로. 오행 분포로 뭉개기 전의 원자료다 — 일간 렌즈는 일간
+   * 하나만 보고, 지지 렌즈는 기둥마다의 지지를 짝지어 본다. 시주는 출생
+   * 시각을 모르면 없다.
+   */
+  saju: SymbolicProfile["saju"];
   sunSign: SymbolicProfile["sunSign"];
   yinYang: SymbolicProfile["yinYang"];
 }

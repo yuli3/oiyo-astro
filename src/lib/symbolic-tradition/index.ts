@@ -162,16 +162,27 @@ export function deriveSymbolicProfile(input: BirthMoment): SymbolicProfile {
   };
 }
 
+/** 상생(相生) — 목생화 화생토 토생금 금생수 수생목. */
+const GENERATION: Record<FiveElement, FiveElement> = {
+  [FiveElement.WOOD]: FiveElement.FIRE,
+  [FiveElement.FIRE]: FiveElement.EARTH,
+  [FiveElement.EARTH]: FiveElement.METAL,
+  [FiveElement.METAL]: FiveElement.WATER,
+  [FiveElement.WATER]: FiveElement.WOOD,
+};
+
+/** 상극(相剋) — 목극토 토극수 수극화 화극금 금극목. */
+const CONTROL: Record<FiveElement, FiveElement> = {
+  [FiveElement.WOOD]: FiveElement.EARTH,
+  [FiveElement.EARTH]: FiveElement.WATER,
+  [FiveElement.WATER]: FiveElement.FIRE,
+  [FiveElement.FIRE]: FiveElement.METAL,
+  [FiveElement.METAL]: FiveElement.WOOD,
+};
+
 function elementRelation(a: FiveElement, b: FiveElement): string {
   if (a === b) return "same";
-  const generation: Record<FiveElement, FiveElement> = {
-    [FiveElement.WOOD]: FiveElement.FIRE,
-    [FiveElement.FIRE]: FiveElement.EARTH,
-    [FiveElement.EARTH]: FiveElement.METAL,
-    [FiveElement.METAL]: FiveElement.WATER,
-    [FiveElement.WATER]: FiveElement.WOOD,
-  };
-  if (generation[a] === b || generation[b] === a) return "generating-cycle";
+  if (GENERATION[a] === b || GENERATION[b] === a) return "generating-cycle";
   return "controlling-cycle";
 }
 
@@ -209,7 +220,95 @@ const HARMONY_INDEX: Record<CompatibilityLensId, Record<string, number>> = {
   "chinese-zodiac": { "same-trine": 90, same: 70, distinct: 55, opposite: 35 },
   "sun-sign": { "same-element": 85, "same-sign": 75, "same-modality": 55, distinct: 50 },
   "element-complement": { "deep-mutual": 88, "mutual-complement": 78, "one-way-complement": 62, "no-gap": 58, "shared-gap": 45 },
+  "day-master": { same: 70, generating: 85, controlling: 42 },
+  "branch-harmony": { "harmony-rich": 88, "harmony-leaning": 74, mixed: 60, "clash-leaning": 46, "clash-rich": 32 },
 };
+
+/**
+ * 일간(日干) 관계 — 명리가 궁합의 첫 축으로 삼는 자리.
+ *
+ * five-elements 렌즈와 무엇이 다른가: 저쪽은 여덟 글자를 세어 **가장 많은**
+ * 오행끼리 본다. 이쪽은 **일간 한 글자**만 본다. 명리에서 일간은 그 사람
+ * 자신을 가리키는 글자이고, 분포의 최빈값과는 대체로 어긋난다.
+ *
+ * 방향은 구분하지 않는다. 처음에는 "갑이 병을 생한다"와 그 반대를 다른
+ * 칸으로 뒀는데, 렌즈는 대칭이어야 한다는 기존 계약(원의 간선에는 방향이
+ * 없다)에 걸렸다. 누가 누구를 받치는지는 간선이 아니라 사람 쪽에 붙일
+ * 정보라, 렌즈에서는 뺀다.
+ */
+function dayMasterRelation(a: FiveElement, b: FiveElement): string {
+  if (a === b) return "same";
+  if (GENERATION[a] === b || GENERATION[b] === a) return "generating";
+  return "controlling";
+}
+
+/**
+ * 삼합(三合) — 세 지지가 한 조를 이뤄 같은 오행으로 모인다고 보는 네 무리.
+ *
+ * 왜 육합이 아니라 삼합인가: 처음에는 육합(子丑·寅亥…)과 육충으로 짰는데
+ * 음양 렌즈와 상관이 -0.275 나와 품질 게이트에 걸렸다. 육합은 여섯 쌍이
+ * 모두 양지-음지 짝이고 육충은 모두 같은 극성이라, 합·충을 세면 사실상
+ * 음양 거리를 다시 재는 것이었다 — 같은 말을 두 번 하는 렌즈다.
+ * 삼합은 한 무리가 모두 같은 극성이라(申子辰 양, 亥卯未 음) 극성을 타지 않는다.
+ */
+const TRINE_GROUPS: EarthlyBranch[][] = ([
+  ["SIN", "JA", "JIN"], ["HAE", "MYO", "MI"],
+  ["IN", "O", "SUL"], ["SA", "YU", "CHUK"],
+] as unknown) as EarthlyBranch[][];
+
+/** 육충(六沖) — 정면으로 부딪친다고 보는 여섯 쌍. 지지 순서로 여섯 칸 거리다. */
+const SIX_CLASHES: [EarthlyBranch, EarthlyBranch][] = ([
+  ["JA", "O"], ["CHUK", "MI"], ["IN", "SIN"],
+  ["MYO", "YU"], ["JIN", "SUL"], ["SA", "HAE"],
+] as unknown) as [EarthlyBranch, EarthlyBranch][];
+
+const pairKey = (a: EarthlyBranch, b: EarthlyBranch) => [a, b].sort().join("-");
+const TRINE_SET = new Set(
+  TRINE_GROUPS.flatMap((group) =>
+    group.flatMap((x, i) => group.slice(i + 1).map((y) => pairKey(x, y))),
+  ),
+);
+const CLASH_SET = new Set(SIX_CLASHES.map(([a, b]) => pairKey(a, b)));
+
+/**
+ * 지지 합·충 — 네 기둥의 지지를 서로 다 짝지어 본다.
+ *
+ * chinese-zodiac 렌즈와 무엇이 다른가: 저쪽은 **연지 하나**(띠)만 본다.
+ * 이쪽은 **연주를 뺀 나머지 기둥**의 지지를 모두 교차시켜 삼합이 몇 번,
+ * 충이 몇 번 걸리는지 센다. 띠가 충이어도 나머지 기둥이 합으로 받치는 경우가
+ * 흔한데, 띠만 보면 그 구조가 보이지 않는다.
+ *
+ * 연주를 빼는 이유는 중복이다. 연지까지 세면 띠 렌즈와 상관이 0.292 로
+ * 올라가 품질 게이트에 걸렸다 — 띠는 저 렌즈가 맡는다.
+ *
+ * 시주가 없으면(출생 시각 미상) 월·일 두 기둥만 쓴다 — 없는 자리를
+ * 지어내지 않는다.
+ */
+function branchHarmonyRelation(
+  a: SymbolicComparisonProfile["saju"],
+  b: SymbolicComparisonProfile["saju"],
+): string {
+  const branches = (pillars: SymbolicComparisonProfile["saju"]) =>
+    [pillars.month, pillars.day, pillars.hour]
+      .filter((pillar): pillar is SymbolicPillar => Boolean(pillar))
+      .map((pillar) => pillar.earthlyBranch);
+  let harmony = 0;
+  let clash = 0;
+  for (const x of branches(a)) {
+    for (const y of branches(b)) {
+      const key = pairKey(x, y);
+      if (TRINE_SET.has(key)) harmony += 1;
+      else if (CLASH_SET.has(key)) clash += 1;
+    }
+  }
+  const net = harmony - clash;
+  if (net >= 2) return "harmony-rich";
+  if (net === 1) return "harmony-leaning";
+  if (net === 0) return "mixed";
+  if (net === -1) return "clash-leaning";
+  return "clash-rich";
+}
+
 
 /**
  * 오행 결핍 보완 — "네가 나에게 없는 것을 갖고 있는가".
@@ -293,6 +392,11 @@ export function compareSymbolicProfiles(
       lens("chinese-zodiac", zodiacRelation(a.chineseZodiac.branch, b.chineseZodiac.branch)),
       lens("sun-sign", sunRelation),
       lens("element-complement", elementComplementRelation(a.fiveElements.counts, b.fiveElements.counts)),
+      lens("day-master", dayMasterRelation(
+        STEMS[a.saju.day.heavenlyStem].element as FiveElement,
+        STEMS[b.saju.day.heavenlyStem].element as FiveElement,
+      )),
+      lens("branch-harmony", branchHarmonyRelation(a.saju, b.saju)),
     ],
     policy: {
       aggregateJudgment: "none",
