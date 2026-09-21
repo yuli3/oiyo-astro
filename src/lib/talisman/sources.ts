@@ -100,6 +100,22 @@ export const OGHAM_BY_TREE: Record<string, string> = {
   nameless: "᚛", // 자모 없음 — 문장 시작 표시
 };
 
+/**
+ * 지지 한 자 → 12지신 이름. public/images/result-symbols/chinese-zodiac 의
+ * 파일 이름과 맞춘다 — 이미 그려 둔 에셋을 쓰기 위한 다리다.
+ */
+export const BRANCH_ANIMAL: Record<string, string> = {
+  子: "rat", 丑: "ox", 寅: "tiger", 卯: "rabbit", 辰: "dragon", 巳: "snake",
+  午: "horse", 未: "goat", 申: "monkey", 酉: "rooster", 戌: "dog", 亥: "boar",
+};
+
+/** 황도 기호 → 별자리 이름. western-zodiac 에셋 파일 이름과 맞춘다. */
+export const ZODIAC_NAME: Record<string, string> = {
+  "♈": "aries", "♉": "taurus", "♊": "gemini", "♋": "cancer",
+  "♌": "leo", "♍": "virgo", "♎": "libra", "♏": "scorpio",
+  "♐": "sagittarius", "♑": "capricorn", "♒": "aquarius", "♓": "pisces",
+};
+
 /** 부적이 읽어 올리는 값. 계산 결과만 담고 그리기는 모른다. */
 export interface TalismanReading {
   /** 보완할 오행 — 사주에서 온다 */

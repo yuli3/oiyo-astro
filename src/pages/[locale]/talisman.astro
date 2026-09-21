@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import TalismanTool from '../../components/tools/TalismanTool';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '액땜 부적 — 내 사주에 모자란 기운을 채우는 부적 한 장',
+    description: '생년월일시를 넣으면 사주에서 모자란 오행을 찾아 부적을 써 드립니다. 만세력 네 기둥, 팔괘, 황도 12궁, 켈트 오검, 마야 촐킨 음조를 한 판에 새기고 무엇을 왜 새겼는지 모두 설명합니다. SVG·PNG 로 내려받으세요.',
+  },
+  en: {
+    title: 'Warding Talisman — One Sheet for the Energy Your Chart Lacks',
+    description: 'Enter your birth date and time to find the Five-Element energy your chart lacks, then get a talisman inscribed with your Four Pillars, trigram, zodiac sign, Celtic Ogham letter and Mayan Tzolkin tone — each one explained. Download as SVG or PNG.',
+  },
+  ja: {
+    title: '厄除けの符 — 四柱に足りない気を補う一枚',
+    description: '生年月日時から足りない五行を見つけ、符を一枚書きます。万年暦の四柱・八卦・黄道十二宮・ケルトのオガム・マヤのツォルキン音を一枚に刻み、何をなぜ刻んだかをすべて説明します。SVG・PNG でダウンロードできます。',
+  },
+  zh: {
+    title: '消灾符 — 补足命盘所缺之气的一张符',
+    description: '输入生辰，找出命盘所缺的五行，为你写一张符。符上刻有万年历四柱、八卦、黄道十二宫、凯尔特欧甘文与玛雅卓尔金音调，并逐一说明来由。可下载 SVG 或 PNG。',
+  },
+  fr: {
+    title: 'Talisman de protection — une feuille pour l’énergie qui vous manque',
+    description: 'Indiquez votre naissance pour trouver l’élément qui manque à votre thème, puis recevez un talisman portant vos Quatre Piliers, votre trigramme, votre signe du zodiaque, votre lettre ogham celtique et votre ton maya — chacun expliqué. Téléchargeable en SVG ou PNG.',
+  },
+  es: {
+    title: 'Talismán de protección — una hoja para la energía que te falta',
+    description: 'Introduce tu nacimiento para hallar el elemento que falta en tu carta y recibe un talismán con tus Cuatro Pilares, trigrama, signo zodiacal, letra ogham celta y tono maya, cada uno explicado. Descárgalo en SVG o PNG.',
+  },
+};
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="container mx-auto max-w-2xl px-4 py-8">
+    <TalismanTool locale={locale} client:load />
+  </div>
+</Layout>
