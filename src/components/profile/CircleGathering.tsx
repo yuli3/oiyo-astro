@@ -21,6 +21,7 @@ import { createEncryptedResultPermalink, readEncryptedResultPermalink } from "@/
 import { FRIEND_BIRTH_SHARE_TOOL_ID, parseFriendBirthShare, type FriendBirthShare } from "@/lib/symbolic-tradition/friend-birth-share";
 import CompatibilityOrbit from "@/components/profile/CompatibilityOrbit";
 import CircleSynthesis from "@/components/profile/CircleSynthesis";
+import CircleToday from "@/components/profile/CircleToday";
 import { synthesizeGroup } from "@/lib/symbolic-tradition/group-synthesis";
 import { scoreAgainstCenter } from "@/lib/symbolic-tradition/orbit-layout";
 import { gaEvent } from "@/lib/analytics/ga-event";
@@ -440,6 +441,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
     </div>}
 
     {synthesis && <CircleSynthesis locale={locale} synthesis={synthesis} />}
+    {synthesis && <CircleToday locale={locale} members={people} synthesis={synthesis} />}
 
     {snapshot && <section className="mt-8 rounded-[2rem] border border-border bg-[var(--surface-subtle)] p-4 sm:p-7">
       <div className="flex gap-2 overflow-x-auto pb-1">{(Object.keys(LENS[lang]) as CompatibilityLensId[]).map((id) => (
