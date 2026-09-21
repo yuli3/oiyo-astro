@@ -11,6 +11,7 @@
  * 결과를 읽기만 한다. 총점도 순위도 만들지 않는다.
  */
 import { GROUP_ELEMENT_ORDER, type GroupSynthesis } from "@/lib/symbolic-tradition/group-synthesis";
+import { groupEpithet } from "@/lib/symbolic-tradition/group-epithet";
 import { ELEMENT_SYMBOLS } from "@/lib/talisman/symbols";
 import type { FiveElement } from "@/lib/ontology/saju/types";
 
@@ -27,11 +28,9 @@ const EL_COLOR: Record<string, string> = {
 const T: Record<Lang, Record<string, string>> = {
   ko: {
     title: "우리 기운",
-    lead: "모인 사람들의 좌표를 한데 합쳐 읽었어요. 점수도 순위도 없어요.",
     abundant: "몰린 기운",
     scarce: "얇은 기운",
     missing: "아무도 없는 기운",
-    none: "두드러지는 쪽이 없어요",
     spreadEven: "다섯 기운이 고르게 퍼져 있어요",
     spreadLeaning: "한쪽으로 조금 기울어 있어요",
     spreadSkewed: "한쪽으로 뚜렷하게 쏠려 있어요",
@@ -51,9 +50,7 @@ const T: Record<Lang, Record<string, string>> = {
   },
   en: {
     title: "Our energies",
-    lead: "Everyone’s coordinates, read as one. No score, no ranking.",
     abundant: "Concentrated", scarce: "Thin", missing: "Nobody has it",
-    none: "Nothing stands out",
     spreadEven: "The five spread evenly",
     spreadLeaning: "Tilted a little to one side",
     spreadSkewed: "Clearly concentrated on one side",
@@ -68,9 +65,7 @@ const T: Record<Lang, Record<string, string>> = {
   },
   ja: {
     title: "わたしたちの気",
-    lead: "集まった人の座標をひとつに合わせて読みました。点数も順位もありません。",
     abundant: "偏った気", scarce: "薄い気", missing: "誰も持たない気",
-    none: "際立つものはありません",
     spreadEven: "五つが均等に散っています",
     spreadLeaning: "少し片寄っています",
     spreadSkewed: "はっきり片寄っています",
@@ -85,9 +80,7 @@ const T: Record<Lang, Record<string, string>> = {
   },
   zh: {
     title: "我们的气",
-    lead: "把在场每个人的坐标合在一起读。没有分数，也没有排名。",
     abundant: "偏多的气", scarce: "偏薄的气", missing: "无人具备的气",
-    none: "没有特别突出的",
     spreadEven: "五行分布均匀",
     spreadLeaning: "略微偏向一侧",
     spreadSkewed: "明显偏向一侧",
@@ -102,9 +95,7 @@ const T: Record<Lang, Record<string, string>> = {
   },
   fr: {
     title: "Nos énergies",
-    lead: "Les coordonnées de chacun, lues comme un tout. Ni score ni classement.",
     abundant: "Concentrée", scarce: "Mince", missing: "Personne ne l’a",
-    none: "Rien ne ressort",
     spreadEven: "Les cinq se répartissent également",
     spreadLeaning: "Légèrement penché d’un côté",
     spreadSkewed: "Nettement concentré d’un côté",
@@ -119,9 +110,7 @@ const T: Record<Lang, Record<string, string>> = {
   },
   es: {
     title: "Nuestras energías",
-    lead: "Las coordenadas de cada uno, leídas como un todo. Sin puntuación ni ranking.",
     abundant: "Concentrada", scarce: "Escasa", missing: "Nadie la tiene",
-    none: "Nada destaca",
     spreadEven: "Los cinco se reparten por igual",
     spreadLeaning: "Algo inclinado a un lado",
     spreadSkewed: "Claramente concentrado en un lado",
@@ -212,6 +201,7 @@ export default function CircleSynthesis({
 }) {
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   const t = T[lang];
+  const epithet = groupEpithet(synthesis, lang);
   const { astro, contributions, elements, polarity, spread } = synthesis;
   const name = (element: FiveElement) =>
     ELEMENT_SYMBOLS[element].name[lang] ?? ELEMENT_SYMBOLS[element].name.en;
@@ -236,8 +226,10 @@ export default function CircleSynthesis({
 
   return (
     <section className="mt-8 rounded-[2rem] border border-border bg-card p-4 sm:p-7">
-      <h2 className="text-lg font-black text-foreground">{t.title}</h2>
-      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{t.lead}</p>
+      <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{t.title}</p>
+      {/* 모임의 이름이 먼저 온다. 숫자는 그 이름의 근거로 아래에 따라붙는다. */}
+      <h2 className="mt-1 text-2xl font-black leading-tight text-foreground sm:text-3xl">{epithet.title}</h2>
+      <p className="mt-2 text-sm leading-relaxed text-foreground">{epithet.line}</p>
 
       {/* 오행 막대. 기대값에서 많이 벗어난 것일수록 진하게 둔다. */}
       <div className="mt-4 space-y-2">
@@ -273,9 +265,6 @@ export default function CircleSynthesis({
         {chips(t.abundant, elements.abundant, "bg-primary/15 text-primary-strong")}
         {chips(t.scarce, elements.scarce, "bg-muted text-muted-foreground")}
         {chips(t.missing, elements.missing, "bg-red-50 text-red-800")}
-        {!elements.abundant.length && !elements.scarce.length && !elements.missing.length && (
-          <p className="text-xs text-muted-foreground">{t.none}</p>
-        )}
       </div>
 
       {cares.length > 0 && (

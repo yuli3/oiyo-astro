@@ -24,8 +24,24 @@ export const GROUP_ELEMENT_ORDER: FiveElement[] = [
   FiveElement.WATER,
 ];
 
-/** 한 원소가 고르게 나뉘었을 때의 몫. 오행이 다섯이므로 20%다. */
-const EVEN_SHARE = 1 / GROUP_ELEMENT_ORDER.length;
+/**
+ * 오행 좌표의 실제 기저 비율.
+ *
+ * 다섯으로 나눈 20% 가 아니다. 지지 열둘 중 넷(辰戌丑未)이 토라 사주 좌표에는
+ * 토가 구조적으로 더 자주 나온다. 1900~2020 의 연속 20,000일에서 좌표
+ * 120,000개를 세어 확인했다(group-synthesis.test 가 이 값을 다시 잰다).
+ *
+ * 20% 를 기준으로 삼으면 모임의 29% 에게 "토가 몰렸다"고 말하게 된다 —
+ * 달력이 원래 그런 것을 그 모임의 특징이라고 하는 셈이다. 기저 비율을
+ * 기준으로 삼아야 "이 모임이 유별나다"가 참이 된다.
+ */
+const EXPECTED_SHARE: Record<FiveElement, number> = {
+  [FiveElement.WOOD]: 0.1845,
+  [FiveElement.FIRE]: 0.183,
+  [FiveElement.EARTH]: 0.2634,
+  [FiveElement.METAL]: 0.1837,
+  [FiveElement.WATER]: 0.1854,
+};
 
 /**
  * "많다·적다"를 몫의 고정 비율로 재면 안 된다.
@@ -44,13 +60,14 @@ const DEVIATION_FLAG = 1.5;
 const DEVIATION_SKEWED = 2;
 const DEVIATION_LEANING = 1.2;
 
-/** 기대값에서 표준편차 몇 배만큼 벗어났는가. */
+/** 기저 비율에서 표준편차 몇 배만큼 벗어났는가. */
 function deviations(counts: Record<FiveElement, number>): Record<FiveElement, number> {
   const total = GROUP_ELEMENT_ORDER.reduce((sum, element) => sum + counts[element], 0);
-  const mean = total * EVEN_SHARE;
-  const sd = Math.sqrt(total * EVEN_SHARE * (1 - EVEN_SHARE));
   const out = emptyCounts();
   for (const element of GROUP_ELEMENT_ORDER) {
+    const share = EXPECTED_SHARE[element];
+    const mean = total * share;
+    const sd = Math.sqrt(total * share * (1 - share));
     out[element] = sd > 0 ? (counts[element] - mean) / sd : 0;
   }
   return out;
