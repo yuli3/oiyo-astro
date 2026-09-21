@@ -1,6 +1,6 @@
 "use client";
 
-import { Network, Plus, Share2, Star, Trash2 } from "lucide-react";
+import { Plus, Share2, Trash2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 import type { City } from "@/lib/ontology/natal/signs";
@@ -12,7 +12,6 @@ import {
   createSymbolicGroupSnapshot,
   decodeSymbolicGroupSnapshot,
   resolveGroupCenterId,
-  starEdges,
   symbolicGroupFragment,
   type SymbolicGroupParticipant,
 } from "@/lib/symbolic-tradition/group-snapshot";
@@ -21,6 +20,8 @@ import { readEncryptedShortShare } from "@/lib/symbolic-tradition/short-share";
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from "@/lib/encrypted-result-permalink";
 import { FRIEND_BIRTH_SHARE_TOOL_ID, parseFriendBirthShare, type FriendBirthShare } from "@/lib/symbolic-tradition/friend-birth-share";
 import CompatibilityOrbit from "@/components/profile/CompatibilityOrbit";
+import CircleSynthesis from "@/components/profile/CircleSynthesis";
+import { synthesizeGroup } from "@/lib/symbolic-tradition/group-synthesis";
 import { scoreAgainstCenter } from "@/lib/symbolic-tradition/orbit-layout";
 import { gaEvent } from "@/lib/analytics/ga-event";
 import { PAIR_COPY } from "@/lib/symbolic-tradition/pair-copy";
@@ -206,6 +207,17 @@ function person(label: string, profile: SymbolicComparisonProfile): SymbolicGrou
   return { id: `p-${Math.random().toString(36).slice(2, 8)}`, label: label.trim().slice(0, 24) || "?", profile };
 }
 
+/**
+ * 별칭은 선택 입력이다. 비우면 예전에는 전원이 같은 말("친구")이 됐고,
+ * 원에도 궤도에도 범례에도 "친구 친구 친구 친구"가 늘어서서 누가 누구인지
+ * 알 수 없었다 — 2026-09-21 세운 지적. 비워 두더라도 서로 구분되게 짓는다.
+ * 원을 만드는 사람이 보통 자기부터 넣으므로 첫 자리는 "나"다.
+ */
+function defaultLabel(copy: { friend: string; me: string }, index: number): string {
+  if (index === 0) return copy.me;
+  return `${copy.friend} ${index}`;
+}
+
 export default function CircleGathering({ locale }: { locale: string }) {
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   // 2026-09-04: `lang === "ko" ? COPY.ko : FALLBACK` 이었다. COPY 에 ko·en 만
@@ -215,7 +227,6 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const [people, setPeople] = useState<SymbolicGroupParticipant[]>([]);
   const [centerId, setCenterId] = useState("");
   const [lens, setLens] = useState<CompatibilityLensId>("five-elements");
-  const [view, setView] = useState<"all" | "star">("star");
   const [alias, setAlias] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
@@ -252,7 +263,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
           }
         }
         if (profile) {
-          setPeople([person(copy.friend, profile)]);
+          setPeople([person(copy.me, profile)]);
           return;
         }
         const encryptedResultId = new URL(window.location.href).searchParams.get("result");
@@ -276,7 +287,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
       }
     };
     void boot();
-  }, [copy.friend]);
+  }, [copy.me]);
 
   useEffect(() => {
     if (!hydrated || pendingFriend) return;
@@ -293,7 +304,14 @@ export default function CircleGathering({ locale }: { locale: string }) {
     () => (people.length >= 2 ? createSymbolicGroupSnapshot(people, { centerId: activeCenterId }) : null),
     [activeCenterId, people],
   );
-  const edges = snapshot ? (view === "star" ? starEdges(snapshot, lens) : allPairEdges(snapshot, lens)) : [];
+  // 쌍 해설은 목록으로 고른다. 예전에는 2D 노드 그래프의 간선을 눌러 골랐는데,
+  // 그 그래프가 궤도와 같은 것을 두 번 그리고 있어 걷어냈다. "나 중심 / 전체
+  // 연결" 토글도 그 그래프의 간선 범위만 바꾸던 것이라 함께 없앴다.
+  const edges = snapshot ? allPairEdges(snapshot, lens) : [];
+  const synthesis = useMemo(
+    () => (people.length >= 2 ? synthesizeGroup(people) : null),
+    [people],
+  );
 
   const addByDate = () => {
     if (time && !selectedCity && !cityId) {
@@ -302,7 +320,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
     }
     try {
       const profile = comparisonFromCivil({ city: selectedCity ?? undefined, cityId: cityId || undefined, date, time: time || undefined });
-      const next = person(alias || copy.friend, profile);
+      const next = person(alias || defaultLabel(copy, people.length), profile);
       setPeople((current) => {
         if (current.length >= 10) return current;
         const list = [...current, next];
@@ -366,7 +384,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
         }
       }
       if (!profile) throw new Error("bad");
-      const next = person(alias || copy.friend, profile);
+      const next = person(alias || defaultLabel(copy, people.length), profile);
       setPeople((current) => (current.length >= 10 ? current : [...current, next]));
       setAlias("");
       setLink("");
@@ -392,13 +410,6 @@ export default function CircleGathering({ locale }: { locale: string }) {
     setCopied(true);
   };
 
-  const positions = people.map((item) => {
-    if (item.id === activeCenterId) return { id: item.id, x: 50, y: 50 };
-    const others = people.filter((row) => row.id !== activeCenterId);
-    const angle = (Math.PI * 2 * others.findIndex((row) => row.id === item.id)) / Math.max(others.length, 1) - Math.PI / 2;
-    return { id: item.id, x: 50 + Math.cos(angle) * 38, y: 50 + Math.sin(angle) * 38 };
-  });
-  const at = (id: string) => positions.find((item) => item.id === id) ?? { id, x: 50, y: 50 };
   const pickedEdge = picked && snapshot
     ? snapshot.edges.find((edge) => edge.lens === lens && ((edge.from === picked.from && edge.to === picked.to) || (edge.from === picked.to && edge.to === picked.from)))
     : null;
@@ -428,31 +439,33 @@ export default function CircleGathering({ locale }: { locale: string }) {
       </button>
     </div>}
 
+    {synthesis && <CircleSynthesis locale={locale} synthesis={synthesis} />}
+
     {snapshot && <section className="mt-8 rounded-[2rem] border border-border bg-[var(--surface-subtle)] p-4 sm:p-7">
       <div className="flex gap-2 overflow-x-auto pb-1">{(Object.keys(LENS[lang]) as CompatibilityLensId[]).map((id) => (
         <button key={id} type="button" onClick={() => { setLens(id); gaEvent("circle_lens_select", { lens: id }); }} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-primary-strong text-white" : "border border-border bg-card text-foreground"}`}>{LENS[lang][id]}</button>
       ))}</div>
-      <div className="mt-3 grid grid-cols-2 gap-2">
-        <button type="button" onClick={() => setView("star")} className={`min-h-11 rounded-xl text-xs font-black ${view === "star" ? "bg-accent text-foreground" : "bg-card text-muted-foreground"}`}><Star className="mr-1 inline h-4 w-4" />{copy.star}</button>
-        <button type="button" onClick={() => setView("all")} className={`min-h-11 rounded-xl text-xs font-black ${view === "all" ? "bg-accent text-foreground" : "bg-card text-muted-foreground"}`}><Network className="mr-1 inline h-4 w-4" />{copy.all}</button>
-      </div>
-      <div className="mt-4 aspect-square max-h-[32rem] w-full overflow-hidden rounded-3xl border border-border bg-card">
-        <svg viewBox="0 0 100 100" className="h-full w-full">
-          {edges.map((edge) => {
-            const from = at(edge.from);
-            const to = at(edge.to);
-            return <line key={`${edge.from}-${edge.to}`} x1={from.x} y1={from.y} x2={to.x} y2={to.y} stroke="var(--primary)" strokeOpacity={0.45 + (edge.harmonyIndex / 100) * 0.55} strokeWidth={0.35 + (edge.harmonyIndex / 100) * 1.15} className="cursor-pointer" onClick={() => { setPicked({ from: edge.from, to: edge.to }); gaEvent("circle_pair_open", { lens: edge.lens, relation: edge.relation }); }} />;
-          })}
-          {positions.map((point) => {
-            const who = people.find((item) => item.id === point.id)!;
-            const isCenter = point.id === activeCenterId;
-            return <g key={point.id} onClick={() => setCenterId(point.id)} className="cursor-pointer">
-              <circle cx={point.x} cy={point.y} r={isCenter ? 7 : 5.5} fill={isCenter ? "var(--primary-strong)" : "var(--accent)"} stroke="var(--primary-strong)" strokeWidth="0.6" />
-              <text x={point.x} y={point.y + 0.8} textAnchor="middle" fontSize="3" fontWeight="800" fill={isCenter ? "white" : "var(--foreground)"}>{who.label.slice(0, 8)}</text>
-            </g>;
-          })}
-        </svg>
-      </div>
+      {/* 쌍 목록 — 누르면 아래에 그 둘의 해설이 열린다. */}
+      <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
+        {edges.map((edge) => {
+          const isPicked = picked && ((picked.from === edge.from && picked.to === edge.to) || (picked.from === edge.to && picked.to === edge.from));
+          const copyFor = PAIR_COPY[lang][`${edge.lens}:${edge.relation}`];
+          return (
+            <li key={`${edge.from}-${edge.to}`}>
+              <button
+                type="button"
+                onClick={() => { setPicked({ from: edge.from, to: edge.to }); gaEvent("circle_pair_open", { lens: edge.lens, relation: edge.relation }); }}
+                className={`flex min-h-11 w-full items-center justify-between gap-2 rounded-xl border px-3 text-left text-xs ${isPicked ? "border-primary bg-primary/10" : "border-border bg-card"}`}
+              >
+                <span className="min-w-0 truncate font-bold text-foreground">
+                  {people.find((item) => item.id === edge.from)?.label} · {people.find((item) => item.id === edge.to)?.label}
+                </span>
+                <span className="shrink-0 font-black text-primary-strong">{copyFor?.label ?? edge.relation}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
       <CompatibilityOrbit
         locale={locale}
         mode="system"
