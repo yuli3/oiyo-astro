@@ -11,17 +11,17 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: Locale };
 const meta: Record<Locale, { title: string; description: string }> = {
-  ko: { title: '우리 원 — 여러 친구와 상징 궁합', description: '2명에서 10명까지 생년월일로 오행·음양·띠·태양궁을 원에 그립니다. 총점과 순위는 없습니다.' },
-  en: { title: 'Our circle — symbolic match for friends', description: 'Map two to ten people through five elements, yin-yang, zodiac, and sun signs. No group total or ranking.' },
-  ja: { title: 'みんなの円 — 友だちとの象徴的な相性', description: '2〜10人の生年月日から五行・陰陽・干支・太陽星座を円に描きます。総合点や順位はありません。' },
-  zh: { title: '我们的圆 — 多个朋友的象征合拍', description: '用两到十人的出生日期画出五行、阴阳、生肖与太阳星座。没有总分或排名。' },
-  fr: { title: 'Notre cercle — compatibilité entre amis', description: 'Placez 2 à 10 personnes selon cinq éléments, yin-yang, zodiaque et signe. Pas de total ni de classement.' },
-  es: { title: 'Nuestro círculo — compatibilidad entre amistades', description: 'Dibuja de 2 a 10 personas con cinco elementos, yin-yang, zodiaco y signo. Sin total ni ranking.' },
+  ko: { title: '우리의 지도 — 2~10명이 모이면 어떤 모임인가', description: '생년월일만으로 오행·음양·띠·태양궁·일간·지지·마야·켈트 아홉 관점을 겹쳐 읽습니다. 몰린 기운과 빈자리, 누가 그 자리를 채우는지, 그리고 오늘의 우리까지.' },
+  en: { title: 'Our Map — what kind of group you are together', description: 'Nine lenses from birth dates alone: five elements, yin-yang, zodiac, sun sign, day master, branches, Mayan, Celtic. What the group has too much of, what it lacks, who fills the gap — and how today lands.' },
+  ja: { title: '私たちの地図 — 2〜10人が集まるとどんな集まりか', description: '生年月日だけで五行・陰陽・干支・太陽星座・日干・地支・マヤ・ケルトの九つの視点を重ねて読みます。偏った気と空いた席、それを埋める人、そして今日のわたしたち。' },
+  zh: { title: '我们的地图 — 2到10人聚在一起是怎样的组合', description: '仅凭出生日期，叠加五行、阴阳、生肖、太阳星座、日干、地支、玛雅与凯尔特九种视角。偏多的气、空缺的位置、由谁补上，以及今天的我们。' },
+  fr: { title: 'Notre carte — quel groupe vous formez ensemble', description: 'Neuf perspectives à partir des seules dates de naissance : cinq éléments, yin-yang, zodiaque, signe solaire, maître du jour, branches, maya, celte. Ce qui abonde, ce qui manque, qui comble — et ce que donne aujourd’hui.' },
+  es: { title: 'Nuestro mapa — qué grupo formáis juntos', description: 'Nueve perspectivas solo con las fechas de nacimiento: cinco elementos, yin-yang, zodiaco, signo solar, tronco del día, ramas, maya y celta. Lo que sobra, lo que falta, quién lo cubre y cómo cae hoy.' },
 };
 const m = meta[locale] ?? meta.en;
 const guide = {
   ko: {
-    heading: '우리 원은 이렇게 읽어요',
+    heading: '우리의 지도는 이렇게 읽어요',
     intro: '여러 사람의 생년월일을 같은 기준으로 바꾼 뒤, 오행·음양·띠·태양궁을 관점별로 비교해요. 관계의 점수나 미래를 판정하지 않아요.',
     steps: ['각 사람의 별칭과 생년월일을 입력해요.', '태어난 시각을 안다면 출생도시도 함께 선택해요.', '중심 인물과 관점을 바꾸며 관계의 공통점과 차이를 살펴봐요.'],
     note: '태어난 시각을 모르면 비워 두세요. 이때는 시주를 만들지 않고 확인 가능한 여섯 좌표만 사용해요. 입력한 정보와 원은 이 브라우저에 저장되며, 친구 링크는 암호화해서 만들어요.',

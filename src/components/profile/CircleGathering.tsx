@@ -32,7 +32,7 @@ type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY = {
   ko: {
-    title: "우리 원",
+    title: "우리의 지도",
     sub: "2명부터 10명까지. 생년월일을 적거나 친구 링크를 넣으면 이 브라우저에서만 원이 그려집니다.",
     me: "나",
     friend: "친구",
@@ -57,7 +57,7 @@ const COPY = {
     locationError: "태어난 시각을 입력했다면 출생도시도 선택해 주세요.",
   },
   en: {
-    title: "Our circle",
+    title: "Our map",
     sub: "Two to ten people. Add a birth date or a friend link. The circle stays in this browser.",
     me: "You",
     friend: "Friend",
@@ -82,7 +82,7 @@ const COPY = {
     locationError: "If you enter a birth time, choose the birth city too.",
   },
   ja: {
-    title: "みんなの円",
+    title: "私たちの地図",
     sub: "2人から10人まで。生年月日を入れるか友だちのリンクを貼ると、このブラウザの中だけで円が描かれます。",
     me: "わたし",
     friend: "友だち",
@@ -107,7 +107,7 @@ const COPY = {
     locationError: "出生時刻を入力した場合は、出生都市も選んでください。",
   },
   zh: {
-    title: "我们的圆",
+    title: "我们的地图",
     sub: "两人到十人。填写出生日期或粘贴朋友的链接，圆只会画在这个浏览器里。",
     me: "我",
     friend: "朋友",
@@ -132,7 +132,7 @@ const COPY = {
     locationError: "如果填写了出生时间，也请选择出生城市。",
   },
   fr: {
-    title: "Notre cercle",
+    title: "Notre carte",
     sub: "De deux à dix personnes. Saisissez une date de naissance ou collez le lien d'un ami : le cercle reste dans ce navigateur.",
     me: "Moi",
     friend: "Ami",
@@ -157,7 +157,7 @@ const COPY = {
     locationError: "Si vous indiquez l’heure de naissance, choisissez aussi la ville de naissance.",
   },
   es: {
-    title: "Nuestro círculo",
+    title: "Nuestro mapa",
     sub: "De dos a diez personas. Escribe una fecha de nacimiento o pega el enlace de una amistad: el círculo se queda en este navegador.",
     me: "Yo",
     friend: "Amistad",
