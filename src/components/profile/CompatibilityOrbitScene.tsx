@@ -11,7 +11,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 
-import type { OrbitLayout } from "@/lib/symbolic-tradition/orbit-layout";
+import { approachValue, type OrbitLayout } from "@/lib/symbolic-tradition/orbit-layout";
 import { useReducedMotion } from "@/hooks/useMotion";
 
 const SUN_COLOR = "#f59e0b";
@@ -37,16 +37,33 @@ function bodyPosition(
   return { x, y: y1, z: z1 };
 }
 
-function Planet({ body, timeRef }: { body: OrbitLayout["bodies"][number]; timeRef: React.MutableRefObject<number> }) {
+function Planet({ body, timeRef, animate }: { animate: boolean; body: OrbitLayout["bodies"][number]; timeRef: React.MutableRefObject<number> }) {
   const group = useRef<THREE.Group>(null);
-  useFrame(() => {
+  const core = useRef<THREE.Mesh>(null);
+  const halo = useRef<THREE.Mesh>(null);
+  const light = useRef<THREE.PointLight>(null);
+  // 화면에 실제로 그려지고 있는 값. 목표값(body.*)을 향해 따라간다.
+  const shown = useRef({ glow: body.glow, radius: body.radius, size: body.size });
+
+  useFrame((_, delta) => {
     if (!group.current) return;
-    const pos = bodyPosition(body, timeRef.current);
+    const step = Math.min(delta, 0.05);
+    shown.current.radius = approachValue(shown.current.radius, body.radius, step, animate);
+    shown.current.size = approachValue(shown.current.size, body.size, step, animate);
+    shown.current.glow = approachValue(shown.current.glow, body.glow, step, animate);
+    const pos = bodyPosition({ ...body, radius: shown.current.radius }, timeRef.current);
     group.current.position.set(pos.x, pos.y, pos.z);
+    const scale = shown.current.size / body.size;
+    if (core.current) core.current.scale.setScalar(scale);
+    if (halo.current) halo.current.scale.setScalar((1.5 + shown.current.glow * 0.7) * scale);
+    if (light.current) light.current.intensity = 0.4 + shown.current.glow * 1.2;
+    const material = core.current?.material as THREE.MeshStandardMaterial | undefined;
+    if (material) material.emissiveIntensity = 0.25 + shown.current.glow * 0.9;
   });
+
   return (
     <group ref={group}>
-      <mesh castShadow={false}>
+      <mesh ref={core} castShadow={false}>
         <sphereGeometry args={[body.size, 32, 32]} />
         <meshStandardMaterial
           color={body.color}
@@ -57,35 +74,45 @@ function Planet({ body, timeRef }: { body: OrbitLayout["bodies"][number]; timeRe
         />
       </mesh>
       {/* Harmony halo — brighter for closer relationships. */}
-      <mesh scale={1.5 + body.glow * 0.7}>
+      <mesh ref={halo} scale={1.5 + body.glow * 0.7}>
         <sphereGeometry args={[body.size, 16, 16]} />
         <meshBasicMaterial color={body.color} transparent opacity={0.08 + body.glow * 0.14} depthWrite={false} />
       </mesh>
-      <pointLight color={body.color} intensity={0.4 + body.glow * 1.2} distance={3} />
+      <pointLight ref={light} color={body.color} intensity={0.4 + body.glow * 1.2} distance={3} />
     </group>
   );
 }
 
-function OrbitRing({ radius, inclinationX, inclinationZ }: { radius: number; inclinationX: number; inclinationZ: number }) {
+/**
+ * 반지름 1 로 한 번만 만들고 스케일로 키운다. 렌즈가 바뀌면 행성이 새 궤도로
+ * 미끄러지는데(Planet 참조) 고리가 그대로 튀면 둘이 어긋나 보이므로, 고리도
+ * 같은 속도로 따라가게 한다. 매번 geometry 를 다시 만들지 않아도 된다.
+ */
+function OrbitRing({ animate, radius, inclinationX, inclinationZ }: { animate: boolean; radius: number; inclinationX: number; inclinationZ: number }) {
+  const loop = useRef<THREE.LineLoop>(null);
+  const shown = useRef(radius);
   const geometry = useMemo(() => {
     const segments = 128;
     const positions = new Float32Array(segments * 3);
     for (let i = 0; i < segments; i += 1) {
       const angle = (i / segments) * Math.PI * 2;
-      positions[i * 3] = Math.cos(angle) * radius;
-      positions[i * 3 + 2] = Math.sin(angle) * radius;
+      positions[i * 3] = Math.cos(angle);
+      positions[i * 3 + 2] = Math.sin(angle);
     }
-    const attr = new THREE.BufferAttribute(positions, 3);
     const geo = new THREE.BufferGeometry();
-    geo.setAttribute("position", attr);
+    geo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     return geo;
-  }, [radius]);
+  }, []);
+  useFrame((_, delta) => {
+    shown.current = approachValue(shown.current, radius, Math.min(delta, 0.05), animate);
+    loop.current?.scale.setScalar(shown.current);
+  });
   const rotation = useMemo(
     () => new THREE.Euler(inclinationX, 0, inclinationZ),
     [inclinationX, inclinationZ],
   );
   return (
-    <lineLoop geometry={geometry} rotation={rotation}>
+    <lineLoop ref={loop} geometry={geometry} rotation={rotation} scale={shown.current}>
       <lineBasicMaterial color="#a3c96a" transparent opacity={0.28} />
     </lineLoop>
   );
@@ -150,9 +177,9 @@ function Scene({ layout, animate }: { layout: Layout; animate: boolean }) {
       {layout.bodies.map((body) => (
         <group key={body.id}>
           {layout.mode === "system" && (
-            <OrbitRing radius={body.radius} inclinationX={body.inclinationX} inclinationZ={body.inclinationZ} />
+            <OrbitRing animate={animate} radius={body.radius} inclinationX={body.inclinationX} inclinationZ={body.inclinationZ} />
           )}
-          <Planet body={body} timeRef={timeRef} />
+          <Planet animate={animate} body={body} timeRef={timeRef} />
         </group>
       ))}
       {layout.mode === "pair" && <PairArc layout={layout} timeRef={timeRef} />}

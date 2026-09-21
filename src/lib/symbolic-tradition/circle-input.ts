@@ -22,7 +22,9 @@ export function comparisonFromCivil(input: {
     utcOffsetMinutes: city ? resolution.offsetMinutes : null,
   });
   return {
+    celticTree: profile.celticTree,
     chineseZodiac: profile.chineseZodiac,
+    mayanKin: profile.mayanKin,
     fiveElements: {
       counts: profile.fiveElements.counts,
       dominant: profile.fiveElements.dominant,

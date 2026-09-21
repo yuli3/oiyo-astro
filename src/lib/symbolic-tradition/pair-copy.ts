@@ -16,6 +16,16 @@ export interface PairCopy { ask: string; care: string; help: string; label: stri
 
 export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`, PairCopy>> = {
   ko: {
+    // 2026-09-21 마야·켈트 렌즈. 생년월일만으로 계산되는 체계를 더 얹었다.
+    "mayan-kin:same-color-near-tone": { label: "같은 색·가까운 박", help: "시작하는 결도 박자도 비슷해 손발이 잘 맞습니다.", care: "너무 닮아 속도를 줄여 줄 사람이 없습니다.", ask: "우리 둘 다 브레이크가 없는 순간은 언제야?" },
+    "mayan-kin:same-color-far-tone": { label: "같은 색·다른 박", help: "향하는 곳은 같은데 박자가 다릅니다.", care: "같은 목표에서 자꾸 타이밍이 어긋납니다.", ask: "같은 걸 원하는데 왜 속도가 다를까?" },
+    "mayan-kin:near-color-near-tone": { label: "이웃 색·가까운 박", help: "결은 다르지만 리듬이 맞아 붙기 쉽습니다.", care: "리듬만 믿고 방향을 안 맞출 수 있습니다.", ask: "우리 요즘 같은 쪽을 보고 있나?" },
+    "mayan-kin:near-color-far-tone": { label: "이웃 색·다른 박", help: "결도 리듬도 조금씩 어긋나 서로 새롭습니다.", care: "맞추는 데 품이 듭니다.", ask: "너한테 제일 낯선 내 습관은 뭐야?" },
+    "mayan-kin:opposite-color": { label: "맞은편 색", help: "정반대 자리라 서로의 사각을 봅니다.", care: "설명 없이는 오해가 쌓입니다.", ask: "내가 당연하다고 여기는 것 중 이상한 게 있어?" },
+    "celtic-tree:same-tree": { label: "같은 나무", help: "같은 구간에서 태어나 기질의 바탕이 겹칩니다.", care: "같은 계절의 약점도 함께 갖습니다.", ask: "우리가 똑같이 힘들어하는 시기가 있어?" },
+    "celtic-tree:same-season": { label: "같은 계절", help: "자라는 리듬이 비슷합니다.", care: "쉬는 때도 겹쳐 둘 다 지칠 수 있습니다.", ask: "요즘 둘 다 지치는 시기인가?" },
+    "celtic-tree:facing-season": { label: "마주 보는 계절", help: "한쪽이 피울 때 다른 쪽이 거둡니다.", care: "서로의 시기를 재촉하면 어긋납니다.", ask: "지금 너는 피우는 때야, 거두는 때야?" },
+    "celtic-tree:distinct": { label: "어긋난 계절", help: "겹치지 않아 번갈아 힘이 됩니다.", care: "동시에 같은 걸 기대하기 어렵습니다.", ask: "내가 바쁠 때 너는 뭐 하고 있어?" },
     // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
     "day-master:same": { label: "같은 일간", help: "기질이 닮아 설명이 짧아도 통합니다.", care: "같은 자리에서 같이 막힙니다.", ask: "우리가 똑같이 피하는 일은 뭐야?" },
     "day-master:generating": { label: "서로를 키우는 일간", help: "한쪽의 기운이 다른 쪽의 재료가 됩니다.", care: "주는 쪽만 계속 주면 비워집니다.", ask: "요즘 나한테서 뭘 받아 가는 것 같아?" },
@@ -47,6 +57,16 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   en: {
+    // 2026-09-21 마야·켈트 렌즈. 생년월일만으로 계산되는 체계를 더 얹었다.
+    "mayan-kin:same-color-near-tone": { label: "Same colour, close tone", help: "Similar way of starting and similar rhythm — you move in step.", care: "So alike that nobody slows the other down.", ask: "When do neither of us hit the brakes?" },
+    "mayan-kin:same-color-far-tone": { label: "Same colour, distant tone", help: "You head the same way on different beats.", care: "Same goal, mistimed again and again.", ask: "We want the same thing — why the different pace?" },
+    "mayan-kin:near-color-near-tone": { label: "Neighbouring colour, close tone", help: "Different grain, matching rhythm: easy to click.", care: "You may trust the rhythm and skip aligning direction.", ask: "Are we looking the same way lately?" },
+    "mayan-kin:near-color-far-tone": { label: "Neighbouring colour, distant tone", help: "Grain and rhythm both differ a little, so you stay new to each other.", care: "Syncing takes effort.", ask: "What habit of mine is strangest to you?" },
+    "mayan-kin:opposite-color": { label: "Opposite colour", help: "Facing positions, so you see each other’s blind spots.", care: "Without explaining, misunderstandings pile up.", ask: "What do I treat as obvious that looks odd to you?" },
+    "celtic-tree:same-tree": { label: "Same tree", help: "Born in the same stretch, your ground layer overlaps.", care: "You share the same season’s weakness too.", ask: "Is there a time of year we both find hard?" },
+    "celtic-tree:same-season": { label: "Same season", help: "You grow on a similar rhythm.", care: "You also rest at the same time, so both can run down together.", ask: "Are we both worn out right now?" },
+    "celtic-tree:facing-season": { label: "Facing seasons", help: "One of you blooms while the other gathers.", care: "Rushing each other’s season throws it off.", ask: "Are you blooming or gathering right now?" },
+    "celtic-tree:distinct": { label: "Offset seasons", help: "You do not overlap, so you take turns carrying things.", care: "Hard to expect the same thing at the same time.", ask: "What are you doing while I am busiest?" },
     // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
     "day-master:same": { label: "Same day master", help: "Similar temperament, so short explanations land.", care: "You also get stuck in the same places.", ask: "What do we both avoid?" },
     "day-master:generating": { label: "One feeds the other", help: "One side's energy becomes material for the other.", care: "If only one gives, that side empties out.", ask: "What do you take from me these days?" },
@@ -78,6 +98,16 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   ja: {
+    // 2026-09-21 마야·켈트 렌즈. 생년월일만으로 계산되는 체계를 더 얹었다.
+    "mayan-kin:same-color-near-tone": { label: "同じ色・近い拍", help: "始め方も拍子も似ていて息が合います。", care: "似すぎて速度を落とす役がいません。", ask: "二人ともブレーキが利かない場面は？" },
+    "mayan-kin:same-color-far-tone": { label: "同じ色・遠い拍", help: "向かう先は同じでも拍子が違います。", care: "同じ目標なのにタイミングがずれます。", ask: "同じものを望むのに、なぜ速度が違う？" },
+    "mayan-kin:near-color-near-tone": { label: "隣の色・近い拍", help: "質は違ってもリズムが合い、近づきやすいです。", care: "リズムを頼って方向を合わせ忘れがちです。", ask: "最近わたしたち、同じ方を見ている？" },
+    "mayan-kin:near-color-far-tone": { label: "隣の色・遠い拍", help: "質もリズムも少しずつずれ、互いに新鮮です。", care: "合わせるのに手間がかかります。", ask: "わたしの癖で一番見慣れないものは？" },
+    "mayan-kin:opposite-color": { label: "向かいの色", help: "正反対の位置から互いの死角が見えます。", care: "説明しないと誤解が積もります。", ask: "当たり前だと思っていることで、変なものある？" },
+    "celtic-tree:same-tree": { label: "同じ木", help: "同じ区間に生まれ、気質の土台が重なります。", care: "同じ季節の弱さも一緒に持ちます。", ask: "二人とも苦しくなる時期はある？" },
+    "celtic-tree:same-season": { label: "同じ季節", help: "育つリズムが似ています。", care: "休む時期も重なり、二人とも消耗しがちです。", ask: "最近、二人とも疲れる時期？" },
+    "celtic-tree:facing-season": { label: "向かい合う季節", help: "一方が咲くとき、もう一方が収めます。", care: "互いの時期を急かすとずれます。", ask: "今のあなたは咲く時期？収める時期？" },
+    "celtic-tree:distinct": { label: "ずれた季節", help: "重ならないので、交代で支えになります。", care: "同時に同じことを期待するのは難しいです。", ask: "わたしが忙しいとき、あなたは何をしてる？" },
     // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
     "day-master:same": { label: "同じ日干", help: "気質が似ていて、短い説明でも通じます。", care: "同じ場所で同じように詰まります。", ask: "二人とも避けていることは何？" },
     "day-master:generating": { label: "互いを育てる日干", help: "一方の気がもう一方の材料になります。", care: "与える側ばかりだと空になります。", ask: "最近わたしから何を受け取っている？" },
@@ -109,6 +139,16 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   zh: {
+    // 2026-09-21 마야·켈트 렌즈. 생년월일만으로 계산되는 체계를 더 얹었다.
+    "mayan-kin:same-color-near-tone": { label: "同色·近拍", help: "起手的方式和节拍都相近，配合默契。", care: "太像了，没人替对方踩刹车。", ask: "我们都刹不住的时候是什么时候？" },
+    "mayan-kin:same-color-far-tone": { label: "同色·远拍", help: "方向一致，节拍不同。", care: "目标相同，时机却总错开。", ask: "想要的一样，为什么速度不一样？" },
+    "mayan-kin:near-color-near-tone": { label: "邻色·近拍", help: "质地不同但节奏合拍，容易靠近。", care: "可能只靠节奏，忘了对齐方向。", ask: "最近我们看的是同一个方向吗？" },
+    "mayan-kin:near-color-far-tone": { label: "邻色·远拍", help: "质地与节奏都略有错开，彼此常新。", care: "要合上需要花工夫。", ask: "我的哪个习惯让你最陌生？" },
+    "mayan-kin:opposite-color": { label: "对面的颜色", help: "位置正相对，能看见彼此的盲区。", care: "不解释就会积累误会。", ask: "我习以为常的事里，有哪件你觉得奇怪？" },
+    "celtic-tree:same-tree": { label: "同一棵树", help: "生在同一段区间，气质的底子重叠。", care: "同一季节的弱点也一并带着。", ask: "有没有我们都难熬的时节？" },
+    "celtic-tree:same-season": { label: "同一季节", help: "生长的节奏相近。", care: "休息的时候也重叠，容易一起耗尽。", ask: "最近是不是我们都累？" },
+    "celtic-tree:facing-season": { label: "相对的季节", help: "一方开花时，另一方在收。", care: "互相催促对方的时节就会错位。", ask: "你现在是开花的时候，还是收的时候？" },
+    "celtic-tree:distinct": { label: "错开的季节", help: "不重叠，所以能轮流出力。", care: "很难在同一时间期待同一件事。", ask: "我最忙的时候，你在做什么？" },
     // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
     "day-master:same": { label: "相同日干", help: "性情相近，说得少也能懂。", care: "也会在同样的地方卡住。", ask: "我们都在回避什么？" },
     "day-master:generating": { label: "彼此滋养的日干", help: "一方的气成为另一方的材料。", care: "只有一方付出就会被掏空。", ask: "最近你从我这里拿到了什么？" },
@@ -140,6 +180,16 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   fr: {
+    // 2026-09-21 마야·켈트 렌즈. 생년월일만으로 계산되는 체계를 더 얹었다.
+    "mayan-kin:same-color-near-tone": { label: "Même couleur, ton proche", help: "Même façon de démarrer, même rythme : vous avancez au pas.", care: "Si semblables que personne ne ralentit l’autre.", ask: "Quand est-ce que ni l’un ni l’autre ne freine ?" },
+    "mayan-kin:same-color-far-tone": { label: "Même couleur, ton éloigné", help: "Même direction, mais pas le même tempo.", care: "Même but, et pourtant toujours décalés.", ask: "On veut la même chose : pourquoi ces rythmes ?" },
+    "mayan-kin:near-color-near-tone": { label: "Couleur voisine, ton proche", help: "Grains différents, rythme commun : ça accroche vite.", care: "On se fie au rythme et on oublie d’accorder la direction.", ask: "Regardons-nous dans la même direction en ce moment ?" },
+    "mayan-kin:near-color-far-tone": { label: "Couleur voisine, ton éloigné", help: "Grain et rythme diffèrent un peu : vous restez neufs l’un pour l’autre.", care: "S'accorder demande du travail.", ask: "Quelle habitude à moi te semble la plus étrangère ?" },
+    "mayan-kin:opposite-color": { label: "Couleur opposée", help: "Positions face à face : vous voyez les angles morts de l’autre.", care: "Sans explication, les malentendus s’accumulent.", ask: "Qu'est-ce que je trouve évident et qui te paraît étrange ?" },
+    "celtic-tree:same-tree": { label: "Même arbre", help: "Nés dans le même intervalle, votre socle se recouvre.", care: "Vous portez aussi la faiblesse de la même saison.", ask: "Y a-t-il une période dure pour nous deux ?" },
+    "celtic-tree:same-season": { label: "Même saison", help: "Vous poussez sur un rythme proche.", care: "Vous vous reposez en même temps : l’épuisement peut être commun.", ask: "Sommes-nous fatigués tous les deux en ce moment ?" },
+    "celtic-tree:facing-season": { label: "Saisons opposées", help: "L'un fleurit pendant que l'autre engrange.", care: "Presser la saison de l'autre la fait dérailler.", ask: "Tu es en train de fleurir ou de récolter ?" },
+    "celtic-tree:distinct": { label: "Saisons décalées", help: "Vous ne vous recouvrez pas : vous portez à tour de rôle.", care: "Difficile d’attendre la même chose au même moment.", ask: "Tu fais quoi quand je suis le plus occupé ?" },
     // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
     "day-master:same": { label: "Même maître du jour", help: "Tempéraments proches : peu de mots suffisent.", care: "Vous bloquez aussi aux mêmes endroits.", ask: "Qu'est-ce que nous évitons tous les deux ?" },
     "day-master:generating": { label: "L'un nourrit l'autre", help: "L'énergie de l'un devient la matière de l'autre.", care: "Si un seul donne, ce côté se vide.", ask: "Qu'est-ce que tu prends chez moi en ce moment ?" },
@@ -171,6 +221,16 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
 
   },
   es: {
+    // 2026-09-21 마야·켈트 렌즈. 생년월일만으로 계산되는 체계를 더 얹었다.
+    "mayan-kin:same-color-near-tone": { label: "Mismo color, tono cercano", help: "Misma forma de empezar y mismo ritmo: vais a la par.", care: "Tan parecidos que nadie frena al otro.", ask: "¿Cuándo no frena ninguno de los dos?" },
+    "mayan-kin:same-color-far-tone": { label: "Mismo color, tono lejano", help: "Vais hacia lo mismo con compases distintos.", care: "Mismo objetivo y siempre a destiempo.", ask: "Queremos lo mismo: ¿por qué a distinta velocidad?" },
+    "mayan-kin:near-color-near-tone": { label: "Color vecino, tono cercano", help: "Grano distinto, ritmo común: encajáis rápido.", care: "Podéis fiaros del ritmo y no alinear la dirección.", ask: "¿Miramos hacia el mismo sitio últimamente?" },
+    "mayan-kin:near-color-far-tone": { label: "Color vecino, tono lejano", help: "Grano y ritmo difieren un poco: seguís siendo novedad.", care: "Sincronizar cuesta trabajo.", ask: "¿Qué costumbre mía te resulta más ajena?" },
+    "mayan-kin:opposite-color": { label: "Color opuesto", help: "Posiciones enfrentadas: veis los puntos ciegos del otro.", care: "Sin explicarlo, los malentendidos se acumulan.", ask: "¿Qué doy por obvio que a ti te parece raro?" },
+    "celtic-tree:same-tree": { label: "Mismo árbol", help: "Nacidos en el mismo tramo, la base se solapa.", care: "También compartís la debilidad de esa estación.", ask: "¿Hay una época dura para los dos?" },
+    "celtic-tree:same-season": { label: "Misma estación", help: "Crecéis a un ritmo parecido.", care: "También descansáis a la vez: podéis agotaros juntos.", ask: "¿Estamos los dos cansados ahora?" },
+    "celtic-tree:facing-season": { label: "Estaciones enfrentadas", help: "Uno florece mientras el otro recoge.", care: "Meter prisa a la estación del otro la desajusta.", ask: "¿Estás floreciendo o recogiendo ahora?" },
+    "celtic-tree:distinct": { label: "Estaciones desfasadas", help: "No os solapáis: os turnáis para sostener.", care: "Difícil esperar lo mismo al mismo tiempo.", ask: "¿Qué haces cuando yo estoy más ocupado?" },
     // 2026-09-21 추가 렌즈 둘. 관계는 판정이 아니라 대화를 여는 자리다.
     "day-master:same": { label: "Mismo tronco del día", help: "Temperamentos parecidos: bastan pocas palabras.", care: "También os atascáis en los mismos sitios.", ask: "¿Qué evitamos los dos?" },
     "day-master:generating": { label: "Uno alimenta al otro", help: "La energía de uno se vuelve material del otro.", care: "Si solo da uno, ese lado se vacía.", ask: "¿Qué tomas de mí últimamente?" },

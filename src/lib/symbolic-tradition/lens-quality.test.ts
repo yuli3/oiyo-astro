@@ -27,12 +27,25 @@ const MAX_CORRELATION = 0.2;
 const MAX_TOP_SHARE = 0.7;
 const MIN_RELATIONS = 3;
 
-/** 1960~2010, 47일 간격. 날짜만 쓰므로 시각 결측과 무관하다. */
+/**
+ * 1960~2010 에 흩뿌린 388명. 날짜만 쓰므로 시각 결측과 무관하다.
+ *
+ * 2026-09-21 까지는 47일 등간격 격자였다. 그 격자가 렌즈의 주기와 공진해
+ * 없는 상관을 만들어 냈다 — 마야(색 20일 주기)와 켈트(계절 ~91일)가 47일
+ * 격자에서만 r=0.339 로 나왔고, 같은 두 렌즈가 1일·13일·91일 간격에서는
+ * -0.013 / 0.010 / 0.006 이었다. 실제 사람의 생일은 등간격 위에 있지 않다.
+ *
+ * 그래서 결정론적 의사난수로 흩뿌린다. 격자가 없으면 공진도 없다. 시드를
+ * 고정하므로 측정값은 실행마다 같다.
+ */
 function sample() {
   const people = [];
   const start = Date.UTC(1960, 0, 1);
+  const span = Math.round((Date.UTC(2010, 0, 1) - start) / 86_400_000);
+  let seed = 20260921;
   for (let d = 0; d < 388; d += 1) {
-    const t = new Date(start + d * 47 * 86_400_000);
+    seed = (seed * 1103515245 + 12345) >>> 0;
+    const t = new Date(start + (seed % span) * 86_400_000);
     people.push(comparisonFromCivil({ date: t.toISOString().slice(0, 10) }));
   }
   const relations = {} as Record<CompatibilityLensId, Record<string, number>>;

@@ -160,3 +160,24 @@ export function scoreAgainstCenter(
   if (!hits.length) return 50;
   return hits.reduce((sum, edge) => sum + edge.harmonyIndex, 0) / hits.length;
 }
+
+/**
+ * 목표값으로 프레임마다 조금씩 다가간다.
+ *
+ * 관점(렌즈)을 바꾸면 사람마다 점수가 달라지고, 점수가 궤도 반경·크기·밝기를
+ * 정한다. 값을 그대로 쓰면 행성이 새 궤도로 순간이동해 "무엇이 달라졌는지"가
+ * 보이지 않는다 — 화면은 바뀌었는데 관점이 바뀐 느낌이 없다. 조금씩 다가가면
+ * 행성이 안팎으로 미끄러지고, 그 움직임 자체가 관점의 차이를 보여 준다.
+ *
+ * 지수 감쇠라 프레임률이 달라도 같은 시간에 같은 만큼 수렴한다. animate 가
+ * 꺼져 있으면(움직임 줄이기 설정) 즉시 목표값이다.
+ */
+export function approachValue(
+  current: number,
+  target: number,
+  deltaSeconds: number,
+  animate: boolean,
+): number {
+  if (!animate) return target;
+  return current + (target - current) * (1 - Math.exp(-deltaSeconds * 3.2));
+}

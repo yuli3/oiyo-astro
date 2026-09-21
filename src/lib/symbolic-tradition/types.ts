@@ -21,6 +21,8 @@ export const COMPATIBILITY_LENSES = [
   "element-complement",
   "day-master",
   "branch-harmony",
+  "mayan-kin",
+  "celtic-tree",
 ] as const;
 
 export type CompatibilityLensId = (typeof COMPATIBILITY_LENSES)[number];
@@ -65,6 +67,20 @@ export interface SymbolicProfile {
   chineseZodiac: {
     branch: EarthlyBranch;
   };
+  /**
+   * 촐킨 서명. 20인장 × 13음조 = 260일 주기다. 열두 지지(12년)나 태양궁
+   * (365일)과 주기가 겹치지 않아 다른 결을 본다. 색은 인장이 속한 네 계열
+   * (적·백·청·황)이고, 계열마다 다섯 인장이 있다.
+   */
+  mayanKin: {
+    color: "blue" | "red" | "white" | "yellow";
+    seal: number;
+    tone: number;
+  };
+  /** 켈트 수목 사인. 태양력 구간으로 나뉜 열넷. */
+  celticTree: {
+    id: string;
+  };
   sunSign: {
     element: "air" | "earth" | "fire" | "water";
     modality: "cardinal" | "fixed" | "mutable";
@@ -85,7 +101,9 @@ export interface SymbolicProfile {
 }
 
 export interface SymbolicComparisonProfile {
+  celticTree: SymbolicProfile["celticTree"];
   chineseZodiac: SymbolicProfile["chineseZodiac"];
+  mayanKin: SymbolicProfile["mayanKin"];
   fiveElements: Pick<SymbolicProfile["fiveElements"], "counts" | "dominant" | "observedCoordinates">;
   /**
    * 네 기둥 그대로. 오행 분포로 뭉개기 전의 원자료다 — 일간 렌즈는 일간

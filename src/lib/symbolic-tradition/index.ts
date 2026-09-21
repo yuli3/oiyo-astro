@@ -1,6 +1,8 @@
 import { BRANCHES } from "@/manifest/data/saju/branches";
 import { STEMS } from "@/manifest/data/saju/stems";
 import { calculateBirthSaju } from "@/lib/ontology/saju/birth-contract";
+import { calculateCelticTree } from "@/lib/ontology/celtic/calculator";
+import { calculateMayanKin } from "@/lib/ontology/mayan/calculator";
 import { FiveElement } from "@/lib/ontology/saju/types";
 import type { EarthlyBranch, SajuPillar } from "@/lib/ontology/saju/types";
 import { createBirthRecord } from "@/lib/user/birth-record";
@@ -158,8 +160,24 @@ export function deriveSymbolicProfile(input: BirthMoment): SymbolicProfile {
     },
     yinYang: { yang, yin },
     chineseZodiac: { branch: result.year.earthlyBranch },
+    // 마야·켈트는 이미 쓰고 있는 엔진을 그대로 부른다. 둘 다 날짜만 받는
+    // 순수 함수라 출생 시각·도시가 없어도 계산된다. 지역 시간 필드로 Date 를
+    // 만드는 것은 두 엔진이 getMonth()/getDate() 로 읽기 때문이다.
+    mayanKin: mayanKinOf(civil.year, civil.month, civil.day),
+    celticTree: { id: calculateCelticTree(new Date(civil.year, civil.month - 1, civil.day)).id },
     sunSign: sunSignOf(civil.month, civil.day),
   };
+}
+
+/**
+ * 촐킨 서명. 윤일(2/29)은 엔진이 후납쿠(인장 0·음조 0)로 돌려주는데, 이는
+ * 20인장 13음조 어디에도 속하지 않는 특별한 날이다. 관계를 따질 자리가
+ * 아니므로 첫 인장·첫 음조로 맺는다 — 없는 값을 지어내는 것보다 낫다.
+ */
+function mayanKinOf(year: number, month: number, day: number): SymbolicProfile["mayanKin"] {
+  const kin = calculateMayanKin(new Date(year, month - 1, day));
+  if (!kin || kin.seal.id < 1) return { color: "red", seal: 1, tone: 1 };
+  return { color: kin.seal.color, seal: kin.seal.id, tone: kin.tone.number };
 }
 
 /** 상생(相生) — 목생화 화생토 토생금 금생수 수생목. */
@@ -222,7 +240,61 @@ const HARMONY_INDEX: Record<CompatibilityLensId, Record<string, number>> = {
   "element-complement": { "deep-mutual": 88, "mutual-complement": 78, "one-way-complement": 62, "no-gap": 58, "shared-gap": 45 },
   "day-master": { same: 70, generating: 85, controlling: 42 },
   "branch-harmony": { "harmony-rich": 88, "harmony-leaning": 74, mixed: 60, "clash-leaning": 46, "clash-rich": 32 },
+  "mayan-kin": { "same-color-near-tone": 86, "same-color-far-tone": 72, "near-color-near-tone": 66, "near-color-far-tone": 58, "opposite-color": 48 },
+  "celtic-tree": { "same-tree": 80, "same-season": 70, "facing-season": 56, distinct: 52 },
 };
+
+/**
+ * 촐킨 — 색 계열과 음조로 본다.
+ *
+ * 왜 인장 자체가 아닌가: 20인장을 그대로 짝지으면 "같은 인장"이 5%,
+ * 드림스펠의 오라클 관계(아날로그·안티포드·오컬트)가 각 5% 안팎이고 나머지
+ * 80%가 "그 밖"으로 뭉친다. 최빈 한 칸이 80%면 볼 이유가 없다 — 품질 게이트의
+ * 분해능 기준(≤70%)이 정확히 이것을 막는다.
+ *
+ * 색 계열(적·백·청·황)은 인장 스무 개를 다섯씩 넷으로 나누고 순환한다.
+ * 같은 계열 25% · 이웃 계열 50% · 맞은편 계열 25% 로 고르게 갈린다. 여기에
+ * 음조(13박) 거리를 겹쳐 다섯 칸으로 만든다.
+ */
+const MAYAN_COLOR_ORDER = ["red", "white", "blue", "yellow"] as const;
+
+function mayanRelation(
+  a: SymbolicComparisonProfile["mayanKin"],
+  b: SymbolicComparisonProfile["mayanKin"],
+): string {
+  const distance = Math.abs(MAYAN_COLOR_ORDER.indexOf(a.color) - MAYAN_COLOR_ORDER.indexOf(b.color));
+  const colorGap = Math.min(distance, 4 - distance);
+  if (colorGap === 2) return "opposite-color";
+  const toneDistance = Math.abs(a.tone - b.tone);
+  const toneGap = Math.min(toneDistance, 13 - toneDistance);
+  const nearTone = toneGap <= 3;
+  if (colorGap === 0) return nearTone ? "same-color-near-tone" : "same-color-far-tone";
+  return nearTone ? "near-color-near-tone" : "near-color-far-tone";
+}
+
+/**
+ * 켈트 수목 사인 — 열넷을 태양력 구간으로 나눈 체계다.
+ *
+ * 태양궁 렌즈와 같은 태양력을 쓰므로 겹칠 위험이 크다. 겹침을 줄이려고
+ * 사인 자체가 아니라 그 사인이 놓인 **계절**로 묶어 본다. 12분할(태양궁)과
+ * 14분할(수목)은 경계가 어긋나 계절 배당이 일치하지 않는다.
+ */
+const CELTIC_SEASON: Record<string, number> = {
+  birch: 0, rowan: 0, ash: 0,
+  alder: 1, willow: 1, hawthorn: 1,
+  oak: 2, holly: 2, hazel: 2,
+  vine: 3, ivy: 3, reed: 3,
+  elder: 0, nameless: 0,
+};
+
+function celticRelation(a: string, b: string): string {
+  if (a === b) return "same-tree";
+  const seasonA = CELTIC_SEASON[a] ?? 0;
+  const seasonB = CELTIC_SEASON[b] ?? 0;
+  if (seasonA === seasonB) return "same-season";
+  const distance = Math.abs(seasonA - seasonB);
+  return Math.min(distance, 4 - distance) === 2 ? "facing-season" : "distinct";
+}
 
 /**
  * 일간(日干) 관계 — 명리가 궁합의 첫 축으로 삼는 자리.
@@ -315,13 +387,18 @@ function branchHarmonyRelation(
  *
  * 기존 오행 렌즈는 `dominant`(가장 많은 원소)끼리 상생·상극을 본다. 이쪽은
  * `counts` 가 0인 원소(없는 것)를 본다. 같은 분포에서 나오지만 다른 질문이라
- * 실측 상관이 -0.020 에 그친다(388명·75,078쌍).
+ * 실측 상관이 0.028 에 그친다(388명·75,078쌍).
  *
  * 관계를 "채웠는가"로만 가르면 55.5% 가 mutual 한 칸에 몰린다. 거의 모두에게
  * "서로를 채운다"고 말하는 건 성찰이 아니라 아첨이다. **몇 칸을 채우는가**로
  * 갈라 깊은 보완이 실제로 드물게 만든다.
  *
- *   one-way 37.0% · deep-mutual 27.9% · mutual 27.6% · shared-gap 6.4% · no-gap 1.0%
+ *   one-way 39.4% · mutual 27.8% · deep-mutual 24.1% · shared-gap 7.2% · no-gap 1.5%
+ *
+ * 2026-09-21: 위 두 수치는 표본을 47일 등간격 격자에서 흩뿌린 난수로 바꾼 뒤
+ * 다시 잰 값이다(앞선 값은 각각 -0.020, 37.0/27.9/27.6/6.4/1.0 이었다).
+ * 격자가 렌즈 주기와 공진해 없는 상관을 만들던 것을 고쳤다 — lens-quality
+ * 테스트의 sample() 주석에 경위가 있다. 결론은 바뀌지 않는다.
  */
 const FIVE_ELEMENTS: FiveElement[] = [
   FiveElement.EARTH, FiveElement.FIRE, FiveElement.METAL, FiveElement.WATER, FiveElement.WOOD,
@@ -397,6 +474,8 @@ export function compareSymbolicProfiles(
         STEMS[b.saju.day.heavenlyStem].element as FiveElement,
       )),
       lens("branch-harmony", branchHarmonyRelation(a.saju, b.saju)),
+      lens("mayan-kin", mayanRelation(a.mayanKin, b.mayanKin)),
+      lens("celtic-tree", celticRelation(a.celticTree.id, b.celticTree.id)),
     ],
     policy: {
       aggregateJudgment: "none",

@@ -26,6 +26,12 @@ const profile = (seed: number): SymbolicComparisonProfile => ({
   },
   // 일간·지지 렌즈가 기둥을 읽는다. seed 로 간지가 갈리게 만들어 관계가
   // 한 값으로 뭉치지 않게 한다. 시주는 생시 미상을 흉내내 비운다.
+  celticTree: { id: (["birch", "alder", "oak", "vine", "elder"] as const)[seed % 5] },
+  mayanKin: {
+    color: (["red", "white", "blue", "yellow"] as const)[seed % 4],
+    seal: (seed % 20) + 1,
+    tone: (seed % 13) + 1,
+  },
   saju: {
     year: pillar(seed), month: pillar(seed + 1), day: pillar(seed + 2), hour: null,
   },
