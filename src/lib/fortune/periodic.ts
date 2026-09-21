@@ -950,7 +950,16 @@ export function reading(
   return { opening: open[locale], focus: foc[locale], advice: adv[locale], caution: cau[locale], keyword: key[locale] };
 }
 
-/** 코퍼스 조합 수 — 페이지 카피에서 "몇 가지 조합인가"를 주장할 때 이 값을 쓴다. */
+/**
+ * 코퍼스 조합 수 — **내부 지표다. 사용자에게 보이는 문구에 쓰지 않는다.**
+ *
+ * 다섯 축의 풀 크기를 곱한 값이라 쉽게 수십억이 된다. 산술은 맞지만 그만큼의
+ * 글을 쓴 것은 아니므로, 이 수를 랜딩에 띄우면 규모를 부풀리는 주장이 된다.
+ * 2026-09-21 까지 홈 첫 줄이 "문장 조합 25,055,723,520가지"였고 걷어냈다.
+ * 방문자에게 할 주장은 MIN_CYCLE_BEFORE_REPEAT 쪽이다 — 직접 확인할 수 있다.
+ *
+ * 코퍼스가 얕아지지 않았는지 재는 용도로만 남긴다(score.test.ts).
+ */
 export const CORPUS_COMBINATIONS =
   (Object.values(OPENING).reduce((n, arr) => n + arr.length, 0) / FIVE_ELEMENTS.length + SHARED_OPENING.length)
   * FOCUS.length * ADVICE.length * CAUTION.length * KEYWORD.length;
