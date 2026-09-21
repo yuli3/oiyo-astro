@@ -26,7 +26,7 @@
  */
 import { STEMS } from "@/manifest/data/saju/stems";
 import { FiveElement } from "../ontology/saju/types";
-import { comparisonFromCivil } from "./circle-input";
+import { comparisonFromCivil, dayMasterElement } from "./circle-input";
 import { compareSymbolicProfiles } from "./index";
 import { GROUP_ELEMENT_ORDER, type GroupMember, type GroupSynthesis } from "./group-synthesis";
 import type { SymbolicCompatibilityLens, SymbolicComparisonProfile } from "./types";
@@ -94,10 +94,8 @@ export function profileOfDay(civilDate: string): SymbolicComparisonProfile {
   return comparisonFromCivil({ date: civilDate });
 }
 
-/** 그날 일간의 오행. */
-export function dayElementOf(civilDate: string): FiveElement {
-  return STEMS[profileOfDay(civilDate).saju.day.heavenlyStem].element as FiveElement;
-}
+/** 그날 일간의 오행. 사람·날짜 공용 단일 출처를 그대로 쓴다. */
+export const dayElementOf = dayMasterElement;
 
 /**
  * 오늘 대 한 사람에서 각 관계가 나오는 빈도. 40,000쌍 실측이다

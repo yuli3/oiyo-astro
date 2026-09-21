@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from 'react';
-import { reading, periodKey, animalOf, signOf, elementOf, FIVE_ELEMENTS, type Locale, type Period } from '../../lib/fortune/periodic';
+import { reading, periodKey, animalOf, signOf, FIVE_ELEMENTS, type Locale, type Period } from '../../lib/fortune/periodic';
+import { dayMasterElement } from '@/lib/symbolic-tradition/circle-input';
 import { AXES, scores, flow, delta, grade, lucky, animalRanking, signRanking, type Axis, type Grade } from '../../lib/fortune/score';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField } from '../shared/BirthDateField';
@@ -199,7 +200,13 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
 
   const result = useMemo(() => {
     if (!birth) return null;
-    const elemIdx = elementOf(birth.y);
+    // 이 사람의 오행은 일간(日干)에서 온다. 2026-09-21 까지는 출생 **연도**의
+    // 천간을 썼는데, 그러면 같은 해에 태어난 모두가 같은 오행이 되고 우리의
+    // 지도(일간 기준)와 79% 확률로 어긋났다 — 4,000명 실측 일치율 20.9%,
+    // 우연 수준이다. 단일 출처 dayMasterElement 로 모은다. 생시·출생지가
+    // 없어도 일주는 정해지므로 이 화면이 가진 y/m/d 만으로 충분하다.
+    const birthDate = `${String(birth.y).padStart(4, '0')}-${String(birth.m).padStart(2, '0')}-${String(birth.d).padStart(2, '0')}`;
+    const elemIdx = FIVE_ELEMENTS.indexOf(dayMasterElement(birthDate) as typeof FIVE_ELEMENTS[number]);
     const aIdx = animalOf(birth.y);
     const sIdx = signOf(birth.m, birth.d);
     // 시드에 월·일까지 넣는다. 생년만 쓰면 같은 해에 태어난 모든 사람이
