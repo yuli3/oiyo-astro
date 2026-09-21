@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect } from 'react';
 import { reading, periodKey, animalOf, signOf, FIVE_ELEMENTS, type Locale, type Period } from '../../lib/fortune/periodic';
-import { dayMasterElement } from '@/lib/symbolic-tradition/circle-input';
+import { comparisonFromCivil, dayMasterElement } from '@/lib/symbolic-tradition/circle-input';
+import { makeFortuneAnchor } from '@/lib/symbolic-tradition/day-harmony';
 import { AXES, scores, flow, delta, grade, lucky, animalRanking, signRanking, type Axis, type Grade } from '../../lib/fortune/score';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField } from '../shared/BirthDateField';
@@ -224,7 +225,12 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
       }
       return reading(el, period, base, locale, new Date(), g);
     };
-    const sc = scores(seed, period);
+    // 점수의 뼈대는 그날과 이 사람의 실제 관계다(세운 결정 1안, 2026-09-22).
+    // 예전에는 생년월일을 해시 시드로만 써서 숫자가 사주와 무관했다 — 관계와의
+    // 상관이 -0.015 였다. 이제 아홉 렌즈에서 나온 앵커가 방향을 정하고 노이즈는
+    // 흐름을 매끄럽게 하는 결로만 남는다(새 점수와 관계의 상관 0.848).
+    const anchor = makeFortuneAnchor(comparisonFromCivil({ date: birthDate }));
+    const sc = scores(seed, period, new Date(), anchor);
     const aRank = animalRanking(period);
     const sRank = signRanking(period);
     const aScore = aRank.find((r) => r.idx === aIdx)!.score;
@@ -232,12 +238,13 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
     return {
       pk: periodKey(period),
       seed,
+      anchor,
       saju: { el: FIVE_ELEMENTS[elemIdx], r: distinct(elemIdx, seed, grade(sc.overall)) },
       // 12지신·별자리도 오행에 매핑해 어조를 달리(축을 바꿔 다른 문장이 나오게 base 다르게)
       animal: { idx: aIdx, r: distinct((aIdx * 2 + 1) % 5, `animal-${aIdx}`, grade(aScore)) },
       sign: { idx: sIdx, r: distinct((sIdx + 2) % 5, `sign-${sIdx}`, grade(sScore)) },
       sc,
-      dl: delta(seed, period),
+      dl: delta(seed, period, new Date(), anchor),
       lk: lucky(seed, period, locale),
       animalRank: aRank,
       signRank: sRank,
@@ -245,7 +252,7 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
   }, [birth, period, locale]);
 
   const flowPoints = useMemo(
-    () => (result ? flow(result.seed, period, flowAxis, 3, 3, new Date(), locale) : []),
+    () => (result ? flow(result.seed, period, flowAxis, 3, 3, new Date(), locale, result.anchor) : []),
     [result, period, flowAxis, locale],
   );
 

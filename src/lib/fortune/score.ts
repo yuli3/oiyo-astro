@@ -41,20 +41,38 @@ function spread(u: number, p = 1.8): number {
 function lift(u: number): number { return Math.pow(u, 0.86); }
 
 
+/**
+ * 점수의 뼈대. 호출자가 넘기면 그날과 그 사람의 실제 관계(0~1)가 점수의
+ * 방향을 정하고, 노이즈는 흐름을 매끄럽게 하는 결로만 남는다.
+ *
+ * 2026-09-22 까지 점수는 순수 노이즈였다 — 생년월일은 해시 시드로만 쓰여
+ * 숫자가 사주를 반영하지 않았다. 세운 결정(1안)으로 관계를 뼈대로 세운다.
+ * 이 파일은 사주 엔진을 모른다. 앵커는 lib/symbolic-tradition/day-harmony.ts
+ * 가 만들고, 넘기지 않으면(랜딩의 띠·별자리 벽처럼 생년월일이 없을 때)
+ * 예전과 한 글자도 다르지 않다.
+ */
+export type FortuneAnchor = (period: Period, d: Date) => Partial<Record<Axis, number>> | null;
+
+/** 뼈대의 무게. 나머지가 노이즈다. 흐름이 톱니가 되지 않을 만큼 결을 남긴다. */
+const ANCHOR_WEIGHT = 0.6;
+
 /** 특정 축의 점수(1~99). 주기 순번 t 를 직접 받아 과거·미래도 계산할 수 있다. */
-export function axisScoreAt(base: string, period: Period, axis: Axis, t: number): number {
+export function axisScoreAt(base: string, period: Period, axis: Axis, t: number, anchor?: number): number {
   const span = SPAN[period];
   const n = noise(`${base}|${period}|${axis}`, t / span);
   // 축마다 위상을 달리한 보조 파동을 더해 5개 축이 나란히 움직이지 않게 한다.
   const wob = noise(`${base}|${period}|${axis}|w`, t / (span * 3)) - 0.5;
-  const v = Math.round(lift(spread(n * 0.78 + (wob + 0.5) * 0.22)) * 94) + 5;
+  const grain = n * 0.78 + (wob + 0.5) * 0.22;
+  const u = anchor === undefined ? grain : anchor * ANCHOR_WEIGHT + grain * (1 - ANCHOR_WEIGHT);
+  const v = Math.round(lift(spread(u)) * 94) + 5;
   return Math.min(99, Math.max(5, v));
 }
 
-export function scores(base: string, period: Period, d = new Date()): Scores {
+export function scores(base: string, period: Period, d = new Date(), anchor?: FortuneAnchor): Scores {
   const t = stepIndex(period, d);
+  const anchors = anchor?.(period, d) ?? null;
   const s = {} as Scores;
-  for (const a of AXES) s[a] = axisScoreAt(base, period, a, t);
+  for (const a of AXES) s[a] = axisScoreAt(base, period, a, t, anchors?.[a]);
   // 총운은 독립 난수가 아니라 나머지 네 축의 가중 평균 + 자체 편차로 만든다.
   // 그래야 "총운은 좋은데 전부 나쁨" 같은 모순이 나오지 않는다.
   // 네 축 평균만 쓰면 서로 상쇄돼 전부 50 근처가 된다. 평균으로 정합성을
@@ -69,19 +87,22 @@ export function scores(base: string, period: Period, d = new Date()): Scores {
 export interface FlowPoint { offset: number; score: number; label: string; }
 export function flow(
   base: string, period: Period, axis: Axis = 'overall',
-  before = 3, after = 3, d = new Date(), locale: Locale = 'en',
+  before = 3, after = 3, d = new Date(), locale: Locale = 'en', anchor?: FortuneAnchor,
 ): FlowPoint[] {
   const out: FlowPoint[] = [];
   for (let o = -before; o <= after; o++) {
     const at = shift(period, d, o);
     // 총운은 scores() 에서 네 축 평균으로 보정되므로 흐름도 같은 보정을 거쳐야
     // 카드에 뜬 숫자와 그래프의 오늘 지점이 어긋나지 않는다.
-    out.push({ offset: o, score: pointScore(base, period, axis, at), label: flowLabel(period, at, locale) });
+    out.push({ offset: o, score: pointScore(base, period, axis, at, anchor), label: flowLabel(period, at, locale) });
   }
   return out;
 }
-function pointScore(base: string, period: Period, axis: Axis, at: Date): number {
-  return axis === 'overall' ? scores(base, period, at).overall : axisScoreAt(base, period, axis, stepIndex(period, at));
+function pointScore(base: string, period: Period, axis: Axis, at: Date, anchor?: FortuneAnchor): number {
+  // 카드의 숫자와 그래프의 오늘 지점이 같은 뼈대를 써야 어긋나지 않는다.
+  return axis === 'overall'
+    ? scores(base, period, at, anchor).overall
+    : axisScoreAt(base, period, axis, stepIndex(period, at), anchor?.(period, at)?.[axis]);
 }
 
 /** 주기 단위로 n 만큼 이동한 날짜 */
@@ -110,9 +131,9 @@ function flowLabel(period: Period, d: Date, locale: Locale): string {
 }
 
 /** 어제(또는 지난주·지난달) 대비 총운 변화량 */
-export function delta(base: string, period: Period, d = new Date()): number {
+export function delta(base: string, period: Period, d = new Date(), anchor?: FortuneAnchor): number {
   const prev = shift(period, d, -1);
-  return scores(base, period, d).overall - scores(base, period, prev).overall;
+  return scores(base, period, d, anchor).overall - scores(base, period, prev, anchor).overall;
 }
 
 // ── 순위 ──
