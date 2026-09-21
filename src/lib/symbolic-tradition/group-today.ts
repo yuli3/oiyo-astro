@@ -255,3 +255,94 @@ export function groupToday(
     profile,
   };
 }
+
+/**
+ * 계절 세기를 둘로 접는다. 문구가 다섯 × 다섯으로 불어나지 않도록, 사람별
+ * 해 볼 것에는 "오늘 기운이 센가 약한가"만 반영한다.
+ *
+ *   strong  旺·相 — 계절과 같거나 계절이 밀어 준다
+ *   weak    休·囚·死 — 계절을 돕거나, 맞서거나, 눌린다
+ */
+export type SeasonBand = "strong" | "weak";
+
+export function seasonBand(strength: SeasonStrength): SeasonBand {
+  return strength === "prosperous" || strength === "rising" ? "strong" : "weak";
+}
+
+// ── 주간·월간 ──────────────────────────────────────────────────────────────
+
+export type PeriodKind = "week" | "month";
+
+/**
+ * 기간에 들어가는 달력 날짜들.
+ *   week   월요일~일요일. 운세 엔진의 주차(ISO)와 같은 주다
+ *   month  그 달 1일~말일
+ * 날짜 문자열만 다루므로 시간대가 끼어들 자리가 없다.
+ */
+export function periodDates(kind: PeriodKind, civilDate: string): string[] {
+  const [y, m, d] = civilDate.split("-").map(Number);
+  const iso = (date: Date) =>
+    `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}-${String(date.getUTCDate()).padStart(2, "0")}`;
+  if (kind === "week") {
+    const base = new Date(Date.UTC(y, m - 1, d));
+    const weekday = base.getUTCDay() || 7; // 월=1 … 일=7
+    return Array.from({ length: 7 }, (_, index) => iso(new Date(Date.UTC(y, m - 1, d - weekday + 1 + index))));
+  }
+  const last = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  return Array.from({ length: last }, (_, index) => iso(new Date(Date.UTC(y, m - 1, index + 1))));
+}
+
+export interface GroupPeriod {
+  kind: PeriodKind;
+  dates: string[];
+  /** 하루하루의 오늘의 우리. 같은 함수를 날짜만 바꿔 부른 것이다. */
+  days: GroupToday[];
+  /** 작용별 날 수 */
+  effectCounts: Record<TodayEffect, number>;
+  /** 계절이 오늘 기운을 밀어 주는(strong) 날 수 */
+  strongDays: number;
+  members: Array<{
+    id: string;
+    label: string;
+    dayMaster: FiveElement;
+    /** 관계별 날짜 목록 */
+    stanceDays: Record<TodayStance, string[]>;
+  }>;
+}
+
+const EFFECTS: TodayEffect[] = ["fills-gap", "eases-peak", "doubles-down", "feeds-peak", "neutral"];
+const STANCES: TodayStance[] = ["peer", "support", "output", "pressure", "wealth"];
+
+export function groupPeriod(
+  synthesis: GroupSynthesis,
+  members: GroupMember[],
+  kind: PeriodKind,
+  civilDate: string,
+): GroupPeriod {
+  const dates = periodDates(kind, civilDate);
+  const days = dates.map((date) => groupToday(synthesis, members, date));
+  const effectCounts = Object.fromEntries(EFFECTS.map((e) => [e, 0])) as Record<TodayEffect, number>;
+  let strongDays = 0;
+  for (const day of days) {
+    effectCounts[day.effect] += 1;
+    if (seasonBand(day.season.strength) === "strong") strongDays += 1;
+  }
+  return {
+    kind,
+    dates,
+    days,
+    effectCounts,
+    strongDays,
+    members: members.map((member, index) => {
+      const stanceDays = Object.fromEntries(STANCES.map((st) => [st, [] as string[]])) as Record<TodayStance, string[]>;
+      for (const day of days) stanceDays[day.members[index].stance].push(day.date);
+      return {
+        id: member.id,
+        label: member.label,
+        dayMaster: days[0]?.members[index].dayMaster ?? (STEMS[member.profile.saju.day.heavenlyStem].element as FiveElement),
+        stanceDays,
+      };
+    }),
+  };
+}
+

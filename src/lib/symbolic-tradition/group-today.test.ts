@@ -5,7 +5,7 @@ import { synthesizeGroup, type GroupMember } from "./group-synthesis";
 import { COMPATIBILITY_LENSES } from "./types";
 import { compareSymbolicProfiles } from "./index";
 import { comparisonFromCivil as dayProfile } from "./circle-input";
-import { TODAY_RELATION_RARITY, dayElementOf, groupToday, pickHighlight, profileOfDay, seasonStrengthOf, stanceOf, type TodayEffect } from "./group-today";
+import { TODAY_RELATION_RARITY, dayElementOf, groupPeriod, groupToday, periodDates, pickHighlight, profileOfDay, seasonBand, seasonStrengthOf, stanceOf, type TodayEffect } from "./group-today";
 import { FiveElement } from "../ontology/saju/types";
 import type { GroupSynthesis } from "./group-synthesis";
 
@@ -228,5 +228,55 @@ describe("오늘의 우리", () => {
     const spring = groupToday(synthesizeGroup(groups(2, 1)[0]), groups(2, 1)[0], "2026-02-15").season.element;
     expect(winter).toBe(FiveElement.EARTH);
     expect(spring).toBe(FiveElement.WOOD);
+  });
+
+  it("주간은 월요일부터 일요일까지다", () => {
+    // 2026-09-22 는 화요일이다. 운세 엔진의 주차(ISO)와 같은 주여야 한다.
+    expect(periodDates("week", "2026-09-22")).toEqual([
+      "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-26", "2026-09-27",
+    ]);
+    // 일요일은 그 주의 마지막 날이다(다음 주 첫날이 아니다).
+    expect(periodDates("week", "2026-09-27")[0]).toBe("2026-09-21");
+  });
+
+  it("월간은 그 달 1일부터 말일까지다", () => {
+    expect(periodDates("month", "2026-02-10")).toHaveLength(28);
+    expect(periodDates("month", "2028-02-10")).toHaveLength(29); // 윤년
+    expect(periodDates("month", "2026-12-31").at(-1)).toBe("2026-12-31");
+  });
+
+  it("기간의 하루하루는 오늘의 우리와 같은 계산이다", () => {
+    const people = groups(4, 1)[0];
+    const synthesis = synthesizeGroup(people);
+    const week = groupPeriod(synthesis, people, "week", "2026-09-22");
+    expect(week.days).toHaveLength(7);
+    for (const day of week.days) {
+      expect(day).toEqual(groupToday(synthesis, people, day.date));
+    }
+    const total = Object.values(week.effectCounts).reduce((a, b) => a + b, 0);
+    expect(total).toBe(7);
+    for (const member of week.members) {
+      const days = Object.values(member.stanceDays).reduce((a, list) => a + list.length, 0);
+      expect(days, member.id).toBe(7);
+    }
+  });
+
+  it("계절 세기를 둘로 접는다", () => {
+    expect(seasonBand("prosperous")).toBe("strong");
+    expect(seasonBand("rising")).toBe("strong");
+    expect(seasonBand("resting")).toBe("weak");
+    expect(seasonBand("confined")).toBe("weak");
+    expect(seasonBand("dead")).toBe("weak");
+  });
+
+  it("한 해 동안 센 날과 약한 날이 모두 흔하다", () => {
+    // 한쪽이 거의 없으면 둘로 나눈 문구의 한쪽은 죽은 문구가 된다.
+    const people = groups(2, 1)[0];
+    const synthesis = synthesizeGroup(people);
+    let strong = 0;
+    const dates = Array.from({ length: 365 }, (_, i) => new Date(Date.UTC(2026, 0, 1 + i)).toISOString().slice(0, 10));
+    for (const date of dates) if (seasonBand(groupToday(synthesis, people, date).season.strength) === "strong") strong += 1;
+    expect(strong / dates.length).toBeGreaterThan(0.2);
+    expect(strong / dates.length).toBeLessThan(0.6);
   });
 });
