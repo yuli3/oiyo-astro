@@ -570,7 +570,8 @@ export default function CircleGathering({ locale }: { locale: string }) {
 
     <ul className="mt-5 space-y-2">{people.map((item) => (
       <li key={item.id} className="flex min-h-12 items-center gap-3 rounded-2xl bg-card px-4">
-        <button type="button" onClick={() => setCenterId(item.id)} className="min-w-0 flex-1 truncate text-left text-sm font-black text-foreground">{item.id === activeCenterId ? "◎ " : "○ "}{item.label}</button>
+        {/* 중심 인물 개념은 2026-09-21 에 걷어냈다. 스냅숏 형식의 centerId 자리만 남는다. */}
+        <span className="min-w-0 flex-1 truncate text-sm font-black text-foreground">{item.label}</span>
         <button type="button" aria-label="remove" onClick={() => setPeople((current) => current.filter((row) => row.id !== item.id))} className="h-11 w-11 text-muted-foreground"><Trash2 className="mx-auto h-4 w-4" /></button>
       </li>
     ))}</ul>

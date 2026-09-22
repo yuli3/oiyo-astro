@@ -4,7 +4,7 @@
  * Reusable three.js scene: cards orbiting a center like planets.
  * Domain-agnostic — astrology/saju/palja/celtic/maya/numerology all pass
  * their own card list. No physics engine: orbital motion is pure
- * angle/trig (same approach as CompatibilityOrbitScene), so it stays
+ * angle/trig, so it stays
  * light and deterministic. Add a physics lib only if cards ever need to
  * collide or be thrown — plain revolution doesn't need one.
  */

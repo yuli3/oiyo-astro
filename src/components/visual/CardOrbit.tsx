@@ -6,7 +6,7 @@
  * maya/numerology/...), the caller owns labels and copy.
  *
  * - Lazy: three/@react-three bundles load only once the panel scrolls
- *   into view (same idiom as CompatibilityOrbit.tsx).
+ *   into view.
  * - Accessible: prefers-reduced-motion renders a single static frame.
  * - Mobile: device pixel ratio capped on narrow screens.
  */
@@ -44,7 +44,7 @@ export interface CardOrbitProps {
   cards: CardOrbitItem[];
   /** Optional legend rendered below the canvas: card id -> display label. */
   legend?: Record<string, string>;
-  /** Tailwind height classes for the canvas container. Default matches CompatibilityOrbit. */
+  /** Tailwind height classes for the canvas container. */
   heightClassName?: string;
 }
 
