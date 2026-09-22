@@ -215,8 +215,10 @@ export default function PairReadingView({ locale }: { locale: string }) {
       if (e.relation === "same-tree") tone = "bond";
     } else if (e.kind === "hexagram") {
       label = t.ev.hexagram;
+      // 중국어 괘 이름은 이미 한자(简体)라 번체 약칭을 앞에 붙이지 않는다 — 復 地雷复 처럼 섞였다.
+      const han = (n: number) => (lang === "zh" ? "" : `${hexagramHan(n)} `);
       const one = (h: typeof e.a) => h
-        ? <>{hexagramHan(h.number)} {hexagramName(h.number, lang)}{lang === "ko" ? ` · ${hexagramMeaningKo(h.number)}` : ""} <span className="text-muted-foreground">({t.ev.hexChanged} {hexagramHan(h.changed)} {hexagramName(h.changed, lang)})</span></>
+        ? <>{han(h.number)}{hexagramName(h.number, lang)}{lang === "ko" ? ` · ${hexagramMeaningKo(h.number)}` : ""} <span className="text-muted-foreground">({t.ev.hexChanged} {han(h.changed)}{hexagramName(h.changed, lang)})</span></>
         : <span className="text-muted-foreground">{t.ev.hexNone}</span>;
       value = <>{reading.a.label}: {one(e.a)}<br />{reading.b.label}: {one(e.b)}</>;
       if (e.a && e.b && e.a.number === e.b.number) tone = "bond";
