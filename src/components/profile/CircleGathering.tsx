@@ -20,7 +20,10 @@ import { readEncryptedShortShare } from "@/lib/symbolic-tradition/short-share";
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from "@/lib/encrypted-result-permalink";
 import { FRIEND_BIRTH_SHARE_TOOL_ID, parseFriendBirthShare, type FriendBirthShare } from "@/lib/symbolic-tradition/friend-birth-share";
 import ConstellationLines from "@/components/profile/ConstellationLines";
-import { dayMasterLinks } from "@/lib/symbolic-tradition/group-flow";
+import { dayMasterLinks, dayMasterOf, signatureOrbit } from "@/lib/symbolic-tradition/group-flow";
+import { groupEpithet } from "@/lib/symbolic-tradition/group-epithet";
+import GatheringScene from "@/components/profile/GatheringScene";
+import SignatureCard from "@/components/profile/SignatureCard";
 import CircleSynthesis from "@/components/profile/CircleSynthesis";
 import CircleToday from "@/components/profile/CircleToday";
 import { synthesizeGroup } from "@/lib/symbolic-tradition/group-synthesis";
@@ -32,6 +35,13 @@ type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY = {
   ko: {
+    gathered: "{n}명이 모였어요",
+    oneMore: "한 명만 더 오면 지도가 그려져요",
+    sigHeading: "우리의 무늬",
+    sigLead: "각자의 좌표를 궤도 하나로 옮겨 꼬리를 남겼어요. 같은 사람들이 모이면 늘 같은 무늬, 한 명만 달라져도 다른 무늬가 나와요.",
+    sigSave: "이미지로 저장",
+    sigSaved: "이미지를 저장했어요",
+    sigBrand: "OIYO · 우리의 지도",
     constellationAria: "관점별로 사람 사이를 이은 별자리",
     lineLegend: "빛이 흐르는 선은 잘 맞물리는 사이, 떨리는 점선은 부딪히는 사이예요.",
     dmLegend: "일간 관점에서는 빛이 기운을 주는 쪽에서 받는 쪽으로 흘러요.",
@@ -59,6 +69,13 @@ const COPY = {
     locationError: "태어난 시각을 입력했다면 출생도시도 선택해 주세요.",
   },
   en: {
+    gathered: "{n} of you are here",
+    oneMore: "One more person and the map appears",
+    sigHeading: "Our pattern",
+    sigLead: "Each person’s coordinates become one orbit that leaves a trail. The same people always make the same pattern; change one person and it changes.",
+    sigSave: "Save as image",
+    sigSaved: "Image saved",
+    sigBrand: "OIYO · Our map",
     constellationAria: "A constellation linking everyone under this lens",
     lineLegend: "Lines with flowing light mesh well; trembling dashed lines rub against each other.",
     dmLegend: "Under the day-master lens, light flows from the one who gives energy to the one who receives it.",
@@ -86,6 +103,13 @@ const COPY = {
     locationError: "If you enter a birth time, choose the birth city too.",
   },
   ja: {
+    gathered: "{n}人が集まりました",
+    oneMore: "あと一人来ると地図が描かれます",
+    sigHeading: "わたしたちの模様",
+    sigLead: "それぞれの座標を一つの軌道に移して軌跡を残しました。同じ顔ぶれならいつも同じ模様、一人違えば別の模様になります。",
+    sigSave: "画像で保存",
+    sigSaved: "画像を保存しました",
+    sigBrand: "OIYO · 私たちの地図",
     constellationAria: "視点ごとに人と人をつないだ星座",
     lineLegend: "光が流れる線はよくかみ合う間柄、震える点線はぶつかる間柄です。",
     dmLegend: "日干の視点では、光が気を与える側から受け取る側へ流れます。",
@@ -113,6 +137,13 @@ const COPY = {
     locationError: "出生時刻を入力した場合は、出生都市も選んでください。",
   },
   zh: {
+    gathered: "{n}人已到齐",
+    oneMore: "再来一个人就能画出地图",
+    sigHeading: "我们的纹样",
+    sigLead: "把每个人的坐标化成一条轨道并留下轨迹。同样的人聚在一起总是同样的纹样，换一个人就会不同。",
+    sigSave: "保存为图片",
+    sigSaved: "图片已保存",
+    sigBrand: "OIYO · 我们的地图",
     constellationAria: "按视角连接每个人的星座",
     lineLegend: "有光流动的线表示彼此契合，颤动的虚线表示容易碰撞。",
     dmLegend: "在日干视角下，光从给出能量的人流向接收的人。",
@@ -140,6 +171,13 @@ const COPY = {
     locationError: "如果填写了出生时间，也请选择出生城市。",
   },
   fr: {
+    gathered: "Vous êtes {n}",
+    oneMore: "Encore une personne et la carte apparaît",
+    sigHeading: "Notre motif",
+    sigLead: "Les coordonnées de chacun deviennent une orbite qui laisse une trace. Les mêmes personnes donnent toujours le même motif ; changez-en une et il change.",
+    sigSave: "Enregistrer l’image",
+    sigSaved: "Image enregistrée",
+    sigBrand: "OIYO · Notre carte",
     constellationAria: "Une constellation qui relie chacun selon cette perspective",
     lineLegend: "Les lignes où la lumière circule s’accordent bien ; les pointillés tremblants se heurtent.",
     dmLegend: "Avec le maître du jour, la lumière va de celui qui donne l’énergie à celui qui la reçoit.",
@@ -167,6 +205,13 @@ const COPY = {
     locationError: "Si vous indiquez l’heure de naissance, choisissez aussi la ville de naissance.",
   },
   es: {
+    gathered: "Sois {n}",
+    oneMore: "Una persona más y aparece el mapa",
+    sigHeading: "Nuestro patrón",
+    sigLead: "Las coordenadas de cada uno se convierten en una órbita que deja estela. Las mismas personas dan siempre el mismo patrón; cambia a una y cambia.",
+    sigSave: "Guardar imagen",
+    sigSaved: "Imagen guardada",
+    sigBrand: "OIYO · Nuestro mapa",
     constellationAria: "Una constelación que une a todos según esta perspectiva",
     lineLegend: "Las líneas con luz que fluye encajan bien; las punteadas que tiemblan chocan.",
     dmLegend: "Con el tronco del día, la luz fluye de quien da la energía a quien la recibe.",
@@ -438,6 +483,14 @@ export default function CircleGathering({ locale }: { locale: string }) {
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{copy.sub}</p>
     </header>
 
+    {/* A6 모이는 순간 — 사람이 들어올 때마다 날아와 궤도에 앉는다. */}
+    {people.length > 0 && (
+      <GatheringScene
+        people={people.map((item) => ({ id: item.id, label: item.label, element: dayMasterOf(item.profile) }))}
+        caption={people.length < 2 ? copy.oneMore : copy.gathered.replace("{n}", String(people.length))}
+      />
+    )}
+
     {pendingFriend && <div className="mt-6 rounded-2xl border border-amber-300 bg-amber-50 p-4 text-amber-950" role="alert">
       <p className="font-black">{FRIEND_SHARE_UI[lang].inviteTitle}</p>
       <p className="mt-1 text-sm leading-6">{FRIEND_SHARE_UI[lang].inviteBody}</p>
@@ -503,6 +556,15 @@ export default function CircleGathering({ locale }: { locale: string }) {
       <button type="button" onClick={() => void share()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Share2 className="h-4 w-4" />{copy.share}</button>
       {copied && <p className="mt-2 text-center text-xs font-black text-primary">{copy.copied}</p>}
     </section>}
+
+    {/* A5 궤적 서명 — 모임마다 다른 무늬. 공유 이미지로 저장할 수 있다. */}
+    {synthesis && snapshot && (
+      <SignatureCard
+        people={people.map((item) => ({ id: item.id, label: item.label, element: dayMasterOf(item.profile), orbit: signatureOrbit(item.profile) }))}
+        title={groupEpithet(synthesis, lang).title}
+        copy={{ heading: copy.sigHeading, lead: copy.sigLead, save: copy.sigSave, saved: copy.sigSaved, brand: copy.sigBrand }}
+      />
+    )}
 
     {!snapshot && <p className="mt-8 rounded-2xl bg-surface-subtle px-4 py-3 text-center text-sm font-bold text-foreground">{copy.need}</p>}
 

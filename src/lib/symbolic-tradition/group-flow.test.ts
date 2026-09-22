@@ -51,10 +51,13 @@ describe("궤적 서명 (A5)", () => {
     expect(signatureOrbit(p)).toEqual(signatureOrbit(comparisonFromCivil({ date: "1990-05-17" })));
     for (let d = 0; d < 400; d += 1) {
       const o = signatureOrbit(comparisonFromCivil({ date: new Date(Date.UTC(1970, 0, 1) + d * 86_400_000 * 37).toISOString().slice(0, 10) }));
-      expect(o.radius).toBeGreaterThanOrEqual(0.3);
-      expect(o.radius).toBeLessThanOrEqual(0.8);
-      expect(o.epicycleRadius).toBeGreaterThanOrEqual(0.06);
-      expect(o.epicycleRadius).toBeLessThanOrEqual(0.18);
+      expect(o.radius).toBeGreaterThanOrEqual(0.25);
+      expect(o.radius).toBeLessThanOrEqual(0.55);
+      expect(o.epicycleRadius).toBeGreaterThanOrEqual(0.12);
+      expect(o.epicycleRadius).toBeLessThanOrEqual(0.38);
+      // 바깥 끝이 무대(반지름 1)를 넘지 않는다.
+      expect(o.radius + o.epicycleRadius).toBeLessThanOrEqual(0.93);
+      expect(o.epicycleSpeed).toBeLessThan(0);
       expect(Number.isInteger(o.speed) && Number.isInteger(o.epicycleSpeed)).toBe(true);
     }
   });

@@ -90,7 +90,7 @@ export function dayMasterLinks(members: GroupMember[]): DayMasterLink[] {
  * 어느 좌표를 쓰는가 — 옛 참가자에게도 있는 것만 쓴다(마야·일주·지지).
  * - 반지름: 마야 음조(1~13). 13단계라 사람끼리 겹치기 어렵다.
  * - 공전 속도: 일간의 오행 순서. 같은 기운은 같은 박자로 돈다.
- * - 주전원(작은 원): 인장(1~20)과 일지(12)로 크기·빠르기.
+ * - 주전원(작은 원): 인장(1~20)과 일지(12)로 크기·빠르기. 거꾸로 돈다.
  * 속도는 모두 정수비라 무늬가 닫힌다(한없이 칠해지지 않는다).
  */
 export interface SignatureOrbit {
@@ -115,10 +115,12 @@ export function signatureOrbit(profile: SymbolicComparisonProfile): SignatureOrb
   const branchIndex = Math.max(0, BRANCH_ORDER.indexOf(profile.saju.day.earthlyBranch));
   const elementIndex = GROUP_ELEMENT_ORDER.indexOf(dayMasterOf(profile));
   return {
-    radius: 0.3 + ((tone - 1) / 12) * 0.5,
+    radius: 0.25 + ((tone - 1) / 12) * 0.3,
     speed: elementIndex + 1,
-    epicycleRadius: 0.06 + ((seal - 1) / 19) * 0.12,
-    epicycleSpeed: 3 + (branchIndex % 5),
+    epicycleRadius: 0.12 + ((seal - 1) / 19) * 0.26,
+    // 거꾸로 도는 작은 원이라야 꽃잎(하이포트로코이드)이 생긴다. 같은 방향이면
+    // 동심원처럼 겹쳐 사람 사이의 차이가 보이지 않았다(2026-09-22 화면 확인).
+    epicycleSpeed: -(4 + (branchIndex % 7)),
     phase: (branchIndex / 12) * Math.PI * 2,
   };
 }
