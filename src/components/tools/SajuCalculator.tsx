@@ -22,6 +22,7 @@ import FiveElementsOrbit from './saju/FiveElementsOrbit';
 import { decodeResult } from '../../lib/result-permalink';
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
+import { prefersReducedMotion } from '../../hooks/useMotion';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import ResultSymbol from '../shared/ResultSymbol';
@@ -826,7 +827,8 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     gaEvent('test_completed', { test_id: 'saju' });
     // Direct answer must land first in the viewport after calculate.
     requestAnimationFrame(() => {
-      resultTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // 움직임을 줄여 달라면 미끄러지지 않고 바로 옮긴다.
+      resultTopRef.current?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
     });
   }
 
