@@ -38,6 +38,18 @@ export const TEST_ICON_BY_PATH: Readonly<Record<string, string>> = {
   '/personal-color/test': '/images/test-icons/personal-color.webp',
   '/depression/test': '/images/test-icons/depression.webp',
   '/social-anxiety/test': '/images/test-icons/social-anxiety.webp',
+  '/self-concept-clarity-test': '/images/test-icons/self-concept-clarity.webp',
+  '/anger-style/test': '/images/test-icons/anger-style.webp',
+  '/sleep-type/test': '/images/test-icons/sleep-type.webp',
+  '/inner-strength/test': '/images/test-icons/inner-strength.webp',
+  '/investment-type/test': '/images/test-icons/investment-type.webp',
+  '/habit-builder/30-days': '/images/test-icons/habit-builder.webp',
+  '/political/test': '/images/test-icons/political.webp',
+  '/lethargy/test': '/images/test-icons/lethargy.webp',
+  '/perfectionism/test': '/images/test-icons/perfectionism.webp',
+  '/adhd/test': '/images/test-icons/adhd.webp',
+  '/narcissism/test': '/images/test-icons/narcissism.webp',
+  '/lazy-perfectionist/test': '/images/test-icons/lazy-perfectionist.webp',
 };
 
 export function testIconSrc(localizedHref: string): string | undefined {

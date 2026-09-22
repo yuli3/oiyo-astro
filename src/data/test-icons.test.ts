@@ -24,7 +24,13 @@ describe('testIconSrc', () => {
     expect(testIconSrc('/ja/mbti/career/')).toBe('/images/result-symbols/mbti.webp');
   });
 
+  it('maps the second pictogram batch', () => {
+    expect(testIconSrc('/ko/anger-style/test/')).toBe('/images/test-icons/anger-style.webp');
+    expect(testIconSrc('/en/adhd/test')).toBe('/images/test-icons/adhd.webp');
+    expect(testIconSrc('/ko/habit-builder/30-days/')).toBe('/images/test-icons/habit-builder.webp');
+  });
+
   it('leaves unmapped tests on their existing emoji fallback', () => {
-    expect(testIconSrc('/ko/anger-style/test/')).toBeUndefined();
+    expect(testIconSrc('/ko/shadow-self-test/')).toBeUndefined();
   });
 });
