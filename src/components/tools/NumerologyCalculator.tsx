@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { lifePathOf } from "@/lib/symbolic-tradition/numerology";
 import type { Locale } from "../../lib/i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 import { BirthDateField, ProfileNameField } from "../shared/BirthDateField";
@@ -34,13 +35,12 @@ const LETTER_MAP: Record<string, number> = {
 
 const VOWELS = new Set(["a","e","i","o","u"]);
 
-/** Life Path = reduce(month + day + year) */
+/**
+ * Life Path — symbolic-tradition/numerology 가 달력 문자열에서 바로 셈한다.
+ * 여기서 `new Date(dateStr)` 로 셈하던 때는 서반구에서 하루 앞 날짜가 됐다.
+ */
 function calcLifePath(dateStr: string): number {
-  const d = new Date(dateStr);
-  const m = d.getMonth() + 1;
-  const day = d.getDate();
-  const y = d.getFullYear();
-  return reduceToDigit(reduceToDigit(m) + reduceToDigit(day) + reduceToDigit(y));
+  return lifePathOf(dateStr);
 }
 
 /**
