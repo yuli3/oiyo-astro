@@ -1,3 +1,4 @@
+import type { AstroCoordinates } from "./astro-coordinates";
 import type { EarthlyBranch, FiveElement, HeavenlyStem } from "@/lib/ontology/saju/types";
 
 export const SYMBOLIC_PROFILE_SCHEMA_VERSION = 1 as const;
@@ -113,6 +114,12 @@ export interface SymbolicComparisonProfile {
   saju: SymbolicProfile["saju"];
   sunSign: SymbolicProfile["sunSign"];
   yinYang: SymbolicProfile["yinYang"];
+  /**
+   * 별자리 층의 입력(태양 황경·달·상승궁). 2026-09-22 에 더했다. 그 전에
+   * 저장·공유된 참가자에게는 없으므로 선택이고, 없는 사람은 별자리 층에서만
+   * 빠진다. 무엇을 얼마나 싣는지는 astro-coordinates.ts 에 적었다.
+   */
+  astro?: AstroCoordinates;
 }
 
 export interface SymbolicCompatibilityLens {

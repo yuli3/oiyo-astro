@@ -1,5 +1,6 @@
 import LZString from "lz-string";
 
+import { isAstroCoordinates } from "./astro-coordinates";
 import { compareSymbolicProfiles } from "./index";
 import type { CompatibilityLensId, SymbolicComparisonProfile } from "./types";
 
@@ -65,7 +66,9 @@ function validProfile(profile: SymbolicComparisonProfile): boolean {
     && validPillar(profile?.saju?.year)
     && validPillar(profile?.saju?.month)
     && validPillar(profile?.saju?.day)
-    && (profile?.saju?.hour === null || validPillar(profile?.saju?.hour));
+    && (profile?.saju?.hour === null || validPillar(profile?.saju?.hour))
+    // 별자리 좌표는 선택이다. 있으면 모양이 맞아야 한다.
+    && (profile.astro === undefined || isAstroCoordinates(profile.astro));
 }
 
 export function isSymbolicGroupParticipant(value: unknown): value is SymbolicGroupParticipant {

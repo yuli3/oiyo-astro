@@ -173,7 +173,7 @@ export const CATEGORY_BASE_RATE: Record<DistinctionSystem, Record<string, number
 };
 
 /** 이항분포 꼬리 P(X ≥ k), X ~ B(n, p). 모임은 열 명이 상한이라 그대로 센다. */
-function binomialTail(n: number, k: number, p: number): number {
+export function binomialTail(n: number, k: number, p: number): number {
   let total = 0;
   let choose = 1;
   for (let i = 0; i <= n; i += 1) {

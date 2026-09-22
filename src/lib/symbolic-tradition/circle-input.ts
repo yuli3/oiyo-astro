@@ -1,6 +1,7 @@
 import { CITIES, type City } from "@/lib/ontology/natal/signs";
 import { resolveZonedCivilTime } from "@/lib/user/birth-record";
 import { deriveSymbolicProfile, type SymbolicComparisonProfile } from "@/lib/symbolic-tradition";
+import { astroCoordinates } from "./astro-coordinates";
 import { STEMS } from "@/manifest/data/saju/stems";
 import type { FiveElement } from "@/lib/ontology/saju/types";
 
@@ -9,7 +10,7 @@ export function comparisonFromCivil(input: {
   cityId?: string;
   date: string;
   time?: string;
-}): SymbolicComparisonProfile {
+}, options: { astro?: boolean } = {}): SymbolicComparisonProfile {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(input.date)) throw new RangeError("Need a civil date");
   const city = input.city ?? CITIES.find((item) => item.id === input.cityId);
   const civilTime = input.time || null;
@@ -35,6 +36,17 @@ export function comparisonFromCivil(input: {
     saju: profile.saju,
     sunSign: profile.sunSign,
     yinYang: profile.yinYang,
+    // 달 궁 셈은 비싸서 사람을 원에 넣을 때만 한다. 이 함수는 "오늘"을
+    // 참가자로 만들 때 하루에 수십 번 불리는데, 그쪽은 별자리가 필요 없다.
+    ...(options.astro ? {
+      astro: astroCoordinates({
+        civilDate: input.date,
+        civilTime,
+        utcOffsetMinutes: city ? resolution.offsetMinutes : null,
+        latitude: city?.lat ?? null,
+        longitude: city?.lon ?? null,
+      }),
+    } : {}),
   };
 }
 

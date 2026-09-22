@@ -181,7 +181,7 @@ function mayanKinOf(year: number, month: number, day: number): SymbolicProfile["
 }
 
 /** 상생(相生) — 목생화 화생토 토생금 금생수 수생목. */
-const GENERATION: Record<FiveElement, FiveElement> = {
+export const GENERATION: Record<FiveElement, FiveElement> = {
   [FiveElement.WOOD]: FiveElement.FIRE,
   [FiveElement.FIRE]: FiveElement.EARTH,
   [FiveElement.EARTH]: FiveElement.METAL,
@@ -190,7 +190,7 @@ const GENERATION: Record<FiveElement, FiveElement> = {
 };
 
 /** 상극(相剋) — 목극토 토극수 수극화 화극금 금극목. */
-const CONTROL: Record<FiveElement, FiveElement> = {
+export const CONTROL: Record<FiveElement, FiveElement> = {
   [FiveElement.WOOD]: FiveElement.EARTH,
   [FiveElement.EARTH]: FiveElement.WATER,
   [FiveElement.WATER]: FiveElement.FIRE,

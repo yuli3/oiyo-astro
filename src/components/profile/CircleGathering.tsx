@@ -320,7 +320,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
       return;
     }
     try {
-      const profile = comparisonFromCivil({ city: selectedCity ?? undefined, cityId: cityId || undefined, date, time: time || undefined });
+      const profile = comparisonFromCivil({ city: selectedCity ?? undefined, cityId: cityId || undefined, date, time: time || undefined }, { astro: true });
       const next = person(alias || defaultLabel(copy, people.length), profile);
       setPeople((current) => {
         if (current.length >= 10) return current;
@@ -363,7 +363,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
       return;
     }
     try {
-      const profile = comparisonFromCivil({ city: pendingFriend.city, date: pendingFriend.date, time: pendingFriend.time || undefined });
+      const profile = comparisonFromCivil({ city: pendingFriend.city, date: pendingFriend.date, time: pendingFriend.time || undefined }, { astro: true });
       setPeople((current) => current.length >= 10 ? current : [...current, person(pendingFriend.alias, profile)]);
       setPendingFriend(null);
       setError("");
