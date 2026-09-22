@@ -10,12 +10,16 @@
  * 셈은 전부 lib/symbolic-tradition/group-synthesis.ts 에 있다. 여기서는 그
  * 결과를 읽기만 한다. 총점도 순위도 만들지 않는다.
  */
+import { useMemo } from "react";
+
 import { GROUP_ELEMENT_ORDER, type GroupMember, type GroupSynthesis } from "@/lib/symbolic-tradition/group-synthesis";
+import { astroAgreement, groupAstro } from "@/lib/symbolic-tradition/group-astro";
 import { dayMasterOf } from "@/lib/symbolic-tradition/group-flow";
 import { groupEpithet } from "@/lib/symbolic-tradition/group-epithet";
 import { ELEMENT_SYMBOLS } from "@/lib/talisman/symbols";
 import type { FiveElement } from "@/lib/ontology/saju/types";
 
+import AstroLayer from "./AstroLayer";
 import ElementRings from "./ElementRings";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -30,6 +34,7 @@ const EL_COLOR: Record<string, string> = {
 
 const T: Record<Lang, Record<string, string>> = {
   ko: {
+    agree: "{el} 기운이 오행에서도 별자리에서도 몰렸어요. 두 체계가 같은 말을 해요.",
     ringsAria: "모임의 오행 고리",
     ringsLegend: "굵은 고리는 많이 가진 기운, 끊긴 고리는 아무도 없는 기운이에요. 각자 자기 일간의 고리를 돌아요.",
     title: "우리 기운",
@@ -52,8 +57,6 @@ const T: Record<Lang, Record<string, string>> = {
     tiltBalanced: "양과 음이 비슷해요",
     tiltYang: "양이 우세해요 — 벌이는 힘이 큰 모임이에요",
     tiltYin: "음이 우세해요 — 머금고 살피는 힘이 큰 모임이에요",
-    astro: "별자리 쏠림",
-    astroLead: "태양궁의 원소와 행동 양식이에요",
     who: "누가 무엇을 넣나",
     supplies: "채움",
     sole: "이 사람뿐",
@@ -61,6 +64,7 @@ const T: Record<Lang, Record<string, string>> = {
     careTitle: "조심할 점",
   },
   en: {
+    agree: "{el} gathers in both the five elements and the zodiac — two systems saying the same thing.",
     ringsAria: "The group’s five-element rings",
     ringsLegend: "Thick rings are energies the group holds a lot of; broken rings are energies nobody has. Each person orbits the ring of their day master.",
     title: "Our energies",
@@ -79,12 +83,12 @@ const T: Record<Lang, Record<string, string>> = {
     tiltBalanced: "Yang and yin are close",
     tiltYang: "Yang leads — a group that starts things",
     tiltYin: "Yin leads — a group that holds and watches",
-    astro: "Zodiac tilt", astroLead: "Sun-sign element and modality",
     who: "Who brings what", supplies: "Fills", sole: "Only one",
     nobody: "Nobody fills the gaps yet",
     careTitle: "Worth watching",
   },
   ja: {
+    agree: "{el}の気が五行でも星座でも集まっています。二つの体系が同じことを言っています。",
     ringsAria: "集まりの五行の環",
     ringsLegend: "太い環は多く持つ気、途切れた環は誰も持たない気です。それぞれ自分の日干の環を回ります。",
     title: "わたしたちの気",
@@ -103,12 +107,12 @@ const T: Record<Lang, Record<string, string>> = {
     tiltBalanced: "陽と陰が近いです",
     tiltYang: "陽が優勢 — 起こす力が大きい集まりです",
     tiltYin: "陰が優勢 — 含み見守る力が大きい集まりです",
-    astro: "星座の偏り", astroLead: "太陽星座の元素と行動様式",
     who: "誰が何を足すか", supplies: "補う", sole: "この人だけ",
     nobody: "空いた席を埋める人がまだいません",
     careTitle: "気をつけること",
   },
   zh: {
+    agree: "{el}气在五行和星座中都很集中——两个体系说的是同一件事。",
     ringsAria: "组合的五行环",
     ringsLegend: "粗环是大家拥有较多的气，断开的环是谁都没有的气。每个人绕着自己日干的环转动。",
     title: "我们的气",
@@ -127,12 +131,12 @@ const T: Record<Lang, Record<string, string>> = {
     tiltBalanced: "阴阳相近",
     tiltYang: "阳占优 — 这是善于发起的组合",
     tiltYin: "阴占优 — 这是善于含蓄观察的组合",
-    astro: "星座倾向", astroLead: "太阳星座的元素与行动方式",
     who: "谁带来什么", supplies: "补上", sole: "仅此一人",
     nobody: "目前还没有人补上空缺",
     careTitle: "需要留意",
   },
   fr: {
+    agree: "L’élément {el} se concentre à la fois dans les cinq éléments et dans le zodiaque : deux systèmes disent la même chose.",
     ringsAria: "Les anneaux des cinq éléments du groupe",
     ringsLegend: "Les anneaux épais sont les énergies abondantes ; les anneaux brisés, celles que personne n’a. Chacun tourne sur l’anneau de son maître du jour.",
     title: "Nos énergies",
@@ -151,12 +155,12 @@ const T: Record<Lang, Record<string, string>> = {
     tiltBalanced: "Yang et yin sont proches",
     tiltYang: "Le yang domine — un groupe qui lance",
     tiltYin: "Le yin domine — un groupe qui garde et observe",
-    astro: "Penchant du zodiaque", astroLead: "Élément et modalité du signe solaire",
     who: "Qui apporte quoi", supplies: "Comble", sole: "Seul",
     nobody: "Personne ne comble encore les manques",
     careTitle: "À surveiller",
   },
   es: {
+    agree: "El elemento {el} se concentra tanto en los cinco elementos como en el zodiaco: dos sistemas dicen lo mismo.",
     ringsAria: "Los anillos de los cinco elementos del grupo",
     ringsLegend: "Los anillos gruesos son las energías abundantes; los rotos, las que nadie tiene. Cada persona gira en el anillo de su tronco del día.",
     title: "Nuestras energías",
@@ -175,30 +179,13 @@ const T: Record<Lang, Record<string, string>> = {
     tiltBalanced: "Yang y yin están cerca",
     tiltYang: "Domina el yang: un grupo que inicia",
     tiltYin: "Domina el yin: un grupo que sostiene y observa",
-    astro: "Inclinación zodiacal", astroLead: "Elemento y modalidad del signo solar",
     who: "Quién aporta qué", supplies: "Cubre", sole: "Solo esta persona",
     nobody: "Todavía nadie cubre los huecos",
     careTitle: "A tener en cuenta",
   },
 };
 
-const ASTRO_ELEMENT: Record<Lang, Record<string, string>> = {
-  ko: { fire: "불", earth: "흙", air: "바람", water: "물" },
-  en: { fire: "Fire", earth: "Earth", air: "Air", water: "Water" },
-  ja: { fire: "火", earth: "地", air: "風", water: "水" },
-  zh: { fire: "火", earth: "土", air: "风", water: "水" },
-  fr: { fire: "Feu", earth: "Terre", air: "Air", water: "Eau" },
-  es: { fire: "Fuego", earth: "Tierra", air: "Aire", water: "Agua" },
-};
 
-const ASTRO_MODALITY: Record<Lang, Record<string, string>> = {
-  ko: { cardinal: "여는 쪽", fixed: "지키는 쪽", mutable: "바꾸는 쪽" },
-  en: { cardinal: "Starting", fixed: "Holding", mutable: "Adapting" },
-  ja: { cardinal: "始める", fixed: "保つ", mutable: "変える" },
-  zh: { cardinal: "开创", fixed: "固守", mutable: "变通" },
-  fr: { cardinal: "Initier", fixed: "Tenir", mutable: "Adapter" },
-  es: { cardinal: "Iniciar", fixed: "Sostener", mutable: "Adaptar" },
-};
 
 /**
  * 쏠림이 가져오는 위험. 같은 기운이 몰리면 그 기운의 장점과 함께 그 기운의
@@ -279,7 +266,10 @@ export default function CircleSynthesis({
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   const t = T[lang];
   const epithet = groupEpithet(synthesis, lang);
-  const { astro, contributions, elements, polarity, spread } = synthesis;
+  const { contributions, elements, polarity, spread } = synthesis;
+  const astroLayer = useMemo(() => groupAstro(members), [members]);
+  const agreement = astroAgreement(synthesis, astroLayer);
+  const labels = Object.fromEntries(members.map((m) => [m.id, m.label]));
   const name = (element: FiveElement) =>
     ELEMENT_SYMBOLS[element].name[lang] ?? ELEMENT_SYMBOLS[element].name.en;
   const spreadLine = spread === "even" ? t.spreadEven : spread === "leaning" ? t.spreadLeaning : t.spreadSkewed;
@@ -315,6 +305,10 @@ export default function CircleSynthesis({
       {/* 모임의 이름이 먼저 온다. 숫자는 그 이름의 근거로 아래에 따라붙는다. */}
       <h2 className="mt-1 text-2xl font-black leading-tight text-foreground sm:text-3xl">{epithet.title}</h2>
       <p className="mt-2 text-sm leading-relaxed text-foreground">{epithet.line}</p>
+      {/* B4 — 오행과 별자리가 같은 원소를 몰렸다고 할 때만 한 줄. */}
+      {agreement && (
+        <p className="mt-1 text-sm font-bold leading-relaxed text-primary-strong">{t.agree.replace("{el}", name(agreement))}</p>
+      )}
       {/* 별명은 오행 축에서 나온다. 음양이 우연으로 보기 어려울 만큼 기울었으면
           같은 별명이라도 결이 달라서 한 줄로 덧붙인다. */}
       {polarity.pronounced && (
@@ -389,7 +383,7 @@ export default function CircleSynthesis({
           <ul className="mt-1 space-y-1">
             {cares.map((item) => (
               <li key={`${item.element}-${item.line}`} className="flex gap-2 text-sm leading-relaxed text-foreground">
-                <span className="mt-0.5 shrink-0 rounded-full px-2 py-0.5 text-[10px] font-black text-white" style={{ backgroundColor: EL_COLOR[item.element] }}>
+                <span className="mt-0.5 shrink-0 whitespace-nowrap rounded-full px-2 py-0.5 text-[10px] font-black text-white" style={{ backgroundColor: EL_COLOR[item.element] }}>
                   {name(item.element)}
                 </span>
                 <span>{item.line}</span>
@@ -399,26 +393,20 @@ export default function CircleSynthesis({
         </div>
       )}
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
-        <div className="rounded-2xl border border-border p-3">
-          <p className="text-[11px] font-bold text-muted-foreground">{t.polarity}</p>
-          <div className="mt-2 flex h-3 overflow-hidden rounded-full bg-muted">
-            <div className="h-full bg-amber-500" style={{ width: `${(polarity.yang / polarityTotal) * 100}%` }} />
-            <div className="h-full bg-slate-600" style={{ width: `${(polarity.yin / polarityTotal) * 100}%` }} />
-          </div>
-          <p className="mt-1 text-[11px] text-muted-foreground">
-            {t.yang} {polarity.yang} · {t.yin} {polarity.yin}
-          </p>
-          <p className="mt-1 text-sm leading-relaxed text-foreground">{tiltLine}</p>
+      <div className="mt-4 rounded-2xl border border-border p-3">
+        <p className="text-[11px] font-bold text-muted-foreground">{t.polarity}</p>
+        <div className="mt-2 flex h-3 overflow-hidden rounded-full bg-muted">
+          <div className="h-full bg-amber-500" style={{ width: `${(polarity.yang / polarityTotal) * 100}%` }} />
+          <div className="h-full bg-slate-600" style={{ width: `${(polarity.yin / polarityTotal) * 100}%` }} />
         </div>
-        <div className="rounded-2xl border border-border p-3">
-          <p className="text-[11px] font-bold text-muted-foreground">{t.astro}</p>
-          <p className="mt-2 text-sm font-black text-foreground">
-            {ASTRO_ELEMENT[lang][astro.topElement]} · {ASTRO_MODALITY[lang][astro.topModality]}
-          </p>
-          <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">{t.astroLead}</p>
-        </div>
+        <p className="mt-1 text-[11px] text-muted-foreground">
+          {t.yang} {polarity.yang} · {t.yin} {polarity.yin}
+        </p>
+        <p className="mt-1 text-sm leading-relaxed text-foreground">{tiltLine}</p>
       </div>
+
+      {/* 별자리 층 B1~B3. B4 는 헤드라인 아래 한 줄. */}
+      <AstroLayer lang={lang} astro={astroLayer} labels={labels} />
 
       <div className="mt-4">
         <p className="text-[11px] font-bold text-muted-foreground">{t.who}</p>
