@@ -14,9 +14,13 @@ import { useEffect, useMemo, useState } from "react";
 
 import { groupPeriod, groupToday, seasonBand, type GroupToday } from "@/lib/symbolic-tradition/group-today";
 import { PAIR_COPY } from "@/lib/symbolic-tradition/pair-copy";
-import { GROUP_ELEMENT_ORDER, type GroupMember, type GroupSynthesis } from "@/lib/symbolic-tradition/group-synthesis";
+import { generationFlow, type FlowEdge } from "@/lib/symbolic-tradition/group-flow";
+import { type GroupMember, type GroupSynthesis } from "@/lib/symbolic-tradition/group-synthesis";
 import { ELEMENT_SYMBOLS } from "@/lib/talisman/symbols";
 import type { FiveElement } from "@/lib/ontology/saju/types";
+
+import FlowPentagon from "./FlowPentagon";
+import PulseField from "./PulseField";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
@@ -26,6 +30,12 @@ const EL_COLOR: Record<string, string> = {
 
 const T: Record<Lang, Record<string, string>> = {
   ko: {
+    flowMended: "오늘 {el} 기운이 들어와 {from}→{to}에서 막혀 있던 흐름을 이어요.",
+    flowBlocked: "{from}에서 {to}(으)로 넘어가는 자리에서 흐름이 막혀요. {to} 기운이 들어오는 날 풀려요.",
+    flowOpen: "다섯 고리가 모두 흘러요. 막힌 자리 없이 기운이 돌아요.",
+    flowAria: "모임의 오행 흐름 그림",
+    pulseLead: "오늘 기운을 받는 사람은 부풀고, 눌리는 사람은 움츠러들어요. 같은 기운끼리는 한 덩어리로 모여요.",
+    pulseAria: "오늘 각자의 기운 그림",
     title: "오늘의 우리",
     tabToday: "오늘",
     tabWeek: "이번 주",
@@ -89,6 +99,12 @@ const T: Record<Lang, Record<string, string>> = {
     neutral: "특별히 밀거나 당기는 기운이 없는 날이에요. 평소의 우리로 흘러가요.",
   },
   en: {
+    flowMended: "Today’s {el} arrives and reconnects the flow that was stuck at {from}→{to}.",
+    flowBlocked: "The flow gets stuck where {from} should pass to {to}. It loosens on days that bring {to}.",
+    flowOpen: "All five links are flowing — nothing is stuck.",
+    flowAria: "The group’s five-element flow",
+    pulseLead: "People who receive today’s energy swell; people under pressure shrink. Those sharing an element gather into one cloud.",
+    pulseAria: "Everyone’s energy today",
     title: "Us today",
     tabToday: "Today",
     tabWeek: "This week",
@@ -150,6 +166,12 @@ const T: Record<Lang, Record<string, string>> = {
     neutral: "Nothing pushes or pulls on this day. The group runs as it usually does.",
   },
   ja: {
+    flowMended: "今日は{el}の気が入り、{from}→{to}で止まっていた流れをつなぎます。",
+    flowBlocked: "{from}から{to}へ移るところで流れが止まります。{to}の気が入る日にほどけます。",
+    flowOpen: "五つの環がすべて流れています。止まる場所はありません。",
+    flowAria: "集まりの五行の流れ",
+    pulseLead: "今日の気を受ける人はふくらみ、抑えられる人は縮みます。同じ気どうしはひとかたまりに集まります。",
+    pulseAria: "今日の各自の気",
     title: "今日のわたしたち",
     tabToday: "今日",
     tabWeek: "今週",
@@ -211,6 +233,12 @@ const T: Record<Lang, Record<string, string>> = {
     neutral: "特に押しも引きもない日です。いつもの流れです。",
   },
   zh: {
+    flowMended: "今天{el}气进来，接上了在{from}→{to}处堵住的流动。",
+    flowBlocked: "在{from}流向{to}的地方堵住了。等到{to}气进来的日子就会疏通。",
+    flowOpen: "五个环节都在流动，没有堵住的地方。",
+    flowAria: "组合的五行流动图",
+    pulseLead: "今天得到助力的人会膨胀，受压的人会收缩。同一种气的人聚成一团。",
+    pulseAria: "今天每个人的气",
     title: "今天的我们",
     tabToday: "今天",
     tabWeek: "本周",
@@ -272,6 +300,12 @@ const T: Record<Lang, Record<string, string>> = {
     neutral: "没有特别推拉的一天，照平常的样子走。",
   },
   fr: {
+    flowMended: "Aujourd’hui, l’élément {el} arrive et reconnecte le flux bloqué entre {from} et {to}.",
+    flowBlocked: "Le flux se bloque au passage de {from} vers {to}. Il se libère les jours qui apportent {to}.",
+    flowOpen: "Les cinq liens circulent : rien n’est bloqué.",
+    flowAria: "Le flux des cinq éléments du groupe",
+    pulseLead: "Ceux qui reçoivent l’énergie du jour gonflent, ceux sous pression se contractent. Ceux qui partagent un élément forment un seul nuage.",
+    pulseAria: "L’énergie de chacun aujourd’hui",
     title: "Nous aujourd’hui",
     tabToday: "Aujourd’hui",
     tabWeek: "Cette semaine",
@@ -333,6 +367,12 @@ const T: Record<Lang, Record<string, string>> = {
     neutral: "Rien ne pousse ni ne tire ce jour-là. Le groupe suit son cours habituel.",
   },
   es: {
+    flowMended: "Hoy llega el elemento {el} y reconecta el flujo atascado entre {from} y {to}.",
+    flowBlocked: "El flujo se atasca donde {from} debería pasar a {to}. Se suelta los días que traen {to}.",
+    flowOpen: "Los cinco enlaces fluyen: nada está atascado.",
+    flowAria: "El flujo de los cinco elementos del grupo",
+    pulseLead: "Quien recibe la energía de hoy se hincha; quien está bajo presión se encoge. Quienes comparten elemento forman una sola nube.",
+    pulseAria: "La energía de cada uno hoy",
     title: "Nosotros hoy",
     tabToday: "Hoy",
     tabWeek: "Esta semana",
@@ -432,6 +472,12 @@ function DayDetail({ day, isToday, synthesis, t, lang }: {
 }) {
   const name = (element: FiveElement) => ELEMENT_SYMBOLS[element].name[lang] ?? ELEMENT_SYMBOLS[element].name.en;
   const band = seasonBand(day.season.strength);
+  const flow = generationFlow(synthesis.elements.counts, day.element);
+  const mended = flow.find((edge) => edge.mended);
+  const blocked = flow.find((edge) => edge.blocked);
+  const fill = (text: string, edge: FlowEdge) =>
+    text.replaceAll("{el}", name(day.element)).replaceAll("{from}", name(edge.from)).replaceAll("{to}", name(edge.to));
+  const flowLine = mended ? fill(t.flowMended, mended) : blocked ? fill(t.flowBlocked, blocked) : t.flowOpen;
   return (
     <div>
       <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -450,30 +496,18 @@ function DayDetail({ day, isToday, synthesis, t, lang }: {
         {t[`season${cap(day.season.strength)}`].replace("{el}", name(day.element))}
       </p>
 
-      {/* 그날의 기운이 모임 분포 어디에 꽂히는지. 막대는 우리 기운과 같은
-          자(기저 비율 대비 편차)를 쓰고, 그날의 원소만 테두리로 짚는다. */}
+      {/* A3 상생 흐름. 그날의 기운이 모임의 순환 어디를 잇거나 막는지. 꼭짓점
+          크기는 모임의 몫이고, 흐름의 판정은 엔진(generationFlow)에서 받는다. */}
       <div className="mt-4">
-        <p className="text-[11px] font-bold text-muted-foreground">{t.yourDay}</p>
-        <div className="mt-2 grid grid-cols-5 items-end gap-1.5" style={{ height: "4.5rem" }}>
-          {GROUP_ELEMENT_ORDER.map((element) => {
-            const off = synthesis.elements.deviation[element];
-            const height = Math.max(12, Math.min(100, 50 + off * 20));
-            const on = element === day.element;
-            return (
-              <div key={element} className="flex h-full flex-col items-center justify-end">
-                <div
-                  className={`w-full rounded-t-md transition-all duration-700 ${on ? "ring-2 ring-offset-2 ring-foreground" : ""}`}
-                  style={{ backgroundColor: EL_COLOR[element], height: `${height}%`, opacity: on ? 1 : 0.4 }}
-                />
-              </div>
-            );
-          })}
-        </div>
-        <div className="mt-1 grid grid-cols-5 gap-1.5 text-center text-[10px] font-bold text-muted-foreground">
-          {GROUP_ELEMENT_ORDER.map((element) => (
-            <span key={element} className={element === day.element ? "text-foreground" : ""}>{name(element)}</span>
-          ))}
-        </div>
+        <p className="mb-2 text-[11px] font-bold text-muted-foreground">{t.yourDay}</p>
+        <FlowPentagon
+          counts={synthesis.elements.counts}
+          today={day.element}
+          people={day.members.map((m) => ({ id: m.id, label: m.label, dayMaster: m.dayMaster }))}
+          elementName={name}
+          ariaLabel={t.flowAria}
+        />
+        <p className="mt-2 text-sm leading-relaxed text-foreground">{flowLine}</p>
       </div>
 
       <div className="mt-4 rounded-2xl bg-muted/40 p-3">
@@ -483,7 +517,15 @@ function DayDetail({ day, isToday, synthesis, t, lang }: {
 
       <div className="mt-4">
         <p className="text-[11px] font-bold text-muted-foreground">{isToday ? t.who : t.whoOther}</p>
-        <ul className="mt-2 space-y-1.5">
+        {/* A4 맥동. 아래 목록과 같은 관계(stance)를 그림으로 먼저 보여 준다. */}
+        <div className="mt-2">
+          <PulseField
+            people={day.members.map((m) => ({ id: m.id, label: m.label, dayMaster: m.dayMaster, stance: m.stance, stanceLabel: t[`stance${cap(m.stance)}`] }))}
+            ariaLabel={t.pulseAria}
+          />
+          <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{t.pulseLead}</p>
+        </div>
+        <ul className="mt-3 space-y-1.5">
           {day.members.map((item) => {
             // 가장 드문 관점 하나. 해설은 쌍 해설(PAIR_COPY)을 그대로 쓴다.
             const copy = PAIR_COPY[lang][`${item.highlight.id}:${item.highlight.relation}`];
