@@ -19,11 +19,11 @@ import { readSymbolicShareFragment } from "@/lib/symbolic-tradition/share-artifa
 import { readEncryptedShortShare } from "@/lib/symbolic-tradition/short-share";
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from "@/lib/encrypted-result-permalink";
 import { FRIEND_BIRTH_SHARE_TOOL_ID, parseFriendBirthShare, type FriendBirthShare } from "@/lib/symbolic-tradition/friend-birth-share";
-import CompatibilityOrbit from "@/components/profile/CompatibilityOrbit";
+import ConstellationLines from "@/components/profile/ConstellationLines";
+import { dayMasterLinks } from "@/lib/symbolic-tradition/group-flow";
 import CircleSynthesis from "@/components/profile/CircleSynthesis";
 import CircleToday from "@/components/profile/CircleToday";
 import { synthesizeGroup } from "@/lib/symbolic-tradition/group-synthesis";
-import { scoreAgainstCenter } from "@/lib/symbolic-tradition/orbit-layout";
 import { gaEvent } from "@/lib/analytics/ga-event";
 import { PAIR_COPY } from "@/lib/symbolic-tradition/pair-copy";
 import type { CompatibilityLensId, SymbolicComparisonProfile } from "@/lib/symbolic-tradition";
@@ -32,6 +32,9 @@ type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY = {
   ko: {
+    constellationAria: "관점별로 사람 사이를 이은 별자리",
+    lineLegend: "빛이 흐르는 선은 잘 맞물리는 사이, 떨리는 점선은 부딪히는 사이예요.",
+    dmLegend: "일간 관점에서는 빛이 기운을 주는 쪽에서 받는 쪽으로 흘러요.",
     title: "우리의 지도",
     sub: "2명부터 10명까지. 생년월일을 적거나 친구 링크를 넣으면 이 브라우저에서만 원이 그려집니다.",
     me: "나",
@@ -51,12 +54,14 @@ const COPY = {
     help: "서로 돕는 점",
     care: "조심할 점",
     ask: "오늘 물어볼 것",
-    noTotal: "모임 총점·순위 없음",
     disclaimer: "전통 상징을 대화 소재로 보는 놀이입니다. 관계의 성공을 예측하지 않습니다.",
     error: "날짜를 확인해 주세요.",
     locationError: "태어난 시각을 입력했다면 출생도시도 선택해 주세요.",
   },
   en: {
+    constellationAria: "A constellation linking everyone under this lens",
+    lineLegend: "Lines with flowing light mesh well; trembling dashed lines rub against each other.",
+    dmLegend: "Under the day-master lens, light flows from the one who gives energy to the one who receives it.",
     title: "Our map",
     sub: "Two to ten people. Add a birth date or a friend link. The circle stays in this browser.",
     me: "You",
@@ -76,12 +81,14 @@ const COPY = {
     help: "How they help",
     care: "Watch for",
     ask: "Ask today",
-    noTotal: "No group total or ranking",
     disclaimer: "A playful reading of traditional symbols. It does not predict a relationship.",
     error: "Check the date.",
     locationError: "If you enter a birth time, choose the birth city too.",
   },
   ja: {
+    constellationAria: "視点ごとに人と人をつないだ星座",
+    lineLegend: "光が流れる線はよくかみ合う間柄、震える点線はぶつかる間柄です。",
+    dmLegend: "日干の視点では、光が気を与える側から受け取る側へ流れます。",
     title: "私たちの地図",
     sub: "2人から10人まで。生年月日を入れるか友だちのリンクを貼ると、このブラウザの中だけで円が描かれます。",
     me: "わたし",
@@ -101,12 +108,14 @@ const COPY = {
     help: "支え合えるところ",
     care: "気をつけるところ",
     ask: "今日たずねてみること",
-    noTotal: "総合点・順位はありません",
     disclaimer: "伝統的な象徴を話のきっかけとして楽しむものです。関係の成否を予測するものではありません。",
     error: "日付を確認してください。",
     locationError: "出生時刻を入力した場合は、出生都市も選んでください。",
   },
   zh: {
+    constellationAria: "按视角连接每个人的星座",
+    lineLegend: "有光流动的线表示彼此契合，颤动的虚线表示容易碰撞。",
+    dmLegend: "在日干视角下，光从给出能量的人流向接收的人。",
     title: "我们的地图",
     sub: "两人到十人。填写出生日期或粘贴朋友的链接，圆只会画在这个浏览器里。",
     me: "我",
@@ -126,12 +135,14 @@ const COPY = {
     help: "彼此帮得上的地方",
     care: "需要留意的地方",
     ask: "今天可以问问看",
-    noTotal: "没有总分与排名",
     disclaimer: "这是把传统象征当作聊天话题的玩法，并不预测关系的成败。",
     error: "请检查日期。",
     locationError: "如果填写了出生时间，也请选择出生城市。",
   },
   fr: {
+    constellationAria: "Une constellation qui relie chacun selon cette perspective",
+    lineLegend: "Les lignes où la lumière circule s’accordent bien ; les pointillés tremblants se heurtent.",
+    dmLegend: "Avec le maître du jour, la lumière va de celui qui donne l’énergie à celui qui la reçoit.",
     title: "Notre carte",
     sub: "De deux à dix personnes. Saisissez une date de naissance ou collez le lien d'un ami : le cercle reste dans ce navigateur.",
     me: "Moi",
@@ -151,12 +162,14 @@ const COPY = {
     help: "Ce qu'ils s'apportent",
     care: "À surveiller",
     ask: "À demander aujourd'hui",
-    noTotal: "Ni total ni classement",
     disclaimer: "Une lecture ludique de symboles traditionnels. Elle ne prédit pas une relation.",
     error: "Vérifiez la date.",
     locationError: "Si vous indiquez l’heure de naissance, choisissez aussi la ville de naissance.",
   },
   es: {
+    constellationAria: "Una constelación que une a todos según esta perspectiva",
+    lineLegend: "Las líneas con luz que fluye encajan bien; las punteadas que tiemblan chocan.",
+    dmLegend: "Con el tronco del día, la luz fluye de quien da la energía a quien la recibe.",
     title: "Nuestro mapa",
     sub: "De dos a diez personas. Escribe una fecha de nacimiento o pega el enlace de una amistad: el círculo se queda en este navegador.",
     me: "Yo",
@@ -176,7 +189,6 @@ const COPY = {
     help: "En qué se apoyan",
     care: "Qué vigilar",
     ask: "Qué preguntar hoy",
-    noTotal: "Sin total ni clasificación",
     disclaimer: "Una lectura lúdica de símbolos tradicionales. No predice una relación.",
     error: "Revisa la fecha.",
     locationError: "Si introduces la hora de nacimiento, elige también la ciudad de nacimiento.",
@@ -440,7 +452,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
       </button>
     </div>}
 
-    {synthesis && <CircleSynthesis locale={locale} synthesis={synthesis} />}
+    {synthesis && <CircleSynthesis locale={locale} synthesis={synthesis} members={people} />}
     {synthesis && <CircleToday locale={locale} members={people} synthesis={synthesis} />}
 
     {snapshot && <section className="mt-8 rounded-[2rem] border border-border bg-[var(--surface-subtle)] p-4 sm:p-7">
@@ -468,16 +480,19 @@ export default function CircleGathering({ locale }: { locale: string }) {
           );
         })}
       </ul>
-      <CompatibilityOrbit
-        locale={locale}
-        mode="system"
-        centerId={activeCenterId}
-        people={people.map((item) => ({
-          id: item.id,
-          label: item.label,
-          score: scoreAgainstCenter(snapshot.edges, activeCenterId, item.id, lens),
-        }))}
-      />
+      {/* A2 별자리 선 — 고른 관점의 관계를 선의 모양으로. 총점을 만들지 않는다. */}
+      <div className="mt-4">
+        <ConstellationLines
+          people={people.map((item) => ({ id: item.id, label: item.label }))}
+          edges={edges}
+          directions={lens === "day-master" ? dayMasterLinks(people) : null}
+          picked={picked}
+          ariaLabel={copy.constellationAria}
+        />
+        <p className="mt-2 text-center text-xs leading-relaxed text-muted-foreground">
+          {copy.lineLegend}{lens === "day-master" ? ` ${copy.dmLegend}` : ""}
+        </p>
+      </div>
       {pairCopy && pickedEdge && <article className="mt-4 rounded-3xl bg-card p-4">
         <p className="text-xs font-black uppercase tracking-wider text-primary">{copy.pair} · {pickedEdge.harmonyIndex}</p>
         <h2 className="mt-1 text-lg font-black text-foreground">{pairCopy.label}</h2>
@@ -485,7 +500,6 @@ export default function CircleGathering({ locale }: { locale: string }) {
         <p className="mt-1 text-sm"><span className="font-black">{copy.care}.</span> {pairCopy.care}</p>
         <p className="mt-1 text-sm"><span className="font-black">{copy.ask}.</span> {pairCopy.ask}</p>
       </article>}
-      <p className="mt-3 text-center text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{copy.noTotal}</p>
       <button type="button" onClick={() => void share()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Share2 className="h-4 w-4" />{copy.share}</button>
       {copied && <p className="mt-2 text-center text-xs font-black text-primary">{copy.copied}</p>}
     </section>}

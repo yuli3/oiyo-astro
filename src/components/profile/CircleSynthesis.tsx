@@ -10,10 +10,13 @@
  * 셈은 전부 lib/symbolic-tradition/group-synthesis.ts 에 있다. 여기서는 그
  * 결과를 읽기만 한다. 총점도 순위도 만들지 않는다.
  */
-import { GROUP_ELEMENT_ORDER, type GroupSynthesis } from "@/lib/symbolic-tradition/group-synthesis";
+import { GROUP_ELEMENT_ORDER, type GroupMember, type GroupSynthesis } from "@/lib/symbolic-tradition/group-synthesis";
+import { dayMasterOf } from "@/lib/symbolic-tradition/group-flow";
 import { groupEpithet } from "@/lib/symbolic-tradition/group-epithet";
 import { ELEMENT_SYMBOLS } from "@/lib/talisman/symbols";
 import type { FiveElement } from "@/lib/ontology/saju/types";
+
+import ElementRings from "./ElementRings";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
@@ -27,6 +30,8 @@ const EL_COLOR: Record<string, string> = {
 
 const T: Record<Lang, Record<string, string>> = {
   ko: {
+    ringsAria: "모임의 오행 고리",
+    ringsLegend: "굵은 고리는 많이 가진 기운, 끊긴 고리는 아무도 없는 기운이에요. 각자 자기 일간의 고리를 돌아요.",
     title: "우리 기운",
     polarityYang: "양이 뚜렷하게 앞서요 — 이 기질이 밖으로 크게 드러나는 모임이에요.",
     polarityYin: "음이 뚜렷하게 깊어요 — 이 기질이 안으로 쌓이는 모임이에요.",
@@ -56,6 +61,8 @@ const T: Record<Lang, Record<string, string>> = {
     careTitle: "조심할 점",
   },
   en: {
+    ringsAria: "The group’s five-element rings",
+    ringsLegend: "Thick rings are energies the group holds a lot of; broken rings are energies nobody has. Each person orbits the ring of their day master.",
     title: "Our energies",
     polarityYang: "Yang clearly leads — this temperament shows outwardly.",
     polarityYin: "Yin clearly runs deep — this temperament builds up inside.",
@@ -78,6 +85,8 @@ const T: Record<Lang, Record<string, string>> = {
     careTitle: "Worth watching",
   },
   ja: {
+    ringsAria: "集まりの五行の環",
+    ringsLegend: "太い環は多く持つ気、途切れた環は誰も持たない気です。それぞれ自分の日干の環を回ります。",
     title: "わたしたちの気",
     polarityYang: "陽がはっきり先行 — この気質が外に大きく出る集まりです。",
     polarityYin: "陰がはっきり深い — この気質が内に積もる集まりです。",
@@ -100,6 +109,8 @@ const T: Record<Lang, Record<string, string>> = {
     careTitle: "気をつけること",
   },
   zh: {
+    ringsAria: "组合的五行环",
+    ringsLegend: "粗环是大家拥有较多的气，断开的环是谁都没有的气。每个人绕着自己日干的环转动。",
     title: "我们的气",
     polarityYang: "阳明显占先——这种气质向外显露。",
     polarityYin: "阴明显深沉——这种气质向内积累。",
@@ -122,6 +133,8 @@ const T: Record<Lang, Record<string, string>> = {
     careTitle: "需要留意",
   },
   fr: {
+    ringsAria: "Les anneaux des cinq éléments du groupe",
+    ringsLegend: "Les anneaux épais sont les énergies abondantes ; les anneaux brisés, celles que personne n’a. Chacun tourne sur l’anneau de son maître du jour.",
     title: "Nos énergies",
     polarityYang: "Le yang domine nettement : ce tempérament se montre au dehors.",
     polarityYin: "Le yin est nettement profond : ce tempérament s’accumule au dedans.",
@@ -144,6 +157,8 @@ const T: Record<Lang, Record<string, string>> = {
     careTitle: "À surveiller",
   },
   es: {
+    ringsAria: "Los anillos de los cinco elementos del grupo",
+    ringsLegend: "Los anillos gruesos son las energías abundantes; los rotos, las que nadie tiene. Cada persona gira en el anillo de su tronco del día.",
     title: "Nuestras energías",
     polarityYang: "El yang domina con claridad: este temperamento se muestra hacia fuera.",
     polarityYin: "El yin es claramente profundo: este temperamento se acumula por dentro.",
@@ -255,9 +270,11 @@ const CATEGORY_NAME: Record<Lang, Record<string, Record<string, string>>> = {"ko
 export default function CircleSynthesis({
   locale,
   synthesis,
+  members,
 }: {
   locale: string;
   synthesis: GroupSynthesis;
+  members: GroupMember[];
 }) {
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   const t = T[lang];
@@ -265,7 +282,6 @@ export default function CircleSynthesis({
   const { astro, contributions, elements, polarity, spread } = synthesis;
   const name = (element: FiveElement) =>
     ELEMENT_SYMBOLS[element].name[lang] ?? ELEMENT_SYMBOLS[element].name.en;
-  const peak = Math.max(...GROUP_ELEMENT_ORDER.map((e) => elements.counts[e]), 1);
   const spreadLine = spread === "even" ? t.spreadEven : spread === "leaning" ? t.spreadLeaning : t.spreadSkewed;
   const tiltLine = polarity.tilt === "balanced" ? t.tiltBalanced : polarity.tilt === "yang" ? t.tiltYang : t.tiltYin;
   const polarityTotal = Math.max(1, polarity.yang + polarity.yin);
@@ -319,33 +335,31 @@ export default function CircleSynthesis({
         </div>
       )}
 
-      {/* 오행 막대. 기대값에서 많이 벗어난 것일수록 진하게 둔다. */}
-      <div className="mt-4 space-y-2">
-        {GROUP_ELEMENT_ORDER.map((element) => {
-          const count = elements.counts[element];
-          const off = elements.deviation[element];
-          const strong = Math.abs(off) >= 1.5;
-          return (
-            <div key={element} className="flex items-center gap-3">
-              <span className="w-14 shrink-0 text-xs font-black" style={{ color: EL_COLOR[element] }}>
-                {name(element)}
+      {/* A1 오행 고리. 굵기는 양, 진하기는 기대값에서 벗어난 정도(막대 시절과
+          같은 자), 끊긴 고리는 아무도 없는 기운. 사람은 자기 일간의 고리를 돈다. */}
+      <div className="mt-4">
+        <ElementRings
+          elements={elements}
+          people={members.map((m) => ({ id: m.id, label: m.label, dayMaster: dayMasterOf(m.profile) }))}
+          elementName={name}
+          ariaLabel={t.ringsAria}
+        />
+        <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{t.ringsLegend}</p>
+        {/* 숫자는 그림 아래 한 줄로. 기대값에서 크게 벗어난 기운만 진하게. */}
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {GROUP_ELEMENT_ORDER.map((element) => {
+            const strong = Math.abs(elements.deviation[element]) >= 1.5;
+            return (
+              <span
+                key={element}
+                className={`rounded-full px-2 py-0.5 text-[11px] tabular-nums ${strong ? "font-black text-white" : "font-bold text-foreground"}`}
+                style={strong ? { backgroundColor: EL_COLOR[element] } : { boxShadow: `inset 0 0 0 1px ${EL_COLOR[element]}` }}
+              >
+                {name(element)} {elements.counts[element]}
               </span>
-              <div className="h-3 flex-1 overflow-hidden rounded-full bg-muted">
-                <div
-                  className="h-full rounded-full transition-all duration-700"
-                  style={{
-                    backgroundColor: EL_COLOR[element],
-                    opacity: strong ? 1 : 0.45,
-                    width: `${(count / peak) * 100}%`,
-                  }}
-                />
-              </div>
-              <span className="w-7 shrink-0 text-right text-xs font-bold tabular-nums text-muted-foreground">
-                {count}
-              </span>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
       <p className="mt-2 text-xs font-bold text-foreground">{spreadLine}</p>
 
