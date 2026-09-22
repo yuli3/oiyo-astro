@@ -60,18 +60,6 @@ export function calculateZiWeiCoordinates(
   const lunar = getLunarDate(trueDate);
   const sexagenary = getSexagenaryCycle(trueDate);
 
-  const stemOrder = [
-    "GAP",
-    "EUL",
-    "BYEONG",
-    "JEONG",
-    "MU",
-    "GI",
-    "GYEONG",
-    "SIN",
-    "IM",
-    "GYE",
-  ];
   const branchOrder = [
     "JA",
     "CHUK",
@@ -87,7 +75,9 @@ export function calculateZiWeiCoordinates(
     "HAE",
   ];
 
-  const yearStemIdx = stemOrder.indexOf(sexagenary.year.heavenlyStem);
+  // 자미두수의 연간은 **음력 해(설 기준)** 의 천간이다. 사주처럼 입춘 기준이 아니다
+  // — 입춘과 설 사이 태생에서 둘이 갈린다. 1984 = 甲子 해.
+  const yearStemIdx = (((lunar.lunarYear - 4) % 10) + 10) % 10;
   const hourBranchIdx = branchOrder.indexOf(sexagenary.hour.earthlyBranch);
 
   // 2. Life Palace Position
@@ -125,7 +115,11 @@ export function calculateZiWeiCoordinates(
 
   // Auxiliary Stars (Major ones)
   stars["wen_chang"] = (10 - hourBranchIdx + 12) % 12;
-  stars["wen_qu"] = (2 + hourBranchIdx) % 12;
+  // 문곡은 辰에서 시를 따라 순행한다(子時 = 辰). 예전에는 寅에서 시작해 두 칸 어긋났다.
+  stars["wen_qu"] = (4 + hourBranchIdx) % 12;
+  // 좌보는 辰에서 월을 따라 순행, 우필은 戌에서 월을 따라 역행(정월 = 辰·戌).
+  stars["zuo_fu"] = (4 + (lunar.lunarMonth - 1)) % 12;
+  stars["you_bi"] = (10 - (lunar.lunarMonth - 1) + 12) % 12;
 
   // 5. Transformations (Sihua)
   const stemName = [

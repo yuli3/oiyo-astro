@@ -23,8 +23,18 @@ export interface FourPillars {
   year: SajuPillar;
 }
 
-const STEMS = Object.values(HeavenlyStem);
-const BRANCHES = Object.values(EarthlyBranch);
+// 순환 순서를 직접 적는다. 2026-09-22 전에는 Object.values(enum) 을 썼는데,
+// enum 이 알파벳 순(BYEONG, EUL, GAP… / CHUK, HAE, IN, JA…)으로 선언돼 있어
+// 모든 기둥이 엉뚱한 글자가 됐다(2024 甲辰 → 丙辰, 2023 癸卯 → 있을 수 없는 辛子).
+// 이 함수를 쓰던 자미두수의 연간·시지가 전부 틀렸다.
+const STEMS: HeavenlyStem[] = [
+  HeavenlyStem.GAP, HeavenlyStem.EUL, HeavenlyStem.BYEONG, HeavenlyStem.JEONG, HeavenlyStem.MU,
+  HeavenlyStem.GI, HeavenlyStem.GYEONG, HeavenlyStem.SIN, HeavenlyStem.IM, HeavenlyStem.GYE,
+];
+const BRANCHES: EarthlyBranch[] = [
+  EarthlyBranch.JA, EarthlyBranch.CHUK, EarthlyBranch.IN, EarthlyBranch.MYO, EarthlyBranch.JIN, EarthlyBranch.SA,
+  EarthlyBranch.O, EarthlyBranch.MI, EarthlyBranch.SIN, EarthlyBranch.YU, EarthlyBranch.SUL, EarthlyBranch.HAE,
+];
 
 // 60 Ganzhi Table (0=Gap-Ja, 1=Eul-Chuk ...)
 // We can generate this programmatically or use a lookup.

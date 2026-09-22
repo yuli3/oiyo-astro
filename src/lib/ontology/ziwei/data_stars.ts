@@ -36,12 +36,14 @@ export const SHAR_DYNAMICS = {
   },
   Eul: { tai_yin: "Ji", tian_ji: "Lu", tian_liang: "Quan", zi_wei: "Ke" },
   // Sihua (Four Transformations) per Year Stem
-  Gap: { tai_yang: "Ji", tian_ji: "Quan", wu_qu: "Ke", zi_wei: "Lu" },
+  // 甲: 廉貞祿 破軍權 武曲科 太陽忌 (예전 표는 紫微祿·天機權으로 틀려 있었다)
+  Gap: { lian_zhen: "Lu", po_jun: "Quan", wu_qu: "Ke", tai_yang: "Ji" },
   Gi: { tan_lang: "Quan", tian_liang: "Ke", wen_qu: "Ji", wu_qu: "Lu" },
   Gye: { ju_men: "Quan", po_jun: "Lu", tai_yin: "Ke", tan_lang: "Ji" },
   Gyeong: { tai_yang: "Lu", tai_yin: "Ke", tian_tong: "Ji", wu_qu: "Quan" },
   Im: { tian_liang: "Lu", wu_qu: "Ji", zi_wei: "Quan", zuo_fu: "Ke" },
   Jeong: { ju_men: "Ji", tai_yin: "Lu", tian_ji: "Ke", tian_tong: "Quan" },
-  Mu: { tai_yang: "Quan", tan_lang: "Lu", tian_ji: "Ji", wu_qu: "Ke" },
+  // 戊: 貪狼祿 太陰權 右弼科 天機忌 (右弼科 대신 太陽科를 쓰는 유파도 있다)
+  Mu: { tan_lang: "Lu", tai_yin: "Quan", you_bi: "Ke", tian_ji: "Ji" },
   Sin: { ju_men: "Lu", tai_yang: "Quan", wen_chang: "Ji", wen_qu: "Ke" },
 };
