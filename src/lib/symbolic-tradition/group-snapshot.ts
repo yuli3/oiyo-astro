@@ -2,6 +2,8 @@ import LZString from "lz-string";
 
 import { isAstroCoordinates } from "./astro-coordinates";
 import { isEgyptianDeityId } from "./egyptian";
+import { isJyotishProfile } from "./jyotish";
+import { isZiweiCoordinates } from "./ziwei-coordinates";
 import { isBirthHexagram } from "./iching";
 import { compareSymbolicProfiles } from "./index";
 import type { CompatibilityLensId, SymbolicComparisonProfile } from "./types";
@@ -72,7 +74,10 @@ function validProfile(profile: SymbolicComparisonProfile): boolean {
     // 별자리 좌표는 선택이다. 있으면 모양이 맞아야 한다.
     && (profile.astro === undefined || isAstroCoordinates(profile.astro))
     && (profile.hexagram === undefined || profile.hexagram === null || isBirthHexagram(profile.hexagram))
-    && (profile.egyptian === undefined || isEgyptianDeityId(profile.egyptian));
+    && (profile.egyptian === undefined || isEgyptianDeityId(profile.egyptian))
+    && (profile.lifePath === undefined || [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33].includes(profile.lifePath))
+    && (profile.jyotish === undefined || isJyotishProfile(profile.jyotish))
+    && (profile.ziwei === undefined || profile.ziwei === null || isZiweiCoordinates(profile.ziwei));
 }
 
 export function isSymbolicGroupParticipant(value: unknown): value is SymbolicGroupParticipant {

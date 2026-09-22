@@ -26,7 +26,8 @@ import { LENS_NAME } from "@/lib/symbolic-tradition/lens-names";
 import { PAIR_COPY } from "@/lib/symbolic-tradition/pair-copy";
 import { fill, PAIR_COPY_FULL, PAIR_NAME, type PairLang } from "@/lib/symbolic-tradition/pair-reading-copy";
 import { readPair, type Evidence, type PairReading } from "@/lib/symbolic-tradition/pair-reading";
-import { celticTreeName, egyptianDeityName, hexagramHan, hexagramMeaningKo, hexagramName, mayanSealName, mayanToneName } from "@/lib/symbolic-tradition/symbol-names";
+import { celticTreeName, egyptianDeityName, hexagramHan, hexagramMeaningKo, hexagramName, mayanSealName, mayanToneName, nakshatraName, taraName, ziweiPalaceName, ziweiStarName } from "@/lib/symbolic-tradition/symbol-names";
+import { DIFFICULT_TARA } from "@/lib/symbolic-tradition/jyotish";
 
 import BinaryStar from "./BinaryStar";
 import SignatureCard from "./SignatureCard";
@@ -228,6 +229,41 @@ export default function PairReadingView({ locale }: { locale: string }) {
         ? <>{egyptianDeityName(e.a, lang)} <span className="text-muted-foreground">— {t.ev.egyptianSame}</span></>
         : <>{reading.a.label}: {egyptianDeityName(e.a, lang)} · {reading.b.label}: {egyptianDeityName(e.b, lang)}</>;
       if (e.a === e.b) tone = "bond";
+    } else if (e.kind === "life-path") {
+      label = t.ev.lifePath;
+      value = e.a === e.b
+        ? fill(t.ev.lifePathSame, { n: String(e.a) })
+        : `${reading.a.label}: ${e.a} · ${reading.b.label}: ${e.b}`;
+      if (e.a === e.b) tone = "bond";
+    } else if (e.kind === "nakshatra") {
+      label = t.ev.nakshatra;
+      const names = (list: number[]) => list.map((n) => nakshatraName(n, lang)).join(t.ev.moonOr);
+      const taraLine = (from: string, to: string, tara: number) => fill(t.ev.tara, { from, to, tara: taraName(tara, lang) });
+      value = <>
+        {reading.a.label}: {names(e.a)}<br />{reading.b.label}: {names(e.b)}<br />
+        <span className="text-muted-foreground">
+          {e.tara
+            ? <>{taraLine(reading.a.label, reading.b.label, e.tara.ab)}<br />{taraLine(reading.b.label, reading.a.label, e.tara.ba)}</>
+            : t.ev.taraNone}
+        </span>
+      </>;
+      // 전통은 3·5·7 타라를 어려운 자리로 본다. 두 방향이 갈리면 섞임.
+      if (e.tara) {
+        const hard = [e.tara.ab, e.tara.ba].filter((x) => DIFFICULT_TARA.has(x)).length;
+        tone = hard === 0 ? "bond" : hard === 2 ? "friction" : "mixed";
+      }
+    } else if (e.kind === "ziwei") {
+      label = t.ev.ziwei;
+      const one = (z: typeof e.a) => z
+        ? <><span className="font-black">{hanja(z.lifePalace, "branch")}</span> · {z.stars.length ? z.stars.map((id) => ziweiStarName(id, lang)).join("·") : t.ev.ziweiEmpty}</>
+        : <span className="text-muted-foreground">{t.ev.ziweiNone}</span>;
+      value = <>
+        {reading.a.label}: {one(e.a)}<br />{reading.b.label}: {one(e.b)}
+        {e.aInB && e.bInA ? <><br /><span className="text-muted-foreground">
+          {fill(t.ev.ziweiSits, { name: reading.a.label, other: reading.b.label, palace: ziweiPalaceName(e.aInB, lang) })}<br />
+          {fill(t.ev.ziweiSits, { name: reading.b.label, other: reading.a.label, palace: ziweiPalaceName(e.bInA, lang) })}
+        </span></> : null}
+      </>;
     }
     const dot = tone === "bond" ? "bg-emerald-600" : tone === "friction" ? "bg-orange-600" : tone === "mixed" ? "bg-amber-500" : "bg-border";
     return (

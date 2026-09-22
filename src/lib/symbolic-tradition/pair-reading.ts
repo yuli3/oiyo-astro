@@ -8,6 +8,9 @@ import { synthesizeGroup, type GroupMember } from "./group-synthesis";
 import { dayElementOf, stanceOf, type TodayStance } from "./group-today";
 import { compareSymbolicProfiles } from "./index";
 import type { BirthHexagram } from "./iching";
+import { taraOf } from "./jyotish";
+import type { PalaceKey } from "@/lib/ontology/ziwei/types";
+import { palaceInChart, type ZiweiCoordinates } from "./ziwei-coordinates";
 import type { SymbolicCompatibilityLens } from "./types";
 
 /**
@@ -67,7 +70,12 @@ export type Evidence =
   | { kind: "mayan"; sameColor: boolean; sameTone: boolean; aTone: number; bTone: number; aColor: string; bColor: string; aSeal: number; bSeal: number }
   | { kind: "celtic"; a: string; b: string; relation: string }
   | { kind: "hexagram"; a: BirthHexagram | null; b: BirthHexagram | null }
-  | { kind: "egyptian"; a: string; b: string };
+  | { kind: "egyptian"; a: string; b: string }
+  | { kind: "life-path"; a: number; b: number }
+  /** 타라는 두 사람의 낙샤트라가 하나로 정해질 때만(시각을 알 때) — ab 는 a 에서 b 로 센 값 */
+  | { kind: "nakshatra"; a: number[]; b: number[]; tara: { ab: number; ba: number } | null }
+  /** aInB = a 의 명궁이 b 명반에서 앉는 궁 */
+  | { kind: "ziwei"; a: ZiweiCoordinates | null; b: ZiweiCoordinates | null; aInB: PalaceKey | null; bInA: PalaceKey | null };
 
 function separation(a: number, b: number): number {
   const d = Math.abs(a - b) % 360;
@@ -117,6 +125,31 @@ export function pairEvidence(a: Person, b: Person): Evidence[] {
   if (ha || hb) out.push({ kind: "hexagram", a: ha, b: hb });
   // 이집트 12신 — 현대 달력이라 화면에 그렇게 밝힌다. 옛 참가자에게는 없다.
   if (a.profile.egyptian && b.profile.egyptian) out.push({ kind: "egyptian", a: a.profile.egyptian, b: b.profile.egyptian });
+  // 2026-09-22 되살린 세 전통. 옛 참가자에게는 자리가 없어 둘 다 있을 때만.
+  if (a.profile.lifePath && b.profile.lifePath) out.push({ kind: "life-path", a: a.profile.lifePath, b: b.profile.lifePath });
+  const ja = a.profile.jyotish;
+  const jb = b.profile.jyotish;
+  if (ja && jb) {
+    const sure = ja.nakshatra.length === 1 && jb.nakshatra.length === 1;
+    out.push({
+      kind: "nakshatra",
+      a: ja.nakshatra,
+      b: jb.nakshatra,
+      tara: sure ? { ab: taraOf(ja.nakshatra[0], jb.nakshatra[0]), ba: taraOf(jb.nakshatra[0], ja.nakshatra[0]) } : null,
+    });
+  }
+  // 명궁은 한 사람이라도 있으면 적는다(없는 쪽은 "시각·도시가 있어야 세움").
+  const za = a.profile.ziwei ?? null;
+  const zb = b.profile.ziwei ?? null;
+  if (za || zb) {
+    out.push({
+      kind: "ziwei",
+      a: za,
+      b: zb,
+      aInB: za && zb ? palaceInChart(zb, za.lifePalace) : null,
+      bInA: za && zb ? palaceInChart(za, zb.lifePalace) : null,
+    });
+  }
   return out;
 }
 

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { jyotishCoordinates, karanaOf, lahiriAyanamsa, nakshatraLord, nakshatraOf, rashiOf, siderealMoon, siderealSun, tithiOf, yogaOf } from "./jyotish";
+import { jyotishCoordinates, karanaOf, lahiriAyanamsa, nakshatraLord, nakshatraOf, rashiOf, siderealMoon, siderealSun, taraOf, tithiOf, yogaOf } from "./jyotish";
 
 // Drik Panchang, 2024-08-15, 서울(KST) — 2026-09-22 조회
 //   티티 Dashami(10) ~13:56 → Ekadashi(11)
@@ -95,5 +95,15 @@ describe("출생 좌표", () => {
     expect(c.tithi).toBeNull();
     expect(c.lagna).toBeNull();
     expect(c.sunRashi).toBe(4);
+  });
+});
+
+describe("타라", () => {
+  it("같은 낙샤트라는 잔마(1), 두 방향은 따로 센다", () => {
+    expect(taraOf(18, 18)).toBe(1);
+    expect(taraOf(18, 19)).toBe(2);
+    expect(taraOf(19, 18)).toBe(9); // 27칸을 돌아 27번째 = 9
+    expect(taraOf(1, 10)).toBe(1); // 10번째 = 두 번째 바퀴의 잔마
+    expect(taraOf(27, 3)).toBe(4); // 경계를 넘어 네 번째
   });
 });

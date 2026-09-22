@@ -174,3 +174,34 @@ export function isJyotishCoordinates(value: unknown): value is JyotishCoordinate
     && nullOr(v.tithi, 1, 30) && nullOr(v.yoga, 1, 27) && nullOr(v.lagna, 1, 12)
     && (v.karana === null || (typeof v.karana === "string"));
 }
+
+/**
+ * 참가자에게 싣는 몫 — 달의 낙샤트라·라시 후보와 라그나.
+ * 티티·요가·카라나는 태어난 순간의 하늘이라 두 사람을 견주는 데 쓰지 않는다.
+ */
+export type JyotishProfile = Pick<JyotishCoordinates, "nakshatra" | "moonRashi" | "lagna">;
+
+export function jyotishProfile(coordinates: JyotishCoordinates): JyotishProfile {
+  return { nakshatra: coordinates.nakshatra, moonRashi: coordinates.moonRashi, lagna: coordinates.lagna };
+}
+
+/**
+ * 타라(Tara) — 한 사람의 낙샤트라에서 상대의 낙샤트라까지 세어(자기 자리가 1)
+ * 아홉으로 나눈 나머지. 고전 궁합(아슈타쿠타)의 타라 쿠타가 두 방향으로 센다.
+ * 1 잔마 · 2 삼파트 · 3 비파트 · 4 크셰마 · 5 프라티야리 · 6 사다나 · 7 나이다나
+ * · 8 미트라 · 9 파라마 미트라. 전통은 3·5·7 을 어려운 자리로 본다.
+ */
+export function taraOf(from: number, to: number): number {
+  const count = ((((to - from) % 27) + 27) % 27) + 1;
+  return ((count - 1) % 9) + 1;
+}
+
+export const DIFFICULT_TARA = new Set([3, 5, 7]);
+
+export function isJyotishProfile(value: unknown): value is JyotishProfile {
+  if (!value || typeof value !== "object") return false;
+  const v = value as Partial<JyotishProfile>;
+  const intIn = (n: unknown, lo: number, hi: number) => Number.isInteger(n) && (n as number) >= lo && (n as number) <= hi;
+  const listIn = (l: unknown, lo: number, hi: number) => Array.isArray(l) && l.length >= 1 && l.length <= 4 && l.every((n) => intIn(n, lo, hi));
+  return listIn(v.nakshatra, 1, 27) && listIn(v.moonRashi, 1, 12) && (v.lagna === null || intIn(v.lagna, 1, 12));
+}

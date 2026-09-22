@@ -1,0 +1,144 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import JyotishReading from '../../../components/tools/JyotishReading';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '인도 점성 — 달이 머무는 별, 낙샤트라로 읽기', description: '생년월일로 낙샤트라·라시·티티를 계산합니다. 라히리 아야남샤를 쓰고, 태어난 시각을 모르면 후보를 그대로 보여 드려요.' },
+  en: { title: 'Vedic astrology — reading your birth by nakshatra', description: 'Calculate your nakshatra, rashi and tithi from your birth date. Uses the Lahiri ayanamsa, and shows every candidate when the birth time is unknown.' },
+  ja: { title: 'インド占星術 — 月の宿ナクシャトラで読む', description: '生年月日からナクシャトラ・ラーシ・ティティを計算します。ラヒリ・アヤナムシャを用い、出生時刻がわからない場合は候補をそのまま示します。' },
+  zh: { title: '印度占星 — 用月宿解读你的出生', description: '根据出生日期计算月宿、星座与太阴日。采用拉希里岁差修正；出生时间未知时如实列出候选。' },
+  fr: { title: 'Astrologie védique — lire votre naissance par le nakshatra', description: 'Calculez votre nakshatra, votre rashi et votre tithi à partir de votre date de naissance. Ayanamsa Lahiri, et tous les candidats affichés si l’heure est inconnue.' },
+  es: { title: 'Astrología védica — leer tu nacimiento por el nakshatra', description: 'Calcula tu nakshatra, rashi y tithi a partir de tu fecha de nacimiento. Usa el ayanamsa Lahiri y muestra todos los candidatos si no se conoce la hora.' },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string; intro: string; conceptTitle: string; concepts: { title: string; body: string }[];
+  faqTitle: string; faqs: { question: string; answer: string }[]; disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '인도 점성은 달이 지나는 스물일곱 개의 별자리로 하늘을 읽습니다',
+    intro: '인도 점성(조티샤)은 서양 점성과 달리 별의 실제 위치를 기준으로 삼습니다. 지구의 축이 흔들리며 생긴 차이(세차)를 아야남샤라는 값으로 덜어 내기 때문에, 같은 날 태어나도 서양 별자리와 한 칸씩 어긋나는 일이 흔합니다. 이 페이지는 인도 정부 역법이 쓰는 라히리 아야남샤를 씁니다.',
+    conceptTitle: '세 가지만 알면 읽을 수 있어요',
+    concepts: [
+      { title: '낙샤트라', body: '달이 지나는 길을 스물일곱으로 나눈 별자리입니다. 한 칸이 13°20′이고, 달은 하루에 13° 남짓 움직여 대개 하루에 한 칸을 지납니다.' },
+      { title: '라시', body: '황도를 열둘로 나눈 궁입니다. 달의 라시(찬드라 라시)를 그 사람의 궁으로 보는 전통이 강해, 해의 궁보다 먼저 묻습니다.' },
+      { title: '티티', body: '달과 해가 벌어진 각을 12°씩 나눈 달의 날입니다. 차는 보름(슈클라)과 기우는 보름(크리슈나)으로 열다섯씩 나뉩니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '서양 별자리와 결과가 다른데 틀린 건가요?', answer: '두 전통이 기준을 다르게 잡았을 뿐입니다. 서양은 춘분점을 0°로 고정하고, 인도는 실제 별자리에 맞춥니다. 지금은 둘 사이가 약 24° 벌어져 있어 궁이 한 칸 밀리는 경우가 많습니다.' },
+      { question: '태어난 시각을 모르면 못 보나요?', answer: '낙샤트라와 라시는 볼 수 있습니다. 다만 달이 하루 동안 칸을 넘어가면 후보가 둘이 되는데, 이때는 하나를 고르지 않고 둘 다 보여 드립니다. 파다·티티·요가·카라나·라그나는 시각이 있어야 정해집니다.' },
+      { question: '라그나(상승궁)는 왜 출생도시까지 필요한가요?', answer: '상승궁은 태어난 순간 동쪽 지평선에 걸린 궁이라 보는 자리에 따라 달라집니다. 같은 시각이라도 도시가 다르면 다른 궁이 뜹니다.' },
+    ],
+    disclaimer: '이 결과는 전통 상징 체계를 계산한 것이고, 성격이나 앞날을 단정하지 않습니다.',
+  },
+  en: {
+    introTitle: 'Vedic astrology reads the sky through the 27 mansions the Moon passes',
+    intro: 'Jyotisha measures the sky against where the stars actually are. The slow wobble of the Earth’s axis (precession) is subtracted with a value called the ayanamsa, so a birthday that reads as one Western sign often lands one sign earlier here. This page uses the Lahiri ayanamsa of the Indian national calendar.',
+    conceptTitle: 'Three ideas are enough to read it',
+    concepts: [
+      { title: 'Nakshatra', body: 'The Moon’s path divided into 27 mansions of 13°20′ each. The Moon covers about 13° a day, so it usually crosses one mansion per day.' },
+      { title: 'Rashi', body: 'The zodiac divided into twelve. The tradition leans on the Moon’s rashi rather than the Sun’s, so that is asked for first.' },
+      { title: 'Tithi', body: 'The lunar day: the gap between Moon and Sun cut into 12° steps, fifteen while the Moon waxes and fifteen while it wanes.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'It differs from my Western sign — is one of them wrong?', answer: 'They simply fix their starting point differently. The West pins 0° to the spring equinox; India keeps it on the stars. The two are about 24° apart today, which usually shifts the sign by one.' },
+      { question: 'Can I use this without my birth time?', answer: 'Yes, for nakshatra and rashi. When the Moon crosses into the next mansion during that day there are two candidates, and both are shown rather than one being chosen for you. Pada, tithi, yoga, karana and lagna need the time.' },
+      { question: 'Why does the lagna need my birth city too?', answer: 'The ascendant is the sign rising on the eastern horizon at that moment, so it depends on where you stood. The same clock time in another city gives a different sign.' },
+    ],
+    disclaimer: 'These results are a calculation within a traditional symbolic system; they do not determine character or the future.',
+  },
+  ja: {
+    introTitle: 'インド占星術は月がめぐる二十七の宿で空を読みます',
+    intro: 'ジョーティシュは星の実際の位置を基準にします。地軸の歳差による差をアヤナムシャという値で差し引くため、同じ誕生日でも西洋の星座とひとつずれることがよくあります。このページはインド国定暦のラヒリ・アヤナムシャを用います。',
+    conceptTitle: '三つ分かれば読めます',
+    concepts: [
+      { title: 'ナクシャトラ', body: '月の通り道を二十七に分けた宿です。一宿は13°20′で、月は一日に約13°進むので、ふつう一日にひと宿を渡ります。' },
+      { title: 'ラーシ', body: '黄道を十二に分けた宮です。インドでは太陽より月のラーシ（チャンドラ・ラーシ）をその人の宮と見る伝統が強く、先に尋ねます。' },
+      { title: 'ティティ', body: '月と太陽の離れた角を12°ずつ区切った「月の日」です。満ちる十五日（シュクラ）と欠ける十五日（クリシュナ）に分かれます。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '西洋の星座と違いますが、どちらかが間違いですか。', answer: '基準の取り方が違うだけです。西洋は春分点を0°に固定し、インドは実際の星に合わせます。現在その差は約24°で、宮がひとつずれることが多くなります。' },
+      { question: '出生時刻がわからなくても見られますか。', answer: 'ナクシャトラとラーシは見られます。その日のうちに月が次の宿へ移る場合は候補がふたつになりますが、勝手にひとつへ寄せず両方を示します。パーダ・ティティ・ヨーガ・カラナ・ラグナは時刻が必要です。' },
+      { question: 'ラグナ（上昇宮）に出生都市まで要るのはなぜですか。', answer: '上昇宮はその瞬間に東の地平線へ昇っていた宮なので、立っていた場所で変わります。同じ時刻でも都市が違えば別の宮になります。' },
+    ],
+    disclaimer: 'この結果は伝統的な象徴体系の計算であり、性格や未来を決めつけるものではありません。',
+  },
+  zh: {
+    introTitle: '印度占星以月亮行经的二十七宿读天',
+    intro: '印度占星以恒星的实际位置为准。地轴岁差造成的偏差用「岁差修正（ayanamsa）」扣除，因此同一个生日常常比西洋星座早一个宫。本页采用印度国定历的拉希里岁差修正。',
+    conceptTitle: '掌握三点即可阅读',
+    concepts: [
+      { title: '月宿（Nakshatra）', body: '把月亮的行经之路分为二十七宿，每宿 13°20′。月亮一天约行 13°，通常一天过一宿。' },
+      { title: '星座（Rashi）', body: '把黄道分为十二宫。印度传统更看重月亮所在的宫（月亮星座），因此先问月而后问日。' },
+      { title: '太阴日（Tithi）', body: '月与日的角距每 12° 为一日，渐盈十五日（白分）与渐亏十五日（黑分）。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '与西洋星座不同，是哪一个错了吗？', answer: '只是起点不同。西洋把春分点定为 0°，印度则对准恒星。两者目前相差约 24°，因此星座常常错开一个宫。' },
+      { question: '不知道出生时间也能看吗？', answer: '月宿与星座可以。若当天月亮跨入下一宿，就会有两个候选，我们不会替你挑一个，而是两个都列出。宿分、太阴日、瑜伽、半日与上升宫需要时间。' },
+      { question: '上升宫为什么还需要出生城市？', answer: '上升宫是那一刻在东方地平线升起的宫，随所在地点而变。同样的时刻，换一座城市就是另一个宫。' },
+    ],
+    disclaimer: '本结果是传统象征体系内的计算，并不判定性格或命运。',
+  },
+  fr: {
+    introTitle: 'L’astrologie védique lit le ciel par les vingt-sept demeures que traverse la Lune',
+    intro: 'Le jyotisha mesure le ciel sur la position réelle des étoiles. L’oscillation lente de l’axe terrestre (précession) est retranchée par une valeur appelée ayanamsa : une même date de naissance tombe souvent un signe plus tôt qu’en astrologie occidentale. Cette page emploie l’ayanamsa Lahiri du calendrier national indien.',
+    conceptTitle: 'Trois notions suffisent',
+    concepts: [
+      { title: 'Nakshatra', body: 'La route de la Lune divisée en vingt-sept demeures de 13°20′. La Lune parcourt environ 13° par jour : elle en traverse donc une par jour.' },
+      { title: 'Rashi', body: 'Le zodiaque divisé en douze. La tradition s’appuie sur le rashi de la Lune plutôt que sur celui du Soleil, et le demande en premier.' },
+      { title: 'Tithi', body: 'Le jour lunaire : l’écart entre la Lune et le Soleil découpé par pas de 12°, quinze pendant que la Lune croît et quinze pendant qu’elle décroît.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Cela diffère de mon signe occidental : lequel est faux ?', answer: 'Aucun : les deux fixent leur origine autrement. L’Occident place 0° à l’équinoxe de printemps ; l’Inde le garde sur les étoiles. L’écart est aujourd’hui d’environ 24°, ce qui décale le signe d’un cran.' },
+      { question: 'Puis-je consulter sans mon heure de naissance ?', answer: 'Oui, pour le nakshatra et le rashi. Si la Lune change de demeure dans la journée, il y a deux candidats et nous affichons les deux au lieu d’en choisir un. Le pada, le tithi, le yoga, le karana et le lagna exigent l’heure.' },
+      { question: 'Pourquoi le lagna demande-t-il aussi ma ville de naissance ?', answer: 'L’ascendant est le signe qui se levait à l’est à cet instant : il dépend du lieu. À la même heure, une autre ville donne un autre signe.' },
+    ],
+    disclaimer: 'Ces résultats sont un calcul mené dans un système symbolique traditionnel ; ils ne déterminent ni le caractère ni l’avenir.',
+  },
+  es: {
+    introTitle: 'La astrología védica lee el cielo por las veintisiete mansiones que recorre la Luna',
+    intro: 'El jyotisha mide el cielo según dónde están realmente las estrellas. El lento bamboleo del eje terrestre (la precesión) se resta con un valor llamado ayanamsa, así que una misma fecha suele caer un signo antes que en la astrología occidental. Esta página usa el ayanamsa Lahiri del calendario nacional indio.',
+    conceptTitle: 'Con tres ideas basta para leerlo',
+    concepts: [
+      { title: 'Nakshatra', body: 'El camino de la Luna dividido en veintisiete mansiones de 13°20′. La Luna avanza unos 13° al día, así que suele cruzar una mansión por día.' },
+      { title: 'Rashi', body: 'El zodiaco dividido en doce. La tradición se apoya en el rashi de la Luna más que en el del Sol, y por eso se pregunta primero.' },
+      { title: 'Tithi', body: 'El día lunar: la distancia entre la Luna y el Sol cortada en pasos de 12°, quince mientras crece y quince mientras mengua.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: 'No coincide con mi signo occidental, ¿cuál está mal?', answer: 'Ninguno: fijan el punto de partida de forma distinta. Occidente ancla los 0° al equinoccio de primavera; la India los mantiene sobre las estrellas. Hoy se separan unos 24°, lo que suele correr el signo un lugar.' },
+      { question: '¿Puedo verlo sin la hora de nacimiento?', answer: 'Sí, el nakshatra y el rashi. Si la Luna cambia de mansión ese día habrá dos candidatos, y mostramos ambos en vez de elegir por ti. El pada, el tithi, el yoga, el karana y el lagna necesitan la hora.' },
+      { question: '¿Por qué el lagna necesita también mi ciudad natal?', answer: 'El ascendente es el signo que subía por el horizonte este en ese instante, así que depende del lugar. A la misma hora, otra ciudad da otro signo.' },
+    ],
+    disclaimer: 'Estos resultados son un cálculo dentro de un sistema simbólico tradicional; no determinan el carácter ni el futuro.',
+  },
+};
+const c = content[locale] ?? content.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto max-w-2xl px-4 py-10">
+    <h1 class="text-2xl font-bold text-violet-950">{m.title}</h1>
+    <div class="mt-6">
+      <JyotishReading client:visible locale={locale} />
+    </div>
+    <section class="mt-10 border-t border-violet-100 pt-8"><h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2><p class="mt-4 leading-8 text-violet-800">{c.intro}</p></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">{c.concepts.map((item) => (<article class="rounded-xl border border-violet-100 bg-card p-4"><h3 class="font-semibold text-violet-950">{item.title}</h3><p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p></article>))}</div></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-card">{c.faqs.map((faq) => (<details class="group p-4"><summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p></details>))}</div></section>
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+    <RelatedTools locale={locale} tools={['natal', 'saju', 'numerology']} current="jyotish" />
+  </div>
+</Layout>

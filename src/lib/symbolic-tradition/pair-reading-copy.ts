@@ -147,6 +147,15 @@ export interface PairCopy {
     hexNone: string;
     egyptian: string;
     egyptianSame: string;
+    lifePath: string;
+    lifePathSame: string;
+    nakshatra: string;
+    tara: string;
+    taraNone: string;
+    ziwei: string;
+    ziweiEmpty: string;
+    ziweiNone: string;
+    ziweiSits: string;
   };
   calendarTitle: string;
   calendarLead: string;
@@ -248,6 +257,15 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexNone: "시각이 없어 세우지 않음",
       egyptian: "이집트 12신 (현대 달력)",
       egyptianSame: "같은 신",
+      lifePath: "생명수 (수비학)",
+      lifePathSame: "둘 다 {n}",
+      nakshatra: "낙샤트라 (인도 점성)",
+      tara: "{from} → {to}: {tara}",
+      taraNone: "시각을 모르는 사람이 있어 후보만 적었어요. 타라는 세우지 않아요.",
+      ziwei: "명궁 (자미두수)",
+      ziweiEmpty: "주성 없음(공궁)",
+      ziweiNone: "태어난 시각과 도시가 있어야 세워요",
+      ziweiSits: "{name}의 명궁은 {other} 명반의 {palace}에 앉아요",
     },
     calendarTitle: "둘의 달력",
     calendarLead: "오늘부터 4주. 칸 색은 그날 누가 기운을 받는지예요.",
@@ -347,6 +365,15 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexNone: "not cast (no birth time)",
       egyptian: "Egyptian 12 deities (modern calendar)",
       egyptianSame: "the same deity",
+      lifePath: "Life path (numerology)",
+      lifePathSame: "both {n}",
+      nakshatra: "Nakshatra (Vedic astrology)",
+      tara: "{from} → {to}: {tara}",
+      taraNone: "Someone’s birth time is unknown, so only candidates are shown and no tara is drawn.",
+      ziwei: "Life palace (Zi Wei Dou Shu)",
+      ziweiEmpty: "no major star (empty palace)",
+      ziweiNone: "needs birth time and city",
+      ziweiSits: "{name}’s life palace sits in {other}’s {palace}",
     },
     calendarTitle: "Your calendar together",
     calendarLead: "The next four weeks. Colour shows who receives energy that day.",
@@ -446,6 +473,15 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexNone: "時刻がないため立てない",
       egyptian: "エジプト12神（現代の暦）",
       egyptianSame: "同じ神",
+      lifePath: "ライフパス数（数秘術）",
+      lifePathSame: "ふたりとも {n}",
+      nakshatra: "ナクシャトラ（インド占星術）",
+      tara: "{from} → {to}：{tara}",
+      taraNone: "出生時刻がわからない人がいるので候補だけを載せ、ターラは立てません。",
+      ziwei: "命宮（紫微斗数）",
+      ziweiEmpty: "主星なし（空宮）",
+      ziweiNone: "出生時刻と都市があれば立てます",
+      ziweiSits: "{name}の命宮は{other}の命盤の{palace}に入ります",
     },
     calendarTitle: "ふたりの暦",
     calendarLead: "今日から4週間。色はその日に誰が気を受けるかです。",
@@ -545,6 +581,15 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexNone: "没有时间，不起卦",
       egyptian: "埃及十二神（现代历）",
       egyptianSame: "同一位神",
+      lifePath: "生命灵数（数字命理）",
+      lifePathSame: "两人都是 {n}",
+      nakshatra: "月宿（印度占星）",
+      tara: "{from} → {to}：{tara}",
+      taraNone: "有人出生时间未知，只列出候选，不推算三九关系（Tara）。",
+      ziwei: "命宫（紫微斗数）",
+      ziweiEmpty: "无主星（空宫）",
+      ziweiNone: "需要出生时间和城市",
+      ziweiSits: "{name}的命宫落在{other}命盘的{palace}",
     },
     calendarTitle: "两个人的日历",
     calendarLead: "从今天起四周。颜色表示当天谁得到助力。",
@@ -644,6 +689,15 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexNone: "non tiré (pas d’heure de naissance)",
       egyptian: "12 divinités égyptiennes (calendrier moderne)",
       egyptianSame: "la même divinité",
+      lifePath: "Chemin de vie (numérologie)",
+      lifePathSame: "tous deux {n}",
+      nakshatra: "Nakshatra (astrologie védique)",
+      tara: "{from} → {to} : {tara}",
+      taraNone: "L’heure de naissance de l’un manque : seuls les candidats sont indiqués, sans tara.",
+      ziwei: "Palais de vie (Zi Wei Dou Shu)",
+      ziweiEmpty: "aucune étoile majeure (palais vide)",
+      ziweiNone: "il faut l’heure et la ville de naissance",
+      ziweiSits: "Le palais de vie de {name} tombe dans le {palace} de {other}",
     },
     calendarTitle: "Votre calendrier à deux",
     calendarLead: "Les quatre prochaines semaines. La couleur montre qui reçoit l’énergie ce jour-là.",
@@ -743,6 +797,15 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexNone: "no se traza (sin hora de nacimiento)",
       egyptian: "12 deidades egipcias (calendario moderno)",
       egyptianSame: "la misma deidad",
+      lifePath: "Camino de vida (numerología)",
+      lifePathSame: "ambos {n}",
+      nakshatra: "Nakshatra (astrología védica)",
+      tara: "{from} → {to}: {tara}",
+      taraNone: "Falta la hora de nacimiento de alguien: solo se muestran candidatos, sin tara.",
+      ziwei: "Palacio de vida (Zi Wei Dou Shu)",
+      ziweiEmpty: "sin estrella mayor (palacio vacío)",
+      ziweiNone: "se necesitan la hora y la ciudad de nacimiento",
+      ziweiSits: "El palacio de vida de {name} cae en el {palace} de {other}",
     },
     calendarTitle: "Vuestro calendario",
     calendarLead: "Las próximas cuatro semanas. El color muestra quién recibe energía ese día.",

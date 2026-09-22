@@ -132,11 +132,11 @@ export interface GroupSynthesis {
   pair: GroupPair | null;
 }
 
-export type DistinctionSystem = "mayanColor" | "zodiacTrine" | "celticSeason";
+export type DistinctionSystem = "mayanColor" | "zodiacTrine" | "celticSeason" | "lifePath";
 
 export interface GroupTag {
   system: DistinctionSystem;
-  /** 체계 안의 칸. 마야는 색 이름, 나머지는 0~3 번호 */
+  /** 체계 안의 칸. 마야는 색 이름, 생명수는 수, 나머지는 0~3 번호 */
   category: string;
   count: number;
 }
@@ -150,17 +150,22 @@ export interface GroupPair {
   neither: FiveElement[];
 }
 
-/** 사람마다 세 체계에서 어느 칸에 드는가. 모두 네 칸짜리 체계다. */
-function categoriesOf(profile: SymbolicComparisonProfile): Record<DistinctionSystem, string> {
+/**
+ * 사람마다 각 체계에서 어느 칸에 드는가. 셋은 네 칸짜리이고, 생명수는
+ * 열두 칸(1~9·11·22·33)에 기저 비율이 고르지 않다. 생명수는 2026-09-22 에
+ * 더해 그 전 참가자에게는 없다 — 없으면 undefined.
+ */
+function categoriesOf(profile: SymbolicComparisonProfile): Record<DistinctionSystem, string | undefined> {
   const trine = TRINE_GROUPS.findIndex((group) => group.includes(profile.chineseZodiac.branch));
   return {
     mayanColor: profile.mayanKin.color,
     zodiacTrine: String(trine),
     celticSeason: String(CELTIC_SEASON[profile.celticTree.id] ?? 0),
+    lifePath: profile.lifePath ? String(profile.lifePath) : undefined,
   };
 }
 
-const SYSTEMS: DistinctionSystem[] = ["mayanColor", "zodiacTrine", "celticSeason"];
+const SYSTEMS: DistinctionSystem[] = ["mayanColor", "zodiacTrine", "celticSeason", "lifePath"];
 
 /**
  * 칸마다 한 사람이 거기 들 기저 확률. 1940~1980 연속 14,610일 실측이다
@@ -170,6 +175,11 @@ export const CATEGORY_BASE_RATE: Record<DistinctionSystem, Record<string, number
   mayanColor: { red: 0.25, white: 0.25, blue: 0.25, yellow: 0.25 },
   zodiacTrine: { "0": 0.25, "1": 0.25, "2": 0.25, "3": 0.25 },
   celticSeason: { "0": 0.31, "1": 0.23, "2": 0.23, "3": 0.23 },
+  // 생명수는 날짜 숫자의 합이라 칸마다 다르다 — 2 는 마스터 11·22 가 떼어 가서 얇다.
+  lifePath: {
+    "1": 0.111, "2": 0.046, "3": 0.111, "4": 0.08, "5": 0.111, "6": 0.101,
+    "7": 0.111, "8": 0.111, "9": 0.111, "11": 0.065, "22": 0.031, "33": 0.01,
+  },
 };
 
 /** 이항분포 꼬리 P(X ≥ k), X ~ B(n, p). 모임은 열 명이 상한이라 그대로 센다. */
@@ -194,7 +204,16 @@ export function binomialTail(n: number, k: number, p: number): number {
 const CONCENTRATION_P = 0.05;
 
 function concentrated(system: DistinctionSystem, category: string, count: number, members: number): boolean {
-  return binomialTail(members, count, CATEGORY_BASE_RATE[system][category] ?? 0.25) < CONCENTRATION_P;
+  // 셋 이상일 때만. 네 칸짜리 체계는 이 문턱이 저절로 걸리지만, 칸이 얇은
+  // 생명수는 3인 중 둘만 같아도 확률이 5% 밑으로 내려간다 — 둘은 모임의
+  // 쏠림이 아니라 두 사람의 닮음이다.
+  //
+  // 문턱은 칸 수로 맞춘다. 칸마다 5% 를 대면 칸이 많은 체계일수록 "어느 칸이든
+  // 몰렸다"가 잦아진다 — 열두 칸 생명수를 그대로 넣자 8인 모임의 42% 에 생명수
+  // 태그가 붙었다(네 칸 마야 10%). 네 칸을 기준으로 5% × 4 ÷ 칸 수를 쓰면 기존
+  // 세 체계는 그대로이고 생명수는 1.67% 가 되어 7% 로 내려온다.
+  const cells = Object.keys(CATEGORY_BASE_RATE[system]).length;
+  return count >= 3 && binomialTail(members, count, CATEGORY_BASE_RATE[system][category] ?? 0.25) < (CONCENTRATION_P * 4) / cells;
 }
 
 function emptyCounts(): Record<FiveElement, number> {
@@ -268,19 +287,21 @@ export function synthesizeGroup(members: GroupMember[]): GroupSynthesis {
   // 다른 체계의 분포
   const cats = members.map((member) => categoriesOf(member.profile));
   const tally = Object.fromEntries(SYSTEMS.map((system) => [system, new Map<string, number>()])) as Record<DistinctionSystem, Map<string, number>>;
-  for (const c of cats) for (const system of SYSTEMS) tally[system].set(c[system], (tally[system].get(c[system]) ?? 0) + 1);
+  // 모두에게 값이 있는 체계만 센다(옛 참가자가 섞이면 생명수는 건너뛴다).
+  const systems = SYSTEMS.filter((system) => cats.every((c) => c[system] !== undefined));
+  for (const c of cats) for (const system of systems) tally[system].set(c[system]!, (tally[system].get(c[system]!) ?? 0) + 1);
 
   // 몰린 체계에서 모두가 한 칸인데 한 사람만 바깥이면, 그 사람이 모임에 다른
   // 결을 넣는다. 네 칸짜리 체계에서 "그냥 혼자인 칸"은 3인의 92% 가 해당해
   // 정보가 아니었다 — 모두가 몰렸을 때 혼자 다른 것만 드물고 뜻이 있다.
   const odd = new Map<number, Array<{ system: DistinctionSystem; category: string }>>();
   if (members.length >= 3) {
-    for (const system of SYSTEMS) {
+    for (const system of systems) {
       for (const [category, count] of tally[system]) {
         if (count !== members.length - 1 || !concentrated(system, category, count, members.length)) continue;
         const outsider = cats.findIndex((c) => c[system] !== category);
         if (outsider >= 0) {
-          odd.set(outsider, [...(odd.get(outsider) ?? []), { system, category: cats[outsider][system] }]);
+          odd.set(outsider, [...(odd.get(outsider) ?? []), { system, category: cats[outsider][system]! }]);
         }
       }
     }
@@ -303,7 +324,7 @@ export function synthesizeGroup(members: GroupMember[]): GroupSynthesis {
   // 사람의 닮음이고, 그건 렌즈(쌍 비교)가 말한다.
   const tags: GroupTag[] = [];
   if (members.length >= 3) {
-    for (const system of SYSTEMS) {
+    for (const system of systems) {
       for (const [category, count] of tally[system]) {
         if (concentrated(system, category, count, members.length)) tags.push({ system, category, count });
       }

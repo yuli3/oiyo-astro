@@ -34,7 +34,7 @@ const BRANCHES = [
   "Xu",
   "Hai",
 ];
-const PALACE_ORDER: PalaceKey[] = [
+export const PALACE_ORDER: PalaceKey[] = [
   "life",
   "siblings",
   "spouse",

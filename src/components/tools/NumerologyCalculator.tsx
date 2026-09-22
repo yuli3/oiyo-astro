@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { lifePathOf } from "@/lib/symbolic-tradition/numerology";
+import { birthdayNumberOf, lifePathOf, personalYearOf } from "@/lib/symbolic-tradition/numerology";
 import type { Locale } from "../../lib/i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 import { BirthDateField, ProfileNameField } from "../shared/BirthDateField";
@@ -97,6 +97,10 @@ const UI: Record<Locale, {
   challengeLabel: string;
   giftLabel: string;
   latinRequired: string;
+  birthdayLabel: string;
+  personalYearLabel: string;
+  personalYearNote: string;
+  dateOnlyHint: string;
 }> = {
   ko: {
     title: "수비학 계산기",
@@ -116,6 +120,10 @@ const UI: Record<Locale, {
     challengeLabel: "과제",
     giftLabel: "재능",
     latinRequired: "표현수·영혼수·성격수는 로마자 표기로 계산합니다. 이름을 영문으로 입력하면 함께 보여드릴게요. 생명수는 생년월일만으로 계산되어 아래에 그대로 나옵니다.",
+    birthdayLabel: "생일수 (Birthday)",
+    personalYearLabel: "{year}년의 개인년",
+    personalYearNote: "개인년은 아홉 해를 한 바퀴로 도는 주기예요. 해가 바뀌면 값도 바뀌어요.",
+    dateOnlyHint: "생명수·생일수·개인년은 생년월일만으로 나와요. 이름은 넣지 않아도 괜찮아요.",
   },
   en: {
     title: "Numerology Calculator",
@@ -135,6 +143,10 @@ const UI: Record<Locale, {
     challengeLabel: "Challenge",
     giftLabel: "Gift",
     latinRequired: "Expression, Soul Urge, and Personality are calculated from Latin letters. Enter your name in Latin script to see them. Life Path comes from your birth date alone and is shown below.",
+    birthdayLabel: "Birthday Number",
+    personalYearLabel: "Personal Year {year}",
+    personalYearNote: "The personal year runs in a nine-year cycle, so this number changes each January.",
+    dateOnlyHint: "Life path, birthday number and personal year come from the date alone — a name is optional.",
   },
   ja: {
     title: "数秘術計算機",
@@ -154,6 +166,10 @@ const UI: Record<Locale, {
     challengeLabel: "課題",
     giftLabel: "才能",
     latinRequired: "表現数・魂の数・個性数はローマ字表記から計算します。お名前をローマ字で入力すると表示されます。ライフパスは生年月日だけで計算されるため、下にそのまま表示されます。",
+    birthdayLabel: "誕生日数（Birthday）",
+    personalYearLabel: "{year}年のパーソナルイヤー",
+    personalYearNote: "パーソナルイヤーは九年でひと回りする周期です。年が変われば数も変わります。",
+    dateOnlyHint: "ライフパス・誕生日数・パーソナルイヤーは生年月日だけで出ます。名前は任意です。",
   },
   fr: {
     title: "Calculateur de Numérologie",
@@ -173,6 +189,10 @@ const UI: Record<Locale, {
     challengeLabel: "Défi",
     giftLabel: "Don",
     latinRequired: "Les nombres d'Expression, d'Âme et de Personnalité se calculent à partir de l'alphabet latin. Saisissez votre nom en caractères latins pour les afficher. Le Chemin de Vie ne dépend que de la date de naissance et reste affiché ci-dessous.",
+    birthdayLabel: "Nombre du jour de naissance",
+    personalYearLabel: "Année personnelle {year}",
+    personalYearNote: "L’année personnelle suit un cycle de neuf ans : ce nombre change chaque janvier.",
+    dateOnlyHint: "Chemin de vie, nombre du jour et année personnelle ne dépendent que de la date ; le nom est facultatif.",
   },
   es: {
     title: "Calculadora de Numerología",
@@ -192,6 +212,10 @@ const UI: Record<Locale, {
     challengeLabel: "Desafío",
     giftLabel: "Don",
     latinRequired: "Los números de Expresión, Deseo del Alma y Personalidad se calculan con el alfabeto latino. Escribe tu nombre en caracteres latinos para verlos. El Camino de Vida solo depende de la fecha de nacimiento y aparece abajo.",
+    birthdayLabel: "Número del día de nacimiento",
+    personalYearLabel: "Año personal {year}",
+    personalYearNote: "El año personal sigue un ciclo de nueve años, así que este número cambia cada enero.",
+    dateOnlyHint: "Camino de vida, número del día y año personal salen solo de la fecha; el nombre es opcional.",
   },
   cn: {
     title: "數字命理計算機",
@@ -211,6 +235,10 @@ const UI: Record<Locale, {
     challengeLabel: "挑戰",
     giftLabel: "天賦",
     latinRequired: "表達數、靈魂衝動數與個性數以拉丁字母計算。請以英文拼寫輸入姓名即可顯示。生命靈數僅依出生日期計算，仍會顯示於下方。",
+    birthdayLabel: "生日數（Birthday）",
+    personalYearLabel: "{year} 年的個人年",
+    personalYearNote: "個人年以九年為一個循環，跨年之後數字就會改變。",
+    dateOnlyHint: "生命數、生日數與個人年只需生日即可計算，姓名可留空。",
   },
   zh: {
     title: "数字命理计算器",
@@ -230,6 +258,10 @@ const UI: Record<Locale, {
     challengeLabel: "挑战",
     giftLabel: "天赋",
     latinRequired: "表达数、灵魂冲动数与个性数以拉丁字母计算。请用英文拼写输入姓名即可显示。生命灵数仅依出生日期计算，仍会显示在下方。",
+    birthdayLabel: "生日数（Birthday）",
+    personalYearLabel: "{year} 年的个人年",
+    personalYearNote: "个人年以九年为一个循环，跨年之后数字就会改变。",
+    dateOnlyHint: "生命数、生日数与个人年只需生日即可计算，姓名可留空。",
   },
 };
 
@@ -713,6 +745,94 @@ const MEANINGS: Record<number, NumberMeaning> = {
   },
 };
 
+/**
+ * 개인년 1~9. 생명수의 뜻(타고난 결)과 다른 축이다 — 올해 어느 계절에
+ * 서 있는지를 말한다. 아홉 해가 한 바퀴이고, 해가 바뀌면 값이 바뀐다.
+ */
+const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
+  1: {
+    ko: "새로 시작하는 해예요. 씨앗을 고르고 첫걸음을 떼기 좋아요.",
+    en: "A year of beginnings. Choose the seed and take the first step.",
+    ja: "始まりの年です。種を選び、最初の一歩を踏み出すのに向きます。",
+    fr: "Une année de commencements : choisissez la graine et faites le premier pas.",
+    es: "Un año de comienzos: elige la semilla y da el primer paso.",
+    cn: "開始之年。選定種子，踏出第一步。",
+    zh: "开始之年。选定种子，踏出第一步。",
+  },
+  2: {
+    ko: "기다리고 맞추는 해예요. 혼자 밀기보다 곁의 사람과 보폭을 맞춰요.",
+    en: "A year of pacing and partnering. Match steps with others instead of pushing alone.",
+    ja: "待って合わせる年です。ひとりで押すより、隣の人と歩幅を合わせて。",
+    fr: "Une année d’ajustement : accordez votre pas à celui des autres plutôt que de forcer seul.",
+    es: "Un año de ajuste: acompasa tu ritmo con otros en vez de empujar en solitario.",
+    cn: "等待與協調之年。與其獨自推進，不如與身邊的人同步。",
+    zh: "等待与协调之年。与其独自推进，不如与身边的人同步。",
+  },
+  3: {
+    ko: "표현하는 해예요. 말과 작품으로 밖에 내보일 때 힘이 붙어요.",
+    en: "A year of expression. Things gather force when you put them out in words or work.",
+    ja: "表現する年です。言葉や作品として外に出すと力がつきます。",
+    fr: "Une année d’expression : ce que vous sortez en mots ou en œuvres prend de la force.",
+    es: "Un año de expresión: lo que sacas en palabras u obras cobra fuerza.",
+    cn: "表達之年。以言語或作品示人，力量才會聚起來。",
+    zh: "表达之年。以言语或作品示人，力量才会聚起来。",
+  },
+  4: {
+    ko: "다지는 해예요. 재미는 적어도 틀과 습관을 세우면 뒤가 편해져요.",
+    en: "A year of groundwork. Less fun, but the structures and habits you set now carry you later.",
+    ja: "固める年です。派手さはなくても、仕組みと習慣を作ると後が楽になります。",
+    fr: "Une année de fondations : peu spectaculaire, mais les cadres posés maintenant vous porteront.",
+    es: "Un año de cimientos: poco vistoso, pero las estructuras que fijes ahora te sostendrán.",
+    cn: "紮根之年。雖不熱鬧，但此時建立的架構與習慣會撐住往後。",
+    zh: "扎根之年。虽不热闹，但此时建立的架构与习惯会撑住往后。",
+  },
+  5: {
+    ko: "바뀌는 해예요. 자리·일·관계가 움직이니 너무 꽉 쥐지 않는 게 좋아요.",
+    en: "A year of change. Places, work and ties shift — hold them loosely.",
+    ja: "変わる年です。場所も仕事も関係も動くので、握りしめすぎないこと。",
+    fr: "Une année de changement : lieux, travail et liens bougent — ne serrez pas trop fort.",
+    es: "Un año de cambio: lugares, trabajo y vínculos se mueven; no aprietes demasiado.",
+    cn: "變動之年。位置、工作與關係都在移動，別抓得太緊。",
+    zh: "变动之年。位置、工作与关系都在移动，别抓得太紧。",
+  },
+  6: {
+    ko: "책임의 해예요. 집과 사람을 돌보는 일이 늘고, 그만큼 기대도 받아요.",
+    en: "A year of responsibility. Home and people ask more of you, and more is expected in return.",
+    ja: "責任の年です。家や人を世話することが増え、その分期待も受けます。",
+    fr: "Une année de responsabilité : le foyer et les proches demandent davantage, et l’on attend autant de vous.",
+    es: "Un año de responsabilidad: la casa y la gente piden más, y también se espera más de ti.",
+    cn: "承擔之年。照顧家與人的事變多，別人對你的期待也變多。",
+    zh: "承担之年。照顾家与人的事变多，别人对你的期待也变多。",
+  },
+  7: {
+    ko: "안으로 들어가는 해예요. 배우고 정리하고 혼자 생각할 시간이 필요해요.",
+    en: "A year of turning inward. You need time to study, sort things out and think alone.",
+    ja: "内に向かう年です。学び、整理し、ひとりで考える時間が要ります。",
+    fr: "Une année tournée vers l’intérieur : il faut du temps pour apprendre, trier et penser seul.",
+    es: "Un año hacia dentro: hace falta tiempo para estudiar, ordenar y pensar a solas.",
+    cn: "向內之年。需要時間學習、整理，並獨自思考。",
+    zh: "向内之年。需要时间学习、整理，并独自思考。",
+  },
+  8: {
+    ko: "거두는 해예요. 쌓아 온 것이 성과와 돈으로 드러나요.",
+    en: "A year of harvest. What you have built shows up as results and money.",
+    ja: "収穫の年です。積み上げてきたものが成果やお金として表れます。",
+    fr: "Une année de récolte : ce que vous avez bâti se traduit en résultats et en argent.",
+    es: "Un año de cosecha: lo construido aparece como resultados y dinero.",
+    cn: "收成之年。累積下來的東西會化為成果與金錢。",
+    zh: "收成之年。累积下来的东西会化为成果与金钱。",
+  },
+  9: {
+    ko: "마무리하는 해예요. 끝낼 것을 끝내야 다음 한 바퀴가 가볍게 시작돼요.",
+    en: "A year of closing. Finish what should end, and the next cycle starts light.",
+    ja: "締めくくる年です。終えるべきものを終えると、次の巡りが軽く始まります。",
+    fr: "Une année de clôture : achevez ce qui doit finir, et le cycle suivant commencera léger.",
+    es: "Un año de cierre: termina lo que debe acabar y el siguiente ciclo empezará ligero.",
+    cn: "收尾之年。該結束的結束了，下一輪才會輕鬆開始。",
+    zh: "收尾之年。该结束的结束了，下一轮才会轻松开始。",
+  },
+};
+
 // ─── Sub-component ────────────────────────────────────────────────────────────
 
 function NumberCard({
@@ -776,6 +896,9 @@ export default function NumerologyCalculator({ locale }: Props) {
   const [date, setDate] = useState("");
   const [result, setResult] = useState<{
     lifePath: number;
+    birthday: number;
+    personalYear: number;
+    thisYear: number;
     // null when the name carries no Latin letters — see latinLetters().
     expression: null | number;
     soulUrge: null | number;
@@ -791,7 +914,9 @@ export default function NumerologyCalculator({ locale }: Props) {
   }, [parsed, profile.name]);
 
   function calculate() {
-    if (!date || !name.trim()) return;
+    // 생명수·생일수·개인년은 날짜만으로 정해진다. 이름을 요구하면 로마자
+    // 이름이 없는 사람은 날짜 수까지 못 보게 된다 — 이름은 선택이다.
+    if (!date) return;
     // 이름·생년월일을 프로필에 저장 → 다른 도구로 전파.
     if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
       const [yy, mm, dd] = date.split("-").map(Number);
@@ -799,8 +924,13 @@ export default function NumerologyCalculator({ locale }: Props) {
     }
     if (name.trim()) setProfile({ name: name.trim() });
     const hasLetters = latinLetters(name).length > 0;
+    const today = new Date();
+    const todayCivil = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
     setResult({
       lifePath: calcLifePath(date),
+      birthday: birthdayNumberOf(date),
+      personalYear: personalYearOf(date, todayCivil),
+      thisYear: today.getFullYear(),
       expression: hasLetters ? calcExpression(name) : null,
       soulUrge: hasLetters ? calcSoulUrge(name) : null,
       personality: hasLetters ? calcPersonality(name) : null,
@@ -825,6 +955,7 @@ export default function NumerologyCalculator({ locale }: Props) {
           onChange={setName}
           warning={latinLetters(name) ? undefined : ui.latinRequired}
         />
+        <p className="text-xs leading-6 text-gray-500 [word-break:keep-all]">{ui.dateOnlyHint}</p>
         <BirthDateField
           id="numerology-birth-date"
           locale={locale}
@@ -834,7 +965,7 @@ export default function NumerologyCalculator({ locale }: Props) {
         />
         <button
           onClick={result ? () => setResult(null) : calculate}
-          disabled={!name.trim() || !date}
+          disabled={!date}
           className="w-full py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary-strong disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {result ? ui.resetBtn : ui.calcBtn}
@@ -857,6 +988,21 @@ export default function NumerologyCalculator({ locale }: Props) {
             locale={locale}
             isMaster={MASTER.has(result.lifePath)}
           />
+          <NumberCard
+            label={ui.birthdayLabel}
+            number={result.birthday}
+            ui={ui}
+            locale={locale}
+            isMaster={MASTER.has(result.birthday)}
+          />
+          <div className="rounded-xl border-2 border-violet-200 bg-violet-50 p-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+              {ui.personalYearLabel.replace("{year}", String(result.thisYear))}
+            </p>
+            <p className="mt-1 text-5xl font-black text-violet-700">{result.personalYear}</p>
+            <p className="mt-2 text-sm leading-relaxed text-gray-700">{PERSONAL_YEAR[result.personalYear]?.[locale]}</p>
+            <p className="mt-2 text-xs leading-5 text-gray-500">{ui.personalYearNote}</p>
+          </div>
           {result.expression === null && (
             <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900 [word-break:keep-all]">
               {ui.latinRequired}

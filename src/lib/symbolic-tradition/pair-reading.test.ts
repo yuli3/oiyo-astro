@@ -3,7 +3,9 @@ import { describe, expect, it } from "vitest";
 import { CITIES } from "@/lib/ontology/natal/signs";
 
 import { comparisonFromCivil } from "./circle-input";
-import { branchRelations, pairCalendar, pairEvidence, pairNameKey, readPair, type Person } from "./pair-reading";
+import { taraOf } from "./jyotish";
+import { branchRelations, pairCalendar, pairEvidence, pairNameKey, readPair, type Evidence, type Person } from "./pair-reading";
+import { palaceInChart } from "./ziwei-coordinates";
 
 const seoul = CITIES.find((c) => c.id === "seoul")!;
 // 관계 해석 PRD 의 테스트 쌍. 워싱턴은 검색 도시와 같은 모양으로 만든다.
@@ -136,3 +138,43 @@ describe("이집트 12신 줄", () => {
   });
 });
 
+
+describe("되살린 세 전통의 줄", () => {
+  it("생명수는 날짜만으로 늘 선다", () => {
+    // 2007-03-24 → 3+6+9 = 18 → 9, 2002-09-01 → 9+1+4 = 14 → 5
+    expect(pairEvidence(A, B).find((e) => e.kind === "life-path")).toEqual({ kind: "life-path", a: 9, b: 5 });
+    const x: Person = { id: "x", label: "X", profile: comparisonFromCivil({ date: "1990-05-17" }) };
+    expect(pairEvidence(x, B).some((e) => e.kind === "life-path")).toBe(true);
+  });
+
+  it("시각을 아는 둘은 낙샤트라가 하나씩이고 타라를 두 방향으로 센다", () => {
+    const ev = pairEvidence(A, B).find((e) => e.kind === "nakshatra") as Extract<Evidence, { kind: "nakshatra" }>;
+    expect(ev.a).toHaveLength(1);
+    expect(ev.b).toHaveLength(1);
+    expect(ev.tara).toEqual({ ab: taraOf(ev.a[0], ev.b[0]), ba: taraOf(ev.b[0], ev.a[0]) });
+  });
+
+  it("시각을 모르면 후보만 적고 타라는 세우지 않는다", () => {
+    const a2: Person = { ...A, profile: comparisonFromCivil({ date: "2007-03-24", city: seoul }, { astro: true }) };
+    const ev = pairEvidence(a2, B).find((e) => e.kind === "nakshatra") as Extract<Evidence, { kind: "nakshatra" }>;
+    expect(ev.a.length).toBeGreaterThanOrEqual(1);
+    if (ev.a.length > 1) expect(ev.tara).toBeNull();
+  });
+
+  it("명궁은 서로의 명반에서 앉는 궁을 적고, 한쪽이 시각이 없으면 그쪽만 비운다", () => {
+    const ev = pairEvidence(A, B).find((e) => e.kind === "ziwei") as Extract<Evidence, { kind: "ziwei" }>;
+    expect(ev.a && ev.b).toBeTruthy();
+    expect(ev.aInB).toBe(palaceInChart(ev.b!, ev.a!.lifePalace));
+    expect(ev.bInA).toBe(palaceInChart(ev.a!, ev.b!.lifePalace));
+    const a2: Person = { ...A, profile: comparisonFromCivil({ date: "2007-03-24", city: seoul }, { astro: true }) };
+    expect(pairEvidence(a2, B).find((e) => e.kind === "ziwei")).toMatchObject({ a: null, aInB: null, bInA: null });
+  });
+
+  it("옛 참가자와는 줄을 만들지 않는다", () => {
+    const old: Person = { id: "o", label: "O", profile: { ...comparisonFromCivil({ date: "1990-05-17" }), lifePath: undefined } };
+    const kinds = pairEvidence(old, B).map((e) => e.kind);
+    expect(kinds).not.toContain("life-path");
+    expect(kinds).not.toContain("nakshatra");
+    expect(kinds).toContain("ziwei"); // B 쪽만 있어도 적는다
+  });
+});

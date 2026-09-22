@@ -169,3 +169,139 @@ const DEITIES: Record<string, Record<SymbolLang, string>> = {
 export function egyptianDeityName(id: string, lang: SymbolLang): string {
   return DEITIES[id]?.[lang] ?? id;
 }
+
+// ─── 인도 점성 27 낙샤트라 · 타라 ──────────────────────────────────────────
+// 서양어는 관용 로마자(발음 구별 기호 없이), 일본어는 가타카나, 중국어는
+// 『宿曜经』의 27수 대응(아슈위니 = 娄宿 …, 牛宿는 빠진다)을 따른다.
+
+const NAKSHATRAS: Record<SymbolLang, string[]> = {
+  ko: ["아슈위니", "바라니", "크리티카", "로히니", "므리가시라", "아르드라", "푸나르바수", "푸시야", "아슐레샤", "마가", "푸르바 팔구니", "우타라 팔구니", "하스타", "치트라", "스와티", "비샤카", "아누라다", "지에슈타", "물라", "푸르바 아샤다", "우타라 아샤다", "슈라바나", "다니슈타", "샤타비샤", "푸르바 바드라파다", "우타라 바드라파다", "레바티"],
+  en: ["Ashwini", "Bharani", "Krittika", "Rohini", "Mrigashira", "Ardra", "Punarvasu", "Pushya", "Ashlesha", "Magha", "Purva Phalguni", "Uttara Phalguni", "Hasta", "Chitra", "Swati", "Vishakha", "Anuradha", "Jyeshtha", "Mula", "Purva Ashadha", "Uttara Ashadha", "Shravana", "Dhanishta", "Shatabhisha", "Purva Bhadrapada", "Uttara Bhadrapada", "Revati"],
+  ja: ["アシュヴィニー", "バラニー", "クリッティカー", "ローヒニー", "ムリガシラー", "アールドラー", "プナルヴァス", "プシュヤ", "アーシュレーシャー", "マガー", "プールヴァ・パールグニー", "ウッタラ・パールグニー", "ハスタ", "チトラー", "スヴァーティー", "ヴィシャーカー", "アヌラーダー", "ジェーシュター", "ムーラ", "プールヴァ・アーシャーダー", "ウッタラ・アーシャーダー", "シュラヴァナ", "ダニシュター", "シャタビシャー", "プールヴァ・バードラパダー", "ウッタラ・バードラパダー", "レーヴァティー"],
+  zh: ["娄宿", "胃宿", "昴宿", "毕宿", "觜宿", "参宿", "井宿", "鬼宿", "柳宿", "星宿", "张宿", "翼宿", "轸宿", "角宿", "亢宿", "氐宿", "房宿", "心宿", "尾宿", "箕宿", "斗宿", "女宿", "虚宿", "危宿", "室宿", "壁宿", "奎宿"],
+  fr: [],
+  es: [],
+};
+NAKSHATRAS.fr = NAKSHATRAS.en;
+NAKSHATRAS.es = NAKSHATRAS.en;
+
+export function nakshatraName(n: number, lang: SymbolLang): string {
+  return NAKSHATRAS[lang][n - 1] ?? String(n);
+}
+
+/** 타라 1~9. 중국어·일본어는 『宿曜经』 삼구법(三九秘法)의 命·荣·衰·安·危·成·坏·友·亲 대응 */
+const TARAS: Record<SymbolLang, string[]> = {
+  ko: ["잔마(태어난 별)", "삼파트(번영)", "비파트(위험)", "크셰마(안녕)", "프라티야리(장애)", "사다나(성취)", "나이다나(소멸)", "미트라(벗)", "파라마 미트라(가장 가까운 벗)"],
+  en: ["Janma (birth)", "Sampat (wealth)", "Vipat (danger)", "Kshema (well-being)", "Pratyari (obstacle)", "Sadhana (achievement)", "Naidhana (loss)", "Mitra (friend)", "Parama Mitra (best friend)"],
+  ja: ["ジャンマ（命）", "サンパット（栄）", "ヴィパット（衰）", "クシェーマ（安）", "プラティヤリ（危）", "サーダナ（成）", "ナイダナ（壊）", "ミトラ（友）", "パラマ・ミトラ（親）"],
+  zh: ["命（Janma）", "荣（Sampat）", "衰（Vipat）", "安（Kshema）", "危（Pratyari）", "成（Sadhana）", "坏（Naidhana）", "友（Mitra）", "亲（Parama Mitra）"],
+  fr: ["Janma (naissance)", "Sampat (prospérité)", "Vipat (danger)", "Kshema (bien-être)", "Pratyari (obstacle)", "Sadhana (accomplissement)", "Naidhana (perte)", "Mitra (ami)", "Parama Mitra (ami intime)"],
+  es: ["Janma (nacimiento)", "Sampat (prosperidad)", "Vipat (peligro)", "Kshema (bienestar)", "Pratyari (obstáculo)", "Sadhana (logro)", "Naidhana (pérdida)", "Mitra (amigo)", "Parama Mitra (gran amigo)"],
+};
+
+export function taraName(tara: number, lang: SymbolLang): string {
+  return TARAS[lang][tara - 1] ?? String(tara);
+}
+
+// ─── 자미두수 14주성 · 12궁 ────────────────────────────────────────────────
+// 한국어는 한자음, 일본어는 번체 한자, 중국어는 简体, 서양어는 병음.
+
+const ZIWEI_STARS: Record<string, [string, string, string, string]> = {
+  // [ko, ja, zh, pinyin]
+  zi_wei: ["자미", "紫微", "紫微", "Zi Wei"],
+  tian_ji: ["천기", "天機", "天机", "Tian Ji"],
+  tai_yang: ["태양", "太陽", "太阳", "Tai Yang"],
+  wu_qu: ["무곡", "武曲", "武曲", "Wu Qu"],
+  tian_tong: ["천동", "天同", "天同", "Tian Tong"],
+  lian_zhen: ["염정", "廉貞", "廉贞", "Lian Zhen"],
+  tian_fu: ["천부", "天府", "天府", "Tian Fu"],
+  tai_yin: ["태음", "太陰", "太阴", "Tai Yin"],
+  tan_lang: ["탐랑", "貪狼", "贪狼", "Tan Lang"],
+  ju_men: ["거문", "巨門", "巨门", "Ju Men"],
+  tian_xiang: ["천상", "天相", "天相", "Tian Xiang"],
+  tian_liang: ["천량", "天梁", "天梁", "Tian Liang"],
+  qi_sha: ["칠살", "七殺", "七杀", "Qi Sha"],
+  po_jun: ["파군", "破軍", "破军", "Po Jun"],
+};
+
+export function ziweiStarName(id: string, lang: SymbolLang): string {
+  const row = ZIWEI_STARS[id];
+  if (!row) return id;
+  return lang === "ko" ? row[0] : lang === "ja" ? row[1] : lang === "zh" ? row[2] : row[3];
+}
+
+const ZIWEI_PALACES: Record<string, Record<SymbolLang, string>> = {
+  life: { ko: "명궁(나 자신)", en: "Life palace (self)", ja: "命宮", zh: "命宫", fr: "palais de la Vie (soi)", es: "palacio de la Vida (uno mismo)" },
+  siblings: { ko: "형제궁(형제·가까운 동료)", en: "Siblings palace", ja: "兄弟宮", zh: "兄弟宫", fr: "palais des Frères et sœurs", es: "palacio de los Hermanos" },
+  spouse: { ko: "부처궁(배우자·짝)", en: "Spouse palace", ja: "夫妻宮", zh: "夫妻宫", fr: "palais du Conjoint", es: "palacio del Cónyuge" },
+  children: { ko: "자녀궁(자녀·아랫사람)", en: "Children palace", ja: "子女宮", zh: "子女宫", fr: "palais des Enfants", es: "palacio de los Hijos" },
+  wealth: { ko: "재백궁(재물)", en: "Wealth palace", ja: "財帛宮", zh: "财帛宫", fr: "palais de la Richesse", es: "palacio de la Riqueza" },
+  health: { ko: "질액궁(몸·건강)", en: "Health palace", ja: "疾厄宮", zh: "疾厄宫", fr: "palais de la Santé", es: "palacio de la Salud" },
+  travel: { ko: "천이궁(바깥·이동)", en: "Travel palace", ja: "遷移宮", zh: "迁移宫", fr: "palais des Déplacements", es: "palacio de los Viajes" },
+  friends: { ko: "교우궁(벗·동료)", en: "Friends palace", ja: "奴僕宮", zh: "交友宫", fr: "palais des Amis", es: "palacio de los Amigos" },
+  career: { ko: "관록궁(일·직업)", en: "Career palace", ja: "官禄宮", zh: "官禄宫", fr: "palais de la Carrière", es: "palacio de la Carrera" },
+  property: { ko: "전택궁(집·터전)", en: "Property palace", ja: "田宅宮", zh: "田宅宫", fr: "palais des Biens", es: "palacio de la Propiedad" },
+  mental: { ko: "복덕궁(마음·즐거움)", en: "Fortune & Virtue palace (mind)", ja: "福徳宮", zh: "福德宫", fr: "palais du Bien-être (fortune et vertu)", es: "palacio del Bienestar (fortuna y virtud)" },
+  parents: { ko: "부모궁(부모·윗사람)", en: "Parents palace", ja: "父母宮", zh: "父母宫", fr: "palais des Parents", es: "palacio de los Padres" },
+};
+
+export function ziweiPalaceName(key: string, lang: SymbolLang): string {
+  return ZIWEI_PALACES[key]?.[lang] ?? key;
+}
+
+// ─── 인도 점성 — 라시 · 그라하 · 요가 · 카라나 ─────────────────────────────
+
+/** 라시(인도식 궁) 1~12. 산스크리트 이름에 각 언어의 별자리 이름을 붙인다. */
+const RASHIS: Record<SymbolLang, string[]> = {
+  ko: ["메샤(양자리)", "브리샤바(황소자리)", "미투나(쌍둥이자리)", "카르카(게자리)", "싱하(사자자리)", "칸야(처녀자리)", "툴라(천칭자리)", "브리슈치카(전갈자리)", "다누(궁수자리)", "마카라(염소자리)", "쿰바(물병자리)", "미나(물고기자리)"],
+  en: ["Mesha (Aries)", "Vrishabha (Taurus)", "Mithuna (Gemini)", "Karka (Cancer)", "Simha (Leo)", "Kanya (Virgo)", "Tula (Libra)", "Vrishchika (Scorpio)", "Dhanu (Sagittarius)", "Makara (Capricorn)", "Kumbha (Aquarius)", "Meena (Pisces)"],
+  ja: ["メーシャ（牡羊）", "ヴリシャバ（牡牛）", "ミトゥナ（双子）", "カルカ（蟹）", "シンハ（獅子）", "カニヤー（乙女）", "トゥラー（天秤）", "ヴリシュチカ（蠍）", "ダヌ（射手）", "マカラ（山羊）", "クンバ（水瓶）", "ミーナ（魚）"],
+  zh: ["白羊宫（Mesha）", "金牛宫（Vrishabha）", "双子宫（Mithuna）", "巨蟹宫（Karka）", "狮子宫（Simha）", "处女宫（Kanya）", "天秤宫（Tula）", "天蝎宫（Vrishchika）", "人马宫（Dhanu）", "摩羯宫（Makara）", "宝瓶宫（Kumbha）", "双鱼宫（Meena）"],
+  fr: ["Mesha (Bélier)", "Vrishabha (Taureau)", "Mithuna (Gémeaux)", "Karka (Cancer)", "Simha (Lion)", "Kanya (Vierge)", "Tula (Balance)", "Vrishchika (Scorpion)", "Dhanu (Sagittaire)", "Makara (Capricorne)", "Kumbha (Verseau)", "Meena (Poissons)"],
+  es: ["Mesha (Aries)", "Vrishabha (Tauro)", "Mithuna (Géminis)", "Karka (Cáncer)", "Simha (Leo)", "Kanya (Virgo)", "Tula (Libra)", "Vrishchika (Escorpio)", "Dhanu (Sagitario)", "Makara (Capricornio)", "Kumbha (Acuario)", "Meena (Piscis)"],
+};
+
+export function rashiName(rashi: number, lang: SymbolLang): string {
+  return RASHIS[lang][rashi - 1] ?? String(rashi);
+}
+
+/** 낙샤트라의 주인 행성(그라하). 라후·케투는 해와 달의 교점이라 이름 그대로 쓴다. */
+const GRAHAS: Record<string, Record<SymbolLang, string>> = {
+  ketu: { ko: "케투", en: "Ketu", ja: "ケートゥ", zh: "计都", fr: "Ketu", es: "Ketu" },
+  venus: { ko: "금성", en: "Venus", ja: "金星", zh: "金星", fr: "Vénus", es: "Venus" },
+  sun: { ko: "태양", en: "Sun", ja: "太陽", zh: "太阳", fr: "Soleil", es: "Sol" },
+  moon: { ko: "달", en: "Moon", ja: "月", zh: "月亮", fr: "Lune", es: "Luna" },
+  mars: { ko: "화성", en: "Mars", ja: "火星", zh: "火星", fr: "Mars", es: "Marte" },
+  rahu: { ko: "라후", en: "Rahu", ja: "ラーフ", zh: "罗睺", fr: "Rahu", es: "Rahu" },
+  jupiter: { ko: "목성", en: "Jupiter", ja: "木星", zh: "木星", fr: "Jupiter", es: "Júpiter" },
+  saturn: { ko: "토성", en: "Saturn", ja: "土星", zh: "土星", fr: "Saturne", es: "Saturno" },
+  mercury: { ko: "수성", en: "Mercury", ja: "水星", zh: "水星", fr: "Mercure", es: "Mercurio" },
+};
+
+export function grahaName(id: string, lang: SymbolLang): string {
+  return GRAHAS[id]?.[lang] ?? id;
+}
+
+/**
+ * 요가 27 · 카라나 11. 산스크리트 이름을 그대로 쓴다 — 각 언어의 관용 번역이
+ * 없어서 옮기면 없는 뜻이 생긴다. 한국어·일본어만 음을 적어 읽기 쉽게 한다.
+ */
+const YOGA_LATIN = ["Vishkambha", "Priti", "Ayushman", "Saubhagya", "Shobhana", "Atiganda", "Sukarma", "Dhriti", "Shula", "Ganda", "Vriddhi", "Dhruva", "Vyaghata", "Harshana", "Vajra", "Siddhi", "Vyatipata", "Variyana", "Parigha", "Shiva", "Siddha", "Sadhya", "Shubha", "Shukla", "Brahma", "Indra", "Vaidhriti"];
+const YOGA_KO = ["비슈캄바", "프리티", "아유슈만", "사우바기아", "쇼바나", "아티간다", "수카르마", "드리티", "슐라", "간다", "브리디", "드루바", "비아가타", "하르샤나", "바즈라", "싯디", "비아티파타", "바리야나", "파리가", "시바", "싯다", "사디아", "슈바", "슈클라", "브라흐마", "인드라", "바이드리티"];
+
+export function yogaName(yoga: number, lang: SymbolLang): string {
+  const latin = YOGA_LATIN[yoga - 1] ?? String(yoga);
+  if (lang === "ko") return `${YOGA_KO[yoga - 1] ?? latin}(${latin})`;
+  return latin;
+}
+
+const KARANA_KO: Record<string, string> = {
+  kimstughna: "킴스투그나", bava: "바바", balava: "발라바", kaulava: "카울라바", taitila: "타이틸라",
+  garaja: "가라자", vanija: "바니자", vishti: "비슈티", shakuni: "샤쿠니", chatushpada: "차투시파다", naga: "나가",
+};
+
+export function karanaName(id: string, lang: SymbolLang): string {
+  const latin = id.charAt(0).toUpperCase() + id.slice(1);
+  if (lang === "ko") return `${KARANA_KO[id] ?? latin}(${latin})`;
+  return latin;
+}

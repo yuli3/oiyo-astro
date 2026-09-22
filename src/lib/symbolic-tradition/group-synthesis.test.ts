@@ -129,7 +129,7 @@ describe("모임 종합 — 판정이 흔해지지 않는가", () => {
 describe("모임 종합 — 오행 밖의 체계", () => {
   it("체계별 기저 비율 표가 실제와 맞다", () => {
     const start = Date.UTC(1950, 0, 1);
-    const tally = { mayanColor: {} as Record<string, number>, zodiacTrine: {} as Record<string, number>, celticSeason: {} as Record<string, number> };
+    const tally = { mayanColor: {} as Record<string, number>, zodiacTrine: {} as Record<string, number>, celticSeason: {} as Record<string, number>, lifePath: {} as Record<string, number> };
     const days = 4383; // 12년 — 삼합이 네 무리를 고르게 돈다
     for (let d = 0; d < days; d += 1) {
       const p = comparisonFromCivil({ date: new Date(start + d * 86_400_000).toISOString().slice(0, 10) });
@@ -138,6 +138,7 @@ describe("모임 종합 — 오행 밖의 체계", () => {
       tally.mayanColor[p.mayanKin.color] = (tally.mayanColor[p.mayanKin.color] ?? 0) + 1;
       tally.zodiacTrine[trine] = (tally.zodiacTrine[trine] ?? 0) + 1;
       tally.celticSeason[season] = (tally.celticSeason[season] ?? 0) + 1;
+      tally.lifePath[String(p.lifePath)] = (tally.lifePath[String(p.lifePath)] ?? 0) + 1;
     }
     for (const [system, rates] of Object.entries(CATEGORY_BASE_RATE)) {
       for (const [category, expected] of Object.entries(rates)) {

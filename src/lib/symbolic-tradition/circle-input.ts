@@ -4,6 +4,9 @@ import { deriveSymbolicProfile, type SymbolicComparisonProfile } from "@/lib/sym
 import { astroCoordinates } from "./astro-coordinates";
 import { egyptianDeityOf } from "./egyptian";
 import { birthHexagram } from "./iching";
+import { jyotishCoordinates, jyotishProfile } from "./jyotish";
+import { lifePathOf } from "./numerology";
+import { ziweiCoordinates } from "./ziwei-coordinates";
 import { STEMS } from "@/manifest/data/saju/stems";
 import type { FiveElement } from "@/lib/ontology/saju/types";
 
@@ -38,6 +41,7 @@ export function comparisonFromCivil(input: {
     saju: profile.saju,
     sunSign: profile.sunSign,
     yinYang: profile.yinYang,
+    lifePath: lifePathOf(input.date),
     // 달 궁 셈은 비싸서 사람을 원에 넣을 때만 한다. 이 함수는 "오늘"을
     // 참가자로 만들 때 하루에 수십 번 불리는데, 그쪽은 별자리가 필요 없다.
     ...(options.astro ? {
@@ -50,6 +54,19 @@ export function comparisonFromCivil(input: {
       }),
       hexagram: birthHexagram(input.date, profile.saju.hour?.earthlyBranch ?? null),
       egyptian: egyptianDeityOf(input.date),
+      jyotish: jyotishProfile(jyotishCoordinates({
+        civilDate: input.date,
+        civilTime,
+        utcOffsetMinutes: city ? resolution.offsetMinutes : null,
+        latitude: city?.lat ?? null,
+        longitude: city?.lon ?? null,
+      })),
+      ziwei: ziweiCoordinates({
+        civilDate: input.date,
+        civilTime,
+        utcOffsetMinutes: city ? resolution.offsetMinutes : null,
+        longitude: city?.lon ?? null,
+      }),
     } : {}),
   };
 }

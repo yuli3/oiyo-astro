@@ -1,6 +1,8 @@
 import type { AstroCoordinates } from "./astro-coordinates";
 import type { EgyptianDeityId } from "./egyptian";
 import type { BirthHexagram } from "./iching";
+import type { JyotishProfile } from "./jyotish";
+import type { ZiweiCoordinates } from "./ziwei-coordinates";
 import type { EarthlyBranch, FiveElement, HeavenlyStem } from "@/lib/ontology/saju/types";
 
 export const SYMBOLIC_PROFILE_SCHEMA_VERSION = 1 as const;
@@ -129,6 +131,18 @@ export interface SymbolicComparisonProfile {
   hexagram?: BirthHexagram | null;
   /** 이집트 12신(현대 달력). 날짜만으로 정해진다. 2026-09-22 에 더했다. */
   egyptian?: EgyptianDeityId;
+  /**
+   * 수비학 생명수(1~9, 마스터 11·22·33). 날짜만으로 정해져 늘 싣는다.
+   * 2026-09-22 에 더했다 — 그 전 참가자에게는 없다.
+   */
+  lifePath?: number;
+  /**
+   * 인도 점성 — 달의 낙샤트라·라시 후보와 라그나(라히리 아야남샤).
+   * 시각이 없으면 후보가 여럿이다. 별자리 좌표와 같은 때(원에 넣을 때) 셈한다.
+   */
+  jyotish?: JyotishProfile;
+  /** 자미두수 명궁과 주성. 시각·도시가 없으면 null. */
+  ziwei?: ZiweiCoordinates | null;
 }
 
 export interface SymbolicCompatibilityLens {

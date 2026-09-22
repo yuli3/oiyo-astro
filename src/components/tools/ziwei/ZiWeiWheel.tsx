@@ -10,7 +10,9 @@
 
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 
+import { MAIN_STARS } from "@/lib/ontology/ziwei/data";
 import type { Palace, PalaceKey } from "@/lib/ontology/ziwei/types";
+import { ziweiStarName } from "@/lib/symbolic-tradition/symbol-names";
 import { useReducedMotion } from "@/hooks/useMotion";
 
 const WheelScene = lazy(() => import("./ZiWeiWheelScene"));
@@ -98,12 +100,18 @@ export default function ZiWeiWheel({ locale, palaces, lifeKey }: ZiWeiWheelProps
         )}
       </div>
       <p className="px-3 py-2 text-[11px] font-medium text-violet-200">{copy.hint}</p>
-      <ul className="flex flex-wrap gap-x-3 gap-y-1 px-3 pb-3 text-[10px] font-medium text-violet-300" aria-hidden="true">
+      {/*
+        그림은 궁마다 별이 몇 개인지만 보여 준다. 이 목록이 같은 내용을 글로
+        적는 자리다 — 예전에는 여기도 개수만 있었고 `aria-hidden` 이라 읽는
+        도구에는 아무것도 남지 않았다. 이제 주성 이름을 적고 숨기지 않는다.
+      */}
+      <ul className="flex flex-wrap gap-x-3 gap-y-1 px-3 pb-3 text-[10px] font-medium text-violet-300">
         {Object.values(palaces)
-          .filter((palace) => palace.stars.length > 0)
-          .map((palace) => (
+          .map((palace) => ({ palace, majors: palace.stars.filter((star) => MAIN_STARS.some((main) => main.id === star.id)) }))
+          .filter(({ majors }) => majors.length > 0)
+          .map(({ palace, majors }) => (
             <li key={palace.key}>
-              {PALACE_NAME[palace.key][lang]} · {palace.stars.length}
+              {PALACE_NAME[palace.key][lang]} · {majors.map((star) => ziweiStarName(star.id, lang)).join("·")}
             </li>
           ))}
       </ul>
