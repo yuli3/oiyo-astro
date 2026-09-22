@@ -1,6 +1,7 @@
 import LZString from "lz-string";
 
 import { isAstroCoordinates } from "./astro-coordinates";
+import { isBirthHexagram } from "./iching";
 import { compareSymbolicProfiles } from "./index";
 import type { CompatibilityLensId, SymbolicComparisonProfile } from "./types";
 
@@ -68,7 +69,8 @@ function validProfile(profile: SymbolicComparisonProfile): boolean {
     && validPillar(profile?.saju?.day)
     && (profile?.saju?.hour === null || validPillar(profile?.saju?.hour))
     // 별자리 좌표는 선택이다. 있으면 모양이 맞아야 한다.
-    && (profile.astro === undefined || isAstroCoordinates(profile.astro));
+    && (profile.astro === undefined || isAstroCoordinates(profile.astro))
+    && (profile.hexagram === undefined || profile.hexagram === null || isBirthHexagram(profile.hexagram));
 }
 
 export function isSymbolicGroupParticipant(value: unknown): value is SymbolicGroupParticipant {

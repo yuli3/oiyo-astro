@@ -7,6 +7,7 @@ import { dayMasterLinks, dayMasterOf } from "./group-flow";
 import { synthesizeGroup, type GroupMember } from "./group-synthesis";
 import { dayElementOf, stanceOf, type TodayStance } from "./group-today";
 import { compareSymbolicProfiles } from "./index";
+import type { BirthHexagram } from "./iching";
 import type { SymbolicCompatibilityLens } from "./types";
 
 /**
@@ -63,7 +64,9 @@ export type Evidence =
   | { kind: "elements-neither"; elements: FiveElement[] }
   | { kind: "moon"; a: SignKey[]; b: SignKey[]; shared: SignKey[] }
   | { kind: "sun"; a: number; b: number; separation: number; aspect: SunAspectKind | null }
-  | { kind: "mayan"; sameColor: boolean; sameTone: boolean; aTone: number; bTone: number; aColor: string; bColor: string };
+  | { kind: "mayan"; sameColor: boolean; sameTone: boolean; aTone: number; bTone: number; aColor: string; bColor: string; aSeal: number; bSeal: number }
+  | { kind: "celtic"; a: string; b: string; relation: string }
+  | { kind: "hexagram"; a: BirthHexagram | null; b: BirthHexagram | null };
 
 function separation(a: number, b: number): number {
   const d = Math.abs(a - b) % 360;
@@ -102,7 +105,15 @@ export function pairEvidence(a: Person, b: Person): Evidence[] {
     bTone: b.profile.mayanKin.tone,
     aColor: a.profile.mayanKin.color,
     bColor: b.profile.mayanKin.color,
+    aSeal: a.profile.mayanKin.seal,
+    bSeal: b.profile.mayanKin.seal,
   });
+  const celtic = compareSymbolicProfiles(a.profile, b.profile).lenses.find((l) => l.id === "celtic-tree")!;
+  out.push({ kind: "celtic", a: a.profile.celticTree.id, b: b.profile.celticTree.id, relation: celtic.relation });
+  // 출생 괘는 한 사람이라도 있으면 적는다(없는 쪽은 "시각이 없어 세우지 않음").
+  const ha = a.profile.hexagram ?? null;
+  const hb = b.profile.hexagram ?? null;
+  if (ha || hb) out.push({ kind: "hexagram", a: ha, b: hb });
   return out;
 }
 

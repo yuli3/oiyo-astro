@@ -48,7 +48,6 @@ export const APP_ROUTES = {
   },
   RESONANCE: {
     ROOT: getPath("resonance", "/resonance"),
-    SACRED: getPath("sacred-resonance", "/resonance"),
   },
 } as const;
 
@@ -57,7 +56,6 @@ export const ROUTES = {
   // Semantic Aliases for Clarity in UI Components
   DAILY_LUCKY: APP_ROUTES.ONTOLOGY.DAILY_LUCKY,
   ORIGIN: APP_ROUTES.ONTOLOGY.ORIGIN,
-  SACRED_RESONANCE: APP_ROUTES.RESONANCE.SACRED,
   SELF_SAJU: APP_ROUTES.ONTOLOGY.SELF_SAJU,
 } as const;
 

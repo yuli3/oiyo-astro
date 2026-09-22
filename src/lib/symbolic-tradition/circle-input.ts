@@ -2,6 +2,7 @@ import { CITIES, type City } from "@/lib/ontology/natal/signs";
 import { resolveZonedCivilTime } from "@/lib/user/birth-record";
 import { deriveSymbolicProfile, type SymbolicComparisonProfile } from "@/lib/symbolic-tradition";
 import { astroCoordinates } from "./astro-coordinates";
+import { birthHexagram } from "./iching";
 import { STEMS } from "@/manifest/data/saju/stems";
 import type { FiveElement } from "@/lib/ontology/saju/types";
 
@@ -46,6 +47,7 @@ export function comparisonFromCivil(input: {
         latitude: city?.lat ?? null,
         longitude: city?.lon ?? null,
       }),
+      hexagram: birthHexagram(input.date, profile.saju.hour?.earthlyBranch ?? null),
     } : {}),
   };
 }

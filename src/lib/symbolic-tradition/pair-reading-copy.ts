@@ -140,6 +140,11 @@ export interface PairCopy {
     mayanSame: string;
     mayanColor: string;
     mayanOther: string;
+    celtic: string;
+    celticRelation: Record<"same-tree" | "same-season" | "facing-season" | "distinct", string>;
+    hexagram: string;
+    hexChanged: string;
+    hexNone: string;
   };
   calendarTitle: string;
   calendarLead: string;
@@ -234,6 +239,11 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       mayanSame: "같은 색 계열 · 같은 음조 {tone}",
       mayanColor: "같은 색 계열 · 음조 {a} · {b}",
       mayanOther: "다른 색 계열 · 음조 {a} · {b}",
+      celtic: "켈트",
+      celticRelation: {"same-tree": "같은 나무", "same-season": "같은 계절의 나무", "facing-season": "마주 보는 계절", distinct: "다른 계절"},
+      hexagram: "출생 괘",
+      hexChanged: "변괘",
+      hexNone: "시각이 없어 세우지 않음",
     },
     calendarTitle: "둘의 달력",
     calendarLead: "오늘부터 4주. 칸 색은 그날 누가 기운을 받는지예요.",
@@ -326,6 +336,11 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       mayanSame: "same colour family · same tone {tone}",
       mayanColor: "same colour family · tones {a} · {b}",
       mayanOther: "different colour families · tones {a} · {b}",
+      celtic: "Celtic",
+      celticRelation: {"same-tree": "same tree", "same-season": "trees of the same season", "facing-season": "facing seasons", distinct: "different seasons"},
+      hexagram: "Birth hexagram",
+      hexChanged: "changing to",
+      hexNone: "not cast (no birth time)",
     },
     calendarTitle: "Your calendar together",
     calendarLead: "The next four weeks. Colour shows who receives energy that day.",
@@ -418,6 +433,11 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       mayanSame: "同じ色の系統 · 同じ音 {tone}",
       mayanColor: "同じ色の系統 · 音 {a} · {b}",
       mayanOther: "違う色の系統 · 音 {a} · {b}",
+      celtic: "ケルト",
+      celticRelation: {"same-tree": "同じ木", "same-season": "同じ季節の木", "facing-season": "向かい合う季節", distinct: "違う季節"},
+      hexagram: "生まれの卦",
+      hexChanged: "之卦",
+      hexNone: "時刻がないため立てない",
     },
     calendarTitle: "ふたりの暦",
     calendarLead: "今日から4週間。色はその日に誰が気を受けるかです。",
@@ -510,6 +530,11 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       mayanSame: "同一色系 · 同一调性 {tone}",
       mayanColor: "同一色系 · 调性 {a} · {b}",
       mayanOther: "不同色系 · 调性 {a} · {b}",
+      celtic: "凯尔特",
+      celticRelation: {"same-tree": "同一棵树", "same-season": "同一季节的树", "facing-season": "相对的季节", distinct: "不同季节"},
+      hexagram: "出生卦",
+      hexChanged: "变卦",
+      hexNone: "没有时间，不起卦",
     },
     calendarTitle: "两个人的日历",
     calendarLead: "从今天起四周。颜色表示当天谁得到助力。",
@@ -602,6 +627,11 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       mayanSame: "même famille de couleur · même ton {tone}",
       mayanColor: "même famille de couleur · tons {a} · {b}",
       mayanOther: "familles de couleur différentes · tons {a} · {b}",
+      celtic: "Celte",
+      celticRelation: {"same-tree": "même arbre", "same-season": "arbres de la même saison", "facing-season": "saisons opposées", distinct: "saisons différentes"},
+      hexagram: "Hexagramme de naissance",
+      hexChanged: "devient",
+      hexNone: "non tiré (pas d’heure de naissance)",
     },
     calendarTitle: "Votre calendrier à deux",
     calendarLead: "Les quatre prochaines semaines. La couleur montre qui reçoit l’énergie ce jour-là.",
@@ -694,6 +724,11 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       mayanSame: "misma familia de color · mismo tono {tone}",
       mayanColor: "misma familia de color · tonos {a} · {b}",
       mayanOther: "familias de color distintas · tonos {a} · {b}",
+      celtic: "Celta",
+      celticRelation: {"same-tree": "el mismo árbol", "same-season": "árboles de la misma estación", "facing-season": "estaciones opuestas", distinct: "estaciones distintas"},
+      hexagram: "Hexagrama natal",
+      hexChanged: "se transforma en",
+      hexNone: "no se traza (sin hora de nacimiento)",
     },
     calendarTitle: "Vuestro calendario",
     calendarLead: "Las próximas cuatro semanas. El color muestra quién recibe energía ese día.",

@@ -99,3 +99,27 @@ describe("근거 줄", () => {
     expect(ev.some((e) => e.kind === "moon" || e.kind === "sun")).toBe(false);
   });
 });
+
+describe("출생 괘 (매화역수)", () => {
+  it("시각이 있는 두 사람은 근거 줄에 각자의 괘가 있다", () => {
+    const hex = pairEvidence(A, B).find((e) => e.kind === "hexagram") as { a: { number: number } | null; b: { number: number } | null } | undefined;
+    expect(hex?.a?.number).toBeGreaterThanOrEqual(1);
+    expect(hex?.b?.number).toBeGreaterThanOrEqual(1);
+  });
+
+  it("둘 다 시각이 없으면 괘 줄을 만들지 않는다", () => {
+    const x: Person = { id: "x", label: "X", profile: comparisonFromCivil({ date: "1990-05-17" }, { astro: true }) };
+    const y: Person = { id: "y", label: "Y", profile: comparisonFromCivil({ date: "1988-11-02" }, { astro: true }) };
+    expect(x.profile.hexagram).toBeNull();
+    expect(pairEvidence(x, y).some((e) => e.kind === "hexagram")).toBe(false);
+  });
+
+  it("마야 줄은 인장 번호를, 켈트 줄은 나무를 싣는다", () => {
+    const ev = pairEvidence(A, B);
+    const mayan = ev.find((e) => e.kind === "mayan") as { aSeal: number; bSeal: number };
+    expect(mayan.aSeal).toBeGreaterThanOrEqual(1);
+    expect(mayan.aSeal).toBeLessThanOrEqual(20);
+    expect(ev.find((e) => e.kind === "celtic")).toMatchObject({ a: A.profile.celticTree.id, b: B.profile.celticTree.id });
+  });
+});
+

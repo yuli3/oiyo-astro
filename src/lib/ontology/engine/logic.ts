@@ -9,7 +9,8 @@ import {
 import { calculateNumerology } from "../../ontology/numerology/logic";
 import { calculateSaju } from "../../ontology/saju/logic";
 import { analyzeSaju } from "../../ontology/saju/logic";
-import { calculateIching } from "../../resonance/relationship/sacred-resonance/iching-logic";
+import { birthHexagram } from "../../symbolic-tradition/iching";
+import { hexagramName } from "../../symbolic-tradition/symbol-names";
 import { getUniversalChronosCoordinates } from "../chronos/chronos-engine";
 import { civilDateToLocalNoon } from "../kernel/civil-date";
 import { calculateHellenisticCoordinates } from "../hellenistic/calculator";
@@ -206,10 +207,9 @@ export function calculateUniversalCorrelation(
     birthstone: birthAttributes.stone,
     celtic: chronos.celtic,
     egyptian: chronos.egyptian,
-    iching: calculateIching(
-      input.fullName || "Seeker",
-      calendarDate.getTime(),
-    ),
+    // 시각이 있을 때만 세운다 — 예전에는 이름과 지금 시각으로 한 시간마다 바뀌는 괘를 뽑았다.
+    // saju 는 시각이 없어도 기본 순간으로 시주를 만들므로, 입력에 시각이 있을 때만 쓴다.
+    iching: birthOracle(input.civilDate, input.birthTime ? chronos.saju?.hour?.earthlyBranch ?? null : null),
     mayan: chronos.mayan!,
     symbols: getBirthSymbols(calendarDate.getMonth()),
   };
@@ -244,4 +244,21 @@ function getBirthSymbols(monthIndex: number): BirthSymbol {
   return (
     FATE_SYMBOLS_DATA.find((s) => s.month === month) || FATE_SYMBOLS_DATA[0]
   );
+}
+
+
+function birthOracle(civilDate: string, hourBranch: string | null) {
+  const h = birthHexagram(civilDate, hourBranch);
+  if (!h) return undefined;
+  const names = (n: number) => ({
+    ko: hexagramName(n, "ko"), en: hexagramName(n, "en"), ja: hexagramName(n, "ja"),
+    zh: hexagramName(n, "zh"), fr: hexagramName(n, "fr"), es: hexagramName(n, "es"),
+  });
+  return {
+    hexagramName: names(h.number),
+    hexagramNumber: h.number,
+    movingLine: h.moving,
+    changedName: names(h.changed),
+    changedNumber: h.changed,
+  };
 }

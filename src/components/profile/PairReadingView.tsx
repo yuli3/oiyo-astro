@@ -26,6 +26,7 @@ import { LENS_NAME } from "@/lib/symbolic-tradition/lens-names";
 import { PAIR_COPY } from "@/lib/symbolic-tradition/pair-copy";
 import { fill, PAIR_COPY_FULL, PAIR_NAME, type PairLang } from "@/lib/symbolic-tradition/pair-reading-copy";
 import { readPair, type Evidence, type PairReading } from "@/lib/symbolic-tradition/pair-reading";
+import { celticTreeName, hexagramHan, hexagramMeaningKo, hexagramName, mayanSealName, mayanToneName } from "@/lib/symbolic-tradition/symbol-names";
 
 import BinaryStar from "./BinaryStar";
 import SignatureCard from "./SignatureCard";
@@ -201,10 +202,24 @@ export default function PairReadingView({ locale }: { locale: string }) {
       tone = e.aspect === "trine" || e.aspect === "sextile" ? "bond" : e.aspect === "square" || e.aspect === "opposition" ? "friction" : null;
     } else if (e.kind === "mayan") {
       label = t.ev.mayan;
-      value = e.sameColor && e.sameTone
+      // 드림스펠 인장 이름으로 — 예전에는 색 계열과 음조 숫자만 보였다.
+      const kin = (seal: number, toneNo: number) => `${mayanSealName(seal, lang)} · ${mayanToneName(toneNo, lang)}`;
+      const rel = e.sameColor && e.sameTone
         ? fill(t.ev.mayanSame, { tone: String(e.aTone) })
         : fill(e.sameColor ? t.ev.mayanColor : t.ev.mayanOther, { a: String(e.aTone), b: String(e.bTone) });
+      value = <>{reading.a.label}: {kin(e.aSeal, e.aTone)}<br />{reading.b.label}: {kin(e.bSeal, e.bTone)}<br /><span className="text-muted-foreground">{rel}</span></>;
       if (e.sameColor && e.sameTone) tone = "bond";
+    } else if (e.kind === "celtic") {
+      label = t.ev.celtic;
+      value = <>{celticTreeName(e.a, lang)} · {celticTreeName(e.b, lang)} <span className="text-muted-foreground">— {t.ev.celticRelation[e.relation as keyof typeof t.ev.celticRelation] ?? e.relation}</span></>;
+      if (e.relation === "same-tree") tone = "bond";
+    } else if (e.kind === "hexagram") {
+      label = t.ev.hexagram;
+      const one = (h: typeof e.a) => h
+        ? <>{hexagramHan(h.number)} {hexagramName(h.number, lang)}{lang === "ko" ? ` · ${hexagramMeaningKo(h.number)}` : ""} <span className="text-muted-foreground">({t.ev.hexChanged} {hexagramHan(h.changed)} {hexagramName(h.changed, lang)})</span></>
+        : <span className="text-muted-foreground">{t.ev.hexNone}</span>;
+      value = <>{reading.a.label}: {one(e.a)}<br />{reading.b.label}: {one(e.b)}</>;
+      if (e.a && e.b && e.a.number === e.b.number) tone = "bond";
     }
     const dot = tone === "bond" ? "bg-emerald-600" : tone === "friction" ? "bg-orange-600" : tone === "mixed" ? "bg-amber-500" : "bg-border";
     return (

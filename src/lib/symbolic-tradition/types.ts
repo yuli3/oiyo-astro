@@ -1,4 +1,5 @@
 import type { AstroCoordinates } from "./astro-coordinates";
+import type { BirthHexagram } from "./iching";
 import type { EarthlyBranch, FiveElement, HeavenlyStem } from "@/lib/ontology/saju/types";
 
 export const SYMBOLIC_PROFILE_SCHEMA_VERSION = 1 as const;
@@ -120,6 +121,11 @@ export interface SymbolicComparisonProfile {
    * 빠진다. 무엇을 얼마나 싣는지는 astro-coordinates.ts 에 적었다.
    */
   astro?: AstroCoordinates;
+  /**
+   * 출생 괘(매화역수). 시각을 알 때만 세우고, 모르면 null. 별자리 좌표와 함께
+   * 2026-09-22 에 더했다 — 그 전 참가자에게는 이 자리가 없다(undefined).
+   */
+  hexagram?: BirthHexagram | null;
 }
 
 export interface SymbolicCompatibilityLens {

@@ -32,11 +32,18 @@ export interface BiorhythmData {
   physical: number;
 }
 
+/**
+ * 출생 괘(매화역수). 2026-09-22 전에는 이름 글자와 지금 시각으로 뽑은 데모
+ * 괘(64괘 중 3괘만 데이터)였다. 지금은 symbolic-tradition/iching 의 전통
+ * 기괘법을 쓰고, 시각을 모르면 세우지 않는다(mythos.iching 이 비어 있음).
+ */
 export interface IChingOracle {
   hexagramName: LocalizedText;
   hexagramNumber: number;
-  image: LocalizedText;
-  judgment: LocalizedText;
+  /** 동효 1~6 */
+  movingLine: number;
+  changedName: LocalizedText;
+  changedNumber: number;
 }
 
 // ============================================================================
@@ -97,7 +104,7 @@ export interface UniversalProfile {
     birthstone?: { meaning: LocalizedText; name: LocalizedText };
     celtic: CelticTreeSign;
     egyptian: EgyptianCoordinates; // Was EgyptianGuardian
-    iching: IChingOracle;
+    iching?: IChingOracle;
     mayan: MayanKin;
     symbols: BirthSymbol;
   };
