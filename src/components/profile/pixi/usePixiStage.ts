@@ -5,8 +5,9 @@
  *
  * - **지연 로드.** pixi.js 는 무겁다. 무대가 화면에 들어올 때 처음 import 한다.
  *   초기 페이로드에 넣지 않는다.
- * - **감축 선호.** 움직임을 줄여 달라면 한 장면만 그리고 멈춘다. 그림이 싣는
- *   정보(막힌 자리, 누가 부푸나)는 정지 장면에도 남도록 각 그림이 짠다.
+ * - **감축 선호.** 움직임을 줄여 달라면 시간을 정지 장면에 묶는다(알갱이·별이
+ *   움직이지 않는다). 그림이 싣는 정보(막힌 자리, 누가 부푸나)는 정지 장면에도
+ *   남도록 각 그림이 짠다. 누르면 바뀌는 그림을 위해 드물게 다시 그린다.
  * - **화면 밖이면 멈춘다.** 스크롤로 벗어난 무대는 프레임을 돌리지 않는다.
  *
  * draw 는 매 프레임 (무대, 초) 를 받는다. 장면은 draw 가 스스로 만들고 지운다.
@@ -65,6 +66,9 @@ export function usePixiStage(host: RefObject<HTMLDivElement | null>, scene: () =
         return;
       }
       app = instance;
+      // 분위기 그림이라 초당 30장이면 충분하다. 한 페이지에 무대가 다섯이라
+      // 60장으로 돌리면 휴대폰 배터리와 스크롤이 먼저 상한다.
+      instance.ticker.maxFPS = 30;
       instance.canvas.setAttribute("aria-hidden", "true");
       instance.canvas.style.display = "block";
       el.appendChild(instance.canvas);
@@ -72,19 +76,20 @@ export function usePixiStage(host: RefObject<HTMLDivElement | null>, scene: () =
       current.setup(instance, pixi);
       started = performance.now();
       if (reduce) {
-        instance.ticker.stop();
-        current.frame(STILL_AT, size());
-        instance.render();
+        // 시간을 정지 장면(STILL_AT)에 묶은 채 드물게만 다시 그린다. 멈춰 버리면
+        // 별자리 선 초점처럼 누르면 바뀌는 그림이 따라오지 못한다.
+        instance.ticker.maxFPS = 8;
+        instance.ticker.add(() => current?.frame(STILL_AT, size()));
       } else {
         instance.ticker.add(tick);
-        if (!visible) instance.ticker.stop();
       }
+      if (!visible) instance.ticker.stop();
     };
 
     const observer = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
       if (visible && !app && !disposed) void boot();
-      if (app && !reduce) {
+      if (app) {
         if (visible) app.ticker.start();
         else app.ticker.stop();
       }

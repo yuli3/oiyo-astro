@@ -81,17 +81,21 @@ export default function GatheringScene({
         const cx = width / 2;
         const cy = height / 2;
         const unit = Math.min(width, height);
-        const ringR = (i: number) => unit * (0.14 + i * (0.3 / Math.max(1, people.length)));
+        // 가로로 넓은 무대라 궤도를 가로 폭에 맞춰 편다. 좁은 쪽에 맞추면
+        // 열 명일 때 궤도 간격이 3%도 안 돼 이름이 겹쳤다.
+        const rx = (i: number) => width * (0.12 + (i / Math.max(1, people.length - 1 || 1)) * 0.3);
+        const ry = (i: number) => height * (0.14 + (i / Math.max(1, people.length - 1 || 1)) * 0.2);
         orbits.clear();
         ripples.clear();
         sun.position.set(cx, cy);
         sun.width = sun.height = unit * (0.2 + 0.015 * Math.sin(t * 1.6));
         for (const b of bodies) {
-          const r = ringR(b.ring);
-          orbits.circle(cx, cy, r).stroke({ width: 1, color: 0xffffff, alpha: 0.08 });
+          const ex = rx(b.ring);
+          const ey = ry(b.ring);
+          orbits.ellipse(cx, cy, ex, ey).stroke({ width: 1, color: 0xffffff, alpha: 0.08 });
           const angle = b.phase + t * b.speed;
-          const tx = cx + r * Math.cos(angle);
-          const ty = cy + r * Math.sin(angle) * 0.62; // 살짝 기울인 궤도
+          const tx = cx + ex * Math.cos(angle);
+          const ty = cy + ey * Math.sin(angle); // 기울인 궤도(타원)
           const since = t - b.joinAt;
           const k = Math.min(1, Math.max(0, since / FLY));
           const ease = 1 - (1 - k) ** 3;

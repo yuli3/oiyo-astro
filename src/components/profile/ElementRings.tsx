@@ -41,6 +41,7 @@ export default function ElementRings({
     const planets: Array<{ glow: Sprite; core: Sprite; label: Text; ring: number; phase: number; speed: number }> = [];
     const ringLabels: Array<{ text: Text; ring: number }> = [];
     const peak = Math.max(1, ...GROUP_ELEMENT_ORDER.map((e) => elements.counts[e]));
+    let drawnAt = 0; // 고리는 움직이지 않는다 — 무대 크기가 바뀔 때만 다시 그린다
     return {
       setup(app, pixi) {
         rings = new pixi.Graphics();
@@ -82,24 +83,27 @@ export default function ElementRings({
       frame(t, { width }) {
         const s = width;
         const c = s / 2;
-        rings.clear();
-        GROUP_ELEMENT_ORDER.forEach((element, index) => {
-          const r = ringRadius(index) * s;
-          const count = elements.counts[element];
-          if (count === 0) {
-            // 끊긴 고리 — 채울 사람이 없는 기운
-            const n = 28;
-            for (let i = 0; i < n; i += 2) {
-              const a0 = (i / n) * Math.PI * 2;
-              const a1 = ((i + 1) / n) * Math.PI * 2;
-              rings.moveTo(c + r * Math.cos(a0), c + r * Math.sin(a0)).arc(c, c, r, a0, a1);
+        if (drawnAt !== s) {
+          drawnAt = s;
+          rings.clear();
+          GROUP_ELEMENT_ORDER.forEach((element, index) => {
+            const r = ringRadius(index) * s;
+            const count = elements.counts[element];
+            if (count === 0) {
+              // 끊긴 고리 — 채울 사람이 없는 기운
+              const n = 28;
+              for (let i = 0; i < n; i += 2) {
+                const a0 = (i / n) * Math.PI * 2;
+                const a1 = ((i + 1) / n) * Math.PI * 2;
+                rings.moveTo(c + r * Math.cos(a0), c + r * Math.sin(a0)).arc(c, c, r, a0, a1);
+              }
+              rings.stroke({ width: 1, color: ELEMENT_GLOW[element], alpha: 0.45 });
+            } else {
+              const strong = Math.abs(elements.deviation[element]) >= 1.5;
+              rings.circle(c, c, r).stroke({ width: 1.5 + (count / peak) * 7, color: ELEMENT_HEX[element], alpha: strong ? 0.95 : 0.5 });
             }
-            rings.stroke({ width: 1, color: ELEMENT_GLOW[element], alpha: 0.45 });
-          } else {
-            const strong = Math.abs(elements.deviation[element]) >= 1.5;
-            rings.circle(c, c, r).stroke({ width: 1.5 + (count / peak) * 7, color: ELEMENT_HEX[element], alpha: strong ? 0.95 : 0.5 });
-          }
-        });
+          });
+        }
         for (const { text, ring } of ringLabels) text.position.set(c, c - ringRadius(ring) * s - 3);
         for (const p of planets) {
           const r = ringRadius(p.ring) * s;

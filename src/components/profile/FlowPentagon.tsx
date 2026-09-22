@@ -59,6 +59,8 @@ export default function FlowPentagon({
     let nodes: Graphics;
     const particles: Particle[] = [];
     let edges: FlowEdge[] = flow;
+    let lastT = 0;
+    let drawnAt = 0; // 고리 선은 무대 크기가 바뀔 때만 다시 그린다
     return {
       setup(app, pixi) {
         edges = flow;
@@ -84,14 +86,19 @@ export default function FlowPentagon({
       },
       frame(t, { width }) {
         const s = width;
-        const dt = 1 / 60;
-        lines.clear();
-        edges.forEach((edge, index) => {
-          const a = vertexOf(index);
-          const b = vertexOf((index + 1) % 5);
-          lines.moveTo(a.x * s, a.y * s).lineTo(b.x * s, b.y * s)
-            .stroke({ width: edge.mended ? 2 : 1, color: ELEMENT_GLOW[edge.from], alpha: edge.mended ? 0.55 : edge.blocked ? 0.12 : 0.22 });
-        });
+        // 실제 흐른 시간으로 움직인다(프레임 수를 30으로 묶어도 속도가 같다).
+        const dt = Math.min(0.1, Math.max(0, t - lastT));
+        lastT = t;
+        if (drawnAt !== s) {
+          drawnAt = s;
+          lines.clear();
+          edges.forEach((edge, index) => {
+            const a = vertexOf(index);
+            const b = vertexOf((index + 1) % 5);
+            lines.moveTo(a.x * s, a.y * s).lineTo(b.x * s, b.y * s)
+              .stroke({ width: edge.mended ? 2 : 1, color: ELEMENT_GLOW[edge.from], alpha: edge.mended ? 0.55 : edge.blocked ? 0.12 : 0.22 });
+          });
+        }
         for (const p of particles) {
           const edge = edges[p.edge];
           p.f += p.speed * dt;
@@ -138,9 +145,14 @@ export default function FlowPentagon({
     const len = Math.hypot(out.x, out.y);
     const nx = out.x / len;
     const ny = out.y / len;
+    // 한 꼭짓점에 여럿이면 바깥쪽으로 세 명씩 줄을 지어 앉힌다. 한 줄로 늘이면
+    // 열 명 모임에서 무대 밖으로 나갔다.
     return here.map((person, k) => {
-      const spread = (k - (here.length - 1) / 2) * 0.085;
-      return { person, x: v.x + nx * 0.105 - ny * spread, y: v.y + ny * 0.105 + nx * spread, element };
+      const row = Math.floor(k / 3);
+      const inRow = Math.min(3, here.length - row * 3);
+      const spread = ((k % 3) - (inRow - 1) / 2) * 0.12;
+      const out = 0.1 + row * 0.07;
+      return { person, x: v.x + nx * out - ny * spread, y: v.y + ny * out + nx * spread, element };
     });
   });
 

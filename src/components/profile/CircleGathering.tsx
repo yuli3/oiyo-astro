@@ -35,6 +35,7 @@ type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY = {
   ko: {
+    focusHint: "이름을 누르면 그 사람의 선만 남아요. 한 번 더 누르면 모두 보여요.",
     gathered: "{n}명이 모였어요",
     oneMore: "한 명만 더 오면 지도가 그려져요",
     sigHeading: "우리의 무늬",
@@ -69,6 +70,7 @@ const COPY = {
     locationError: "태어난 시각을 입력했다면 출생도시도 선택해 주세요.",
   },
   en: {
+    focusHint: "Tap a name to keep only that person’s lines. Tap again to see everyone.",
     gathered: "{n} of you are here",
     oneMore: "One more person and the map appears",
     sigHeading: "Our pattern",
@@ -103,6 +105,7 @@ const COPY = {
     locationError: "If you enter a birth time, choose the birth city too.",
   },
   ja: {
+    focusHint: "名前を押すとその人の線だけが残ります。もう一度押すと全員に戻ります。",
     gathered: "{n}人が集まりました",
     oneMore: "あと一人来ると地図が描かれます",
     sigHeading: "わたしたちの模様",
@@ -137,6 +140,7 @@ const COPY = {
     locationError: "出生時刻を入力した場合は、出生都市も選んでください。",
   },
   zh: {
+    focusHint: "点一下名字，只留下这个人的连线。再点一下显示全部。",
     gathered: "{n}人已到齐",
     oneMore: "再来一个人就能画出地图",
     sigHeading: "我们的纹样",
@@ -171,6 +175,7 @@ const COPY = {
     locationError: "如果填写了出生时间，也请选择出生城市。",
   },
   fr: {
+    focusHint: "Touchez un nom pour ne garder que ses lignes. Touchez à nouveau pour tout voir.",
     gathered: "Vous êtes {n}",
     oneMore: "Encore une personne et la carte apparaît",
     sigHeading: "Notre motif",
@@ -205,6 +210,7 @@ const COPY = {
     locationError: "Si vous indiquez l’heure de naissance, choisissez aussi la ville de naissance.",
   },
   es: {
+    focusHint: "Toca un nombre para dejar solo sus líneas. Tócalo otra vez para ver a todos.",
     gathered: "Sois {n}",
     oneMore: "Una persona más y aparece el mapa",
     sigHeading: "Nuestro patrón",
@@ -541,6 +547,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
           directions={lens === "day-master" ? dayMasterLinks(people) : null}
           picked={picked}
           ariaLabel={copy.constellationAria}
+          focusHint={copy.focusHint}
         />
         <p className="mt-2 text-center text-xs leading-relaxed text-muted-foreground">
           {copy.lineLegend}{lens === "day-master" ? ` ${copy.dmLegend}` : ""}
