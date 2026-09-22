@@ -19,22 +19,6 @@
   "5": {
    "q": "Puis-je enregistrer ou partager mes résultats ?",
    "a": "Oui. Vous pouvez enregistrer votre résultat en image ou le partager par lien, et regrouper plusieurs résultats dans la vue Ontologie."
-  },
-  "q1": {
-   "question": "OIYO est-il gratuit ?",
-   "answer": "oui, OIYO propose un test de personnalité gratuit et des fonctionnalités de base. Si vous souhaitez des informations plus approfondies, vous pouvez utiliser des fonctionnalités premium."
-  },
-  "q2": {
-   "question": "Quels modes de paiement puis-je utiliser ?",
-   "answer": "Nous prenons en charge toutes les principales cartes de crédit, PayPal et diverses méthodes de paiement locales en fonction de votre région."
-  },
-  "q3": {
-   "question": "Puis-je annuler mon abonnement à tout moment ?",
-   "answer": "Bien sûr! Vous pouvez annuler votre abonnement à tout moment dans les paramètres de votre compte. Il est traité immédiatement, sans autre question."
-  },
-  "q4": {
-   "question": "Un remboursement est-il possible ?",
-   "answer": "Oui, nous offrons une garantie de remboursement de 30 jours si vous n'êtes pas satisfait des fonctionnalités premium."
   }
  },
  "title": "Questions fréquentes",

@@ -21,10 +21,12 @@ async function loadMessages(locale: Locale): Promise<Messages> {
     'about', 'common', 'contact', 'error', 'faq',
     'header', 'hero', 'landing', 'legal', 'marketing',
     'nav', 'navigation', 'ontology', 'page', 'seo',
-    'support', 'features',
+    'support',
     // Ontology engine namespaces
-    'akashic', 'catalog', 'chosun', 'commerce', 'dashboard',
-    'egyptian', 'onomancy', 'saju', 'ui', 'universal',
+    // 2026-09-22: commerce·egyptian·features 를 뺐다 — 쓰는 화면이 없고, 가격·Pro 플랜
+    // 안내(결제 없음), 13신이 모두 라(Ra)인 복사 오염, 영어 그대로인 문구였다.
+    'akashic', 'catalog', 'chosun', 'dashboard',
+    'onomancy', 'saju', 'ui', 'universal',
   ];
 
   const merged: Messages = {};
