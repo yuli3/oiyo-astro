@@ -66,7 +66,8 @@ export type Evidence =
   | { kind: "sun"; a: number; b: number; separation: number; aspect: SunAspectKind | null }
   | { kind: "mayan"; sameColor: boolean; sameTone: boolean; aTone: number; bTone: number; aColor: string; bColor: string; aSeal: number; bSeal: number }
   | { kind: "celtic"; a: string; b: string; relation: string }
-  | { kind: "hexagram"; a: BirthHexagram | null; b: BirthHexagram | null };
+  | { kind: "hexagram"; a: BirthHexagram | null; b: BirthHexagram | null }
+  | { kind: "egyptian"; a: string; b: string };
 
 function separation(a: number, b: number): number {
   const d = Math.abs(a - b) % 360;
@@ -114,6 +115,8 @@ export function pairEvidence(a: Person, b: Person): Evidence[] {
   const ha = a.profile.hexagram ?? null;
   const hb = b.profile.hexagram ?? null;
   if (ha || hb) out.push({ kind: "hexagram", a: ha, b: hb });
+  // 이집트 12신 — 현대 달력이라 화면에 그렇게 밝힌다. 옛 참가자에게는 없다.
+  if (a.profile.egyptian && b.profile.egyptian) out.push({ kind: "egyptian", a: a.profile.egyptian, b: b.profile.egyptian });
   return out;
 }
 

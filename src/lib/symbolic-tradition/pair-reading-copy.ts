@@ -145,6 +145,8 @@ export interface PairCopy {
     hexagram: string;
     hexChanged: string;
     hexNone: string;
+    egyptian: string;
+    egyptianSame: string;
   };
   calendarTitle: string;
   calendarLead: string;
@@ -244,6 +246,8 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexagram: "출생 괘",
       hexChanged: "변괘",
       hexNone: "시각이 없어 세우지 않음",
+      egyptian: "이집트 12신 (현대 달력)",
+      egyptianSame: "같은 신",
     },
     calendarTitle: "둘의 달력",
     calendarLead: "오늘부터 4주. 칸 색은 그날 누가 기운을 받는지예요.",
@@ -341,6 +345,8 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexagram: "Birth hexagram",
       hexChanged: "changing to",
       hexNone: "not cast (no birth time)",
+      egyptian: "Egyptian 12 deities (modern calendar)",
+      egyptianSame: "the same deity",
     },
     calendarTitle: "Your calendar together",
     calendarLead: "The next four weeks. Colour shows who receives energy that day.",
@@ -438,6 +444,8 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexagram: "生まれの卦",
       hexChanged: "之卦",
       hexNone: "時刻がないため立てない",
+      egyptian: "エジプト12神（現代の暦）",
+      egyptianSame: "同じ神",
     },
     calendarTitle: "ふたりの暦",
     calendarLead: "今日から4週間。色はその日に誰が気を受けるかです。",
@@ -535,6 +543,8 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexagram: "出生卦",
       hexChanged: "变卦",
       hexNone: "没有时间，不起卦",
+      egyptian: "埃及十二神（现代历）",
+      egyptianSame: "同一位神",
     },
     calendarTitle: "两个人的日历",
     calendarLead: "从今天起四周。颜色表示当天谁得到助力。",
@@ -632,6 +642,8 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexagram: "Hexagramme de naissance",
       hexChanged: "devient",
       hexNone: "non tiré (pas d’heure de naissance)",
+      egyptian: "12 divinités égyptiennes (calendrier moderne)",
+      egyptianSame: "la même divinité",
     },
     calendarTitle: "Votre calendrier à deux",
     calendarLead: "Les quatre prochaines semaines. La couleur montre qui reçoit l’énergie ce jour-là.",
@@ -729,6 +741,8 @@ export const PAIR_COPY_FULL: Record<PairLang, PairCopy> = {
       hexagram: "Hexagrama natal",
       hexChanged: "se transforma en",
       hexNone: "no se traza (sin hora de nacimiento)",
+      egyptian: "12 deidades egipcias (calendario moderno)",
+      egyptianSame: "la misma deidad",
     },
     calendarTitle: "Vuestro calendario",
     calendarLead: "Las próximas cuatro semanas. El color muestra quién recibe energía ese día.",

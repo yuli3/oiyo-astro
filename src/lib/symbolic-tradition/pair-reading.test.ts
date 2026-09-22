@@ -123,3 +123,16 @@ describe("출생 괘 (매화역수)", () => {
   });
 });
 
+describe("이집트 12신 줄", () => {
+  it("두 사람 모두 날짜만으로 신이 정해져 근거 줄에 들어간다", () => {
+    const ev = pairEvidence(A, B).find((e) => e.kind === "egyptian");
+    // 2007-03-24 → 이시스(3/11–31), 2002-09-01 → 나일(9/1–7)
+    expect(ev).toEqual({ kind: "egyptian", a: "isis", b: "nile" });
+  });
+
+  it("옛 참가자(이집트 좌표 없음)와는 줄을 만들지 않는다", () => {
+    const old: Person = { id: "o", label: "O", profile: comparisonFromCivil({ date: "1990-05-17" }) };
+    expect(pairEvidence(old, B).some((e) => e.kind === "egyptian")).toBe(false);
+  });
+});
+

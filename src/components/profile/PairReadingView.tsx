@@ -26,7 +26,7 @@ import { LENS_NAME } from "@/lib/symbolic-tradition/lens-names";
 import { PAIR_COPY } from "@/lib/symbolic-tradition/pair-copy";
 import { fill, PAIR_COPY_FULL, PAIR_NAME, type PairLang } from "@/lib/symbolic-tradition/pair-reading-copy";
 import { readPair, type Evidence, type PairReading } from "@/lib/symbolic-tradition/pair-reading";
-import { celticTreeName, hexagramHan, hexagramMeaningKo, hexagramName, mayanSealName, mayanToneName } from "@/lib/symbolic-tradition/symbol-names";
+import { celticTreeName, egyptianDeityName, hexagramHan, hexagramMeaningKo, hexagramName, mayanSealName, mayanToneName } from "@/lib/symbolic-tradition/symbol-names";
 
 import BinaryStar from "./BinaryStar";
 import SignatureCard from "./SignatureCard";
@@ -222,6 +222,12 @@ export default function PairReadingView({ locale }: { locale: string }) {
         : <span className="text-muted-foreground">{t.ev.hexNone}</span>;
       value = <>{reading.a.label}: {one(e.a)}<br />{reading.b.label}: {one(e.b)}</>;
       if (e.a && e.b && e.a.number === e.b.number) tone = "bond";
+    } else if (e.kind === "egyptian") {
+      label = t.ev.egyptian;
+      value = e.a === e.b
+        ? <>{egyptianDeityName(e.a, lang)} <span className="text-muted-foreground">— {t.ev.egyptianSame}</span></>
+        : <>{reading.a.label}: {egyptianDeityName(e.a, lang)} · {reading.b.label}: {egyptianDeityName(e.b, lang)}</>;
+      if (e.a === e.b) tone = "bond";
     }
     const dot = tone === "bond" ? "bg-emerald-600" : tone === "friction" ? "bg-orange-600" : tone === "mixed" ? "bg-amber-500" : "bg-border";
     return (

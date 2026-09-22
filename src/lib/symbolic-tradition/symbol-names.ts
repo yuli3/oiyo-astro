@@ -148,3 +148,24 @@ const TREES: Record<string, Record<SymbolLang, string>> = {
 export function celticTreeName(id: string, lang: SymbolLang): string {
   return TREES[id]?.[lang] ?? id;
 }
+
+// ─── 이집트 12신(현대 달력) ─────────────────────────────────────────────────
+
+const DEITIES: Record<string, Record<SymbolLang, string>> = {
+  nile: { ko: "나일", en: "The Nile", ja: "ナイル", zh: "尼罗河", fr: "Le Nil", es: "El Nilo" },
+  "amun-ra": { ko: "아문라", en: "Amun-Ra", ja: "アメン・ラー", zh: "阿蒙-拉", fr: "Amon-Rê", es: "Amón-Ra" },
+  mut: { ko: "무트", en: "Mut", ja: "ムト", zh: "穆特", fr: "Mout", es: "Mut" },
+  geb: { ko: "게브", en: "Geb", ja: "ゲブ", zh: "盖布", fr: "Geb", es: "Geb" },
+  osiris: { ko: "오시리스", en: "Osiris", ja: "オシリス", zh: "奥西里斯", fr: "Osiris", es: "Osiris" },
+  isis: { ko: "이시스", en: "Isis", ja: "イシス", zh: "伊西斯", fr: "Isis", es: "Isis" },
+  thoth: { ko: "토트", en: "Thoth", ja: "トート", zh: "托特", fr: "Thot", es: "Tot" },
+  horus: { ko: "호루스", en: "Horus", ja: "ホルス", zh: "荷鲁斯", fr: "Horus", es: "Horus" },
+  anubis: { ko: "아누비스", en: "Anubis", ja: "アヌビス", zh: "阿努比斯", fr: "Anubis", es: "Anubis" },
+  seth: { ko: "세트", en: "Seth", ja: "セト", zh: "赛特", fr: "Seth", es: "Set" },
+  bastet: { ko: "바스테트", en: "Bastet", ja: "バステト", zh: "巴斯特", fr: "Bastet", es: "Bastet" },
+  sekhmet: { ko: "세크메트", en: "Sekhmet", ja: "セクメト", zh: "塞赫麦特", fr: "Sekhmet", es: "Sejmet" },
+};
+
+export function egyptianDeityName(id: string, lang: SymbolLang): string {
+  return DEITIES[id]?.[lang] ?? id;
+}

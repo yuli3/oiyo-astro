@@ -1,4 +1,5 @@
 import type { AstroCoordinates } from "./astro-coordinates";
+import type { EgyptianDeityId } from "./egyptian";
 import type { BirthHexagram } from "./iching";
 import type { EarthlyBranch, FiveElement, HeavenlyStem } from "@/lib/ontology/saju/types";
 
@@ -126,6 +127,8 @@ export interface SymbolicComparisonProfile {
    * 2026-09-22 에 더했다 — 그 전 참가자에게는 이 자리가 없다(undefined).
    */
   hexagram?: BirthHexagram | null;
+  /** 이집트 12신(현대 달력). 날짜만으로 정해진다. 2026-09-22 에 더했다. */
+  egyptian?: EgyptianDeityId;
 }
 
 export interface SymbolicCompatibilityLens {
