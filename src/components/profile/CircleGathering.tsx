@@ -20,6 +20,8 @@ import { readEncryptedShortShare } from "@/lib/symbolic-tradition/short-share";
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from "@/lib/encrypted-result-permalink";
 import { FRIEND_BIRTH_SHARE_TOOL_ID, parseFriendBirthShare, type FriendBirthShare } from "@/lib/symbolic-tradition/friend-birth-share";
 import ConstellationLines from "@/components/profile/ConstellationLines";
+import { LENS_NAME as LENS } from "@/lib/symbolic-tradition/lens-names";
+import { fill, PAIR_COPY_FULL } from "@/lib/symbolic-tradition/pair-reading-copy";
 import { dayMasterLinks, dayMasterOf, signatureOrbit } from "@/lib/symbolic-tradition/group-flow";
 import { groupEpithet } from "@/lib/symbolic-tradition/group-epithet";
 import GatheringScene from "@/components/profile/GatheringScene";
@@ -257,14 +259,6 @@ const FRIEND_SHARE_UI: Record<Lang, { accept: string; copied: string; failed: st
   es: { share: "Copiar enlace cifrado del amigo", copied: "Enlace del amigo copiado", failed: "No se pudo crear el enlace cifrado", inviteTitle: "Un amigo compartió datos de nacimiento", inviteBody: "El apodo, la fecha, la hora y la ciudad de nacimiento llegaron cifrados. Al aceptar se añaden al círculo de este navegador.", accept: "Revisar y añadir al círculo" },
 };
 
-const LENS: Record<Lang, Record<CompatibilityLensId, string>> = {
-  ko: { "five-elements": "오행", "yin-yang": "음양", "chinese-zodiac": "띠", "sun-sign": "태양궁", "element-complement": "채움", "day-master": "일간", "branch-harmony": "지지 합·충", "mayan-kin": "마야", "celtic-tree": "켈트" },
-  en: { "five-elements": "Five elements", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiac", "sun-sign": "Sun sign", "element-complement": "Filling in", "day-master": "Day master", "branch-harmony": "Branch harmony", "mayan-kin": "Mayan", "celtic-tree": "Celtic" },
-  ja: { "five-elements": "五行", "yin-yang": "陰陽", "chinese-zodiac": "干支", "sun-sign": "太陽星座", "element-complement": "補い", "day-master": "日干", "branch-harmony": "地支の合冲", "mayan-kin": "マヤ", "celtic-tree": "ケルト" },
-  zh: { "five-elements": "五行", "yin-yang": "阴阳", "chinese-zodiac": "生肖", "sun-sign": "太阳星座", "element-complement": "互补", "day-master": "日干", "branch-harmony": "地支合冲", "mayan-kin": "玛雅", "celtic-tree": "凯尔特" },
-  fr: { "five-elements": "Cinq éléments", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiaque", "sun-sign": "Signe", "element-complement": "Complément", "day-master": "Maître du jour", "branch-harmony": "Branches", "mayan-kin": "Maya", "celtic-tree": "Celte" },
-  es: { "five-elements": "Cinco elementos", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiaco", "sun-sign": "Signo", "element-complement": "Complemento", "day-master": "Tronco del día", "branch-harmony": "Ramas", "mayan-kin": "Maya", "celtic-tree": "Celta" },
-};
 
 
 function person(label: string, profile: SymbolicComparisonProfile): SymbolicGroupParticipant {
@@ -512,6 +506,19 @@ export default function CircleGathering({ locale }: { locale: string }) {
     </div>}
 
     {synthesis && <CircleSynthesis locale={locale} synthesis={synthesis} members={people} />}
+    {/* 두 명뿐이면 두 사람 보기가 이 원의 본론이다 — 바로 들어갈 수 있게 */}
+    {people.length === 2 && (
+      <a
+        href={`/${locale}/circle/pair/?a=${encodeURIComponent(people[0].id)}&b=${encodeURIComponent(people[1].id)}`}
+        className="mt-6 flex items-center justify-between gap-3 rounded-[2rem] bg-[#141c16] px-5 py-5 text-white transition-transform hover:-translate-y-0.5"
+      >
+        <span>
+          <span className="block text-[11px] font-bold uppercase tracking-wide text-white/60">{PAIR_COPY_FULL[lang].pageTitle}</span>
+          <span className="mt-1 block text-lg font-black">{fill(PAIR_COPY_FULL[lang].ctaPair, { a: people[0].label, b: people[1].label })}</span>
+        </span>
+        <span aria-hidden="true" className="text-2xl">→</span>
+      </a>
+    )}
     {synthesis && <CircleToday locale={locale} members={people} synthesis={synthesis} />}
 
     {snapshot && <section className="mt-8 rounded-[2rem] border border-border bg-[var(--surface-subtle)] p-4 sm:p-7">
@@ -559,6 +566,13 @@ export default function CircleGathering({ locale }: { locale: string }) {
         <p className="mt-2 text-sm"><span className="font-black">{copy.help}.</span> {pairCopy.help}</p>
         <p className="mt-1 text-sm"><span className="font-black">{copy.care}.</span> {pairCopy.care}</p>
         <p className="mt-1 text-sm"><span className="font-black">{copy.ask}.</span> {pairCopy.ask}</p>
+        {/* 두 사람 보기로 — 이름·장면·달력·아홉 관점을 한 장에서 */}
+        <a
+          href={`/${locale}/circle/pair/?a=${encodeURIComponent(pickedEdge.from)}&b=${encodeURIComponent(pickedEdge.to)}`}
+          className="mt-3 flex min-h-11 items-center justify-center rounded-2xl border border-primary text-sm font-black text-primary"
+        >
+          {fill(PAIR_COPY_FULL[lang].ctaPair, { a: people.find((item) => item.id === pickedEdge.from)?.label ?? "", b: people.find((item) => item.id === pickedEdge.to)?.label ?? "" })} →
+        </a>
       </article>}
       <button type="button" onClick={() => void share()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Share2 className="h-4 w-4" />{copy.share}</button>
       {copied && <p className="mt-2 text-center text-xs font-black text-primary">{copy.copied}</p>}

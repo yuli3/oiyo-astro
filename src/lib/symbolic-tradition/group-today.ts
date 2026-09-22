@@ -148,7 +148,7 @@ const RELATION_RARITY: Record<string, Record<string, number>> = {
   "chinese-zodiac": { distinct: 0.6635, "same-trine": 0.183, opposite: 0.0884, same: 0.065 },
   "sun-sign": { distinct: 0.5352, "same-modality": 0.2233, "same-element": 0.1671, "same-sign": 0.0744 },
   "element-complement": { "one-way-complement": 0.3873, "mutual-complement": 0.2673, "deep-mutual": 0.2661, "shared-gap": 0.0603, "no-gap": 0.0189 },
-  "day-master": { controlling: 0.4057, generating: 0.3893, same: 0.205 },
+  "day-master": { generating: 0.3893, controlling: 0.297, same: 0.205, combining: 0.1087 },
   "branch-harmony": { mixed: 0.4189, "harmony-leaning": 0.2906, "harmony-rich": 0.1356, "clash-leaning": 0.1288, "clash-rich": 0.0261 },
   "mayan-kin": { "opposite-color": 0.2604, "near-color-near-tone": 0.2482, "near-color-far-tone": 0.202, "same-color-near-tone": 0.1545, "same-color-far-tone": 0.1348 },
   "celtic-tree": { distinct: 0.4622, "facing-season": 0.2682, "same-season": 0.2044, "same-tree": 0.0652 },

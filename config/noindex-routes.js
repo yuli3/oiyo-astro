@@ -13,6 +13,7 @@ const NOINDEX_PATTERNS = [
   /^\/[a-z]{2}\/contact\/?$/,
   /^\/[a-z]{2}\/labs\//,
   /^\/[a-z]{2}\/profile\/relationship-comparison\/?$/,
+  /^\/[a-z]{2}\/circle\/pair\/?$/,        // 두 사람 보기 — 이 브라우저의 원을 읽는 개인 화면
 ];
 
 export function isNoindexRoute(pathname) {

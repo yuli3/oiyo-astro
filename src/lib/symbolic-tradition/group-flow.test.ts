@@ -33,6 +33,16 @@ describe("상생 흐름 (A3)", () => {
 });
 
 describe("별자리 선 (A2)", () => {
+  it("丁壬은 오행으로는 극이지만 천간합이라 합으로 읽는다", () => {
+    // 관계 해석 PRD 의 테스트 쌍: 丁巳일(2007-03-24) · 壬申일(2002-09-01)
+    const people = [member("2007-03-24", "a"), member("2002-09-01", "b")];
+    expect(people[0].profile.saju.day.heavenlyStem).toBe("JEONG");
+    expect(people[1].profile.saju.day.heavenlyStem).toBe("IM");
+    expect(dayMasterLinks(people)[0]).toMatchObject({ kind: "combining", from: null });
+    const lens = compareSymbolicProfiles(people[0].profile, people[1].profile).lenses.find((l) => l.id === "day-master")!;
+    expect(lens.relation).toBe("combining");
+  });
+
   it("관계 이름이 일간 렌즈와 같다", () => {
     const people = ["1990-05-17", "1988-11-02", "1995-02-14", "2001-07-30", "1979-09-09", "1993-03-03"].map((d, i) => member(d, `p${i}`));
     for (const link of dayMasterLinks(people)) {
@@ -40,7 +50,7 @@ describe("별자리 선 (A2)", () => {
       const b = people.find((p) => p.id === link.b)!;
       const lens = compareSymbolicProfiles(a.profile, b.profile).lenses.find((l) => l.id === "day-master")!;
       expect(lens.relation).toBe(link.kind);
-      expect(link.kind === "same" ? link.from === null : [link.a, link.b].includes(link.from!)).toBe(true);
+      expect(link.kind === "same" || link.kind === "combining" ? link.from === null : [link.a, link.b].includes(link.from!)).toBe(true);
     }
   });
 });

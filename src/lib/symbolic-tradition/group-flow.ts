@@ -2,7 +2,7 @@ import { EarthlyBranch, type FiveElement } from "@/lib/ontology/saju/types";
 import { STEMS } from "@/manifest/data/saju/stems";
 
 import { GROUP_ELEMENT_ORDER, type GroupMember } from "./group-synthesis";
-import { CONTROL, GENERATION } from "./index";
+import { CONTROL, GENERATION, isStemCombination } from "./index";
 import type { SymbolicComparisonProfile } from "./types";
 
 /**
@@ -56,13 +56,14 @@ export function generationFlow(
  * A2 별자리 선. 두 사람의 일간 관계와 **방향**. 생은 주는 쪽→받는 쪽,
  * 극은 누르는 쪽→눌리는 쪽. 같은 기운은 방향이 없다.
  *
- * 관계 이름은 일간 렌즈(compareSymbolicProfiles 의 day-master)와 같다.
+ * 관계 이름은 일간 렌즈(compareSymbolicProfiles 의 day-master)와 같다. 천간합이
+ * 먼저다 — 오행으로는 극이어도 합이면 합이라 부른다.
  */
 export interface DayMasterLink {
   a: string;
   b: string;
-  kind: "same" | "generating" | "controlling";
-  /** 생·극의 출발점. same 이면 null */
+  kind: "combining" | "same" | "generating" | "controlling";
+  /** 생·극의 출발점. 합·같음은 방향이 없어 null */
   from: string | null;
 }
 
@@ -73,7 +74,8 @@ export function dayMasterLinks(members: GroupMember[]): DayMasterLink[] {
       const [x, y] = [members[i], members[j]];
       const ex = dayMasterOf(x.profile);
       const ey = dayMasterOf(y.profile);
-      if (ex === ey) links.push({ a: x.id, b: y.id, kind: "same", from: null });
+      if (isStemCombination(x.profile.saju.day.heavenlyStem, y.profile.saju.day.heavenlyStem)) links.push({ a: x.id, b: y.id, kind: "combining", from: null });
+      else if (ex === ey) links.push({ a: x.id, b: y.id, kind: "same", from: null });
       else if (GENERATES[ex] === ey) links.push({ a: x.id, b: y.id, kind: "generating", from: x.id });
       else if (GENERATES[ey] === ex) links.push({ a: x.id, b: y.id, kind: "generating", from: y.id });
       else if (CONTROLS[ex] === ey) links.push({ a: x.id, b: y.id, kind: "controlling", from: x.id });

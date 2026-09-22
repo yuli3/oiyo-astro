@@ -238,7 +238,7 @@ const HARMONY_INDEX: Record<CompatibilityLensId, Record<string, number>> = {
   "chinese-zodiac": { "same-trine": 90, same: 70, distinct: 55, opposite: 35 },
   "sun-sign": { "same-element": 85, "same-sign": 75, "same-modality": 55, distinct: 50 },
   "element-complement": { "deep-mutual": 88, "mutual-complement": 78, "one-way-complement": 62, "no-gap": 58, "shared-gap": 45 },
-  "day-master": { same: 70, generating: 85, controlling: 42 },
+  "day-master": { combining: 90, same: 70, generating: 85, controlling: 42 },
   "branch-harmony": { "harmony-rich": 88, "harmony-leaning": 74, mixed: 60, "clash-leaning": 46, "clash-rich": 32 },
   "mayan-kin": { "same-color-near-tone": 86, "same-color-far-tone": 72, "near-color-near-tone": 66, "near-color-far-tone": 58, "opposite-color": 48 },
   "celtic-tree": { "same-tree": 80, "same-season": 70, "facing-season": 56, distinct: 52 },
@@ -308,8 +308,25 @@ function celticRelation(a: string, b: string): string {
  * 칸으로 뒀는데, 렌즈는 대칭이어야 한다는 기존 계약(원의 간선에는 방향이
  * 없다)에 걸렸다. 누가 누구를 받치는지는 간선이 아니라 사람 쪽에 붙일
  * 정보라, 렌즈에서는 뺀다.
+ *
+ * **천간합(天干合)을 먼저 본다 (2026-09-22).** 甲己·乙庚·丙辛·丁壬·戊癸 다섯
+ * 짝은 오행으로는 모두 극(剋)이지만, 음양이 반대인 두 글자가 서로를 찾아
+ * 묶인다고 본다. 이걸 빼고 오행만 보면 丁壬 같은 대표적인 합이 "맞서는
+ * 사이"로 나온다 — 관계 해석 PRD 의 테스트 쌍이 정확히 그렇게 틀렸다. 그래서
+ * 극 칸을 합(무작위 쌍의 약 10%)과 극(약 30%)으로 나눈다.
  */
-function dayMasterRelation(a: FiveElement, b: FiveElement): string {
+const STEM_COMBINATIONS: ReadonlyArray<readonly [string, string]> = [
+  ["GAP", "GI"], ["EUL", "GYEONG"], ["BYEONG", "SIN"], ["JEONG", "IM"], ["MU", "GYE"],
+];
+
+export function isStemCombination(a: string, b: string): boolean {
+  return STEM_COMBINATIONS.some(([x, y]) => (a === x && b === y) || (a === y && b === x));
+}
+
+function dayMasterRelation(stemA: string, stemB: string): string {
+  const a = STEMS[stemA as keyof typeof STEMS].element as FiveElement;
+  const b = STEMS[stemB as keyof typeof STEMS].element as FiveElement;
+  if (isStemCombination(stemA, stemB)) return "combining";
   if (a === b) return "same";
   if (GENERATION[a] === b || GENERATION[b] === a) return "generating";
   return "controlling";
@@ -472,10 +489,7 @@ export function compareSymbolicProfiles(
       lens("chinese-zodiac", zodiacRelation(a.chineseZodiac.branch, b.chineseZodiac.branch)),
       lens("sun-sign", sunRelation),
       lens("element-complement", elementComplementRelation(a.fiveElements.counts, b.fiveElements.counts)),
-      lens("day-master", dayMasterRelation(
-        STEMS[a.saju.day.heavenlyStem].element as FiveElement,
-        STEMS[b.saju.day.heavenlyStem].element as FiveElement,
-      )),
+      lens("day-master", dayMasterRelation(a.saju.day.heavenlyStem, b.saju.day.heavenlyStem)),
       lens("branch-harmony", branchHarmonyRelation(a.saju, b.saju)),
       lens("mayan-kin", mayanRelation(a.mayanKin, b.mayanKin)),
       lens("celtic-tree", celticRelation(a.celticTree.id, b.celticTree.id)),

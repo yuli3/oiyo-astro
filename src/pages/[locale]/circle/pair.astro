@@ -1,0 +1,33 @@
+---
+/**
+ * 두 사람 보기 — 우리의 지도에서 고른 두 사람을 깊이 읽는 장.
+ *
+ * 이 브라우저의 원(localStorage)을 읽는 개인 화면이라 색인하지 않는다
+ * (config/noindex-routes.js 에도 같은 경로가 있다). 주소에는 원 안의 번호만
+ * 있고 생년월일·좌표는 싣지 않는다.
+ */
+import Layout from '../../../layouts/Layout.astro';
+import PairReadingView from '../../../components/profile/PairReadingView';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '두 사람 보기 — 우리의 지도', description: '우리의 지도에서 고른 두 사람을 이름·세 장면·둘의 달력·아홉 관점·근거로 깊이 읽어요.' },
+  en: { title: 'The two of you — Our map', description: 'Read two people from Our map in depth: a name, three scenes, a shared calendar, nine lenses and the evidence.' },
+  ja: { title: 'ふたりを見る — 私たちの地図', description: '私たちの地図で選んだふたりを、名前・三つの場面・ふたりの暦・九つの視点・根拠で深く読みます。' },
+  zh: { title: '两个人 — 我们的地图', description: '深入解读从我们的地图中选出的两个人：名字、三个场景、共同日历、九种视角与依据。' },
+  fr: { title: 'Vous deux — Notre carte', description: 'Lisez en profondeur deux personnes de Notre carte : un nom, trois scènes, un calendrier commun, neuf perspectives et les preuves.' },
+  es: { title: 'Vosotros dos — Nuestro mapa', description: 'Lee a fondo a dos personas de Nuestro mapa: un nombre, tres escenas, un calendario compartido, nueve perspectivas y las pruebas.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale} noindex>
+  <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
+    <PairReadingView client:load locale={locale} />
+  </div>
+</Layout>
