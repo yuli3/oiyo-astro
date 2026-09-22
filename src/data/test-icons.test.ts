@@ -37,6 +37,8 @@ describe('testIconSrc', () => {
   it('leaves unmapped tests on their existing emoji fallback', () => {
     expect(testIconSrc('/ko/animal-personality-test/')).toBe('/images/test-icons/animal-personality.webp');
     expect(testIconSrc('/ko/boundary-style-test/')).toBe('/images/test-icons/boundary-style.webp');
-    expect(testIconSrc('/ko/stress-type-test/')).toBeUndefined();
+    expect(testIconSrc('/ko/stress-type-test/')).toBe('/images/test-icons/stress-type.webp');
+    expect(testIconSrc('/en/resilience-boost-test')).toBe('/images/test-icons/resilience-boost.webp');
+    expect(testIconSrc('/ko/not-a-real-test/')).toBeUndefined();
   });
 });
