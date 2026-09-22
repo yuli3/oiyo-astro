@@ -19,134 +19,696 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Nuestro mapa — qué grupo formáis juntos', description: 'Nueve perspectivas solo con las fechas de nacimiento: cinco elementos, yin-yang, zodiaco, signo solar, tronco del día, ramas, maya y celta. Lo que sobra, lo que falta, quién lo cubre y cómo cae hoy.' },
 };
 const m = meta[locale] ?? meta.en;
-const guide = {
-  ko: {
-    heading: '우리의 지도는 이렇게 읽어요',
-    intro: '여러 사람의 생년월일을 같은 기준으로 바꾼 뒤, 오행·음양·띠·태양궁을 관점별로 비교해요. 관계의 점수나 미래를 판정하지 않아요.',
-    steps: ['각 사람의 별칭과 생년월일을 입력해요.', '태어난 시각을 안다면 출생도시도 함께 선택해요.', '중심 인물과 관점을 바꾸며 관계의 공통점과 차이를 살펴봐요.'],
-    note: '태어난 시각을 모르면 비워 두세요. 이때는 시주를 만들지 않고 확인 가능한 여섯 좌표만 사용해요. 입력한 정보와 원은 이 브라우저에 저장되며, 친구 링크는 암호화해서 만들어요.',
-    faq: [
-      ['왜 시각을 입력하면 도시도 필요한가요?', '출생도시는 그 날짜의 현지 시각과 UTC 오프셋을 확인하는 데 필요해요. 도시 없이 한국 시간으로 추정하지 않아요.'],
-      ['궁합 총점이 있나요?', '없어요. 오행·음양·띠·태양궁은 서로 다른 질문을 다루므로 하나의 점수나 순위로 합치지 않아요.'],
-      ['결과가 관계의 성공을 예측하나요?', '아니요. 전통 상징을 대화와 자기 성찰의 소재로 보는 오락용 도구예요. 중요한 관계 결정을 대신하지 않아요.'],
+/**
+ * 본문 — audit:mystic-seo 의 고정 템플릿(introTitle·concepts·useCases·faqs·
+ * reading·disclaimer)을 따른다. 2026-09-21 궁합을 이 페이지로 모은 뒤 목적지가
+ * 됐으므로 다른 신비 도구와 같은 수준의 본문을 갖춘다. 예전 안내문은 렌즈 넷과
+ * 이미 걷어낸 "중심 인물 바꾸기"를 설명하고 있어 지금 기능(아홉 관점·우리 기운·
+ * 오늘의 우리·공유 링크)에 맞춰 다시 썼다.
+ */
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  steps: string[];
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "introTitle": "우리의 지도는 두 사람이 아니라 \"우리\"를 읽습니다",
+    "intro": "궁합은 보통 두 사람을 겨룹니다. 우리의 지도는 2명에서 10명까지 모인 사람들을 한 덩어리로 봅니다. 생년월일만으로 각자의 좌표를 만들고, 그 좌표를 합쳐 이 모임에 어떤 기운이 몰려 있고 무엇이 비었는지, 누가 그 빈자리를 채우는지 읽습니다. 모임 전체에는 \"브레이크 없는 폭주기관차\"처럼 한 줄 이름이 붙고, 오늘·이번 주·이번 달에 그 모임이 어떻게 움직일지도 함께 봅니다.",
+    "steps": [
+      "각 사람의 생년월일을 넣어요. 별칭은 비워 두면 나·친구 1처럼 붙어요.",
+      "태어난 시각을 안다면 출생도시도 골라요. 모르면 비워 둬도 돼요.",
+      "우리 기운에서 모임의 이름과 몰린·빈 기운을 보고, 관점을 바꿔 두 사람씩 읽어요.",
+      "오늘의 우리에서 오늘·이번 주·이번 달의 흐름과 각자의 받는 날·눌리는 날을 확인해요."
     ],
-  },
-  en: {
-    heading: 'How to read your circle',
-    intro: 'The circle puts everyone on the same input basis, then compares five elements, yin–yang, Chinese zodiac, and sun sign as separate lenses. It does not score a relationship or predict its future.',
-    steps: ['Enter a nickname and birth date for each person.', 'If you know the birth time, choose the birth city too.', 'Change the center person and lens to explore shared patterns and differences.'],
-    note: 'Leave the time blank when it is unknown. The circle then omits the hour pillar and uses only six observable coordinates. Your entries and circle stay in this browser, and friend links are encrypted.',
-    faq: [
-      ['Why is a city required with a birth time?', 'The city identifies the historical local time and UTC offset. The tool does not silently assume Korean time.'],
-      ['Is there an overall compatibility score?', 'No. Each lens asks a different question, so the tool does not combine them into one score or ranking.'],
-      ['Does the result predict relationship success?', 'No. This is an entertainment and reflection tool using traditional symbols, not a substitute for important relationship decisions.'],
+    "conceptTitle": "무엇을 보나요",
+    "concepts": [
+      {
+        "title": "아홉 관점",
+        "body": "오행의 생극과 보완, 음양, 띠, 일간, 지지의 합·충, 태양궁, 마야 촐킨, 켈트 수목. 서로 겹치지 않도록 실측으로 걸러 낸 관점만 씁니다."
+      },
+      {
+        "title": "우리 기운",
+        "body": "모인 사람의 오행을 합쳐 무엇이 몰리고 무엇이 비었는지 봅니다. 달력의 기저 비율과 견주어, 우연으로 보기 어려울 때만 \"몰렸다\"고 말합니다."
+      },
+      {
+        "title": "오늘의 우리",
+        "body": "그날의 일진을 한 명의 참가자처럼 넣어 모임과 견줍니다. 계절(절기)에 따라 그날 기운의 세기도 달라집니다."
+      },
+      {
+        "title": "누가 무엇을 넣나",
+        "body": "모임에 빈 기운을 혼자 가진 사람, 모두가 한쪽에 몰렸는데 혼자 다른 결을 가진 사람을 짚어 줍니다."
+      }
     ],
-  },
-  ja: {
-    heading: 'みんなの円の読み方',
-    intro: '全員の入力条件をそろえ、五行・陰陽・干支・太陽星座を別々の視点で比べます。関係を採点したり、未来を予測したりはしません。',
-    steps: ['一人ずつニックネームと生年月日を入力します。', '出生時刻がわかる場合は、出生都市も選びます。', '中心人物と視点を切り替え、共通点と違いを見てみましょう。'],
-    note: '出生時刻が不明なら空欄のままで大丈夫です。その場合は時柱を作らず、確認できる6つの座標だけを使います。入力と円はこのブラウザに保存され、友だちリンクは暗号化されます。',
-    faq: [
-      ['出生時刻と一緒に都市が必要なのはなぜですか？', 'その日の現地時刻とUTCオフセットを確認するためです。都市がない場合に韓国時間を仮定しません。'],
-      ['相性の総合点はありますか？', 'ありません。各視点は異なる問いを扱うため、一つの点数や順位にまとめません。'],
-      ['関係の成功を予測できますか？', 'できません。伝統的な象徴を会話や振り返りに使う娯楽ツールで、重要な判断の代わりにはなりません。'],
+    "useTitle": "모임에 쓰는 법",
+    "useCases": [
+      {
+        "title": "역할을 나누는 대화",
+        "body": "\"시작하는 힘이 비어요\"가 나오면 누가 먼저 판을 벌일지 정하는 식으로, 빈 기운을 역할 이야기로 바꿔 보세요."
+      },
+      {
+        "title": "날짜 고르기",
+        "body": "이번 달 달력에서 모임에 빈 기운이 들어오는 날을 골라 미뤄 둔 이야기를 꺼내 보세요."
+      },
+      {
+        "title": "서로를 번역하기",
+        "body": "두 사람씩 관점을 바꿔 가며 읽으면 \"왜 저래?\"를 \"속도가 다르구나\"로 바꾸는 데 도움이 됩니다."
+      }
     ],
-  },
-  zh: {
-    heading: '怎样查看我们的圆',
-    intro: '系统先统一每个人的输入条件，再分别从五行、阴阳、生肖和太阳星座进行比较。它不会给关系打总分，也不会预测未来。',
-    steps: ['为每个人填写昵称和出生日期。', '如果知道出生时间，也请选择出生城市。', '切换中心人物和观察角度，查看共同点与差异。'],
-    note: '不知道出生时间时可以留空。系统不会生成时柱，只使用能够确认的六个坐标。资料和关系圈保存在当前浏览器中，好友链接会加密生成。',
-    faq: [
-      ['为什么填写出生时间时还需要城市？', '城市用于确认当时的当地时间和UTC偏移。工具不会在缺少城市时默认采用韩国时间。'],
-      ['有综合合拍分数吗？', '没有。每个角度回答的问题不同，因此不会合并成一个分数或排名。'],
-      ['结果能预测关系是否成功吗？', '不能。这是运用传统象征进行交流和自我反思的娱乐工具，不能代替重要的关系决定。'],
+    "faqTitle": "자주 묻는 질문",
+    "faqs": [
+      {
+        "question": "태어난 시각을 모르면 어떻게 되나요?",
+        "answer": "비워 두면 시주를 만들지 않고 연·월·일 세 기둥의 여섯 좌표만 씁니다. 없는 자리를 지어내지 않아요."
+      },
+      {
+        "question": "시각을 넣으면 왜 도시도 필요한가요?",
+        "answer": "그 날짜 그 도시의 현지 시각과 표준시 차이를 확인해야 시주가 정확해집니다. 도시 없이 한국 시간으로 추정하지 않아요."
+      },
+      {
+        "question": "모임 총점이나 순위가 있나요?",
+        "answer": "없습니다. 관점마다 다른 질문을 다루므로 하나의 점수로 합치지 않아요. 대신 모임 전체에 한 줄 이름과 몰린·빈 기운을 보여 줍니다."
+      },
+      {
+        "question": "친구 링크에 제 생년월일이 그대로 들어가나요?",
+        "answer": "생년월일과 시각 원자료는 들어가지 않고, 비교에 필요한 간지·오행 같은 좌표만 암호화되어 들어갑니다. 다만 시주가 있으면 태어난 시각이 두 시간 폭까지는 좁혀집니다."
+      },
+      {
+        "question": "결과가 관계의 성공을 예측하나요?",
+        "answer": "아니요. 전통 상징을 대화와 자기 성찰의 소재로 보는 도구입니다. 중요한 관계 결정을 대신하지 않아요."
+      }
     ],
-  },
-  fr: {
-    heading: 'Comment lire votre cercle',
-    intro: 'Le cercle place chaque personne sur une même base, puis compare séparément les cinq éléments, le yin-yang, le zodiaque chinois et le signe solaire. Il ne note pas la relation et ne prédit pas son avenir.',
-    steps: ['Saisissez un surnom et une date de naissance pour chaque personne.', 'Si vous connaissez l’heure de naissance, choisissez aussi la ville.', 'Changez de personne centrale et de point de vue pour observer ressemblances et différences.'],
-    note: 'Laissez l’heure vide si elle est inconnue. Le pilier de l’heure est alors omis et seuls six repères observables sont utilisés. Les données et le cercle restent dans ce navigateur, et les liens d’amis sont chiffrés.',
-    faq: [
-      ['Pourquoi faut-il une ville avec l’heure de naissance ?', 'La ville permet de retrouver l’heure locale historique et le décalage UTC. L’outil ne suppose pas l’heure coréenne.'],
-      ['Existe-t-il un score global de compatibilité ?', 'Non. Chaque point de vue pose une question différente ; ils ne sont donc pas fusionnés en un score ou un classement.'],
-      ['Le résultat prédit-il la réussite d’une relation ?', 'Non. C’est un outil ludique de réflexion fondé sur des symboles traditionnels, pas un substitut aux décisions importantes.'],
+    "readingTitle": "더 깊게 읽기",
+    "reading": [
+      {
+        "href": "/ko/western-astrology-vs-saju-comparison/",
+        "label": "점성술과 사주 비교",
+        "desc": "서양 별자리와 동양 사주가 무엇을 다르게 보는지 읽습니다."
+      },
+      {
+        "href": "/ko/saju/calculator/",
+        "label": "사주 계산기",
+        "desc": "내 일간과 네 기둥을 먼저 확인해 보세요."
+      },
+      {
+        "href": "/ko/chinese-zodiac/",
+        "label": "12지신 띠",
+        "desc": "띠와 삼합이 무엇인지 읽어 보세요."
+      },
+      {
+        "href": "/ko/mayan/reading/",
+        "label": "마야 달력 읽기",
+        "desc": "촐킨 인장과 색 계열을 봅니다."
+      },
+      {
+        "href": "/ko/celtic/reading/",
+        "label": "켈트 나무 읽기",
+        "desc": "태어난 날의 수목 사인을 봅니다."
+      }
     ],
+    "disclaimer": "우리의 지도는 전통 상징을 대화 소재로 보는 오락·성찰 도구입니다. 관계의 선택이나 중요한 결정을 대신하지 않습니다."
   },
-  es: {
-    heading: 'Cómo leer vuestro círculo',
-    intro: 'El círculo coloca a todas las personas sobre la misma base y compara por separado cinco elementos, yin-yang, zodiaco chino y signo solar. No puntúa la relación ni predice su futuro.',
-    steps: ['Introduce un apodo y la fecha de nacimiento de cada persona.', 'Si conoces la hora de nacimiento, elige también la ciudad.', 'Cambia la persona central y el enfoque para observar coincidencias y diferencias.'],
-    note: 'Deja la hora vacía si no la sabes. El círculo omitirá el pilar de la hora y usará solo seis coordenadas observables. Los datos y el círculo permanecen en este navegador, y los enlaces de amistad se cifran.',
-    faq: [
-      ['¿Por qué hace falta una ciudad junto con la hora?', 'La ciudad permite determinar la hora local histórica y el desfase UTC. La herramienta no supone la hora de Corea.'],
-      ['¿Hay una puntuación total de compatibilidad?', 'No. Cada enfoque responde a una pregunta distinta, por lo que no se combinan en una puntuación ni una clasificación.'],
-      ['¿El resultado predice el éxito de una relación?', 'No. Es una herramienta de entretenimiento y reflexión basada en símbolos tradicionales, no sustituye decisiones importantes.'],
+  "en": {
+    "introTitle": "Our Map reads \"us\", not just two people",
+    "intro": "Compatibility usually pits two people against each other. Our Map looks at two to ten people as one group. From birth dates alone it builds each person’s coordinates, then adds them up to show what the group has too much of, what it lacks, and who fills the gap. The whole group gets a one-line name — like “A train with no brakes” — and you can see how the group moves today, this week and this month.",
+    "steps": [
+      "Enter each person’s birth date. Leave the nickname blank and it becomes You, Friend 1, and so on.",
+      "If you know the birth time, pick the birth city too. Leave both blank if unknown.",
+      "In Our Energies, read the group’s name and its concentrated and missing energies, then switch lenses to read pairs.",
+      "In Us Today, check the flow for today, this week and this month, and each person’s receiving and under-pressure days."
     ],
+    "conceptTitle": "What it looks at",
+    "concepts": [
+      {
+        "title": "Nine lenses",
+        "body": "Five-element cycles and gaps, yin–yang, zodiac animal, day master, branch harmony and clash, sun sign, Mayan Tzolkin and Celtic tree. Only lenses measured to not repeat each other are used."
+      },
+      {
+        "title": "Our energies",
+        "body": "Everyone’s five elements are added up to show what is concentrated and what is missing. Compared against the calendar’s base rates, “concentrated” is only said when chance can’t explain it."
+      },
+      {
+        "title": "Us today",
+        "body": "The day’s own pillar joins the group as if it were a participant. Its strength also shifts with the season (solar terms)."
+      },
+      {
+        "title": "Who brings what",
+        "body": "It points out who alone holds an energy the group lacks, and who stands apart when everyone else leans one way."
+      }
+    ],
+    "useTitle": "How to use it with your group",
+    "useCases": [
+      {
+        "title": "Talk about roles",
+        "body": "When it says “the starting force is missing”, decide who opens things — turn a missing energy into a conversation about roles."
+      },
+      {
+        "title": "Pick a date",
+        "body": "In this month’s calendar, find the days that bring the group’s missing energy and raise what you’ve been putting off."
+      },
+      {
+        "title": "Translate each other",
+        "body": "Reading pairs through different lenses helps turn “why are they like that?” into “we just move at different speeds”."
+      }
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faqs": [
+      {
+        "question": "What if I don’t know the birth time?",
+        "answer": "Leave it blank. The hour pillar is omitted and only the six coordinates of the year, month and day pillars are used. Nothing is invented."
+      },
+      {
+        "question": "Why is a city needed with the birth time?",
+        "answer": "The local time and offset of that date in that city are needed for an accurate hour pillar. The tool does not silently assume Korean time."
+      },
+      {
+        "question": "Is there a group score or ranking?",
+        "answer": "No. Each lens asks a different question, so they are not merged into one number. Instead the group gets a one-line name and its concentrated and missing energies."
+      },
+      {
+        "question": "Does a friend link contain my birth date?",
+        "answer": "The raw birth date and time are not included — only the encrypted coordinates needed for comparison, such as stems, branches and elements. If an hour pillar is present, it narrows the birth time to a two-hour window."
+      },
+      {
+        "question": "Does the result predict relationship success?",
+        "answer": "No. It uses traditional symbols as material for conversation and reflection. It does not replace important relationship decisions."
+      }
+    ],
+    "readingTitle": "Read more",
+    "reading": [
+      {
+        "href": "/en/western-astrology-vs-saju-comparison/",
+        "label": "Astrology vs Saju",
+        "desc": "What Western astrology and Eastern Saju look at differently."
+      },
+      {
+        "href": "/en/saju/calculator/",
+        "label": "Saju calculator",
+        "desc": "Check your day master and four pillars first."
+      },
+      {
+        "href": "/en/chinese-zodiac/",
+        "label": "Chinese zodiac",
+        "desc": "What the animal signs and trines mean."
+      },
+      {
+        "href": "/en/mayan/reading/",
+        "label": "Mayan calendar reading",
+        "desc": "Your Tzolkin seal and colour family."
+      },
+      {
+        "href": "/en/celtic/reading/",
+        "label": "Celtic tree reading",
+        "desc": "The tree sign of your birth date."
+      }
+    ],
+    "disclaimer": "Our Map is an entertainment and reflection tool that uses traditional symbols as conversation material. It does not replace relationship choices or important decisions."
   },
-} satisfies Record<Locale, { heading: string; intro: string; steps: string[]; note: string; faq: string[][] }>;
-const g = guide[locale] ?? guide.en;
-const canonicalUrl = `https://oiyo.net/${locale}/circle/`;
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebApplication',
-      name: m.title,
-      description: m.description,
-      url: canonicalUrl,
-      applicationCategory: 'LifestyleApplication',
-      operatingSystem: 'Any',
-      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
-    },
-    {
-      '@type': 'HowTo',
-      name: g.heading,
-      description: g.intro,
-      step: g.steps.map((text, index) => ({ '@type': 'HowToStep', position: index + 1, text })),
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: g.faq.map(([name, text]) => ({
-        '@type': 'Question',
-        name,
-        acceptedAnswer: { '@type': 'Answer', text },
-      })),
-    },
-  ],
+  "ja": {
+    "introTitle": "私たちの地図は二人ではなく「わたしたち」を読みます",
+    "intro": "相性はふつう二人を比べます。私たちの地図は2〜10人の集まりをひとつのかたまりとして見ます。生年月日だけで各自の座標を作り、それを合わせて、この集まりに何が偏り何が空いているのか、誰がその空きを埋めるのかを読みます。集まり全体には「ブレーキのない暴走機関車」のような一行の名前がつき、今日・今週・今月の動きも一緒に見られます。",
+    "steps": [
+      "一人ずつ生年月日を入れます。ニックネームは空欄なら「私」「友だち1」のように付きます。",
+      "出生時刻がわかれば出生都市も選びます。わからなければ空欄で構いません。",
+      "わたしたちの気で集まりの名前と偏った気・空いた気を見て、視点を切り替えて二人ずつ読みます。",
+      "今日のわたしたちで今日・今週・今月の流れと、各自の受け取る日・抑えられる日を確かめます。"
+    ],
+    "conceptTitle": "何を見るのか",
+    "concepts": [
+      {
+        "title": "九つの視点",
+        "body": "五行の生剋と補い、陰陽、干支、日干、地支の合冲、太陽星座、マヤのツォルキン、ケルトの木。互いに重ならないよう実測で選んだ視点だけを使います。"
+      },
+      {
+        "title": "わたしたちの気",
+        "body": "集まった人の五行を合わせ、何が偏り何が空いたかを見ます。暦の基準比率と比べ、偶然では説明しにくいときだけ「偏った」と言います。"
+      },
+      {
+        "title": "今日のわたしたち",
+        "body": "その日の日辰を一人の参加者のように加えて集まりと比べます。季節（節気）によってその日の気の強さも変わります。"
+      },
+      {
+        "title": "誰が何を足すか",
+        "body": "集まりに空いた気を一人だけ持つ人、みんなが一方に偏る中で一人だけ違う質を持つ人を示します。"
+      }
+    ],
+    "useTitle": "集まりでの使い方",
+    "useCases": [
+      {
+        "title": "役割を分ける会話",
+        "body": "「始める力が空いています」と出たら誰が先に動くか決める、というように空いた気を役割の話に変えてみましょう。"
+      },
+      {
+        "title": "日を選ぶ",
+        "body": "今月の暦で集まりに空いた気が入る日を選び、先送りにしていた話を出してみましょう。"
+      },
+      {
+        "title": "互いを翻訳する",
+        "body": "二人ずつ視点を変えて読むと、「なぜああなの?」を「速さが違うだけ」に変える助けになります。"
+      }
+    ],
+    "faqTitle": "よくある質問",
+    "faqs": [
+      {
+        "question": "出生時刻がわからないときは?",
+        "answer": "空欄にすると時柱を作らず、年・月・日の三柱の六つの座標だけを使います。ない場所を作り出しません。"
+      },
+      {
+        "question": "時刻を入れると都市も必要なのはなぜ?",
+        "answer": "その日のその都市の現地時刻と時差を確かめて初めて時柱が正確になります。都市なしに韓国時間を仮定しません。"
+      },
+      {
+        "question": "集まりの総合点や順位はありますか?",
+        "answer": "ありません。視点ごとに違う問いを扱うため、一つの点数にまとめません。代わりに集まり全体の一行の名前と、偏った気・空いた気を示します。"
+      },
+      {
+        "question": "友だちリンクに私の生年月日がそのまま入りますか?",
+        "answer": "生年月日と時刻の原データは入らず、比較に必要な干支・五行などの座標だけが暗号化されて入ります。ただし時柱があると出生時刻が二時間の幅まで絞られます。"
+      },
+      {
+        "question": "関係の成功を予測しますか?",
+        "answer": "いいえ。伝統的な象徴を会話と振り返りの材料にする道具です。重要な関係の判断の代わりにはなりません。"
+      }
+    ],
+    "readingTitle": "詳しく読む",
+    "reading": [
+      {
+        "href": "/ja/western-astrology-vs-saju-comparison/",
+        "label": "西洋占星術と四柱推命",
+        "desc": "西洋の星座と東洋の四柱が何を違って見るかを読みます。"
+      },
+      {
+        "href": "/ja/saju/calculator/",
+        "label": "四柱計算機",
+        "desc": "まず自分の日干と四柱を確かめましょう。"
+      },
+      {
+        "href": "/ja/chinese-zodiac/",
+        "label": "十二支",
+        "desc": "干支と三合の意味を読みます。"
+      },
+      {
+        "href": "/ja/mayan/reading/",
+        "label": "マヤ暦リーディング",
+        "desc": "ツォルキンの紋章と色の系統を見ます。"
+      },
+      {
+        "href": "/ja/celtic/reading/",
+        "label": "ケルトの木リーディング",
+        "desc": "生まれた日の樹木サインを見ます。"
+      }
+    ],
+    "disclaimer": "私たちの地図は伝統的な象徴を会話の材料にする娯楽・内省のための道具です。関係の選択や重要な決定の代わりにはなりません。"
+  },
+  "zh": {
+    "introTitle": "我们的地图读的是“我们”，而不只是两个人",
+    "intro": "合盘通常是把两个人放在一起比。我们的地图把2到10人的聚会当作一个整体来看。仅凭出生日期为每个人建立坐标，再把这些坐标加总，读出这个组合偏重什么、缺什么、由谁来补上空缺。整个组合会得到一句名字——比如“没有刹车的火车”——还能看到今天、本周、本月这个组合如何运转。",
+    "steps": [
+      "为每个人填写出生日期。昵称留空会自动叫作“我”“朋友1”等。",
+      "如果知道出生时间，也请选择出生城市。不知道可以都留空。",
+      "在“我们的气”里看组合的名字和偏多、缺少的气，再切换视角两两解读。",
+      "在“今天的我们”里查看今天、本周、本月的走向，以及每个人的受益之日与受压之日。"
+    ],
+    "conceptTitle": "看些什么",
+    "concepts": [
+      {
+        "title": "九种视角",
+        "body": "五行生克与互补、阴阳、生肖、日干、地支合冲、太阳星座、玛雅卓尔金与凯尔特树木。只使用经实测确认彼此不重复的视角。"
+      },
+      {
+        "title": "我们的气",
+        "body": "把在场每个人的五行加总，看偏多什么、缺少什么。与历法的基准比例相比，只有在难以用偶然解释时才说“偏多”。"
+      },
+      {
+        "title": "今天的我们",
+        "body": "把当天的日辰当作一位参与者放进来与组合比较。当天之气的强弱也会随时令（节气）变化。"
+      },
+      {
+        "title": "谁带来什么",
+        "body": "指出谁独自拥有组合所缺的气，以及大家都偏向一边时谁独有不同的质地。"
+      }
+    ],
+    "useTitle": "在聚会中怎么用",
+    "useCases": [
+      {
+        "title": "分工的对话",
+        "body": "看到“起步的力量空着”，就定下谁来开局——把缺少的气变成关于分工的话题。"
+      },
+      {
+        "title": "挑日子",
+        "body": "在本月日历里挑出补上组合缺口的日子，把一直拖着的话题拿出来。"
+      },
+      {
+        "title": "彼此翻译",
+        "body": "两两切换视角来读，有助于把“他怎么这样？”变成“只是节奏不同”。"
+      }
+    ],
+    "faqTitle": "常见问题",
+    "faqs": [
+      {
+        "question": "不知道出生时间怎么办？",
+        "answer": "留空即可。不生成时柱，只使用年、月、日三柱的六个坐标，不会凭空编造。"
+      },
+      {
+        "question": "为什么填了时间还需要城市？",
+        "answer": "需要确认那一天那座城市的当地时间与时差，时柱才准确。没有城市时不会默认按韩国时间推算。"
+      },
+      {
+        "question": "有组合总分或排名吗？",
+        "answer": "没有。每个视角回答不同的问题，因此不合成一个分数。取而代之的是整个组合的一句名字，以及偏多与缺少的气。"
+      },
+      {
+        "question": "好友链接里会有我的出生日期吗？",
+        "answer": "不会放入出生日期和时间的原始数据，只加密放入比较所需的干支、五行等坐标。不过有时柱时，出生时间会被缩小到两小时的范围。"
+      },
+      {
+        "question": "结果能预测关系成败吗？",
+        "answer": "不能。这是把传统象征当作对话与自省素材的工具，不能代替重要的关系决定。"
+      }
+    ],
+    "readingTitle": "延伸阅读",
+    "reading": [
+      {
+        "href": "/zh/western-astrology-vs-saju-comparison/",
+        "label": "西方占星与八字",
+        "desc": "看看西方星座与东方八字关注点有何不同。"
+      },
+      {
+        "href": "/zh/saju/calculator/",
+        "label": "八字计算器",
+        "desc": "先确认自己的日干和四柱。"
+      },
+      {
+        "href": "/zh/chinese-zodiac/",
+        "label": "十二生肖",
+        "desc": "了解生肖与三合的含义。"
+      },
+      {
+        "href": "/zh/mayan/reading/",
+        "label": "玛雅历解读",
+        "desc": "查看卓尔金印记与颜色系。"
+      },
+      {
+        "href": "/zh/celtic/reading/",
+        "label": "凯尔特树木解读",
+        "desc": "查看出生日对应的树木星座。"
+      }
+    ],
+    "disclaimer": "我们的地图是把传统象征当作对话素材的娱乐与自省工具，不能代替关系选择或重要决定。"
+  },
+  "fr": {
+    "introTitle": "Notre carte lit « nous », pas seulement deux personnes",
+    "intro": "La compatibilité oppose d’ordinaire deux personnes. Notre carte regarde de deux à dix personnes comme un seul groupe. À partir des seules dates de naissance, elle établit les coordonnées de chacun puis les additionne pour montrer ce dont le groupe a trop, ce qui lui manque et qui comble le vide. Le groupe reçoit un nom en une ligne — comme « Un train sans freins » — et vous voyez comment il évolue aujourd’hui, cette semaine et ce mois-ci.",
+    "steps": [
+      "Indiquez la date de naissance de chacun. Sans surnom, chacun devient Vous, Ami 1, etc.",
+      "Si vous connaissez l’heure de naissance, choisissez aussi la ville. Sinon, laissez vide.",
+      "Dans Nos énergies, lisez le nom du groupe et ses énergies concentrées ou manquantes, puis changez de perspective pour lire les paires.",
+      "Dans Nous aujourd’hui, suivez le cours du jour, de la semaine et du mois, et les jours où chacun reçoit ou est sous pression."
+    ],
+    "conceptTitle": "Ce qui est regardé",
+    "concepts": [
+      {
+        "title": "Neuf perspectives",
+        "body": "Cycles et manques des cinq éléments, yin-yang, animal du zodiaque, maître du jour, accords et heurts des branches, signe solaire, Tzolkin maya et arbre celte. Seules des perspectives mesurées pour ne pas se répéter sont utilisées."
+      },
+      {
+        "title": "Nos énergies",
+        "body": "Les cinq éléments de chacun sont additionnés pour voir ce qui se concentre et ce qui manque. Comparé aux taux de base du calendrier, « concentré » n’est dit que si le hasard ne l’explique pas."
+      },
+      {
+        "title": "Nous aujourd’hui",
+        "body": "Le pilier du jour entre dans le groupe comme un participant. Sa force varie aussi selon la saison (termes solaires)."
+      },
+      {
+        "title": "Qui apporte quoi",
+        "body": "Il signale qui détient seul une énergie qui manque au groupe, et qui se distingue quand tous les autres penchent du même côté."
+      }
+    ],
+    "useTitle": "Comment l’utiliser en groupe",
+    "useCases": [
+      {
+        "title": "Parler des rôles",
+        "body": "Quand il indique « la force de départ manque », décidez qui lance — transformez une énergie manquante en conversation sur les rôles."
+      },
+      {
+        "title": "Choisir une date",
+        "body": "Dans le calendrier du mois, repérez les jours qui apportent l’énergie qui manque au groupe pour aborder ce que vous repoussez."
+      },
+      {
+        "title": "Se traduire l’un l’autre",
+        "body": "Lire les paires sous différentes perspectives aide à passer de « pourquoi fait-il ça ? » à « nous n’avons pas le même rythme »."
+      }
+    ],
+    "faqTitle": "Questions fréquentes",
+    "faqs": [
+      {
+        "question": "Et si je ne connais pas l’heure de naissance ?",
+        "answer": "Laissez vide. Le pilier horaire est omis et seules les six coordonnées des piliers de l’année, du mois et du jour sont utilisées. Rien n’est inventé."
+      },
+      {
+        "question": "Pourquoi faut-il une ville avec l’heure ?",
+        "answer": "L’heure locale et le décalage de cette date dans cette ville sont nécessaires pour un pilier horaire exact. L’outil ne suppose pas l’heure coréenne en silence."
+      },
+      {
+        "question": "Y a-t-il un score ou un classement du groupe ?",
+        "answer": "Non. Chaque perspective pose une question différente, elles ne sont donc pas fondues en un nombre. Le groupe reçoit plutôt un nom en une ligne et ses énergies concentrées et manquantes."
+      },
+      {
+        "question": "Un lien d’ami contient-il ma date de naissance ?",
+        "answer": "La date et l’heure brutes n’y figurent pas — seulement les coordonnées chiffrées utiles à la comparaison, comme troncs, branches et éléments. Si un pilier horaire est présent, il ramène l’heure de naissance à une plage de deux heures."
+      },
+      {
+        "question": "Le résultat prédit-il la réussite d’une relation ?",
+        "answer": "Non. Il utilise des symboles traditionnels comme matière à conversation et à réflexion. Il ne remplace pas les décisions importantes."
+      }
+    ],
+    "readingTitle": "Pour aller plus loin",
+    "reading": [
+      {
+        "href": "/fr/saju/calculator/",
+        "label": "Calculateur de Saju",
+        "desc": "Vérifiez d’abord votre maître du jour et vos quatre piliers."
+      },
+      {
+        "href": "/fr/chinese-zodiac/",
+        "label": "Zodiaque chinois",
+        "desc": "Ce que signifient les animaux et les trigones."
+      },
+      {
+        "href": "/fr/mayan/reading/",
+        "label": "Lecture du calendrier maya",
+        "desc": "Votre sceau Tzolkin et sa famille de couleur."
+      },
+      {
+        "href": "/fr/celtic/reading/",
+        "label": "Lecture de l’arbre celte",
+        "desc": "Le signe-arbre de votre date de naissance."
+      }
+    ],
+    "disclaimer": "Notre carte est un outil de divertissement et de réflexion qui utilise des symboles traditionnels comme matière à conversation. Il ne remplace ni les choix relationnels ni les décisions importantes."
+  },
+  "es": {
+    "introTitle": "Nuestro mapa lee el «nosotros», no solo a dos personas",
+    "intro": "La compatibilidad suele enfrentar a dos personas. Nuestro mapa mira de dos a diez personas como un solo grupo. Solo con las fechas de nacimiento construye las coordenadas de cada uno y las suma para mostrar lo que al grupo le sobra, lo que le falta y quién cubre el hueco. El grupo recibe un nombre de una línea —como «Un tren sin frenos»— y puedes ver cómo se mueve hoy, esta semana y este mes.",
+    "steps": [
+      "Introduce la fecha de nacimiento de cada persona. Sin apodo, cada uno será Tú, Amigo 1, etc.",
+      "Si conoces la hora de nacimiento, elige también la ciudad. Si no, déjalo en blanco.",
+      "En Nuestras energías, lee el nombre del grupo y sus energías concentradas o ausentes, y cambia de perspectiva para leer parejas.",
+      "En Nosotros hoy, revisa el curso de hoy, esta semana y este mes, y los días en que cada uno recibe o está bajo presión."
+    ],
+    "conceptTitle": "Qué mira",
+    "concepts": [
+      {
+        "title": "Nueve perspectivas",
+        "body": "Ciclos y huecos de los cinco elementos, yin-yang, animal del zodiaco, tronco del día, armonía y choque de ramas, signo solar, Tzolkin maya y árbol celta. Solo se usan perspectivas medidas para no repetirse entre sí."
+      },
+      {
+        "title": "Nuestras energías",
+        "body": "Se suman los cinco elementos de todos para ver qué se concentra y qué falta. Comparado con las tasas base del calendario, solo se dice «concentrado» cuando el azar no lo explica."
+      },
+      {
+        "title": "Nosotros hoy",
+        "body": "El pilar del día entra en el grupo como un participante más. Su fuerza también cambia con la estación (términos solares)."
+      },
+      {
+        "title": "Quién aporta qué",
+        "body": "Señala quién tiene en solitario una energía que al grupo le falta, y quién se distingue cuando todos los demás se inclinan hacia un lado."
+      }
+    ],
+    "useTitle": "Cómo usarlo en grupo",
+    "useCases": [
+      {
+        "title": "Hablar de papeles",
+        "body": "Cuando diga «falta la fuerza de arranque», decidid quién abre: convertid una energía ausente en una conversación sobre papeles."
+      },
+      {
+        "title": "Elegir una fecha",
+        "body": "En el calendario del mes, busca los días que traen la energía que le falta al grupo para sacar lo que venís aplazando."
+      },
+      {
+        "title": "Traducirse mutuamente",
+        "body": "Leer las parejas desde distintas perspectivas ayuda a pasar de «¿por qué hace eso?» a «solo vamos a distinto ritmo»."
+      }
+    ],
+    "faqTitle": "Preguntas frecuentes",
+    "faqs": [
+      {
+        "question": "¿Y si no sé la hora de nacimiento?",
+        "answer": "Déjala en blanco. Se omite el pilar de la hora y solo se usan las seis coordenadas de los pilares del año, el mes y el día. No se inventa nada."
+      },
+      {
+        "question": "¿Por qué hace falta una ciudad con la hora?",
+        "answer": "Se necesitan la hora local y el desfase de esa fecha en esa ciudad para un pilar de la hora exacto. La herramienta no asume en silencio la hora de Corea."
+      },
+      {
+        "question": "¿Hay una puntuación o ranking del grupo?",
+        "answer": "No. Cada perspectiva plantea una pregunta distinta, así que no se funden en un número. En su lugar, el grupo recibe un nombre de una línea y sus energías concentradas y ausentes."
+      },
+      {
+        "question": "¿Un enlace de amigo contiene mi fecha de nacimiento?",
+        "answer": "No incluye la fecha ni la hora en bruto, solo las coordenadas cifradas necesarias para comparar, como troncos, ramas y elementos. Si hay pilar de la hora, reduce la hora de nacimiento a una franja de dos horas."
+      },
+      {
+        "question": "¿El resultado predice el éxito de una relación?",
+        "answer": "No. Usa símbolos tradicionales como material para conversar y reflexionar. No sustituye las decisiones importantes."
+      }
+    ],
+    "readingTitle": "Para leer más",
+    "reading": [
+      {
+        "href": "/es/saju/calculator/",
+        "label": "Calculadora de Saju",
+        "desc": "Comprueba primero tu tronco del día y tus cuatro pilares."
+      },
+      {
+        "href": "/es/chinese-zodiac/",
+        "label": "Zodiaco chino",
+        "desc": "Qué significan los animales y los trígonos."
+      },
+      {
+        "href": "/es/mayan/reading/",
+        "label": "Lectura del calendario maya",
+        "desc": "Tu sello Tzolkin y su familia de color."
+      },
+      {
+        "href": "/es/celtic/reading/",
+        "label": "Lectura del árbol celta",
+        "desc": "El signo-árbol de tu fecha de nacimiento."
+      }
+    ],
+    "disclaimer": "Nuestro mapa es una herramienta de entretenimiento y reflexión que usa símbolos tradicionales como material para conversar. No sustituye decisiones de pareja ni decisiones importantes."
+  }
 };
+const c = content[locale] ?? content.en;
+const canonicalUrl = `https://oiyo.net/${locale}/circle/`;
+const webApplicationJsonLd = {
+  '@type': 'WebApplication',
+  name: m.title,
+  description: m.description,
+  url: canonicalUrl,
+  applicationCategory: 'LifestyleApplication',
+  operatingSystem: 'Any',
+  inLanguage: locale,
+  isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+  publisher: { '@id': 'https://oiyo.net/#organization' },
+};
+const howToJsonLd = {
+  '@type': 'HowTo',
+  name: c.introTitle,
+  description: c.intro,
+  step: c.steps.map((text, index) => ({ '@type': 'HowToStep', position: index + 1, text })),
+};
+const faqJsonLd = {
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+const structuredData = { '@context': 'https://schema.org', '@graph': [webApplicationJsonLd, howToJsonLd, faqJsonLd] };
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
     <CircleGathering client:load locale={locale} />
-    <section aria-labelledby="circle-guide" class="mx-auto mt-14 max-w-3xl border-t border-border pt-10 sm:mt-20 sm:pt-14">
-      <h2 id="circle-guide" class="text-balance text-2xl font-black tracking-tight text-foreground sm:text-3xl">{g.heading}</h2>
-      <p class="mt-4 max-w-2xl text-pretty leading-7 text-muted-foreground">{g.intro}</p>
-      <ol class="mt-7 space-y-4">
-        {g.steps.map((step, index) => (
-          <li class="flex gap-4 text-sm leading-6 text-foreground sm:text-base">
-            <span aria-hidden="true" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent font-black text-foreground">{index + 1}</span>
-            <span class="pt-1">{step}</span>
-          </li>
-        ))}
-      </ol>
-      <p class="mt-7 rounded-2xl bg-surface-subtle px-5 py-4 text-sm leading-6 text-muted-foreground">{g.note}</p>
-    </section>
-    <section aria-labelledby="circle-faq" class="mx-auto mt-12 max-w-3xl sm:mt-16">
-      <h2 id="circle-faq" class="text-2xl font-black tracking-tight text-foreground sm:text-3xl">FAQ</h2>
-      <div class="mt-5 divide-y divide-border border-y border-border">
-        {g.faq.map(([question, answer]) => (
-          <details class="group py-4">
-            <summary class="cursor-pointer list-none pr-8 font-bold leading-6 text-foreground marker:hidden">{question}</summary>
-            <p class="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">{answer}</p>
-          </details>
-        ))}
-      </div>
-    </section>
+
+    <div class="mx-auto mt-14 max-w-3xl border-t border-border pt-10 sm:mt-20 sm:pt-14">
+      <section aria-labelledby="circle-intro">
+        <h2 id="circle-intro" class="text-balance text-2xl font-black tracking-tight text-foreground sm:text-3xl">{c.introTitle}</h2>
+        <p class="mt-4 text-pretty leading-7 text-muted-foreground">{c.intro}</p>
+        <ol class="mt-7 space-y-4">
+          {c.steps.map((step, index) => (
+            <li class="flex gap-4 text-sm leading-6 text-foreground sm:text-base">
+              <span aria-hidden="true" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent font-black text-foreground">{index + 1}</span>
+              <span class="pt-1">{step}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-xl font-black text-foreground">{c.conceptTitle}</h2>
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          {c.concepts.map((item) => (
+            <article class="rounded-2xl border border-border bg-card p-4">
+              <h3 class="font-bold text-foreground">{item.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-muted-foreground">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-xl font-black text-foreground">{c.useTitle}</h2>
+        <div class="mt-4 grid gap-4 md:grid-cols-3">
+          {c.useCases.map((item) => (
+            <article class="rounded-2xl bg-surface-subtle p-4">
+              <h3 class="font-bold text-foreground">{item.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-muted-foreground">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-xl font-black text-foreground">{c.faqTitle}</h2>
+        <div class="mt-4 divide-y divide-border border-y border-border">
+          {c.faqs.map((faq) => (
+            <details class="group py-4">
+              <summary class="cursor-pointer list-none pr-8 font-bold leading-6 text-foreground marker:hidden">{faq.question}</summary>
+              <p class="mt-3 text-sm leading-6 text-muted-foreground sm:text-base">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-xl font-black text-foreground">{c.readingTitle}</h2>
+        {/* 같은 사이트 안의 글·도구라 같은 탭에서 연다. */}
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+          {c.reading.map((item) => (
+            <a class="rounded-2xl border border-border bg-card p-4 transition-colors hover:bg-surface-subtle" href={item.href}>
+              <span class="font-bold text-foreground">{item.label}</span>
+              <span class="mt-2 block text-sm leading-6 text-muted-foreground">{item.desc}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <p class="mt-10 rounded-2xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+    </div>
+
     <RelatedTools locale={locale} tools={['fortunePeriodic', 'sajuPeriodic', 'chineseZodiac']} current="circle" />
   </div>
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 </Layout>
