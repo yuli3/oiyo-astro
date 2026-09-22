@@ -30,7 +30,11 @@ describe('testIconSrc', () => {
     expect(testIconSrc('/ko/habit-builder/30-days/')).toBe('/images/test-icons/habit-builder.webp');
   });
 
+  it('maps the shadow-self pictogram', () => {
+    expect(testIconSrc('/ko/shadow-self-test/')).toBe('/images/test-icons/shadow-self.webp');
+  });
+
   it('leaves unmapped tests on their existing emoji fallback', () => {
-    expect(testIconSrc('/ko/shadow-self-test/')).toBeUndefined();
+    expect(testIconSrc('/ko/animal-personality-test/')).toBeUndefined();
   });
 });

@@ -50,6 +50,7 @@ export const TEST_ICON_BY_PATH: Readonly<Record<string, string>> = {
   '/adhd/test': '/images/test-icons/adhd.webp',
   '/narcissism/test': '/images/test-icons/narcissism.webp',
   '/lazy-perfectionist/test': '/images/test-icons/lazy-perfectionist.webp',
+  '/shadow-self-test': '/images/test-icons/shadow-self.webp',
 };
 
 export function testIconSrc(localizedHref: string): string | undefined {
