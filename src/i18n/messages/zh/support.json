@@ -4,8 +4,8 @@
     "description": "在我们神圣的圣所寻求指导并找到解决方案。"
   },
   "hero": {
-    "title": "神圣的支持",
-    "subtitle": "我们的守护者在这里指导您应对精神之旅中的任何挑战。"
+    "title": "支持",
+    "subtitle": "有疑问或遇到问题，欢迎随时告诉我们，我们会确认后回复您。"
   },
   "form": {
     "subjectLabel": "主题",
@@ -22,7 +22,7 @@
     "errorMessage": "暂时的阴影横亘在我们的路上。 请稍后重试。",
     "title": "提交支持票"
   },
-  "contact": "寻求指导",
+  "contact": "联系我们",
   "faq": "常见查询",
   "ticket_status": "协议的现状",
   "new_ticket": "发起新的询价",

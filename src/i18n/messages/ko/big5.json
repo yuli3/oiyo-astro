@@ -5,10 +5,10 @@
   "restart": "재응시 시험",
   "save": "결과 저장",
   "dimensions": {
-    "openness": "개방 상태",
+    "openness": "개방성",
     "conscientiousness": "성실성",
     "extraversion": "외향성",
     "agreeableness": "친화성",
-    "neuroticism": "신경증"
+    "neuroticism": "신경성"
   }
 }

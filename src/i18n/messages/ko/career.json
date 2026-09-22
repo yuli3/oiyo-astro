@@ -10,30 +10,30 @@
   },
   "types": {
     "realistic": {
-      "name": "현실적(실행자)",
+      "name": "현실형 (실행가)",
       "emoji": "🔧"
     },
     "investigative": {
-      "name": "조사 (사상가)",
+      "name": "탐구형 (사색가)",
       "emoji": "🔬"
     },
     "artistic": {
-      "name": "예술적(크리에이터)",
+      "name": "예술형 (창작가)",
       "emoji": "🎨"
     },
     "social": {
-      "name": "소셜(도우미)",
+      "name": "사회형 (조력자)",
       "emoji": "👥"
     },
     "enterprising": {
-      "name": "진취적인(설득자)",
+      "name": "진취형 (설득가)",
       "emoji": "💼"
     },
     "conventional": {
-      "name": "기존(주최자)",
+      "name": "관습형 (조직가)",
       "emoji": "📊"
     },
-    "subtitle": "당신을 가장 잘 설명하는 유형은 무엇입니까?"
+    "subtitle": "어떤 유형이 나를 가장 잘 설명할까요?"
   },
   "hero": {
     "badge": "🎯 과학 기반",

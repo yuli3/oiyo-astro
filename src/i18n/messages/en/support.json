@@ -4,8 +4,8 @@
     "description": "Seek guidance and find solutions in our sacred sanctuary."
   },
   "hero": {
-    "title": "Sacred Support",
-    "subtitle": "Our keepers are here to guide you through any challenges on your spiritual journey."
+    "title": "Support",
+    "subtitle": "Questions or something not working? Let us know and we will get back to you."
   },
   "form": {
     "subjectLabel": "Subject",
@@ -22,7 +22,7 @@
     "errorMessage": "A temporary shadow has crossed our path. Please try again later.",
     "title": "Submit a Support Ticket"
   },
-  "contact": "Seek Guidance",
+  "contact": "Contact us",
   "faq": "Common Inquiries",
   "ticket_status": "Status of the Pact",
   "new_ticket": "Initiate New Inquiry",

@@ -14,41 +14,41 @@
     "cycle": "Cycle Élémentaire"
   },
   "water": {
-    "name": "Bois (木)",
-    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
-    "keywords": ["Sagesse", "Flexibilité", "Aperçu", "Vitalité"],
+    "name": "Eau (水)",
+    "description": "La force qui s’infiltre et coule. Elle réfléchit, observe et attend son heure.",
+    "keywords": ["Sagesse", "Souplesse", "Intuition"],
     "strengths": ["Aperçu", "Adaptabilité", "Apprentissage"],
     "careers": ["Chercheuse", "Philosophe", "Commerce", "Psychologie"],
-    "short": "Metal"
+    "short": "Eau"
   },
   "wood": {
     "name": "Bois (木)",
-    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
-    "keywords": ["Croissance", "Création", "Conduire", "Bienveillance"],
+    "description": "La force qui pousse et s’étend. Elle va vers ce qui commence et s’élargit.",
+    "keywords": ["Croissance", "Commencement", "Élan"],
     "strengths": ["Conduire", "Planification", "Compassion"],
     "careers": ["Planificatrice", "Éducatrice", "Art", "Conception"],
-    "short": "Metal"
+    "short": "Bois"
   },
   "fire": {
-    "name": "Bois (木)",
-    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
-    "keywords": ["Passion", "Expression", "Énergie", "Éclat"],
+    "name": "Feu (火)",
+    "description": "La force vive qui se montre. Elle va vers l’expression et l’animation.",
+    "keywords": ["Passion", "Expression", "Vitalité"],
     "strengths": ["Sociabilité", "Direction", "Créativité"],
     "careers": ["Artiste", "Ventes", "Conception", "IT"],
-    "short": "Metal"
+    "short": "Feu"
   },
   "earth": {
-    "name": "Bois (木)",
-    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
-    "keywords": ["Inclusion", "Médiation", "Confiance", "Stabilité"],
+    "name": "Terre (土)",
+    "description": "La force qui soutient au centre. Elle accueille, tient bon et relie.",
+    "keywords": ["Accueil", "Médiation", "Confiance"],
     "strengths": ["Fiabilité", "Persistance", "Fiabilité"],
     "careers": ["Immobilier", "Agriculture", "Architecture", "Politique"],
-    "short": "Metal"
+    "short": "Terre"
   },
   "metal": {
-    "name": "Bois (木)",
-    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
-    "keywords": ["Principe", "Justice", "Décision", "Précision"],
+    "name": "Métal (金)",
+    "description": "La force qui tranche et conclut. Elle pose des principes, trie et décide.",
+    "keywords": ["Principe", "Justice", "Décision"],
     "strengths": ["Esprit de décision", "Précision", "Intégrité"],
     "careers": ["Militaire", "Légale", "Finance", "Ingénierie"],
     "short": "Métal"

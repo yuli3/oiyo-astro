@@ -4,8 +4,8 @@
     "description": "Busque orientación y encuentre soluciones en nuestro santuario sagrado."
   },
   "hero": {
-    "title": "Apoyo Sagrado",
-    "subtitle": "Nuestros guardianes están aquí para guiarlo a través de cualquier desafío en su viaje espiritual."
+    "title": "Soporte",
+    "subtitle": "¿Tienes dudas o algo no funciona? Cuéntanoslo y te responderemos."
   },
   "form": {
     "subjectLabel": "Sujeta",
@@ -22,7 +22,7 @@
     "errorMessage": "Una sombra temporal se ha cruzado en nuestro camino. Inténtelo de nuevo más tarde.",
     "title": "Enviar un ticket de soporte"
   },
-  "contact": "buscar orientación",
+  "contact": "Contáctanos",
   "faq": "Consultas comunes",
   "ticket_status": "Estado del Pacto",
   "new_ticket": "Iniciar nueva consulta",

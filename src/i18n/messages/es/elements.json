@@ -14,41 +14,41 @@
     "cycle": "Ciclo Elemental"
   },
   "water": {
-    "name": "Madera (木)",
-    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
-    "keywords": ["Sabiduría", "Flexibilidad", "Conocimiento", "Vitalidad"],
+    "name": "Agua (水)",
+    "description": "La fuerza que se filtra y fluye. Piensa a fondo, observa y espera su momento.",
+    "keywords": ["Sabiduría", "Flexibilidad", "Intuición"],
     "strengths": ["Conocimiento", "Adaptabilidad", "Aprendiendo"],
     "careers": ["Investigadora", "Filósofa", "Comercio", "Psicología"],
-    "short": "Metal"
+    "short": "Agua"
   },
   "wood": {
     "name": "Madera (木)",
-    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
-    "keywords": ["Crecimiento", "Creación", "Conducir", "Benevolencia"],
+    "description": "La fuerza que crece y se extiende. Tiende a empezar y a ampliar.",
+    "keywords": ["Crecimiento", "Comienzo", "Impulso"],
     "strengths": ["Conducir", "Planificación", "Compasión"],
     "careers": ["Planificadora", "Educadora", "Art", "Diseño"],
-    "short": "Metal"
+    "short": "Madera"
   },
   "fire": {
-    "name": "Madera (木)",
-    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
-    "keywords": ["Pasión", "Expresión", "Energía", "Resplandor"],
+    "name": "Fuego (火)",
+    "description": "La fuerza viva que se muestra. Tiende a expresar y a animar el ambiente.",
+    "keywords": ["Pasión", "Expresión", "Vitalidad"],
     "strengths": ["Sociabilidad", "Liderazgo", "Creatividad"],
     "careers": ["Artista", "Ventas", "Diseño", "IT"],
-    "short": "Metal"
+    "short": "Fuego"
   },
   "earth": {
-    "name": "Madera (木)",
-    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
-    "keywords": ["Inclusión", "Mediación", "Confianza", "Estabilidad"],
+    "name": "Tierra (土)",
+    "description": "La fuerza que sostiene desde el centro. Acoge, resiste y une.",
+    "keywords": ["Acogida", "Mediación", "Confianza"],
     "strengths": ["Fiabilidad", "Persistencia", "Integridad"],
     "careers": ["Bienes raíces", "Agricultura", "Arquitectura", "Política"],
-    "short": "Metal"
+    "short": "Tierra"
   },
   "metal": {
-    "name": "Madera (木)",
-    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
-    "keywords": ["Principio", "Justicia", "Decisión", "Precisión"],
+    "name": "Metal (金)",
+    "description": "La fuerza que corta y concluye. Fija principios, ordena y decide.",
+    "keywords": ["Principio", "Justicia", "Decisión"],
     "strengths": ["Decisión", "Exactitud", "Integridad"],
     "careers": ["Militar", "Legal", "Finanzas", "Ingeniería"],
     "short": "Metal"
