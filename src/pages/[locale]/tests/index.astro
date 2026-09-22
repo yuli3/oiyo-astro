@@ -645,7 +645,14 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
         <ul data-search-results class="divide-y divide-primary/10">
           {searchableTests.map((test) => (
             <li data-search-entry data-search-text={`${test.title[locale]} ${test.desc[locale]}`}>
-              <a href={test.href} class="block min-h-11 rounded-md px-3 py-3 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">{test.title[locale]}</a>
+              <a href={test.href} class="flex min-h-11 items-center gap-3 rounded-md px-3 py-3 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                {(testIconSrc(test.href) || test.icon) && (
+                  <span class={`inline-flex size-8 shrink-0 items-center justify-center rounded-md ${test.bg} p-1 text-base`} aria-hidden="true">
+                    <TestIcon src={testIconSrc(test.href)} fallback={test.icon} />
+                  </span>
+                )}
+                <span>{test.title[locale]}</span>
+              </a>
             </li>
           ))}
         </ul>
@@ -700,8 +707,13 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
               <ul class="divide-y divide-primary/10 px-1">
                 {lane.tests.slice(3).map((test) => (
                   <li>
-                    <a href={test.href} class="block min-h-11 rounded-md px-3 py-3 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
-                      {test.title[locale]}
+                    <a href={test.href} class="flex min-h-11 items-center gap-3 rounded-md px-3 py-3 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                      {(testIconSrc(test.href) || test.icon) && (
+                        <span class={`inline-flex size-8 shrink-0 items-center justify-center rounded-md ${test.bg} p-1 text-base`} aria-hidden="true">
+                          <TestIcon src={testIconSrc(test.href)} fallback={test.icon} />
+                        </span>
+                      )}
+                      <span>{test.title[locale]}</span>
                     </a>
                   </li>
                 ))}

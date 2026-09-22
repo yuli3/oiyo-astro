@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-09-08",
+  "updated": "2026-09-22",
   "format": "512x512 transparent WebP",
   "generator": "OpenAI built-in image generation",
   "style": "OIYO warm olive cute flat 2.5D pictogram with bold charcoal outline",
@@ -26,6 +26,16 @@
     "self-efficacy": "three steps leading to a success flag",
     "self-esteem": "handheld mirror reflecting a heart",
     "social-comparison": "two profile cards comparing unequal charts",
-    "workaholic": "laptop beside a late-hours clock"
+    "workaholic": "laptop beside a late-hours clock",
+    "riasec": "olive compass of six petals and an amber needle",
+    "fomo": "round window with an amber lantern beyond the glass",
+    "assertiveness": "empty cream speech bubble on a short olive post",
+    "playfulness": "olive and amber spinning top",
+    "locus-of-control": "olive ship wheel with an amber hub",
+    "emotional-labor": "parted olive curtain with a cream heart",
+    "entrepreneurial-aptitude": "seedling growing through a shop awning",
+    "personal-color": "four swatches, olive cream amber and terracotta",
+    "depression": "rainy window with a small sprout on the sill",
+    "social-anxiety": "ajar garden gate with a lantern on the near side"
   }
 }

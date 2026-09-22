@@ -17,7 +17,14 @@ describe('testIconSrc', () => {
     expect(testIconSrc('/fr/jealousy-type-test/')).toBe('/images/test-icons/jealousy.webp');
   });
 
+  it('maps the 2026-09-22 pictogram batch', () => {
+    expect(testIconSrc('/ko/riasec-career-test/')).toBe('/images/test-icons/riasec.webp');
+    expect(testIconSrc('/en/depression/test')).toBe('/images/test-icons/depression.webp');
+    expect(testIconSrc('/ko/playfulness-test/')).toBe('/images/test-icons/playfulness.webp');
+    expect(testIconSrc('/ja/mbti/career/')).toBe('/images/result-symbols/mbti.webp');
+  });
+
   it('leaves unmapped tests on their existing emoji fallback', () => {
-    expect(testIconSrc('/ko/playfulness-test/')).toBeUndefined();
+    expect(testIconSrc('/ko/anger-style/test/')).toBeUndefined();
   });
 });
