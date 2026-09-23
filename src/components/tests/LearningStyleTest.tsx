@@ -3,11 +3,11 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type StyleType = 'visual' | 'auditory' | 'reading' | 'kinesthetic'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -64,6 +64,48 @@ const LABELS: Record<SupportedLang, {
     recommendation: 'おすすめの学習法',
     dominant: '主タイプ',
   },
+  zh: {
+    title: '学习风格测验（VARK）',
+    subtitle: '我用哪种方式学得最顺？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的学习风格是',
+    yourStyle: '我的主要学习风格',
+    yourProfile: 'VARK 学习分布',
+    note: '这份结果是帮你认识自己的参考，学习方式会随情境改变。',
+    styleNames: { visual: '视觉型', auditory: '听觉型', reading: '读写型', kinesthetic: '实作型' },
+    recommendation: '适合的学法',
+    dominant: '主要类型',
+  },
+  fr: {
+    title: 'Test des styles d’apprentissage (VARK)',
+    subtitle: 'Comment apprenez-vous le mieux ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon style d’apprentissage est',
+    yourStyle: 'Votre style dominant',
+    yourProfile: 'Profil VARK',
+    note: 'Ce résultat sert à mieux se connaître ; la façon d’apprendre change selon le contexte.',
+    styleNames: { visual: 'Visuel', auditory: 'Auditif', reading: 'Lecture/écriture', kinesthetic: 'Kinesthésique' },
+    recommendation: 'Méthodes conseillées',
+    dominant: 'Type dominant',
+  },
+  es: {
+    title: 'Test de estilos de aprendizaje (VARK)',
+    subtitle: '¿Cómo aprendes mejor?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi estilo de aprendizaje es',
+    yourStyle: 'Tu estilo principal',
+    yourProfile: 'Perfil VARK',
+    note: 'Este resultado sirve para conocerte mejor; la forma de aprender cambia según el contexto.',
+    styleNames: { visual: 'Visual', auditory: 'Auditivo', reading: 'Lectura/escritura', kinesthetic: 'Kinestésico' },
+    recommendation: 'Métodos recomendados',
+    dominant: 'Tipo principal',
+  },
 }
 
 interface StyleResult {
@@ -93,6 +135,27 @@ const STYLE_RESULTS: Record<StyleType, Record<SupportedLang, StyleResult>> = {
       description: '図表、色、空間的配置で情報を処理します。',
       tips: ['マインドマップや図を活用する', 'カラーノートと蛍光ペンを使う', 'インフォグラフィックや動画を活用する'],
     },
+    zh: {
+      icon: '👁️',
+      title: '视觉型',
+      subtitle: '用画面思考的学习者',
+      description: '你靠图表、颜色和版面的位置来消化信息。',
+      tips: ['画心智图和示意图', '用彩色笔和萤光笔分层', '多找信息图和影片'],
+    },
+    fr: {
+      icon: '👁️',
+      title: 'Visuel',
+      subtitle: 'Celui qui pense en images',
+      description: 'Vous traitez l’information par les schémas, les couleurs et la disposition dans l’espace.',
+      tips: ['Faire des cartes mentales et des schémas', 'Coder ses notes par couleurs', 'Chercher infographies et vidéos'],
+    },
+    es: {
+      icon: '👁️',
+      title: 'Visual',
+      subtitle: 'Quien piensa en imágenes',
+      description: 'Procesas la información con esquemas, colores y la disposición en el espacio.',
+      tips: ['Hacer mapas mentales y esquemas', 'Codificar los apuntes por colores', 'Buscar infografías y vídeos'],
+    },
   },
   auditory: {
     ko: {
@@ -115,6 +178,27 @@ const STYLE_RESULTS: Record<StyleType, Record<SupportedLang, StyleResult>> = {
       subtitle: '聴いて学ぶ学習者',
       description: '音、リズム、ディスカッションで情報を吸収します。',
       tips: ['講義を録音して繰り返し聴く', 'スタディグループで声に出して説明する', 'ポッドキャストとオーディオブックを活用する'],
+    },
+    zh: {
+      icon: '👂',
+      title: '听觉型',
+      subtitle: '用耳朵理解的学习者',
+      description: '你在听人讲、跟人说的过程里把东西弄懂。',
+      tips: ['把重点念出声，或录下来反覆听', '讲给别人听，一讲就清楚', '用播客和讲座来学'],
+    },
+    fr: {
+      icon: '👂',
+      title: 'Auditif',
+      subtitle: 'Celui qui comprend par l’oreille',
+      description: 'Vous saisissez les choses en écoutant et en parlant avec d’autres.',
+      tips: ['Lire à voix haute ou s’enregistrer et réécouter', 'Expliquer à quelqu’un : tout s’éclaire', 'Apprendre par podcasts et conférences'],
+    },
+    es: {
+      icon: '👂',
+      title: 'Auditivo',
+      subtitle: 'Quien entiende por el oído',
+      description: 'Captas las cosas escuchando y hablándolas con otros.',
+      tips: ['Leer en voz alta o grabarte y repetir', 'Explicárselo a alguien: ahí se aclara', 'Aprender con pódcast y charlas'],
     },
   },
   reading: {
@@ -139,6 +223,27 @@ const STYLE_RESULTS: Record<StyleType, Record<SupportedLang, StyleResult>> = {
       description: 'テキストを読み書きすることで最もよく理解します。',
       tips: ['詳細なノートとサマリーを書く', 'レポートやエッセイを書く練習をする', '関連書籍や資料を読む'],
     },
+    zh: {
+      icon: '📖',
+      title: '读写型',
+      subtitle: '用文字整理的学习者',
+      description: '你把看到的东西写成字，才算真的装进脑子里。',
+      tips: ['把重点整理成摘要', '读完写一段自己的话', '做条列笔记，再回头重读'],
+    },
+    fr: {
+      icon: '📖',
+      title: 'Lecture/écriture',
+      subtitle: 'Celui qui met de l’ordre par l’écrit',
+      description: 'Ce que vous avez écrit avec vos mots est ce qui reste vraiment.',
+      tips: ['Résumer l’essentiel par écrit', 'Reformuler après lecture, avec ses propres mots', 'Prendre des notes structurées et les relire'],
+    },
+    es: {
+      icon: '📖',
+      title: 'Lectura/escritura',
+      subtitle: 'Quien ordena escribiendo',
+      description: 'Lo que has escrito con tus palabras es lo que de verdad se queda.',
+      tips: ['Resumir lo esencial por escrito', 'Reformular con tus palabras después de leer', 'Tomar apuntes ordenados y releerlos'],
+    },
   },
   kinesthetic: {
     ko: {
@@ -161,6 +266,27 @@ const STYLE_RESULTS: Record<StyleType, Record<SupportedLang, StyleResult>> = {
       subtitle: '経験で学ぶ学習者',
       description: '直接やってみることで最も効果的に学習します。',
       tips: ['実践プロジェクトやロールプレイを活用する', 'フィールドワークやシミュレーションに参加する', '学んだことをすぐに実践する'],
+    },
+    zh: {
+      icon: '✋',
+      title: '实作型',
+      subtitle: '动手才学得会的学习者',
+      description: '你要亲手做过、身体记住，才真的懂。',
+      tips: ['先上手做一遍再读说明', '边走边背，让身体动起来', '用实例和练习题来学'],
+    },
+    fr: {
+      icon: '✋',
+      title: 'Kinesthésique',
+      subtitle: 'Celui qui apprend en faisant',
+      description: 'Vous comprenez une fois que le geste a été fait et que le corps s’en souvient.',
+      tips: ['Essayer d’abord, lire la notice ensuite', 'Réviser en marchant, en bougeant', 'Apprendre par des cas concrets et des exercices'],
+    },
+    es: {
+      icon: '✋',
+      title: 'Kinestésico',
+      subtitle: 'Quien aprende haciendo',
+      description: 'Entiendes cuando ya lo has hecho con las manos y el cuerpo lo recuerda.',
+      tips: ['Probar primero y leer las instrucciones después', 'Repasar caminando, con el cuerpo en marcha', 'Aprender con casos y ejercicios'],
     },
   },
 }
@@ -649,6 +775,492 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
         { type: 'auditory', text: '経験者の説明を聴く' },
         { type: 'reading', text: 'ルールブックや説明書を読む' },
         { type: 'kinesthetic', text: 'とりあえずやってみながら覚える' },
+      ],
+    },
+  ],
+  zh: [
+    {
+      id: 'q1',
+      text: '在陌生的城市找路时，我会…',
+      options: [
+        { type: 'visual', text: '看地图或导航画面走' },
+        { type: 'auditory', text: '听语音导航，或直接问人' },
+        { type: 'reading', text: '把路名和方向记成文字' },
+        { type: 'kinesthetic', text: '先走走看，用脚记住' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: '学新东西，最有效的方式是…',
+      options: [
+        { type: 'visual', text: '看图表、示意图和影片' },
+        { type: 'auditory', text: '听课、听播客、听人讲' },
+        { type: 'reading', text: '把书和资料仔细读一遍' },
+        { type: 'kinesthetic', text: '自己动手做一次' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: '开会或上课时，我靠什么保持专注？',
+      options: [
+        { type: 'visual', text: '盯着投影片或白板看' },
+        { type: 'auditory', text: '专心听讲的内容' },
+        { type: 'reading', text: '把重点记到本子上' },
+        { type: 'kinesthetic', text: '手里摆弄点东西，或动一动' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: '摸熟一支新手机时，我会…',
+      options: [
+        { type: 'visual', text: '把设定画面一页页看过' },
+        { type: 'auditory', text: '看教学影片听着讲解' },
+        { type: 'reading', text: '读说明书或线上指南' },
+        { type: 'kinesthetic', text: '这按按那点点就上手了' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: '准备上台报告时，最帮得上忙的是…',
+      options: [
+        { type: 'visual', text: '投影片里多放图和图表' },
+        { type: 'auditory', text: '把内容念出声反覆练' },
+        { type: 'reading', text: '把讲稿写细，照着读' },
+        { type: 'kinesthetic', text: '站起来像正式那样走一遍' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: '记住学过的东西，我靠…',
+      options: [
+        { type: 'visual', text: '用彩色笔画心智图' },
+        { type: 'auditory', text: '录下来反覆听，或讲给朋友' },
+        { type: 'reading', text: '把重点整理成摘要再读' },
+        { type: 'kinesthetic', text: '做单字卡，或动手抄一遍' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: '理解复杂概念时…',
+      options: [
+        { type: 'visual', text: '画成图就很快懂' },
+        { type: 'auditory', text: '有人讲给我听就通了' },
+        { type: 'reading', text: '读详细的文字说明才清楚' },
+        { type: 'kinesthetic', text: '要看到实例、实际碰过才懂' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: '准备考试时，我偏好…',
+      options: [
+        { type: 'visual', text: '把重点整理成图表' },
+        { type: 'auditory', text: '跟读书会互相讲解' },
+        { type: 'reading', text: '课本和笔记反覆读' },
+        { type: 'kinesthetic', text: '刷题，或以实作为主' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: '要了解一个陌生主题，我会…',
+      options: [
+        { type: 'visual', text: '找信息图或影片' },
+        { type: 'auditory', text: '听专家讲座或播客' },
+        { type: 'reading', text: '找文章和书来读' },
+        { type: 'kinesthetic', text: '报名体验课或工作坊' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: '跟朋友解释复杂的事时，我会…',
+      options: [
+        { type: 'visual', text: '在纸上边画边说' },
+        { type: 'auditory', text: '举例子，用讲的' },
+        { type: 'reading', text: '写成文字或便条给对方看' },
+        { type: 'kinesthetic', text: '拿类似的经历来比' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: '我喜欢的休闲是…',
+      options: [
+        { type: 'visual', text: '摄影、绘画、看电影' },
+        { type: 'auditory', text: '听音乐、播客、广播' },
+        { type: 'reading', text: '读书、写日记、写部落格' },
+        { type: 'kinesthetic', text: '做菜、运动、动手做东西' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: '上线上课程时，我会…',
+      options: [
+        { type: 'visual', text: '盯着投影片和画面看' },
+        { type: 'auditory', text: '专心听讲者的声音' },
+        { type: 'reading', text: '看字幕或讲义跟着走' },
+        { type: 'kinesthetic', text: '跟着课程中途的练习做' },
+      ],
+    },
+    {
+      id: 'q13',
+      text: '照新食谱做菜时，我会…',
+      options: [
+        { type: 'visual', text: '看着成品照片做' },
+        { type: 'auditory', text: '听着料理影片的说明做' },
+        { type: 'reading', text: '照着步骤读着做' },
+        { type: 'kinesthetic', text: '边尝边调整分量' },
+      ],
+    },
+    {
+      id: 'q14',
+      text: '最容易记住的信息是…',
+      options: [
+        { type: 'visual', text: '跟颜色或画面一起看到的' },
+        { type: 'auditory', text: '别人亲口讲给我听的' },
+        { type: 'reading', text: '读过或自己写下来的' },
+        { type: 'kinesthetic', text: '身体做过、实际练过的' },
+      ],
+    },
+    {
+      id: 'q15',
+      text: '最容易专心的环境是…',
+      options: [
+        { type: 'visual', text: '干净、整齐、看着舒服的地方' },
+        { type: 'auditory', text: '有背景音乐或一点声响的地方' },
+        { type: 'reading', text: '安静、笔和纸都就位的地方' },
+        { type: 'kinesthetic', text: '可以走动、能起来动的地方' },
+      ],
+    },
+    {
+      id: 'q16',
+      text: '学新游戏或新运动时，我会…',
+      options: [
+        { type: 'visual', text: '先看规则讲解的影片' },
+        { type: 'auditory', text: '听玩过的人说一遍' },
+        { type: 'reading', text: '读规则书或说明' },
+        { type: 'kinesthetic', text: '先玩玩看，边玩边学' },
+      ],
+    },
+  ],
+  fr: [
+    {
+      id: 'q1',
+      text: 'Pour m’orienter dans une ville inconnue, je…',
+      options: [
+        { type: 'visual', text: 'regarde la carte ou l’écran du GPS' },
+        { type: 'auditory', text: 'écoute les indications vocales ou demande à quelqu’un' },
+        { type: 'reading', text: 'note les noms de rues et les directions' },
+        { type: 'kinesthetic', text: 'marche d’abord, pour prendre mes repères' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: 'Pour apprendre, ce qui marche le mieux, c’est…',
+      options: [
+        { type: 'visual', text: 'des schémas, des diagrammes, des vidéos' },
+        { type: 'auditory', text: 'un cours, un podcast, quelqu’un qui explique' },
+        { type: 'reading', text: 'lire un livre ou un document avec soin' },
+        { type: 'kinesthetic', text: 'faire moi-même, m’exercer' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: 'Pour rester concentré en réunion ou en cours, je…',
+      options: [
+        { type: 'visual', text: 'suis des yeux la présentation ou le tableau' },
+        { type: 'auditory', text: 'me concentre sur ce qui est dit' },
+        { type: 'reading', text: 'note l’essentiel' },
+        { type: 'kinesthetic', text: 'manipule un objet ou bouge un peu' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: 'Pour prendre en main un nouveau téléphone, je…',
+      options: [
+        { type: 'visual', text: 'parcours les écrans de réglages' },
+        { type: 'auditory', text: 'regarde un tutoriel et j’écoute les explications' },
+        { type: 'reading', text: 'lis le mode d’emploi ou un guide en ligne' },
+        { type: 'kinesthetic', text: 'appuie un peu partout et j’apprends ainsi' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: 'Pour préparer une présentation, ce qui m’aide le plus…',
+      options: [
+        { type: 'visual', text: 'mettre des images et des graphiques dans les diapos' },
+        { type: 'auditory', text: 'répéter à voix haute, plusieurs fois' },
+        { type: 'reading', text: 'rédiger le texte en détail et le lire' },
+        { type: 'kinesthetic', text: 'répéter debout, comme en situation' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: 'Pour retenir ce que j’ai appris, je…',
+      options: [
+        { type: 'visual', text: 'fais une carte mentale en couleurs' },
+        { type: 'auditory', text: 'm’enregistre et réécoute, ou j’explique à un ami' },
+        { type: 'reading', text: 'résume les idées clés et je relis' },
+        { type: 'kinesthetic', text: 'fabrique des fiches ou je recopie à la main' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: 'Pour saisir une notion complexe…',
+      options: [
+        { type: 'visual', text: 'un dessin ou un schéma et je comprends vite' },
+        { type: 'auditory', text: 'quelqu’un me l’explique et ça passe tout seul' },
+        { type: 'reading', text: 'un texte détaillé et c’est clair' },
+        { type: 'kinesthetic', text: 'il me faut un exemple concret, vécu' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: 'Pour préparer un examen, je préfère…',
+      options: [
+        { type: 'visual', text: 'organiser l’essentiel en tableaux ou en schémas' },
+        { type: 'auditory', text: 'travailler en groupe et s’expliquer mutuellement' },
+        { type: 'reading', text: 'relire le manuel et mes notes' },
+        { type: 'kinesthetic', text: 'faire des exercices, du concret' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: 'Pour découvrir un sujet inconnu, je…',
+      options: [
+        { type: 'visual', text: 'cherche des infographies ou des vidéos' },
+        { type: 'auditory', text: 'écoute une conférence ou un podcast' },
+        { type: 'reading', text: 'lis des articles et des livres' },
+        { type: 'kinesthetic', text: 'm’inscris à un atelier ou à une expérience' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: 'Pour expliquer quelque chose de compliqué à un ami, je…',
+      options: [
+        { type: 'visual', text: 'dessine sur une feuille en parlant' },
+        { type: 'auditory', text: 'donne des exemples, à l’oral' },
+        { type: 'reading', text: 'écris un mot ou une note à lui montrer' },
+        { type: 'kinesthetic', text: 'prends une situation vécue comparable' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: 'Mes loisirs, ce sont plutôt…',
+      options: [
+        { type: 'visual', text: 'la photo, le dessin, le cinéma' },
+        { type: 'auditory', text: 'la musique, les podcasts, la radio' },
+        { type: 'reading', text: 'la lecture, le journal intime, le blog' },
+        { type: 'kinesthetic', text: 'la cuisine, le sport, le travail manuel' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: 'Pendant un cours en ligne, je…',
+      options: [
+        { type: 'visual', text: 'fixe les diapos et les documents à l’écran' },
+        { type: 'auditory', text: 'me concentre sur la voix de l’intervenant' },
+        { type: 'reading', text: 'suis les sous-titres ou les notes de cours' },
+        { type: 'kinesthetic', text: 'fais les exercices proposés en cours de route' },
+      ],
+    },
+    {
+      id: 'q13',
+      text: 'Avec une nouvelle recette, je…',
+      options: [
+        { type: 'visual', text: 'me guide sur la photo du plat fini' },
+        { type: 'auditory', text: 'suis les explications d’une vidéo' },
+        { type: 'reading', text: 'lis les étapes et j’avance' },
+        { type: 'kinesthetic', text: 'goûte et j’ajuste les quantités' },
+      ],
+    },
+    {
+      id: 'q14',
+      text: 'Ce dont je me souviens le mieux, c’est…',
+      options: [
+        { type: 'visual', text: 'ce que j’ai vu avec des couleurs ou des images' },
+        { type: 'auditory', text: 'ce que quelqu’un m’a dit de vive voix' },
+        { type: 'reading', text: 'ce que j’ai lu ou écrit moi-même' },
+        { type: 'kinesthetic', text: 'ce que j’ai fait avec le corps' },
+      ],
+    },
+    {
+      id: 'q15',
+      text: 'Je me concentre le mieux…',
+      options: [
+        { type: 'visual', text: 'dans un lieu net et bien rangé' },
+        { type: 'auditory', text: 'avec une musique de fond ou un peu de bruit' },
+        { type: 'reading', text: 'au calme, avec de quoi écrire' },
+        { type: 'kinesthetic', text: 'là où je peux marcher ou bouger' },
+      ],
+    },
+    {
+      id: 'q16',
+      text: 'Pour apprendre un jeu ou un sport, je…',
+      options: [
+        { type: 'visual', text: 'regarde d’abord une vidéo des règles' },
+        { type: 'auditory', text: 'écoute quelqu’un qui a déjà pratiqué' },
+        { type: 'reading', text: 'lis le règlement ou la notice' },
+        { type: 'kinesthetic', text: 'me lance et j’apprends en jouant' },
+      ],
+    },
+  ],
+  es: [
+    {
+      id: 'q1',
+      text: 'Para orientarme en una ciudad nueva, yo…',
+      options: [
+        { type: 'visual', text: 'miro el mapa o la pantalla del GPS' },
+        { type: 'auditory', text: 'escucho las indicaciones o pregunto a alguien' },
+        { type: 'reading', text: 'apunto los nombres de calle y las direcciones' },
+        { type: 'kinesthetic', text: 'camino primero y me hago con el sitio' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: 'Para aprender algo, lo que mejor me funciona es…',
+      options: [
+        { type: 'visual', text: 'esquemas, diagramas y vídeos' },
+        { type: 'auditory', text: 'una clase, un pódcast, alguien que lo explique' },
+        { type: 'reading', text: 'leer con calma un libro o un documento' },
+        { type: 'kinesthetic', text: 'hacerlo yo, practicar' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: 'Para mantener la atención en una reunión o clase, yo…',
+      options: [
+        { type: 'visual', text: 'sigo con la vista la presentación o la pizarra' },
+        { type: 'auditory', text: 'me concentro en lo que se dice' },
+        { type: 'reading', text: 'apunto lo esencial' },
+        { type: 'kinesthetic', text: 'toqueteo algo con las manos o me muevo' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: 'Para manejarme con un móvil nuevo, yo…',
+      options: [
+        { type: 'visual', text: 'recorro las pantallas de ajustes' },
+        { type: 'auditory', text: 'veo un tutorial y escucho la explicación' },
+        { type: 'reading', text: 'leo el manual o una guía en línea' },
+        { type: 'kinesthetic', text: 'toco por todas partes y así lo aprendo' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: 'Preparando una presentación, lo que más me ayuda es…',
+      options: [
+        { type: 'visual', text: 'poner imágenes y gráficos en las diapositivas' },
+        { type: 'auditory', text: 'repetirlo en voz alta varias veces' },
+        { type: 'reading', text: 'escribir el guion con detalle y leerlo' },
+        { type: 'kinesthetic', text: 'ensayar de pie, como si fuera real' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: 'Para recordar lo estudiado, yo…',
+      options: [
+        { type: 'visual', text: 'hago un mapa mental con colores' },
+        { type: 'auditory', text: 'lo grabo y lo repito, o se lo explico a alguien' },
+        { type: 'reading', text: 'resumo las ideas clave y las releo' },
+        { type: 'kinesthetic', text: 'hago fichas o lo copio a mano' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: 'Para entender un concepto complejo…',
+      options: [
+        { type: 'visual', text: 'si lo dibujo o lo esquematizo, lo pillo enseguida' },
+        { type: 'auditory', text: 'si alguien me lo cuenta, me entra solo' },
+        { type: 'reading', text: 'con un texto detallado me queda claro' },
+        { type: 'kinesthetic', text: 'necesito un ejemplo real, haberlo tocado' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: 'Estudiando para un examen, prefiero…',
+      options: [
+        { type: 'visual', text: 'ordenar lo importante en tablas o esquemas' },
+        { type: 'auditory', text: 'estudiar en grupo y explicárnoslo' },
+        { type: 'reading', text: 'releer el manual y los apuntes' },
+        { type: 'kinesthetic', text: 'hacer ejercicios, lo más práctico posible' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: 'Para acercarme a un tema nuevo, yo…',
+      options: [
+        { type: 'visual', text: 'busco infografías o vídeos' },
+        { type: 'auditory', text: 'escucho una charla o un pódcast' },
+        { type: 'reading', text: 'busco artículos y libros' },
+        { type: 'kinesthetic', text: 'me apunto a un taller o a una experiencia' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: 'Al explicarle algo complicado a un amigo, yo…',
+      options: [
+        { type: 'visual', text: 'dibujo en un papel mientras hablo' },
+        { type: 'auditory', text: 'pongo ejemplos, hablando' },
+        { type: 'reading', text: 'se lo escribo en una nota y se lo enseño' },
+        { type: 'kinesthetic', text: 'uso una situación parecida que hayamos vivido' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: 'Mis aficiones son más bien…',
+      options: [
+        { type: 'visual', text: 'fotografía, dibujo, cine' },
+        { type: 'auditory', text: 'música, pódcast, radio' },
+        { type: 'reading', text: 'leer, escribir un diario, un blog' },
+        { type: 'kinesthetic', text: 'cocinar, deporte, trabajos manuales' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: 'En un curso en línea, yo…',
+      options: [
+        { type: 'visual', text: 'miro fijamente las diapositivas y el material' },
+        { type: 'auditory', text: 'me concentro en la voz de quien enseña' },
+        { type: 'reading', text: 'sigo los subtítulos o los apuntes' },
+        { type: 'kinesthetic', text: 'hago sobre la marcha los ejercicios que proponen' },
+      ],
+    },
+    {
+      id: 'q13',
+      text: 'Con una receta nueva, yo…',
+      options: [
+        { type: 'visual', text: 'me guío por la foto del plato terminado' },
+        { type: 'auditory', text: 'sigo las explicaciones de un vídeo' },
+        { type: 'reading', text: 'leo los pasos y voy avanzando' },
+        { type: 'kinesthetic', text: 'pruebo y ajusto las cantidades' },
+      ],
+    },
+    {
+      id: 'q14',
+      text: 'Lo que mejor recuerdo es…',
+      options: [
+        { type: 'visual', text: 'lo que vi con colores o imágenes' },
+        { type: 'auditory', text: 'lo que alguien me contó de viva voz' },
+        { type: 'reading', text: 'lo que leí o escribí yo' },
+        { type: 'kinesthetic', text: 'lo que hice con el cuerpo' },
+      ],
+    },
+    {
+      id: 'q15',
+      text: 'Me concentro mejor…',
+      options: [
+        { type: 'visual', text: 'en un sitio limpio y ordenado' },
+        { type: 'auditory', text: 'con música de fondo o algo de ruido' },
+        { type: 'reading', text: 'en silencio, con algo con lo que escribir a mano' },
+        { type: 'kinesthetic', text: 'donde pueda andar o moverme' },
+      ],
+    },
+    {
+      id: 'q16',
+      text: 'Para aprender un juego o un deporte, yo…',
+      options: [
+        { type: 'visual', text: 'veo primero un vídeo con las reglas' },
+        { type: 'auditory', text: 'escucho a alguien con experiencia' },
+        { type: 'reading', text: 'leo el reglamento o las instrucciones' },
+        { type: 'kinesthetic', text: 'me lanzo y aprendo jugando' },
       ],
     },
   ],
