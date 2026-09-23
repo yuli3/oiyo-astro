@@ -53,7 +53,11 @@ const meta: Record<Locale, { title: string; description: string; heading: string
 
 const m = meta[locale] ?? meta.en;
 
-const namespaces = ['saju', 'saju-daymaster', 'elements', 'ontology', 'common', 'nav', 'ui'];
+// 이 섬이 실제로 읽는 것은 둘뿐이다 — 천간 설명(saju-daymaster)과 오행 뜻
+// (elements). 2026-09-23 까지는 일곱 묶음을 통째로 섬 props 로 HTML 에
+// 직렬화해 쪽마다 42KB 가 실렸고(그중 35KB 는 아무도 읽지 않았다) 화면에
+// 없는 옛 문구가 원본에 딸려 갔다.
+const namespaces = ['saju-daymaster', 'elements'];
 const messages: Record<string, unknown> = {};
 for (const ns of namespaces) {
   try {

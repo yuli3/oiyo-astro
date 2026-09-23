@@ -2,7 +2,7 @@
 
 import { motion as m } from "framer-motion";
 import { BookOpen, Flower, Mountain, Sparkles } from "lucide-react";
-import { useLocale, useMessages, useTranslations } from "next-intl";
+import { useLocale, useMessages } from "next-intl";
 import { useMemo, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
@@ -51,7 +51,6 @@ const BRANCH_KEYS = [
 ];
 
 export function EncyclopediaClient() {
-  const t = useTranslations("universal");
   const messages = useMessages() as any;
   const locale = useLocale();
   const [activeTab, setActiveTab] = useState<Tab>("stems");
