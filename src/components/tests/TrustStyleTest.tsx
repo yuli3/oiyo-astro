@@ -3,11 +3,11 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type StyleKey = 'quick' | 'earned' | 'cautious' | 'guarded'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -58,6 +58,39 @@ const LABELS: Record<SupportedLang, {
     dimLabels: { quick: '即時信頼型', earned: '検証型', cautious: '慎重型', guarded: '防衛型' },
     note: 'このテストは参考用であり、専門的な心理診断の代替ではありません。',
     barLabel: '傾向分布',
+  },
+  zh: {
+    title: '信任风格测验',
+    subtitle: '我是怎么相信别人的？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: '重新测验', share: '分享结果', shareMsg: '我的信任风格是',
+    yourStyle: '我的信任风格', strengths: '这种风格的长处', tips: '可以练习的地方',
+    affirmation: '今天想对你说',
+    dimLabels: { quick: '快速信任型', earned: '验证型', cautious: '谨慎型', guarded: '防守型' },
+    note: '本测验仅供参考，不能替代专业的心理评估。',
+    barLabel: '倾向分布',
+  },
+  fr: {
+    title: 'Test du style de confiance',
+    subtitle: 'Comment est-ce que je fais confiance ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Recommencer', share: 'Partager le résultat', shareMsg: 'Mon style de confiance',
+    yourStyle: 'Votre style de confiance', strengths: 'Les forces de ce style', tips: 'Pistes de progrès',
+    affirmation: 'Un mot pour aujourd’hui',
+    dimLabels: { quick: 'Confiance rapide', earned: 'Confiance éprouvée', cautious: 'Prudent', guarded: 'Sur ses gardes' },
+    note: 'Ce test est indicatif et ne remplace pas une évaluation psychologique professionnelle.',
+    barLabel: 'Répartition des tendances',
+  },
+  es: {
+    title: 'Test de estilo de confianza',
+    subtitle: '¿Cómo confío en los demás?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Repetir', share: 'Compartir resultado', shareMsg: 'Mi estilo de confianza',
+    yourStyle: 'Tu estilo de confianza', strengths: 'Las fortalezas de este estilo', tips: 'Para practicar',
+    affirmation: 'Algo para hoy',
+    dimLabels: { quick: 'Confianza rápida', earned: 'Confianza ganada', cautious: 'Cauto', guarded: 'En guardia' },
+    note: 'Este test es orientativo y no sustituye una evaluación psicológica profesional.',
+    barLabel: 'Reparto de tendencias',
   },
 }
 
@@ -116,6 +149,60 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q15', text: '幼少期の主な養育者との関係は', choices: ['とても安定していて信頼できた', 'おおむね良かったが不安もあった', '一貫性がなく混乱した', '信頼しにくかった'] },
     { id: 'q16', text: '相手が自分の弱みを見せてくれたとき、私は', choices: ['大切に思い、より近しく感じる', '受け入れるが慎重に反応する', '大丈夫か心配になる', '居心地の悪さを感じる'] },
   ],
+  zh: [
+    { id: 'q1', text: '初次见面的同事主动帮忙时，我会', choices: ['马上高兴地接受', '先道谢，再看看情况', '客气地婉拒，自己处理', '开始怀疑对方的用意'] },
+    { id: 'q2', text: '朋友给我新建议时，我会', choices: ['马上试试看', '想清楚再决定', '再多问几个人的意见', '更相信自己的判断'] },
+    { id: 'q3', text: '陌生人给我指路时，我会', choices: ['道谢后跟着走', '边看地图边走', '反复确认，小心地跟', '另外找别的办法'] },
+    { id: 'q4', text: '和网上初次认识的人聊天时，我会', choices: ['自然地聊起自己的事', '等熟一点再打开', '只说需要说的', '几乎不给个人资料'] },
+    { id: 'q5', text: '和第一次共事的组员合作时，我会', choices: ['直接把任务交给他，信他', '从小事开始，慢慢建立信任', '仔细核对着推进', '能自己做就自己做'] },
+    { id: 'q6', text: '有人对我吐露秘密时，我会', choices: ['真心接住，并感同身受', '先弄清来龙去脉再回应', '小心地听着', '心里疑惑：为什么跟我说'] },
+    { id: 'q7', text: '如果曾被信任的人辜负过，我会', choices: ['觉得那是那个人的问题', '当成教训，下次更谨慎', '被影响相当久', '从此不太轻易信人'] },
+    { id: 'q8', text: '对方失约一次时，我会', choices: ['很快原谅，继续相信', '听完理由再判断', '信任掉得不少', '重新评估这段关系'] },
+    { id: 'q9', text: '有人称赞我时，我会', choices: ['单纯地高兴', '谢谢，但也想想原因', '有点不自在地接下', '想想是不是有别的用意'] },
+    { id: 'q10', text: '第一次去的餐厅问推荐菜时，我会', choices: ['直接照店员说的点', '参考评论一起看', '多问几次再挑', '按自己的判断决定'] },
+    { id: 'q11', text: '好朋友突然开口借钱时，我会', choices: ['二话不说借给他', '听完情况再决定', '客气地说不方便', '开始对这个朋友起疑'] },
+    { id: 'q12', text: '听医生或专家的意见时，我会', choices: ['完全相信并照做', '再看别的意见后决定', '仔细查过再判断', '自己下判断'] },
+    { id: 'q13', text: '适应新环境（职场、学校）时，我会', choices: ['很快和大家熟起来', '慢慢了解，慢慢建立关系', '要花时间，也比较小心', '保持一点距离'] },
+    { id: 'q14', text: '在社群网络上看到新闻或资讯时，我会', choices: ['有共鸣就直接相信', '先查来源', '比对好几个来源', '大多带着怀疑看'] },
+    { id: 'q15', text: '小时候和主要照顾者（父母等）的关系是', choices: ['非常稳定，可以信赖', '大体不错，但有些不安', '不太一致，让人困惑', '难以信任'] },
+    { id: 'q16', text: '对方在我面前露出弱点时，我会', choices: ['很珍惜，也更靠近', '接住，但反应小心', '担心他是不是还好', '觉得有点不自在'] },
+  ],
+  fr: [
+    { id: 'q1', text: 'Quand un collègue rencontré pour la première fois propose son aide, je', choices: ['accepte tout de suite, avec plaisir', 'remercie d’abord et j’observe la situation', 'décline poliment et je me débrouille seul', 'me mets à douter de ses intentions'] },
+    { id: 'q2', text: 'Quand un ami me donne un conseil nouveau, je', choices: ['l’essaie aussitôt', 'y réfléchis bien avant de décider', 'demande encore d’autres avis', 'me fie davantage à mon propre jugement'] },
+    { id: 'q3', text: 'Quand un inconnu m’indique le chemin, je', choices: ['le remercie et je le suis', 'avance en vérifiant sur la carte', 'vérifie plusieurs fois et je suis prudemment', 'cherche une autre solution'] },
+    { id: 'q4', text: 'Quand je parle à quelqu’un rencontré en ligne, je', choices: ['raconte naturellement des choses personnelles', 'm’ouvre une fois que je le connais un peu', 'ne dis que le nécessaire', 'ne donne presque aucune information personnelle'] },
+    { id: 'q5', text: 'Quand je travaille avec un équipier que je ne connais pas, je', choices: ['lui confie un rôle tout de suite et je lui fais confiance', 'commence par de petites choses pour bâtir la confiance', 'avance en vérifiant soigneusement', 'fais moi-même dès que possible'] },
+    { id: 'q6', text: 'Quand quelqu’un me confie un secret, je', choices: ['l’accueille sincèrement et je comprends', 'cerne d’abord le contexte avant de réagir', 'écoute avec prudence', 'me demande pourquoi c’est à moi qu’il le dit'] },
+    { id: 'q7', text: 'Si quelqu’un en qui j’avais confiance m’a trahi, je', choices: ['me dis que le problème venait de lui', 'en tire une leçon et je serai plus prudent', 'en reste marqué assez longtemps', 'ne fais plus facilement confiance'] },
+    { id: 'q8', text: 'Quand l’autre manque une fois à sa parole, je', choices: ['pardonne vite et je refais confiance', 'écoute la raison avant de juger', 'perds beaucoup de confiance', 'réévalue la relation elle-même'] },
+    { id: 'q9', text: 'Quand on me complimente, je', choices: ['me réjouis simplement', 'remercie tout en me demandant pourquoi', 'accueille cela avec gêne', 'me demande s’il y a une intention derrière'] },
+    { id: 'q10', text: 'Quand je demande la spécialité d’un restaurant inconnu, je', choices: ['suis directement ce que dit le serveur', 'le croise avec les avis en ligne', 'pose plusieurs fois la question avant de choisir', 'décide selon mon propre jugement'] },
+    { id: 'q11', text: 'Quand un ami proche me demande soudain de l’argent, je', choices: ['prête sans hésiter', 'écoute la situation avant de décider', 'refuse poliment en disant que c’est compliqué', 'commence à douter de cet ami'] },
+    { id: 'q12', text: 'Quand j’écoute l’avis d’un médecin ou d’un expert, je', choices: ['fais entièrement confiance et je suis', 'décide après avoir vérifié d’autres avis', 'cherche soigneusement avant de juger', 'décide par moi-même'] },
+    { id: 'q13', text: 'Quand je m’adapte à un nouvel environnement (travail, école), je', choices: ['me rapproche vite des gens', 'apprends à connaître lentement et je construis', 'mets du temps et je reste prudent', 'garde plutôt mes distances'] },
+    { id: 'q14', text: 'Devant une information ou une actualité sur les réseaux, je', choices: ['y crois tout de suite si cela me parle', 'vérifie la source', 'compare plusieurs sources', 'regarde cela avec méfiance la plupart du temps'] },
+    { id: 'q15', text: 'Ma relation avec la personne qui s’est occupée de moi enfant était', choices: ['très stable et digne de confiance', 'globalement bonne, avec un peu d’insécurité', 'inconstante, et cela m’a déstabilisé', 'difficile à investir de confiance'] },
+    { id: 'q16', text: 'Quand l’autre me montre une faiblesse, je', choices: ['le prends comme précieux et je me sens plus proche', 'l’accueille, mais je réagis avec prudence', 'm’inquiète pour lui', 'ressens un certain malaise'] },
+  ],
+  es: [
+    { id: 'q1', text: 'Cuando un compañero al que acabo de conocer me ofrece ayuda, yo', choices: ['la acepto encantado al momento', 'le doy las gracias y observo la situación', 'lo rechazo con educación y lo resuelvo solo', 'empiezo a dudar de sus intenciones'] },
+    { id: 'q2', text: 'Cuando un amigo me da un consejo nuevo, yo', choices: ['lo pruebo enseguida', 'lo pienso bien antes de decidir', 'pido todavía más opiniones', 'me fío más de mi propio criterio'] },
+    { id: 'q3', text: 'Cuando un desconocido me indica el camino, yo', choices: ['se lo agradezco y le hago caso', 'voy comprobándolo en el mapa', 'lo confirmo varias veces y sigo con cuidado', 'busco otra alternativa'] },
+    { id: 'q4', text: 'Cuando hablo con alguien que acabo de conocer en internet, yo', choices: ['cuento cosas personales con naturalidad', 'me abro cuando ya lo conozco algo', 'digo solo lo necesario', 'apenas doy datos personales'] },
+    { id: 'q5', text: 'Cuando colaboro con alguien del equipo a quien no conozco, yo', choices: ['le doy una tarea enseguida y confío', 'empiezo por cosas pequeñas y construyo confianza', 'avanzo comprobándolo todo con cuidado', 'lo hago yo mismo si puedo'] },
+    { id: 'q6', text: 'Cuando alguien me confía un secreto, yo', choices: ['lo recibo de corazón y me pongo en su lugar', 'entiendo primero el contexto y luego respondo', 'escucho con cautela', 'me pregunto por qué me lo cuenta a mí'] },
+    { id: 'q7', text: 'Si alguien en quien confiaba me falló, yo', choices: ['pienso que el problema era suyo', 'lo tomo como lección y la próxima vez voy con más cuidado', 'me queda marcado bastante tiempo', 'ya no confío con facilidad'] },
+    { id: 'q8', text: 'Cuando el otro falta una vez a su palabra, yo', choices: ['perdono pronto y vuelvo a confiar', 'escucho el motivo y luego juzgo', 'pierdo bastante confianza', 'me replanteo la relación entera'] },
+    { id: 'q9', text: 'Cuando alguien me elogia, yo', choices: ['me alegro sin más', 'lo agradezco, pero pienso el porqué', 'lo recibo con cierta incomodidad', 'me pregunto si hay una intención detrás'] },
+    { id: 'q10', text: 'Cuando pregunto qué recomiendan en un restaurante nuevo, yo', choices: ['hago caso directamente al camarero', 'lo cruzo con las reseñas', 'pregunto varias veces antes de elegir', 'decido según mi propio criterio'] },
+    { id: 'q11', text: 'Cuando un buen amigo me pide dinero de repente, yo', choices: ['se lo presto sin pensarlo', 'escucho la situación y decido', 'le digo con educación que no puedo', 'empiezo a desconfiar de ese amigo'] },
+    { id: 'q12', text: 'Cuando escucho la opinión de un médico o un experto, yo', choices: ['confío del todo y la sigo', 'decido después de ver otras opiniones', 'busco a fondo y luego juzgo', 'decido por mí mismo'] },
+    { id: 'q13', text: 'Cuando me adapto a un entorno nuevo (trabajo, estudios), yo', choices: ['me hago pronto con la gente', 'conozco despacio y voy construyendo', 'tardo y voy con cautela', 'mantengo cierta distancia'] },
+    { id: 'q14', text: 'Ante una noticia o información en redes, yo', choices: ['me la creo enseguida si me resuena', 'compruebo la fuente', 'comparo varias fuentes', 'la miro con desconfianza casi siempre'] },
+    { id: 'q15', text: 'Mi relación con quien me cuidó de niño (padres u otros) era', choices: ['muy estable y de fiar', 'en general buena, con algo de inseguridad', 'poco constante, y eso me desconcertaba', 'difícil de confiar'] },
+    { id: 'q16', text: 'Cuando el otro me muestra una debilidad, yo', choices: ['lo tomo como algo valioso y me siento más cerca', 'lo recibo, pero respondo con cuidado', 'me preocupo por si está bien', 'siento cierta incomodidad'] },
+  ],
 }
 
 // Each question maps to a style: index 0=quick,1=earned,2=cautious,3=guarded
@@ -148,6 +235,30 @@ const RESULTS: Record<StyleKey, Record<SupportedLang, StyleData>> = {
       tips: ['判断より観察を先にする練習', '信頼は贈り物ではなく交換であることを覚える', '境界を設けることは冷たさではないと理解する'],
       affirmation: 'あなたの開かれた心は世界に温もりをもたらします。同時に、自分を守る境界もその心の一部です。',
     },
+    zh: {
+      title: '快速信任型',
+      subtitle: '你带着敞开的心遇见别人',
+      description: '对初次见面的人，你也很快就敞开。你建立关系快，也很会把气氛弄暖。不过判断在前时，有时会因此受伤。',
+      strengths: ['很会建立新关系', '温暖而开放的气场', '能把协作的氛围造出来', '先给对方「我被信任」的感觉'],
+      tips: ['练习先观察，再判断', '记得信任是交换，不是礼物', '知道设界线并不等于冷漠'],
+      affirmation: '你的敞开给世界带来温度。同时，保护自己的界线，也是这份心的一部分。',
+    },
+    fr: {
+      title: 'Confiance rapide',
+      subtitle: 'Vous allez vers les autres à cœur ouvert',
+      description: 'Même avec quelqu’un rencontré pour la première fois, vous vous ouvrez vite. Vous créez le lien rapidement et vous savez réchauffer l’ambiance. Quand le jugement passe en premier, cela peut aussi vous blesser.',
+      strengths: ['Excellent pour créer de nouveaux liens', 'Une énergie chaleureuse et ouverte', 'Vous installez un climat de coopération', 'Vous donnez d’emblée le sentiment d’être digne de confiance'],
+      tips: ['S’exercer à observer avant de juger', 'Se rappeler que la confiance est un échange, pas un cadeau', 'Savoir que poser une limite n’est pas de la froideur'],
+      affirmation: 'Votre ouverture réchauffe le monde. Et les limites qui vous protègent font partie de ce même cœur.',
+    },
+    es: {
+      title: 'Confianza rápida',
+      subtitle: 'Te acercas a la gente con el corazón abierto',
+      description: 'Incluso con quien acabas de conocer, te abres pronto. Creas vínculo rápido y sabes calentar el ambiente. Cuando el juicio va por delante, eso también puede hacerte daño.',
+      strengths: ['Muy bueno creando vínculos nuevos', 'Una energía cálida y abierta', 'Generas un clima de colaboración', 'Das de entrada la sensación de ser de fiar'],
+      tips: ['Practicar observar antes de juzgar', 'Recordar que la confianza es intercambio, no regalo', 'Saber que poner un límite no es frialdad'],
+      affirmation: 'Tu apertura da calor al mundo. Y los límites que te protegen son parte de ese mismo corazón.',
+    },
   },
   earned: {
     ko: {
@@ -173,6 +284,30 @@ const RESULTS: Record<StyleKey, Record<SupportedLang, StyleData>> = {
       strengths: ['深く続く人間関係', 'バランスの取れた信頼判断力', '信頼される友人・同僚', '感情的な安定感を提供する'],
       tips: ['初対面でもう少しオープンな姿勢を持つ', '検証期間が長くなると相手が感じる距離感を意識する', '完璧な信頼はないことを受け入れる'],
       affirmation: '信頼を築くあなたのやり方は誠実です。その慎重さがあなたと周囲の人を守っています。',
+    },
+    zh: {
+      title: '验证型',
+      subtitle: '你相信得谨慎，却是真心的',
+      description: '要建立信任需要时间，但一旦建起来，就深也牢。你靠经验判断人，也维持着平衡的人际关系。',
+      strengths: ['深而长久的关系', '对信任的判断很均衡', '是别人信得过的朋友或同事', '能给人情绪上的安定'],
+      tips: ['初见时，把姿态再打开一点', '察觉一下：验证期太长时，对方会不会感到距离', '接受「没有完美的信任」这件事'],
+      affirmation: '你建立信任的方式是真诚的。那份谨慎护住了你，也护住了身边的人。',
+    },
+    fr: {
+      title: 'Confiance éprouvée',
+      subtitle: 'Vous faites confiance avec prudence, mais sincèrement',
+      description: 'Bâtir votre confiance demande du temps ; une fois établie, elle est profonde et solide. Vous jugez à partir de l’expérience et vous entretenez des relations équilibrées.',
+      strengths: ['Des relations profondes et durables', 'Un jugement équilibré sur la confiance', 'Un ami ou un collègue sur qui l’on compte', 'Vous apportez une stabilité émotionnelle'],
+      tips: ['S’ouvrir un peu plus dès la première rencontre', 'Remarquer la distance que peut créer une longue période de vérification', 'Accepter qu’il n’existe pas de confiance parfaite'],
+      affirmation: 'Votre façon de bâtir la confiance est sincère. Cette prudence vous protège, vous et vos proches.',
+    },
+    es: {
+      title: 'Confianza ganada',
+      subtitle: 'Confías con prudencia, pero de verdad',
+      description: 'Construir tu confianza lleva tiempo; una vez hecha, es honda y firme. Juzgas a partir de la experiencia y mantienes relaciones equilibradas.',
+      strengths: ['Relaciones hondas y duraderas', 'Un juicio equilibrado sobre la confianza', 'Un amigo o compañero con quien se cuenta', 'Aportas estabilidad emocional'],
+      tips: ['Abrirte un poco más en el primer encuentro', 'Notar la distancia que puede crear un periodo largo de comprobación', 'Aceptar que no existe la confianza perfecta'],
+      affirmation: 'Tu manera de construir confianza es sincera. Esa prudencia te protege a ti y a los tuyos.',
     },
   },
   cautious: {
@@ -200,6 +335,30 @@ const RESULTS: Record<StyleKey, Record<SupportedLang, StyleData>> = {
       tips: ['小さな信頼実験を少しずつ試す', 'すべての関係に同じ基準を適用する必要はない', '待ってくれている人がいることを忘れずに'],
       affirmation: 'ゆっくり進むことは遅れることではありません。あなたの慎重さは真の関係の基盤です。',
     },
+    zh: {
+      title: '谨慎型',
+      subtitle: '你慢慢地、稳稳地把关系建起来',
+      description: '你在把信任交出去这件事上非常谨慎。要观察够久、时间够长，才会敞开。关系因此走得慢，但一旦结成，就很有分量。',
+      strengths: ['少而深的关系', '把受伤的风险压到最低', '决定做得慎重', '对自己的理解很深'],
+      tips: ['一点一点做些小的信任实验', '不是每段关系都要用同一把尺', '记得，也有人正在等你'],
+      affirmation: '慢不等于落后。你的谨慎是真诚关系的地基。',
+    },
+    fr: {
+      title: 'Prudent',
+      subtitle: 'Vous bâtissez lentement, solidement',
+      description: 'Vous accordez votre confiance avec beaucoup de prudence : il vous faut du temps et de l’observation avant de vous ouvrir. Les relations avancent lentement, mais celles qui se nouent comptent vraiment.',
+      strengths: ['Peu de relations, mais profondes', 'Le risque d’être blessé réduit au minimum', 'Des décisions mûries', 'Une connaissance de soi profonde'],
+      tips: ['Tenter peu à peu de petites expériences de confiance', 'Ne pas appliquer la même mesure à toutes les relations', 'Se rappeler que quelqu’un vous attend peut-être'],
+      affirmation: 'Aller lentement n’est pas être en retard. Votre prudence est le socle de relations sincères.',
+    },
+    es: {
+      title: 'Cauto',
+      subtitle: 'Construyes despacio y firme',
+      description: 'Das tu confianza con mucha prudencia: necesitas tiempo y observación antes de abrirte. Los vínculos avanzan despacio, pero los que se forman pesan de verdad.',
+      strengths: ['Pocas relaciones, pero hondas', 'El riesgo de salir herido reducido al mínimo', 'Decisiones bien pensadas', 'Un conocimiento hondo de ti mismo'],
+      tips: ['Probar poco a poco pequeños experimentos de confianza', 'No aplicar la misma vara a todas las relaciones', 'Recordar que quizá alguien te está esperando'],
+      affirmation: 'Ir despacio no es ir por detrás. Tu prudencia es la base de vínculos sinceros.',
+    },
   },
   guarded: {
     ko: {
@@ -225,6 +384,30 @@ const RESULTS: Record<StyleKey, Record<SupportedLang, StyleData>> = {
       strengths: ['強い自己防衛本能', '自立的・自律的', '慎重な情報共有で安全を保つ', '豊かな内面世界'],
       tips: ['すべてを一人で解決する必要はないことを覚える', '小さな信頼のステップを安全に試す', '過去の経験が今のすべての関係を定義するわけではない'],
       affirmation: 'あなたが境界を持つのには理由があります。その境界の中にも、つながる準備ができたあなたがいます。',
+    },
+    zh: {
+      title: '防守型',
+      subtitle: '你懂得怎么保护自己',
+      description: '要你去相信，是很难的事。这常常来自过去的经历或伤。想保护自己是自然的本能，但有时候也会把人推向孤单。',
+      strengths: ['自我保护的本能强', '独立，也自主', '把资讯分享得谨慎，保住安全', '内心世界很深'],
+      tips: ['记得：不是所有事都得一个人扛', '在安全的范围里，试试信任的小步骤', '过去的经历，不该定义现在所有的关系'],
+      affirmation: '你会立起界线，是有理由的。而在那道界线里面，也有一个准备好去连结的你。',
+    },
+    fr: {
+      title: 'Sur ses gardes',
+      subtitle: 'Vous savez vous protéger',
+      description: 'Faire confiance vous est très difficile. Cela vient souvent d’expériences ou de blessures passées. L’instinct de se protéger est naturel, mais il peut parfois mener à l’isolement.',
+      strengths: ['Un instinct de protection solide', 'Indépendant et autonome', 'Vous partagez l’information avec prudence, ce qui vous garde en sécurité', 'Un monde intérieur profond'],
+      tips: ['Se rappeler qu’on n’a pas à tout porter seul', 'Tenter de petits pas de confiance dans un cadre sûr', 'Le passé ne définit pas toutes vos relations présentes'],
+      affirmation: 'Si vous posez ces limites, il y a une raison. Et derrière elles se tient un vous prêt à se relier.',
+    },
+    es: {
+      title: 'En guardia',
+      subtitle: 'Sabes protegerte',
+      description: 'Confiar te resulta muy difícil. Suele venir de experiencias o heridas del pasado. El instinto de protegerte es natural, aunque a veces lleva al aislamiento.',
+      strengths: ['Un instinto de protección fuerte', 'Independiente y autónomo', 'Compartes la información con cautela y eso te mantiene a salvo', 'Un mundo interior hondo'],
+      tips: ['Recordar que no tienes que cargar con todo solo', 'Probar pasos pequeños de confianza en un entorno seguro', 'El pasado no define todas tus relaciones de ahora'],
+      affirmation: 'Si pones esos límites, es por algo. Y tras ellos hay un tú listo para vincularse.',
     },
   },
 }

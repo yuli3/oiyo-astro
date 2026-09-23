@@ -3,9 +3,9 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 type Domain = 'emotional' | 'physical' | 'time' | 'digital'
@@ -81,6 +81,57 @@ const LABELS: Record<SupportedLang, {
     outOf: '/ 48点',
     domainNames: { emotional: '感情の境界線', physical: '身体的境界線', time: '時間の境界線', digital: 'デジタルの境界線' },
   },
+  zh: {
+    title: '个人界线强度测验',
+    subtitle: '我的界线有多健康？',
+    note: '界线是保护自己、让关系健康的必要之物。这个测验是帮你认识自己的工具。',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的个人界线强度',
+    yourBoundary: '我的界线强度',
+    domainProfile: '各领域的界线分布',
+    overallStrength: '整体界线强度',
+    guidance: '把界线立稳的建议',
+    scoreLabel: '界线总分',
+    outOf: '/ 48 分',
+    domainNames: { emotional: '情绪界线', physical: '身体界线', time: '时间界线', digital: '数字界线' },
+  },
+  fr: {
+    title: 'Test de la solidité des limites personnelles',
+    subtitle: 'Mes limites sont-elles saines ?',
+    note: 'Les limites sont nécessaires pour se protéger et pour des relations saines. Ce test est un outil de connaissance de soi.',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Jamais', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'La solidité de vos limites',
+    yourBoundary: 'Votre niveau de limites',
+    domainProfile: 'Vos limites par domaine',
+    overallStrength: 'Solidité globale',
+    guidance: 'Conseils pour affermir vos limites',
+    scoreLabel: 'Score total',
+    outOf: '/ 48 points',
+    domainNames: { emotional: 'Limites émotionnelles', physical: 'Limites corporelles', time: 'Limites de temps', digital: 'Limites numériques' },
+  },
+  es: {
+    title: 'Test de firmeza de los límites personales',
+    subtitle: '¿Son sanos mis límites?',
+    note: 'Los límites son necesarios para protegerte y para tener relaciones sanas. Este test es una herramienta de autoconocimiento.',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nunca', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'La firmeza de tus límites',
+    yourBoundary: 'Tu nivel de límites',
+    domainProfile: 'Tus límites por área',
+    overallStrength: 'Firmeza global',
+    guidance: 'Consejos para afianzar tus límites',
+    scoreLabel: 'Puntuación total',
+    outOf: '/ 48 puntos',
+    domainNames: { emotional: 'Límites emocionales', physical: 'Límites corporales', time: 'Límites de tiempo', digital: 'Límites digitales' },
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -126,6 +177,48 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'd2', text: 'SNSで不快な人をブロックやアンフォローできる', domain: 'digital' },
     { id: 'd3', text: '定期的にデバイスをオフにしてつながりを断つ時間を持つ', domain: 'digital' },
   ],
+  zh: [
+    { id: 'e1', text: '就算对方把不快摆在脸上，我也说得出「不」', domain: 'emotional' },
+    { id: 'e2', text: '我知道别人的情绪不该由我来扛', domain: 'emotional' },
+    { id: 'e3', text: '有人想在情绪上摆布我时，我察觉得到', domain: 'emotional' },
+    { id: 'p1', text: '我拒绝得了不想要的身体接触', domain: 'physical' },
+    { id: 'p2', text: '我能自在地说出「我需要自己的空间」', domain: 'physical' },
+    { id: 'p3', text: '我认为自己身体上的舒服，比别人的心情更要紧', domain: 'physical' },
+    { id: 't1', text: '有人过度占用我的时间和精力时，我拒绝得了', domain: 'time' },
+    { id: 't2', text: '日程太满时，我会排优先级，并推掉一部分', domain: 'time' },
+    { id: 't3', text: '我会刻意守住休息和照顾自己的时间', domain: 'time' },
+    { id: 'd1', text: '深夜的消息，我觉得不必立刻回', domain: 'digital' },
+    { id: 'd2', text: '在社群网络上，我可以封锁或取消追踪让我不舒服的人', domain: 'digital' },
+    { id: 'd3', text: '我会规律地关掉设备，断开一段连线', domain: 'digital' },
+  ],
+  fr: [
+    { id: 'e1', text: 'Même si l’autre affiche son mécontentement, je sais dire « non »', domain: 'emotional' },
+    { id: 'e2', text: 'Je sais que je n’ai pas à porter les émotions des autres', domain: 'emotional' },
+    { id: 'e3', text: 'Quand on cherche à me manipuler émotionnellement, je le repère', domain: 'emotional' },
+    { id: 'p1', text: 'Je peux refuser un contact physique que je ne veux pas', domain: 'physical' },
+    { id: 'p2', text: 'Je peux dire sans gêne que j’ai besoin de mon espace', domain: 'physical' },
+    { id: 'p3', text: 'Je considère que mon confort physique passe avant l’humeur de l’autre', domain: 'physical' },
+    { id: 't1', text: 'Quand on demande trop de mon temps et de mon énergie, je sais refuser', domain: 'time' },
+    { id: 't2', text: 'Face à un agenda trop chargé, je priorise et je décline une partie', domain: 'time' },
+    { id: 't3', text: 'Je protège volontairement du temps pour le repos et pour moi', domain: 'time' },
+    { id: 'd1', text: 'Je me sens libre de ne pas répondre tout de suite à un message tard le soir', domain: 'digital' },
+    { id: 'd2', text: 'Sur les réseaux, je peux bloquer ou me désabonner de quelqu’un qui me met mal à l’aise', domain: 'digital' },
+    { id: 'd3', text: 'J’éteins régulièrement mes appareils pour me déconnecter', domain: 'digital' },
+  ],
+  es: [
+    { id: 'e1', text: 'Aunque el otro muestre su molestia, sé decir «no»', domain: 'emotional' },
+    { id: 'e2', text: 'Sé que no tengo que cargar con las emociones de los demás', domain: 'emotional' },
+    { id: 'e3', text: 'Cuando alguien intenta manipularme emocionalmente, lo noto', domain: 'emotional' },
+    { id: 'p1', text: 'Puedo rechazar un contacto físico que no quiero', domain: 'physical' },
+    { id: 'p2', text: 'Puedo decir sin apuro que necesito mi espacio', domain: 'physical' },
+    { id: 'p3', text: 'Considero que mi comodidad física va antes que el humor del otro', domain: 'physical' },
+    { id: 't1', text: 'Cuando piden demasiado de mi tiempo y mi energía, sé negarme', domain: 'time' },
+    { id: 't2', text: 'Ante una agenda demasiado llena, priorizo y rechazo una parte', domain: 'time' },
+    { id: 't3', text: 'Protejo a propósito tiempo para descansar y cuidarme', domain: 'time' },
+    { id: 'd1', text: 'Me siento libre de no responder al instante a un mensaje de madrugada', domain: 'digital' },
+    { id: 'd2', text: 'En redes puedo bloquear o dejar de seguir a quien me incomoda', domain: 'digital' },
+    { id: 'd3', text: 'Apago los dispositivos con regularidad para desconectar', domain: 'digital' },
+  ],
 }
 
 interface LevelData { title: string; subtitle: string; description: string; guidance: string[] }
@@ -149,6 +242,24 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
       description: '現在、境界線が不明確または一貫していない可能性があります。これは他者の要求に圧倒されやすく、自分のニーズを後回しにしがちであることを意味します。境界線は練習によって強化できます。',
       guidance: ['小さなことから「ノー」の練習を始める', '感情とニーズを日記に記録する', '信頼できるカウンセラーや治療士と境界線のワークをする', '毎日一つの小さな境界設定を練習する'],
     },
+    zh: {
+      title: '流动的界线',
+      subtitle: '界线可能还不清楚',
+      description: '现在你的界线可能是模糊的，也不太一致。这意味着你容易被别人的要求压过去，也常把自己的需要往后放。界线是可以练出来的。',
+      guidance: ['先从练习说「不」开始', '把自己的情绪和需要写进日记', '和信得过的咨询师一起做界线的工作', '每天练一次小小的界线设定'],
+    },
+    fr: {
+      title: 'Limites poreuses',
+      subtitle: 'Vos limites sont peut-être floues',
+      description: 'Vos limites semblent floues ou irrégulières. Vous risquez d’être vite submergé par les demandes des autres et de faire souvent passer vos besoins en dernier. Les limites, cela se travaille.',
+      guidance: ['Commencer par s’entraîner à dire « non »', 'Noter ses émotions et ses besoins dans un journal', 'Travailler les limites avec un professionnel de confiance', 'S’exercer chaque jour à poser une petite limite'],
+    },
+    es: {
+      title: 'Límites porosos',
+      subtitle: 'Puede que tus límites estén poco claros',
+      description: 'Tus límites parecen difusos o poco constantes. Es fácil que las peticiones de otros te desborden y que dejes lo tuyo para el final. Los límites se pueden entrenar.',
+      guidance: ['Empezar practicando decir «no»', 'Anotar tus emociones y necesidades en un diario', 'Trabajar los límites con un profesional de confianza', 'Practicar cada día poner un límite pequeño'],
+    },
   },
   developing: {
     ko: {
@@ -168,6 +279,24 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
       subtitle: '境界線を構築しています',
       description: 'いくつかの領域では境界線が形成されていますが、全ての領域で一貫していない可能性があります。すでに始めていることは良いサインです。継続的な練習が違いを生みます。',
       guidance: ['強い領域の境界をさらに強化する', '弱い領域一つに集中して改善する', '境界を表現する言葉を練習する', '境界が守られたとき自分を認める'],
+    },
+    zh: {
+      title: '正在成形的界线',
+      subtitle: '你正在把界线立起来',
+      description: '有些领域的界线已经在成形，但还不是每个领域都一致。已经开始就是好信号，持续练习会拉开差距。',
+      guidance: ['把已经强的领域再加固', '挑一个弱的领域集中改善', '练习把界线说出口的说法', '界线守住时，记得肯定自己'],
+    },
+    fr: {
+      title: 'Limites en construction',
+      subtitle: 'Vous êtes en train de les poser',
+      description: 'Dans certains domaines, les limites se forment ; elles ne sont pas encore cohérentes partout. Avoir commencé est bon signe, et la régularité fera la différence.',
+      guidance: ['Renforcer encore les domaines déjà solides', 'Cibler un domaine faible et l’améliorer', 'S’entraîner aux formulations pour dire sa limite', 'Se reconnaître quand une limite a tenu'],
+    },
+    es: {
+      title: 'Límites en construcción',
+      subtitle: 'Los estás poniendo',
+      description: 'En algunas áreas los límites se están formando; aún no son iguales en todas. Haber empezado es buena señal, y la constancia marcará la diferencia.',
+      guidance: ['Reforzar aún más las áreas ya firmes', 'Elegir un área débil y mejorarla', 'Practicar cómo formular el límite', 'Reconocerte cuando un límite ha aguantado'],
     },
   },
   balanced: {
@@ -189,6 +318,24 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
       description: '全般的に健全な境界線が形成されています。自分のニーズと他者のニーズを適切にバランスさせており、これは関係の健全性に非常にポジティブです。',
       guidance: ['現在の境界線パターンを意識的に維持する', '新しい関係でも一貫して適用する', '境界線のスキルを周りの人々と共有する', 'ストレス状況でも境界を維持する練習'],
     },
+    zh: {
+      title: '均衡的界线',
+      subtitle: '你的界线是健康的',
+      description: '整体上你的界线立得健康。自己的需要和别人的需要拿捏得当，这对关系的品质非常有益。',
+      guidance: ['有意识地把现在的模式保持住', '在新的关系里也一致地用上', '把设界线的做法分给身边的人', '练习在压力下也守得住界线'],
+    },
+    fr: {
+      title: 'Limites équilibrées',
+      subtitle: 'Vos limites sont saines',
+      description: 'Dans l’ensemble, vos limites sont saines. Vous tenez la balance entre vos besoins et ceux des autres, ce qui profite beaucoup à la qualité de vos relations.',
+      guidance: ['Maintenir consciemment ce fonctionnement', 'L’appliquer avec la même cohérence dans les nouvelles relations', 'Partager vos façons de poser des limites', 'S’exercer à les tenir aussi sous stress'],
+    },
+    es: {
+      title: 'Límites equilibrados',
+      subtitle: 'Tus límites son sanos',
+      description: 'En conjunto, tus límites son sanos. Equilibras tus necesidades y las de los demás, y eso beneficia mucho la calidad de tus vínculos.',
+      guidance: ['Mantener conscientemente esta forma de funcionar', 'Aplicarla con la misma coherencia en vínculos nuevos', 'Compartir tus formas de poner límites', 'Practicar sostenerlos también bajo presión'],
+    },
   },
   firm: {
     ko: {
@@ -208,6 +355,24 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
       subtitle: '非常に強い境界線を持っています',
       description: '境界線が非常に強く設定されています。これは優れた自己保護能力を意味します。ただし、境界が強すぎると時に親密さの形成が難しくなることがあります。柔軟性も合わせて検討してみてください。',
       guidance: ['境界が他者を完全に締め出していないか確認する', '信頼できる人々には柔軟に開く練習をする', '境界と断絶の違いを認識する', '安全な空間で脆弱性を許す練習をする'],
+    },
+    zh: {
+      title: '坚固的界线',
+      subtitle: '你的界线非常强',
+      description: '你的界线立得很硬，这代表很好的自我保护能力。不过界线太硬时，亲密有时会不好建立，也值得一起考虑弹性。',
+      guidance: ['检查一下，界线有没有把人完全挡在外面', '练习对信得过的人打开一点', '分清楚「界线」和「切断」的差别', '在安全的地方，练习让脆弱露出来'],
+    },
+    fr: {
+      title: 'Limites fermes',
+      subtitle: 'Vos limites sont très solides',
+      description: 'Vos limites sont posées avec fermeté, signe d’une belle capacité à vous protéger. Trop rigides, elles peuvent parfois rendre l’intimité difficile : la souplesse mérite aussi d’être considérée.',
+      guidance: ['Vérifier que la limite ne ferme pas complètement la porte', 'S’exercer à s’ouvrir un peu avec les personnes de confiance', 'Distinguer la limite de la rupture', 'S’autoriser la vulnérabilité dans un cadre sûr'],
+    },
+    es: {
+      title: 'Límites firmes',
+      subtitle: 'Tus límites son muy sólidos',
+      description: 'Tus límites están puestos con firmeza, señal de buena capacidad de protegerte. Demasiado rígidos, a veces dificultan la intimidad: conviene considerar también la flexibilidad.',
+      guidance: ['Revisar que el límite no cierre del todo la puerta', 'Practicar abrirte un poco con quien es de fiar', 'Distinguir el límite de la ruptura', 'Permitirte la vulnerabilidad en un espacio seguro'],
     },
   },
 }
