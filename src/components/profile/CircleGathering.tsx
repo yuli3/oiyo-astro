@@ -297,17 +297,22 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const [friendShareState, setFriendShareState] = useState<"copied" | "failed" | "idle">("idle");
   const [pendingFriend, setPendingFriend] = useState<FriendBirthShare | null>(null);
   const [hydrated, setHydrated] = useState(false);
+  // 공유 링크가 실어 온 날 — "오늘의 우리"가 여는 날이 아니라 공유한 날을 먼저 보여 준다.
+  const [sharedDay, setSharedDay] = useState<string | null>(null);
 
   useEffect(() => {
     const boot = async () => {
       try {
         const hash = window.location.hash;
-        const group = new URLSearchParams(hash.replace(/^#/, "")).get("group");
+        const params = new URLSearchParams(hash.replace(/^#/, ""));
+        const group = params.get("group");
         if (group) {
           const snapshot = decodeSymbolicGroupSnapshot(group);
           if (snapshot) {
             setPeople(snapshot.participants);
             setCenterId(snapshot.centerId);
+            const day = params.get("day");
+            if (day && /^\d{4}-\d{2}-\d{2}$/.test(day)) setSharedDay(day);
             return;
           }
         }
@@ -455,7 +460,10 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const share = async () => {
     gaEvent("circle_share", { people: String(people.length) });
     if (!snapshot) return;
-    const url = `${window.location.origin}/${locale}/circle/${symbolicGroupFragment(snapshot)}`;
+    // 공유한 사람의 오늘(로컬 날짜)을 함께 싣는다. 받는 사람이 다른 날 열어도 같은 "오늘의 우리"를 먼저 본다.
+    const now = new Date();
+    const day = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+    const url = `${window.location.origin}/${locale}/circle/${symbolicGroupFragment(snapshot)}&day=${day}`;
     if (navigator.share) {
       try {
         await navigator.share({ title: copy.title, url });
@@ -519,7 +527,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
         <span aria-hidden="true" className="text-2xl">→</span>
       </a>
     )}
-    {synthesis && <CircleToday locale={locale} members={people} synthesis={synthesis} />}
+    {synthesis && <CircleToday locale={locale} members={people} synthesis={synthesis} sharedDate={sharedDay} />}
 
     {snapshot && <section className="mt-8 rounded-[2rem] border border-border bg-[var(--surface-subtle)] p-4 sm:p-7">
       <div className="flex gap-2 overflow-x-auto pb-1">{(Object.keys(LENS[lang]) as CompatibilityLensId[]).map((id) => (

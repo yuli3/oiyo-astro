@@ -49,6 +49,8 @@ const T: Record<Lang, Record<string, string>> = {
     none: "없음",
     dayCount: "{n}일",
     dayIsOther: "그날의 기운",
+    sharedOn: "공유한 사람이 본 날({date}) 기준이에요",
+    backToToday: "오늘 기준으로 보기",
     whoOther: "그날 각자",
     tryOther: "그날 해 볼 것",
     qPeerStrong: "같은 기운이 세서 경쟁심이 붙기 쉬워요.",
@@ -118,6 +120,8 @@ const T: Record<Lang, Record<string, string>> = {
     none: "None",
     dayCount: "{n} days",
     dayIsOther: "That day’s energy",
+    sharedOn: "Showing the day it was shared ({date})",
+    backToToday: "Show today instead",
     whoOther: "Each of you that day",
     tryOther: "Try that day",
     qPeerStrong: "The shared energy runs strong, so rivalry comes easily.",
@@ -185,6 +189,8 @@ const T: Record<Lang, Record<string, string>> = {
     none: "なし",
     dayCount: "{n}日",
     dayIsOther: "その日の気",
+    sharedOn: "共有した人が見た日（{date}）の結果です",
+    backToToday: "今日で見る",
     whoOther: "その日のそれぞれ",
     tryOther: "その日やってみること",
     qPeerStrong: "同じ気が強く、張り合いやすい。",
@@ -252,6 +258,8 @@ const T: Record<Lang, Record<string, string>> = {
     none: "无",
     dayCount: "{n}天",
     dayIsOther: "那天之气",
+    sharedOn: "这是分享者当天（{date}）的结果",
+    backToToday: "改看今天",
     whoOther: "那天的各位",
     tryOther: "那天可以试试",
     qPeerStrong: "同气偏旺，容易较劲。",
@@ -319,6 +327,8 @@ const T: Record<Lang, Record<string, string>> = {
     none: "Aucun",
     dayCount: "{n} j",
     dayIsOther: "L’énergie de ce jour",
+    sharedOn: "Résultat du jour du partage ({date})",
+    backToToday: "Voir aujourd’hui",
     whoOther: "Chacun ce jour-là",
     tryOther: "À essayer ce jour-là",
     qPeerStrong: "L’énergie commune est forte : la rivalité vient vite.",
@@ -386,6 +396,8 @@ const T: Record<Lang, Record<string, string>> = {
     none: "Ninguno",
     dayCount: "{n} días",
     dayIsOther: "La energía de ese día",
+    sharedOn: "Resultado del día en que se compartió ({date})",
+    backToToday: "Ver hoy",
     whoOther: "Cada uno ese día",
     tryOther: "Para probar ese día",
     qPeerStrong: "La energía compartida es fuerte: la rivalidad sale fácil.",
@@ -568,16 +580,25 @@ export default function CircleToday({
   locale,
   members,
   synthesis,
+  sharedDate,
 }: {
   locale: string;
   members: GroupMember[];
   synthesis: GroupSynthesis;
+  /** 공유 링크가 실어 온 날(YYYY-MM-DD). 여는 날이 달라도 공유한 사람이 본 결과를 먼저 보여 준다. */
+  sharedDate?: string | null;
 }) {
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   const t = T[lang];
   const [todayDate, setTodayDate] = useState<string | null>(null);
+  // 링크를 읽는 쪽이 늦게 날짜를 넘겨도 한 번 고정한다.
+  useEffect(() => {
+    if (sharedDate && /^\d{4}-\d{2}-\d{2}$/.test(sharedDate)) setPinned(sharedDate);
+  }, [sharedDate]);
   const [tab, setTab] = useState<Tab>("today");
   const [selected, setSelected] = useState<string | null>(null);
+  // 공유 링크의 날이 오늘과 다르면 그날로 고정해 보여 준다. 탭을 누르거나 "오늘 기준"을 누르면 푼다.
+  const [pinned, setPinned] = useState<string | null>(sharedDate && /^\d{4}-\d{2}-\d{2}$/.test(sharedDate) ? sharedDate : null);
 
   useEffect(() => {
     // 탭을 열어 둔 채 날이 바뀌면 어제를 오늘이라고 말하게 된다. 그래서
@@ -603,7 +624,8 @@ export default function CircleToday({
     () => (todayDate && tab !== "today" ? groupPeriod(synthesis, members, tab, todayDate) : null),
     [todayDate, tab, synthesis, members],
   );
-  const focusDate = tab === "today" ? todayDate : selected ?? todayDate;
+  const pinnedDate = pinned && pinned !== todayDate ? pinned : null;
+  const focusDate = pinnedDate ?? (tab === "today" ? todayDate : selected ?? todayDate);
   const day = useMemo(() => {
     if (!focusDate) return null;
     // 기간 보기라면 이미 계산한 날을 재사용한다.
@@ -635,7 +657,7 @@ export default function CircleToday({
             <button
               key={key}
               type="button"
-              onClick={() => { setTab(key); setSelected(null); }}
+              onClick={() => { setTab(key); setSelected(null); setPinned(null); }}
               className={`min-h-9 rounded-full px-3 text-xs font-black ${tab === key ? "bg-primary-strong text-white" : "text-muted-foreground"}`}
             >
               {t[`tab${cap(key)}`]}
@@ -643,6 +665,14 @@ export default function CircleToday({
           ))}
         </div>
       </div>
+      {pinnedDate && (
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-2xl bg-muted/50 px-4 py-3 text-xs font-bold text-foreground">
+          <span>{t.sharedOn.replace("{date}", pinnedDate)}</span>
+          <button type="button" onClick={() => setPinned(null)} className="min-h-9 rounded-full border border-border bg-card px-3 font-black">
+            {t.backToToday}
+          </button>
+        </div>
+      )}
 
       {period && topEffect && (
         <div className="mt-4">
