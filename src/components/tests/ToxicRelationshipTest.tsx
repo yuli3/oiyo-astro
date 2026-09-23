@@ -3,11 +3,11 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type Level = 'healthy' | 'some_flags' | 'notable' | 'high_toxicity'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -57,6 +57,39 @@ const LABELS: Record<SupportedLang, {
     encouragement: 'あなたへ', scoreLabel: 'パターンスコア', outOf: '/ 45点',
     note: 'このテストは関係パターンの認識を助けるためのものです。結果は参考程度としてください。',
     disclaimer: 'どんな結果であっても、より健全な関係を求める気持ち自体が大切です。専門カウンセリングはいつでも良い選択です。',
+  },
+  zh: {
+    title: '关系有害模式测验',
+    subtitle: '我的关系健康吗？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    choiceLabels: ['完全不是', '有时如此', '经常如此', '总是如此'],
+    restart: '重新测验', share: '分享结果', shareMsg: '我的关系模式测验结果是',
+    yourLevel: '关系模式结果', patterns: '发现的模式', steps: '下一步',
+    encouragement: '写给你', scoreLabel: '模式分数', outOf: '/ 45 分',
+    note: '本测验用于帮助觉察关系模式，结果仅供参考。',
+    disclaimer: '无论结果如何，想要更健康关系的这份心意本身就很重要。专业咨询永远是好选择。',
+  },
+  fr: {
+    title: 'Test des schémas relationnels toxiques',
+    subtitle: 'Ma relation est-elle saine ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    choiceLabels: ['Pas du tout', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer', share: 'Partager le résultat', shareMsg: 'Mon résultat au test des schémas relationnels',
+    yourLevel: 'Résultat des schémas relationnels', patterns: 'Schémas repérés', steps: 'Prochaines étapes',
+    encouragement: 'Pour vous', scoreLabel: 'Score des schémas', outOf: '/ 45 points',
+    note: 'Ce test vise à vous aider à repérer des schémas relationnels. Le résultat n’est qu’un repère.',
+    disclaimer: 'Quel que soit le résultat, vouloir une relation plus saine est déjà important. Consulter un professionnel est toujours un bon choix.',
+  },
+  es: {
+    title: 'Test de patrones de relación tóxica',
+    subtitle: '¿Es sana mi relación?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    choiceLabels: ['Nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir', share: 'Compartir resultado', shareMsg: 'Mi resultado del test de patrones de relación',
+    yourLevel: 'Resultado de patrones de relación', patterns: 'Patrones detectados', steps: 'Próximos pasos',
+    encouragement: 'Para ti', scoreLabel: 'Puntuación de patrones', outOf: '/ 45 puntos',
+    note: 'Este test busca ayudarte a reconocer patrones en la relación. El resultado es solo una referencia.',
+    disclaimer: 'Sea cual sea el resultado, desear una relación más sana ya es importante. Consultar a un profesional siempre es una buena opción.',
   },
 }
 
@@ -112,6 +145,57 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q14', text: '相手にガスライティングされていると感じることがある' },
     { id: 'q15', text: 'この関係では幸せより心配や不安をより多く感じる' },
   ],
+  zh: [
+    { id: 'q1',  text: '对方无视或否定我的感受和意见' },
+    { id: 'q2',  text: '在这段关系里，我常觉得是我做错了' },
+    { id: 'q3',  text: '对方常说批评或贬低我的话' },
+    { id: 'q4',  text: '因为这个人，我和朋友、家人的关系变远了' },
+    { id: 'q5',  text: '对方的情绪或反应让我害怕，或难以预测' },
+    { id: 'q6',  text: '我觉得自己的决定或生活受到过度控制' },
+    { id: 'q7',  text: '在关系里，我的需要和愿望总是被放在最后' },
+    { id: 'q8',  text: '和对方起冲突时，总是我先道歉' },
+    { id: 'q9',  text: '我想离开这段关系，但又害怕或内疚' },
+    { id: 'q10', text: '对方不会真心为我的成功或幸福高兴' },
+    { id: 'q11', text: '在这段关系里，我很难表达自己' },
+    { id: 'q12', text: '这段关系让我精疲力尽' },
+    { id: 'q13', text: '对方的言行让我的自尊变低' },
+    { id: 'q14', text: '我觉得对方在对我进行“煤气灯”式操控' },
+    { id: 'q15', text: '在这段关系里，我感到担心或不安的时候比幸福更多' },
+  ],
+  fr: [
+    { id: 'q1',  text: 'L’autre ignore ou balaie mes émotions et mes opinions' },
+    { id: 'q2',  text: 'Dans cette relation, j’ai souvent l’impression d’être en tort' },
+    { id: 'q3',  text: 'L’autre me critique ou me rabaisse souvent' },
+    { id: 'q4',  text: 'Mes liens avec mes amis ou ma famille se sont distendus à cause de cette personne' },
+    { id: 'q5',  text: 'L’humeur ou les réactions de l’autre me font peur ou sont imprévisibles' },
+    { id: 'q6',  text: 'Je sens que mes décisions ou ma vie sont excessivement contrôlées' },
+    { id: 'q7',  text: 'Dans la relation, mes besoins et envies passent toujours en dernier' },
+    { id: 'q8',  text: 'En cas de conflit, c’est moi qui finis par m’excuser en premier' },
+    { id: 'q9',  text: 'Je voudrais quitter cette relation, mais j’ai peur ou je culpabilise' },
+    { id: 'q10', text: 'L’autre ne se réjouit pas sincèrement de mes réussites ou de mon bonheur' },
+    { id: 'q11', text: 'J’ai du mal à m’exprimer dans cette relation' },
+    { id: 'q12', text: 'Cette relation m’épuise' },
+    { id: 'q13', text: 'Les paroles ou actes de l’autre font baisser mon estime de moi' },
+    { id: 'q14', text: 'J’ai l’impression que l’autre me manipule en me faisant douter de moi (gaslighting)' },
+    { id: 'q15', text: 'Dans cette relation, je ressens plus souvent de l’inquiétude ou de l’anxiété que du bonheur' },
+  ],
+  es: [
+    { id: 'q1',  text: 'El otro ignora o desprecia mis emociones y opiniones' },
+    { id: 'q2',  text: 'En esta relación siento a menudo que soy yo quien hace mal las cosas' },
+    { id: 'q3',  text: 'El otro me critica o me menosprecia a menudo' },
+    { id: 'q4',  text: 'Mi relación con amigos o familia se ha distanciado por esta persona' },
+    { id: 'q5',  text: 'El estado de ánimo o las reacciones del otro me dan miedo o son imprevisibles' },
+    { id: 'q6',  text: 'Siento que controlan en exceso mis decisiones o mi vida' },
+    { id: 'q7',  text: 'En la relación, mis necesidades y deseos siempre quedan en último lugar' },
+    { id: 'q8',  text: 'Cuando hay conflicto, acabo siendo yo quien se disculpa primero' },
+    { id: 'q9',  text: 'Quiero dejar esta relación, pero tengo miedo o me siento culpable' },
+    { id: 'q10', text: 'El otro no se alegra de verdad de mis logros o mi felicidad' },
+    { id: 'q11', text: 'Me cuesta expresarme en esta relación' },
+    { id: 'q12', text: 'Esta relación me agota' },
+    { id: 'q13', text: 'Lo que el otro dice o hace hace que baje mi autoestima' },
+    { id: 'q14', text: 'Siento que el otro me hace luz de gas (gaslighting)' },
+    { id: 'q15', text: 'En esta relación siento preocupación o ansiedad más a menudo que felicidad' },
+  ],
 }
 
 const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
@@ -137,6 +221,27 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
       steps: ['今の健全なパターンを意識的に維持する', 'コミュニケーションと傾聴を継続的に練習する', 'お互いの成長を支持する'],
       encouragement: 'あなたは健全な関係を築いています。関係にも継続的なケアが必要です。今の努力を続けてください。',
     },
+    zh: {
+      title: '健康的关系', subtitle: '这段关系整体上看起来很健康',
+      description: '目前的关系中没有发现明显的有害模式。你们表现出互相尊重、顾及彼此需要的平衡关系。',
+      patterns: ['相互尊重的痕迹', '维持健康的界限', '认可彼此的独立', '建设性地解决冲突'],
+      steps: ['有意识地维持现在的健康模式', '持续练习沟通与倾听', '支持彼此的成长'],
+      encouragement: '你正在经营一段健康的关系。关系也需要持续照顾，把现在的努力继续下去吧。',
+    },
+    fr: {
+      title: 'Relation saine', subtitle: 'Cette relation paraît globalement saine',
+      description: 'Aucun schéma toxique important n’apparaît dans votre relation actuelle. Elle montre un équilibre fait de respect mutuel et d’attention aux besoins de chacun.',
+      patterns: ['Des signes de respect mutuel', 'Des limites saines', 'Une indépendance reconnue de part et d’autre', 'Des conflits résolus de façon constructive'],
+      steps: ['Entretenir consciemment ces schémas sains', 'Pratiquer régulièrement la communication et l’écoute', 'Soutenir la croissance de chacun'],
+      encouragement: 'Vous construisez une relation saine. Une relation demande aussi un soin régulier : continuez vos efforts.',
+    },
+    es: {
+      title: 'Relación sana', subtitle: 'En general, esta relación parece sana',
+      description: 'No aparecen patrones tóxicos importantes en tu relación actual. Muestra un equilibrio de respeto mutuo y atención a las necesidades de cada uno.',
+      patterns: ['Señales de respeto mutuo', 'Límites sanos', 'Independencia reconocida por ambas partes', 'Conflictos resueltos de forma constructiva'],
+      steps: ['Mantener conscientemente estos patrones sanos', 'Practicar con constancia la comunicación y la escucha', 'Apoyar el crecimiento del otro'],
+      encouragement: 'Estás construyendo una relación sana. Las relaciones también necesitan cuidado constante: sigue con tu esfuerzo.',
+    },
   },
   some_flags: {
     ko: {
@@ -159,6 +264,27 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
       patterns: ['時々コミュニケーションの困難', '境界が曖昧になることがある', '一部アンバランスなダイナミクス', '感情消耗の経験'],
       steps: ['パートナーと率直な対話を試みる', '自分のニーズと限界を明確にする', '関係カウンセリングを検討する', '信頼できる人に話す'],
       encouragement: 'サインに気づくことが最初の勇気です。あなたはより良い関係を受け取る資格があります。',
+    },
+    zh: {
+      title: '有警示信号', subtitle: '有些模式需要留意',
+      description: '发现了几个值得注意的模式，可能正在影响你们的关系。这时候，好好谈谈或设定界限会有帮助。',
+      patterns: ['偶尔沟通困难', '有时界限模糊', '部分不平衡的互动', '有过情绪耗竭的经历'],
+      steps: ['试着和伴侣坦诚对话', '厘清自己的需要和界限', '考虑关系咨询', '和亲近的人聊聊'],
+      encouragement: '察觉到信号是第一份勇气。你值得拥有更好的关系。',
+    },
+    fr: {
+      title: 'Signaux d’alerte', subtitle: 'Certains schémas méritent votre attention',
+      description: 'Quelques schémas préoccupants sont apparus et pourraient peser sur la relation. À ce stade, une conversation ou la définition de limites peut aider.',
+      patterns: ['Des difficultés de communication par moments', 'Des limites parfois floues', 'Une dynamique en partie déséquilibrée', 'Des épisodes d’épuisement émotionnel'],
+      steps: ['Tenter une conversation franche avec votre partenaire', 'Clarifier vos besoins et vos limites', 'Envisager une thérapie de couple', 'En parler à un proche'],
+      encouragement: 'Repérer les signaux est un premier acte de courage. Vous méritez une relation meilleure.',
+    },
+    es: {
+      title: 'Señales de alerta', subtitle: 'Algunos patrones merecen atención',
+      description: 'Han aparecido algunos patrones preocupantes que podrían estar afectando a la relación. En este punto, hablar o poner límites puede ayudar.',
+      patterns: ['Dificultades de comunicación a veces', 'Límites a veces difusos', 'Una dinámica en parte desequilibrada', 'Episodios de agotamiento emocional'],
+      steps: ['Intentar una conversación sincera con tu pareja', 'Aclarar tus necesidades y límites', 'Plantearte terapia de pareja', 'Hablarlo con alguien cercano'],
+      encouragement: 'Reconocer las señales es el primer acto de valentía. Mereces una relación mejor.',
     },
   },
   notable: {
@@ -183,6 +309,27 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
       steps: ['専門カウンセラーとの相談を検討する', '信頼できるサポートネットワークを探す', '自分のニーズを最優先にする', '関係を続けるかどうか冷静に評価する'],
       encouragement: 'この結果はあなたが悪い人だということではありません。助けを求めることは強さの表れです。',
     },
+    zh: {
+      title: '模式需留意', subtitle: '观察到多种有害模式',
+      description: '发现了相当多的有害模式。这段关系很可能正在影响你的情绪健康。这些模式可以改变，但需要积极的努力。',
+      patterns: ['反复的界限侵犯', '持续的情绪耗竭', '自尊下降', '关系中不平衡的权力动态'],
+      steps: ['考虑找专业咨询师谈谈', '寻找可信任的支持网络', '把自己的需要放在第一位', '冷静评估是否要继续这段关系'],
+      encouragement: '这个结果不代表你是坏人。求助是力量的体现。',
+    },
+    fr: {
+      title: 'Schémas préoccupants', subtitle: 'Plusieurs schémas toxiques sont observés',
+      description: 'De nombreux schémas toxiques sont apparus. Cette relation pèse probablement sur votre bien-être émotionnel. Ces schémas peuvent changer, mais cela demande des efforts actifs.',
+      patterns: ['Des limites franchies à répétition', 'Un épuisement émotionnel persistant', 'Une baisse de l’estime de soi', 'Une dynamique de pouvoir déséquilibrée'],
+      steps: ['Envisager de consulter un thérapeute', 'Chercher un réseau de soutien de confiance', 'Placer vos besoins en priorité', 'Évaluer calmement s’il faut poursuivre la relation'],
+      encouragement: 'Ce résultat ne signifie pas que vous êtes quelqu’un de mauvais. Demander de l’aide est un signe de force.',
+    },
+    es: {
+      title: 'Patrones preocupantes', subtitle: 'Se observan varios patrones tóxicos',
+      description: 'Han aparecido bastantes patrones tóxicos. Es probable que esta relación esté afectando a tu bienestar emocional. Estos patrones pueden cambiar, pero requieren un esfuerzo activo.',
+      patterns: ['Límites traspasados una y otra vez', 'Agotamiento emocional persistente', 'Baja autoestima', 'Una dinámica de poder desequilibrada'],
+      steps: ['Plantearte consultar a un terapeuta', 'Buscar una red de apoyo de confianza', 'Poner tus necesidades en primer lugar', 'Valorar con calma si continuar la relación'],
+      encouragement: 'Este resultado no significa que seas mala persona. Pedir ayuda es una muestra de fortaleza.',
+    },
   },
   high_toxicity: {
     ko: {
@@ -205,6 +352,27 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
       patterns: ['継続的な感情的被害', '深刻な境界侵害', '自己価値感の損傷', '関係から抜け出せないという感覚'],
       steps: ['安全な専門家（カウンセラー、心理士）に連絡する', '信頼できる人に現在の状況を伝える', '自分の安全を最優先に判断する', '一人で解決しようとしない'],
       encouragement: 'あなたはこの状況で一人ではありません。どんな結果でも、あなたは尊重され愛される資格があります。助けを求めることは勇気ある行動です。',
+    },
+    zh: {
+      title: '有害的关系', subtitle: '现在对你最重要的，是你自己',
+      description: '发现了高度的有害模式。这段关系可能正在严重影响你的情绪和心理健康。请不要独自承受这个结果。',
+      patterns: ['持续的情绪伤害', '严重的界限侵犯', '自我价值感受损', '觉得很难离开这段关系'],
+      steps: ['联系可信赖的专业人士（咨询师、心理师）', '把目前的情况告诉可信任的人', '以自己的安全为最优先来判断', '不要试图独自解决'],
+      encouragement: '在这件事上你并不孤单。无论结果如何，你都值得被尊重、被爱。求助是勇敢的行动。',
+    },
+    fr: {
+      title: 'Relation toxique', subtitle: 'Ce qui compte le plus maintenant, c’est vous',
+      description: 'Des schémas toxiques de haut niveau sont apparus. Cette relation peut nuire gravement à votre santé émotionnelle et psychologique. Ne portez pas ce résultat seul.',
+      patterns: ['Des blessures émotionnelles persistantes', 'Des limites gravement franchies', 'Une estime de soi abîmée', 'Le sentiment qu’il est difficile de partir'],
+      steps: ['Contacter un professionnel de confiance (thérapeute, psychologue)', 'Informer une personne de confiance de votre situation', 'Faire de votre sécurité la priorité absolue', 'Ne pas essayer de tout régler seul'],
+      encouragement: 'Vous n’êtes pas seul face à cela. Quel que soit le résultat, vous méritez d’être respecté et aimé. Demander de l’aide est un acte courageux.',
+    },
+    es: {
+      title: 'Relación tóxica', subtitle: 'Ahora lo más importante eres tú',
+      description: 'Han aparecido patrones tóxicos de nivel alto. Esta relación puede estar afectando gravemente a tu salud emocional y psicológica. No cargues con este resultado a solas.',
+      patterns: ['Daño emocional persistente', 'Límites gravemente traspasados', 'Autoestima dañada', 'Sensación de que es difícil salir de la relación'],
+      steps: ['Contactar con un profesional de confianza (terapeuta, psicólogo)', 'Contarle tu situación a alguien de confianza', 'Poner tu seguridad como máxima prioridad', 'No intentar resolverlo a solas'],
+      encouragement: 'No estás solo en esto. Sea cual sea el resultado, mereces respeto y cariño. Pedir ayuda es un acto valiente.',
     },
   },
 }

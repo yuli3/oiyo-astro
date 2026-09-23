@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type AssertLevel = 'passive' | 'developing' | 'assertive' | 'strong'
 type Subscale = 'express' | 'boundary'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはRathusアサーション尺度（RAS）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '自我主张测验',
+    subtitle: '我能在多大程度上表达自己的想法和界限？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大体是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的自我主张分数是',
+    yourScore: '我的自我主张分数',
+    overallLabel: '综合自我主张',
+    expressLabel: '意见表达',
+    boundaryLabel: '界限设定',
+    outOf: '/ 5.0',
+    tipsLabel: '成长建议',
+    note: '本测验参考 Rathus 自我主张量表（RAS）的概念，用于自我省思，不能替代专业诊断。',
+  },
+  fr: {
+    title: 'Test d’affirmation de soi',
+    subtitle: 'Dans quelle mesure est-ce que j’exprime mes idées et mes limites ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Moyennement', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon score d’affirmation de soi',
+    yourScore: 'Mon score d’affirmation de soi',
+    overallLabel: 'Affirmation de soi globale',
+    expressLabel: 'Expression de ses opinions',
+    boundaryLabel: 'Poser ses limites',
+    outOf: '/ 5.0',
+    tipsLabel: 'Pistes pour progresser',
+    note: 'Test de réflexion personnelle inspiré de l’échelle d’affirmation de soi de Rathus (RAS). Il ne remplace pas un diagnostic professionnel.',
+  },
+  es: {
+    title: 'Test de asertividad',
+    subtitle: '¿Cuánto expreso mis ideas y mis límites?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A medias', 'Bastante', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi puntuación de asertividad',
+    yourScore: 'Mi puntuación de asertividad',
+    overallLabel: 'Asertividad global',
+    expressLabel: 'Expresar opiniones',
+    boundaryLabel: 'Poner límites',
+    outOf: '/ 5.0',
+    tipsLabel: 'Consejos para crecer',
+    note: 'Test de reflexión personal basado en la escala de asertividad de Rathus (RAS). No sustituye un diagnóstico profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<AssertLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<AssertLevel, Record<SupportedLang, LevelData>> = {
         '自分の感情を非難せず「私」中心で言ってみましょう。',
       ],
     },
+    zh: {
+      icon: '🌱',
+      title: '包容体贴型',
+      description: '你很会体贴别人、避开冲突。再多练习表达自己的想法和需要，关系会更健康。',
+      tips: [
+        '从小小的偏好开始表达吧（“我比较喜欢这个”）。',
+        '用一句话练习说“不”，锻炼拒绝的肌肉。',
+        '不带指责，用“我”开头说出自己的感受。',
+      ],
+    },
+    fr: {
+      icon: '🌱',
+      title: 'Profil accueillant et attentionné',
+      description: 'Vous savez prendre soin des autres et éviter les conflits. En vous entraînant à exprimer vos idées et vos besoins, vos relations deviendront plus saines.',
+      tips: [
+        'Commencez par exprimer de petites préférences (« Je préfère celui-ci »).',
+        'Entraînez-vous à dire « non » en une phrase pour muscler votre refus.',
+        'Dites ce que vous ressentez à la première personne, sans reproche.',
+      ],
+    },
+    es: {
+      icon: '🌱',
+      title: 'Perfil receptivo y considerado',
+      description: 'Tienes mucha capacidad para cuidar de los demás y evitar conflictos. Si practicas expresar tus ideas y necesidades, tus relaciones serán más sanas.',
+      tips: [
+        'Empieza expresando pequeñas preferencias («Prefiero este»).',
+        'Practica decir «no» en una frase para fortalecer el músculo de rechazar.',
+        'Di lo que sientes en primera persona, sin reproches.',
+      ],
+    },
   },
   developing: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<AssertLevel, Record<SupportedLang, LevelData>> = {
         '我慢した瞬間を振り返り、表現してよかった点を探しましょう。',
         '重要な依頼・断りを前もって一文で準備しておきましょう。',
         '主張後の罪悪感を「健康的な表現」として捉え直しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌿',
+      title: '平衡成长型',
+      description: '你会视情况表达，也会忍住。这是在体贴与主张之间找平衡的健康成长阶段。',
+      tips: [
+        '回顾那些忍下来的时刻，找找其实可以说出口的地方。',
+        '重要的请求或拒绝，事先准备成一句话。',
+        '把主张之后的内疚，重新理解为“健康的表达”。',
+      ],
+    },
+    fr: {
+      icon: '🌿',
+      title: 'Profil en équilibre, en progression',
+      description: 'Selon les situations, vous vous exprimez ou vous vous retenez. C’est une étape saine où vous cherchez l’équilibre entre attention aux autres et affirmation.',
+      tips: [
+        'Repensez aux moments où vous vous êtes retenu et repérez où vous auriez pu parler.',
+        'Préparez à l’avance en une phrase les demandes ou refus importants.',
+        'Relisez la culpabilité qui suit une affirmation comme de « l’expression saine ».',
+      ],
+    },
+    es: {
+      icon: '🌿',
+      title: 'Perfil en equilibrio, en crecimiento',
+      description: 'Según la situación, te expresas o te contienes. Es una etapa sana en la que buscas el equilibrio entre considerar a otros y afirmarte.',
+      tips: [
+        'Repasa los momentos en que te contuviste y busca dónde podrías haber hablado.',
+        'Prepara de antemano en una frase las peticiones o negativas importantes.',
+        'Reinterpreta la culpa tras afirmarte como «expresión sana».',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<AssertLevel, Record<SupportedLang, LevelData>> = {
         '周囲に健康的な自己主張をモデリングしましょう。',
       ],
     },
+    zh: {
+      icon: '🧭',
+      title: '健康主张型',
+      description: '你既尊重自己的想法和界限，也顾及他人地表达。坦率与体贴平衡得很好。',
+      tips: [
+        '在关系和工作中，一贯地维持这份平衡。',
+        '表达之后也倾听对方的反应，保持双向。',
+        '在身边示范健康的自我主张。',
+      ],
+    },
+    fr: {
+      icon: '🧭',
+      title: 'Affirmation saine',
+      description: 'Vous vous exprimez en respectant vos idées et vos limites tout en tenant compte des autres. Franchise et attention sont bien équilibrées.',
+      tips: [
+        'Maintenez cet équilibre avec constance, dans vos relations comme au travail.',
+        'Après vous être exprimé, écoutez aussi la réaction de l’autre : gardez l’échange à double sens.',
+        'Montrez autour de vous ce qu’est une affirmation de soi saine.',
+      ],
+    },
+    es: {
+      icon: '🧭',
+      title: 'Asertividad sana',
+      description: 'Te expresas respetando tus ideas y límites sin dejar de tener en cuenta a los demás. Franqueza y consideración están bien equilibradas.',
+      tips: [
+        'Mantén este equilibrio de forma constante en tus relaciones y en el trabajo.',
+        'Tras expresarte, escucha también la reacción del otro: que sea en ambas direcciones.',
+        'Sé ejemplo de asertividad sana para quienes te rodean.',
+      ],
+    },
   },
   strong: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<AssertLevel, Record<SupportedLang, LevelData>> = {
         '主張の前に相手の立場を一度確認する余裕を持ちましょう。',
         '強い表現が相手を圧倒していないか時々点検しましょう。',
         '傾聴と質問で主張と共感のバランスを取りましょう。',
+      ],
+    },
+    zh: {
+      icon: '🔥',
+      title: '强势主张型',
+      description: '你的自我表达和界限设定非常明确。这是优势，但偶尔检视一下倾听与体贴的平衡，关系会更柔和。',
+      tips: [
+        '主张之前，留点余裕先确认对方的立场。',
+        '偶尔检查强烈的表达是否压倒了对方。',
+        '用倾听和提问，平衡主张与共情。',
+      ],
+    },
+    fr: {
+      icon: '🔥',
+      title: 'Affirmation forte',
+      description: 'Votre expression et vos limites sont très nettes. C’est une force ; vérifier de temps en temps l’équilibre avec l’écoute et l’attention adoucira vos relations.',
+      tips: [
+        'Avant de vous affirmer, prenez le temps de vérifier la position de l’autre.',
+        'Vérifiez parfois que votre franchise n’écrase pas l’autre.',
+        'Équilibrez affirmation et empathie par l’écoute et les questions.',
+      ],
+    },
+    es: {
+      icon: '🔥',
+      title: 'Asertividad fuerte',
+      description: 'Tu forma de expresarte y de poner límites es muy clara. Es una fortaleza; revisar de vez en cuando el equilibrio con la escucha y la consideración suavizará tus relaciones.',
+      tips: [
+        'Antes de afirmarte, tómate un momento para comprobar la postura del otro.',
+        'Revisa a veces que tu franqueza no abrume al otro.',
+        'Equilibra afirmación y empatía con escucha y preguntas.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'b5', subscale: 'boundary', reverse: false, text: '誰かが一線を越えたら明確に伝える' },
     { id: 'b6', subscale: 'boundary', reverse: false, text: '罪悪感なく自分の必要を優先できる' },
     { id: 'b7', subscale: 'boundary', reverse: false, text: '対立が生じても必要なことは言う方だ' },
+  ],
+  zh: [
+    { id: 'e1', subscale: 'express', reverse: false, text: '我倾向坦率地说出自己的意见' },
+    { id: 'e2', subscale: 'express', reverse: false, text: '我能自然地表达称赞或感谢' },
+    { id: 'e3', subscale: 'express', reverse: false, text: '在会议或聚会上，我能好好说出自己的想法' },
+    { id: 'e4', subscale: 'express', reverse: false, text: '受到不公平的对待时，我会明确表达' },
+    { id: 'e5', subscale: 'express', reverse: false, text: '我能直接提出自己想要的' },
+    { id: 'e6', subscale: 'express', reverse: false, text: '即使意见不同，我也不会退缩，照样说出来' },
+    { id: 'e7', subscale: 'express', reverse: false, text: '有不满时，我会适当表达，而不是憋着' },
+    { id: 'b1', subscale: 'boundary', reverse: false, text: '需要拒绝请求时，我能明确拒绝' },
+    { id: 'b2', subscale: 'boundary', reverse: false, text: '面对无理的要求，我能说“不”' },
+    { id: 'b3', subscale: 'boundary', reverse: false, text: '我倾向守住自己时间和精力的界限' },
+    { id: 'b4', subscale: 'boundary', reverse: false, text: '我不会因为别人的期待而勉强迎合' },
+    { id: 'b5', subscale: 'boundary', reverse: false, text: '有人越界时，我会明确告诉对方' },
+    { id: 'b6', subscale: 'boundary', reverse: false, text: '我能不带内疚地把自己的需要放在前面' },
+    { id: 'b7', subscale: 'boundary', reverse: false, text: '即使发生冲突，该说的话我还是会说' },
+  ],
+  fr: [
+    { id: 'e1', subscale: 'express', reverse: false, text: 'J’ai tendance à dire franchement mon avis' },
+    { id: 'e2', subscale: 'express', reverse: false, text: 'J’exprime naturellement compliments et remerciements' },
+    { id: 'e3', subscale: 'express', reverse: false, text: 'En réunion ou en groupe, je partage bien mes idées' },
+    { id: 'e4', subscale: 'express', reverse: false, text: 'Quand on me traite injustement, je le dis clairement' },
+    { id: 'e5', subscale: 'express', reverse: false, text: 'Je peux demander directement ce que je veux' },
+    { id: 'e6', subscale: 'express', reverse: false, text: 'Même en désaccord, je parle sans me laisser intimider' },
+    { id: 'e7', subscale: 'express', reverse: false, text: 'Quand quelque chose me déplaît, je l’exprime au lieu de l’accumuler' },
+    { id: 'b1', subscale: 'boundary', reverse: false, text: 'Quand je dois refuser une demande, je sais refuser clairement' },
+    { id: 'b2', subscale: 'boundary', reverse: false, text: 'Je peux dire « non » à une demande déraisonnable' },
+    { id: 'b3', subscale: 'boundary', reverse: false, text: 'J’ai tendance à protéger les limites de mon temps et de mon énergie' },
+    { id: 'b4', subscale: 'boundary', reverse: false, text: 'Je ne me force pas à répondre aux attentes des autres' },
+    { id: 'b5', subscale: 'boundary', reverse: false, text: 'Quand quelqu’un dépasse les bornes, je le lui signale clairement' },
+    { id: 'b6', subscale: 'boundary', reverse: false, text: 'Je peux faire passer mes besoins en premier sans culpabiliser' },
+    { id: 'b7', subscale: 'boundary', reverse: false, text: 'Même en cas de conflit, je dis ce qui doit être dit' },
+  ],
+  es: [
+    { id: 'e1', subscale: 'express', reverse: false, text: 'Suelo decir mi opinión con franqueza' },
+    { id: 'e2', subscale: 'express', reverse: false, text: 'Expreso elogios y agradecimiento con naturalidad' },
+    { id: 'e3', subscale: 'express', reverse: false, text: 'En reuniones o en grupo, digo bien lo que pienso' },
+    { id: 'e4', subscale: 'express', reverse: false, text: 'Si me tratan injustamente, lo digo con claridad' },
+    { id: 'e5', subscale: 'express', reverse: false, text: 'Puedo pedir directamente lo que quiero' },
+    { id: 'e6', subscale: 'express', reverse: false, text: 'Aunque no esté de acuerdo, hablo sin achicarme' },
+    { id: 'e7', subscale: 'express', reverse: false, text: 'Cuando algo me molesta, lo expreso en vez de acumularlo' },
+    { id: 'b1', subscale: 'boundary', reverse: false, text: 'Cuando tengo que rechazar una petición, sé decir que no con claridad' },
+    { id: 'b2', subscale: 'boundary', reverse: false, text: 'Puedo decir «no» a una exigencia excesiva' },
+    { id: 'b3', subscale: 'boundary', reverse: false, text: 'Suelo proteger los límites de mi tiempo y mi energía' },
+    { id: 'b4', subscale: 'boundary', reverse: false, text: 'No me fuerzo a encajar en las expectativas de los demás' },
+    { id: 'b5', subscale: 'boundary', reverse: false, text: 'Cuando alguien se pasa de la raya, se lo digo claramente' },
+    { id: 'b6', subscale: 'boundary', reverse: false, text: 'Puedo priorizar mis necesidades sin sentir culpa' },
+    { id: 'b7', subscale: 'boundary', reverse: false, text: 'Aunque haya conflicto, digo lo que hay que decir' },
   ],
 }
 

@@ -3,11 +3,11 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type BiasDim = 'confirmation' | 'dunningKruger' | 'availability' | 'lossAversion' | 'attribution'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 interface Question {
@@ -105,6 +105,72 @@ const LABELS: Record<SupportedLang, {
       attribution: '帰属バイアス',
     },
   },
+  zh: {
+    title: '认知偏差类型测验',
+    subtitle: '我容易陷入哪种偏差？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '不太是', '一般', '比较是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的认知偏差测验结果',
+    yourBiases: '我的偏差类型',
+    topBiases: '最强的两种偏差',
+    allScores: '五种偏差得分',
+    exampleLabel: '日常中的例子',
+    mitigationLabel: '减少偏差的方法',
+    disclaimer: '本测验是帮助自我觉察的工具。认知偏差人人都有，并不是坏事。',
+    dimNames: {
+      confirmation: '确认偏差',
+      dunningKruger: '达克效应',
+      availability: '可得性启发',
+      lossAversion: '损失厌恶',
+      attribution: '归因偏差',
+    },
+  },
+  fr: {
+    title: 'Test des biais cognitifs',
+    subtitle: 'À quels biais suis-je le plus sensible ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Plutôt pas', 'Moyennement', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon résultat au test des biais cognitifs',
+    yourBiases: 'Mon type de biais',
+    topBiases: 'Mes deux biais les plus forts',
+    allScores: 'Scores des cinq biais',
+    exampleLabel: 'Exemple au quotidien',
+    mitigationLabel: 'Comment réduire ce biais',
+    disclaimer: 'Ce test est un outil de connaissance de soi. Tout le monde a des biais cognitifs, et ce n’est pas un défaut.',
+    dimNames: {
+      confirmation: 'Biais de confirmation',
+      dunningKruger: 'Effet Dunning-Kruger',
+      availability: 'Heuristique de disponibilité',
+      lossAversion: 'Aversion à la perte',
+      attribution: 'Biais d’attribution',
+    },
+  },
+  es: {
+    title: 'Test de sesgos cognitivos',
+    subtitle: '¿A qué sesgos soy más vulnerable?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Poco', 'A medias', 'Bastante', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi resultado del test de sesgos cognitivos',
+    yourBiases: 'Mi tipo de sesgo',
+    topBiases: 'Mis dos sesgos más fuertes',
+    allScores: 'Puntuación de los cinco sesgos',
+    exampleLabel: 'Ejemplo cotidiano',
+    mitigationLabel: 'Cómo reducir el sesgo',
+    disclaimer: 'Este test es una herramienta de autoconocimiento. Todas las personas tienen sesgos cognitivos, y no es algo malo.',
+    dimNames: {
+      confirmation: 'Sesgo de confirmación',
+      dunningKruger: 'Efecto Dunning-Kruger',
+      availability: 'Heurística de disponibilidad',
+      lossAversion: 'Aversión a la pérdida',
+      attribution: 'Sesgo de atribución',
+    },
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -159,6 +225,57 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q14', text: '他者が失敗するとその人の性格の問題だと思う傾向がある', dim: 'attribution' },
     { id: 'q15', text: '自分が失敗すると状況や環境のせいをまず探す', dim: 'attribution' },
   ],
+  zh: [
+    { id: 'q1', text: '与我观点相反的新闻或文章，我很难相信', dim: 'confirmation' },
+    { id: 'q2', text: '我会先去找支持自己想法的资料', dim: 'confirmation' },
+    { id: 'q3', text: '听到反对意见后，我反而更确信自己是对的', dim: 'confirmation' },
+    { id: 'q4', text: '开始学一个新领域时，很快就觉得自己懂了', dim: 'dunningKruger' },
+    { id: 'q5', text: '我认为自己在很多方面都比一般人强', dim: 'dunningKruger' },
+    { id: 'q6', text: '我觉得别人低估了我的能力或知识', dim: 'dunningKruger' },
+    { id: 'q7', text: '最近新闻里常出现的事件，我会觉得它更常发生', dim: 'availability' },
+    { id: 'q8', text: '身边人遇到的事，大大影响我对一般风险或概率的判断', dim: 'availability' },
+    { id: 'q9', text: '印象鲜明的案例，比统计数据更让我信服', dim: 'availability' },
+    { id: 'q10', text: '丢掉一千元的感觉，比得到一千元强烈得多', dim: 'lossAversion' },
+    { id: 'q11', text: '为了避免损失，我常常放弃获利的机会', dim: 'lossAversion' },
+    { id: 'q12', text: '已经投入了成本，即使明显亏损也很难放手', dim: 'lossAversion' },
+    { id: 'q13', text: '事情顺利时是我努力的结果，不顺时多半是环境的问题', dim: 'attribution' },
+    { id: 'q14', text: '别人犯错时，我倾向认为是那个人的性格问题', dim: 'attribution' },
+    { id: 'q15', text: '自己犯错时，我会先找情境或环境上的理由', dim: 'attribution' },
+  ],
+  fr: [
+    { id: 'q1', text: 'J’ai du mal à croire les articles ou nouvelles qui contredisent mon avis', dim: 'confirmation' },
+    { id: 'q2', text: 'Je cherche d’abord des sources qui confirment ce que je pense', dim: 'confirmation' },
+    { id: 'q3', text: 'Entendre un avis contraire renforce ma conviction d’avoir raison', dim: 'confirmation' },
+    { id: 'q4', text: 'Quand je commence un nouveau domaine, j’ai vite l’impression d’avoir compris', dim: 'dunningKruger' },
+    { id: 'q5', text: 'Je pense être meilleur que la moyenne dans bien des domaines', dim: 'dunningKruger' },
+    { id: 'q6', text: 'J’ai l’impression que les autres sous-estiment mes compétences ou mes connaissances', dim: 'dunningKruger' },
+    { id: 'q7', text: 'Les événements souvent évoqués dans l’actualité me semblent plus fréquents', dim: 'availability' },
+    { id: 'q8', text: 'Ce qui est arrivé à mes proches influence fortement mon jugement sur les risques en général', dim: 'availability' },
+    { id: 'q9', text: 'Un cas marquant me convainc davantage que des statistiques', dim: 'availability' },
+    { id: 'q10', text: 'Perdre 100 € me paraît bien plus fort que gagner 100 €', dim: 'lossAversion' },
+    { id: 'q11', text: 'Je renonce souvent à un gain possible pour éviter une perte', dim: 'lossAversion' },
+    { id: 'q12', text: 'Quand j’ai déjà investi, j’ai du mal à lâcher prise même si la perte est évidente', dim: 'lossAversion' },
+    { id: 'q13', text: 'Quand ça marche, c’est grâce à mes efforts ; quand ça rate, c’est souvent la faute des circonstances', dim: 'attribution' },
+    { id: 'q14', text: 'Quand quelqu’un se trompe, j’ai tendance à y voir un problème de caractère', dim: 'attribution' },
+    { id: 'q15', text: 'Quand je me trompe, je cherche d’abord des raisons dans la situation ou l’environnement', dim: 'attribution' },
+  ],
+  es: [
+    { id: 'q1', text: 'Me cuesta creer noticias o textos que contradicen mi opinión', dim: 'confirmation' },
+    { id: 'q2', text: 'Busco primero datos que respalden lo que pienso', dim: 'confirmation' },
+    { id: 'q3', text: 'Oír una opinión contraria refuerza mi convicción de tener razón', dim: 'confirmation' },
+    { id: 'q4', text: 'Cuando empiezo a aprender algo nuevo, enseguida siento que lo he entendido', dim: 'dunningKruger' },
+    { id: 'q5', text: 'Creo que soy mejor que la media en muchos aspectos', dim: 'dunningKruger' },
+    { id: 'q6', text: 'Siento que los demás subestiman mis capacidades o conocimientos', dim: 'dunningKruger' },
+    { id: 'q7', text: 'Los sucesos que salen a menudo en las noticias me parecen más frecuentes', dim: 'availability' },
+    { id: 'q8', text: 'Lo que le pasa a gente cercana influye mucho en cómo juzgo riesgos y probabilidades', dim: 'availability' },
+    { id: 'q9', text: 'Un caso que recuerdo vívidamente me convence más que las estadísticas', dim: 'availability' },
+    { id: 'q10', text: 'Perder 100 € me pesa mucho más que ganar 100 €', dim: 'lossAversion' },
+    { id: 'q11', text: 'A menudo renuncio a una ganancia posible para evitar una pérdida', dim: 'lossAversion' },
+    { id: 'q12', text: 'Si ya he invertido, me cuesta abandonar aunque la pérdida sea evidente', dim: 'lossAversion' },
+    { id: 'q13', text: 'Cuando algo sale bien es gracias a mi esfuerzo; cuando sale mal, suele ser por las circunstancias', dim: 'attribution' },
+    { id: 'q14', text: 'Cuando otra persona se equivoca, tiendo a verlo como un problema de su carácter', dim: 'attribution' },
+    { id: 'q15', text: 'Cuando me equivoco yo, busco primero razones en la situación o el entorno', dim: 'attribution' },
+  ],
 }
 
 const BIAS_RESULTS: Record<BiasDim, Record<SupportedLang, BiasResult>> = {
@@ -181,6 +298,24 @@ const BIAS_RESULTS: Record<BiasDim, Record<SupportedLang, BiasResult>> = {
       example: '株式投資後にその企業のポジティブなニュースだけを探し、ネガティブなシグナルを無視すること',
       mitigation: '意図的に反対意見を探し、自分の信念を反証するシナリオを考えてみましょう',
     },
+    zh: {
+      title: '确认偏差',
+      description: '倾向偏好能证实自己既有信念或假设的信息，而忽视或轻视反面证据。',
+      example: '买了股票后只看那家公司的利好新闻，忽略负面信号',
+      mitigation: '刻意去找反对意见，想想能反驳自己信念的情境',
+    },
+    fr: {
+      title: 'Biais de confirmation',
+      description: 'Tendance à privilégier les informations qui confirment nos croyances ou hypothèses, et à ignorer ou minimiser celles qui les contredisent.',
+      example: 'Après avoir acheté une action, ne lire que les bonnes nouvelles sur l’entreprise et ignorer les signaux négatifs',
+      mitigation: 'Cherchez délibérément des avis contraires et imaginez des scénarios qui réfutent vos croyances',
+    },
+    es: {
+      title: 'Sesgo de confirmación',
+      description: 'Tendencia a preferir la información que confirma nuestras creencias o hipótesis y a ignorar o restar importancia a la que las contradice.',
+      example: 'Tras comprar acciones, leer solo las buenas noticias de la empresa e ignorar las señales negativas',
+      mitigation: 'Busca a propósito opiniones contrarias y piensa en escenarios que refuten tus creencias',
+    },
   },
   dunningKruger: {
     ko: {
@@ -200,6 +335,24 @@ const BIAS_RESULTS: Record<BiasDim, Record<SupportedLang, BiasResult>> = {
       description: '能力が不足している人が自分の能力を過大評価する現象です。逆に、能力が高いほど自分を過小評価する傾向もあります。',
       example: 'プログラミングを2週間習った人が複雑なシステムを簡単に作れると過信すること',
       mitigation: '専門家からフィードバックをもらい、自分が知らないことを継続的に確認しましょう',
+    },
+    zh: {
+      title: '达克效应',
+      description: '能力不足的人高估自己能力的现象。反过来，能力越高的人也可能越低估自己。',
+      example: '学编程两周的人，自信能轻松做出复杂系统',
+      mitigation: '向专家寻求反馈，持续检视自己不知道的是什么',
+    },
+    fr: {
+      title: 'Effet Dunning-Kruger',
+      description: 'Phénomène par lequel les personnes peu compétentes surestiment leurs capacités. À l’inverse, plus on est compétent, plus on a tendance à se sous-estimer.',
+      example: 'Après deux semaines de programmation, se croire capable de construire facilement un système complexe',
+      mitigation: 'Demandez l’avis d’experts et vérifiez régulièrement ce que vous ne savez pas',
+    },
+    es: {
+      title: 'Efecto Dunning-Kruger',
+      description: 'Fenómeno por el que las personas poco competentes sobreestiman su capacidad. A la inversa, cuanta más competencia, más tendencia a subestimarse.',
+      example: 'Tras dos semanas aprendiendo a programar, creerse capaz de construir fácilmente un sistema complejo',
+      mitigation: 'Pide opinión a expertos y revisa con constancia qué es lo que no sabes',
     },
   },
   availability: {
@@ -221,12 +374,30 @@ const BIAS_RESULTS: Record<BiasDim, Record<SupportedLang, BiasResult>> = {
       example: '飛行機事故のニュースを見た直後、自動車より飛行機がずっと危険だと感じること',
       mitigation: '直感的な判断をする前に、実際の統計や基本確率を確認する習慣をつけましょう',
     },
+    zh: {
+      title: '可得性启发',
+      description: '依赖容易想到的信息或案例来判断概率或频率的思维捷径。',
+      example: '刚看完空难新闻，就觉得坐飞机比开车危险得多',
+      mitigation: '在凭直觉判断之前，养成先查实际统计或基础概率的习惯',
+    },
+    fr: {
+      title: 'Heuristique de disponibilité',
+      description: 'Raccourci mental qui consiste à juger une probabilité ou une fréquence d’après les informations ou exemples qui viennent facilement à l’esprit.',
+      example: 'Juste après un reportage sur un accident d’avion, trouver l’avion bien plus dangereux que la voiture',
+      mitigation: 'Avant de juger à l’intuition, prenez l’habitude de vérifier les statistiques réelles ou les probabilités de base',
+    },
+    es: {
+      title: 'Heurística de disponibilidad',
+      description: 'Atajo mental que consiste en juzgar la probabilidad o la frecuencia según la información o los ejemplos que vienen fácilmente a la mente.',
+      example: 'Justo después de ver una noticia de un accidente aéreo, sentir que el avión es mucho más peligroso que el coche',
+      mitigation: 'Antes de juzgar por intuición, acostúmbrate a consultar las estadísticas reales o las probabilidades de base',
+    },
   },
   lossAversion: {
     ko: {
       title: '손실 회피',
       description: '같은 크기의 이익보다 손실을 더 크게 느끼는 경향입니다. 이는 합리적 의사결정을 방해할 수 있습니다.',
-      example: '수익률이 좋은 주식을 팔지 못하는 이유: "더 오를지 모른다"가 아니라 "팔면 그게 마지막이 될까봐"',
+      example: '팔면 손실이 "확정"되는 게 싫어서, 논리적으로는 손절해야 할 하락 주식을 계속 들고 있는 것',
       mitigation: '의사결정 시 기대값(예상 이익 × 확률)을 계산하고, 손실 가능성보다 이익 가능성을 균형 있게 고려하세요',
     },
     en: {
@@ -240,6 +411,24 @@ const BIAS_RESULTS: Record<BiasDim, Record<SupportedLang, BiasResult>> = {
       description: '同じ大きさの利益より損失をより大きく感じる傾向です。これは合理的な意思決定を妨げることがあります。',
       example: '損失を「確定」させることへの恐怖から、下落株を保有し続けること',
       mitigation: '意思決定時に期待値（予想利益×確率）を計算し、損失可能性と利益可能性をバランス良く考慮しましょう',
+    },
+    zh: {
+      title: '损失厌恶',
+      description: '同样大小的得失，损失给人的感受更强烈。这可能妨碍理性决策。',
+      example: '因为不想让亏损“落定”，明知该止损却一直抱着下跌的股票',
+      mitigation: '做决定时计算期望值（预期收益 × 概率），平衡地考虑获利与亏损的可能',
+    },
+    fr: {
+      title: 'Aversion à la perte',
+      description: 'Tendance à ressentir une perte plus fortement qu’un gain de même montant. Elle peut entraver une décision rationnelle.',
+      example: 'Garder une action en baisse pour ne pas « acter » la perte, alors que la logique voudrait couper les pertes',
+      mitigation: 'Lors d’une décision, calculez l’espérance (gain attendu × probabilité) et pesez gains et pertes possibles de façon équilibrée',
+    },
+    es: {
+      title: 'Aversión a la pérdida',
+      description: 'Tendencia a sentir una pérdida con más fuerza que una ganancia del mismo tamaño. Puede entorpecer una decisión racional.',
+      example: 'Mantener una acción que cae para no «hacer real» la pérdida, aunque la lógica diga que conviene cortarla',
+      mitigation: 'Al decidir, calcula el valor esperado (ganancia esperada × probabilidad) y sopesa por igual ganancias y pérdidas posibles',
     },
   },
   attribution: {
@@ -260,6 +449,24 @@ const BIAS_RESULTS: Record<BiasDim, Record<SupportedLang, BiasResult>> = {
       description: '自分の行動は状況のせいに、他者の行動は性格のせいにする自己奉仕的な帰属パターンです。',
       example: '自分が遅刻すると「交通が渋滞していた」、同僚が遅刻すると「怠け者だ」と判断すること',
       mitigation: '他者の行動を判断する前に、その人が置かれた状況をまず考慮しましょう',
+    },
+    zh: {
+      title: '归因偏差',
+      description: '把自己的行为归于情境，把别人的行为归于性格的自利归因模式。',
+      example: '自己迟到是“路上堵车”，同事迟到就是“这人懒”',
+      mitigation: '在评判别人的行为之前，先考虑对方所处的情境',
+    },
+    fr: {
+      title: 'Biais d’attribution',
+      description: 'Schéma d’attribution qui rapporte nos propres actes aux circonstances, et ceux des autres à leur caractère.',
+      example: 'Si je suis en retard, « il y avait des bouchons » ; si un collègue l’est, « il est paresseux »',
+      mitigation: 'Avant de juger le comportement d’autrui, tenez d’abord compte de sa situation',
+    },
+    es: {
+      title: 'Sesgo de atribución',
+      description: 'Patrón de atribución que achaca nuestros actos a las circunstancias y los de los demás a su carácter.',
+      example: 'Si llego tarde, «había atasco»; si llega tarde un compañero, «es un vago»',
+      mitigation: 'Antes de juzgar lo que hace otra persona, ten en cuenta primero su situación',
     },
   },
 }
