@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type ClarityLevel = 'forming' | 'developing' | 'clear' | 'solid'
 type Subscale = 'consistency' | 'certainty'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはキャンベルの自己概念明確性尺度（Self-Concept Clarity, 1996）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '自我概念清晰度测验',
+    subtitle: '我对自己看得有多清楚？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的自我概念清晰度是',
+    yourScore: '我的自我概念清晰度',
+    overallLabel: '综合清晰度',
+    consistencyLabel: '自我一致性',
+    certaintyLabel: '自我笃定',
+    outOf: '/ 5.0',
+    tipsLabel: '成长建议',
+    note: '本测验参考 Campbell 的自我概念清晰度量表（Self-Concept Clarity, 1996）概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test de clarté du concept de soi',
+    subtitle: 'À quel point est-ce que je me vois clairement ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Ma clarté de soi',
+    yourScore: 'Votre clarté de soi',
+    overallLabel: 'Clarté globale',
+    consistencyLabel: 'Cohérence de soi',
+    certaintyLabel: 'Assurance intérieure',
+    outOf: '/ 5.0',
+    tipsLabel: 'Piste de progrès',
+    note: 'Ce test reprend les notions de l’échelle de clarté du concept de soi de Campbell (1996), à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de claridad del autoconcepto',
+    subtitle: '¿Con qué claridad me veo?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi claridad sobre mí',
+    yourScore: 'Tu claridad sobre ti',
+    overallLabel: 'Claridad global',
+    consistencyLabel: 'Coherencia con uno mismo',
+    certaintyLabel: 'Seguridad interior',
+    outOf: '/ 5.0',
+    tipsLabel: 'Para crecer',
+    note: 'Este test recoge las ideas de la escala de claridad del autoconcepto de Campbell (1996), para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<ClarityLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<ClarityLevel, Record<SupportedLang, LevelData>> = {
         '他人の期待と自分の願いを区別する練習をしましょう。',
       ],
     },
+    zh: {
+      icon: '🌫️',
+      title: '形成阶段',
+      description: '「我像什么样子」还没定下来，正处在摸索期。自我概念会随场合和他人晃动，但这是成长里很自然的一段。',
+      tips: [
+        '把价值观、长处、想要的东西写下来，给自己画个轮廓。',
+        '用「这适不适合我」的角度，去检视各种经历。',
+        '练习分清楚：哪些是别人的期待，哪些是自己的想要。',
+      ],
+    },
+    fr: {
+      icon: '🌫️',
+      title: 'En formation',
+      description: '« Ce que je suis » n’est pas encore net : vous êtes en exploration. Le concept de soi peut vaciller selon les situations et les personnes, mais c’est une étape naturelle de la croissance.',
+      tips: [
+        'Écrivez vos valeurs, vos forces et vos désirs pour dessiner vos contours.',
+        'Passez vos expériences au crible de la question « est-ce que cela me convient ? ».',
+        'Entraînez-vous à distinguer les attentes des autres de vos propres envies.',
+      ],
+    },
+    es: {
+      icon: '🌫️',
+      title: 'En formación',
+      description: '«Lo que soy» aún no está nítido: estás explorando. El autoconcepto puede tambalearse según la situación y la gente, pero es una etapa natural del crecimiento.',
+      tips: [
+        'Escribe tus valores, tus fortalezas y lo que quieres, para dibujar tu contorno.',
+        'Pasa tus experiencias por la pregunta «¿esto me encaja?».',
+        'Practica distinguir las expectativas ajenas de tus propios deseos.',
+      ],
+    },
   },
   developing: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<ClarityLevel, Record<SupportedLang, LevelData>> = {
         '決断の基準が揺れた瞬間を振り返ってパターンを探しましょう。',
         '「私は〜な人」という核心の文をいくつか整理しましょう。',
         'フィードバックを参考にしつつ最終的な定義は自分で下しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌤️',
+      title: '发展阶段',
+      description: '你对自己已经有个大致的轮廓，但还有些地方会晃。现在正是把清晰度再拉高的好时机。',
+      tips: [
+        '回看那些标准晃动的时刻，找出自己的规律。',
+        '整理几句「我是一个……的人」的核心句子。',
+        '参考别人的回馈，但最后的定义留给自己。',
+      ],
+    },
+    fr: {
+      icon: '🌤️',
+      title: 'En développement',
+      description: 'Vous avez déjà une image de vous-même, avec des zones qui bougent encore. C’est un bon moment pour gagner en clarté.',
+      tips: [
+        'Repensez aux moments où vos critères ont vacillé : cherchez le schéma.',
+        'Formulez quelques phrases clés : « je suis quelqu’un qui… ».',
+        'Tenez compte des retours, mais gardez la définition finale pour vous.',
+      ],
+    },
+    es: {
+      icon: '🌤️',
+      title: 'En desarrollo',
+      description: 'Ya tienes una imagen de ti, con zonas que aún se mueven. Es buen momento para ganar claridad.',
+      tips: [
+        'Repasa los momentos en que tus criterios se tambalearon: busca el patrón.',
+        'Formula unas cuantas frases clave: «soy alguien que…».',
+        'Ten en cuenta lo que te dicen, pero deja la definición final en tus manos.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<ClarityLevel, Record<SupportedLang, LevelData>> = {
         '自分の価値を行動で表現し一貫性をさらに固めましょう。',
       ],
     },
+    zh: {
+      icon: '🧭',
+      title: '清晰阶段',
+      description: '你比较清楚自己是什么样的人，这个身份跨越场合和时间也保持一致。就算晃动，你也稳得住重心。',
+      tips: [
+        '把这份清楚的自我认识用在决定和关系里。',
+        '别让身份变僵，保持对新经验的开放。',
+        '把价值用行动表达出来，一致性会更结实。',
+      ],
+    },
+    fr: {
+      icon: '🧭',
+      title: 'Clair',
+      description: 'Vous savez assez nettement qui vous êtes, et cette identité tient à travers les situations et le temps. Même secoué, vous gardez votre centre.',
+      tips: [
+        'Servez-vous de cette clarté dans vos décisions et vos relations.',
+        'Veillez à ce que l’identité ne se fige pas : restez ouvert au neuf.',
+        'Exprimez vos valeurs par des actes : la cohérence s’en trouve renforcée.',
+      ],
+    },
+    es: {
+      icon: '🧭',
+      title: 'Claro',
+      description: 'Sabes con bastante nitidez quién eres, y esa identidad se mantiene a través de situaciones y tiempo. Aunque te sacudan, conservas el centro.',
+      tips: [
+        'Usa esa claridad en tus decisiones y en tus vínculos.',
+        'Cuida que la identidad no se vuelva rígida: sigue abierto a lo nuevo.',
+        'Expresa tus valores con actos: la coherencia se afianza.',
+      ],
+    },
   },
   solid: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<ClarityLevel, Record<SupportedLang, LevelData>> = {
         '確固たる同一性を長期ビジョン・使命と結びつけましょう。',
         '確信が閉鎖に固まらないよう他の視点に耳を傾けましょう。',
         '自己理解をもとに他人の同一性探索を助けましょう。',
+      ],
+    },
+    zh: {
+      icon: '🗿',
+      title: '稳固阶段',
+      description: '你的自我概念非常清楚也很稳。外界的评价和变化都动摇不了「我是谁」。',
+      tips: [
+        '把这份稳固的身份接到长期的愿景和使命上。',
+        '别让笃定变成封闭，也听听别的角度。',
+        '用你对自己的理解，去帮别人探索他们的身份。',
+      ],
+    },
+    fr: {
+      icon: '🗿',
+      title: 'Solide',
+      description: 'Votre concept de soi est très net et stable. Ni les jugements extérieurs ni les changements n’ébranlent le « qui je suis ».',
+      tips: [
+        'Reliez cette identité solide à une vision et à une vocation de long terme.',
+        'Veillez à ce que l’assurance ne se ferme pas : écoutez d’autres points de vue.',
+        'Servez-vous de cette connaissance de soi pour aider d’autres à explorer la leur.',
+      ],
+    },
+    es: {
+      icon: '🗿',
+      title: 'Sólido',
+      description: 'Tu autoconcepto es muy nítido y estable. Ni los juicios de fuera ni los cambios mueven el «quién soy».',
+      tips: [
+        'Conecta esa identidad sólida con una visión y una vocación de largo plazo.',
+        'Cuida que la seguridad no se cierre: escucha otros puntos de vista.',
+        'Usa ese conocimiento de ti para ayudar a otros a explorar el suyo.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 't5', subscale: 'certainty', reverse: false, text: '自分の強みと弱みをはっきり知っている' },
     { id: 't6', subscale: 'certainty', reverse: false, text: '自分の意見は簡単に揺らがない' },
     { id: 't7', subscale: 'certainty', reverse: false, text: '自分の人生の方向に確信がある' },
+  ],
+  zh: [
+    { id: 'c1', subscale: 'consistency', reverse: false, text: '我有一些核心价值，时间过去也不会变' },
+    { id: 'c2', subscale: 'consistency', reverse: false, text: '就算处境变了，「我这个人」还是一致的' },
+    { id: 'c3', subscale: 'consistency', reverse: false, text: '我的信念和行为大体上对得上' },
+    { id: 'c4', subscale: 'consistency', reverse: false, text: '跟什么人在一起，我都觉得自己是同一个人' },
+    { id: 'c5', subscale: 'consistency', reverse: false, text: '过去的我和现在的我之间，有连得起来的线' },
+    { id: 'c6', subscale: 'consistency', reverse: false, text: '我能用一句话说清自己的性格' },
+    { id: 'c7', subscale: 'consistency', reverse: false, text: '我的情绪为什么冒出来，我大体上懂' },
+    { id: 't1', subscale: 'certainty', reverse: false, text: '我很清楚自己是什么样的人' },
+    { id: 't2', subscale: 'certainty', reverse: false, text: '我想要什么，我比较清楚' },
+    { id: 't3', subscale: 'certainty', reverse: false, text: '重要的选择上，我的标准是明确的' },
+    { id: 't4', subscale: 'certainty', reverse: false, text: '别人怎么说，都不会让我搞不清自己是谁' },
+    { id: 't5', subscale: 'certainty', reverse: false, text: '我的长处和短处，我看得清楚' },
+    { id: 't6', subscale: 'certainty', reverse: false, text: '我的意见不容易被动摇' },
+    { id: 't7', subscale: 'certainty', reverse: false, text: '对自己人生的方向，我是有把握的' },
+  ],
+  fr: [
+    { id: 'c1', subscale: 'consistency', reverse: false, text: 'J’ai des valeurs centrales qui ne changent pas avec le temps' },
+    { id: 'c2', subscale: 'consistency', reverse: false, text: 'Même quand la situation change, « ce que je suis » reste cohérent' },
+    { id: 'c3', subscale: 'consistency', reverse: false, text: 'Mes convictions et mes actes concordent en général' },
+    { id: 'c4', subscale: 'consistency', reverse: false, text: 'Avec n’importe qui, j’ai le sentiment d’être la même personne' },
+    { id: 'c5', subscale: 'consistency', reverse: false, text: 'Je sens une continuité entre celui que j’étais et celui que je suis' },
+    { id: 'c6', subscale: 'consistency', reverse: false, text: 'Je peux décrire mon caractère en une phrase' },
+    { id: 'c7', subscale: 'consistency', reverse: false, text: 'Je comprends en général d’où viennent mes émotions' },
+    { id: 't1', subscale: 'certainty', reverse: false, text: 'Je sais bien quelle sorte de personne je suis' },
+    { id: 't2', subscale: 'certainty', reverse: false, text: 'Je sais assez clairement ce que je veux' },
+    { id: 't3', subscale: 'certainty', reverse: false, text: 'Dans les choix importants, mes critères sont nets' },
+    { id: 't4', subscale: 'certainty', reverse: false, text: 'Quoi qu’on dise de moi, je ne perds pas de vue qui je suis' },
+    { id: 't5', subscale: 'certainty', reverse: false, text: 'Je connais clairement mes forces et mes faiblesses' },
+    { id: 't6', subscale: 'certainty', reverse: false, text: 'Mes opinions ne vacillent pas facilement' },
+    { id: 't7', subscale: 'certainty', reverse: false, text: 'J’ai une certitude sur la direction de ma vie' },
+  ],
+  es: [
+    { id: 'c1', subscale: 'consistency', reverse: false, text: 'Tengo valores centrales que no cambian con el tiempo' },
+    { id: 'c2', subscale: 'consistency', reverse: false, text: 'Aunque cambie la situación, «lo que soy» se mantiene coherente' },
+    { id: 'c3', subscale: 'consistency', reverse: false, text: 'Mis convicciones y mis actos suelen coincidir' },
+    { id: 'c4', subscale: 'consistency', reverse: false, text: 'Con cualquier persona siento que soy el mismo' },
+    { id: 'c5', subscale: 'consistency', reverse: false, text: 'Noto continuidad entre quien era y quien soy' },
+    { id: 'c6', subscale: 'consistency', reverse: false, text: 'Puedo describir mi carácter en una frase' },
+    { id: 'c7', subscale: 'consistency', reverse: false, text: 'Entiendo en general de dónde vienen mis emociones' },
+    { id: 't1', subscale: 'certainty', reverse: false, text: 'Sé bien qué clase de persona soy' },
+    { id: 't2', subscale: 'certainty', reverse: false, text: 'Sé con bastante claridad qué quiero' },
+    { id: 't3', subscale: 'certainty', reverse: false, text: 'En las decisiones importantes mis criterios son claros' },
+    { id: 't4', subscale: 'certainty', reverse: false, text: 'Digan lo que digan de mí, no pierdo de vista quién soy' },
+    { id: 't5', subscale: 'certainty', reverse: false, text: 'Conozco con claridad mis fortalezas y mis debilidades' },
+    { id: 't6', subscale: 'certainty', reverse: false, text: 'Mis opiniones no se tambalean con facilidad' },
+    { id: 't7', subscale: 'certainty', reverse: false, text: 'Tengo certeza sobre la dirección de mi vida' },
   ],
 }
 

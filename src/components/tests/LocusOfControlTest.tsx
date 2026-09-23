@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type LocusLevel = 'external' | 'mixed' | 'internal' | 'strong'
 type Subscale = 'control' | 'effort'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはRotterの統制の所在（Locus of Control）概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '控制点测验',
+    subtitle: '我人生的方向盘握在谁手里？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的内控指数是',
+    yourScore: '我的内控指数',
+    overallLabel: '综合内控',
+    controlLabel: '对结果的掌控感',
+    effortLabel: '努力与回报的信念',
+    outOf: '/ 5.0',
+    tipsLabel: '成长建议',
+    note: '本测验参考 Rotter 的控制点（Locus of Control）概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test du lieu de contrôle',
+    subtitle: 'Qui tient le volant de ma vie ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice de contrôle interne',
+    yourScore: 'Votre indice de contrôle interne',
+    overallLabel: 'Contrôle interne global',
+    controlLabel: 'Sentiment de prise sur les résultats',
+    effortLabel: 'Croyance effort-récompense',
+    outOf: '/ 5.0',
+    tipsLabel: 'Piste de progrès',
+    note: 'Ce test reprend la notion de lieu de contrôle de Rotter, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test del locus de control',
+    subtitle: '¿Quién lleva el volante de mi vida?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice de control interno',
+    yourScore: 'Tu índice de control interno',
+    overallLabel: 'Control interno global',
+    controlLabel: 'Sensación de manejo sobre los resultados',
+    effortLabel: 'Creencia esfuerzo-recompensa',
+    outOf: '/ 5.0',
+    tipsLabel: 'Para crecer',
+    note: 'Este test recoge la noción de locus de control de Rotter, para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<LocusLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<LocusLevel, Record<SupportedLang, LevelData>> = {
         '統制できることとできないことを書き出して区別しましょう。',
       ],
     },
+    zh: {
+      icon: '🎲',
+      title: '外控型',
+      description: '你更觉得人生的结果取决于运气、环境和别人。这有时会让人安心，但别让它变成无力感——把小小的掌控感养起来会更好。',
+      tips: [
+        '挑一件你改得动的小事，去做它。',
+        '练习把成功解释成「我努力的结果」。',
+        '把能控制的和不能控制的写下来，分清楚。',
+      ],
+    },
+    fr: {
+      icon: '🎲',
+      title: 'Contrôle externe',
+      description: 'Vous avez le sentiment que les résultats dépendent surtout de la chance, du contexte ou des autres. Cela peut rassurer, mais mieux vaut cultiver un peu de prise pour ne pas glisser vers l’impuissance.',
+      tips: [
+        'Choisissez une petite chose que vous pouvez changer, et faites-la.',
+        'Entraînez-vous à lire vos réussites comme « le fruit de mes efforts ».',
+        'Écrivez ce qui est sous votre contrôle et ce qui ne l’est pas, pour les distinguer.',
+      ],
+    },
+    es: {
+      icon: '🎲',
+      title: 'Control externo',
+      description: 'Sientes que los resultados dependen sobre todo de la suerte, el entorno o los demás. A veces tranquiliza, pero conviene cultivar algo de manejo para no caer en la impotencia.',
+      tips: [
+        'Elige una cosa pequeña que sí puedas cambiar y hazla.',
+        'Practica leer tus logros como «fruto de mi esfuerzo».',
+        'Escribe qué está bajo tu control y qué no, para distinguirlo.',
+      ],
+    },
   },
   mixed: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<LocusLevel, Record<SupportedLang, LevelData>> = {
         '統制できる領域にもっとエネルギーを集中しましょう。',
         '結果が悪くても自分の部分を客観的に評価しましょう。',
         '外部要因のせいと自分の責任をバランスよく見る習慣を保ちましょう。',
+      ],
+    },
+    zh: {
+      icon: '⚖️',
+      title: '均衡型',
+      description: '你既承认自己努力的力量，也承认外部环境的影响。现实，又有弹性，是拿捏得不错的态度。',
+      tips: [
+        '把力气更多放在你控得住的范围里。',
+        '就算结果不好，也客观评估自己做了哪一部分。',
+        '保持这个习惯：外因和自己的责任，两边都看得见。',
+      ],
+    },
+    fr: {
+      icon: '⚖️',
+      title: 'Contrôle équilibré',
+      description: 'Vous reconnaissez à la fois la force de vos efforts et le poids du contexte. C’est une position réaliste et souple.',
+      tips: [
+        'Concentrez davantage votre énergie sur ce qui est de votre ressort.',
+        'Même quand le résultat déçoit, évaluez objectivement votre part.',
+        'Gardez l’habitude de voir à la fois les causes extérieures et votre responsabilité.',
+      ],
+    },
+    es: {
+      icon: '⚖️',
+      title: 'Control equilibrado',
+      description: 'Reconoces a la vez la fuerza de tu esfuerzo y el peso del contexto. Es una postura realista y flexible.',
+      tips: [
+        'Concentra más energía en lo que sí depende de ti.',
+        'Aunque el resultado decepcione, evalúa con objetividad tu parte.',
+        'Mantén el hábito de ver a la vez las causas externas y tu responsabilidad.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<LocusLevel, Record<SupportedLang, LevelData>> = {
         '努力と同じく運や他人の助けも認めるとより強くなります。',
       ],
     },
+    zh: {
+      icon: '🧭',
+      title: '内控型',
+      description: '你很相信自己的选择和努力会造出结果。你主动地带着自己的生活走，就算在难处里也找得到能使力的地方。',
+      tips: [
+        '把这份主动用在定目标和推进上。',
+        '划条界线，别把控不住的事也揽来自责。',
+        '除了努力，也认下运气和别人的帮忙，人会更稳。',
+      ],
+    },
+    fr: {
+      icon: '🧭',
+      title: 'Contrôle interne',
+      description: 'Vous croyez fortement que vos choix et vos efforts façonnent les résultats. Vous menez votre vie activement et trouvez de l’influence même dans la difficulté.',
+      tips: [
+        'Mettez cette initiative au service de vos objectifs et de leur exécution.',
+        'Posez une limite pour ne pas vous reprocher ce qui ne dépend pas de vous.',
+        'Reconnaître aussi la chance et l’aide reçue vous rendra plus solide.',
+      ],
+    },
+    es: {
+      icon: '🧭',
+      title: 'Control interno',
+      description: 'Crees firmemente que tus decisiones y tu esfuerzo dan forma a los resultados. Llevas tu vida de forma activa y encuentras influencia incluso en lo difícil.',
+      tips: [
+        'Pon esa iniciativa al servicio de tus metas y su ejecución.',
+        'Pon un límite para no culparte por lo que no depende de ti.',
+        'Reconocer también la suerte y la ayuda recibida te hará más firme.',
+      ],
+    },
   },
   strong: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<LocusLevel, Record<SupportedLang, LevelData>> = {
         '自分の影響の外のことは「受け入れる」練習も併せてしましょう。',
         '完全な統制欲求がバーンアウトにつながらないか点検しましょう。',
         '強い主体感を他人の能力強化にも分かち合いましょう。',
+      ],
+    },
+    zh: {
+      icon: '🚀',
+      title: '强内控型',
+      description: '你的主动感非常高。这是很强的推动力，但别把控不住的领域也扛下来，需要平衡。',
+      tips: [
+        '练一练：对自己影响不到的事，学会「接受」。',
+        '检查一下，想把一切控住的念头会不会把你烧干。',
+        '把这份强主动也分一点出去，帮别人长出力量。',
+      ],
+    },
+    fr: {
+      icon: '🚀',
+      title: 'Contrôle interne fort',
+      description: 'Votre sentiment d’initiative est très élevé. C’est une force motrice, mais il faut de l’équilibre pour ne pas porter aussi ce qui échappe à votre contrôle.',
+      tips: [
+        'Entraînez-vous aussi à « accepter » ce qui est hors de votre influence.',
+        'Vérifiez que le besoin de tout maîtriser ne mène pas à l’épuisement.',
+        'Partagez cette force d’initiative pour faire grandir la capacité des autres.',
+      ],
+    },
+    es: {
+      icon: '🚀',
+      title: 'Control interno fuerte',
+      description: 'Tu sentido de iniciativa es muy alto. Es una fuerza motriz, pero hace falta equilibrio para no cargar también con lo que se te escapa.',
+      tips: [
+        'Entrénate también en «aceptar» lo que está fuera de tu influencia.',
+        'Revisa que la necesidad de controlarlo todo no lleve al agotamiento.',
+        'Reparte esa fuerza de iniciativa para hacer crecer la capacidad de otros.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'e5', subscale: 'effort', reverse: false, text: 'チャンスは準備した人に来ると思う' },
     { id: 'e6', subscale: 'effort', reverse: true, text: 'どれだけ努力しても変わらないことが多すぎる' },
     { id: 'e7', subscale: 'effort', reverse: true, text: '重要な決定は自分の力の外のことに左右される' },
+  ],
+  zh: [
+    { id: 'c1', subscale: 'control', reverse: false, text: '我生活里发生的事，多半是我自己选择的结果' },
+    { id: 'c2', subscale: 'control', reverse: false, text: '想得到的东西，主要靠我自己下功夫' },
+    { id: 'c3', subscale: 'control', reverse: false, text: '出问题时，我会专注在自己能改变的部分' },
+    { id: 'c4', subscale: 'control', reverse: false, text: '决定我未来的，行动比运气更重要' },
+    { id: 'c5', subscale: 'control', reverse: false, text: '情况再差，我也认为自己还有可以使力的地方' },
+    { id: 'c6', subscale: 'control', reverse: false, text: '失败时，我会先看自己本来能掌控的因素' },
+    { id: 'c7', subscale: 'control', reverse: true, text: '我的人生多半由运气或外在情况左右' },
+    { id: 'e1', subscale: 'effort', reverse: false, text: '我相信只要努力，结果终究会跟上' },
+    { id: 'e2', subscale: 'effort', reverse: false, text: '成功更多靠准备和努力，而不是运气' },
+    { id: 'e3', subscale: 'effort', reverse: false, text: '只要持续做，能力是会变好的' },
+    { id: 'e4', subscale: 'effort', reverse: false, text: '我怎么用时间，决定了结果长什么样' },
+    { id: 'e5', subscale: 'effort', reverse: false, text: '机会是留给准备好的人的' },
+    { id: 'e6', subscale: 'effort', reverse: true, text: '再怎么努力也改不了的事，实在太多' },
+    { id: 'e7', subscale: 'effort', reverse: true, text: '重要的决定，多半由我力气之外的事决定' },
+  ],
+  fr: [
+    { id: 'c1', subscale: 'control', reverse: false, text: 'Ce qui m’arrive dans la vie vient surtout de mes choix' },
+    { id: 'c2', subscale: 'control', reverse: false, text: 'Obtenir ce que je veux dépend surtout de mes efforts' },
+    { id: 'c3', subscale: 'control', reverse: false, text: 'Quand un problème surgit, je me concentre sur ce que je peux changer' },
+    { id: 'c4', subscale: 'control', reverse: false, text: 'Mon avenir dépend plus de mes actes que de la chance' },
+    { id: 'c5', subscale: 'control', reverse: false, text: 'Même quand ça va mal, je pense avoir encore une marge d’influence' },
+    { id: 'c6', subscale: 'control', reverse: false, text: 'Après un échec, je regarde d’abord ce que j’aurais pu maîtriser' },
+    { id: 'c7', subscale: 'control', reverse: true, text: 'Ma vie dépend surtout de la chance ou des circonstances' },
+    { id: 'e1', subscale: 'effort', reverse: false, text: 'Je crois qu’avec des efforts, le résultat finit par suivre' },
+    { id: 'e2', subscale: 'effort', reverse: false, text: 'Le succès tient plus à la préparation et au travail qu’à la chance' },
+    { id: 'e3', subscale: 'effort', reverse: false, text: 'Avec de la constance, les capacités s’améliorent' },
+    { id: 'e4', subscale: 'effort', reverse: false, text: 'La façon dont j’emploie mon temps façonne les résultats' },
+    { id: 'e5', subscale: 'effort', reverse: false, text: 'Les occasions viennent à ceux qui sont préparés' },
+    { id: 'e6', subscale: 'effort', reverse: true, text: 'Il y a trop de choses qui ne changent pas, quoi qu’on fasse' },
+    { id: 'e7', subscale: 'effort', reverse: true, text: 'Les décisions importantes dépendent de forces qui me dépassent' },
+  ],
+  es: [
+    { id: 'c1', subscale: 'control', reverse: false, text: 'Lo que me pasa en la vida viene sobre todo de mis decisiones' },
+    { id: 'c2', subscale: 'control', reverse: false, text: 'Conseguir lo que quiero depende sobre todo de mi esfuerzo' },
+    { id: 'c3', subscale: 'control', reverse: false, text: 'Cuando surge un problema, me centro en lo que puedo cambiar' },
+    { id: 'c4', subscale: 'control', reverse: false, text: 'Mi futuro lo deciden más mis actos que la suerte' },
+    { id: 'c5', subscale: 'control', reverse: false, text: 'Aunque la cosa vaya mal, creo que aún tengo margen de influir' },
+    { id: 'c6', subscale: 'control', reverse: false, text: 'Tras un fallo, miro primero lo que sí podía manejar' },
+    { id: 'c7', subscale: 'control', reverse: true, text: 'Mi vida depende sobre todo de la suerte o de las circunstancias' },
+    { id: 'e1', subscale: 'effort', reverse: false, text: 'Creo que con esfuerzo el resultado acaba llegando' },
+    { id: 'e2', subscale: 'effort', reverse: false, text: 'El éxito depende más de la preparación y el trabajo que de la suerte' },
+    { id: 'e3', subscale: 'effort', reverse: false, text: 'Con constancia, las capacidades mejoran' },
+    { id: 'e4', subscale: 'effort', reverse: false, text: 'Cómo empleo el tiempo da forma a los resultados' },
+    { id: 'e5', subscale: 'effort', reverse: false, text: 'Las oportunidades llegan a quien está preparado' },
+    { id: 'e6', subscale: 'effort', reverse: true, text: 'Hay demasiadas cosas que no cambian, por mucho que uno haga' },
+    { id: 'e7', subscale: 'effort', reverse: true, text: 'Las decisiones importantes dependen de fuerzas que me superan' },
   ],
 }
 
