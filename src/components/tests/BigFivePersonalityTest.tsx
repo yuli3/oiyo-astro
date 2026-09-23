@@ -19,9 +19,9 @@ import {
   type BigFiveScoreMap,
 } from '@/assessments';
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -45,26 +45,41 @@ const DIM_META: Record<Dim, Record<SupportedLang, DimMeta>> = {
     ko: { label: '개방성', color: '#435D31' },
     en: { label: 'Openness', color: '#435D31' },
     ja: { label: '開放性', color: '#435D31' },
+    zh: { label: '开放性', color: '#435D31' },
+    fr: { label: 'Ouverture', color: '#435D31' },
+    es: { label: 'Apertura', color: '#435D31' },
   },
   C: {
     ko: { label: '성실성', color: '#3b82f6' },
     en: { label: 'Conscientiousness', color: '#3b82f6' },
     ja: { label: '誠実性', color: '#3b82f6' },
+    zh: { label: '尽责性', color: '#3b82f6' },
+    fr: { label: 'Conscience', color: '#3b82f6' },
+    es: { label: 'Responsabilidad', color: '#3b82f6' },
   },
   E: {
     ko: { label: '외향성', color: '#f59e0b' },
     en: { label: 'Extraversion', color: '#f59e0b' },
     ja: { label: '外向性', color: '#f59e0b' },
+    zh: { label: '外向性', color: '#f59e0b' },
+    fr: { label: 'Extraversion', color: '#f59e0b' },
+    es: { label: 'Extraversión', color: '#f59e0b' },
   },
   A: {
     ko: { label: '친화성', color: '#22c55e' },
     en: { label: 'Agreeableness', color: '#22c55e' },
     ja: { label: '協調性', color: '#22c55e' },
+    zh: { label: '宜人性', color: '#22c55e' },
+    fr: { label: 'Agréabilité', color: '#22c55e' },
+    es: { label: 'Amabilidad', color: '#22c55e' },
   },
   N: {
     ko: { label: '신경성', color: '#ef4444' },
     en: { label: 'Neuroticism', color: '#ef4444' },
     ja: { label: '神経症的傾向', color: '#ef4444' },
+    zh: { label: '情绪敏感度', color: '#ef4444' },
+    fr: { label: 'Sensibilité émotionnelle', color: '#ef4444' },
+    es: { label: 'Sensibilidad emocional', color: '#ef4444' },
   },
 }
 
@@ -140,6 +155,54 @@ const LABELS: Record<SupportedLang, {
     medium: '普通',
     low: '低い',
   },
+  zh: {
+    title: '大五人格测验（OCEAN）',
+    subtitle: '测一测你的五个人格维度',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不符', '不太符合', '一般', '比较符合', '非常符合'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的 OCEAN 人格分布',
+    yourProfile: '我的人格分布',
+    dominantTrait: '主要特质',
+    secondaryTrait: '次要特质',
+    traitProfile: '各维度解读',
+    scoreLabel: '分数',
+    note: '本测验基于学术界的大五人格模型，不能替代专业评估。',
+    high: '高', medium: '中', low: '低',
+  },
+  fr: {
+    title: 'Test des Big Five (OCEAN)',
+    subtitle: 'Mesurez vos cinq dimensions de personnalité',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Plutôt non', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon profil OCEAN',
+    yourProfile: 'Votre profil de personnalité',
+    dominantTrait: 'Trait dominant',
+    secondaryTrait: 'Trait secondaire',
+    traitProfile: 'Lecture par dimension',
+    scoreLabel: 'Score',
+    note: 'Ce test s’appuie sur le modèle académique des Big Five et ne remplace pas une évaluation professionnelle.',
+    high: 'Élevé', medium: 'Moyen', low: 'Bas',
+  },
+  es: {
+    title: 'Test de los cinco grandes (OCEAN)',
+    subtitle: 'Mide tus cinco dimensiones de personalidad',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Más bien no', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi perfil OCEAN',
+    yourProfile: 'Tu perfil de personalidad',
+    dominantTrait: 'Rasgo dominante',
+    secondaryTrait: 'Rasgo secundario',
+    traitProfile: 'Lectura por dimensión',
+    scoreLabel: 'Puntuación',
+    note: 'Este test se basa en el modelo académico de los cinco grandes y no sustituye una evaluación profesional.',
+    high: 'Alto', medium: 'Medio', low: 'Bajo',
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -209,6 +272,72 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q19', dim: 'N', text: 'ストレスの多い状況で簡単に圧倒される' },
     { id: 'q20', dim: 'N', text: '批判や失敗に長時間影響を受ける' },
   ],
+  zh: [
+    { id: 'q1', dim: 'O', text: '我很容易对新想法、新概念产生兴趣' },
+    { id: 'q2', dim: 'O', text: '我对艺术、音乐、文学有浓厚的兴趣' },
+    { id: 'q3', dim: 'O', text: '我想象力丰富，也有创造力' },
+    { id: 'q4', dim: 'O', text: '我喜欢了解不同的文化或哲学思想' },
+    { id: 'q5', dim: 'C', text: '接下的事情我会做到底' },
+    { id: 'q6', dim: 'C', text: '我看重先做计划，然后照着走' },
+    { id: 'q7', dim: 'C', text: '东西我会归位，收拾得有条理' },
+    { id: 'q8', dim: 'C', text: '截止日期和约定我守得很紧' },
+    { id: 'q9', dim: 'E', text: '在聚会里我能自然地把话题带起来' },
+    { id: 'q10', dim: 'E', text: '认识新朋友让我开心，也来劲' },
+    { id: 'q11', dim: 'E', text: '比起独处，和人在一起时我更有活力' },
+    { id: 'q12', dim: 'E', text: '我身边总有不少人，过着社交的生活' },
+    { id: 'q13', dim: 'A', text: '我能很容易理解并体会别人的情绪' },
+    { id: 'q14', dim: 'A', text: '比起冲突我更想要和气，也愿意让步' },
+    { id: 'q15', dim: 'A', text: '我乐意帮人，也喜欢合作' },
+    { id: 'q16', dim: 'A', text: '我基本上愿意相信别人' },
+    { id: 'q17', dim: 'N', text: '一点小事也容易让我担心或不安' },
+    { id: 'q18', dim: 'N', text: '我的情绪起伏比较大' },
+    { id: 'q19', dim: 'N', text: '压力一来，我容易招架不住' },
+    { id: 'q20', dim: 'N', text: '批评或失败会在我心里留很久' },
+  ],
+  fr: [
+    { id: 'q1', dim: 'O', text: 'Les idées et les concepts nouveaux m’intéressent facilement' },
+    { id: 'q2', dim: 'O', text: 'L’art, la musique et la littérature me passionnent' },
+    { id: 'q3', dim: 'O', text: 'J’ai de l’imagination et un tour d’esprit créatif' },
+    { id: 'q4', dim: 'O', text: 'J’aime explorer d’autres cultures ou des courants de pensée' },
+    { id: 'q5', dim: 'C', text: 'Ce que j’entreprends, je le mène jusqu’au bout' },
+    { id: 'q6', dim: 'C', text: 'Faire un plan et m’y tenir compte pour moi' },
+    { id: 'q7', dim: 'C', text: 'Je remets les choses à leur place et je garde de l’ordre' },
+    { id: 'q8', dim: 'C', text: 'Je respecte scrupuleusement les délais et les rendez-vous' },
+    { id: 'q9', dim: 'E', text: 'En soirée ou en réunion, je lance la conversation naturellement' },
+    { id: 'q10', dim: 'E', text: 'Rencontrer de nouvelles personnes me réjouit et me donne de l’énergie' },
+    { id: 'q11', dim: 'E', text: 'Je suis plus vivant entouré que seul' },
+    { id: 'q12', dim: 'E', text: 'J’ai beaucoup de monde autour de moi et une vie sociale animée' },
+    { id: 'q13', dim: 'A', text: 'Je comprends et je ressens facilement les émotions des autres' },
+    { id: 'q14', dim: 'A', text: 'Je préfère l’entente au conflit et je sais céder' },
+    { id: 'q15', dim: 'A', text: 'J’aide volontiers et j’aime coopérer' },
+    { id: 'q16', dim: 'A', text: 'J’ai plutôt tendance à faire confiance aux gens' },
+    { id: 'q17', dim: 'N', text: 'Un rien suffit à m’inquiéter ou à me rendre anxieux' },
+    { id: 'q18', dim: 'N', text: 'Mon humeur change souvent, j’ai des hauts et des bas' },
+    { id: 'q19', dim: 'N', text: 'Sous pression, je me sens vite débordé' },
+    { id: 'q20', dim: 'N', text: 'Une critique ou un échec me marque longtemps' },
+  ],
+  es: [
+    { id: 'q1', dim: 'O', text: 'Las ideas y los conceptos nuevos me interesan enseguida' },
+    { id: 'q2', dim: 'O', text: 'El arte, la música y la literatura me atraen mucho' },
+    { id: 'q3', dim: 'O', text: 'Tengo imaginación y una vena creativa' },
+    { id: 'q4', dim: 'O', text: 'Me gusta explorar otras culturas o corrientes de pensamiento' },
+    { id: 'q5', dim: 'C', text: 'Lo que empiezo, lo termino' },
+    { id: 'q6', dim: 'C', text: 'Me importa hacer un plan y seguirlo' },
+    { id: 'q7', dim: 'C', text: 'Devuelvo las cosas a su sitio y mantengo el orden' },
+    { id: 'q8', dim: 'C', text: 'Cumplo a rajatabla los plazos y las citas' },
+    { id: 'q9', dim: 'E', text: 'En una reunión saco la conversación con naturalidad' },
+    { id: 'q10', dim: 'E', text: 'Conocer gente nueva me alegra y me da energía' },
+    { id: 'q11', dim: 'E', text: 'Me siento más vivo acompañado que a solas' },
+    { id: 'q12', dim: 'E', text: 'Suelo tener gente alrededor y una vida social movida' },
+    { id: 'q13', dim: 'A', text: 'Entiendo y siento con facilidad lo que sienten los demás' },
+    { id: 'q14', dim: 'A', text: 'Prefiero el buen entendimiento al conflicto y sé ceder' },
+    { id: 'q15', dim: 'A', text: 'Ayudo de buena gana y me gusta cooperar' },
+    { id: 'q16', dim: 'A', text: 'Por lo general tiendo a confiar en la gente' },
+    { id: 'q17', dim: 'N', text: 'Cualquier cosa pequeña me preocupa o me inquieta' },
+    { id: 'q18', dim: 'N', text: 'Mi ánimo cambia mucho, tengo altibajos' },
+    { id: 'q19', dim: 'N', text: 'Con presión me siento desbordado enseguida' },
+    { id: 'q20', dim: 'N', text: 'Una crítica o un fracaso me dura mucho tiempo' },
+  ],
 }
 
 const DIM_DESCRIPTIONS: Record<Dim, Record<SupportedLang, Record<DimLevel, string>>> = {
@@ -228,6 +357,21 @@ const DIM_DESCRIPTIONS: Record<Dim, Record<SupportedLang, Record<DimLevel, strin
       medium: '選択的な好奇心を持つバランスの取れた探索者 — 馴染みあるものと新しいものの間でバランスを取ります。',
       low: '実用的で現実志向の現実主義者 — 実績のある方法と具体的な事実を好みます。',
     },
+    zh: {
+      high: '好奇心旺盛的探索者——不断去找新的想法和新的经历。',
+      medium: '有选择的好奇——在熟悉和新鲜之间拿捏分寸。',
+      low: '务实的现实派——偏好验证过的方法和具体的事实。',
+    },
+    fr: {
+      high: 'Un explorateur curieux — toujours en quête d’idées et d’expériences neuves.',
+      medium: 'Une curiosité sélective — vous tenez la balance entre le familier et le nouveau.',
+      low: 'Un réaliste concret — vous préférez les méthodes éprouvées et les faits.',
+    },
+    es: {
+      high: 'Un explorador curioso — siempre buscando ideas y experiencias nuevas.',
+      medium: 'Curiosidad selectiva — equilibras lo conocido y lo nuevo.',
+      low: 'Un realista práctico — prefieres métodos probados y hechos concretos.',
+    },
   },
   C: {
     ko: {
@@ -244,6 +388,21 @@ const DIM_DESCRIPTIONS: Record<Dim, Record<SupportedLang, Record<DimLevel, strin
       high: '体系的で目標志向の達成者 — 高い自己規律で着実に目標を達成します。',
       medium: '柔軟なプランナー — 状況に応じて構造と即興の間で調整します。',
       low: '自由で即興的な探求者 — 厳格な計画より流れに従うことを好みます。',
+    },
+    zh: {
+      high: '有条理的目标型——靠自律稳稳把事做成。',
+      medium: '灵活的计划者——在结构和随兴之间看情况调。',
+      low: '自由随性的人——比起严格的计划，更愿意顺着流走。',
+    },
+    fr: {
+      high: 'Un réalisateur méthodique — une discipline solide qui mène au but.',
+      medium: 'Un planificateur souple — vous ajustez entre cadre et spontanéité.',
+      low: 'Un esprit libre — vous suivez le courant plutôt qu’un plan strict.',
+    },
+    es: {
+      high: 'Alguien metódico y orientado a la meta — la disciplina te lleva lejos.',
+      medium: 'Un planificador flexible — ajustas entre estructura y espontaneidad.',
+      low: 'Un espíritu libre — sigues la corriente antes que un plan rígido.',
     },
   },
   E: {
@@ -262,6 +421,21 @@ const DIM_DESCRIPTIONS: Record<Dim, Record<SupportedLang, Record<DimLevel, strin
       medium: '状況に応じて柔軟な両向性の人物 — 社交的でありながら一人の時間も大切にします。',
       low: '深い思考を楽しむ内向的な内省家 — 少数との深いつながりを好みます。',
     },
+    zh: {
+      high: '在人群里充电的人——和人相处会让你更有劲。',
+      medium: '场合来了就热络，独处也自在——两边都行。',
+      low: '在安静里恢复的人——少而深的关系更合你。',
+    },
+    fr: {
+      high: 'Vous vous rechargez parmi les gens — la compagnie vous donne de l’élan.',
+      medium: 'À l’aise dans les deux — sociable quand il le faut, bien seul aussi.',
+      low: 'Vous récupérez dans le calme — peu de liens, mais profonds.',
+    },
+    es: {
+      high: 'Te cargas entre la gente — la compañía te da impulso.',
+      medium: 'Cómodo en ambos lados — sociable cuando toca, bien a solas también.',
+      low: 'Te recuperas en la calma — pocos vínculos, pero hondos.',
+    },
   },
   A: {
     ko: {
@@ -279,6 +453,21 @@ const DIM_DESCRIPTIONS: Record<Dim, Record<SupportedLang, Record<DimLevel, strin
       medium: '選択的な信頼と共感のバランサー — 状況に応じて協力と主張を調整します。',
       low: '独立的で率直な現実主義者 — 他者の目よりも率直な意見を優先します。',
     },
+    zh: {
+      high: '体贴又好合作——把关系的和气放在前面。',
+      medium: '该配合时配合，该守住时守住——你分得清。',
+      low: '直率而讲道理——比起附和，更重实话。',
+    },
+    fr: {
+      high: 'Attentif et coopératif — vous mettez l’entente au premier plan.',
+      medium: 'Vous savez accommoder quand il faut et tenir quand il faut.',
+      low: 'Franc et rationnel — la vérité avant la complaisance.',
+    },
+    es: {
+      high: 'Considerado y cooperativo — pones el buen entendimiento delante.',
+      medium: 'Sabes ceder cuando toca y mantenerte cuando toca.',
+      low: 'Directo y racional — antes la verdad que la complacencia.',
+    },
   },
   N: {
     ko: {
@@ -295,6 +484,21 @@ const DIM_DESCRIPTIONS: Record<Dim, Record<SupportedLang, Record<DimLevel, strin
       high: '豊かな感受性で深く感じる人 — 感情体験が豊富ですが、ストレス管理が重要です。',
       medium: '感情的にバランスの取れた現実的な人 — ほとんどの状況で感情を安定して維持します。',
       low: '感情的に安定した回復力の強い人 — ストレスの多い状況でも落ち着きを保ちます。',
+    },
+    zh: {
+      high: '感受细腻，也容易被情绪带走——好处是察觉得早。',
+      medium: '情绪起伏在一般范围——压力大时会晃，但回得来。',
+      low: '情绪稳定——风浪里也维持得住步调。',
+    },
+    fr: {
+      high: 'Vous sentez finement et l’émotion vous emporte parfois — mais vous repérez tôt.',
+      medium: 'Des variations dans la norme — vous vacillez sous pression, puis vous revenez.',
+      low: 'Une humeur stable — vous gardez votre rythme dans la tempête.',
+    },
+    es: {
+      high: 'Sientes con finura y a veces la emoción te arrastra — pero lo detectas pronto.',
+      medium: 'Altibajos dentro de lo normal — te tambaleas con presión y vuelves.',
+      low: 'Ánimo estable — mantienes el paso incluso en lo revuelto.',
     },
   },
 }
