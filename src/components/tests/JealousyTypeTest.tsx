@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type JealousyLevel = 'secure' | 'mild' | 'watchful' | 'intense'
 type Subscale = 'cognitive' | 'behavioral'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '関係のためのヒント',
     note: 'このテストはPfeiffer & Wongの多次元嫉妬尺度の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '嫉妒类型测验',
+    subtitle: '我的嫉妒长什么样？（适合有伴侣的人）',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的嫉妒指数是',
+    yourScore: '我的嫉妒指数',
+    overallLabel: '综合嫉妒指数',
+    cognitiveLabel: '认知型嫉妒（怀疑与想象）',
+    behavioralLabel: '行为型嫉妒（查看与掌控）',
+    outOf: '/ 5.0',
+    tipsLabel: '给关系的建议',
+    note: '本测验参考 Pfeiffer 与 Wong 的多维嫉妒量表概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test du type de jalousie',
+    subtitle: 'Quelle forme prend ma jalousie ? (pour qui est en couple)',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice de jalousie',
+    yourScore: 'Votre indice de jalousie',
+    overallLabel: 'Indice global',
+    cognitiveLabel: 'Jalousie cognitive (doute, imagination)',
+    behavioralLabel: 'Jalousie comportementale (vérification, contrôle)',
+    outOf: '/ 5.0',
+    tipsLabel: 'Conseils pour la relation',
+    note: 'Ce test reprend les notions de l’échelle multidimensionnelle de jalousie de Pfeiffer et Wong, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test del tipo de celos',
+    subtitle: '¿Qué forma tienen mis celos? (para quien tiene pareja)',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice de celos',
+    yourScore: 'Tu índice de celos',
+    overallLabel: 'Índice global',
+    cognitiveLabel: 'Celos cognitivos (duda e imaginación)',
+    behavioralLabel: 'Celos conductuales (comprobar y controlar)',
+    outOf: '/ 5.0',
+    tipsLabel: 'Consejos para la relación',
+    note: 'Este test recoge las ideas de la escala multidimensional de celos de Pfeiffer y Wong, para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<JealousyLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<JealousyLevel, Record<SupportedLang, LevelData>> = {
         'お互いの独立性と信頼を尊重する姿勢を保ちましょう。',
       ],
     },
+    zh: {
+      icon: '💚',
+      title: '稳定信任型',
+      description: '你对关系的信任是稳的。嫉妒几乎没有，就算有，也不会动摇关系，属于健康的程度。',
+      tips: [
+        '用坦白的沟通，把现在的信任基础继续夯实。',
+        '偶尔的嫉妒，当成自然的情绪轻轻接住就好。',
+        '维持彼此尊重独立与信任的态度。',
+      ],
+    },
+    fr: {
+      icon: '💚',
+      title: 'Confiance stable',
+      description: 'Votre confiance dans la relation est stable. La jalousie est quasi absente ou reste à un niveau sain qui n’ébranle pas le lien.',
+      tips: [
+        'Continuez de consolider cette base par une communication franche.',
+        'Accueillez sans dramatiser la jalousie occasionnelle, c’est une émotion ordinaire.',
+        'Gardez cette attitude de respect mutuel pour l’indépendance et la confiance.',
+      ],
+    },
+    es: {
+      icon: '💚',
+      title: 'Confianza estable',
+      description: 'Tu confianza en la relación es estable. Los celos son casi inexistentes o se quedan en un nivel sano que no mueve el vínculo.',
+      tips: [
+        'Sigue afianzando esa base con una comunicación franca.',
+        'Acoge sin dramatizar los celos ocasionales: son una emoción corriente.',
+        'Mantén esa actitud de respeto mutuo por la independencia y la confianza.',
+      ],
+    },
   },
   mild: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<JealousyLevel, Record<SupportedLang, LevelData>> = {
         '嫉妬が湧いたら事実と想像を区別しましょう。',
         '不安を非難ではなく「私」中心の感情で表現しましょう。',
         '自分の価値を関係の外でも育てて安定感を加えましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌤️',
+      title: '轻度嫉妒型',
+      description: '这是大多数人都会有的日常程度的嫉妒。偶尔会在意，但你不会想去掌控关系。',
+      tips: [
+        '嫉妒冒上来时，把事实和想象分开来看。',
+        '把不安说成「我」的感受，而不是指责对方。',
+        '在关系之外也把自己的价值养起来，人会更安稳。',
+      ],
+    },
+    fr: {
+      icon: '🌤️',
+      title: 'Jalousie légère',
+      description: 'C’est le niveau ordinaire de jalousie que connaît la plupart des gens. Cela vous préoccupe parfois, sans que vous cherchiez à contrôler la relation.',
+      tips: [
+        'Quand la jalousie monte, séparez les faits de l’imagination.',
+        'Exprimez l’inquiétude en parlant de vous plutôt qu’en accusant.',
+        'Cultivez aussi votre valeur en dehors du couple : cela apaise.',
+      ],
+    },
+    es: {
+      icon: '🌤️',
+      title: 'Celos leves',
+      description: 'Es el nivel corriente de celos que tiene la mayoría. A veces te inquieta, pero no buscas controlar la relación.',
+      tips: [
+        'Cuando suban los celos, separa los hechos de la imaginación.',
+        'Expresa la inquietud hablando de ti, no reprochando.',
+        'Cultiva también tu valor fuera de la pareja: eso da calma.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<JealousyLevel, Record<SupportedLang, LevelData>> = {
         '統制ではなく正直な対話で安心の基盤を作りましょう。',
       ],
     },
+    zh: {
+      icon: '⚠️',
+      title: '警戒嫉妒型',
+      description: '怀疑或想确认的冲动很明显。嫉妒会把关系的紧张拉高，也可能变成查看和掌控的举动。',
+      tips: [
+        '想去确认的冲动冒上来时，先停一下，呼吸，拉开距离。',
+        '检查一下：怀疑有事实根据，还是不安投射出来的。',
+        '与其掌控，不如用坦白的对话把安心的地基做出来。',
+      ],
+    },
+    fr: {
+      icon: '⚠️',
+      title: 'Jalousie vigilante',
+      description: 'Le doute et le besoin de vérifier sont nets. La jalousie augmente la tension et peut se transformer en vérifications et en contrôle.',
+      tips: [
+        'Quand l’envie de vérifier monte, marquez une pause, respirez, prenez du recul.',
+        'Vérifiez si le doute repose sur des faits ou s’il projette une inquiétude.',
+        'Plutôt que de contrôler, construisez la sécurité par une conversation franche.',
+      ],
+    },
+    es: {
+      icon: '⚠️',
+      title: 'Celos vigilantes',
+      description: 'La duda y las ganas de comprobar son claras. Los celos suben la tensión y pueden convertirse en comprobaciones y control.',
+      tips: [
+        'Cuando suba el impulso de comprobar, párate, respira, toma distancia.',
+        'Comprueba si la duda se apoya en hechos o si proyecta una inquietud.',
+        'Antes que controlar, construye seguridad con una conversación franca.',
+      ],
+    },
   },
   intense: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<JealousyLevel, Record<SupportedLang, LevelData>> = {
         '嫉妬の根（不安定な愛着・低い自尊心など）を見つめましょう。',
         '確認・監視行動を一つずつ意識的に減らしましょう。',
         '一人で扱うのが重いならカウンセリングなど専門的な助けを検討しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🔥',
+      title: '嫉妒过敏型',
+      description: '嫉妒非常强，掌控和查看的举动也很明显。这会给你自己和关系都带来很大的紧张，需要照顾。',
+      tips: [
+        '看看嫉妒的根在哪（不安全依附、低自尊等）。',
+        '把查看和监看的举动，一件一件有意识地减下来。',
+        '一个人难以处理时，考虑咨询等专业协助。',
+      ],
+    },
+    fr: {
+      icon: '🔥',
+      title: 'Jalousie intense',
+      description: 'La jalousie est très forte et les comportements de contrôle et de vérification sont marqués. Cela pèse lourdement sur vous et sur la relation : prenez-en soin.',
+      tips: [
+        'Regardez la racine de cette jalousie (attachement insécure, estime de soi basse…).',
+        'Réduisez volontairement, un par un, les gestes de vérification et de surveillance.',
+        'Si c’est trop difficile seul, envisagez un accompagnement professionnel.',
+      ],
+    },
+    es: {
+      icon: '🔥',
+      title: 'Celos intensos',
+      description: 'Los celos son muy fuertes y las conductas de control y comprobación son marcadas. Pesan mucho sobre ti y sobre la relación: hay que cuidarlo.',
+      tips: [
+        'Mira dónde está la raíz (apego inseguro, autoestima baja…).',
+        'Reduce a propósito, uno a uno, los gestos de comprobar y vigilar.',
+        'Si a solas se hace difícil, valora acompañamiento profesional.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'b5', subscale: 'behavioral', reverse: false, text: '恋人のSNSの友達やフォロワーを調べたことがある' },
     { id: 'b6', subscale: 'behavioral', reverse: false, text: '恋人が特定の人に会わないようにしたい時がある' },
     { id: 'b7', subscale: 'behavioral', reverse: false, text: '不安な時に恋人にもっと頻繁に連絡して確認する' },
+  ],
+  zh: [
+    { id: 'g1', subscale: 'cognitive', reverse: false, text: '伴侣和别人走得近时，我会一直去怀疑那段关系' },
+    { id: 'g2', subscale: 'cognitive', reverse: false, text: '我常会想，伴侣是不是背着我对别人有意思' },
+    { id: 'g3', subscale: 'cognitive', reverse: false, text: '想到伴侣过去的感情，我有时会在意' },
+    { id: 'g4', subscale: 'cognitive', reverse: false, text: '伴侣晚归或联络不上时，我会往不好的方向想' },
+    { id: 'g5', subscale: 'cognitive', reverse: false, text: '想到伴侣和异性在一起的画面，我有时会很难受' },
+    { id: 'g6', subscale: 'cognitive', reverse: false, text: '我常去分析伴侣话里或举动背后的用意' },
+    { id: 'g7', subscale: 'cognitive', reverse: false, text: '伴侣称赞别人时，我心里会不舒服' },
+    { id: 'b1', subscale: 'behavioral', reverse: false, text: '我会有想看伴侣手机或社群的冲动' },
+    { id: 'b2', subscale: 'behavioral', reverse: false, text: '我常去确认伴侣现在和谁在一起' },
+    { id: 'b3', subscale: 'behavioral', reverse: false, text: '我曾想掌控伴侣的行程或人际关系' },
+    { id: 'b4', subscale: 'behavioral', reverse: false, text: '我曾因为嫉妒而质问伴侣或发火' },
+    { id: 'b5', subscale: 'behavioral', reverse: false, text: '我看过伴侣社群上的好友或追踪者' },
+    { id: 'b6', subscale: 'behavioral', reverse: false, text: '我有时希望伴侣别去见某个特定的人' },
+    { id: 'b7', subscale: 'behavioral', reverse: false, text: '不安的时候，我会更频繁地联络伴侣去确认' },
+  ],
+  fr: [
+    { id: 'g1', subscale: 'cognitive', reverse: false, text: 'Quand mon ou ma partenaire est proche de quelqu’un, je me mets à douter de cette relation' },
+    { id: 'g2', subscale: 'cognitive', reverse: false, text: 'Je me demande souvent si l’autre s’intéresse à quelqu’un dans mon dos' },
+    { id: 'g3', subscale: 'cognitive', reverse: false, text: 'Il m’arrive de ruminer les relations passées de mon ou ma partenaire' },
+    { id: 'g4', subscale: 'cognitive', reverse: false, text: 'Quand l’autre rentre tard ou ne répond pas, j’imagine le pire' },
+    { id: 'g5', subscale: 'cognitive', reverse: false, text: 'Il m’arrive de souffrir en imaginant mon ou ma partenaire avec quelqu’un' },
+    { id: 'g6', subscale: 'cognitive', reverse: false, text: 'J’analyse souvent l’intention cachée derrière ses paroles ou ses gestes' },
+    { id: 'g7', subscale: 'cognitive', reverse: false, text: 'Quand mon ou ma partenaire fait l’éloge de quelqu’un, cela me met mal à l’aise' },
+    { id: 'b1', subscale: 'behavioral', reverse: false, text: 'J’ai l’envie de regarder son téléphone ou ses réseaux' },
+    { id: 'b2', subscale: 'behavioral', reverse: false, text: 'Je vérifie souvent avec qui se trouve mon ou ma partenaire' },
+    { id: 'b3', subscale: 'behavioral', reverse: false, text: 'Il m’est arrivé de vouloir contrôler son emploi du temps ou ses relations' },
+    { id: 'b4', subscale: 'behavioral', reverse: false, text: 'Il m’est arrivé, par jalousie, de lui faire des reproches ou de me mettre en colère' },
+    { id: 'b5', subscale: 'behavioral', reverse: false, text: 'J’ai déjà passé en revue ses amis ou ses abonnés sur les réseaux' },
+    { id: 'b6', subscale: 'behavioral', reverse: false, text: 'Il m’arrive de souhaiter qu’il ou elle ne voie pas telle personne' },
+    { id: 'b7', subscale: 'behavioral', reverse: false, text: 'Quand je suis inquiet, je multiplie les messages pour vérifier' },
+  ],
+  es: [
+    { id: 'g1', subscale: 'cognitive', reverse: false, text: 'Cuando mi pareja se lleva bien con alguien, acabo dudando de esa relación' },
+    { id: 'g2', subscale: 'cognitive', reverse: false, text: 'Pienso a menudo si le interesa otra persona a mis espaldas' },
+    { id: 'g3', subscale: 'cognitive', reverse: false, text: 'A veces le doy vueltas a las relaciones pasadas de mi pareja' },
+    { id: 'g4', subscale: 'cognitive', reverse: false, text: 'Si llega tarde o no contesta, me imagino lo peor' },
+    { id: 'g5', subscale: 'cognitive', reverse: false, text: 'A veces sufro imaginando a mi pareja con otra persona' },
+    { id: 'g6', subscale: 'cognitive', reverse: false, text: 'Analizo a menudo la intención detrás de lo que dice o hace' },
+    { id: 'g7', subscale: 'cognitive', reverse: false, text: 'Cuando mi pareja elogia a alguien, me incomoda' },
+    { id: 'b1', subscale: 'behavioral', reverse: false, text: 'Siento el impulso de mirar su móvil o sus redes' },
+    { id: 'b2', subscale: 'behavioral', reverse: false, text: 'Compruebo a menudo con quién está mi pareja' },
+    { id: 'b3', subscale: 'behavioral', reverse: false, text: 'He querido controlar su agenda o sus amistades' },
+    { id: 'b4', subscale: 'behavioral', reverse: false, text: 'Por celos le he reprochado cosas o me he enfadado' },
+    { id: 'b5', subscale: 'behavioral', reverse: false, text: 'He repasado sus amigos o seguidores en redes' },
+    { id: 'b6', subscale: 'behavioral', reverse: false, text: 'A veces quisiera que no viera a cierta persona' },
+    { id: 'b7', subscale: 'behavioral', reverse: false, text: 'Cuando me inquieto, le escribo más para comprobar' },
   ],
 }
 

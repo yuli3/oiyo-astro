@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type ChildLevel = 'nurtured' | 'aware' | 'wounded' | 'frozen'
 type Subscale = 'neglect' | 'adaptation'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: 'インナーチャイルドへのヒント',
     note: 'このテストはインナーチャイルドの概念に着想を得た自己省察用です。専門的な心理療法や診断の代替ではありません。',
   },
+  zh: {
+    title: '内在小孩测验',
+    subtitle: '我心里那个小小的我，现在是什么心情？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的内在小孩指数是',
+    yourScore: '我的内在小孩指数',
+    overallLabel: '综合内在小孩指数',
+    neglectLabel: '情感上的匮乏',
+    adaptationLabel: '过度适应与顺从',
+    outOf: '/ 5.0',
+    tipsLabel: '给内在小孩的建议',
+    note: '本测验受内在小孩（inner child）概念启发，用于自我省思，不能替代专业的心理治疗或诊断。',
+  },
+  fr: {
+    title: 'Test de l’enfant intérieur',
+    subtitle: 'Comment va l’enfant que je porte en moi ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice d’enfant intérieur',
+    yourScore: 'Votre indice d’enfant intérieur',
+    overallLabel: 'Indice global',
+    neglectLabel: 'Manque affectif',
+    adaptationLabel: 'Suradaptation et conformité',
+    outOf: '/ 5.0',
+    tipsLabel: 'Conseils pour l’enfant intérieur',
+    note: 'Ce test s’inspire de la notion d’enfant intérieur, à des fins de réflexion personnelle. Il ne remplace ni une psychothérapie ni un diagnostic.',
+  },
+  es: {
+    title: 'Test del niño interior',
+    subtitle: '¿Cómo está el niño que llevo dentro?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice de niño interior',
+    yourScore: 'Tu índice de niño interior',
+    overallLabel: 'Índice global',
+    neglectLabel: 'Carencia afectiva',
+    adaptationLabel: 'Sobreadaptación y complacencia',
+    outOf: '/ 5.0',
+    tipsLabel: 'Consejos para el niño interior',
+    note: 'Este test se inspira en la noción de niño interior, para la reflexión personal. No sustituye una psicoterapia ni un diagnóstico.',
+  },
 }
 
 const LEVEL_DATA: Record<ChildLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<ChildLevel, Record<SupportedLang, LevelData>> = {
         '内面の充足を創造性や人間関係に分かち合いましょう。',
       ],
     },
+    zh: {
+      icon: '🌷',
+      title: '被好好照顾的内在小孩',
+      description: '你的内在小孩比较安稳，也感觉被照顾得够。你对自己的情绪和需要，处理得健康。',
+      tips: [
+        '把带来这份安稳的自我照顾习惯继续做下去。',
+        '偶尔冒出来的童年情绪，也温柔地抱一抱。',
+        '把心里的丰盛，分到创作和关系里。',
+      ],
+    },
+    fr: {
+      icon: '🌷',
+      title: 'Un enfant intérieur bien entouré',
+      description: 'Votre enfant intérieur est plutôt apaisé et se sent suffisamment entouré. Vous traitez vos émotions et vos besoins de façon saine.',
+      tips: [
+        'Poursuivez les gestes de soin qui ont construit cette assise.',
+        'Quand une émotion d’enfance remonte, accueillez-la avec douceur.',
+        'Partagez cette plénitude dans la création et dans vos liens.',
+      ],
+    },
+    es: {
+      icon: '🌷',
+      title: 'Un niño interior bien cuidado',
+      description: 'Tu niño interior está bastante tranquilo y se siente suficientemente cuidado. Manejas tus emociones y tus necesidades de forma sana.',
+      tips: [
+        'Sigue con los cuidados que construyeron esa base.',
+        'Cuando suba una emoción de la infancia, acógela con suavidad.',
+        'Reparte esa plenitud en la creación y en tus vínculos.',
+      ],
+    },
   },
   aware: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<ChildLevel, Record<SupportedLang, LevelData>> = {
         '感情が高ぶる時「今、何歳の自分が反応しているか」と問いましょう。',
         '幼い自分に伝えたい言葉を手紙に書いてみましょう。',
         '自分の欲求を小さなことから正直に表現する練習をしましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌿',
+      title: '开始看见的内在小孩',
+      description: '你对内在小孩的伤，已经有一定的觉察。旧的情绪偶尔会冒上来，但你已经准备好去照顾它了。',
+      tips: [
+        '情绪很激动时，问一句「现在反应的，是几岁的我」。',
+        '把想对小时候的自己说的话，写成一封信。',
+        '从小的地方开始，练习把自己的需要老实说出来。',
+      ],
+    },
+    fr: {
+      icon: '🌿',
+      title: 'Un enfant intérieur reconnu',
+      description: 'Vous percevez en partie les blessures de votre enfant intérieur. D’anciennes émotions remontent parfois, et vous êtes prêt à en prendre soin.',
+      tips: [
+        'Quand l’émotion s’emballe, demandez-vous : « quel âge a celui qui réagit ? »',
+        'Écrivez une lettre à l’enfant que vous étiez.',
+        'Entraînez-vous à dire vos besoins, en commençant par de petites choses.',
+      ],
+    },
+    es: {
+      icon: '🌿',
+      title: 'Un niño interior reconocido',
+      description: 'Percibes en parte las heridas de tu niño interior. A veces suben emociones antiguas, y estás listo para cuidarlas.',
+      tips: [
+        'Cuando la emoción se dispare, pregúntate: «¿qué edad tiene quien reacciona?».',
+        'Escríbele una carta al niño que fuiste.',
+        'Practica decir lo que necesitas, empezando por cosas pequeñas.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<ChildLevel, Record<SupportedLang, LevelData>> = {
         '自分を安全にケアしてくれる関係やルーティンを作りましょう。',
       ],
     },
+    zh: {
+      icon: '🩹',
+      title: '受了伤的内在小孩',
+      description: '情感上的匮乏，或是过度迁就的痕迹很明显。为了被爱而拼命，或把自己往后放的模式，可能一再重复。',
+      tips: [
+        '在让给别人之后，挑一件自己被搁下的需要，去照顾它。',
+        '轻轻地怀疑一下「乖才会被爱」这个信念。',
+        '慢慢建起能安全照顾你的关系或日常的节奏。',
+      ],
+    },
+    fr: {
+      icon: '🩹',
+      title: 'Un enfant intérieur blessé',
+      description: 'Les traces d’un manque affectif ou d’une suradaptation sont nettes. Le schéma de se démener pour être aimé, ou de se mettre en dernier, peut se répéter.',
+      tips: [
+        'Après avoir cédé aux autres, choisissez un besoin à vous et prenez-en soin.',
+        'Mettez doucement en doute la croyance « il faut être sage pour être aimé ».',
+        'Construisez peu à peu des relations et des routines qui vous entourent en sécurité.',
+      ],
+    },
+    es: {
+      icon: '🩹',
+      title: 'Un niño interior herido',
+      description: 'Las huellas de una carencia afectiva o de una sobreadaptación son claras. El patrón de esforzarte para que te quieran, o de ponerte el último, puede repetirse.',
+      tips: [
+        'Después de ceder a otros, elige una necesidad tuya y atiéndela.',
+        'Pon suavemente en duda la creencia «hay que ser bueno para que te quieran».',
+        'Construye poco a poco vínculos y rutinas que te cuiden con seguridad.',
+      ],
+    },
   },
   frozen: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<ChildLevel, Record<SupportedLang, LevelData>> = {
         '感情を感じること自体をゆっくり許す練習から始めましょう。',
         '自分を責める内面の声と距離を取ってみましょう。',
         '一人で向き合うのが重いならカウンセリングなど安全な助けを探しましょう。',
+      ],
+    },
+    zh: {
+      icon: '❄️',
+      title: '冻住的内在小孩',
+      description: '很可能有很深的情感匮乏被压了很久。空落落和孤单常常冒上来，你也可能和自己的情绪断了线。',
+      tips: [
+        '先从「允许自己去感觉」开始，慢慢练。',
+        '和那个在心里责备你的声音，拉开一点距离。',
+        '一个人面对太吃力时，找咨询这样安全的帮助。',
+      ],
+    },
+    fr: {
+      icon: '❄️',
+      title: 'Un enfant intérieur figé',
+      description: 'Un manque affectif profond est probablement refoulé depuis longtemps. Le vide et la solitude remontent souvent, et vous pouvez être coupé de vos propres émotions.',
+      tips: [
+        'Commencez par vous autoriser lentement à ressentir.',
+        'Prenez de la distance avec la voix intérieure qui vous accuse.',
+        'Si c’est trop lourd à porter seul, cherchez une aide sûre, un accompagnement par exemple.',
+      ],
+    },
+    es: {
+      icon: '❄️',
+      title: 'Un niño interior congelado',
+      description: 'Probablemente hay una carencia afectiva honda reprimida desde hace mucho. El vacío y la soledad suben a menudo, y puedes estar desconectado de lo que sientes.',
+      tips: [
+        'Empieza por permitirte sentir, despacio.',
+        'Toma distancia de la voz interior que te acusa.',
+        'Si pesa demasiado a solas, busca ayuda segura, como un acompañamiento.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'a5', subscale: 'adaptation', reverse: false, text: '断るのが苦手で無理して合わせる方だ' },
     { id: 'a6', subscale: 'adaptation', reverse: false, text: '自分が望むことより他人が期待することを先にする' },
     { id: 'a7', subscale: 'adaptation', reverse: false, text: '一人でいる時に空虚や不安を感じる時がある' },
+  ],
+  zh: [
+    { id: 'n1', subscale: 'neglect', reverse: false, text: '我觉得小时候我的情绪没有被好好接住' },
+    { id: 'n2', subscale: 'neglect', reverse: false, text: '难受的时候，我常觉得没有能安心靠着的地方' },
+    { id: 'n3', subscale: 'neglect', reverse: false, text: '我觉得要做得好，才会被爱' },
+    { id: 'n4', subscale: 'neglect', reverse: false, text: '心底有一块填不满的孤单' },
+    { id: 'n5', subscale: 'neglect', reverse: false, text: '就算被称赞或被疼，我也不太敢相信' },
+    { id: 'n6', subscale: 'neglect', reverse: false, text: '我有时候会怕被丢下或被拒绝' },
+    { id: 'n7', subscale: 'neglect', reverse: false, text: '说出自己的情绪或需要，我会别扭、不自在' },
+    { id: 'a1', subscale: 'adaptation', reverse: false, text: '我忙着看别人的脸色，把自己的心往后放' },
+    { id: 'a2', subscale: 'adaptation', reverse: false, text: '为了避开冲突，我常把自己的意见收回去' },
+    { id: 'a3', subscale: 'adaptation', reverse: false, text: '我觉得有压力，好像必须一直当「好人」' },
+    { id: 'a4', subscale: 'adaptation', reverse: false, text: '给别人添麻烦这件事，让我特别不舒服' },
+    { id: 'a5', subscale: 'adaptation', reverse: false, text: '我不太会拒绝，常勉强自己去迁就' },
+    { id: 'a6', subscale: 'adaptation', reverse: false, text: '我会先做别人期待的，而不是自己想要的' },
+    { id: 'a7', subscale: 'adaptation', reverse: false, text: '一个人的时候，我有时会空落落的，或不安' },
+  ],
+  fr: [
+    { id: 'n1', subscale: 'neglect', reverse: false, text: 'J’ai le sentiment que mes émotions d’enfant n’ont pas été suffisamment accueillies' },
+    { id: 'n2', subscale: 'neglect', reverse: false, text: 'Dans les moments difficiles, je sens souvent n’avoir personne sur qui m’appuyer' },
+    { id: 'n3', subscale: 'neglect', reverse: false, text: 'J’ai le sentiment qu’il faut bien faire pour être aimé' },
+    { id: 'n4', subscale: 'neglect', reverse: false, text: 'Il y a au fond de moi une solitude qui ne se comble pas' },
+    { id: 'n5', subscale: 'neglect', reverse: false, text: 'Même quand on me complimente ou m’entoure, j’ai du mal à y croire' },
+    { id: 'n6', subscale: 'neglect', reverse: false, text: 'Il m’arrive de craindre d’être abandonné ou rejeté' },
+    { id: 'n7', subscale: 'neglect', reverse: false, text: 'Exprimer mes émotions ou mes besoins me met mal à l’aise' },
+    { id: 'a1', subscale: 'adaptation', reverse: false, text: 'À force de guetter l’humeur des autres, je remets mes sentiments à plus tard' },
+    { id: 'a2', subscale: 'adaptation', reverse: false, text: 'Pour éviter le conflit, je renonce souvent à mon avis' },
+    { id: 'a3', subscale: 'adaptation', reverse: false, text: 'Je ressens la pression de devoir être « quelqu’un de gentil »' },
+    { id: 'a4', subscale: 'adaptation', reverse: false, text: 'Déranger les autres me met exagérément mal à l’aise' },
+    { id: 'a5', subscale: 'adaptation', reverse: false, text: 'J’ai du mal à refuser et je m’adapte au-delà de mes forces' },
+    { id: 'a6', subscale: 'adaptation', reverse: false, text: 'Je fais d’abord ce que les autres attendent, avant ce que je veux' },
+    { id: 'a7', subscale: 'adaptation', reverse: false, text: 'Quand je suis seul, il m’arrive de me sentir vide ou inquiet' },
+  ],
+  es: [
+    { id: 'n1', subscale: 'neglect', reverse: false, text: 'Siento que de niño mis emociones no se acogieron lo suficiente' },
+    { id: 'n2', subscale: 'neglect', reverse: false, text: 'En los momentos duros, siento a menudo que no tengo dónde apoyarme' },
+    { id: 'n3', subscale: 'neglect', reverse: false, text: 'Siento que hay que hacerlo bien para ser querido' },
+    { id: 'n4', subscale: 'neglect', reverse: false, text: 'Hay en el fondo una soledad que no se llena' },
+    { id: 'n5', subscale: 'neglect', reverse: false, text: 'Aunque me elogien o me cuiden, me cuesta creerlo' },
+    { id: 'n6', subscale: 'neglect', reverse: false, text: 'A veces temo que me abandonen o me rechacen' },
+    { id: 'n7', subscale: 'neglect', reverse: false, text: 'Expresar lo que siento o necesito me incomoda' },
+    { id: 'a1', subscale: 'adaptation', reverse: false, text: 'De tanto mirar el ánimo ajeno, dejo lo mío para después' },
+    { id: 'a2', subscale: 'adaptation', reverse: false, text: 'Para evitar el conflicto, a menudo me callo mi opinión' },
+    { id: 'a3', subscale: 'adaptation', reverse: false, text: 'Siento la presión de tener que ser «buena persona»' },
+    { id: 'a4', subscale: 'adaptation', reverse: false, text: 'Molestar a los demás me incomoda muchísimo' },
+    { id: 'a5', subscale: 'adaptation', reverse: false, text: 'Me cuesta negarme y me adapto más allá de mis fuerzas' },
+    { id: 'a6', subscale: 'adaptation', reverse: false, text: 'Hago antes lo que esperan de mí que lo que quiero' },
+    { id: 'a7', subscale: 'adaptation', reverse: false, text: 'Cuando estoy solo, a veces me siento vacío o inquieto' },
   ],
 }
 
