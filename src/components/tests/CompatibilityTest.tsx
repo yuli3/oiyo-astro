@@ -3,12 +3,12 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 import { Questionnaire } from '@/components/ui/questionnaire'
 
-type Locale = 'ko' | 'en' | 'ja'
+type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type Dimension = 'communication' | 'values' | 'lifestyle' | 'emotional'
 type Phase = 'self' | 'partner' | 'result'
 
 function lang(lp: string): Locale {
-  return (['ko', 'en', 'ja'].includes(lp) ? lp : 'en') as Locale
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(lp) ? lp : 'en') as Locale
 }
 
 const LABELS: Record<Locale, {
@@ -103,6 +103,78 @@ const LABELS: Record<Locale, {
     },
     choose: '最も近い答えを選んでください',
   },
+  zh: {
+    title: '默契度测验',
+    subtitle: '分析我和伴侣的性格默契',
+    selfPhaseTitle: '关于我的问题（12 题）',
+    partnerPhaseTitle: '关于伴侣的问题（12 题）',
+    questionOf: (c, t) => `${c} / ${t}`,
+    next: '下一题',
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我们的默契分数是',
+    overallLabel: '整体默契',
+    dimLabels: { communication: '沟通', values: '价值观', lifestyle: '生活方式', emotional: '情感' },
+    note: '本测验是探索关系模式的工具。真实的关系要复杂和美好得多。',
+    startPartner: '开始回答伴侣的问题',
+    compatible: '高度契合',
+    moderate: '中等契合',
+    different: '倾向不同',
+    compatDesc: {
+      high: '你们在很多方面都自然合拍。发挥彼此的优势，关系会更深厚。',
+      medium: '有些方面很合，有些方面有差异。差异是成长的机会。',
+      low: '你们在很多方面倾向不同。理解彼此的不同，是关系的钥匙。',
+    },
+    choose: '请选择最接近的回答',
+  },
+  fr: {
+    title: 'Test de compatibilité',
+    subtitle: 'Analyse de la compatibilité de personnalité entre mon/ma partenaire et moi',
+    selfPhaseTitle: 'Questions sur moi (12)',
+    partnerPhaseTitle: 'Questions sur mon/ma partenaire (12)',
+    questionOf: (c, t) => `${c} / ${t}`,
+    next: 'Suivant',
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Notre score de compatibilité',
+    overallLabel: 'Compatibilité globale',
+    dimLabels: { communication: 'Communication', values: 'Valeurs', lifestyle: 'Mode de vie', emotional: 'Émotions' },
+    note: 'Ce test est un outil pour explorer les schémas d’une relation. Une vraie relation est bien plus complexe, et bien plus belle.',
+    startPartner: 'Commencer les questions sur mon/ma partenaire',
+    compatible: 'Grande compatibilité',
+    moderate: 'Compatibilité moyenne',
+    different: 'Tempéraments différents',
+    compatDesc: {
+      high: 'Vous vous accordez naturellement sur bien des points. En valorisant vos forces respectives, votre relation s’approfondira.',
+      medium: 'Vous vous accordez bien sur certains points et différez sur d’autres. Les différences sont une occasion de grandir.',
+      low: 'Vous avez des tempéraments différents sur plusieurs points. Comprendre vos différences est la clé de votre relation.',
+    },
+    choose: 'Choisissez la réponse la plus proche',
+  },
+  es: {
+    title: 'Test de compatibilidad',
+    subtitle: 'Análisis de la compatibilidad de personalidad entre mi pareja y yo',
+    selfPhaseTitle: 'Preguntas sobre mí (12)',
+    partnerPhaseTitle: 'Preguntas sobre mi pareja (12)',
+    questionOf: (c, t) => `${c} / ${t}`,
+    next: 'Siguiente',
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Nuestra puntuación de compatibilidad',
+    overallLabel: 'Compatibilidad global',
+    dimLabels: { communication: 'Comunicación', values: 'Valores', lifestyle: 'Estilo de vida', emotional: 'Emociones' },
+    note: 'Este test es una herramienta para explorar los patrones de una relación. Una relación real es mucho más compleja, y mucho más bonita.',
+    startPartner: 'Empezar las preguntas sobre mi pareja',
+    compatible: 'Alta compatibilidad',
+    moderate: 'Compatibilidad media',
+    different: 'Tendencias distintas',
+    compatDesc: {
+      high: 'Encajáis de forma natural en muchos aspectos. Si aprovecháis las fortalezas de cada uno, la relación será aún más profunda.',
+      medium: 'Encajáis bien en algunas áreas y diferís en otras. Las diferencias son una oportunidad para crecer.',
+      low: 'Tenéis tendencias distintas en varios aspectos. Entender vuestras diferencias es la clave de la relación.',
+    },
+    choose: 'Elige la respuesta más cercana',
+  },
 }
 
 interface Question {
@@ -119,122 +191,158 @@ interface Question {
 const QUESTIONS: Question[] = [
   {
     id: 'q1', dimension: 'communication',
-    self: { ko: '갈등이 생기면 나는 주로?', en: 'When conflict arises, I usually:', ja: '対立が生じた時、私は主に？' },
-    partner: { ko: '갈등이 생기면 파트너는 주로?', en: 'When conflict arises, my partner usually:', ja: '対立が生じた時、パートナーは主に？' },
+    self: { ko: '갈등이 생기면 나는 주로?', en: 'When conflict arises, I usually:', ja: '対立が生じた時、私は主に？', zh: '起冲突时，我通常？', fr: 'En cas de conflit, j’ai tendance à…', es: 'Cuando surge un conflicto, suelo…' },
+    partner: { ko: '갈등이 생기면 파트너는 주로?', en: 'When conflict arises, my partner usually:', ja: '対立が生じた時、パートナーは主に？', zh: '起冲突时，伴侣通常？', fr: 'En cas de conflit, mon/ma partenaire a tendance à…', es: 'Cuando surge un conflicto, mi pareja suele…' },
     options: {
       ko: ['바로 이야기를 꺼낸다', '적절한 시간을 찾아 대화한다', '혼자 생각을 정리한 후 말한다', '가능하면 갈등을 피한다'],
       en: ['Bring it up immediately', 'Find the right time to talk', 'Sort thoughts alone first, then speak', 'Avoid conflict if possible'],
       ja: ['すぐに話し合う', '適切な時間を見つけて話す', '一人で考えを整理してから話す', 'できれば対立を避ける'],
+      zh: ['马上说出来', '找合适的时间谈', '自己先整理好想法再说', '尽量避开冲突'],
+      fr: ['En parler tout de suite', 'Trouver le bon moment pour en discuter', 'Mettre ses idées au clair seul avant de parler', 'Éviter le conflit si possible'],
+      es: ['Sacarlo enseguida', 'Buscar el momento adecuado para hablar', 'Ordenar las ideas a solas antes de hablar', 'Evitar el conflicto si se puede'],
     },
   },
   {
     id: 'q2', dimension: 'communication',
-    self: { ko: '나는 감정 표현을?', en: 'I express emotions:', ja: '私は感情表現を？' },
-    partner: { ko: '파트너는 감정 표현을?', en: 'My partner expresses emotions:', ja: 'パートナーは感情表現を？' },
+    self: { ko: '나는 감정 표현을?', en: 'I express emotions:', ja: '私は感情表現を？', zh: '我表达情绪的方式？', fr: 'Pour exprimer mes émotions, je…', es: 'Al expresar mis emociones, yo…' },
+    partner: { ko: '파트너는 감정 표현을?', en: 'My partner expresses emotions:', ja: 'パートナーは感情表現を？', zh: '伴侣表达情绪的方式？', fr: 'Pour exprimer ses émotions, mon/ma partenaire…', es: 'Al expresar sus emociones, mi pareja…' },
     options: {
       ko: ['솔직하고 자주 표현한다', '상황에 따라 표현한다', '말보다 행동으로 표현한다', '내면에 담아두는 편이다'],
       en: ['Openly and frequently', 'Depending on the situation', 'Through actions rather than words', 'Tend to keep inside'],
       ja: ['率直に頻繁に表現する', '状況に応じて表現する', '言葉より行動で表現する', '内に秘めておく'],
+      zh: ['坦率而经常表达', '视情况表达', '用行动而非言语表达', '倾向藏在心里'],
+      fr: ['Les exprime souvent et franchement', 'Les exprime selon la situation', 'Les exprime par des actes plutôt que par des mots', 'A tendance à les garder pour soi'],
+      es: ['Las expresa a menudo y con franqueza', 'Las expresa según la situación', 'Las expresa más con hechos que con palabras', 'Tiende a guardárselas'],
     },
   },
   {
     id: 'q3', dimension: 'communication',
-    self: { ko: '나는 대화할 때?', en: 'When I talk, I:', ja: '私は会話する時？' },
-    partner: { ko: '파트너는 대화할 때?', en: 'When my partner talks, they:', ja: 'パートナーが会話する時？' },
+    self: { ko: '나는 대화할 때?', en: 'When I talk, I:', ja: '私は会話する時？', zh: '我说话的时候？', fr: 'Quand je parle, je…', es: 'Cuando hablo, yo…' },
+    partner: { ko: '파트너는 대화할 때?', en: 'When my partner talks, they:', ja: 'パートナーが会話する時？', zh: '伴侣说话的时候？', fr: 'Quand mon/ma partenaire parle, il/elle…', es: 'Cuando habla, mi pareja…' },
     options: {
       ko: ['핵심만 간결하게 말한다', '맥락을 충분히 설명한다', '이야기로 풀어서 말한다', '비유나 예시를 많이 사용한다'],
       en: ['Get to the point concisely', 'Explain with sufficient context', 'Tell it as a story', 'Use many metaphors and examples'],
       ja: ['要点を簡潔に伝える', '文脈を十分に説明する', '話として展開する', '比喩や例えをよく使う'],
+      zh: ['只讲重点，简洁明了', '充分说明来龙去脉', '像讲故事一样说', '常用比喻或例子'],
+      fr: ['Va droit à l’essentiel', 'Explique bien le contexte', 'Raconte sous forme d’histoire', 'Utilise beaucoup d’images et d’exemples'],
+      es: ['Va al grano, breve y claro', 'Explica bien el contexto', 'Lo cuenta como una historia', 'Usa muchas metáforas y ejemplos'],
     },
   },
   {
     id: 'q4', dimension: 'values',
-    self: { ko: '나에게 돈은?', en: 'To me, money is:', ja: '私にとってお金は？' },
-    partner: { ko: '파트너에게 돈은?', en: 'To my partner, money is:', ja: 'パートナーにとってお金は？' },
+    self: { ko: '나에게 돈은?', en: 'To me, money is:', ja: '私にとってお金は？', zh: '钱对我来说是？', fr: 'Pour moi, l’argent sert à…', es: 'Para mí, el dinero es…' },
+    partner: { ko: '파트너에게 돈은?', en: 'To my partner, money is:', ja: 'パートナーにとってお金は？', zh: '钱对伴侣来说是？', fr: 'Pour mon/ma partenaire, l’argent sert à…', es: 'Para mi pareja, el dinero es…' },
     options: {
       ko: ['안정과 미래를 위한 것', '지금 행복을 위한 것', '경험과 성장을 위한 것', '나눔과 기여를 위한 것'],
       en: ['For stability and the future', 'For happiness now', 'For experiences and growth', 'For giving and contributing'],
       ja: ['安定と未来のため', '今の幸福のため', '経験と成長のため', '分かち合いと貢献のため'],
+      zh: ['为了安稳和未来', '为了现在的幸福', '为了经验和成长', '为了分享和贡献'],
+      fr: ['La sécurité et l’avenir', 'Être heureux maintenant', 'Vivre des expériences et grandir', 'Partager et contribuer'],
+      es: ['Para la estabilidad y el futuro', 'Para ser feliz ahora', 'Para vivir experiencias y crecer', 'Para compartir y contribuir'],
     },
   },
   {
     id: 'q5', dimension: 'values',
-    self: { ko: '나에게 가장 중요한 것은?', en: 'The most important thing to me is:', ja: '私にとって最も大切なことは？' },
-    partner: { ko: '파트너에게 가장 중요한 것은?', en: 'The most important thing to my partner is:', ja: 'パートナーにとって最も大切なことは？' },
+    self: { ko: '나에게 가장 중요한 것은?', en: 'The most important thing to me is:', ja: '私にとって最も大切なことは？', zh: '对我最重要的是？', fr: 'Ce qui compte le plus pour moi :', es: 'Lo más importante para mí es…' },
+    partner: { ko: '파트너에게 가장 중요한 것은?', en: 'The most important thing to my partner is:', ja: 'パートナーにとって最も大切なことは？', zh: '对伴侣最重要的是？', fr: 'Ce qui compte le plus pour mon/ma partenaire :', es: 'Lo más importante para mi pareja es…' },
     options: {
       ko: ['가족과 인간관계', '성취와 성공', '자유와 모험', '내면의 평화와 성장'],
       en: ['Family and relationships', 'Achievement and success', 'Freedom and adventure', 'Inner peace and growth'],
       ja: ['家族と人間関係', '成就と成功', '自由と冒険', '内なる平和と成長'],
+      zh: ['家人和人际关系', '成就与成功', '自由与冒险', '内心的平静与成长'],
+      fr: ['La famille et les relations', 'La réussite et le succès', 'La liberté et l’aventure', 'La paix intérieure et la croissance'],
+      es: ['La familia y las relaciones', 'El logro y el éxito', 'La libertad y la aventura', 'La paz interior y el crecimiento'],
     },
   },
   {
     id: 'q6', dimension: 'values',
-    self: { ko: '나는 미래를 어떻게 생각하나?', en: 'How do I think about the future?', ja: '私は未来についてどう考える？' },
-    partner: { ko: '파트너는 미래를 어떻게 생각하나?', en: 'How does my partner think about the future?', ja: 'パートナーは未来についてどう考える？' },
+    self: { ko: '나는 미래를 어떻게 생각하나?', en: 'How do I think about the future?', ja: '私は未来についてどう考える？', zh: '我怎么看待未来？', fr: 'Comment je vois l’avenir ?', es: '¿Cómo veo el futuro?' },
+    partner: { ko: '파트너는 미래를 어떻게 생각하나?', en: 'How does my partner think about the future?', ja: 'パートナーは未来についてどう考える？', zh: '伴侣怎么看待未来？', fr: 'Comment mon/ma partenaire voit l’avenir ?', es: '¿Cómo ve el futuro mi pareja?' },
     options: {
       ko: ['구체적인 계획을 세운다', '큰 방향만 정하고 유연하게', '지금에 집중하며 흘러간다', '직관을 따라 결정한다'],
       en: ['Make concrete plans', 'Set a general direction and stay flexible', 'Focus on now and go with the flow', 'Follow intuition to decide'],
       ja: ['具体的な計画を立てる', '大きな方向だけ決めて柔軟に', '今に集中して流れに任せる', '直感に従って決める'],
+      zh: ['制定具体的计划', '只定大方向，保持弹性', '专注当下，顺其自然', '跟随直觉决定'],
+      fr: ['Avec un plan concret', 'Une grande direction, avec souplesse', 'En restant dans le présent, au fil de l’eau', 'En suivant son intuition'],
+      es: ['Con planes concretos', 'Con una dirección general y flexibilidad', 'Centrándose en el presente y dejándose llevar', 'Decidiendo por intuición'],
     },
   },
   {
     id: 'q7', dimension: 'lifestyle',
-    self: { ko: '주말을 보내는 나의 이상적인 방식은?', en: 'My ideal way to spend weekends:', ja: '週末の過ごし方の理想は？' },
-    partner: { ko: '파트너가 이상적으로 보내는 주말은?', en: 'My partner\'s ideal weekend:', ja: 'パートナーの理想の週末は？' },
+    self: { ko: '주말을 보내는 나의 이상적인 방식은?', en: 'My ideal way to spend weekends:', ja: '週末の過ごし方の理想は？', zh: '我理想的周末怎么过？', fr: 'Mon week-end idéal :', es: 'Mi fin de semana ideal es…' },
+    partner: { ko: '파트너가 이상적으로 보내는 주말은?', en: 'My partner\'s ideal weekend:', ja: 'パートナーの理想の週末は？', zh: '伴侣理想的周末怎么过？', fr: 'Le week-end idéal de mon/ma partenaire :', es: 'El fin de semana ideal de mi pareja es…' },
     options: {
       ko: ['활동적인 외출과 사람들과의 만남', '집에서 편안하게 쉬기', '새로운 장소 탐험이나 여행', '취미 활동과 창작에 집중'],
       en: ['Active outings and meeting people', 'Relaxing comfortably at home', 'Exploring new places or traveling', 'Focusing on hobbies and creativity'],
       ja: ['活動的な外出と人との交流', '家でゆっくり休む', '新しい場所の探索や旅行', '趣味活動や創作に集中'],
+      zh: ['活跃地外出、见朋友', '在家舒服地休息', '探索新地方或旅行', '专注于兴趣和创作'],
+      fr: ['Sortir et voir du monde', 'Se reposer tranquillement à la maison', 'Explorer de nouveaux lieux ou voyager', 'Se consacrer à ses loisirs et à la création'],
+      es: ['Salir y ver gente', 'Descansar tranquilamente en casa', 'Explorar sitios nuevos o viajar', 'Dedicarse a aficiones y a crear'],
     },
   },
   {
     id: 'q8', dimension: 'lifestyle',
-    self: { ko: '나의 에너지 회복 방식은?', en: 'How I recharge my energy:', ja: '私のエネルギー回復方法は？' },
-    partner: { ko: '파트너의 에너지 회복 방식은?', en: 'How my partner recharges:', ja: 'パートナーのエネルギー回復方法は？' },
+    self: { ko: '나의 에너지 회복 방식은?', en: 'How I recharge my energy:', ja: '私のエネルギー回復方法は？', zh: '我恢复能量的方式？', fr: 'Comment je recharge mes batteries ?', es: '¿Cómo recargo energía?' },
+    partner: { ko: '파트너의 에너지 회복 방식은?', en: 'How my partner recharges:', ja: 'パートナーのエネルギー回復方法は？', zh: '伴侣恢复能量的方式？', fr: 'Comment mon/ma partenaire recharge ses batteries ?', es: '¿Cómo recarga energía mi pareja?' },
     options: {
       ko: ['혼자만의 조용한 시간', '가까운 사람들과 함께', '활동적인 운동이나 여행', '자연 속에서 여유롭게'],
       en: ['Quiet time alone', 'Being with close people', 'Active exercise or travel', 'Leisurely time in nature'],
       ja: ['一人での静かな時間', '親しい人たちと一緒に', '活動的な運動や旅行', '自然の中でのんびりと'],
+      zh: ['独自安静的时间', '和亲近的人在一起', '积极运动或旅行', '在大自然里悠闲放松'],
+      fr: ['Du temps seul, au calme', 'Avec des proches', 'Du sport ou des voyages', 'Tranquillement dans la nature'],
+      es: ['Con tiempo a solas y en calma', 'Con la gente cercana', 'Con deporte o viajes', 'Con calma en la naturaleza'],
     },
   },
   {
     id: 'q9', dimension: 'lifestyle',
-    self: { ko: '나는 정리정돈을?', en: 'When it comes to tidiness, I:', ja: '片づけについて私は？' },
-    partner: { ko: '파트너는 정리정돈을?', en: 'When it comes to tidiness, my partner:', ja: '片づけについてパートナーは？' },
+    self: { ko: '나는 정리정돈을?', en: 'When it comes to tidiness, I:', ja: '片づけについて私は？', zh: '我对整理收纳？', fr: 'Côté rangement, je…', es: 'En cuanto al orden, yo…' },
+    partner: { ko: '파트너는 정리정돈을?', en: 'When it comes to tidiness, my partner:', ja: '片づけについてパートナーは？', zh: '伴侣对整理收纳？', fr: 'Côté rangement, mon/ma partenaire…', es: 'En cuanto al orden, mi pareja…' },
     options: {
       ko: ['항상 깔끔하게 유지한다', '대체로 정리되어 있다', '필요할 때 정리한다', '창의적인 혼란을 즐긴다'],
       en: ['Always keep it spotless', 'Generally kept tidy', 'Tidy up when needed', 'Enjoy creative chaos'],
       ja: ['常に整然と保つ', 'おおむね整理されている', '必要な時に片付ける', 'クリエイティブな混沌を楽しむ'],
+      zh: ['总是保持整洁', '大体上是整齐的', '需要时才整理', '享受有创意的凌乱'],
+      fr: ['Garde toujours tout impeccable', 'Est plutôt ordonné', 'Range quand il le faut', 'Aime le désordre créatif'],
+      es: ['Lo mantiene siempre impecable', 'Suele tenerlo ordenado', 'Ordena cuando hace falta', 'Disfruta del desorden creativo'],
     },
   },
   {
     id: 'q10', dimension: 'emotional',
-    self: { ko: '나는 상처를 받으면?', en: 'When I\'m hurt, I:', ja: '傷ついた時、私は？' },
-    partner: { ko: '파트너는 상처를 받으면?', en: 'When my partner is hurt, they:', ja: '傷ついた時、パートナーは？' },
+    self: { ko: '나는 상처를 받으면?', en: 'When I\'m hurt, I:', ja: '傷ついた時、私は？', zh: '我受伤时会？', fr: 'Quand je suis blessé, je…', es: 'Cuando me hieren, yo…' },
+    partner: { ko: '파트너는 상처를 받으면?', en: 'When my partner is hurt, they:', ja: '傷ついた時、パートナーは？', zh: '伴侣受伤时会？', fr: 'Quand mon/ma partenaire est blessé(e), il/elle…', es: 'Cuando hieren a mi pareja…' },
     options: {
       ko: ['바로 말하고 해결하려 한다', '시간이 지나면 회복된다', '깊이 반추하며 이해한다', '감정을 혼자 처리한다'],
       en: ['Address it immediately', 'Recover after some time', 'Deeply reflect to understand', 'Process emotions alone'],
       ja: ['すぐに話して解決しようとする', '時間が経てば回復する', '深く反芻して理解する', '感情を一人で処理する'],
+      zh: ['马上说出来并想解决', '过段时间就会恢复', '深深反刍、试着理解', '独自消化情绪'],
+      fr: ['En parle tout de suite pour régler le problème', 'Se remet avec le temps', 'Rumine longuement pour comprendre', 'Gère ses émotions seul'],
+      es: ['Lo dice enseguida e intenta resolverlo', 'Se recupera con el tiempo', 'Le da muchas vueltas para entenderlo', 'Procesa sus emociones a solas'],
     },
   },
   {
     id: 'q11', dimension: 'emotional',
-    self: { ko: '나는 사랑을 어떻게 표현하나?', en: 'How do I express love?', ja: '私はどのように愛を表現する？' },
-    partner: { ko: '파트너는 사랑을 어떻게 표현하나?', en: 'How does my partner express love?', ja: 'パートナーはどのように愛を表現する？' },
+    self: { ko: '나는 사랑을 어떻게 표현하나?', en: 'How do I express love?', ja: '私はどのように愛を表現する？', zh: '我怎么表达爱？', fr: 'Comment j’exprime mon amour ?', es: '¿Cómo expreso el amor?' },
+    partner: { ko: '파트너는 사랑을 어떻게 표현하나?', en: 'How does my partner express love?', ja: 'パートナーはどのように愛を表現する？', zh: '伴侣怎么表达爱？', fr: 'Comment mon/ma partenaire exprime son amour ?', es: '¿Cómo expresa el amor mi pareja?' },
     options: {
       ko: ['말과 언어로', '함께 하는 시간으로', '선물이나 배려로', '스킨십과 표현으로'],
       en: ['Through words and language', 'Through quality time together', 'Through gifts or care', 'Through physical touch and expression'],
       ja: ['言葉や言語で', '一緒に過ごす時間で', '贈り物や気遣いで', 'スキンシップや表現で'],
+      zh: ['用言语', '用相处的时间', '用礼物或体贴', '用肢体接触和表达'],
+      fr: ['Par les mots', 'Par le temps passé ensemble', 'Par des cadeaux ou des attentions', 'Par le contact physique et les gestes'],
+      es: ['Con palabras', 'Con tiempo compartido', 'Con regalos o detalles', 'Con contacto físico y gestos'],
     },
   },
   {
     id: 'q12', dimension: 'emotional',
-    self: { ko: '나는 파트너에게 무엇을 가장 필요로 하나?', en: 'What do I need most from my partner?', ja: 'パートナーに最も必要なものは？' },
-    partner: { ko: '파트너는 나에게 무엇을 가장 필요로 하나?', en: 'What does my partner need most from me?', ja: 'パートナーが私に最も必要なものは？' },
+    self: { ko: '나는 파트너에게 무엇을 가장 필요로 하나?', en: 'What do I need most from my partner?', ja: 'パートナーに最も必要なものは？', zh: '我最需要伴侣给我什么？', fr: 'Ce dont j’ai le plus besoin de mon/ma partenaire :', es: '¿Qué necesito más de mi pareja?' },
+    partner: { ko: '파트너는 나에게 무엇을 가장 필요로 하나?', en: 'What does my partner need most from me?', ja: 'パートナーが私に最も必要なものは？', zh: '伴侣最需要我给什么？', fr: 'Ce dont mon/ma partenaire a le plus besoin de moi :', es: '¿Qué necesita más mi pareja de mí?' },
     options: {
       ko: ['정서적 지지와 공감', '지적 자극과 대화', '신뢰와 안정감', '자유와 존중'],
       en: ['Emotional support and empathy', 'Intellectual stimulation and conversation', 'Trust and stability', 'Freedom and respect'],
       ja: ['感情的サポートと共感', '知的刺激と対話', '信頼と安定感', '自由と尊重'],
+      zh: ['情感支持与共情', '智识刺激与对话', '信任与安全感', '自由与尊重'],
+      fr: ['Soutien émotionnel et empathie', 'Stimulation intellectuelle et conversation', 'Confiance et sécurité', 'Liberté et respect'],
+      es: ['Apoyo emocional y empatía', 'Estímulo intelectual y conversación', 'Confianza y seguridad', 'Libertad y respeto'],
     },
   },
 ]
@@ -413,7 +521,7 @@ export default function CompatibilityTest({ locale: lp = 'ko' }: Props) {
       options={q.options[locale].map((label, i) => ({ label, value: i + 1 }))}
       selectedValue={selected === undefined ? undefined : selected + 1}
       note={lb.note}
-      previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+      previousLabel={({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question'}
       onPrevious={current > 0 || phase === 'partner' ? previous : undefined}
       onSelect={(value) => pick(value - 1)}
     />
