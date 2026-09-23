@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type ControlLevel = 'building' | 'moderate' | 'strong' | 'high'
 type Subscale = 'restraint' | 'focus'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはTangneyらの短縮セルフコントロール尺度（BSCS）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '自控力测验',
+    subtitle: '我的克制和耐力有多稳？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的自控力分数是',
+    yourScore: '我的自控力分数',
+    overallLabel: '综合自控力',
+    restraintLabel: '冲动克制',
+    focusLabel: '耐力与专注',
+    outOf: '/ 5.0',
+    tipsLabel: '成长建议',
+    note: '本测验参考 Tangney 等人的简式自控量表（BSCS）概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test de maîtrise de soi',
+    subtitle: 'À quel point ma retenue et ma persévérance tiennent-elles ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon score de maîtrise de soi',
+    yourScore: 'Votre score de maîtrise de soi',
+    overallLabel: 'Maîtrise de soi globale',
+    restraintLabel: 'Retenue face à l’impulsion',
+    focusLabel: 'Persévérance et concentration',
+    outOf: '/ 5.0',
+    tipsLabel: 'Piste de progrès',
+    note: 'Ce test reprend les notions de l’échelle brève de maîtrise de soi (BSCS) de Tangney et al., à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de autocontrol',
+    subtitle: '¿Cuán firmes son mi contención y mi constancia?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi puntuación de autocontrol',
+    yourScore: 'Tu puntuación de autocontrol',
+    overallLabel: 'Autocontrol global',
+    restraintLabel: 'Contención del impulso',
+    focusLabel: 'Constancia y concentración',
+    outOf: '/ 5.0',
+    tipsLabel: 'Para crecer',
+    note: 'Este test recoge las ideas de la escala breve de autocontrol (BSCS) de Tangney y otros, para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<ControlLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<ControlLevel, Record<SupportedLang, LevelData>> = {
         '「あと5分」ルールで先延ばしの衝動を乗り越えましょう。',
       ],
     },
+    zh: {
+      icon: '🌱',
+      title: '正在形成',
+      description: '克制冲动、保持耐力的力气还在长。自控像肌肉，靠小小的练习一点点变结实。',
+      tips: [
+        '与其用意志压住诱惑，不如先从环境里把它拿走。',
+        '把目标定得很小，反覆累积「我做到了」。',
+        '用「再五分钟」的规则，把想拖的那股劲儿撑过去。',
+      ],
+    },
+    fr: {
+      icon: '🌱',
+      title: 'En construction',
+      description: 'La force de contenir l’impulsion et de tenir dans la durée est encore en train de pousser. La maîtrise de soi se renforce comme un muscle, par de petits exercices.',
+      tips: [
+        'Plutôt que de résister par la volonté, retirez d’abord la tentation de votre environnement.',
+        'Fixez des objectifs très petits et répétez l’expérience du « j’y suis arrivé ».',
+        'Utilisez la règle des « cinq minutes de plus » pour passer l’envie de remettre à plus tard.',
+      ],
+    },
+    es: {
+      icon: '🌱',
+      title: 'En construcción',
+      description: 'La fuerza para contener el impulso y sostener el esfuerzo todavía está creciendo. El autocontrol se fortalece como un músculo, con ejercicios pequeños.',
+      tips: [
+        'Antes que resistir por voluntad, quita la tentación del entorno.',
+        'Ponte metas muy pequeñas y repite la experiencia de «lo he conseguido».',
+        'Usa la regla de «cinco minutos más» para pasar las ganas de aplazar.',
+      ],
+    },
   },
   moderate: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<ControlLevel, Record<SupportedLang, LevelData>> = {
         '崩れやすい状況（時間・場所・気分）を把握して備えましょう。',
         '習慣を意志ではなくルーティンや合図で自動化しましょう。',
         '成功体験を記録して自己統制の自信を育てましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌿',
+      title: '稳定的自控型',
+      description: '大体上你控得住冲动，也把该做的做完。偶尔会晃，但有回得来的力气，属于健康的程度。',
+      tips: [
+        '摸清自己容易垮掉的场合（时间、地点、心情），提前准备。',
+        '把习惯交给流程和提示，而不是交给意志。',
+        '把成功的经验记下来，养出对自己的信心。',
+      ],
+    },
+    fr: {
+      icon: '🌿',
+      title: 'Maîtrise stable',
+      description: 'Dans l’ensemble, vous contenez bien l’impulsion et vous faites ce qu’il y a à faire. Il vous arrive de vaciller, mais vous savez revenir : c’est un niveau sain.',
+      tips: [
+        'Repérez les situations où vous craquez (heure, lieu, humeur) et préparez-les à l’avance.',
+        'Confiez l’habitude à une routine et à des signaux plutôt qu’à la volonté.',
+        'Notez vos réussites pour nourrir votre confiance.',
+      ],
+    },
+    es: {
+      icon: '🌿',
+      title: 'Autocontrol estable',
+      description: 'En general contienes bien el impulso y sacas lo que hay que sacar. A veces te tambaleas, pero sabes volver: es un nivel sano.',
+      tips: [
+        'Identifica las situaciones en que flaqueas (hora, lugar, ánimo) y prepáralas antes.',
+        'Deja el hábito en manos de una rutina y unas señales, no de la voluntad.',
+        'Anota tus logros para alimentar la confianza.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<ControlLevel, Record<SupportedLang, LevelData>> = {
         '周囲に良い習慣の仕組みを分かち合いましょう。',
       ],
     },
+    zh: {
+      icon: '🛡️',
+      title: '强自控型',
+      description: '克制和耐力都很强。为了长期的目标，你能把眼前的诱惑往后放，也做得持续。',
+      tips: [
+        '把这份力气投到真正要紧的长期目标上。',
+        '别让控制变成僵硬和压抑，也给自己休息和乐趣。',
+        '把好用的习惯系统分给身边的人。',
+      ],
+    },
+    fr: {
+      icon: '🛡️',
+      title: 'Maîtrise forte',
+      description: 'Votre retenue et votre persévérance sont solides. Pour un objectif lointain, vous savez différer la tentation et tenir dans la durée.',
+      tips: [
+        'Investissez cette force dans des objectifs de long terme qui comptent vraiment.',
+        'Veillez à ce que la maîtrise ne devienne pas rigidité : accordez-vous du repos et du plaisir.',
+        'Partagez vos systèmes d’habitudes autour de vous.',
+      ],
+    },
+    es: {
+      icon: '🛡️',
+      title: 'Autocontrol fuerte',
+      description: 'Tu contención y tu constancia son sólidas. Por una meta lejana sabes aplazar la tentación y sostener el esfuerzo.',
+      tips: [
+        'Invierte esa fuerza en metas de largo plazo que de verdad importen.',
+        'Cuida que el control no se vuelva rigidez: date descanso y gusto.',
+        'Comparte tus sistemas de hábitos con quienes te rodean.',
+      ],
+    },
   },
   high: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<ControlLevel, Record<SupportedLang, LevelData>> = {
         '計画に「余白」と即興の楽しみを意図的に入れましょう。',
         '統制欲求が完璧主義や自己批判に広がらないか点検しましょう。',
         '休むことも能力だと受け入れ回復を計画しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🏔️',
+      title: '顶级自控型',
+      description: '你的自控力非常高。这是很强的克制力，但控得太紧会带来僵硬和耗竭，需要保持平衡。',
+      tips: [
+        '有意在计划里留白，也留一点随兴的乐趣。',
+        '检查一下，控制的欲望有没有变成完美主义和自我批评。',
+        '把「休息也是能力」接受下来，把恢复排进计划。',
+      ],
+    },
+    fr: {
+      icon: '🏔️',
+      title: 'Maîtrise très élevée',
+      description: 'Votre maîtrise de soi est très forte. C’est une belle puissance de retenue, mais un contrôle trop serré mène à la rigidité et à l’épuisement : il faut de l’équilibre.',
+      tips: [
+        'Ménagez volontairement du blanc dans vos plans, et un peu de spontanéité.',
+        'Vérifiez que le besoin de contrôle ne glisse pas vers le perfectionnisme et l’autocritique.',
+        'Acceptez que se reposer soit aussi une compétence, et planifiez la récupération.',
+      ],
+    },
+    es: {
+      icon: '🏔️',
+      title: 'Autocontrol muy alto',
+      description: 'Tu autocontrol es muy alto. Es una gran capacidad de contención, pero un control demasiado apretado lleva a la rigidez y al agotamiento: hace falta equilibrio.',
+      tips: [
+        'Deja huecos a propósito en los planes, y algo de espontaneidad.',
+        'Revisa que la necesidad de control no derive en perfeccionismo y autocrítica.',
+        'Acepta que descansar también es una habilidad y planifica la recuperación.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'f5', subscale: 'focus', reverse: false, text: '始めたことを最後までやり遂げる方だ' },
     { id: 'f6', subscale: 'focus', reverse: false, text: '気が散っても再びやるべきことに戻る' },
     { id: 'f7', subscale: 'focus', reverse: false, text: '計画したことを着実に実践する' },
+  ],
+  zh: [
+    { id: 'r1', subscale: 'restraint', reverse: false, text: '就算有诱惑，我也忍得住' },
+    { id: 'r2', subscale: 'restraint', reverse: false, text: '比起冲动行事，我会先多想一下' },
+    { id: 'r3', subscale: 'restraint', reverse: false, text: '戒掉或减少坏习惯，对我不算太难' },
+    { id: 'r4', subscale: 'restraint', reverse: false, text: '就算生气，我也不会当场就反应' },
+    { id: 'r5', subscale: 'restraint', reverse: false, text: '就算眼前开心，长期有害的事我会避开' },
+    { id: 'r6', subscale: 'restraint', reverse: false, text: '该忍住的事，我克制得住' },
+    { id: 'r7', subscale: 'restraint', reverse: false, text: '不被情绪冲走，能保持冷静' },
+    { id: 'f1', subscale: 'focus', reverse: false, text: '该做的事我不太拖' },
+    { id: 'f2', subscale: 'focus', reverse: false, text: '为了目标，我能把眼前的享乐往后放' },
+    { id: 'f3', subscale: 'focus', reverse: false, text: '需要专注时，我专注得起来' },
+    { id: 'f4', subscale: 'focus', reverse: false, text: '规律的习惯我维持得住' },
+    { id: 'f5', subscale: 'focus', reverse: false, text: '开了头的事，我会做完' },
+    { id: 'f6', subscale: 'focus', reverse: false, text: '就算分心了，也能回到手上的事' },
+    { id: 'f7', subscale: 'focus', reverse: false, text: '计划好的事，我会持续做下去' },
+  ],
+  fr: [
+    { id: 'r1', subscale: 'restraint', reverse: false, text: 'Même face à la tentation, je tiens bon' },
+    { id: 'r2', subscale: 'restraint', reverse: false, text: 'Plutôt que d’agir sur l’impulsion, je réfléchis une fois de plus' },
+    { id: 'r3', subscale: 'restraint', reverse: false, text: 'Arrêter ou réduire une mauvaise habitude ne m’est pas très difficile' },
+    { id: 'r4', subscale: 'restraint', reverse: false, text: 'Même en colère, je ne réagis pas sur le coup' },
+    { id: 'r5', subscale: 'restraint', reverse: false, text: 'Même si c’est agréable sur le moment, j’évite ce qui nuit à long terme' },
+    { id: 'r6', subscale: 'restraint', reverse: false, text: 'Je sais me retenir de ce qu’il ne faut pas faire' },
+    { id: 'r7', subscale: 'restraint', reverse: false, text: 'Je garde mon calme sans me laisser emporter par l’émotion' },
+    { id: 'f1', subscale: 'focus', reverse: false, text: 'Je ne remets pas à plus tard ce qu’il faut faire' },
+    { id: 'f2', subscale: 'focus', reverse: false, text: 'Pour un objectif, je sais différer un plaisir immédiat' },
+    { id: 'f3', subscale: 'focus', reverse: false, text: 'Quand il faut se concentrer, j’y arrive' },
+    { id: 'f4', subscale: 'focus', reverse: false, text: 'Je tiens des habitudes régulières' },
+    { id: 'f5', subscale: 'focus', reverse: false, text: 'Ce que je commence, je le termine' },
+    { id: 'f6', subscale: 'focus', reverse: false, text: 'Même distrait, je reviens à ce que je faisais' },
+    { id: 'f7', subscale: 'focus', reverse: false, text: 'Ce que j’ai prévu, je le fais dans la durée' },
+  ],
+  es: [
+    { id: 'r1', subscale: 'restraint', reverse: false, text: 'Aunque haya tentación, aguanto' },
+    { id: 'r2', subscale: 'restraint', reverse: false, text: 'Antes de actuar por impulso, lo pienso una vez más' },
+    { id: 'r3', subscale: 'restraint', reverse: false, text: 'Dejar o reducir un mal hábito no me cuesta demasiado' },
+    { id: 'r4', subscale: 'restraint', reverse: false, text: 'Aunque me enfade, no reacciono en caliente' },
+    { id: 'r5', subscale: 'restraint', reverse: false, text: 'Aunque apetezca ahora, evito lo que a la larga hace daño' },
+    { id: 'r6', subscale: 'restraint', reverse: false, text: 'Sé contenerme con lo que no conviene' },
+    { id: 'r7', subscale: 'restraint', reverse: false, text: 'Mantengo la calma sin dejarme arrastrar por la emoción' },
+    { id: 'f1', subscale: 'focus', reverse: false, text: 'No aplazo lo que hay que hacer' },
+    { id: 'f2', subscale: 'focus', reverse: false, text: 'Por una meta, sé dejar para después un gusto inmediato' },
+    { id: 'f3', subscale: 'focus', reverse: false, text: 'Cuando hay que concentrarse, lo consigo' },
+    { id: 'f4', subscale: 'focus', reverse: false, text: 'Mantengo hábitos regulares' },
+    { id: 'f5', subscale: 'focus', reverse: false, text: 'Lo que empiezo, lo acabo' },
+    { id: 'f6', subscale: 'focus', reverse: false, text: 'Aunque me distraiga, vuelvo a lo que estaba haciendo' },
+    { id: 'f7', subscale: 'focus', reverse: false, text: 'Lo que planeo, lo sostengo en el tiempo' },
   ],
 }
 

@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type EfficacyLevel = 'building' | 'moderate' | 'strong' | 'high'
 type Subscale = 'coping' | 'goal'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはSchwarzer & Jerusalemの一般性セルフ・エフィカシー尺度（GSE）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '自我效能测验',
+    subtitle: '我有多相信自己做得到？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的自我效能分数是',
+    yourScore: '我的自我效能分数',
+    overallLabel: '综合自我效能',
+    copingLabel: '应对挑战的把握',
+    goalLabel: '达成目标的把握',
+    outOf: '/ 5.0',
+    tipsLabel: '成长建议',
+    note: '本测验参考 Schwarzer 与 Jerusalem 的一般自我效能量表（GSE）概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test du sentiment d’efficacité personnelle',
+    subtitle: 'À quel point est-ce que je me fais confiance ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon score d’efficacité personnelle',
+    yourScore: 'Votre score d’efficacité personnelle',
+    overallLabel: 'Efficacité personnelle globale',
+    copingLabel: 'Face aux difficultés',
+    goalLabel: 'Pour atteindre ses objectifs',
+    outOf: '/ 5.0',
+    tipsLabel: 'Piste de progrès',
+    note: 'Ce test reprend les notions de l’échelle d’auto-efficacité générale (GSE) de Schwarzer et Jerusalem, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de autoeficacia',
+    subtitle: '¿Cuánto confío en que puedo?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi puntuación de autoeficacia',
+    yourScore: 'Tu puntuación de autoeficacia',
+    overallLabel: 'Autoeficacia global',
+    copingLabel: 'Ante las dificultades',
+    goalLabel: 'Para alcanzar metas',
+    outOf: '/ 5.0',
+    tipsLabel: 'Para crecer',
+    note: 'Este test recoge las ideas de la escala de autoeficacia general (GSE) de Schwarzer y Jerusalem, para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<EfficacyLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<EfficacyLevel, Record<SupportedLang, LevelData>> = {
         '自分に似た人の成功事例を見て「自分にも可能」を育てましょう。',
       ],
     },
+    zh: {
+      icon: '🌱',
+      title: '效能感形成中',
+      description: '对自己能力的信任还在长。把小小的成功经验攒起来，效能感就会结实。',
+      tips: [
+        '把目标定得很小，多攒几次「我做到了」的经验。',
+        '每天记下一件做得好的事，给自己留证据。',
+        '看看跟你处境相近的人怎么做成的，把「我也行」养起来。',
+      ],
+    },
+    fr: {
+      icon: '🌱',
+      title: 'Confiance en construction',
+      description: 'La croyance en vos capacités est encore en train de pousser. Elle se solidifie à mesure que s’accumulent de petites réussites.',
+      tips: [
+        'Fixez de tout petits objectifs et accumulez l’expérience du « j’y suis arrivé ».',
+        'Notez chaque jour une chose réussie : cela fait des preuves.',
+        'Regardez comment des personnes proches de votre situation ont réussi, pour nourrir le « moi aussi je peux ».',
+      ],
+    },
+    es: {
+      icon: '🌱',
+      title: 'Confianza en construcción',
+      description: 'La creencia en tus capacidades aún está creciendo. Se afianza según se acumulan pequeños logros.',
+      tips: [
+        'Ponte metas muy pequeñas y acumula la experiencia de «lo he conseguido».',
+        'Anota cada día algo que salió bien: eso genera pruebas.',
+        'Mira cómo lo han conseguido personas en una situación parecida, para alimentar el «yo también puedo».',
+      ],
+    },
   },
   moderate: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<EfficacyLevel, Record<SupportedLang, LevelData>> = {
         '成功の原因を「運」ではなく「自分の努力」と解釈しましょう。',
         '挑戦の難易度を少しずつ上げて効力感の幅を広げましょう。',
         '失敗を能力不足ではなく戦略の問題として捉え直しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌿',
+      title: '稳定效能型',
+      description: '你大体上信任自己的能力，但遇到难处时也会晃。把效能感再做实一点，还有空间。',
+      tips: [
+        '把成功的原因解释成「我的努力」，而不是「运气」。',
+        '把挑战的难度一点点往上加，把效能感的范围撑开。',
+        '把失败重新看成策略问题，而不是能力不足。',
+      ],
+    },
+    fr: {
+      icon: '🌿',
+      title: 'Confiance stable',
+      description: 'Vous faites globalement confiance à vos capacités, mais la difficulté vous fait parfois vaciller. Il reste de la marge pour consolider.',
+      tips: [
+        'Attribuez vos réussites à votre travail plutôt qu’à la chance.',
+        'Augmentez peu à peu le niveau de difficulté pour élargir votre confiance.',
+        'Relisez l’échec comme un problème de stratégie, non comme un manque de capacité.',
+      ],
+    },
+    es: {
+      icon: '🌿',
+      title: 'Confianza estable',
+      description: 'En general confías en tus capacidades, pero la dificultad a veces te hace dudar. Queda margen para consolidarla.',
+      tips: [
+        'Atribuye tus logros a tu esfuerzo antes que a la suerte.',
+        'Sube poco a poco el nivel de dificultad para ensanchar la confianza.',
+        'Relee el fallo como un problema de estrategia, no como falta de capacidad.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<EfficacyLevel, Record<SupportedLang, LevelData>> = {
         '周囲の効力感を育てるメンター役を担ってみましょう。',
       ],
     },
+    zh: {
+      icon: '🌳',
+      title: '强效能型',
+      description: '你对自己的能力很有信心。遇到难处也能抱着「总找得到办法」的态度闯过去。',
+      tips: [
+        '用这份效能感去设更有意义的挑战。',
+        '别让效能感滑成自满，保持对回馈的开放。',
+        '当那个帮别人长出效能感的人。',
+      ],
+    },
+    fr: {
+      icon: '🌳',
+      title: 'Confiance forte',
+      description: 'Vous croyez fortement en vos capacités. Devant l’obstacle, votre posture est « je trouverai un moyen », et vous traversez bien les difficultés.',
+      tips: [
+        'Mettez cette confiance au service de défis qui ont du sens.',
+        'Veillez à ce qu’elle ne glisse pas vers la suffisance : restez ouvert aux retours.',
+        'Jouez le rôle de mentor qui fait grandir la confiance des autres.',
+      ],
+    },
+    es: {
+      icon: '🌳',
+      title: 'Confianza fuerte',
+      description: 'Crees firmemente en tus capacidades. Ante el obstáculo tu postura es «ya encontraré la forma», y atraviesas bien las dificultades.',
+      tips: [
+        'Pon esa confianza al servicio de retos con sentido.',
+        'Cuida que no derive en suficiencia: mantente abierto a que te digan las cosas.',
+        'Haz de mentor que hace crecer la confianza de otros.',
+      ],
+    },
   },
   high: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<EfficacyLevel, Record<SupportedLang, LevelData>> = {
         '大きな目標・長期ビジョンにこの強みを投資しましょう。',
         '高い効力感がリスクの過小評価につながらないか点検しましょう。',
         '経験を文章やメンタリングで分かち合い影響力を広げましょう。',
+      ],
+    },
+    zh: {
+      icon: '🏔️',
+      title: '顶级效能型',
+      description: '你的自我效能非常高。在不确定和压力之下，也信得过自己并把能力使出来。',
+      tips: [
+        '把这份强项投到大目标和长期愿景上。',
+        '检查一下，高效能有没有让你低估了风险。',
+        '把经验写下来或带人，把影响力扩出去。',
+      ],
+    },
+    fr: {
+      icon: '🏔️',
+      title: 'Confiance très élevée',
+      description: 'Votre sentiment d’efficacité est très fort. Dans l’incertitude et sous pression, vous vous faites confiance et vous déployez vos capacités.',
+      tips: [
+        'Investissez cette force dans de grands objectifs et une vision de long terme.',
+        'Vérifiez qu’une confiance élevée ne vous fait pas sous-estimer les risques.',
+        'Partagez votre expérience par l’écrit ou le mentorat pour élargir votre influence.',
+      ],
+    },
+    es: {
+      icon: '🏔️',
+      title: 'Confianza muy alta',
+      description: 'Tu sentido de eficacia es muy fuerte. En la incertidumbre y bajo presión confías en ti y despliegas lo que tienes.',
+      tips: [
+        'Invierte esa fuerza en metas grandes y una visión de largo plazo.',
+        'Revisa que la confianza alta no te haga subestimar los riesgos.',
+        'Comparte tu experiencia por escrito o como mentor para ampliar tu influencia.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'g5', subscale: 'goal', reverse: false, text: '人生の重要なことを自分でコントロールできると感じる' },
     { id: 'g6', subscale: 'goal', reverse: false, text: '挑戦的な目標ほどむしろ動機が湧く' },
     { id: 'g7', subscale: 'goal', reverse: false, text: 'やろうと決めればたいてい成し遂げられる' },
+  ],
+  zh: [
+    { id: 'c1', subscale: 'coping', reverse: false, text: '我相信只要肯下功夫，难的问题也能解开' },
+    { id: 'c2', subscale: 'coping', reverse: false, text: '就算冒出没想到的状况，我也应付得来' },
+    { id: 'c3', subscale: 'coping', reverse: false, text: '出问题时，我能想出好几种解法' },
+    { id: 'c4', subscale: 'coping', reverse: false, text: '难处来了，我也能保持冷静' },
+    { id: 'c5', subscale: 'coping', reverse: false, text: '没做过的事，我也能学会并做好' },
+    { id: 'c6', subscale: 'coping', reverse: false, text: '就算有阻碍，我有把握找到办法' },
+    { id: 'c7', subscale: 'coping', reverse: false, text: '压力很大的场合，我也能把能力使出来' },
+    { id: 'g1', subscale: 'goal', reverse: false, text: '定下目标后，我大体上都能达成' },
+    { id: 'g2', subscale: 'goal', reverse: false, text: '计划好的事，我会做到最后' },
+    { id: 'g3', subscale: 'goal', reverse: false, text: '我相信付出多少，结果就会跟上' },
+    { id: 'g4', subscale: 'goal', reverse: false, text: '失败了，我也有再试一次的底气' },
+    { id: 'g5', subscale: 'goal', reverse: false, text: '我觉得自己能掌控生活里重要的事' },
+    { id: 'g6', subscale: 'goal', reverse: false, text: '越有挑战的目标，反而越能激起我的劲' },
+    { id: 'g7', subscale: 'goal', reverse: false, text: '只要下定决心，大多数事我都做得到' },
+  ],
+  fr: [
+    { id: 'c1', subscale: 'coping', reverse: false, text: 'Je crois qu’avec des efforts, même un problème difficile se résout' },
+    { id: 'c2', subscale: 'coping', reverse: false, text: 'Même si l’imprévu arrive, je sais y faire face' },
+    { id: 'c3', subscale: 'coping', reverse: false, text: 'Quand un problème surgit, je trouve plusieurs solutions' },
+    { id: 'c4', subscale: 'coping', reverse: false, text: 'Même dans la difficulté, je garde mon calme' },
+    { id: 'c5', subscale: 'coping', reverse: false, text: 'Même ce que je n’ai jamais fait, je peux l’apprendre et le réussir' },
+    { id: 'c6', subscale: 'coping', reverse: false, text: 'Même avec des obstacles, je suis sûr de trouver un moyen' },
+    { id: 'c7', subscale: 'coping', reverse: false, text: 'Sous forte pression, je sais déployer mes capacités' },
+    { id: 'g1', subscale: 'goal', reverse: false, text: 'Quand je me fixe un objectif, je l’atteins en général' },
+    { id: 'g2', subscale: 'goal', reverse: false, text: 'Ce que j’ai planifié, je le mène jusqu’au bout' },
+    { id: 'g3', subscale: 'goal', reverse: false, text: 'Je crois que le résultat suit l’effort fourni' },
+    { id: 'g4', subscale: 'goal', reverse: false, text: 'Même après un échec, j’ai de quoi réessayer' },
+    { id: 'g5', subscale: 'goal', reverse: false, text: 'J’ai le sentiment de maîtriser ce qui compte dans ma vie' },
+    { id: 'g6', subscale: 'goal', reverse: false, text: 'Plus l’objectif est exigeant, plus cela me motive' },
+    { id: 'g7', subscale: 'goal', reverse: false, text: 'Quand je décide vraiment, je peux faire la plupart des choses' },
+  ],
+  es: [
+    { id: 'c1', subscale: 'coping', reverse: false, text: 'Creo que con esfuerzo hasta un problema difícil se resuelve' },
+    { id: 'c2', subscale: 'coping', reverse: false, text: 'Aunque llegue lo imprevisto, sé manejarlo' },
+    { id: 'c3', subscale: 'coping', reverse: false, text: 'Cuando surge un problema, doy con varias salidas' },
+    { id: 'c4', subscale: 'coping', reverse: false, text: 'Aun en la dificultad, mantengo la calma' },
+    { id: 'c5', subscale: 'coping', reverse: false, text: 'Aunque no lo haya hecho nunca, puedo aprenderlo y hacerlo bien' },
+    { id: 'c6', subscale: 'coping', reverse: false, text: 'Aunque haya obstáculos, confío en encontrar el modo' },
+    { id: 'c7', subscale: 'coping', reverse: false, text: 'Bajo mucha presión, sé sacar lo que tengo' },
+    { id: 'g1', subscale: 'goal', reverse: false, text: 'Cuando me pongo una meta, suelo alcanzarla' },
+    { id: 'g2', subscale: 'goal', reverse: false, text: 'Lo que planeo, lo llevo hasta el final' },
+    { id: 'g3', subscale: 'goal', reverse: false, text: 'Creo que el resultado acompaña al esfuerzo' },
+    { id: 'g4', subscale: 'goal', reverse: false, text: 'Aunque falle, tengo con qué volver a intentarlo' },
+    { id: 'g5', subscale: 'goal', reverse: false, text: 'Siento que manejo lo importante de mi vida' },
+    { id: 'g6', subscale: 'goal', reverse: false, text: 'Cuanto más exigente es la meta, más me motiva' },
+    { id: 'g7', subscale: 'goal', reverse: false, text: 'Cuando me decido de verdad, puedo con casi todo' },
   ],
 }
 

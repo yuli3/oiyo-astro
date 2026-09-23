@@ -3,12 +3,12 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type GritLevel = 'starter' | 'growing' | 'mature' | 'expert'
 type Subscale = 'perseverance' | 'consistency'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -82,6 +82,57 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはアンジェラ・ダックワースのグリット理論にインスパイアされています。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '毅力（Grit）量表测验',
+    subtitle: '我的热情和耐性有几分？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的毅力分数是',
+    yourScore: '我的毅力分数',
+    gritScore: '综合毅力分数',
+    perseveranceLabel: '努力的持续性',
+    consistencyLabel: '兴趣的一致性',
+    outOf: '/ 5.0',
+    levelLabel: '毅力阶段',
+    tipsLabel: '成长建议',
+    note: '本测验受 Angela Duckworth 的毅力理论启发，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test de l’échelle de grit',
+    subtitle: 'Combien vaut ma passion doublée de ténacité ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon score de grit',
+    yourScore: 'Votre score de grit',
+    gritScore: 'Score de grit global',
+    perseveranceLabel: 'Constance de l’effort',
+    consistencyLabel: 'Constance des intérêts',
+    outOf: '/ 5.0',
+    levelLabel: 'Étape de grit',
+    tipsLabel: 'Piste de progrès',
+    note: 'Ce test s’inspire des travaux d’Angela Duckworth sur le grit. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de la escala de grit',
+    subtitle: '¿Cuánta pasión con constancia tengo?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi puntuación de grit',
+    yourScore: 'Tu puntuación de grit',
+    gritScore: 'Puntuación global de grit',
+    perseveranceLabel: 'Constancia del esfuerzo',
+    consistencyLabel: 'Constancia de los intereses',
+    outOf: '/ 5.0',
+    levelLabel: 'Etapa de grit',
+    tipsLabel: 'Para crecer',
+    note: 'Este test se inspira en el trabajo de Angela Duckworth sobre el grit. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<GritLevel, Record<SupportedLang, LevelData>> = {
@@ -116,6 +167,36 @@ const LEVEL_DATA: Record<GritLevel, Record<SupportedLang, LevelData>> = {
         '短期達成を記録して成長の証を作りましょう。',
       ],
     },
+    zh: {
+      icon: '🌱',
+      title: '入门阶段',
+      description: '毅力这块肌肉还有很大的成长空间。追长期目标、跨过难处的经验还在累积。',
+      tips: [
+        '先从小目标开始，攒「做完了」的经验。',
+        '用「再五分钟」的规则，练习顶过想放弃的那一下。',
+        '把短期的成果记下来，给成长留证据。',
+      ],
+    },
+    fr: {
+      icon: '🌱',
+      title: 'Débutant',
+      description: 'Le muscle du grit a beaucoup de marge. L’expérience de poursuivre un objectif long et de franchir les difficultés est encore en train de s’accumuler.',
+      tips: [
+        'Commencez par de petits objectifs et accumulez l’expérience d’aller au bout.',
+        'Utilisez la règle des « cinq minutes de plus » pour passer l’envie d’abandonner.',
+        'Notez vos réussites à court terme : ce sont des preuves de progression.',
+      ],
+    },
+    es: {
+      icon: '🌱',
+      title: 'Principiante',
+      description: 'Al músculo del grit le queda mucho recorrido. La experiencia de perseguir metas largas y cruzar dificultades todavía se está acumulando.',
+      tips: [
+        'Empieza por metas pequeñas y acumula la experiencia de llegar al final.',
+        'Usa la regla de «cinco minutos más» para pasar las ganas de abandonar.',
+        'Anota los logros a corto plazo: son pruebas de que avanzas.',
+      ],
+    },
   },
   growing: {
     ko: {
@@ -146,6 +227,36 @@ const LEVEL_DATA: Record<GritLevel, Record<SupportedLang, LevelData>> = {
         '興味が薄れる時を記録してパターンを把握しましょう。',
         '困難な瞬間を成長の証として捉え直す練習をしましょう。',
         'グリットの強いロールモデルを見つけて彼らの物語を読みましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌿',
+      title: '成长阶段',
+      description: '你的持续努力和兴趣正在长出来。毅力的底子在形成，还有变强的空间。',
+      tips: [
+        '把兴趣退潮的时刻记下来，摸清自己的规律。',
+        '练习把难的时刻重新读成成长的证据。',
+        '找几个毅力强的人，读读他们的故事。',
+      ],
+    },
+    fr: {
+      icon: '🌿',
+      title: 'En croissance',
+      description: 'Votre constance dans l’effort et dans l’intérêt se développe. Les bases du grit se posent, et le potentiel de renforcement est là.',
+      tips: [
+        'Notez les moments où l’intérêt retombe, pour repérer votre schéma.',
+        'Entraînez-vous à relire les passages difficiles comme des preuves de progression.',
+        'Cherchez des modèles tenaces et lisez leur parcours.',
+      ],
+    },
+    es: {
+      icon: '🌿',
+      title: 'En crecimiento',
+      description: 'Tu constancia en el esfuerzo y en el interés está creciendo. La base del grit se está formando y hay potencial para reforzarla.',
+      tips: [
+        'Anota los momentos en que el interés decae, para ver tu patrón.',
+        'Practica releer los tramos difíciles como pruebas de que creces.',
+        'Busca referentes tenaces y lee sus trayectorias.',
       ],
     },
   },
@@ -180,6 +291,36 @@ const LEVEL_DATA: Record<GritLevel, Record<SupportedLang, LevelData>> = {
         '目標の「なぜ」をより深く探求して内発的動機を強化しましょう。',
       ],
     },
+    zh: {
+      icon: '🌲',
+      title: '成熟阶段',
+      description: '你靠强毅力跨过挑战。对长期目标的投入和扛过逆境的能力都发展得不错。',
+      tips: [
+        '用更难的挑战把毅力这块肌肉练得更强。',
+        '在身边的人面前把毅力做出来给他们看。',
+        '把目标的「为什么」挖得更深，内在动力会更稳。',
+      ],
+    },
+    fr: {
+      icon: '🌲',
+      title: 'Mature',
+      description: 'Votre grit vous fait franchir les obstacles. L’engagement dans des objectifs longs et la capacité à traverser l’adversité sont bien développés.',
+      tips: [
+        'Renforcez ce muscle avec des défis plus exigeants.',
+        'Incarnez cette ténacité devant votre entourage.',
+        'Creusez le « pourquoi » de vos objectifs : la motivation intérieure s’en trouve renforcée.',
+      ],
+    },
+    es: {
+      icon: '🌲',
+      title: 'Maduro',
+      description: 'Tu grit te hace cruzar los obstáculos. El compromiso con metas largas y la capacidad de atravesar la adversidad están bien desarrollados.',
+      tips: [
+        'Refuerza ese músculo con retos más exigentes.',
+        'Encárnalo delante de quienes te rodean.',
+        'Escarba en el «porqué» de tus metas: la motivación interna se afianza.',
+      ],
+    },
   },
   expert: {
     ko: {
@@ -210,6 +351,36 @@ const LEVEL_DATA: Record<GritLevel, Record<SupportedLang, LevelData>> = {
         'あなたのグリットは周りの人々へのインスピレーションです。',
         'この強みでさらに大きな目標を設定してみましょう。',
         'グリットを発揮した経験を文章やメンタリングで分かち合いましょう。',
+      ],
+    },
+    zh: {
+      icon: '🏔️',
+      title: '精通阶段',
+      description: '你的毅力在顶端。你的热情和耐性会让身边的人受到鼓舞。',
+      tips: [
+        '你的毅力对身边的人是一种鼓舞。',
+        '用这份强项去设更大的目标。',
+        '把发挥毅力的经验写下来，或带带别人。',
+      ],
+    },
+    fr: {
+      icon: '🏔️',
+      title: 'Expert',
+      description: 'Votre grit est au plus haut. Votre passion et votre ténacité inspirent votre entourage.',
+      tips: [
+        'Votre ténacité inspire ceux qui vous entourent.',
+        'Servez-vous de cette force pour viser plus grand.',
+        'Partagez cette expérience par l’écrit ou le mentorat.',
+      ],
+    },
+    es: {
+      icon: '🏔️',
+      title: 'Experto',
+      description: 'Tu grit está en lo más alto. Tu pasión y tu constancia inspiran a quienes te rodean.',
+      tips: [
+        'Tu constancia inspira a los que tienes cerca.',
+        'Usa esa fuerza para ponerte metas más grandes.',
+        'Comparte esa experiencia por escrito o como mentor.',
       ],
     },
   },
@@ -257,6 +428,48 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'c4', subscale: 'consistency', reverse: false, text: '1年以上同じ目標に向けて継続的に努力した経験がある' },
     { id: 'c5', subscale: 'consistency', reverse: true, text: '数ヶ月頑張ってもすぐに興味が薄れることが多い' },
     { id: 'c6', subscale: 'consistency', reverse: false, text: '人生に重要な長期目標があり、それに向かって進んでいる' },
+  ],
+  zh: [
+    { id: 'p1', subscale: 'perseverance', reverse: false, text: '开了头的事，就算难，我也会做完' },
+    { id: 'p2', subscale: 'perseverance', reverse: false, text: '就算有阻碍，我也不放弃，继续使劲' },
+    { id: 'p3', subscale: 'perseverance', reverse: false, text: '为了达成目标，我肯下功夫' },
+    { id: 'p4', subscale: 'perseverance', reverse: true, text: '一失败，我就容易泄气' },
+    { id: 'p5', subscale: 'perseverance', reverse: true, text: '事情一变难，我就想撒手' },
+    { id: 'p6', subscale: 'perseverance', reverse: false, text: '我相信只要持续努力，什么目标都到得了' },
+    { id: 'c1', subscale: 'consistency', reverse: false, text: '我能长时间盯着同一个目标或兴趣' },
+    { id: 'c2', subscale: 'consistency', reverse: true, text: '对新点子或新项目，我很快就失去兴趣' },
+    { id: 'c3', subscale: 'consistency', reverse: true, text: '我追的东西常常在换' },
+    { id: 'c4', subscale: 'consistency', reverse: false, text: '我有过一年以上朝同一个目标持续努力的经历' },
+    { id: 'c5', subscale: 'consistency', reverse: true, text: '认真几个月后，兴趣很快就没了，这种情况不少' },
+    { id: 'c6', subscale: 'consistency', reverse: false, text: '我的生活里有重要的长期目标，我正朝它走' },
+  ],
+  fr: [
+    { id: 'p1', subscale: 'perseverance', reverse: false, text: 'Ce que j’ai commencé, je le termine, même quand c’est difficile' },
+    { id: 'p2', subscale: 'perseverance', reverse: false, text: 'Même face aux obstacles, je ne lâche pas et je continue' },
+    { id: 'p3', subscale: 'perseverance', reverse: false, text: 'Je travaille dur pour atteindre mon objectif' },
+    { id: 'p4', subscale: 'perseverance', reverse: true, text: 'Après un échec, je perds facilement ma détermination' },
+    { id: 'p5', subscale: 'perseverance', reverse: true, text: 'Dès que ça devient dur, j’ai envie d’arrêter' },
+    { id: 'p6', subscale: 'perseverance', reverse: false, text: 'Je crois qu’avec de la constance, on atteint n’importe quel objectif' },
+    { id: 'c1', subscale: 'consistency', reverse: false, text: 'Je peux rester longtemps concentré sur le même objectif ou intérêt' },
+    { id: 'c2', subscale: 'consistency', reverse: true, text: 'Je me lasse vite d’une idée ou d’un projet nouveau' },
+    { id: 'c3', subscale: 'consistency', reverse: true, text: 'Ce que je poursuis change souvent' },
+    { id: 'c4', subscale: 'consistency', reverse: false, text: 'J’ai déjà travaillé plus d’un an vers le même objectif' },
+    { id: 'c5', subscale: 'consistency', reverse: true, text: 'Il m’arrive souvent de m’investir quelques mois puis de perdre l’intérêt' },
+    { id: 'c6', subscale: 'consistency', reverse: false, text: 'J’ai un objectif important à long terme et j’avance vers lui' },
+  ],
+  es: [
+    { id: 'p1', subscale: 'perseverance', reverse: false, text: 'Lo que empiezo lo termino, aunque cueste' },
+    { id: 'p2', subscale: 'perseverance', reverse: false, text: 'Aunque haya obstáculos, no lo dejo y sigo' },
+    { id: 'p3', subscale: 'perseverance', reverse: false, text: 'Trabajo duro para alcanzar la meta' },
+    { id: 'p4', subscale: 'perseverance', reverse: true, text: 'Si fallo, pierdo la determinación con facilidad' },
+    { id: 'p5', subscale: 'perseverance', reverse: true, text: 'En cuanto se pone difícil, me dan ganas de dejarlo' },
+    { id: 'p6', subscale: 'perseverance', reverse: false, text: 'Creo que con constancia se alcanza cualquier meta' },
+    { id: 'c1', subscale: 'consistency', reverse: false, text: 'Puedo mantenerme mucho tiempo en la misma meta o interés' },
+    { id: 'c2', subscale: 'consistency', reverse: true, text: 'Pierdo pronto el interés por una idea o proyecto nuevo' },
+    { id: 'c3', subscale: 'consistency', reverse: true, text: 'Lo que persigo cambia a menudo' },
+    { id: 'c4', subscale: 'consistency', reverse: false, text: 'He trabajado más de un año hacia la misma meta' },
+    { id: 'c5', subscale: 'consistency', reverse: true, text: 'A menudo me vuelco unos meses y luego se me va el interés' },
+    { id: 'c6', subscale: 'consistency', reverse: false, text: 'Tengo una meta importante a largo plazo y voy hacia ella' },
   ],
 }
 
