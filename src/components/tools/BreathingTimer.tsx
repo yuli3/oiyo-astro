@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import type { Locale } from '../../lib/i18n';
+import type { Locale } from '../../i18n';
 import {
   BREATHING_LOG_KEY,
   consecutiveStreak,

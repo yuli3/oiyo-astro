@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import type { Locale } from '../../lib/i18n'
+import type { Locale } from '../../i18n'
 
 /* ── Solar calculations from Globe Dashboard (MIT spirit) ──────
    Computes the subsolar point and related astronomical data

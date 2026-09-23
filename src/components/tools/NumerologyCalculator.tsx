@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { birthdayNumberOf, lifePathOf, personalYearOf } from "@/lib/symbolic-tradition/numerology";
-import type { Locale } from "../../lib/i18n";
+import type { Locale } from "../../i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 import { BirthDateField, ProfileNameField } from "../shared/BirthDateField";
 import AnimatedNumber from "../ui/AnimatedNumber";
@@ -217,29 +217,6 @@ const UI: Record<Locale, {
     personalYearNote: "El año personal sigue un ciclo de nueve años, así que este número cambia cada enero.",
     dateOnlyHint: "Camino de vida, número del día y año personal salen solo de la fecha; el nombre es opcional.",
   },
-  cn: {
-    title: "數字命理計算機",
-    subtitle: "透過生日和姓名計算生命數、表達數、靈魂數和個性數",
-    nameLabel: "英文全名",
-    namePlaceholder: "例: Wang Fang",
-    dateLabel: "出生日期",
-    calcBtn: "計算",
-    resetBtn: "重新計算",
-    lifePathLabel: "生命靈數",
-    expressionLabel: "表達數",
-    soulUrgeLabel: "靈魂衝動數",
-    personalityLabel: "個性數",
-    masterNote: "主數",
-    keywordsLabel: "關鍵詞",
-    meaningLabel: "含義",
-    challengeLabel: "挑戰",
-    giftLabel: "天賦",
-    latinRequired: "表達數、靈魂衝動數與個性數以拉丁字母計算。請以英文拼寫輸入姓名即可顯示。生命靈數僅依出生日期計算，仍會顯示於下方。",
-    birthdayLabel: "生日數（Birthday）",
-    personalYearLabel: "{year} 年的個人年",
-    personalYearNote: "個人年以九年為一個循環，跨年之後數字就會改變。",
-    dateOnlyHint: "生命數、生日數與個人年只需生日即可計算，姓名可留空。",
-  },
   zh: {
     title: "数字命理计算器",
     subtitle: "通过生日和姓名计算生命数、表达数、灵魂数和个性数",
@@ -283,7 +260,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["独立心", "リーダーシップ", "開拓精神", "自信"],
       fr: ["Indépendance", "Leadership", "Pionnier", "Confiance"],
       es: ["Independencia", "Liderazgo", "Pionero", "Confianza"],
-      cn: ["獨立", "領導力", "開拓精神", "自信"],
       zh: ["独立", "领导力", "开拓精神", "自信"],
     },
     meaning: {
@@ -292,7 +268,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは生まれながらのリーダーです。独創的なアイデアと強い意志で新しい道を切り開きます。",
       fr: "Vous êtes un leader né. Avec des idées originales et une forte volonté, vous tracez de nouveaux chemins.",
       es: "Eres un líder nato. Con ideas originales y fuerte voluntad, abres nuevos caminos.",
-      cn: "你是天生的領導者。以獨創的想法和強大的意志力開闢新道路。",
       zh: "你是天生的领导者。以独创的想法和强大的意志力开辟新道路。",
     },
     challenge: {
@@ -301,7 +276,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "独善と頑固さに注意し、他者の意見に耳を傾ける練習が必要です。",
       fr: "Méfiez-vous de l'entêtement ; pratiquez l'écoute des autres.",
       es: "Cuidado con la terquedad; practica escuchar a los demás.",
-      cn: "警惕固執自以為是，需要練習傾聽他人意見。",
       zh: "警惕固执自以为是，需要练习倾听他人意见。",
     },
     gift: {
@@ -310,7 +284,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "強い推進力と独創性で、誰も歩んでいない道を作り出します。",
       fr: "Force de caractère et originalité pour créer des voies inédites.",
       es: "Fuerte impulso y originalidad para crear caminos que nadie ha recorrido.",
-      cn: "強大的驅動力和獨創性讓你能走出前人未走過的路。",
       zh: "强大的驱动力和独创性让你能走出前人未走过的路。",
     },
   },
@@ -322,7 +295,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["協力", "バランス", "感受性", "外交的"],
       fr: ["Coopération", "Équilibre", "Sensibilité", "Diplomatique"],
       es: ["Cooperación", "Equilibrio", "Sensibilidad", "Diplomático"],
-      cn: ["合作", "平衡", "感受性", "外交手腕"],
       zh: ["合作", "平衡", "感受性", "外交手腕"],
     },
     meaning: {
@@ -331,7 +303,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは優れた調停者でありパートナーです。関係の調和を求め、繊細な感受性で周囲を和ませます。",
       fr: "Vous êtes un excellent médiateur et partenaire. Vous recherchez l'harmonie et mettez les autres à l'aise.",
       es: "Eres un excelente mediador y compañero. Buscas la armonía y pones a los demás a gusto.",
-      cn: "你是出色的調解者和夥伴。追求關係中的和諧，用細膩的感受力讓周圍的人感到輕鬆。",
       zh: "你是出色的调解者和伙伴。追求关系中的和谐，用细腻的感受力让周围的人感到轻松。",
     },
     challenge: {
@@ -340,7 +311,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "過度な依存と優柔不断を克服し、自分の声を出す勇気が必要です。",
       fr: "Surmontez dépendance excessive et indécision; osez exprimer votre vérité.",
       es: "Supera la dependencia excesiva e indecisión; encuentra el valor para expresar tu verdad.",
-      cn: "克服過度依賴和優柔寡斷，需要勇氣說出自己的想法。",
       zh: "克服过度依赖和优柔寡断，需要勇气说出自己的想法。",
     },
     gift: {
@@ -349,7 +319,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "他者の感情を深く理解する共感能力と、対立を調整する卓越した能力を持っています。",
       fr: "Empathie profonde et capacité exceptionnelle à résoudre les conflits.",
       es: "Profunda empatía y excepcional capacidad para mediar conflictos.",
-      cn: "深刻理解他人情感的同理心和化解衝突的卓越能力。",
       zh: "深刻理解他人情感的同理心和化解冲突的卓越能力。",
     },
   },
@@ -361,7 +330,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["創造性", "表現力", "社交性", "楽観主義"],
       fr: ["Créativité", "Expression", "Sociabilité", "Optimisme"],
       es: ["Creatividad", "Expresión", "Sociabilidad", "Optimismo"],
-      cn: ["創造力", "表達能力", "社交性", "樂觀主義"],
       zh: ["创造力", "表达能力", "社交性", "乐观主义"],
     },
     meaning: {
@@ -370,7 +338,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは輝く創造的な表現者です。芸術、文章、話し言葉で世界に喜びをもたらします。",
       fr: "Vous êtes un brillant expressif créatif. Vous apportez joie au monde par l'art et la communication.",
       es: "Eres un brillante expresor creativo. Llevas alegría al mundo a través del arte y la comunicación.",
-      cn: "你是閃耀的創意表達者。透過藝術、寫作和溝通為世界帶來快樂。",
       zh: "你是闪耀的创意表达者。通过艺术、写作和沟通为世界带来快乐。",
     },
     challenge: {
@@ -379,7 +346,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "エネルギーを分散させず、一つのことに集中する能力を育てる必要があります。",
       fr: "Développez la capacité de vous concentrer plutôt que de disperser votre énergie.",
       es: "Desarrolla la capacidad de concentrarte en una cosa en lugar de dispersar tu energía.",
-      cn: "需要培養專注於一件事的能力，而不是分散精力。",
       zh: "需要培养专注于一件事的能力，而不是分散精力。",
     },
     gift: {
@@ -388,7 +354,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "生まれながらのユーモアと創造力で、どこでも雰囲気を明るくするエネルギーを持っています。",
       fr: "Humour naturel et créativité qui illuminent n'importe quelle atmosphère.",
       es: "Humor natural y creatividad que iluminan cualquier ambiente.",
-      cn: "天生的幽默感和創造力，能在任何地方活躍氣氛。",
       zh: "天生的幽默感和创造力，能在任何地方活跃气氛。",
     },
   },
@@ -400,7 +365,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["安定", "実用性", "誠実さ", "体系的"],
       fr: ["Stabilité", "Praticité", "Diligence", "Systématique"],
       es: ["Estabilidad", "Practicidad", "Diligencia", "Sistemático"],
-      cn: ["穩定", "實用性", "勤勉", "系統性"],
       zh: ["稳定", "实用性", "勤勉", "系统性"],
     },
     meaning: {
@@ -409,7 +373,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは信頼できる建築家です。体系的で誠実な努力で確かな基盤を築いていきます。",
       fr: "Vous êtes un bâtisseur fiable. Par l'effort systématique et diligent, vous posez des bases solides.",
       es: "Eres un constructor confiable. Con esfuerzo sistemático y diligente, construyes una base sólida.",
-      cn: "你是值得信賴的建造者。透過系統性的努力奠定堅實基礎。",
       zh: "你是值得信赖的建造者。通过系统性的努力奠定坚实基础。",
     },
     challenge: {
@@ -418,7 +381,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "過度な硬直性と変化への抵抗を克服し、柔軟性を育てる必要があります。",
       fr: "Surmontez la rigidité excessive et la résistance au changement en cultivant la flexibilité.",
       es: "Supera la rigidez excesiva y la resistencia al cambio cultivando flexibilidad.",
-      cn: "需要克服過度刻板和對變化的抗拒，培養靈活性。",
       zh: "需要克服过度刻板和对变化的抗拒，培养灵活性。",
     },
     gift: {
@@ -427,7 +389,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "どんなプロジェクトも最後まで完成させる驚くべき忍耐力と実行力を持っています。",
       fr: "Persévérance remarquable pour mener n'importe quel projet à terme.",
       es: "Perseverancia y capacidad de ejecución para completar cualquier proyecto.",
-      cn: "無論什麼項目都能堅持到底完成的驚人耐力和執行力。",
       zh: "无论什么项目都能坚持到底完成的惊人耐力和执行力。",
     },
   },
@@ -439,7 +400,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["自由", "冒険", "変化", "適応力"],
       fr: ["Liberté", "Aventure", "Changement", "Adaptabilité"],
       es: ["Libertad", "Aventura", "Cambio", "Adaptabilidad"],
-      cn: ["自由", "冒險", "變化", "適應力"],
       zh: ["自由", "冒险", "变化", "适应力"],
     },
     meaning: {
@@ -448,7 +408,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは自由な冒険家です。変化を恐れず、様々な経験を通して人生を豊かにします。",
       fr: "Vous êtes un aventurier libre. Sans craindre le changement, vous enrichissez la vie d'expériences variées.",
       es: "Eres un aventurero libre. Sin miedo al cambio, enriqueces tu vida con experiencias variadas.",
-      cn: "你是自由奔放的冒險家。不懼變化，透過豐富的經歷豐富人生。",
       zh: "你是自由奔放的冒险家。不惧变化，通过丰富的经历丰富人生。",
     },
     challenge: {
@@ -457,7 +416,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "衝動的な決断と集中力不足を克服し、一つの方向に進む力を育てる必要があります。",
       fr: "Surmontez les décisions impulsives et le manque de concentration; bâtissez la force d'aller dans une direction.",
       es: "Supera decisiones impulsivas y falta de concentración; desarrolla la fuerza de ir en una dirección.",
-      cn: "需要克服衝動的決定和缺乏專注，培養朝一個方向前進的力量。",
       zh: "需要克服冲动的决定和缺乏专注，培养朝一个方向前进的力量。",
     },
     gift: {
@@ -466,7 +424,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "どんな状況でも素早く適応し、新たな可能性を見出す卓越した感覚を持っています。",
       fr: "Sens exceptionnel d'adaptation rapide et de découverte de nouvelles possibilités.",
       es: "Excepcional sentido de adaptación rápida y descubrimiento de nuevas posibilidades.",
-      cn: "在任何情況下都能快速適應並發現新可能性的卓越感知力。",
       zh: "在任何情况下都能快速适应并发现新可能性的卓越感知力。",
     },
   },
@@ -478,7 +435,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["家庭", "責任感", "奉仕", "愛"],
       fr: ["Foyer", "Responsabilité", "Service", "Amour"],
       es: ["Hogar", "Responsabilidad", "Servicio", "Amor"],
-      cn: ["家庭", "責任感", "服務", "愛"],
       zh: ["家庭", "责任感", "服务", "爱"],
     },
     meaning: {
@@ -487,7 +443,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは生まれながらの守護者であり癒し手です。家族とコミュニティに献身し、愛で世界を温かくします。",
       fr: "Vous êtes un protecteur et guérisseur né. Dévoué à la famille et la communauté, vous réchauffez le monde.",
       es: "Eres un protector y sanador nato. Dedicado a la familia y comunidad, haces el mundo más cálido.",
-      cn: "你是天生的保護者和治癒者。為家人和社區奉獻，以愛讓世界更溫暖。",
       zh: "你是天生的保护者和治愈者。为家人和社区奉献，以爱让世界更温暖。",
     },
     challenge: {
@@ -496,7 +451,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "自己犠牲的な奉仕から離れ、健全な境界を設定する方法を学ぶ必要があります。",
       fr: "Apprenez à poser des limites saines plutôt que de trop vous sacrifier.",
       es: "Aprende a establecer límites saludables en lugar de sacrificarte demasiado.",
-      cn: "需要學會設立健康的界限，而非過度犧牲自己去服務他人。",
       zh: "需要学会设立健康的界限，而非过度牺牲自己去服务他人。",
     },
     gift: {
@@ -505,7 +459,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "無条件の愛と深い癒しの能力で傷ついた魂を慰めます。",
       fr: "Amour inconditionnel et profonde capacité de guérison pour réconforter les âmes blessées.",
       es: "Amor incondicional y profunda capacidad curativa para consolar almas heridas.",
-      cn: "無條件的愛和深刻的治癒能力，能安慰受傷的靈魂。",
       zh: "无条件的爱和深刻的治愈能力，能安慰受伤的灵魂。",
     },
   },
@@ -517,7 +470,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["知恵", "分析", "霊性", "内向性"],
       fr: ["Sagesse", "Analyse", "Spiritualité", "Introspection"],
       es: ["Sabiduría", "Análisis", "Espiritualidad", "Introspección"],
-      cn: ["智慧", "分析", "靈性", "內省"],
       zh: ["智慧", "分析", "灵性", "内省"],
     },
     meaning: {
@@ -526,7 +478,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは真実を探求する哲学者です。深い思索と分析で人生の隠れた意味を探っていきます。",
       fr: "Vous êtes un philosophe en quête de vérité. La réflexion profonde vous guide vers les sens cachés.",
       es: "Eres un filósofo en busca de la verdad. La reflexión profunda te guía hacia los significados ocultos.",
-      cn: "你是探尋真理的哲學家。透過深刻的沉思和分析，尋找生命的隱藏意義。",
       zh: "你是探寻真理的哲学家。通过深刻的沉思和分析，寻找生命的隐藏意义。",
     },
     challenge: {
@@ -535,7 +486,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "孤立と不信を克服し、他者との真のつながりを恐れない勇気が必要です。",
       fr: "Surmontez l'isolement et la méfiance; trouvez le courage de vous connecter vraiment.",
       es: "Supera el aislamiento y la desconfianza; encuentra el valor de conectarte genuinamente.",
-      cn: "需要克服孤立和不信任，勇於與他人建立真正的連結。",
       zh: "需要克服孤立和不信任，勇于与他人建立真正的联结。",
     },
     gift: {
@@ -544,7 +494,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "他の人が見えないパターンを発見し、深い真実を見抜く卓越した直観力を持っています。",
       fr: "Intuition exceptionnelle pour découvrir des schémas que les autres manquent.",
       es: "Intuición excepcional para descubrir patrones que otros no ven.",
-      cn: "發現他人看不到的規律、洞察深層真理的卓越直覺力。",
       zh: "发现他人看不到的规律、洞察深层真理的卓越直觉力。",
     },
   },
@@ -556,7 +505,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["成功", "権力", "豊かさ", "野心"],
       fr: ["Succès", "Pouvoir", "Abondance", "Ambition"],
       es: ["Éxito", "Poder", "Abundancia", "Ambición"],
-      cn: ["成功", "權力", "豐盛", "野心"],
       zh: ["成功", "权力", "丰盛", "野心"],
     },
     meaning: {
@@ -565,7 +513,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは世界を動かす力を持つ人物です。強い野心と実行力で物質的・精神的成功を収めます。",
       fr: "Vous avez le pouvoir de changer le monde. Forte ambition et exécution mènent au succès.",
       es: "Tienes el poder de mover el mundo. Fuerte ambición y ejecución te llevan al éxito.",
-      cn: "你擁有影響世界的力量。強大的野心和執行力帶領你走向物質和精神上的成功。",
       zh: "你拥有影响世界的力量。强大的野心和执行力带领你走向物质和精神上的成功。",
     },
     challenge: {
@@ -574,7 +521,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "権力と物質への執着を手放し、より大きな善のために使う知恵が必要です。",
       fr: "Sagesse pour utiliser pouvoir et succès pour le bien commun plutôt que de s'y accrocher.",
       es: "Sabiduría para usar el poder y el éxito para el bien mayor en lugar de aferrarte a ellos.",
-      cn: "需要智慧地使用權力和物質成功，為更大的善服務，而非執著於此。",
       zh: "需要智慧地使用权力和物质成功，为更大的善服务，而非执着于此。",
     },
     gift: {
@@ -583,7 +529,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "どんな分野でも最高の地位に上れる卓越した戦略的思考と実行能力を持っています。",
       fr: "Pensée stratégique et exécution exceptionnelles pour atteindre le sommet.",
       es: "Pensamiento estratégico y ejecución excepcionales para llegar a la cima.",
-      cn: "在任何領域都能登頂的卓越戰略思維和執行能力。",
       zh: "在任何领域都能登顶的卓越战略思维和执行能力。",
     },
   },
@@ -595,7 +540,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["人道主義", "完成", "知恵", "慈悲"],
       fr: ["Humanitarisme", "Achèvement", "Sagesse", "Compassion"],
       es: ["Humanitarismo", "Completitud", "Sabiduría", "Compasión"],
-      cn: ["人道主義", "完成", "智慧", "慈悲"],
       zh: ["人道主义", "完成", "智慧", "慈悲"],
     },
     meaning: {
@@ -604,7 +548,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたは人類を包む広い心の持ち主です。深い知恵と深い慈悲で世界に奉仕する使命を持っています。",
       fr: "Vous avez un cœur qui embrasse l'humanité. Sagesse ancienne et compassion profonde vous appellent à servir.",
       es: "Tienes un corazón que abraza a toda la humanidad. Sabiduría antigua y compasión profunda te llaman a servir.",
-      cn: "你有一顆包容全人類的廣闊心靈。以深邃的智慧和慈悲，承擔服務世界的使命。",
       zh: "你有一颗包容全人类的广阔心灵。以深邃的智慧和慈悲，承担服务世界的使命。",
     },
     challenge: {
@@ -613,7 +556,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "過去への執着と感情的な傷を手放し、前に進む勇気が必要です。",
       fr: "Lâchez les attachements du passé et les blessures émotionnelles pour avancer.",
       es: "Suelta el apego al pasado y las heridas emocionales; encuentra valor para avanzar.",
-      cn: "需要放下對過去的執著和情感創傷，勇於前行。",
       zh: "需要放下对过去的执着和情感创伤，勇于前行。",
     },
     gift: {
@@ -622,7 +564,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "人生のすべての経験を統合し、他者の道を照らす知恵の灯台となります。",
       fr: "Intégrer toutes les expériences de vie pour devenir un phare de sagesse.",
       es: "Integrar todas las experiencias de vida para convertirse en un faro de sabiduría.",
-      cn: "整合所有人生經驗，成為照亮他人道路的智慧燈塔。",
       zh: "整合所有人生经验，成为照亮他人道路的智慧灯塔。",
     },
   },
@@ -634,7 +575,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["インスピレーション", "直感", "理想主義", "霊性"],
       fr: ["Inspiration", "Intuition", "Idéalisme", "Spiritualité"],
       es: ["Inspiración", "Intuición", "Idealismo", "Espiritualidad"],
-      cn: ["靈感", "直覺", "理想主義", "靈性"],
       zh: ["灵感", "直觉", "理想主义", "灵性"],
     },
     meaning: {
@@ -643,7 +583,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたはマスターナンバー11を持つ、生まれながらのインスピレーションのチャンネルです。高い直感力と霊的洞察で人類に光をもたらします。",
       fr: "Vous portez le Nombre Maître 11 — un canal d'inspiration naturel. Votre haute intuition apporte lumière à l'humanité.",
       es: "Llevas el Número Maestro 11 — canal natural de inspiración. Tu alta intuición trae luz a la humanidad.",
-      cn: "你擁有主數11——天生的靈感傳遞渠道。高度直覺和靈性洞察為人類帶來光明。",
       zh: "你拥有主数11——天生的灵感传递渠道。高度直觉和灵性洞察为人类带来光明。",
     },
     challenge: {
@@ -652,7 +591,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "極度の感受性と内面の葛藤をコントロールし、高い理想を現実に接地させる能力が必要です。",
       fr: "Gérer l'hypersensibilité et les conflits intérieurs; ancrer les idéaux élevés dans la réalité.",
       es: "Manejar la extrema sensibilidad y conflictos internos; aterrizar los altos ideales en la realidad.",
-      cn: "需要管理極度敏感和內心衝突，將崇高理想落實於現實。",
       zh: "需要管理极度敏感和内心冲突，将崇高理想落实于现实。",
     },
     gift: {
@@ -661,7 +599,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "強い直感とインスピレーションで多くの人の人生に影響を与える先見的な能力を持っています。",
       fr: "Capacité prophétique d'influencer de nombreuses vies par l'intuition et l'inspiration.",
       es: "Capacidad profética de influir en muchas vidas a través de la intuición e inspiración.",
-      cn: "以強烈的直覺和靈感影響眾多人生的先知般的能力。",
       zh: "以强烈的直觉和灵感影响众多人生的先知般的能力。",
     },
   },
@@ -673,7 +610,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["マスタービルダー", "実践的理想主義", "大きなビジョン", "変革"],
       fr: ["Maître Bâtisseur", "Idéalisme pratique", "Grande vision", "Transformation"],
       es: ["Maestro Constructor", "Idealismo práctico", "Gran visión", "Transformación"],
-      cn: ["大師建築者", "實用理想主義", "宏大願景", "變革"],
       zh: ["大师建筑者", "实用理想主义", "宏大愿景", "变革"],
     },
     meaning: {
@@ -682,7 +618,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたはマスターナンバー22、マスタービルダーです。壮大なビジョンを現実に具現化する卓越した能力で世界を変えます。",
       fr: "Vous portez le Nombre Maître 22 — le Maître Bâtisseur. Vous transformez le monde en manifestant de grandes visions.",
       es: "Llevas el Número Maestro 22 — el Maestro Constructor. Transformas el mundo materializando grandes visiones.",
-      cn: "你擁有主數22——大師建築者。將宏大願景化為現實的卓越能力改變著世界。",
       zh: "你拥有主数22——大师建筑者。将宏大愿景化为现实的卓越能力改变着世界。",
     },
     challenge: {
@@ -691,7 +626,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "巨大な可能性に押し潰されず、一歩一歩現実的な計画で実現するバランス感覚が必要です。",
       fr: "Équilibre nécessaire pour ne pas être écrasé par un potentiel immense — réalisez-le pas à pas.",
       es: "Equilibrio para no ser abrumado por el vasto potencial — realizarlo paso a paso.",
-      cn: "需要平衡感，不被巨大潛力壓倒，而是一步一步用實際計劃去實現。",
       zh: "需要平衡感，不被巨大潜力压倒，而是一步一步用实际计划去实现。",
     },
     gift: {
@@ -700,7 +634,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "人類の歴史に貢献する不朽の作品を残せるマスタービルダーの能力を持って生まれました。",
       fr: "Don du Maître Bâtisseur pour laisser des œuvres immortelles qui contribuent à l'histoire humaine.",
       es: "Don del Maestro Constructor para dejar obras inmortales que contribuyan a la historia humana.",
-      cn: "天生具備大師建築者的能力，能留下對人類歷史有貢獻的不朽作品。",
       zh: "天生具备大师建筑者的能力，能留下对人类历史有贡献的不朽作品。",
     },
   },
@@ -712,7 +645,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: ["マスターティーチャー", "無条件の愛", "犠牲", "癒し"],
       fr: ["Maître Enseignant", "Amour inconditionnel", "Sacrifice", "Guérison"],
       es: ["Maestro Instructor", "Amor incondicional", "Sacrificio", "Sanación"],
-      cn: ["大師教師", "無條件的愛", "犧牲", "治癒"],
       zh: ["大师教师", "无条件的爱", "牺牲", "治愈"],
     },
     meaning: {
@@ -721,7 +653,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "あなたはマスターナンバー33、マスターティーチャーです。無条件の愛で人類を教え癒す崇高な使命を持っています。",
       fr: "Vous portez le Nombre Maître 33 — le Maître Enseignant. Votre mission sublime est d'enseigner et guérir avec amour inconditionnel.",
       es: "Llevas el Número Maestro 33 — el Maestro Instructor. Tu misión sublime es enseñar y sanar con amor incondicional.",
-      cn: "你擁有主數33——大師教師。以無條件的愛教導和治癒人類是你崇高的使命。",
       zh: "你拥有主数33——大师教师。以无条件的爱教导和治愈人类是你崇高的使命。",
     },
     challenge: {
@@ -730,7 +661,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "自分をケアしながら他者に奉仕するバランスを見つけ、自己消耗せずに愛を分かち合う方法を見つける必要があります。",
       fr: "Trouver équilibre entre prendre soin de soi et servir les autres sans s'épuiser.",
       es: "Encontrar equilibrio entre cuidarte y servir a otros; compartir amor sin agotarte.",
-      cn: "在照顧自己和服務他人之間找到平衡，在不自我耗竭的情況下分享愛。",
       zh: "在照顾自己和服务他人之间找到平衡，在不自我耗竭的情况下分享爱。",
     },
     gift: {
@@ -739,7 +669,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
       ja: "存在するだけで周囲を癒しインスピレーションを与える、神聖な光のような存在です。",
       fr: "Votre existence même guérit et inspire — vous êtes comme une lumière divine.",
       es: "Tu propia existencia sana e inspira — eres como una luz divina.",
-      cn: "你的存在本身就能治癒和激勵他人，如同神聖的光芒。",
       zh: "你的存在本身就能治愈和激励他人，如同神圣的光芒。",
     },
   },
@@ -756,7 +685,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "始まりの年です。種を選び、最初の一歩を踏み出すのに向きます。",
     fr: "Une année de commencements : choisissez la graine et faites le premier pas.",
     es: "Un año de comienzos: elige la semilla y da el primer paso.",
-    cn: "開始之年。選定種子，踏出第一步。",
     zh: "开始之年。选定种子，踏出第一步。",
   },
   2: {
@@ -765,7 +693,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "待って合わせる年です。ひとりで押すより、隣の人と歩幅を合わせて。",
     fr: "Une année d’ajustement : accordez votre pas à celui des autres plutôt que de forcer seul.",
     es: "Un año de ajuste: acompasa tu ritmo con otros en vez de empujar en solitario.",
-    cn: "等待與協調之年。與其獨自推進，不如與身邊的人同步。",
     zh: "等待与协调之年。与其独自推进，不如与身边的人同步。",
   },
   3: {
@@ -774,7 +701,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "表現する年です。言葉や作品として外に出すと力がつきます。",
     fr: "Une année d’expression : ce que vous sortez en mots ou en œuvres prend de la force.",
     es: "Un año de expresión: lo que sacas en palabras u obras cobra fuerza.",
-    cn: "表達之年。以言語或作品示人，力量才會聚起來。",
     zh: "表达之年。以言语或作品示人，力量才会聚起来。",
   },
   4: {
@@ -783,7 +709,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "固める年です。派手さはなくても、仕組みと習慣を作ると後が楽になります。",
     fr: "Une année de fondations : peu spectaculaire, mais les cadres posés maintenant vous porteront.",
     es: "Un año de cimientos: poco vistoso, pero las estructuras que fijes ahora te sostendrán.",
-    cn: "紮根之年。雖不熱鬧，但此時建立的架構與習慣會撐住往後。",
     zh: "扎根之年。虽不热闹，但此时建立的架构与习惯会撑住往后。",
   },
   5: {
@@ -792,7 +717,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "変わる年です。場所も仕事も関係も動くので、握りしめすぎないこと。",
     fr: "Une année de changement : lieux, travail et liens bougent — ne serrez pas trop fort.",
     es: "Un año de cambio: lugares, trabajo y vínculos se mueven; no aprietes demasiado.",
-    cn: "變動之年。位置、工作與關係都在移動，別抓得太緊。",
     zh: "变动之年。位置、工作与关系都在移动，别抓得太紧。",
   },
   6: {
@@ -801,7 +725,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "責任の年です。家や人を世話することが増え、その分期待も受けます。",
     fr: "Une année de responsabilité : le foyer et les proches demandent davantage, et l’on attend autant de vous.",
     es: "Un año de responsabilidad: la casa y la gente piden más, y también se espera más de ti.",
-    cn: "承擔之年。照顧家與人的事變多，別人對你的期待也變多。",
     zh: "承担之年。照顾家与人的事变多，别人对你的期待也变多。",
   },
   7: {
@@ -810,7 +733,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "内に向かう年です。学び、整理し、ひとりで考える時間が要ります。",
     fr: "Une année tournée vers l’intérieur : il faut du temps pour apprendre, trier et penser seul.",
     es: "Un año hacia dentro: hace falta tiempo para estudiar, ordenar y pensar a solas.",
-    cn: "向內之年。需要時間學習、整理，並獨自思考。",
     zh: "向内之年。需要时间学习、整理，并独自思考。",
   },
   8: {
@@ -819,7 +741,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "収穫の年です。積み上げてきたものが成果やお金として表れます。",
     fr: "Une année de récolte : ce que vous avez bâti se traduit en résultats et en argent.",
     es: "Un año de cosecha: lo construido aparece como resultados y dinero.",
-    cn: "收成之年。累積下來的東西會化為成果與金錢。",
     zh: "收成之年。累积下来的东西会化为成果与金钱。",
   },
   9: {
@@ -828,7 +749,6 @@ const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
     ja: "締めくくる年です。終えるべきものを終えると、次の巡りが軽く始まります。",
     fr: "Une année de clôture : achevez ce qui doit finir, et le cycle suivant commencera léger.",
     es: "Un año de cierre: termina lo que debe acabar y el siguiente ciclo empezará ligero.",
-    cn: "收尾之年。該結束的結束了，下一輪才會輕鬆開始。",
     zh: "收尾之年。该结束的结束了，下一轮才会轻松开始。",
   },
 };

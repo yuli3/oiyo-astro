@@ -18,7 +18,7 @@ const selectedCareerIds = [...new Set(careers.map(({ id }) => id))];
 const selectedHobbyIds = ["HOBBY_GARDENING", "HOBBY_MEDITATION", "HOBBY_HIKING", "HOBBY_COOKING", "HOBBY_CODING", "HOBBY_PHOTOGRAPHY", "HOBBY_READING", "HOBBY_YOGA", "HOBBY_BOARD_GAMES", "HOBBY_WRITING", "HOBBY_SWIMMING", "HOBBY_ASTRONOMY", "HOBBY_PAINTING", "HOBBY_VOLUNTEERING", "HOBBY_CHESS", "HOBBY_CYCLING", "HOBBY_POTTERY", "HOBBY_DANCING", "HOBBY_PHILOSOPHY", "HOBBY_ROCK_CLIMBING", "HOBBY_MUSIC_COMPOSITION", "HOBBY_DEBATING", "HOBBY_LINGUISTICS", "HOBBY_MARCHIAL_ARTS", "HOBBY_WOODWORKING"];
 const curatedHobbyDocument = JSON.parse(await readFile(resolve(ROOT, "config/ontology-platform/v1/curated-hobbies-v1.json"), "utf8"));
 const existingGraph = await Promise.all([
-  "src/lib/ontology/graph/nodes.ts", "src/lib/ontology/graph/edges.ts", "src/lib/engines/recommendation/graph-fallback.ts", "src/lib/ontology/bridge/recommendation-engine.ts"
+  "src/lib/ontology/graph/nodes.ts", "src/lib/ontology/graph/edges.ts", "src/lib/engines/recommendation/graph-fallback.ts"
 ].map((path) => readFile(resolve(ROOT, path), "utf8")));
 const legacyIds = new Set(platform.concepts.flatMap((concept) => concept.legacyIds ?? []));
 const errors = [];

@@ -5,6 +5,7 @@ import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import { BirthDateField } from "@/components/shared/BirthDateField";
 import ResultSymbol, { resultSymbolSrc } from "@/components/shared/ResultSymbol";
 import ShareResultButton from "@/components/shared/ShareResultButton";
+import { mayanSealName, mayanToneName } from "@/lib/symbolic-tradition/symbol-names";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const COPY: Record<Lang, { birthDate: string; kin: string; tone: string; heading: string }> = {
@@ -31,19 +32,25 @@ export default function MayanReading({ locale = "ko" }: { locale?: string }) {
 
   const local = new Date(parsed.year, parsed.month - 1, parsed.day, parsed.hour ?? 12, parsed.minute ?? 0);
   const result = calculateMayanKin(local);
+  if (!result) return null;
+  // 계산기의 kinName 은 영어 한 벌뿐이라(ko 도 영어) 여섯 언어 인장·음조 이름으로 짓는다.
+  // 윤일(Hunab Ku, kin 0)은 인장·음조가 없어 그 이름을 그대로 쓴다.
+  const kinName = result.kinNumber > 0
+    ? `${mayanSealName(result.seal.id, lang)} · ${mayanToneName(result.tone.number, lang)}`
+    : (lang === "ko" ? result.kinName?.ko : result.kinName?.en) ?? "Hunab Ku";
 
   return (
     <div className="rounded-2xl bg-amber-50 p-5">
       <div className="flex items-center gap-3">
         <ResultSymbol id="maya-inspired" alt="" className="h-16 w-16 shrink-0" />
-        <p className="text-sm font-black text-amber-950">{t.kin} {result.kinNumber} · {result.kinName[lang === "ko" ? "ko" : "en"]}</p>
+        <p className="text-sm font-black text-amber-950">{t.kin} {result.kinNumber} · {kinName}</p>
       </div>
       <p className="mt-2 text-sm text-amber-800">{t.tone} {result.tone.number} · {result.seal.mayanName}</p>
       <div className="mt-4">
         <ShareResultButton
           locale={lang}
           heading={t.heading}
-          resultTitle={`${t.kin} ${result.kinNumber} · ${result.kinName[lang === "ko" ? "ko" : "en"]}`}
+          resultTitle={`${t.kin} ${result.kinNumber} · ${kinName}`}
           description={`${t.tone} ${result.tone.number} · ${result.seal.mayanName}`}
           symbolSrc={resultSymbolSrc("maya-inspired")}
           analyticsId="mayan-reading"

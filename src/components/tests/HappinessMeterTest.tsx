@@ -228,7 +228,7 @@ export default function HappinessMeterTest({ locale: localeProp }: Props) {
             {copied ? ui.copied : ui.share}
           </button>
         </div>
-        <ShareResultButton locale={localeProp ?? 'ko'} heading={tx.title} resultTitle={level.label} />
+        <ShareResultButton locale={localeProp ?? 'ko'} heading={ui.title} resultTitle={level.label} />
       </div>
     );
   }

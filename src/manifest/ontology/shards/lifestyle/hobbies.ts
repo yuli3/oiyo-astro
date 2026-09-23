@@ -1,4 +1,17 @@
-import type { Hobby } from "../../core/schemas";
+/**
+ * 취미 스물다섯 — 추천기(exploration-recommender)와 온톨로지 플랫폼 스크립트가 읽는다.
+ * 모양을 정하던 core/schemas 는 2026-09-23 죽은 코드 정리 때 지워졌으므로 여기 둔다.
+ */
+export interface Hobby {
+  category: "CREATIVE" | "PHYSICAL" | "INTELLECTUAL" | "SOCIAL" | "NATURE";
+  id: string;
+  name: string;
+  tags: {
+    elements: ("WOOD" | "FIRE" | "EARTH" | "METAL" | "WATER")[];
+    mbti?: string[];
+    riasec?: string[];
+  };
+}
 
 export const HOBBIES: Hobby[] = [
   {

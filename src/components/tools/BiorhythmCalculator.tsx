@@ -3,7 +3,7 @@ import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField } from '../shared/BirthDateField';
 import { civilDateToLocalNoon } from '../../lib/user/birth-record';
 import { differenceInCivilDays } from '../../lib/ontology/kernel/civil-date';
-import type { Locale } from '../../lib/i18n';
+import type { Locale } from '../../i18n';
 import AnimatedNumber from '../ui/AnimatedNumber';
 import { useReducedMotion } from "@/hooks/useMotion";
 

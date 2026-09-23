@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import type { Locale } from '../../lib/i18n';
+import type { Locale } from '../../i18n';
 
 /**
  * 인지부조화 랩.

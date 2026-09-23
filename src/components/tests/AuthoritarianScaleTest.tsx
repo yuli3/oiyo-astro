@@ -243,38 +243,38 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
     const level = overallLevel(overall, l);
 
     return (
-      <div class="space-y-6">
-        <div class="rounded-2xl border-2 border-slate-200 bg-card p-6 text-center">
-          <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">{ui.result}</p>
-          <div class={`inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-base font-black ${level.color}`}>
+      <div className="space-y-6">
+        <div className="rounded-2xl border-2 border-slate-200 bg-card p-6 text-center">
+          <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">{ui.result}</p>
+          <div className={`inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-base font-black ${level.color}`}>
             {level.label}
           </div>
-          <p class="mt-3 text-sm text-slate-600">{level.desc}</p>
-          <div class="mt-3 text-2xl font-black text-slate-800">{overall}<span class="text-sm font-normal text-slate-400"> / 100</span></div>
+          <p className="mt-3 text-sm text-slate-600">{level.desc}</p>
+          <div className="mt-3 text-2xl font-black text-slate-800">{overall}<span className="text-sm font-normal text-slate-400"> / 100</span></div>
         </div>
 
-        <div class="rounded-2xl border-2 border-slate-100 bg-card p-5">
-          <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">{ui.dimScores}</p>
-          <div class="space-y-4">
+        <div className="rounded-2xl border-2 border-slate-100 bg-card p-5">
+          <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">{ui.dimScores}</p>
+          <div className="space-y-4">
             {dimScores.map(({ d, score }) => {
               const info = DIMS[d];
               return (
                 <div key={d}>
-                  <div class="flex items-center justify-between mb-1">
-                    <span class="text-sm font-bold text-slate-700">{info.icon} {info.name[l]}</span>
-                    <span class="text-sm font-black text-slate-800">{score}</span>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-sm font-bold text-slate-700">{info.icon} {info.name[l]}</span>
+                    <span className="text-sm font-black text-slate-800">{score}</span>
                   </div>
-                  <div class="h-2 w-full rounded-full bg-slate-100">
-                    <div class="h-2 rounded-full bg-slate-600 transition-all" style={{ width: `${score}%` }} />
+                  <div className="h-2 w-full rounded-full bg-slate-100">
+                    <div className="h-2 rounded-full bg-slate-600 transition-all" style={{ width: `${score}%` }} />
                   </div>
-                  <p class="mt-1 text-xs text-slate-500">{score < 50 ? info.low[l] : info.high[l]}</p>
+                  <p className="mt-1 text-xs text-slate-500">{score < 50 ? info.low[l] : info.high[l]}</p>
                 </div>
               );
             })}
           </div>
         </div>
 
-        <p class="text-xs text-slate-400 text-center px-2">{ui.note}</p>
+        <p className="text-xs text-slate-400 text-center px-2">{ui.note}</p>
 
         <ShareResultButton
           locale={locale}
@@ -294,7 +294,7 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
 
         <button
           onClick={restart}
-          class="w-full rounded-xl border-2 border-slate-200 bg-card py-3 font-bold text-slate-600 transition hover:border-slate-400"
+          className="w-full rounded-xl border-2 border-slate-200 bg-card py-3 font-bold text-slate-600 transition hover:border-slate-400"
         >
           {ui.restart}
         </button>

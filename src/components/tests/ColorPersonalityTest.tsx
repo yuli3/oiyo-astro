@@ -304,11 +304,11 @@ export default function ColorPersonalityTest({ locale: lp = 'ko' }: Props) {
 
   const finished = current >= questions.length
   const colorNames: Record<ColorType, Record<SupportedLang, string>> = {
-    red: { ko: '레드', en: 'Red', ja: 'レッド' },
-    blue: { ko: '블루', en: 'Blue', ja: 'ブルー' },
-    yellow: { ko: '옐로우', en: 'Yellow', ja: 'イエロー' },
-    green: { ko: '그린', en: 'Green', ja: 'グリーン' },
-    purple: { ko: '퍼플', en: 'Purple', ja: 'パープル' },
+    red: { ko: '레드', en: 'Red', ja: 'レッド', zh: '红色', fr: 'Rouge', es: 'Rojo' },
+    blue: { ko: '블루', en: 'Blue', ja: 'ブルー', zh: '蓝色', fr: 'Bleu', es: 'Azul' },
+    yellow: { ko: '옐로우', en: 'Yellow', ja: 'イエロー', zh: '黄色', fr: 'Jaune', es: 'Amarillo' },
+    green: { ko: '그린', en: 'Green', ja: 'グリーン', zh: '绿色', fr: 'Vert', es: 'Verde' },
+    purple: { ko: '퍼플', en: 'Purple', ja: 'パープル', zh: '紫色', fr: 'Violet', es: 'Morado' },
   }
 
   if (!finished) {

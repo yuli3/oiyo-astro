@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Locale } from "../../lib/i18n";
+import type { Locale } from "../../i18n";
 import { BirthDateField } from "../shared/BirthDateField";
 import ResultSymbol, { resultSymbolSrc } from "../shared/ResultSymbol";
 import ShareResultButton from "../shared/ShareResultButton";
@@ -109,22 +109,6 @@ const UI: Record<Locale, {
     dateRangeLabel: "Rango de fechas",
     resetBtn: "Elegir de nuevo",
   },
-  cn: {
-    title: "星座性格分析",
-    subtitle: "12星座的性格、優勢、弱點和相容性",
-    selectPrompt: "選擇你的星座",
-    orEnterBirthday: "或透過生日查詢",
-    birthdayLabel: "出生日期",
-    lookupBtn: "找我的星座",
-    traitsLabel: "性格特徵",
-    strengthsLabel: "優勢",
-    weaknessesLabel: "弱點",
-    compatibilityLabel: "相容性",
-    elementLabel: "元素",
-    rulerLabel: "守護星",
-    dateRangeLabel: "日期範圍",
-    resetBtn: "重新選擇",
-  },
   zh: {
     title: "星座性格分析",
     subtitle: "12星座的性格、优势、弱点和相容性",
@@ -146,10 +130,10 @@ const UI: Record<Locale, {
 export type Element = "fire" | "earth" | "air" | "water";
 
 export const ELEMENT_LABEL: Record<Element, Record<Locale, string>> = {
-  fire:  { ko: "🔥 불", en: "🔥 Fire",  ja: "🔥 火", fr: "🔥 Feu",  es: "🔥 Fuego", cn: "🔥 火", zh: "🔥 火" },
-  earth: { ko: "🌍 흙", en: "🌍 Earth", ja: "🌍 土", fr: "🌍 Terre", es: "🌍 Tierra", cn: "🌍 土", zh: "🌍 土" },
-  air:   { ko: "💨 공기", en: "💨 Air", ja: "💨 風", fr: "💨 Air",   es: "💨 Aire",  cn: "💨 風", zh: "💨 风" },
-  water: { ko: "💧 물", en: "💧 Water", ja: "💧 水", fr: "💧 Eau",   es: "💧 Agua",  cn: "💧 水", zh: "💧 水" },
+  fire:  { ko: "🔥 불", en: "🔥 Fire",  ja: "🔥 火", fr: "🔥 Feu",  es: "🔥 Fuego", zh: "🔥 火" },
+  earth: { ko: "🌍 흙", en: "🌍 Earth", ja: "🌍 土", fr: "🌍 Terre", es: "🌍 Tierra", zh: "🌍 土" },
+  air:   { ko: "💨 공기", en: "💨 Air", ja: "💨 風", fr: "💨 Air",   es: "💨 Aire", zh: "💨 风" },
+  water: { ko: "💧 물", en: "💧 Water", ja: "💧 水", fr: "💧 Eau",   es: "💧 Agua", zh: "💧 水" },
 };
 
 const ELEMENT_BG: Record<Element, string> = {
@@ -186,16 +170,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   aries: {
     emoji: "♈",
     element: "fire",
-    ruler: { ko: "화성", en: "Mars", ja: "火星", fr: "Mars", es: "Marte", cn: "火星", zh: "火星" },
-    dateRange: { ko: "3월 21일 – 4월 19일", en: "Mar 21 – Apr 19", ja: "3月21日 – 4月19日", fr: "21 mar – 19 avr", es: "21 mar – 19 abr", cn: "3月21日 – 4月19日", zh: "3月21日 – 4月19日" },
-    name: { ko: "양자리", en: "Aries", ja: "牡羊座", fr: "Bélier", es: "Aries", cn: "牡羊座", zh: "白羊座" },
+    ruler: { ko: "화성", en: "Mars", ja: "火星", fr: "Mars", es: "Marte", zh: "火星" },
+    dateRange: { ko: "3월 21일 – 4월 19일", en: "Mar 21 – Apr 19", ja: "3月21日 – 4月19日", fr: "21 mar – 19 avr", es: "21 mar – 19 abr", zh: "3月21日 – 4月19日" },
+    name: { ko: "양자리", en: "Aries", ja: "牡羊座", fr: "Bélier", es: "Aries", zh: "白羊座" },
     description: {
       ko: "양자리는 열정적이고 용감한 개척자입니다. 새로운 도전을 두려워하지 않으며 타고난 리더십으로 주변을 이끌어갑니다.",
       en: "Aries is a passionate, courageous pioneer. They fearlessly embrace new challenges and lead others with natural confidence.",
       ja: "牡羊座は情熱的で勇敢な開拓者です。新たな挑戦を恐れず、生まれながらのリーダーシップで周囲を引っ張ります。",
       fr: "Le Bélier est un pionnier passionné et courageux. Il affronte les nouveaux défis sans peur et guide les autres avec un leadership naturel.",
       es: "Aries es un pionero apasionado y valiente. Abraza los nuevos desafíos sin miedo y lidera a los demás con confianza natural.",
-      cn: "牡羊座是充滿熱情、勇敢的開拓者。不懼新挑戰，以天生的領導力引領他人。",
       zh: "白羊座是充满热情、勇敢的开拓者。不惧新挑战，以天生的领导力引领他人。",
     },
     traits: {
@@ -204,7 +187,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["情熱的", "勇敢", "自信家", "直接的", "競争心", "衝動的", "独立的"],
       fr: ["Passionné", "Courageux", "Confiant", "Direct", "Compétitif", "Impulsif", "Indépendant"],
       es: ["Apasionado", "Valiente", "Confiado", "Directo", "Competitivo", "Impulsivo", "Independiente"],
-      cn: ["熱情", "勇敢", "自信", "直接", "好勝", "衝動", "獨立"],
       zh: ["热情", "勇敢", "自信", "直接", "好胜", "冲动", "独立"],
     },
     strengths: {
@@ -213,7 +195,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["強い推進力", "リーダーシップ", "勇気", "素早い決断力", "情熱"],
       fr: ["Détermination", "Leadership", "Courage", "Décision rapide", "Passion"],
       es: ["Determinación", "Liderazgo", "Valentía", "Toma de decisiones rápida", "Pasión"],
-      cn: ["強大驅動力", "領導力", "勇氣", "快速決斷", "熱情"],
       zh: ["强大驱动力", "领导力", "勇气", "快速决断", "热情"],
     },
     weaknesses: {
@@ -222,7 +203,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["せっかち", "自己中心的傾向", "継続力不足", "攻撃的", "エゴイズム"],
       fr: ["Impatience", "Tendances égoïstes", "Manque de persévérance", "Agressivité", "Égocentrisme"],
       es: ["Impaciencia", "Tendencias egoístas", "Falta de persistencia", "Agresividad", "Egoísmo"],
-      cn: ["急躁", "以自我為中心", "缺乏堅持", "攻擊性", "自我主義"],
       zh: ["急躁", "以自我为中心", "缺乏坚持", "攻击性", "自我主义"],
     },
     bestMatch: ["leo", "sagittarius", "gemini", "aquarius"],
@@ -231,16 +211,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   taurus: {
     emoji: "♉",
     element: "earth",
-    ruler: { ko: "금성", en: "Venus", ja: "金星", fr: "Vénus", es: "Venus", cn: "金星", zh: "金星" },
-    dateRange: { ko: "4월 20일 – 5월 20일", en: "Apr 20 – May 20", ja: "4月20日 – 5月20日", fr: "20 avr – 20 mai", es: "20 abr – 20 may", cn: "4月20日 – 5月20日", zh: "4月20日 – 5月20日" },
-    name: { ko: "황소자리", en: "Taurus", ja: "牡牛座", fr: "Taureau", es: "Tauro", cn: "金牛座", zh: "金牛座" },
+    ruler: { ko: "금성", en: "Venus", ja: "金星", fr: "Vénus", es: "Venus", zh: "金星" },
+    dateRange: { ko: "4월 20일 – 5월 20일", en: "Apr 20 – May 20", ja: "4月20日 – 5月20日", fr: "20 avr – 20 mai", es: "20 abr – 20 may", zh: "4月20日 – 5月20日" },
+    name: { ko: "황소자리", en: "Taurus", ja: "牡牛座", fr: "Taureau", es: "Tauro", zh: "金牛座" },
     description: {
       ko: "황소자리는 믿음직스럽고 안정을 추구하는 실용주의자입니다. 한번 결정한 일은 끝까지 해내는 강한 의지와 인내심을 가집니다.",
       en: "Taurus is a reliable, stability-seeking pragmatist. They possess remarkable willpower and patience to see things through to the end.",
       ja: "牡牛座は信頼できる安定志向の実用主義者です。一度決めたことは最後までやり遂げる強い意志と忍耐力を持っています。",
       fr: "Le Taureau est un pragmatique fiable qui recherche la stabilité. Il possède une volonté et une patience remarquables pour mener les choses à bien.",
       es: "Tauro es un pragmático confiable que busca la estabilidad. Posee una notable fuerza de voluntad y paciencia para llevar las cosas a término.",
-      cn: "金牛座是可靠、追求穩定的實用主義者。一旦決定的事，會以強大的意志力和耐心貫徹始終。",
       zh: "金牛座是可靠、追求稳定的实用主义者。一旦决定的事，会以强大的意志力和耐心贯彻始终。",
     },
     traits: {
@@ -249,7 +228,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["信頼性", "忍耐力", "実用的", "頑固", "感覚的", "物質的", "忠実"],
       fr: ["Fiable", "Patient", "Pratique", "Têtu", "Sensuel", "Matérialiste", "Loyal"],
       es: ["Confiable", "Paciente", "Práctico", "Terco", "Sensual", "Materialista", "Leal"],
-      cn: ["可靠", "耐心", "實用", "固執", "感官享受", "物質主義", "忠誠"],
       zh: ["可靠", "耐心", "实用", "固执", "感官享受", "物质主义", "忠诚"],
     },
     strengths: {
@@ -258,7 +236,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["強い忍耐力", "信頼性", "実用的判断力", "芸術的センス", "財務管理"],
       fr: ["Persévérance", "Fiabilité", "Jugement pratique", "Sens artistique", "Gestion financière"],
       es: ["Perseverancia", "Confiabilidad", "Juicio práctico", "Sentido artístico", "Gestión financiera"],
-      cn: ["強大耐心", "可靠性", "實用判斷力", "藝術感", "財務管理"],
       zh: ["强大耐心", "可靠性", "实用判断力", "艺术感", "财务管理"],
     },
     weaknesses: {
@@ -267,7 +244,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["頑固", "変化への抵抗", "独占欲", "怠惰", "物質主義"],
       fr: ["Entêtement", "Résistance au changement", "Possessivité", "Paresse", "Matérialisme"],
       es: ["Terquedad", "Resistencia al cambio", "Posesividad", "Pereza", "Materialismo"],
-      cn: ["固執", "抗拒改變", "佔有慾", "懶惰", "物質主義"],
       zh: ["固执", "抗拒改变", "占有欲", "懒惰", "物质主义"],
     },
     bestMatch: ["virgo", "capricorn", "cancer", "pisces"],
@@ -276,16 +252,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   gemini: {
     emoji: "♊",
     element: "air",
-    ruler: { ko: "수성", en: "Mercury", ja: "水星", fr: "Mercure", es: "Mercurio", cn: "水星", zh: "水星" },
-    dateRange: { ko: "5월 21일 – 6월 20일", en: "May 21 – Jun 20", ja: "5月21日 – 6月20日", fr: "21 mai – 20 juin", es: "21 may – 20 jun", cn: "5月21日 – 6月20日", zh: "5月21日 – 6月20日" },
-    name: { ko: "쌍둥이자리", en: "Gemini", ja: "双子座", fr: "Gémeaux", es: "Géminis", cn: "雙子座", zh: "双子座" },
+    ruler: { ko: "수성", en: "Mercury", ja: "水星", fr: "Mercure", es: "Mercurio", zh: "水星" },
+    dateRange: { ko: "5월 21일 – 6월 20일", en: "May 21 – Jun 20", ja: "5月21日 – 6月20日", fr: "21 mai – 20 juin", es: "21 may – 20 jun", zh: "5月21日 – 6月20日" },
+    name: { ko: "쌍둥이자리", en: "Gemini", ja: "双子座", fr: "Gémeaux", es: "Géminis", zh: "双子座" },
     description: {
       ko: "쌍둥이자리는 호기심 넘치는 커뮤니케이터입니다. 다양한 관심사와 빠른 두뇌회전으로 어떤 상황에서도 유연하게 적응합니다.",
       en: "Gemini is a curious, quick-witted communicator. Their wide-ranging interests and sharp mind allow them to adapt flexibly to any situation.",
       ja: "双子座は好奇心旺盛なコミュニケーターです。多様な興味と素早い頭の回転で、どんな状況にも柔軟に適応します。",
       fr: "Les Gémeaux sont des communicants curieux et vifs d'esprit. Leurs intérêts variés et leur esprit acéré leur permettent de s'adapter à toute situation.",
       es: "Géminis es un comunicador curioso y perspicaz. Sus amplios intereses y mente aguda le permiten adaptarse a cualquier situación.",
-      cn: "雙子座是充滿好奇心的溝通達人。廣泛的興趣和敏捷的頭腦讓他們能靈活應對任何情況。",
       zh: "双子座是充满好奇心的沟通达人。广泛的兴趣和敏捷的头脑让他们能灵活应对任何情况。",
     },
     traits: {
@@ -294,7 +269,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["好奇心", "話術", "二面性", "適応力", "知的", "気まぐれ", "社交的"],
       fr: ["Curieux", "Éloquent", "Double nature", "Adaptable", "Intellectuel", "Inconstant", "Sociable"],
       es: ["Curioso", "Elocuente", "Doble naturaleza", "Adaptable", "Intelectual", "Inconstante", "Sociable"],
-      cn: ["好奇心強", "口才好", "雙重性格", "適應力強", "聰明", "善變", "善於社交"],
       zh: ["好奇心强", "口才好", "双重性格", "适应力强", "聪明", "善变", "善于社交"],
     },
     strengths: {
@@ -303,7 +277,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["優れたコミュニケーション", "素早い学習力", "柔軟な思考", "社交性", "創造力"],
       fr: ["Communication", "Apprentissage rapide", "Pensée flexible", "Sociabilité", "Créativité"],
       es: ["Comunicación", "Aprendizaje rápido", "Pensamiento flexible", "Sociabilidad", "Creatividad"],
-      cn: ["出色溝通能力", "快速學習", "靈活思維", "社交能力", "創造力"],
       zh: ["出色沟通能力", "快速学习", "灵活思维", "社交能力", "创造力"],
     },
     weaknesses: {
@@ -312,7 +285,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["優柔不断", "集中力不足", "気まぐれ", "表面的", "不安定"],
       fr: ["Indécision", "Manque de concentration", "Inconstance", "Superficialité", "Agitation"],
       es: ["Indecisión", "Poca concentración", "Inconstancia", "Superficialidad", "Inquietud"],
-      cn: ["優柔寡斷", "注意力不集中", "情緒化", "膚淺", "不穩定"],
       zh: ["优柔寡断", "注意力不集中", "情绪化", "肤浅", "不稳定"],
     },
     bestMatch: ["libra", "aquarius", "aries", "leo"],
@@ -321,16 +293,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   cancer: {
     emoji: "♋",
     element: "water",
-    ruler: { ko: "달", en: "Moon", ja: "月", fr: "Lune", es: "Luna", cn: "月亮", zh: "月亮" },
-    dateRange: { ko: "6월 21일 – 7월 22일", en: "Jun 21 – Jul 22", ja: "6月21日 – 7月22日", fr: "21 juin – 22 juil", es: "21 jun – 22 jul", cn: "6月21日 – 7月22日", zh: "6月21日 – 7月22日" },
-    name: { ko: "게자리", en: "Cancer", ja: "蟹座", fr: "Cancer", es: "Cáncer", cn: "巨蟹座", zh: "巨蟹座" },
+    ruler: { ko: "달", en: "Moon", ja: "月", fr: "Lune", es: "Luna", zh: "月亮" },
+    dateRange: { ko: "6월 21일 – 7월 22일", en: "Jun 21 – Jul 22", ja: "6月21日 – 7月22日", fr: "21 juin – 22 juil", es: "21 jun – 22 jul", zh: "6月21日 – 7月22日" },
+    name: { ko: "게자리", en: "Cancer", ja: "蟹座", fr: "Cancer", es: "Cáncer", zh: "巨蟹座" },
     description: {
       ko: "게자리는 직관적이고 공감 능력이 뛰어난 양육자입니다. 가족과 가까운 사람들을 위해 헌신하며 깊은 감정적 유대를 맺습니다.",
       en: "Cancer is an intuitive, empathetic nurturer. They are deeply devoted to family and close ones, forming profound emotional bonds.",
       ja: "蟹座は直感的で共感力の高い養育者です。家族や親しい人のために献身し、深い感情的絆を結びます。",
       fr: "Le Cancer est un nourricier intuitif et empathique. Il se consacre profondément à sa famille et ses proches, formant des liens émotionnels profonds.",
       es: "Cáncer es un cuidador intuitivo y empático. Está profundamente dedicado a la familia y los seres queridos, formando vínculos emocionales profundos.",
-      cn: "巨蟹座是直覺敏銳、富有同理心的照顧者。對家人和親近的人充滿奉獻精神，能建立深厚的情感紐帶。",
       zh: "巨蟹座是直觉敏锐、富有同理心的照顾者。对家人和亲近的人充满奉献精神，能建立深厚的情感纽带。",
     },
     traits: {
@@ -339,7 +310,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["感情的", "直感的", "保護的", "気分屋", "忠実", "執着", "想像力豊か"],
       fr: ["Émotionnel", "Intuitif", "Protecteur", "Lunatique", "Loyal", "Collant", "Imaginatif"],
       es: ["Emocional", "Intuitivo", "Protector", "Cambiante", "Leal", "Apegado", "Imaginativo"],
-      cn: ["感性", "直覺", "保護性", "情緒化", "忠誠", "依戀", "想像力豐富"],
       zh: ["感性", "直觉", "保护性", "情绪化", "忠诚", "依恋", "想象力丰富"],
     },
     strengths: {
@@ -348,7 +318,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["深い共感能力", "忠誠心", "直感力", "創造性", "強い記憶力"],
       fr: ["Empathie profonde", "Loyauté", "Intuition", "Créativité", "Mémoire forte"],
       es: ["Empatía profunda", "Lealtad", "Intuición", "Creatividad", "Memoria fuerte"],
-      cn: ["深刻的同理心", "忠誠", "直覺力", "創造力", "記憶力強"],
       zh: ["深刻的同理心", "忠诚", "直觉力", "创造力", "记忆力强"],
     },
     weaknesses: {
@@ -357,7 +326,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["過敏反応", "執着", "消極的", "自己憐憫", "感情の起伏"],
       fr: ["Hypersensibilité", "Dépendance", "Passivité", "Apitoiement", "Sautes d'humeur"],
       es: ["Hipersensibilidad", "Dependencia", "Pasividad", "Autocompasión", "Cambios de humor"],
-      cn: ["過度敏感", "執著", "消極", "自憐", "情緒波動"],
       zh: ["过度敏感", "执着", "消极", "自怜", "情绪波动"],
     },
     bestMatch: ["scorpio", "pisces", "taurus", "virgo"],
@@ -366,16 +334,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   leo: {
     emoji: "♌",
     element: "fire",
-    ruler: { ko: "태양", en: "Sun", ja: "太陽", fr: "Soleil", es: "Sol", cn: "太陽", zh: "太阳" },
-    dateRange: { ko: "7월 23일 – 8월 22일", en: "Jul 23 – Aug 22", ja: "7月23日 – 8月22日", fr: "23 juil – 22 août", es: "23 jul – 22 ago", cn: "7月23日 – 8月22日", zh: "7月23日 – 8月22日" },
-    name: { ko: "사자자리", en: "Leo", ja: "獅子座", fr: "Lion", es: "Leo", cn: "獅子座", zh: "狮子座" },
+    ruler: { ko: "태양", en: "Sun", ja: "太陽", fr: "Soleil", es: "Sol", zh: "太阳" },
+    dateRange: { ko: "7월 23일 – 8월 22일", en: "Jul 23 – Aug 22", ja: "7月23日 – 8月22日", fr: "23 juil – 22 août", es: "23 jul – 22 ago", zh: "7月23日 – 8月22日" },
+    name: { ko: "사자자리", en: "Leo", ja: "獅子座", fr: "Lion", es: "Leo", zh: "狮子座" },
     description: {
       ko: "사자자리는 카리스마 넘치는 타고난 스타입니다. 무대 중심에서 빛나며, 주변 사람들에게 따뜻함과 영감을 나눠줍니다.",
       en: "Leo is a charismatic, natural-born star. They shine at the center of attention, radiating warmth and inspiration to those around them.",
       ja: "獅子座はカリスマあふれる生まれながらのスターです。舞台の中心で輝き、周囲に温かさとインスピレーションを与えます。",
       fr: "Le Lion est une star charismatique née. Il brille au centre de l'attention, rayonnant chaleur et inspiration autour de lui.",
       es: "Leo es una estrella carismática nata. Brilla en el centro de atención, irradiando calidez e inspiración a quienes lo rodean.",
-      cn: "獅子座是魅力十足的天生明星。在舞台中央閃耀，向周圍的人散發溫暖和靈感。",
       zh: "狮子座是魅力十足的天生明星。在舞台中央闪耀，向周围的人散发温暖和灵感。",
     },
     traits: {
@@ -384,7 +351,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["カリスマ", "自信家", "寛大", "プライドが高い", "情熱的", "ドラマチック", "リーダー"],
       fr: ["Charismatique", "Confiant", "Généreux", "Fier", "Passionné", "Dramatique", "Leader"],
       es: ["Carismático", "Confiado", "Generoso", "Orgulloso", "Apasionado", "Dramático", "Líder"],
-      cn: ["魅力四射", "自信", "慷慨", "自尊心強", "熱情", "戲劇性", "領導力"],
       zh: ["魅力四射", "自信", "慷慨", "自尊心强", "热情", "戏剧性", "领导力"],
     },
     strengths: {
@@ -393,7 +359,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["カリスマとリーダーシップ", "創造力", "寛大さ", "勇気", "鼓舞する能力"],
       fr: ["Charisme et leadership", "Créativité", "Générosité", "Courage", "Capacité à inspirer"],
       es: ["Carisma y liderazgo", "Creatividad", "Generosidad", "Valentía", "Capacidad de inspirar"],
-      cn: ["魅力與領導力", "創造力", "慷慨", "勇氣", "激勵他人的能力"],
       zh: ["魅力与领导力", "创造力", "慷慨", "勇气", "激励他人的能力"],
     },
     weaknesses: {
@@ -402,7 +367,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["傲慢さ", "注目欲求", "頑固", "支配的", "自己中心"],
       fr: ["Arrogance", "Besoin d'attention", "Entêtement", "Dominance", "Égocentrisme"],
       es: ["Arrogancia", "Búsqueda de atención", "Terquedad", "Dominancia", "Egocentrismo"],
-      cn: ["傲慢", "渴望關注", "固執", "強勢", "以自我為中心"],
       zh: ["傲慢", "渴望关注", "固执", "强势", "以自我为中心"],
     },
     bestMatch: ["aries", "sagittarius", "gemini", "libra"],
@@ -411,16 +375,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   virgo: {
     emoji: "♍",
     element: "earth",
-    ruler: { ko: "수성", en: "Mercury", ja: "水星", fr: "Mercure", es: "Mercurio", cn: "水星", zh: "水星" },
-    dateRange: { ko: "8월 23일 – 9월 22일", en: "Aug 23 – Sep 22", ja: "8月23日 – 9月22日", fr: "23 août – 22 sep", es: "23 ago – 22 sep", cn: "8月23日 – 9月22日", zh: "8月23日 – 9月22日" },
-    name: { ko: "처녀자리", en: "Virgo", ja: "乙女座", fr: "Vierge", es: "Virgo", cn: "處女座", zh: "处女座" },
+    ruler: { ko: "수성", en: "Mercury", ja: "水星", fr: "Mercure", es: "Mercurio", zh: "水星" },
+    dateRange: { ko: "8월 23일 – 9월 22일", en: "Aug 23 – Sep 22", ja: "8月23日 – 9月22日", fr: "23 août – 22 sep", es: "23 ago – 22 sep", zh: "8月23日 – 9月22日" },
+    name: { ko: "처녀자리", en: "Virgo", ja: "乙女座", fr: "Vierge", es: "Virgo", zh: "处女座" },
     description: {
       ko: "처녀자리는 분석적이고 꼼꼼한 완벽주의자입니다. 실용적인 해결책을 찾는 데 뛰어나며, 타인을 위해 헌신적으로 봉사합니다.",
       en: "Virgo is an analytical, meticulous perfectionist. They excel at finding practical solutions and are dedicated to serving others.",
       ja: "乙女座は分析的で几帳面な完璧主義者です。実用的な解決策を見つけるのが得意で、他者のために献身的に奉仕します。",
       fr: "La Vierge est un perfectionniste analytique et méticuleux. Excellent à trouver des solutions pratiques, il se consacre au service des autres.",
       es: "Virgo es un perfeccionista analítico y meticuloso. Excelente para encontrar soluciones prácticas, se dedica al servicio de los demás.",
-      cn: "處女座是分析型的一絲不苟完美主義者。擅長找出實際解決方案，並全心奉獻服務他人。",
       zh: "处女座是分析型的一丝不苟完美主义者。擅长找出实际解决方案，并全心奉献服务他人。",
     },
     traits: {
@@ -429,7 +392,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["分析的", "几帳面", "実用的", "批判的", "奉仕精神", "謙虚", "完璧主義"],
       fr: ["Analytique", "Méticuleux", "Pratique", "Critique", "Serviable", "Modeste", "Perfectionniste"],
       es: ["Analítico", "Meticuloso", "Práctico", "Crítico", "Servicial", "Modesto", "Perfeccionista"],
-      cn: ["分析型", "一絲不苟", "實用", "批判性", "服務精神", "謙遜", "完美主義"],
       zh: ["分析型", "一丝不苟", "实用", "批判性", "服务精神", "谦逊", "完美主义"],
     },
     strengths: {
@@ -438,7 +400,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["細やかな分析力", "問題解決能力", "信頼性", "献身的奉仕", "実用的知恵"],
       fr: ["Analyse fine", "Résolution de problèmes", "Fiabilité", "Service dévoué", "Sagesse pratique"],
       es: ["Análisis agudo", "Resolución de problemas", "Confiabilidad", "Servicio dedicado", "Sabiduría práctica"],
-      cn: ["細膩分析力", "解決問題能力", "可靠性", "盡心服務", "實用智慧"],
       zh: ["细腻分析力", "解决问题能力", "可靠性", "尽心服务", "实用智慧"],
     },
     weaknesses: {
@@ -447,7 +408,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["過度な批判", "心配しすぎ", "完璧主義への執着", "優柔不断", "内向的孤立"],
       fr: ["Sur-critique", "Inquiétude excessive", "Fixation perfectionniste", "Indécision", "Isolement"],
       es: ["Exceso de crítica", "Preocupación excesiva", "Fijación perfeccionista", "Indecisión", "Aislamiento"],
-      cn: ["過度批評", "過於擔憂", "完美主義執念", "優柔寡斷", "內向孤立"],
       zh: ["过度批评", "过于担忧", "完美主义执念", "优柔寡断", "内向孤立"],
     },
     bestMatch: ["taurus", "capricorn", "cancer", "scorpio"],
@@ -456,16 +416,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   libra: {
     emoji: "♎",
     element: "air",
-    ruler: { ko: "금성", en: "Venus", ja: "金星", fr: "Vénus", es: "Venus", cn: "金星", zh: "金星" },
-    dateRange: { ko: "9월 23일 – 10월 22일", en: "Sep 23 – Oct 22", ja: "9月23日 – 10月22日", fr: "23 sep – 22 oct", es: "23 sep – 22 oct", cn: "9月23日 – 10月22日", zh: "9月23日 – 10月22日" },
-    name: { ko: "천칭자리", en: "Libra", ja: "天秤座", fr: "Balance", es: "Libra", cn: "天秤座", zh: "天秤座" },
+    ruler: { ko: "금성", en: "Venus", ja: "金星", fr: "Vénus", es: "Venus", zh: "金星" },
+    dateRange: { ko: "9월 23일 – 10월 22일", en: "Sep 23 – Oct 22", ja: "9月23日 – 10月22日", fr: "23 sep – 22 oct", es: "23 sep – 22 oct", zh: "9月23日 – 10月22日" },
+    name: { ko: "천칭자리", en: "Libra", ja: "天秤座", fr: "Balance", es: "Libra", zh: "天秤座" },
     description: {
       ko: "천칭자리는 조화와 균형을 추구하는 외교관입니다. 아름다움에 대한 탁월한 안목과 타인과의 공정한 관계를 중시합니다.",
       en: "Libra is a diplomat who seeks harmony and balance. They have exceptional aesthetic taste and prioritize fair, equal relationships.",
       ja: "天秤座は調和とバランスを求める外交官です。美に対する卓越した審美眼と、公正な人間関係を大切にします。",
       fr: "La Balance est un diplomate qui recherche l'harmonie et l'équilibre. Elle possède un goût esthétique exceptionnel et valorise les relations justes.",
       es: "Libra es un diplomático que busca la armonía y el equilibrio. Tiene un gusto estético excepcional y prioriza relaciones justas e igualitarias.",
-      cn: "天秤座是追求和諧與平衡的外交家。擁有卓越的審美品味，重視公平平等的人際關係。",
       zh: "天秤座是追求和谐与平衡的外交家。拥有卓越的审美品味，重视公平平等的人际关系。",
     },
     traits: {
@@ -474,7 +433,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["公平", "外交的", "優雅", "社交的", "優柔不断", "理想主義", "協力的"],
       fr: ["Équitable", "Diplomatique", "Élégant", "Sociable", "Indécis", "Idéaliste", "Coopératif"],
       es: ["Justo", "Diplomático", "Elegante", "Sociable", "Indeciso", "Idealista", "Cooperativo"],
-      cn: ["公平", "外交手腕", "優雅", "善於社交", "優柔寡斷", "理想主義", "合作精神"],
       zh: ["公平", "外交手腕", "优雅", "善于社交", "优柔寡断", "理想主义", "合作精神"],
     },
     strengths: {
@@ -483,7 +441,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["優れた交渉力", "美的センス", "公正な判断", "社交性", "対立調整"],
       fr: ["Capacité de négociation", "Sens esthétique", "Jugement juste", "Sociabilité", "Résolution des conflits"],
       es: ["Habilidad de negociación", "Sentido estético", "Juicio justo", "Sociabilidad", "Resolución de conflictos"],
-      cn: ["出色的協商能力", "審美感", "公正判斷", "社交能力", "衝突調解"],
       zh: ["出色的协商能力", "审美感", "公正判断", "社交能力", "冲突调解"],
     },
     weaknesses: {
@@ -492,7 +449,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["優柔不断", "葛藤回避", "自己卑下", "依存的", "表面的な関係"],
       fr: ["Indécision", "Évitement des conflits", "Manque de confiance", "Dépendance", "Superficialité"],
       es: ["Indecisión", "Evitar conflictos", "Duda personal", "Dependencia", "Superficialidad"],
-      cn: ["優柔寡斷", "迴避衝突", "自我懷疑", "依賴性", "膚淺的關係"],
       zh: ["优柔寡断", "回避冲突", "自我怀疑", "依赖性", "肤浅的关系"],
     },
     bestMatch: ["gemini", "aquarius", "leo", "sagittarius"],
@@ -501,16 +457,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   scorpio: {
     emoji: "♏",
     element: "water",
-    ruler: { ko: "명왕성/화성", en: "Pluto / Mars", ja: "冥王星・火星", fr: "Pluton / Mars", es: "Plutón / Marte", cn: "冥王星/火星", zh: "冥王星/火星" },
-    dateRange: { ko: "10월 23일 – 11월 21일", en: "Oct 23 – Nov 21", ja: "10月23日 – 11月21日", fr: "23 oct – 21 nov", es: "23 oct – 21 nov", cn: "10月23日 – 11月21日", zh: "10月23日 – 11月21日" },
-    name: { ko: "전갈자리", en: "Scorpio", ja: "蠍座", fr: "Scorpion", es: "Escorpio", cn: "天蠍座", zh: "天蝎座" },
+    ruler: { ko: "명왕성/화성", en: "Pluto / Mars", ja: "冥王星・火星", fr: "Pluton / Mars", es: "Plutón / Marte", zh: "冥王星/火星" },
+    dateRange: { ko: "10월 23일 – 11월 21일", en: "Oct 23 – Nov 21", ja: "10月23日 – 11月21日", fr: "23 oct – 21 nov", es: "23 oct – 21 nov", zh: "10月23日 – 11月21日" },
+    name: { ko: "전갈자리", en: "Scorpio", ja: "蠍座", fr: "Scorpion", es: "Escorpio", zh: "天蝎座" },
     description: {
       ko: "전갈자리는 강렬하고 신비로운 탐구자입니다. 깊은 감정과 날카로운 통찰력으로 인생의 본질을 꿰뚫어 봅니다.",
       en: "Scorpio is an intense, mysterious investigator. Their deep emotions and sharp insight allow them to pierce the heart of any matter.",
       ja: "蠍座は強烈で神秘的な探究者です。深い感情と鋭い洞察力で、物事の本質を見抜きます。",
       fr: "Le Scorpion est un investigateur intense et mystérieux. Ses émotions profondes et son intuition aiguë lui permettent de percer l'essence de toute chose.",
       es: "Escorpio es un investigador intenso y misterioso. Sus profundas emociones y aguda perspicacia le permiten penetrar en el corazón de cualquier asunto.",
-      cn: "天蠍座是強烈而神秘的探索者。深邃的情感和敏銳的洞察力讓他們能看穿事物的本質。",
       zh: "天蝎座是强烈而神秘的探索者。深邃的情感和敏锐的洞察力让他们能看穿事物的本质。",
     },
     traits: {
@@ -519,7 +474,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["強烈", "直感的", "秘密主義", "意志が強い", "執着", "忠実", "復讐心"],
       fr: ["Intense", "Intuitif", "Mystérieux", "Volontaire", "Obsessionnel", "Loyal", "Vindicatif"],
       es: ["Intenso", "Intuitivo", "Reservado", "Decidido", "Obsesivo", "Leal", "Vengativo"],
-      cn: ["強烈", "直覺敏銳", "神秘", "意志力強", "執念", "忠誠", "報復心"],
       zh: ["强烈", "直觉敏锐", "神秘", "意志力强", "执念", "忠诚", "报复心"],
     },
     strengths: {
@@ -528,7 +482,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["強い意志力", "深い洞察力", "集中力", "忠誠心", "変容能力"],
       fr: ["Forte volonté", "Insight profond", "Concentration", "Loyauté", "Capacité de transformation"],
       es: ["Fuerte voluntad", "Perspicacia profunda", "Concentración", "Lealtad", "Capacidad de transformación"],
-      cn: ["強大意志力", "深刻洞察力", "專注力", "忠誠心", "轉化能力"],
       zh: ["强大意志力", "深刻洞察力", "专注力", "忠诚心", "转化能力"],
     },
     weaknesses: {
@@ -537,7 +490,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["嫉妬心", "復讐心", "秘密主義", "執着", "信頼しにくい"],
       fr: ["Jalousie", "Rancune", "Mystère", "Obsession", "Difficulté à faire confiance"],
       es: ["Celos", "Venganza", "Secretismo", "Obsesión", "Dificultad para confiar"],
-      cn: ["嫉妒心", "報復心", "秘密主義", "執念", "難以信任他人"],
       zh: ["嫉妒心", "报复心", "秘密主义", "执念", "难以信任他人"],
     },
     bestMatch: ["cancer", "pisces", "virgo", "capricorn"],
@@ -546,16 +498,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   sagittarius: {
     emoji: "♐",
     element: "fire",
-    ruler: { ko: "목성", en: "Jupiter", ja: "木星", fr: "Jupiter", es: "Júpiter", cn: "木星", zh: "木星" },
-    dateRange: { ko: "11월 22일 – 12월 21일", en: "Nov 22 – Dec 21", ja: "11月22日 – 12月21日", fr: "22 nov – 21 déc", es: "22 nov – 21 dic", cn: "11月22日 – 12月21日", zh: "11月22日 – 12月21日" },
-    name: { ko: "사수자리", en: "Sagittarius", ja: "射手座", fr: "Sagittaire", es: "Sagitario", cn: "射手座", zh: "射手座" },
+    ruler: { ko: "목성", en: "Jupiter", ja: "木星", fr: "Jupiter", es: "Júpiter", zh: "木星" },
+    dateRange: { ko: "11월 22일 – 12월 21일", en: "Nov 22 – Dec 21", ja: "11月22日 – 12月21日", fr: "22 nov – 21 déc", es: "22 nov – 21 dic", zh: "11月22日 – 12月21日" },
+    name: { ko: "사수자리", en: "Sagittarius", ja: "射手座", fr: "Sagittaire", es: "Sagitario", zh: "射手座" },
     description: {
       ko: "사수자리는 자유를 사랑하는 철학자이자 모험가입니다. 세계를 탐험하고 진리를 추구하며, 낙관적인 에너지로 주변을 밝힙니다.",
       en: "Sagittarius is a freedom-loving philosopher and adventurer. They explore the world, seek truth, and brighten their surroundings with optimistic energy.",
       ja: "射手座は自由を愛する哲学者であり冒険家です。世界を探求して真理を追い求め、楽観的なエネルギーで周囲を明るくします。",
       fr: "Le Sagittaire est un philosophe et aventurier épris de liberté. Il explore le monde, cherche la vérité et illumine son entourage d'énergie optimiste.",
       es: "Sagitario es un filósofo y aventurero que ama la libertad. Explora el mundo, busca la verdad e ilumina su entorno con energía optimista.",
-      cn: "射手座是熱愛自由的哲學家和冒險家。探索世界、追求真理，以樂觀的能量照亮周圍。",
       zh: "射手座是热爱自由的哲学家和冒险家。探索世界、追求真理，以乐观的能量照亮周围。",
     },
     traits: {
@@ -564,7 +515,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["楽観的", "冒険的", "哲学的", "率直", "自由奔放", "無責任", "情熱的"],
       fr: ["Optimiste", "Aventureux", "Philosophique", "Honnête", "Libre", "Irresponsable", "Enthousiaste"],
       es: ["Optimista", "Aventurero", "Filosófico", "Honesto", "Libre", "Irresponsable", "Entusiasta"],
-      cn: ["樂觀", "喜歡冒險", "哲學思維", "坦誠", "自由奔放", "不負責任", "充滿熱情"],
       zh: ["乐观", "喜欢冒险", "哲学思维", "坦诚", "自由奔放", "不负责任", "充满热情"],
     },
     strengths: {
@@ -573,7 +523,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["楽観的なエネルギー", "知的好奇心", "自由な思考", "ユーモアセンス", "哲学的深さ"],
       fr: ["Énergie optimiste", "Curiosité intellectuelle", "Pensée ouverte", "Sens de l'humour", "Profondeur philosophique"],
       es: ["Energía optimista", "Curiosidad intelectual", "Pensamiento abierto", "Sentido del humor", "Profundidad filosófica"],
-      cn: ["樂觀能量", "求知欲", "開放思維", "幽默感", "哲學深度"],
       zh: ["乐观能量", "求知欲", "开放思维", "幽默感", "哲学深度"],
     },
     weaknesses: {
@@ -582,7 +531,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["無責任", "大げさ", "無神経", "約束不履行", "集中力不足"],
       fr: ["Irresponsabilité", "Exagération", "Maladresse", "Manque de fiabilité", "Manque de concentration"],
       es: ["Irresponsabilidad", "Exageración", "Falta de tacto", "Incumplimiento", "Falta de concentración"],
-      cn: ["不負責任", "誇大其詞", "說話不得體", "不履行承諾", "缺乏專注"],
       zh: ["不负责任", "夸大其词", "说话不得体", "不履行承诺", "缺乏专注"],
     },
     bestMatch: ["aries", "leo", "libra", "aquarius"],
@@ -591,16 +539,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   capricorn: {
     emoji: "♑",
     element: "earth",
-    ruler: { ko: "토성", en: "Saturn", ja: "土星", fr: "Saturne", es: "Saturno", cn: "土星", zh: "土星" },
-    dateRange: { ko: "12월 22일 – 1월 19일", en: "Dec 22 – Jan 19", ja: "12月22日 – 1月19日", fr: "22 déc – 19 jan", es: "22 dic – 19 ene", cn: "12月22日 – 1月19日", zh: "12月22日 – 1月19日" },
-    name: { ko: "염소자리", en: "Capricorn", ja: "山羊座", fr: "Capricorne", es: "Capricornio", cn: "摩羯座", zh: "摩羯座" },
+    ruler: { ko: "토성", en: "Saturn", ja: "土星", fr: "Saturne", es: "Saturno", zh: "土星" },
+    dateRange: { ko: "12월 22일 – 1월 19일", en: "Dec 22 – Jan 19", ja: "12月22日 – 1月19日", fr: "22 déc – 19 jan", es: "22 dic – 19 ene", zh: "12月22日 – 1月19日" },
+    name: { ko: "염소자리", en: "Capricorn", ja: "山羊座", fr: "Capricorne", es: "Capricornio", zh: "摩羯座" },
     description: {
       ko: "염소자리는 목표 지향적이고 책임감 강한 성취자입니다. 어떤 장애물도 극복하는 인내력과 실용적인 지혜로 정상에 오릅니다.",
       en: "Capricorn is a goal-oriented, responsible achiever. They reach the top with perseverance that overcomes any obstacle and practical wisdom.",
       ja: "山羊座は目標志向で責任感の強い達成者です。いかなる障害も乗り越える忍耐力と実用的な知恵で頂点を目指します。",
       fr: "Le Capricorne est un réalisateur ambitieux et responsable. Il atteint le sommet grâce à une persévérance qui surmonte tout obstacle.",
       es: "Capricornio es un realizador orientado a metas y responsable. Alcanza la cima con perseverancia que supera cualquier obstáculo.",
-      cn: "摩羯座是目標導向、責任感強的成就者。以克服任何障礙的耐力和實用智慧登頂。",
       zh: "摩羯座是目标导向、责任感强的成就者。以克服任何障碍的耐力和实用智慧登顶。",
     },
     traits: {
@@ -609,7 +556,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["野心", "自制心", "責任感", "実用的", "保守的", "冷静", "忍耐力"],
       fr: ["Ambitieux", "Discipliné", "Responsable", "Pratique", "Conservateur", "Réservé", "Patient"],
       es: ["Ambicioso", "Disciplinado", "Responsable", "Práctico", "Conservador", "Reservado", "Paciente"],
-      cn: ["有抱負", "自律", "責任感", "實用", "保守", "冷靜", "耐心"],
       zh: ["有抱负", "自律", "责任感", "实用", "保守", "冷静", "耐心"],
     },
     strengths: {
@@ -618,7 +564,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["強い自制心", "目標達成力", "責任感", "長期的思考", "実用的知恵"],
       fr: ["Autodiscipline", "Réalisation d'objectifs", "Sens des responsabilités", "Vision à long terme", "Sagesse pratique"],
       es: ["Autodisciplina", "Logro de objetivos", "Responsabilidad", "Pensamiento a largo plazo", "Sabiduría práctica"],
-      cn: ["強大自律", "目標達成", "責任感", "長遠思考", "實用智慧"],
       zh: ["强大自律", "目标达成", "责任感", "长远思考", "实用智慧"],
     },
     weaknesses: {
@@ -627,7 +572,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["頑固", "冷淡", "悲観主義", "仕事中毒", "感情表現の乏しさ"],
       fr: ["Entêtement", "Froideur", "Pessimisme", "Workaholisme", "Détachement émotionnel"],
       es: ["Terquedad", "Frialdad", "Pesimismo", "Adicción al trabajo", "Distancia emocional"],
-      cn: ["固執", "冷淡", "悲觀", "工作狂", "缺乏情感表達"],
       zh: ["固执", "冷淡", "悲观", "工作狂", "缺乏情感表达"],
     },
     bestMatch: ["taurus", "virgo", "scorpio", "pisces"],
@@ -636,16 +580,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   aquarius: {
     emoji: "♒",
     element: "air",
-    ruler: { ko: "천왕성/토성", en: "Uranus / Saturn", ja: "天王星・土星", fr: "Uranus / Saturne", es: "Urano / Saturno", cn: "天王星/土星", zh: "天王星/土星" },
-    dateRange: { ko: "1월 20일 – 2월 18일", en: "Jan 20 – Feb 18", ja: "1月20日 – 2月18日", fr: "20 jan – 18 fév", es: "20 ene – 18 feb", cn: "1月20日 – 2月18日", zh: "1月20日 – 2月18日" },
-    name: { ko: "물병자리", en: "Aquarius", ja: "水瓶座", fr: "Verseau", es: "Acuario", cn: "水瓶座", zh: "水瓶座" },
+    ruler: { ko: "천왕성/토성", en: "Uranus / Saturn", ja: "天王星・土星", fr: "Uranus / Saturne", es: "Urano / Saturno", zh: "天王星/土星" },
+    dateRange: { ko: "1월 20일 – 2월 18일", en: "Jan 20 – Feb 18", ja: "1月20日 – 2月18日", fr: "20 jan – 18 fév", es: "20 ene – 18 feb", zh: "1月20日 – 2月18日" },
+    name: { ko: "물병자리", en: "Aquarius", ja: "水瓶座", fr: "Verseau", es: "Acuario", zh: "水瓶座" },
     description: {
       ko: "물병자리는 혁신적이고 인도주의적인 비전가입니다. 인류의 미래를 생각하며 독창적인 아이디어로 세상을 변화시킵니다.",
       en: "Aquarius is an innovative, humanitarian visionary. They envision humanity's future and transform the world with original ideas.",
       ja: "水瓶座は革新的で人道主義的なビジョナリーです。人類の未来を考え、独創的なアイデアで世界を変えていきます。",
       fr: "Le Verseau est un visionnaire innovant et humaniste. Il envisage l'avenir de l'humanité et transforme le monde avec des idées originales.",
       es: "Acuario es un visionario innovador y humanista. Imagina el futuro de la humanidad y transforma el mundo con ideas originales.",
-      cn: "水瓶座是創新的人道主義願景者。展望人類未來，以獨創思想改變世界。",
       zh: "水瓶座是创新的人道主义愿景者。展望人类未来，以独创思想改变世界。",
     },
     traits: {
@@ -654,7 +597,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["独創的", "人道主義的", "独立的", "反骨", "知的", "非慣習的", "社交的"],
       fr: ["Original", "Humaniste", "Indépendant", "Rebelle", "Intellectuel", "Non-conventionnel", "Sociable"],
       es: ["Original", "Humanitario", "Independiente", "Rebelde", "Intelectual", "No convencional", "Amigable"],
-      cn: ["獨創", "人道主義", "獨立", "反叛", "智性", "非傳統", "友善"],
       zh: ["独创", "人道主义", "独立", "反叛", "智性", "非传统", "友善"],
     },
     strengths: {
@@ -663,7 +605,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["独創的思考", "人道主義的ビジョン", "知的好奇心", "革新性", "社会的意識"],
       fr: ["Pensée originale", "Vision humaniste", "Curiosité intellectuelle", "Innovation", "Conscience sociale"],
       es: ["Pensamiento original", "Visión humanitaria", "Curiosidad intelectual", "Innovación", "Conciencia social"],
-      cn: ["獨創思維", "人道主義願景", "求知欲", "創新性", "社會意識"],
       zh: ["独创思维", "人道主义愿景", "求知欲", "创新性", "社会意识"],
     },
     weaknesses: {
@@ -672,7 +613,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["感情的距離感", "頑固", "妥協しない", "反社会的", "予測不可能"],
       fr: ["Détachement émotionnel", "Entêtement", "Intransigeance", "Anti-social", "Imprévisibilité"],
       es: ["Distancia emocional", "Terquedad", "Intransigencia", "Antisocial", "Imprevisibilidad"],
-      cn: ["情感疏離", "固執", "不妥協", "反社會", "難以預測"],
       zh: ["情感疏离", "固执", "不妥协", "反社会", "难以预测"],
     },
     bestMatch: ["gemini", "libra", "aries", "sagittarius"],
@@ -681,16 +621,15 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   pisces: {
     emoji: "♓",
     element: "water",
-    ruler: { ko: "해왕성/목성", en: "Neptune / Jupiter", ja: "海王星・木星", fr: "Neptune / Jupiter", es: "Neptuno / Júpiter", cn: "海王星/木星", zh: "海王星/木星" },
-    dateRange: { ko: "2월 19일 – 3월 20일", en: "Feb 19 – Mar 20", ja: "2月19日 – 3月20日", fr: "19 fév – 20 mar", es: "19 feb – 20 mar", cn: "2月19日 – 3月20日", zh: "2月19日 – 3月20日" },
-    name: { ko: "물고기자리", en: "Pisces", ja: "魚座", fr: "Poissons", es: "Piscis", cn: "雙魚座", zh: "双鱼座" },
+    ruler: { ko: "해왕성/목성", en: "Neptune / Jupiter", ja: "海王星・木星", fr: "Neptune / Jupiter", es: "Neptuno / Júpiter", zh: "海王星/木星" },
+    dateRange: { ko: "2월 19일 – 3월 20일", en: "Feb 19 – Mar 20", ja: "2月19日 – 3月20日", fr: "19 fév – 20 mar", es: "19 feb – 20 mar", zh: "2月19日 – 3月20日" },
+    name: { ko: "물고기자리", en: "Pisces", ja: "魚座", fr: "Poissons", es: "Piscis", zh: "双鱼座" },
     description: {
       ko: "물고기자리는 꿈꾸는 예술가이자 공감의 달인입니다. 무한한 상상력과 깊은 감수성으로 세상의 고통을 자신의 것처럼 느낍니다.",
       en: "Pisces is a dreaming artist and master of empathy. With boundless imagination and deep sensitivity, they feel the world's joys and pains as their own.",
       ja: "魚座は夢見る芸術家であり共感の達人です。無限の想像力と深い感受性で、世界の喜びと痛みを自分のものとして感じます。",
       fr: "Les Poissons sont des artistes rêveurs et maîtres de l'empathie. Avec une imagination sans limites et une sensibilité profonde, ils ressentent les joies du monde.",
       es: "Piscis es un artista soñador y maestro de la empatía. Con imaginación ilimitada y profunda sensibilidad, siente las alegrías y dolores del mundo como propios.",
-      cn: "雙魚座是夢幻藝術家和同理心大師。以無限的想像力和深刻的感受力，把世界的喜悅和痛苦當作自己的來感受。",
       zh: "双鱼座是梦幻艺术家和同理心大师。以无限的想象力和深刻的感受力，把世界的喜悦和痛苦当作自己的来感受。",
     },
     traits: {
@@ -699,7 +638,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["共感力が高い", "直感的", "芸術的", "利他的", "夢想家", "優柔不断", "感受性豊か"],
       fr: ["Empathique", "Intuitif", "Artistique", "Altruiste", "Rêveur", "Indécis", "Très sensible"],
       es: ["Empático", "Intuitivo", "Artístico", "Altruista", "Soñador", "Indeciso", "Muy sensible"],
-      cn: ["高度同理心", "直覺敏銳", "藝術氣質", "無私", "夢想家", "優柔寡斷", "感受力強"],
       zh: ["高度同理心", "直觉敏锐", "艺术气质", "无私", "梦想家", "优柔寡断", "感受力强"],
     },
     strengths: {
@@ -708,7 +646,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["深い共感能力", "豊かな想像力", "芸術的創造性", "利他心", "直感力"],
       fr: ["Empathie profonde", "Imagination riche", "Créativité artistique", "Altruisme", "Intuition"],
       es: ["Empatía profunda", "Imaginación rica", "Creatividad artística", "Altruismo", "Intuición"],
-      cn: ["深刻同理心", "豐富想像力", "藝術創造力", "無私心", "直覺力"],
       zh: ["深刻同理心", "丰富想象力", "艺术创造力", "无私心", "直觉力"],
     },
     weaknesses: {
@@ -717,7 +654,6 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       ja: ["現実逃避", "優柔不断", "境界設定が難しい", "自己犠牲", "過度な感受性"],
       fr: ["Évasion de la réalité", "Indécision", "Limites floues", "Sacrifice de soi", "Hypersensibilité"],
       es: ["Escapismo", "Indecisión", "Límites pobres", "Auto-sacrificio", "Hipersensibilidad"],
-      cn: ["逃避現實", "優柔寡斷", "難以設定界限", "自我犧牲", "過度敏感"],
       zh: ["逃避现实", "优柔寡断", "难以设定界限", "自我牺牲", "过度敏感"],
     },
     bestMatch: ["cancer", "scorpio", "taurus", "capricorn"],
@@ -752,7 +688,6 @@ const COMPAT_LABEL: Record<Locale, { best: string; challenging: string }> = {
   ja:  { best: "最高の相性 💕", challenging: "難しい相性 ⚡" },
   fr:  { best: "Meilleure compatibilité 💕", challenging: "Difficile ⚡" },
   es:  { best: "Mejor compatibilidad 💕", challenging: "Difícil ⚡" },
-  cn:  { best: "最佳配對 💕", challenging: "有挑戰性 ⚡" },
   zh:  { best: "最佳配对 💕", challenging: "有挑战性 ⚡" },
 };
 

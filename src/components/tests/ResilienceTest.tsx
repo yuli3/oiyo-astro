@@ -414,7 +414,7 @@ export default function ResilienceTest({ locale: localeProp }: Props) {
 
         <p className="text-xs text-gray-400 text-center">{t.note}</p>
 
-        <ShareResultButton locale={locale} heading={t.resultTitle} emoji="🌱" resultTitle={d.label[locale]} description={`${t.yourScore ?? ""} ${result.score}`.trim()} />
+        <ShareResultButton locale={locale} heading={t.resultTitle} emoji="🌱" resultTitle={d.label[locale]} description={`${t.score} ${result.score}`} />
 
         <div className="flex gap-3 justify-center">
           <button onClick={restart}

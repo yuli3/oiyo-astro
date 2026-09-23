@@ -341,29 +341,29 @@ export default function PoliticalCompassTest({ locale }: Props) {
     const clarify = TERM_CLARIFY[L] ?? TERM_CLARIFY.en!
 
     return (
-      <div class="space-y-6">
-        <div class="rounded-2xl border border-green-200 bg-surface-subtle p-6 text-center">
-          <p class="text-xs font-semibold uppercase tracking-widest text-green-600">{info.resultTitle}</p>
-          <p class="mt-1 text-sm text-green-700">{info.resultSub}</p>
-          <div class="mt-4 inline-flex rounded-xl border-2 border-green-800 bg-card px-6 py-3">
-            <span class="font-mono text-3xl font-black tracking-[0.3em] text-green-900">{chars.slice(0,4).join('')}</span>
+      <div className="space-y-6">
+        <div className="rounded-2xl border border-green-200 bg-surface-subtle p-6 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-green-600">{info.resultTitle}</p>
+          <p className="mt-1 text-sm text-green-700">{info.resultSub}</p>
+          <div className="mt-4 inline-flex rounded-xl border-2 border-green-800 bg-card px-6 py-3">
+            <span className="font-mono text-3xl font-black tracking-[0.3em] text-green-900">{chars.slice(0,4).join('')}</span>
           </div>
         </div>
 
-        <div class="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           {axes.map((ax, i) => (
-            <div key={i} class={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-surface-subtle' : 'border-slate-200 bg-slate-50'}`}>
-              <p class="text-xs font-bold uppercase tracking-widest text-slate-500">{ax.name}</p>
-              <p class={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-green-800' : 'text-slate-500'}`}>{ax.label}</p>
-              <div class="mt-2 flex items-center gap-1">
-                <span class="text-xs text-slate-400">{ax.left}</span>
-                <div class="relative mx-1 h-2 flex-1 rounded-full bg-slate-200">
-                  <div class={`absolute top-0 h-2 w-2 -translate-x-1/2 rounded-full border-2 border-white shadow ${ax.side === 'left' ? 'left-[20%] bg-amber-500' : ax.side === 'right' ? 'left-[80%] bg-green-500' : 'left-[50%] bg-slate-400'}`} />
+            <div key={i} className={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-surface-subtle' : 'border-slate-200 bg-slate-50'}`}>
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-500">{ax.name}</p>
+              <p className={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-green-800' : 'text-slate-500'}`}>{ax.label}</p>
+              <div className="mt-2 flex items-center gap-1">
+                <span className="text-xs text-slate-400">{ax.left}</span>
+                <div className="relative mx-1 h-2 flex-1 rounded-full bg-slate-200">
+                  <div className={`absolute top-0 h-2 w-2 -translate-x-1/2 rounded-full border-2 border-white shadow ${ax.side === 'left' ? 'left-[20%] bg-amber-500' : ax.side === 'right' ? 'left-[80%] bg-green-500' : 'left-[50%] bg-slate-400'}`} />
                 </div>
-                <span class="text-xs text-slate-400">{ax.right}</span>
+                <span className="text-xs text-slate-400">{ax.right}</span>
               </div>
               {ax.side !== 'neutral' && glossary[i] && (
-                <p class="mt-3 border-t border-slate-200/70 pt-2 text-xs leading-relaxed text-slate-600">
+                <p className="mt-3 border-t border-slate-200/70 pt-2 text-xs leading-relaxed text-slate-600">
                   {glossary[i][ax.side as 'left' | 'right']}
                 </p>
               )}
@@ -372,21 +372,21 @@ export default function PoliticalCompassTest({ locale }: Props) {
         </div>
 
         {/* 정치 용어 바로 알기 — 한국 담론 오염 교정 */}
-        <div class="rounded-xl border-2 border-green-200 bg-green-50/60 p-5">
-          <p class="mb-3 flex items-center gap-2 text-sm font-black text-green-900">
+        <div className="rounded-xl border-2 border-green-200 bg-green-50/60 p-5">
+          <p className="mb-3 flex items-center gap-2 text-sm font-black text-green-900">
             <span>📚</span>{clarify.title}
           </p>
-          <ul class="space-y-2">
+          <ul className="space-y-2">
             {clarify.items.map((it, i) => (
-              <li key={i} class="flex gap-2 text-xs leading-relaxed text-slate-700">
-                <span class="mt-0.5 font-black text-green-600">·</span>
+              <li key={i} className="flex gap-2 text-xs leading-relaxed text-slate-700">
+                <span className="mt-0.5 font-black text-green-600">·</span>
                 <span>{it}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <p class="rounded-lg bg-slate-100 p-3 text-center text-xs text-slate-500">{info.disclaimer}</p>
+        <p className="rounded-lg bg-slate-100 p-3 text-center text-xs text-slate-500">{info.disclaimer}</p>
         <ShareResultButton
           locale={L}
           heading={ui.title}
@@ -405,7 +405,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
         <button
           onClick={handleRestart}
-          class="w-full rounded-xl border-2 border-green-700 bg-card py-3 font-bold text-green-700 transition hover:bg-primary hover:text-primary-foreground"
+          className="w-full rounded-xl border-2 border-green-700 bg-card py-3 font-bold text-green-700 transition hover:bg-primary hover:text-primary-foreground"
         >
           {ui.restart}
         </button>
@@ -416,45 +416,45 @@ export default function PoliticalCompassTest({ locale }: Props) {
   const stepLabels = [ui.step1, ui.step2, ui.step3, ui.step4]
 
   return (
-    <div class="space-y-6">
+    <div className="space-y-6">
       {/* 헤더 */}
-      <div class="text-center">
-        <h1 class="text-2xl font-black text-slate-900">{ui.title}</h1>
-        <p class="mt-1 text-sm text-slate-500">{ui.subtitle}</p>
+      <div className="text-center">
+        <h1 className="text-2xl font-black text-slate-900">{ui.title}</h1>
+        <p className="mt-1 text-sm text-slate-500">{ui.subtitle}</p>
       </div>
 
       {/* 스텝 인디케이터 */}
-      <div class="flex items-center gap-1">
+      <div className="flex items-center gap-1">
         {POLITICAL_STEP_KEYS.map((_, i) => (
-          <div key={i} class={`h-2 flex-1 rounded-full transition-all ${i < step ? 'bg-green-500' : i === step ? 'bg-primary' : 'bg-slate-200'}`} />
+          <div key={i} className={`h-2 flex-1 rounded-full transition-all ${i < step ? 'bg-green-500' : i === step ? 'bg-primary' : 'bg-slate-200'}`} />
         ))}
       </div>
-      <p class="text-center text-sm font-semibold text-green-700">
+      <p className="text-center text-sm font-semibold text-green-700">
         {ui.stepOf(step + 1, 4)} — {stepLabels[step]}
       </p>
-      <p class="rounded-xl border border-green-100 bg-surface-subtle p-3 text-xs leading-5 text-green-900">
+      <p className="rounded-xl border border-green-100 bg-surface-subtle p-3 text-xs leading-5 text-green-900">
         {ui.privacy}
       </p>
 
       {/* 오류 배너 */}
       {error && (
-        <div class="rounded-xl border-2 border-red-300 bg-red-50 p-3 text-center text-sm font-bold text-red-700">
+        <div className="rounded-xl border-2 border-red-300 bg-red-50 p-3 text-center text-sm font-bold text-red-700">
           {error}
         </div>
       )}
 
       {/* 질문 목록 */}
-      <div class="space-y-5">
+      <div className="space-y-5">
         {currentKeys.map((key, qi) => {
           const q = QUESTIONS[key]?.[L] ?? QUESTIONS[key]?.en ?? ''
           const isUnanswered = unanswered.includes(key)
           const current = answers[key]
           return (
-            <div key={key} class={`rounded-xl border-2 p-4 transition ${isUnanswered ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-card'}`}>
-              <p class="mb-3 font-medium leading-relaxed text-slate-800">
-                <span class="mr-2 font-black text-green-600">{qi + 1}.</span>{q}
+            <div key={key} className={`rounded-xl border-2 p-4 transition ${isUnanswered ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-card'}`}>
+              <p className="mb-3 font-medium leading-relaxed text-slate-800">
+                <span className="mr-2 font-black text-green-600">{qi + 1}.</span>{q}
               </p>
-              <div class="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-2">
                 {(['1','2','3'] as const).map((val, vi) => {
                   const labels = [ui.disagree, ui.neutral, ui.agree]
                   const isSelected = current === val
@@ -462,7 +462,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
                     <button
                       key={val}
                       onClick={() => setAnswer(key, val)}
-                      class={`rounded-lg border-2 py-2 text-sm font-semibold transition ${
+                      className={`rounded-lg border-2 py-2 text-sm font-semibold transition ${
                         isSelected
                           ? vi === 0 ? 'border-amber-500 bg-amber-500 text-white'
                             : vi === 2 ? 'border-green-500 bg-green-500 text-white'
@@ -481,18 +481,18 @@ export default function PoliticalCompassTest({ locale }: Props) {
       </div>
 
       {/* 네비게이션 */}
-      <div class="flex gap-3 pt-2">
+      <div className="flex gap-3 pt-2">
         <button
           onClick={handlePrev}
           disabled={step === 0}
-          class="flex-1 rounded-xl border-2 border-slate-300 py-3 font-bold text-slate-600 transition hover:border-slate-500 disabled:opacity-40"
+          className="flex-1 rounded-xl border-2 border-slate-300 py-3 font-bold text-slate-600 transition hover:border-slate-500 disabled:opacity-40"
         >
           {ui.prev}
         </button>
         {step < 3 ? (
           <button
             onClick={handleNext}
-            class="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-primary-strong"
+            className="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-primary-strong"
           >
             {ui.next}
           </button>
@@ -500,7 +500,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            class="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-primary-strong disabled:opacity-60"
+            className="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-primary-strong disabled:opacity-60"
           >
             {loading ? ui.loading : ui.submit}
           </button>

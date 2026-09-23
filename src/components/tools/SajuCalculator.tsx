@@ -62,7 +62,6 @@ const STEM_NAMES: Record<Locale, string[]> = {
   fr: ['Jiǎ', 'Yǐ', 'Bǐng', 'Dīng', 'Wù', 'Jǐ', 'Gēng', 'Xīn', 'Rén', 'Guǐ'],
   es: ['Jiǎ', 'Yǐ', 'Bǐng', 'Dīng', 'Wù', 'Jǐ', 'Gēng', 'Xīn', 'Rén', 'Guǐ'],
   zh: ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'],
-  cn: ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'],
 };
 
 // ─── Earthly Branches (地支) ──────────────────────────────────────────────────
@@ -74,7 +73,6 @@ const BRANCH_ANIMALS: Record<Locale, string[]> = {
   fr: ['Rat', 'Bœuf', 'Tigre', 'Lapin', 'Dragon', 'Serpent', 'Cheval', 'Chèvre', 'Singe', 'Coq', 'Chien', 'Cochon'],
   es: ['Rata', 'Buey', 'Tigre', 'Conejo', 'Dragón', 'Serpiente', 'Caballo', 'Cabra', 'Mono', 'Gallo', 'Perro', 'Cerdo'],
   zh: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'],
-  cn: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'],
 };
 const BRANCH_EMOJIS = ['🐭', '🐄', '🐯', '🐰', '🐉', '🐍', '🐎', '🐑', '🐒', '🐓', '🐕', '🐷'];
 
@@ -82,11 +80,11 @@ const BRANCH_EMOJIS = ['🐭', '🐄', '🐯', '🐰', '🐉', '🐍', '🐎', '
 const STEM_ELEMENT = ['Wood', 'Wood', 'Fire', 'Fire', 'Earth', 'Earth', 'Metal', 'Metal', 'Water', 'Water'];
 const BRANCH_ELEMENT = ['Water', 'Earth', 'Wood', 'Wood', 'Earth', 'Fire', 'Fire', 'Earth', 'Metal', 'Metal', 'Earth', 'Water'];
 const ELEMENTS: Record<string, Record<Locale, string>> = {
-  Wood: { ko: '목(木)', en: 'Wood 木', ja: '木', fr: 'Bois 木', es: 'Madera 木', zh: '木', cn: '木' },
-  Fire: { ko: '화(火)', en: 'Fire 火', ja: '火', fr: 'Feu 火', es: 'Fuego 火', zh: '火', cn: '火' },
-  Earth: { ko: '토(土)', en: 'Earth 土', ja: '土', fr: 'Terre 土', es: 'Tierra 土', zh: '土', cn: '土' },
-  Metal: { ko: '금(金)', en: 'Metal 金', ja: '金', fr: 'Métal 金', es: 'Metal 金', zh: '金', cn: '金' },
-  Water: { ko: '수(水)', en: 'Water 水', ja: '水', fr: 'Eau 水', es: 'Agua 水', zh: '水', cn: '水' },
+  Wood: { ko: '목(木)', en: 'Wood 木', ja: '木', fr: 'Bois 木', es: 'Madera 木', zh: '木' },
+  Fire: { ko: '화(火)', en: 'Fire 火', ja: '火', fr: 'Feu 火', es: 'Fuego 火', zh: '火' },
+  Earth: { ko: '토(土)', en: 'Earth 土', ja: '土', fr: 'Terre 土', es: 'Tierra 土', zh: '土' },
+  Metal: { ko: '금(金)', en: 'Metal 金', ja: '金', fr: 'Métal 金', es: 'Metal 金', zh: '金' },
+  Water: { ko: '수(水)', en: 'Water 水', ja: '水', fr: 'Eau 水', es: 'Agua 水', zh: '水' },
 };
 const ELEMENT_COLORS: Record<string, { bg: string; text: string; border: string }> = {
   Wood: { bg: 'bg-surface-subtle', text: 'text-green-700', border: 'border-green-200' },
@@ -129,7 +127,6 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     fr: { strengths: ['Orienté croissance', 'Créatif', 'Humaniste', 'Flexible'], weaknesses: ['Indécis', 'Trop idéaliste', 'Têtu'], career: 'Éducation, santé, environnement, arts' },
     es: { strengths: ['Orientado al crecimiento', 'Creativo', 'Humanitario', 'Flexible'], weaknesses: ['Indeciso', 'Demasiado idealista', 'Terco'], career: 'Educación, salud, medio ambiente, artes' },
     zh: { strengths: ['成长导向', '创造力强', '人道主义', '灵活'], weaknesses: ['优柔寡断', '过度理想化', '固执'], career: '教育、医疗、环境、创作' },
-    cn: { strengths: ['成长导向', '创造力强', '人道主义', '灵活'], weaknesses: ['优柔寡断', '过度理想化', '固执'], career: '教育、医疗、环境、创作' },
   },
   Fire: {
     ko: { strengths: ['열정적', '카리스마', '직관력', '리더십'], weaknesses: ['성급함', '충동적', '과도한 자신감'], career: '연예, 마케팅, 정치, 스포츠' },
@@ -138,7 +135,6 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     fr: { strengths: ['Passionné(e)', 'Charismatique', 'Intuitif(ve)', 'Leadership'], weaknesses: ['Impatient(e)', 'Impulsif(ve)', 'Trop confiant(e)'], career: 'Divertissement, marketing, politique, sport' },
     es: { strengths: ['Apasionado/a', 'Carismático/a', 'Intuitivo/a', 'Liderazgo'], weaknesses: ['Impaciente', 'Impulsivo/a', 'Demasiado confiado/a'], career: 'Entretenimiento, marketing, política, deporte' },
     zh: { strengths: ['热情', '魅力', '直觉力', '领导力'], weaknesses: ['急躁', '冲动', '过度自信'], career: '娱乐、行销、政治、体育' },
-    cn: { strengths: ['热情', '魅力', '直觉力', '领导力'], weaknesses: ['急躁', '冲动', '过度自信'], career: '娱乐、营销、政治、体育' },
   },
   Earth: {
     ko: { strengths: ['안정적', '신뢰할 수 있는', '실용적', '인내심'], weaknesses: ['보수적', '변화 거부', '느린 결정'], career: '부동산, 금융, 농업, 행정' },
@@ -147,7 +143,6 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     fr: { strengths: ['Stable', 'Fiable', 'Pratique', 'Patient(e)'], weaknesses: ['Conservateur(trice)', 'Résistance au changement', 'Lent(e) à décider'], career: 'Immobilier, finance, agriculture, administration' },
     es: { strengths: ['Estable', 'Confiable', 'Práctico/a', 'Paciente'], weaknesses: ['Conservador/a', 'Resistente al cambio', 'Lento/a para decidir'], career: 'Inmobiliario, finanzas, agricultura, administración' },
     zh: { strengths: ['稳定', '值得信赖', '务实', '有耐心'], weaknesses: ['保守', '抗拒变化', '决策缓慢'], career: '房地产、金融、农业、行政' },
-    cn: { strengths: ['稳定', '值得信赖', '务实', '有耐心'], weaknesses: ['保守', '抗拒变化', '决策缓慢'], career: '房地产、金融、农业、行政' },
   },
   Metal: {
     ko: { strengths: ['결단력', '정의감', '체계적', '강한 의지'], weaknesses: ['완고함', '비타협적', '지나친 비판'], career: '법조계, 군/경찰, 금융, 엔지니어링' },
@@ -156,7 +151,6 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     fr: { strengths: ['Décidé(e)', 'Sens de la justice', 'Systématique', 'Volonté forte'], weaknesses: ['Têtu(e)', 'Intransigeant(e)', 'Trop critique'], career: 'Droit, armée/police, finance, ingénierie' },
     es: { strengths: ['Decidido/a', 'Sentido de justicia', 'Sistemático/a', 'Voluntad fuerte'], weaknesses: ['Terco/a', 'Intransigente', 'Demasiado crítico/a'], career: 'Derecho, militar/policía, finanzas, ingeniería' },
     zh: { strengths: ['果断', '正义感强', '有条理', '意志坚定'], weaknesses: ['固执', '不妥协', '过度批评'], career: '法律、军警、金融、工程' },
-    cn: { strengths: ['果断', '正义感强', '有条理', '意志坚定'], weaknesses: ['固执', '不妥协', '过度批评'], career: '法律、军警、金融、工程' },
   },
   Water: {
     ko: { strengths: ['지혜로움', '적응력', '통찰력', '외교적'], weaknesses: ['우유부단', '불안함', '지나친 사색'], career: '철학, 글쓰기, 상담, 외교' },
@@ -165,7 +159,6 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     fr: { strengths: ['Sage', 'Adaptable', 'Perspicace', 'Diplomatique'], weaknesses: ['Indécis(e)', 'Anxieux(se)', 'Trop contemplatif(ve)'], career: 'Philosophie, écriture, conseil, diplomatie' },
     es: { strengths: ['Sabio/a', 'Adaptable', 'Perspicaz', 'Diplomático/a'], weaknesses: ['Indeciso/a', 'Ansioso/a', 'Demasiado contemplativo/a'], career: 'Filosofía, escritura, asesoramiento, diplomacia' },
     zh: { strengths: ['智慧', '适应力强', '洞察力', '外交手腕'], weaknesses: ['优柔寡断', '焦虑', '过度沉思'], career: '哲学、写作、咨询、外交' },
-    cn: { strengths: ['智慧', '适应力强', '洞察力', '外交手腕'], weaknesses: ['优柔寡断', '焦虑', '过度沉思'], career: '哲学、写作、咨询、外交' },
   },
 };
 
@@ -178,7 +171,6 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     fr: { colors: 'Vert, Bleu', numbers: '3, 8', directions: 'Est' },
     es: { colors: 'Verde, Azul', numbers: '3, 8', directions: 'Este' },
     zh: { colors: '绿色、蓝色', numbers: '3、8', directions: '东方' },
-    cn: { colors: '绿色、蓝色', numbers: '3、8', directions: '东方' },
   },
   Fire: {
     ko: { colors: '빨강, 보라', numbers: '2, 7', directions: '남쪽' },
@@ -187,7 +179,6 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     fr: { colors: 'Rouge, Violet', numbers: '2, 7', directions: 'Sud' },
     es: { colors: 'Rojo, Morado', numbers: '2, 7', directions: 'Sur' },
     zh: { colors: '红色、紫色', numbers: '2、7', directions: '南方' },
-    cn: { colors: '红色、紫色', numbers: '2、7', directions: '南方' },
   },
   Earth: {
     ko: { colors: '노랑, 갈색', numbers: '5, 10', directions: '중앙' },
@@ -196,7 +187,6 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     fr: { colors: 'Jaune, Brun', numbers: '5, 10', directions: 'Centre' },
     es: { colors: 'Amarillo, Marrón', numbers: '5, 10', directions: 'Centro' },
     zh: { colors: '黄色、棕色', numbers: '5、10', directions: '中央' },
-    cn: { colors: '黄色、棕色', numbers: '5、10', directions: '中央' },
   },
   Metal: {
     ko: { colors: '흰색, 금색', numbers: '4, 9', directions: '서쪽' },
@@ -205,7 +195,6 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     fr: { colors: 'Blanc, Or', numbers: '4, 9', directions: 'Ouest' },
     es: { colors: 'Blanco, Dorado', numbers: '4, 9', directions: 'Oeste' },
     zh: { colors: '白色、金色', numbers: '4、9', directions: '西方' },
-    cn: { colors: '白色、金色', numbers: '4、9', directions: '西方' },
   },
   Water: {
     ko: { colors: '검정, 파랑', numbers: '1, 6', directions: '북쪽' },
@@ -214,7 +203,6 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     fr: { colors: 'Noir, Bleu', numbers: '1, 6', directions: 'Nord' },
     es: { colors: 'Negro, Azul', numbers: '1, 6', directions: 'Norte' },
     zh: { colors: '黑色、蓝色', numbers: '1、6', directions: '北方' },
-    cn: { colors: '黑色、蓝色', numbers: '1、6', directions: '北方' },
   },
 };
 
@@ -293,18 +281,6 @@ const L: Record<Locale, {
   zh: {
     title: '四柱推命计算机', subtitle: '依生年月日时分析四柱八字',
     birthDate: '出生日期', birthTime: '出生时间',
-    calcBtn: '查看我的四柱', resetBtn: '重置',
-    unknownTime: '不知道',
-    fourPillars: '四柱 (사주)', yearPillar: '年柱', monthPillar: '月柱', dayPillar: '日柱', hourPillar: '时柱',
-    stem: '天干', branch: '地支', animal: '生肖', element: '五行',
-    dominantElement: '主要五行', strengths: '优点', weaknesses: '缺点', career: '适合职业',
-    luckyColors: '幸运颜色', luckyNumbers: '幸运数字', luckyDirections: '幸运方向',
-    disclaimer: '四柱推命是东亚传统占术，没有科学依据。请仅用于娱乐和自我认识。',
-    methodNote: '自2026年9月起，年柱与月柱按节气计算。此前使用历法上的年份与月份，因此与您先前保存或分享的结果可能不同。',
-  },
-  cn: {
-    title: '四柱推命计算器', subtitle: '依生年月日时分析四柱八字',
-    birthDate: '出生日期', birthTime: '出生時間',
     calcBtn: '查看我的四柱', resetBtn: '重置',
     unknownTime: '不知道',
     fourPillars: '四柱 (사주)', yearPillar: '年柱', monthPillar: '月柱', dayPillar: '日柱', hourPillar: '时柱',
