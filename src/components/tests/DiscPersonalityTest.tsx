@@ -10,7 +10,7 @@ import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
 // ─── Types ────────────────────────────────────────────────────────────────────
 type DiscType = 'D' | 'I' | 'S' | 'C'
 type Scores = Record<DiscType, number>
-type Locale = 'ko' | 'en' | 'ja'
+type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 interface Option { text: string; disc: DiscType }
 interface Question { id: string; text: string; options: Option[] }
@@ -99,6 +99,57 @@ const LABELS: Record<Locale, {
     communication: 'コミュニケーション',
     tip: '成長のアドバイス',
     chartTitle: 'DISCプロファイル',
+    pct: '%',
+  },
+  zh: {
+    title: 'DISC 性格类型测验',
+    subtitle: '我的行为方式与沟通风格是？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的 DISC 类型是',
+    yourType: '我的 DISC 类型',
+    keywords: '核心关键词',
+    strengths: '优势',
+    weaknesses: '弱点',
+    workStyle: '工作风格',
+    communication: '沟通方式',
+    tip: '成长建议',
+    chartTitle: 'DISC 倾向分析',
+    pct: '%',
+  },
+  fr: {
+    title: 'Test de personnalité DISC',
+    subtitle: 'Quel est mon style de comportement et de communication ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon type DISC',
+    yourType: 'Mon type DISC',
+    keywords: 'Mots-clés',
+    strengths: 'Forces',
+    weaknesses: 'Faiblesses',
+    workStyle: 'Style de travail',
+    communication: 'Mode de communication',
+    tip: 'Conseils pour progresser',
+    chartTitle: 'Analyse du profil DISC',
+    pct: '%',
+  },
+  es: {
+    title: 'Test de personalidad DISC',
+    subtitle: '¿Cuál es mi estilo de conducta y de comunicación?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi tipo DISC',
+    yourType: 'Mi tipo DISC',
+    keywords: 'Palabras clave',
+    strengths: 'Fortalezas',
+    weaknesses: 'Debilidades',
+    workStyle: 'Estilo de trabajo',
+    communication: 'Forma de comunicarse',
+    tip: 'Consejos para crecer',
+    chartTitle: 'Análisis del perfil DISC',
     pct: '%',
   },
 }
@@ -470,6 +521,372 @@ const QUESTIONS: Record<Locale, Question[]> = {
       ],
     },
   ],
+  zh: [
+    {
+      id: 'q1',
+      text: '开始一件新事情时，我会……',
+      options: [
+        { text: '迅速决定，马上行动', disc: 'D' },
+        { text: '兴奋地和大家分享想法', disc: 'I' },
+        { text: '把一切都谨慎准备好再开始', disc: 'S' },
+        { text: '充分检视详细计划和资料', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: '在团队项目中，我通常……',
+      options: [
+        { text: '设定目标，带领团队', disc: 'D' },
+        { text: '炒热团队气氛，鼓励每个人', disc: 'I' },
+        { text: '支持队友，担任稳定的角色', disc: 'S' },
+        { text: '负责分析数据和细节', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: '发生冲突时，我会……',
+      options: [
+        { text: '直接面对，想快速解决', disc: 'D' },
+        { text: '缓和气氛，让大家都笑出来', disc: 'I' },
+        { text: '耐心寻找和谐的解决办法', disc: 'S' },
+        { text: '以事实和逻辑分析并解决', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: '对我来说最重要的是……',
+      options: [
+        { text: '结果与成绩', disc: 'D' },
+        { text: '认可与乐趣', disc: 'I' },
+        { text: '稳定与信任', disc: 'S' },
+        { text: '准确与品质', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: '我最大的恐惧是……',
+      options: [
+        { text: '失败或失去掌控', disc: 'D' },
+        { text: '被拒绝或被忽视', disc: 'I' },
+        { text: '突如其来的变化或不稳定', disc: 'S' },
+        { text: '被批评或出错', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: '沟通时，我会……',
+      options: [
+        { text: '直接简洁，只讲重点', disc: 'D' },
+        { text: '充满热情、表达丰富地说', disc: 'I' },
+        { text: '温和体贴、平静地说', disc: 'S' },
+        { text: '准确、以事实为中心、谨慎地说', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: '有压力时，我会……',
+      options: [
+        { text: '变得更想掌控或更激烈', disc: 'D' },
+        { text: '变得情绪化或分心', disc: 'I' },
+        { text: '藏在心里忍着', disc: 'S' },
+        { text: '变得更完美主义或过度分析', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: '认识新朋友时，我会……',
+      options: [
+        { text: '带着目的去见，想了解对方的能力', disc: 'D' },
+        { text: '亲切地靠近，很快就熟了', disc: 'I' },
+        { text: '谨慎地接近，慢慢建立信任', disc: 'S' },
+        { text: '先观察、分析对方再靠近', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: '我理想的环境是……',
+      options: [
+        { text: '有挑战性目标和自主权的环境', disc: 'D' },
+        { text: '和人热络交流的环境', disc: 'I' },
+        { text: '稳定、可预测的环境', disc: 'S' },
+        { text: '有条理、重视准确的环境', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: '做决定时，我会……',
+      options: [
+        { text: '快速果断地决定', disc: 'D' },
+        { text: '凭直觉和别人的反应来决定', disc: 'I' },
+        { text: '慎重思考，听取别人的意见', disc: 'S' },
+        { text: '在充分的信息和分析后决定', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: '事情不顺时，我会……',
+      options: [
+        { text: '更用力推进，或找别的方法', disc: 'D' },
+        { text: '找人聊聊来纾解', disc: 'I' },
+        { text: '耐心地继续努力', disc: 'S' },
+        { text: '分析问题，找出原因', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: '如果我是领导，我会……',
+      options: [
+        { text: '设定明确目标，强力带领团队', disc: 'D' },
+        { text: '给队员灵感，注入热情', disc: 'I' },
+        { text: '支持队员，让他们工作得安心', disc: 'S' },
+        { text: '设定高标准，维持品质', disc: 'C' },
+      ],
+    },
+  ],
+  fr: [
+    {
+      id: 'q1',
+      text: 'Quand je commence quelque chose de nouveau…',
+      options: [
+        { text: 'Je décide vite et passe tout de suite à l’action', disc: 'D' },
+        { text: 'Je partage mes idées avec enthousiasme', disc: 'I' },
+        { text: 'Je prépare tout soigneusement avant de commencer', disc: 'S' },
+        { text: 'J’examine en détail le plan et la documentation', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: 'Dans un projet d’équipe, je suis plutôt…',
+      options: [
+        { text: 'Celui qui fixe les objectifs et mène l’équipe', disc: 'D' },
+        { text: 'Celui qui met l’ambiance et encourage tout le monde', disc: 'I' },
+        { text: 'Celui qui soutient les autres et assure la stabilité', disc: 'S' },
+        { text: 'Celui qui analyse les données et les détails', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: 'Face à un conflit…',
+      options: [
+        { text: 'Je l’affronte directement pour le régler vite', disc: 'D' },
+        { text: 'J’allège l’atmosphère et fais rire tout le monde', disc: 'I' },
+        { text: 'Je cherche patiemment une solution harmonieuse', disc: 'S' },
+        { text: 'J’analyse et je résous à partir des faits et de la logique', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: 'Ce qui compte le plus pour moi…',
+      options: [
+        { text: 'Les résultats et les performances', disc: 'D' },
+        { text: 'La reconnaissance et le plaisir', disc: 'I' },
+        { text: 'La stabilité et la confiance', disc: 'S' },
+        { text: 'La précision et la qualité', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: 'Ma plus grande peur…',
+      options: [
+        { text: 'Échouer ou perdre le contrôle', disc: 'D' },
+        { text: 'Être rejeté ou ignoré', disc: 'I' },
+        { text: 'Un changement brutal ou l’instabilité', disc: 'S' },
+        { text: 'Être critiqué ou me tromper', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: 'Quand je communique…',
+      options: [
+        { text: 'Je vais droit au but, de façon concise', disc: 'D' },
+        { text: 'Je parle avec passion et beaucoup d’expressivité', disc: 'I' },
+        { text: 'Je parle avec douceur, attention et calme', disc: 'S' },
+        { text: 'Je parle avec précision et prudence, en m’appuyant sur les faits', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: 'Sous le stress…',
+      options: [
+        { text: 'Je deviens plus contrôlant ou plus brusque', disc: 'D' },
+        { text: 'Je deviens émotif ou dispersé', disc: 'I' },
+        { text: 'Je garde tout pour moi et je prends sur moi', disc: 'S' },
+        { text: 'Je deviens plus perfectionniste ou j’analyse à l’excès', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: 'Quand je rencontre quelqu’un…',
+      options: [
+        { text: 'J’y vais avec un objectif et cherche à cerner ses compétences', disc: 'D' },
+        { text: 'Je vais vers l’autre chaleureusement et sympathise vite', disc: 'I' },
+        { text: 'J’approche prudemment et bâtis la confiance lentement', disc: 'S' },
+        { text: 'J’observe et j’analyse avant d’aller vers l’autre', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: 'Mon environnement idéal…',
+      options: [
+        { text: 'Des objectifs ambitieux et de l’autonomie', disc: 'D' },
+        { text: 'Beaucoup d’échanges avec les autres', disc: 'I' },
+        { text: 'Stable et prévisible', disc: 'S' },
+        { text: 'Structuré et attaché à la précision', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: 'Pour prendre une décision…',
+      options: [
+        { text: 'Je décide vite et fermement', disc: 'D' },
+        { text: 'Je me fie à mon intuition et aux réactions des autres', disc: 'I' },
+        { text: 'Je réfléchis soigneusement et écoute l’avis des autres', disc: 'S' },
+        { text: 'Je décide après avoir réuni assez d’informations et d’analyses', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: 'Quand les choses se passent mal…',
+      options: [
+        { text: 'Je pousse plus fort ou cherche une autre voie', disc: 'D' },
+        { text: 'J’en parle à quelqu’un pour évacuer', disc: 'I' },
+        { text: 'Je persévère avec patience', disc: 'S' },
+        { text: 'J’analyse le problème et en cherche la cause', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: 'Si j’étais leader…',
+      options: [
+        { text: 'Je fixerais des objectifs clairs et mènerais l’équipe avec fermeté', disc: 'D' },
+        { text: 'J’inspirerais les autres et leur transmettrais mon enthousiasme', disc: 'I' },
+        { text: 'Je soutiendrais l’équipe pour qu’elle travaille sereinement', disc: 'S' },
+        { text: 'Je fixerais des standards élevés et maintiendrais la qualité', disc: 'C' },
+      ],
+    },
+  ],
+  es: [
+    {
+      id: 'q1',
+      text: 'Cuando empiezo algo nuevo…',
+      options: [
+        { text: 'Decido rápido y paso enseguida a la acción', disc: 'D' },
+        { text: 'Comparto mis ideas con entusiasmo', disc: 'I' },
+        { text: 'Lo preparo todo con cuidado antes de empezar', disc: 'S' },
+        { text: 'Reviso a fondo el plan y los materiales', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: 'En un proyecto de equipo, suelo…',
+      options: [
+        { text: 'Fijar objetivos y liderar al equipo', disc: 'D' },
+        { text: 'Animar el ambiente y motivar a todos', disc: 'I' },
+        { text: 'Apoyar a los demás y dar estabilidad', disc: 'S' },
+        { text: 'Analizar los datos y los detalles', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: 'Cuando surge un conflicto…',
+      options: [
+        { text: 'Lo afronto de frente para resolverlo rápido', disc: 'D' },
+        { text: 'Suavizo el ambiente y hago reír a todos', disc: 'I' },
+        { text: 'Busco con paciencia una solución armoniosa', disc: 'S' },
+        { text: 'Lo analizo y resuelvo con hechos y lógica', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: 'Lo más importante para mí es…',
+      options: [
+        { text: 'Los resultados y el rendimiento', disc: 'D' },
+        { text: 'El reconocimiento y la diversión', disc: 'I' },
+        { text: 'La estabilidad y la confianza', disc: 'S' },
+        { text: 'La precisión y la calidad', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: 'Mi mayor miedo es…',
+      options: [
+        { text: 'Fracasar o perder el control', disc: 'D' },
+        { text: 'Que me rechacen o me ignoren', disc: 'I' },
+        { text: 'Un cambio repentino o la inestabilidad', disc: 'S' },
+        { text: 'Que me critiquen o equivocarme', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: 'Cuando me comunico…',
+      options: [
+        { text: 'Voy al grano, de forma directa y breve', disc: 'D' },
+        { text: 'Hablo con pasión y mucha expresividad', disc: 'I' },
+        { text: 'Hablo con suavidad, consideración y calma', disc: 'S' },
+        { text: 'Hablo con precisión y cautela, basándome en hechos', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: 'Cuando estoy estresado…',
+      options: [
+        { text: 'Me vuelvo más controlador o brusco', disc: 'D' },
+        { text: 'Me pongo emocional o me disperso', disc: 'I' },
+        { text: 'Me lo guardo y aguanto', disc: 'S' },
+        { text: 'Me vuelvo más perfeccionista o analizo en exceso', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: 'Cuando conozco a alguien…',
+      options: [
+        { text: 'Voy con un objetivo e intento calibrar su capacidad', disc: 'D' },
+        { text: 'Me acerco con simpatía y enseguida conecto', disc: 'I' },
+        { text: 'Me acerco con cautela y construyo la confianza poco a poco', disc: 'S' },
+        { text: 'Observo y analizo antes de acercarme', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: 'Mi entorno ideal es…',
+      options: [
+        { text: 'Con objetivos retadores y autonomía', disc: 'D' },
+        { text: 'Con mucho trato con la gente', disc: 'I' },
+        { text: 'Estable y previsible', disc: 'S' },
+        { text: 'Organizado y que valore la precisión', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: 'Al tomar una decisión…',
+      options: [
+        { text: 'Decido rápido y con firmeza', disc: 'D' },
+        { text: 'Me guío por la intuición y la reacción de los demás', disc: 'I' },
+        { text: 'Lo pienso con calma y escucho otras opiniones', disc: 'S' },
+        { text: 'Decido tras reunir suficiente información y análisis', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: 'Cuando las cosas no salen bien…',
+      options: [
+        { text: 'Presiono más o busco otro camino', disc: 'D' },
+        { text: 'Lo hablo con alguien para desahogarme', disc: 'I' },
+        { text: 'Sigo esforzándome con paciencia', disc: 'S' },
+        { text: 'Analizo el problema y busco la causa', disc: 'C' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: 'Si yo fuera líder…',
+      options: [
+        { text: 'Fijaría objetivos claros y guiaría al equipo con firmeza', disc: 'D' },
+        { text: 'Inspiraría al equipo y le contagiaría entusiasmo', disc: 'I' },
+        { text: 'Apoyaría al equipo para que trabaje a gusto', disc: 'S' },
+        { text: 'Fijaría estándares altos y cuidaría la calidad', disc: 'C' },
+      ],
+    },
+  ],
 }
 
 const RESULTS: Record<DiscType, Record<Locale, ResultData>> = {
@@ -507,6 +924,39 @@ const RESULTS: Record<DiscType, Record<Locale, ResultData>> = {
       communication: '直接的で簡潔です。要点だけ話し、不必要な形式を嫌います。メールより直接対話を好みます。',
       tip: '他者の感情と意見にもっと耳を傾ける練習をしましょう。チームメンバーの貢献を認めると、より強力なリーダーになれます。',
     },
+    zh: {
+      title: 'D 型 — 支配型',
+      subtitle: '果断迈向结果的领导者',
+      description: '支配型喜欢挑战、重视结果。直接而果断，偏好掌握主导权。从克服障碍中获得动力，重视快速决策与执行。',
+      keywords: ['果断', '直接', '独立', '好胜', '目标导向'],
+      strengths: ['决策迅速', '领导力强', '追求结果', '压力下依然沉着'],
+      weaknesses: ['可能忽视他人的感受', '过度掌控', '缺乏耐心', '忽略细节'],
+      workStyle: '快速决定、亲自执行。明确设定目标、强力带领团队，比起官僚程序更重视结果。',
+      communication: '直接简洁，只讲重点，不喜欢多余的形式。比起邮件，更喜欢当面交谈。',
+      tip: '练习多倾听别人的感受和意见。肯定队员的贡献，会让你成为更强大的领导者。',
+    },
+    fr: {
+      title: 'Type D — Dominant',
+      subtitle: 'Un leader qui avance résolument vers les résultats',
+      description: 'Le profil dominant aime les défis et vise les résultats. Direct et résolu, il préfère avoir le contrôle. Il tire sa motivation du dépassement des obstacles et valorise la rapidité de décision et d’exécution.',
+      keywords: ['Détermination', 'Franchise', 'Indépendance', 'Esprit de compétition', 'Orientation objectifs'],
+      strengths: ['Décisions rapides', 'Fort leadership', 'Recherche de résultats', 'Calme sous pression'],
+      weaknesses: ['Peut négliger les émotions des autres', 'Contrôle excessif', 'Manque de patience', 'Néglige les détails'],
+      workStyle: 'Décide vite et exécute lui-même. Fixe des objectifs clairs, mène l’équipe avec fermeté et privilégie les résultats aux procédures.',
+      communication: 'Direct et concis. Va à l’essentiel et déteste le formalisme inutile. Préfère la conversation directe aux e-mails.',
+      tip: 'Entraînez-vous à mieux écouter les émotions et les avis des autres. Reconnaître la contribution de l’équipe fera de vous un leader encore plus fort.',
+    },
+    es: {
+      title: 'Tipo D — Dominante',
+      subtitle: 'Un líder que avanza con decisión hacia los resultados',
+      description: 'El perfil dominante disfruta los retos y se orienta a resultados. Es directo y decidido, y prefiere tener el control. Se motiva superando obstáculos y valora decidir y ejecutar rápido.',
+      keywords: ['Determinación', 'Franqueza', 'Independencia', 'Competitividad', 'Orientación a objetivos'],
+      strengths: ['Decisiones rápidas', 'Liderazgo fuerte', 'Búsqueda de resultados', 'Calma bajo presión'],
+      weaknesses: ['Puede pasar por alto los sentimientos ajenos', 'Control excesivo', 'Falta de paciencia', 'Descuida los detalles'],
+      workStyle: 'Decide rápido y ejecuta en persona. Fija objetivos claros, guía al equipo con firmeza y valora más los resultados que los trámites.',
+      communication: 'Directo y conciso. Va al grano y detesta las formalidades innecesarias. Prefiere hablar en persona antes que por correo.',
+      tip: 'Practica escuchar más los sentimientos y opiniones de los demás. Reconocer las aportaciones del equipo te hará un líder aún más fuerte.',
+    },
   },
   I: {
     ko: {
@@ -541,6 +991,39 @@ const RESULTS: Record<DiscType, Record<Locale, ResultData>> = {
       workStyle: '人々と協力してアイデアを共有します。創造的な環境で最高の成果を出し、単調な作業より多様なプロジェクトを好みます。',
       communication: '情熱的で表現豊かです。物語と感情を通じてコミュニケーションし、褒め言葉と認定によく反応します。',
       tip: '細部と締め切り管理を強化しましょう。優れたアイデアを実行に結びつけると、より大きな影響力を発揮できます。',
+    },
+    zh: {
+      title: 'I 型 — 影响型',
+      subtitle: '以热情与正能量带动人的活力源',
+      description: '影响型乐观外向，和人在一起时获得能量。说服力强，激励人心的能力出众。能让团队气氛明亮，通过关系激发动力。',
+      keywords: ['热情', '积极', '善交际', '创意', '影响力'],
+      strengths: ['出色的说服力', '激励团队', '创意点子', '正能量'],
+      weaknesses: ['细节与后续跟进较弱', '情绪化决定', '难以保持专注', '过度乐观'],
+      workStyle: '和人合作、分享点子。在有创意的环境里表现最好，比起单调的工作，更喜欢多样的项目。',
+      communication: '热情而富有表现力。通过故事和情感沟通，对称赞与认可反应热烈。',
+      tip: '加强细节与截止日期的管理。把出色的点子落实为执行，就能发挥更大的影响力。',
+    },
+    fr: {
+      title: 'Type I — Influent',
+      subtitle: 'Un énergiseur qui entraîne les autres par son enthousiasme',
+      description: 'Le profil influent est optimiste et extraverti ; il se ressource au contact des autres. Très persuasif, il excelle à inspirer. Il égaye l’ambiance de l’équipe et motive par la relation.',
+      keywords: ['Enthousiasme', 'Positivité', 'Sociabilité', 'Créativité', 'Influence'],
+      strengths: ['Grand pouvoir de persuasion', 'Motive l’équipe', 'Idées créatives', 'Énergie positive'],
+      weaknesses: ['Faible sur les détails et le suivi', 'Décisions émotionnelles', 'Du mal à rester concentré', 'Optimisme excessif'],
+      workStyle: 'Collabore et partage ses idées. Donne le meilleur dans un environnement créatif et préfère des projets variés aux tâches monotones.',
+      communication: 'Passionné et expressif. Communique par les récits et les émotions, et réagit bien aux compliments et à la reconnaissance.',
+      tip: 'Renforcez la gestion des détails et des délais. En transformant vos excellentes idées en actions, vous gagnerez encore en influence.',
+    },
+    es: {
+      title: 'Tipo I — Influyente',
+      subtitle: 'Un dinamizador que arrastra a la gente con entusiasmo',
+      description: 'El perfil influyente es optimista y extrovertido; se carga de energía con los demás. Muy persuasivo, destaca inspirando. Alegra el ambiente del equipo y motiva a través de las relaciones.',
+      keywords: ['Entusiasmo', 'Positividad', 'Sociabilidad', 'Creatividad', 'Influencia'],
+      strengths: ['Gran capacidad de persuasión', 'Motiva al equipo', 'Ideas creativas', 'Energía positiva'],
+      weaknesses: ['Flojo en detalles y seguimiento', 'Decisiones emocionales', 'Le cuesta mantener la concentración', 'Optimismo excesivo'],
+      workStyle: 'Colabora y comparte ideas. Rinde al máximo en entornos creativos y prefiere proyectos variados a tareas monótonas.',
+      communication: 'Apasionado y expresivo. Se comunica con historias y emociones, y responde bien a los elogios y al reconocimiento.',
+      tip: 'Refuerza la gestión de detalles y plazos. Si conviertes tus grandes ideas en acción, tendrás aún más influencia.',
     },
   },
   S: {
@@ -577,6 +1060,39 @@ const RESULTS: Record<DiscType, Record<Locale, ResultData>> = {
       communication: '穏やかで思いやりがあり、積極的に傾聴します。調和を重視し、葛藤を避けようとします。',
       tip: '自分の意見をより積極的に表現して、変化に柔軟に対応する練習が必要です。あなたの安定性はチームの大きな資産です。',
     },
+    zh: {
+      title: 'S 型 — 稳健型',
+      subtitle: '以信任与稳定支撑团队的协助者',
+      description: '稳健型耐心强、值得信赖，是优秀的团队成员。重视和谐与稳定，擅长维持团队平衡。以一致性与合作创造稳定的成果。',
+      keywords: ['可靠', '耐心', '团队合作', '稳定', '合作'],
+      strengths: ['非常可靠', '有力地支持团队', '成果稳定一致', '出色的倾听能力'],
+      weaknesses: ['适应变化较慢', '自我主张不足', '过度规避风险', '回避冲突'],
+      workStyle: '有系统、稳扎稳打地工作。在稳定环境中表现最好，比起突如其来的变化，更喜欢可预测的日常。',
+      communication: '温和体贴，积极倾听。重视和谐，尽量避免冲突。',
+      tip: '需要练习更积极地表达自己的意见，灵活应对变化。你的稳定是团队的一大资产。',
+    },
+    fr: {
+      title: 'Type S — Stable',
+      subtitle: 'Un soutien qui porte l’équipe par sa fiabilité et sa stabilité',
+      description: 'Le profil stable est patient et fiable, un vrai joueur d’équipe. Attaché à l’harmonie et à la stabilité, il excelle à maintenir l’équilibre du groupe et produit des résultats réguliers par la constance et la coopération.',
+      keywords: ['Fiabilité', 'Patience', 'Esprit d’équipe', 'Stabilité', 'Coopération'],
+      strengths: ['Grande fiabilité', 'Soutien solide de l’équipe', 'Résultats réguliers', 'Excellente écoute'],
+      weaknesses: ['S’adapte lentement au changement', 'Manque d’affirmation de soi', 'Aversion excessive au risque', 'Évite les conflits'],
+      workStyle: 'Travaille avec méthode et constance. Donne le meilleur dans un cadre stable et préfère les routines prévisibles aux changements brusques.',
+      communication: 'Doux, attentionné, à l’écoute active. Attaché à l’harmonie, il cherche à éviter les conflits.',
+      tip: 'Entraînez-vous à exprimer davantage votre avis et à accueillir le changement avec souplesse. Votre stabilité est un atout précieux pour l’équipe.',
+    },
+    es: {
+      title: 'Tipo S — Estable',
+      subtitle: 'Un apoyo que sostiene al equipo con confianza y estabilidad',
+      description: 'El perfil estable es paciente y fiable, un gran compañero de equipo. Valora la armonía y la estabilidad, destaca manteniendo el equilibrio del grupo y logra resultados constantes con coherencia y cooperación.',
+      keywords: ['Fiabilidad', 'Paciencia', 'Trabajo en equipo', 'Estabilidad', 'Cooperación'],
+      strengths: ['Gran fiabilidad', 'Fuerte apoyo al equipo', 'Resultados constantes', 'Excelente capacidad de escucha'],
+      weaknesses: ['Se adapta despacio al cambio', 'Poca asertividad', 'Aversión excesiva al riesgo', 'Evita los conflictos'],
+      workStyle: 'Trabaja de forma sistemática y constante. Rinde al máximo en entornos estables y prefiere rutinas previsibles a los cambios repentinos.',
+      communication: 'Suave, atento y con escucha activa. Valora la armonía e intenta evitar los conflictos.',
+      tip: 'Practica expresar más tu opinión y adaptarte con flexibilidad a los cambios. Tu estabilidad es un gran activo para el equipo.',
+    },
   },
   C: {
     ko: {
@@ -612,13 +1128,46 @@ const RESULTS: Record<DiscType, Record<Locale, ResultData>> = {
       communication: '正確で事実中心に話します。感情より論理を好み、証拠とデータを重視します。',
       tip: '完璧でなくても十分良い結果を認める練習が必要です。時に素早い実行が完璧な計画より価値があります。',
     },
+    zh: {
+      title: 'C 型 — 谨慎型',
+      subtitle: '以准确与品质提升完成度的分析者',
+      description: '谨慎型善于分析、细心，重视准确。设定高标准，专注于品质。以有系统的方法和对细节的专注解决复杂问题。',
+      keywords: ['准确', '分析力', '品质', '条理', '完美主义'],
+      strengths: ['出色的分析力', '高品质标准', '有系统地解决问题', '慎重决策'],
+      weaknesses: ['过度完美主义', '抗拒变化', '决定拖延', '对批评敏感'],
+      workStyle: '以数据和事实为基础，细致地工作。给足时间和信息，就能做出高品质的成果。',
+      communication: '准确、以事实为中心地沟通。比起情感更偏好逻辑，重视证据和数据。',
+      tip: '需要练习接受“不完美但够好”的结果。有时，快速执行比完美计划更有价值。',
+    },
+    fr: {
+      title: 'Type C — Consciencieux',
+      subtitle: 'Un analyste qui élève le niveau par la précision et la qualité',
+      description: 'Le profil consciencieux est analytique, minutieux et attaché à la précision. Il fixe des standards élevés et se concentre sur la qualité. Méthode et souci du détail lui permettent de résoudre des problèmes complexes.',
+      keywords: ['Précision', 'Esprit d’analyse', 'Qualité', 'Méthode', 'Perfectionnisme'],
+      strengths: ['Excellente capacité d’analyse', 'Standards de qualité élevés', 'Résolution méthodique des problèmes', 'Décisions réfléchies'],
+      weaknesses: ['Perfectionnisme excessif', 'Résistance au changement', 'Décisions repoussées', 'Sensibilité à la critique'],
+      workStyle: 'Travaille minutieusement à partir de données et de faits. Avec assez de temps et d’informations, il produit des résultats de grande qualité.',
+      communication: 'Communique avec précision, à partir des faits. Préfère la logique aux émotions et accorde de l’importance aux preuves et aux données.',
+      tip: 'Entraînez-vous à accepter un résultat assez bon, même s’il n’est pas parfait. Parfois, agir vite vaut mieux qu’un plan parfait.',
+    },
+    es: {
+      title: 'Tipo C — Concienzudo',
+      subtitle: 'Un analista que eleva el nivel con precisión y calidad',
+      description: 'El perfil concienzudo es analítico, minucioso y valora la precisión. Fija estándares altos y se centra en la calidad. Resuelve problemas complejos con método y atención al detalle.',
+      keywords: ['Precisión', 'Capacidad analítica', 'Calidad', 'Método', 'Perfeccionismo'],
+      strengths: ['Gran capacidad analítica', 'Estándares de calidad altos', 'Resolución sistemática de problemas', 'Decisiones prudentes'],
+      weaknesses: ['Perfeccionismo excesivo', 'Resistencia al cambio', 'Decisiones aplazadas', 'Sensibilidad a la crítica'],
+      workStyle: 'Trabaja con minuciosidad a partir de datos y hechos. Con tiempo e información suficientes, logra resultados de gran calidad.',
+      communication: 'Se comunica con precisión y basándose en hechos. Prefiere la lógica a las emociones y valora las pruebas y los datos.',
+      tip: 'Practica aceptar un resultado suficientemente bueno aunque no sea perfecto. A veces actuar rápido vale más que un plan perfecto.',
+    },
   },
 }
 
 interface Props { locale?: string }
 
 export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
-  const locale: Locale = (['ko', 'en', 'ja'].includes(lp) ? lp : 'en') as Locale
+  const locale: Locale = (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(lp) ? lp : 'en') as Locale
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
 
