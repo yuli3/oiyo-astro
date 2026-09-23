@@ -2019,26 +2019,7 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8 space-y-6">
-      {/* Header */}
-      <div className="space-y-1">
-        <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">{t.title}</p>
-        <p className="text-sm text-muted-foreground">{t.instructions}</p>
-      </div>
-
-      {/* Progress */}
-      <div className="space-y-1.5">
-        <div className="flex justify-between text-xs text-muted-foreground">
-          <span>{t.progress(current + 1, questions.length)}</span>
-          <span>{progress}%</span>
-        </div>
-        <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-          <div
-            className="h-full bg-primary rounded-full transition-all duration-300"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-      </div>
-
+      {/* 제목·진행률은 Questionnaire 가 그린다 — 여기서 또 그리면 두 번 보인다. */}
       <Questionnaire
         title={t.title}
         subtitle={t.instructions}
