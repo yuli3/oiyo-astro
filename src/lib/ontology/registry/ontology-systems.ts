@@ -41,6 +41,7 @@ const INNATE: OntologySystem[] = [
   { id: 'natal', lane: 'innate', emoji: '🌌', requires: 'birthTime', href: (l) => `/${l}/natal/chart`, name: L('출생 차트', 'Natal Chart', '出生図', '出生星盘', 'Thème natal', 'Carta natal') },
   { id: 'chinese-zodiac', lane: 'innate', emoji: '🐉', requires: 'birthDate', href: (l) => `/${l}/chinese-zodiac/`, name: L('띠(십이지)', 'Chinese Zodiac', '干支・十二支', '生肖', 'Zodiaque chinois', 'Zodíaco chino') },
   { id: 'ziwei', lane: 'innate', emoji: '⭐', requires: 'birthTime', href: (l) => `/${l}/ziwei/reading`, name: L('자미두수', 'Zi Wei Dou Shu', '紫微斗数', '紫微斗数', 'Zi Wei Dou Shu', 'Zi Wei Dou Shu') },
+  { id: 'jyotish', lane: 'innate', emoji: '🕉️', requires: 'birthDate', href: (l) => `/${l}/jyotish/reading`, name: L('인도 점성', 'Vedic Astrology', 'インド占星術', '印度占星', 'Astrologie védique', 'Astrología védica') },
   { id: 'numerology', lane: 'innate', emoji: '🔢', requires: 'birthDate', href: (l) => `/${l}/numerology/calculator`, name: L('수비학', 'Numerology', '数秘術', '数字命理', 'Numérologie', 'Numerología') },
   { id: 'mayan', lane: 'innate', emoji: '🗿', requires: 'birthDate', href: (l) => `/${l}/mayan/reading`, name: L('마야 달력', 'Mayan (Tzolkin)', 'マヤ暦', '玛雅历', 'Maya (Tzolkin)', 'Maya (Tzolkin)') },
   { id: 'celtic', lane: 'innate', emoji: '🌲', requires: 'birthDate', href: (l) => `/${l}/celtic/reading`, name: L('켈트 나무점', 'Celtic Tree', 'ケルト樹木', '凯尔特树历', 'Arbre celtique', 'Árbol celta') },
@@ -63,6 +64,11 @@ const TEST: OntologySystem[] = [
   { id: 'political', lane: 'test', emoji: '🗳️', requires: 'testResult', testId: 'political', href: (l) => `/${l}/political/test`, name: L('정치성향', 'Political Values', '政治的傾向', '政治倾向', 'Valeurs politiques', 'Valores políticos') },
   { id: 'economics', lane: 'test', emoji: '📊', requires: 'testResult', testId: 'economics', href: (l) => `/${l}/economics-school-test/`, name: L('경제관', 'Economic View', '経済観', '经济观', 'Vision économique', 'Visión económica') },
   { id: 'joseon', lane: 'test', emoji: '🏯', requires: 'testResult', testId: 'joseon', href: (l) => `/${l}/joseon-faction-test/`, name: L('조선붕당', 'Joseon Factions', '朝鮮の党派', '朝鲜党派', 'Factions Joseon', 'Facciones Joseon') },
+  { id: 'learning-style', lane: 'test', emoji: '📚', requires: 'testResult', testId: 'learning-style', href: (l) => `/${l}/learning-style-test/`, name: L('학습 유형(VARK)', 'Learning Style (VARK)', '学習タイプ（VARK）', '学习风格（VARK）', 'Style d’apprentissage (VARK)', 'Estilo de aprendizaje (VARK)') },
+  { id: 'conflict-style', lane: 'test', emoji: '🤝', requires: 'testResult', testId: 'conflict-style', href: (l) => `/${l}/conflict-style-test/`, name: L('갈등 스타일', 'Conflict Style', '葛藤スタイル', '冲突风格', 'Style face aux conflits', 'Estilo ante conflictos') },
+  { id: 'money-personality', lane: 'test', emoji: '💰', requires: 'testResult', testId: 'money-personality', href: (l) => `/${l}/money-personality-test/`, name: L('머니 성격', 'Money Personality', 'マネー性格', '金钱性格', 'Rapport à l’argent', 'Relación con el dinero') },
+  { id: 'color-personality', lane: 'test', emoji: '🎨', requires: 'testResult', testId: 'color-personality', href: (l) => `/${l}/color-personality-test/`, name: L('컬러 성격', 'Color Personality', 'カラー性格', '色彩性格', 'Couleurs de personnalité', 'Color y personalidad') },
+  { id: 'animal-personality', lane: 'test', emoji: '🦊', requires: 'testResult', testId: 'animal-personality', href: (l) => `/${l}/animal-personality-test/`, name: L('정신 동물', 'Spirit Animal', '精神動物', '守护动物', 'Animal totem', 'Animal interior') },
 ];
 
 // ── Lane 3: 실제 나의 것 (self-chosen — mindmap builder) ──
