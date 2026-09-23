@@ -4,10 +4,10 @@ import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type CoffeeType = 'espresso' | 'latte' | 'coldbrew' | 'cappuccino' | 'americano'
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -78,6 +78,42 @@ const LABELS: Record<SupportedLang, {
     traits: '私の特性',
     note: '最も多く選んだコーヒータイプがあなたの性格を表します。',
     copied: 'リンクがコピーされました！',
+  },
+  zh: {
+    title: '咖啡性格测验',
+    subtitle: '我是哪种咖啡？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的咖啡性格类型是',
+    yourType: '我的咖啡类型',
+    traits: '我的特点',
+    note: '选得最多的咖啡类型代表你的性格。',
+    copied: '链接已复制！',
+  },
+  fr: {
+    title: 'Test de personnalité café',
+    subtitle: 'Quel café suis-je ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon type de café',
+    yourType: 'Mon type de café',
+    traits: 'Mes traits',
+    note: 'Le café que vous avez choisi le plus souvent reflète votre personnalité.',
+    copied: 'Lien copié !',
+  },
+  es: {
+    title: 'Test de personalidad cafetera',
+    subtitle: '¿Qué café soy?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi tipo de café',
+    yourType: 'Mi tipo de café',
+    traits: 'Mis rasgos',
+    note: 'El café que más has elegido refleja tu personalidad.',
+    copied: '¡Enlace copiado!',
   },
 }
 
@@ -352,6 +388,276 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       ],
     },
   ],
+  zh: [
+    {
+      id: 'q1',
+      text: '你喜欢怎样开始早晨？',
+      options: [
+        { label: '快速充电', type: 'espresso' },
+        { label: '慢慢地、舒舒服服', type: 'latte' },
+        { label: '柔和而从容', type: 'coldbrew' },
+        { label: '完美准备好的仪式', type: 'cappuccino' },
+        { label: '简单又可靠', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: '理想的周末活动是？',
+      options: [
+        { label: '快节奏的冒险', type: 'espresso' },
+        { label: '和朋友去咖啡馆', type: 'latte' },
+        { label: '轻松的户外时光', type: 'coldbrew' },
+        { label: '在家做创作项目', type: 'cappuccino' },
+        { label: '高效的工作时间', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: '朋友们怎么形容你？',
+      options: [
+        { label: '强烈而有冲劲', type: 'espresso' },
+        { label: '温暖又善交际', type: 'latte' },
+        { label: '悠闲从容', type: 'coldbrew' },
+        { label: '有艺术感又独特', type: 'cappuccino' },
+        { label: '可靠而经典', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: '你面对挑战的方式是？',
+      options: [
+        { label: '正面全速冲刺', type: 'espresso' },
+        { label: '和别人合作', type: 'latte' },
+        { label: '慢慢地、沉着地', type: 'coldbrew' },
+        { label: '寻找创意解法', type: 'cappuccino' },
+        { label: '用验证过的方法', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: '理想的社交场合是？',
+      options: [
+        { label: '充满活力的交流活动', type: 'espresso' },
+        { label: '温馨的聚会', type: 'latte' },
+        { label: '少数亲密的小圈子', type: 'coldbrew' },
+        { label: '画廊或音乐会', type: 'cappuccino' },
+        { label: '专业的会面', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: '你偏好的工作风格是？',
+      options: [
+        { label: '高强度的爆发式生产', type: 'espresso' },
+        { label: '稳定的协作节奏', type: 'latte' },
+        { label: '平静持续的专注', type: 'coldbrew' },
+        { label: '创意探索', type: 'cappuccino' },
+        { label: '有条理又高效', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: '什么最能给你能量？',
+      options: [
+        { label: '竞争与胜利', type: 'espresso' },
+        { label: '与人连结', type: 'latte' },
+        { label: '平和与宁静', type: 'coldbrew' },
+        { label: '创意表达', type: 'cappuccino' },
+        { label: '达成目标', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: '你的人生座右铭是？',
+      options: [
+        { label: '要么做大，要么回家', type: 'espresso' },
+        { label: '人生有伴更美好', type: 'latte' },
+        { label: '悠哉享受吧', type: 'coldbrew' },
+        { label: '大胆地表达', type: 'cappuccino' },
+        { label: '简单而真诚', type: 'americano' },
+      ],
+    },
+  ],
+  fr: [
+    {
+      id: 'q1',
+      text: 'Comment préférez-vous commencer la matinée ?',
+      options: [
+        { label: 'Une recharge d’énergie rapide', type: 'espresso' },
+        { label: 'Lentement, bien au chaud', type: 'latte' },
+        { label: 'En douceur, sans me presser', type: 'coldbrew' },
+        { label: 'Un rituel parfaitement préparé', type: 'cappuccino' },
+        { label: 'Simple et fiable', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: 'Votre activité idéale du week-end ?',
+      options: [
+        { label: 'Une aventure au rythme soutenu', type: 'espresso' },
+        { label: 'Un café entre amis', type: 'latte' },
+        { label: 'Un moment détente au grand air', type: 'coldbrew' },
+        { label: 'Un projet créatif à la maison', type: 'cappuccino' },
+        { label: 'Une séance de travail productive', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: 'Comment vos amis vous décrivent-ils ?',
+      options: [
+        { label: 'Intense et déterminé', type: 'espresso' },
+        { label: 'Chaleureux et sociable', type: 'latte' },
+        { label: 'Détendu et serein', type: 'coldbrew' },
+        { label: 'Artiste et singulier', type: 'cappuccino' },
+        { label: 'Fiable et classique', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: 'Votre façon d’aborder un défi ?',
+      options: [
+        { label: 'De front, à pleine vitesse', type: 'espresso' },
+        { label: 'En coopérant avec les autres', type: 'latte' },
+        { label: 'Lentement, calmement', type: 'coldbrew' },
+        { label: 'En cherchant une solution créative', type: 'cappuccino' },
+        { label: 'Avec une méthode éprouvée', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: 'Votre cadre social idéal ?',
+      options: [
+        { label: 'Un networking plein d’énergie', type: 'espresso' },
+        { label: 'Une réunion chaleureuse', type: 'latte' },
+        { label: 'Un petit groupe intime', type: 'coldbrew' },
+        { label: 'Une galerie ou un concert', type: 'cappuccino' },
+        { label: 'Une rencontre professionnelle', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: 'Votre style de travail préféré ?',
+      options: [
+        { label: 'Des pics de productivité intenses', type: 'espresso' },
+        { label: 'Un flux de collaboration régulier', type: 'latte' },
+        { label: 'Une concentration calme et durable', type: 'coldbrew' },
+        { label: 'L’exploration créative', type: 'cappuccino' },
+        { label: 'Méthodique et efficace', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: 'Qu’est-ce qui vous donne le plus d’énergie ?',
+      options: [
+        { label: 'La compétition et la victoire', type: 'espresso' },
+        { label: 'Le lien avec les autres', type: 'latte' },
+        { label: 'La paix et le calme', type: 'coldbrew' },
+        { label: 'L’expression créative', type: 'cappuccino' },
+        { label: 'Atteindre ses objectifs', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: 'Votre devise ?',
+      options: [
+        { label: 'Tout ou rien', type: 'espresso' },
+        { label: 'La vie est plus belle à plusieurs', type: 'latte' },
+        { label: 'Prenons le temps d’en profiter', type: 'coldbrew' },
+        { label: 'Exprime-toi avec audace', type: 'cappuccino' },
+        { label: 'Simple et vrai', type: 'americano' },
+      ],
+    },
+  ],
+  es: [
+    {
+      id: 'q1',
+      text: '¿Cómo prefieres empezar la mañana?',
+      options: [
+        { label: 'Una recarga rápida de energía', type: 'espresso' },
+        { label: 'Despacio y a gusto', type: 'latte' },
+        { label: 'Suave y sin prisas', type: 'coldbrew' },
+        { label: 'Un ritual perfectamente preparado', type: 'cappuccino' },
+        { label: 'Sencillo y fiable', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: '¿Tu plan ideal de fin de semana?',
+      options: [
+        { label: 'Una aventura a ritmo rápido', type: 'espresso' },
+        { label: 'Un café con amigos', type: 'latte' },
+        { label: 'Un rato tranquilo al aire libre', type: 'coldbrew' },
+        { label: 'Un proyecto creativo en casa', type: 'cappuccino' },
+        { label: 'Una sesión de trabajo productiva', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: '¿Cómo te describen tus amigos?',
+      options: [
+        { label: 'Intenso y con empuje', type: 'espresso' },
+        { label: 'Cálido y sociable', type: 'latte' },
+        { label: 'Relajado y tranquilo', type: 'coldbrew' },
+        { label: 'Artístico y único', type: 'cappuccino' },
+        { label: 'Fiable y clásico', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: '¿Cómo afrontas un reto?',
+      options: [
+        { label: 'De frente y a toda velocidad', type: 'espresso' },
+        { label: 'Colaborando con otros', type: 'latte' },
+        { label: 'Despacio y con calma', type: 'coldbrew' },
+        { label: 'Buscando una solución creativa', type: 'cappuccino' },
+        { label: 'Con un método probado', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: '¿Tu ambiente social ideal?',
+      options: [
+        { label: 'Networking lleno de energía', type: 'espresso' },
+        { label: 'Una reunión acogedora', type: 'latte' },
+        { label: 'Un grupo pequeño e íntimo', type: 'coldbrew' },
+        { label: 'Una galería o un concierto', type: 'cappuccino' },
+        { label: 'Un encuentro profesional', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: '¿Tu estilo de trabajo preferido?',
+      options: [
+        { label: 'Ráfagas intensas de productividad', type: 'espresso' },
+        { label: 'Un flujo de colaboración constante', type: 'latte' },
+        { label: 'Concentración tranquila y sostenida', type: 'coldbrew' },
+        { label: 'Exploración creativa', type: 'cappuccino' },
+        { label: 'Sistemático y eficiente', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: '¿Qué te da más energía?',
+      options: [
+        { label: 'Competir y ganar', type: 'espresso' },
+        { label: 'Conectar con la gente', type: 'latte' },
+        { label: 'La paz y la calma', type: 'coldbrew' },
+        { label: 'La expresión creativa', type: 'cappuccino' },
+        { label: 'Alcanzar objetivos', type: 'americano' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: '¿Tu lema de vida?',
+      options: [
+        { label: 'O a lo grande o nada', type: 'espresso' },
+        { label: 'La vida es mejor en compañía', type: 'latte' },
+        { label: 'Disfrutemos sin prisas', type: 'coldbrew' },
+        { label: 'Exprésate con audacia', type: 'cappuccino' },
+        { label: 'Sencillo y auténtico', type: 'americano' },
+      ],
+    },
+  ],
 }
 
 const RESULTS: Record<CoffeeType, Record<SupportedLang, ResultData>> = {
@@ -377,6 +683,27 @@ const RESULTS: Record<CoffeeType, Record<SupportedLang, ResultData>> = {
       description: '情熱的で効率的、そしてすぐに核心に迫ります。時間を無駄にせず、望むものへ真っ直ぐ進むタイプです。',
       traits: ['⚡ 高いエネルギー', '🎯 直接的で結果志向', '💪 プレッシャーの中で輝く'],
     },
+    zh: {
+      emoji: '☕',
+      title: '意式浓缩',
+      tagline: '目标导向的推进者',
+      description: '强烈、高效，直奔重点。你不浪费时间，是朝着想要的东西直线前进的类型。',
+      traits: ['⚡ 高能量', '🎯 直接、重结果', '💪 越有压力越出色'],
+    },
+    fr: {
+      emoji: '☕',
+      title: 'Espresso',
+      tagline: 'Fonceur orienté objectifs',
+      description: 'Intense, efficace, vous allez droit à l’essentiel. Vous ne perdez pas de temps et filez tout droit vers ce que vous voulez.',
+      traits: ['⚡ Grande énergie', '🎯 Direct et orienté résultats', '💪 S’épanouit sous pression'],
+    },
+    es: {
+      emoji: '☕',
+      title: 'Espresso',
+      tagline: 'Impulsor orientado a objetivos',
+      description: 'Intenso y eficiente, vas directo a lo esencial. No pierdes el tiempo y avanzas en línea recta hacia lo que quieres.',
+      traits: ['⚡ Mucha energía', '🎯 Directo y orientado a resultados', '💪 Rinde bajo presión'],
+    },
   },
   latte: {
     ko: {
@@ -399,6 +726,27 @@ const RESULTS: Record<CoffeeType, Record<SupportedLang, ResultData>> = {
       tagline: 'ソーシャルバタフライ',
       description: '温かく親しみやすく、誰もが歓迎されていると感じさせます。あなたの周りには常に心地よい雰囲気が漂っています。',
       traits: ['💝 温かく社交的', '☕ 居心地のよい雰囲気を作る', '🤝 バランスの取れたアプローチ'],
+    },
+    zh: {
+      emoji: '🥛',
+      title: '拿铁',
+      tagline: '社交蝴蝶',
+      description: '温暖亲切，让每个人都觉得被欢迎。你身边总是弥漫着舒服的氛围。',
+      traits: ['💝 温暖又善交际', '☕ 营造轻松氛围', '🤝 平衡的做法'],
+    },
+    fr: {
+      emoji: '🥛',
+      title: 'Latte',
+      tagline: 'Papillon social',
+      description: 'Chaleureux et accueillant, vous mettez tout le monde à l’aise. Autour de vous règne toujours une ambiance détendue.',
+      traits: ['💝 Chaleureux et sociable', '☕ Crée une ambiance détendue', '🤝 Approche équilibrée'],
+    },
+    es: {
+      emoji: '🥛',
+      title: 'Latte',
+      tagline: 'Mariposa social',
+      description: 'Cálido y cercano, haces que todo el mundo se sienta bienvenido. A tu alrededor siempre hay un ambiente cómodo.',
+      traits: ['💝 Cálido y sociable', '☕ Crea un ambiente cómodo', '🤝 Enfoque equilibrado'],
     },
   },
   coldbrew: {
@@ -423,6 +771,27 @@ const RESULTS: Record<CoffeeType, Record<SupportedLang, ResultData>> = {
       description: 'なめらかで忍耐強く、プレッシャーの中でも落ち着いています。急がないけれど、最終的には目標に到達します。',
       traits: ['😎 いつも冷静', '🧠 深く考えてから行動', '🌊 なめらかでゆったりした存在'],
     },
+    zh: {
+      emoji: '🧊',
+      title: '冷萃',
+      tagline: '从容的策略家',
+      description: '柔和、有耐心，压力下也很沉着。你不急，但最终会抵达想要的目标。',
+      traits: ['😎 永远沉着', '🧠 想清楚再行动', '🌊 柔和从容的存在'],
+    },
+    fr: {
+      emoji: '🧊',
+      title: 'Cold brew',
+      tagline: 'Stratège serein',
+      description: 'Doux, patient, calme même sous pression. Vous ne vous pressez pas, mais vous finissez par atteindre votre but.',
+      traits: ['😎 Toujours calme', '🧠 Réfléchit avant d’agir', '🌊 Une présence douce et sereine'],
+    },
+    es: {
+      emoji: '🧊',
+      title: 'Cold brew',
+      tagline: 'Estratega sereno',
+      description: 'Suave, paciente y tranquilo incluso bajo presión. No tienes prisa, pero acabas llegando a tu meta.',
+      traits: ['😎 Siempre tranquilo', '🧠 Piensa antes de actuar', '🌊 Una presencia suave y serena'],
+    },
   },
   cappuccino: {
     ko: {
@@ -446,6 +815,27 @@ const RESULTS: Record<CoffeeType, Record<SupportedLang, ResultData>> = {
       description: '美しさと自己表現をとても大切にしています。あなたは生活のあらゆる面に芸術性と独創性を吹き込みます。',
       traits: ['🎨 ユニークなクリエイティブ思考', '✨ 美学を重視', '💫 すべてに芸術性を加える'],
     },
+    zh: {
+      emoji: '🎨',
+      title: '卡布奇诺',
+      tagline: '创意灵魂',
+      description: '你重视美和自我表达，把艺术感与独创性注入生活的每个角落。',
+      traits: ['🎨 独特的创意思维', '✨ 重视美感', '💫 为一切增添艺术气息'],
+    },
+    fr: {
+      emoji: '🎨',
+      title: 'Cappuccino',
+      tagline: 'Âme créative',
+      description: 'Vous accordez de l’importance à la beauté et à l’expression de soi. Vous insufflez art et originalité dans tous les aspects de la vie.',
+      traits: ['🎨 Pensée créative singulière', '✨ Sens esthétique', '💫 Une touche d’art en toute chose'],
+    },
+    es: {
+      emoji: '🎨',
+      title: 'Capuchino',
+      tagline: 'Alma creativa',
+      description: 'Valoras la belleza y la expresión personal. Llenas cada aspecto de la vida de arte y originalidad.',
+      traits: ['🎨 Pensamiento creativo único', '✨ Valora la estética', '💫 Un toque artístico en todo'],
+    },
   },
   americano: {
     ko: {
@@ -468,6 +858,27 @@ const RESULTS: Record<CoffeeType, Record<SupportedLang, ResultData>> = {
       tagline: 'クラシックな信頼',
       description: '率直で信頼できます。トレンドを追うより実証済みのものを信頼し、周囲の人々にとって頼もしい存在です。',
       traits: ['🎯 率直で正直', '⚓ いつも頼れる存在', '📋 シンプルさと実用性を重視'],
+    },
+    zh: {
+      emoji: '☕',
+      title: '美式咖啡',
+      tagline: '经典的可靠',
+      description: '坦率又值得信赖。比起追逐潮流，你更相信经过验证的东西，是身边人的靠山。',
+      traits: ['🎯 坦率诚实', '⚓ 值得信赖', '📋 重视简单与实用'],
+    },
+    fr: {
+      emoji: '☕',
+      title: 'Americano',
+      tagline: 'Fiabilité classique',
+      description: 'Franc et digne de confiance. Plutôt que de suivre les modes, vous vous fiez à ce qui a fait ses preuves, et vous êtes un appui solide pour votre entourage.',
+      traits: ['🎯 Franc et honnête', '⚓ Une présence fiable', '📋 Aime la simplicité et le pratique'],
+    },
+    es: {
+      emoji: '☕',
+      title: 'Americano',
+      tagline: 'Fiabilidad clásica',
+      description: 'Franco y de confianza. Más que seguir modas, confías en lo probado y eres un apoyo sólido para quienes te rodean.',
+      traits: ['🎯 Franco y honesto', '⚓ Una presencia fiable', '📋 Valora lo sencillo y práctico'],
     },
   },
 }

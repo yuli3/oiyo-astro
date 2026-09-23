@@ -5,10 +5,10 @@ import ShareResultButton from '../shared/ShareResultButton'
 
 type RiskLevel = 'conservative' | 'moderate' | 'balanced' | 'adventurous'
 type Subscale = 'financial' | 'life'
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 interface Question {
@@ -91,6 +91,54 @@ const LABELS: Record<SupportedLang, {
     lifeAdvice: 'ライフアドバイス',
     note: '参考用テストです。実際の投資判断の前に専門家にご相談ください。',
   },
+  zh: {
+    title: '风险偏好测验',
+    subtitle: '我是稳健型还是冒险型？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '不是', '一般', '是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的风险偏好是',
+    yourLevel: '我的风险偏好',
+    financialScore: '金融风险倾向',
+    lifeScore: '人生风险倾向',
+    overallScore: '综合风险偏好',
+    investmentAdvice: '金融建议',
+    lifeAdvice: '人生建议',
+    note: '本测验仅供参考。做出实际投资决定前，请咨询专业人士。',
+  },
+  fr: {
+    title: 'Test de tolérance au risque',
+    subtitle: 'Suis-je plutôt prudent ou aventurier ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Non', 'Moyennement', 'Oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Ma tolérance au risque',
+    yourLevel: 'Ma tolérance au risque',
+    financialScore: 'Rapport au risque financier',
+    lifeScore: 'Rapport au risque dans la vie',
+    overallScore: 'Tolérance au risque globale',
+    investmentAdvice: 'Repères financiers',
+    lifeAdvice: 'Repères pour la vie',
+    note: 'Ce test est donné à titre indicatif. Consultez un professionnel avant toute décision d’investissement réelle.',
+  },
+  es: {
+    title: 'Test de tolerancia al riesgo',
+    subtitle: '¿Soy prudente o aventurero?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'No', 'A medias', 'Sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi tolerancia al riesgo',
+    yourLevel: 'Mi tolerancia al riesgo',
+    financialScore: 'Actitud ante el riesgo financiero',
+    lifeScore: 'Actitud ante el riesgo en la vida',
+    overallScore: 'Tolerancia al riesgo global',
+    investmentAdvice: 'Orientación financiera',
+    lifeAdvice: 'Orientación para la vida',
+    note: 'Este test es solo orientativo. Consulta a un profesional antes de tomar decisiones de inversión reales.',
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -142,6 +190,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'l6', text: '移住・転職・起業などの大きな決断を前にワクワクする', subscale: 'life', reverse: false },
     { id: 'l7', text: '失敗が怖くて挑戦を避けがちだ', subscale: 'life', reverse: true },
   ],
+  zh: [
+    { id: 'f1', text: '即使可能亏本金，只要期待高收益我就会投资', subscale: 'financial', reverse: false },
+    { id: 'f2', text: '股价跌 20%，我也会以长期投资的角度继续持有', subscale: 'financial', reverse: false },
+    { id: 'f3', text: '把应急资金全部拿去投资，我也不会太不安', subscale: 'financial', reverse: false },
+    { id: 'f4', text: '比起投资，我更喜欢稳定的存款', subscale: 'financial', reverse: true },
+    { id: 'f5', text: '我会积极投资新的金融产品（ETF、加密货币等）', subscale: 'financial', reverse: false },
+    { id: 'f6', text: '一旦亏损，我会不安到睡不着', subscale: 'financial', reverse: true },
+    { id: 'f7', text: '我不害怕使用杠杆（借钱投资）', subscale: 'financial', reverse: false },
+    { id: 'l1', text: '我会即兴地投入计划外的旅行或新体验', subscale: 'life', reverse: false },
+    { id: 'l2', text: '比起稳定的工作，我会选择有潜力的初创公司', subscale: 'life', reverse: false },
+    { id: 'l3', text: '认识新朋友让我期待，而不是害怕', subscale: 'life', reverse: false },
+    { id: 'l4', text: '比起变化，我更喜欢稳定、可预测的生活', subscale: 'life', reverse: true },
+    { id: 'l5', text: '我乐于尝试没吃过的食物或陌生的体验', subscale: 'life', reverse: false },
+    { id: 'l6', text: '面对重大决定（移民、跳槽、创业）时，我会感到兴奋', subscale: 'life', reverse: false },
+    { id: 'l7', text: '我因为害怕失败而不愿挑战', subscale: 'life', reverse: true },
+  ],
+  fr: [
+    { id: 'f1', text: 'J’investis en espérant un rendement élevé, même avec un risque de perte en capital', subscale: 'financial', reverse: false },
+    { id: 'f2', text: 'Si une action chute de 20 %, je la garde dans une optique de long terme', subscale: 'financial', reverse: false },
+    { id: 'f3', text: 'Investir toute mon épargne de précaution ne m’inquiète pas vraiment', subscale: 'financial', reverse: false },
+    { id: 'f4', text: 'Je préfère l’épargne sûre (livrets, comptes à terme) à l’investissement', subscale: 'financial', reverse: true },
+    { id: 'f5', text: 'J’investis volontiers dans de nouveaux produits financiers (ETF, cryptomonnaies…)', subscale: 'financial', reverse: false },
+    { id: 'f6', text: 'Quand je subis une perte, je suis si anxieux que j’en perds le sommeil', subscale: 'financial', reverse: true },
+    { id: 'f7', text: 'L’effet de levier (investir avec de l’argent emprunté) ne me fait pas peur', subscale: 'financial', reverse: false },
+    { id: 'l1', text: 'Je me lance spontanément dans des voyages imprévus ou de nouvelles expériences', subscale: 'life', reverse: false },
+    { id: 'l2', text: 'Je pourrais choisir une start-up prometteuse plutôt qu’un emploi stable', subscale: 'life', reverse: false },
+    { id: 'l3', text: 'Rencontrer de nouvelles personnes m’enthousiasme plus que cela ne m’effraie', subscale: 'life', reverse: false },
+    { id: 'l4', text: 'Je préfère une vie stable et prévisible au changement', subscale: 'life', reverse: true },
+    { id: 'l5', text: 'J’essaie volontiers des plats inconnus ou des expériences inédites', subscale: 'life', reverse: false },
+    { id: 'l6', text: 'Face à une grande décision (expatriation, changement d’emploi, création d’entreprise), je ressens de l’excitation', subscale: 'life', reverse: false },
+    { id: 'l7', text: 'Par peur de l’échec, j’ai tendance à éviter les défis', subscale: 'life', reverse: true },
+  ],
+  es: [
+    { id: 'f1', text: 'Invierto esperando una alta rentabilidad aunque pueda perder capital', subscale: 'financial', reverse: false },
+    { id: 'f2', text: 'Si una acción cae un 20 %, la mantengo con visión a largo plazo', subscale: 'financial', reverse: false },
+    { id: 'f3', text: 'Invertir todo mi fondo de emergencia no me inquieta mucho', subscale: 'financial', reverse: false },
+    { id: 'f4', text: 'Prefiero depósitos y ahorro seguro antes que invertir', subscale: 'financial', reverse: true },
+    { id: 'f5', text: 'Invierto con ganas en productos financieros nuevos (ETF, criptomonedas…)', subscale: 'financial', reverse: false },
+    { id: 'f6', text: 'Cuando tengo pérdidas, me angustio tanto que no duermo', subscale: 'financial', reverse: true },
+    { id: 'f7', text: 'No me da miedo usar apalancamiento (invertir con dinero prestado)', subscale: 'financial', reverse: false },
+    { id: 'l1', text: 'Me lanzo espontáneamente a viajes no planeados o experiencias nuevas', subscale: 'life', reverse: false },
+    { id: 'l2', text: 'Podría elegir una startup prometedora antes que un empleo estable', subscale: 'life', reverse: false },
+    { id: 'l3', text: 'Conocer gente nueva me ilusiona más que me asusta', subscale: 'life', reverse: false },
+    { id: 'l4', text: 'Prefiero una vida estable y previsible antes que el cambio', subscale: 'life', reverse: true },
+    { id: 'l5', text: 'Pruebo con gusto comidas desconocidas o experiencias nuevas', subscale: 'life', reverse: false },
+    { id: 'l6', text: 'Ante una gran decisión (emigrar, cambiar de trabajo, emprender) siento emoción', subscale: 'life', reverse: false },
+    { id: 'l7', text: 'Por miedo a fracasar, suelo evitar los retos', subscale: 'life', reverse: true },
+  ],
 }
 
 const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
@@ -170,6 +266,30 @@ const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
       investmentAdvice: ['預金・国債などの安全資産中心', '分散投資でボラティリティを最小化', '緊急資金3–6ヶ月分を先に確保', '低リスク商品（インデックスETF等）から始める'],
       lifeAdvice: ['安定した環境で最高のパフォーマンスを発揮', '小さな変化から段階的に試す', '安定志向を強みとして認識する'],
     },
+    zh: {
+      icon: '🛡️',
+      title: '稳健型',
+      subtitle: '把稳定与确定性放在第一位',
+      description: '你对损失很敏感，重视可预测性。偏好安全的选择，对大的变化感到不自在。这不是缺点，而是你的倾向。',
+      investmentAdvice: ['以存款、国债等安全资产为主', '用分散投资把波动降到最低', '先备好 3–6 个月的应急资金', '从 ETF 等低风险产品开始'],
+      lifeAdvice: ['在稳定的环境中发挥最佳表现', '从小改变开始，一步步尝试', '把自己对稳定的偏好视为优势'],
+    },
+    fr: {
+      icon: '🛡️',
+      title: 'Prudent',
+      subtitle: 'La stabilité et la certitude passent avant tout',
+      description: 'Vous êtes très sensible aux pertes et tenez à la prévisibilité. Vous préférez les choix sûrs et les grands changements vous mettent mal à l’aise. Ce n’est pas un défaut : c’est votre tempérament.',
+      investmentAdvice: ['Privilégier les actifs sûrs (livrets, obligations d’État)', 'Diversifier pour réduire au maximum la volatilité', 'Constituer d’abord 3 à 6 mois d’épargne de précaution', 'Commencer par des produits peu risqués comme les ETF'],
+      lifeAdvice: ['Donner le meilleur de vous dans un cadre stable', 'Essayer par étapes, en commençant par de petits changements', 'Voir votre goût de la stabilité comme une force'],
+    },
+    es: {
+      icon: '🛡️',
+      title: 'Prudente',
+      subtitle: 'La estabilidad y la certeza son lo primero',
+      description: 'Eres muy sensible a las pérdidas y valoras la previsibilidad. Prefieres opciones seguras y los grandes cambios te incomodan. No es un defecto: es tu forma de ser.',
+      investmentAdvice: ['Priorizar activos seguros (depósitos, deuda pública)', 'Diversificar para minimizar la volatilidad', 'Reunir primero un fondo de emergencia de 3–6 meses', 'Empezar con productos de bajo riesgo como los ETF'],
+      lifeAdvice: ['Dar lo mejor de ti en entornos estables', 'Probar por etapas, empezando por cambios pequeños', 'Ver tu preferencia por la estabilidad como una fortaleza'],
+    },
   },
   moderate: {
     ko: {
@@ -195,6 +315,30 @@ const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
       description: '基本的に安定を求めつつ、合理的なリスクを選択的に受け入れます。十分な情報と準備があるときに挑戦を検討します。',
       investmentAdvice: ['安全資産60–70%、成長資産30–40%の配分', '積立投資で平均取得単価を下げる', 'ポートフォリオを四半期ごとにリバランス', '短期トレードより長期投資を優先'],
       lifeAdvice: ['リスク分析後に行動するバランスの取れたアプローチ', '準備された挑戦は恐れずに取り組める', '過度な安全志向が機会損失につながることも'],
+    },
+    zh: {
+      icon: '⚖️',
+      title: '保守平衡型',
+      subtitle: '偏好稳定，但也承担适度风险',
+      description: '基本上追求稳定，但会有选择地接受合理的风险。在信息充足、准备好时才考虑挑战。',
+      investmentAdvice: ['安全资产 60–70%，成长资产 30–40% 配置', '用定期定额投资摊低平均成本', '每季度重新平衡投资组合', '比起短线交易，更偏好长期投资'],
+      lifeAdvice: ['先分析风险再行动的平衡做法', '准备好的挑战可以放心去做', '过度求稳可能导致错失机会'],
+    },
+    fr: {
+      icon: '⚖️',
+      title: 'Équilibré prudent',
+      subtitle: 'Vous préférez la stabilité mais acceptez un risque mesuré',
+      description: 'Vous recherchez d’abord la stabilité, tout en acceptant de façon sélective des risques raisonnables. Vous envisagez un défi quand vous avez assez d’informations et de préparation.',
+      investmentAdvice: ['Répartir 60–70 % en actifs sûrs et 30–40 % en actifs de croissance', 'Lisser le prix d’achat moyen par des versements programmés', 'Rééquilibrer le portefeuille chaque trimestre', 'Préférer l’investissement de long terme au trading à court terme'],
+      lifeAdvice: ['Une approche équilibrée : analyser le risque avant d’agir', 'Vous pouvez relever sans crainte un défi bien préparé', 'Trop chercher la sécurité peut faire manquer des occasions'],
+    },
+    es: {
+      icon: '⚖️',
+      title: 'Equilibrado prudente',
+      subtitle: 'Prefieres la estabilidad pero aceptas un riesgo moderado',
+      description: 'Buscas ante todo estabilidad, pero aceptas de forma selectiva riesgos razonables. Consideras un reto cuando tienes suficiente información y preparación.',
+      investmentAdvice: ['Repartir 60–70 % en activos seguros y 30–40 % en activos de crecimiento', 'Reducir el precio medio de compra con aportaciones periódicas', 'Reequilibrar la cartera cada trimestre', 'Preferir la inversión a largo plazo al trading a corto'],
+      lifeAdvice: ['Un enfoque equilibrado: analizar el riesgo antes de actuar', 'Puedes afrontar sin miedo un reto bien preparado', 'Buscar demasiada seguridad puede hacerte perder oportunidades'],
     },
   },
   balanced: {
@@ -222,6 +366,30 @@ const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
       investmentAdvice: ['成長資産と安全資産のバランスある配分', 'セクター分散と地域分散を同時に追求', '市場の変動をチャンスとして活用', 'ライフステージに合わせて定期的にポートフォリオを調整'],
       lifeAdvice: ['様々な状況での柔軟な判断', 'リスク許容度が競争優位として機能', '衝動的な決断の前に少し立ち止まる習慣を'],
     },
+    zh: {
+      icon: '🌊',
+      title: '平衡型',
+      subtitle: '在风险与稳定之间保持良好平衡',
+      description: '你能理性评估风险与回报之间的取舍。视情况可以进取，也可以防守，灵活应对。',
+      investmentAdvice: ['成长资产与安全资产均衡配置', '同时追求行业分散与地区分散', '把市场波动当作机会', '按年龄定期调整投资组合'],
+      lifeAdvice: ['在各种情况下都能灵活判断', '承受风险的能力是你的优势', '建议在冲动决定前先停一下'],
+    },
+    fr: {
+      icon: '🌊',
+      title: 'Équilibré',
+      subtitle: 'Vous gardez un bon équilibre entre risque et stabilité',
+      description: 'Vous évaluez de façon rationnelle l’arbitrage entre risque et rendement. Selon la situation, vous savez être offensif comme défensif.',
+      investmentAdvice: ['Répartir de façon équilibrée actifs de croissance et actifs sûrs', 'Diversifier à la fois par secteur et par zone géographique', 'Voir la volatilité des marchés comme une occasion', 'Ajuster régulièrement le portefeuille selon l’âge'],
+      lifeAdvice: ['Un jugement souple selon les situations', 'Votre capacité à accepter le risque est une force', 'Prendre l’habitude de marquer une pause avant une décision impulsive'],
+    },
+    es: {
+      icon: '🌊',
+      title: 'Equilibrado',
+      subtitle: 'Mantienes un buen equilibrio entre riesgo y estabilidad',
+      description: 'Evalúas de forma racional el equilibrio entre riesgo y recompensa. Según la situación, sabes ser ofensivo o defensivo con flexibilidad.',
+      investmentAdvice: ['Repartir de forma equilibrada activos de crecimiento y seguros', 'Diversificar a la vez por sectores y por regiones', 'Aprovechar la volatilidad del mercado como oportunidad', 'Ajustar periódicamente la cartera según la edad'],
+      lifeAdvice: ['Juicio flexible en distintas situaciones', 'Tu capacidad de asumir riesgos es una fortaleza', 'Conviene parar un momento antes de decisiones impulsivas'],
+    },
   },
   adventurous: {
     ko: {
@@ -247,6 +415,30 @@ const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
       description: '高いリスクを受け入れ、大きなリターンを追求します。変化と不確実性を面白く感じます。この性質は大きな成功の原動力ですが、過度なリスクには注意が必要です。',
       investmentAdvice: ['成長資産中心のポートフォリオが選択肢に', 'ただし総資産の最低20–30%は安全資産として確保', 'レバレッジ使用時は損失上限を厳格に設定', '興奮状態での感情的投資判断は危険'],
       lifeAdvice: ['高いエネルギーと挑戦精神は大きな強み', 'リスク志向と長期計画・管理の両立が必須', '自分のリスクが周囲の人々に与える影響も考慮'],
+    },
+    zh: {
+      icon: '🚀',
+      title: '冒险型',
+      subtitle: '即使风险很高也乐于挑战',
+      description: '你愿意承担高风险去追求大回报，觉得变化和不确定很有意思。这种倾向是大成功的动力，但要留意过度的风险。',
+      investmentAdvice: ['可以以成长资产为主构建投资组合', '但总资产中至少 20–30% 放在安全资产', '使用杠杆时严格设定止损上限', '警惕情绪化的投资决定——兴奋时的判断很危险'],
+      lifeAdvice: ['高能量和挑战精神是很大的优势', '长期规划与风险管理必须并行', '也要考虑风险对身边人的影响'],
+    },
+    fr: {
+      icon: '🚀',
+      title: 'Aventurier',
+      subtitle: 'Vous relevez volontiers des défis même très risqués',
+      description: 'Vous acceptez de grands risques pour viser de grandes récompenses ; le changement et l’incertitude vous stimulent. Ce tempérament peut porter de grands succès, mais attention aux risques excessifs.',
+      investmentAdvice: ['Vous pouvez bâtir un portefeuille centré sur les actifs de croissance', 'Mais gardez au moins 20–30 % de votre patrimoine en actifs sûrs', 'Avec l’effet de levier, fixez des limites de perte strictes', 'Méfiez-vous des décisions d’investissement émotionnelles : juger dans l’excitation est risqué'],
+      lifeAdvice: ['Votre énergie et votre goût du défi sont de vraies forces', 'Planification de long terme et gestion du risque doivent aller de pair', 'Pensez aussi aux risques que vous faites courir à vos proches'],
+    },
+    es: {
+      icon: '🚀',
+      title: 'Aventurero',
+      subtitle: 'Afrontas retos con gusto aunque el riesgo sea alto',
+      description: 'Asumes grandes riesgos buscando grandes recompensas; el cambio y la incertidumbre te resultan estimulantes. Esta tendencia puede impulsar grandes éxitos, pero cuidado con el riesgo excesivo.',
+      investmentAdvice: ['Puedes construir una cartera centrada en activos de crecimiento', 'Pero mantén al menos el 20–30 % de tu patrimonio en activos seguros', 'Si usas apalancamiento, fija límites de pérdida estrictos', 'Cuidado con las decisiones de inversión emocionales: decidir en plena euforia es arriesgado'],
+      lifeAdvice: ['Tu energía y tu espíritu de reto son grandes fortalezas', 'La planificación a largo plazo y la gestión del riesgo deben ir juntas', 'Ten en cuenta también el riesgo para las personas de tu entorno'],
     },
   },
 }

@@ -3,9 +3,9 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 type Domain = 'workDemand' | 'personalTime' | 'recovery' | 'meaning'
@@ -99,6 +99,75 @@ const LABELS: Record<SupportedLang, {
       meaning: '意味と目的',
     },
   },
+  zh: {
+    title: '工作与生活平衡测验',
+    subtitle: '我的工作生活平衡几分？',
+    note: '本测验是探索工作与生活平衡的自我检查工具。',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '有点不是', '一般', '有点是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的工作生活平衡分数',
+    yourBalance: '我的工作与生活平衡',
+    domainProfile: '各领域平衡概况',
+    overallLevel: '整体平衡程度',
+    guidance: '给平衡的建议',
+    attentionDomain: '最需要留意的领域',
+    scoreLabel: '平衡分数',
+    outOf: '/ 80 分',
+    domainNames: {
+      workDemand: '工作负担',
+      personalTime: '个人时间',
+      recovery: '恢复力',
+      meaning: '意义与目的',
+    },
+  },
+  fr: {
+    title: 'Test d’équilibre vie pro / vie perso',
+    subtitle: 'Quel est mon score d’équilibre ?',
+    note: 'Ce test est un outil d’auto-évaluation pour explorer l’équilibre entre travail et vie personnelle.',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Plutôt pas', 'Moyennement', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon score d’équilibre vie pro / vie perso',
+    yourBalance: 'Mon équilibre travail-vie',
+    domainProfile: 'Profil d’équilibre par domaine',
+    overallLevel: 'Niveau d’équilibre global',
+    guidance: 'Conseils pour l’équilibre',
+    attentionDomain: 'Domaine qui demande le plus d’attention',
+    scoreLabel: 'Score d’équilibre',
+    outOf: '/ 80 points',
+    domainNames: {
+      workDemand: 'Charge de travail',
+      personalTime: 'Temps personnel',
+      recovery: 'Récupération',
+      meaning: 'Sens et objectifs',
+    },
+  },
+  es: {
+    title: 'Test de equilibrio entre trabajo y vida',
+    subtitle: '¿Cuál es mi puntuación de equilibrio?',
+    note: 'Este test es una herramienta de autoevaluación para explorar el equilibrio entre trabajo y vida personal.',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Un poco no', 'A medias', 'Un poco sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi puntuación de equilibrio trabajo-vida',
+    yourBalance: 'Mi equilibrio entre trabajo y vida',
+    domainProfile: 'Perfil de equilibrio por áreas',
+    overallLevel: 'Nivel de equilibrio global',
+    guidance: 'Consejos para el equilibrio',
+    attentionDomain: 'Área que más atención necesita',
+    scoreLabel: 'Puntuación de equilibrio',
+    outOf: '/ 80 puntos',
+    domainNames: {
+      workDemand: 'Carga de trabajo',
+      personalTime: 'Tiempo personal',
+      recovery: 'Recuperación',
+      meaning: 'Sentido y propósito',
+    },
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -156,6 +225,60 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'm3', text: '仕事でも個人生活でも成長していると感じる', domain: 'meaning' },
     { id: 'm4', text: '将来に対してポジティブな期待感がある', domain: 'meaning' },
   ],
+  zh: [
+    { id: 'w1', text: '下班后，工作的事还是一直在脑子里转', domain: 'workDemand', reversed: true },
+    { id: 'w2', text: '工作时间常常比预期长很多', domain: 'workDemand', reversed: true },
+    { id: 'w3', text: '工作压力影响到家庭生活或个人时间', domain: 'workDemand', reversed: true },
+    { id: 'w4', text: '休息日也有必须查看或回复工作消息的压力', domain: 'workDemand', reversed: true },
+    { id: 'p1', text: '我能和家人朋友共度足够有意义的时间', domain: 'personalTime' },
+    { id: 'p2', text: '我会把时间投入到兴趣或个人爱好上', domain: 'personalTime' },
+    { id: 'p3', text: '我觉得自己在工作之外有属于自己的生活', domain: 'personalTime' },
+    { id: 'p4', text: '我会规律地做让自己开心的活动', domain: 'personalTime' },
+    { id: 'r1', text: '我的睡眠是充足的', domain: 'recovery' },
+    { id: 'r2', text: '即使疲劳累积，也有时间恢复', domain: 'recovery' },
+    { id: 'r3', text: '周末或假日能真正休息', domain: 'recovery' },
+    { id: 'r4', text: '我每周至少运动几次', domain: 'recovery' },
+    { id: 'm1', text: '我觉得现在做的事有意义', domain: 'meaning' },
+    { id: 'm2', text: '职业目标和个人价值观是一致的', domain: 'meaning' },
+    { id: 'm3', text: '我觉得自己在工作和生活上都在成长', domain: 'meaning' },
+    { id: 'm4', text: '我对未来有正面的期待', domain: 'meaning' },
+  ],
+  fr: [
+    { id: 'w1', text: 'Même après le travail, je n’arrive pas à décrocher', domain: 'workDemand', reversed: true },
+    { id: 'w2', text: 'Mes journées de travail durent souvent bien plus que prévu', domain: 'workDemand', reversed: true },
+    { id: 'w3', text: 'Le stress du travail empiète sur ma vie de famille ou mon temps personnel', domain: 'workDemand', reversed: true },
+    { id: 'w4', text: 'Même les jours de repos, je me sens obligé de consulter ou répondre aux messages professionnels', domain: 'workDemand', reversed: true },
+    { id: 'p1', text: 'Je peux passer suffisamment de temps de qualité avec ma famille ou mes amis', domain: 'personalTime' },
+    { id: 'p2', text: 'Je consacre du temps à mes loisirs ou centres d’intérêt', domain: 'personalTime' },
+    { id: 'p3', text: 'J’ai le sentiment d’avoir une vie à moi en dehors du travail', domain: 'personalTime' },
+    { id: 'p4', text: 'Je fais régulièrement des activités agréables pour moi', domain: 'personalTime' },
+    { id: 'r1', text: 'Je dors suffisamment', domain: 'recovery' },
+    { id: 'r2', text: 'Quand la fatigue s’accumule, j’ai le temps de récupérer', domain: 'recovery' },
+    { id: 'r3', text: 'Je peux vraiment me reposer le week-end ou les jours fériés', domain: 'recovery' },
+    { id: 'r4', text: 'Je fais une activité physique au moins quelques fois par semaine', domain: 'recovery' },
+    { id: 'm1', text: 'J’ai le sentiment que mon travail a du sens', domain: 'meaning' },
+    { id: 'm2', text: 'Mes objectifs professionnels rejoignent mes valeurs personnelles', domain: 'meaning' },
+    { id: 'm3', text: 'J’ai le sentiment de progresser au travail comme dans la vie', domain: 'meaning' },
+    { id: 'm4', text: 'J’envisage l’avenir de façon positive', domain: 'meaning' },
+  ],
+  es: [
+    { id: 'w1', text: 'Incluso después del trabajo, no consigo desconectar', domain: 'workDemand', reversed: true },
+    { id: 'w2', text: 'La jornada laboral suele alargarse mucho más de lo previsto', domain: 'workDemand', reversed: true },
+    { id: 'w3', text: 'El estrés del trabajo afecta a mi vida familiar o a mi tiempo personal', domain: 'workDemand', reversed: true },
+    { id: 'w4', text: 'Incluso en días libres siento presión por revisar o responder mensajes del trabajo', domain: 'workDemand', reversed: true },
+    { id: 'p1', text: 'Puedo pasar suficiente tiempo de calidad con mi familia o amigos', domain: 'personalTime' },
+    { id: 'p2', text: 'Dedico tiempo a mis aficiones o intereses personales', domain: 'personalTime' },
+    { id: 'p3', text: 'Siento que tengo una vida propia fuera del trabajo', domain: 'personalTime' },
+    { id: 'p4', text: 'Hago con regularidad actividades que disfruto', domain: 'personalTime' },
+    { id: 'r1', text: 'Duermo lo suficiente', domain: 'recovery' },
+    { id: 'r2', text: 'Cuando se acumula el cansancio, tengo tiempo para recuperarme', domain: 'recovery' },
+    { id: 'r3', text: 'Puedo descansar de verdad los fines de semana o festivos', domain: 'recovery' },
+    { id: 'r4', text: 'Hago actividad física al menos unas cuantas veces por semana', domain: 'recovery' },
+    { id: 'm1', text: 'Siento que mi trabajo tiene sentido', domain: 'meaning' },
+    { id: 'm2', text: 'Mis metas profesionales encajan con mis valores personales', domain: 'meaning' },
+    { id: 'm3', text: 'Siento que crezco tanto en el trabajo como en la vida', domain: 'meaning' },
+    { id: 'm4', text: 'Tengo expectativas positivas sobre el futuro', domain: 'meaning' },
+  ],
 }
 
 interface LevelData { title: string; subtitle: string; description: string; guidance: string[] }
@@ -179,6 +302,24 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
       description: '現在、仕事と生活のバランスが大きく崩れています。この状態が続くと、バーンアウト、健康問題、関係の損傷につながる可能性があります。今すぐ変化が必要です。',
       guidance: ['勤務時間外に少なくとも一つの固定「休息」時間を作る', '現在のスケジュールから削除できるものをリストアップ', '信頼できる人やカウンセラーに現状を共有する', '小さな回復ルーティンから始める（15分の散歩、早めの就寝）'],
     },
+    zh: {
+      title: '严重失衡',
+      subtitle: '现在工作与生活的平衡已经严重失守',
+      description: '目前工作与生活的平衡严重失衡。如果持续下去，可能导致倦怠、健康问题和关系受损。现在需要立即做出改变。',
+      guidance: ['在工作之外，至少固定一段“休息”时间', '列出目前日程里可以删掉的事', '和信任的人或咨询师聊聊现在的状况', '从小小的恢复习惯开始（散步 15 分钟、早点睡）'],
+    },
+    fr: {
+      title: 'Déséquilibre marqué',
+      subtitle: 'Votre équilibre entre travail et vie personnelle est fortement ébranlé',
+      description: 'L’équilibre entre travail et vie personnelle est très dégradé. Si cela dure, cela peut mener à l’épuisement, à des problèmes de santé et à des relations abîmées. Un changement immédiat s’impose.',
+      guidance: ['Bloquer au moins un créneau de « pause » fixe en dehors du travail', 'Lister ce qui peut être retiré de votre emploi du temps', 'Parler de votre situation à une personne de confiance ou à un professionnel', 'Commencer par une petite routine de récupération (15 minutes de marche, se coucher plus tôt)'],
+    },
+    es: {
+      title: 'Desequilibrio grave',
+      subtitle: 'Tu equilibrio entre trabajo y vida está muy deteriorado',
+      description: 'El equilibrio entre trabajo y vida está muy deteriorado. Si continúa, puede llevar al agotamiento, a problemas de salud y a relaciones dañadas. Hace falta un cambio inmediato.',
+      guidance: ['Reservar al menos un rato fijo de «descanso» fuera del trabajo', 'Hacer una lista de lo que puedes quitar de tu agenda', 'Compartir tu situación con alguien de confianza o con un profesional', 'Empezar con una pequeña rutina de recuperación (15 minutos de paseo, acostarte antes)'],
+    },
   },
   strained: {
     ko: {
@@ -198,6 +339,24 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
       subtitle: 'バランスが揺らいでいます',
       description: '仕事と生活のバランスが不安定な状態です。いくつかの領域は大丈夫ですが、他の領域が負担になっています。今、意図的な調整が必要な時期です。',
       guidance: ['最も脆弱な領域に優先的に集中する', '毎週「バランスチェック」の10分を持つ', '回復に役立つ活動を一つ日課に加える', 'デジタル機器の使用時間を意図的に制限する'],
+    },
+    zh: {
+      title: '不稳定的平衡',
+      subtitle: '平衡正在动摇',
+      description: '工作与生活的平衡不太稳定。有些领域还好，但另一些正成为负担。现在是需要有意识调整的时候。',
+      guidance: ['优先关注最薄弱的领域', '每周留 10 分钟做“平衡检查”', '在日常中加入一项有助恢复的活动', '有意识地限制使用电子设备的时间'],
+    },
+    fr: {
+      title: 'Équilibre fragile',
+      subtitle: 'Votre équilibre vacille',
+      description: 'Votre équilibre entre travail et vie personnelle est instable. Certains domaines vont bien, d’autres deviennent pesants. C’est le moment de faire des ajustements volontaires.',
+      guidance: ['Vous concentrer d’abord sur le domaine le plus fragile', 'Prendre 10 minutes chaque semaine pour faire le point sur votre équilibre', 'Ajouter à votre journée une activité qui aide à récupérer', 'Limiter volontairement le temps passé sur les écrans'],
+    },
+    es: {
+      title: 'Equilibrio inestable',
+      subtitle: 'Tu equilibrio se tambalea',
+      description: 'Tu equilibrio entre trabajo y vida es inestable. Algunas áreas van bien, pero otras empiezan a pesar. Es momento de hacer ajustes conscientes.',
+      guidance: ['Centrarte primero en el área más frágil', 'Reservar 10 minutos a la semana para revisar tu equilibrio', 'Añadir a tu día una actividad que ayude a recuperarte', 'Limitar conscientemente el tiempo con dispositivos digitales'],
     },
   },
   developing: {
@@ -219,6 +378,24 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
       description: '全般的にバランスを取りつつありますが、まだ最適化の余地があります。今の方向性は正しいです。もう少し細かく調整すれば、より良いバランスを実現できます。',
       guidance: ['うまくいっていることを意識的に維持する', '改善余地のある領域に一つずつアプローチする', '仕事でも生活でも「十分に良い」の基準を設定する', '自分のエネルギーパターンに合ったスケジュールを最適化する'],
     },
+    zh: {
+      title: '逐步建立的平衡',
+      subtitle: '正在找到平衡',
+      description: '整体上正在找到平衡，但还有优化空间。现在的方向是对的，再细致地调整一下，就能达到更好的平衡。',
+      guidance: ['有意识地维持目前做得好的部分', '一次处理一个有改进空间的领域', '在工作和生活上都设定“够好了”的标准', '按照自己的能量模式优化日程'],
+    },
+    fr: {
+      title: 'Équilibre en construction',
+      subtitle: 'Vous êtes en train de trouver l’équilibre',
+      description: 'Dans l’ensemble, vous trouvez votre équilibre, mais il reste une marge d’amélioration. La direction est la bonne : quelques réglages plus fins vous mèneront à un meilleur équilibre.',
+      guidance: ['Préserver consciemment ce qui fonctionne déjà', 'Aborder un par un les domaines à améliorer', 'Fixer un niveau « suffisamment bien » au travail comme dans la vie', 'Organiser votre emploi du temps selon vos pics d’énergie'],
+    },
+    es: {
+      title: 'Equilibrio en desarrollo',
+      subtitle: 'Estás encontrando el equilibrio',
+      description: 'En general estás encontrando el equilibrio, pero aún hay margen de mejora. Vas en la dirección correcta: con ajustes más finos lograrás un equilibrio mejor.',
+      guidance: ['Mantener conscientemente lo que ya funciona', 'Abordar una a una las áreas con margen de mejora', 'Fijar un listón de «suficientemente bien» en el trabajo y en la vida', 'Organizar tu agenda según tus patrones de energía'],
+    },
   },
   balanced: {
     ko: {
@@ -238,6 +415,24 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
       subtitle: '優れたワークライフバランスを維持しています',
       description: '現在、仕事と生活のバランスが健全に維持されています。このバランスを継続的に意識して維持することが重要です。状況が変わっても、このバランスを守り続けてください。',
       guidance: ['現在のバランスを可能にしている要素を把握して保護する', '新しい課題に直面したときもバランスが崩れないよう注意する', '周りの人々にもバランスの取れた生活パターンを共有する', '定期的な自己チェックでバランスをモニタリングする'],
+    },
+    zh: {
+      title: '平衡的生活',
+      subtitle: '你维持着很好的工作生活平衡',
+      description: '目前工作与生活的平衡保持得很健康。持续留意并维持这份平衡很重要。在变化的环境中也请守住它。',
+      guidance: ['找出并守护让现在平衡成为可能的因素', '面对新挑战时，留意别让平衡被打乱', '也和身边的人分享平衡生活的方式', '定期自我检查，关注平衡状况'],
+    },
+    fr: {
+      title: 'Une vie équilibrée',
+      subtitle: 'Vous maintenez un excellent équilibre',
+      description: 'Votre équilibre entre travail et vie personnelle est sain. L’important est de continuer à y prêter attention et à l’entretenir, même quand la situation change.',
+      guidance: ['Identifier et protéger ce qui rend cet équilibre possible', 'Veiller à ce que les nouveaux défis ne le fassent pas vaciller', 'Partager avec votre entourage vos façons de vivre équilibrées', 'Faire régulièrement le point pour suivre votre équilibre'],
+    },
+    es: {
+      title: 'Una vida equilibrada',
+      subtitle: 'Mantienes un equilibrio excelente',
+      description: 'Tu equilibrio entre trabajo y vida es sano. Lo importante es seguir atento a él y cuidarlo, incluso cuando cambian las circunstancias.',
+      guidance: ['Identificar y proteger lo que hace posible este equilibrio', 'Vigilar que los nuevos retos no lo desestabilicen', 'Compartir con tu entorno tus hábitos de vida equilibrada', 'Revisarte con regularidad para seguir tu equilibrio'],
     },
   },
 }
