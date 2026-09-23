@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type ExprLevel = 'reserved' | 'moderate' | 'expressive' | 'open'
 type Subscale = 'positive' | 'negative'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはGross & Johnの感情表現性研究（Berkeley Expressivity）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '情绪表达测验',
+    subtitle: '我把情绪露出来多少？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的情绪表达分数是',
+    yourScore: '我的情绪表达分数',
+    overallLabel: '综合情绪表达',
+    positiveLabel: '正向情绪的表达',
+    negativeLabel: '负向与脆弱情绪的表达',
+    outOf: '/ 5.0',
+    tipsLabel: '成长建议',
+    note: '本测验参考 Gross 与 John 的情绪表达研究（Berkeley Expressivity）概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test d’expressivité émotionnelle',
+    subtitle: 'À quel point est-ce que je montre ce que je ressens ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon score d’expressivité',
+    yourScore: 'Votre score d’expressivité',
+    overallLabel: 'Expressivité globale',
+    positiveLabel: 'Expression des émotions positives',
+    negativeLabel: 'Expression des émotions difficiles',
+    outOf: '/ 5.0',
+    tipsLabel: 'Piste de progrès',
+    note: 'Ce test reprend les notions issues des travaux de Gross et John sur l’expressivité émotionnelle (Berkeley Expressivity), à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de expresividad emocional',
+    subtitle: '¿Cuánto muestro lo que siento?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi puntuación de expresividad',
+    yourScore: 'Tu puntuación de expresividad',
+    overallLabel: 'Expresividad global',
+    positiveLabel: 'Expresión de emociones positivas',
+    negativeLabel: 'Expresión de emociones difíciles',
+    outOf: '/ 5.0',
+    tipsLabel: 'Para crecer',
+    note: 'Este test recoge las ideas de los trabajos de Gross y John sobre expresividad emocional (Berkeley Expressivity), para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<ExprLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<ExprLevel, Record<SupportedLang, LevelData>> = {
         '肯定的な感情（感謝・喜び）から表現練習を始めましょう。',
       ],
     },
+    zh: {
+      icon: '🌙',
+      title: '沉静克制型',
+      description: '你习惯把情绪收在心里。沉稳和慎重是你的长处；在亲近的关系里多露一点，亲密会更深。',
+      tips: [
+        '先对一个信得过的人，从小的情绪开始说出口。',
+        '用「我感到……」这样的句子，给情绪取个名字。',
+        '先从正向的情绪（感谢、开心）练起。',
+      ],
+    },
+    fr: {
+      icon: '🌙',
+      title: 'Réservé et posé',
+      description: 'Vous gardez vos émotions à l’intérieur. Le calme et la prudence sont vos forces ; en exprimer un peu plus dans vos liens proches approfondira l’intimité.',
+      tips: [
+        'Commencez par dire de petites émotions à une personne de confiance.',
+        'Nommez ce que vous ressentez avec la formule « je ressens… ».',
+        'Entraînez-vous d’abord sur les émotions positives (gratitude, joie).',
+      ],
+    },
+    es: {
+      icon: '🌙',
+      title: 'Reservado y sereno',
+      description: 'Guardas las emociones dentro. La calma y la prudencia son tus fuerzas; expresar un poco más en los vínculos cercanos hará más honda la intimidad.',
+      tips: [
+        'Empieza diciendo emociones pequeñas a alguien de confianza.',
+        'Ponle nombre a lo que sientes con la fórmula «siento…».',
+        'Practica primero con las emociones positivas (gratitud, alegría).',
+      ],
+    },
   },
   moderate: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<ExprLevel, Record<SupportedLang, LevelData>> = {
         '表現を控えた瞬間を振り返ってパターンを探しましょう。',
         '否定的な感情も非難せず表現する練習を加えましょう。',
         '表現後に相手の反応を傾聴して対話を深めましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌤️',
+      title: '均衡表达型',
+      description: '你会看场合和对象，把情绪表达得恰当。在坦率和克制之间，你拿捏得有弹性。',
+      tips: [
+        '回看那些你忍住没说的时刻，找出自己的规律。',
+        '再练一练：把负面情绪说出来，但不带指责。',
+        '说完之后，也好好听对方的回应，把交流做深。',
+      ],
+    },
+    fr: {
+      icon: '🌤️',
+      title: 'Expression équilibrée',
+      description: 'Vous exprimez vos émotions de façon adaptée à la situation et à la personne. Vous tenez une balance souple entre franchise et retenue.',
+      tips: [
+        'Repensez aux moments où vous avez retenu l’expression : cherchez le schéma.',
+        'Ajoutez l’entraînement à exprimer le négatif sans reproche.',
+        'Après avoir parlé, écoutez la réaction de l’autre : l’échange s’approfondit.',
+      ],
+    },
+    es: {
+      icon: '🌤️',
+      title: 'Expresión equilibrada',
+      description: 'Expresas las emociones de forma adecuada a la situación y a la persona. Mantienes un equilibrio flexible entre franqueza y contención.',
+      tips: [
+        'Repasa los momentos en que te callaste: busca el patrón.',
+        'Añade practicar expresar lo negativo sin reproche.',
+        'Después de hablar, escucha la reacción del otro: el intercambio se hace más hondo.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<ExprLevel, Record<SupportedLang, LevelData>> = {
         '豊かな表現力を共感と慰めの道具として活かしましょう。',
       ],
     },
+    zh: {
+      icon: '☀️',
+      title: '表达丰富型',
+      description: '你把情绪表达得又足又坦率。真诚的表达让关系变暖，也让人和人连得更深。',
+      tips: [
+        '偶尔检查一下，表达的力度和对象、场合合不合。',
+        '表达多少，也要听对方多少，保持平衡。',
+        '把这份表达力用在共情和安慰上。',
+      ],
+    },
+    fr: {
+      icon: '☀️',
+      title: 'Très expressif',
+      description: 'Vous exprimez vos émotions avec richesse et franchise. Cette sincérité réchauffe les relations et approfondit les liens.',
+      tips: [
+        'Vérifiez de temps en temps que l’intensité convient à la personne et au moment.',
+        'Gardez l’équilibre : écouter autant que l’on exprime.',
+        'Mettez cette expressivité au service de l’empathie et du réconfort.',
+      ],
+    },
+    es: {
+      icon: '☀️',
+      title: 'Muy expresivo',
+      description: 'Expresas las emociones con riqueza y franqueza. Esa sinceridad calienta las relaciones y hace más hondos los vínculos.',
+      tips: [
+        'Revisa de vez en cuando que la intensidad encaje con la persona y el momento.',
+        'Mantén el equilibrio: escuchar tanto como expresas.',
+        'Pon esa expresividad al servicio de la empatía y el consuelo.',
+      ],
+    },
   },
   open: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<ExprLevel, Record<SupportedLang, LevelData>> = {
         '感情の波が大きい時は一度止まって表現を選ぶ余裕を持ちましょう。',
         '表現が相手を圧倒していないか時々点検しましょう。',
         '素直さを傾聴・共感と共に発揮すると信頼が深まります。',
+      ],
+    },
+    zh: {
+      icon: '🌈',
+      title: '敞开表达型',
+      description: '你把情绪敞得很开。真诚和生气勃勃是你的长处；若再顾到表达的快慢和对方的节奏，会更深。',
+      tips: [
+        '情绪的浪头大的时候，先停一下，挑一挑怎么说。',
+        '偶尔检查一下，表达会不会把对方压住。',
+        '坦率若配上倾听和共情，信任会长得更深。',
+      ],
+    },
+    fr: {
+      icon: '🌈',
+      title: 'Grand ouvert',
+      description: 'Vous laissez vos émotions s’exprimer largement. La sincérité et la vitalité sont vos forces ; en veillant au rythme de l’autre et au dosage, l’échange gagnera en profondeur.',
+      tips: [
+        'Quand la vague émotionnelle est forte, marquez une pause pour choisir vos mots.',
+        'Vérifiez de temps en temps que votre expression ne submerge pas l’autre.',
+        'La franchise alliée à l’écoute et à l’empathie approfondit la confiance.',
+      ],
+    },
+    es: {
+      icon: '🌈',
+      title: 'Muy abierto',
+      description: 'Dejas que las emociones se expresen ampliamente. La sinceridad y la vitalidad son tus fuerzas; cuidando el ritmo del otro y la dosis, el intercambio gana hondura.',
+      tips: [
+        'Cuando la ola emocional es grande, párate un momento para elegir las palabras.',
+        'Revisa de vez en cuando que tu expresión no desborde al otro.',
+        'La franqueza junto con escucha y empatía hace más honda la confianza.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'n5', subscale: 'negative', reverse: false, text: '弱い姿を見せることを恐れない' },
     { id: 'n6', subscale: 'negative', reverse: false, text: '助けが必要な時、正直に頼む' },
     { id: 'n7', subscale: 'negative', reverse: false, text: '自分の感情を顔や言葉でよく表す方だ' },
+  ],
+  zh: [
+    { id: 'p1', subscale: 'positive', reverse: false, text: '开心或高兴时，我会自然地表现出来' },
+    { id: 'p2', subscale: 'positive', reverse: false, text: '喜欢一个人，我说得出口' },
+    { id: 'p3', subscale: 'positive', reverse: false, text: '谢意我会用话或行动表达' },
+    { id: 'p4', subscale: 'positive', reverse: false, text: '被打动时，我不会藏着' },
+    { id: 'p5', subscale: 'positive', reverse: false, text: '笑或欢呼会自然冒出来' },
+    { id: 'p6', subscale: 'positive', reverse: false, text: '表达亲近对我来说不别扭' },
+    { id: 'p7', subscale: 'positive', reverse: false, text: '在人前我也能把开心露出来' },
+    { id: 'n1', subscale: 'negative', reverse: false, text: '难过或辛苦时，我会把感受说出来' },
+    { id: 'n2', subscale: 'negative', reverse: false, text: '生气时，我会适度地表达' },
+    { id: 'n3', subscale: 'negative', reverse: false, text: '害怕或不安的心情，我能老实说' },
+    { id: 'n4', subscale: 'negative', reverse: false, text: '委屈时，比起忍着，我更倾向说出来' },
+    { id: 'n5', subscale: 'negative', reverse: false, text: '我不怕被人看见自己软的一面' },
+    { id: 'n6', subscale: 'negative', reverse: false, text: '需要帮忙时，我会直说' },
+    { id: 'n7', subscale: 'negative', reverse: false, text: '我的情绪比较容易从表情或言语上看出来' },
+  ],
+  fr: [
+    { id: 'p1', subscale: 'positive', reverse: false, text: 'Quand je suis content, cela se voit naturellement' },
+    { id: 'p2', subscale: 'positive', reverse: false, text: 'Je sais dire que quelqu’un me plaît' },
+    { id: 'p3', subscale: 'positive', reverse: false, text: 'J’exprime ma gratitude par des mots ou des gestes' },
+    { id: 'p4', subscale: 'positive', reverse: false, text: 'Quand je suis ému, je ne le cache pas' },
+    { id: 'p5', subscale: 'positive', reverse: false, text: 'Le rire ou l’enthousiasme viennent tout seuls' },
+    { id: 'p6', subscale: 'positive', reverse: false, text: 'Exprimer de l’affection ne me met pas mal à l’aise' },
+    { id: 'p7', subscale: 'positive', reverse: false, text: 'Même devant du monde, je laisse voir ma joie' },
+    { id: 'n1', subscale: 'negative', reverse: false, text: 'Quand je suis triste ou en difficulté, je le dis' },
+    { id: 'n2', subscale: 'negative', reverse: false, text: 'Quand je suis en colère, je l’exprime de façon mesurée' },
+    { id: 'n3', subscale: 'negative', reverse: false, text: 'Je dis honnêtement quand j’ai peur ou que je suis inquiet' },
+    { id: 'n4', subscale: 'negative', reverse: false, text: 'Quand quelque chose me blesse, je l’exprime plutôt que de le garder' },
+    { id: 'n5', subscale: 'negative', reverse: false, text: 'Je n’ai pas peur de montrer une part fragile de moi' },
+    { id: 'n6', subscale: 'negative', reverse: false, text: 'Quand j’ai besoin d’aide, je le demande franchement' },
+    { id: 'n7', subscale: 'negative', reverse: false, text: 'Mes émotions se lisent assez bien sur mon visage ou dans mes mots' },
+  ],
+  es: [
+    { id: 'p1', subscale: 'positive', reverse: false, text: 'Cuando estoy contento, se me nota sin esfuerzo' },
+    { id: 'p2', subscale: 'positive', reverse: false, text: 'Sé decir que alguien me gusta' },
+    { id: 'p3', subscale: 'positive', reverse: false, text: 'Expreso agradecimiento con palabras o con gestos' },
+    { id: 'p4', subscale: 'positive', reverse: false, text: 'Cuando me emociono, no lo escondo' },
+    { id: 'p5', subscale: 'positive', reverse: false, text: 'La risa o el entusiasmo me salen solos' },
+    { id: 'p6', subscale: 'positive', reverse: false, text: 'Expresar cariño no me incomoda' },
+    { id: 'p7', subscale: 'positive', reverse: false, text: 'Incluso delante de gente dejo ver mi alegría' },
+    { id: 'n1', subscale: 'negative', reverse: false, text: 'Cuando estoy triste o mal, lo digo' },
+    { id: 'n2', subscale: 'negative', reverse: false, text: 'Cuando me enfado, lo expreso con medida' },
+    { id: 'n3', subscale: 'negative', reverse: false, text: 'Digo con franqueza cuando tengo miedo o inquietud' },
+    { id: 'n4', subscale: 'negative', reverse: false, text: 'Cuando algo me duele, lo digo en vez de guardarlo' },
+    { id: 'n5', subscale: 'negative', reverse: false, text: 'No me da miedo mostrar mi parte frágil' },
+    { id: 'n6', subscale: 'negative', reverse: false, text: 'Cuando necesito ayuda, la pido claramente' },
+    { id: 'n7', subscale: 'negative', reverse: false, text: 'Mis emociones se leen bastante en mi cara o en mis palabras' },
   ],
 }
 

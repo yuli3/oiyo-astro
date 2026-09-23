@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type CuriosityLevel = 'settled' | 'moderate' | 'curious' | 'explorer'
 type Subscale = 'stretch' | 'embrace'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはKashdanの好奇心・探究尺度（CEI-II）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '好奇心测验',
+    subtitle: '我的求知欲有多深？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的好奇心分数是',
+    yourScore: '我的好奇心分数',
+    overallLabel: '综合好奇心',
+    stretchLabel: '探索与求新',
+    embraceLabel: '对不确定的接纳',
+    outOf: '/ 5.0',
+    tipsLabel: '成长建议',
+    note: '本测验参考 Kashdan 的好奇与探索量表（CEI-II）概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test de curiosité',
+    subtitle: 'Jusqu’où va mon envie d’explorer ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon score de curiosité',
+    yourScore: 'Votre score de curiosité',
+    overallLabel: 'Curiosité globale',
+    stretchLabel: 'Exploration et goût du neuf',
+    embraceLabel: 'Tolérance à l’incertitude',
+    outOf: '/ 5.0',
+    tipsLabel: 'Piste de progrès',
+    note: 'Ce test reprend les notions de l’échelle de curiosité et d’exploration (CEI-II) de Kashdan, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de curiosidad',
+    subtitle: '¿Hasta dónde llega mi ganas de explorar?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi puntuación de curiosidad',
+    yourScore: 'Tu puntuación de curiosidad',
+    overallLabel: 'Curiosidad global',
+    stretchLabel: 'Exploración y gusto por lo nuevo',
+    embraceLabel: 'Tolerancia a la incertidumbre',
+    outOf: '/ 5.0',
+    tipsLabel: 'Para crecer',
+    note: 'Este test recoge las ideas de la escala de curiosidad y exploración (CEI-II) de Kashdan, para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
         '「なぜそうなのか？」と一日一回問いかけましょう。',
       ],
     },
+    zh: {
+      icon: '🪴',
+      title: '偏好安稳型',
+      description: '熟悉而安稳的东西让你舒服。你的长处在「深」，稍微加一点新鲜，日子会更有味道。',
+      tips: [
+        '在走惯的路上加一个小变化。',
+        '对感兴趣的题目，轻松查个五分钟。',
+        '每天问自己一次「为什么会这样」。',
+      ],
+    },
+    fr: {
+      icon: '🪴',
+      title: 'Attaché à la stabilité',
+      description: 'Le familier et le stable vous mettent à l’aise. Votre force est la profondeur ; un peu de nouveauté rendra le quotidien plus riche.',
+      tips: [
+        'Ajoutez un petit changement sur un chemin déjà connu.',
+        'Cherchez cinq minutes, sans effort, sur un sujet qui vous attire.',
+        'Posez-vous une fois par jour la question « pourquoi est-ce ainsi ? ».',
+      ],
+    },
+    es: {
+      icon: '🪴',
+      title: 'Prefieres lo estable',
+      description: 'Lo conocido y estable te da comodidad. Tu fuerza es la hondura; con un poco de novedad el día a día gana sabor.',
+      tips: [
+        'Añade un cambio pequeño a un camino ya conocido.',
+        'Busca cinco minutos, sin esfuerzo, sobre un tema que te atraiga.',
+        'Pregúntate una vez al día «¿por qué es así?».',
+      ],
+    },
   },
   moderate: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
         '関心が深まる話題を一つ決めて着実に掘りましょう。',
         '月に一度、新しい経験を意図的に試しましょう。',
         '好奇心をメモに集めて探究リストを作りましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌱',
+      title: '均衡好奇型',
+      description: '你在安稳和探索之间拿捏得不错。有兴趣就去了解，也享受熟悉，属于健康的好奇。',
+      tips: [
+        '挑一个越挖越有意思的题目，持续挖下去。',
+        '每个月刻意安排一次陌生的体验。',
+        '把好奇记成笔记，做成自己的探究清单。',
+      ],
+    },
+    fr: {
+      icon: '🌱',
+      title: 'Curiosité équilibrée',
+      description: 'Vous tenez la balance entre stabilité et exploration. Quand l’intérêt vient, vous creusez ; le familier vous plaît aussi. C’est une curiosité saine.',
+      tips: [
+        'Choisissez un sujet qui vous prend et creusez-le dans la durée.',
+        'Une fois par mois, tentez volontairement une expérience inconnue.',
+        'Collectez vos curiosités dans des notes : une liste à explorer.',
+      ],
+    },
+    es: {
+      icon: '🌱',
+      title: 'Curiosidad equilibrada',
+      description: 'Mantienes el equilibrio entre estabilidad y exploración. Cuando algo te interesa, lo miras; y también disfrutas lo conocido. Es una curiosidad sana.',
+      tips: [
+        'Elige un tema que te enganche y escárbalo con constancia.',
+        'Una vez al mes, prueba a propósito algo desconocido.',
+        'Recoge tus curiosidades en notas: una lista para explorar.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
         '好奇心を新しい人や分野とのつながりに広げましょう。',
       ],
     },
+    zh: {
+      icon: '🔭',
+      title: '好奇心丰富型',
+      description: '学新东西、四处探索，会让你真的快乐。这份好奇是成长和创造的源头。',
+      tips: [
+        '把宽广的兴趣收拢到一两个深的探究上。',
+        '把学到的记下来、讲出去，让知识变成资产。',
+        '把好奇心扩到新的人和新的领域上。',
+      ],
+    },
+    fr: {
+      icon: '🔭',
+      title: 'Curiosité abondante',
+      description: 'Apprendre et explorer vous procure un vrai plaisir. Cette curiosité nourrit la croissance et la création.',
+      tips: [
+        'Rassemblez des intérêts larges en une ou deux explorations profondes.',
+        'Notez et partagez ce que vous apprenez : le savoir devient un capital.',
+        'Étendez cette curiosité vers de nouvelles personnes et de nouveaux domaines.',
+      ],
+    },
+    es: {
+      icon: '🔭',
+      title: 'Curiosidad abundante',
+      description: 'Aprender y explorar te da un placer real. Esa curiosidad alimenta el crecimiento y la creación.',
+      tips: [
+        'Reúne intereses amplios en una o dos exploraciones hondas.',
+        'Anota y comparte lo que aprendes: el saber se vuelve un capital.',
+        'Extiende esa curiosidad hacia gente y campos nuevos.',
+      ],
+    },
   },
   explorer: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
         'エネルギーが分散しないよう核心の探究テーマを決めましょう。',
         '始めた探究を最後までやり遂げる仕上げの筋肉を鍛えましょう。',
         '発見や洞察を文章や創作で世界と分かち合いましょう。',
+      ],
+    },
+    zh: {
+      icon: '🚀',
+      title: '探险家型',
+      description: '你的好奇心和求知欲非常高。你把不确定当成可能性，不断去追新的东西。',
+      tips: [
+        '定几个核心的探究主题，别让精力散掉。',
+        '把开了头的探究做完，练练收尾的肌肉。',
+        '把发现和体会写出来、做出来，分享给世界。',
+      ],
+    },
+    fr: {
+      icon: '🚀',
+      title: 'Explorateur',
+      description: 'Votre curiosité et votre soif de comprendre sont très élevées. Vous accueillez l’incertitude comme une possibilité et cherchez sans cesse du neuf.',
+      tips: [
+        'Fixez quelques sujets centraux pour ne pas disperser votre énergie.',
+        'Menez à terme ce que vous commencez : entraînez le muscle de la finition.',
+        'Partagez vos découvertes par l’écriture ou la création.',
+      ],
+    },
+    es: {
+      icon: '🚀',
+      title: 'Explorador',
+      description: 'Tu curiosidad y tus ganas de entender son muy altas. Recibes la incertidumbre como posibilidad y buscas lo nuevo sin parar.',
+      tips: [
+        'Fija unos pocos temas centrales para no dispersar la energía.',
+        'Termina lo que empiezas: entrena el músculo de cerrar.',
+        'Comparte tus hallazgos por escrito o creando algo.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'e5', subscale: 'embrace', reverse: false, text: '答えが定まらない曖昧な問題が面白い' },
     { id: 'e6', subscale: 'embrace', reverse: false, text: '変化と新しさが自分をわくわくさせる' },
     { id: 'e7', subscale: 'embrace', reverse: false, text: '不慣れな人・文化・視点を知りたい' },
+  ],
+  zh: [
+    { id: 's1', subscale: 'stretch', reverse: false, text: '学新东西让我快乐' },
+    { id: 's2', subscale: 'stretch', reverse: false, text: '我喜欢探索没碰过的领域或话题' },
+    { id: 's3', subscale: 'stretch', reverse: false, text: '冒出有意思的问题，我会追到底' },
+    { id: 's4', subscale: 'stretch', reverse: false, text: '我会主动去找新的体验' },
+    { id: 's5', subscale: 'stretch', reverse: false, text: '复杂或有难度的东西会吸引我' },
+    { id: 's6', subscale: 'stretch', reverse: false, text: '日常里我也常问「为什么」' },
+    { id: 's7', subscale: 'stretch', reverse: false, text: '把不懂的弄懂，这个过程本身就有意思' },
+    { id: 'e1', subscale: 'embrace', reverse: false, text: '对料不准的状况，我觉得有意思' },
+    { id: 'e2', subscale: 'embrace', reverse: false, text: '我把不确定看成可能性，不是威胁' },
+    { id: 'e3', subscale: 'embrace', reverse: false, text: '在不熟的场合，好奇心会先冒出来' },
+    { id: 'e4', subscale: 'embrace', reverse: false, text: '计划外的事，我也能当成新机会享受' },
+    { id: 'e5', subscale: 'embrace', reverse: false, text: '没有标准答案的模糊问题让我觉得好玩' },
+    { id: 'e6', subscale: 'embrace', reverse: false, text: '变化和新鲜让我兴奋' },
+    { id: 'e7', subscale: 'embrace', reverse: false, text: '我想去认识陌生的人、文化和视角' },
+  ],
+  fr: [
+    { id: 's1', subscale: 'stretch', reverse: false, text: 'Apprendre du neuf me réjouit' },
+    { id: 's2', subscale: 'stretch', reverse: false, text: 'J’aime explorer des domaines ou des sujets inconnus' },
+    { id: 's3', subscale: 'stretch', reverse: false, text: 'Quand une question intéressante surgit, je vais jusqu’au bout' },
+    { id: 's4', subscale: 'stretch', reverse: false, text: 'Je vais chercher activement de nouvelles expériences' },
+    { id: 's5', subscale: 'stretch', reverse: false, text: 'Ce qui est complexe ou exigeant m’attire' },
+    { id: 's6', subscale: 'stretch', reverse: false, text: 'Même au quotidien, je demande souvent « pourquoi »' },
+    { id: 's7', subscale: 'stretch', reverse: false, text: 'Le chemin qui mène de l’ignorance à la compréhension me plaît en soi' },
+    { id: 'e1', subscale: 'embrace', reverse: false, text: 'Les situations imprévisibles me paraissent intéressantes' },
+    { id: 'e2', subscale: 'embrace', reverse: false, text: 'Je vois l’incertitude comme une possibilité, non comme une menace' },
+    { id: 'e3', subscale: 'embrace', reverse: false, text: 'Dans un cadre inconnu, c’est la curiosité qui parle en premier' },
+    { id: 'e4', subscale: 'embrace', reverse: false, text: 'Ce qui n’était pas prévu, je l’accueille comme une occasion' },
+    { id: 'e5', subscale: 'embrace', reverse: false, text: 'Les problèmes flous, sans réponse fixée, m’amusent' },
+    { id: 'e6', subscale: 'embrace', reverse: false, text: 'Le changement et la nouveauté m’enthousiasment' },
+    { id: 'e7', subscale: 'embrace', reverse: false, text: 'J’ai envie de connaître des personnes, des cultures et des points de vue étrangers' },
+  ],
+  es: [
+    { id: 's1', subscale: 'stretch', reverse: false, text: 'Aprender cosas nuevas me alegra' },
+    { id: 's2', subscale: 'stretch', reverse: false, text: 'Me gusta explorar campos o temas desconocidos' },
+    { id: 's3', subscale: 'stretch', reverse: false, text: 'Cuando surge una pregunta interesante, voy hasta el final' },
+    { id: 's4', subscale: 'stretch', reverse: false, text: 'Busco activamente experiencias nuevas' },
+    { id: 's5', subscale: 'stretch', reverse: false, text: 'Lo complejo o exigente me atrae' },
+    { id: 's6', subscale: 'stretch', reverse: false, text: 'Incluso a diario pregunto a menudo «por qué»' },
+    { id: 's7', subscale: 'stretch', reverse: false, text: 'El camino de no saber a entender me gusta en sí mismo' },
+    { id: 'e1', subscale: 'embrace', reverse: false, text: 'Las situaciones imprevisibles me parecen interesantes' },
+    { id: 'e2', subscale: 'embrace', reverse: false, text: 'Veo la incertidumbre como posibilidad, no como amenaza' },
+    { id: 'e3', subscale: 'embrace', reverse: false, text: 'En un sitio desconocido, primero habla la curiosidad' },
+    { id: 'e4', subscale: 'embrace', reverse: false, text: 'Lo no previsto lo recibo como una oportunidad' },
+    { id: 'e5', subscale: 'embrace', reverse: false, text: 'Los problemas difusos, sin respuesta fija, me divierten' },
+    { id: 'e6', subscale: 'embrace', reverse: false, text: 'El cambio y lo nuevo me entusiasman' },
+    { id: 'e7', subscale: 'embrace', reverse: false, text: 'Quiero conocer personas, culturas y puntos de vista ajenos' },
   ],
 }
 

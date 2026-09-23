@@ -3,12 +3,12 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'intensity' | 'frequency' | 'span' | 'density'
 type Level = 'low' | 'developing' | 'appreciative' | 'deeply_grateful'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -65,6 +65,42 @@ const LABELS: Record<SupportedLang, {
     note: 'このテストはGQ-6とMcCulloughの感謝研究を参考にした自己診断です。',
     dimNames: { intensity: '強度', frequency: '頻度', span: '範囲', density: '密度' },
   },
+  zh: {
+    title: '感恩倾向测验',
+    subtitle: '我活得有多少感谢？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '不太是', '一般', '大致是', '非常是'],
+    restart: '重新测验', share: '分享结果', shareMsg: '我的感恩程度是',
+    yourLevel: '我的感恩倾向', insights: '我的感恩模式', practices: '可以练的做法',
+    affirmation: '今天想对你说', scoreLabel: '感恩分数', outOf: '/ 60 分',
+    dimProfile: '感恩的四个面向',
+    note: '本测验参考 GQ-6 与 McCullough 的感恩研究，属于参考性的自我观察。',
+    dimNames: { intensity: '强度', frequency: '频率', span: '广度', density: '密度' },
+  },
+  fr: {
+    title: 'Test du rapport à la gratitude',
+    subtitle: 'Quelle place la gratitude tient-elle dans ma vie ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Plutôt pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer', share: 'Partager le résultat', shareMsg: 'Mon niveau de gratitude',
+    yourLevel: 'Votre rapport à la gratitude', insights: 'Votre façon de remercier', practices: 'Pratiques possibles',
+    affirmation: 'Un mot pour aujourd’hui', scoreLabel: 'Score de gratitude', outOf: '/ 60 points',
+    dimProfile: 'Les quatre dimensions',
+    note: 'Ce test s’inspire du GQ-6 et des travaux de McCullough sur la gratitude ; c’est une observation de soi, à titre indicatif.',
+    dimNames: { intensity: 'Intensité', frequency: 'Fréquence', span: 'Étendue', density: 'Densité' },
+  },
+  es: {
+    title: 'Test de gratitud',
+    subtitle: '¿Cuánta gratitud hay en mi vida?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Más bien no', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir', share: 'Compartir resultado', shareMsg: 'Mi nivel de gratitud',
+    yourLevel: 'Tu relación con la gratitud', insights: 'Tu forma de agradecer', practices: 'Prácticas posibles',
+    affirmation: 'Algo para hoy', scoreLabel: 'Puntuación de gratitud', outOf: '/ 60 puntos',
+    dimProfile: 'Las cuatro dimensiones',
+    note: 'Este test se inspira en el GQ-6 y en los trabajos de McCullough sobre la gratitud; es una autoobservación orientativa.',
+    dimNames: { intensity: 'Intensidad', frequency: 'Frecuencia', span: 'Amplitud', density: 'Densidad' },
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -110,6 +146,48 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q11', dim: 'density',    text: '今自分が持っているものは多くの人の努力のおかげだとわかる' },
     { id: 'q12', dim: 'density',    text: '自分の成功の背景には見えない多くのサポートがあったと思う' },
   ],
+  zh: [
+    { id: 'q1',  dim: 'intensity',  text: '有好事发生时，我会真切地感到感谢' },
+    { id: 'q2',  dim: 'intensity',  text: '有人帮了我，我会强烈地记着这份好' },
+    { id: 'q3',  dim: 'intensity',  text: '看到好风景或听到好音乐时，我会深深被打动' },
+    { id: 'q4',  dim: 'frequency',  text: '一天里我会好几次发现值得感谢的事' },
+    { id: 'q5',  dim: 'frequency',  text: '小事也会自然让我生出谢意' },
+    { id: 'q6',  dim: 'frequency',  text: '早上睁开眼，我会为还活着而感谢' },
+    { id: 'q7',  dim: 'span',       text: '对那些让我的人生更好的人，我心里有谢意' },
+    { id: 'q8',  dim: 'span',       text: '对自然、社会、天地这些大的东西，我也有感谢' },
+    { id: 'q9',  dim: 'span',       text: '难走的路最后也让我长大了，为此我心存感谢' },
+    { id: 'q10', dim: 'density',    text: '一件好事背后，我看得见许多人的份' },
+    { id: 'q11', dim: 'density',    text: '我现在拥有的，是很多人努力的结果' },
+    { id: 'q12', dim: 'density',    text: '我的成绩背后，有很多看不见的帮忙' },
+  ],
+  fr: [
+    { id: 'q1',  dim: 'intensity',  text: 'Quand quelque chose de bon arrive, j’éprouve une gratitude profonde' },
+    { id: 'q2',  dim: 'intensity',  text: 'Quand on m’aide, je ressens fortement cette bienveillance' },
+    { id: 'q3',  dim: 'intensity',  text: 'Devant un beau paysage ou une belle musique, je suis profondément touché' },
+    { id: 'q4',  dim: 'frequency',  text: 'Dans une journée, je repère plusieurs fois de quoi remercier' },
+    { id: 'q5',  dim: 'frequency',  text: 'Même les petites choses éveillent naturellement ma gratitude' },
+    { id: 'q6',  dim: 'frequency',  text: 'Au réveil, je suis reconnaissant d’être en vie' },
+    { id: 'q7',  dim: 'span',       text: 'J’éprouve de la gratitude pour tous ceux qui ont contribué à ma vie' },
+    { id: 'q8',  dim: 'span',       text: 'J’éprouve aussi de la gratitude envers la nature, la société, le monde' },
+    { id: 'q9',  dim: 'span',       text: 'Même les épreuves m’ont fait grandir, et j’en suis reconnaissant' },
+    { id: 'q10', dim: 'density',    text: 'Derrière une seule bonne chose, je vois la part de beaucoup de gens' },
+    { id: 'q11', dim: 'density',    text: 'Ce que j’ai aujourd’hui vient du travail de beaucoup de personnes' },
+    { id: 'q12', dim: 'density',    text: 'Derrière mes réussites, il y a eu beaucoup d’aides invisibles' },
+  ],
+  es: [
+    { id: 'q1',  dim: 'intensity',  text: 'Cuando pasa algo bueno, siento una gratitud honda' },
+    { id: 'q2',  dim: 'intensity',  text: 'Cuando alguien me ayuda, siento con fuerza ese gesto' },
+    { id: 'q3',  dim: 'intensity',  text: 'Ante un paisaje o una música bella me emociono de verdad' },
+    { id: 'q4',  dim: 'frequency',  text: 'A lo largo del día encuentro varias veces algo que agradecer' },
+    { id: 'q5',  dim: 'frequency',  text: 'Hasta las cosas pequeñas me despiertan gratitud' },
+    { id: 'q6',  dim: 'frequency',  text: 'Al despertar, agradezco estar vivo' },
+    { id: 'q7',  dim: 'span',       text: 'Siento gratitud por todos los que han aportado a mi vida' },
+    { id: 'q8',  dim: 'span',       text: 'También agradezco a la naturaleza, la sociedad, el mundo' },
+    { id: 'q9',  dim: 'span',       text: 'Incluso lo difícil acabó haciéndome crecer, y lo agradezco' },
+    { id: 'q10', dim: 'density',    text: 'Detrás de una sola cosa buena veo la parte de mucha gente' },
+    { id: 'q11', dim: 'density',    text: 'Lo que tengo hoy viene del trabajo de muchas personas' },
+    { id: 'q12', dim: 'density',    text: 'Detrás de mis logros hubo muchas ayudas invisibles' },
+  ],
 }
 
 const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
@@ -135,6 +213,27 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
       practices: ['毎晩3つの感謝することを書く', '誰かに感謝のメッセージを送る', '今持っているものに集中する5分間の瞑想', '小さな喜びに気づく練習'],
       affirmation: '感謝は完璧な人生から来るものではありません。今この瞬間、とても小さなことから始められます。',
     },
+    zh: {
+      title: '感恩偏低', subtitle: '现在可能是不容易生出谢意的时期',
+      description: '眼下你不太常感受到感谢。可能是日子本来就难，也可能是表达感谢的习惯还没长出来。感恩是可以练出来的能力。',
+      insights: ['现在可能很难把注意力放回当下', '注意力更容易被负面的事吸走', '表达感谢的习惯还在形成中'],
+      practices: ['每天晚上写下三件值得谢的事', '给某个人发一句感谢的话', '用五分钟静一静，只想现在已有的东西', '练习留意小小的快乐'],
+      affirmation: '感恩不是从完美的生活里来的。此刻，从很小的地方就能开始。',
+    },
+    fr: {
+      title: 'Gratitude basse', subtitle: 'C’est peut-être une période où la gratitude vient difficilement',
+      description: 'En ce moment, vous éprouvez rarement de la gratitude. La vie est peut-être dure, ou l’habitude de remercier n’est pas encore installée. La gratitude est une capacité qui se travaille.',
+      insights: ['Difficile de ramener l’attention au présent', 'L’attention se porte plus facilement sur le négatif', 'L’habitude d’exprimer sa gratitude est encore à construire'],
+      practices: ['Noter chaque soir trois choses à remercier', 'Envoyer un mot de remerciement à quelqu’un', 'Cinq minutes au calme, sur ce qui est déjà là', 'S’exercer à remarquer les petits plaisirs'],
+      affirmation: 'La gratitude ne vient pas d’une vie parfaite. On peut commencer dès maintenant, par de toutes petites choses.',
+    },
+    es: {
+      title: 'Gratitud baja', subtitle: 'Puede ser una época en la que cuesta agradecer',
+      description: 'Ahora mismo rara vez sientes gratitud. Puede que la vida esté dura o que el hábito de agradecer aún no esté formado. La gratitud es una capacidad que se entrena.',
+      insights: ['Cuesta traer la atención al presente', 'La atención se va con más facilidad a lo negativo', 'El hábito de expresar gratitud aún se está formando'],
+      practices: ['Anotar cada noche tres cosas que agradecer', 'Mandarle unas palabras de agradecimiento a alguien', 'Cinco minutos en calma sobre lo que ya tienes', 'Practicar fijarte en los gustos pequeños'],
+      affirmation: 'La gratitud no viene de una vida perfecta. Se puede empezar ahora mismo, por algo muy pequeño.',
+    },
   },
   developing: {
     ko: {
@@ -157,6 +256,27 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
       insights: ['断続的に感謝を感じる', '意識的に努力すると感謝体験が増える', '感謝実践の効果を経験し始めた'],
       practices: ['感謝日記を継続的につける', '食事前に感謝の時間を持つ', '助けてくれた人たちを思い浮かべる', '自然の中に美しさを見つける'],
       affirmation: '変化はすでに始まっています。小さな感謝が積み重なって人生を変えます。',
+    },
+    zh: {
+      title: '成长中', subtitle: '感恩的种子在长',
+      description: '你已经开始感受到谢意，但还不太稳。偶尔会有，却还没成为习惯。一点一点做下去，会长得很快。',
+      insights: ['会断断续续地感到感谢', '刻意去做时，感谢的经验就变多', '开始体会到感恩带来的好处'],
+      practices: ['坚持写感恩日记', '吃饭前留一小会儿谢意', '想起那些帮过你的人', '在自然里找到美的地方'],
+      affirmation: '变化已经开始了。小小的感谢攒起来，会把生活换个样子。',
+    },
+    fr: {
+      title: 'En développement', subtitle: 'La graine de la gratitude pousse',
+      description: 'Vous commencez à éprouver de la gratitude, mais de façon encore irrégulière. Elle apparaît parfois, sans être devenue une habitude. En pratiquant un peu, cela peut grandir vite.',
+      insights: ['Une gratitude qui va et vient', 'Quand vous y mettez de l’intention, elle se fait plus fréquente', 'Vous commencez à en sentir les effets'],
+      practices: ['Tenir un journal de gratitude avec régularité', 'Prendre un instant de gratitude avant le repas', 'Penser à ceux qui vous ont aidé', 'Trouver de la beauté dans la nature'],
+      affirmation: 'Le changement a déjà commencé. De petites gratitudes, accumulées, changent une vie.',
+    },
+    es: {
+      title: 'En desarrollo', subtitle: 'La semilla de la gratitud crece',
+      description: 'Ya empiezas a sentir gratitud, pero todavía de forma irregular. Aparece a veces, sin llegar a ser hábito. Con un poco de práctica puede crecer rápido.',
+      insights: ['Una gratitud que va y viene', 'Cuando pones intención, aparece más a menudo', 'Empiezas a notar sus efectos'],
+      practices: ['Llevar un diario de gratitud con constancia', 'Tomar un momento de gratitud antes de comer', 'Pensar en quienes te han ayudado', 'Encontrar belleza en la naturaleza'],
+      affirmation: 'El cambio ya empezó. Las gratitudes pequeñas, acumuladas, cambian una vida.',
     },
   },
   appreciative: {
@@ -181,6 +301,27 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
       practices: ['感謝をより具体的に深く表現する', '感謝を他の人と分かち合う', '困難な状況でも感謝を見つける練習', '感謝の瞑想を深める'],
       affirmation: 'あなたの感謝する心はあなたと周囲を同時に豊かにします。この能力を大切にしてください。',
     },
+    zh: {
+      title: '感恩型', subtitle: '你很会在生活里看见值得谢的事',
+      description: '在日常里自然感受到谢意的能力发展得不错。你会在各种对象和时刻里生出感谢，这份感谢正在提升你的生活满意度和关系品质。',
+      insights: ['感谢的体验丰富又多样', '调节正向情绪的能力较强', '在关系里表达谢意很自然'],
+      practices: ['把感谢表达得更具体、更深', '把感谢说给别人听', '练习在难的处境里也找到可谢之处', '把感恩的静心做得更深'],
+      affirmation: '你的感谢之心同时滋养你和周围。好好珍惜这份能力。',
+    },
+    fr: {
+      title: 'Reconnaissant', subtitle: 'Vous savez voir ce qu’il y a à remercier',
+      description: 'Votre capacité à éprouver de la gratitude au quotidien est bien développée. Elle se porte sur des objets et des moments variés, et elle nourrit votre satisfaction de vie et la qualité de vos relations.',
+      insights: ['Une gratitude riche et variée', 'Une bonne capacité à réguler les émotions positives', 'L’expression de la gratitude vient naturellement dans la relation'],
+      practices: ['Exprimer la gratitude de façon plus concrète et plus profonde', 'Partager sa gratitude avec les autres', 'S’exercer à trouver de quoi remercier même dans les moments durs', 'Approfondir une méditation de gratitude'],
+      affirmation: 'Votre gratitude nourrit à la fois vous et votre entourage. Prenez-en soin.',
+    },
+    es: {
+      title: 'Agradecido', subtitle: 'Sabes ver lo que hay que agradecer',
+      description: 'Tu capacidad de sentir gratitud en el día a día está bien desarrollada. Se dirige a objetos y momentos variados, y alimenta tu satisfacción con la vida y la calidad de tus vínculos.',
+      insights: ['Una gratitud rica y variada', 'Buena capacidad de regular las emociones positivas', 'Expresar gratitud te sale natural en la relación'],
+      practices: ['Expresar la gratitud de forma más concreta y honda', 'Compartir tu gratitud con otros', 'Practicar encontrar qué agradecer también en lo difícil', 'Profundizar en una meditación de gratitud'],
+      affirmation: 'Tu gratitud alimenta a la vez a ti y a los tuyos. Cuídala.',
+    },
   },
   deeply_grateful: {
     ko: {
@@ -203,6 +344,27 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
       insights: ['感謝が人生の基本的な姿勢として定着', '困難な状況でも意味を見出す能力', '深い繋がりと豊かさの経験', '感謝が自然な習慣'],
       practices: ['感謝をより広く分かち合い表現する', '困っている人に感謝の文化を伝える', '感謝の実践をより深い精神的な修練に拡張', '感謝を文章やアートで表現する'],
       affirmation: 'あなたの感謝は世界をより明るくします。この贈り物を大切にし、惜しみなく分かち合ってください。',
+    },
+    zh: {
+      title: '深度感恩型', subtitle: '感恩已经成了你看世界的方式',
+      description: '感恩对你不只是一种情绪，而是看待生活的方式。大事小事、看得见的和看不见的，你都能生出深的谢意。这份感恩是你的复原力和关系的一大资产。',
+      insights: ['感恩成了基本的生活姿态', '在难处里也找得到意义', '有深的连结感和丰盛感', '感恩已经自然成了习惯'],
+      practices: ['把感谢分享得更广、表达得更清楚', '把感恩的风气传给身处困难的人', '把感恩的练习延伸成更深的修习', '用文字或创作把感谢表达出来'],
+      affirmation: '你的感恩让世界亮一点。好好把这份礼物养着，也分出去。',
+    },
+    fr: {
+      title: 'Profondément reconnaissant', subtitle: 'La gratitude est devenue une façon de vivre',
+      description: 'La gratitude n’est plus seulement une émotion : c’est votre manière de regarder la vie. Grandes choses et petites, visibles et invisibles, vous y trouvez une gratitude profonde. C’est un atout pour votre capacité à rebondir et pour vos relations.',
+      insights: ['La gratitude comme posture de base', 'La capacité à trouver du sens même dans la difficulté', 'Un sentiment profond de lien et d’abondance', 'Une gratitude devenue habitude naturelle'],
+      practices: ['Partager et exprimer plus largement', 'Transmettre cette culture à ceux qui traversent des épreuves', 'Prolonger la pratique en quelque chose de plus profond', 'Exprimer la gratitude par l’écriture ou la création'],
+      affirmation: 'Votre gratitude éclaire le monde. Prenez-en soin, et partagez-la.',
+    },
+    es: {
+      title: 'Profundamente agradecido', subtitle: 'La gratitud se ha vuelto tu forma de vivir',
+      description: 'La gratitud ya no es solo una emoción: es tu manera de mirar la vida. En lo grande y lo pequeño, lo visible y lo invisible, encuentras gratitud honda. Es un activo para tu capacidad de recuperarte y para tus vínculos.',
+      insights: ['La gratitud como actitud de base', 'Capacidad de encontrar sentido también en lo difícil', 'Un sentimiento hondo de vínculo y abundancia', 'Una gratitud ya vuelta hábito natural'],
+      practices: ['Compartirla y expresarla más ampliamente', 'Transmitir esa cultura a quienes lo pasan mal', 'Prolongar la práctica hacia algo más hondo', 'Expresar la gratitud por escrito o creando'],
+      affirmation: 'Tu gratitud ilumina el mundo. Cuídala y repártela.',
     },
   },
 }

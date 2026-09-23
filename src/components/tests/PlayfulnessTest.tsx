@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type PlayLevel = 'serious' | 'balanced' | 'playful' | 'spirited'
 type Subscale = 'light' | 'social'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '成長のヒント',
     note: 'このテストはProyerの成人の遊び心（playfulness）研究の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '玩心测验',
+    subtitle: '我身上的顽皮和轻快有多少？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的玩心分数是',
+    yourScore: '我的玩心分数',
+    overallLabel: '综合玩心',
+    lightLabel: '轻快与即兴',
+    socialLabel: '关系里的玩心',
+    outOf: '/ 5.0',
+    tipsLabel: '成长建议',
+    note: '本测验参考 Proyer 关于成人玩心的研究概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test de l’esprit de jeu',
+    subtitle: 'Quelle part de malice et de légèreté y a-t-il en moi ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon score d’esprit de jeu',
+    yourScore: 'Votre score d’esprit de jeu',
+    overallLabel: 'Esprit de jeu global',
+    lightLabel: 'Légèreté et spontanéité',
+    socialLabel: 'Jeu dans la relation',
+    outOf: '/ 5.0',
+    tipsLabel: 'Piste de progrès',
+    note: 'Ce test reprend les notions issues des travaux de Proyer sur l’esprit de jeu chez l’adulte, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test del espíritu de juego',
+    subtitle: '¿Cuánta travesura y ligereza hay en mí?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi puntuación de espíritu de juego',
+    yourScore: 'Tu puntuación de espíritu de juego',
+    overallLabel: 'Espíritu de juego global',
+    lightLabel: 'Ligereza y espontaneidad',
+    socialLabel: 'Juego en la relación',
+    outOf: '/ 5.0',
+    tipsLabel: 'Para crecer',
+    note: 'Este test recoge las ideas de los trabajos de Proyer sobre el espíritu de juego en adultos, para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<PlayLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<PlayLevel, Record<SupportedLang, LevelData>> = {
         '遊び心の強い人と過ごしそのエネルギーを借りましょう。',
       ],
     },
+    zh: {
+      icon: '🍵',
+      title: '沉稳认真型',
+      description: '你认真、沉着地对待生活。深度和稳重是你的长处，稍微加一点玩心，日子会轻一些。',
+      tips: [
+        '每天刻意塞进一小块「好玩」。',
+        '练习把失误和尴尬一笑带过。',
+        '跟玩心强的人待一待，借一点那股劲儿。',
+      ],
+    },
+    fr: {
+      icon: '🍵',
+      title: 'Sérieux et posé',
+      description: 'Vous abordez la vie avec sérieux et calme. La profondeur et la prudence sont vos forces ; un peu de malice allégera le quotidien.',
+      tips: [
+        'Glissez chaque jour, volontairement, un petit morceau de « pour le plaisir ».',
+        'Entraînez-vous à rire d’une maladresse plutôt qu’à la ruminer.',
+        'Fréquentez des personnes joueuses et empruntez-leur un peu de cette énergie.',
+      ],
+    },
+    es: {
+      icon: '🍵',
+      title: 'Serio y sereno',
+      description: 'Tomas la vida con seriedad y calma. La hondura y la prudencia son tus fuerzas; un poco de travesura aligerará el día.',
+      tips: [
+        'Mete cada día, a propósito, un trozo pequeño de «por gusto».',
+        'Practica reírte de un desliz en vez de darle vueltas.',
+        'Júntate con gente juguetona y tómales prestada algo de esa energía.',
+      ],
+    },
   },
   balanced: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<PlayLevel, Record<SupportedLang, LevelData>> = {
         '気の合う人と冗談を交わして遊び心を育てましょう。',
         '日常のルーティンに小さな楽しみを設計して入れましょう。',
         'ストレス状況でユーモアを緩衝装置として活用しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🙂',
+      title: '均衡玩心型',
+      description: '认真和轻快在你身上配得不错。该加点乐子时加，该专心时专心，有弹性。',
+      tips: [
+        '跟合拍的人多开开玩笑，把玩心养起来。',
+        '在日常的流程里设计几处小乐趣。',
+        '压力大的时候，用幽默当缓冲。',
+      ],
+    },
+    fr: {
+      icon: '🙂',
+      title: 'Équilibre entre sérieux et jeu',
+      description: 'Le sérieux et la légèreté s’équilibrent bien chez vous. Vous ajoutez du plaisir quand c’est possible et vous concentrez quand il le faut.',
+      tips: [
+        'Échangez des blagues avec ceux avec qui ça passe bien : l’esprit de jeu s’entretient.',
+        'Glissez de petits plaisirs dans vos routines.',
+        'Servez-vous de l’humour comme d’un amortisseur sous le stress.',
+      ],
+    },
+    es: {
+      icon: '🙂',
+      title: 'Equilibrio entre seriedad y juego',
+      description: 'La seriedad y la ligereza te conviven bien. Añades gusto cuando se puede y te concentras cuando toca.',
+      tips: [
+        'Intercambia bromas con quien te sigue el juego: el espíritu se cultiva.',
+        'Diseña pequeños gustos dentro de tus rutinas.',
+        'Usa el humor como amortiguador cuando hay presión.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<PlayLevel, Record<SupportedLang, LevelData>> = {
         'あなたの陽気さを疲れた人と分かち合いましょう。',
       ],
     },
+    zh: {
+      icon: '🎈',
+      title: '轻快玩心型',
+      description: '你的顽皮和轻快很足。日常里你很会找乐子，也有把气氛点亮的力气。',
+      tips: [
+        '把玩心也用到创意和解题上。',
+        '同时练一练，分辨什么时候需要认真。',
+        '把你的轻快分给累着的人。',
+      ],
+    },
+    fr: {
+      icon: '🎈',
+      title: 'Joueur',
+      description: 'Votre malice et votre légèreté sont bien présentes. Vous trouvez le plaisir dans le quotidien et vous savez éclairer l’ambiance.',
+      tips: [
+        'Mettez aussi l’esprit de jeu au service de la créativité et de la résolution de problèmes.',
+        'Cultivez en parallèle le discernement des moments qui demandent du sérieux.',
+        'Partagez votre légèreté avec ceux qui sont fatigués.',
+      ],
+    },
+    es: {
+      icon: '🎈',
+      title: 'Juguetón',
+      description: 'Tu travesura y tu ligereza están muy presentes. Encuentras el gusto en lo cotidiano y sabes encender el ambiente.',
+      tips: [
+        'Pon también el juego al servicio de la creatividad y de resolver problemas.',
+        'Cultiva a la vez el criterio para ver cuándo toca seriedad.',
+        'Reparte tu ligereza con quien viene cansado.',
+      ],
+    },
   },
   spirited: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<PlayLevel, Record<SupportedLang, LevelData>> = {
         '遊びのエネルギーを意味ある目標や創作につなげましょう。',
         '真剣な場での強弱の調整感覚も育てましょう。',
         'あなたの活力で共同体に楽しさとつながりを贈りましょう。',
+      ],
+    },
+    zh: {
+      icon: '🎉',
+      title: '玩心满满型',
+      description: '你的玩心非常高。走到哪儿都能把乐趣造出来，这股活力是长处；再配上深度和认真，会更亮。',
+      tips: [
+        '把玩的能量接到有意义的目标或创作上。',
+        '练一练在正经场合收放自如的分寸。',
+        '用你的活力，给身边的人带来欢乐和连结。',
+      ],
+    },
+    fr: {
+      icon: '🎉',
+      title: 'Plein d’élan',
+      description: 'Votre esprit de jeu est très élevé. Vous créez du plaisir partout : c’est une force, qui brille davantage encore alliée à la profondeur et au sérieux.',
+      tips: [
+        'Reliez cette énergie à un objectif ou à une création qui compte.',
+        'Travaillez aussi le dosage dans les moments qui demandent du sérieux.',
+        'Offrez, par votre élan, de la joie et du lien à votre entourage.',
+      ],
+    },
+    es: {
+      icon: '🎉',
+      title: 'Lleno de chispa',
+      description: 'Tu espíritu de juego es muy alto. Creas diversión donde estés: es una fuerza, y brilla aún más junto con hondura y seriedad.',
+      tips: [
+        'Conecta esa energía con una meta o una creación que importe.',
+        'Trabaja también el punto justo en los momentos que piden seriedad.',
+        'Regala, con tu chispa, alegría y vínculo a quienes te rodean.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 's5', subscale: 'social', reverse: false, text: '一緒に笑えるネタを作るのが得意だ' },
     { id: 's6', subscale: 'social', reverse: false, text: '遊びを通じて人と近づく' },
     { id: 's7', subscale: 'social', reverse: false, text: '真剣な場でも陽気さを失わない' },
+  ],
+  zh: [
+    { id: 'l1', subscale: 'light', reverse: false, text: '再平常的日子，我也找得到有趣的地方' },
+    { id: 'l2', subscale: 'light', reverse: false, text: '我会临时起意开个玩笑，或想些好笑的画面' },
+    { id: 'l3', subscale: 'light', reverse: false, text: '无聊的场合，我常能把它变成一种玩法' },
+    { id: 'l4', subscale: 'light', reverse: false, text: '我喜欢古灵精怪的想法' },
+    { id: 'l5', subscale: 'light', reverse: false, text: '我喜欢试新的玩法或新活动' },
+    { id: 'l6', subscale: 'light', reverse: false, text: '就算出了错，我多半一笑而过' },
+    { id: 'l7', subscale: 'light', reverse: false, text: '我带着好奇和顽皮过日子' },
+    { id: 's1', subscale: 'social', reverse: false, text: '我喜欢和人你一句我一句地开玩笑' },
+    { id: 's2', subscale: 'social', reverse: false, text: '把气氛弄轻松，我挺在行' },
+    { id: 's3', subscale: 'social', reverse: false, text: '和朋友闹着玩让我开心' },
+    { id: 's4', subscale: 'social', reverse: false, text: '我常用幽默把紧张化开' },
+    { id: 's5', subscale: 'social', reverse: false, text: '我很会制造一起笑的由头' },
+    { id: 's6', subscale: 'social', reverse: false, text: '玩着玩着就跟人亲近起来' },
+    { id: 's7', subscale: 'social', reverse: false, text: '就算在正经场合，我也不会把轻快丢掉' },
+  ],
+  fr: [
+    { id: 'l1', subscale: 'light', reverse: false, text: 'Même dans un quotidien banal, je trouve de quoi m’amuser' },
+    { id: 'l2', subscale: 'light', reverse: false, text: 'Je lance une blague ou j’imagine des choses drôles sur le moment' },
+    { id: 'l3', subscale: 'light', reverse: false, text: 'Une situation ennuyeuse, j’arrive souvent à la transformer en jeu' },
+    { id: 'l4', subscale: 'light', reverse: false, text: 'J’aime les idées farfelues' },
+    { id: 'l5', subscale: 'light', reverse: false, text: 'J’aime essayer de nouveaux jeux ou de nouvelles activités' },
+    { id: 'l6', subscale: 'light', reverse: false, text: 'Même quand je me trompe, j’en ris le plus souvent' },
+    { id: 'l7', subscale: 'light', reverse: false, text: 'J’aborde le quotidien avec curiosité et malice' },
+    { id: 's1', subscale: 'social', reverse: false, text: 'J’aime échanger des blagues avec les autres' },
+    { id: 's2', subscale: 'social', reverse: false, text: 'Je sais rendre l’ambiance plus légère' },
+    { id: 's3', subscale: 'social', reverse: false, text: 'Chahuter avec des amis me réjouit' },
+    { id: 's4', subscale: 'social', reverse: false, text: 'J’utilise souvent l’humour pour détendre' },
+    { id: 's5', subscale: 'social', reverse: false, text: 'Je sais créer des occasions de rire ensemble' },
+    { id: 's6', subscale: 'social', reverse: false, text: 'C’est par le jeu que je me rapproche des gens' },
+    { id: 's7', subscale: 'social', reverse: false, text: 'Même dans un cadre sérieux, je ne perds pas ma légèreté' },
+  ],
+  es: [
+    { id: 'l1', subscale: 'light', reverse: false, text: 'Incluso en un día corriente encuentro algo divertido' },
+    { id: 'l2', subscale: 'light', reverse: false, text: 'Suelto una broma o imagino cosas graciosas sobre la marcha' },
+    { id: 'l3', subscale: 'light', reverse: false, text: 'Una situación aburrida suelo convertirla en juego' },
+    { id: 'l4', subscale: 'light', reverse: false, text: 'Me gustan las ideas disparatadas' },
+    { id: 'l5', subscale: 'light', reverse: false, text: 'Me gusta probar juegos o actividades nuevas' },
+    { id: 'l6', subscale: 'light', reverse: false, text: 'Aunque me equivoque, casi siempre me río' },
+    { id: 'l7', subscale: 'light', reverse: false, text: 'Vivo el día con curiosidad y algo de travesura' },
+    { id: 's1', subscale: 'social', reverse: false, text: 'Me gusta intercambiar bromas con la gente' },
+    { id: 's2', subscale: 'social', reverse: false, text: 'Sé aligerar el ambiente' },
+    { id: 's3', subscale: 'social', reverse: false, text: 'Cachondearme con los amigos me alegra' },
+    { id: 's4', subscale: 'social', reverse: false, text: 'Uso a menudo el humor para destensar' },
+    { id: 's5', subscale: 'social', reverse: false, text: 'Sé crear ocasiones para reírnos juntos' },
+    { id: 's6', subscale: 'social', reverse: false, text: 'Es jugando como me acerco a la gente' },
+    { id: 's7', subscale: 'social', reverse: false, text: 'Incluso en un sitio serio no pierdo la ligereza' },
   ],
 }
 
