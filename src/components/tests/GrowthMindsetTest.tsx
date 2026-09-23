@@ -500,7 +500,7 @@ export default function GrowthMindsetTest({ locale: localeProp }: Props) {
       options={scoreOptions.map((opt) => ({ label: opt.label, value: opt.value }))}
       selectedValue={answers[idx] === undefined ? undefined : q.reverse ? 5 - answers[idx] : answers[idx]}
       note={tx.instruction}
-      previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+      previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
       onPrevious={idx > 0 ? previous : undefined}
       onSelect={pick}
     />

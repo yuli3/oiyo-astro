@@ -561,7 +561,7 @@ export default function DigitalWellnessTest({ locale: lp = 'ko' }: Props) {
         options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
         selectedValue={answers[current]}
         note={lb.note}
-        previousLabel={l === 'ko' ? '이전 질문' : l === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[l] ?? 'Previous question')}
         onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
         onSelect={pick}
       />

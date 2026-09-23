@@ -1159,7 +1159,7 @@ export default function SpendingHabitsTest({ locale: lp = 'ko' }: Props) {
             : q.options.findIndex((opt) => opt.type === answers[current]) + 1
         }
         note={lb.note}
-        previousLabel={l === 'ko' ? '이전 질문' : l === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[l] ?? 'Previous question')}
         onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
         onSelect={(value) => pick(q.options[value - 1].type)}
       />

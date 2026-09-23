@@ -525,8 +525,8 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const isFinancial = q.subscale === 'financial'
     const riskCategoryLabel = isFinancial
-      ? locale === 'ko' ? '금융 리스크' : locale === 'ja' ? '金融リスク' : 'Financial Risk'
-      : locale === 'ko' ? '인생 리스크' : locale === 'ja' ? 'ライフリスク' : 'Life Risk'
+      ? (({ ko: '금융 리스크', en: 'Financial Risk', ja: '金融リスク', zh: '金融风险', fr: 'Risque financier', es: 'Riesgo financiero' } as Record<string, string>)[locale] ?? 'Financial Risk')
+      : (({ ko: '인생 리스크', en: 'Life Risk', ja: 'ライフリスク', zh: '人生风险', fr: 'Risque dans la vie', es: 'Riesgo vital' } as Record<string, string>)[locale] ?? 'Life Risk')
     return (
       /* 금융/인생 리스크 배지는 Questionnaire 에 문항별 슬롯이 없어 subtitle 로 합친다.
          배지를 그냥 버리면 사용자가 보던 정보가 사라진다. */
@@ -539,7 +539,7 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
         options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
         selectedValue={answers[current] === undefined ? undefined : answers[current] + 1}
         note={lb.note}
-        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
         onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
         onSelect={(value) => pick(value - 1)}
       />

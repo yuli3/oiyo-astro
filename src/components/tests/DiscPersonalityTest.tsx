@@ -1245,7 +1245,7 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
               ? undefined
               : q.options.findIndex((opt) => opt.disc === answers[current]) + 1
         }
-        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
         onPrevious={current > 0 && selected === null ? () => setCurrent(current - 1) : undefined}
         onSelect={(value) => pick(value - 1)}
       />

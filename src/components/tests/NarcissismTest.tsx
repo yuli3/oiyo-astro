@@ -583,9 +583,9 @@ export default function NarcissismTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/self-esteem/test/`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
-          { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
-          { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+          { href: `/${locale}/self-esteem/test/`, label: (({ ko: '🌿 자존감 테스트', en: '🌿 Self-esteem test', ja: '🌿 自尊感情テスト', zh: '🌿 自尊测验', fr: '🌿 Test d’estime de soi', es: '🌿 Test de autoestima' } as Record<string, string>)[locale] ?? '🌿 Self-esteem test') },
+          { href: `/${locale}/inner-strength/test/`, label: (({ ko: '🧠 내면 강점 테스트', en: '🧠 Inner strength test', ja: '🧠 内面の強さテスト', zh: '🧠 内在力量测验', fr: '🧠 Test de force intérieure', es: '🧠 Test de fuerza interior' } as Record<string, string>)[locale] ?? '🧠 Inner strength test') },
+          { href: `/${locale}/habit-builder/guide/`, label: (({ ko: '✅ 습관 만들기 가이드', en: '✅ Habit builder guide', ja: '✅ 習慣づくりガイド', zh: '✅ 养成习惯指南', fr: '✅ Guide pour créer des habitudes', es: '✅ Guía para crear hábitos' } as Record<string, string>)[locale] ?? '✅ Habit builder guide') },
         ]}
       />
       <div className="flex gap-3">

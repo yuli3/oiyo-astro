@@ -228,9 +228,9 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
-            { href: `/${locale}/routine/builder/`, label: locale === 'ko' ? '🗓️ 루틴 빌더' : locale === 'ja' ? '🗓️ ルーティンビルダー' : '🗓️ Routine builder' },
-            { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+            { href: `/${locale}/habit-builder/guide/`, label: (({ ko: '✅ 습관 만들기 가이드', en: '✅ Habit builder guide', ja: '✅ 習慣づくりガイド', zh: '✅ 养成习惯指南', fr: '✅ Guide pour créer des habitudes', es: '✅ Guía para crear hábitos' } as Record<string, string>)[locale] ?? '✅ Habit builder guide') },
+            { href: `/${locale}/routine/builder/`, label: (({ ko: '🗓️ 루틴 빌더', en: '🗓️ Routine builder', ja: '🗓️ ルーティンビルダー', zh: '🗓️ 日常规划工具', fr: '🗓️ Créateur de routine', es: '🗓️ Creador de rutinas' } as Record<string, string>)[locale] ?? '🗓️ Routine builder') },
+            { href: `/${locale}/inner-strength/test/`, label: (({ ko: '🧠 내면 강점 테스트', en: '🧠 Inner strength test', ja: '🧠 内面の強さテスト', zh: '🧠 内在力量测验', fr: '🧠 Test de force intérieure', es: '🧠 Test de fuerza interior' } as Record<string, string>)[locale] ?? '🧠 Inner strength test') },
           ]}
         />
         <div className="flex gap-3">

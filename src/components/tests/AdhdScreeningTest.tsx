@@ -665,9 +665,9 @@ export default function AdhdScreeningTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/breathing/timer/`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
-          { href: `/${locale}/self-esteem/test/`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
-          { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+          { href: `/${locale}/breathing/timer/`, label: (({ ko: '🫁 호흡 타이머', en: '🫁 Breathing timer', ja: '🫁 呼吸タイマー', zh: '🫁 呼吸计时器', fr: '🫁 Minuteur de respiration', es: '🫁 Temporizador de respiración' } as Record<string, string>)[locale] ?? '🫁 Breathing timer') },
+          { href: `/${locale}/self-esteem/test/`, label: (({ ko: '🌿 자존감 테스트', en: '🌿 Self-esteem test', ja: '🌿 自尊感情テスト', zh: '🌿 自尊测验', fr: '🌿 Test d’estime de soi', es: '🌿 Test de autoestima' } as Record<string, string>)[locale] ?? '🌿 Self-esteem test') },
+          { href: `/${locale}/habit-builder/guide/`, label: (({ ko: '✅ 습관 만들기 가이드', en: '✅ Habit builder guide', ja: '✅ 習慣づくりガイド', zh: '✅ 养成习惯指南', fr: '✅ Guide pour créer des habitudes', es: '✅ Guía para crear hábitos' } as Record<string, string>)[locale] ?? '✅ Habit builder guide') },
         ]}
       />
 

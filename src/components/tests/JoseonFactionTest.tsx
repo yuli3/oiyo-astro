@@ -247,7 +247,7 @@ export default function JoseonFactionTest({ locale }: Props) {
     recordTestResult({
       kind: 'psychometric',
       testId: 'joseon-faction',
-      title: locale === 'ko' ? '조선붕당' : 'Joseon faction',
+      title: (({ ko: '조선붕당', en: 'Joseon faction', ja: '朝鮮の党派', zh: '朝鲜朋党', fr: 'Factions de Joseon', es: 'Facciones de Joseon' } as Record<string, string>)[locale] ?? 'Joseon faction'),
       resultLabel: fd.name,
       inputs: { scores },
       result: { faction: result, scores },

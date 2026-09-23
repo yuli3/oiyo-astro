@@ -522,9 +522,9 @@ export default function DepressionScreeningTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/breathing/timer/`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
-          { href: `/${locale}/self-esteem/test/`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
-          { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+          { href: `/${locale}/breathing/timer/`, label: (({ ko: '🫁 호흡 타이머', en: '🫁 Breathing timer', ja: '🫁 呼吸タイマー', zh: '🫁 呼吸计时器', fr: '🫁 Minuteur de respiration', es: '🫁 Temporizador de respiración' } as Record<string, string>)[locale] ?? '🫁 Breathing timer') },
+          { href: `/${locale}/self-esteem/test/`, label: (({ ko: '🌿 자존감 테스트', en: '🌿 Self-esteem test', ja: '🌿 自尊感情テスト', zh: '🌿 自尊测验', fr: '🌿 Test d’estime de soi', es: '🌿 Test de autoestima' } as Record<string, string>)[locale] ?? '🌿 Self-esteem test') },
+          { href: `/${locale}/inner-strength/test/`, label: (({ ko: '🧠 내면 강점 테스트', en: '🧠 Inner strength test', ja: '🧠 内面の強さテスト', zh: '🧠 内在力量测验', fr: '🧠 Test de force intérieure', es: '🧠 Test de fuerza interior' } as Record<string, string>)[locale] ?? '🧠 Inner strength test') },
         ]}
       />
       <button

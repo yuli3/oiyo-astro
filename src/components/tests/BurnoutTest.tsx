@@ -287,9 +287,9 @@ export default function BurnoutTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/breathing/timer/`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
-          { href: `/${locale}/lethargy/test/`, label: locale === 'ko' ? '🛌 무기력 회복 테스트' : locale === 'ja' ? '🛌 無気力回復テスト' : '🛌 Lethargy recovery test' },
-          { href: `/${locale}/sleep-type/test/`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
+          { href: `/${locale}/breathing/timer/`, label: (({ ko: '🫁 호흡 타이머', en: '🫁 Breathing timer', ja: '🫁 呼吸タイマー', zh: '🫁 呼吸计时器', fr: '🫁 Minuteur de respiration', es: '🫁 Temporizador de respiración' } as Record<string, string>)[locale] ?? '🫁 Breathing timer') },
+          { href: `/${locale}/lethargy/test/`, label: (({ ko: '🛌 무기력 회복 테스트', en: '🛌 Lethargy recovery test', ja: '🛌 無気力回復テスト', zh: '🛌 无力感恢复测验', fr: '🛌 Test de sortie de la léthargie', es: '🛌 Test de recuperación de la apatía' } as Record<string, string>)[locale] ?? '🛌 Lethargy recovery test') },
+          { href: `/${locale}/sleep-type/test/`, label: (({ ko: '💤 수면 유형 테스트', en: '💤 Sleep type test', ja: '💤 睡眠タイプテスト', zh: '💤 睡眠类型测验', fr: '💤 Test du type de sommeil', es: '💤 Test de tipo de sueño' } as Record<string, string>)[locale] ?? '💤 Sleep type test') },
         ]}
       />
       <div className="flex gap-3">

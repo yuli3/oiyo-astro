@@ -213,9 +213,9 @@ export default function LethargyRecoveryTest({ locale: rawLocale = 'ko' }: Props
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/breathing/timer/`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
-            { href: `/${locale}/habit-builder/30-days/`, label: locale === 'ko' ? '✅ 30일 습관 만들기' : locale === 'ja' ? '✅ 30日習慣づくり' : '✅ 30-day habit builder' },
-            { href: `/${locale}/sleep-type/test/`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
+            { href: `/${locale}/breathing/timer/`, label: (({ ko: '🫁 호흡 타이머', en: '🫁 Breathing timer', ja: '🫁 呼吸タイマー', zh: '🫁 呼吸计时器', fr: '🫁 Minuteur de respiration', es: '🫁 Temporizador de respiración' } as Record<string, string>)[locale] ?? '🫁 Breathing timer') },
+            { href: `/${locale}/habit-builder/30-days/`, label: (({ ko: '✅ 30일 습관 만들기', en: '✅ 30-day habit builder', ja: '✅ 30日習慣づくり', zh: '✅ 30 天养成习惯', fr: '✅ Une habitude en 30 jours', es: '✅ Un hábito en 30 días' } as Record<string, string>)[locale] ?? '✅ 30-day habit builder') },
+            { href: `/${locale}/sleep-type/test/`, label: (({ ko: '💤 수면 유형 테스트', en: '💤 Sleep type test', ja: '💤 睡眠タイプテスト', zh: '💤 睡眠类型测验', fr: '💤 Test du type de sommeil', es: '💤 Test de tipo de sueño' } as Record<string, string>)[locale] ?? '💤 Sleep type test') },
           ]}
         />
         <div className="flex gap-3">

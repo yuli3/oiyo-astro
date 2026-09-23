@@ -463,7 +463,7 @@ export default function SelfEsteemTest({ locale: lp = 'ko' }: Props) {
         options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
         selectedValue={answers[current] === undefined ? undefined : answers[current] + 1}
         note={lb.note}
-        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
         onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
         onSelect={(value) => pick(value - 1)}
       />
@@ -535,9 +535,9 @@ export default function SelfEsteemTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
-          { href: `/${locale}/burnout/test/`, label: locale === 'ko' ? '😰 번아웃 테스트' : locale === 'ja' ? '😰 バーンアウトテスト' : '😰 Burnout test' },
-          { href: `/${locale}/today/`, label: locale === 'ko' ? '🌌 오늘의 우주' : locale === 'ja' ? '🌌 今日の宇宙' : "🌌 Today's Universe" },
+          { href: `/${locale}/inner-strength/test/`, label: (({ ko: '💪 내면 강점 테스트', en: '💪 Inner strength test', ja: '💪 内面の強みテスト', zh: '💪 内在力量测验', fr: '💪 Test de force intérieure', es: '💪 Test de fuerza interior' } as Record<string, string>)[locale] ?? '💪 Inner strength test') },
+          { href: `/${locale}/burnout/test/`, label: (({ ko: '😰 번아웃 테스트', en: '😰 Burnout test', ja: '😰 バーンアウトテスト', zh: '😰 倦怠测验', fr: '😰 Test d’épuisement professionnel', es: '😰 Test de burnout' } as Record<string, string>)[locale] ?? '😰 Burnout test') },
+          { href: `/${locale}/today/`, label: ({ ko: '🌌 오늘의 우주', en: "🌌 Today's Universe", ja: '🌌 今日の宇宙', zh: '🌌 今日宇宙', fr: '🌌 L’univers du jour', es: '🌌 El universo de hoy' } as Record<string, string>)[locale] ?? "🌌 Today's Universe" },
         ]}
       />
 

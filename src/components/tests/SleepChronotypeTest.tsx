@@ -1364,9 +1364,9 @@ export default function SleepChronotypeTest({ locale: lp = 'ko', showHeading = t
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/routine/builder/`, label: locale === 'ko' ? '📋 루틴 빌더' : locale === 'ja' ? '📋 ルーティンビルダー' : '📋 Routine builder' },
-          { href: `/${locale}/habit-builder/30-days/`, label: locale === 'ko' ? '📅 30일 습관 만들기' : locale === 'ja' ? '📅 30日習慣づくり' : '📅 30-day habit builder' },
-          { href: `/${locale}/burnout/test/`, label: locale === 'ko' ? '😰 번아웃 테스트' : locale === 'ja' ? '😰 バーンアウトテスト' : '😰 Burnout test' },
+          { href: `/${locale}/routine/builder/`, label: (({ ko: '📋 루틴 빌더', en: '📋 Routine builder', ja: '📋 ルーティンビルダー', zh: '📋 日常规划工具', fr: '📋 Créateur de routine', es: '📋 Creador de rutinas' } as Record<string, string>)[locale] ?? '📋 Routine builder') },
+          { href: `/${locale}/habit-builder/30-days/`, label: (({ ko: '📅 30일 습관 만들기', en: '📅 30-day habit builder', ja: '📅 30日習慣づくり', zh: '📅 30 天养成习惯', fr: '📅 Une habitude en 30 jours', es: '📅 Un hábito en 30 días' } as Record<string, string>)[locale] ?? '📅 30-day habit builder') },
+          { href: `/${locale}/burnout/test/`, label: (({ ko: '😰 번아웃 테스트', en: '😰 Burnout test', ja: '😰 バーンアウトテスト', zh: '😰 倦怠测验', fr: '😰 Test d’épuisement professionnel', es: '😰 Test de burnout' } as Record<string, string>)[locale] ?? '😰 Burnout test') },
         ]}
       />
 

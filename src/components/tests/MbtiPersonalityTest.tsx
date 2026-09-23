@@ -228,6 +228,26 @@ QUESTIONS.zh = QUESTIONS.en
 QUESTIONS.fr = QUESTIONS.en
 QUESTIONS.es = QUESTIONS.en
 
+/** 유형 별칭 — ko/en 은 TYPE_PROFILES 에 있고, 나머지 언어는 여기서 채운다. */
+const TYPE_NICKNAMES: Record<MbtiType, { ja: string; zh: string; fr: string; es: string }> = {
+  INTJ: { ja: '建築家', zh: '建筑师', fr: 'Architecte', es: 'Arquitecto' },
+  INTP: { ja: '論理学者', zh: '逻辑学家', fr: 'Logicien', es: 'Lógico' },
+  ENTJ: { ja: '指揮官', zh: '指挥官', fr: 'Commandant', es: 'Comandante' },
+  ENTP: { ja: '討論者', zh: '辩论家', fr: 'Innovateur', es: 'Innovador' },
+  INFJ: { ja: '提唱者', zh: '提倡者', fr: 'Avocat', es: 'Abogado' },
+  INFP: { ja: '仲介者', zh: '调停者', fr: 'Médiateur', es: 'Mediador' },
+  ENFJ: { ja: '主人公', zh: '主人公', fr: 'Protagoniste', es: 'Protagonista' },
+  ENFP: { ja: '運動家', zh: '竞选者', fr: 'Inspirateur', es: 'Activista' },
+  ISTJ: { ja: '管理者', zh: '物流师', fr: 'Logisticien', es: 'Logista' },
+  ISFJ: { ja: '擁護者', zh: '守卫者', fr: 'Défenseur', es: 'Defensor' },
+  ESTJ: { ja: '幹部', zh: '总经理', fr: 'Directeur', es: 'Ejecutivo' },
+  ESFJ: { ja: '領事', zh: '执政官', fr: 'Consul', es: 'Cónsul' },
+  ISTP: { ja: '巨匠', zh: '鉴赏家', fr: 'Virtuose', es: 'Virtuoso' },
+  ISFP: { ja: '冒険家', zh: '探险家', fr: 'Aventurier', es: 'Aventurero' },
+  ESTP: { ja: '起業家', zh: '企业家', fr: 'Entrepreneur', es: 'Emprendedor' },
+  ESFP: { ja: 'エンターテイナー', zh: '表演者', fr: 'Amuseur', es: 'Animador' },
+}
+
 export const TYPE_PROFILES: Record<MbtiType, { emoji: string; en: string; ko: string; desc: Record<SupportedLang, string> }> = {
   INTJ: { emoji: '🏛️', en: 'Architect', ko: '전략가', desc: { ko: '독립적이고 장기적 관점이 강한 전략형입니다. 복잡한 구조를 읽고 체계적인 해법을 만드는 데 강합니다.', en: 'Independent, strategic, and long-range in perspective. You are strong at reading complex systems and building structured solutions.', ja: '独立心が強く、長期的な視点を持つ戦略型です。複雑な構造を読み、体系的な解決策を作ることが得意です。', zh: '独立、战略性强，擅长理解复杂系统并设计结构化方案。', fr: 'Indépendant et stratégique, vous excellez à lire des systèmes complexes et à construire des solutions structurées.', es: 'Independiente y estratégico, destacas al leer sistemas complejos y crear soluciones estructuradas.' } },
   INTP: { emoji: '🔬', en: 'Logician', ko: '논리술사', desc: { ko: '호기심이 많고 분석적인 탐구형입니다. 아이디어의 원리와 모순을 깊게 파고드는 편입니다.', en: 'Curious and analytical. You like to explore principles, inconsistencies, and abstract ideas deeply.', ja: '好奇心が強く分析的な探究型です。原理や矛盾、抽象的なアイデアを深く掘り下げます。', zh: '好奇且善于分析，喜欢深入探索原则、矛盾和抽象想法。', fr: 'Curieux et analytique, vous aimez explorer les principes, les incohérences et les idées abstraites.', es: 'Curioso y analítico, disfrutas explorar principios, contradicciones e ideas abstractas.' } },
@@ -290,7 +310,8 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
   const preferenceScores = isComplete ? mbtiPreferenceScores(answers) : null
 
   const profile = TYPE_PROFILES[mbtiType]
-  const title = l === 'ko' ? `${mbtiType} - ${profile?.ko}` : `${mbtiType} - ${profile?.en}`
+  const nickname = l === 'ko' ? profile?.ko : l === 'en' ? profile?.en : TYPE_NICKNAMES[mbtiType]?.[l] ?? profile?.en
+  const title = `${mbtiType} - ${nickname}`
   const deep = interpretMBTIDeep(mbtiType, COGNITIVE_STACK_BY_TYPE[mbtiType], l)
 
   function pick(value: DimValue) {
@@ -426,7 +447,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           locale={l}
           links={[
             { href: `/${l}/circle/`, label: FRIEND_COMPARE_LABEL[l] },
-            { href: `/${l}/mbti/hobbies/`, label: l === 'ko' ? `✨ ${mbtiType} 추천 취미` : `✨ ${mbtiType} hobbies` },
+            { href: `/${l}/mbti/hobbies/`, label: ({ ko: `✨ ${mbtiType} 추천 취미`, en: `✨ ${mbtiType} hobbies`, ja: `✨ ${mbtiType}のおすすめ趣味`, zh: `✨ ${mbtiType} 推荐兴趣`, fr: `✨ Loisirs pour ${mbtiType}`, es: `✨ Aficiones para ${mbtiType}` } as Record<string, string>)[l] ?? `✨ ${mbtiType} hobbies` },
           ]}
         />
         <button

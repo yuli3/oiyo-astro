@@ -466,7 +466,7 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
         options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
         selectedValue={responses[q.id]}
         note={lb.note}
-        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
         onPrevious={current > 0 ? previous : undefined}
         onSelect={pick}
       />

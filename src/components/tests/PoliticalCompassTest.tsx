@@ -278,7 +278,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
     recordTestResult({
       kind: 'preference',
       testId: 'political-compass',
-      title: L === 'ko' ? '정치성향' : 'Political compass',
+      title: (({ ko: '정치성향', en: 'Political compass', ja: '政治的傾向', zh: '政治倾向', fr: 'Orientation politique', es: 'Orientación política' } as Record<string, string>)[L] ?? 'Political compass'),
       resultLabel: code,
       result: { code, instrumentVersion: POLITICAL_INSTRUMENT_VERSION },
       locale: L,
@@ -397,9 +397,9 @@ export default function PoliticalCompassTest({ locale }: Props) {
         <ResultNextSteps
           locale={L}
           links={[
-            { href: `/${L}/authoritarian/test/`, label: L === 'ko' ? '⚖️ 권위주의 성향 테스트' : L === 'ja' ? '⚖️ 権威主義傾向テスト' : '⚖️ Authoritarian scale test' },
-            { href: `/${L}/big5/test/`, label: L === 'ko' ? '🧬 Big5 성격 테스트' : L === 'ja' ? '🧬 Big5性格テスト' : '🧬 Big Five personality test' },
-            { href: `/${L}/ontology/personality/`, label: L === 'ko' ? '🧭 성격 지도' : L === 'ja' ? '🧭 性格マップ' : '🧭 Personality map' },
+            { href: `/${L}/authoritarian/test/`, label: (({ ko: '⚖️ 권위주의 성향 테스트', en: '⚖️ Authoritarian scale test', ja: '⚖️ 権威主義傾向テスト', zh: '⚖️ 威权倾向测验', fr: '⚖️ Test d’autoritarisme', es: '⚖️ Test de autoritarismo' } as Record<string, string>)[L] ?? '⚖️ Authoritarian scale test') },
+            { href: `/${L}/big5/test/`, label: (({ ko: '🧬 Big5 성격 테스트', en: '🧬 Big Five personality test', ja: '🧬 Big5性格テスト', zh: '🧬 大五人格测验', fr: '🧬 Test de personnalité Big Five', es: '🧬 Test de personalidad Big Five' } as Record<string, string>)[L] ?? '🧬 Big Five personality test') },
+            { href: `/${L}/ontology/personality/`, label: (({ ko: '🧭 성격 지도', en: '🧭 Personality map', ja: '🧭 性格マップ', zh: '🧭 性格地图', fr: '🧭 Carte de personnalité', es: '🧭 Mapa de personalidad' } as Record<string, string>)[L] ?? '🧭 Personality map') },
           ]}
         />
 

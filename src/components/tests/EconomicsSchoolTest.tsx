@@ -215,7 +215,7 @@ export default function EconomicsSchoolTest({ locale }: Props) {
     recordTestResult({
       kind: 'psychometric',
       testId: 'economics-school',
-      title: locale === 'ko' ? '경제관' : 'Economic worldview',
+      title: (({ ko: '경제관', en: 'Economic worldview', ja: '経済観', zh: '经济观', fr: 'Vision économique', es: 'Visión económica' } as Record<string, string>)[locale] ?? 'Economic worldview'),
       resultLabel: schoolData.name,
       inputs: { scores },
       result: { school: result, scores },
@@ -264,7 +264,7 @@ export default function EconomicsSchoolTest({ locale }: Props) {
           <p className="text-sm text-muted-foreground">{s.policy}</p>
         </div>
         <div>
-          <h3 className="text-sm font-semibold text-muted-foreground uppercase mb-2">{locale === 'ko' ? '성향 분포' : 'Tendency Distribution'}</h3>
+          <h3 className="text-sm font-semibold text-muted-foreground uppercase mb-2">{(({ ko: '성향 분포', en: 'Tendency Distribution', ja: '傾向の分布', zh: '倾向分布', fr: 'Répartition des tendances', es: 'Distribución de tendencias' } as Record<string, string>)[locale] ?? 'Tendency Distribution')}</h3>
           <div className="space-y-1.5">
             {sorted.map(k => {
               const sn = isKo ? SCHOOLS[k].ko : SCHOOLS[k].en

@@ -611,7 +611,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
         options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
         selectedValue={answers[current]}
         note={lb.note}
-        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
         onPrevious={current > 0 ? previous : undefined}
         onSelect={pick}
       />
@@ -707,8 +707,8 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/mbti/test/`, label: locale === 'ko' ? '🧠 MBTI 테스트' : locale === 'ja' ? '🧠 MBTIテスト' : '🧠 MBTI test' },
-          { href: `/${locale}/enneagram/test/`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
+          { href: `/${locale}/mbti/test/`, label: (({ ko: '🧠 MBTI 테스트', en: '🧠 MBTI test', ja: '🧠 MBTIテスト', zh: '🧠 MBTI 测验', fr: '🧠 Test MBTI', es: '🧠 Test MBTI' } as Record<string, string>)[locale] ?? '🧠 MBTI test') },
+          { href: `/${locale}/enneagram/test/`, label: (({ ko: '🔮 에니어그램 테스트', en: '🔮 Enneagram test', ja: '🔮 エニアグラムテスト', zh: '🔮 九型人格测验', fr: '🔮 Test de l’ennéagramme', es: '🔮 Test del eneagrama' } as Record<string, string>)[locale] ?? '🔮 Enneagram test') },
         ]}
       />
 

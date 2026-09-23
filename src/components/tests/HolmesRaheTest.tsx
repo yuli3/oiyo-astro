@@ -56,7 +56,7 @@ export default function HolmesRaheTest({ locale = 'ko' }: { locale?: Locale }) {
     recordTestResult({
       kind: 'psychometric',
       testId: 'holmes-rahe',
-      title: locale === 'ko' ? '홈즈-라헤 생활사건 스트레스' : 'Holmes-Rahe life stress',
+      title: (({ ko: '홈즈-라헤 생활사건 스트레스', en: 'Holmes-Rahe life stress', ja: 'ホームズ・レイ生活ストレス', zh: '霍尔姆斯-拉赫生活事件压力', fr: 'Stress des événements de vie de Holmes-Rahe', es: 'Estrés por acontecimientos vitales de Holmes-Rahe' } as Record<string, string>)[locale] ?? 'Holmes-Rahe life stress'),
       resultLabel: `${score} LCU`,
       inputs: { events: [...checked] },
       result: { score, band },

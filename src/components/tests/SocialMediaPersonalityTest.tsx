@@ -1006,7 +1006,7 @@ export default function SocialMediaPersonalityTest({ locale: lp = 'ko' }: Props)
         options={q.options.map((opt) => ({ label: opt.label, value: opt.type }))}
         selectedValue={answers[current]}
         note={lb.note}
-        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
         onPrevious={current > 0 ? previous : undefined}
         onSelect={pick}
       />

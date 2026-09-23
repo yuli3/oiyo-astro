@@ -1263,9 +1263,9 @@ export default function PersonalColorTest({ locale }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/ontology/hobbies/`, label: locale === 'ko' ? '🎨 취미 지도' : locale === 'ja' ? '🎨 趣味マップ' : '🎨 Hobbies map' },
-          { href: `/${locale}/ontology/luck/`, label: locale === 'ko' ? '🍀 운 지도' : locale === 'ja' ? '🍀 運のマップ' : '🍀 Luck map' },
-          { href: `/${locale}/mbti/test/`, label: locale === 'ko' ? '🧩 MBTI 성격 테스트' : locale === 'ja' ? '🧩 MBTI性格テスト' : '🧩 MBTI personality test' },
+          { href: `/${locale}/ontology/hobbies/`, label: (({ ko: '🎨 취미 지도', en: '🎨 Hobbies map', ja: '🎨 趣味マップ', zh: '🎨 兴趣地图', fr: '🎨 Carte des loisirs', es: '🎨 Mapa de aficiones' } as Record<string, string>)[locale] ?? '🎨 Hobbies map') },
+          { href: `/${locale}/ontology/luck/`, label: (({ ko: '🍀 운 지도', en: '🍀 Luck map', ja: '🍀 運のマップ', zh: '🍀 运势地图', fr: '🍀 Carte de la chance', es: '🍀 Mapa de la suerte' } as Record<string, string>)[locale] ?? '🍀 Luck map') },
+          { href: `/${locale}/mbti/test/`, label: (({ ko: '🧩 MBTI 성격 테스트', en: '🧩 MBTI personality test', ja: '🧩 MBTI性格テスト', zh: '🧩 MBTI 性格测验', fr: '🧩 Test de personnalité MBTI', es: '🧩 Test de personalidad MBTI' } as Record<string, string>)[locale] ?? '🧩 MBTI personality test') },
         ]}
       />
 

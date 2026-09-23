@@ -602,8 +602,8 @@ const LeftBrainTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
         {/* Brain bar */}
         <div className="mb-8">
           <div className="flex justify-between text-xs font-black mb-2">
-            <span className="text-blue-600">🧠 {locale === 'ko' ? '좌뇌' : 'Left'} {leftPct}%</span>
-            <span className="text-green-600">{rightPct}% {locale === 'ko' ? '우뇌' : 'Right'} 🎨</span>
+            <span className="text-blue-600">🧠 {(({ ko: '좌뇌', en: 'Left', ja: '左脳', zh: '左脑', fr: 'Gauche', es: 'Izquierdo' } as Record<string, string>)[locale] ?? 'Left')} {leftPct}%</span>
+            <span className="text-green-600">{rightPct}% {(({ ko: '우뇌', en: 'Right', ja: '右脳', zh: '右脑', fr: 'Droit', es: 'Derecho' } as Record<string, string>)[locale] ?? 'Right')} 🎨</span>
           </div>
           <div className="w-full h-4 rounded-full bg-muted overflow-hidden flex">
             <div className="h-full bg-blue-500 transition-all duration-700" style={{ width: `${leftPct}%` }} />
@@ -652,7 +652,7 @@ const LeftBrainTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
         value: choice,
       }))}
       selectedValue={answers[current]}
-      previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+      previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
       onPrevious={current > 0 ? () => setCurrent(c => c - 1) : undefined}
       onSelect={handleAnswer}
     />

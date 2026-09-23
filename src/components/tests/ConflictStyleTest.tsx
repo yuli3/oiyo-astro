@@ -241,7 +241,7 @@ export default function ConflictStyleTest({ locale: lp = 'ko' }: Props) {
         progress={progress}
         options={(['a', 'b'] as const).map(side => ({ label: pair[side].text, value: side }))}
         selectedValue={chosen === pair.a.style ? 'a' : chosen === pair.b.style ? 'b' : undefined}
-        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
         onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
         onSelect={pick}
       />
