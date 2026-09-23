@@ -2,7 +2,7 @@
   "GAP": {
     "traits": [
       "Un fort esprit pionnier signalant un nouveau départ.",
-      "Ne peut pas tolérer l'injustice ; possède un caractère droit et droit.",
+      "Ne supporte pas l'injustice ; son caractère est droit et sans détour.",
       "Possède des qualités de leadership et a du mal à être subordonné.",
       "Un entêtement excessif peut parfois conduire à l’autosatisfaction, c’est pourquoi la flexibilité est nécessaire."
     ],
@@ -137,6 +137,6 @@
     "weaknesses": ["Chagrin", "Fragilité", "Nervosité"],
     "name": "Gye (癸)",
     "nature": "Vague humble et intellectuelle de pluie et de rosée mouillant toutes choses",
-    "lifePurpose": "Pour étancher la soif et la soif du monde et transmettre les principes invisibles de la vie à travers l'exploration intellectuelle."
+    "lifePurpose": "Étancher la soif du monde et transmettre, par une étude patiente, les principes invisibles de la vie."
   }
 }

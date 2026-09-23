@@ -2,7 +2,7 @@
   "GAP": {
     "traits": [
       "Fuerte espíritu pionero que indica nuevos comienzos.",
-      "No puedo tolerar la injusticia; Posee un carácter recto y erguido.",
+      "No tolera la injusticia; su carácter es recto y firme.",
       "Tiene cualidades de liderazgo y le resulta difícil estar subordinado.",
       "La terquedad excesiva a veces puede conducir a la superioridad moral, por lo que se necesita flexibilidad."
     ],
@@ -137,6 +137,6 @@
     "weaknesses": ["Pena", "Fragilidad", "Nerviosismo"],
     "name": "Gye (癸)",
     "nature": "Humilde e intelectual ola de lluvia y rocío que moja todas las cosas.",
-    "lifePurpose": "Saciar la sed y la sed del mundo y transmitir principios invisibles de la vida a través de la exploración intelectual."
+    "lifePurpose": "Saciar la sed del mundo y transmitir, mediante un estudio paciente, los principios invisibles de la vida."
   }
 }
