@@ -1,9 +1,11 @@
 {
   "schema": "oiyo.relationship-comparison-contract",
   "schemaVersion": 1,
-  "stage": "non-public-foundation",
+  "stage": "noindex-pilot",
   "stageDecision": "2026-07-19 세운이 동의/프라이버시 문구를 승인하고 구현을 지시(personal-ontology relationship-comparison 서브골). 공개 마케팅 명칭·색인 여부는 여전히 별도 사람 결정 대기 상태이므로 noindex를 유지한다.",
-  "publicRoutes": [],
+  "publicRoutes": [
+    "src/pages/[locale]/circle/pair.astro"
+  ],
   "indexable": false,
   "a3Compatibility": {
     "acceptedSchema": "oiyo.personal-profile-export",
@@ -98,5 +100,5 @@
       "false-deletion-status"
     ]
   },
-  "stageNote": "2026-09-21 궁합을 \"우리 원\"(/{locale}/circle/) 하나로 모으면서 noindex 파일럿 경로를 접었다. 엔진·스키마·동의 패널은 그대로 두고 공개 경로만 거둔 것이라 단계가 non-public-foundation 으로 돌아간다. 검사 결과 기반이 아니라 생년월일 기반으로 통일하기로 한 결정에 따른다."
+  "stageNote": "2026-09-23 세운 결정으로 되살렸다. 다만 2026-09-21 에 경로를 거둔 이유(궁합이 여러 갈래로 흩어져 사용자가 어느 쪽이 진짜인지 헷갈렸다)를 되돌리지 않기 위해 별도 경로를 다시 열지 않는다. 두 사람 보기(/{locale}/circle/pair/, noindex) 안의 접힌 칸으로 들어간다 — 위는 생년월일 상징, 아래는 각자 완료한 검사 결과다. /profile/relationship-comparison 의 301 은 그대로 둔다."
 }
