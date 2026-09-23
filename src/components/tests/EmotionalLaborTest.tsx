@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type LaborLevel = 'light' | 'moderate' | 'heavy' | 'severe'
 type Subscale = 'surface' | 'dissonance'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '回復のためのヒント',
     note: 'このテストはHochschildの感情労働（emotional labor）概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '情绪劳动测验',
+    subtitle: '我在工作里演了多少情绪？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的情绪劳动指数是',
+    yourScore: '我的情绪劳动指数',
+    overallLabel: '综合情绪劳动指数',
+    surfaceLabel: '表层扮演',
+    dissonanceLabel: '情绪失调与耗竭',
+    outOf: '/ 5.0',
+    tipsLabel: '恢复的建议',
+    note: '本测验参考 Hochschild 的情绪劳动（emotional labor）概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test du travail émotionnel',
+    subtitle: 'À quel point est-ce que je joue mes émotions au travail ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice de travail émotionnel',
+    yourScore: 'Votre indice de travail émotionnel',
+    overallLabel: 'Indice global',
+    surfaceLabel: 'Jeu de surface',
+    dissonanceLabel: 'Dissonance émotionnelle et usure',
+    outOf: '/ 5.0',
+    tipsLabel: 'Conseils pour récupérer',
+    note: 'Ce test reprend la notion de travail émotionnel de Hochschild, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de trabajo emocional',
+    subtitle: '¿Cuánto actúo mis emociones en el trabajo?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice de trabajo emocional',
+    yourScore: 'Tu índice de trabajo emocional',
+    overallLabel: 'Índice global',
+    surfaceLabel: 'Actuación superficial',
+    dissonanceLabel: 'Disonancia emocional y desgaste',
+    outOf: '/ 5.0',
+    tipsLabel: 'Consejos para recuperarte',
+    note: 'Este test recoge la noción de trabajo emocional de Hochschild, para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<LaborLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<LaborLevel, Record<SupportedLang, LevelData>> = {
         '本当の感情を安全に分かち合える関係を保ちましょう。',
       ],
     },
+    zh: {
+      icon: '🌿',
+      title: '轻度情绪劳动型',
+      description: '真实的感受和表现出来的差距不大。因为演情绪而消耗的部分比较少。',
+      tips: [
+        '珍惜现在这种「真心和表现靠得近」的环境。',
+        '偶尔演过情绪之后，哪怕短短地，也给自己一点恢复时间。',
+        '维持几段能安全说真心话的关系。',
+      ],
+    },
+    fr: {
+      icon: '🌿',
+      title: 'Travail émotionnel léger',
+      description: 'L’écart entre ce que vous ressentez et ce que vous montrez est faible. L’usure liée au jeu émotionnel reste limitée.',
+      tips: [
+        'Prenez soin de cet environnement où le vrai et l’exprimé sont proches.',
+        'Après un moment de jeu émotionnel, accordez-vous un temps de récupération, même bref.',
+        'Entretenez des relations où vos vraies émotions peuvent se dire en sécurité.',
+      ],
+    },
+    es: {
+      icon: '🌿',
+      title: 'Trabajo emocional leve',
+      description: 'La distancia entre lo que sientes y lo que muestras es pequeña. El desgaste por actuar emociones es limitado.',
+      tips: [
+        'Cuida ese entorno en el que lo real y lo expresado están cerca.',
+        'Después de un rato de actuar, date un tiempo de recuperación, aunque sea corto.',
+        'Mantén relaciones donde tus emociones reales puedan decirse con seguridad.',
+      ],
+    },
   },
   moderate: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<LaborLevel, Record<SupportedLang, LevelData>> = {
         '勤務後に感情を「切り替える」自分なりの儀式を作りましょう。',
         '表面演技より状況を捉え直す内面調整を試しましょう。',
         '感情を打ち明けられる安全な相手を決めておきましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌤️',
+      title: '中度情绪劳动型',
+      description: '你日常里会调节、也会演一部分情绪。这是多数上班族都有的程度，但到了这里，恢复的习惯就变得重要。',
+      tips: [
+        '给自己一个下班后「把情绪切换掉」的小仪式。',
+        '比起表层扮演，试试从不同角度重新解读处境。',
+        '先定好一个能安心吐露情绪的对象。',
+      ],
+    },
+    fr: {
+      icon: '🌤️',
+      title: 'Travail émotionnel modéré',
+      description: 'Au quotidien, vous ajustez et jouez une partie de vos émotions. C’est le niveau que connaissent la plupart des salariés, mais les routines de récupération deviennent importantes.',
+      tips: [
+        'Créez un petit rituel pour « changer d’émotion » après le travail.',
+        'Plutôt que le jeu de surface, essayez de relire la situation autrement.',
+        'Désignez à l’avance une personne à qui parler en confiance.',
+      ],
+    },
+    es: {
+      icon: '🌤️',
+      title: 'Trabajo emocional moderado',
+      description: 'En el día a día ajustas y actúas parte de tus emociones. Es el nivel que tiene la mayoría, pero aquí las rutinas de recuperación ya importan.',
+      tips: [
+        'Crea un pequeño ritual para «cambiar de emoción» al salir del trabajo.',
+        'Más que actuar por fuera, prueba a releer la situación de otra manera.',
+        'Ten decidido de antemano a quién puedes contárselo con confianza.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<LaborLevel, Record<SupportedLang, LevelData>> = {
         '仕事の境界を設定し回復を優先しましょう。',
       ],
     },
+    zh: {
+      icon: '⚠️',
+      title: '高情绪劳动型',
+      description: '压住真实感受、演出规定情绪的负担很重。情绪失调可能拖成耗竭，需要照顾自己。',
+      tips: [
+        '每天留出一段「不必演情绪」的时间。',
+        '把压着的情绪用文字或对话放出去。',
+        '把工作的界线划出来，把恢复排进优先级。',
+      ],
+    },
+    fr: {
+      icon: '⚠️',
+      title: 'Travail émotionnel lourd',
+      description: 'La charge de refouler le vrai et de jouer l’émotion attendue est importante. La dissonance peut mener à l’épuisement : prenez soin de vous.',
+      tips: [
+        'Réservez chaque jour un temps où vous n’avez pas à jouer.',
+        'Laissez sortir ce qui est refoulé par l’écriture ou la parole.',
+        'Posez des limites au travail et faites de la récupération une priorité.',
+      ],
+    },
+    es: {
+      icon: '⚠️',
+      title: 'Trabajo emocional alto',
+      description: 'La carga de reprimir lo real y actuar la emoción que toca es fuerte. La disonancia puede llevar al agotamiento: cuídate.',
+      tips: [
+        'Reserva cada día un rato en el que no tengas que actuar.',
+        'Deja salir lo reprimido por escrito o hablándolo.',
+        'Pon límites en el trabajo y haz de la recuperación una prioridad.',
+      ],
+    },
   },
   severe: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<LaborLevel, Record<SupportedLang, LevelData>> = {
         '消耗のサイン（無感覚・冷笑・疲労）を点検し休息を確保しましょう。',
         '環境が過度なら役割・業務の調整を模索しましょう。',
         '回復が難しいならカウンセリングなど専門的な助けを検討しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🔥',
+      title: '过载情绪劳动型',
+      description: '情绪劳动的强度非常高。你可能已经和真实的感受断开，耗竭感也在影响日常，需要积极照顾自己。',
+      tips: [
+        '检查耗竭的信号（麻木、冷漠、疲惫），把休息拿回来。',
+        '如果环境本身要求过度的情绪劳动，设法调整角色或工作内容。',
+        '恢复不动时，考虑咨询等专业协助。',
+      ],
+    },
+    fr: {
+      icon: '🔥',
+      title: 'Surcharge émotionnelle',
+      description: 'L’intensité du travail émotionnel est très élevée. Vous risquez d’être coupé de vos vraies émotions, et l’usure touche votre quotidien : prenez soin de vous activement.',
+      tips: [
+        'Repérez les signes d’épuisement (insensibilité, cynisme, fatigue) et reprenez du repos.',
+        'Si l’environnement exige trop, cherchez à ajuster votre rôle ou vos missions.',
+        'Si la récupération ne vient pas, envisagez un accompagnement professionnel.',
+      ],
+    },
+    es: {
+      icon: '🔥',
+      title: 'Sobrecarga emocional',
+      description: 'La intensidad del trabajo emocional es muy alta. Puedes estar desconectado de lo que sientes de verdad, y el desgaste ya afecta a tu día: cuídate activamente.',
+      tips: [
+        'Revisa las señales de agotamiento (embotamiento, cinismo, fatiga) y recupera descanso.',
+        'Si el entorno exige demasiado, busca ajustar tu papel o tus funciones.',
+        'Si no logras recuperarte, valora ayuda profesional.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'd5', subscale: 'dissonance', reverse: false, text: '親切を保つためにストレスが溜まる' },
     { id: 'd6', subscale: 'dissonance', reverse: false, text: '感情を統制するのに多くのエネルギーを使う' },
     { id: 'd7', subscale: 'dissonance', reverse: false, text: '感情労働のせいで休んでもよく回復しない' },
+  ],
+  zh: [
+    { id: 's1', subscale: 'surface', reverse: false, text: '在工作或关系里，我常摆出跟真实感受不一样的表情' },
+    { id: 's2', subscale: 'surface', reverse: false, text: '心里难受，却常得装没事地笑' },
+    { id: 's3', subscale: 'surface', reverse: false, text: '就算生气，也得维持亲切的态度' },
+    { id: 's4', subscale: 'surface', reverse: false, text: '我会藏起真实心情，演出该有的情绪' },
+    { id: 's5', subscale: 'surface', reverse: false, text: '别人看到的我，和我真实的感受常常不一样' },
+    { id: 's6', subscale: 'surface', reverse: false, text: '我压下情绪，做出符合角色的表情' },
+    { id: 's7', subscale: 'surface', reverse: false, text: '就算面对让我不舒服的人，也得摆出好脸色' },
+    { id: 'd1', subscale: 'dissonance', reverse: false, text: '该表现的情绪和真实感受之间的落差让我很累' },
+    { id: 'd2', subscale: 'dissonance', reverse: false, text: '装出情绪这件事在消耗我' },
+    { id: 'd3', subscale: 'dissonance', reverse: false, text: '一天结束时，我会有情绪被掏空的感觉' },
+    { id: 'd4', subscale: 'dissonance', reverse: false, text: '有时候我搞不清自己真正的感受是什么' },
+    { id: 'd5', subscale: 'dissonance', reverse: false, text: '为了维持亲切，压力一点点堆起来' },
+    { id: 'd6', subscale: 'dissonance', reverse: false, text: '控制情绪花掉我很多力气' },
+    { id: 'd7', subscale: 'dissonance', reverse: false, text: '因为情绪劳动，就算休息也恢复不太回来' },
+  ],
+  fr: [
+    { id: 's1', subscale: 'surface', reverse: false, text: 'Au travail ou dans mes relations, j’affiche souvent une expression différente de ce que je ressens' },
+    { id: 's2', subscale: 'surface', reverse: false, text: 'Même quand je vais mal, je dois souvent sourire comme si tout allait bien' },
+    { id: 's3', subscale: 'surface', reverse: false, text: 'Même en colère, je dois rester aimable' },
+    { id: 's4', subscale: 'surface', reverse: false, text: 'Je cache mon humeur réelle et je joue l’émotion attendue' },
+    { id: 's5', subscale: 'surface', reverse: false, text: 'Ce que l’autre voit de moi et ce que je ressens diffèrent souvent' },
+    { id: 's6', subscale: 'surface', reverse: false, text: 'Je refoule mes émotions et je compose l’expression qui va avec le rôle' },
+    { id: 's7', subscale: 'surface', reverse: false, text: 'Même devant quelqu’un qui me met mal à l’aise, je dois faire bonne figure' },
+    { id: 'd1', subscale: 'dissonance', reverse: false, text: 'L’écart entre l’émotion à montrer et celle que je ressens m’épuise' },
+    { id: 'd2', subscale: 'dissonance', reverse: false, text: 'Fabriquer des émotions me vide' },
+    { id: 'd3', subscale: 'dissonance', reverse: false, text: 'À la fin de la journée, je me sens émotionnellement vide' },
+    { id: 'd4', subscale: 'dissonance', reverse: false, text: 'Il m’arrive de ne plus savoir ce que je ressens vraiment' },
+    { id: 'd5', subscale: 'dissonance', reverse: false, text: 'Maintenir l’amabilité fait monter la tension' },
+    { id: 'd6', subscale: 'dissonance', reverse: false, text: 'Contrôler mes émotions me demande beaucoup d’énergie' },
+    { id: 'd7', subscale: 'dissonance', reverse: false, text: 'À cause de ce travail émotionnel, le repos ne me remet pas vraiment' },
+  ],
+  es: [
+    { id: 's1', subscale: 'surface', reverse: false, text: 'En el trabajo o en mis relaciones pongo a menudo una cara distinta de lo que siento' },
+    { id: 's2', subscale: 'surface', reverse: false, text: 'Aunque lo esté pasando mal, muchas veces tengo que sonreír como si nada' },
+    { id: 's3', subscale: 'surface', reverse: false, text: 'Aunque me enfade, tengo que mantener el trato amable' },
+    { id: 's4', subscale: 'surface', reverse: false, text: 'Escondo mi ánimo real y actúo la emoción que toca' },
+    { id: 's5', subscale: 'surface', reverse: false, text: 'Lo que el otro ve de mí y lo que siento suelen ser distintos' },
+    { id: 's6', subscale: 'surface', reverse: false, text: 'Reprimo lo que siento y compongo la cara que pide el papel' },
+    { id: 's7', subscale: 'surface', reverse: false, text: 'Aunque tenga delante a alguien que me incomoda, tengo que poner buena cara' },
+    { id: 'd1', subscale: 'dissonance', reverse: false, text: 'La distancia entre la emoción que debo mostrar y la que siento me agota' },
+    { id: 'd2', subscale: 'dissonance', reverse: false, text: 'Fabricar emociones me vacía' },
+    { id: 'd3', subscale: 'dissonance', reverse: false, text: 'Al final del día me siento emocionalmente vacío' },
+    { id: 'd4', subscale: 'dissonance', reverse: false, text: 'A veces ya no sé qué siento de verdad' },
+    { id: 'd5', subscale: 'dissonance', reverse: false, text: 'Mantener la amabilidad me va acumulando tensión' },
+    { id: 'd6', subscale: 'dissonance', reverse: false, text: 'Controlar las emociones me cuesta mucha energía' },
+    { id: 'd7', subscale: 'dissonance', reverse: false, text: 'Por este trabajo emocional, el descanso no acaba de reponerme' },
   ],
 }
 

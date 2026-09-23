@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type CompLevel = 'self' | 'mild' | 'sensitive' | 'intense'
 type Subscale = 'ability' | 'opinion'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '心のためのヒント',
     note: 'このテストはGibbons & Buunkの社会的比較志向尺度（INCOM）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '社会比较倾向测验',
+    subtitle: '我有多常跟别人比？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的社会比较指数是',
+    yourScore: '我的社会比较指数',
+    overallLabel: '综合比较倾向',
+    abilityLabel: '能力比较',
+    opinionLabel: '意见比较',
+    outOf: '/ 5.0',
+    tipsLabel: '给心里的建议',
+    note: '本测验参考 Gibbons 与 Buunk 的社会比较倾向量表（INCOM）概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test de la tendance à la comparaison sociale',
+    subtitle: 'À quel point est-ce que je me compare ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice de comparaison sociale',
+    yourScore: 'Votre indice de comparaison sociale',
+    overallLabel: 'Tendance globale',
+    abilityLabel: 'Comparaison de capacités',
+    opinionLabel: 'Comparaison d’opinions',
+    outOf: '/ 5.0',
+    tipsLabel: 'Un conseil pour l’esprit',
+    note: 'Ce test reprend les notions de l’échelle d’orientation à la comparaison sociale (INCOM) de Gibbons et Buunk, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de tendencia a la comparación social',
+    subtitle: '¿Cuánto me comparo con los demás?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice de comparación social',
+    yourScore: 'Tu índice de comparación social',
+    overallLabel: 'Tendencia global',
+    abilityLabel: 'Comparación de capacidades',
+    opinionLabel: 'Comparación de opiniones',
+    outOf: '/ 5.0',
+    tipsLabel: 'Un consejo para la cabeza',
+    note: 'Este test recoge las ideas de la escala de orientación a la comparación social (INCOM) de Gibbons y Buunk, para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
         '自分の価値と進捗を定期的に点検しましょう。',
       ],
     },
+    zh: {
+      icon: '🧭',
+      title: '自我标准型',
+      description: '比起看别人，你更用自己的标准来判断。别人的成绩或意见不太动摇得了你，你守得住重心。',
+      tips: [
+        '有意识地守住现在这份结实的自我标准。',
+        '偶尔的比较，就轻轻当成学习的机会。',
+        '定期回看自己的价值和进度。',
+      ],
+    },
+    fr: {
+      icon: '🧭',
+      title: 'Critères propres',
+      description: 'Vous jugez d’après vos propres critères plutôt que d’après les autres. Les réussites ou les avis d’autrui ne vous font pas vaciller : vous gardez votre centre.',
+      tips: [
+        'Préservez consciemment ces repères solides.',
+        'Prenez les comparaisons occasionnelles comme de simples occasions d’apprendre.',
+        'Faites le point régulièrement sur vos valeurs et vos progrès.',
+      ],
+    },
+    es: {
+      icon: '🧭',
+      title: 'Criterios propios',
+      description: 'Juzgas según tus criterios antes que según los demás. Los logros o las opiniones ajenas no te tambalean: conservas el centro.',
+      tips: [
+        'Cuida conscientemente esos criterios firmes.',
+        'Toma las comparaciones ocasionales como simples ocasiones de aprender.',
+        'Revisa con regularidad tus valores y tus avances.',
+      ],
+    },
   },
   mild: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
         '比較が始まったら「自分の基準は何か」と自問しましょう。',
         '上方比較は刺激に、下方比較は感謝に活用しましょう。',
         'SNSのフィードは編集されたハイライトだと思い出しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🙂',
+      title: '轻度比较型',
+      description: '这是大多数人都会有的日常比较。偶尔会跟人比一比，但你守得住自己的节奏。',
+      tips: [
+        '比较一开始，就问自己「我的标准是什么」。',
+        '向上比较当成刺激，向下比较当成感谢。',
+        '提醒自己：社群上的动态是剪过的精华。',
+      ],
+    },
+    fr: {
+      icon: '🙂',
+      title: 'Comparaison légère',
+      description: 'C’est le niveau ordinaire de comparaison que connaît la plupart des gens. Vous vous comparez parfois, tout en gardant votre rythme.',
+      tips: [
+        'Dès que la comparaison commence, demandez-vous : « quel est mon critère ? ».',
+        'Prenez la comparaison vers le haut comme un stimulant, celle vers le bas comme une gratitude.',
+        'Rappelez-vous qu’un fil d’actualité est un montage de moments choisis.',
+      ],
+    },
+    es: {
+      icon: '🙂',
+      title: 'Comparación leve',
+      description: 'Es el nivel corriente de comparación que tiene la mayoría. A veces te comparas, pero mantienes tu ritmo.',
+      tips: [
+        'En cuanto empieza la comparación, pregúntate «¿cuál es mi criterio?».',
+        'Toma la comparación hacia arriba como estímulo y la de abajo como gratitud.',
+        'Recuerda que un feed es un montaje de momentos escogidos.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
         '比較直後に湧く感情に名前をつけて距離を取りましょう。',
       ],
     },
+    zh: {
+      icon: '⚖️',
+      title: '比较敏感型',
+      description: '和别人的比较很明显。别人的成绩或评价，可能常常影响你的自尊和心情。',
+      tips: [
+        '把容易引起比较的帐号或环境整理掉，或静音。',
+        '把比较的对象换成「昨天的自己」。',
+        '比较刚过去时，给冒出来的情绪取个名字，拉开一点距离。',
+      ],
+    },
+    fr: {
+      icon: '⚖️',
+      title: 'Sensible à la comparaison',
+      description: 'La comparaison avec les autres est nette. Les réussites ou les jugements d’autrui influencent souvent votre estime et votre humeur.',
+      tips: [
+        'Faites le tri ou mettez en sourdine les comptes et les contextes qui nourrissent la comparaison.',
+        'Déplacez la comparaison vers « moi d’hier ».',
+        'Juste après une comparaison, nommez l’émotion qui monte pour prendre de la distance.',
+      ],
+    },
+    es: {
+      icon: '⚖️',
+      title: 'Sensible a la comparación',
+      description: 'La comparación con otros es clara. Los logros o los juicios ajenos influyen a menudo en tu autoestima y tu ánimo.',
+      tips: [
+        'Limpia o silencia las cuentas y los contextos que alimentan la comparación.',
+        'Cambia la comparación hacia «el yo de ayer».',
+        'Justo después de compararte, ponle nombre a la emoción para tomar distancia.',
+      ],
+    },
   },
   intense: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
         '一日の一定時間、SNSや比較刺激を遮断してみましょう。',
         '自分の価値を成果ではなく存在そのものに見出す練習をしましょう。',
         '比較が苦痛になるほどならカウンセリングなど助けを検討しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🔁',
+      title: '比较过敏型',
+      description: '社会比较的倾向非常强。不停地比较可能正在啃食你的自尊，也消耗大量心力。',
+      tips: [
+        '每天留一段时间，把社群和会引起比较的刺激断掉。',
+        '练习把自己的价值放在「存在」上，而不是成绩上。',
+        '如果比较已经到了痛苦的程度，考虑咨询等协助。',
+      ],
+    },
+    fr: {
+      icon: '🔁',
+      title: 'Comparaison intense',
+      description: 'Votre tendance à la comparaison sociale est très forte. Comparer sans cesse peut ronger votre estime de vous et consommer beaucoup d’énergie mentale.',
+      tips: [
+        'Réservez chaque jour un temps sans réseaux ni stimulus de comparaison.',
+        'Entraînez-vous à situer votre valeur dans le fait d’être, plutôt que dans les résultats.',
+        'Si la comparaison devient douloureuse, envisagez un accompagnement.',
+      ],
+    },
+    es: {
+      icon: '🔁',
+      title: 'Comparación intensa',
+      description: 'Tu tendencia a la comparación social es muy fuerte. Compararte sin parar puede desgastar tu autoestima y consumir mucha energía mental.',
+      tips: [
+        'Reserva cada día un rato sin redes ni estímulos de comparación.',
+        'Practica situar tu valor en el hecho de ser, más que en los logros.',
+        'Si la comparación se vuelve dolorosa, valora acompañamiento.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'o5', subscale: 'opinion', reverse: false, text: '自分の感情や反応が「普通」か他人と比べてみる' },
     { id: 'o6', subscale: 'opinion', reverse: false, text: '重要なことは周りの人の反応を見て判断する' },
     { id: 'o7', subscale: 'opinion', reverse: false, text: '他人の評価によって自分の考えがよく変わる' },
+  ],
+  zh: [
+    { id: 'a1', subscale: 'ability', reverse: false, text: '我会拿别人来衡量自己做得好不好' },
+    { id: 'a2', subscale: 'ability', reverse: false, text: '看到别人的成绩，我就会估量自己的水平' },
+    { id: 'a3', subscale: 'ability', reverse: false, text: '在社群上看别人的生活时，我会跟自己的处境比' },
+    { id: 'a4', subscale: 'ability', reverse: false, text: '跟我差不多的人过得比我好时，我会在意' },
+    { id: 'a5', subscale: 'ability', reverse: false, text: '我常拿自己的外表或能力去跟别人比' },
+    { id: 'a6', subscale: 'ability', reverse: false, text: '身边的人有成就时，我有时会着急' },
+    { id: 'a7', subscale: 'ability', reverse: false, text: '我常好奇别人怎么评价我' },
+    { id: 'o1', subscale: 'opinion', reverse: false, text: '该怎么想这件事，我会看看别人的意见再定' },
+    { id: 'o2', subscale: 'opinion', reverse: false, text: '做决定前，我会看看别人是怎么做的' },
+    { id: 'o3', subscale: 'opinion', reverse: false, text: '我会拿别人来对照，确认自己的想法对不对' },
+    { id: 'o4', subscale: 'opinion', reverse: false, text: '我偏向跟着流行或多数人的选择' },
+    { id: 'o5', subscale: 'opinion', reverse: false, text: '我的情绪或反应是不是「正常」，我会拿别人来比' },
+    { id: 'o6', subscale: 'opinion', reverse: false, text: '重要的事，我会看周围人的反应再判断' },
+    { id: 'o7', subscale: 'opinion', reverse: false, text: '别人的评价常常会改变我的想法' },
+  ],
+  fr: [
+    { id: 'a1', subscale: 'ability', reverse: false, text: 'Je juge mon niveau de travail en me comparant aux autres' },
+    { id: 'a2', subscale: 'ability', reverse: false, text: 'En voyant les réussites des autres, je mesure où j’en suis' },
+    { id: 'a3', subscale: 'ability', reverse: false, text: 'Sur les réseaux, je compare ma situation à la vie des autres' },
+    { id: 'a4', subscale: 'ability', reverse: false, text: 'Quand quelqu’un qui me ressemble réussit mieux, cela me travaille' },
+    { id: 'a5', subscale: 'ability', reverse: false, text: 'Je compare souvent mon apparence ou mes capacités à celles des autres' },
+    { id: 'a6', subscale: 'ability', reverse: false, text: 'La réussite de mon entourage me met parfois sous pression' },
+    { id: 'a7', subscale: 'ability', reverse: false, text: 'Je me demande souvent comment les autres me jugent' },
+    { id: 'o1', subscale: 'opinion', reverse: false, text: 'Pour savoir quoi penser, je regarde l’avis des autres' },
+    { id: 'o2', subscale: 'opinion', reverse: false, text: 'Avant de décider, je regarde comment font les autres' },
+    { id: 'o3', subscale: 'opinion', reverse: false, text: 'Je compare pour vérifier si ma façon de voir est juste' },
+    { id: 'o4', subscale: 'opinion', reverse: false, text: 'J’ai tendance à suivre la mode ou le choix du plus grand nombre' },
+    { id: 'o5', subscale: 'opinion', reverse: false, text: 'Je compare pour savoir si mes émotions ou mes réactions sont « normales »' },
+    { id: 'o6', subscale: 'opinion', reverse: false, text: 'Pour les choses importantes, je juge d’après la réaction de mon entourage' },
+    { id: 'o7', subscale: 'opinion', reverse: false, text: 'L’avis des autres change souvent ma façon de voir' },
+  ],
+  es: [
+    { id: 'a1', subscale: 'ability', reverse: false, text: 'Juzgo lo bien que lo hago comparándome con otros' },
+    { id: 'a2', subscale: 'ability', reverse: false, text: 'Al ver los logros ajenos, calculo en qué punto estoy' },
+    { id: 'a3', subscale: 'ability', reverse: false, text: 'En redes comparo mi situación con la vida de los demás' },
+    { id: 'a4', subscale: 'ability', reverse: false, text: 'Cuando a alguien parecido a mí le va mejor, me afecta' },
+    { id: 'a5', subscale: 'ability', reverse: false, text: 'Comparo a menudo mi aspecto o mis capacidades con los de otros' },
+    { id: 'a6', subscale: 'ability', reverse: false, text: 'El éxito de quienes me rodean a veces me mete prisa' },
+    { id: 'a7', subscale: 'ability', reverse: false, text: 'Me pregunto a menudo cómo me juzgan los demás' },
+    { id: 'o1', subscale: 'opinion', reverse: false, text: 'Para saber qué pensar, miro la opinión de otros' },
+    { id: 'o2', subscale: 'opinion', reverse: false, text: 'Antes de decidir, miro cómo lo hacen los demás' },
+    { id: 'o3', subscale: 'opinion', reverse: false, text: 'Comparo para comprobar si mi forma de ver es acertada' },
+    { id: 'o4', subscale: 'opinion', reverse: false, text: 'Tiendo a seguir la moda o lo que elige la mayoría' },
+    { id: 'o5', subscale: 'opinion', reverse: false, text: 'Comparo para saber si mis emociones o reacciones son «normales»' },
+    { id: 'o6', subscale: 'opinion', reverse: false, text: 'En lo importante, juzgo por la reacción de quienes me rodean' },
+    { id: 'o7', subscale: 'opinion', reverse: false, text: 'La opinión ajena cambia a menudo mi forma de ver' },
   ],
 }
 
