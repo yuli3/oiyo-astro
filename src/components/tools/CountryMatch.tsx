@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Locale } from "../../i18n";
+import { useRecordFinishedTest } from "../../lib/user/use-record-finished-test";
 import {
   COUNTRY_QUESTIONS,
   COUNTRIES_DATABASE,
@@ -11,9 +12,12 @@ import type {
 } from "../../lib/ontology/country/types";
 
 /**
- * "Which country fits you?" — surfaces the unwired `country` ontology engine
- * (archetype quiz → best-match countries). ko/en authored; ja/zh/fr/es text in
- * the engine data is currently English placeholder (translation pending).
+ * "Which country fits you?" — surfaces the `country` ontology engine
+ * (archetype quiz → best-match countries). Question and country text is authored
+ * in all six locales in the engine data.
+ *
+ * 2026-09-23: 결과를 기록해 "나의 지도"의 나라 선호 좌표로 잇는다 — 새 여행 검사를
+ * 따로 세우지 않고 이미 있는 이 화면을 좌표로 삼았다(중복 금지).
  */
 
 type LC = Record<string, string> | string | undefined;
@@ -78,6 +82,18 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
     () => (done ? calculateCountryPreference(answers) : null),
     [done, answers],
   );
+
+  useRecordFinishedTest({
+    testId: "country-match",
+    title: "CountryMatch",
+    kind: "preference",
+    finished: Boolean(result),
+    resultLabel: result ? tt(ARCHETYPE[result.primaryArchetype], locale) : undefined,
+    result: result
+      ? { archetype: result.primaryArchetype, top: result.topCountries.slice(0, 3).map((c) => c.code) }
+      : undefined,
+    locale,
+  });
 
   const pick = (qId: string, optId: string) => {
     setAnswers((a) => ({ ...a, [qId]: optId }));

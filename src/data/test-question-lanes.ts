@@ -163,6 +163,7 @@ export const LANE_BY_PATH: Record<string, LaneId> = {
   "/compatibility-test": "relationships",
   "/conflict-style-test": "relationships",
   "/friendship-style-test": "relationships",
+  "/music-taste-test": "self",
   "/humor-style-test": "relationships",
   "/love-profile-test": "relationships",
   "/mbti-love-test": "relationships",

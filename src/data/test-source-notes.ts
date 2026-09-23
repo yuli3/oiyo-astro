@@ -141,6 +141,14 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     ],
     caution: 'finance',
   },
+  'music-taste-test': {
+    basis: [
+      'five textures follow the MUSIC model — Rentfrow, Goldberg & Levitin (2011), J. Personality and Social Psychology 100(6)',
+      'OIYO-authored items — 12 everyday listening scenes, not the original genre-rating instrument',
+      'not a validated instrument; shows all five proportions instead of a single type',
+    ],
+    caution: 'style',
+  },
   'friendship-style-test': {
     basis: [
       'OIYO-authored items — 12 everyday scenes sorted into five parts people take among friends',
