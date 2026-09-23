@@ -4,10 +4,10 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
 type StressType = 'fighter' | 'freezer' | 'fleeer' | 'fixer'
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -84,6 +84,45 @@ const LABELS: Record<SupportedLang, {
     caution: '注意',
     tip: 'ヒント',
     note: 'この結果は参考用であり、専門的な心理診断の代替ではありません。',
+  },
+  zh: {
+    title: '压力反应类型测验',
+    subtitle: '我是怎么受压力的？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的压力反应类型是',
+    yourType: '我的压力类型',
+    strengths: '长处',
+    caution: '留意',
+    tip: '建议',
+    note: '本结果仅供参考，不能替代专业的心理评估。',
+  },
+  fr: {
+    title: 'Test du type de réaction au stress',
+    subtitle: 'Comment est-ce que je vis le stress ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon type de réaction au stress',
+    yourType: 'Votre type de stress',
+    strengths: 'Forces',
+    caution: 'À surveiller',
+    tip: 'Conseil',
+    note: 'Ce résultat est indicatif et ne remplace pas une évaluation psychologique professionnelle.',
+  },
+  es: {
+    title: 'Test del tipo de reacción al estrés',
+    subtitle: '¿Cómo me afecta el estrés?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi tipo de reacción al estrés',
+    yourType: 'Tu tipo de estrés',
+    strengths: 'Fortalezas',
+    caution: 'Atención',
+    tip: 'Consejo',
+    note: 'Este resultado es orientativo y no sustituye una evaluación psicológica profesional.',
   },
 }
 
@@ -454,6 +493,372 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       ],
     },
   ],
+  zh: [
+    {
+      id: 'q1',
+      text: '重要的截止日期突然提前时，我会…',
+      options: [
+        { label: '马上行动，并找人帮忙', type: 'fighter' },
+        { label: '不知道该从哪开始，愣在那儿', type: 'freezer' },
+        { label: '先散个心，之后再处理', type: 'fleeer' },
+        { label: '重排优先级，立刻改计划', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: '在公司或学校被批评时，我会…',
+      options: [
+        { label: '当场反驳，或替自己辩解', type: 'fighter' },
+        { label: '说不出话，心里塌下去', type: 'freezer' },
+        { label: '尽快把话题结束，离开那个场合', type: 'fleeer' },
+        { label: '分析批评有没有道理，找可以改的地方', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: '突然出了大问题时，我会…',
+      options: [
+        { label: '立刻迎上去，带头解决', type: 'fighter' },
+        { label: '慌了，很难做决定', type: 'freezer' },
+        { label: '很想暂时离开现实一下', type: 'fleeer' },
+        { label: '分析问题，做出一步步的解法', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: '人际关系起冲突时，我会…',
+      options: [
+        { label: '直接面对，想把它解决', type: 'fighter' },
+        { label: '不知道怎么办，干脆躲开这段关系', type: 'freezer' },
+        { label: '等事情自然过去', type: 'fleeer' },
+        { label: '分析双方的立场，讲道理地居中', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: '睡前有压力时，我会…',
+      options: [
+        { label: '找人说说，或用行动把它散掉', type: 'fighter' },
+        { label: '想法一个接一个，睡不着', type: 'freezer' },
+        { label: '刷影片或社群，刷到睡着', type: 'fleeer' },
+        { label: '写下明天要做的事，把心整理一下', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: '犯了错时，我的反应是…',
+      options: [
+        { label: '马上补救，承担责任', type: 'fighter' },
+        { label: '陷在自责里，难受很久', type: 'freezer' },
+        { label: '不想再想，把注意力转到别的事', type: 'fleeer' },
+        { label: '弄清楚错是怎么发生的', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: '有压力时，我身体的反应是…',
+      options: [
+        { label: '心跳变快，力气一下子冒上来', type: 'fighter' },
+        { label: '身体僵住，什么都不想做', type: 'freezer' },
+        { label: '很想去哪儿走一走', type: 'fleeer' },
+        { label: '脑子转得飞快，开始做计划', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: '被丢了过重的工作时，我会…',
+      options: [
+        { label: '把不满说出来，要求调整工作量', type: 'fighter' },
+        { label: '不知道从哪开始，把事情往后拖', type: 'freezer' },
+        { label: '把事情切开，能躲一点是一点', type: 'fleeer' },
+        { label: '马上定优先级，排出时程', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: '消解压力的方式里，你最想选…',
+      options: [
+        { label: '运动、球类等身体活动', type: 'fighter' },
+        { label: '在床上休息，什么都不做', type: 'freezer' },
+        { label: '游戏、剧、吃的，先离现实远一点', type: 'fleeer' },
+        { label: '看书、做计划、分析问题', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: '压力一堆起来，对身边的人我会…',
+      options: [
+        { label: '用烦躁或发火表现出来', type: 'fighter' },
+        { label: '话变少，只想一个人待着', type: 'freezer' },
+        { label: '装作没事，表现得很开朗', type: 'fleeer' },
+        { label: '找人讨主意，或把情况说清楚', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: '面对又难又不想做的事时，我会…',
+      options: [
+        { label: '冲上去，想快点做完', type: 'fighter' },
+        { label: '一拖再拖，最后被赶着做', type: 'freezer' },
+        { label: '先做容易的事，绕开它', type: 'fleeer' },
+        { label: '就算不想做，也先把计划排出来', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: '在危机里，你的角色是？',
+      options: [
+        { label: '带着队伍，做出决断', type: 'fighter' },
+        { label: '等别人来拿主意', type: 'freezer' },
+        { label: '尽快从那个情况里抽身', type: 'fleeer' },
+        { label: '收集资讯，分析出最好的解法', type: 'fixer' },
+      ],
+    },
+  ],
+  fr: [
+    {
+      id: 'q1',
+      text: 'Quand une échéance importante est soudain avancée, je…',
+      options: [
+        { label: 'passe à l’action tout de suite et je demande de l’aide', type: 'fighter' },
+        { label: 'reste figé, sans savoir par où commencer', type: 'freezer' },
+        { label: 'me change les idées et je m’en occupe plus tard', type: 'fleeer' },
+        { label: 'réorganise les priorités et je révise le plan aussitôt', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: 'Quand on me critique au travail ou à l’école, je…',
+      options: [
+        { label: 'réplique aussitôt ou je me défends', type: 'fighter' },
+        { label: 'n’arrive pas à répondre et je m’effondre intérieurement', type: 'freezer' },
+        { label: 'abrège la conversation et je quitte les lieux', type: 'fleeer' },
+        { label: 'examine si la critique est fondée et ce que je peux améliorer', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: 'Quand un gros problème surgit sans prévenir, je…',
+      options: [
+        { label: 'l’affronte tout de suite et je prends la résolution en main', type: 'fighter' },
+        { label: 'panique et j’ai du mal à décider', type: 'freezer' },
+        { label: 'ai envie de m’éloigner un moment de la réalité', type: 'fleeer' },
+        { label: 'analyse la situation et je construis une solution par étapes', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: 'Quand un conflit éclate dans mes relations, je…',
+      options: [
+        { label: 'l’affronte directement pour le régler', type: 'fighter' },
+        { label: 'ne sais pas quoi faire et j’évite la relation', type: 'freezer' },
+        { label: 'attends que la situation se règle d’elle-même', type: 'fleeer' },
+        { label: 'analyse les deux positions et je joue la médiation', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: 'Quand le stress monte au moment de dormir, je…',
+      options: [
+        { label: 'en parle à quelqu’un ou je l’évacue par l’action', type: 'fighter' },
+        { label: 'enchaîne les pensées et je n’arrive pas à dormir', type: 'freezer' },
+        { label: 'regarde des vidéos ou les réseaux jusqu’à m’endormir', type: 'fleeer' },
+        { label: 'écris la liste du lendemain pour me poser', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: 'Quand je fais une erreur, ma réaction est de…',
+      options: [
+        { label: 'réparer tout de suite et d’assumer', type: 'fighter' },
+        { label: 'me reprocher longtemps ce qui s’est passé', type: 'freezer' },
+        { label: 'penser à autre chose pour ne pas y revenir', type: 'fleeer' },
+        { label: 'comprendre pourquoi l’erreur est arrivée', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: 'Sous stress, mon corps réagit ainsi :',
+      options: [
+        { label: 'le cœur s’accélère et l’énergie monte d’un coup', type: 'fighter' },
+        { label: 'le corps se fige et je n’ai envie de rien', type: 'freezer' },
+        { label: 'j’ai envie de partir quelque part', type: 'fleeer' },
+        { label: 'les idées défilent vite et je commence à planifier', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: 'Quand la charge de travail devient trop lourde, je…',
+      options: [
+        { label: 'dis mon désaccord et je demande un ajustement', type: 'fighter' },
+        { label: 'ne sais pas par où commencer et je repousse', type: 'freezer' },
+        { label: 'découpe le travail et j’évite ce que je peux', type: 'fleeer' },
+        { label: 'fixe aussitôt les priorités et j’établis un planning', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: 'Pour évacuer le stress, ce qui m’attire le plus :',
+      options: [
+        { label: 'le sport, l’activité physique', type: 'fighter' },
+        { label: 'me reposer au lit, ne rien faire', type: 'freezer' },
+        { label: 'jeux, séries, nourriture : m’échapper un moment', type: 'fleeer' },
+        { label: 'lire, planifier, analyser le problème', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: 'Quand le stress s’accumule, avec mon entourage je…',
+      options: [
+        { label: 'le montre par de l’irritation ou de la colère', type: 'fighter' },
+        { label: 'parle moins et je veux rester seul', type: 'freezer' },
+        { label: 'fais comme si de rien n’était et j’affiche de la bonne humeur', type: 'fleeer' },
+        { label: 'demande conseil ou j’explique la situation', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: 'Face à une tâche difficile et ingrate, je…',
+      options: [
+        { label: 'fonce pour en finir vite', type: 'fighter' },
+        { label: 'repousse jusqu’à me retrouver pris de court', type: 'freezer' },
+        { label: 'commence par les tâches faciles pour l’éviter', type: 'fleeer' },
+        { label: 'établis d’abord un plan, même sans envie', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: 'En situation de crise, votre rôle est de…',
+      options: [
+        { label: 'mener l’équipe et trancher', type: 'fighter' },
+        { label: 'attendre que quelqu’un décide', type: 'freezer' },
+        { label: 'sortir de la situation au plus vite', type: 'fleeer' },
+        { label: 'rassembler les informations et chercher la meilleure solution', type: 'fixer' },
+      ],
+    },
+  ],
+  es: [
+    {
+      id: 'q1',
+      text: 'Cuando una fecha importante se adelanta de golpe, yo…',
+      options: [
+        { label: 'me pongo en marcha ya y pido ayuda', type: 'fighter' },
+        { label: 'me quedo en blanco, sin saber por dónde empezar', type: 'freezer' },
+        { label: 'me despejo un rato y lo atiendo después', type: 'fleeer' },
+        { label: 'reordeno prioridades y cambio el plan al momento', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q2',
+      text: 'Cuando me critican en el trabajo o en clase, yo…',
+      options: [
+        { label: 'respondo al momento o me defiendo', type: 'fighter' },
+        { label: 'no consigo decir nada y por dentro me hundo', type: 'freezer' },
+        { label: 'corto la conversación y me voy de ahí', type: 'fleeer' },
+        { label: 'miro si la crítica tiene razón y qué puedo mejorar', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q3',
+      text: 'Cuando surge un problema grande de repente, yo…',
+      options: [
+        { label: 'lo afronto ya y lidero la solución', type: 'fighter' },
+        { label: 'me entra el pánico y me cuesta decidir', type: 'freezer' },
+        { label: 'tengo ganas de alejarme un rato de la realidad', type: 'fleeer' },
+        { label: 'analizo la situación y armo una solución por pasos', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q4',
+      text: 'Cuando hay un conflicto en mis relaciones, yo…',
+      options: [
+        { label: 'lo afronto de frente para resolverlo', type: 'fighter' },
+        { label: 'no sé qué hacer y acabo evitando la relación', type: 'freezer' },
+        { label: 'espero a que se resuelva solo', type: 'fleeer' },
+        { label: 'analizo las dos posturas y medio con razones', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q5',
+      text: 'Si me llega el estrés antes de dormir, yo…',
+      options: [
+        { label: 'lo hablo con alguien o lo descargo con acción', type: 'fighter' },
+        { label: 'encadeno pensamientos y no consigo dormir', type: 'freezer' },
+        { label: 'miro vídeos o redes hasta que me duermo', type: 'fleeer' },
+        { label: 'escribo la lista de mañana y me ordeno la cabeza', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q6',
+      text: 'Cuando cometo un error, mi reacción es…',
+      options: [
+        { label: 'arreglarlo ya y asumirlo', type: 'fighter' },
+        { label: 'quedarme mucho tiempo reprochándomelo', type: 'freezer' },
+        { label: 'pensar en otra cosa para no darle vueltas', type: 'fleeer' },
+        { label: 'entender por qué ocurrió', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q7',
+      text: 'Con estrés, mi cuerpo reacciona así:',
+      options: [
+        { label: 'se me acelera el pulso y sube la energía', type: 'fighter' },
+        { label: 'el cuerpo se agarrota y no me apetece nada', type: 'freezer' },
+        { label: 'me entran ganas de irme a algún sitio', type: 'fleeer' },
+        { label: 'las ideas van rápido y empiezo a planificar', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q8',
+      text: 'Cuando la carga de trabajo se vuelve excesiva, yo…',
+      options: [
+        { label: 'digo que no me parece y pido ajustarla', type: 'fighter' },
+        { label: 'no sé por dónde empezar y lo aplazo', type: 'freezer' },
+        { label: 'lo trocero y esquivo lo que puedo', type: 'fleeer' },
+        { label: 'fijo prioridades enseguida y hago un calendario', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q9',
+      text: 'Para soltar el estrés, lo que más me atrae es…',
+      options: [
+        { label: 'el deporte o la actividad física', type: 'fighter' },
+        { label: 'descansar en la cama, no hacer nada', type: 'freezer' },
+        { label: 'juegos, series, comida: escaparme un rato', type: 'fleeer' },
+        { label: 'leer, planificar, analizar el problema', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q10',
+      text: 'Cuando el estrés se acumula, con los demás yo…',
+      options: [
+        { label: 'lo muestro con irritación o enfado', type: 'fighter' },
+        { label: 'hablo menos y quiero estar solo', type: 'freezer' },
+        { label: 'hago como si nada y me muestro animado', type: 'fleeer' },
+        { label: 'pido consejo o explico la situación', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q11',
+      text: 'Ante algo difícil y que no me apetece, yo…',
+      options: [
+        { label: 'me lanzo para acabarlo cuanto antes', type: 'fighter' },
+        { label: 'lo aplazo hasta que me pilla el tiempo', type: 'freezer' },
+        { label: 'empiezo por lo fácil para esquivarlo', type: 'fleeer' },
+        { label: 'aunque no me apetezca, primero hago un plan', type: 'fixer' },
+      ],
+    },
+    {
+      id: 'q12',
+      text: 'En una crisis, tu papel es…',
+      options: [
+        { label: 'llevar al equipo y decidir', type: 'fighter' },
+        { label: 'esperar a que alguien decida', type: 'freezer' },
+        { label: 'salir de esa situación cuanto antes', type: 'fleeer' },
+        { label: 'reunir información y analizar la mejor salida', type: 'fixer' },
+      ],
+    },
+  ],
 }
 
 const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
@@ -485,6 +890,33 @@ const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
       caution: '衝動的な反応が人間関係を傷つける可能性があります。',
       tip: '反応する前に3秒止まる練習で衝動をコントロールしましょう。',
     },
+    zh: {
+      icon: '⚔️',
+      title: '迎战型',
+      subtitle: '正面迎上的战士',
+      description: '你有正面迎向压力的强劲能量。出了问题就立刻行动，也拿得出决断。',
+      strengths: ['决断力', '行动力', '领导力'],
+      caution: '冲动的反应可能会伤到人际关系。',
+      tip: '反应前先停三秒，练习把冲动收住。',
+    },
+    fr: {
+      icon: '⚔️',
+      title: 'Combattant',
+      subtitle: 'Le guerrier qui fait face',
+      description: 'Vous affrontez le stress de front, avec beaucoup d’énergie. Dès qu’un problème surgit, vous agissez et vous tranchez.',
+      strengths: ['Décision', 'Capacité d’action', 'Leadership'],
+      caution: 'Une réaction impulsive peut abîmer vos relations.',
+      tip: 'Entraînez-vous à marquer trois secondes avant de réagir.',
+    },
+    es: {
+      icon: '⚔️',
+      title: 'Combativo',
+      subtitle: 'El guerrero que planta cara',
+      description: 'Afrontas el estrés de frente, con mucha energía. En cuanto surge un problema, actúas y decides.',
+      strengths: ['Decisión', 'Capacidad de acción', 'Liderazgo'],
+      caution: 'Una reacción impulsiva puede dañar tus vínculos.',
+      tip: 'Practica parar tres segundos antes de reaccionar.',
+    },
   },
   freezer: {
     ko: {
@@ -513,6 +945,33 @@ const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
       strengths: ['慎重さ', '感受性', '深い共感力'],
       caution: '麻痺状態が状況をさらに悪化させる可能性があります。',
       tip: 'まずとても小さな最初の一歩だけ踏み出すことを目標にしましょう。',
+    },
+    zh: {
+      icon: '🧊',
+      title: '冻结型',
+      subtitle: '愣住的鹿',
+      description: '面对压力时，你容易停住不动。一旦超载，判断变难，身体也跟着僵住。',
+      strengths: ['审慎', '感受细腻', '共情深'],
+      caution: '僵住的状态可能会让情况变得更糟。',
+      tip: '把目标定成「只做第一个很小的动作」。',
+    },
+    fr: {
+      icon: '🧊',
+      title: 'Figé',
+      subtitle: 'Le cerf immobile',
+      description: 'Face au stress, vous avez tendance à vous immobiliser. En surcharge, décider devient difficile et le corps se raidit.',
+      strengths: ['Prudence', 'Sensibilité', 'Empathie profonde'],
+      caution: 'L’immobilisation peut aggraver la situation.',
+      tip: 'Fixez-vous pour objectif un seul tout petit premier geste.',
+    },
+    es: {
+      icon: '🧊',
+      title: 'Congelado',
+      subtitle: 'El ciervo inmóvil',
+      description: 'Ante el estrés tiendes a quedarte quieto. Con sobrecarga, decidir se hace difícil y el cuerpo se agarrota.',
+      strengths: ['Prudencia', 'Sensibilidad', 'Empatía honda'],
+      caution: 'Quedarte inmóvil puede empeorar la situación.',
+      tip: 'Ponte como meta un único primer gesto muy pequeño.',
     },
   },
   fleeer: {
@@ -543,6 +1002,33 @@ const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
       caution: '問題が解決されず積み上がる可能性があります。',
       tip: '一時的な逃避の後、必ず問題に戻るルーティンを作りましょう。',
     },
+    zh: {
+      icon: '🦅',
+      title: '回避型',
+      subtitle: '自由的抽身者',
+      description: '你会先躲开压力，靠转换心情把力气找回来。暂时和现实拉开距离，是你自然的模式。',
+      strengths: ['弹性', '自我保护的本能', '恢复力'],
+      caution: '问题没被解决，可能会越积越多。',
+      tip: '给自己定个规矩：暂时逃开之后，一定要回到问题上。',
+    },
+    fr: {
+      icon: '🦅',
+      title: 'Fuyant',
+      subtitle: 'Celui qui prend le large',
+      description: 'Vous évitez d’abord le stress et vous récupérez en changeant d’air. Prendre un peu de distance avec la réalité est votre schéma naturel.',
+      strengths: ['Souplesse', 'Instinct de préservation', 'Capacité de récupération'],
+      caution: 'Les problèmes non traités peuvent s’accumuler.',
+      tip: 'Instaurez une règle : après la pause, revenir au problème.',
+    },
+    es: {
+      icon: '🦅',
+      title: 'Evitativo',
+      subtitle: 'Quien se aparta un rato',
+      description: 'Primero esquivas el estrés y recuperas fuerzas cambiando de aire. Tomar distancia de la realidad es tu patrón natural.',
+      strengths: ['Flexibilidad', 'Instinto de protegerte', 'Capacidad de recuperarte'],
+      caution: 'Los problemas sin tratar pueden acumularse.',
+      tip: 'Ponte una regla: después de la pausa, volver al problema.',
+    },
   },
   fixer: {
     ko: {
@@ -571,6 +1057,33 @@ const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
       strengths: ['体系的思考', '計画力', '効率性'],
       caution: '過度な分析がかえって疲労を引き起こす可能性があります。',
       tip: '時には解決せずにただ感じることも大切です。',
+    },
+    zh: {
+      icon: '🔧',
+      title: '解决型',
+      subtitle: '会分析的解题者',
+      description: '你把压力看成问题，马上去找解法。你会有条理地分析状况，并做出执行计划。',
+      strengths: ['有条理的思考', '计划力', '效率'],
+      caution: '分析过头，反而会让人更累。',
+      tip: '有时候不必解决，只是去感受，也没关系。',
+    },
+    fr: {
+      icon: '🔧',
+      title: 'Solutionneur',
+      subtitle: 'Celui qui analyse et résout',
+      description: 'Vous voyez le stress comme un problème et vous cherchez aussitôt une solution. Vous analysez la situation avec méthode et bâtissez un plan d’action.',
+      strengths: ['Pensée structurée', 'Capacité à planifier', 'Efficacité'],
+      caution: 'Trop analyser peut au contraire épuiser.',
+      tip: 'Parfois, ressentir sans chercher à résoudre suffit.',
+    },
+    es: {
+      icon: '🔧',
+      title: 'Resolutivo',
+      subtitle: 'Quien analiza y resuelve',
+      description: 'Ves el estrés como un problema y buscas solución enseguida. Analizas la situación con método y armas un plan.',
+      strengths: ['Pensamiento estructurado', 'Capacidad de planificar', 'Eficacia'],
+      caution: 'Analizar de más puede cansar todavía más.',
+      tip: 'A veces está bien solo sentir, sin resolver.',
     },
   },
 }

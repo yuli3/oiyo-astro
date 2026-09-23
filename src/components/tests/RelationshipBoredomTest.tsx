@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type BoredomLevel = 'vibrant' | 'stable' | 'slump' | 'deep'
 type Subscale = 'distance' | 'routine'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '関係のためのヒント',
     note: 'このテストは関係満足度・倦怠の研究概念に基づく自己省察用です。カップルカウンセリングや専門的診断の代替ではありません。',
   },
+  zh: {
+    title: '感情倦怠期测验',
+    subtitle: '我们现在走到哪一段了？（适合有伴侣的人）',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的关系倦怠指数是',
+    yourScore: '我的关系倦怠指数',
+    overallLabel: '综合倦怠指数',
+    distanceLabel: '情感上的距离',
+    routineLabel: '心动与日常倦怠',
+    outOf: '/ 5.0',
+    tipsLabel: '给关系的建议',
+    note: '本测验参考关系满意度与倦怠的研究概念，用于自我省思，不能替代伴侣咨询或专业评估。',
+  },
+  fr: {
+    title: 'Test de la lassitude amoureuse',
+    subtitle: 'Où en est notre relation ? (pour qui est en couple)',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice de lassitude',
+    yourScore: 'Votre indice de lassitude',
+    overallLabel: 'Indice global',
+    distanceLabel: 'Distance affective',
+    routineLabel: 'Émoi et routine',
+    outOf: '/ 5.0',
+    tipsLabel: 'Conseils pour la relation',
+    note: 'Ce test reprend les notions issues des recherches sur la satisfaction et la lassitude dans le couple, à des fins de réflexion personnelle. Il ne remplace ni une thérapie de couple ni une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test del desgaste en la pareja',
+    subtitle: '¿En qué punto está nuestra relación? (para quien tiene pareja)',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice de desgaste',
+    yourScore: 'Tu índice de desgaste',
+    overallLabel: 'Índice global',
+    distanceLabel: 'Distancia afectiva',
+    routineLabel: 'Ilusión y rutina',
+    outOf: '/ 5.0',
+    tipsLabel: 'Consejos para la relación',
+    note: 'Este test recoge las ideas de la investigación sobre satisfacción y desgaste en la pareja, para la reflexión personal. No sustituye una terapia de pareja ni una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
         '感謝と称賛をよく表現して肯定的な感情を積みましょう。',
       ],
     },
+    zh: {
+      icon: '💞',
+      title: '生气勃勃型',
+      description: '关系新鲜，连结感也高。你们对彼此的好奇和心动，维持得不错。',
+      tips: [
+        '把带来这份连结的习惯（好好说话、肢体接触）继续做下去。',
+        '一起加点新的体验，把心动更新一下。',
+        '多表达感谢和称赞，把正向的情绪攒起来。',
+      ],
+    },
+    fr: {
+      icon: '💞',
+      title: 'Relation vivante',
+      description: 'La relation est fraîche et le lien est fort. La curiosité et l’émoi que vous avez l’un pour l’autre se maintiennent bien.',
+      tips: [
+        'Poursuivez ce qui a construit ce lien : les conversations, les gestes tendres.',
+        'Ajoutez des expériences nouvelles à deux pour renouveler l’émoi.',
+        'Exprimez souvent gratitude et compliments : les émotions positives s’accumulent.',
+      ],
+    },
+    es: {
+      icon: '💞',
+      title: 'Relación viva',
+      description: 'La relación está fresca y el vínculo es fuerte. La curiosidad y la ilusión mutuas se mantienen bien.',
+      tips: [
+        'Sigue con lo que construyó ese vínculo: hablar y el contacto afectuoso.',
+        'Añadid experiencias nuevas juntos para renovar la ilusión.',
+        'Expresad a menudo gratitud y elogios: las emociones positivas se acumulan.',
+      ],
+    },
   },
   stable: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
         '安定を当然とせず、時々意識的に表現しましょう。',
         'ルーティンの間に小さなサプライズを挟みましょう。',
         'お互いの変化や近況を定期的に共有しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌿',
+      title: '安定定居型',
+      description: '你们处在舒服的稳定期。倦怠不高，但别让熟悉硬化成漠不关心，一点小小的用心会很有用。',
+      tips: [
+        '别把安稳当成理所当然，偶尔刻意说出口。',
+        '在固定的节奏里，塞一点小小的惊喜。',
+        '定期互相更新彼此的变化和近况。',
+      ],
+    },
+    fr: {
+      icon: '🌿',
+      title: 'Stabilité installée',
+      description: 'Vous êtes dans une période stable et confortable. La lassitude est faible ; veillez simplement à ce que l’habitude ne se fige pas en indifférence.',
+      tips: [
+        'Ne tenez pas la stabilité pour acquise : dites-le parfois à voix haute.',
+        'Glissez une petite surprise entre deux routines.',
+        'Prenez régulièrement des nouvelles des changements de l’autre.',
+      ],
+    },
+    es: {
+      icon: '🌿',
+      title: 'Estabilidad asentada',
+      description: 'Estáis en una etapa estable y cómoda. El desgaste es bajo; solo cuidad que lo conocido no se endurezca en indiferencia.',
+      tips: [
+        'No des la estabilidad por hecha: dilo en voz alta de vez en cuando.',
+        'Mete una pequeña sorpresa entre rutinas.',
+        'Poneos al día con regularidad sobre lo que va cambiando en cada uno.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
         '相手の良い点を意識的に見つけ直して表現しましょう。',
       ],
     },
+    zh: {
+      icon: '🍂',
+      title: '倦怠初期',
+      description: '心动少了，距离感开始出现。这可能是常见的倦怠期，而现在正是重新检视关系的好时机。',
+      tips: [
+        '把积着的委屈，用「我」的说法坦白讲出来，不带指责。',
+        '用两个人的新活动或旅行，把共同的经验重置一下。',
+        '有意识地重新去找对方的好，并把它说出口。',
+      ],
+    },
+    fr: {
+      icon: '🍂',
+      title: 'Début de lassitude',
+      description: 'L’émoi a baissé et la distance commence à se sentir. C’est souvent une phase ordinaire, et c’est le bon moment pour réexaminer la relation.',
+      tips: [
+        'Dites franchement les rancœurs accumulées, à la première personne, sans reproche.',
+        'Remettez à zéro vos expériences communes par une activité ou un voyage à deux.',
+        'Recherchez volontairement ce qui est bien chez l’autre, et dites-le.',
+      ],
+    },
+    es: {
+      icon: '🍂',
+      title: 'Inicio del desgaste',
+      description: 'La ilusión ha bajado y empieza a notarse la distancia. Suele ser una fase corriente, y es buen momento para revisar la relación.',
+      tips: [
+        'Di con franqueza lo que se ha acumulado, en primera persona y sin reproches.',
+        'Reiniciad las experiencias compartidas con una actividad o un viaje a dos.',
+        'Busca a propósito lo bueno del otro y dilo en voz alta.',
+      ],
+    },
   },
   deep: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
         '回避や沈黙ではなく、まず安全な対話の場を作りましょう。',
         '倦怠が関係自体のためか、自分の状態のためかを区別しましょう。',
         '二人だけで難しければカップルカウンセリングを検討しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌫️',
+      title: '深度倦怠型',
+      description: '情感上的距离和无力感很明显。可能到了认真检视关系方向的时候，也可以一起谈谈，或去寻求协助。',
+      tips: [
+        '与其回避和沉默，不如先做出一个能安心说话的场合。',
+        '分清楚：倦怠是来自关系本身，还是来自你自己的状态。',
+        '靠两个人的力气不够时，考虑伴侣咨询。',
+      ],
+    },
+    fr: {
+      icon: '🌫️',
+      title: 'Lassitude profonde',
+      description: 'La distance affective et le découragement sont nets. Il est peut-être temps d’examiner sérieusement la direction de la relation, d’en parler ensemble ou de chercher de l’aide.',
+      tips: [
+        'Plutôt que d’éviter ou de vous taire, créez d’abord un cadre où l’on peut parler en sécurité.',
+        'Distinguez si la lassitude vient de la relation elle-même ou de votre propre état.',
+        'Si vous n’y arrivez pas à deux, envisagez une thérapie de couple.',
+      ],
+    },
+    es: {
+      icon: '🌫️',
+      title: 'Desgaste profundo',
+      description: 'La distancia afectiva y el desánimo son claros. Quizá sea momento de revisar en serio hacia dónde va la relación, hablarlo juntos o buscar ayuda.',
+      tips: [
+        'Antes que evitar o callar, crea primero un espacio donde se pueda hablar con seguridad.',
+        'Distingue si el desgaste viene de la relación o de tu propio estado.',
+        'Si entre los dos no alcanza, valorad terapia de pareja.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'r5', subscale: 'routine', reverse: false, text: '他の人や別の人生が時々気になる' },
     { id: 'r6', subscale: 'routine', reverse: false, text: '相手との未来を描いても以前ほどときめかない' },
     { id: 'r7', subscale: 'routine', reverse: false, text: '関係への期待や情熱が冷めた気がする' },
+  ],
+  zh: [
+    { id: 'd1', subscale: 'distance', reverse: false, text: '最近和对方交心的对话变少了' },
+    { id: 'd2', subscale: 'distance', reverse: false, text: '就算待在一起，也常常各看各的手机' },
+    { id: 'd3', subscale: 'distance', reverse: false, text: '有时候对他今天过得怎样，我提不起兴趣' },
+    { id: 'd4', subscale: 'distance', reverse: false, text: '比起以前，肢体接触或表达爱意都少了' },
+    { id: 'd5', subscale: 'distance', reverse: false, text: '起了冲突，比起解开，我更常回避或沉默' },
+    { id: 'd6', subscale: 'distance', reverse: false, text: '心里委屈的地方，我常常不说，就这样过去' },
+    { id: 'd7', subscale: 'distance', reverse: false, text: '有时候一个人待着，比两个人待着更自在' },
+    { id: 'r1', subscale: 'routine', reverse: false, text: '约会或见面总是差不多，心动的感觉少了' },
+    { id: 'r2', subscale: 'routine', reverse: false, text: '这段关系，有时候感觉只是熟悉的习惯' },
+    { id: 'r3', subscale: 'routine', reverse: false, text: '我们几乎不再一起尝试新的东西' },
+    { id: 'r4', subscale: 'routine', reverse: false, text: '我有时候会想「这样下去真的好吗」' },
+    { id: 'r5', subscale: 'routine', reverse: false, text: '偶尔会好奇别人，或另一种生活' },
+    { id: 'r6', subscale: 'routine', reverse: false, text: '想到和对方的未来，也不像从前那样心跳了' },
+    { id: 'r7', subscale: 'routine', reverse: false, text: '我对这段关系的期待或热情，好像凉了' },
+  ],
+  fr: [
+    { id: 'd1', subscale: 'distance', reverse: false, text: 'Ces temps-ci, les conversations profondes avec l’autre se sont raréfiées' },
+    { id: 'd2', subscale: 'distance', reverse: false, text: 'Même ensemble, nous regardons souvent chacun notre téléphone' },
+    { id: 'd3', subscale: 'distance', reverse: false, text: 'Il m’arrive de ne pas avoir envie de savoir comment s’est passée sa journée' },
+    { id: 'd4', subscale: 'distance', reverse: false, text: 'Les gestes tendres et les marques d’affection ont diminué' },
+    { id: 'd5', subscale: 'distance', reverse: false, text: 'En cas de conflit, j’évite ou je me tais plutôt que de régler les choses' },
+    { id: 'd6', subscale: 'distance', reverse: false, text: 'Je garde souvent pour moi ce qui m’a blessé' },
+    { id: 'd7', subscale: 'distance', reverse: false, text: 'Il m’arrive d’être plus à l’aise seul qu’à deux' },
+    { id: 'r1', subscale: 'routine', reverse: false, text: 'Nos sorties se ressemblent toutes et l’émoi s’est émoussé' },
+    { id: 'r2', subscale: 'routine', reverse: false, text: 'La relation ressemble parfois à une habitude familière' },
+    { id: 'r3', subscale: 'routine', reverse: false, text: 'Nous n’essayons presque plus rien de nouveau ensemble' },
+    { id: 'r4', subscale: 'routine', reverse: false, text: 'Il m’arrive de me demander si cela peut continuer ainsi' },
+    { id: 'r5', subscale: 'routine', reverse: false, text: 'Je me demande parfois à quoi ressemblerait une autre vie, ou quelqu’un d’autre' },
+    { id: 'r6', subscale: 'routine', reverse: false, text: 'Imaginer l’avenir avec l’autre ne me fait plus le même effet' },
+    { id: 'r7', subscale: 'routine', reverse: false, text: 'Mes attentes et mon enthousiasme pour cette relation semblent refroidis' },
+  ],
+  es: [
+    { id: 'd1', subscale: 'distance', reverse: false, text: 'Últimamente hemos hablado menos de cosas hondas' },
+    { id: 'd2', subscale: 'distance', reverse: false, text: 'Aunque estemos juntos, a menudo cada uno mira su móvil' },
+    { id: 'd3', subscale: 'distance', reverse: false, text: 'A veces no me apetece saber cómo le ha ido el día' },
+    { id: 'd4', subscale: 'distance', reverse: false, text: 'Los gestos de cariño y el contacto han disminuido' },
+    { id: 'd5', subscale: 'distance', reverse: false, text: 'Ante un conflicto, evito o me callo en vez de resolverlo' },
+    { id: 'd6', subscale: 'distance', reverse: false, text: 'A menudo me guardo lo que me ha dolido' },
+    { id: 'd7', subscale: 'distance', reverse: false, text: 'A veces estoy más a gusto solo que en pareja' },
+    { id: 'r1', subscale: 'routine', reverse: false, text: 'Las citas se parecen todas y la ilusión ha bajado' },
+    { id: 'r2', subscale: 'routine', reverse: false, text: 'La relación a veces parece solo una costumbre conocida' },
+    { id: 'r3', subscale: 'routine', reverse: false, text: 'Casi no probamos nada nuevo juntos' },
+    { id: 'r4', subscale: 'routine', reverse: false, text: 'A veces me pregunto si esto puede seguir así' },
+    { id: 'r5', subscale: 'routine', reverse: false, text: 'A veces me pregunto cómo sería otra vida, u otra persona' },
+    { id: 'r6', subscale: 'routine', reverse: false, text: 'Imaginar el futuro con mi pareja ya no me hace el mismo efecto' },
+    { id: 'r7', subscale: 'routine', reverse: false, text: 'Mis expectativas y mi entusiasmo por la relación parecen enfriados' },
   ],
 }
 
