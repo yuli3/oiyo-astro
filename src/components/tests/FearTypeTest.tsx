@@ -4,10 +4,10 @@ import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type FearType = 'rejection' | 'failure' | 'loss' | 'unknown' | 'judgment'
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 interface Option { type: FearType; text: string }
@@ -76,6 +76,48 @@ const LABELS: Record<SupportedLang, {
     affirmation: 'あなたへ',
     distribution: '恐怖の分布',
     note: 'この結果は自己理解のための参考情報です。恐怖は誰もが持つもの — 理解することで成長できます。',
+  },
+  zh: {
+    title: '恐惧类型测验',
+    subtitle: '最让我害怕的是什么？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的核心恐惧类型是',
+    yourType: '我的恐惧类型',
+    traits: '主要特点',
+    growth: '成长要点',
+    affirmation: '写给你',
+    distribution: '恐惧分布',
+    note: '本结果是帮助认识自己的参考。每个人都有恐惧，理解它就能成长。',
+  },
+  fr: {
+    title: 'Test du type de peur',
+    subtitle: 'Qu’est-ce qui me fait le plus peur ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon type de peur principal',
+    yourType: 'Mon type de peur',
+    traits: 'Traits principaux',
+    growth: 'Pistes de croissance',
+    affirmation: 'Pour vous',
+    distribution: 'Répartition des peurs',
+    note: 'Ce résultat est un repère pour mieux vous connaître. Tout le monde a des peurs, et les comprendre permet de grandir.',
+  },
+  es: {
+    title: 'Test del tipo de miedo',
+    subtitle: '¿Qué es lo que más miedo me da?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi tipo de miedo principal',
+    yourType: 'Mi tipo de miedo',
+    traits: 'Rasgos principales',
+    growth: 'Claves para crecer',
+    affirmation: 'Para ti',
+    distribution: 'Distribución de los miedos',
+    note: 'Este resultado es una referencia para conocerte mejor. Todo el mundo tiene miedos, y comprenderlos permite crecer.',
   },
 }
 
@@ -518,6 +560,444 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       ],
     },
   ],
+  zh: [
+    {
+      id: 'q1', text: '想到一个新点子时，你第一个念头是？',
+      options: [
+        { type: 'rejection', text: '别人可能会觉得我很奇怪' },
+        { type: 'failure', text: '要是出错了怎么办？' },
+        { type: 'loss', text: '好像要放弃太多东西' },
+        { type: 'unknown', text: '完全无法预测结果，让我不安' },
+      ],
+    },
+    {
+      id: 'q2', text: '和亲近的人吵架时，你最怕的是？',
+      options: [
+        { type: 'rejection', text: '那个人好像会离开我' },
+        { type: 'failure', text: '必须承认是我错了' },
+        { type: 'loss', text: '好像会失去这段关系本身' },
+        { type: 'judgment', text: '其他人好像不会站在我这边' },
+      ],
+    },
+    {
+      id: 'q3', text: '面对报告或考试时，你最担心的是？',
+      options: [
+        { type: 'rejection', text: '做不好会被看不起' },
+        { type: 'failure', text: '会因为失误而搞砸' },
+        { type: 'unknown', text: '完全不知道会是什么结果' },
+        { type: 'judgment', text: '在别人眼里显得不够好' },
+      ],
+    },
+    {
+      id: 'q4', text: '在公司或学校难以发表意见的原因是？',
+      options: [
+        { type: 'rejection', text: '怕显得突出而被孤立' },
+        { type: 'failure', text: '怕说错时的难堪' },
+        { type: 'unknown', text: '预测不到会有什么反应' },
+        { type: 'judgment', text: '怕被批评或嘲笑' },
+      ],
+    },
+    {
+      id: 'q5', text: '在关系中最难受的情况是？',
+      options: [
+        { type: 'rejection', text: '对方疏远我、联系变少的时候' },
+        { type: 'failure', text: '发现我让对方失望的时候' },
+        { type: 'loss', text: '特别的关系好像要改变或结束的时候' },
+        { type: 'unknown', text: '关系的方向不明确的时候' },
+      ],
+    },
+    {
+      id: 'q6', text: '难以做决定的最大原因是？',
+      options: [
+        { type: 'rejection', text: '怕因为这个选择失去某个人' },
+        { type: 'failure', text: '怕做出错误的选择' },
+        { type: 'loss', text: '因为必须放弃某些东西' },
+        { type: 'judgment', text: '怕别人嘲笑我的选择' },
+      ],
+    },
+    {
+      id: 'q7', text: '不愿在社交媒体上发文的原因是？',
+      options: [
+        { type: 'rejection', text: '怕得不到关注' },
+        { type: 'failure', text: '不想发不完美的东西' },
+        { type: 'loss', text: '怕失去隐私' },
+        { type: 'judgment', text: '怕出现批评的留言' },
+      ],
+    },
+    {
+      id: 'q8', text: '独处时常冒出的可怕念头是？',
+      options: [
+        { type: 'rejection', text: '到头来没有人真正想要我' },
+        { type: 'failure', text: '我做得还不够好' },
+        { type: 'loss', text: '珍贵的东西好像会消失' },
+        { type: 'judgment', text: '别人要是知道真实的我会失望' },
+      ],
+    },
+    {
+      id: 'q9', text: '新环境（新工作、搬家）让你为难的原因是？',
+      options: [
+        { type: 'rejection', text: '怕没人会喜欢我' },
+        { type: 'failure', text: '怕自己适应不好' },
+        { type: 'loss', text: '害怕失去熟悉的一切' },
+        { type: 'unknown', text: '完全不知道那会是什么样的地方' },
+      ],
+    },
+    {
+      id: 'q10', text: '害怕秘密或弱点被知道的原因是？',
+      options: [
+        { type: 'rejection', text: '怕因此被抛弃' },
+        { type: 'failure', text: '好像会暴露我的失败' },
+        { type: 'judgment', text: '怕别人对我另眼相看' },
+        { type: 'unknown', text: '完全不知道会有什么反应' },
+      ],
+    },
+    {
+      id: 'q11', text: '越接近成功反而越不安的原因是？',
+      options: [
+        { type: 'rejection', text: '怕成功后被寄予更高的期待' },
+        { type: 'failure', text: '就算成功，总有一天也会崩塌' },
+        { type: 'loss', text: '怕成功会改变现在的我' },
+        { type: 'judgment', text: '怕招来嫉妒或批评' },
+      ],
+    },
+    {
+      id: 'q12', text: '最打动你的故事类型是？',
+      options: [
+        { type: 'rejection', text: '孤单的人找到真爱的故事' },
+        { type: 'failure', text: '跨越失败取得成功的故事' },
+        { type: 'loss', text: '找回失去之物的故事' },
+        { type: 'unknown', text: '在不确定的世界里寻找答案的故事' },
+      ],
+    },
+    {
+      id: 'q13', text: '难以开口请人帮忙的原因是？',
+      options: [
+        { type: 'rejection', text: '怕被拒绝' },
+        { type: 'failure', text: '请求本身好像暴露了我的无能' },
+        { type: 'judgment', text: '怕显得软弱' },
+        { type: 'unknown', text: '预测不到会有什么反应' },
+      ],
+    },
+    {
+      id: 'q14', text: '无法改变旧关系或旧习惯的原因是？',
+      options: [
+        { type: 'rejection', text: '怕改变会导致在关系中被拒绝' },
+        { type: 'loss', text: '不想失去熟悉的东西' },
+        { type: 'unknown', text: '不知道改变后会怎样' },
+        { type: 'failure', text: '怕尝试改变后失败' },
+      ],
+    },
+    {
+      id: 'q15', text: '无法追求梦想的最大原因是？',
+      options: [
+        { type: 'rejection', text: '怕说出梦想会被嘲笑' },
+        { type: 'failure', text: '太害怕失败' },
+        { type: 'loss', text: '因为要放弃安稳的东西' },
+        { type: 'unknown', text: '完全预测不到会怎样' },
+      ],
+    },
+    {
+      id: 'q16', text: '难以表达感谢或亲密的原因是？',
+      options: [
+        { type: 'rejection', text: '怕表露情感后被冷落' },
+        { type: 'failure', text: '怕表达得笨拙而搞砸' },
+        { type: 'judgment', text: '怕显得太情绪化' },
+        { type: 'unknown', text: '不知道对方会怎么反应' },
+      ],
+    },
+  ],
+  fr: [
+    {
+      id: 'q1', text: 'Quand une nouvelle idée vous vient, quelle est votre première pensée ?',
+      options: [
+        { type: 'rejection', text: 'Les gens vont me trouver bizarre' },
+        { type: 'failure', text: 'Et si ça tournait mal ?' },
+        { type: 'loss', text: 'J’ai l’impression de devoir renoncer à trop de choses' },
+        { type: 'unknown', text: 'Je suis inquiet de ne pas pouvoir prévoir le résultat' },
+      ],
+    },
+    {
+      id: 'q2', text: 'Après une dispute avec un proche, qu’est-ce qui vous fait le plus peur ?',
+      options: [
+        { type: 'rejection', text: 'Que cette personne me quitte' },
+        { type: 'failure', text: 'Devoir reconnaître que j’ai eu tort' },
+        { type: 'loss', text: 'Perdre la relation elle-même' },
+        { type: 'judgment', text: 'Que les autres ne soient pas de mon côté' },
+      ],
+    },
+    {
+      id: 'q3', text: 'Avant une présentation ou un examen, qu’est-ce qui vous inquiète le plus ?',
+      options: [
+        { type: 'rejection', text: 'Être méprisé si je rate' },
+        { type: 'failure', text: 'Tout gâcher en faisant une erreur' },
+        { type: 'unknown', text: 'Ne pas savoir du tout quel sera le résultat' },
+        { type: 'judgment', text: 'Paraître insuffisant aux yeux des autres' },
+      ],
+    },
+    {
+      id: 'q4', text: 'Pourquoi est-il difficile de donner votre avis au travail ou à l’école ?',
+      options: [
+        { type: 'rejection', text: 'Par peur de me démarquer et d’être mis à l’écart' },
+        { type: 'failure', text: 'Par peur d’avoir honte si je me trompe' },
+        { type: 'unknown', text: 'Parce que je ne peux pas prévoir les réactions' },
+        { type: 'judgment', text: 'Par peur d’être critiqué ou moqué' },
+      ],
+    },
+    {
+      id: 'q5', text: 'La situation la plus difficile dans une relation ?',
+      options: [
+        { type: 'rejection', text: 'Quand l’autre s’éloigne ou donne moins de nouvelles' },
+        { type: 'failure', text: 'Quand je découvre que je l’ai déçu' },
+        { type: 'loss', text: 'Quand une relation spéciale semble changer ou prendre fin' },
+        { type: 'unknown', text: 'Quand la direction de la relation est incertaine' },
+      ],
+    },
+    {
+      id: 'q6', text: 'La principale raison qui rend une décision difficile ?',
+      options: [
+        { type: 'rejection', text: 'La peur de perdre quelqu’un à cause de mon choix' },
+        { type: 'failure', text: 'La peur de faire le mauvais choix' },
+        { type: 'loss', text: 'Devoir renoncer à quelque chose' },
+        { type: 'judgment', text: 'La peur que les autres se moquent de mon choix' },
+      ],
+    },
+    {
+      id: 'q7', text: 'Pourquoi hésitez-vous à publier sur les réseaux ?',
+      options: [
+        { type: 'rejection', text: 'Par peur de ne pas avoir d’attention' },
+        { type: 'failure', text: 'Je ne veux pas publier quelque chose d’imparfait' },
+        { type: 'loss', text: 'Par peur de perdre ma vie privée' },
+        { type: 'judgment', text: 'Par peur des commentaires critiques' },
+      ],
+    },
+    {
+      id: 'q8', text: 'Quelle pensée effrayante vous vient souvent quand vous êtes seul ?',
+      options: [
+        { type: 'rejection', text: 'Au fond, personne ne veut vraiment de moi' },
+        { type: 'failure', text: 'Je ne fais pas assez bien les choses' },
+        { type: 'loss', text: 'Ce qui m’est cher va disparaître' },
+        { type: 'judgment', text: 'Si les gens voyaient qui je suis vraiment, ils seraient déçus' },
+      ],
+    },
+    {
+      id: 'q9', text: 'Pourquoi un nouvel environnement (nouveau travail, déménagement) est-il difficile ?',
+      options: [
+        { type: 'rejection', text: 'J’ai peur que personne ne m’apprécie' },
+        { type: 'failure', text: 'J’ai peur de mal m’adapter' },
+        { type: 'loss', text: 'J’ai peur de perdre ce qui m’est familier' },
+        { type: 'unknown', text: 'Je ne sais pas du tout à quoi m’attendre' },
+      ],
+    },
+    {
+      id: 'q10', text: 'Pourquoi craignez-vous que vos secrets ou faiblesses soient connus ?',
+      options: [
+        { type: 'rejection', text: 'Par peur d’être abandonné à cause d’eux' },
+        { type: 'failure', text: 'Parce que mes échecs seraient exposés' },
+        { type: 'judgment', text: 'Parce qu’on me regarderait autrement' },
+        { type: 'unknown', text: 'Parce que je ne sais pas du tout comment on réagirait' },
+      ],
+    },
+    {
+      id: 'q11', text: 'Pourquoi l’anxiété monte-t-elle à mesure que le succès approche ?',
+      options: [
+        { type: 'rejection', text: 'J’ai peur des attentes encore plus élevées après le succès' },
+        { type: 'failure', text: 'Même en réussissant, j’ai l’impression que tout s’effondrera un jour' },
+        { type: 'loss', text: 'J’ai peur que le succès change qui je suis' },
+        { type: 'judgment', text: 'J’ai peur de la jalousie ou des critiques' },
+      ],
+    },
+    {
+      id: 'q12', text: 'Le type d’histoire qui vous touche le plus ?',
+      options: [
+        { type: 'rejection', text: 'Une personne seule qui trouve le véritable amour' },
+        { type: 'failure', text: 'Quelqu’un qui surmonte l’échec pour réussir' },
+        { type: 'loss', text: 'Retrouver ce qu’on avait perdu' },
+        { type: 'unknown', text: 'Trouver des réponses dans un monde incertain' },
+      ],
+    },
+    {
+      id: 'q13', text: 'Pourquoi est-il difficile de demander de l’aide ?',
+      options: [
+        { type: 'rejection', text: 'Par peur d’un refus' },
+        { type: 'failure', text: 'Parce que demander semble révéler mon incompétence' },
+        { type: 'judgment', text: 'Par peur de paraître faible' },
+        { type: 'unknown', text: 'Parce que je ne peux pas prévoir la réaction' },
+      ],
+    },
+    {
+      id: 'q14', text: 'Pourquoi ne parvenez-vous pas à changer de vieilles relations ou habitudes ?',
+      options: [
+        { type: 'rejection', text: 'Le changement pourrait mener à un rejet dans la relation' },
+        { type: 'loss', text: 'Je ne veux pas perdre ce qui m’est familier' },
+        { type: 'unknown', text: 'Je ne sais pas ce qui arrivera après le changement' },
+        { type: 'failure', text: 'J’ai peur d’échouer en essayant de changer' },
+      ],
+    },
+    {
+      id: 'q15', text: 'La principale raison qui vous empêche de poursuivre vos rêves ?',
+      options: [
+        { type: 'rejection', text: 'Si j’en parle, on va se moquer de moi' },
+        { type: 'failure', text: 'J’ai trop peur d’échouer' },
+        { type: 'loss', text: 'Je devrais renoncer à ce qui est stable' },
+        { type: 'unknown', text: 'Je ne peux absolument pas prévoir ce qui arrivera' },
+      ],
+    },
+    {
+      id: 'q16', text: 'Pourquoi est-il difficile d’exprimer votre gratitude ou votre affection ?',
+      options: [
+        { type: 'rejection', text: 'Par peur d’être ignoré après avoir montré mes émotions' },
+        { type: 'failure', text: 'Par peur de tout gâcher en m’exprimant maladroitement' },
+        { type: 'judgment', text: 'Par peur de paraître trop émotif' },
+        { type: 'unknown', text: 'Parce que je ne sais pas comment l’autre réagira' },
+      ],
+    },
+  ],
+  es: [
+    {
+      id: 'q1', text: 'Cuando se te ocurre una idea nueva, ¿qué piensas primero?',
+      options: [
+        { type: 'rejection', text: 'La gente me verá como alguien raro' },
+        { type: 'failure', text: '¿Y si sale mal?' },
+        { type: 'loss', text: 'Siento que tendría que renunciar a demasiado' },
+        { type: 'unknown', text: 'Me inquieta no poder prever el resultado' },
+      ],
+    },
+    {
+      id: 'q2', text: 'Tras discutir con alguien cercano, ¿qué te da más miedo?',
+      options: [
+        { type: 'rejection', text: 'Que esa persona me deje' },
+        { type: 'failure', text: 'Tener que admitir que me equivoqué' },
+        { type: 'loss', text: 'Perder la relación en sí' },
+        { type: 'judgment', text: 'Que los demás no estén de mi parte' },
+      ],
+    },
+    {
+      id: 'q3', text: 'Ante una presentación o un examen, ¿qué te preocupa más?',
+      options: [
+        { type: 'rejection', text: 'Que me menosprecien si lo hago mal' },
+        { type: 'failure', text: 'Estropearlo todo por un error' },
+        { type: 'unknown', text: 'No tener ni idea de cuál será el resultado' },
+        { type: 'judgment', text: 'Parecer insuficiente ante los demás' },
+      ],
+    },
+    {
+      id: 'q4', text: '¿Por qué te cuesta opinar en el trabajo o en clase?',
+      options: [
+        { type: 'rejection', text: 'Por miedo a destacar y quedar aislado' },
+        { type: 'failure', text: 'Por miedo a la vergüenza de equivocarme' },
+        { type: 'unknown', text: 'Porque no puedo prever la reacción' },
+        { type: 'judgment', text: 'Por miedo a que me critiquen o se burlen' },
+      ],
+    },
+    {
+      id: 'q5', text: '¿La situación más difícil en una relación?',
+      options: [
+        { type: 'rejection', text: 'Cuando el otro se aleja o escribe menos' },
+        { type: 'failure', text: 'Cuando descubro que le he decepcionado' },
+        { type: 'loss', text: 'Cuando una relación especial parece cambiar o terminar' },
+        { type: 'unknown', text: 'Cuando no está claro hacia dónde va la relación' },
+      ],
+    },
+    {
+      id: 'q6', text: '¿La mayor razón por la que te cuesta decidir?',
+      options: [
+        { type: 'rejection', text: 'Perder a alguien por mi elección' },
+        { type: 'failure', text: 'Elegir mal' },
+        { type: 'loss', text: 'Tener que renunciar a algo' },
+        { type: 'judgment', text: 'Que los demás se rían de mi elección' },
+      ],
+    },
+    {
+      id: 'q7', text: '¿Por qué te cuesta publicar en redes sociales?',
+      options: [
+        { type: 'rejection', text: 'Por miedo a no recibir atención' },
+        { type: 'failure', text: 'No quiero publicar algo imperfecto' },
+        { type: 'loss', text: 'Por miedo a perder mi privacidad' },
+        { type: 'judgment', text: 'Por miedo a comentarios críticos' },
+      ],
+    },
+    {
+      id: 'q8', text: '¿Qué pensamiento aterrador te viene a menudo cuando estás solo?',
+      options: [
+        { type: 'rejection', text: 'Al final, nadie me quiere de verdad' },
+        { type: 'failure', text: 'No lo estoy haciendo lo bastante bien' },
+        { type: 'loss', text: 'Lo que me importa va a desaparecer' },
+        { type: 'judgment', text: 'Si la gente conociera mi verdadero yo, se decepcionaría' },
+      ],
+    },
+    {
+      id: 'q9', text: '¿Por qué te cuesta un entorno nuevo (trabajo nuevo, mudanza)?',
+      options: [
+        { type: 'rejection', text: 'Me da miedo no caerle bien a nadie' },
+        { type: 'failure', text: 'Me da miedo no adaptarme' },
+        { type: 'loss', text: 'Me da miedo perder lo conocido' },
+        { type: 'unknown', text: 'No tengo ni idea de cómo será' },
+      ],
+    },
+    {
+      id: 'q10', text: '¿Por qué temes que se conozcan tus secretos o debilidades?',
+      options: [
+        { type: 'rejection', text: 'Por miedo a que me abandonen por ello' },
+        { type: 'failure', text: 'Porque quedarían expuestos mis fracasos' },
+        { type: 'judgment', text: 'Porque me verían de otra manera' },
+        { type: 'unknown', text: 'Porque no tengo ni idea de cómo reaccionarían' },
+      ],
+    },
+    {
+      id: 'q11', text: '¿Por qué te inquietas más cuanto más cerca está el éxito?',
+      options: [
+        { type: 'rejection', text: 'Me asustan las expectativas más altas tras el éxito' },
+        { type: 'failure', text: 'Aunque triunfe, siento que algún día se derrumbará' },
+        { type: 'loss', text: 'Temo que el éxito cambie quien soy' },
+        { type: 'judgment', text: 'Temo la envidia o las críticas' },
+      ],
+    },
+    {
+      id: 'q12', text: '¿El tipo de historia que más te emociona?',
+      options: [
+        { type: 'rejection', text: 'Alguien solo que encuentra el amor verdadero' },
+        { type: 'failure', text: 'Superar el fracaso y alcanzar el éxito' },
+        { type: 'loss', text: 'Recuperar lo que se había perdido' },
+        { type: 'unknown', text: 'Encontrar respuestas en un mundo incierto' },
+      ],
+    },
+    {
+      id: 'q13', text: '¿Por qué te cuesta pedir ayuda?',
+      options: [
+        { type: 'rejection', text: 'Por miedo a que me digan que no' },
+        { type: 'failure', text: 'Pedir parece mostrar mi incompetencia' },
+        { type: 'judgment', text: 'Por miedo a parecer débil' },
+        { type: 'unknown', text: 'Porque no puedo prever la reacción' },
+      ],
+    },
+    {
+      id: 'q14', text: '¿Por qué no consigues cambiar relaciones o hábitos antiguos?',
+      options: [
+        { type: 'rejection', text: 'El cambio podría llevar a un rechazo en la relación' },
+        { type: 'loss', text: 'No quiero perder lo conocido' },
+        { type: 'unknown', text: 'No sé qué pasará tras el cambio' },
+        { type: 'failure', text: 'Temo fracasar si intento cambiar' },
+      ],
+    },
+    {
+      id: 'q15', text: '¿La mayor razón por la que no persigues tus sueños?',
+      options: [
+        { type: 'rejection', text: 'Si los cuento, se reirán de mí' },
+        { type: 'failure', text: 'Me da demasiado miedo fracasar' },
+        { type: 'loss', text: 'Tendría que renunciar a lo estable' },
+        { type: 'unknown', text: 'No puedo prever en absoluto qué pasará' },
+      ],
+    },
+    {
+      id: 'q16', text: '¿Por qué te cuesta expresar gratitud o cercanía?',
+      options: [
+        { type: 'rejection', text: 'Por miedo a que me ignoren tras mostrar mis emociones' },
+        { type: 'failure', text: 'Por miedo a estropearlo expresándome con torpeza' },
+        { type: 'judgment', text: 'Por miedo a parecer demasiado emocional' },
+        { type: 'unknown', text: 'Porque no sé cómo reaccionará el otro' },
+      ],
+    },
+  ],
 }
 
 const RESULTS: Record<FearType, Record<SupportedLang, ResultData>> = {
@@ -546,6 +1026,30 @@ const RESULTS: Record<FearType, Record<SupportedLang, ResultData>> = {
       growth: 'まず自己受容の練習が必要です。本当に愛してくれる人はあなたのミスがあっても傍にいます。全員の承認を得る必要はありません。',
       affirmation: 'あなたは何かを達成したからではなく、存在するだけで愛される価値があります。',
     },
+    zh: {
+      title: '💔 害怕被拒绝型',
+      subtitle: '害怕不被爱的你',
+      coreDescription: '核心恐惧是被抛弃与失去归属。你渴望关系中的深度连结，但对拒绝的恐惧有时反而妨碍了真正的连结。',
+      traits: ['对关系投入很深', '认可需求强烈', '倾向回避冲突', '对被独自留下很敏感'],
+      growth: '需要先练习接纳自己。爱你的人，在你犯错时也会在你身边。你不需要得到每个人的认可。',
+      affirmation: '你值得被爱，不是因为你做到了什么，而是因为你本身。',
+    },
+    fr: {
+      title: '💔 Peur du rejet',
+      subtitle: 'Vous qui craignez de ne pas être aimé',
+      coreDescription: 'Votre peur centrale est l’abandon et la perte d’appartenance. Vous désirez des liens profonds, mais la peur du rejet peut justement entraver une vraie connexion.',
+      traits: ['Un fort investissement dans les relations', 'Un grand besoin d’approbation', 'Une tendance à éviter les conflits', 'Une sensibilité à l’idée d’être laissé seul'],
+      growth: 'Entraînez-vous d’abord à vous accepter vous-même. Ceux qui vous aiment restent à vos côtés même quand vous vous trompez. Vous n’avez pas besoin de l’approbation de tout le monde.',
+      affirmation: 'Vous méritez d’être aimé non pour ce que vous accomplissez, mais pour ce que vous êtes.',
+    },
+    es: {
+      title: '💔 Miedo al rechazo',
+      subtitle: 'Tú, que temes no ser querido',
+      coreDescription: 'Tu miedo central es el abandono y la pérdida de pertenencia. Deseas conexiones profundas, pero el miedo al rechazo a veces impide precisamente una conexión real.',
+      traits: ['Te implicas mucho en las relaciones', 'Gran necesidad de aprobación', 'Tendencia a evitar conflictos', 'Sensibilidad a quedarte solo'],
+      growth: 'Necesitas practicar primero aceptarte a ti mismo. Quien te quiere sigue a tu lado aunque te equivoques. No necesitas la aprobación de todo el mundo.',
+      affirmation: 'Mereces amor no por lo que logras, sino por quien eres.',
+    },
   },
   failure: {
     ko: {
@@ -571,6 +1075,30 @@ const RESULTS: Record<FearType, Record<SupportedLang, ResultData>> = {
       traits: ['完璧主義の傾向', '高い達成基準', '批判に敏感', 'ミスをいつまでも引きずる傾向'],
       growth: 'ミスを学習過程として再定義しましょう。完璧な準備ができるまで待っていると、始めること自体ができなくなります。失敗は終着点ではなく過程です。',
       affirmation: 'あなたの価値は成果ではなく存在そのものにあります。十分によいことで十分です。',
+    },
+    zh: {
+      title: '📉 害怕失败型',
+      subtitle: '“必须够好”的压力',
+      coreDescription: '核心恐惧是不够好与无能。你标准很高、不断努力，却对失误和失败极度敏感。',
+      traits: ['完美主义倾向', '成就标准很高', '对批评敏感', '会反复咀嚼失误'],
+      growth: '把失误重新定义为学习的过程。如果等到完美准备好才开始，可能永远开始不了。失败不是终点，而是过程。',
+      affirmation: '你的价值在于你本身，而不是成果。“够好”就已经足够。',
+    },
+    fr: {
+      title: '📉 Peur de l’échec',
+      subtitle: 'La pression d’être « assez bien »',
+      coreDescription: 'Votre peur centrale est l’insuffisance et l’incompétence. Vous avez des exigences élevées et faites sans cesse des efforts, mais vous êtes extrêmement sensible aux erreurs et aux échecs.',
+      traits: ['Tendance perfectionniste', 'Des standards de réussite élevés', 'Sensibilité à la critique', 'Tendance à ressasser ses erreurs'],
+      growth: 'Redéfinissez l’erreur comme une étape d’apprentissage. À attendre d’être parfaitement prêt, on risque de ne jamais commencer. L’échec n’est pas une destination, c’est un passage.',
+      affirmation: 'Votre valeur tient à ce que vous êtes, pas à vos résultats. « Assez bien », c’est assez.',
+    },
+    es: {
+      title: '📉 Miedo al fracaso',
+      subtitle: 'La presión de tener que ser «suficientemente bueno»',
+      coreDescription: 'Tu miedo central es la insuficiencia y la incompetencia. Tienes estándares altos y te esfuerzas sin parar, pero eres extremadamente sensible a los errores y fracasos.',
+      traits: ['Tendencia perfeccionista', 'Estándares de logro altos', 'Sensibilidad a la crítica', 'Tendencia a darle vueltas a los errores'],
+      growth: 'Redefine el error como parte del aprendizaje. Si esperas a estar perfectamente preparado, puede que nunca empieces. El fracaso no es el destino, es el camino.',
+      affirmation: 'Tu valor está en quién eres, no en tus resultados. «Suficientemente bueno» ya es suficiente.',
     },
   },
   loss: {
@@ -598,6 +1126,30 @@ const RESULTS: Record<FearType, Record<SupportedLang, ResultData>> = {
       growth: '手を開いて手放すとき、より多くのものが入ってきます。すべてをコントロールできないという事実を受け入れることが自由への道です。',
       affirmation: '失うことを恐れるほど、あなたがそれをどれほど大切にしているかを示しています。その深さは美しい強さです。',
     },
+    zh: {
+      title: '🌊 害怕失去型',
+      subtitle: '紧紧抓住、不愿失去的你',
+      coreDescription: '核心恐惧是失去掌控和珍贵的东西。你有强烈的欲望，想保住让你感到安全的一切。',
+      traits: ['掌控欲强', '抗拒变化', '容易执着于珍贵之物', '离别与结束格外难熬'],
+      growth: '放开手中的东西，才能迎来更多。接受无法掌控一切，是通往自由的路。',
+      affirmation: '你有多害怕失去，就说明你有多珍惜。这份心意是美好的优势。',
+    },
+    fr: {
+      title: '🌊 Peur de la perte',
+      subtitle: 'Vous qui serrez fort pour ne rien perdre',
+      coreDescription: 'Votre peur centrale est la perte de contrôle et de ce qui vous est cher. Vous avez un fort besoin de préserver ce qui vous donne un sentiment de sécurité.',
+      traits: ['Un fort besoin de contrôle', 'Une résistance au changement', 'Une tendance à s’attacher à ce qui est précieux', 'Des séparations et des fins particulièrement difficiles'],
+      growth: 'En desserrant la main, on laisse entrer davantage. Accepter qu’on ne peut pas tout contrôler est le chemin de la liberté.',
+      affirmation: 'Votre peur de perdre montre à quel point vous tenez aux choses. Cette sensibilité est une belle force.',
+    },
+    es: {
+      title: '🌊 Miedo a la pérdida',
+      subtitle: 'Tú, que aprietas fuerte para no perder nada',
+      coreDescription: 'Tu miedo central es perder el control y lo que te importa. Tienes una fuerte necesidad de conservar lo que te da seguridad.',
+      traits: ['Fuerte necesidad de control', 'Resistencia al cambio', 'Tendencia a aferrarte a lo valioso', 'Las despedidas y los finales te cuestan especialmente'],
+      growth: 'Cuando sueltas lo que tienes en la mano, entra más. Aceptar que no puedes controlarlo todo es el camino hacia la libertad.',
+      affirmation: 'Cuanto más temes perder, más demuestras lo que valoras. Ese sentimiento es una hermosa fortaleza.',
+    },
   },
   unknown: {
     ko: {
@@ -624,6 +1176,30 @@ const RESULTS: Record<FearType, Record<SupportedLang, ResultData>> = {
       growth: '確実性がなくても一歩踏み出す練習が必要です。すべてを知ってから始める必要はありません。不確実な中でも人生は続きます。',
       affirmation: '未知を恐れるほどあなたは慎重で思慮深い。その慎重さを信じて一歩進んでも大丈夫です。',
     },
+    zh: {
+      title: '🌑 害怕不确定型',
+      subtitle: '最怕无法预测的你',
+      coreDescription: '核心恐惧是未知与变化。你强烈渴望确定性，花很多精力收集信息、分析决定。',
+      traits: ['有计划、准备周全', '容易过度收集信息', '决定拖延（分析瘫痪）', '偏好可预测的环境'],
+      growth: '需要练习在没有确定性时也迈出一步。不是非得全部弄清楚才能开始。在不确定中，生活依然继续。',
+      affirmation: '你有多怕未知，就有多谨慎体贴。相信这份谨慎，往前迈一步也没关系。',
+    },
+    fr: {
+      title: '🌑 Peur de l’incertitude',
+      subtitle: 'Vous que l’imprévisible effraie le plus',
+      coreDescription: 'Votre peur centrale est l’inconnu et le changement. Vous désirez intensément la certitude et consacrez beaucoup d’énergie à collecter des informations et à analyser vos décisions.',
+      traits: ['Planification et préparation minutieuses', 'Tendance à accumuler trop d’informations', 'Décisions repoussées (paralysie par l’analyse)', 'Préférence pour les environnements prévisibles'],
+      growth: 'Entraînez-vous à avancer d’un pas même sans certitude. Il n’est pas nécessaire de tout savoir pour commencer. La vie continue aussi dans l’incertitude.',
+      affirmation: 'Votre peur de l’inconnu fait de vous quelqu’un de prudent et réfléchi. Vous pouvez faire confiance à cette prudence et avancer d’un pas.',
+    },
+    es: {
+      title: '🌑 Miedo a la incertidumbre',
+      subtitle: 'Tú, a quien lo imprevisible asusta más',
+      coreDescription: 'Tu miedo central es lo desconocido y el cambio. Deseas intensamente la certeza y dedicas mucha energía a reunir información y analizar decisiones.',
+      traits: ['Planificación y preparación minuciosas', 'Tendencia a acumular demasiada información', 'Decisiones aplazadas (parálisis por análisis)', 'Preferencia por entornos previsibles'],
+      growth: 'Necesitas practicar dar un paso aunque no haya certeza. No hace falta saberlo todo para empezar. La vida sigue también en la incertidumbre.',
+      affirmation: 'Cuanto más temes lo desconocido, más prudente y reflexivo eres. Puedes confiar en esa prudencia y dar un paso adelante.',
+    },
   },
   judgment: {
     ko: {
@@ -649,6 +1225,30 @@ const RESULTS: Record<FearType, Record<SupportedLang, ResultData>> = {
       traits: ['高い社会的意識', '強い自己検閲傾向', 'イメージ管理にエネルギーを使う', '人前での緊張'],
       growth: 'あなたを最も厳しく批判しているのは自分自身かもしれません。他の人はあなたが思うほどあなたに注目していません。',
       affirmation: '他者の視線を気にするあなたはそれだけ繊細で共感力が高い。その感受性があなたの強みです。',
+    },
+    zh: {
+      title: '👁️ 害怕评价型',
+      subtitle: '害怕别人眼光的你',
+      coreDescription: '核心恐惧是批评、羞耻和他人的评判。你很在意别人怎么看你，可能因此压抑自我表达。',
+      traits: ['社会意识很强', '倾向自我审查', '在形象管理上耗费精力', '在众人面前紧张'],
+      growth: '对你最苛刻的批评者，可能就是你自己。别人并没有你以为的那么关注你。',
+      affirmation: '在意别人眼光的你，同样是细腻、共情能力很强的人。这份敏感是你的优势。',
+    },
+    fr: {
+      title: '👁️ Peur du jugement',
+      subtitle: 'Vous qui craignez le regard des autres',
+      coreDescription: 'Votre peur centrale est la critique, la honte et le jugement d’autrui. Vous êtes très conscient de la façon dont les autres vous voient, ce qui peut freiner votre expression.',
+      traits: ['Grande conscience sociale', 'Tendance à l’autocensure', 'De l’énergie dépensée à soigner son image', 'Nervosité devant un public'],
+      growth: 'Votre critique le plus sévère, c’est peut-être vous. Les autres ne vous observent pas autant que vous le pensez.',
+      affirmation: 'Si vous êtes attentif au regard des autres, c’est aussi que vous êtes délicat et empathique. Cette sensibilité est votre force.',
+    },
+    es: {
+      title: '👁️ Miedo al juicio',
+      subtitle: 'Tú, que temes la mirada de los demás',
+      coreDescription: 'Tu miedo central es la crítica, la vergüenza y el juicio ajeno. Eres muy consciente de cómo te ven los demás, y eso puede frenar tu forma de expresarte.',
+      traits: ['Gran conciencia social', 'Tendencia a la autocensura', 'Energía gastada en cuidar la imagen', 'Nervios delante de la gente'],
+      growth: 'Quizá tu crítico más duro seas tú. Los demás no se fijan en ti tanto como crees.',
+      affirmation: 'Si te importa la mirada ajena, es porque eres sensible y empático. Esa sensibilidad es tu fortaleza.',
     },
   },
 }
