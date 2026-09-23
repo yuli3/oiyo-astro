@@ -7,10 +7,10 @@ import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
 type Chronotype = 'lion' | 'bear' | 'wolf' | 'dolphin'
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 interface Option { type: Chronotype; text: string }
@@ -75,6 +75,45 @@ const LABELS: Record<SupportedLang, {
     traits: '主な特性',
     tips: '実践アドバイス',
     note: 'Dr. Michael Breusのクロノタイプモデルに基づいています。専門的診断の代替ではありません。',
+  },
+  zh: {
+    title: '睡眠时型测验',
+    subtitle: '我是狮子型、熊型、狼型，还是海豚型？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的睡眠时型是',
+    yourType: '我的时型',
+    optimalSleep: '最适合的睡眠时段',
+    traits: '主要特征',
+    tips: '实践建议',
+    note: '本测验参考 Michael Breus 博士的时型模型，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test du chronotype de sommeil',
+    subtitle: 'Suis-je lion, ours, loup ou dauphin ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon chronotype de sommeil',
+    yourType: 'Votre chronotype',
+    optimalSleep: 'Créneau de sommeil optimal',
+    traits: 'Traits principaux',
+    tips: 'Conseils pratiques',
+    note: 'Ce test s’appuie sur le modèle des chronotypes du Dr Michael Breus. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de cronotipo de sueño',
+    subtitle: '¿Soy león, oso, lobo o delfín?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi cronotipo de sueño',
+    yourType: 'Tu cronotipo',
+    optimalSleep: 'Franja de sueño óptima',
+    traits: 'Rasgos principales',
+    tips: 'Consejos prácticos',
+    note: 'Este test se apoya en el modelo de cronotipos del Dr. Michael Breus. No sustituye una evaluación profesional.',
   },
 }
 
@@ -517,6 +556,444 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       ],
     },
   ],
+  zh: [
+    {
+      id: 'q1', text: '不用闹钟时，你自然醒的时间是？',
+      options: [
+        { type: 'lion', text: '早上五到六点' },
+        { type: 'bear', text: '早上七到八点' },
+        { type: 'wolf', text: '早上九到十点以后' },
+        { type: 'dolphin', text: '时间不规律，而且总是累' },
+      ],
+    },
+    {
+      id: 'q2', text: '你注意力最好的时段是？',
+      options: [
+        { type: 'lion', text: '上午八到十点' },
+        { type: 'bear', text: '上午十点到下午两点' },
+        { type: 'wolf', text: '晚上六点以后' },
+        { type: 'dolphin', text: '没有固定时段，起伏不定' },
+      ],
+    },
+    {
+      id: 'q3', text: '周末早上多出空闲时，你会…',
+      options: [
+        { type: 'lion', text: '照平常时间起床，享受早晨' },
+        { type: 'bear', text: '比平常晚起一两个小时' },
+        { type: 'wolf', text: '能睡多晚就睡多晚' },
+        { type: 'dolphin', text: '睡再久也不清爽' },
+      ],
+    },
+    {
+      id: 'q4', text: '晚餐后你的精神状态是？',
+      options: [
+        { type: 'lion', text: '开始犯困，想早点上床' },
+        { type: 'bear', text: '还算有劲，但十点左右会困' },
+        { type: 'wolf', text: '反而更精神，创意也上来' },
+        { type: 'dolphin', text: '起伏不定，疲惫一直挂着' },
+      ],
+    },
+    {
+      id: 'q5', text: '你入睡需要多久？',
+      options: [
+        { type: 'lion', text: '躺下很快就着（五到十分钟）' },
+        { type: 'bear', text: '大约十五到二十分钟' },
+        { type: 'wolf', text: '超过三十分钟，或要很晚才有睡意' },
+        { type: 'dolphin', text: '难入睡，而且中途常醒' },
+      ],
+    },
+    {
+      id: 'q6', text: '你最偏好的会议或约见时段是？',
+      options: [
+        { type: 'lion', text: '一早（八到十点）' },
+        { type: 'bear', text: '上午中段到中午（十点到十二点）' },
+        { type: 'wolf', text: '傍晚以后（五点之后）' },
+        { type: 'dolphin', text: '安排日程这件事本身就让我有压力' },
+      ],
+    },
+    {
+      id: 'q7', text: '早上醒来时你的状态是？',
+      options: [
+        { type: 'lion', text: '马上就能精神地开始一天' },
+        { type: 'bear', text: '十五到三十分钟就完全清醒' },
+        { type: 'wolf', text: '整个上午都像在雾里' },
+        { type: 'dolphin', text: '好像没睡好，总是累' },
+      ],
+    },
+    {
+      id: 'q8', text: '如果晚上十一点有个好玩的聚会…',
+      options: [
+        { type: 'lion', text: '已经困了，想早睡或干脆不去' },
+        { type: 'bear', text: '会去，但半夜就想回家' },
+        { type: 'wolf', text: '夜越深越开心' },
+        { type: 'dolphin', text: '想去，但担心隔天会累' },
+      ],
+    },
+    {
+      id: 'q9', text: '做创作或写东西时，你状态最好的是？',
+      options: [
+        { type: 'lion', text: '清早' },
+        { type: 'bear', text: '上午中段' },
+        { type: 'wolf', text: '晚上或深夜' },
+        { type: 'dolphin', text: '说不准——有时深夜，有时凌晨' },
+      ],
+    },
+    {
+      id: 'q10', text: '你对咖啡或咖啡因的依赖？',
+      options: [
+        { type: 'lion', text: '几乎不需要' },
+        { type: 'bear', text: '早上一两杯' },
+        { type: 'wolf', text: '下午也会喝' },
+        { type: 'dolphin', text: '没有就撑不过一天' },
+      ],
+    },
+    {
+      id: 'q11', text: '出门旅行时，你倒时差的情况？',
+      options: [
+        { type: 'lion', text: '很快适应当地时间' },
+        { type: 'bear', text: '几天就好了' },
+        { type: 'wolf', text: '反而有夜间时段的地方更舒服' },
+        { type: 'dolphin', text: '跟时差无关，我一直睡不好' },
+      ],
+    },
+    {
+      id: 'q12', text: '最适合你运动的时间是？',
+      options: [
+        { type: 'lion', text: '清早' },
+        { type: 'bear', text: '上午晚些到午前后' },
+        { type: 'wolf', text: '下午晚些到傍晚' },
+        { type: 'dolphin', text: '运动完反而睡不着或太亢奋' },
+      ],
+    },
+    {
+      id: 'q13', text: '你理想的就寝时间是？',
+      options: [
+        { type: 'lion', text: '晚上九到十点' },
+        { type: 'bear', text: '晚上十到十一点' },
+        { type: 'wolf', text: '午夜之后' },
+        { type: 'dolphin', text: '很难维持规律的就寝时间' },
+      ],
+    },
+    {
+      id: 'q14', text: '你对午睡的看法是？',
+      options: [
+        { type: 'lion', text: '午睡会影响晚上的睡眠' },
+        { type: 'bear', text: '二十到三十分钟的午睡能让下午回神' },
+        { type: 'wolf', text: '怕一睡就把整个下午报销，所以不敢睡' },
+        { type: 'dolphin', text: '想睡，但睡了也不清爽' },
+      ],
+    },
+    {
+      id: 'q15', text: '晚上看着待办清单时，你会想…',
+      options: [
+        { type: 'lion', text: '明早早点开始就都做得完' },
+        { type: 'bear', text: '晚上先处理一部分，明天收尾' },
+        { type: 'wolf', text: '晚上做反而效率高得多' },
+        { type: 'dolphin', text: '会先担心起来，大概会睡不着' },
+      ],
+    },
+    {
+      id: 'q16', text: '你平日和周末的睡眠差别是？',
+      options: [
+        { type: 'lion', text: '几乎一样' },
+        { type: 'bear', text: '周末晚睡一两个小时' },
+        { type: 'wolf', text: '周末晚得多，起得也晚' },
+        { type: 'dolphin', text: '不管平日还是周末，都睡不好' },
+      ],
+    },
+  ],
+  fr: [
+    {
+      id: 'q1', text: 'Sans réveil, à quelle heure vous levez-vous naturellement ?',
+      options: [
+        { type: 'lion', text: 'Entre 5 h et 6 h' },
+        { type: 'bear', text: 'Entre 7 h et 8 h' },
+        { type: 'wolf', text: 'À partir de 9 h ou 10 h' },
+        { type: 'dolphin', text: 'À des heures irrégulières, et toujours fatigué' },
+      ],
+    },
+    {
+      id: 'q2', text: 'À quel moment votre concentration est-elle la meilleure ?',
+      options: [
+        { type: 'lion', text: 'Entre 8 h et 10 h' },
+        { type: 'bear', text: 'Entre 10 h et 14 h' },
+        { type: 'wolf', text: 'Après 18 h' },
+        { type: 'dolphin', text: 'Sans horaire fixe, cela varie' },
+      ],
+    },
+    {
+      id: 'q3', text: 'Un matin de week-end libre, vous…',
+      options: [
+        { type: 'lion', text: 'vous levez à l’heure habituelle et savourez la matinée' },
+        { type: 'bear', text: 'vous levez une ou deux heures plus tard' },
+        { type: 'wolf', text: 'dormez le plus tard possible' },
+        { type: 'dolphin', text: 'dormez longtemps sans vous sentir frais' },
+      ],
+    },
+    {
+      id: 'q4', text: 'Après le dîner, votre énergie est…',
+      options: [
+        { type: 'lion', text: 'en baisse, vous avez envie de vous coucher tôt' },
+        { type: 'bear', text: 'encore bonne, mais le sommeil vient vers 22 h' },
+        { type: 'wolf', text: 'plutôt en hausse, avec un regain de créativité' },
+        { type: 'dolphin', text: 'irrégulière, avec une fatigue persistante' },
+      ],
+    },
+    {
+      id: 'q5', text: 'Combien de temps mettez-vous à vous endormir ?',
+      options: [
+        { type: 'lion', text: 'Je m’endors vite une fois couché (5 à 10 minutes)' },
+        { type: 'bear', text: 'Environ 15 à 20 minutes' },
+        { type: 'wolf', text: 'Plus de 30 minutes, ou le sommeil ne vient que tard' },
+        { type: 'dolphin', text: 'J’ai du mal à m’endormir et je me réveille souvent' },
+      ],
+    },
+    {
+      id: 'q6', text: 'Quel créneau préférez-vous pour une réunion ou un rendez-vous ?',
+      options: [
+        { type: 'lion', text: 'Tôt le matin (8 h à 10 h)' },
+        { type: 'bear', text: 'En milieu de matinée jusqu’à midi' },
+        { type: 'wolf', text: 'En fin d’après-midi ou le soir (après 17 h)' },
+        { type: 'dolphin', text: 'Le fait même de planifier me stresse' },
+      ],
+    },
+    {
+      id: 'q7', text: 'Au réveil, votre état est…',
+      options: [
+        { type: 'lion', text: 'immédiatement actif, prêt à démarrer' },
+        { type: 'bear', text: 'complètement réveillé en 15 à 30 minutes' },
+        { type: 'wolf', text: 'dans le brouillard toute la matinée' },
+        { type: 'dolphin', text: 'fatigué, comme si je n’avais pas dormi' },
+      ],
+    },
+    {
+      id: 'q8', text: 'Si une soirée sympa commence à 23 h…',
+      options: [
+        { type: 'lion', text: 'j’ai déjà sommeil, je préfère me coucher ou décliner' },
+        { type: 'bear', text: 'j’y vais, mais je veux rentrer vers minuit' },
+        { type: 'wolf', text: 'plus la nuit avance, plus j’en profite' },
+        { type: 'dolphin', text: 'j’ai envie d’y aller, mais je crains la fatigue du lendemain' },
+      ],
+    },
+    {
+      id: 'q9', text: 'Pour créer ou écrire, votre meilleure forme est…',
+      options: [
+        { type: 'lion', text: 'tôt le matin' },
+        { type: 'bear', text: 'en milieu de matinée' },
+        { type: 'wolf', text: 'le soir ou tard dans la nuit' },
+        { type: 'dolphin', text: 'imprévisible — parfois la nuit, parfois à l’aube' },
+      ],
+    },
+    {
+      id: 'q10', text: 'Votre rapport au café ou à la caféine ?',
+      options: [
+        { type: 'lion', text: 'Je n’en ai presque pas besoin' },
+        { type: 'bear', text: 'Une ou deux tasses le matin' },
+        { type: 'wolf', text: 'J’en bois aussi l’après-midi' },
+        { type: 'dolphin', text: 'Sans caféine, je ne tiens pas la journée' },
+      ],
+    },
+    {
+      id: 'q11', text: 'En voyage, votre adaptation au décalage horaire ?',
+      options: [
+        { type: 'lion', text: 'Je m’aligne vite sur l’heure locale' },
+        { type: 'bear', text: 'Quelques jours et ça va' },
+        { type: 'wolf', text: 'Je me sens même mieux là où la vie est nocturne' },
+        { type: 'dolphin', text: 'Décalage ou pas, je dors mal de toute façon' },
+      ],
+    },
+    {
+      id: 'q12', text: 'Le meilleur moment pour faire du sport ?',
+      options: [
+        { type: 'lion', text: 'Tôt le matin' },
+        { type: 'bear', text: 'En fin de matinée ou autour de midi' },
+        { type: 'wolf', text: 'En fin d’après-midi ou le soir' },
+        { type: 'dolphin', text: 'Après le sport, je ne trouve pas le sommeil ou je suis trop excité' },
+      ],
+    },
+    {
+      id: 'q13', text: 'Votre heure de coucher idéale ?',
+      options: [
+        { type: 'lion', text: 'Entre 21 h et 22 h' },
+        { type: 'bear', text: 'Entre 22 h et 23 h' },
+        { type: 'wolf', text: 'Après minuit' },
+        { type: 'dolphin', text: 'J’ai du mal à tenir une heure régulière' },
+      ],
+    },
+    {
+      id: 'q14', text: 'Votre rapport à la sieste ?',
+      options: [
+        { type: 'lion', text: 'Une sieste perturbe ma nuit' },
+        { type: 'bear', text: '20 à 30 minutes me relancent pour l’après-midi' },
+        { type: 'wolf', text: 'J’ai peur de perdre tout l’après-midi, alors j’évite' },
+        { type: 'dolphin', text: 'J’aimerais dormir, mais la sieste ne me repose pas' },
+      ],
+    },
+    {
+      id: 'q15', text: 'Le soir, devant votre liste de tâches, vous vous dites…',
+      options: [
+        { type: 'lion', text: 'en démarrant tôt demain matin, je viendrai à bout de tout' },
+        { type: 'bear', text: 'j’en fais une partie ce soir et je termine demain' },
+        { type: 'wolf', text: 'le soir, je travaille bien mieux' },
+        { type: 'dolphin', text: 'l’inquiétude monte et je risque de mal dormir' },
+      ],
+    },
+    {
+      id: 'q16', text: 'Vos habitudes de sommeil en semaine et le week-end ?',
+      options: [
+        { type: 'lion', text: 'Presque identiques' },
+        { type: 'bear', text: 'Je me couche une ou deux heures plus tard le week-end' },
+        { type: 'wolf', text: 'Beaucoup plus tard le week-end, et je me lève tard' },
+        { type: 'dolphin', text: 'Semaine ou week-end, je dors mal' },
+      ],
+    },
+  ],
+  es: [
+    {
+      id: 'q1', text: 'Sin despertador, ¿a qué hora te levantas de forma natural?',
+      options: [
+        { type: 'lion', text: 'Entre las 5 y las 6' },
+        { type: 'bear', text: 'Entre las 7 y las 8' },
+        { type: 'wolf', text: 'A partir de las 9 o las 10' },
+        { type: 'dolphin', text: 'A horas irregulares, y siempre cansado' },
+      ],
+    },
+    {
+      id: 'q2', text: '¿En qué franja te concentras mejor?',
+      options: [
+        { type: 'lion', text: 'Entre las 8 y las 10' },
+        { type: 'bear', text: 'Entre las 10 y las 14' },
+        { type: 'wolf', text: 'A partir de las 18' },
+        { type: 'dolphin', text: 'Sin franja fija, va cambiando' },
+      ],
+    },
+    {
+      id: 'q3', text: 'Una mañana libre de fin de semana, tú…',
+      options: [
+        { type: 'lion', text: 'te levantas a la hora de siempre y disfrutas la mañana' },
+        { type: 'bear', text: 'te levantas una o dos horas más tarde' },
+        { type: 'wolf', text: 'duermes hasta lo más tarde posible' },
+        { type: 'dolphin', text: 'duermes mucho y aun así no te despejas' },
+      ],
+    },
+    {
+      id: 'q4', text: 'Después de cenar, tu energía está…',
+      options: [
+        { type: 'lion', text: 'de bajada, con ganas de acostarte pronto' },
+        { type: 'bear', text: 'aún bien, pero sobre las 22 te entra el sueño' },
+        { type: 'wolf', text: 'más bien alta, con un repunte creativo' },
+        { type: 'dolphin', text: 'irregular, con un cansancio que no se va' },
+      ],
+    },
+    {
+      id: 'q5', text: '¿Cuánto tardas en dormirte?',
+      options: [
+        { type: 'lion', text: 'Me duermo rápido al acostarme (5 a 10 minutos)' },
+        { type: 'bear', text: 'Unos 15 a 20 minutos' },
+        { type: 'wolf', text: 'Más de 30 minutos, o el sueño llega muy tarde' },
+        { type: 'dolphin', text: 'Me cuesta dormirme y me despierto a menudo' },
+      ],
+    },
+    {
+      id: 'q6', text: '¿Qué franja prefieres para una reunión o una cita?',
+      options: [
+        { type: 'lion', text: 'Temprano (de 8 a 10)' },
+        { type: 'bear', text: 'De media mañana a mediodía' },
+        { type: 'wolf', text: 'A última hora de la tarde (después de las 17)' },
+        { type: 'dolphin', text: 'Planificar la agenda ya me estresa de por sí' },
+      ],
+    },
+    {
+      id: 'q7', text: 'Al despertar, tu estado es…',
+      options: [
+        { type: 'lion', text: 'activo enseguida, listo para empezar' },
+        { type: 'bear', text: 'despierto del todo en 15 a 30 minutos' },
+        { type: 'wolf', text: 'como en niebla toda la mañana' },
+        { type: 'dolphin', text: 'cansado, como si no hubiera dormido' },
+      ],
+    },
+    {
+      id: 'q8', text: 'Si una fiesta apetecible empieza a las 23…',
+      options: [
+        { type: 'lion', text: 'ya tengo sueño, prefiero acostarme o no ir' },
+        { type: 'bear', text: 'voy, pero sobre medianoche quiero volver' },
+        { type: 'wolf', text: 'cuanto más avanza la noche, mejor lo paso' },
+        { type: 'dolphin', text: 'me apetece ir, pero temo el cansancio del día siguiente' },
+      ],
+    },
+    {
+      id: 'q9', text: 'Para crear o escribir, tu mejor momento es…',
+      options: [
+        { type: 'lion', text: 'muy temprano' },
+        { type: 'bear', text: 'a media mañana' },
+        { type: 'wolf', text: 'por la noche o de madrugada' },
+        { type: 'dolphin', text: 'impredecible: a veces de noche, a veces al amanecer' },
+      ],
+    },
+    {
+      id: 'q10', text: '¿Cuánto dependes del café o la cafeína?',
+      options: [
+        { type: 'lion', text: 'Casi no la necesito' },
+        { type: 'bear', text: 'Una o dos tazas por la mañana' },
+        { type: 'wolf', text: 'También tomo por la tarde' },
+        { type: 'dolphin', text: 'Sin ella no aguanto el día' },
+      ],
+    },
+    {
+      id: 'q11', text: 'De viaje, ¿cómo llevas el cambio de horario?',
+      options: [
+        { type: 'lion', text: 'Me ajusto rápido a la hora local' },
+        { type: 'bear', text: 'Con unos días ya estoy bien' },
+        { type: 'wolf', text: 'Incluso estoy mejor donde la vida es más nocturna' },
+        { type: 'dolphin', text: 'Con o sin cambio horario, duermo mal igual' },
+      ],
+    },
+    {
+      id: 'q12', text: '¿Cuál es tu mejor hora para hacer deporte?',
+      options: [
+        { type: 'lion', text: 'Muy temprano' },
+        { type: 'bear', text: 'A última hora de la mañana o al mediodía' },
+        { type: 'wolf', text: 'A última hora de la tarde' },
+        { type: 'dolphin', text: 'Después del deporte no me duermo o me quedo demasiado activado' },
+      ],
+    },
+    {
+      id: 'q13', text: '¿Tu hora ideal de acostarte?',
+      options: [
+        { type: 'lion', text: 'Entre las 21 y las 22' },
+        { type: 'bear', text: 'Entre las 22 y las 23' },
+        { type: 'wolf', text: 'Después de medianoche' },
+        { type: 'dolphin', text: 'Me cuesta mantener una hora regular' },
+      ],
+    },
+    {
+      id: 'q14', text: '¿Qué opinas de la siesta?',
+      options: [
+        { type: 'lion', text: 'La siesta me estropea la noche' },
+        { type: 'bear', text: '20 o 30 minutos me devuelven la tarde' },
+        { type: 'wolf', text: 'Temo perder la tarde entera, así que la evito' },
+        { type: 'dolphin', text: 'Me apetece, pero la siesta no me repone' },
+      ],
+    },
+    {
+      id: 'q15', text: 'Por la noche, mirando la lista de tareas, piensas…',
+      options: [
+        { type: 'lion', text: 'empezando pronto mañana, lo saco todo' },
+        { type: 'bear', text: 'hago una parte esta noche y mañana lo cierro' },
+        { type: 'wolf', text: 'de noche rindo mucho mejor' },
+        { type: 'dolphin', text: 'me entra la preocupación y seguramente dormiré mal' },
+      ],
+    },
+    {
+      id: 'q16', text: '¿Cómo es tu sueño entre semana y el fin de semana?',
+      options: [
+        { type: 'lion', text: 'Casi igual' },
+        { type: 'bear', text: 'El fin de semana me acuesto una o dos horas más tarde' },
+        { type: 'wolf', text: 'El fin de semana mucho más tarde, y me levanto tarde' },
+        { type: 'dolphin', text: 'Entre semana o el fin de semana, duermo mal igual' },
+      ],
+    },
+  ],
 }
 
 const RESULTS: Record<Chronotype, Record<SupportedLang, ResultData>> = {
@@ -545,6 +1022,30 @@ const RESULTS: Record<Chronotype, Record<SupportedLang, ResultData>> = {
       traits: ['完全な朝型人間', '規則的で予測可能な生活', '目標志向', '夕方にエネルギーが低下'],
       tips: ['夜型の人への理解を深める', '遅い夜間活動後の翌日に回復時間を確保する', '午後2時以降のカフェインを控える', '早い就寝前のスクリーン使用を最小限に'],
     },
+    zh: {
+      title: '🦁 狮子型',
+      subtitle: '主宰清晨的领导者',
+      description: '你在清晨最清醒也最有产出。你目标感强，偏好规律的生活，在别人还在睡的时候做出最好的成绩。',
+      optimalSleep: '晚上十点 ~ 早上六点',
+      traits: ['早起型', '规律、可预期的生活', '目标导向', '傍晚起精神就开始下滑'],
+      tips: ['对那些晚上有约的人，多一点体谅', '有夜间活动时，隔天记得留恢复的时间', '下午两点后别再碰咖啡因', '睡前尽量少看屏幕'],
+    },
+    fr: {
+      title: '🦁 Lion',
+      subtitle: 'Le meneur qui règne sur le petit matin',
+      description: 'C’est à l’aube que vous êtes le plus clair et le plus productif. Orienté objectifs, vous préférez une vie régulière et donnez le meilleur pendant que les autres dorment.',
+      optimalSleep: '22 h ~ 6 h',
+      traits: ['Du matin', 'Vie régulière et prévisible', 'Orienté objectifs', 'L’énergie baisse dès le début de soirée'],
+      tips: ['Comprendre ceux dont les rendez-vous sont le soir', 'Après une soirée tardive, prévoir un temps de récupération le lendemain', 'Éviter la caféine après 14 h', 'Réduire les écrans avant le coucher'],
+    },
+    es: {
+      title: '🦁 León',
+      subtitle: 'El líder que domina la madrugada',
+      description: 'Es al amanecer cuando estás más lúcido y produces más. Orientado a metas, prefieres una vida regular y rindes al máximo mientras los demás duermen.',
+      optimalSleep: '22:00 ~ 6:00',
+      traits: ['Madrugador', 'Vida regular y previsible', 'Orientado a metas', 'La energía baja ya al caer la tarde'],
+      tips: ['Comprender a quienes quedan por la noche', 'Tras una noche larga, reservar tiempo de recuperación al día siguiente', 'Evitar la cafeína después de las 14', 'Reducir pantallas antes de dormir'],
+    },
   },
   bear: {
     ko: {
@@ -570,6 +1071,30 @@ const RESULTS: Record<Chronotype, Record<SupportedLang, ResultData>> = {
       optimalSleep: '午後11時〜午前7時',
       traits: ['柔軟で適応力が高い', '社交的で協調性がある', '安定した中程度の生産性', '昼食後にエネルギーが少し低下'],
       tips: ['昼食後の眠気に10–20分のパワーナップが効果的', '重要な作業は午前中に配置', '午後1–3時はルーティン作業に', '週末の寝過ぎに注意'],
+    },
+    zh: {
+      title: '🐻 熊型',
+      subtitle: '跟着太阳走的均衡者',
+      description: '这是最常见的一型。你和社会的节奏对得上，自然适应朝九晚五。性格灵活又好相处，对各种场合适应力强。',
+      optimalSleep: '晚上十一点 ~ 早上七点',
+      traits: ['灵活，适应力强', '好相处', '中等而稳定的产出', '午饭后精神会小幅下滑'],
+      tips: ['午后犯困时，十到二十分钟的小睡很有效', '把重要的工作排在上午中段', '下午一到三点处理例行事务', '周末别把睡眠拉得太长'],
+    },
+    fr: {
+      title: '🐻 Ours',
+      subtitle: 'L’équilibré qui suit le rythme du soleil',
+      description: 'C’est le chronotype le plus répandu. Vous êtes accordé au rythme social et vous adaptez naturellement à un horaire de bureau. Souple et sociable, vous vous adaptez à bien des situations.',
+      optimalSleep: '23 h ~ 7 h',
+      traits: ['Souple et adaptable', 'Sociable', 'Une productivité moyenne et stable', 'Légère baisse d’énergie après le déjeuner'],
+      tips: ['En cas de coup de barre, une sieste de 10 à 20 minutes fait effet', 'Placer les tâches importantes en milieu de matinée', 'Traiter les tâches de routine entre 13 h et 15 h', 'Éviter de trop prolonger le sommeil le week-end'],
+    },
+    es: {
+      title: '🐻 Oso',
+      subtitle: 'El equilibrado que sigue el ritmo del sol',
+      description: 'Es el cronotipo más común. Vas acompasado con el ritmo social y te adaptas con naturalidad al horario de oficina. Flexible y sociable, te amoldas a muchas situaciones.',
+      optimalSleep: '23:00 ~ 7:00',
+      traits: ['Flexible y adaptable', 'Sociable', 'Productividad media y estable', 'Ligera bajada después de comer'],
+      tips: ['Si llega el bajón, una siesta de 10 a 20 minutos funciona', 'Colocar lo importante a media mañana', 'Dejar lo rutinario entre las 13 y las 15', 'No alargar demasiado el sueño el fin de semana'],
     },
   },
   wolf: {
@@ -597,6 +1122,30 @@ const RESULTS: Record<Chronotype, Record<SupportedLang, ResultData>> = {
       traits: ['クリエイティブで即興的', '典型的な夜型', '夕方〜夜にエネルギーが最高潮', '朝の適応が遅い'],
       tips: ['9–5が辛ければフレックス勤務を活用する', 'カフェインは午後2時まで', '重要な判断は午後に', '夜型は性格の問題ではなく生物学的なもの'],
     },
+    zh: {
+      title: '🐺 狼型',
+      subtitle: '爱着夜晚的创意夜行者',
+      description: '你的创意和精力在晚上到达高点。你偏即兴、有独创性，社会的时间表和你的生理节奏容易打架，弹性的工作环境最适合你。',
+      optimalSleep: '午夜 ~ 早上八点',
+      traits: ['有创意、即兴', '夜行', '傍晚精力最旺', '早上启动慢'],
+      tips: ['如果朝九晚五太难，尽量用弹性工时', '咖啡只在下午两点前喝', '重要的决定放在下午，而不是上午', '作息和社会对不上，别因此责怪自己'],
+    },
+    fr: {
+      title: '🐺 Loup',
+      subtitle: 'Le créatif nocturne qui aime la nuit',
+      description: 'Votre créativité et votre énergie culminent le soir. Spontané et inventif, vous vivez souvent un décalage entre les attentes sociales et votre horloge : un cadre souple vous convient mieux.',
+      optimalSleep: 'Minuit ~ 8 h',
+      traits: ['Créatif et spontané', 'Nocturne', 'Énergie au sommet le soir', 'Démarrage lent le matin'],
+      tips: ['Si le rythme de bureau est difficile, chercher des horaires souples', 'Le café seulement avant 14 h', 'Prendre les décisions importantes l’après-midi plutôt que le matin', 'Ne pas se reprocher un rythme qui ne colle pas à celui des autres'],
+    },
+    es: {
+      title: '🐺 Lobo',
+      subtitle: 'El creativo nocturno que ama la noche',
+      description: 'Tu creatividad y tu energía llegan al máximo por la noche. Espontáneo e inventivo, sueles vivir un desfase entre lo que espera la sociedad y tu reloj interno: un marco flexible te viene mejor.',
+      optimalSleep: 'Medianoche ~ 8:00',
+      traits: ['Creativo y espontáneo', 'Nocturno', 'Energía máxima por la noche', 'Arranque lento por la mañana'],
+      tips: ['Si el horario de oficina cuesta, busca flexibilidad', 'Café solo antes de las 14', 'Tomar las decisiones importantes por la tarde, no por la mañana', 'No culparte por un ritmo que no encaja con el de los demás'],
+    },
   },
   dolphin: {
     ko: {
@@ -622,6 +1171,30 @@ const RESULTS: Record<Chronotype, Record<SupportedLang, ResultData>> = {
       optimalSleep: '午後11時30分〜午前6時30分（推奨）',
       traits: ['知的・繊細・完璧主義', '睡眠効率が低い', '不安傾向あり', '日中の疲労が続く'],
       tips: ['就寝1時間前にすべての画面をオフ', '寝室の温度を低めに保つ（18–19°C）', '厳格な睡眠ルーティンを維持', '正午以降のカフェインを完全にカット', '睡眠専門家への相談を検討'],
+    },
+    zh: {
+      title: '🐬 海豚型',
+      subtitle: '感觉敏锐的浅眠者',
+      description: '你的睡眠效率偏低，也带点容易紧张的倾向，不容易入睡或睡得深。你聪明、敏感，也有完美主义的一面。睡眠卫生对你比其他型都更要紧。',
+      optimalSleep: '早上十一点半 ~ 早上六点半（建议）',
+      traits: ['聪明、敏感、完美主义', '睡眠效率低', '容易紧张', '白天疲惫感持续'],
+      tips: ['睡前一小时关掉屏幕', '把卧室温度调低（18–19°C）', '严格守住睡前的固定流程', '中午之后完全不碰咖啡因', '考虑找睡眠专科咨询'],
+    },
+    fr: {
+      title: '🐬 Dauphin',
+      subtitle: 'Le dormeur léger, aux sens très fins',
+      description: 'Votre efficacité de sommeil est faible et une tendance anxieuse rend l’endormissement et le sommeil profond difficiles. Vif et sensible, vous avez aussi un côté perfectionniste. L’hygiène de sommeil compte pour vous plus que pour les autres.',
+      optimalSleep: '11 h 30 ~ 6 h 30 (recommandé)',
+      traits: ['Vif, sensible, perfectionniste', 'Faible efficacité de sommeil', 'Tendance anxieuse', 'Fatigue persistante dans la journée'],
+      tips: ['Éteindre les écrans une heure avant le coucher', 'Baisser la température de la chambre (18–19 °C)', 'Tenir strictement le rituel du coucher', 'Aucune caféine après midi', 'Envisager un avis auprès d’un spécialiste du sommeil'],
+    },
+    es: {
+      title: '🐬 Delfín',
+      subtitle: 'El de sueño ligero y sentidos finos',
+      description: 'Tu eficiencia de sueño es baja y una tendencia a la inquietud hace difícil dormirte o dormir profundo. Despierto y sensible, también tienes un lado perfeccionista. La higiene del sueño te importa más que a otros tipos.',
+      optimalSleep: '11:30 ~ 6:30 (recomendado)',
+      traits: ['Despierto, sensible, perfeccionista', 'Baja eficiencia de sueño', 'Tendencia a la inquietud', 'Cansancio que se prolonga durante el día'],
+      tips: ['Apagar pantallas una hora antes de dormir', 'Bajar la temperatura del dormitorio (18–19 °C)', 'Mantener con rigor el ritual de acostarte', 'Nada de cafeína después del mediodía', 'Valorar consultar a un especialista del sueño'],
     },
   },
 }
