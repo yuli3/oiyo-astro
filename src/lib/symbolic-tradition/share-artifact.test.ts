@@ -29,7 +29,11 @@ describe("symbolic share artifact", () => {
     expect(artifact).not.toHaveProperty("name");
     expect(encoded.length).toBeLessThan(700);
     expect(artifact.profile).toEqual({
+      // 2026-09-24: 마야·켈트 렌즈가 읽으므로 공유 대상에 들어왔다. 둘 다 날짜에서만
+      // 나오므로 사주 기둥보다 더 드러내는 것이 없다.
+      celticTree: profile.celticTree,
       chineseZodiac: profile.chineseZodiac,
+      mayanKin: profile.mayanKin,
       fiveElements: {
         counts: profile.fiveElements.counts,
         dominant: profile.fiveElements.dominant,
@@ -87,5 +91,17 @@ describe("symbolic share artifact", () => {
     const artifact = createSymbolicShareArtifact(profile, { now: NOW });
     expect(readSymbolicShareFragment(symbolicShareFragment(artifact), { now: NOW })).toMatchObject({ ok: true });
     expect(readSymbolicShareFragment("#unrelated=1", { now: NOW })).toBeNull();
+  });
+});
+
+describe("공유 링크에 마야·켈트를 싣는다", () => {
+  it("만든 링크를 풀면 mayanKin·celticTree 가 그대로 있다", () => {
+    const artifact = createSymbolicShareArtifact(profile, { now: NOW });
+    const decoded = decodeSymbolicShareArtifact(encodeSymbolicShareArtifact(artifact), { now: NOW });
+    expect(decoded.ok).toBe(true);
+    if (decoded.ok) {
+      expect(decoded.artifact.profile.mayanKin).toEqual(profile.mayanKin);
+      expect(decoded.artifact.profile.celticTree).toEqual(profile.celticTree);
+    }
   });
 });

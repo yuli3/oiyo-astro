@@ -106,19 +106,26 @@ export function pairEvidence(a: Person, b: Person): Evidence[] {
     out.push({ kind: "moon", a: aa.moon, b: ba.moon, shared: aa.moon.filter((m) => ba.moon.includes(m)) });
     out.push({ kind: "sun", a: aa.sun, b: ba.sun, separation: separation(aa.sun, ba.sun), aspect: sunAspectOf(aa.sun, ba.sun)?.kind ?? null });
   }
-  out.push({
-    kind: "mayan",
-    sameColor: a.profile.mayanKin.color === b.profile.mayanKin.color,
-    sameTone: a.profile.mayanKin.tone === b.profile.mayanKin.tone,
-    aTone: a.profile.mayanKin.tone,
-    bTone: b.profile.mayanKin.tone,
-    aColor: a.profile.mayanKin.color,
-    bColor: b.profile.mayanKin.color,
-    aSeal: a.profile.mayanKin.seal,
-    bSeal: b.profile.mayanKin.seal,
-  });
-  const celtic = compareSymbolicProfiles(a.profile, b.profile).lenses.find((l) => l.id === "celtic-tree")!;
-  out.push({ kind: "celtic", a: a.profile.celticTree.id, b: b.profile.celticTree.id, relation: celtic.relation });
+  // 마야·켈트는 옛 공유 링크 참가자에게 없을 수 있다 — 둘 다 있을 때만 적는다.
+  const ma = a.profile.mayanKin;
+  const mb = b.profile.mayanKin;
+  if (ma && mb) {
+    out.push({
+      kind: "mayan",
+      sameColor: ma.color === mb.color,
+      sameTone: ma.tone === mb.tone,
+      aTone: ma.tone,
+      bTone: mb.tone,
+      aColor: ma.color,
+      bColor: mb.color,
+      aSeal: ma.seal,
+      bSeal: mb.seal,
+    });
+  }
+  const celtic = compareSymbolicProfiles(a.profile, b.profile).lenses.find((l) => l.id === "celtic-tree");
+  if (celtic && a.profile.celticTree && b.profile.celticTree) {
+    out.push({ kind: "celtic", a: a.profile.celticTree.id, b: b.profile.celticTree.id, relation: celtic.relation });
+  }
   // 출생 괘는 한 사람이라도 있으면 적는다(없는 쪽은 "시각이 없어 세우지 않음").
   const ha = a.profile.hexagram ?? null;
   const hb = b.profile.hexagram ?? null;
@@ -184,9 +191,9 @@ function yangShare(p: Person): number {
 export function pairNameSignal(a: Person, b: Person, evidence: Evidence[]): NameSignal {
   const day = evidence.find((e) => e.kind === "branch" && e.pillar === "day") as Extract<Evidence, { kind: "branch" }> | undefined;
   const moon = evidence.find((e) => e.kind === "moon") as Extract<Evidence, { kind: "moon" }> | undefined;
-  const mayan = evidence.find((e) => e.kind === "mayan") as Extract<Evidence, { kind: "mayan" }>;
+  const mayan = evidence.find((e) => e.kind === "mayan") as Extract<Evidence, { kind: "mayan" }> | undefined;
   // 대략의 희귀도: 같은 음조·색 1/52, 달 같은 궁(둘 다 확정) 1/12, 일지 육합 1/12, 일지 충 1/12, 속도 대비는 흔한 편
-  if (mayan.sameColor && mayan.sameTone) return "same-kin";
+  if (mayan?.sameColor && mayan.sameTone) return "same-kin";
   if (moon && moon.a.length === 1 && moon.b.length === 1 && moon.shared.length === 1) return "same-moon";
   if (day?.relations.includes("six-harmony")) return "day-branch-harmony";
   if (day?.relations.includes("clash")) return "day-branch-clash";

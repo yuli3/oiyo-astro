@@ -112,8 +112,9 @@ const BRANCH_ORDER: EarthlyBranch[] = [
 ];
 
 export function signatureOrbit(profile: SymbolicComparisonProfile): SignatureOrbit {
-  const tone = profile.mayanKin.tone; // 1..13
-  const seal = profile.mayanKin.seal; // 1..20
+  // 옛 공유 링크 참가자는 마야 좌표가 없다 — 궤도 모양만 가운데 값으로 그린다.
+  const tone = profile.mayanKin?.tone ?? 7; // 1..13
+  const seal = profile.mayanKin?.seal ?? 10; // 1..20
   const branchIndex = Math.max(0, BRANCH_ORDER.indexOf(profile.saju.day.earthlyBranch));
   const elementIndex = GROUP_ELEMENT_ORDER.indexOf(dayMasterOf(profile));
   return {

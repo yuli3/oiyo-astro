@@ -106,9 +106,14 @@ export interface SymbolicProfile {
 }
 
 export interface SymbolicComparisonProfile {
-  celticTree: SymbolicProfile["celticTree"];
+  /**
+   * 마야·켈트는 2026-09-21 에 더했지만 공유 링크(profileForShare)가 2026-09-24
+   * 까지 싣지 않았다. 그 사이 만든 링크로 들어온 사람에게는 없으므로 선택이고,
+   * 없는 사람은 두 렌즈에서만 빠진다.
+   */
+  celticTree?: SymbolicProfile["celticTree"];
   chineseZodiac: SymbolicProfile["chineseZodiac"];
-  mayanKin: SymbolicProfile["mayanKin"];
+  mayanKin?: SymbolicProfile["mayanKin"];
   fiveElements: Pick<SymbolicProfile["fiveElements"], "counts" | "dominant" | "observedCoordinates">;
   /**
    * 네 기둥 그대로. 오행 분포로 뭉개기 전의 원자료다 — 일간 렌즈는 일간

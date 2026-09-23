@@ -121,7 +121,7 @@ describe("출생 괘 (매화역수)", () => {
     const mayan = ev.find((e) => e.kind === "mayan") as { aSeal: number; bSeal: number };
     expect(mayan.aSeal).toBeGreaterThanOrEqual(1);
     expect(mayan.aSeal).toBeLessThanOrEqual(20);
-    expect(ev.find((e) => e.kind === "celtic")).toMatchObject({ a: A.profile.celticTree.id, b: B.profile.celticTree.id });
+    expect(ev.find((e) => e.kind === "celtic")).toMatchObject({ a: A.profile.celticTree!.id, b: B.profile.celticTree!.id });
   });
 });
 
@@ -176,5 +176,19 @@ describe("되살린 세 전통의 줄", () => {
     expect(kinds).not.toContain("life-path");
     expect(kinds).not.toContain("nakshatra");
     expect(kinds).toContain("ziwei"); // B 쪽만 있어도 적는다
+  });
+});
+
+describe("옛 공유 링크 참가자 — 마야·켈트가 없어도 읽는다", () => {
+  // 2026-09-24 전의 공유 링크는 mayanKin·celticTree 를 싣지 않았다. 그런 사람과
+  // 겹쳐 봐도 터지지 않고, 두 렌즈만 빠져야 한다.
+  const { mayanKin: _m, celticTree: _c, ...rest } = B.profile;
+  const legacy: Person = { ...B, profile: rest };
+
+  it("짝 읽기와 근거가 예외 없이 나오고 마야·켈트 근거만 빠진다", () => {
+    const ev = pairEvidence(A, legacy);
+    expect(ev.some((e) => e.kind === "mayan" || e.kind === "celtic")).toBe(false);
+    expect(ev.length).toBeGreaterThan(0);
+    expect(() => readPair(A, legacy, "2026-09-24")).not.toThrow();
   });
 });

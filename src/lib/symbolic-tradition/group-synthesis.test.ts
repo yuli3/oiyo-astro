@@ -134,8 +134,8 @@ describe("모임 종합 — 오행 밖의 체계", () => {
     for (let d = 0; d < days; d += 1) {
       const p = comparisonFromCivil({ date: new Date(start + d * 86_400_000).toISOString().slice(0, 10) });
       const trine = String(TRINE_GROUPS.findIndex((g) => g.includes(p.chineseZodiac.branch)));
-      const season = String(CELTIC_SEASON[p.celticTree.id] ?? 0);
-      tally.mayanColor[p.mayanKin.color] = (tally.mayanColor[p.mayanKin.color] ?? 0) + 1;
+      const season = String(CELTIC_SEASON[p.celticTree!.id] ?? 0);
+      tally.mayanColor[p.mayanKin!.color] = (tally.mayanColor[p.mayanKin!.color] ?? 0) + 1;
       tally.zodiacTrine[trine] = (tally.zodiacTrine[trine] ?? 0) + 1;
       tally.celticSeason[season] = (tally.celticSeason[season] ?? 0) + 1;
       tally.lifePath[String(p.lifePath)] = (tally.lifePath[String(p.lifePath)] ?? 0) + 1;

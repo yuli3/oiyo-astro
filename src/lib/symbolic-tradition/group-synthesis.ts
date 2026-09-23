@@ -158,9 +158,9 @@ export interface GroupPair {
 function categoriesOf(profile: SymbolicComparisonProfile): Record<DistinctionSystem, string | undefined> {
   const trine = TRINE_GROUPS.findIndex((group) => group.includes(profile.chineseZodiac.branch));
   return {
-    mayanColor: profile.mayanKin.color,
+    mayanColor: profile.mayanKin?.color,
     zodiacTrine: String(trine),
-    celticSeason: String(CELTIC_SEASON[profile.celticTree.id] ?? 0),
+    celticSeason: profile.celticTree ? String(CELTIC_SEASON[profile.celticTree.id] ?? 0) : undefined,
     lifePath: profile.lifePath ? String(profile.lifePath) : undefined,
   };
 }

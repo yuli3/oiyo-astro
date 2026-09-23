@@ -35,7 +35,11 @@ function crc32(value: string): string {
 
 function profileForShare(profile: SymbolicProfile): SymbolicComparisonProfile {
   return {
+    // 마야·켈트는 생년월일만으로 정해진다 — 사주 기둥이 이미 날짜를 드러내므로
+    // 새로 새지 않는다. 2026-09-24 전까지 빠져 있어 비교 도중 터졌다.
+    celticTree: profile.celticTree,
     chineseZodiac: profile.chineseZodiac,
+    mayanKin: profile.mayanKin,
     fiveElements: {
       counts: profile.fiveElements.counts,
       dominant: profile.fiveElements.dominant,

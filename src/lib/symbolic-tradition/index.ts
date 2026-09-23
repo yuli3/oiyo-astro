@@ -10,6 +10,7 @@ import { createBirthRecord } from "@/lib/user/birth-record";
 import { SYMBOLIC_PROFILE_SCHEMA_VERSION } from "./types";
 import type {
   BirthMoment,
+  CompatibilityLensId,
   SymbolicCompatibilityLens,
   SymbolicCompatibilityReport,
   SymbolicComparisonProfile,
@@ -259,8 +260,8 @@ const HARMONY_INDEX: Record<CompatibilityLensId, Record<string, number>> = {
 const MAYAN_COLOR_ORDER = ["red", "white", "blue", "yellow"] as const;
 
 function mayanRelation(
-  a: SymbolicComparisonProfile["mayanKin"],
-  b: SymbolicComparisonProfile["mayanKin"],
+  a: NonNullable<SymbolicComparisonProfile["mayanKin"]>,
+  b: NonNullable<SymbolicComparisonProfile["mayanKin"]>,
 ): string {
   const distance = Math.abs(MAYAN_COLOR_ORDER.indexOf(a.color) - MAYAN_COLOR_ORDER.indexOf(b.color));
   const colorGap = Math.min(distance, 4 - distance);
@@ -491,8 +492,9 @@ export function compareSymbolicProfiles(
       lens("element-complement", elementComplementRelation(a.fiveElements.counts, b.fiveElements.counts)),
       lens("day-master", dayMasterRelation(a.saju.day.heavenlyStem, b.saju.day.heavenlyStem)),
       lens("branch-harmony", branchHarmonyRelation(a.saju, b.saju)),
-      lens("mayan-kin", mayanRelation(a.mayanKin, b.mayanKin)),
-      lens("celtic-tree", celticRelation(a.celticTree.id, b.celticTree.id)),
+      // 옛 공유 링크로 들어온 사람에게는 마야·켈트가 없다 — 그때는 두 렌즈만 뺀다.
+      ...(a.mayanKin && b.mayanKin ? [lens("mayan-kin", mayanRelation(a.mayanKin, b.mayanKin))] : []),
+      ...(a.celticTree && b.celticTree ? [lens("celtic-tree", celticRelation(a.celticTree.id, b.celticTree.id))] : []),
     ],
     policy: {
       aggregateJudgment: "none",
