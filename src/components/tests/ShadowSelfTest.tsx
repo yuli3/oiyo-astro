@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type ShadowLevel = 'integrated' | 'aware' | 'projecting' | 'submerged'
 type Subscale = 'projection' | 'repression'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '統合のためのヒント',
     note: 'このテストはC.G.ユングの影（シャドウ）概念に着想を得た自己省察用です。専門的な心理分析や診断の代替ではありません。',
   },
+  zh: {
+    title: '阴影自我测验',
+    subtitle: '我心里的阴影有多深？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的阴影指数是',
+    yourScore: '我的阴影指数',
+    overallLabel: '综合阴影指数',
+    projectionLabel: '投射（照到别人身上）',
+    repressionLabel: '压抑（往里压）',
+    outOf: '/ 5.0',
+    tipsLabel: '整合的建议',
+    note: '本测验受荣格的阴影（shadow）概念启发，用于自我省思，不能替代专业的心理分析或诊断。',
+  },
+  fr: {
+    title: 'Test de l’ombre intérieure',
+    subtitle: 'À quel point mon ombre est-elle profonde ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice d’ombre',
+    yourScore: 'Votre indice d’ombre',
+    overallLabel: 'Indice global',
+    projectionLabel: 'Projection (sur les autres)',
+    repressionLabel: 'Refoulement (vers l’intérieur)',
+    outOf: '/ 5.0',
+    tipsLabel: 'Conseils pour l’intégration',
+    note: 'Ce test s’inspire de la notion d’ombre chez C. G. Jung, à des fins de réflexion personnelle. Il ne remplace ni une analyse ni un diagnostic professionnels.',
+  },
+  es: {
+    title: 'Test de la sombra interior',
+    subtitle: '¿Cuán honda es mi sombra?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice de sombra',
+    yourScore: 'Tu índice de sombra',
+    overallLabel: 'Índice global',
+    projectionLabel: 'Proyección (en los demás)',
+    repressionLabel: 'Represión (hacia dentro)',
+    outOf: '/ 5.0',
+    tipsLabel: 'Consejos para integrarla',
+    note: 'Este test se inspira en la noción de sombra de C. G. Jung, para la reflexión personal. No sustituye un análisis ni un diagnóstico profesionales.',
+  },
 }
 
 const LEVEL_DATA: Record<ShadowLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<ShadowLevel, Record<SupportedLang, LevelData>> = {
         '統合されたエネルギーを創造性と誠実さで表現しましょう。',
       ],
     },
+    zh: {
+      icon: '🌗',
+      title: '阴影整合型',
+      description: '你对自己的阴暗面和弱点，认得比较清楚，也接得住。你不把阴影当敌人，而是当成自己的一部分来对待。',
+      tips: [
+        '继续带着好奇去观察情绪的阴影处。',
+        '在特别刺眼的人身上，找找自己的镜子。',
+        '把整合过的能量，用创作和真诚表达出来。',
+      ],
+    },
+    fr: {
+      icon: '🌗',
+      title: 'Ombre intégrée',
+      description: 'Vous reconnaissez et accueillez plutôt bien vos parts sombres et vos faiblesses. Vous ne traitez pas l’ombre en ennemie, mais comme une part de vous.',
+      tips: [
+        'Continuez d’observer avec curiosité les zones d’ombre de vos émotions.',
+        'Cherchez votre miroir chez celui qui vous heurte le plus.',
+        'Exprimez cette énergie intégrée par la création et l’authenticité.',
+      ],
+    },
+    es: {
+      icon: '🌗',
+      title: 'Sombra integrada',
+      description: 'Reconoces y acoges bastante bien tus partes oscuras y tus debilidades. No tratas la sombra como enemiga, sino como parte de ti.',
+      tips: [
+        'Sigue observando con curiosidad las zonas de sombra de tus emociones.',
+        'Busca tu espejo en quien más te choca.',
+        'Expresa esa energía integrada con creación y autenticidad.',
+      ],
+    },
   },
   aware: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<ShadowLevel, Record<SupportedLang, LevelData>> = {
         '「自分は絶対あんなふうではない」と感じたら一度立ち止まりましょう。',
         '不快な感情を日記に書いてパターンを探しましょう。',
         '弱さも自分の一部として名づけ受け入れる練習をしましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌓',
+      title: '觉察成长型',
+      description: '你对自己的阴影有一定的觉察，但难以接受的部分还会别过头去。整合还有空间。',
+      tips: [
+        '当你觉得「我绝对不是那样」时，先停一下。',
+        '把不舒服的情绪写进日记，找出它的规律。',
+        '练习给弱点取个名字，把它当成自己的一部分接住。',
+      ],
+    },
+    fr: {
+      icon: '🌓',
+      title: 'Conscience en croissance',
+      description: 'Vous percevez en partie votre ombre, mais vous détournez encore le regard de ce qui est difficile à accepter. Il reste de la marge pour intégrer.',
+      tips: [
+        'Quand vous pensez « je ne suis absolument pas comme ça », marquez une pause.',
+        'Notez les émotions inconfortables dans un journal pour repérer le schéma.',
+        'Entraînez-vous à nommer vos faiblesses et à les accueillir comme vôtres.',
+      ],
+    },
+    es: {
+      icon: '🌓',
+      title: 'Conciencia en crecimiento',
+      description: 'Percibes en parte tu sombra, pero aún apartas la mirada de lo que cuesta aceptar. Queda margen para integrarla.',
+      tips: [
+        'Cuando pienses «yo desde luego no soy así», párate un momento.',
+        'Anota las emociones incómodas en un diario para ver el patrón.',
+        'Practica ponerle nombre a tus debilidades y acogerlas como tuyas.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<ShadowLevel, Record<SupportedLang, LevelData>> = {
         '対立の中で自分の責任を一つでも見つけてみましょう。',
       ],
     },
+    zh: {
+      icon: '🌒',
+      title: '投射倾向型',
+      description: '你倾向在别人身上看见自己难以接受的那一面，并去批评它。特别刺眼的地方，常常是自己的镜子。',
+      tips: [
+        '有人特别刺眼时，问一句「这个特质我身上有吗」。',
+        '批评的冲动冒上来时，看看这情绪是从哪里来的。',
+        '在冲突里，至少找出一件属于自己的责任。',
+      ],
+    },
+    fr: {
+      icon: '🌒',
+      title: 'Tendance à projeter',
+      description: 'Vous avez tendance à repérer chez les autres la part de vous difficile à accepter, puis à la critiquer. Ce qui heurte le plus est souvent un miroir.',
+      tips: [
+        'Quand quelqu’un vous heurte particulièrement, demandez-vous : « ce trait, l’ai-je aussi ? »',
+        'Quand l’envie de critiquer monte, regardez d’où vient cette émotion.',
+        'Dans un conflit, trouvez au moins une part de responsabilité qui vous revient.',
+      ],
+    },
+    es: {
+      icon: '🌒',
+      title: 'Tendencia a proyectar',
+      description: 'Sueles ver en los demás la parte de ti que cuesta aceptar, y criticarla. Lo que más choca suele ser un espejo.',
+      tips: [
+        'Cuando alguien te choque especialmente, pregúntate: «¿ese rasgo lo tengo yo también?».',
+        'Cuando suba el impulso de criticar, mira de dónde viene esa emoción.',
+        'En un conflicto, busca al menos una parte de responsabilidad tuya.',
+      ],
+    },
   },
   submerged: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<ShadowLevel, Record<SupportedLang, LevelData>> = {
         '「良い人でなければ」という圧力を少し手放してみましょう。',
         '怒り・嫉妬・欲望といった感情も情報だと受け入れましょう。',
         '一人で向き合うのが重いなら、カウンセリングなど安全な場を探しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌑',
+      title: '阴影潜伏型',
+      description: '你很可能把难以接受的情绪和欲望压得很深。被压下去的阴影，会在看不见的地方使劲。',
+      tips: [
+        '把「必须当好人」的压力先放下一会儿。',
+        '接受愤怒、嫉妒、欲望这些情绪也是信息。',
+        '一个人面对太吃力时，找咨询这类安全的地方。',
+      ],
+    },
+    fr: {
+      icon: '🌑',
+      title: 'Ombre immergée',
+      description: 'Vous refoulez probablement en profondeur des émotions et des désirs difficiles à accepter. Une ombre refoulée agit avec force depuis l’inconscient.',
+      tips: [
+        'Posez un moment la pression de « devoir être quelqu’un de bien ».',
+        'Acceptez que la colère, la jalousie ou le désir soient aussi des informations.',
+        'Si l’affronter seul est trop lourd, cherchez un cadre sûr, un accompagnement par exemple.',
+      ],
+    },
+    es: {
+      icon: '🌑',
+      title: 'Sombra sumergida',
+      description: 'Probablemente reprimes a fondo emociones y deseos difíciles de aceptar. Una sombra reprimida actúa con fuerza desde lo inconsciente.',
+      tips: [
+        'Suelta un rato la presión de «tener que ser buena persona».',
+        'Acepta que la rabia, la envidia o el deseo también son información.',
+        'Si afrontarlo a solas pesa demasiado, busca un espacio seguro, como un acompañamiento.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'r5', subscale: 'repression', reverse: false, text: '自分の欲望や衝動を正直に見つめたことがほとんどない' },
     { id: 'r6', subscale: 'repression', reverse: false, text: '夢や無意識が自分について何か教えてくれるとは思わない' },
     { id: 'r7', subscale: 'repression', reverse: false, text: '感情を深く見つめるより、忙しくして忘れる方だ' },
+  ],
+  zh: [
+    { id: 'p1', subscale: 'projection', reverse: false, text: '某个人的某种举动，会让我难以忍受地刺眼' },
+    { id: 'p2', subscale: 'projection', reverse: false, text: '别人的缺点我看得很清楚，自己身上类似的地方却不太认' },
+    { id: 'p3', subscale: 'projection', reverse: false, text: '生气的时候，我多半确信是对方的错' },
+    { id: 'p4', subscale: 'projection', reverse: false, text: '听到「你也有那一面」时，我会强烈反弹' },
+    { id: 'p5', subscale: 'projection', reverse: false, text: '看到有我瞧不上的那种特质的人，我的情绪会很大' },
+    { id: 'p6', subscale: 'projection', reverse: false, text: '比起称赞，批评更容易先从我嘴里冒出来' },
+    { id: 'p7', subscale: 'projection', reverse: false, text: '冲突的原因，我多半觉得在对方身上' },
+    { id: 'r1', subscale: 'repression', reverse: false, text: '愤怒、嫉妒、自私这类情绪，我觉得离我很远' },
+    { id: 'r2', subscale: 'repression', reverse: false, text: '负面情绪一冒头，我就想赶紧压下去' },
+    { id: 'r3', subscale: 'repression', reverse: false, text: '我常觉得自己几乎必须一直当「好人」' },
+    { id: 'r4', subscale: 'repression', reverse: false, text: '想到自己身上阴暗或软弱的部分，我会不舒服' },
+    { id: 'r5', subscale: 'repression', reverse: false, text: '我几乎没有诚实地看过自己的欲望或冲动' },
+    { id: 'r6', subscale: 'repression', reverse: false, text: '我不认为梦或潜意识会告诉我什么' },
+    { id: 'r7', subscale: 'repression', reverse: false, text: '比起深看情绪，我更倾向让自己忙起来把它忘掉' },
+  ],
+  fr: [
+    { id: 'p1', subscale: 'projection', reverse: false, text: 'Un certain comportement chez quelqu’un me heurte de façon presque insupportable' },
+    { id: 'p2', subscale: 'projection', reverse: false, text: 'Je vois bien les défauts des autres, mais j’admets mal les mêmes chez moi' },
+    { id: 'p3', subscale: 'projection', reverse: false, text: 'Quand je suis en colère, je suis à peu près sûr que c’est la faute de l’autre' },
+    { id: 'p4', subscale: 'projection', reverse: false, text: 'Quand on me dit « tu as aussi cette part-là », je réagis vivement' },
+    { id: 'p5', subscale: 'projection', reverse: false, text: 'Face à quelqu’un qui a un trait que je méprise, mes émotions s’emballent' },
+    { id: 'p6', subscale: 'projection', reverse: false, text: 'La critique me vient aux lèvres avant le compliment' },
+    { id: 'p7', subscale: 'projection', reverse: false, text: 'J’ai le sentiment que la cause du conflit vient surtout de l’autre' },
+    { id: 'r1', subscale: 'repression', reverse: false, text: 'La colère, la jalousie, l’égoïsme me semblent étrangers' },
+    { id: 'r2', subscale: 'repression', reverse: false, text: 'Dès qu’une émotion négative monte, je cherche à l’étouffer vite' },
+    { id: 'r3', subscale: 'repression', reverse: false, text: 'J’ai le sentiment de devoir être « quelqu’un de bien » presque tout le temps' },
+    { id: 'r4', subscale: 'repression', reverse: false, text: 'Penser à ma part sombre ou fragile me met mal à l’aise' },
+    { id: 'r5', subscale: 'repression', reverse: false, text: 'Je n’ai presque jamais regardé honnêtement mes désirs ou mes pulsions' },
+    { id: 'r6', subscale: 'repression', reverse: false, text: 'Je ne crois pas que les rêves ou l’inconscient m’apprennent quelque chose' },
+    { id: 'r7', subscale: 'repression', reverse: false, text: 'Plutôt que de regarder mes émotions de près, je m’occupe pour les oublier' },
+  ],
+  es: [
+    { id: 'p1', subscale: 'projection', reverse: false, text: 'Cierta conducta de alguien me resulta casi insoportable' },
+    { id: 'p2', subscale: 'projection', reverse: false, text: 'Veo bien los defectos ajenos, pero admito mal los míos parecidos' },
+    { id: 'p3', subscale: 'projection', reverse: false, text: 'Cuando me enfado, estoy casi seguro de que la culpa es del otro' },
+    { id: 'p4', subscale: 'projection', reverse: false, text: 'Si me dicen «tú también tienes esa parte», reacciono con fuerza' },
+    { id: 'p5', subscale: 'projection', reverse: false, text: 'Ante alguien con un rasgo que desprecio, mis emociones se disparan' },
+    { id: 'p6', subscale: 'projection', reverse: false, text: 'La crítica me sale antes que el elogio' },
+    { id: 'p7', subscale: 'projection', reverse: false, text: 'Siento que la causa del conflicto está sobre todo en el otro' },
+    { id: 'r1', subscale: 'repression', reverse: false, text: 'La rabia, la envidia o el egoísmo me parecen ajenos' },
+    { id: 'r2', subscale: 'repression', reverse: false, text: 'En cuanto sube una emoción negativa, intento apagarla rápido' },
+    { id: 'r3', subscale: 'repression', reverse: false, text: 'Siento que casi siempre debo ser «buena persona»' },
+    { id: 'r4', subscale: 'repression', reverse: false, text: 'Pensar en mi parte oscura o frágil me incomoda' },
+    { id: 'r5', subscale: 'repression', reverse: false, text: 'Casi nunca he mirado con honestidad mis deseos o impulsos' },
+    { id: 'r6', subscale: 'repression', reverse: false, text: 'No creo que los sueños o el inconsciente me digan algo' },
+    { id: 'r7', subscale: 'repression', reverse: false, text: 'Antes que mirar de cerca mis emociones, me ocupo para olvidarlas' },
   ],
 }
 
