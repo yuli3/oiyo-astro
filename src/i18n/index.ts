@@ -25,7 +25,9 @@ async function loadMessages(locale: Locale): Promise<Messages> {
     // Ontology engine namespaces
     // 2026-09-22: commerce·egyptian·features 를 뺐다 — 쓰는 화면이 없고, 가격·Pro 플랜
     // 안내(결제 없음), 13신이 모두 라(Ra)인 복사 오염, 영어 그대로인 문구였다.
-    'akashic', 'catalog', 'chosun', 'dashboard',
+    // 2026-09-23: chosun 을 뺐다 — 조선 붕당 코드를 걷어내자 이 묶음의 키를
+    // 읽는 화면이 하나도 남지 않았다.
+    'akashic', 'catalog', 'dashboard',
     'onomancy', 'saju', 'ui', 'universal',
   ];
 
