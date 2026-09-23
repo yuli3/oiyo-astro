@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 
-type Locale = 'ko' | 'en' | 'ja'
+type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type SensLevel = 'high' | 'moderate' | 'low'
 
 function lang(lp: string): Locale {
-  return (['ko', 'en', 'ja'].includes(lp) ? lp : 'en') as Locale
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(lp) ? lp : 'en') as Locale
 }
 
 const LABELS: Record<Locale, {
@@ -141,6 +141,117 @@ const LABELS: Record<Locale, {
     },
     hspInfo: 'HSP（Highly Sensitive Person）とは？',
   },
+  zh: {
+    title: '感官敏感度测验（HSP）',
+    subtitle: '我是高敏感的人吗？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '不太是', '一般', '比较是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的感官敏感度是',
+    yourLevel: '我的感官敏感度',
+    strengths: '高敏感者的优势',
+    selfCare: '自我照顾小贴士',
+    scoreLabel: '敏感度分数',
+    outOf: '/ 75 分',
+    note: '本测验参考 Elaine Aron 博士关于 HSP（高敏感者）的研究，是自我探索的工具，不能替代专业诊断。',
+    levelLabels: { high: '高敏感者（HSP）', moderate: '中等敏感者', low: '低敏感者' },
+    levelSubtitles: {
+      high: '你是非常敏感、处理得很深的人',
+      moderate: '你会视情况灵活调节感官',
+      low: '你拥有能轻松适应刺激的强韧感官',
+    },
+    levelDescriptions: {
+      high: '全球约 15–20% 的人是高敏感者。你会更深入地处理感官信息，对别人的情绪有强烈共鸣，也善于察觉细微的变化。这是先天的神经特质，不是弱点，而是独特的优势。',
+      moderate: '你的感官敏感度处于中等水平。有时会敏感地反应，有时也能从容应对刺激。察觉自己敏感的时刻并适当管理，会有帮助。',
+      low: '你很能适应刺激，感官耐受力强。在吵闹或刺激繁多的环境中也能运作良好，善于快速做决定。不过，如果身边有高敏感的人，理解他们的需要很重要。',
+    },
+    levelStrengths: {
+      high: ['深厚的共情力与直觉', '能从艺术与自然中获得深深的感动', '善于察觉细节', '深入思考与处理的能力', '善于读懂他人情绪', '创造力与感受力'],
+      moderate: ['适应情境的能力', '共情与现实感的平衡', '能在多样的环境中运作', '自我调节能力'],
+      low: ['对刺激的耐受力与强韧的恢复力', '在动态环境中表现良好', '决断迅速', '压力下保持沉着'],
+    },
+    levelSelfCare: {
+      high: ['定期留出独处恢复的时间', '事先了解并准备应对过度刺激的环境', '通过与大自然连结恢复能量', '练习冥想或正念', '把敏感视为优势，而不是秘密', '练习设定界限'],
+      moderate: ['了解自己敏感时刻的模式', '根据能量水平照顾自己', '平衡独处时间与社交活动'],
+      low: ['理解身边高敏感者的需要', '多留意情绪信号', '练习放慢速度'],
+    },
+    hspInfo: '什么是 HSP（高敏感者）？',
+  },
+  fr: {
+    title: 'Test d’hypersensibilité sensorielle (HSP)',
+    subtitle: 'Suis-je une personne hautement sensible ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Plutôt pas', 'Moyennement', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon niveau de sensibilité',
+    yourLevel: 'Mon niveau de sensibilité',
+    strengths: 'Les forces des personnes hautement sensibles',
+    selfCare: 'Conseils pour prendre soin de soi',
+    scoreLabel: 'Score de sensibilité',
+    outOf: '/ 75 points',
+    note: 'Ce test d’exploration de soi s’inspire des recherches du Dr Elaine Aron sur les personnes hautement sensibles (HSP). Il ne remplace pas un diagnostic professionnel.',
+    levelLabels: { high: 'Personne hautement sensible (HSP)', moderate: 'Sensibilité intermédiaire', low: 'Faible sensibilité' },
+    levelSubtitles: {
+      high: 'Vous êtes une personne très sensible qui traite les choses en profondeur',
+      moderate: 'Vous ajustez votre sensibilité avec souplesse selon les situations',
+      low: 'Vous avez une sensibilité robuste qui s’adapte facilement aux stimulations',
+    },
+    levelDescriptions: {
+      high: 'Environ 15 à 20 % de la population mondiale est hautement sensible. Vous traitez plus profondément les informations sensorielles, ressentez fortement les émotions des autres et percevez les changements subtils. C’est un trait neurologique inné : non pas une faiblesse, mais une force singulière.',
+      moderate: 'Votre sensibilité est de niveau intermédiaire. Selon les situations, vous réagissez vivement ou vous gérez les stimulations avec aisance. Repérer vos moments de sensibilité et les gérer vous aidera.',
+      low: 'Vous vous adaptez bien aux stimulations et avez une forte tolérance sensorielle. Vous fonctionnez bien dans des environnements bruyants ou riches en stimuli et prenez vite des décisions. Si des personnes hautement sensibles vous entourent, il est toutefois important de comprendre leurs besoins.',
+    },
+    levelStrengths: {
+      high: ['Grande empathie et intuition', 'Profondément ému par l’art et la nature', 'Remarque bien les détails', 'Capacité à réfléchir et traiter en profondeur', 'Lit bien les émotions des autres', 'Créativité et sensibilité'],
+      moderate: ['Capacité d’adaptation', 'Équilibre entre empathie et sens des réalités', 'Fonctionne dans des environnements variés', 'Capacité d’autorégulation'],
+      low: ['Tolérance aux stimulations et forte résilience', 'À l’aise dans les environnements dynamiques', 'Décisions rapides', 'Calme sous pression'],
+    },
+    levelSelfCare: {
+      high: ['Se réserver régulièrement des temps de récupération en solitude', 'Repérer et anticiper les environnements trop stimulants', 'Se ressourcer au contact de la nature', 'Pratiquer la méditation ou la pleine conscience', 'Voir sa sensibilité comme une force, pas comme un secret', 'S’entraîner à poser des limites'],
+      moderate: ['Repérer les moments où l’on est plus sensible', 'Prendre soin de soi selon son niveau d’énergie', 'Équilibrer temps seul et activités sociales'],
+      low: ['Comprendre les besoins des personnes hautement sensibles autour de soi', 'Être plus attentif aux signaux émotionnels', 'S’entraîner à ralentir'],
+    },
+    hspInfo: 'Qu’est-ce qu’une personne hautement sensible (HSP) ?',
+  },
+  es: {
+    title: 'Test de alta sensibilidad (PAS)',
+    subtitle: '¿Soy una persona altamente sensible?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Poco', 'A medias', 'Bastante', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi nivel de sensibilidad',
+    yourLevel: 'Mi nivel de sensibilidad',
+    strengths: 'Fortalezas de las personas altamente sensibles',
+    selfCare: 'Consejos de autocuidado',
+    scoreLabel: 'Puntuación de sensibilidad',
+    outOf: '/ 75 puntos',
+    note: 'Este test de autoexploración se basa en la investigación de la Dra. Elaine Aron sobre las personas altamente sensibles (PAS/HSP). No sustituye un diagnóstico profesional.',
+    levelLabels: { high: 'Persona altamente sensible (PAS)', moderate: 'Sensibilidad intermedia', low: 'Baja sensibilidad' },
+    levelSubtitles: {
+      high: 'Eres una persona muy sensible que procesa las cosas en profundidad',
+      moderate: 'Ajustas tu sensibilidad con flexibilidad según la situación',
+      low: 'Tienes una sensibilidad resistente que se adapta con facilidad a los estímulos',
+    },
+    levelDescriptions: {
+      high: 'Alrededor del 15–20 % de la población mundial es altamente sensible. Procesas la información sensorial con más profundidad, empatizas intensamente con las emociones ajenas y percibes cambios sutiles. Es un rasgo neurológico innato: no una debilidad, sino una fortaleza propia.',
+      moderate: 'Tu sensibilidad está en un nivel intermedio. Según la situación, reaccionas con sensibilidad o manejas los estímulos con soltura. Te ayudará reconocer tus momentos sensibles y gestionarlos.',
+      low: 'Te adaptas bien a los estímulos y tienes una gran tolerancia sensorial. Funcionas bien en ambientes ruidosos o con muchos estímulos y decides con rapidez. Eso sí, si a tu alrededor hay personas altamente sensibles, es importante entender sus necesidades.',
+    },
+    levelStrengths: {
+      high: ['Gran empatía e intuición', 'Te emocionan profundamente el arte y la naturaleza', 'Te fijas bien en los detalles', 'Capacidad de pensar y procesar en profundidad', 'Lees bien las emociones de los demás', 'Creatividad y sensibilidad'],
+      moderate: ['Capacidad de adaptación', 'Equilibrio entre empatía y sentido de la realidad', 'Funcionas en entornos variados', 'Capacidad de autorregulación'],
+      low: ['Tolerancia a los estímulos y gran resiliencia', 'Te desenvuelves bien en entornos dinámicos', 'Decisiones rápidas', 'Calma ante el estrés'],
+    },
+    levelSelfCare: {
+      high: ['Reservar con regularidad tiempo a solas para recuperarte', 'Identificar y prepararte para entornos sobreestimulantes', 'Recuperar energía en contacto con la naturaleza', 'Practicar meditación o atención plena', 'Ver tu sensibilidad como una fortaleza, no como un secreto', 'Practicar poner límites'],
+      moderate: ['Identificar el patrón de tus momentos sensibles', 'Cuidarte según tu nivel de energía', 'Equilibrar tiempo a solas y vida social'],
+      low: ['Entender las necesidades de las personas altamente sensibles de tu entorno', 'Prestar más atención a las señales emocionales', 'Practicar ir más despacio'],
+    },
+    hspInfo: '¿Qué es una persona altamente sensible (PAS)?',
+  },
 }
 
 interface Question {
@@ -149,21 +260,21 @@ interface Question {
 }
 
 const QUESTIONS: Question[] = [
-  { id: 'q1', text: { ko: '다른 사람들의 기분 변화를 빠르게 알아챈다', en: 'I quickly notice changes in others\' moods', ja: '他者の気分の変化を素早く気づく' } },
-  { id: 'q2', text: { ko: '한꺼번에 많은 일이 생기면 압도되는 느낌이 든다', en: 'I feel overwhelmed when many things happen at once', ja: '一度に多くのことが起きると圧倒される感じがする' } },
-  { id: 'q3', text: { ko: '빛, 소리, 냄새, 촉감에 특히 민감하다', en: 'I\'m particularly sensitive to light, sound, smell, or touch', ja: '光、音、匂い、触感に特に敏感である' } },
-  { id: 'q4', text: { ko: '예술, 음악, 자연에서 강한 감동을 받는다', en: 'I\'m deeply moved by art, music, or nature', ja: '芸術、音楽、自然から強い感動を受ける' } },
-  { id: 'q5', text: { ko: '시끄럽고 혼잡한 장소는 쉽게 지치게 만든다', en: 'Loud and crowded places exhaust me quickly', ja: '騒がしくて混雑した場所はすぐに疲れさせる' } },
-  { id: 'q6', text: { ko: '결정을 내릴 때 선택지가 많으면 압도된다', en: 'I feel overwhelmed when there are many choices', ja: '決断する時、選択肢が多いと圧倒される' } },
-  { id: 'q7', text: { ko: '영화나 뉴스에서 폭력적인 장면을 보면 매우 힘들다', en: 'Violent scenes in movies or news deeply disturb me', ja: '映画やニュースの暴力的な場面を見るととても辛い' } },
-  { id: 'q8', text: { ko: '다른 사람이 신체적으로 불편할 때 나도 불편함을 느낀다', en: 'I feel uncomfortable when others are physically uncomfortable', ja: '他者が身体的に不快な時、私も不快さを感じる' } },
-  { id: 'q9', text: { ko: '짧은 시간에 많은 것을 해야 할 때 매우 불안하다', en: 'I get very anxious when I have to do a lot in a short time', ja: '短時間で多くのことをしなければならない時、非常に不安になる' } },
-  { id: 'q10', text: { ko: '삶의 아름다움과 섬세함에 깊이 감동받는 편이다', en: 'I tend to be deeply touched by beauty and subtlety in life', ja: '人生の美しさと繊細さに深く感動する傾向がある' } },
-  { id: 'q11', text: { ko: '남들이 눈치채지 못하는 작은 변화나 세부 사항을 잘 알아챈다', en: 'I notice small changes and details others miss', ja: '他の人が気づかない小さな変化や細部をよく気づく' } },
-  { id: 'q12', text: { ko: '카페인이나 알코올에 민감하게 반응하는 편이다', en: 'I tend to react sensitively to caffeine or alcohol', ja: 'カフェインやアルコールに敏感に反応する傾向がある' } },
-  { id: 'q13', text: { ko: '강한 냄새나 질감이 불편하게 느껴질 때가 많다', en: 'Strong smells or textures often feel uncomfortable to me', ja: '強い匂いや質感が不快に感じることが多い' } },
-  { id: 'q14', text: { ko: '오랫동안 관찰한 후에야 낯선 상황에 참여한다', en: 'I observe for a long time before joining unfamiliar situations', ja: '長い間観察してから初めて慣れない状況に参加する' } },
-  { id: 'q15', text: { ko: '배고프거나 피곤할 때 집중이나 기분에 큰 영향을 준다', en: 'Hunger or tiredness greatly affects my concentration and mood', ja: '空腹や疲れが集中力や気分に大きな影響を与える' } },
+  { id: 'q1', text: { ko: '다른 사람들의 기분 변화를 빠르게 알아챈다', en: 'I quickly notice changes in others\' moods', ja: '他者の気分の変化を素早く気づく', zh: '我能很快察觉别人的情绪变化', fr: 'Je remarque vite les changements d’humeur des autres', es: 'Noto enseguida los cambios de ánimo de los demás' } },
+  { id: 'q2', text: { ko: '한꺼번에 많은 일이 생기면 압도되는 느낌이 든다', en: 'I feel overwhelmed when many things happen at once', ja: '一度に多くのことが起きると圧倒される感じがする', zh: '很多事一下子涌来时，我会有被压垮的感觉', fr: 'Quand beaucoup de choses arrivent en même temps, je me sens submergé', es: 'Cuando pasan muchas cosas a la vez, me siento desbordado' } },
+  { id: 'q3', text: { ko: '빛, 소리, 냄새, 촉감에 특히 민감하다', en: 'I\'m particularly sensitive to light, sound, smell, or touch', ja: '光、音、匂い、触感に特に敏感である', zh: '我对光线、声音、气味、触感特别敏感', fr: 'Je suis particulièrement sensible à la lumière, aux sons, aux odeurs et aux textures', es: 'Soy especialmente sensible a la luz, los sonidos, los olores y las texturas' } },
+  { id: 'q4', text: { ko: '예술, 음악, 자연에서 강한 감동을 받는다', en: 'I\'m deeply moved by art, music, or nature', ja: '芸術、音楽、自然から強い感動を受ける', zh: '艺术、音乐和大自然会深深打动我', fr: 'L’art, la musique et la nature m’émeuvent profondément', es: 'El arte, la música y la naturaleza me emocionan profundamente' } },
+  { id: 'q5', text: { ko: '시끄럽고 혼잡한 장소는 쉽게 지치게 만든다', en: 'Loud and crowded places exhaust me quickly', ja: '騒がしくて混雑した場所はすぐに疲れさせる', zh: '吵闹拥挤的地方很容易让我疲惫', fr: 'Les lieux bruyants et bondés m’épuisent vite', es: 'Los lugares ruidosos y abarrotados me agotan enseguida' } },
+  { id: 'q6', text: { ko: '결정을 내릴 때 선택지가 많으면 압도된다', en: 'I feel overwhelmed when there are many choices', ja: '決断する時、選択肢が多いと圧倒される', zh: '做决定时选项一多，我就会不知所措', fr: 'Face à trop d’options, je me sens dépassé pour décider', es: 'Cuando hay muchas opciones, me cuesta decidir' } },
+  { id: 'q7', text: { ko: '영화나 뉴스에서 폭력적인 장면을 보면 매우 힘들다', en: 'Violent scenes in movies or news deeply disturb me', ja: '映画やニュースの暴力的な場面を見るととても辛い', zh: '看到电影或新闻里的暴力场面，我会非常难受', fr: 'Les scènes violentes dans les films ou aux informations me sont très pénibles', es: 'Las escenas violentas en películas o noticias me resultan muy duras' } },
+  { id: 'q8', text: { ko: '다른 사람이 신체적으로 불편할 때 나도 불편함을 느낀다', en: 'I feel uncomfortable when others are physically uncomfortable', ja: '他者が身体的に不快な時、私も不快さを感じる', zh: '别人身体不舒服时，我也会觉得不舒服', fr: 'Quand quelqu’un est mal physiquement, je me sens mal aussi', es: 'Cuando alguien está mal físicamente, yo también me siento mal' } },
+  { id: 'q9', text: { ko: '짧은 시간에 많은 것을 해야 할 때 매우 불안하다', en: 'I get very anxious when I have to do a lot in a short time', ja: '短時間で多くのことをしなければならない時、非常に不安になる', zh: '要在短时间内做很多事时，我会非常焦虑', fr: 'Devoir faire beaucoup de choses en peu de temps me rend très anxieux', es: 'Tener que hacer muchas cosas en poco tiempo me angustia mucho' } },
+  { id: 'q10', text: { ko: '삶의 아름다움과 섬세함에 깊이 감동받는 편이다', en: 'I tend to be deeply touched by beauty and subtlety in life', ja: '人生の美しさと繊細さに深く感動する傾向がある', zh: '我往往会被生活中的美与细腻深深打动', fr: 'La beauté et la délicatesse de la vie me touchent profondément', es: 'La belleza y la delicadeza de la vida me conmueven profundamente' } },
+  { id: 'q11', text: { ko: '남들이 눈치채지 못하는 작은 변화나 세부 사항을 잘 알아챈다', en: 'I notice small changes and details others miss', ja: '他の人が気づかない小さな変化や細部をよく気づく', zh: '我很容易察觉别人没注意到的小变化或细节', fr: 'Je remarque les petits changements ou détails qui échappent aux autres', es: 'Noto pequeños cambios o detalles que a otros se les escapan' } },
+  { id: 'q12', text: { ko: '카페인이나 알코올에 민감하게 반응하는 편이다', en: 'I tend to react sensitively to caffeine or alcohol', ja: 'カフェインやアルコールに敏感に反応する傾向がある', zh: '我对咖啡因或酒精比较敏感', fr: 'Je réagis fortement à la caféine ou à l’alcool', es: 'Reacciono con sensibilidad a la cafeína o al alcohol' } },
+  { id: 'q13', text: { ko: '강한 냄새나 질감이 불편하게 느껴질 때가 많다', en: 'Strong smells or textures often feel uncomfortable to me', ja: '強い匂いや質感が不快に感じることが多い', zh: '强烈的气味或质感常让我觉得不舒服', fr: 'Les odeurs ou textures fortes me gênent souvent', es: 'Los olores o texturas fuertes me molestan a menudo' } },
+  { id: 'q14', text: { ko: '오랫동안 관찰한 후에야 낯선 상황에 참여한다', en: 'I observe for a long time before joining unfamiliar situations', ja: '長い間観察してから初めて慣れない状況に参加する', zh: '我要观察很久之后，才会加入陌生的场合', fr: 'Je n’entre dans une situation inconnue qu’après l’avoir longtemps observée', es: 'Solo entro en una situación desconocida después de observarla mucho rato' } },
+  { id: 'q15', text: { ko: '배고프거나 피곤할 때 집중이나 기분에 큰 영향을 준다', en: 'Hunger or tiredness greatly affects my concentration and mood', ja: '空腹や疲れが集中力や気分に大きな影響を与える', zh: '饿了或累了时，专注力和心情会受到很大影响', fr: 'La faim ou la fatigue affectent beaucoup ma concentration ou mon humeur', es: 'El hambre o el cansancio afectan mucho a mi concentración o mi ánimo' } },
 ]
 
 interface Props { locale?: string }
@@ -278,6 +389,9 @@ export default function SensoryProcessingTest({ locale: lp = 'ko' }: Props) {
               {locale === 'ko' && 'HSP는 1996년 Elaine Aron 박사가 연구한 개념으로, 신경계가 환경 자극에 더 깊이 반응하는 선천적 특성입니다. 약 20%의 인구가 해당하며, 높은 공감력, 창의성, 직관력과 연결됩니다.'}
               {locale === 'en' && 'HSP is a concept researched by Dr. Elaine Aron in 1996. It\'s an innate trait where the nervous system processes environmental stimuli more deeply. About 20% of the population has this trait, linked to high empathy, creativity, and intuition.'}
               {locale === 'ja' && 'HSPは1996年にElaine Aron博士が研究した概念で、神経系が環境刺激により深く反応する先天的な特性です。人口の約20%が該当し、高い共感力、創造性、直感力と関連しています。'}
+              {locale === 'zh' && 'HSP 是 Elaine Aron 博士于 1996 年研究提出的概念，指神经系统对环境刺激反应更深的先天特质。约 20% 的人属于此类，与高度共情、创造力和直觉有关。'}
+              {locale === 'fr' && 'La notion de HSP a été étudiée par le Dr Elaine Aron en 1996. Il s’agit d’un trait inné : le système nerveux traite plus profondément les stimulations de l’environnement. Environ 20 % de la population est concernée, avec une empathie, une créativité et une intuition élevées.'}
+              {locale === 'es' && 'El concepto de PAS (HSP) fue estudiado por la Dra. Elaine Aron en 1996. Es un rasgo innato por el que el sistema nervioso procesa con más profundidad los estímulos del entorno. Afecta a alrededor del 20 % de la población y se asocia a una gran empatía, creatividad e intuición.'}
             </p>
           </div>
         )}
@@ -315,7 +429,7 @@ export default function SensoryProcessingTest({ locale: lp = 'ko' }: Props) {
       options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
       selectedValue={answers[current]}
       note={lb.note}
-      previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+      previousLabel={({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question'}
       onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
       onSelect={(value) => pick(value - 1)}
     />
