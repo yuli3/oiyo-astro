@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type FomoLevel = 'free' | 'mild' | 'high' | 'intense'
 type Subscale = 'exclusion' | 'connection'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '心のためのヒント',
     note: 'このテストはPrzybylskiらのFoMO尺度（2013）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
   },
+  zh: {
+    title: '错失恐惧（FOMO）量表测验',
+    subtitle: '我的错失焦虑有多高？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的 FOMO 指数是',
+    yourScore: '我的 FOMO 指数',
+    overallLabel: '综合 FOMO 指数',
+    exclusionLabel: '错失焦虑',
+    connectionLabel: '连线强迫',
+    outOf: '/ 5.0',
+    tipsLabel: '给心里的建议',
+    note: '本测验参考 Przybylski 等人（2013）的 FoMO 量表概念，用于自我省思，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test de l’échelle FOMO',
+    subtitle: 'Quel est mon niveau de peur de manquer quelque chose ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice FOMO',
+    yourScore: 'Votre indice FOMO',
+    overallLabel: 'Indice FOMO global',
+    exclusionLabel: 'Peur d’être mis à l’écart',
+    connectionLabel: 'Besoin compulsif de rester connecté',
+    outOf: '/ 5.0',
+    tipsLabel: 'Un conseil pour l’esprit',
+    note: 'Ce test reprend les notions de l’échelle FoMO de Przybylski et al. (2013), à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test de la escala FOMO',
+    subtitle: '¿Cuánto miedo tengo a perderme algo?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice FOMO',
+    yourScore: 'Tu índice FOMO',
+    overallLabel: 'Índice FOMO global',
+    exclusionLabel: 'Miedo a quedarte fuera',
+    connectionLabel: 'Necesidad compulsiva de estar conectado',
+    outOf: '/ 5.0',
+    tipsLabel: 'Un consejo para la cabeza',
+    note: 'Este test recoge las ideas de la escala FoMO de Przybylski y otros (2013), para la reflexión personal. No sustituye una evaluación profesional.',
+  },
 }
 
 const LEVEL_DATA: Record<FomoLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<FomoLevel, Record<SupportedLang, LevelData>> = {
         'オフラインの深い関係や経験に投資し続けましょう。',
       ],
     },
+    zh: {
+      icon: '🍃',
+      title: '心里自在型',
+      description: '你的 FOMO 偏低。比起跟人比较，你更专注在自己的当下，也能自在地享受没有连线的时间。',
+      tips: [
+        '有意识地守住现在这份健康的距离。',
+        '偶尔冒出来的落单感，当成自然的情绪接住就好。',
+        '继续把心力投到线下的深关系和真实的体验上。',
+      ],
+    },
+    fr: {
+      icon: '🍃',
+      title: 'L’esprit libre',
+      description: 'Votre FOMO est bas. Plutôt que de vous comparer, vous restez dans votre présent et vous savourez tranquillement les temps déconnectés.',
+      tips: [
+        'Préservez consciemment cette distance saine.',
+        'Accueillez comme naturel le sentiment d’exclusion qui passe parfois.',
+        'Continuez d’investir dans des liens profonds et des expériences hors ligne.',
+      ],
+    },
+    es: {
+      icon: '🍃',
+      title: 'Mente libre',
+      description: 'Tu FOMO es bajo. Antes que compararte, te quedas en tu presente y disfrutas con calma los ratos desconectado.',
+      tips: [
+        'Cuida conscientemente esa distancia sana.',
+        'Acoge como natural la sensación de quedarte fuera que aparece a veces.',
+        'Sigue invirtiendo en vínculos hondos y experiencias fuera de la pantalla.',
+      ],
+    },
   },
   mild: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<FomoLevel, Record<SupportedLang, LevelData>> = {
         '比較が始まったら「自分の基準は何か」と自問しましょう。',
         '通知をまとめて決まった時間だけ確認しましょう。',
         'SNSのフィードと実生活の差を意識的に思い出しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌤️',
+      title: '轻度 FOMO 型',
+      description: '这是大多数人都会有的日常程度。比较和想确认的冲动偶尔冒出来，但你控得住。',
+      tips: [
+        '比较一冒头，就问自己一句「我的标准是什么」。',
+        '把通知收拢起来，只在固定的时间看。',
+        '有意识地提醒自己：动态和真实的生活并不一样。',
+      ],
+    },
+    fr: {
+      icon: '🌤️',
+      title: 'FOMO léger',
+      description: 'C’est le niveau ordinaire que la plupart des gens connaissent. L’envie de comparer ou de vérifier monte parfois, mais vous la gérez bien.',
+      tips: [
+        'Dès que la comparaison démarre, demandez-vous : « quel est mon critère ? ».',
+        'Regroupez les notifications et ne les consultez qu’à des moments définis.',
+        'Rappelez-vous volontairement l’écart entre un fil d’actualité et la vraie vie.',
+      ],
+    },
+    es: {
+      icon: '🌤️',
+      title: 'FOMO leve',
+      description: 'Es el nivel corriente que siente la mayoría. A veces sube el impulso de comparar o comprobar, pero lo manejas bien.',
+      tips: [
+        'En cuanto empieza la comparación, pregúntate «¿cuál es mi criterio?».',
+        'Agrupa las notificaciones y míralas solo a horas fijadas.',
+        'Recuérdate a propósito la diferencia entre un feed y la vida real.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<FomoLevel, Record<SupportedLang, LevelData>> = {
         '比較をあおるアカウントを整理またはミュートしましょう。',
       ],
     },
+    zh: {
+      icon: '📲',
+      title: '高 FOMO 型',
+      description: '错失焦虑和想确认的冲动很明显。跟别人比较，或是「怕错过」的心情，可能常常打断你的日常和休息。',
+      tips: [
+        '每天定一段完全关掉通知的时间。',
+        '刻意练习「错过也没关系」（JOMO）。',
+        '把那些引你比较的帐号整理掉，或静音。',
+      ],
+    },
+    fr: {
+      icon: '📲',
+      title: 'FOMO élevé',
+      description: 'La peur de manquer et le besoin de vérifier sont nets. La comparaison et la crainte de « rater quelque chose » viennent souvent perturber votre quotidien et votre repos.',
+      tips: [
+        'Définissez chaque jour une plage où les notifications sont totalement coupées.',
+        'Entraînez-vous volontairement au « plaisir de manquer » (JOMO).',
+        'Faites le tri ou mettez en sourdine les comptes qui nourrissent la comparaison.',
+      ],
+    },
+    es: {
+      icon: '📲',
+      title: 'FOMO alto',
+      description: 'El miedo a perderte algo y las ganas de comprobar son claros. Compararte y temer «perderte algo» interrumpen a menudo tu día y tu descanso.',
+      tips: [
+        'Fija cada día un rato con las notificaciones totalmente apagadas.',
+        'Practica a propósito el «gusto por perderse cosas» (JOMO).',
+        'Limpia o silencia las cuentas que alimentan la comparación.',
+      ],
+    },
   },
   intense: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<FomoLevel, Record<SupportedLang, LevelData>> = {
         '一日1時間でも完全なデジタルデトックスから始めましょう。',
         '不安の根（承認欲求・孤独など）を見つめましょう。',
         '一人で調整が難しい場合はカウンセリングなど専門的な助けを検討しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌀',
+      title: 'FOMO 过敏型',
+      description: '错失焦虑非常强。不停地确认和比较，很可能正在大量消耗你的心力。',
+      tips: [
+        '先从每天一小时的彻底断线开始。',
+        '看一看焦虑的根在哪（想被认可、孤单等）。',
+        '一个人难以调节时，考虑咨询等专业协助。',
+      ],
+    },
+    fr: {
+      icon: '🌀',
+      title: 'FOMO intense',
+      description: 'La peur de manquer est très forte. Les vérifications et les comparaisons incessantes consomment probablement beaucoup de votre énergie mentale.',
+      tips: [
+        'Commencez par une heure par jour de déconnexion complète.',
+        'Regardez la racine de l’anxiété (besoin de reconnaissance, solitude…).',
+        'Si vous n’y arrivez pas seul, envisagez un accompagnement professionnel.',
+      ],
+    },
+    es: {
+      icon: '🌀',
+      title: 'FOMO intenso',
+      description: 'El miedo a perderte algo es muy fuerte. Comprobar y comparar sin parar probablemente consume mucha de tu energía mental.',
+      tips: [
+        'Empieza por una hora al día de desconexión completa.',
+        'Mira dónde está la raíz de la ansiedad (necesidad de reconocimiento, soledad…).',
+        'Si no puedes solo, valora acompañamiento profesional.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'c5', subscale: 'connection', reverse: false, text: 'SNSをしばらく見られないと落ち着かない' },
     { id: 'c6', subscale: 'connection', reverse: false, text: '寝る前や起きてすぐにまずフィードを確認する' },
     { id: 'c7', subscale: 'connection', reverse: false, text: 'いいね・コメント・反応を頻繁に確認してしまう' },
+  ],
+  zh: [
+    { id: 'e1', subscale: 'exclusion', reverse: false, text: '我会在意朋友们没有我也玩得开心' },
+    { id: 'e2', subscale: 'exclusion', reverse: false, text: '我觉得别人过得比我更精彩' },
+    { id: 'e3', subscale: 'exclusion', reverse: false, text: '我担心在我不知道的时候，重要的事正在发生' },
+    { id: 'e4', subscale: 'exclusion', reverse: false, text: '看到别人的日常（旅行、聚会），我会觉得只有我落后' },
+    { id: 'e5', subscale: 'exclusion', reverse: false, text: '有没被邀请的聚会时，我会很在意' },
+    { id: 'e6', subscale: 'exclusion', reverse: false, text: '我怕错过潮流或正在流行的东西' },
+    { id: 'e7', subscale: 'exclusion', reverse: false, text: '我担心大家都知道的事，只有我不知道' },
+    { id: 'c1', subscale: 'connection', reverse: false, text: '我离开一会儿后，会一直想确认发生了什么' },
+    { id: 'c2', subscale: 'connection', reverse: false, text: '吃饭或聚会时，我也会去看社群或讯息' },
+    { id: 'c3', subscale: 'connection', reverse: false, text: '有通知来时，不马上看我会不安' },
+    { id: 'c4', subscale: 'connection', reverse: false, text: '就算在休假或休息，我也会一直刷线上的消息' },
+    { id: 'c5', subscale: 'connection', reverse: false, text: '一阵子没看社群，我会闷得慌或心急' },
+    { id: 'c6', subscale: 'connection', reverse: false, text: '睡前或一醒来，我第一件事就是刷动态' },
+    { id: 'c7', subscale: 'connection', reverse: false, text: '我常去确认按赞、留言和回应' },
+  ],
+  fr: [
+    { id: 'e1', subscale: 'exclusion', reverse: false, text: 'Cela me travaille que mes amis s’amusent sans moi' },
+    { id: 'e2', subscale: 'exclusion', reverse: false, text: 'J’ai le sentiment que les autres vivent des choses plus riches que moi' },
+    { id: 'e3', subscale: 'exclusion', reverse: false, text: 'J’ai peur qu’il se passe quelque chose d’important sans que je le sache' },
+    { id: 'e4', subscale: 'exclusion', reverse: false, text: 'En voyant le quotidien des autres (voyages, sorties), j’ai l’impression d’être seul à la traîne' },
+    { id: 'e5', subscale: 'exclusion', reverse: false, text: 'Quand il y a une sortie où je ne suis pas invité, cela me préoccupe beaucoup' },
+    { id: 'e6', subscale: 'exclusion', reverse: false, text: 'J’ai peur de rater une tendance ou ce qui est en vogue' },
+    { id: 'e7', subscale: 'exclusion', reverse: false, text: 'Je crains d’être le seul à ne pas savoir ce que tout le monde sait' },
+    { id: 'c1', subscale: 'connection', reverse: false, text: 'Après une absence, je veux sans cesse vérifier ce qui s’est passé' },
+    { id: 'c2', subscale: 'connection', reverse: false, text: 'Même pendant un repas ou une sortie, je consulte les réseaux ou mes messages' },
+    { id: 'c3', subscale: 'connection', reverse: false, text: 'Si je ne regarde pas tout de suite une notification, je me sens mal' },
+    { id: 'c4', subscale: 'connection', reverse: false, text: 'Même en vacances ou au repos, je continue de suivre l’actualité en ligne' },
+    { id: 'c5', subscale: 'connection', reverse: false, text: 'Rester un moment sans réseaux me rend fébrile' },
+    { id: 'c6', subscale: 'connection', reverse: false, text: 'Avant de dormir ou au réveil, mon premier geste est de regarder mon fil' },
+    { id: 'c7', subscale: 'connection', reverse: false, text: 'Je vérifie souvent les mentions j’aime, les commentaires et les réactions' },
+  ],
+  es: [
+    { id: 'e1', subscale: 'exclusion', reverse: false, text: 'Me afecta que mis amigos se diviertan sin mí' },
+    { id: 'e2', subscale: 'exclusion', reverse: false, text: 'Siento que los demás viven cosas más ricas que yo' },
+    { id: 'e3', subscale: 'exclusion', reverse: false, text: 'Me inquieta que pase algo importante sin que yo lo sepa' },
+    { id: 'e4', subscale: 'exclusion', reverse: false, text: 'Al ver el día a día de otros (viajes, quedadas), siento que solo yo me quedo atrás' },
+    { id: 'e5', subscale: 'exclusion', reverse: false, text: 'Si hay una quedada a la que no me invitan, me preocupa bastante' },
+    { id: 'e6', subscale: 'exclusion', reverse: false, text: 'Me da miedo perderme una tendencia o lo que está de moda' },
+    { id: 'e7', subscale: 'exclusion', reverse: false, text: 'Temo ser el único que no sabe lo que todos saben' },
+    { id: 'c1', subscale: 'connection', reverse: false, text: 'Después de ausentarme, quiero comprobar sin parar qué ha pasado' },
+    { id: 'c2', subscale: 'connection', reverse: false, text: 'Incluso comiendo o en una quedada, miro redes o mensajes' },
+    { id: 'c3', subscale: 'connection', reverse: false, text: 'Si no miro una notificación al momento, me inquieto' },
+    { id: 'c4', subscale: 'connection', reverse: false, text: 'Aunque esté de vacaciones o descansando, sigo mirando lo que pasa en línea' },
+    { id: 'c5', subscale: 'connection', reverse: false, text: 'Estar un rato sin redes me pone nervioso' },
+    { id: 'c6', subscale: 'connection', reverse: false, text: 'Antes de dormir o al despertar, lo primero que hago es mirar el feed' },
+    { id: 'c7', subscale: 'connection', reverse: false, text: 'Compruebo a menudo los me gusta, los comentarios y las reacciones' },
   ],
 }
 

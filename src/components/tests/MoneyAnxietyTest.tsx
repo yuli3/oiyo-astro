@@ -4,12 +4,12 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type MoneyLevel = 'secure' | 'mild' | 'anxious' | 'distress'
 type Subscale = 'worry' | 'avoidance'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -80,6 +80,54 @@ const LABELS: Record<SupportedLang, {
     tipsLabel: '心のためのヒント',
     note: 'このテストは金銭不安（Financial Anxiety）とマネースクリプト研究の概念に基づく自己省察用です。財務・医学的診断の代替ではありません。',
   },
+  zh: {
+    title: '金钱焦虑量表测验',
+    subtitle: '我的金钱焦虑有多高？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '几乎不是', '偶尔如此', '经常如此', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的金钱焦虑指数是',
+    yourScore: '我的金钱焦虑指数',
+    overallLabel: '综合金钱焦虑指数',
+    worryLabel: '对财务的担心',
+    avoidanceLabel: '对财务的回避',
+    outOf: '/ 5.0',
+    tipsLabel: '给心里的建议',
+    note: '本测验参考财务焦虑（Financial Anxiety）与金钱脚本的研究概念，用于自我省思，不能替代财务或医学上的诊断。',
+  },
+  fr: {
+    title: 'Test de l’anxiété financière',
+    subtitle: 'Quel est mon niveau d’anxiété face à l’argent ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Presque pas', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon indice d’anxiété financière',
+    yourScore: 'Votre indice d’anxiété financière',
+    overallLabel: 'Indice global',
+    worryLabel: 'Inquiétude financière',
+    avoidanceLabel: 'Évitement financier',
+    outOf: '/ 5.0',
+    tipsLabel: 'Un conseil pour l’esprit',
+    note: 'Ce test reprend les notions issues des recherches sur l’anxiété financière et les scripts monétaires, à des fins de réflexion personnelle. Il ne remplace ni un diagnostic médical ni un conseil financier.',
+  },
+  es: {
+    title: 'Test de ansiedad financiera',
+    subtitle: '¿Cuánta ansiedad me produce el dinero?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Casi nada', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi índice de ansiedad financiera',
+    yourScore: 'Tu índice de ansiedad financiera',
+    overallLabel: 'Índice global',
+    worryLabel: 'Preocupación financiera',
+    avoidanceLabel: 'Evitación financiera',
+    outOf: '/ 5.0',
+    tipsLabel: 'Un consejo para la cabeza',
+    note: 'Este test recoge las ideas de la investigación sobre ansiedad financiera y guiones del dinero, para la reflexión personal. No sustituye un diagnóstico médico ni un consejo financiero.',
+  },
 }
 
 const LEVEL_DATA: Record<MoneyLevel, Record<SupportedLang, LevelData>> = {
@@ -114,6 +162,36 @@ const LEVEL_DATA: Record<MoneyLevel, Record<SupportedLang, LevelData>> = {
         'お金を目標や価値と結びつけて意味あるものに使いましょう。',
       ],
     },
+    zh: {
+      icon: '💚',
+      title: '安稳型',
+      description: '你和钱的关系相对健康。你敢正视自己的财务，也能不带过度担心地务实处理。',
+      tips: [
+        '把带来这份安稳的习惯写下来整理一遍。',
+        '用应急金、自动储蓄这类机制，把安稳做得更牢。',
+        '把钱和你的目标与价值接起来，花得有意义。',
+      ],
+    },
+    fr: {
+      icon: '💚',
+      title: 'Sécurisé',
+      description: 'Votre rapport à l’argent est plutôt sain. Vous regardez vos finances en face et vous les gérez concrètement, sans inquiétude excessive.',
+      tips: [
+        'Mettez par écrit les habitudes qui ont construit cette sécurité.',
+        'Consolidez-la par des mécanismes : épargne automatique, fonds d’urgence.',
+        'Reliez l’argent à vos objectifs et à vos valeurs pour lui donner du sens.',
+      ],
+    },
+    es: {
+      icon: '💚',
+      title: 'Seguro',
+      description: 'Tu relación con el dinero es bastante sana. Miras tus finanzas de frente y las manejas con los pies en el suelo, sin preocupación excesiva.',
+      tips: [
+        'Pon por escrito los hábitos que construyeron esa seguridad.',
+        'Refuérzala con mecanismos: ahorro automático, fondo de emergencia.',
+        'Conecta el dinero con tus metas y tus valores para darle sentido.',
+      ],
+    },
   },
   mild: {
     ko: {
@@ -144,6 +222,36 @@ const LEVEL_DATA: Record<MoneyLevel, Record<SupportedLang, LevelData>> = {
         '月1回「財政点検の日」を決めて負担を減らしましょう。',
         '心配が浮かんだら漠然とせず数字で書き出しましょう。',
         'コントロールできること（支出習慣）とできないことを区別しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🌱',
+      title: '轻度紧张型',
+      description: '这是多数人都有的日常程度的金钱担心。偶尔会挂心，但你没有回避现实。',
+      tips: [
+        '每月定一天「财务检查日」，把负担分散开。',
+        '担心冒出来时，与其含糊地想，不如把数字写下来。',
+        '分清楚哪些是控得住的（花钱的习惯），哪些不是。',
+      ],
+    },
+    fr: {
+      icon: '🌱',
+      title: 'Tension légère',
+      description: 'C’est le niveau ordinaire d’inquiétude financière que connaît la plupart des gens. Cela vous préoccupe parfois, mais vous ne fuyez pas la réalité.',
+      tips: [
+        'Fixez une « journée finances » par mois pour alléger la charge.',
+        'Quand l’inquiétude monte, écrivez des chiffres plutôt que de rester dans le flou.',
+        'Distinguez ce qui est sous contrôle (habitudes de dépense) de ce qui ne l’est pas.',
+      ],
+    },
+    es: {
+      icon: '🌱',
+      title: 'Tensión leve',
+      description: 'Es el nivel corriente de preocupación por el dinero que tiene la mayoría. A veces te inquieta, pero no huyes de la realidad.',
+      tips: [
+        'Fija un «día de finanzas» al mes para repartir la carga.',
+        'Cuando aparezca la preocupación, escribe cifras en vez de quedarte en lo vago.',
+        'Distingue lo que sí controlas (hábitos de gasto) de lo que no.',
       ],
     },
   },
@@ -178,6 +286,36 @@ const LEVEL_DATA: Record<MoneyLevel, Record<SupportedLang, LevelData>> = {
         '信頼できる人とお金の話をして孤立感を減らしましょう。',
       ],
     },
+    zh: {
+      icon: '⚠️',
+      title: '财务焦虑型',
+      description: '对钱的担心或回避已经很明显。焦虑可能常常挡住你的决定，也搅乱心里的平静。',
+      tips: [
+        '从很小的地方开始——先把账户余额看一次。',
+        '回避会把焦虑养大。看清楚，本身就会带来掌控感。',
+        '跟信得过的人聊聊钱的事，减少一个人扛的感觉。',
+      ],
+    },
+    fr: {
+      icon: '⚠️',
+      title: 'Anxiété financière',
+      description: 'L’inquiétude ou l’évitement face à l’argent sont nets. L’anxiété gêne probablement souvent vos décisions et votre tranquillité.',
+      tips: [
+        'Commencez tout petit : regarder une fois le solde de votre compte.',
+        'L’évitement nourrit l’anxiété. Regarder en face redonne un sentiment de prise.',
+        'Parlez d’argent avec quelqu’un de confiance pour rompre l’isolement.',
+      ],
+    },
+    es: {
+      icon: '⚠️',
+      title: 'Ansiedad financiera',
+      description: 'La preocupación o la evitación con el dinero son claras. La ansiedad probablemente entorpece a menudo tus decisiones y tu calma.',
+      tips: [
+        'Empieza por algo mínimo: mirar una vez el saldo.',
+        'Evitar alimenta la ansiedad. Mirar de frente ya devuelve sensación de manejo.',
+        'Habla de dinero con alguien de confianza para no cargarlo en solitario.',
+      ],
+    },
   },
   distress: {
     ko: {
@@ -208,6 +346,36 @@ const LEVEL_DATA: Record<MoneyLevel, Record<SupportedLang, LevelData>> = {
         'ごく小さな実践一つ（自動振替1件など）からコントロール感を取り戻しましょう。',
         '不安の正体を客観的な数字（収入・支出・負債）で向き合いましょう。',
         '財務相談・信用相談など専門的な助けを積極的に検討しましょう。',
+      ],
+    },
+    zh: {
+      icon: '🆘',
+      title: '高金钱压力型',
+      description: '对钱的焦虑非常强。担心和回避很可能已经影响到日常、睡眠，甚至关系。',
+      tips: [
+        '从一件极小的行动开始（例如设定一笔自动转账），把掌控感捡回来。',
+        '用客观的数字（收入、支出、负债）去面对焦虑的真面目。',
+        '积极考虑财务咨询、债务咨询等专业协助。',
+      ],
+    },
+    fr: {
+      icon: '🆘',
+      title: 'Forte détresse financière',
+      description: 'L’anxiété liée à l’argent est très forte. L’inquiétude et l’évitement touchent probablement déjà votre quotidien, votre sommeil, voire vos relations.',
+      tips: [
+        'Reprenez prise par une action minuscule (un virement automatique, par exemple).',
+        'Affrontez l’anxiété avec des chiffres concrets : revenus, dépenses, dettes.',
+        'Envisagez sérieusement un accompagnement : conseil budgétaire ou conseil en surendettement.',
+      ],
+    },
+    es: {
+      icon: '🆘',
+      title: 'Alto estrés financiero',
+      description: 'La ansiedad con el dinero es muy fuerte. La preocupación y la evitación probablemente ya afectan a tu día, tu sueño y hasta tus vínculos.',
+      tips: [
+        'Recupera manejo con una acción mínima (por ejemplo, una transferencia automática).',
+        'Enfrenta la ansiedad con cifras concretas: ingresos, gastos, deudas.',
+        'Valora en serio ayuda profesional: asesoría financiera o de deudas.',
       ],
     },
   },
@@ -261,6 +429,54 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'a5', subscale: 'avoidance', reverse: false, text: '請求書や金融関係の郵便を開けたくない' },
     { id: 'a6', subscale: 'avoidance', reverse: false, text: 'お金の問題は「後で考えよう」と先延ばしにする方だ' },
     { id: 'a7', subscale: 'avoidance', reverse: false, text: '貯蓄・投資の計画を調べるのをつい後回しにする' },
+  ],
+  zh: [
+    { id: 'w1', subscale: 'worry', reverse: false, text: '钱的事常让我担心，也不太从脑子里散掉' },
+    { id: 'w2', subscale: 'worry', reverse: false, text: '我总担心冒出没算到的开销' },
+    { id: 'w3', subscale: 'worry', reverse: false, text: '一想到账户余额，心里就不舒服' },
+    { id: 'w4', subscale: 'worry', reverse: false, text: '我怕将来的经济状况' },
+    { id: 'w5', subscale: 'worry', reverse: false, text: '我常把自己的经济状况和别人比' },
+    { id: 'w6', subscale: 'worry', reverse: false, text: '我曾因为钱而睡不好或压力很大' },
+    { id: 'w7', subscale: 'worry', reverse: false, text: '就算赚得够，我也怕总是不够' },
+    { id: 'a1', subscale: 'avoidance', reverse: false, text: '我老是把查账单、对卡单往后拖' },
+    { id: 'a2', subscale: 'avoidance', reverse: false, text: '我怕看清自己的财务状况，所以躲着不看' },
+    { id: 'a3', subscale: 'avoidance', reverse: false, text: '跟钱有关的话题，我尽量避开' },
+    { id: 'a4', subscale: 'avoidance', reverse: false, text: '做过预算或记账，但常常不了了之' },
+    { id: 'a5', subscale: 'avoidance', reverse: false, text: '账单或银行的信件，我不太想拆开' },
+    { id: 'a6', subscale: 'avoidance', reverse: false, text: '钱的事我倾向「以后再说」' },
+    { id: 'a7', subscale: 'avoidance', reverse: false, text: '了解储蓄或投资的事，我一直往后拖' },
+  ],
+  fr: [
+    { id: 'w1', subscale: 'worry', reverse: false, text: 'Les questions d’argent me préoccupent souvent et ne me quittent pas' },
+    { id: 'w2', subscale: 'worry', reverse: false, text: 'J’ai toujours peur qu’une dépense imprévue surgisse' },
+    { id: 'w3', subscale: 'worry', reverse: false, text: 'Penser au solde de mon compte me met mal à l’aise' },
+    { id: 'w4', subscale: 'worry', reverse: false, text: 'L’avenir financier me fait peur' },
+    { id: 'w5', subscale: 'worry', reverse: false, text: 'Je compare souvent ma situation financière à celle des autres' },
+    { id: 'w6', subscale: 'worry', reverse: false, text: 'Il m’est arrivé de mal dormir ou d’être très stressé à cause de l’argent' },
+    { id: 'w7', subscale: 'worry', reverse: false, text: 'Même si je gagne assez, j’ai peur que cela ne suffise jamais' },
+    { id: 'a1', subscale: 'avoidance', reverse: false, text: 'Je repousse sans cesse la consultation de mes relevés' },
+    { id: 'a2', subscale: 'avoidance', reverse: false, text: 'J’évite de regarder ma situation financière parce que j’ai peur de la voir' },
+    { id: 'a3', subscale: 'avoidance', reverse: false, text: 'J’évite autant que possible les conversations sur l’argent' },
+    { id: 'a4', subscale: 'avoidance', reverse: false, text: 'J’ai souvent commencé un budget ou un carnet de comptes sans le tenir' },
+    { id: 'a5', subscale: 'avoidance', reverse: false, text: 'Je n’ai pas envie d’ouvrir les factures ou le courrier bancaire' },
+    { id: 'a6', subscale: 'avoidance', reverse: false, text: 'Pour l’argent, j’ai tendance à me dire « j’y penserai plus tard »' },
+    { id: 'a7', subscale: 'avoidance', reverse: false, text: 'Je repousse le moment de me renseigner sur l’épargne ou les placements' },
+  ],
+  es: [
+    { id: 'w1', subscale: 'worry', reverse: false, text: 'Los temas de dinero me preocupan a menudo y no se me van de la cabeza' },
+    { id: 'w2', subscale: 'worry', reverse: false, text: 'Siempre temo que surja un gasto imprevisto' },
+    { id: 'w3', subscale: 'worry', reverse: false, text: 'Pensar en el saldo de la cuenta me incomoda' },
+    { id: 'w4', subscale: 'worry', reverse: false, text: 'Me da miedo mi futuro económico' },
+    { id: 'w5', subscale: 'worry', reverse: false, text: 'Comparo a menudo mi situación económica con la de otros' },
+    { id: 'w6', subscale: 'worry', reverse: false, text: 'He dormido mal o me he estresado mucho por dinero' },
+    { id: 'w7', subscale: 'worry', reverse: false, text: 'Aunque gane suficiente, temo que nunca alcance' },
+    { id: 'a1', subscale: 'avoidance', reverse: false, text: 'Aplazo una y otra vez mirar los extractos' },
+    { id: 'a2', subscale: 'avoidance', reverse: false, text: 'Evito mirar mi situación financiera porque me da miedo verla' },
+    { id: 'a3', subscale: 'avoidance', reverse: false, text: 'Evito en lo posible las conversaciones sobre dinero' },
+    { id: 'a4', subscale: 'avoidance', reverse: false, text: 'He empezado presupuestos o cuentas que luego no sostengo' },
+    { id: 'a5', subscale: 'avoidance', reverse: false, text: 'No me apetece abrir las facturas o el correo del banco' },
+    { id: 'a6', subscale: 'avoidance', reverse: false, text: 'Con el dinero tiendo a decirme «ya lo pensaré luego»' },
+    { id: 'a7', subscale: 'avoidance', reverse: false, text: 'Aplazo el momento de informarme sobre ahorro o inversión' },
   ],
 }
 
