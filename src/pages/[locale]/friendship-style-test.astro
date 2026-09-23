@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import FriendshipStyleTest from '../../components/tests/FriendshipStyleTest';
+import TestSourceNote from '../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../data/test-source-notes';
+import RelatedTools from '../../components/shared/RelatedTools.astro';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '우정 스타일 검사 — 친구들 사이에서 나는 어떤 자리인가', description: '열두 가지 장면으로 모험가·분위기 메이커·살림꾼·지지자·생각 친구 중 내가 서는 자리를 봐요. 으뜸과 버금을 함께 보여 드려요.' },
+  en: { title: 'Friendship style test — where you stand among your friends', description: 'Twelve everyday scenes place you among five styles: Adventurer, Spark, Organiser, Supporter and Thinking friend. You get a main style and a second one.' },
+  ja: { title: '友情スタイル診断 — 友だちの中での立ち位置', description: '十二の場面から、冒険役・盛り上げ役・まとめ役・支え役・考える友のどこに立つかを見ます。主なスタイルと次のスタイルを一緒に出します。' },
+  zh: { title: '友情风格测验 — 在朋友里你站哪个位置', description: '用十二个日常场景，看你落在探路的、带气氛的、张罗的、撑着的、陪你想的哪一边。同时给出主要与次要风格。' },
+  fr: { title: 'Test du style d’amitié — votre place parmi vos amis', description: 'Douze scènes du quotidien situent votre place parmi cinq styles : Aventurier, Étincelle, Organisateur, Soutien et Ami qui réfléchit. Avec un style principal et un second.' },
+  es: { title: 'Test de estilo de amistad — tu lugar entre tus amigos', description: 'Doce escenas cotidianas sitúan tu lugar entre cinco estilos: Aventurero, Chispa, Organizador, Apoyo y Amigo que piensa. Con estilo principal y secundario.' },
+};
+const m = meta[locale] ?? meta.en;
+
+const intro: Record<Locale, { title: string; body: string }> = {
+  ko: { title: '친구 사이에도 각자 맡는 자리가 있어요', body: '한 모임이 굴러가려면 누군가는 먼저 가자고 하고, 누군가는 웃기고, 누군가는 예약을 잡고, 누군가는 조용한 사람을 살피고, 누군가는 진짜 문제를 짚어요. 이 검사는 그중 내가 자주 서는 자리를 봐요. 한 자리로 자르지 않고 다섯의 비율을 그대로 보여 드려요.' },
+  en: { title: 'Every circle of friends has parts, and people take them', body: 'For a group to work, someone has to suggest going somewhere, someone has to make people laugh, someone books the table, someone notices who has gone quiet, and someone names the real problem. This test looks at which part you take most often — and shows all five proportions rather than cutting you down to one.' },
+  ja: { title: '友だちの中にも、それぞれの持ち場があります', body: '集まりが回るには、誰かが行こうと言い、誰かが笑わせ、誰かが予約を取り、誰かが黙った人に気づき、誰かが本当の問題を指します。この診断は、あなたがよく立つ場所を見ます。一つに切らず、五つの割合をそのまま示します。' },
+  zh: { title: '朋友之间，也各有各的位置', body: '一个圈子要转起来，总得有人提议出发、有人把大家逗笑、有人订位子、有人留意谁不出声、有人点破真正的问题。这个测验看的是你最常站的位置——不把你切成一种，而是把五个比例都摆出来。' },
+  fr: { title: 'Dans un groupe d’amis aussi, chacun tient un rôle', body: 'Pour qu’un groupe tourne, il faut quelqu’un qui propose de partir, quelqu’un qui fait rire, quelqu’un qui réserve, quelqu’un qui remarque celui qui se tait, et quelqu’un qui nomme le vrai problème. Ce test regarde la place que vous tenez le plus souvent — et montre les cinq proportions au lieu de vous réduire à une.' },
+  es: { title: 'Entre amigos también hay papeles, y alguien los ocupa', body: 'Para que un grupo funcione, alguien propone salir, alguien hace reír, alguien reserva la mesa, alguien se fija en quien se ha callado y alguien pone nombre al problema real. Este test mira qué lugar ocupas más a menudo — y enseña las cinco proporciones en vez de reducirte a una.' },
+};
+const c = intro[locale] ?? intro.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto max-w-2xl px-4 py-10">
+    <FriendshipStyleTest client:load locale={locale} />
+    <section class="mt-10 border-t border-border pt-8">
+      <h2 class="text-xl font-bold text-foreground">{c.title}</h2>
+      <p class="mt-3 leading-8 text-muted-foreground [word-break:keep-all]">{c.body}</p>
+    </section>
+    <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['friendship-style-test']} />
+    <RelatedTools locale={locale} tools={['mbti', 'zodiacCompat', 'numerology']} current="friendship-style-test" />
+  </div>
+</Layout>

@@ -141,6 +141,14 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     ],
     caution: 'finance',
   },
+  'friendship-style-test': {
+    basis: [
+      'OIYO-authored items — 12 everyday scenes sorted into five parts people take among friends',
+      'draws on group-role language (initiator, energiser, coordinator, supporter, reflector) used in team literature',
+      'not a validated instrument; shows all five proportions instead of a single type'
+    ],
+    caution: 'style',
+  },
   'focus-blocker-test': {
     basis: [
       '10 OIYO-authored items — sorts where your focus breaks from',
