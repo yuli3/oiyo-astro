@@ -4,10 +4,10 @@ import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type MoneyType = 'saver' | 'spender' | 'investor' | 'minimalist'
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -87,6 +87,51 @@ const LABELS: Record<SupportedLang, {
     note: 'このテストはあなたの金融習慣の自己理解を助けるためのものです。',
     copied: 'リンクがコピーされました！',
   },
+  zh: {
+    title: '金钱性格测验',
+    subtitle: '我是怎么管钱的？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全没有', '很少', '偶尔', '经常', '总是如此'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的金钱性格是',
+    yourType: '我的理财类型',
+    strengths: '长处',
+    tip: '小建议',
+    scoreLabel: '各类型得分',
+    note: '这个测验帮你看清自己的用钱习惯，不是理财建议。',
+    copied: '链接已复制！',
+  },
+  fr: {
+    title: 'Test du rapport à l’argent',
+    subtitle: 'Comment gérez-vous votre argent ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Jamais', 'Rarement', 'Parfois', 'Souvent', 'Toujours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon rapport à l’argent est',
+    yourType: 'Votre profil financier',
+    strengths: 'Forces',
+    tip: 'Conseil',
+    scoreLabel: 'Score par profil',
+    note: 'Ce test aide à voir ses habitudes d’argent ; ce n’est pas un conseil financier.',
+    copied: 'Lien copié !',
+  },
+  es: {
+    title: 'Test de tu relación con el dinero',
+    subtitle: '¿Cómo manejas tu dinero?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nunca', 'Rara vez', 'A veces', 'A menudo', 'Siempre'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi relación con el dinero es',
+    yourType: 'Tu perfil financiero',
+    strengths: 'Fortalezas',
+    tip: 'Consejo',
+    scoreLabel: 'Puntuación por perfil',
+    note: 'Este test ayuda a ver tus hábitos con el dinero; no es asesoramiento financiero.',
+    copied: '¡Enlace copiado!',
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -126,6 +171,42 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q9', text: '定期的に物を整理し、不必要な所有物の蓄積を避ける', type: 'minimalist' },
     { id: 'q10', text: '少ない所有物と最小限の支出の生活に自由を感じる', type: 'minimalist' },
   ],
+  zh: [
+    { id: 'q1', text: '在花别的钱之前，我总会先存下一笔', type: 'saver' },
+    { id: 'q2', text: '存款余额一变少，我就会不安', type: 'saver' },
+    { id: 'q3', text: '看到喜欢的东西会当场买下', type: 'spender' },
+    { id: 'q4', text: '比起将来，我更看重当下的体验和快乐', type: 'spender' },
+    { id: 'q5', text: '我会主动研究股票、房产这类资产并投入', type: 'investor' },
+    { id: 'q6', text: '我把钱看成累积长期财富的工具', type: 'investor' },
+    { id: 'q7', text: '为了可能的收益，我愿意承担算得清的金融风险', type: 'investor' },
+    { id: 'q8', text: '比起便宜东西买很多，我宁可少买几件好的', type: 'minimalist' },
+    { id: 'q9', text: '我会定期整理，不让用不上的东西堆着', type: 'minimalist' },
+    { id: 'q10', text: '东西少、开销小的生活让我觉得自由', type: 'minimalist' },
+  ],
+  fr: [
+    { id: 'q1', text: 'Avant toute autre dépense, je mets d’abord une somme de côté', type: 'saver' },
+    { id: 'q2', text: 'Quand mon épargne baisse, je me sens mal à l’aise', type: 'saver' },
+    { id: 'q3', text: 'Quand un objet me plaît, je l’achète sur le coup', type: 'spender' },
+    { id: 'q4', text: 'Je privilégie l’expérience et le plaisir présents plutôt que l’avenir', type: 'spender' },
+    { id: 'q5', text: 'Je me renseigne activement et j’investis (actions, immobilier…)', type: 'investor' },
+    { id: 'q6', text: 'Je vois l’argent comme un outil pour bâtir un patrimoine durable', type: 'investor' },
+    { id: 'q7', text: 'Je suis à l’aise avec un risque financier calculé pour un gain possible', type: 'investor' },
+    { id: 'q8', text: 'Je préfère quelques objets de qualité à beaucoup d’objets bon marché', type: 'minimalist' },
+    { id: 'q9', text: 'Je trie régulièrement et j’évite d’accumuler l’inutile', type: 'minimalist' },
+    { id: 'q10', text: 'Posséder peu et dépenser peu me donne un sentiment de liberté', type: 'minimalist' },
+  ],
+  es: [
+    { id: 'q1', text: 'Antes de cualquier otro gasto, aparto primero una cantidad', type: 'saver' },
+    { id: 'q2', text: 'Cuando baja el saldo del ahorro, me pongo inquieto', type: 'saver' },
+    { id: 'q3', text: 'Si algo me gusta, lo compro en el momento', type: 'spender' },
+    { id: 'q4', text: 'Priorizo la experiencia y el disfrute de ahora antes que el futuro', type: 'spender' },
+    { id: 'q5', text: 'Investigo por mi cuenta e invierto (bolsa, vivienda…)', type: 'investor' },
+    { id: 'q6', text: 'Veo el dinero como herramienta para construir patrimonio a largo plazo', type: 'investor' },
+    { id: 'q7', text: 'Me manejo bien con un riesgo financiero calculado a cambio de una ganancia posible', type: 'investor' },
+    { id: 'q8', text: 'Prefiero pocas cosas buenas a muchas baratas', type: 'minimalist' },
+    { id: 'q9', text: 'Ordeno con regularidad y evito acumular lo que no uso', type: 'minimalist' },
+    { id: 'q10', text: 'Tener poco y gastar poco me da sensación de libertad', type: 'minimalist' },
+  ],
 }
 
 const RESULTS: Record<MoneyType, Record<SupportedLang, ResultData>> = {
@@ -154,6 +235,30 @@ const RESULTS: Record<MoneyType, Record<SupportedLang, ResultData>> = {
       strengths: ['財政的な安定', '緊急資金の確保', '目標貯蓄'],
       tip: '厳しすぎる節約よりも、楽しい消費も人生の一部であることを忘れずに。',
     },
+    zh: {
+      emoji: '🏦',
+      title: '储蓄型',
+      tagline: '求稳的人',
+      description: '你会为将来打算，靠存下来的钱换取安心。有一张财务安全网，心里才踏实。',
+      strengths: ['财务稳', '备得住应急金', '有目标地存'],
+      tip: '别把自己绷得太紧，偶尔花在开心上也是生活的一部分。',
+    },
+    fr: {
+      emoji: '🏦',
+      title: 'Épargnant',
+      tagline: 'Celui qui cherche la stabilité',
+      description: 'Vous pensez à l’avenir et trouvez la tranquillité dans l’épargne. Un filet de sécurité, c’est votre paix d’esprit.',
+      strengths: ['Stabilité financière', 'Réserve d’urgence prête', 'Épargne orientée vers un but'],
+      tip: 'Une dépense plaisir de temps en temps fait aussi partie d’une vie bien vécue.',
+    },
+    es: {
+      emoji: '🏦',
+      title: 'Ahorrador',
+      tagline: 'Quien busca estabilidad',
+      description: 'Piensas en el futuro y encuentras calma en el ahorro. Tener un colchón es tu tranquilidad.',
+      strengths: ['Estabilidad financiera', 'Fondo de emergencia listo', 'Ahorro con objetivo'],
+      tip: 'Gastar de vez en cuando en algo que te gusta también es parte de vivir bien.',
+    },
   },
   spender: {
     ko: {
@@ -179,6 +284,30 @@ const RESULTS: Record<MoneyType, Record<SupportedLang, ResultData>> = {
       description: '今この瞬間を楽しみ、経験に投資します。生活の質を高める消費に喜びを見出します。',
       strengths: ['豊かな経験', '現在への集中', '生活の質を重視'],
       tip: '衝動買いを減らすために、購入前に24時間待つルールを試してみてください。',
+    },
+    zh: {
+      emoji: '🎉',
+      title: '消费型',
+      tagline: '享受当下的人',
+      description: '你活在此刻，愿意把钱花在体验上。能提升生活品质的花费会让你高兴。',
+      strengths: ['经历丰富', '专注当下', '看重生活品质'],
+      tip: '想买的时候先等24小时，冲动买的次数会明显变少。',
+    },
+    fr: {
+      emoji: '🎉',
+      title: 'Dépensier',
+      tagline: 'Celui qui profite du présent',
+      description: 'Vous vivez l’instant et investissez dans l’expérience. La dépense qui améliore la vie vous réjouit.',
+      strengths: ['Expériences riches', 'Ancré dans le présent', 'Attaché à la qualité de vie'],
+      tip: 'Essayez la règle des 24 heures avant d’acheter : les achats impulsifs diminuent nettement.',
+    },
+    es: {
+      emoji: '🎉',
+      title: 'Gastador',
+      tagline: 'Quien disfruta el presente',
+      description: 'Vives el momento e inviertes en experiencias. Te alegra el gasto que mejora la vida.',
+      strengths: ['Experiencias ricas', 'Presente bien vivido', 'Cuidas la calidad de vida'],
+      tip: 'Prueba la regla de las 24 horas antes de comprar: las compras impulsivas bajan bastante.',
     },
   },
   investor: {
@@ -206,6 +335,30 @@ const RESULTS: Record<MoneyType, Record<SupportedLang, ResultData>> = {
       strengths: ['長期的な視点', 'リスク管理', '資産成長'],
       tip: '分散投資と緊急資金の維持を忘れずに。',
     },
+    zh: {
+      emoji: '📈',
+      title: '投资型',
+      tagline: '让资产长大的人',
+      description: '你把钱当工具，为将来的价值而投入。你用长线的眼光追求财务自由。',
+      strengths: ['看得长远', '会管风险', '让资产增值'],
+      tip: '别忘了分散投资，也别动到应急金。',
+    },
+    fr: {
+      emoji: '📈',
+      title: 'Investisseur',
+      tagline: 'Celui qui fait croître son patrimoine',
+      description: 'Vous voyez l’argent comme un outil et investissez pour la valeur future. Vous visez la liberté financière sur le long terme.',
+      strengths: ['Vision de long terme', 'Gestion du risque', 'Croissance du patrimoine'],
+      tip: 'N’oubliez pas la diversification, et gardez intacte votre réserve d’urgence.',
+    },
+    es: {
+      emoji: '📈',
+      title: 'Inversor',
+      tagline: 'Quien hace crecer su patrimonio',
+      description: 'Ves el dinero como herramienta e inviertes por el valor futuro. Buscas libertad financiera con mirada larga.',
+      strengths: ['Visión a largo plazo', 'Gestión del riesgo', 'Patrimonio que crece'],
+      tip: 'No olvides diversificar, y deja intacto el fondo de emergencia.',
+    },
   },
   minimalist: {
     ko: {
@@ -213,7 +366,7 @@ const RESULTS: Record<MoneyType, Record<SupportedLang, ResultData>> = {
       title: '미니멀리스트',
       tagline: '자유로운 간소주의자',
       description: '소유를 줄이고 본질에 집중합니다. 당신은 덜 가짐으로써 더 많은 자유를 얻습니다.',
-      strengths: ['재정적 자유', '청소한 삶', '지속 가능한 소비'],
+      strengths: ['재정적 자유', '정돈된 생활', '지속 가능한 소비'],
       tip: '경험 소비는 미니멀리즘과 충분히 양립할 수 있습니다.',
     },
     en: {
@@ -231,6 +384,30 @@ const RESULTS: Record<MoneyType, Record<SupportedLang, ResultData>> = {
       description: '所有を減らし、本質に集中します。少ない所有によってより多くの自由を得ます。',
       strengths: ['財政的自由', 'すっきりした生活', '持続可能な消費'],
       tip: '経験への消費はミニマリズムと十分に両立できます。',
+    },
+    zh: {
+      emoji: '🍃',
+      title: '极简型',
+      tagline: '轻装上路的人',
+      description: '你把拥有的东西减到必要，专心在真正重要的事上。少拿一点，反而更自由。',
+      strengths: ['需要的很清楚', '少而精', '开销可控'],
+      tip: '精简是好事，但别把该有的快乐也一起省掉。',
+    },
+    fr: {
+      emoji: '🍃',
+      title: 'Minimaliste',
+      tagline: 'Celui qui voyage léger',
+      description: 'Vous réduisez ce que vous possédez pour vous concentrer sur l’essentiel. Avoir moins vous rend plus libre.',
+      strengths: ['Besoins clairs', 'Peu de choses, mais bien choisies', 'Dépenses maîtrisées'],
+      tip: 'Simplifier est précieux ; veillez seulement à ne pas rogner aussi sur les plaisirs qui comptent.',
+    },
+    es: {
+      emoji: '🍃',
+      title: 'Minimalista',
+      tagline: 'Quien viaja ligero',
+      description: 'Reduces lo que tienes para centrarte en lo esencial. Tener menos te hace más libre.',
+      strengths: ['Tienes claro lo que necesitas', 'Pocas cosas, bien elegidas', 'Gasto bajo control'],
+      tip: 'Simplificar está bien; solo cuida de no recortar también los gustos que te importan.',
     },
   },
 }
