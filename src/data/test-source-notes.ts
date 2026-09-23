@@ -2,7 +2,7 @@ import type { Locale } from '../i18n';
 
 export interface TestSourceNote {
   basis: string[];
-  caution: 'clinical' | 'reflection' | 'symbolic' | 'style' | 'finance';
+  caution: 'clinical' | 'reflection' | 'symbolic' | 'style' | 'color' | 'finance';
 }
 
 export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
@@ -49,102 +49,102 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
   },
   'loneliness-test': {
     basis: [
-      'UCLA Loneliness Scale 구조를 참고한 30문항',
-      '주관적 외로움은 사회적 접촉의 양이 아니라 기대와 현실의 간극을 잰다',
-      '임상 진단이 아니라 자기관찰용',
+      '30 items modelled on the UCLA Loneliness Scale structure',
+      'measures the gap between expectation and reality, not the amount of social contact',
+      'for self-observation, not clinical diagnosis',
     ],
     caution: 'reflection',
   },
   'conflict-style-test': {
     basis: [
-      'OIYO 자작 문항 — 갈등 상황에서의 대응 경향을 유형으로 정리한다',
-      '검증된 갈등관리 도구(TKI 등)를 사용하지 않았고 그 점수와 비교할 수 없다',
+      'OIYO-authored items — sorts how you tend to respond in conflict into styles',
+      'does not use a validated conflict instrument (TKI and the like); not comparable to those scores',
     ],
     caution: 'style',
   },
   'breakup-recovery-test': {
     basis: [
-      'OIYO 자작 문항 — 이별 후 회복 국면을 폭풍기·성장기·고독기·전환기로 나눈다',
-      '애도 단계 이론에서 착안했으나 단계가 순서대로 온다고 보지 않는다',
-      '상실 반응이 일상 기능을 무너뜨린다면 이 결과가 아니라 전문가를 본다',
+      'OIYO-authored items — divides post-breakup recovery into storm, growth, solitude and turning phases',
+      'inspired by grief-stage theory, but does not assume the stages arrive in order',
+      'if grief disrupts daily functioning, see a professional rather than this result',
     ],
     caution: 'reflection',
   },
   'emotional-eating-test': {
     basis: [
-      'OIYO 자작 문항 — 정서 상태와 먹는 행동의 연결을 자기보고로 본다',
-      '섭식장애 선별 도구가 아니다',
+      'OIYO-authored items — self-report on how mood and eating connect',
+      'not an eating-disorder screening tool',
     ],
     caution: 'clinical',
   },
   'coffee-personality-test': {
     basis: [
-      '오락용 유형 분류 — 커피 취향을 성격 은유로 쓴다',
-      '취향과 성격의 상관을 주장하지 않는다. 결과는 대화거리이지 진단이 아니다',
+      'for fun — uses coffee preference as a metaphor for personality',
+      'claims no correlation between taste and personality; the result is conversation, not diagnosis',
     ],
-    caution: 'style',
+    caution: 'color',
   },
   'animal-personality-test': {
     basis: [
-      '오락용 유형 분류 — 동물 상징으로 행동 경향을 이야기한다',
-      '동물 비유는 기억을 돕는 장치이고 분류학적 근거가 없다',
+      'for fun — talks about behavioural tendencies through animal symbols',
+      'the animal metaphor is a memory aid with no taxonomic basis',
     ],
     caution: 'style',
   },
   'chimp-test': {
     basis: [
-      '숫자 위치를 순간 기억하는 캐주얼 게임',
-      '교토대 침팬지 연구에서 이름을 따왔을 뿐 그 실험 절차를 재현하지 않는다',
-      '작업기억 측정이 아니고 아무것도 진단하지 않는다',
+      'a casual game of remembering where numbers flashed',
+      'named after the Kyoto University chimpanzee studies; does not reproduce their procedure',
+      'not a working-memory measure and diagnoses nothing',
     ],
     caution: 'reflection',
   },
   'typing-speed-test': {
     basis: [
-      '입력 속도(WPM)와 정확도 측정 — 심리 검사가 아니다',
-      '키보드·언어·지문에 따라 값이 달라지므로 절대 비교에 쓰지 않는다',
+      'measures typing speed (WPM) and accuracy — not a psychological test',
+      'values shift with keyboard, language and passage, so they are not for absolute comparison',
     ],
     caution: 'style',
   },
   'productivity-style-test': {
     basis: [
-      'OIYO 자작 문항 — 몰입형·멀티태스커·협업형·유연형 중 작업 성향을 본다',
-      '업무 성과를 예측하지 않는다. 환경에 따라 바뀌는 선호에 가깝다',
+      'OIYO-authored items — looks at working style across deep-focus, multitasking, collaborative and flexible',
+      'does not predict job performance; closer to a preference that shifts with environment',
     ],
     caution: 'style',
   },
   'thinking-patterns-test': {
     basis: [
-      'OIYO 자작 문항 — 분석·창의·실용·관계 중 어디로 먼저 기우는지 본다',
-      '인지 능력 검사가 아니라 접근 방식의 선호다',
+      'OIYO-authored items — which way you lean first: analytical, creative, practical or relational',
+      'a preference in approach, not a test of cognitive ability',
     ],
     caution: 'style',
   },
   'work-life-balance-test': {
     basis: [
-      'OIYO 자작 문항 — 시간·에너지·경계의 배분을 자기보고로 본다',
-      '번아웃 선별 도구가 아니다. 소진이 의심되면 burnout 검사를 본다',
+      'OIYO-authored items — self-report on how you split time, energy and boundaries',
+      'not a burnout screening tool; if exhaustion is the worry, take the burnout test',
     ],
     caution: 'reflection',
   },
   'digital-wellness-test': {
     basis: [
-      'OIYO 자작 문항 — 디지털 기기 사용이 수면·집중·관계에 닿는 지점을 본다',
-      '중독 진단 기준(예: IGD)을 쓰지 않았고 그것으로 읽어서도 안 된다',
+      'OIYO-authored items — where device use touches sleep, focus and relationships',
+      'does not use addiction criteria (such as IGD) and should not be read as such',
     ],
     caution: 'clinical',
   },
   'risk-tolerance-test': {
     basis: [
-      'OIYO 자작 문항 — 불확실성 앞에서의 선택 경향을 본다',
-      '투자 적합성 평가가 아니다. 금융 상품 선택의 근거로 쓰지 않는다',
+      'OIYO-authored items — how you tend to choose when the outcome is uncertain',
+      'not an investment suitability assessment; not a basis for choosing financial products',
     ],
     caution: 'finance',
   },
   'focus-blocker-test': {
     basis: [
-      'OIYO 자작 10문항 — 집중을 끊는 요인이 어디에서 오는지 나눈다',
-      'ADHD 선별이 아니다. 지속적인 주의 곤란은 adhd 검사와 전문가 상담으로',
+      '10 OIYO-authored items — sorts where your focus breaks from',
+      'not an ADHD screen; persistent attention difficulty calls for the ADHD test and a professional',
     ],
     caution: 'clinical',
   },
@@ -210,7 +210,7 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
   },
   'personal-color': {
     basis: ['seasonal color analysis tradition', 'personal styling color harmony principles'],
-    caution: 'style',
+    caution: 'color',
   },
   political: {
     basis: ['two-axis political compass model', 'civic values and ideological orientation surveys'],
@@ -287,7 +287,19 @@ const CAUTION_TEXT: Record<TestSourceNote['caution'], Record<Locale, string>> = 
     fr: "Ce test adapte un langage typologique populaire pour l'introspection. Il ne doit pas définir une personne ni remplacer une décision importante.",
     es: 'Este test adapta un lenguaje tipológico popular para la reflexión. No debe definir a una persona ni reemplazar decisiones importantes.',
   },
+  // 2026-09-23: 이 문구는 색채 이론만 말하고 있었는데, 갈등 스타일·정신 동물·
+  // 타자 속도·생산성·사고 습관까지 일곱 검사가 같이 쓰고 있었다. 동물 검사
+  // 아래에 "색채와 스타일 이론은…" 이 뜨는 식이었다. 문구를 유형 분류 전반에
+  // 맞게 고치고, 색채 전용 문구는 color 로 따로 둔다.
   style: {
+    ko: '이 분류는 과학적 진단이 아니라 자기 경향을 살펴보는 도구입니다. 사람을 한 유형으로 단정하지 말고 이야깃거리로 삼아 주세요.',
+    en: 'This typology is a way to look at your own tendencies, not a scientific diagnosis. Use it as something to talk about, not a label for a person.',
+    ja: 'この分類は科学的診断ではなく、自分の傾向を眺めるための道具です。人を一つの型に決めつけず、話のきっかけとして使ってください。',
+    zh: '这个分类不是科学诊断，而是用来看看自己的倾向。别把人定成某一型，当作聊天的由头就好。',
+    fr: "Cette typologie sert à observer vos tendances, ce n'est pas un diagnostic scientifique. Prenez-la comme un sujet de conversation, pas comme une étiquette.",
+    es: 'Esta tipología sirve para mirar tus propias tendencias; no es un diagnóstico científico. Tómala como tema de conversación, no como etiqueta.',
+  },
+  color: {
     ko: '색채·스타일 이론은 과학적 진단이 아니라 취향 탐색 도구입니다. 결과는 어울림을 실험하는 출발점으로만 사용하세요.',
     en: 'Color and style theory is a preference exploration tool, not a scientific diagnosis. Treat results as a starting point for trying looks.',
     ja: '色彩・スタイル理論は科学的診断ではなく好みを探る道具です。結果は試すための出発点として使ってください。',
