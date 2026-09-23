@@ -44,3 +44,32 @@ describe("자미두수 명반 — 공개 예시와 대조", () => {
     expect(at("wen_qu")).toBe("Xu"); // 辰(4) + 午(6) = 戌(10)
   });
 });
+
+describe("자미두수 — 晚子時와 윤달", () => {
+  const at = (chart: ReturnType<typeof calculateZiWeiCoordinates>, id: string) =>
+    Object.values(chart.palaces).find((p) => p.stars.some((s) => s.id === id))?.earthlyBranch;
+
+  // 경도 0°, 6월 중순(균시차 ≈ 0)이라 진태양시 ≈ UTC 로 둔다.
+  it("진태양시 23시 이후는 다음 날 子時로 본다 — 00시 30분과 같은 날, 22시 30분과는 다른 날", () => {
+    const late = calculateZiWeiCoordinates(new Date(Date.UTC(2024, 5, 13, 23, 30)), 0);
+    const nextEarly = calculateZiWeiCoordinates(new Date(Date.UTC(2024, 5, 14, 0, 30)), 0);
+    const sameDayHai = calculateZiWeiCoordinates(new Date(Date.UTC(2024, 5, 13, 22, 30)), 0);
+    expect(late.lunarDate).toEqual(nextEarly.lunarDate);
+    expect(late.lunarDate.day).toBe(sameDayHai.lunarDate.day + 1);
+    expect(at(late, "zi_wei")).toBe(at(nextEarly, "zi_wei"));
+  });
+
+  // 2023년 윤2월: 양력 3월 22일이 윤2월 1일.
+  it("윤달 보름까지는 그 달, 16일부터는 다음 달로 좌보·우필과 명궁을 놓는다", () => {
+    const leapEarly = calculateZiWeiCoordinates(new Date(Date.UTC(2023, 2, 26, 12)), 0); // 윤2월 5일
+    const leapLate = calculateZiWeiCoordinates(new Date(Date.UTC(2023, 3, 10, 12)), 0); // 윤2월 20일
+    expect(leapEarly.lunarDate).toMatchObject({ month: 2, isLeap: true, day: 5 });
+    expect(leapLate.lunarDate).toMatchObject({ month: 2, isLeap: true, day: 20 });
+    expect(at(leapEarly, "zuo_fu")).toBe("Si"); // 2월: 辰 + 1
+    expect(at(leapLate, "zuo_fu")).toBe("Wu"); // 3월로 본다: 辰 + 2
+    expect(at(leapLate, "you_bi")).toBe("Shen"); // 戌 − 2
+    // 같은 시각의 명궁은 달이 하나 밀린 만큼 한 칸 나아간다
+    const idx = (c: ReturnType<typeof calculateZiWeiCoordinates>) => c.lifePalace.index;
+    expect((idx(leapLate) - idx(leapEarly) + 12) % 12).toBe(1);
+  });
+});

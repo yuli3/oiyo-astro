@@ -36,6 +36,7 @@ const content: Record<Locale, {
     faqTitle: '자주 묻는 질문',
     faqs: [
       { question: '왜 태어난 시각까지 필요한가요?', answer: '자미두수는 하루를 12개의 시진(2시간 단위)으로 나누고, 그 시진을 기준으로 명궁의 위치를 정하기 때문에 시각 없이는 정확한 계산이 어렵습니다.' },
+      { question: '밤 11시 이후에 태어났거나 윤달에 태어났다면요?', answer: '출생지 기준 진태양시로 밤 11시부터 자정까지는 자시(子時)이고, 음력 날짜는 다음 날로 계산해요. 윤달생은 보름까지는 그 달, 16일부터는 다음 달로 명궁을 세워요. 둘 다 가장 널리 쓰는 배반 관례를 따른 것이고, 같은 날로 두거나 윤달을 통째로 한 달로 보는 유파도 있어요.' },
       { question: '사주(팔자)와 결과가 다른데 왜죠?', answer: '사주와 자미두수는 계산 방식이 다른 별개의 상징 체계입니다. 같은 생년월일시라도 서로 다른 언어로 해석하기 때문에 결과가 다르게 느껴질 수 있습니다.' },
       { question: '이 결과를 어떻게 활용하면 좋나요?', answer: '정답을 정해주는 진단이 아니라, 자기 성찰을 위한 참고 자료로 활용해 보세요.' },
     ],
@@ -53,6 +54,7 @@ const content: Record<Locale, {
     faqTitle: 'Frequently asked questions',
     faqs: [
       { question: 'Why is my birth time required?', answer: 'Zi Wei Dou Shu divides the day into 12 two-hour blocks, and the life palace is fixed based on which block you were born in — without it, precise calculation isn’t possible.' },
+      { question: 'What if I was born after 11 p.m., or in a leap month?', answer: 'From 11 p.m. to midnight in local true solar time is the Zi hour, and the lunar date is counted as the next day. For a leap month, days 1–15 are read as that month and days 16 onward as the following month when placing the life palace. Both follow the most widely used charting convention; some schools keep the same day or treat the whole leap month as one month.' },
       { question: 'Why is this different from my Saju result?', answer: 'Saju and Zi Wei Dou Shu are separate symbolic systems with different calculation methods. The same birth date and time can read differently through each language.' },
       { question: 'How should I use this result?', answer: 'Treat it as a prompt for self-reflection rather than a fixed diagnosis.' },
     ],
@@ -70,6 +72,7 @@ const content: Record<Locale, {
     faqTitle: 'よくある質問',
     faqs: [
       { question: 'なぜ出生時刻が必要ですか？', answer: '紫微斗数は一日を12の時辰（2時間単位）に分け、その時辰をもとに命宮の位置を定めるため、時刻がないと正確な計算ができません。' },
+      { question: '夜11時以降や閏月に生まれた場合は？', answer: '出生地の真太陽時で夜11時から0時までは子の刻で、旧暦の日付は翌日として計算します。閏月生まれは、15日までその月、16日からは翌月として命宮を立てます。どちらも最も広く使われる作盤の慣例に従ったもので、同じ日のままにしたり閏月を丸ごと一か月と見たりする流派もあります。' },
       { question: '四柱推命の結果と違うのはなぜですか？', answer: '四柱推命と紫微斗数は計算方法が異なる別々の象徴体系です。同じ生年月日時でも異なる言語で読むため、結果の印象が変わります。' },
       { question: 'この結果はどう活用すればいいですか？', answer: '断定的な診断ではなく、内省のための参考として活用してください。' },
     ],
@@ -87,6 +90,7 @@ const content: Record<Locale, {
     faqTitle: '常见问题',
     faqs: [
       { question: '为什么需要出生时间？', answer: '紫微斗数将一天分为12个时辰（每个2小时），命宫的位置正是根据所在时辰确定的，没有时间就难以精确计算。' },
+      { question: '如果出生在晚上11点以后，或者在闰月出生呢？', answer: '按出生地真太阳时，晚上11点到午夜属于子时，农历日期按第二天计算。闰月出生的，十五日以前按本月、十六日起按下个月来安命宫。两者都遵循最通行的排盘惯例；也有流派仍算同一天，或把整个闰月当作一个月。' },
       { question: '为什么结果和八字不一样？', answer: '八字与紫微斗数是计算方式不同的两套独立象征体系，即使是同一出生日期时间，用不同语言解读也会呈现不同结果。' },
       { question: '应该如何使用这个结果？', answer: '请把它当作自我反思的参考，而不是定论式的诊断。' },
     ],
@@ -104,6 +108,7 @@ const content: Record<Locale, {
     faqTitle: 'Questions fréquentes',
     faqs: [
       { question: 'Pourquoi mon heure de naissance est-elle nécessaire ?', answer: 'Le Zi Wei Dou Shu divise la journée en 12 tranches de deux heures, et le palais de vie est fixé selon la tranche de votre naissance — sans elle, un calcul précis est impossible.' },
+      { question: 'Et si je suis né après 23 h, ou pendant un mois intercalaire ?', answer: 'De 23 h à minuit en temps solaire vrai du lieu de naissance, c’est l’heure Zi, et la date lunaire est comptée comme le lendemain. Pour un mois intercalaire, les jours 1 à 15 sont lus comme ce mois-là et à partir du 16 comme le mois suivant pour placer le palais de vie. Les deux suivent la convention la plus répandue ; certaines écoles gardent le même jour ou traitent tout le mois intercalaire comme un seul mois.' },
       { question: 'Pourquoi le résultat diffère-t-il de mon Saju ?', answer: 'Le Saju et le Zi Wei Dou Shu sont deux systèmes symboliques distincts, avec des méthodes de calcul différentes.' },
       { question: 'Comment utiliser ce résultat ?', answer: 'Considérez-le comme une piste de réflexion, pas comme un diagnostic figé.' },
     ],
@@ -121,6 +126,7 @@ const content: Record<Locale, {
     faqTitle: 'Preguntas frecuentes',
     faqs: [
       { question: '¿Por qué se necesita mi hora de nacimiento?', answer: 'Zi Wei Dou Shu divide el día en 12 bloques de dos horas, y el palacio de vida se fija según el bloque en que naciste — sin ella no es posible un cálculo preciso.' },
+      { question: '¿Y si nací después de las 23:00 o en un mes intercalar?', answer: 'De las 23:00 a medianoche en hora solar verdadera del lugar de nacimiento es la hora Zi, y la fecha lunar se cuenta como el día siguiente. En un mes intercalar, los días 1 a 15 se leen como ese mes y desde el 16 como el mes siguiente para situar el palacio de vida. Ambas reglas siguen la convención más extendida; algunas escuelas mantienen el mismo día o tratan todo el mes intercalar como un solo mes.' },
       { question: '¿Por qué difiere de mi resultado de Saju?', answer: 'Saju y Zi Wei Dou Shu son sistemas simbólicos independientes con métodos de cálculo distintos.' },
       { question: '¿Cómo debo usar este resultado?', answer: 'Trátalo como una guía para la reflexión personal, no como un diagnóstico fijo.' },
     ],

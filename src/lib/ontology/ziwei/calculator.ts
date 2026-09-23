@@ -57,8 +57,15 @@ export function calculateZiWeiCoordinates(
   const trueDate = getTrueSolarTime(birthDate, longitude);
 
   // 1. Kernel Conversions
-  const lunar = getLunarDate(trueDate);
+  // 晚子時 — 진태양시 23시부터 자정까지는 子時이고 **음력 날짜는 다음 날로** 친다.
+  // 명반의 날(紫微 자리)과, 섣달 그믐 밤이면 해(연간·사화)까지 다음 날 것을 쓴다.
+  // 흔히 쓰는 배반 관례(iztro 기본값과 같음)이고, 같은 날로 두는 파도 있다.
+  const lateZi = trueDate.getUTCHours() >= 23;
+  const lunar = getLunarDate(lateZi ? new Date(trueDate.getTime() + 3_600_000) : trueDate);
   const sexagenary = getSexagenaryCycle(trueDate);
+  // 윤달 — 보름(15일)까지는 그 달, 16일부터는 다음 달로 명궁·월계 성을 놓는다.
+  // 윤달을 통째로 그 달로 보거나 다음 달로 보는 파도 있지만 반으로 나누는 것이 가장 흔하다.
+  const chartMonth = lunar.isLeap && lunar.lunarDay > 15 ? (lunar.lunarMonth % 12) + 1 : lunar.lunarMonth;
 
   const branchOrder = [
     "JA",
@@ -81,7 +88,7 @@ export function calculateZiWeiCoordinates(
   const hourBranchIdx = branchOrder.indexOf(sexagenary.hour.earthlyBranch);
 
   // 2. Life Palace Position
-  const lifeIndex = getLifePalaceIndex(lunar.lunarMonth, hourBranchIdx);
+  const lifeIndex = getLifePalaceIndex(chartMonth, hourBranchIdx);
 
   // 3. Bureau
   const bureau = getBureau(lifeIndex, yearStemIdx);
@@ -118,8 +125,8 @@ export function calculateZiWeiCoordinates(
   // 문곡은 辰에서 시를 따라 순행한다(子時 = 辰). 예전에는 寅에서 시작해 두 칸 어긋났다.
   stars["wen_qu"] = (4 + hourBranchIdx) % 12;
   // 좌보는 辰에서 월을 따라 순행, 우필은 戌에서 월을 따라 역행(정월 = 辰·戌).
-  stars["zuo_fu"] = (4 + (lunar.lunarMonth - 1)) % 12;
-  stars["you_bi"] = (10 - (lunar.lunarMonth - 1) + 12) % 12;
+  stars["zuo_fu"] = (4 + (chartMonth - 1)) % 12;
+  stars["you_bi"] = (10 - (chartMonth - 1) + 12) % 12;
 
   // 5. Transformations (Sihua)
   const stemName = [
