@@ -3,11 +3,11 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type HumorDim = 'affiliative' | 'selfEnhancing' | 'aggressive' | 'selfDefeating'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 interface Question {
@@ -102,6 +102,69 @@ const LABELS: Record<SupportedLang, {
       selfDefeating: '自己卑下ユーモア',
     },
   },
+  zh: {
+    title: '幽默风格测验',
+    subtitle: '我是怎么运用笑的？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '不太是', '一般', '比较是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的幽默风格测验结果',
+    yourStyle: '我的幽默风格',
+    dominant: '主导风格',
+    dimensionsLabel: '四种幽默风格得分',
+    strengthLabel: '优势',
+    watchoutLabel: '需要留意',
+    disclaimer: '本测验基于 Martin 的幽默风格理论，是帮助认识自己的工具。',
+    dimNames: {
+      affiliative: '亲和型幽默',
+      selfEnhancing: '自我提升型幽默',
+      aggressive: '攻击型幽默',
+      selfDefeating: '自我贬低型幽默',
+    },
+  },
+  fr: {
+    title: 'Test du style d’humour',
+    subtitle: 'Comment est-ce que j’utilise le rire ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Plutôt pas', 'Moyennement', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon résultat au test du style d’humour',
+    yourStyle: 'Mon style d’humour',
+    dominant: 'Style dominant',
+    dimensionsLabel: 'Scores des quatre styles d’humour',
+    strengthLabel: 'Forces',
+    watchoutLabel: 'Points de vigilance',
+    disclaimer: 'Ce test s’appuie sur la théorie des styles d’humour de Martin ; c’est un outil pour mieux se connaître.',
+    dimNames: {
+      affiliative: 'Humour affiliatif',
+      selfEnhancing: 'Humour d’auto-valorisation',
+      aggressive: 'Humour agressif',
+      selfDefeating: 'Humour d’autodérision',
+    },
+  },
+  es: {
+    title: 'Test de estilo de humor',
+    subtitle: '¿Cómo uso la risa?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Poco', 'A medias', 'Bastante', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi resultado del test de estilo de humor',
+    yourStyle: 'Mi estilo de humor',
+    dominant: 'Estilo dominante',
+    dimensionsLabel: 'Puntuación de los cuatro estilos de humor',
+    strengthLabel: 'Fortalezas',
+    watchoutLabel: 'A tener en cuenta',
+    disclaimer: 'Este test se basa en la teoría de los estilos de humor de Martin; es una herramienta para conocerte mejor.',
+    dimNames: {
+      affiliative: 'Humor afiliativo',
+      selfEnhancing: 'Humor de autoafirmación',
+      aggressive: 'Humor agresivo',
+      selfDefeating: 'Humor autodescalificador',
+    },
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -159,6 +222,60 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q15', text: '目的達成のために他の人を笑い者にすることがある', dim: 'aggressive' },
     { id: 'q16', text: '人気を得るために恥ずかしい行動をする', dim: 'selfDefeating' },
   ],
+  zh: [
+    { id: 'q1', text: '我喜欢和大家一起笑，让气氛变得轻松', dim: 'affiliative' },
+    { id: 'q2', text: '我觉得幽默让我和朋友更亲近', dim: 'affiliative' },
+    { id: 'q3', text: '逗别人笑对我来说是很大的乐趣', dim: 'affiliative' },
+    { id: 'q4', text: '就算一个人，我也能在日常里发现有趣的地方', dim: 'selfEnhancing' },
+    { id: 'q5', text: '就算处境艰难，我也不太会失去笑容', dim: 'selfEnhancing' },
+    { id: 'q6', text: '我有用幽默缓解压力的能力', dim: 'selfEnhancing' },
+    { id: 'q7', text: '我喜欢嘲弄或讽刺别人的玩笑', dim: 'aggressive' },
+    { id: 'q8', text: '只要好笑，就算对方不舒服也没关系', dim: 'aggressive' },
+    { id: 'q9', text: '拿别人开涮的玩笑，我觉得更好笑', dim: 'aggressive' },
+    { id: 'q10', text: '为了逗别人笑，我会故意让自己出丑', dim: 'selfDefeating' },
+    { id: 'q11', text: '别人笑我的时候，我也就跟着笑过去', dim: 'selfDefeating' },
+    { id: 'q12', text: '为了关系，就算自己心里受伤，也要装得很好笑', dim: 'selfDefeating' },
+    { id: 'q13', text: '在团体里，我常用即兴的幽默带动气氛', dim: 'affiliative' },
+    { id: 'q14', text: '即使在生活的阴暗面，我也会试着找出有趣的部分', dim: 'selfEnhancing' },
+    { id: 'q15', text: '为了达到目的，我有时会拿别人当笑柄', dim: 'aggressive' },
+    { id: 'q16', text: '为了受欢迎，我会做出让自己丢脸的事', dim: 'selfDefeating' },
+  ],
+  fr: [
+    { id: 'q1', text: 'J’aime rire avec les autres et détendre l’atmosphère', dim: 'affiliative' },
+    { id: 'q2', text: 'Je sens que l’humour me rapproche de mes amis', dim: 'affiliative' },
+    { id: 'q3', text: 'Faire rire les autres me fait très plaisir', dim: 'affiliative' },
+    { id: 'q4', text: 'Même seul, je repère le côté drôle du quotidien', dim: 'selfEnhancing' },
+    { id: 'q5', text: 'Même dans les moments difficiles, je garde le sourire', dim: 'selfEnhancing' },
+    { id: 'q6', text: 'J’ai la capacité d’alléger le stress par l’humour', dim: 'selfEnhancing' },
+    { id: 'q7', text: 'J’aime les plaisanteries qui se moquent des autres ou les tournent en dérision', dim: 'aggressive' },
+    { id: 'q8', text: 'Si c’est drôle, peu importe que l’autre soit vexé', dim: 'aggressive' },
+    { id: 'q9', text: 'Je trouve plus drôles les blagues faites aux dépens des autres', dim: 'aggressive' },
+    { id: 'q10', text: 'Je me rends ridicule pour faire rire les autres', dim: 'selfDefeating' },
+    { id: 'q11', text: 'Quand on se moque de moi, j’en ris aussi, simplement', dim: 'selfDefeating' },
+    { id: 'q12', text: 'Pour préserver la relation, je fais le drôle même quand je suis blessé', dim: 'selfDefeating' },
+    { id: 'q13', text: 'Dans un groupe, j’anime l’ambiance par un humour spontané', dim: 'affiliative' },
+    { id: 'q14', text: 'Je cherche le côté drôle même dans les aspects sombres de la vie', dim: 'selfEnhancing' },
+    { id: 'q15', text: 'Il m’arrive de tourner quelqu’un en ridicule pour arriver à mes fins', dim: 'aggressive' },
+    { id: 'q16', text: 'Je me couvre de ridicule pour être apprécié', dim: 'selfDefeating' },
+  ],
+  es: [
+    { id: 'q1', text: 'Me gusta reír con la gente y alegrar el ambiente', dim: 'affiliative' },
+    { id: 'q2', text: 'Siento que el humor me acerca a mis amigos', dim: 'affiliative' },
+    { id: 'q3', text: 'Hacer reír a los demás me da mucha alegría', dim: 'affiliative' },
+    { id: 'q4', text: 'Incluso a solas, encuentro el lado divertido del día a día', dim: 'selfEnhancing' },
+    { id: 'q5', text: 'Incluso en momentos difíciles, no pierdo la sonrisa', dim: 'selfEnhancing' },
+    { id: 'q6', text: 'Tengo la capacidad de aliviar el estrés con humor', dim: 'selfEnhancing' },
+    { id: 'q7', text: 'Disfruto de las bromas que se burlan de otros o los ridiculizan', dim: 'aggressive' },
+    { id: 'q8', text: 'Si tiene gracia, da igual que al otro le moleste', dim: 'aggressive' },
+    { id: 'q9', text: 'Me parecen más graciosas las bromas a costa de los demás', dim: 'aggressive' },
+    { id: 'q10', text: 'Me pongo en ridículo para hacer reír a los demás', dim: 'selfDefeating' },
+    { id: 'q11', text: 'Cuando se ríen de mí, me río con ellos y ya', dim: 'selfDefeating' },
+    { id: 'q12', text: 'Por la relación, hago el gracioso aunque me haya dolido', dim: 'selfDefeating' },
+    { id: 'q13', text: 'En grupo, animo el ambiente con humor improvisado', dim: 'affiliative' },
+    { id: 'q14', text: 'Busco lo divertido incluso en el lado oscuro de la vida', dim: 'selfEnhancing' },
+    { id: 'q15', text: 'A veces ridiculizo a alguien para conseguir lo que quiero', dim: 'aggressive' },
+    { id: 'q16', text: 'Hago el ridículo para caer bien', dim: 'selfDefeating' },
+  ],
 }
 
 const DIM_RESULTS: Record<HumorDim, Record<SupportedLang, DimResult>> = {
@@ -181,6 +298,24 @@ const DIM_RESULTS: Record<HumorDim, Record<SupportedLang, DimResult>> = {
       strength: '高い社交性、葛藤の緩和、ポジティブな雰囲気の創出',
       watchout: '過度になると深刻な状況でも冗談を言おうとするかもしれません',
     },
+    zh: {
+      title: '亲和型幽默',
+      description: '用幽默拉近关系的风格。你很擅长逗大家笑、让团体更有凝聚力。',
+      strength: '社交能力强、能缓和冲突、营造正向气氛',
+      watchout: '过头的话，可能在严肃场合也想开玩笑',
+    },
+    fr: {
+      title: 'Humour affiliatif',
+      description: 'Vous utilisez l’humour pour resserrer les liens. Vous excellez à faire rire et à souder un groupe.',
+      strength: 'Grande sociabilité, apaisement des conflits, ambiance positive',
+      watchout: 'Poussé trop loin, vous risquez de plaisanter même dans les situations sérieuses',
+    },
+    es: {
+      title: 'Humor afiliativo',
+      description: 'Usas el humor para estrechar lazos. Se te da muy bien hacer reír y unir al grupo.',
+      strength: 'Gran sociabilidad, alivio de conflictos, ambiente positivo',
+      watchout: 'Si te pasas, puedes bromear incluso en situaciones serias',
+    },
   },
   selfEnhancing: {
     ko: {
@@ -200,6 +335,24 @@ const DIM_RESULTS: Record<HumorDim, Record<SupportedLang, DimResult>> = {
       description: '逆境の中でもユーモアを通じて心理的バランスを保つスタイルです。一人でも世界の面白い面を見つけます。',
       strength: 'レジリエンス、ストレス緩和、内的安定感',
       watchout: '困難な状況をユーモアだけで回避しようとするかもしれません',
+    },
+    zh: {
+      title: '自我提升型幽默',
+      description: '在人生的逆境中，也靠幽默维持心理平衡的风格。即使一个人，也能发现世界有趣的一面。',
+      strength: '复原力、缓解压力、内在的安定感',
+      watchout: '可能只想靠幽默来逃避困难',
+    },
+    fr: {
+      title: 'Humour d’auto-valorisation',
+      description: 'Vous gardez votre équilibre psychologique grâce à l’humour, même dans l’adversité. Seul, vous voyez encore le côté drôle du monde.',
+      strength: 'Résilience, gestion du stress, stabilité intérieure',
+      watchout: 'Vous risquez de n’affronter les difficultés que par l’humour, pour les esquiver',
+    },
+    es: {
+      title: 'Humor de autoafirmación',
+      description: 'Mantienes el equilibrio psicológico gracias al humor incluso en la adversidad. A solas, sigues viendo el lado divertido del mundo.',
+      strength: 'Resiliencia, alivio del estrés, estabilidad interior',
+      watchout: 'Puedes usar el humor solo para esquivar las dificultades',
     },
   },
   aggressive: {
@@ -221,6 +374,24 @@ const DIM_RESULTS: Record<HumorDim, Record<SupportedLang, DimResult>> = {
       strength: '鋭い機知、直接的な表現力',
       watchout: '意図せず関係を損なったり相手を傷つける可能性があります',
     },
+    zh: {
+      title: '攻击型幽默',
+      description: '喜欢讽刺、嘲弄、挖苦式幽默的风格。很机智，但可能让别人受伤。',
+      strength: '犀利的机智、直接的表达力',
+      watchout: '可能在无意间伤害关系，或刺伤对方',
+    },
+    fr: {
+      title: 'Humour agressif',
+      description: 'Vous aimez la satire, la moquerie et l’ironie mordante. C’est spirituel, mais cela peut blesser.',
+      strength: 'Esprit vif, franc-parler',
+      watchout: 'Vous risquez d’abîmer des relations ou de blesser sans le vouloir',
+    },
+    es: {
+      title: 'Humor agresivo',
+      description: 'Te gusta la sátira, la burla y la ironía. Es ingenioso, pero puede herir a otros.',
+      strength: 'Ingenio agudo, expresión directa',
+      watchout: 'Puedes dañar relaciones o herir a alguien sin querer',
+    },
   },
   selfDefeating: {
     ko: {
@@ -240,6 +411,24 @@ const DIM_RESULTS: Record<HumorDim, Record<SupportedLang, DimResult>> = {
       description: '自分を笑いものにして他者の承認を求めるスタイルです。柔軟に見えますが自尊心に影響することがあります。',
       strength: '葛藤回避、雰囲気転換能力',
       watchout: '繰り返すほど自尊心が下がり、他者にあなたを過小評価させる可能性があります',
+    },
+    zh: {
+      title: '自我贬低型幽默',
+      description: '把自己当笑柄来换取别人认可的风格。看起来随和，但可能影响自尊。',
+      strength: '回避冲突、转换气氛的能力',
+      watchout: '越常这样，自尊可能越低，别人也可能低估你',
+    },
+    fr: {
+      title: 'Humour d’autodérision',
+      description: 'Vous vous tournez en ridicule pour obtenir l’approbation des autres. Cela paraît souple, mais peut peser sur l’estime de soi.',
+      strength: 'Évitement des conflits, capacité à changer l’ambiance',
+      watchout: 'À force, l’estime de soi baisse et les autres risquent de vous sous-estimer',
+    },
+    es: {
+      title: 'Humor autodescalificador',
+      description: 'Te pones en ridículo para ganarte la aprobación de los demás. Parece flexible, pero puede afectar a tu autoestima.',
+      strength: 'Evitar conflictos, capacidad de cambiar el ambiente',
+      watchout: 'Si se repite, baja la autoestima y los demás pueden infravalorarte',
     },
   },
 }

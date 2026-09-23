@@ -4,11 +4,11 @@ import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type FlagLevel = 'normal' | 'some' | 'multiple' | 'strong'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -98,6 +98,60 @@ const LABELS: Record<SupportedLang, {
     note: 'WHO ASRS Part Aに基づく参考ツールです。専門的診断の代替ではありません。',
     disclaimer: 'このテストは診断ツールではありません。結果は専門家への相談前の参考資料としてのみ使用してください。',
   },
+  zh: {
+    title: '成人 ADHD 自我筛查',
+    subtitle: '看看我的专注模式',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['从未', '很少', '有时', '经常', '非常频繁'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的 ADHD 筛查结果',
+    yourLevel: '筛查结果',
+    scoreLabel: '总分',
+    flagLabel: '信号项目',
+    outOf: '/ 30 分',
+    flagsOf: (n) => `${n} / 6항목`,
+    guidanceLabel: '下一步建议',
+    disclaimerLabel: '重要说明',
+    note: '本工具基于 WHO ASRS 第一部分，仅供参考，不能替代专业诊断。',
+    disclaimer: '本测验不是诊断工具。结果只作为咨询专业人士前的参考。',
+  },
+  fr: {
+    title: 'Dépistage TDAH adulte (auto-évaluation)',
+    subtitle: 'Découvrir mon profil d’attention',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Jamais', 'Rarement', 'Parfois', 'Souvent', 'Très souvent'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon résultat de dépistage TDAH',
+    yourLevel: 'Résultat du dépistage',
+    scoreLabel: 'Score total',
+    flagLabel: 'Items signalés',
+    outOf: '/ 30 points',
+    flagsOf: (n) => `${n} / 6항목`,
+    guidanceLabel: 'Prochaines étapes',
+    disclaimerLabel: 'Information importante',
+    note: 'Outil indicatif fondé sur la partie A de l’ASRS de l’OMS. Il ne remplace pas un diagnostic professionnel.',
+    disclaimer: 'Ce test n’est pas un outil de diagnostic. Utilisez le résultat uniquement comme repère avant de consulter un professionnel.',
+  },
+  es: {
+    title: 'Cribado de TDAH en adultos (autoevaluación)',
+    subtitle: 'Conoce tu patrón de atención',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nunca', 'Rara vez', 'A veces', 'A menudo', 'Muy a menudo'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi resultado del cribado de TDAH',
+    yourLevel: 'Resultado del cribado',
+    scoreLabel: 'Puntuación total',
+    flagLabel: 'Ítems señalados',
+    outOf: '/ 30 puntos',
+    flagsOf: (n) => `${n} / 6항목`,
+    guidanceLabel: 'Próximos pasos',
+    disclaimerLabel: 'Aviso importante',
+    note: 'Herramienta orientativa basada en la parte A del ASRS de la OMS. No sustituye un diagnóstico profesional.',
+    disclaimer: 'Este test no es una herramienta de diagnóstico. Usa el resultado solo como referencia antes de consultar a un profesional.',
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -124,6 +178,30 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q4', text: '多くの考えが必要な作業をするとき、先延ばしにしたり避けたりしますか？' },
     { id: 'q5', text: '長時間座っていなければならないとき、手や足をもじもじさせたり、体を動かしたりしますか？' },
     { id: 'q6', text: 'エンジンで動いているかのように、過剰に活動的だったり、何かし続けなければならない感覚がありますか？' },
+  ],
+  zh: [
+    { id: 'q1', text: '完成了困难部分之后，你在收尾阶段会难以把项目做完吗？' },
+    { id: 'q2', text: '做需要条理的事情时，你会难以按顺序整理好吗？' },
+    { id: 'q3', text: '你多常忘记约定或该做的事？' },
+    { id: 'q4', text: '遇到需要大量思考的事时，你会拖着不开始或回避吗？' },
+    { id: 'q5', text: '需要长时间坐着时，你会摆弄手脚或动来动去吗？' },
+    { id: 'q6', text: '你会觉得自己像装了马达一样过度活跃，或非得一直做点什么吗？' },
+  ],
+  fr: [
+    { id: 'q1', text: 'Avez-vous du mal à boucler les derniers détails d’un projet une fois les parties difficiles terminées ?' },
+    { id: 'q2', text: 'Avez-vous du mal à mettre les choses en ordre quand une tâche demande de l’organisation ?' },
+    { id: 'q3', text: 'À quelle fréquence oubliez-vous des rendez-vous ou des obligations ?' },
+    { id: 'q4', text: 'Quand une tâche demande beaucoup de réflexion, évitez-vous ou retardez-vous le moment de commencer ?' },
+    { id: 'q5', text: 'Quand vous devez rester assis longtemps, remuez-vous les mains ou les pieds ou vous tortillez-vous ?' },
+    { id: 'q6', text: 'Vous sentez-vous excessivement actif, comme mû par un moteur, ou obligé de faire sans cesse quelque chose ?' },
+  ],
+  es: [
+    { id: 'q1', text: '¿Te cuesta rematar los detalles finales de un proyecto una vez hecha la parte difícil?' },
+    { id: 'q2', text: '¿Te cuesta poner las cosas en orden cuando una tarea requiere organización?' },
+    { id: 'q3', text: '¿Con qué frecuencia olvidas citas u obligaciones?' },
+    { id: 'q4', text: 'Cuando una tarea exige mucho pensar, ¿evitas o retrasas empezarla?' },
+    { id: 'q5', text: 'Cuando tienes que estar sentado mucho tiempo, ¿mueves las manos o los pies o te retuerces?' },
+    { id: 'q6', text: '¿Te sientes excesivamente activo, como impulsado por un motor, o con la necesidad de estar siempre haciendo algo?' },
   ],
 }
 
@@ -181,6 +259,39 @@ const RESULTS: Record<FlagLevel, Record<SupportedLang, ResultData>> = {
         'ストレスが高いときに集中力が下がるのは自然なことです',
       ],
     },
+    zh: {
+      badge: '💚',
+      title: '一般范围',
+      subtitle: '目前 ADHD 相关特征不明显',
+      description: '从回答来看，ADHD 相关特征在一般范围内。日常生活中专注与条理方面没有太大困难。',
+      guidance: [
+        '保持目前的生活节奏',
+        '需要的话，养成定期自我检视的习惯会有帮助',
+        '压力大时专注力下降，是很自然的现象',
+      ],
+    },
+    fr: {
+      badge: '💚',
+      title: 'Plage habituelle',
+      subtitle: 'Les traits liés au TDAH ne ressortent pas pour l’instant',
+      description: 'Vos réponses situent les traits liés au TDAH dans la plage habituelle. Vous n’avez pas de grande difficulté d’attention ni d’organisation au quotidien.',
+      guidance: [
+        'Gardez votre rythme de vie actuel',
+        'Si besoin, prenez l’habitude de faire le point régulièrement',
+        'Il est normal que l’attention baisse quand le stress monte',
+      ],
+    },
+    es: {
+      badge: '💚',
+      title: 'Rango habitual',
+      subtitle: 'Por ahora no destacan rasgos relacionados con el TDAH',
+      description: 'Tus respuestas sitúan los rasgos relacionados con el TDAH en el rango habitual. No tienes grandes dificultades de atención ni de organización en el día a día.',
+      guidance: [
+        'Mantén tu ritmo de vida actual',
+        'Si lo necesitas, crea el hábito de revisarte con regularidad',
+        'Es normal que la atención baje cuando sube el estrés',
+      ],
+    },
   },
   some: {
     ko: {
@@ -217,6 +328,42 @@ const RESULTS: Record<FlagLevel, Record<SupportedLang, ResultData>> = {
         'やることを小さな単位に分けて管理してみてください',
         '睡眠と規則的な生活リズムを見直してみてください',
         '症状が続いたり日常生活に影響するなら専門家への相談を検討してください',
+      ],
+    },
+    zh: {
+      badge: '💛',
+      title: '观察到部分特征',
+      subtitle: '出现了部分 ADHD 相关特征',
+      description: '观察到部分与 ADHD 相关的特征。在某些情境下，你可能会觉得专注或条理有困难。这也可能来自压力、睡眠不足或环境因素。',
+      guidance: [
+        '减少干扰专注的环境因素（噪音、通知等）',
+        '试着把要做的事拆成小单位来管理',
+        '检视一下睡眠和规律的作息',
+        '如果症状持续或影响日常生活，可以考虑咨询专业人士',
+      ],
+    },
+    fr: {
+      badge: '💛',
+      title: 'Quelques traits observés',
+      subtitle: 'Certains traits liés au TDAH apparaissent',
+      description: 'Certains traits liés au TDAH sont observés. Dans certaines situations, l’attention ou l’organisation peuvent vous coûter. Le stress, le manque de sommeil ou l’environnement peuvent aussi en être la cause.',
+      guidance: [
+        'Réduisez ce qui perturbe l’attention (bruit, notifications…)',
+        'Découpez vos tâches en petites unités',
+        'Faites le point sur votre sommeil et la régularité de votre rythme',
+        'Si les symptômes persistent ou pèsent sur le quotidien, envisagez de consulter un professionnel',
+      ],
+    },
+    es: {
+      badge: '💛',
+      title: 'Algunos rasgos observados',
+      subtitle: 'Aparecen algunos rasgos relacionados con el TDAH',
+      description: 'Se observan algunos rasgos relacionados con el TDAH. En ciertas situaciones puede costarte concentrarte u organizarte. También pueden deberse al estrés, la falta de sueño o el entorno.',
+      guidance: [
+        'Reduce lo que interrumpe la atención (ruido, notificaciones…)',
+        'Divide las tareas en unidades pequeñas',
+        'Revisa tu sueño y la regularidad de tu rutina',
+        'Si los síntomas persisten o afectan a tu día a día, plantéate consultar a un profesional',
       ],
     },
   },
@@ -257,6 +404,42 @@ const RESULTS: Record<FlagLevel, Record<SupportedLang, ResultData>> = {
         'ADHDは適切な治療と戦略で十分に管理できます',
       ],
     },
+    zh: {
+      badge: '🧡',
+      title: '多项信号',
+      subtitle: '确认到多项 ADHD 相关特征',
+      description: '观察到多项与 ADHD 相关的特征。你可能在专注、条理、冲动控制等方面反复遇到困难。和专业人士谈谈可能会有帮助。',
+      guidance: [
+        '建议咨询精神科医生或心理专业人士',
+        '积极使用日常管理工具（计划本、计时器、提醒）',
+        '不要独自硬扛，得到身边人的支持很重要',
+        'ADHD 可以通过治疗和策略好好管理',
+      ],
+    },
+    fr: {
+      badge: '🧡',
+      title: 'Plusieurs signaux',
+      subtitle: 'Plusieurs traits liés au TDAH sont présents',
+      description: 'Plusieurs traits liés au TDAH sont observés. Vous rencontrez peut-être des difficultés répétées d’attention, d’organisation ou de contrôle des impulsions. Un échange avec un professionnel peut aider.',
+      guidance: [
+        'Nous vous conseillons de consulter un psychiatre ou un psychologue',
+        'Servez-vous d’outils du quotidien (agenda, minuteur, rappels)',
+        'Ne restez pas seul face à cela : le soutien de l’entourage compte',
+        'Le TDAH se prend bien en charge grâce aux traitements et aux stratégies',
+      ],
+    },
+    es: {
+      badge: '🧡',
+      title: 'Varias señales',
+      subtitle: 'Se confirman varios rasgos relacionados con el TDAH',
+      description: 'Se observan varios rasgos relacionados con el TDAH. Puede que tengas dificultades repetidas de atención, organización o control de impulsos. Hablar con un profesional puede ayudar.',
+      guidance: [
+        'Te recomendamos consultar a un psiquiatra o a un psicólogo',
+        'Aprovecha herramientas del día a día (agenda, temporizador, recordatorios)',
+        'No intentes resolverlo a solas: el apoyo de tu entorno importa',
+        'El TDAH se puede manejar bien con tratamiento y estrategias',
+      ],
+    },
   },
   strong: {
     ko: {
@@ -293,6 +476,42 @@ const RESULTS: Record<FlagLevel, Record<SupportedLang, ResultData>> = {
          'ADHD診断と治療により生活の質を大幅に向上させることができます',
         'この結果を診断と受け取らず、専門家とともに確認してください',
         'あなたは一人ではありません。多くの成人がADHDとともに充実した生活を送っています',
+      ],
+    },
+    zh: {
+      badge: '❤️',
+      title: '强烈信号',
+      subtitle: 'ADHD 特征表现强烈',
+      description: '与 ADHD 相关的特征在多个方面表现强烈。这个结果不是诊断，但我们真心建议你接受专业评估。ADHD 一旦被发现，就能得到有效的帮助。',
+      guidance: [
+        '强烈建议去看精神科专科医生',
+        'ADHD 的诊断与治疗能大大提升生活质量',
+        '不要把这个结果当成诊断，请和专业人士一起确认',
+        '你并不孤单。许多成年人带着 ADHD 也过着充实的生活',
+      ],
+    },
+    fr: {
+      badge: '❤️',
+      title: 'Signal fort',
+      subtitle: 'Les traits du TDAH ressortent fortement',
+      description: 'Les traits liés au TDAH ressortent fortement dans plusieurs domaines. Ce résultat n’est pas un diagnostic, mais nous vous conseillons sincèrement de vous faire évaluer. Une fois repéré, le TDAH peut être pris en charge efficacement.',
+      guidance: [
+        'Nous vous recommandons vivement de consulter un psychiatre',
+        'Le diagnostic et le traitement du TDAH peuvent nettement améliorer la qualité de vie',
+        'Ne prenez pas ce résultat pour un diagnostic : vérifiez-le avec un professionnel',
+        'Vous n’êtes pas seul. Beaucoup d’adultes vivent pleinement avec un TDAH',
+      ],
+    },
+    es: {
+      badge: '❤️',
+      title: 'Señal fuerte',
+      subtitle: 'Los rasgos del TDAH aparecen con fuerza',
+      description: 'Los rasgos relacionados con el TDAH aparecen con fuerza en varias áreas. Este resultado no es un diagnóstico, pero te recomendamos de verdad que te evalúe un profesional. Una vez detectado, el TDAH se puede tratar con eficacia.',
+      guidance: [
+        'Te recomendamos encarecidamente acudir a un psiquiatra',
+        'El diagnóstico y el tratamiento del TDAH pueden mejorar mucho la calidad de vida',
+        'No tomes este resultado como un diagnóstico: compruébalo con un profesional',
+        'No estás solo. Muchas personas adultas viven una vida plena con TDAH',
       ],
     },
   },

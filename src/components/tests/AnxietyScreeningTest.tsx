@@ -4,11 +4,11 @@ import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type Level = 'minimal' | 'mild' | 'moderate' | 'severe'
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 interface Question { id: string; text: string }
@@ -80,6 +80,60 @@ const LABELS: Record<SupportedLang, {
     note: 'この結果は医師や精神科専門家の診断に代わるものではありません。',
     compassion: '不安を感じることは非常に自然な人間の経験です。このスクリーニングを受けることは、自分を理解しようとする勇気ある行動です。',
   },
+  zh: {
+    title: '焦虑自我检查（GAD-7）',
+    subtitle: '看看我的焦虑程度',
+    screeningNote: '本测验是筛查工具，不是诊断。若焦虑影响到日常生活，请找专业人士咨询。',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全没有', '有几天', '一半以上的天数', '几乎每天'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的焦虑检查结果',
+    yourLevel: '我的检查结果',
+    tips: '有助于缓解焦虑的方法',
+    resources: '寻求专业帮助',
+    affirmation: '今天想对你说',
+    scoreLabel: 'GAD-7 分数',
+    outOf: '/ 21 分',
+    note: '本结果不能替代医生或精神卫生专业人士的诊断。',
+    compassion: '感到焦虑是非常自然的人类经验。现在做这个检查，是想了解自己的勇敢之举。',
+  },
+  fr: {
+    title: 'Auto-évaluation de l’anxiété (GAD-7)',
+    subtitle: 'Évaluer mon niveau d’anxiété',
+    screeningNote: 'Ce test est un outil de dépistage, pas un diagnostic. Si l’anxiété perturbe votre quotidien, parlez-en à un professionnel.',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Jamais', 'Plusieurs jours', 'Plus de la moitié du temps', 'Presque tous les jours'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Mon résultat d’auto-évaluation de l’anxiété',
+    yourLevel: 'Mon résultat',
+    tips: 'Ce qui aide à apaiser l’anxiété',
+    resources: 'Obtenir une aide professionnelle',
+    affirmation: 'Le message du jour',
+    scoreLabel: 'Score GAD-7',
+    outOf: '/ 21 points',
+    note: 'Ce résultat ne remplace pas le diagnostic d’un médecin ou d’un professionnel de santé mentale.',
+    compassion: 'Ressentir de l’anxiété est une expérience humaine tout à fait naturelle. Faire ce test, c’est déjà un geste courageux pour mieux vous comprendre.',
+  },
+  es: {
+    title: 'Autoevaluación de la ansiedad (GAD-7)',
+    subtitle: 'Conoce tu nivel de ansiedad',
+    screeningNote: 'Este test es una herramienta de cribado, no un diagnóstico. Si la ansiedad interfiere en tu día a día, consulta a un profesional.',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nunca', 'Varios días', 'Más de la mitad de los días', 'Casi todos los días'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Mi resultado de la autoevaluación de ansiedad',
+    yourLevel: 'Mi resultado',
+    tips: 'Lo que ayuda a calmar la ansiedad',
+    resources: 'Buscar ayuda profesional',
+    affirmation: 'Mensaje de hoy',
+    scoreLabel: 'Puntuación GAD-7',
+    outOf: '/ 21 puntos',
+    note: 'Este resultado no sustituye el diagnóstico de un médico o de un profesional de salud mental.',
+    compassion: 'Sentir ansiedad es una experiencia humana muy natural. Hacer este test ya es un gesto valiente para entenderte mejor.',
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -110,6 +164,33 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q6', text: 'イライラしたり、怒りっぽくなっている' },
     { id: 'q7', text: '何か恐ろしいことが起きそうな恐怖を感じる' },
   ],
+  zh: [
+    { id: 'q1', text: '感到紧张、不安或过度绷紧' },
+    { id: 'q2', text: '无法停止或控制担忧' },
+    { id: 'q3', text: '对各种各样的事情过度担忧' },
+    { id: 'q4', text: '很难放松下来' },
+    { id: 'q5', text: '坐立不安，焦虑到无法静下来' },
+    { id: 'q6', text: '容易烦躁或发火' },
+    { id: 'q7', text: '感到好像有什么可怕的事要发生' },
+  ],
+  fr: [
+    { id: 'q1', text: 'Je me sens nerveux, anxieux ou très tendu' },
+    { id: 'q2', text: 'Je n’arrive pas à arrêter ou à contrôler mes inquiétudes' },
+    { id: 'q3', text: 'Je m’inquiète trop à propos de différentes choses' },
+    { id: 'q4', text: 'J’ai du mal à me détendre' },
+    { id: 'q5', text: 'Je suis si agité que j’ai du mal à tenir en place' },
+    { id: 'q6', text: 'Je deviens facilement contrarié ou irritable' },
+    { id: 'q7', text: 'J’ai peur que quelque chose de terrible arrive' },
+  ],
+  es: [
+    { id: 'q1', text: 'Me siento nervioso, ansioso o muy tenso' },
+    { id: 'q2', text: 'No puedo dejar de preocuparme ni controlar la preocupación' },
+    { id: 'q3', text: 'Me preocupo demasiado por distintas cosas' },
+    { id: 'q4', text: 'Me cuesta relajarme' },
+    { id: 'q5', text: 'Estoy tan inquieto que me cuesta quedarme quieto' },
+    { id: 'q6', text: 'Me enfado o me irrito con facilidad' },
+    { id: 'q7', text: 'Siento miedo de que vaya a pasar algo terrible' },
+  ],
 }
 
 const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
@@ -119,7 +200,7 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       subtitle: '불안 수준이 정상 범위 내에 있습니다',
       description: '현재 불안 수준은 낮습니다. 일상적인 긴장과 불안은 삶의 자연스러운 부분이며, 지금은 잘 조절되고 있는 것으로 보입니다.',
       tips: ['규칙적인 신체 활동 유지하기', '마음 챙김 또는 깊은 호흡 연습', '충분한 수면 확보하기', '카페인 섭취량 적절히 조절하기'],
-      resources: ['정신건강 위기상담: 1577-0199', '자살예방상담전화: 1393', '정신건강복지센터 방문 상담'],
+      resources: ['정신건강 위기상담: 1577-0199', '자살예방상담전화: 109', '정신건강복지센터 방문 상담'],
       affirmation: '일상의 불안을 잘 관리하고 있습니다. 자신에게 친절하게 대하는 것을 잊지 마세요.',
     },
     en: {
@@ -138,6 +219,30 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       resources: ['こころの健康相談統一ダイヤル: 0570-064-556', 'よりそいホットライン: 0120-279-338', '精神保健福祉センター'],
       affirmation: '日常の不安をうまく管理しています。自分に優しくすることを忘れないでください。',
     },
+    zh: {
+      title: '最低程度',
+      subtitle: '焦虑程度在正常范围内',
+      description: '目前的焦虑程度很低。日常的紧张与不安是生活的自然部分，现在看起来调节得很好。',
+      tips: ['保持规律的身体活动', '练习正念或深呼吸', '保证充足睡眠', '适度控制咖啡因摄入'],
+      resources: ['全国心理援助热线：12356', '北京心理危机研究与干预中心：010-82951332', '当地精神卫生中心门诊咨询'],
+      affirmation: '你把日常的焦虑管理得很好。别忘了善待自己。',
+    },
+    fr: {
+      title: 'Niveau minimal',
+      subtitle: 'Votre anxiété se situe dans la plage normale',
+      description: 'Votre niveau d’anxiété est faible. Les tensions et inquiétudes du quotidien font naturellement partie de la vie, et elles semblent bien régulées en ce moment.',
+      tips: ['Maintenir une activité physique régulière', 'Pratiquer la pleine conscience ou la respiration profonde', 'Dormir suffisamment', 'Modérer la caféine'],
+      resources: ['Numéro national de prévention du suicide : 3114', 'SOS Amitié : 09 72 39 40 50', 'Centre médico-psychologique (CMP) de votre secteur'],
+      affirmation: 'Vous gérez bien l’anxiété du quotidien. N’oubliez pas d’être bienveillant envers vous-même.',
+    },
+    es: {
+      title: 'Nivel mínimo',
+      subtitle: 'Tu ansiedad está dentro del rango normal',
+      description: 'Tu nivel de ansiedad es bajo. La tensión y la preocupación cotidianas son parte natural de la vida, y ahora parecen bien reguladas.',
+      tips: ['Mantener actividad física regular', 'Practicar atención plena o respiración profunda', 'Dormir lo suficiente', 'Moderar la cafeína'],
+      resources: ['Línea de atención a la conducta suicida: 024', 'Teléfono de la Esperanza: 717 003 717', 'Centro de salud mental de tu zona'],
+      affirmation: 'Estás gestionando bien la ansiedad cotidiana. No olvides tratarte con amabilidad.',
+    },
   },
   mild: {
     ko: {
@@ -145,7 +250,7 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       subtitle: '불안이 가끔 일상에 영향을 미치고 있습니다',
       description: '가벼운 불안은 매우 흔하며 여러 가지 방법으로 관리할 수 있습니다. 증상이 2주 이상 지속된다면 전문가 상담을 고려해보세요.',
       tips: ['복식 호흡: 4초 들이쉬고, 4초 참고, 6초 내쉬기', '점진적 근육 이완법 연습하기', '규칙적인 운동 (특히 유산소)', '걱정 일기 쓰기로 생각 정리하기', '수면 루틴 확립하기'],
-      resources: ['정신건강 위기상담: 1577-0199', '자살예방상담전화: 1393', '지역 정신건강복지센터 무료 상담'],
+      resources: ['정신건강 위기상담: 1577-0199', '자살예방상담전화: 109', '지역 정신건강복지센터 무료 상담'],
       affirmation: '불안은 당신이 무언가를 소중히 여기고 있다는 신호이기도 합니다. 자신을 판단하지 말고, 친구를 대하듯 자신에게 친절하세요.',
     },
     en: {
@@ -164,6 +269,30 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       resources: ['こころの健康相談統一ダイヤル: 0570-064-556', 'よりそいホットライン: 0120-279-338', '精神保健福祉センター'],
       affirmation: '不安はあなたが何かを大切にしているサインでもあります。自分を責めず、友達に接するように自分に優しくしてください。',
     },
+    zh: {
+      title: '轻度焦虑',
+      subtitle: '焦虑有时会影响日常生活',
+      description: '轻度焦虑非常常见，可以用多种方法管理。如果症状持续两周以上，可以考虑找专业人士咨询。',
+      tips: ['腹式呼吸：吸气 4 秒、屏住 4 秒、呼气 6 秒', '练习渐进式肌肉放松', '规律运动（尤其是有氧运动）', '写担忧日记，整理思绪', '建立睡眠习惯'],
+      resources: ['全国心理援助热线：12356', '北京心理危机研究与干预中心：010-82951332', '当地精神卫生中心门诊咨询'],
+      affirmation: '焦虑也是你珍视某些东西的信号。别评判自己，像对待朋友一样善待自己。',
+    },
+    fr: {
+      title: 'Anxiété légère',
+      subtitle: 'L’anxiété affecte parfois votre quotidien',
+      description: 'L’anxiété légère est très fréquente et se gère de plusieurs façons. Si les symptômes durent plus de deux semaines, envisagez de consulter un professionnel.',
+      tips: ['Respiration abdominale : inspirer 4 s, retenir 4 s, expirer 6 s', 'Pratiquer la relaxation musculaire progressive', 'Faire de l’exercice régulièrement (surtout d’endurance)', 'Tenir un journal des inquiétudes pour clarifier ses pensées', 'Instaurer une routine de sommeil'],
+      resources: ['Numéro national de prévention du suicide : 3114', 'SOS Amitié : 09 72 39 40 50', 'Centre médico-psychologique (CMP) de votre secteur'],
+      affirmation: 'L’anxiété signale aussi que quelque chose compte pour vous. Ne vous jugez pas : soyez bienveillant envers vous-même comme envers un ami.',
+    },
+    es: {
+      title: 'Ansiedad leve',
+      subtitle: 'La ansiedad afecta a veces a tu día a día',
+      description: 'La ansiedad leve es muy común y se puede manejar de varias formas. Si los síntomas duran más de dos semanas, plantéate consultar a un profesional.',
+      tips: ['Respiración abdominal: inhala 4 s, retén 4 s, exhala 6 s', 'Practicar la relajación muscular progresiva', 'Hacer ejercicio con regularidad (sobre todo aeróbico)', 'Escribir un diario de preocupaciones para ordenar las ideas', 'Establecer una rutina de sueño'],
+      resources: ['Línea de atención a la conducta suicida: 024', 'Teléfono de la Esperanza: 717 003 717', 'Centro de salud mental de tu zona'],
+      affirmation: 'La ansiedad también indica que algo te importa. No te juzgues: trátate con la amabilidad con que tratarías a un amigo.',
+    },
   },
   moderate: {
     ko: {
@@ -171,7 +300,7 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       subtitle: '전문가의 도움을 받는 것을 권장합니다',
       description: '중등도 불안은 일상 기능에 상당한 영향을 미치고 있습니다. 인지행동치료(CBT)나 약물치료가 효과적일 수 있습니다. 혼자 감당하려 하지 마세요.',
       tips: ['가능한 빨리 정신건강 전문가 상담 예약하기', 'CBT 기반 자조 앱 활용 (예: Woebot, Headspace)', '카페인, 알코올, 과도한 뉴스 소비 줄이기', '매일 같은 시간에 자고 일어나기'],
-      resources: ['정신건강 위기상담: 1577-0199 (24시간)', '자살예방상담전화: 1393', '국가 정신건강정보포털: www.mentalhealth.go.kr', '지역 정신건강복지센터 (무료 상담)'],
+      resources: ['정신건강 위기상담: 1577-0199 (24시간)', '자살예방상담전화: 109', '국가 정신건강정보포털: www.mentalhealth.go.kr', '지역 정신건강복지센터 (무료 상담)'],
       affirmation: '도움을 구하는 것은 용기 있는 행동입니다. 불안은 치료 가능하며, 당신은 더 편안해질 수 있습니다.',
     },
     en: {
@@ -190,6 +319,30 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       resources: ['こころの健康相談統一ダイヤル: 0570-064-556', 'よりそいホットライン: 0120-279-338 (24時間)', '精神保健福祉センター', '精神科・心療内科への受診'],
       affirmation: '助けを求めることは勇気ある行動です。不安は治療可能で、あなたはより楽に感じることができます。',
     },
+    zh: {
+      title: '中度焦虑',
+      subtitle: '建议寻求专业人士的帮助',
+      description: '中度焦虑已经明显影响日常功能。认知行为疗法（CBT）或药物治疗可能有效。请不要独自承受。',
+      tips: ['尽快预约精神卫生专业人士', '使用基于 CBT 的自助应用（如 Woebot、Headspace）', '减少咖啡因、酒精和过量的新闻', '每天在同一时间睡觉和起床'],
+      resources: ['全国心理援助热线：12356', '北京心理危机研究与干预中心：010-82951332（24 小时）', '全国精神卫生中心名录可在当地卫生健康委员会网站查询', '当地精神卫生中心门诊咨询'],
+      affirmation: '寻求帮助是勇敢的行动。焦虑是可以治疗的，你可以变得更轻松。',
+    },
+    fr: {
+      title: 'Anxiété modérée',
+      subtitle: 'Nous vous conseillons de vous faire aider par un professionnel',
+      description: 'L’anxiété modérée pèse nettement sur le fonctionnement quotidien. Les thérapies cognitivo-comportementales (TCC) ou un traitement médicamenteux peuvent être efficaces. N’essayez pas d’y faire face seul.',
+      tips: ['Prendre rendez-vous au plus vite avec un professionnel de santé mentale', 'Utiliser une application d’auto-aide fondée sur les TCC (ex. Woebot, Headspace)', 'Réduire caféine, alcool et consommation excessive d’actualités', 'Se coucher et se lever chaque jour à la même heure'],
+      resources: ['Numéro national de prévention du suicide : 3114 (24 h/24)', 'SOS Amitié : 09 72 39 40 50', 'Informations sur la santé mentale : www.psycom.org', 'Centre médico-psychologique (CMP) de votre secteur (gratuit)'],
+      affirmation: 'Demander de l’aide est un acte courageux. L’anxiété se soigne, et vous pouvez vous sentir mieux.',
+    },
+    es: {
+      title: 'Ansiedad moderada',
+      subtitle: 'Te recomendamos buscar ayuda profesional',
+      description: 'La ansiedad moderada afecta de forma notable a tu funcionamiento diario. La terapia cognitivo-conductual (TCC) o la medicación pueden ser eficaces. No intentes cargar con ello a solas.',
+      tips: ['Pedir cita cuanto antes con un profesional de salud mental', 'Usar una app de autoayuda basada en TCC (p. ej., Woebot, Headspace)', 'Reducir cafeína, alcohol y el exceso de noticias', 'Acostarte y levantarte cada día a la misma hora'],
+      resources: ['Línea de atención a la conducta suicida: 024 (24 h)', 'Teléfono de la Esperanza: 717 003 717', 'Confederación Salud Mental España: www.consaludmental.org', 'Centro de salud mental de tu zona (gratuito)'],
+      affirmation: 'Pedir ayuda es un acto valiente. La ansiedad tiene tratamiento y puedes llegar a sentirte mejor.',
+    },
   },
   severe: {
     ko: {
@@ -197,7 +350,7 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       subtitle: '지금 바로 전문가의 도움을 받으세요',
       description: '심각한 불안은 삶의 질에 크게 영향을 미치고 있습니다. 이는 의학적 치료가 필요한 상태입니다. 전문가의 도움을 통해 반드시 나아질 수 있습니다.',
       tips: ['지금 즉시 정신건강 전문가에게 연락하거나 응급실 방문', '패닉 어택이 심각하다면 즉시 응급 지원 요청', '혼자 있지 말고 믿을 수 있는 사람 곁에 있기'],
-      resources: ['정신건강 위기상담: 1577-0199 (24시간)', '자살예방상담전화: 1393', '응급: 119 또는 가까운 응급실'],
+      resources: ['정신건강 위기상담: 1577-0199 (24시간)', '자살예방상담전화: 109', '응급: 119 또는 가까운 응급실'],
       affirmation: '극심한 불안을 느끼고 있는 지금도, 당신은 혼자가 아닙니다. 도움을 요청하는 것은 약함이 아닌 강함입니다.',
     },
     en: {
@@ -215,6 +368,30 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       tips: ['今すぐ精神科に連絡するか救急外来を受診する', 'パニック発作が深刻な場合は緊急サポートを求める', '一人でいないで信頼できる人のそばにいる'],
       resources: ['こころの健康相談統一ダイヤル: 0570-064-556', 'いのちの電話: 0120-783-556 (24時間)', 'よりそいホットライン: 0120-279-338', '緊急: 119または救急外来'],
       affirmation: '極度の不安を感じている今でも、あなたは一人ではありません。助けを求めることは弱さではなく強さです。',
+    },
+    zh: {
+      title: '严重程度',
+      subtitle: '请立即寻求专业人士的帮助',
+      description: '严重的焦虑正在大大影响生活质量。这是需要医学治疗的状态。借助专业帮助，一定能好起来。',
+      tips: ['立即联系精神卫生专业人士，或前往急诊', '如果惊恐发作很严重，请立即寻求紧急救助', '不要独处，待在可信任的人身边'],
+      resources: ['全国心理援助热线：12356（24 小时）', '北京心理危机研究与干预中心：010-82951332', '急救：120，或前往最近的医院急诊'],
+      affirmation: '即使在感到极度焦虑的此刻，你也不是一个人。求助不是软弱，而是力量。',
+    },
+    fr: {
+      title: 'Niveau sévère',
+      subtitle: 'Faites-vous aider par un professionnel dès maintenant',
+      description: 'Une anxiété sévère pèse fortement sur la qualité de vie. C’est un état qui nécessite un traitement médical. Avec une aide professionnelle, les choses peuvent vraiment s’améliorer.',
+      tips: ['Contactez tout de suite un professionnel de santé mentale ou rendez-vous aux urgences', 'Si une crise de panique est sévère, demandez immédiatement une aide d’urgence', 'Ne restez pas seul : restez auprès d’une personne de confiance'],
+      resources: ['Numéro national de prévention du suicide : 3114 (24 h/24)', 'SOS Amitié : 09 72 39 40 50', 'Urgences : 15 ou 112, ou le service d’urgences le plus proche'],
+      affirmation: 'Même maintenant, au cœur d’une anxiété intense, vous n’êtes pas seul. Demander de l’aide n’est pas une faiblesse, c’est une force.',
+    },
+    es: {
+      title: 'Nivel grave',
+      subtitle: 'Busca ayuda profesional ahora mismo',
+      description: 'La ansiedad grave está afectando mucho a tu calidad de vida. Es un estado que requiere tratamiento médico. Con ayuda profesional, puedes mejorar de verdad.',
+      tips: ['Contacta ya con un profesional de salud mental o acude a urgencias', 'Si un ataque de pánico es grave, pide ayuda de emergencia de inmediato', 'No te quedes a solas: quédate con alguien de confianza'],
+      resources: ['Línea de atención a la conducta suicida: 024 (24 h)', 'Teléfono de la Esperanza: 717 003 717', 'Emergencias: 112 o el servicio de urgencias más cercano'],
+      affirmation: 'Incluso ahora, en medio de una ansiedad intensa, no estás solo. Pedir ayuda no es debilidad, es fortaleza.',
     },
   },
 }
