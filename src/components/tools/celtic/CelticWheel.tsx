@@ -24,7 +24,7 @@ const COPY: Record<Lang, { hint: string }> = {
   es: { hint: "Arrastra para explorar el calendario de árboles celtas. El punto brillante es tu árbol." },
 };
 
-function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
+function useInView<T extends HTMLElement>(): [React.RefObject<T | null>, boolean] {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {

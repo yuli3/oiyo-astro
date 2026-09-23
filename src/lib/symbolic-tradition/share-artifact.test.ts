@@ -70,7 +70,7 @@ describe("symbolic share artifact", () => {
     const encoded = encodeSymbolicShareArtifact({
       ...artifact,
       schemaVersion: 1,
-    } as typeof artifact);
+    } as unknown as typeof artifact);
 
     expect(decodeSymbolicShareArtifact(encoded, { now: NOW })).toEqual({ ok: false, reason: "unsupported" });
   });

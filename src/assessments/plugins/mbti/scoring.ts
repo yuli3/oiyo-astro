@@ -47,7 +47,9 @@ export function scoreMbti(
 export function mbtiType(
   input: CanonicalAssessmentResult | Record<string, number>,
 ): string {
-  const normalized = "scores" in input ? input.scores.normalized : input;
+  const normalized = "scores" in input && typeof input.scores === "object"
+    ? (input as CanonicalAssessmentResult).scores.normalized
+    : (input as Record<string, number>);
   return MBTI_AXES.map((axis) => {
     const [first, second] = MBTI_POLES[axis];
     return (normalized[axis] ?? 0) >= 50 ? first : second;

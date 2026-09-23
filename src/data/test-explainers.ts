@@ -1,5 +1,15 @@
 import type { Locale } from '../i18n';
-import type { TestExplainerContent } from '../components/shared/TestExplainer.astro';
+
+/** 해설 한 벌의 모양. TestExplainer.astro 가 이 타입을 다시 내보낸다(.astro 는 tsc 가 못 읽는다). */
+export interface TestExplainerContent {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}
 
 /**
  * 깡통이던 테스트 페이지에 붙일 해설.

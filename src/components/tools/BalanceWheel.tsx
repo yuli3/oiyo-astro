@@ -113,7 +113,7 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
             <p className="mb-2 text-sm font-bold text-green-800">{u("byArea")}</p>
             <div className="space-y-1.5">
               {CAT_ORDER.map((k) => {
-                const v = Math.round((result.scores as Record<string, number>)[k] ?? 0);
+                const v = Math.round((result.scores as unknown as Record<string, number>)[k] ?? 0);
                 return (
                   <div key={k} className="flex items-center gap-2">
                     <span className="w-20 shrink-0 text-xs text-green-700">{tt(CAT[k], locale)}</span>

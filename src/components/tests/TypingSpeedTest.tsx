@@ -88,7 +88,7 @@ export default function TypingSpeedTest({ locale }: Props) {
   const [targetText] = useState(() => texts[Math.floor(Math.random() * texts.length)])
   const [typed, setTyped] = useState('')
   const [status, setStatus] = useState<'idle' | 'running' | 'done'>('idle')
-  useRecordFinishedTest({ testId: "typing-speed", title: "TypingSpeedTest", finished: (status === 'done' || status === "done") });
+  useRecordFinishedTest({ testId: "typing-speed", title: "TypingSpeedTest", finished: status === 'done' });
   const [timeLeft, setTimeLeft] = useState(DURATION)
   const [errors, setErrors] = useState(0)
   const inputRef = useRef<HTMLTextAreaElement>(null)

@@ -237,7 +237,7 @@ export function computeYongsin(
   let gisin: FiveElement;
   if (strengthensDayMaster) {
     // 용신이 일간을 돕는다면, 힘을 빼는 오행 중 가장 강한 것이 기신
-    const drainRole = (["jaesung", "gwansung", "siksang"] as const).sort(
+    const drainRole = (["jaesung", "gwansung", "siksang"] as (keyof ElementRoles)[]).sort(
       (a, b) => c[b] - c[a],
     )[0];
     gisin = roles[drainRole];

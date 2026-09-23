@@ -25,7 +25,7 @@ const COPY: Record<Lang, { hint: string }> = {
   es: { hint: "Cuanto mayor sea el número, más grande será la estrella. Las estrellas doradas son números maestros." },
 };
 
-function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
+function useInView<T extends HTMLElement>(): [React.RefObject<T | null>, boolean] {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {

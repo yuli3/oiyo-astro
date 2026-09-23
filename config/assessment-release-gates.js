@@ -1,3 +1,18 @@
+/**
+ * 공개 게이트 한 벌의 모양. 함수 인자는 이 모양이면 된다 — 기본값이 성인 애착
+ * 게이트라서 JS 추론이 인자를 그 게이트 리터럴로 좁히던 것을 풀어 둔다.
+ * @typedef {{
+ *   assessmentId: string;
+ *   assessmentStatus: string;
+ *   canonicalPattern: string;
+ *   executionRoutePattern: string;
+ *   indexable: boolean;
+ *   localeStatuses: Readonly<Record<string, string>>;
+ *   locales: readonly string[];
+ *   [key: string]: unknown;
+ * }} AssessmentReleaseGate
+ */
+
 const attachmentLocaleStatuses = Object.freeze({
   ko: "draft",
   en: "draft",
@@ -90,6 +105,7 @@ export const ASSESSMENT_RELEASE_GATES = Object.freeze([
   VALUE_COMPASS_BRIDGE_RELEASE_GATE,
 ]);
 
+/** @param {AssessmentReleaseGate} [gate] */
 export function assertAssessmentReleaseGate(gate = ADULT_ATTACHMENT_RELEASE_GATE) {
   if (gate.indexable && gate.assessmentStatus !== "production") {
     throw new Error("indexable assessment must have production status");
@@ -103,6 +119,7 @@ export function assertAssessmentReleaseGate(gate = ADULT_ATTACHMENT_RELEASE_GATE
   return true;
 }
 
+/** @param {string} locale @param {AssessmentReleaseGate} [gate] */
 export function localizedAssessmentPath(locale, gate = ADULT_ATTACHMENT_RELEASE_GATE) {
   return gate.executionRoutePattern.replace("{locale}", locale).replace(/\/$/, "");
 }

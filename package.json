@@ -10,6 +10,7 @@
     "build": "npm run build:ontology-platform:public && NODE_OPTIONS=--max-old-space-size=6144 astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "type-check": "astro check --minimumSeverity error",
     "type-check:active": "astro check --tsconfig tsconfig.active.json --minimumSeverity error",
     "test": "vitest",
     "audit:page-structure": "node scripts/audit-page-structure.mjs",

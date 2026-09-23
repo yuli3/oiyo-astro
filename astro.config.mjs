@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
-import sitemap from '@astrojs/sitemap';
+import sitemap, { ChangeFreqEnum } from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import remarkGfm from 'remark-gfm';
 import remarkCjkFriendly from 'remark-cjk-friendly';
@@ -70,18 +70,18 @@ export default defineConfig({
         const p = new URL(item.url).pathname;
         const isKo = p.startsWith('/ko/') || p === '/ko';
         if (/^\/(ko|en|ja|zh|fr|es)\/?$/.test(p)) {
-          return { ...item, priority: isKo ? 1.0 : 0.8, changefreq: 'weekly' };
+          return { ...item, priority: isKo ? 1.0 : 0.8, changefreq: ChangeFreqEnum.WEEKLY };
         }
         if (/\/(ko|en|ja|zh|fr|es)\/tests\/?$/.test(p)) {
-          return { ...item, priority: isKo ? 0.9 : 0.7, changefreq: 'weekly' };
+          return { ...item, priority: isKo ? 0.9 : 0.7, changefreq: ChangeFreqEnum.WEEKLY };
         }
         if (/\/(mbti|enneagram)\//.test(p)) {
-          return { ...item, priority: isKo ? 0.8 : 0.6, changefreq: 'monthly' };
+          return { ...item, priority: isKo ? 0.8 : 0.6, changefreq: ChangeFreqEnum.MONTHLY };
         }
         if (/\/test\/?$/.test(p)) {
-          return { ...item, priority: isKo ? 0.85 : 0.65, changefreq: 'weekly' };
+          return { ...item, priority: isKo ? 0.85 : 0.65, changefreq: ChangeFreqEnum.WEEKLY };
         }
-        return { ...item, priority: isKo ? 0.75 : 0.6, changefreq: 'weekly' };
+        return { ...item, priority: isKo ? 0.75 : 0.6, changefreq: ChangeFreqEnum.WEEKLY };
       },
     }),
     robotsTxt({

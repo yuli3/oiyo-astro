@@ -11,8 +11,8 @@
 
 import { Billboard, RoundedBox, Stars, Text } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
-import type { Group, MutableRefObject } from "three";
+import { useMemo, useRef, type MutableRefObject } from "react";
+import type { Group } from "three";
 import * as THREE from "three";
 import { useReducedMotion } from "@/hooks/useMotion";
 

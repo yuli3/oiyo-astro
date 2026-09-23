@@ -370,7 +370,7 @@ export function sanitizeRelationshipResultCode(value: unknown): RelationshipResu
   if (provenance.some((item) => !item) || signals.some((item) => !item)) throw new TypeError("Invalid result code evidence");
   const safeProvenance = provenance as RelationshipResultCodeSource[];
   const safeSignals = signals as RelationshipResultCodeSignal[];
-  if (safeProvenance.some((source) => Date.parse(source.measuredAt) > Date.parse(String(value.origin.profileGeneratedAt)))) throw new TypeError("Relationship provenance cannot follow the profile snapshot");
+  if (safeProvenance.some((source) => Date.parse(source.measuredAt) > Date.parse(String((value.origin as Record<string, unknown>).profileGeneratedAt)))) throw new TypeError("Relationship provenance cannot follow the profile snapshot");
   const sourceKeys = new Set(safeProvenance.map((source) => `${source.assessmentId}:${source.measuredAt}`));
   if (sourceKeys.size !== safeProvenance.length) throw new TypeError("Duplicate relationship provenance");
   if (safeSignals.some((signal) => !sourceKeys.has(`${signal.sourceAssessmentId}:${signal.measuredAt}`))) throw new TypeError("Relationship signal is missing provenance");

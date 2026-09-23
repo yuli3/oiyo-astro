@@ -401,6 +401,8 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<RiasecType, number>>({ R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 })
   const [responses, setResponses] = useState<AssessmentResponses>({})
+  // 응답은 리커트 숫자만 담는다 — AssessmentResponses 는 다른 형태도 허용하므로 숫자만 꺼낸다.
+  const numberAt = (id: string): number | undefined => { const v = responses[id]; return typeof v === 'number' ? v : undefined }
   const [done, setDone] = useState(false)
 
   function pick(val: number) {
@@ -415,7 +417,7 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
   function previous() {
     if (current === 0) return
     const previousQuestion = questions[current - 1]
-    const previousValue = responses[previousQuestion.id] ?? 0
+    const previousValue = numberAt(previousQuestion.id) ?? 0
     setScores({ ...scores, [previousQuestion.type]: scores[previousQuestion.type] - previousValue })
     setCurrent(current - 1)
   }
@@ -464,7 +466,7 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
         questionLabel={lb.questionOf(current + 1, questions.length)}
         progress={progress}
         options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
-        selectedValue={responses[q.id]}
+        selectedValue={numberAt(q.id)}
         note={lb.note}
         previousLabel={(({ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' } as Record<string, string>)[locale] ?? 'Previous question')}
         onPrevious={current > 0 ? previous : undefined}

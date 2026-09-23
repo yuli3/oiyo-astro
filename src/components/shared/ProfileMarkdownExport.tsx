@@ -369,7 +369,7 @@ export default function ProfileMarkdownExport({ locale }: Props) {
       let changed = false;
       const next = { ...prev };
       for (const k of PREFILL) {
-        const v = (storeProfile as Record<string, unknown>)[k];
+        const v = (storeProfile as unknown as Record<string, unknown>)[k];
         if (!prev[k] && v) { next[k] = String(v); changed = true; }
       }
       return changed ? next : prev;

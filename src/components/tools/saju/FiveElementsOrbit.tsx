@@ -24,7 +24,7 @@ const COPY: Record<Lang, { hint: string; legend: string }> = {
   es: { hint: "Arrastra para ver la generación y el control de los elementos.", legend: "Anillo exterior = genera · estrella interior = controla" },
 };
 
-function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
+function useInView<T extends HTMLElement>(): [React.RefObject<T | null>, boolean] {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {

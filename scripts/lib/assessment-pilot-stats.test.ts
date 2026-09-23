@@ -59,8 +59,8 @@ describe("de-identified assessment pilot input QC", () => {
     const report = analyzePilotRows(rows, instrument, { ...manifest, administeredFormHashSha256: instrument.localeVersions.ko.administeredFormHashSha256 });
     expect(report.participants).toBe(6);
     expect(report.locale).toBe("ko");
-    expect(report.dimensions.anxiety.completeCases).toBe(6);
-    expect(report.dimensions.avoidance.responseCountsByItem["avoidance-1"]).toBeDefined();
+    expect((report.dimensions as Record<string, any>).anxiety.completeCases).toBe(6);
+    expect((report.dimensions as Record<string, any>).avoidance.responseCountsByItem["avoidance-1"]).toBeDefined();
     expect(JSON.stringify(report)).not.toMatch(/responses|alpha|correlation|mean|standardDeviation/i);
   });
 
@@ -69,7 +69,7 @@ describe("de-identified assessment pilot input QC", () => {
     delete responses["anxiety-1"];
     const batchManifest = { ...manifest, administeredFormHashSha256: instrument.localeVersions.ko.administeredFormHashSha256 };
     const report = analyzePilotRows([{ locale: "ko", responses }], instrument, batchManifest);
-    expect(report.dimensions.anxiety.missingByItem["anxiety-1"]).toBe(1);
+    expect((report.dimensions as Record<string, any>).anxiety.missingByItem["anxiety-1"]).toBe(1);
     expect(() => analyzePilotRows([{ locale: "ko", participantId: "person-1", responses }], instrument, batchManifest)).toThrow("disallowed fields");
     expect(() => analyzePilotRows([{ locale: "person@example.com", responses }], instrument, batchManifest)).toThrow("locale must be one of");
     expect(() => analyzePilotRows([{ locale: "ko", responses: { "anxiety-1": 9 } }], instrument, batchManifest)).toThrow("must be an integer");

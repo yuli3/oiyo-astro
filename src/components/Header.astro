@@ -173,7 +173,7 @@ const secondaryNavLinks = [
     overlay.setAttribute('aria-hidden', 'false');
     openBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
-    const firstLink = drawer.querySelector('a, button');
+    const firstLink = drawer.querySelector<HTMLElement>('a, button');
     if (firstLink) firstLink.focus();
   }
 

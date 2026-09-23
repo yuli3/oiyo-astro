@@ -13,15 +13,8 @@
  */
 import type { Locale } from '../../i18n';
 
-export interface TestExplainerContent {
-  introTitle: string;
-  intro: string;
-  conceptTitle: string;
-  concepts: { title: string; body: string }[];
-  faqTitle: string;
-  faqs: { question: string; answer: string }[];
-  disclaimer: string;
-}
+import type { TestExplainerContent } from '../../data/test-explainers';
+export type { TestExplainerContent };
 
 interface Props {
   content: Partial<Record<Locale, TestExplainerContent>>;

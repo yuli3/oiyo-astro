@@ -91,7 +91,7 @@ describe("MBTI V2 plugin", () => {
       for (const pole of MBTI_POLES[axis]) expect(strings[`preferences.${pole}`]).toBeTruthy();
     }
     const result = buildMbtiResult(responsesFor({ EI: 4, SN: 4, TF: 4, JP: 4 }));
-    const fragments = mbtiPlugin.interpreter.compose(result);
+    const fragments = mbtiPlugin.interpreter.compose(result, { locale: "ko" });
     const sourceIds = new Set(mbtiPlugin.sources.records.map((source) => source.id));
     expect(fragments.every((fragment) => strings[fragment.titleKey] && strings[fragment.bodyKey])).toBe(true);
     expect(fragments.every((fragment) => !fragment.caveatKey || strings[fragment.caveatKey])).toBe(true);

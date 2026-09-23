@@ -73,6 +73,8 @@ export class OntologyPlatformArtifactLoader {
   }
   private async relation(locale: OntologyPlatformLocale, edge: Edge): Promise<ReadOnlyPilotRelation | null> {
     if (edge.kind !== "supports" && edge.kind !== "used_in" && edge.kind !== "transfers_to") return null;
+    // 관계 배지는 큐레이션·파생 둘뿐이다. 가져온(imported) 관계는 지금 자료에 없고, 생기면 보이지 않게 둔다.
+    if (edge.provenance === "imported") return null;
     const target = await this.concept(locale, edge.to);
     if (!target || (target.kind !== "action" && target.kind !== "work_context")) return null;
     return { targetId: target.id, targetKind: target.kind, label: target.label, kind: edge.kind, provenance: edge.provenance, confidence: edge.confidence };

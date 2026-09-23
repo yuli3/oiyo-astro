@@ -19,7 +19,7 @@ import { useReducedMotion } from "@/hooks/useMotion";
 const OrbitScene = lazy(() => import("./CardOrbitScene"));
 
 /** Mount the scene only once the placeholder scrolls into view. */
-function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
+function useInView<T extends HTMLElement>(): [React.RefObject<T | null>, boolean] {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {

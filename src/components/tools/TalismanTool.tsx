@@ -366,10 +366,10 @@ export default function TalismanTool({ locale = 'ko' }: { locale?: string }) {
             {/* 일지의 12지신과 태양 궁 — 이미 그려 둔 결과 심볼 에셋을 쓴다.
                 부적 판에는 문자만 올리므로(지어낸 그림 금지) 그림은 여기 둔다. */}
             <div className="flex justify-center gap-6 pb-1">
-              {[
-                [BRANCH_ANIMAL[reading.pillars[2][1]], 'chinese-zodiac' as const, t.dayP],
-                [ZODIAC_NAME[reading.zodiac], 'western-zodiac' as const, t.zodiac],
-              ].map(([variant, id, label]) =>
+              {([
+                [BRANCH_ANIMAL[reading.pillars[2][1]], 'chinese-zodiac', t.dayP],
+                [ZODIAC_NAME[reading.zodiac], 'western-zodiac', t.zodiac],
+              ] as const).map(([variant, id, label]) =>
                 variant ? (
                   <figure key={id} className="m-0 text-center">
                     <ResultSymbol id={id} variant={variant} fallback="○" className="mx-auto h-16 w-16" />

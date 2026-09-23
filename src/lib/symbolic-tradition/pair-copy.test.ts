@@ -60,7 +60,7 @@ describe("pair copy contract", () => {
 
   it("does not reuse one locale's wording in another", () => {
     // ko 문구를 그대로 복사해 두고 번역했다고 넘어가는 사고를 막는다.
-    const ko = PAIR_COPY.ko;
+    const ko: Record<string, { label: string }> = PAIR_COPY.ko;
     const copied: string[] = [];
     for (const locale of LOCALES) {
       if (locale === "ko") continue;

@@ -2,7 +2,7 @@
 
 import { motion as m } from "framer-motion";
 import { BookOpen, Flower, Mountain, Sparkles } from "lucide-react";
-import { useLocale, useMessages } from "next-intl";
+import { useLocale, useMessages } from "@/lib/shims/next-intl";
 import { useMemo, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";

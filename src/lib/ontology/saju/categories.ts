@@ -102,7 +102,8 @@ export function analyzeLifeCategories(saju: SajuResult): LifeCategories {
     [FiveElement.METAL]: 0,
     [FiveElement.WATER]: 0,
   };
-  const chars: { stem: boolean; v: any }[] = [
+  type Char = { stem: true; v: keyof typeof heavenlyStems } | { stem: false; v: keyof typeof earthlyBranches };
+  const chars: Char[] = [
     { stem: true, v: saju.year.heavenlyStem },
     { stem: false, v: saju.year.earthlyBranch },
     { stem: true, v: saju.month.heavenlyStem },
@@ -113,7 +114,7 @@ export function analyzeLifeCategories(saju: SajuResult): LifeCategories {
     { stem: false, v: saju.hour.earthlyBranch },
   ];
   chars.forEach(({ stem, v }, i) => {
-    const el = stem ? heavenlyStems[v].element : earthlyBranches[v].element;
+    const el = stem ? heavenlyStems[v as keyof typeof heavenlyStems].element : earthlyBranches[v as keyof typeof earthlyBranches].element;
     elementCounts[el as FiveElement] += 1;
     // day stem (index 4) is the day master itself
     if (i === 4) {
@@ -146,12 +147,14 @@ export function analyzeLifeCategories(saju: SajuResult): LifeCategories {
 
   // ── 진로/직업 ──
   const career = (() => {
-    const modes: { mode: "official" | "creative" | "academic" | "peer"; role: RoleKey; n: number }[] = [
+    type ModeRow = { mode: "official" | "creative" | "academic" | "peer"; role: RoleKey; n: number };
+    const rows: ModeRow[] = [
       { mode: "official", role: "gwansung", n: rawRoleCounts.gwansung },
       { mode: "creative", role: "siksang", n: rawRoleCounts.siksang },
       { mode: "academic", role: "insung", n: rawRoleCounts.insung },
       { mode: "peer", role: "bigyeop", n: rawRoleCounts.bigyeop },
-    ].sort((a, b) => b.n - a.n);
+    ];
+    const modes = rows.sort((a, b) => b.n - a.n);
     const top = modes[0];
     const element = roles[top.role];
     const level = levelFromCount(top.n);

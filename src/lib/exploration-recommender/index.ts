@@ -211,7 +211,7 @@ const LOCALIZED_COPY: Readonly<Record<ExplorationLocale, LocaleCopy>> = (() => {
     }
     const candidates: Record<string, CandidateCopy> = {};
     for (const id of candidateIds) {
-      const value = localeValue.candidates[id];
+      const value = (localeValue.candidates as Record<string, unknown>)[id];
       if (!isRecord(value) || !isNonEmptyString(value.environment) || !isNonEmptyString(value.experiment)) {
         throw new TypeError(`Invalid exploration recommender copy: ${locale}.${id}`);
       }

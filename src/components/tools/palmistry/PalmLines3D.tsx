@@ -26,7 +26,7 @@ const COPY: Record<Lang, { hint: string }> = {
   es: { hint: "La línea seleccionada se eleva y brilla, trazada desde la forma real de la palma." },
 };
 
-function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
+function useInView<T extends HTMLElement>(): [React.RefObject<T | null>, boolean] {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {

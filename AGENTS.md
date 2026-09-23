@@ -11,7 +11,7 @@
 
 ## 검증
 
-- `npm run type-check:active`, `npm run audit:questionnaire`, `npm run audit:mystic-seo`, `npm run test -- --run`, `npm run build` 후 `npm run audit:content-depth-baseline`.
+- `npm run type-check`(전체, CI 차단 게이트), `npm run audit:questionnaire`, `npm run audit:mystic-seo`, `npm run test -- --run`, `npm run build` 후 `npm run audit:content-depth-baseline`.
 - 검사 컴포넌트를 만들거나 고치면 `npm run audit:test-funnel-events`를 함께 돌린다. `test_completed`를 발화하는 문항형 검사에 `test_started`가 없으면 실패한다 — 2026-08-31 GA4 실측에서 완료 204건 대비 시작 14건이 나와 완주율의 분모가 없던 것이 원인이다. 계산기(`src/components/tools`)는 대상이 아니다: 계약상 `test_started`는 "첫 문항 응답"이라 입력→계산 화면엔 대응하는 순간이 없다.
 - 링크·내비게이션을 건드리면 `npm run audit:internal-link-slashes`를 함께 돌린다. 내부 링크는 서빙 형태(트레일링 슬래시)로 낸다 — `localePath()`나 `withTrailingSlash()`를 쓰고 308 리다이렉트에 의존하지 않는다. 네이버 Yeti는 리다이렉트된 페이지를 수집제한으로 분류해 목표를 색인하지 않는다(2026-08-30 서치어드바이저: 색인 0 / 수집제한 21 전부 리다이렉션). 래칫이므로 CEILING은 개선 때 낮추고 통과시키려고 올리지 않는다.
 - 페이지·레이아웃·사이트맵 필터를 건드리면 `npm run audit:sitemap-noindex`와 `npm run audit:single-h1`을 함께 돌린다(둘 다 빌드 후). 전자는 astro.config.mjs가 요구하는 lockstep을 강제한다 — 사이트맵에 올린 URL이 noindex면 모순 신호이고 크롤 예산만 쓴다(2026-08-31 실측 14건). 후자는 색인 대상 페이지의 h1을 정확히 1개로 강제한다(h1 없음도 중복만큼 나쁘다). noindex 라우트는 `config/noindex-routes.js`가 정본이다.

@@ -15,7 +15,7 @@ function result(resultId: string, completedAt: string): CanonicalAssessmentResul
     resultId,
     schema: "oiyo.assessment-result",
     schemaVersion: 2,
-    scores: { dimensions: {} },
+    scores: { normalized: {}, raw: {} },
     versions: { instrument: "i1", interpretation: "x1", scoring: "s1" },
   };
 }
@@ -39,7 +39,7 @@ describe("ontologySignalsFromResults", () => {
           value: 50,
         }],
       },
-    } as AssessmentPlugin;
+    } as unknown as AssessmentPlugin;
 
     const signals = ontologySignalsFromResults(
       [result("old", "2026-01-01T00:00:00.000Z"), result("new", "2026-02-01T00:00:00.000Z")],
@@ -69,7 +69,7 @@ describe("ontologySignalsFromResults", () => {
           value: 50,
         }],
       },
-    } as AssessmentPlugin;
+    } as unknown as AssessmentPlugin;
 
     expect(ontologySignalsFromResults(
       [value],
