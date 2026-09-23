@@ -4,7 +4,7 @@ import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type ResultKey = 'rest' | 'activation' | 'meaning' | 'support'
 
 interface Question {
@@ -21,7 +21,7 @@ interface Result {
 }
 
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 const LABELS: Record<SupportedLang, {
@@ -64,6 +64,9 @@ const LABELS: Record<SupportedLang, {
     restart: 'もう一度',
     share: '共有',
   },
+  zh: { title: '无力感自测', subtitle: '轻轻看一下：精力下滑、回避、意义感变淡、需要有人搭把手。', note: '这不是诊断。若两周以上日常明显撑不住，或出现伤害自己的念头，请立刻寻求专业协助。', progress: (current, total) => `${current} / ${total}`, result: '现在的恢复着力点', plan: '小步恢复计划', restart: '重新测验', share: '分享' },
+  fr: { title: 'Test de l’état d’épuisement', subtitle: 'Un regard rapide : énergie en baisse, évitement, perte de sens, besoin d’aide.', note: 'Ce n’est pas un diagnostic. Si le quotidien s’effondre depuis plus de deux semaines, ou en cas d’idées de se faire du mal, demandez de l’aide sans attendre.', progress: (current, total) => `${current} / ${total}`, result: 'Point d’appui pour récupérer', plan: 'Petit plan de récupération', restart: 'Recommencer', share: 'Partager' },
+  es: { title: 'Test de desgana', subtitle: 'Una mirada rápida: energía baja, evitación, pérdida de sentido, necesidad de apoyo.', note: 'Esto no es un diagnóstico. Si más de dos semanas el día a día se viene abajo, o aparecen ideas de hacerte daño, pide ayuda ya.', progress: (current, total) => `${current} / ${total}`, result: 'Punto de apoyo para recuperarte', plan: 'Plan pequeño de recuperación', restart: 'Repetir', share: 'Compartir' },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -97,12 +100,18 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { text: '自分が何を望んでいるのか分からず方向感が薄い。', scores: { rest: 0, activation: 1, meaning: 3, support: 1 } },
     { text: '誰かと話せば少し耐えられそうだ。', scores: { rest: 0, activation: 1, meaning: 1, support: 3 } },
   ],
+  zh: [{ text: '早上起来，身体也没充上电', scores: { rest: 3, activation: 1, meaning: 0, support: 1 } }, { text: '一想到要做的事，人就重得动不了', scores: { rest: 1, activation: 3, meaning: 1, support: 1 } }, { text: '以前觉得有意思的事，现在没什么感觉', scores: { rest: 1, activation: 1, meaning: 3, support: 1 } }, { text: '想自己扛，结果越扛越孤单', scores: { rest: 0, activation: 1, meaning: 1, support: 3 } }, { text: '睡觉、吃饭、晒太阳、活动，塌了好几样', scores: { rest: 3, activation: 2, meaning: 0, support: 1 } }, { text: '再小的事，还没开始就先放弃', scores: { rest: 1, activation: 3, meaning: 2, support: 1 } }, { text: '不太清楚自己想要什么，方向是糊的', scores: { rest: 0, activation: 1, meaning: 3, support: 1 } }, { text: '跟谁说说话，好像就能撑一下', scores: { rest: 0, activation: 1, meaning: 1, support: 3 } }],
+  fr: [{ text: 'Même après la nuit, le corps ne se recharge pas', scores: { rest: 3, activation: 1, meaning: 0, support: 1 } }, { text: 'À l’idée de ce qu’il faut faire, tout devient lourd', scores: { rest: 1, activation: 3, meaning: 1, support: 1 } }, { text: 'Ce qui avait du sens avant ne me fait plus rien', scores: { rest: 1, activation: 1, meaning: 3, support: 1 } }, { text: 'À vouloir m’en sortir seul, je m’isole davantage', scores: { rest: 0, activation: 1, meaning: 1, support: 3 } }, { text: 'Sommeil, repas, lumière, mouvement : plusieurs se sont effondrés', scores: { rest: 3, activation: 2, meaning: 0, support: 1 } }, { text: 'Même un tout petit geste, j’abandonne avant de commencer', scores: { rest: 1, activation: 3, meaning: 2, support: 1 } }, { text: 'Je ne sais plus bien ce que je veux, la direction est floue', scores: { rest: 0, activation: 1, meaning: 3, support: 1 } }, { text: 'Parler avec quelqu’un m’aiderait sans doute à tenir', scores: { rest: 0, activation: 1, meaning: 1, support: 3 } }],
+  es: [{ text: 'Aunque duerma, el cuerpo no se recarga', scores: { rest: 3, activation: 1, meaning: 0, support: 1 } }, { text: 'Pensar en lo que hay que hacer ya me pesa', scores: { rest: 1, activation: 3, meaning: 1, support: 1 } }, { text: 'Lo que antes tenía sentido ahora no me dice nada', scores: { rest: 1, activation: 1, meaning: 3, support: 1 } }, { text: 'Al querer salir solo, me aíslo más', scores: { rest: 0, activation: 1, meaning: 1, support: 3 } }, { text: 'Sueño, comidas, sol, movimiento: varios se han caído', scores: { rest: 3, activation: 2, meaning: 0, support: 1 } }, { text: 'Hasta lo más pequeño lo abandono antes de empezar', scores: { rest: 1, activation: 3, meaning: 2, support: 1 } }, { text: 'No sé bien qué quiero, la dirección está borrosa', scores: { rest: 0, activation: 1, meaning: 3, support: 1 } }, { text: 'Hablar con alguien creo que me ayudaría a sostenerme', scores: { rest: 0, activation: 1, meaning: 1, support: 3 } }],
 }
 
 const OPTIONS: Record<SupportedLang, string[]> = {
   ko: ['거의 아니다', '가끔 그렇다', '자주 그렇다', '매우 그렇다'],
   en: ['Rarely', 'Sometimes', 'Often', 'Very often'],
   ja: ['ほとんどない', '時々ある', 'よくある', 'とてもよくある'],
+  zh: ['几乎没有', '偶尔', '经常', '非常频繁'],
+  fr: ['Presque jamais', 'Parfois', 'Souvent', 'Très souvent'],
+  es: ['Casi nunca', 'A veces', 'A menudo', 'Muy a menudo'],
 }
 
 const RESULTS: Record<ResultKey, Record<SupportedLang, Result>> = {
@@ -110,21 +119,33 @@ const RESULTS: Record<ResultKey, Record<SupportedLang, Result>> = {
     ko: { title: '회복 에너지 부족형', subtitle: '의지보다 생체 리듬 회복이 먼저입니다', description: '지금은 더 밀어붙이기보다 수면, 식사, 햇빛, 몸의 긴장을 낮추는 것이 우선입니다.', plan: ['기상 시간을 먼저 고정하기', '아침 햇빛 5분 받기', '단백질이 있는 첫 식사 챙기기'], supportNote: '신체 피로가 길게 이어지면 건강검진과 상담을 함께 고려하세요.' },
     en: { title: 'Low Recovery Energy', subtitle: 'Rhythm comes before willpower', description: 'Instead of pushing harder, rebuild sleep, meals, sunlight, and body calm first.', plan: ['Fix wake-up time first', 'Get 5 minutes of morning light', 'Eat a first meal with protein'], supportNote: 'If body fatigue lasts, consider both a health check and counseling.' },
     ja: { title: '回復エネルギー不足型', subtitle: '意志より生体リズムの回復が先です', description: '今は無理に押すより、睡眠、食事、日光、体の緊張を整えることが先です。', plan: ['起床時間を固定する', '朝の日光を5分浴びる', 'たんぱく質のある食事を取る'], supportNote: '身体の疲労が長く続く場合は健康チェックと相談を検討してください。' },
+    zh: { title: '恢复能量不足型', subtitle: '比起意志，先把生理节奏扶回来', description: '现在与其再逼自己，不如先顾睡眠、吃饭、晒太阳，把身体的紧绷降下来。', plan: ['先把起床时间固定住', '早上晒五分钟太阳', '第一餐吃到蛋白质'], supportNote: '身体的疲惫拖得久，就把体检和咨询一起考虑进来。' },
+    fr: { title: 'Manque d’énergie de récupération', subtitle: 'Avant la volonté, remettre le rythme du corps', description: 'Plutôt que de forcer encore, commencez par le sommeil, les repas, la lumière et le relâchement des tensions.', plan: ['Fixer d’abord l’heure du lever', 'Cinq minutes de lumière le matin', 'Un premier repas avec des protéines'], supportNote: 'Si la fatigue physique dure, envisagez aussi un bilan médical et un entretien.' },
+    es: { title: 'Falta de energía para recuperarte', subtitle: 'Antes que la voluntad, recolocar el ritmo del cuerpo', description: 'En vez de forzar más, empieza por el sueño, las comidas, la luz y bajar la tensión del cuerpo.', plan: ['Fijar primero la hora de levantarte', 'Cinco minutos de luz por la mañana', 'Un primer desayuno con proteína'], supportNote: 'Si el cansancio físico se alarga, valora también una revisión médica y hablar con alguien.' },
   },
   activation: {
     ko: { title: '행동 시동 저하형', subtitle: '동기보다 2분 행동이 먼저입니다', description: '생각으로 에너지를 만들기보다, 아주 작은 행동으로 뇌에 시작 신호를 주는 것이 효과적입니다.', plan: ['2분만 정리하기', '해야 할 일을 한 문장으로 줄이기', '완료 후 바로 체크 표시하기'], supportNote: '움직임이 시작되면 감정은 뒤늦게 따라오는 경우가 많습니다.' },
     en: { title: 'Low Activation', subtitle: 'Two minutes comes before motivation', description: 'Rather than thinking your way into energy, give the brain a start signal through tiny action.', plan: ['Clean for only 2 minutes', 'Shrink the task into one sentence', 'Check it off immediately after finishing'], supportNote: 'Emotion often follows action later.' },
     ja: { title: '行動開始低下型', subtitle: '動機より2分行動が先です', description: '考えてエネルギーを作るより、小さな行動で開始信号を出しましょう。', plan: ['2分だけ片づける', '作業を一文に縮める', '終わったらすぐチェックする'], supportNote: '感情は行動の後からついてくることがあります。' },
+    zh: { title: '启动力下滑型', subtitle: '比起动机，先做两分钟', description: '靠想是想不出能量的。用极小的动作给大脑一个「开始」的信号，更管用。', plan: ['只整理两分钟', '把要做的事缩成一句话', '做完立刻打个勾'], supportNote: '常常是身体先动起来，情绪才慢慢跟上。' },
+    fr: { title: 'Démarrage en panne', subtitle: 'Avant la motivation, deux minutes d’action', description: 'On ne fabrique pas d’énergie en y pensant. Un geste minuscule donne au cerveau le signal du départ.', plan: ['Ranger deux minutes, pas plus', 'Réduire la tâche à une seule phrase', 'Cocher aussitôt une fois fait'], supportNote: 'Souvent le corps part d’abord et l’émotion suit avec un temps de retard.' },
+    es: { title: 'Arranque apagado', subtitle: 'Antes que la motivación, dos minutos de acción', description: 'La energía no se fabrica pensando. Un gesto mínimo le da al cerebro la señal de empezar.', plan: ['Ordenar solo dos minutos', 'Reducir la tarea a una frase', 'Marcarlo en cuanto esté hecho'], supportNote: 'A menudo primero se mueve el cuerpo y la emoción llega después.' },
   },
   meaning: {
     ko: { title: '의미 감각 저하형', subtitle: '목표보다 작은 이유를 회복해야 합니다', description: '큰 인생 목적을 찾기 전에 오늘을 버티게 하는 작은 이유를 다시 연결하는 단계입니다.', plan: ['오늘 의미 있었던 장면 1개 쓰기', '고마웠던 사람 1명 떠올리기', '나를 살리는 활동 10분 하기'], supportNote: '의미 상실이 깊고 오래가면 혼자 결론 내리지 말고 대화가 필요합니다.' },
     en: { title: 'Low Meaning Signal', subtitle: 'Recover a small why before a big goal', description: 'Before searching for a grand purpose, reconnect with one small reason that carries today.', plan: ['Write one meaningful moment today', 'Name one person you are grateful for', 'Do one life-giving activity for 10 minutes'], supportNote: 'If meaninglessness feels deep and persistent, do not decide alone. Talk to someone.' },
     ja: { title: '意味感覚低下型', subtitle: '大きな目標より小さな理由を回復します', description: '大きな目的を探す前に、今日を支える小さな理由とつながり直します。', plan: ['今日意味があった場面を1つ書く', '感謝できる人を1人思い出す', '自分を生かす活動を10分する'], supportNote: '意味の喪失が深く長い時は、一人で結論を出さず話してください。' },
+    zh: { title: '意义感变淡型', subtitle: '比起大目标，先找回小小的理由', description: '先别急着找人生目的。现在要做的，是把撑住今天的那些小理由重新接上。', plan: ['写下今天有意义的一个画面', '想起一个让你感谢的人', '做十分钟能把自己救回来的事'], supportNote: '意义感掉得深又久时，别一个人下结论，找人说说话。' },
+    fr: { title: 'Sens qui s’estompe', subtitle: 'Avant le grand but, retrouver les petites raisons', description: 'Inutile de chercher tout de suite un sens à la vie. L’étape est de renouer avec les petites raisons qui font tenir aujourd’hui.', plan: ['Noter une scène qui a eu du sens aujourd’hui', 'Penser à une personne à qui vous êtes reconnaissant', 'Dix minutes d’une activité qui vous remet debout'], supportNote: 'Quand la perte de sens s’installe, ne concluez pas seul : parlez-en.' },
+    es: { title: 'Sentido que se apaga', subtitle: 'Antes que la gran meta, recuperar las razones pequeñas', description: 'No hace falta buscar ya un propósito de vida. Toca reconectar con las razones pequeñas que sostienen el día.', plan: ['Anotar una escena con sentido de hoy', 'Pensar en alguien a quien agradeces', 'Diez minutos de algo que te devuelva a ti'], supportNote: 'Si la falta de sentido se hace honda y larga, no concluyas a solas: háblalo.' },
   },
   support: {
     ko: { title: '연결 지원 필요형', subtitle: '혼자 버티는 전략이 한계에 왔을 수 있습니다', description: '지금 필요한 것은 더 강한 의지가 아니라 안전한 연결과 도움 요청일 수 있습니다.', plan: ['오늘 연락할 사람 1명 정하기', '상태를 한 문장으로 보내기', '필요하면 상담/진료 예약하기'], supportNote: '자해 생각이 있거나 위험하다고 느껴지면 즉시 1393, 1577-0199, 119를 이용하세요.' },
     en: { title: 'Support Needed', subtitle: 'Going alone may have reached its limit', description: 'What you need may not be stronger willpower, but safer connection and help.', plan: ['Choose one person to contact today', 'Send one honest sentence about your state', 'Book counseling or medical care if needed'], supportNote: 'If you feel at risk or have self-harm thoughts, contact emergency or crisis support immediately.' },
     ja: { title: 'つながり支援必要型', subtitle: '一人で耐える戦略が限界かもしれません', description: '必要なのは強い意志ではなく、安全なつながりと助けを求めることかもしれません。', plan: ['今日連絡する人を1人決める', '状態を一文で送る', '必要なら相談や受診を予約する'], supportNote: '危険を感じる、自傷の考えがある場合はすぐ緊急窓口に連絡してください。' },
+    zh: { title: '需要有人搭把手型', subtitle: '一个人硬撑的办法可能到头了', description: '现在需要的不是更强的意志，而是安全的连结和开口求助。', plan: ['先定今天要联络的一个人', '用一句话把状态发出去', '需要的话就预约咨询或门诊'], supportNote: '若出现伤害自己的念头或觉得有危险，请立刻联系当地的紧急与心理危机专线。' },
+    fr: { title: 'Besoin d’un appui', subtitle: 'La stratégie « tenir seul » a peut-être atteint sa limite', description: 'Ce qu’il faut maintenant n’est pas plus de volonté, mais un lien sûr et une demande d’aide.', plan: ['Choisir une personne à contacter aujourd’hui', 'Envoyer son état en une phrase', 'Prendre rendez-vous si besoin'], supportNote: 'En cas d’idées de se faire du mal ou de danger ressenti, contactez immédiatement les urgences ou une ligne d’écoute de votre pays.' },
+    es: { title: 'Hace falta que alguien eche una mano', subtitle: 'Puede que aguantar en solitario haya tocado techo', description: 'Lo que hace falta ahora no es más voluntad, sino un vínculo seguro y pedir ayuda.', plan: ['Elegir a una persona a la que escribir hoy', 'Contar cómo estás en una frase', 'Pedir cita si hace falta'], supportNote: 'Si aparecen ideas de hacerte daño o sientes peligro, llama de inmediato a emergencias o a una línea de crisis de tu país.' },
   },
 }
 

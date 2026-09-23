@@ -5,7 +5,7 @@ import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
 
 type Level = 'high' | 'medium' | 'low'
-type Locale = 'ko' | 'en' | 'ja'
+type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 interface Question { id: string; text: string }
 interface ResultData {
@@ -47,6 +47,9 @@ const LABELS: Record<Locale, {
     warning: '注意', affirmation: '今日のメッセージ', scoreLabel: 'バーンアウトスコア',
     outOf: '/ 40点', note: 'このテストは専門的診断の代替ではありません。症状が深刻な場合は専門家に相談してください。',
   },
+  zh: { title: '职业倦怠自测', subtitle: '现在的我，累到什么程度？', questionOf: (c, t) => `${c} / ${t}`, scaleLabels: ['完全没有', '很少', '偶尔', '经常', '总是如此'], restart: '重新测验', share: '分享结果', shareMsg: '我的倦怠程度是', yourLevel: '我的倦怠程度', symptoms: '主要表现', recovery: '恢复的做法', warning: '提醒', affirmation: '今天想对你说', scoreLabel: '倦怠分数', outOf: '/ 40 分', note: '本测验不能替代专业评估。症状严重时请寻求专业协助。' },
+  fr: { title: 'Auto-évaluation du burn-out', subtitle: 'À quel point suis-je épuisé en ce moment ?', questionOf: (c, t) => `${c} / ${t}`, scaleLabels: ['Jamais', 'Rarement', 'Parfois', 'Souvent', 'Toujours'], restart: 'Recommencer', share: 'Partager le résultat', shareMsg: 'Mon niveau d’épuisement est', yourLevel: 'Votre niveau d’épuisement', symptoms: 'Ce qui se manifeste', recovery: 'Pistes de récupération', warning: 'Attention', affirmation: 'Un mot pour aujourd’hui', scoreLabel: 'Score d’épuisement', outOf: '/ 40 points', note: 'Ce test ne remplace pas une évaluation professionnelle. Si les symptômes sont lourds, demandez de l’aide.' },
+  es: { title: 'Autotest de burnout', subtitle: '¿Hasta qué punto estoy agotado ahora?', questionOf: (c, t) => `${c} / ${t}`, scaleLabels: ['Nunca', 'Rara vez', 'A veces', 'A menudo', 'Siempre'], restart: 'Repetir', share: 'Compartir resultado', shareMsg: 'Mi nivel de agotamiento es', yourLevel: 'Tu nivel de agotamiento', symptoms: 'Lo que se nota', recovery: 'Vías de recuperación', warning: 'Atención', affirmation: 'Algo para hoy', scoreLabel: 'Puntuación de agotamiento', outOf: '/ 40 puntos', note: 'Este test no sustituye una evaluación profesional. Si los síntomas son intensos, busca ayuda.' },
 }
 
 const QUESTIONS: Record<Locale, Question[]> = {
@@ -86,6 +89,9 @@ const QUESTIONS: Record<Locale, Question[]> = {
     { id: 'q9', text: '自分がやっていることに意味がないと感じる' },
     { id: 'q10', text: '休んでもエネルギーが回復せず、ずっと疲れている' },
   ],
+  zh: [{ id: 'q1', text: '早上醒来，疲劳也没消掉' }, { id: 'q2', text: '对工作或学习提不起劲' }, { id: 'q3', text: '懒得跟人来往，只想一个人待着' }, { id: 'q4', text: '一点小事就烦躁或上火' }, { id: 'q5', text: '注意力下降，小事也处理不动' }, { id: 'q6', text: '以前喜欢的爱好变得没意思' }, { id: 'q7', text: '情绪变钝，什么都不想感觉' }, { id: 'q8', text: '身体常不舒服，头痛、消化不良等' }, { id: 'q9', text: '觉得自己做的事没有意义' }, { id: 'q10', text: '休息了也充不上电，一直累着' }],
+  fr: [{ id: 'q1', text: 'Même au réveil, la fatigue ne part pas' }, { id: 'q2', text: 'Je n’ai plus d’élan pour le travail ou les études' }, { id: 'q3', text: 'Voir du monde me pèse, j’ai envie d’être seul' }, { id: 'q4', text: 'Un rien m’agace ou me met en colère' }, { id: 'q5', text: 'Ma concentration baisse, même les petites tâches coincent' }, { id: 'q6', text: 'Ce qui me plaisait avant ne m’intéresse plus' }, { id: 'q7', text: 'Mes émotions s’émoussent, je ne veux plus rien ressentir' }, { id: 'q8', text: 'J’ai souvent mal quelque part : maux de tête, digestion' }, { id: 'q9', text: 'J’ai le sentiment que ce que je fais n’a pas de sens' }, { id: 'q10', text: 'Même après du repos, je ne recharge pas' }],
+  es: [{ id: 'q1', text: 'Aunque me levante, el cansancio no se va' }, { id: 'q2', text: 'No me sale ganas para el trabajo ni el estudio' }, { id: 'q3', text: 'Me da pereza la gente, quiero estar a solas' }, { id: 'q4', text: 'Cualquier cosa me irrita o me enfada' }, { id: 'q5', text: 'Me baja la concentración y hasta lo pequeño se atasca' }, { id: 'q6', text: 'Lo que antes disfrutaba ya no me dice nada' }, { id: 'q7', text: 'Las emociones se apagan, no quiero sentir nada' }, { id: 'q8', text: 'Me duele algo a menudo: cabeza, digestión' }, { id: 'q9', text: 'Siento que lo que hago no tiene sentido' }, { id: 'q10', text: 'Aunque descanse, no recargo' }],
 }
 
 const RESULTS: Record<Level, Record<Locale, ResultData>> = {
@@ -114,6 +120,9 @@ const RESULTS: Record<Level, Record<Locale, ResultData>> = {
       warning: 'バーンアウトは意志力で克服するものではありません。一人で耐えようとしないでください。',
       affirmation: '休むことは怠けではありません。今のあなたに必要な最も勇気ある行動は、立ち止まることです。',
     },
+    zh: { title: '严重倦怠', subtitle: '你现在需要的是真正的休息', description: '倦怠已经很深了。身体、情绪、脑子同时被掏空。先把速度降下来，并认真考虑找专业协助。', symptoms: ['情绪极度耗竭', '变得冷漠、事不关己', '效率大幅下滑', '身体症状（头痛、失眠、肠胃不适）'], recovery: ['立刻减少手上的工作量', '找信得过的人说说话', '去看咨询师或医生', '断开一段时间的手机和网络', '把最基本的照顾做到（睡觉、吃饭、走走）'], warning: '倦怠不是靠意志力扛过去的。别一个人硬撑。', affirmation: '休息不是偷懒。此刻最勇敢的事，就是停下来。' },
+    fr: { title: 'Burn-out sévère', subtitle: 'Ce qu’il vous faut maintenant, c’est du vrai repos', description: 'L’épuisement est profond : corps, émotions et tête sont vidés en même temps. Ralentissez dès maintenant et envisagez sérieusement une aide professionnelle.', symptoms: ['Épuisement émotionnel extrême', 'Cynisme et détachement', 'Efficacité en chute', 'Symptômes physiques (maux de tête, insomnie, digestion)'], recovery: ['Réduire la charge de travail tout de suite', 'Parler à quelqu’un de confiance', 'Consulter un professionnel ou un médecin', 'Se couper des écrans un moment', 'Assurer le minimum vital : sommeil, repas, marche'], warning: 'Le burn-out ne se surmonte pas à la volonté. Ne tenez pas seul.', affirmation: 'Se reposer n’est pas de la paresse. Le geste le plus courageux, maintenant, c’est de s’arrêter.' },
+    es: { title: 'Burnout severo', subtitle: 'Lo que necesitas ahora es descanso de verdad', description: 'El agotamiento es profundo: cuerpo, emociones y cabeza vaciados a la vez. Baja el ritmo ya y valora en serio buscar ayuda profesional.', symptoms: ['Agotamiento emocional extremo', 'Cinismo y desapego', 'Rendimiento en caída', 'Síntomas físicos (dolor de cabeza, insomnio, digestión)'], recovery: ['Reducir la carga de trabajo ya', 'Hablar con alguien de confianza', 'Acudir a un profesional o al médico', 'Desconectar de las pantallas un tiempo', 'Asegurar lo básico: dormir, comer, caminar'], warning: 'El burnout no se supera a fuerza de voluntad. No aguantes solo.', affirmation: 'Descansar no es pereza. Ahora mismo, lo más valiente es parar.' },
   },
   medium: {
     ko: {
@@ -140,6 +149,9 @@ const RESULTS: Record<Level, Record<Locale, ResultData>> = {
       warning: 'バーンアウトの初期サインを無視すると、回復にさらに時間がかかります。',
       affirmation: '完璧でなくていい。今日一日を生き切ったあなたは、すでによくやっています。',
     },
+    zh: { title: '中度倦怠', subtitle: '警示灯已经亮了', description: '处在倦怠的中段。现在还回得来，但放着不管会继续往下走。检查生活的节奏，刻意排出恢复的时间。', symptoms: ['长期的疲惫感', '动力和专注力下滑', '情绪起伏变大', '小的乐趣变少'], recovery: ['重新调整工作与休息的比例', '刻意安排一点让自己开心的事', '运动，或到自然里待一会儿', '把待办删短，重排优先级', '把睡眠补足'], warning: '忽略早期信号，之后恢复要花更长的时间。', affirmation: '不必做到完美。今天好好过完的你，已经做得不错了。' },
+    fr: { title: 'Burn-out modéré', subtitle: 'Les voyants s’allument', description: 'Vous êtes à mi-chemin. La récupération est encore possible, mais sans rien changer, cela s’aggrave. Regardez votre rythme et ménagez des temps de repos volontaires.', symptoms: ['Fatigue chronique', 'Baisse de l’élan et de la concentration', 'Humeur plus instable', 'Moins de petits plaisirs'], recovery: ['Rééquilibrer travail et repos', 'Programmer exprès de petits plaisirs', 'Bouger, ou passer du temps dehors', 'Raccourcir la liste et revoir les priorités', 'Dormir assez'], warning: 'Ignorer les premiers signes rallonge la récupération.', affirmation: 'Pas besoin d’être parfait. Avoir traversé cette journée, c’est déjà bien.' },
+    es: { title: 'Burnout moderado', subtitle: 'Se están encendiendo los avisos', description: 'Estás a media escalera. Aún se puede recuperar, pero si no cambia nada irá a peor. Revisa el ritmo y reserva tiempo de recuperación a propósito.', symptoms: ['Cansancio que no se va', 'Menos ganas y menos concentración', 'Ánimo más inestable', 'Menos gustos pequeños'], recovery: ['Reequilibrar trabajo y descanso', 'Programar a propósito algún gusto pequeño', 'Moverte o pasar rato al aire libre', 'Acortar la lista y reordenar prioridades', 'Dormir lo suficiente'], warning: 'Ignorar las primeras señales alarga la recuperación.', affirmation: 'No hace falta ser perfecto. Haber llegado al final del día ya está bien.' },
   },
   low: {
     ko: {
@@ -166,13 +178,16 @@ const RESULTS: Record<Level, Record<Locale, ResultData>> = {
       warning: '今は大丈夫でも、無理なスケジュールや長期のストレスはバーンアウトを招く可能性があります。',
       affirmation: '今のバランスは貴重です。自分をうまくケアしているあなたを応援します。',
     },
+    zh: { title: '倦怠风险低', subtitle: '现在还好，但值得先防着', description: '目前倦怠程度低。不过倦怠不是突然来的，是一点点堆起来的。刻意守住现在的平衡最要紧。', symptoms: ['目前没有明显的倦怠表现', '整体功能维持得住'], recovery: ['保持现在的生活节奏', '养成定期自我检查的习惯', '让喜欢的事持续在日子里', '练习把界线划出来'], warning: '就算现在没事，过密的日程和持续的压力也会把倦怠叫来。', affirmation: '现在的平衡很珍贵。把自己照顾得这么好，值得一句佩服。' },
+    fr: { title: 'Risque de burn-out faible', subtitle: 'Ça va pour l’instant, et la prévention compte', description: 'Le niveau est bas aujourd’hui. Mais le burn-out n’arrive pas d’un coup : il s’accumule. Tenir volontairement cet équilibre est ce qui compte.', symptoms: ['Pas de signe marqué pour l’instant', 'Fonctionnement d’ensemble préservé'], recovery: ['Garder le rythme actuel', 'Prendre l’habitude de faire le point régulièrement', 'Maintenir ce qui vous fait du bien', 'S’exercer à poser des limites'], warning: 'Même quand tout va, un agenda trop serré et un stress continu peuvent appeler le burn-out.', affirmation: 'Cet équilibre a de la valeur. Vous prenez soin de vous : c’est à saluer.' },
+    es: { title: 'Riesgo de burnout bajo', subtitle: 'Ahora vas bien, y prevenir cuenta', description: 'El nivel es bajo hoy. Pero el burnout no llega de golpe: se acumula. Lo importante es sostener a propósito este equilibrio.', symptoms: ['Sin señales marcadas por ahora', 'El funcionamiento general se mantiene'], recovery: ['Mantener el ritmo actual', 'Acostumbrarte a revisarte cada cierto tiempo', 'Conservar lo que te sienta bien', 'Practicar poner límites'], warning: 'Aunque ahora vaya bien, una agenda apretada y el estrés continuo pueden traerlo.', affirmation: 'Este equilibrio vale mucho. Te estás cuidando, y eso merece reconocimiento.' },
   },
 }
 
 interface Props { locale?: string }
 
 export default function BurnoutTest({ locale: lp = 'ko' }: Props) {
-  const locale: Locale = (['ko', 'en', 'ja'].includes(lp) ? lp : 'en') as Locale
+  const locale: Locale = (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(lp) ? lp : 'en') as Locale
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
 
