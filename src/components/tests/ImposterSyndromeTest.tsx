@@ -3,9 +3,9 @@ import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es' | 'zh' | 'fr' | 'es'
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : 'en'
 }
@@ -85,6 +85,51 @@ const LABELS: Record<SupportedLang, {
     affirmationLabel: '今日のメッセージ',
     note: 'このテストはClanceインポスター現象尺度の概念に基づいており、専門的診断の代替ではありません。',
   },
+  zh: {
+    title: '冒名顶替感测验',
+    subtitle: '我有多常觉得自己像个骗子？',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全不是', '不太是', '一般', '有点是', '非常是'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的冒名顶替感程度',
+    yourLevel: '我的冒名顶替感程度',
+    scoreLabel: '冒名顶替感分数',
+    outOf: '/ 75 分',
+    copingLabel: '应对做法',
+    affirmationLabel: '今天想对你说',
+    note: '本测验参考 Clance 冒名顶替现象量表的概念，不能替代专业评估。',
+  },
+  fr: {
+    title: 'Test du syndrome de l’imposteur',
+    subtitle: 'À quel point est-ce que je me sens imposteur ?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Pas du tout', 'Plutôt non', 'Neutre', 'Plutôt oui', 'Tout à fait'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Votre niveau',
+    yourLevel: 'Votre niveau',
+    scoreLabel: 'Score du syndrome de l’imposteur',
+    outOf: '/ 75 points',
+    copingLabel: 'Ce que vous pouvez faire',
+    affirmationLabel: 'Un mot pour aujourd’hui',
+    note: 'Ce test reprend les notions de l’échelle de Clance et ne remplace pas une évaluation professionnelle.',
+  },
+  es: {
+    title: 'Test del síndrome del impostor',
+    subtitle: '¿Con qué frecuencia me siento un impostor?',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nada', 'Más bien no', 'Neutro', 'Más bien sí', 'Totalmente'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Tu nivel',
+    yourLevel: 'Tu nivel',
+    scoreLabel: 'Puntuación del síndrome del impostor',
+    outOf: '/ 75 puntos',
+    copingLabel: 'Qué puedes hacer',
+    affirmationLabel: 'Algo para hoy',
+    note: 'Este test recoge las ideas de la escala de Clance y no sustituye una evaluación profesional.',
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -139,6 +184,57 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q14', text: '褒められたり昇進などいいことがあると、すぐにバレてしまいそうで緊張する' },
     { id: 'q15', text: '詐欺師のように感じる瞬間がある' },
   ],
+  zh: [
+    { id: 'q1', text: '我觉得自己的成功靠的是运气或时机，不是实力' },
+    { id: 'q2', text: '比我强得多的人很快就会发现我其实不行' },
+    { id: 'q3', text: '被称赞时，我会觉得对方是误会了' },
+    { id: 'q4', text: '接下新项目或新角色时，我怕自己扛不住' },
+    { id: 'q5', text: '我觉得别人比我能干得多' },
+    { id: 'q6', text: '就算成功了，也很难把它当成自己的' },
+    { id: 'q7', text: '一犯错，我就觉得这正是我不够格的证据' },
+    { id: 'q8', text: '做得好的时候，我会想这次只是运气好' },
+    { id: 'q9', text: '站在重要场合时，我会怀疑自己是否该在这里' },
+    { id: 'q10', text: '我一直担心达不到身边人的期待' },
+    { id: 'q11', text: '我觉得别人把我的知识或能力看得太高了' },
+    { id: 'q12', text: '跟同场的人比，我好像准备得更少' },
+    { id: 'q13', text: '我很难自信地相信成绩来自实力而不是运气' },
+    { id: 'q14', text: '有好事发生（称赞、升职）时，我紧张自己快被识破' },
+    { id: 'q15', text: '我有时候觉得自己像个骗子' },
+  ],
+  fr: [
+    { id: 'q1', text: 'Je crois devoir mes réussites à la chance ou au bon moment plutôt qu’à mes compétences' },
+    { id: 'q2', text: 'Des gens bien plus capables vont vite s’apercevoir de mon incompétence' },
+    { id: 'q3', text: 'Quand on me complimente, je me dis que la personne se trompe' },
+    { id: 'q4', text: 'Quand on me confie un projet ou un rôle nouveau, j’ai peur de ne pas tenir' },
+    { id: 'q5', text: 'J’ai le sentiment que les autres sont bien plus compétents que moi' },
+    { id: 'q6', text: 'Même en cas de succès, j’ai du mal à le considérer vraiment comme le mien' },
+    { id: 'q7', text: 'Quand je fais une erreur, j’y vois la preuve que je ne suis pas à la hauteur' },
+    { id: 'q8', text: 'Quand je réussis, je me dis que j’ai simplement eu de la chance' },
+    { id: 'q9', text: 'Dans les moments importants, je doute d’avoir ma place ici' },
+    { id: 'q10', text: 'Je crains en permanence de ne pas être à la hauteur des attentes' },
+    { id: 'q11', text: 'J’ai l’impression qu’on surestime mes connaissances ou mes capacités' },
+    { id: 'q12', text: 'Par rapport aux autres présents, je me sens moins préparé' },
+    { id: 'q13', text: 'J’ai du mal à croire avec assurance que mes réussites viennent de moi' },
+    { id: 'q14', text: 'Quand une bonne nouvelle arrive (compliment, promotion), je me tends, comme si j’allais être démasqué' },
+    { id: 'q15', text: 'Il m’arrive de me sentir comme un imposteur' },
+  ],
+  es: [
+    { id: 'q1', text: 'Creo que mis éxitos vienen de la suerte o del momento, no de mi capacidad' },
+    { id: 'q2', text: 'Gente mucho más capaz se dará cuenta enseguida de que no doy la talla' },
+    { id: 'q3', text: 'Cuando me felicitan, pienso que se están equivocando' },
+    { id: 'q4', text: 'Cuando me dan un proyecto o un papel nuevo, temo no poder con ello' },
+    { id: 'q5', text: 'Siento que los demás son mucho más competentes que yo' },
+    { id: 'q6', text: 'Aunque salga bien, me cuesta considerarlo realmente mío' },
+    { id: 'q7', text: 'Si cometo un error, lo veo como prueba de que no valgo' },
+    { id: 'q8', text: 'Cuando lo hago bien, pienso que esta vez tuve suerte' },
+    { id: 'q9', text: 'En los momentos importantes dudo de si merezco estar ahí' },
+    { id: 'q10', text: 'Vivo con miedo de no cumplir lo que esperan de mí' },
+    { id: 'q11', text: 'Siento que sobrevaloran mis conocimientos o mi capacidad' },
+    { id: 'q12', text: 'Comparado con los demás presentes, me siento menos preparado' },
+    { id: 'q13', text: 'Me cuesta creer con seguridad que mis logros vienen de mi capacidad' },
+    { id: 'q14', text: 'Cuando llega algo bueno (un elogio, un ascenso), me tenso como si fueran a descubrirme' },
+    { id: 'q15', text: 'A veces me siento un impostor' },
+  ],
 }
 
 const LEVEL_RESULTS: Record<Level, Record<SupportedLang, LevelResult>> = {
@@ -164,6 +260,27 @@ const LEVEL_RESULTS: Record<Level, Record<SupportedLang, LevelResult>> = {
       coping: '今のように現実的な自己評価を維持しましょう。失敗も成長の一部として受け入れ、自分の強みリストを定期的に更新してみてください。',
       affirmation: 'あなたの成功は運ではなく、あなたの能力と努力の成果です。',
     },
+    zh: {
+      badge: '💚 低',
+      title: '冒名顶替感低',
+      description: '你的自信处在健康的程度。一点点不确定谁都会有，而你对自己的成绩看得比较实在。',
+      coping: '保持现在这种实在的自我评估。把失败也当成成长的一部分，并定期更新自己的强项清单。',
+      affirmation: '你的成功不是运气，是能力和努力结出的果。',
+    },
+    fr: {
+      badge: '💚 Faible',
+      title: 'Syndrome de l’imposteur faible',
+      description: 'Votre confiance est à un niveau sain. Un peu d’incertitude est normale chez tout le monde, et vous regardez vos réussites avec assez de réalisme.',
+      coping: 'Gardez cette évaluation réaliste de vous-même. Accueillez l’échec comme une part de la croissance et mettez à jour régulièrement la liste de vos forces.',
+      affirmation: 'Vos réussites ne sont pas de la chance : elles sont le fruit de vos capacités et de votre travail.',
+    },
+    es: {
+      badge: '💚 Bajo',
+      title: 'Síndrome del impostor bajo',
+      description: 'Tu confianza está en un nivel sano. Un poco de incertidumbre la tiene cualquiera, y miras tus logros con bastante realismo.',
+      coping: 'Conserva esa mirada realista sobre ti. Acepta el fallo como parte del crecimiento y actualiza de vez en cuando la lista de tus fortalezas.',
+      affirmation: 'Tu éxito no es suerte: es fruto de tu capacidad y tu trabajo.',
+    },
   },
   medium: {
     ko: {
@@ -186,6 +303,27 @@ const LEVEL_RESULTS: Record<Level, Record<SupportedLang, LevelResult>> = {
       description: '特定の状況や挑戦的な環境で詐欺師のような感覚が現れます。これは非常に一般的な経験で、多くの成功した人も同様に感じます。',
       coping: '成功日誌を書く：毎週うまくできたこと3つを記録しましょう。信頼できる人に正直に気持ちを打ち明けましょう。運ではなく準備の結果であることを思い出しましょう。',
       affirmation: '成功者の70%以上がインポスター症候群を経験しています。あなただけの感情ではありません。',
+    },
+    zh: {
+      badge: '💛 中等',
+      title: '中等程度的冒名顶替感',
+      description: '在某些场合或有挑战的环境里，会冒出「像个骗子」的感觉。这非常常见，很多做得不错的人也一样。',
+      coping: '写成功日记：每周记下三件做得好的事。把感受坦白讲给信得过的人。提醒自己，这是准备的结果，不是运气。',
+      affirmation: '超过七成做出成绩的人都经历过冒名顶替感。这不是只有你才有的感觉。',
+    },
+    fr: {
+      badge: '💛 Modéré',
+      title: 'Syndrome de l’imposteur modéré',
+      description: 'Dans certaines situations ou dans un environnement exigeant, la sensation d’être un imposteur apparaît. C’est très répandu : beaucoup de gens qui réussissent le ressentent aussi.',
+      coping: 'Tenez un journal des réussites : trois choses réussies chaque semaine. Dites honnêtement ce que vous ressentez à une personne de confiance. Rappelez-vous que c’est le fruit de votre préparation, pas du hasard.',
+      affirmation: 'Plus de 70 % des personnes qui réussissent connaissent ce sentiment. Vous n’êtes pas seul.',
+    },
+    es: {
+      badge: '💛 Medio',
+      title: 'Síndrome del impostor medio',
+      description: 'En ciertas situaciones o en entornos exigentes aparece la sensación de ser un impostor. Es muy habitual: mucha gente con éxito lo siente igual.',
+      coping: 'Lleva un diario de logros: tres cosas que salieron bien cada semana. Cuéntale con franqueza cómo te sientes a alguien de confianza. Recuérdate que es fruto de tu preparación, no del azar.',
+      affirmation: 'Más del 70 % de las personas con éxito pasan por esto. No es solo cosa tuya.',
     },
   },
   high: {
@@ -210,6 +348,27 @@ const LEVEL_RESULTS: Record<Level, Record<SupportedLang, LevelResult>> = {
       coping: 'インポスター症候群のパターンを認識するだけで大きな変化が始まります。メンターやコーチの助けを借りましょう。完璧でなくても十分だということを練習しましょう。',
       affirmation: 'あなたがここにいることには理由があります。あなたの視点と貢献はユニークで価値があります。',
     },
+    zh: {
+      badge: '🧡 高',
+      title: '冒名顶替感高',
+      description: '你没有充分把成绩认到自己头上，强烈的冒名顶替感可能正在挡住你的发挥。现在需要动一动。',
+      coping: '光是认出自己的这套模式，改变就开始了。找个前辈或教练搭把手。练习「不完美也够了」这件事。',
+      affirmation: '你在这个位置上是有理由的。你的视角和贡献是独有的，也是有价值的。',
+    },
+    fr: {
+      badge: '🧡 Élevé',
+      title: 'Syndrome de l’imposteur élevé',
+      description: 'Vous ne vous attribuez pas suffisamment vos réussites, et cette sensation peut freiner ce que vous pourriez déployer. Il est temps d’agir.',
+      coping: 'Reconnaître ce schéma, c’est déjà amorcer le changement. Faites-vous accompagner par un mentor ou un coach. Entraînez-vous à considérer que « pas parfait » suffit.',
+      affirmation: 'Si vous êtes là, il y a une raison. Votre regard et votre contribution sont singuliers et précieux.',
+    },
+    es: {
+      badge: '🧡 Alto',
+      title: 'Síndrome del impostor alto',
+      description: 'No te estás atribuyendo lo que logras, y esa sensación puede estar frenando lo que podrías desplegar. Toca moverse.',
+      coping: 'Reconocer este patrón ya inicia el cambio. Busca el apoyo de un mentor o un coach. Practica que «no perfecto» ya es suficiente.',
+      affirmation: 'Si estás ahí, es por algo. Tu mirada y tu aporte son propios y valiosos.',
+    },
   },
   veryHigh: {
     ko: {
@@ -232,6 +391,27 @@ const LEVEL_RESULTS: Record<Level, Record<SupportedLang, LevelResult>> = {
       description: '非常に高いインポスター症候群が日常的な機能と自己認識に影響しています。一人で抱え込まないでください — 専門的なサポートが意味のある変化をもたらします。',
       coping: '一人で抱え込まないでください。カウンセラーや心理療法士と一緒に取り組めば根本的な変化が可能です。あなたの成果は本物です。',
       affirmation: '助けを求めることは強さの表れです。あなたはより正確な自己認識を受け取る価値があります。',
+    },
+    zh: {
+      badge: '❤️ 非常高',
+      title: '非常高的冒名顶替感',
+      description: '很强的冒名顶替感正在影响你日常的运作和对自己的认识。别一个人扛——专业协助能带来实在的改变。',
+      coping: '别一个人扛。跟咨询师或心理治疗师一起工作，能带来根本的改变。你的成绩是真的。',
+      affirmation: '开口求助是强的表现。你值得对自己有更准确的认识。',
+    },
+    fr: {
+      badge: '❤️ Très élevé',
+      title: 'Syndrome de l’imposteur très élevé',
+      description: 'Ce sentiment très fort pèse sur votre fonctionnement quotidien et sur la façon dont vous vous voyez. Ne portez pas cela seul : un accompagnement professionnel peut changer les choses.',
+      coping: 'Ne portez pas cela seul. Travailler avec un psychologue ou un thérapeute permet un changement de fond. Vos réussites sont réelles.',
+      affirmation: 'Demander de l’aide est une force. Vous méritez un regard plus juste sur vous-même.',
+    },
+    es: {
+      badge: '❤️ Muy alto',
+      title: 'Síndrome del impostor muy alto',
+      description: 'Este sentimiento, muy intenso, afecta a tu día a día y a cómo te ves. No cargues con ello solo: el acompañamiento profesional puede cambiar las cosas.',
+      coping: 'No lo cargues solo. Trabajar con un psicólogo o terapeuta permite un cambio de fondo. Tus logros son reales.',
+      affirmation: 'Pedir ayuda es una muestra de fuerza. Mereces una mirada más justa sobre ti.',
     },
   },
 }

@@ -4,9 +4,9 @@ import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire'
 import { scoreLoneliness, type LonelinessLevel } from './loneliness-score';
 import ShareResultButton from '../shared/ShareResultButton'
 
-type SupportedLang = 'ko' | 'en' | 'ja'
+type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 function lang(locale: string): SupportedLang {
-  return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
+  return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
 type Level = LonelinessLevel
@@ -73,6 +73,54 @@ const LABELS: Record<SupportedLang, {
     scoreLabel: '孤独感スコア',
     outOf: '/ 40点',
   },
+  zh: {
+    title: '孤独感自测',
+    subtitle: '我现在有多孤立？',
+    note: '本测验参考 UCLA 孤独量表，属于自我观察工具，不是研究用的诊断量表。',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['完全没有', '很少', '偶尔', '经常'],
+    restart: '重新测验',
+    share: '分享结果',
+    shareMsg: '我的社会连结状态',
+    yourLevel: '我的连结状态',
+    tips: '可以试试的连结方式',
+    affirmation: '今天想对你说',
+    connectionNote: '连结感',
+    scoreLabel: '孤独分数',
+    outOf: '/ 40 分',
+  },
+  fr: {
+    title: 'Auto-évaluation de la solitude',
+    subtitle: 'À quel point suis-je isolé ?',
+    note: 'Ce test s’inspire de l’échelle de solitude UCLA ; c’est un outil d’observation de soi, pas un instrument de diagnostic.',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Jamais', 'Rarement', 'Parfois', 'Souvent'],
+    restart: 'Recommencer',
+    share: 'Partager le résultat',
+    shareMsg: 'Votre lien social',
+    yourLevel: 'Votre état de lien',
+    tips: 'Ce que vous pouvez tenter pour renouer',
+    affirmation: 'Un mot pour aujourd’hui',
+    connectionNote: 'Sentiment de lien',
+    scoreLabel: 'Score de solitude',
+    outOf: '/ 40 points',
+  },
+  es: {
+    title: 'Autotest de soledad',
+    subtitle: '¿Cuán aislado estoy ahora?',
+    note: 'Este test se inspira en la escala de soledad UCLA; es una herramienta de autoobservación, no un instrumento de diagnóstico.',
+    questionOf: (c, t) => `${c} / ${t}`,
+    scaleLabels: ['Nunca', 'Rara vez', 'A veces', 'A menudo'],
+    restart: 'Repetir',
+    share: 'Compartir resultado',
+    shareMsg: 'Tu vínculo social',
+    yourLevel: 'Tu estado de vínculo',
+    tips: 'Cosas que puedes intentar para reconectar',
+    affirmation: 'Algo para hoy',
+    connectionNote: 'Sensación de vínculo',
+    scoreLabel: 'Puntuación de soledad',
+    outOf: '/ 40 puntos',
+  },
 }
 
 const QUESTIONS: Record<SupportedLang, Question[]> = {
@@ -112,6 +160,42 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q9', text: '私は社交的な人間だ', reversed: true },
     { id: 'q10', text: '親しみを感じる人がいる', reversed: true },
   ],
+  zh: [
+    { id: 'q1', text: '我觉得身边没有跟我合得来的人' },
+    { id: 'q2', text: '我跟人相处得不错', reversed: true },
+    { id: 'q3', text: '没有人真正懂我' },
+    { id: 'q4', text: '我并不害羞', reversed: true },
+    { id: 'q5', text: '没有人待在我身边' },
+    { id: 'q6', text: '我跟周围的人有不少共同点', reversed: true },
+    { id: 'q7', text: '我已经没办法再靠近任何人了' },
+    { id: 'q8', text: '我的兴趣和想法，身边的人接不上' },
+    { id: 'q9', text: '我外向，也容易亲近', reversed: true },
+    { id: 'q10', text: '我觉得没有可以真正交流的人' },
+  ],
+  fr: [
+    { id: 'q1', text: 'J’ai l’impression que personne autour de moi ne me ressemble' },
+    { id: 'q2', text: 'Je m’entends bien avec les gens', reversed: true },
+    { id: 'q3', text: 'Personne ne me comprend vraiment' },
+    { id: 'q4', text: 'Je ne suis pas timide', reversed: true },
+    { id: 'q5', text: 'Personne ne se tient près de moi' },
+    { id: 'q6', text: 'J’ai beaucoup en commun avec mon entourage', reversed: true },
+    { id: 'q7', text: 'Je n’arrive plus à m’approcher de qui que ce soit' },
+    { id: 'q8', text: 'Mes centres d’intérêt et mes idées ne passent pas auprès des autres' },
+    { id: 'q9', text: 'Je suis extraverti et facile d’accès', reversed: true },
+    { id: 'q10', text: 'J’ai le sentiment de n’avoir personne avec qui échanger vraiment' },
+  ],
+  es: [
+    { id: 'q1', text: 'Siento que a mi alrededor no hay nadie parecido a mí' },
+    { id: 'q2', text: 'Me llevo bien con la gente', reversed: true },
+    { id: 'q3', text: 'Nadie me entiende de verdad' },
+    { id: 'q4', text: 'No soy tímido', reversed: true },
+    { id: 'q5', text: 'No hay nadie que esté a mi lado' },
+    { id: 'q6', text: 'Tengo bastante en común con quienes me rodean', reversed: true },
+    { id: 'q7', text: 'Ya no consigo acercarme a nadie' },
+    { id: 'q8', text: 'Mis intereses y mis ideas no conectan con los de alrededor' },
+    { id: 'q9', text: 'Soy extravertido y cercano', reversed: true },
+    { id: 'q10', text: 'Siento que no tengo con quién intercambiar de verdad' },
+  ],
 }
 
 const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
@@ -140,6 +224,30 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       affirmation: 'このつながりの感覚は貴重な資産です。周りの良い人々に感謝しながら一日を過ごしてください。',
       connectionNote: '現在、社会的によくつながっています。',
     },
+    zh: {
+      title: '连结良好',
+      subtitle: '目前的社会连结是健康的',
+      description: '你现在和有意义的关系连着线。珍惜它，并持续养护。连结不会自动维持，需要有意去做。',
+      tips: ['把现在有意义的关系养得更深', '主动去找认识新朋友的机会', '考虑参加社群活动或兴趣小组', '养成先联络重要的人的习惯'],
+      affirmation: '此刻的这份连结是珍贵的资产。带着对身边好人的感谢过完今天。',
+      connectionNote: '你目前的社会连结状态良好。',
+    },
+    fr: {
+      title: 'Bien relié',
+      subtitle: 'Votre lien social est en bonne santé',
+      description: 'Vous êtes relié à des relations qui comptent. Prenez-en soin et continuez à les nourrir : le lien ne se maintient pas tout seul, il demande de l’intention.',
+      tips: ['Approfondir les relations qui comptent aujourd’hui', 'Chercher activement des occasions de rencontrer du monde', 'Envisager une activité associative ou un club', 'Prendre l’habitude d’écrire le premier aux gens importants'],
+      affirmation: 'Ce lien est un bien précieux. Traversez la journée avec de la gratitude pour les personnes qui vous entourent.',
+      connectionNote: 'Votre lien social est actuellement solide.',
+    },
+    es: {
+      title: 'Bien conectado',
+      subtitle: 'Tu vínculo social está sano',
+      description: 'Estás conectado con relaciones que importan. Cuídalas y síguelas alimentando: el vínculo no se mantiene solo, pide intención.',
+      tips: ['Profundizar en las relaciones que hoy importan', 'Buscar activamente ocasiones de conocer gente', 'Plantearte una actividad comunitaria o un club', 'Acostumbrarte a escribir tú primero a quien te importa'],
+      affirmation: 'Este vínculo es un bien valioso. Pasa el día con gratitud hacia quienes te rodean.',
+      connectionNote: 'Tu vínculo social está ahora en buen estado.',
+    },
   },
   moderate: {
     ko: {
@@ -166,6 +274,30 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       affirmation: '孤独を感じることは、つながりを求めているサインです。その気持ちはあなたが関係を大切にしている証拠です。',
       connectionNote: '今、もっとつながりが必要かもしれません。',
     },
+    zh: {
+      title: '中等程度的孤独',
+      subtitle: '有时候会觉得连结不够',
+      description: '偶尔觉得孤独，是很自然的经验。能察觉到这份感受，本身就是改变的开始。小小的连结尝试，能带来不小的差别。',
+      tips: ['先联络一位老朋友', '报名一个兴趣小组或课程', '每天哪怕短短地到自然里走走', '参加志愿服务或社区活动', '去那种「一个人但不孤单」的地方（图书馆、咖啡馆）'],
+      affirmation: '觉得孤独，是你想要连结的信号。那份心情正说明你看重关系。',
+      connectionNote: '你现在可能需要更多的连结。',
+    },
+    fr: {
+      title: 'Solitude modérée',
+      subtitle: 'Il vous arrive de manquer de lien',
+      description: 'Se sentir seul par moments est une expérience très ordinaire. Reconnaître ce ressenti est déjà un début de changement, et de petites tentatives de lien font une vraie différence.',
+      tips: ['Écrire le premier à un ami de longue date', 'S’inscrire à un atelier ou à un cours', 'Marcher dehors chaque jour, même brièvement', 'Participer à du bénévolat ou à une activité de quartier', 'Fréquenter des lieux où l’on est seul sans l’être (bibliothèque, café)'],
+      affirmation: 'Se sentir seul est le signe qu’on veut du lien. Ce sentiment dit que les relations comptent pour vous.',
+      connectionNote: 'Vous avez sans doute besoin de plus de lien en ce moment.',
+    },
+    es: {
+      title: 'Soledad moderada',
+      subtitle: 'A veces te falta vínculo',
+      description: 'Sentirse solo a ratos es una experiencia muy normal. Reconocer ese sentir ya es el comienzo del cambio, y los intentos pequeños de conectar marcan diferencia.',
+      tips: ['Escribir tú primero a un amigo de siempre', 'Apuntarte a un taller o a una clase', 'Caminar al aire libre cada día, aunque sea poco', 'Participar en voluntariado o en algo del barrio', 'Ir a sitios donde se está solo sin estarlo (biblioteca, cafetería)'],
+      affirmation: 'Sentirte solo es la señal de que quieres vínculo. Ese sentir dice que las relaciones te importan.',
+      connectionNote: 'Puede que ahora necesites más vínculo.',
+    },
   },
   high: {
     ko: {
@@ -191,6 +323,30 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
       tips: ['カウンセラーや心理療法士への相談を検討する', '一日一つの小さな社会的行動を試みる', 'メンタルヘルスサポートグループへの参加を検討する', 'オンラインコミュニティも有効なスタート地点', '身体活動で神経系を安定させる'],
       affirmation: '孤独はあなたのせいではありません。助けを求めることは勇気ある行動であり、あなたはつながる資格があります。',
       connectionNote: '今、専門的なサポートを受けることを検討してください。',
+    },
+    zh: {
+      title: '孤独感偏高',
+      subtitle: '现在似乎相当孤立',
+      description: '你正经历着不小的孤独。这份感受是在提醒你：有重要的东西不够了。孤独是可以改善的，也有包括专业协助在内的许多支援。',
+      tips: ['考虑找咨询师或心理治疗师谈谈', '每天试着做一件小小的社交举动', '考虑参加心理健康的支持团体', '从线上社群开始连结，也是有效的起点', '用身体活动让神经系统稳下来'],
+      affirmation: '孤独不是你的错。开口求助是勇敢的举动，你值得被连结。',
+      connectionNote: '建议现在考虑寻求专业支援。',
+    },
+    fr: {
+      title: 'Solitude élevée',
+      subtitle: 'Vous semblez très isolé en ce moment',
+      description: 'Vous traversez une solitude importante. Ce sentiment signale qu’il manque quelque chose d’essentiel. La solitude peut se travailler, et des soutiens existent, y compris professionnels.',
+      tips: ['Envisager un entretien avec un psychologue ou un thérapeute', 'Tenter chaque jour un petit geste social', 'Envisager un groupe de soutien en santé mentale', 'Commencer par une communauté en ligne reste un vrai départ', 'Apaiser le système nerveux par une activité physique'],
+      affirmation: 'La solitude n’est pas votre faute. Demander de l’aide est courageux, et vous méritez d’être relié.',
+      connectionNote: 'Il serait bon d’envisager un soutien professionnel dès maintenant.',
+    },
+    es: {
+      title: 'Soledad alta',
+      subtitle: 'Ahora mismo pareces muy aislado',
+      description: 'Estás atravesando una soledad considerable. Ese sentir avisa de que falta algo importante. La soledad se puede trabajar, y hay apoyos, también profesionales.',
+      tips: ['Valorar hablar con un psicólogo o terapeuta', 'Intentar cada día un gesto social pequeño', 'Plantearte un grupo de apoyo en salud mental', 'Empezar por una comunidad en línea también es un comienzo válido', 'Calmar el sistema nervioso con actividad física'],
+      affirmation: 'La soledad no es culpa tuya. Pedir ayuda es valiente, y mereces estar conectado.',
+      connectionNote: 'Sería bueno que valoraras apoyo profesional ahora.',
     },
   },
 }
