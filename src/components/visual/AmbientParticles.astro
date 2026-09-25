@@ -1,0 +1,22 @@
+---
+/**
+ * 부모 요소 뒤에 배경 입자를 깐다. 부모는 `relative` 여야 하고,
+ * 이 요소는 부모를 가득 채우며 클릭을 막지 않는다.
+ * 그리기는 Layout 이 부르는 `installSiteParticles()` 가 맡는다 — React 런타임이 필요 없다.
+ */
+interface Props {
+  colors?: string[];
+  density?: number;
+  links?: boolean;
+  class?: string;
+}
+const { colors, density, links = true, class: className = "" } = Astro.props;
+---
+<div
+  aria-hidden="true"
+  class={`pointer-events-none absolute inset-0 overflow-hidden ${className}`}
+  data-oiyo-ambient
+  data-oiyo-ambient-colors={colors?.join(",")}
+  data-oiyo-ambient-density={density}
+  data-oiyo-ambient-links={links ? "true" : "false"}
+></div>

@@ -4,6 +4,7 @@ import { LOCALES, localePath } from "../../../i18n";
 import type { Locale } from "../../../i18n";
 import ReincarnationCountry from "../../../components/tools/ReincarnationCountry";
 import RelatedTools from "../../../components/shared/RelatedTools.astro";
+import AmbientParticles from "../../../components/visual/AmbientParticles.astro";
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -11,41 +12,47 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: Locale };
 
-const meta: Record<Locale, { title: string; description: string; heading: string; intro: string }> = {
+const meta: Record<Locale, { title: string; description: string; heading: string; question: string; intro: string }> = {
   ko: {
-    title: "다시 태어난다면 어느 나라? — 신생아·인구 가중 추첨",
+    title: "환생 — 다시 태어난다면 어느 나라? 신생아·인구 가중 추첨",
     description: "지금 태어나는 아이 기준 또는 현재 인구 기준으로, 환생 국가를 가중 추첨합니다. 여러 번도 가능합니다.",
-    heading: "다시 태어난다면 어느 나라?",
+    heading: "환생",
+    question: "다시 태어난다면 어느 나라?",
     intro: "점이 아닙니다. 인구는 세계은행, 출생은 유엔 WPP 2024 중위 시나리오입니다. 신생아 비중 또는 인구 비중으로 나라를 뽑습니다. 여러 번은 서로 독립입니다.",
   },
   en: {
-    title: "If you were born again, which country? — Birth or population weights",
+    title: "Reincarnation — If you were born again, which country? Birth or population weights",
     description: "A weighted draw of your next country using current births or current population. Multiple independent lives are allowed.",
-    heading: "If you were born again, which country?",
+    heading: "Reincarnation",
+    question: "If you were born again, which country?",
     intro: "This is not a fortune. Population is World Bank; births are UN WPP 2024 medium-variant counts. The draw uses either today's births or today's population as the weight.",
   },
   ja: {
-    title: "生まれ変わるとしたらどの国？ — 出生または人口の重み",
+    title: "転生 — 生まれ変わるとしたらどの国？ 出生または人口の重み",
     description: "いま生まれている子ども、またはいま生きている人の重みで次の国を抽選します。複数回も独立です。",
-    heading: "生まれ変わるとしたらどの国？",
+    heading: "転生",
+    question: "生まれ変わるとしたらどの国？",
     intro: "占いではありません。人口は世界銀行、出生は国連WPP 2024中位推計です。出生または人口の比率で国を引きます。",
   },
   zh: {
-    title: "如果再出生会在哪个国家？ — 按新生儿或人口加权",
+    title: "投胎 — 如果再出生会在哪个国家？ 按新生儿或人口加权",
     description: "用当前出生数或当前人口做加权抽取。可以独立抽取多次。",
-    heading: "如果再出生会在哪个国家？",
+    heading: "投胎",
+    question: "如果再出生会在哪个国家？",
     intro: "这不是占卜。人口用世界银行，出生用联合国 WPP 2024 中位方案。再按新生儿或人口比重抽国家。",
   },
   fr: {
-    title: "Si vous renaissiez, dans quel pays ? — Naissances ou population",
+    title: "Réincarnation — Si vous renaissiez, dans quel pays ? Naissances ou population",
     description: "Tirage pondéré du prochain pays selon les naissances actuelles ou la population actuelle. Plusieurs vies indépendantes sont possibles.",
-    heading: "Si vous renaissiez, dans quel pays ?",
+    heading: "Réincarnation",
+    question: "Si vous renaissiez, dans quel pays ?",
     intro: "Ce n'est pas une voyance. La population vient de la Banque mondiale, les naissances du WPP 2024 (scénario moyen).",
   },
   es: {
-    title: "Si nacieras de nuevo, ¿en qué país? — Nacimientos o población",
+    title: "Reencarnación — Si nacieras de nuevo, ¿en qué país? Nacimientos o población",
     description: "Sorteo ponderado del siguiente país según nacimientos actuales o población actual. Puedes repetir vidas independientes.",
-    heading: "Si nacieras de nuevo, ¿en qué país?",
+    heading: "Reencarnación",
+    question: "Si nacieras de nuevo, ¿en qué país?",
     intro: "No es un horóscopo. La población es del Banco Mundial; los nacimientos, del WPP 2024 (variante media).",
   },
 };
@@ -144,7 +151,16 @@ const faqs: Record<Locale, { title: string; items: { q: string; a: string }[] }>
     ],
   },
 };
-const faq = faqs[locale] ?? faqs.en;
+const motionFaq: Record<Locale, { q: string; a: string }> = {
+  ko: { q: "지구를 도는 빛과 떨어지는 공은 확률에 영향을 주나요?", a: "주지 않습니다. 버튼을 누르는 순간 추첨은 끝나고, 영혼 파티클과 항아리의 공은 이미 뽑힌 나라를 보여주는 연출입니다. 지구 위 초록 점은 출생 비중대로, 하늘색 점은 인구 비중대로 나라 경계 안에 뿌린 것이라 점이 몰린 곳이 곧 뽑힐 가능성이 큰 곳입니다. 움직임 줄이기를 켠 기기에서는 연출 없이 결과만 보여줍니다." },
+  en: { q: "Do the orbiting lights and falling balls change the odds?", a: "No. The draw is finished the moment you press the button; the soul particles and the balls in the jar only show the country already drawn. Green dots on the globe are spread by birth share and blue dots by population share, so where dots crowd is where a draw is most likely to land. With reduced motion on, the result appears without the animation." },
+  ja: { q: "地球を回る光や落ちるボールは確率に影響しますか？", a: "しません。ボタンを押した瞬間に抽選は終わり、魂のパーティクルとボールは抽選済みの国を見せる演出です。緑の点は出生比重、水色の点は人口比重で国境内に配置しているので、点が集まる所ほど当たりやすい所です。視差効果を減らす設定では演出なしで結果だけを表示します。" },
+  zh: { q: "绕地球的光点和落下的球会影响概率吗？", a: "不会。按下按钮时抽取就已完成，灵魂粒子和罐中的球只是展示已经抽到的国家。绿点按出生比重、蓝点按人口比重撒在国界内，点越密的地方越可能被抽到。开启减少动态效果时，只显示结果不播放动画。" },
+  fr: { q: "Les lumières en orbite et les billes qui tombent changent-elles les chances ?", a: "Non. Le tirage est terminé dès que vous appuyez ; les particules d’âme et les billes montrent seulement le pays déjà tiré. Les points verts sont répartis selon les naissances et les bleus selon la population, dans les frontières : là où ils se concentrent, le tirage tombe le plus souvent. Avec la réduction des animations, le résultat s’affiche sans effet." },
+  es: { q: "¿Las luces en órbita y las bolas que caen cambian las probabilidades?", a: "No. El sorteo termina al pulsar el botón; las partículas de alma y las bolas solo muestran el país ya sorteado. Los puntos verdes se reparten por nacimientos y los azules por población, dentro de las fronteras: donde se agrupan es donde el sorteo cae más. Con movimiento reducido, el resultado aparece sin animación." },
+};
+const baseFaq = faqs[locale] ?? faqs.en;
+const faq = { ...baseFaq, items: [...baseFaq.items, motionFaq[locale] ?? motionFaq.en] };
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -159,8 +175,14 @@ const faqJsonLd = {
 <Layout title={m.title} description={m.description} locale={locale} canonicalPath={localePath(locale, "/reincarnation-country/")}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="container mx-auto max-w-3xl px-4 py-8">
-    <h1 class="text-3xl font-black tracking-tight text-slate-900">{m.heading}</h1>
-    <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-600">{m.intro}</p>
+    <div class="relative -mx-4 overflow-hidden rounded-3xl px-4 py-6">
+    <AmbientParticles colors={["#a78bfa", "#34d399", "#fde68a"]} density={1.2} />
+    <h1 class="relative text-4xl font-black tracking-tight text-slate-900">
+      {m.heading}
+      <span class="mt-1 block text-xl font-bold text-slate-500">{m.question}</span>
+    </h1>
+    <p class="relative mt-3 max-w-2xl text-base leading-relaxed text-slate-600">{m.intro}</p>
+    </div>
     <div class="mt-6">
       <ReincarnationCountry locale={locale} client:load />
     </div>

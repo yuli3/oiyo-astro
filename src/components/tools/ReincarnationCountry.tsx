@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Locale } from "../../i18n";
 import {
   REINCARNATION_COUNTRIES,
@@ -27,7 +27,10 @@ import {
   type ReincarnationHistoryEntry,
   type WeightMode,
 } from "../../lib/reincarnation";
+import { birthsPerSecond, dotValue } from "../../lib/reincarnation-particles";
+import { useReducedMotion } from "../../hooks/useMotion";
 import ReincarnationGlobe from "./ReincarnationGlobe";
+import ReincarnationSoulJar from "./ReincarnationSoulJar";
 
 interface Props {
   locale: Locale;
@@ -68,6 +71,13 @@ const COPY = {
   europe: { ko: "유럽", en: "Europe", ja: "ヨーロッパ", zh: "欧洲", fr: "Europe", es: "Europa" },
   americas: { ko: "아메리카", en: "Americas", ja: "アメリカ", zh: "美洲", fr: "Amériques", es: "Américas" },
   oceania: { ko: "오세아니아", en: "Oceania", ja: "オセアニア", zh: "大洋洲", fr: "Océanie", es: "Oceanía" },
+  summoning: { ko: "영혼이 내려앉는 중…", en: "Your soul is descending…", ja: "魂が降りていきます…", zh: "灵魂正在降落…", fr: "Votre âme descend…", es: "Tu alma está descendiendo…" },
+  jar: { ko: "환생한 삶들", en: "Your lives", ja: "転生した人生", zh: "投胎的人生", fr: "Vos vies", es: "Tus vidas" },
+  shake: { ko: "흔들기", en: "Shake", ja: "揺らす", zh: "摇一摇", fr: "Secouer", es: "Agitar" },
+  jarNote: { ko: "공 하나가 삶 하나입니다. 끌어서 던지거나 눌러서 지구본으로 볼 수 있어요. 물리는 결과를 바꾸지 않습니다 — 나라는 떨어지기 전에 이미 뽑혀 있습니다.", en: "Each ball is one life. Drag to throw, tap to see it on the globe. The physics does not change the result — the country is drawn before it falls.", ja: "ボール1つが人生1つです。ドラッグで投げ、タップで地球儀に表示。物理は結果を変えません — 国は落ちる前に抽選済みです。", zh: "一个球就是一次人生。拖动可以扔，点一下在地球仪上看。物理不改变结果——国家在落下前已抽定。", fr: "Chaque bille est une vie. Glissez pour lancer, touchez pour la voir sur le globe. La physique ne change pas le résultat : le pays est tiré avant la chute.", es: "Cada bola es una vida. Arrastra para lanzar, toca para verla en el globo. La física no cambia el resultado: el país se sortea antes de caer." },
+  dustBirths: { ko: "초록 점 하나 ≈ 한 해 출생 {n}명. 반짝이는 금빛은 실제 출생 속도(초당 약 {r}명)로 출생 비중에 따라 켜집니다.", en: "Each green dot ≈ {n} births a year. Gold sparks light up at the real birth rate (about {r} per second), placed by birth share.", ja: "緑の点1つ ≈ 年間出生{n}人。金色のきらめきは実際の出生速度（毎秒約{r}人）で出生比重に沿って灯ります。", zh: "每个绿点 ≈ 每年 {n} 名新生儿。金色闪光按真实出生速度（每秒约 {r} 人）、按出生比重亮起。", fr: "Chaque point vert ≈ {n} naissances par an. Les étincelles dorées s’allument au rythme réel des naissances (environ {r} par seconde), selon la part des naissances.", es: "Cada punto verde ≈ {n} nacimientos al año. Las chispas doradas se encienden al ritmo real de nacimientos (unos {r} por segundo), según la proporción de nacimientos." },
+  dustPopulation: { ko: "하늘색 점 하나 ≈ 지금 사는 사람 {n}명.", en: "Each blue dot ≈ {n} people alive today.", ja: "水色の点1つ ≈ いま生きている人{n}人。", zh: "每个蓝点 ≈ 现在活着的 {n} 人。", fr: "Chaque point bleu ≈ {n} personnes vivantes.", es: "Cada punto azul ≈ {n} personas vivas hoy." },
+  ticker: { ko: "이 페이지를 연 뒤 세계에서 태어난 아기 ≈ {n}명", en: "Babies born worldwide since you opened this page ≈ {n}", ja: "このページを開いてから世界で生まれた赤ちゃん ≈ {n}人", zh: "打开本页后全球出生的婴儿 ≈ {n} 名", fr: "Bébés nés dans le monde depuis l’ouverture de cette page ≈ {n}", es: "Bebés nacidos en el mundo desde que abriste esta página ≈ {n}" },
   filterNote: { ko: "대륙 필터는 목록과 검색만 바꿉니다. 환생 추첨은 전 세계 출생·인구 비중 그대로입니다.", en: "The region filter changes the list and search only. The draw still uses worldwide birth and population weights.", ja: "大陸フィルターは一覧と検索だけを変えます。転生の抽選は世界の出生・人口比重のままです。", zh: "大洲筛选只改列表和搜索。投胎抽签仍按全世界出生与人口比重。", fr: "Le filtre régional ne change que la liste et la recherche. Le tirage garde les poids mondiaux.", es: "El filtro regional solo cambia la lista y la búsqueda. El sorteo sigue usando pesos mundiales." },
 };
 
@@ -89,6 +99,35 @@ function formatX(n: number, locale: Locale): string {
   return `${new Intl.NumberFormat(locale === "zh" ? "zh-CN" : locale, {
     maximumFractionDigits: n >= 10 ? 0 : 1,
   }).format(n)}×`;
+}
+
+const REVEAL_MS = 1800;
+
+const CONTINENT_COLOR: Record<Continent, string> = {
+  asia: "#fca5a5",
+  africa: "#fcd34d",
+  europe: "#93c5fd",
+  americas: "#86efac",
+  oceania: "#c4b5fd",
+};
+
+function fill(template: string, values: Record<string, string>): string {
+  return template.replace(/\{(\w+)\}/g, (_, key: string) => values[key] ?? "");
+}
+
+function BirthTicker({ locale }: { locale: Locale }) {
+  const [born, setBorn] = useState(0);
+  useEffect(() => {
+    const start = performance.now();
+    const rate = birthsPerSecond();
+    const id = window.setInterval(() => setBorn(Math.floor(((performance.now() - start) / 1000) * rate)), 1000);
+    return () => window.clearInterval(id);
+  }, []);
+  return (
+    <p className="text-xs font-semibold text-slate-600" aria-live="off">
+      {fill(COPY.ticker[locale], { n: formatInt(born, locale) })}
+    </p>
+  );
 }
 
 function nameOf(row: Country, locale: Locale): string {
@@ -124,6 +163,11 @@ export default function ReincarnationCountry({ locale }: Props) {
   const [ready, setReady] = useState(false);
   const [history, setHistory] = useState<ReincarnationHistoryEntry[]>([]);
   const [continent, setContinent] = useState<Continent | "all">("all");
+  const [drawKey, setDrawKey] = useState(0);
+  const [jarKey, setJarKey] = useState(0);
+  const [revealed, setRevealed] = useState(true);
+  const revealTimer = useRef<number | null>(null);
+  const reducedMotion = useReducedMotion();
 
   const home = byIso2(homeIso2) ?? byIso2("KR")!;
   const latest = results[results.length - 1] ?? focus;
@@ -153,6 +197,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       setResults(sharedRows);
       setFocus(sharedRows[sharedRows.length - 1] ?? null);
       setDraws(sharedRows.length);
+      setJarKey((key) => key + 1);
     }
     try {
       setHistory(parseHistory(window.localStorage.getItem(REINCARNATION_HISTORY_KEY)));
@@ -172,6 +217,30 @@ export default function ReincarnationCountry({ locale }: Props) {
     const next = `${window.location.pathname}${params.toString() ? `?${params}` : ""}`;
     window.history.replaceState(null, "", next);
   }, [ready, mode, continent, results, latest?.iso2]);
+
+  useEffect(() => () => {
+    if (revealTimer.current) window.clearTimeout(revealTimer.current);
+  }, []);
+
+  function roll() {
+    const next = pickMany(mode, draws);
+    setResults(next);
+    setFocus(next[next.length - 1] ?? null);
+    persistHistory(next, mode);
+    setDrawKey((key) => key + 1);
+    if (revealTimer.current) window.clearTimeout(revealTimer.current);
+    if (reducedMotion) {
+      setRevealed(true);
+      setJarKey((key) => key + 1);
+      return;
+    }
+    // 영혼이 나라에 내려앉는 순간에 이름을 밝힌다. 추첨은 이미 끝났다.
+    setRevealed(false);
+    revealTimer.current = window.setTimeout(() => {
+      setRevealed(true);
+      setJarKey((key) => key + 1);
+    }, REVEAL_MS);
+  }
 
   function lookUp(value: string) {
     setQuery(value);
@@ -205,6 +274,8 @@ export default function ReincarnationCountry({ locale }: Props) {
     setDraws(rows.length);
     setResults(rows);
     setFocus(rows[rows.length - 1] ?? null);
+    setRevealed(true);
+    setJarKey((key) => key + 1);
   }
 
   function clearHistory() {
@@ -303,13 +374,9 @@ export default function ReincarnationCountry({ locale }: Props) {
         </label>
         <button
           type="button"
-          onClick={() => {
-            const next = pickMany(mode, draws);
-            setResults(next);
-            setFocus(next[next.length - 1] ?? null);
-            persistHistory(next, mode);
-          }}
-          className="rounded-full bg-emerald-600 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-700"
+          onClick={roll}
+          disabled={!revealed}
+          className="rounded-full bg-gradient-to-r from-violet-600 to-emerald-600 px-5 py-2 text-sm font-bold text-white shadow-lg shadow-violet-500/20 hover:from-violet-700 hover:to-emerald-700 disabled:opacity-60"
         >
           {results.length ? COPY.again[locale] : COPY.roll[locale]}
         </button>
@@ -358,19 +425,35 @@ export default function ReincarnationCountry({ locale }: Props) {
 
       <ReincarnationGlobe
         focusIso3={latest?.iso3}
-        focusLabel={latest ? nameOf(latest, locale) : undefined}
+        focusLabel={latest && revealed ? nameOf(latest, locale) : undefined}
         homeIso3={home.iso3}
-        hitIso3={hitIso3}
+        hitIso3={revealed ? hitIso3 : []}
         yaw={yaw}
+        mode={mode}
+        drawIso3={hitIso3}
+        drawKey={drawKey}
         onSelect={(iso2) => {
           const row = byIso2(iso2);
           if (!row) return;
           setFocus(row);
         }}
       />
-      <p className="text-xs text-slate-500">{COPY.pinNote[locale]}</p>
+      <div className="space-y-1">
+        {mode === "births" ? <BirthTicker locale={locale} /> : null}
+        <p className="text-xs text-slate-500">
+          {fill(mode === "births" ? COPY.dustBirths[locale] : COPY.dustPopulation[locale], {
+            n: formatInt(Math.round(dotValue(mode)), locale),
+            r: new Intl.NumberFormat(locale === "zh" ? "zh-CN" : locale, { maximumFractionDigits: 1 }).format(birthsPerSecond()),
+          })}{" "}
+          {COPY.pinNote[locale]}
+        </p>
+      </div>
 
-      {latest ? (
+      {!revealed ? (
+        <div className="rounded-2xl border border-violet-200 bg-card p-5" aria-live="polite">
+          <p className="animate-pulse text-2xl font-black tracking-tight text-violet-700">{COPY.summoning[locale]}</p>
+        </div>
+      ) : latest ? (
         <div className="rounded-2xl border border-slate-200 bg-card p-5">
           <p className="text-3xl font-black tracking-tight text-slate-900">{nameOf(latest, locale)}</p>
           <dl className="mt-3 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
@@ -429,6 +512,26 @@ export default function ReincarnationCountry({ locale }: Props) {
               {shared === "text" ? COPY.copied[locale] : COPY.copyText[locale]}
             </button>
           </div>
+          {results.length > 0 && !reducedMotion && (
+            <div className="mt-4">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">{COPY.jar[locale]}</p>
+              <ReincarnationSoulJar
+                lives={results.map((row) => ({
+                  iso2: row.iso2,
+                  label: nameOf(row, locale),
+                  color: row.continent ? CONTINENT_COLOR[row.continent] : "#e2e8f0",
+                }))}
+                dropKey={jarKey}
+                onSelect={(iso2) => {
+                  const row = byIso2(iso2);
+                  if (row) setFocus(row);
+                }}
+                shakeLabel={COPY.shake[locale]}
+                ariaLabel={`${COPY.jar[locale]}: ${results.map((row) => nameOf(row, locale)).join(", ")}`}
+              />
+              <p className="mt-2 text-xs text-slate-500">{COPY.jarNote[locale]}</p>
+            </div>
+          )}
           {results.length > 0 && (
             <ol className="mt-4 grid gap-1 text-sm text-slate-700 sm:grid-cols-2" aria-label={COPY.lives[locale]}>
               {results.map((country, index) => (

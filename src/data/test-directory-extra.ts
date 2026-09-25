@@ -486,7 +486,7 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
   },
   {
     slug: "reincarnation-country",
-    title: {"ko": "다시 태어난다면 어느 나라? — 신생아·인구 가중 추첨", "en": "If you were born again, which country?", "ja": "生まれ変わるとしたらどの国？", "zh": "如果再出生会在哪个国家？", "fr": "Si vous renaissiez, dans quel pays ?", "es": "Si nacieras de nuevo, ¿en qué país?"},
+    title: {"ko": "환생 — 다시 태어난다면 어느 나라?", "en": "Reincarnation — if you were born again, which country?", "ja": "転生 — 生まれ変わるとしたらどの国？", "zh": "投胎 — 如果再出生会在哪个国家？", "fr": "Réincarnation — si vous renaissiez, dans quel pays ?", "es": "Reencarnación — si nacieras de nuevo, ¿en qué país?"},
     description: {"ko": "점이 아닙니다. 세계은행 인구와 출생 추정으로 나라를 가중 추첨합니다. 신생아 기준과 인구 기준을 바꿀 수 있고, 여러 번도 가능합니다.", "en": "Not a fortune. A World Bank weighted draw using current births or current population. Multiple independent lives allowed.", "ja": "占いではありません。世界銀行のデータで出生または人口の重み抽選。複数回も独立です。", "zh": "不是占卜。用世界银行数据按新生儿或人口加权抽取，可独立多次。", "fr": "Ce n'est pas une voyance. Tirage pondéré Banque mondiale, naissances ou population.", "es": "No es un horóscopo. Sorteo ponderado del Banco Mundial, nacimientos o población."},
   },
 ];

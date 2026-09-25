@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import FortuneWall from '../../components/tools/FortuneWall.astro';
+import AmbientParticles from '../../components/visual/AmbientParticles.astro';
 import { LOCALES, getTranslations, localePath } from '../../i18n';
 import type { Locale } from '../../i18n';
 // 2026-08-25 impeccable critique P2: one coherent icon language instead of
@@ -102,6 +103,7 @@ const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テス�
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-green-200 rounded-full blur-3xl opacity-20" />
     </div>
+    <AmbientParticles />
 
     <div class="relative z-10 max-w-2xl mx-auto text-center animate-fadeInUp">
       <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3 tracking-tight leading-tight">

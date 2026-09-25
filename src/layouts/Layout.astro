@@ -223,7 +223,9 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
     <Footer locale={locale} />
     <script>
       import { removeStoredTestInputs } from '../lib/user/test-results';
+      import { installSiteParticles } from '../lib/particles/install';
       removeStoredTestInputs('political-compass');
+      installSiteParticles();
     </script>
   </body>
 </html>

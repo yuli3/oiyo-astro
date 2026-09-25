@@ -284,12 +284,12 @@ const reincarnationCountryManifest: FeatureManifest = {
   path: "/reincarnation-country",
   status: "production",
   name: {
-    zh: "如果再出生会在哪国",
-    en: "If you were born again",
-    es: "Si nacieras de nuevo",
-    fr: "Si vous renaissiez",
-    ja: "生まれ変わるとしたら",
-    ko: "다시 태어난다면 어느 나라",
+    zh: "投胎 — 如果再出生会在哪国",
+    en: "Reincarnation — if you were born again",
+    es: "Reencarnación — si nacieras de nuevo",
+    fr: "Réincarnation — si vous renaissiez",
+    ja: "転生 — 生まれ変わるとしたら",
+    ko: "환생 — 다시 태어난다면 어느 나라",
   },
   description: {
     zh: "按当前新生儿或当前人口加权抽取下一个国家。可独立抽取多次。",

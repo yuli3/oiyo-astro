@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import AmbientParticles from '../../../components/visual/AmbientParticles.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import WisdomNotes from '../../../components/shared/WisdomNotes.astro';
@@ -609,8 +610,9 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
 
 <Layout title={title[locale]} description={description[locale]} locale={locale}>
   <!-- Hero -->
-  <section class="bg-gradient-to-b from-green-50/80 to-white pt-16 pb-10 px-4">
-    <div class="max-w-2xl mx-auto text-center">
+  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 to-white pt-16 pb-10 px-4">
+    <AmbientParticles density={0.7} />
+    <div class="relative max-w-2xl mx-auto text-center">
       <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3 leading-tight">
         {heading[locale]}
       </h1>

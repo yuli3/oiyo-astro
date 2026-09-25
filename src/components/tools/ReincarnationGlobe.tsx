@@ -1,11 +1,16 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, OrbitControls, useTexture } from "@react-three/drei";
-import { Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
-import { REINCARNATION_COUNTRIES, latLonToCartesian, type ReincarnationCountry } from "../../lib/reincarnation";
+import {
+  REINCARNATION_COUNTRIES,
+  latLonToCartesian,
+  type ReincarnationCountry,
+  type WeightMode,
+} from "../../lib/reincarnation";
+import type { BorderRings } from "../../lib/reincarnation-particles";
 import { useReducedMotion } from "../../hooks/useMotion";
-
-type BorderRings = Record<string, number[][][]>;
+import { ArrivalRings, BirthDust, BirthFlashes, SoulStream, StarField } from "./ReincarnationParticles";
 
 const EARTH_MAP = "/textures/earth-blue-marble.jpg";
 
@@ -15,6 +20,10 @@ interface Props {
   homeIso3?: string;
   hitIso3: string[];
   yaw: number;
+  mode: WeightMode;
+  /** 추첨 결과 순서. drawKey가 바뀔 때 영혼 무리가 이 나라들로 내려앉는다. */
+  drawIso3: string[];
+  drawKey: number;
   onSelect: (iso2: string) => void;
 }
 
@@ -227,6 +236,9 @@ function Earth({
   yaw,
   reducedMotion,
   borders,
+  mode,
+  drawIso3,
+  drawKey,
   onSelect,
 }: {
   focus?: ReincarnationCountry;
@@ -236,8 +248,22 @@ function Earth({
   yaw: number;
   reducedMotion: boolean;
   borders: BorderRings | null;
+  mode: WeightMode;
+  drawIso3: string[];
+  drawKey: number;
   onSelect: (iso2: string) => void;
 }) {
+  const [dots, setDots] = useState<Float32Array | null>(null);
+  const handleDots = useCallback((positions: Float32Array) => setDots(positions), []);
+  const targets = useMemo(
+    () =>
+      drawIso3.flatMap((iso3) => {
+        const row = REINCARNATION_COUNTRIES.find((item) => item.iso3 === iso3);
+        if (!row || row.lat == null || row.lon == null) return [];
+        return [latLonToCartesian(row.lat, row.lon, 1.012)];
+      }),
+    [drawIso3],
+  );
   const group = useRef<THREE.Group>(null);
   const target = useMemo(
     () => lookQuaternion(focus?.lat ?? 20, focus?.lon ?? 20, yaw),
@@ -269,8 +295,16 @@ function Earth({
       </Suspense>
       <mesh>
         <sphereGeometry args={[1.04, 32, 32]} />
-        <meshBasicMaterial color="#38bdf8" transparent opacity={0.08} />
+        <meshBasicMaterial color="#38bdf8" transparent opacity={0.08} depthWrite={false} />
       </mesh>
+      <BirthDust mode={mode} borders={borders} reducedMotion={reducedMotion} onDots={handleDots} />
+      {!reducedMotion ? (
+        <>
+          <BirthFlashes dots={dots} active={mode === "births"} />
+          <SoulStream targets={targets} drawKey={drawKey} />
+          <ArrivalRings targets={targets} drawKey={drawKey} />
+        </>
+      ) : null}
       {borders ? (
         <CountryBorders borders={borders} focusIso3={focus?.iso3} homeIso3={homeIso3} hit={hit} onSelect={onSelect} />
       ) : null}
@@ -315,7 +349,17 @@ function Earth({
   );
 }
 
-export default function ReincarnationGlobe({ focusIso3, focusLabel, homeIso3, hitIso3, yaw, onSelect }: Props) {
+export default function ReincarnationGlobe({
+  focusIso3,
+  focusLabel,
+  homeIso3,
+  hitIso3,
+  yaw,
+  mode,
+  drawIso3,
+  drawKey,
+  onSelect,
+}: Props) {
   const focus = REINCARNATION_COUNTRIES.find((row) => row.iso3 === focusIso3);
   const hit = useMemo(() => new Set(hitIso3), [hitIso3]);
   const reducedMotion = useReducedMotion();
@@ -323,11 +367,12 @@ export default function ReincarnationGlobe({ focusIso3, focusLabel, homeIso3, hi
 
   return (
     <div>
-      <div className="h-80 w-full overflow-hidden rounded-2xl bg-slate-950 sm:h-96">
+      <div className="h-96 w-full overflow-hidden rounded-2xl bg-slate-950 sm:h-[28rem]">
         <Canvas camera={{ position: [0, 0, 2.6], fov: 40 }} dpr={[1, 1.5]}>
           <color attach="background" args={["#020617"]} />
           <ambientLight intensity={0.55} />
           <directionalLight position={[3, 2, 4]} intensity={1.35} />
+          <StarField reducedMotion={reducedMotion} />
           <Earth
             focus={focus}
             focusLabel={focusLabel}
@@ -336,6 +381,9 @@ export default function ReincarnationGlobe({ focusIso3, focusLabel, homeIso3, hi
             yaw={yaw}
             reducedMotion={reducedMotion}
             borders={borders}
+            mode={mode}
+            drawIso3={drawIso3}
+            drawKey={drawKey}
             onSelect={onSelect}
           />
           <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.6} />
