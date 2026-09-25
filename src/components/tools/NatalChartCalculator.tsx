@@ -1,10 +1,33 @@
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
 import CopyResultLink from '../shared/CopyResultLink';
 import { BirthDateField, ProfilePlaceField, ProfileTimeField } from '../shared/BirthDateField';
 import { computeNatalChart, type NatalChart } from '../../lib/ontology/natal/calculator';
 import { computeAstroCartoMeridians, computeHorizonCurves, type CartoMeridian, type CartoHorizon } from '../../lib/ontology/natal/astrocartography';
 import { SIGN_INFO, CITIES, type City, type NatalLocale } from '../../lib/ontology/natal/signs';
+import { SIGN_KEYS } from '../../lib/ontology/natal/calculator';
+import { prefersReducedMotion } from '../../hooks/useMotion';
+
+// 3D 천구(three)는 결과가 나온 뒤에만 받아 온다.
+const NatalSkyScene = lazy(() => import('./NatalSkyScene'));
+
+function canUseWebGL(): boolean {
+  try {
+    const canvas = document.createElement('canvas');
+    return Boolean(canvas.getContext('webgl2') ?? canvas.getContext('webgl'));
+  } catch {
+    return false;
+  }
+}
+
+const SKY_NOTE: Record<string, string> = {
+  ko: '태어난 순간 황도 위 천체 자리입니다. 가까운 천체는 겹치지 않게 위로 쌓았어요. 천체를 누르면 설명으로 이동합니다.',
+  en: 'Where each body sat on the ecliptic at your birth. Close bodies are stacked so they don’t overlap. Tap one to jump to its card.',
+  ja: '生まれた瞬間の黄道上の天体の位置です。近い天体は重ならないよう上に積んでいます。天体をタップすると説明へ移動します。',
+  zh: '出生时刻各天体在黄道上的位置。相近的天体向上叠放以免重叠。点一下天体跳到说明。',
+  fr: 'Position de chaque astre sur l’écliptique à votre naissance. Les astres proches sont empilés. Touchez-en un pour aller à sa fiche.',
+  es: 'Dónde estaba cada astro en la eclíptica al nacer. Los cercanos se apilan para no solaparse. Toca uno para ir a su tarjeta.',
+};
 import { parseSynthesizedId } from '../../lib/ontology/natal/city-search';
 import AstroCartoMap from './AstroCartoMap';
 // `readResultCode` is kept for one thing only: reading pre-T6 `?d=&c=&t=`
@@ -417,6 +440,14 @@ export default function NatalChartCalculator({ locale }: Props) {
 
   if (result) {
     const { chart, hasTime } = result;
+    const skyBodies = (['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto'] as const).map((key) => ({
+      key,
+      label: t[key],
+      longitude: chart[key].longitude,
+      retrograde: chart[key].retrograde,
+    }));
+    const skySigns = SIGN_KEYS.map((key) => ({ key, emoji: SIGN_INFO[key].emoji, name: SIGN_INFO[key].name[loc], element: SIGN_INFO[key].element }));
+    const showSky = typeof window !== 'undefined' && !prefersReducedMotion() && canUseWebGL();
     const rows: { key: string; label: string; sub: string; signKey: typeof chart.sun.sign; deg: number; show: boolean; retro?: boolean }[] = [
       { key: 'sun', label: t.sun, sub: t.sunSub, signKey: chart.sun.sign, deg: chart.sun.degreeInSign, show: true },
       { key: 'moon', label: t.moon, sub: t.moonSub, signKey: chart.moon.sign, deg: chart.moon.degreeInSign, show: true },
@@ -435,6 +466,20 @@ export default function NatalChartCalculator({ locale }: Props) {
         <header className="mb-5 text-center">
           <h2 className="text-2xl font-extrabold text-green-900">{t.resultHeading}</h2>
         </header>
+        {showSky && (
+          <div className="mb-5">
+            <Suspense fallback={<div className="h-80 rounded-2xl bg-slate-950 sm:h-96" aria-hidden="true" />}>
+              <NatalSkyScene
+                bodies={skyBodies}
+                signs={skySigns}
+                ascendant={hasTime ? chart.ascendant.longitude : null}
+                ascLabel={t.asc}
+                onSelect={(key) => document.getElementById(`natal-${key}`)?.scrollIntoView({ block: 'center' })}
+              />
+            </Suspense>
+            <p className="mt-2 text-xs leading-5 text-slate-500">{SKY_NOTE[loc] ?? SKY_NOTE.en}</p>
+          </div>
+        )}
         <div className="space-y-3">
           {rows.map((r) => {
             const info = SIGN_INFO[r.signKey];
@@ -446,7 +491,7 @@ export default function NatalChartCalculator({ locale }: Props) {
               );
             }
             return (
-              <article key={r.key} className={`rounded-2xl border p-4 ${ELEMENT_BG[info.element]}`}>
+              <article key={r.key} id={`natal-${r.key}`} className={`scroll-mt-20 rounded-2xl border p-4 ${ELEMENT_BG[info.element]}`}>
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-slate-500">{r.label}</p>
