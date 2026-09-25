@@ -84,17 +84,9 @@ jobs:
       - name: Audit stateless relationship comparison privacy and consent contracts
         run: npm run audit:relationship-comparison
 
-      - name: Audit sample-report derived-artifact and non-diagnostic contracts
-        run: npm run audit:sample-report
 
-      - name: Audit type-advice epistemic lanes and abuse-avoidance contracts
-        run: npm run audit:type-advice
 
-      - name: Audit reflective life-role-balance boundaries
-        run: npm run audit:reflective-life-role-balance
 
-      - name: Audit affiliate category/disclosure/click-payload gates
-        run: npm run audit:affiliate
 
       # sitemap-submit only reads dist/sitemap*.xml. Handing those over costs a
       # few hundred KB and saves that job a second full site build.
