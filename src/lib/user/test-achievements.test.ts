@@ -1,6 +1,6 @@
 import { describe, expect, it, beforeEach } from "vitest";
 import { recordTestResult } from "./test-results";
-import { TEST_ACHIEVEMENTS, buildTestAchievementSnapshot, evaluateTestAchievements, recordTestOpened } from "./test-achievements";
+import { TEST_ACHIEVEMENTS, buildTestAchievementSnapshot, evaluateTestAchievements, jarText, listAchievementTests, recordTestOpened } from "./test-achievements";
 
 function createMemoryStorage(): Storage {
   const store = new Map<string, string>();
@@ -34,5 +34,23 @@ describe("test achievements", () => {
     expect(snap.distinctTests).toBe(2);
     expect(snap.finishedTests).toBe(1);
     expect(evaluateTestAchievements(snap).find((a) => a.id === "first-test")?.unlocked).toBe(true);
+  });
+
+  it("lists the same distinct tests the snapshot counts, finished first", () => {
+    recordTestResult({ kind: "mystic", testId: "tarot", title: "타로", resultLabel: "done" });
+    recordTestResult({ kind: "psychometric", testId: "mbti", title: "MBTI", resultLabel: "INFJ" });
+    recordTestOpened("mbti");
+    recordTestOpened("self-esteem-test");
+    const list = listAchievementTests();
+    expect(list.length).toBe(buildTestAchievementSnapshot().distinctTests);
+    expect(list.map((t) => [t.testId, t.finished])).toEqual([["mbti", true], ["tarot", true], ["self-esteem-test", false]]);
+    expect(list[0].kind).toBe("psychometric");
+  });
+
+  it("shortens labels for a ball", () => {
+    expect(jarText("MBTI")).toBe("MBTI");
+    expect(jarText("riasec")).toBe("RIA");
+    expect(jarText("self-esteem-test")).toBe("SE");
+    expect(jarText("빅파이브 성격 검사")).toBe("빅파");
   });
 });
