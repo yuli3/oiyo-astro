@@ -269,6 +269,9 @@ export function mountAmbient(host: HTMLElement, options: AmbientOptions = {}): (
 
   let last = performance.now();
   const tick = (now: number) => {
+    frame = requestAnimationFrame(tick);
+    // 배경은 30fps 면 충분하다 — 절반의 프레임은 건너뛰어 메인 스레드를 비운다.
+    if (now - last < 1000 / 30) return;
     const dt = Math.min(0.05, (now - last) / 1000);
     last = now;
     for (const p of dots) {
@@ -291,7 +294,6 @@ export function mountAmbient(host: HTMLElement, options: AmbientOptions = {}): (
       if (p.x > width + 10) p.x = -10;
     }
     draw();
-    frame = requestAnimationFrame(tick);
   };
 
   const start = () => {
