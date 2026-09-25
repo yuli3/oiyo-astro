@@ -2,38 +2,44 @@ import { useEffect, useRef } from "react";
 import type MatterNS from "matter-js";
 
 /**
- * 추첨된 삶 하나하나가 공이 되어 항아리로 떨어진다(Matter.js).
- * 물리는 보여주기만 한다 — 어느 나라인지는 떨어지기 전에 이미 정해져 있다.
- * 다시 환생하면 바닥이 열려 이전 삶들이 빠져나가고 새 삶이 떨어진다.
- * 공을 끌어 던질 수 있고, 톡 누르면 그 나라로 지구본이 돈다.
+ * 항목 하나가 공 하나가 되어 항아리로 떨어진다(Matter.js). 환생(삶)·업적(연 검사)이 쓴다.
+ * 물리는 보여주기만 한다 — 무엇이 떨어질지는 부르는 쪽이 이미 정해 두었다.
+ * `dropKey` 가 바뀌면 바닥이 열려 이전 공이 빠져나가고 새 공이 떨어진다.
+ * 공을 끌어 던질 수 있고, 톡 누르면 `onSelect(id)`. 화면 밖이면 멈춘다.
+ * 감축 선호면 부르는 쪽이 이 항아리 대신 목록을 보인다.
  */
 
-export interface JarLife {
-  iso2: string;
-  label: string;
+export interface JarItem {
+  id: string;
+  /** 공 가운데 큰 글자(2~3자). */
+  text: string;
+  /** 공 아래쪽 작은 글자. */
+  sub?: string;
   color: string;
+  /** 속이 빈 공 — 아직 덜 된 것(예: 열기만 한 검사). */
+  hollow?: boolean;
 }
 
 interface Props {
-  lives: JarLife[];
+  items: JarItem[];
   dropKey: number;
-  onSelect: (iso2: string) => void;
+  onSelect?: (id: string) => void;
   shakeLabel: string;
   ariaLabel: string;
+  height?: number;
 }
 
-type Ball = MatterNS.Body & { plugin: { life?: JarLife; order?: number; leaving?: boolean } };
+type Ball = MatterNS.Body & { plugin: { item?: JarItem; leaving?: boolean } };
 
-const HEIGHT = 240;
-
-export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLabel, ariaLabel }: Props) {
+export default function PhysicsJar({ items, dropKey, onSelect, shakeLabel, ariaLabel, height = 240 }: Props) {
+  const HEIGHT = height;
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const api = useRef<{
-    drop: (lives: JarLife[]) => void;
+    drop: (items: JarItem[]) => void;
     shake: () => void;
   } | null>(null);
-  const pending = useRef<JarLife[] | null>(null);
+  const pending = useRef<JarItem[] | null>(null);
   const selectRef = useRef(onSelect);
   selectRef.current = onSelect;
 
@@ -87,7 +93,7 @@ export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLa
         return Composite.allBodies(engine.world).filter((body) => !body.isStatic) as Ball[];
       }
 
-      function drop(next: JarLife[]) {
+      function drop(next: JarItem[]) {
         timers.forEach((id) => window.clearTimeout(id));
         timers = [];
         const old = balls();
@@ -104,7 +110,9 @@ export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLa
           );
         }
         const r = radiusFor(next.length);
-        next.forEach((life, order) => {
+        // 많을수록 간격을 줄여 한꺼번에 쏟아지듯 떨어진다.
+        const gap = Math.max(35, Math.min(110, 2200 / Math.max(1, next.length)));
+        next.forEach((item, order) => {
           timers.push(
             window.setTimeout(() => {
               const x = width / 2 + (Math.random() - 0.5) * width * 0.4;
@@ -113,11 +121,11 @@ export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLa
                 friction: 0.05,
                 density: 0.002,
               }) as Ball;
-              ball.plugin = { life, order: order + 1 };
+              ball.plugin = { item };
               Body.setVelocity(ball, { x: (Math.random() - 0.5) * 3, y: 2 });
               Body.setAngularVelocity(ball, (Math.random() - 0.5) * 0.2);
               Composite.add(engine.world, ball);
-            }, 550 + order * 110),
+            }, 550 + order * gap),
           );
         });
       }
@@ -164,8 +172,8 @@ export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLa
       const onUp = () => {
         if (!grab) return;
         Composite.remove(engine.world, grab.constraint);
-        const life = grab.ball.plugin.life;
-        if (!grab.moved && life) selectRef.current(life.iso2);
+        const item = grab.ball.plugin.item;
+        if (!grab.moved && item) selectRef.current?.(item.id);
         grab = null;
       };
       canvas.addEventListener("pointerdown", onDown);
@@ -190,33 +198,44 @@ export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLa
           ctx!.stroke();
         }
         for (const ball of balls()) {
-          const life = ball.plugin.life;
-          if (!life) continue;
+          const item = ball.plugin.item;
+          if (!item) continue;
           const r = ball.circleRadius ?? 16;
           const { x, y } = ball.position;
           ctx!.save();
           ctx!.globalAlpha = ball.plugin.leaving ? 0.45 : 1;
-          ctx!.shadowColor = life.color;
+          ctx!.shadowColor = item.color;
           ctx!.shadowBlur = 14;
-          ctx!.fillStyle = life.color;
           ctx!.beginPath();
-          ctx!.arc(x, y, r, 0, Math.PI * 2);
-          ctx!.fill();
+          ctx!.arc(x, y, item.hollow ? r - 1.5 : r, 0, Math.PI * 2);
+          if (item.hollow) {
+            ctx!.fillStyle = "rgba(15,23,42,0.85)";
+            ctx!.fill();
+            ctx!.strokeStyle = item.color;
+            ctx!.lineWidth = 3;
+            ctx!.stroke();
+          } else {
+            ctx!.fillStyle = item.color;
+            ctx!.fill();
+          }
           ctx!.shadowBlur = 0;
           ctx!.translate(x, y);
           ctx!.rotate(ball.angle);
-          ctx!.fillStyle = "#0f172a";
+          ctx!.fillStyle = item.hollow ? item.color : "#0f172a";
           ctx!.textAlign = "center";
           ctx!.textBaseline = "middle";
-          ctx!.font = `800 ${Math.round(r * 0.72)}px system-ui, sans-serif`;
-          ctx!.fillText(life.iso2, 0, -r * 0.08);
-          ctx!.font = `700 ${Math.max(9, Math.round(r * 0.34))}px system-ui, sans-serif`;
-          ctx!.fillText(String(ball.plugin.order ?? ""), 0, r * 0.52);
+          ctx!.font = `800 ${Math.round(r * (item.text.length > 3 ? 0.46 : item.text.length > 2 ? 0.55 : 0.72))}px system-ui, sans-serif`;
+          ctx!.fillText(item.text, 0, item.sub ? -r * 0.08 : 0);
+          if (item.sub) {
+            ctx!.font = `700 ${Math.max(9, Math.round(r * 0.34))}px system-ui, sans-serif`;
+            ctx!.fillText(item.sub, 0, r * 0.52);
+          }
           ctx!.restore();
         }
       }
 
       let last = performance.now();
+      let visible = true;
       const loop = (now: number) => {
         const delta = Math.min(32, now - last);
         last = now;
@@ -225,12 +244,20 @@ export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLa
           if (ball.position.y > HEIGHT + 120) Composite.remove(engine.world, ball);
         }
         draw();
-        frame = requestAnimationFrame(loop);
+        frame = visible ? requestAnimationFrame(loop) : 0;
       };
 
       resize();
       const observer = new ResizeObserver(() => resize());
       observer.observe(wrapRef.current);
+      const io = new IntersectionObserver(([entry]) => {
+        visible = entry.isIntersecting;
+        if (visible && !frame) {
+          last = performance.now();
+          frame = requestAnimationFrame(loop);
+        }
+      });
+      io.observe(canvas);
       frame = requestAnimationFrame(loop);
       api.current = { drop, shake };
       if (pending.current) {
@@ -240,6 +267,7 @@ export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLa
 
       cleanup = () => {
         observer.disconnect();
+        io.disconnect();
         timers.forEach((id) => window.clearTimeout(id));
         canvas.removeEventListener("pointerdown", onDown);
         canvas.removeEventListener("pointermove", onMove);
@@ -259,10 +287,10 @@ export default function ReincarnationSoulJar({ lives, dropKey, onSelect, shakeLa
   }, []);
 
   useEffect(() => {
-    if (!lives.length) return;
-    if (api.current) api.current.drop(lives);
-    else pending.current = lives;
-    // lives 내용이 아니라 추첨 한 번(dropKey)마다 떨어뜨린다.
+    if (!items.length) return;
+    if (api.current) api.current.drop(items);
+    else pending.current = items;
+    // items 내용이 아니라 dropKey 가 바뀔 때마다 떨어뜨린다.
   }, [dropKey]);
 
   return (

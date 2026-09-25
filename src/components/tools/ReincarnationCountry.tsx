@@ -30,7 +30,7 @@ import {
 import { birthsPerSecond, dotValue } from "../../lib/reincarnation-particles";
 import { useReducedMotion } from "../../hooks/useMotion";
 import ReincarnationGlobe from "./ReincarnationGlobe";
-import ReincarnationSoulJar from "./ReincarnationSoulJar";
+import PhysicsJar from "../visual/PhysicsJar";
 
 interface Props {
   locale: Locale;
@@ -515,10 +515,11 @@ export default function ReincarnationCountry({ locale }: Props) {
           {results.length > 0 && !reducedMotion && (
             <div className="mt-4">
               <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">{COPY.jar[locale]}</p>
-              <ReincarnationSoulJar
-                lives={results.map((row) => ({
-                  iso2: row.iso2,
-                  label: nameOf(row, locale),
+              <PhysicsJar
+                items={results.map((row, index) => ({
+                  id: row.iso2,
+                  text: row.iso2,
+                  sub: String(index + 1),
                   color: row.continent ? CONTINENT_COLOR[row.continent] : "#e2e8f0",
                 }))}
                 dropKey={jarKey}
