@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useEffect, useMemo, useState } from "react";
+
+import { useReducedMotion } from "@/hooks/useMotion";
 
 import { resolveNodeLabel } from "@/lib/ontology/graph/label";
 import { getNode } from "@/lib/ontology/graph/nodes";
@@ -12,6 +14,19 @@ import {
   truncateBreadcrumb,
 } from "@/lib/ontology/graph/orbit";
 import { collectSignals } from "@/lib/ontology/signals";
+
+// 3D 무대는 무겁다(three·r3f). 화면에 들어온 뒤에만 받아 오고, 받는 동안과
+// 감축 선호·WebGL 없음에서는 아래 평면 무대를 그대로 쓴다.
+const OntologyOrbitScene = lazy(() => import("./OntologyOrbitScene"));
+
+function supportsWebGL(): boolean {
+  try {
+    const canvas = document.createElement("canvas");
+    return Boolean(canvas.getContext("webgl2") ?? canvas.getContext("webgl"));
+  } catch {
+    return false;
+  }
+}
 
 // Lane 4 "관계 궤도": Focus+Orbit radial explorer (Phase 1 / Track A, step 4).
 // Center = current focus ("나" at first, then whichever ring node was
@@ -43,11 +58,14 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
   const [seedIds, setSeedIds] = useState<string[]>([]);
   const [breadcrumb, setBreadcrumb] = useState<OrbitFocus[]>([null]);
   const [labels, setLabels] = useState<Record<string, string>>({});
+  const [webgl, setWebgl] = useState(false);
+  const reducedMotion = useReducedMotion();
 
   // Signals only exist client-side (localStorage/zustand) — read them once
   // after mount, same hydration-guard idiom as ProfileMindmap.
   useEffect(() => {
     setSeedIds(seedIdsFromSignals(collectSignals()));
+    setWebgl(supportsWebGL());
     setHydrated(true);
   }, []);
 
@@ -100,8 +118,12 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
   const centerLabel = focus === null ? t.center : (labels[focus] ?? focus);
   const showEmpty = hydrated && focus === null && seedIds.length === 0;
 
-  return (
-    <div id="relation-orbit" className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+  const sceneRing = useMemo(
+    () => ring.map((id) => ({ id, icon: getNode(id)?.icon ?? "✨", label: labels[id] ?? id })),
+    [ring, labels],
+  );
+
+  const flatStage = (
       <div className="relative mx-auto" style={{ width: SIZE, height: SIZE }}>
         <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 text-center">
           <span className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl text-primary-foreground shadow-sm transition-all duration-300">
@@ -135,6 +157,23 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
           );
         })}
       </div>
+  );
+
+  return (
+    <div id="relation-orbit" className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+      {webgl && !reducedMotion ? (
+        <Suspense fallback={flatStage}>
+          <OntologyOrbitScene
+            focusKey={breadcrumb.map((id) => id ?? "root").join(">")}
+            centerIcon={centerIcon}
+            centerLabel={centerLabel}
+            ring={sceneRing}
+            onSelect={selectNode}
+          />
+        </Suspense>
+      ) : (
+        flatStage
+      )}
 
       {showEmpty ? <p className="mt-2 text-center text-xs font-bold text-green-500">{t.empty}</p> : null}
 
