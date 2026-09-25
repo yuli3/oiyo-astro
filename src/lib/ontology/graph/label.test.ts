@@ -9,6 +9,15 @@ describe("resolveNodeLabel", () => {
     expect((label ?? "").length).toBeGreaterThan(0);
   });
 
+  it("resolves RIASEC orbit labels in every active locale", async () => {
+    expect(await resolveNodeLabel("ko", "career.types.artistic.name")).toBe("예술형 (창작가)");
+    for (const locale of ["en", "ja", "zh", "fr", "es"]) {
+      const label = await resolveNodeLabel(locale, "career.types.artistic.name");
+      expect(label, locale).toBeTruthy();
+      expect(label, locale).not.toBe("artistic");
+    }
+  });
+
   it("returns undefined for an unknown namespace", async () => {
     expect(await resolveNodeLabel("ko", "does-not-exist.foo")).toBeUndefined();
   });
