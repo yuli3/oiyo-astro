@@ -2,6 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import type { MoteStage } from "@/lib/particles/motes";
+
+import { MindmapMotes } from "./MindmapMotes";
+
 // Lane 3 "실제 나의 것": radial explore-and-select profile builder.
 // Central "나" → fixed ring of 5 category nodes (always visible, angle math
 // shared with OntologyRelationOrbit). Tapping one reveals its chips in a
@@ -35,6 +39,15 @@ const UI: Record<Lang, { center: string; saved: string; count: (n: number) => st
   zh: { center: "我", saved: "已保存", count: (n) => `已选 ${n}`, hint: "点击分类开始探索" },
   fr: { center: "Moi", saved: "Enregistré", count: (n) => `${n} choisis`, hint: "Touchez une catégorie pour explorer" },
   es: { center: "Yo", saved: "Guardado", count: (n) => `${n} elegidos`, hint: "Toca una categoría para explorar" },
+};
+
+// 카테고리마다 알갱이 색 — 고른 칩이 어느 갈래에서 왔는지 "나" 주위에서도 보인다.
+const CAT_COLORS: Record<string, string> = {
+  interest: "#16a34a",
+  activity: "#0ea5e9",
+  environment: "#65a30d",
+  relation: "#e11d48",
+  goal: "#8b5cf6",
 };
 
 const SIZE = 280;
@@ -76,6 +89,15 @@ export function ProfileMindmap({ locale }: { locale: string }) {
       }),
     [],
   );
+  const moteStage = useMemo<MoteStage>(
+    () => ({
+      center: { x: CENTER, y: CENTER },
+      nodes: Object.fromEntries(ringPositions.map(({ cat, x, y }) => [cat.id, { x, y }])),
+      orbitMin: 40,
+      orbitMax: 60,
+    }),
+    [ringPositions],
+  );
 
   return (
     <div className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
@@ -85,6 +107,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
       </div>
 
       <div className="relative mx-auto" style={{ width: SIZE, height: SIZE, maxWidth: "100%" }}>
+        {hydrated ? <MindmapMotes size={SIZE} stage={moteStage} selection={sel} colors={CAT_COLORS} /> : null}
         <div className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-sm font-black text-primary-foreground shadow-sm">
           {t.center}
         </div>
@@ -103,6 +126,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
               style={{ left: x, top: y }}
             >
               <span
+                style={count > 0 && !isOpen ? { borderColor: CAT_COLORS[cat.id] } : undefined}
                 className={
                   "flex h-11 w-11 items-center justify-center rounded-full border text-sm font-black shadow-sm transition " +
                   (isOpen ? "border-green-700 bg-primary text-primary-foreground" : count > 0 ? "border-green-600 bg-card text-green-800" : "border-green-200 bg-card text-green-700 hover:border-green-400")
