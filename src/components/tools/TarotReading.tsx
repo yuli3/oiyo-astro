@@ -1,9 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { decodeResult } from '../../lib/result-permalink';
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
 import { TarotCardFace, romanMajor, tarotMajorImageSrc } from './TarotCardFace';
 import TarotSpread from './tarot/TarotSpread';
+import { shuffleDeck } from '../../lib/tarot/shuffle';
+import { prefersReducedMotion } from '../../hooks/useMotion';
+
+// 셔플 테이블(Matter.js)은 뽑기를 누를 때만 받아 온다.
+const TarotShuffleTable = lazy(() => import('./tarot/TarotShuffleTable'));
+
+const SHUFFLING: Record<string, string> = {
+  ko: '카드를 섞는 중…', en: 'Shuffling the deck…', ja: 'カードを混ぜています…',
+  zh: '正在洗牌…', cn: '正在洗牌…', fr: 'Mélange du jeu…', es: 'Barajando las cartas…',
+};
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 type Spread = 1 | 3 | 5;
@@ -303,7 +313,7 @@ interface DrawnCard {
 }
 
 function drawCards(count: number, positionLabels: string[]): DrawnCard[] {
-  const shuffled = [...MAJOR_ARCANA].sort(() => Math.random() - 0.5);
+  const shuffled = shuffleDeck(MAJOR_ARCANA);
   return shuffled.slice(0, count).map((card, i) => ({
     card,
     reversed: Math.random() < 0.3,
@@ -337,6 +347,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
   const [shareCopied, setShareCopied] = useState(false);
   const [shareFailed, setShareFailed] = useState(false);
   const [legacyShare, setLegacyShare] = useState<PermalinkState | null>(null);
+  const [shuffle, setShuffle] = useState<{ key: number; chosen: number[] } | null>(null);
   const shareLabels = SHARE_LABELS[locale === 'cn' ? 'zh' : locale] ?? SHARE_LABELS.en;
 
   function restoreSharedState(value: unknown) {
@@ -369,8 +380,12 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
 
   function handleDraw() {
     const labels = SPREAD_LABELS[spread][locale];
-    setDrawn(drawCards(spread, labels));
+    const next = drawCards(spread, labels);
+    setDrawn(next);
     setFlipped(new Set());
+    // 뽑기는 위에서 끝났다. 테이블은 뽑힌 카드가 떠오르는 모습만 보여 준다.
+    if (prefersReducedMotion()) setShuffle(null);
+    else setShuffle({ key: Date.now(), chosen: next.map((dc) => MAJOR_ARCANA.indexOf(dc.card)) });
   }
 
   async function share() {
@@ -441,13 +456,26 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       {/* Draw button */}
       <button
         onClick={handleDraw}
-        className="w-full py-3 bg-primary hover:bg-primary-strong text-primary-foreground font-semibold rounded-xl transition-colors"
+        disabled={shuffle !== null}
+        className="w-full py-3 disabled:opacity-60 bg-primary hover:bg-primary-strong text-primary-foreground font-semibold rounded-xl transition-colors"
       >
         {drawn ? t.redrawBtn : t.drawBtn}
       </button>
 
+      {shuffle && (
+        <Suspense fallback={<div className="h-[230px] rounded-2xl bg-green-950" aria-hidden="true" />}>
+          <TarotShuffleTable
+            key={shuffle.key}
+            deckSize={MAJOR_ARCANA.length}
+            chosen={shuffle.chosen}
+            onDone={() => setShuffle(null)}
+            label={SHUFFLING[locale] ?? SHUFFLING.en}
+          />
+        </Suspense>
+      )}
+
       {/* Cards */}
-      {drawn && (
+      {drawn && !shuffle && (
         <div className={`grid gap-4 ${drawn.length === 1 ? 'grid-cols-1 max-w-xs mx-auto' : drawn.length === 3 ? 'grid-cols-3' : 'grid-cols-2 sm:grid-cols-3'}`}>
           {drawn.map((dc, i) => {
             const isFlipped = flipped.has(i);
@@ -514,14 +542,14 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
         </div>
       )}
 
-      {drawn && (
+      {drawn && !shuffle && (
         <TarotSpread
           locale={locale}
           cards={drawn.map((dc, i) => ({ reversed: dc.reversed, revealed: flipped.has(i) }))}
         />
       )}
 
-      {drawn && flipped.size < drawn.length && (
+      {drawn && !shuffle && flipped.size < drawn.length && (
         <p className="text-center text-sm text-gray-400">
           {locale === 'ko' ? '카드를 탭해서 뒤집으세요' :
            locale === 'ja' ? 'カードをタップして裏返しましょう' :
