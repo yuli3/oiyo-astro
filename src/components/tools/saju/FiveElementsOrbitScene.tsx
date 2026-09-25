@@ -13,9 +13,10 @@
 
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useReducedMotion } from "@/hooks/useMotion";
+import { planElementFlow } from "./element-flow";
 
 export const ELEMENT_ORDER = ["Wood", "Fire", "Earth", "Metal", "Water"] as const;
 export type ElementKey = (typeof ELEMENT_ORDER)[number];
@@ -101,6 +102,63 @@ function ElementNode({
   );
 }
 
+/**
+ * 상생 고리를 따라 흐르는 빛 알갱이. 간선마다 낳는 쪽 오행 개수에 비례하고,
+ * 받을 오행이 비어 있으면 그 앞(85%)에서 멈춰 쌓이며 흐려진다.
+ */
+function GenerationFlow({ elementCount, animate }: { elementCount: Record<string, number>; animate: boolean }) {
+  const plan = useMemo(() => planElementFlow(elementCount), [elementCount]);
+  const pack = useMemo(() => {
+    const particles = plan.flatMap((edge) =>
+      Array.from({ length: edge.particles }, (_, i) => ({
+        edge,
+        offset: (i + Math.random() * 0.6) / Math.max(1, edge.particles),
+        speed: 0.12 + Math.random() * 0.08,
+        wobble: Math.random() * Math.PI * 2,
+      })),
+    );
+    const position = new Float32Array(particles.length * 3);
+    const color = new Float32Array(particles.length * 3);
+    particles.forEach((p, i) => {
+      const c = new THREE.Color(ELEMENT_HEX[ELEMENT_ORDER[p.edge.from]]);
+      color.set([c.r, c.g, c.b], i * 3);
+    });
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute("position", new THREE.BufferAttribute(position, 3));
+    geometry.setAttribute("color", new THREE.BufferAttribute(color, 3));
+    geometry.boundingSphere = new THREE.Sphere(new THREE.Vector3(), RADIUS * 2);
+    return { particles, position, geometry };
+  }, [plan]);
+  useEffect(() => () => pack.geometry.dispose(), [pack]);
+
+  const place = (t: number) => {
+    pack.particles.forEach((p, i) => {
+      let f = (p.offset + t * p.speed) % 1;
+      // 받을 기운이 없으면 끝까지 가지 못하고 앞에서 쌓인다.
+      if (p.edge.blocked) f = Math.min(f * 1.15, 0.85);
+      const [ax, ay] = nodePosition(p.edge.from);
+      const [bx, by] = nodePosition(p.edge.to);
+      // 고리 바깥으로 살짝 부푼 곡선을 따라간다.
+      const bulge = Math.sin(f * Math.PI) * 0.35;
+      const mx = (ax + bx) / 2;
+      const my = (ay + by) / 2;
+      const len = Math.hypot(mx, my) || 1;
+      pack.position[i * 3] = ax + (bx - ax) * f + (mx / len) * bulge;
+      pack.position[i * 3 + 1] = ay + (by - ay) * f + (my / len) * bulge;
+      pack.position[i * 3 + 2] = Math.sin(t * 1.5 + p.wobble) * 0.08;
+    });
+    (pack.geometry.getAttribute("position") as THREE.BufferAttribute).needsUpdate = true;
+  };
+
+  useFrame(({ clock }) => place(animate ? clock.elapsedTime : 2));
+
+  return (
+    <points geometry={pack.geometry}>
+      <pointsMaterial vertexColors size={0.17} sizeAttenuation transparent opacity={0.85} depthWrite={false} blending={THREE.AdditiveBlending} />
+    </points>
+  );
+}
+
 function Scene({
   elementCount,
   dominantElement,
@@ -131,6 +189,7 @@ function Scene({
       <lineSegments geometry={controllingGeo}>
         <lineBasicMaterial color="#fca5a5" transparent opacity={0.28} />
       </lineSegments>
+      <GenerationFlow elementCount={elementCount} animate={animate} />
       {ELEMENT_ORDER.map((el, index) => (
         <ElementNode
           key={el}

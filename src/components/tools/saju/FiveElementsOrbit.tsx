@@ -16,12 +16,12 @@ const OrbitScene = lazy(() => import("./FiveElementsOrbitScene"));
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY: Record<Lang, { hint: string; legend: string }> = {
-  ko: { hint: "드래그해 오행의 상생·상극 관계를 돌려보세요.", legend: "바깥 고리 = 상생 · 안쪽 별 = 상극" },
-  en: { hint: "Drag to rotate the generating and controlling cycles.", legend: "Outer ring = generates · inner star = controls" },
-  ja: { hint: "ドラッグして相生・相剋の関係を回してみましょう。", legend: "外側の輪＝相生・内側の星＝相剋" },
-  zh: { hint: "拖动查看五行相生相克的关系。", legend: "外环＝相生 · 内星＝相克" },
-  fr: { hint: "Faites glisser pour explorer génération et contrôle.", legend: "Anneau extérieur = génère · étoile intérieure = contrôle" },
-  es: { hint: "Arrastra para ver la generación y el control de los elementos.", legend: "Anillo exterior = genera · estrella interior = controla" },
+  ko: { hint: "드래그해 오행의 상생·상극 관계를 돌려보세요.", legend: "바깥 고리 = 상생 · 안쪽 별 = 상극 · 빛 알갱이 = 상생 흐름(낳는 오행이 많을수록 많고, 비어 있는 오행 앞에서는 멈춰 쌓임)" },
+  en: { hint: "Drag to rotate the generating and controlling cycles.", legend: "Outer ring = generates · inner star = controls · particles = generating flow (more when the source element is strong; they pile up before an empty element)" },
+  ja: { hint: "ドラッグして相生・相剋の関係を回してみましょう。", legend: "外側の輪＝相生・内側の星＝相剋・光の粒＝相生の流れ（生む五行が多いほど多く、空の五行の手前で止まって溜まる）" },
+  zh: { hint: "拖动查看五行相生相克的关系。", legend: "外环＝相生 · 内星＝相克 · 光点＝相生之流（生方五行越多越多，遇到空缺的五行会停下堆积）" },
+  fr: { hint: "Faites glisser pour explorer génération et contrôle.", legend: "Anneau extérieur = génère · étoile intérieure = contrôle · particules = flux de génération (plus nombreuses si l’élément source est fort ; elles s’accumulent devant un élément absent)" },
+  es: { hint: "Arrastra para ver la generación y el control de los elementos.", legend: "Anillo exterior = genera · estrella interior = controla · partículas = flujo de generación (más cuando el elemento origen es fuerte; se acumulan ante un elemento vacío)" },
 };
 
 function useInView<T extends HTMLElement>(): [React.RefObject<T | null>, boolean] {
