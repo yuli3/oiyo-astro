@@ -73,6 +73,7 @@ const TEST: OntologySystem[] = [
   { id: 'music-taste', lane: 'test', emoji: '🎧', requires: 'testResult', testId: 'music-taste', href: (l) => `/${l}/music-taste-test/`, name: L('음악 취향', 'Music Taste', '音楽の好み', '音乐品味', 'Goûts musicaux', 'Gustos musicales') },
   { id: 'color-personality', lane: 'test', emoji: '🎨', requires: 'testResult', testId: 'color-personality', href: (l) => `/${l}/color-personality-test/`, name: L('컬러 성격', 'Color Personality', 'カラー性格', '色彩性格', 'Couleurs de personnalité', 'Color y personalidad') },
   { id: 'animal-personality', lane: 'test', emoji: '🦊', requires: 'testResult', testId: 'animal-personality', href: (l) => `/${l}/animal-personality-test/`, name: L('정신 동물', 'Spirit Animal', '精神動物', '守护动物', 'Animal totem', 'Animal interior') },
+  { id: 'resilience', lane: 'test', emoji: '🌿', requires: 'testResult', testId: 'resilience', href: (l) => `/${l}/resilience-test/`, name: L('회복탄력성', 'Resilience', 'レジリエンス', '心理韧性', 'Résilience', 'Resiliencia') },
 ];
 
 // ── Lane 3: 실제 나의 것 (self-chosen — mindmap builder) ──
