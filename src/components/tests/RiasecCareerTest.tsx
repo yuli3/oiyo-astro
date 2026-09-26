@@ -5,6 +5,7 @@ import { recordTestResult } from '@/lib/user/test-results'
 import { gaEvent } from '@/lib/analytics/ga-event'
 import { buildRiasecProfile, type RiasecType } from '../../lib/riasec-profile'
 import RiasecHexagonChart from '../shared/RiasecHexagonChart'
+import type { CareerExample } from '@/lib/career-exploration'
 import {
   buildRiasecResult,
   recordAssessmentResult,
@@ -14,6 +15,17 @@ import {
 } from '@/assessments'
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
+const CAREER_COPY: Record<SupportedLang, {
+  title: string; caution: string; search: string; placeholder: string; interest: string; empty: string; more: string;
+  count: (found: number, total: number) => string
+}> = {
+  ko: { title: '직업 탐색', caution: '흥미 유형과 연결된 직업을 먼저 보여 줘요. 이는 취업 적합도나 채용 전망 순위가 아니에요. 실제 업무와 필요한 자격은 따로 확인해 주세요.', search: '직업 검색', placeholder: '직업명이나 하는 일 검색', interest: '흥미 코드', empty: '검색 결과가 없어요.', more: '직업 더 보기', count: (found, total) => `${total}개 직업 중 ${found}개` },
+  en: { title: 'Explore careers', caution: 'Careers are grouped by interest code, not ranked by job fit or hiring prospects. Check actual duties and qualifications separately.', search: 'Search careers', placeholder: 'Search a job or task', interest: 'Interest code', empty: 'No careers found.', more: 'Show more careers', count: (found, total) => `${found} of ${total} careers` },
+  ja: { title: '職業を探す', caution: '興味タイプに近い職業から表示します。適職や採用見通しの順位ではありません。仕事内容や資格は別途確認してください。', search: '職業を検索', placeholder: '職業名や仕事内容で検索', interest: '興味コード', empty: '該当する職業がありません。', more: 'もっと見る', count: (found, total) => `${total}件中${found}件` },
+  zh: { title: '探索职业', caution: '先展示与兴趣类型相关的职业。这不是职业适合度或招聘前景排名。请另外核实工作内容和资格要求。', search: '搜索职业', placeholder: '搜索职业或工作内容', interest: '兴趣代码', empty: '没有找到职业。', more: '查看更多', count: (found, total) => `共${total}个职业，找到${found}个` },
+  fr: { title: 'Explorer les métiers', caution: 'Les métiers sont regroupés par intérêts, sans classement d’aptitude ni de perspectives d’emploi. Vérifiez les tâches et qualifications séparément.', search: 'Rechercher un métier', placeholder: 'Métier ou activité', interest: 'Code d’intérêt', empty: 'Aucun métier trouvé.', more: 'Voir plus de métiers', count: (found, total) => `${found} métiers sur ${total}` },
+  es: { title: 'Explorar profesiones', caution: 'Las profesiones se agrupan por intereses; no es una clasificación de aptitud ni de perspectivas laborales. Comprueba por separado las tareas y los requisitos.', search: 'Buscar profesiones', placeholder: 'Profesión o actividad', interest: 'Código de interés', empty: 'No se encontraron profesiones.', more: 'Ver más profesiones', count: (found, total) => `${found} de ${total} profesiones` },
+}
 // Exported so RiasecQuickTest.tsx (the 18-question /riasec-quick sibling) can
 // reuse the type-level shape and the shared color palette/type descriptions
 // below instead of duplicating them.
@@ -388,9 +400,9 @@ export const TYPE_DETAILS: Record<RiasecType, Record<SupportedLang, TypeDetail>>
   },
 }
 
-interface Props { locale?: string }
+interface Props { locale?: string; careerExamples?: CareerExample[] }
 
-export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
+export default function RiasecCareerTest({ locale: lp = 'ko', careerExamples = [] }: Props) {
   const locale = lang(lp ?? 'ko')
   const resultLocale = (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(lp as AssessmentLocale)
     ? lp as AssessmentLocale
@@ -404,6 +416,8 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
   // 응답은 리커트 숫자만 담는다 — AssessmentResponses 는 다른 형태도 허용하므로 숫자만 꺼낸다.
   const numberAt = (id: string): number | undefined => { const v = responses[id]; return typeof v === 'number' ? v : undefined }
   const [done, setDone] = useState(false)
+  const [careerQuery, setCareerQuery] = useState('')
+  const [careerLimit, setCareerLimit] = useState(18)
 
   function pick(val: number) {
     if (Object.keys(responses).length === 0) gaEvent('test_started', { test_id: 'riasec' })
@@ -481,6 +495,11 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
   const resultTitle = resultProfile.isMixed ? lb.mixedTitle : topCode
   const resultBody = resultProfile.isLowFlat ? lb.lowFlatBody : resultProfile.isMixed ? lb.mixedBody : lb.clearBody
   const interpretationTypes = resultProfile.interpretationTypes
+  const careerCopy = CAREER_COPY[locale]
+  const normalizedQuery = careerQuery.trim().toLocaleLowerCase(locale)
+  const matchingCareers = careerExamples
+    .filter(career => !normalizedQuery || `${career.title} ${career.description}`.toLocaleLowerCase(locale).includes(normalizedQuery))
+    .sort((a, b) => sorted.indexOf(a.code[0] as RiasecType) - sorted.indexOf(b.code[0] as RiasecType) || a.title.localeCompare(b.title, locale))
   const minScore = 4
   const maxScore = 20
 
@@ -523,6 +542,41 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
           </ul>
         </div>
       ))}
+      {careerExamples.length > 0 && (
+        <section className="rounded-xl border bg-card p-4 sm:p-6 space-y-4" aria-labelledby="career-exploration-title">
+          <div className="space-y-1">
+            <h3 id="career-exploration-title" className="text-lg font-bold">{careerCopy.title}</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">{careerCopy.caution}</p>
+          </div>
+          <label className="block space-y-2 text-sm font-medium">
+            <span>{careerCopy.search}</span>
+            <input
+              type="search"
+              value={careerQuery}
+              onChange={event => { setCareerQuery(event.target.value); setCareerLimit(18) }}
+              placeholder={careerCopy.placeholder}
+              className="min-h-11 w-full rounded-lg border bg-background px-3 text-base"
+            />
+          </label>
+          <p className="text-xs text-muted-foreground" aria-live="polite">{careerCopy.count(matchingCareers.length, careerExamples.length)}</p>
+          {matchingCareers.length === 0 ? <p className="text-sm text-muted-foreground">{careerCopy.empty}</p> : (
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {matchingCareers.slice(0, careerLimit).map(career => (
+                <li key={career.id} className="rounded-lg border p-3 space-y-1">
+                  <h4 className="font-semibold text-sm">{career.title}</h4>
+                  <p className="text-xs text-muted-foreground">{careerCopy.interest}: {career.code.split('').join(' · ')}</p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{career.description}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+          {matchingCareers.length > careerLimit && (
+            <button type="button" onClick={() => setCareerLimit(limit => limit + 18)} className="min-h-11 w-full rounded-lg border px-4 text-sm font-semibold hover:bg-accent">
+              {careerCopy.more}
+            </button>
+          )}
+        </section>
+      )}
       <p className="rounded-xl border bg-muted/40 p-4 text-sm">{lb.tryNext}</p>
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
       <ShareResultButton
