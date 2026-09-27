@@ -15,7 +15,7 @@ import { useMemo } from "react";
 import { GROUP_ELEMENT_ORDER, type GroupMember, type GroupSynthesis } from "@/lib/symbolic-tradition/group-synthesis";
 import { astroAgreement, groupAstro } from "@/lib/symbolic-tradition/group-astro";
 import { dayMasterOf } from "@/lib/symbolic-tradition/group-flow";
-import { groupEpithet } from "@/lib/symbolic-tradition/group-epithet";
+import { groupEpithet, groupEpithetAxis } from "@/lib/symbolic-tradition/group-epithet";
 import { ELEMENT_SYMBOLS } from "@/lib/talisman/symbols";
 import type { FiveElement } from "@/lib/ontology/saju/types";
 
@@ -266,6 +266,8 @@ export default function CircleSynthesis({
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   const t = T[lang];
   const epithet = groupEpithet(synthesis, lang);
+  // 별명이 음양이나 띠에서 나왔으면 같은 말을 아래에서 또 하지 않는다.
+  const epithetAxis = groupEpithetAxis(synthesis);
   const { contributions, elements, polarity, spread } = synthesis;
   const astroLayer = useMemo(() => groupAstro(members), [members]);
   const agreement = astroAgreement(synthesis, astroLayer);
@@ -284,7 +286,8 @@ export default function CircleSynthesis({
     })),
   ].filter((item) => item.line);
   const helpers = contributions.filter((item) => item.supplies.length || item.sole.length || item.distinctions.length);
-  const { pair, tags } = synthesis;
+  const { pair } = synthesis;
+  const tags = synthesis.tags.filter((tag) => !(epithetAxis === "zodiacTrine" && tag.system === "zodiacTrine"));
   const labelOf = (id: string) => contributions.find((item) => item.id === id)?.label ?? id;
 
   const chips = (label: string, list: FiveElement[], tone: string) =>
@@ -309,9 +312,9 @@ export default function CircleSynthesis({
       {agreement && (
         <p className="mt-1 text-sm font-bold leading-relaxed text-primary-strong">{t.agree.replace("{el}", name(agreement))}</p>
       )}
-      {/* 별명은 오행 축에서 나온다. 음양이 우연으로 보기 어려울 만큼 기울었으면
-          같은 별명이라도 결이 달라서 한 줄로 덧붙인다. */}
-      {polarity.pronounced && (
+      {/* 별명이 오행에서 나왔는데 음양도 우연으로 보기 어려울 만큼 기울었으면
+          결이 달라서 한 줄로 덧붙인다. 별명이 음양에서 나왔으면 생략한다. */}
+      {polarity.pronounced && epithetAxis !== "polarity" && (
         <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
           {polarity.yang > polarity.yin ? t.polarityYang : t.polarityYin}
         </p>

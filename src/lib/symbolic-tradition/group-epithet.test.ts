@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { comparisonFromCivil } from "./circle-input";
-import { GROUP_EPITHET, groupEpithet, groupEpithetKey, type GroupEpithetKey } from "./group-epithet";
+import { GROUP_EPITHET, groupEpithet, groupEpithetAxis, groupEpithetKey, type GroupEpithetKey } from "./group-epithet";
 import { synthesizeGroup, type GroupMember } from "./group-synthesis";
 
 const LOCALES = ["ko", "en", "ja", "zh", "fr", "es"] as const;
@@ -26,9 +26,9 @@ function groups(size: number, count: number): GroupMember[][] {
 }
 
 describe("모임 별명", () => {
-  it("여섯 언어가 같은 열한 칸을 모두 갖춘다", () => {
+  it("여섯 언어가 같은 스물한 칸을 모두 갖춘다", () => {
     const keys = Object.keys(GROUP_EPITHET.ko).sort();
-    expect(keys).toHaveLength(11);
+    expect(keys).toHaveLength(21);
     for (const locale of LOCALES) {
       expect(Object.keys(GROUP_EPITHET[locale]).sort(), locale).toEqual(keys);
       for (const key of keys) {
@@ -46,8 +46,8 @@ describe("모임 별명", () => {
     }
   });
 
-  it("열한 칸이 전부 실제로 나온다", () => {
-    // 나오지 않는 칸은 죽은 문구다. 여섯 언어 66개 문장을 계속 요구하게 된다.
+  it("스물한 칸이 전부 실제로 나온다", () => {
+    // 나오지 않는 칸은 죽은 문구다. 여섯 언어 126개 문장을 계속 요구하게 된다.
     const seen = new Set<GroupEpithetKey>();
     for (const size of [2, 3, 4, 5, 6, 8]) {
       for (const people of groups(size, 500)) seen.add(groupEpithetKey(synthesizeGroup(people)));
@@ -68,6 +68,36 @@ describe("모임 별명", () => {
     }
     const top = Math.max(...tally.values()) / total;
     expect(top, [...tally].map(([k, v]) => `${k} ${(v / total * 100).toFixed(1)}`).join(" · ")).toBeLessThan(0.3);
+  });
+
+  it("오행 밖의 축은 그 축이 실제로 몰렸을 때만 별명을 가져간다", () => {
+    for (const size of [3, 4, 5, 6, 8]) {
+      for (const people of groups(size, 300)) {
+        const synthesis = synthesizeGroup(people);
+        const axis = groupEpithetAxis(synthesis);
+        const key = groupEpithetKey(synthesis);
+        if (axis === "polarity") {
+          expect(synthesis.polarity.pronounced).toBe(true);
+          expect(key).toBe(synthesis.polarity.yang > synthesis.polarity.yin ? "yang" : "yin");
+        }
+        if (axis === "zodiacTrine") {
+          const tag = synthesis.tags.find((t) => t.system === "zodiacTrine");
+          expect(tag).toBeDefined();
+          expect(key).toBe(`trine-${tag!.category}`);
+        }
+        if (axis === "astro") {
+          const element = key.replace("astro-", "") as "fire" | "earth" | "air" | "water";
+          expect(synthesis.astro.elements[element]).toBeGreaterThanOrEqual(3);
+        }
+      }
+    }
+  });
+
+  it("2인 모임은 띠·별자리 축으로 이름 붙이지 않는다", () => {
+    // 둘이 같은 칸인 것은 모임의 쏠림이 아니라 두 사람의 닮음이다(태그와 같은 규칙).
+    for (const people of groups(2, 800)) {
+      expect(["zodiacTrine", "astro"]).not.toContain(groupEpithetAxis(synthesizeGroup(people)));
+    }
   });
 
   it("같은 모임은 언제나 같은 별명이다", () => {
