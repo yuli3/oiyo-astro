@@ -14,14 +14,12 @@ import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "@/hooks/useMotion";
 import type { FiveElement } from "@/lib/ontology/saju/types";
 import type { SignatureOrbit } from "@/lib/symbolic-tradition/group-flow";
+import { signaturePalette, type MayanColor, type SunElement } from "@/lib/symbolic-tradition/signature-palette";
 
-const GLOW: Record<string, string> = {
-  wood: "#7fd39a", fire: "#ff8a66", earth: "#e0b872", metal: "#d5dde6", water: "#8cc0f0",
-};
 const STEPS = 1400;
 const DRAW_SECONDS = 7;
 
-interface Person { id: string; label: string; element: FiveElement; orbit: SignatureOrbit }
+interface Person { id: string; label: string; element: FiveElement; sunElement: SunElement; mayanColor?: MayanColor; orbit: SignatureOrbit }
 
 function pointAt(o: SignatureOrbit, tau: number, R: number): [number, number] {
   const a = o.phase + o.speed * tau;
@@ -43,7 +41,14 @@ function drawPattern(ctx: CanvasRenderingContext2D, people: Person[], cx: number
       if (i === 0) ctx.moveTo(cx + x, cy + y);
       else ctx.lineTo(cx + x, cy + y);
     }
-    ctx.strokeStyle = GLOW[person.element];
+    // 한 오행으로 모인 친구라도 태양궁 원소·마야 색을 함께 담는다. 궤도 모양과
+    // 사람별 세 색은 같은 입력에서 늘 같고, 화면과 저장 이미지가 같은 무늬다.
+    const colors = signaturePalette(person.element, person.sunElement, person.mayanColor);
+    const gradient = ctx.createLinearGradient(cx - R, cy - R, cx + R, cy + R);
+    gradient.addColorStop(0, colors[0]);
+    gradient.addColorStop(0.5, colors[1]);
+    gradient.addColorStop(1, colors[2]);
+    ctx.strokeStyle = gradient;
     ctx.globalAlpha = 0.55;
     ctx.lineWidth = line;
     ctx.stroke();
@@ -64,7 +69,7 @@ export default function SignatureCard({
   const canvas = useRef<HTMLCanvasElement>(null);
   const reduce = useReducedMotion();
   const [saved, setSaved] = useState(false);
-  const key = people.map((p) => `${p.id}:${p.element}:${JSON.stringify(p.orbit)}`).join("|");
+  const key = people.map((p) => `${p.id}:${p.element}:${p.sunElement}:${p.mayanColor ?? "-"}:${JSON.stringify(p.orbit)}`).join("|");
 
   useEffect(() => {
     const el = canvas.current;
