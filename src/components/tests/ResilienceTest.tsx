@@ -299,7 +299,11 @@ export default function ResilienceTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<{ level: ResLevel; score: number } | null>(null);
-  useRecordFinishedTest({ testId: "resilience", title: "ResilienceTest", finished: Boolean(result) });
+  useRecordFinishedTest({
+    testId: "resilience", title: t.title, finished: Boolean(result), locale,
+    resultLabel: result ? levelData[result.level].label[locale] : undefined,
+    result: result ? { level: result.level, score: result.score } : undefined,
+  });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

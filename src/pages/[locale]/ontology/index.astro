@@ -263,8 +263,12 @@ const ABOUT_LABEL: Record<Locale, string> = {
         const has = { birthDate: !!(p.birthDate && String(p.birthDate).trim()), birthTime: !!(p.birthTime), name: !!(p.name && String(p.name).trim()), bloodType: !!(p.bloodType) };
         const results = read('oiyo:test-results:v1');
         const assessments = read('oiyo:assessment-results:v2');
+        const latestTests = new Map();
+        if (Array.isArray(results)) results.forEach((r) => {
+          if (r && typeof r.testId === 'string' && !latestTests.has(r.testId)) latestTests.set(r.testId, r);
+        });
         const doneTests = new Set([
-          ...(Array.isArray(results) ? results.map((r) => r && (r.testId || r.kind)).filter(Boolean) : []),
+          ...latestTests.keys(),
           ...(Array.isArray(assessments) ? assessments.map((r) => r && r.assessmentId).filter(Boolean) : []),
         ]);
         const cards = Array.from(document.querySelectorAll('[data-sys]'));
@@ -291,7 +295,12 @@ const ABOUT_LABEL: Record<Locale, string> = {
           card.classList.remove('bg-green-50/60', 'bg-amber-50/40', 'opacity-60');
           if (status) {
             status.classList.remove('text-green-500', 'text-green-600', 'text-amber-600');
-            if (state === 'recorded') { status.textContent = card.getAttribute('data-recorded'); status.classList.add('text-green-600'); recorded++; card.classList.add('bg-green-50/60'); }
+            if (state === 'recorded') {
+              const saved = req === 'testResult' ? latestTests.get(testId) : null;
+              const label = saved && typeof saved.resultLabel === 'string' ? saved.resultLabel.trim() : '';
+              status.textContent = label && !['done', '-', 'legacy'].includes(label.toLowerCase()) ? label.slice(0, 80) : card.getAttribute('data-recorded');
+              status.classList.add('text-green-600'); recorded++; card.classList.add('bg-green-50/60');
+            }
             else if (state === 'locked') { status.textContent = card.getAttribute('data-locked'); status.classList.add('text-amber-600'); card.classList.add('opacity-60'); if (!firstOpen) firstOpen = card; }
             else { status.textContent = card.getAttribute('data-open'); if (!firstOpen) firstOpen = card; }
           }
