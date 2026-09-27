@@ -41,7 +41,7 @@ const COPY = {
     gathered: "{n}명이 모였어요",
     oneMore: "한 명만 더 오면 지도가 그려져요",
     sigHeading: "우리의 무늬",
-    sigLead: "각자의 좌표를 궤도 하나로 옮겨 꼬리를 남겼어요. 같은 사람들이 모이면 늘 같은 무늬, 한 명만 달라져도 다른 무늬가 나와요.",
+    sigLead: "각자의 좌표를 궤도 하나로 옮겨 꼬리를 남겼어요. 색에는 일간 오행·별자리 원소·마야 색 계열을 담았어요. 같은 사람들이 모이면 늘 같은 무늬가 나와요.",
     sigSave: "이미지로 저장",
     sigSaved: "이미지를 저장했어요",
     sigBrand: "OIYO · 우리의 지도",
@@ -76,7 +76,7 @@ const COPY = {
     gathered: "{n} of you are here",
     oneMore: "One more person and the map appears",
     sigHeading: "Our pattern",
-    sigLead: "Each person’s coordinates become one orbit that leaves a trail. The same people always make the same pattern; change one person and it changes.",
+    sigLead: "Each person’s coordinates become an orbit with a trail. Colors weave together day-master, zodiac element, and Maya color families. The same people make the same pattern.",
     sigSave: "Save as image",
     sigSaved: "Image saved",
     sigBrand: "OIYO · Our map",
@@ -111,7 +111,7 @@ const COPY = {
     gathered: "{n}人が集まりました",
     oneMore: "あと一人来ると地図が描かれます",
     sigHeading: "わたしたちの模様",
-    sigLead: "それぞれの座標を一つの軌道に移して軌跡を残しました。同じ顔ぶれならいつも同じ模様、一人違えば別の模様になります。",
+    sigLead: "それぞれの座標を軌道に移し、軌跡を残しました。色には日干の五行・星座のエレメント・マヤの色の系統を重ねています。同じ顔ぶれならいつも同じ模様になります。",
     sigSave: "画像で保存",
     sigSaved: "画像を保存しました",
     sigBrand: "OIYO · 私たちの地図",
@@ -146,7 +146,7 @@ const COPY = {
     gathered: "{n}人已到齐",
     oneMore: "再来一个人就能画出地图",
     sigHeading: "我们的纹样",
-    sigLead: "把每个人的坐标化成一条轨道并留下轨迹。同样的人聚在一起总是同样的纹样，换一个人就会不同。",
+    sigLead: "把每个人的坐标化成轨道并留下轨迹。颜色结合了日干五行、星座元素和玛雅颜色类别。同样的人总会形成同样的纹样。",
     sigSave: "保存为图片",
     sigSaved: "图片已保存",
     sigBrand: "OIYO · 我们的地图",
@@ -181,7 +181,7 @@ const COPY = {
     gathered: "Vous êtes {n}",
     oneMore: "Encore une personne et la carte apparaît",
     sigHeading: "Notre motif",
-    sigLead: "Les coordonnées de chacun deviennent une orbite qui laisse une trace. Les mêmes personnes donnent toujours le même motif ; changez-en une et il change.",
+    sigLead: "Les coordonnées de chacun tracent une orbite. Les couleurs mêlent l’élément du maître du jour, celui du zodiaque et la famille de couleurs maya. Les mêmes personnes donnent le même motif.",
     sigSave: "Enregistrer l’image",
     sigSaved: "Image enregistrée",
     sigBrand: "OIYO · Notre carte",
@@ -216,7 +216,7 @@ const COPY = {
     gathered: "Sois {n}",
     oneMore: "Una persona más y aparece el mapa",
     sigHeading: "Nuestro patrón",
-    sigLead: "Las coordenadas de cada uno se convierten en una órbita que deja estela. Las mismas personas dan siempre el mismo patrón; cambia a una y cambia.",
+    sigLead: "Las coordenadas de cada persona trazan una órbita. Los colores combinan el elemento del día, el zodiacal y la familia de color maya. Las mismas personas crean el mismo patrón.",
     sigSave: "Guardar imagen",
     sigSaved: "Imagen guardada",
     sigBrand: "OIYO · Nuestro mapa",
@@ -589,7 +589,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
     {/* A5 궤적 서명 — 모임마다 다른 무늬. 공유 이미지로 저장할 수 있다. */}
     {synthesis && snapshot && (
       <SignatureCard
-        people={people.map((item) => ({ id: item.id, label: item.label, element: dayMasterOf(item.profile), orbit: signatureOrbit(item.profile) }))}
+        people={people.map((item) => ({ id: item.id, label: item.label, element: dayMasterOf(item.profile), sunElement: item.profile.sunSign.element, mayanColor: item.profile.mayanKin?.color, orbit: signatureOrbit(item.profile) }))}
         title={groupEpithet(synthesis, lang).title}
         copy={{ heading: copy.sigHeading, lead: copy.sigLead, save: copy.sigSave, saved: copy.sigSaved, brand: copy.sigBrand }}
       />

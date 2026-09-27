@@ -394,7 +394,7 @@ export default function PairReadingView({ locale }: { locale: string }) {
 
       {/* C6 둘의 무늬 */}
       <SignatureCard
-        people={[A, B].map((p) => ({ id: p.id, label: p.label, element: (STEMS[p.profile.saju.day.heavenlyStem].element as FiveElement), orbit: signatureOrbit(p.profile) }))}
+        people={[A, B].map((p) => ({ id: p.id, label: p.label, element: (STEMS[p.profile.saju.day.heavenlyStem].element as FiveElement), sunElement: p.profile.sunSign.element, mayanColor: p.profile.mayanKin?.color, orbit: signatureOrbit(p.profile) }))}
         title={PAIR_NAME[lang][reading.nameKey]}
         copy={{ heading: t.patternTitle, lead: t.patternLead, save: saveLabel(lang), saved: savedLabel(lang), brand: `OIYO · ${t.pageTitle}` }}
       />

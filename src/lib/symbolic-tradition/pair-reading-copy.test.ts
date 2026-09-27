@@ -1,10 +1,43 @@
 import { describe, expect, it } from "vitest";
 
+import { CITIES } from "@/lib/ontology/natal/signs";
+
+import { comparisonFromCivil } from "./circle-input";
+import { PAIR_COPY } from "./pair-copy";
+import { readPair } from "./pair-reading";
 import { fill, josa, PAIR_COPY_FULL, PAIR_NAME, type PairLang } from "./pair-reading-copy";
 
 const LANGS: PairLang[] = ["ko", "en", "ja", "zh", "fr", "es"];
 
 describe("두 사람 읽기 문장", () => {
+  it("PRD 테스트 쌍의 L1+L2 한국어 설명은 제목을 빼고 900자 이상이다", () => {
+    const seoul = CITIES.find((city) => city.id === "seoul")!;
+    const washington = {
+      id: "gn:38.8951,-77.0364",
+      label: { ko: "워싱턴", en: "Washington", ja: "ワシントン", zh: "华盛顿", fr: "Washington", es: "Washington" },
+      lat: 38.8951, lon: -77.0364, tz: -5, zoneId: "America/New_York",
+    };
+    const a = { id: "a", label: "A", profile: comparisonFromCivil({ date: "2007-03-24", time: "14:00", city: seoul }, { astro: true }) };
+    const b = { id: "b", label: "B", profile: comparisonFromCivil({ date: "2002-09-01", time: "09:00", city: washington }, { astro: true }) };
+    const reading = readPair(a, b, "2026-10-01");
+    const t = PAIR_COPY_FULL.ko;
+    const prose = [
+      t.relation[reading.relation],
+      t.signal[reading.nameSignal as Exclude<typeof reading.nameSignal, "none">] ?? "",
+      fill(t.talk.contrast, { fast: "B", slow: "A" }),
+      t.decide.combining,
+      fill(t.recover.only, { element: "쇠", job: t.elementJob.metal, holder: "B" }),
+      t.lensesLead,
+      ...reading.lenses.flatMap((lens) => {
+        const copy = PAIR_COPY.ko[`${lens.id}:${lens.relation}`];
+        return copy ? [copy.help, copy.care, copy.ask] : [];
+      }),
+    ].join(" ");
+
+    expect(reading.lenses).toHaveLength(9);
+    expect(prose.length).toBeGreaterThanOrEqual(900);
+  });
+
   it("여섯 언어 모두 이름 스무 개를 같은 키로 갖는다", () => {
     const keys = Object.keys(PAIR_NAME.ko).sort();
     expect(keys).toHaveLength(20);
