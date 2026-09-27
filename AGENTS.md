@@ -9,6 +9,8 @@
 - 활성 로케일 ko/en/ja/zh/fr/es를 유지한다. YMYL·상징 해석은 적절한 한계·비진단 안내를 포함하고 canonical/로케일 가정을 검증한다.
 - 테스트 질문 UI를 생성·이관·검토·출시하기 전 `/Users/seuncho/coding/company-brain/AI-Sessions/wiki/design/questionnaire-family-contract.md`를 읽는다. step/matrix/screening/dedicated tool을 분류하고 승인된 engine cohort 하나씩 출시한다.
 
+- Code comments: non-obvious branches / security / frozen formulas / intentional bypasses → comment WHY + date or decision link (see root `AGENTS.md`). Do not restate the next line.
+
 ## 검증
 
 - `npm run type-check`(전체, CI 차단 게이트), `npm run audit:questionnaire`, `npm run audit:mystic-seo`, `npm run test -- --run`, `npm run build` 후 `npm run audit:content-depth-baseline`.
