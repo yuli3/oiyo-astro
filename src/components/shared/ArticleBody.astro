@@ -25,6 +25,7 @@ import FaqAccordion from '../mdx/FaqAccordion.astro';
 import SajuPillarCards from '../mdx/SajuPillarCards.astro';
 import LuckTimeline from '../mdx/LuckTimeline.astro';
 import FiveElementsWheel from '../mdx/FiveElementsWheel.astro';
+import ArticleBodyH1 from '../mdx/ArticleBodyH1.astro';
 import { LectureTable, LectureProcess, LectureBarChart, LecturePieChart } from '../mdx/LectureVisuals';
 
 // 원본 570편 중 상당수가 이 넷을 import 없이 쓴다 — blog 는 mdx-component-registry
@@ -37,6 +38,7 @@ const mdxComponents = {
   FormulaBox, StepFlow, Timeline, FaqAccordion,
   SajuPillarCards, LuckTimeline, FiveElementsWheel,
   LectureTable, LectureProcess, LectureBarChart, LecturePieChart,
+  h1: ArticleBodyH1,
 };
 
 interface Props {
@@ -65,6 +67,7 @@ const stamp = shown.toISOString().slice(0, 10);
 
 <style is:global>
   .article-prose h2 { margin-top: 2rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 700; }
+  .article-prose h2.article-body-h1 { margin-top: 0; font-size: 1.0625rem; font-weight: 600; color: var(--color-muted-foreground, inherit); }
   .article-prose h3 { margin-top: 1.5rem; margin-bottom: .5rem; font-size: 1.05rem; font-weight: 700; }
   .article-prose p { margin-bottom: 1rem; line-height: 1.75; }
   .article-prose ul, .article-prose ol { margin: 0 0 1rem 1.25rem; line-height: 1.75; }

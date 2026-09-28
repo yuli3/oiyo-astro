@@ -1265,6 +1265,7 @@ export default function SleepChronotypeTest({ locale: lp = 'ko', showHeading = t
     const q = questions[current]
     return (
       <Questionnaire
+        headingLevel={showHeading ? 1 : 2}
         title={lb.title}
         subtitle={lb.subtitle}
         question={q.text}

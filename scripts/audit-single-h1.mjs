@@ -17,6 +17,8 @@ const walk = (d, out = []) => {
 };
 const many = [], none = [];
 for (const f of walk(dist)) {
+  // 2026-09-28: 검색엔진 소유 확인 파일(navera….html, google….html)은 페이지가 아니라 토큰 한 줄이다.
+  if (/\/(naver[0-9a-f]+|google[0-9a-f]+)\.html$/.test(f)) continue;
   const html = readFileSync(f, "utf8");
   // noindex 페이지의 h1 은 검색에 의미가 없다 — 색인 대상만 본다.
   if (/<meta name="robots" content="noindex/.test(html)) continue;

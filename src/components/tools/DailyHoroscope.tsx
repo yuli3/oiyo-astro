@@ -5,6 +5,8 @@ import { civilDateString, signOf } from "../../lib/fortune/periodic";
 
 interface Props {
   locale: Locale;
+  /** 2026-09-28: 글 본문에 끼워 넣을 때 true — 글 제목이 이미 h1 이라 이 제목은 h2 로 낸다. */
+  embedded?: boolean;
 }
 
 // ─── Seed-based RNG ───────────────────────────────────────────────────────────
@@ -826,7 +828,8 @@ function CategoryCard({ emoji, label, score, text }: { emoji: string; label: str
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export default function DailyHoroscope({ locale }: Props) {
+export default function DailyHoroscope({ locale, embedded = false }: Props) {
+  const Heading = embedded ? "h2" : "h1";
   const ui = UI[locale] ?? UI.en;
   const names = SIGN_NAMES[locale] ?? SIGN_NAMES.en;
   const [selected, setSelected] = useState<SignKey | "">("");
@@ -856,7 +859,7 @@ export default function DailyHoroscope({ locale }: Props) {
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{ui.title}</h1>
+        <Heading className="text-2xl font-bold text-gray-900">{ui.title}</Heading>
         <p className="mt-1 text-gray-500">{ui.subtitle}</p>
       </div>
 

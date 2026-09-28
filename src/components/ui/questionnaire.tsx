@@ -30,6 +30,11 @@ type QuestionnaireProps<TValue extends QuestionnaireValue = number> = {
   previousLabel?: string;
   onPrevious?: () => void;
   onSelect: (value: TValue) => void;
+  /**
+   * 2026-09-28: 페이지에 이미 h1 이 있는데 검사를 그 안에 끼워 넣을 때만 2로 준다
+   * (fr 수면 계산기 페이지). 기본 1 — 대부분 검사에서 이 제목이 유일한 h1 이다.
+   */
+  headingLevel?: 1 | 2;
 };
 
 export function Questionnaire<TValue extends QuestionnaireValue = number>({
@@ -44,7 +49,9 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
   previousLabel,
   onPrevious,
   onSelect,
+  headingLevel = 1,
 }: QuestionnaireProps<TValue>) {
+  const Heading = headingLevel === 2 ? "h2" : "h1";
   const legendRef = React.useRef<HTMLLegendElement>(null);
 
   React.useEffect(() => {
@@ -54,9 +61,9 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
   return (
     <section className="space-y-6" aria-labelledby="questionnaire-title">
       <header className="space-y-2 text-center">
-        <h1 id="questionnaire-title" className="text-2xl font-bold">
+        <Heading id="questionnaire-title" className="text-2xl font-bold">
           {title}
-        </h1>
+        </Heading>
         <p className="text-sm text-muted-foreground">{subtitle}</p>
       </header>
 
