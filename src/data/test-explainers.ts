@@ -2028,7 +2028,7 @@ export const TEST_EXPLAINERS: Record<string, TestExplainerMap> = {
       "disclaimer": "Este resultado es una referencia para conocerte. No lo uses como base para un diagnóstico, una contratación o una evaluación."
     }
   },
-  // 2026-09-29 O9 B 2차: 노출 0인 52개 중 GA4 90일 방문 상위 다섯. resilience-boost 는 resilience 해설과 주제가 겹쳐 빼고 6위 creativity-type 을 넣었다.
+  // 2026-09-29 O9 B 2차: 노출 0인 52개 중 GA4 90일 방문 상위 다섯. resilience-boost 는 resilience 와 주제가 겹쳐 빼고(같은 날 resilience-test 로 301 통합) 6위 creativity-type 을 넣었다.
   "social-media-personality": {
     "ko": {
       "introTitle": "SNS에서 나는 만드는 사람일까, 지켜보는 사람일까",

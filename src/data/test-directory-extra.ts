@@ -355,11 +355,6 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "계획형·즉흥형·집중형·협력형 중 나의 생산성 스타일을 발견하고 최적의 업무 환경을 찾아보세요.", "en": "Discover your productivity style — Planner, Improviser, Deep Worker, or Collaborator — and find your optimal work environment.", "ja": "計画型・即興型・集中型・協力型の中から自分の生産性スタイルを発見しましょう。", "zh": "发现你是计划型、即兴型、深度工作型还是协作型，找到最佳工作环境。", "fr": "Découvrez votre style de productivité entre Planificateur, Improvisateur, Travailleur en profondeur ou Collaborateur.", "es": "Descubre tu estilo de productividad entre Planificador, Improvisador, Trabajador Profundo o Colaborador."},
   },
   {
-    slug: "resilience-boost-test",
-    title: {"ko": "회복탄력성 테스트 — 나의 회복 근육은 얼마나 강한가?", "en": "Resilience Boost Test — How Strong Is Your Recovery Muscle?", "ja": "レジリエンスブーストテスト — あなたの回復力はどれくらい強いですか？", "zh": "韧性测试 — 你的恢复能力有多强？", "fr": "Test de Résilience — Quelle est la force de votre muscle de récupération?", "es": "Test de Resiliencia — ¿Qué tan fuerte es tu músculo de recuperación?"},
-    description: {"ko": "역경·스트레스·실패를 극복하는 회복탄력성의 4가지 요소(감정조절·낙관성·자기효능감·사회적지지)를 측정합니다.", "en": "Measure your resilience across emotion regulation, optimism, self-efficacy, and social support.", "ja": "感情調節・楽観主義・自己効力感・社会的サポートの4要素で回復力を測定します。", "zh": "测量你在情绪调节、乐观主义、自我效能感和社会支持方面的韧性。", "fr": "Mesurez votre résilience en régulation émotionnelle, optimisme, auto-efficacité et soutien social.", "es": "Mide tu resiliencia en regulación emocional, optimismo, autoeficacia y apoyo social."},
-  },
-  {
     slug: "resilience-test",
     title: {"ko": "회복탄력성 자가 진단 — 나는 역경에서 얼마나 잘 회복하나요?", "en": "Resilience Self-Assessment — How Well Do You Bounce Back?", "ja": "回復力自己診断 — 逆境からどれくらいうまく立ち直れますか？", "zh": "心理韧性自我评估 — 你从逆境中恢复得多好？", "fr": "Auto-évaluation de la Résilience — Comment rebondissez-vous?", "es": "Autoevaluación de Resiliencia — ¿Qué tan bien te recuperas?"},
     description: {"ko": "10가지 질문으로 나의 회복탄력성 수준을 진단해보세요. 역경 후 회복 능력과 강화 전략을 알아봅니다.", "en": "Assess your resilience level with 10 questions. Discover your recovery ability and strategies to strengthen it.", "ja": "10の質問で自分の回復力レベルを診断。逆境からの回復能力と強化戦略を発見しましょう。", "zh": "通过10个问题评估你的心理韧性水平。", "fr": "Évaluez votre niveau de résilience avec 10 questions.", "es": "Evalúa tu nivel de resiliencia con 10 preguntas."},

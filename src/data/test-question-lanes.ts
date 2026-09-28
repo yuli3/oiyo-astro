@@ -203,7 +203,6 @@ export const LANE_BY_PATH: Record<string, LaneId> = {
   "/loneliness-test": "mood",
   "/mental-clarity-test": "mood",
   "/mindfulness-test": "mood",
-  "/resilience-boost-test": "mood",
   "/resilience-test": "mood",
   "/self-compassion-test": "mood",
   "/stress-response-test": "mood",

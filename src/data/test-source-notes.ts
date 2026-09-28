@@ -279,11 +279,6 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     caution: 'reflection',
   },
   // 2026-09-28 O9: 설명 없이 검사만 있던 57개 페이지의 출처·한계 안내. 근거는 각 검사 컴포넌트가 밝힌 이론을 따른다.
-  'resilience-boost-test': {
-    basis: ["Resilience research concepts (Connor-Davidson CD-RISC; Smith et al. Brief Resilience Scale)", "OIYO-authored items — educational reference, not a validated instrument"],
-    updated: '2026-09-28',
-    caution: 'reflection',
-  },
   'english-level-test': {
     basis: ["Common European Framework of Reference for Languages (CEFR) levels A1–C2", "OIYO-authored 20-item placement check — not an official CEFR exam"],
     updated: '2026-09-28',

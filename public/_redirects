@@ -85,3 +85,9 @@
 /:lang/profile/circle  /:lang/circle/  301
 /:lang/profile/circle/  /:lang/circle/  301
 
+
+# 2026-09-29 회복탄력성 검사 통합 (세운 결정). resilience-boost 는 resilience 와 주제가
+# 같은 두 번째 검사였다. 해설·FAQ 가 있는 resilience-test 하나만 남긴다.
+# 90일 검색 노출 0, GA4 방문 32 라 잃을 유입이 거의 없다.
+/:lang/resilience-boost-test  /:lang/resilience-test/  301
+/:lang/resilience-boost-test/  /:lang/resilience-test/  301
