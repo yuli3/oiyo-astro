@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import TestLaneLink from '../../components/shared/TestLaneLink.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import EconomicsSchoolTest from '../../components/tests/EconomicsSchoolTest';
@@ -74,4 +75,5 @@ const ci = coordinateIntroMap[locale] ?? coordinateIntroMap.en;
       </ul>
     </section>
   </div>
+  <TestLaneLink locale={locale as Locale} path="/economics-school-test" />
 </Layout>

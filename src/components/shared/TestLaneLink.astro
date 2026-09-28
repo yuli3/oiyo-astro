@@ -1,0 +1,39 @@
+---
+/**
+ * 검사 페이지 끝의 "같은 질문의 다른 검사" 링크.
+ *
+ * 2026-09-28 O9: 설명 없이 검사만 있던 57개 페이지는 다음으로 갈 곳이 없었다. 관련 검사
+ * 목록을 페이지마다 손으로 고르지 않고, /tests 허브가 이미 가진 질문 분류(LANE_BY_PATH)로
+ * 같은 질문 묶음에 돌려보낸다. 분류가 없으면 아무것도 그리지 않는다.
+ */
+import { localePath, type Locale } from '../../i18n';
+import { LANE_BY_PATH, QUESTION_LANES } from '../../data/test-question-lanes';
+
+interface Props {
+  locale: Locale;
+  /** 페이지 경로 — 예: "/optimism-test" */
+  path: string;
+}
+
+const { locale, path } = Astro.props;
+const laneId = LANE_BY_PATH[path];
+const lane = QUESTION_LANES.find((item) => item.id === laneId);
+const T: Record<Locale, { eyebrow: string; more: string }> = {
+  ko: { eyebrow: '같은 질문의 다른 검사', more: '이 질문의 검사 모두 보기' },
+  en: { eyebrow: 'More tests for the same question', more: 'See every test for this question' },
+  ja: { eyebrow: '同じ問いのほかのテスト', more: 'この問いのテストをすべて見る' },
+  zh: { eyebrow: '同一问题的其他测试', more: '查看这个问题下的所有测试' },
+  fr: { eyebrow: 'D’autres tests pour la même question', more: 'Voir tous les tests de cette question' },
+  es: { eyebrow: 'Más tests para la misma pregunta', more: 'Ver todos los tests de esta pregunta' },
+};
+const copy = T[locale] ?? T.en;
+---
+{lane && (
+  <section class="mx-auto mt-6 max-w-2xl px-4 pb-8">
+    <a href={`${localePath(locale, '/tests')}#${lane.id}`} class="block rounded-lg border border-green-100 bg-card p-5 shadow-sm transition-colors hover:border-green-300 hover:bg-surface-subtle focus-visible:outline-2 focus-visible:outline-primary">
+      <p class="text-[11px] font-black uppercase tracking-widest text-green-700">{copy.eyebrow}</p>
+      <p class="mt-2 text-lg font-black text-foreground">{lane.question[locale] ?? lane.question.en}</p>
+      <p class="mt-1 text-sm font-semibold text-green-700">{copy.more} →</p>
+    </a>
+  </section>
+)}

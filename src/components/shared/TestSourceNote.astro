@@ -36,7 +36,7 @@ const copy = T[locale] ?? T.en;
       </div>
     </div>
     <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-3 text-xs text-slate-500">
-      <span>{copy.updated}: 2026-06-13</span>
+      <span>{copy.updated}: {note.updated ?? '2026-06-13'}</span>
       <a href={localePath(locale, '/methodology')} class="font-semibold text-green-700 hover:text-green-900">{copy.methodology}</a>
     </div>
   </div>
