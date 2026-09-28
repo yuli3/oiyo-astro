@@ -18,7 +18,6 @@ export const i18nRegistry: Record<string, (locale: string) => Promise<unknown>> 
   big5: (locale: string) => import(`@/i18n/messages/${locale}/big5.json`),
   career: (locale: string) => import(`@/i18n/messages/${locale}/career.json`),
   catalog: (locale: string) => import(`@/i18n/messages/${locale}/catalog.json`),
-  common: (locale: string) => import(`@/i18n/messages/${locale}/common.json`),
   contact: (locale: string) => import(`@/i18n/messages/${locale}/contact.json`),
   dashboard: (locale: string) => import(`@/i18n/messages/${locale}/dashboard.json`),
   elements: (locale: string) => import(`@/i18n/messages/${locale}/elements.json`),
@@ -39,7 +38,6 @@ export const i18nRegistry: Record<string, (locale: string) => Promise<unknown>> 
   "saju-daymaster": (locale: string) => import(`@/i18n/messages/${locale}/saju-daymaster.json`),
   seo: (locale: string) => import(`@/i18n/messages/${locale}/seo.json`),
   support: (locale: string) => import(`@/i18n/messages/${locale}/support.json`),
-  ui: (locale: string) => import(`@/i18n/messages/${locale}/ui.json`),
   universal: (locale: string) => import(`@/i18n/messages/${locale}/universal.json`),
   zodiac: (locale: string) => import(`@/i18n/messages/${locale}/zodiac.json`),
 };
