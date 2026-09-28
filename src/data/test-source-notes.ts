@@ -51,7 +51,7 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
   },
   'loneliness-test': {
     basis: [
-      'UCLA Loneliness Scale, Version 3 (Russell, 1996) — 10 items adapted from it; several follow the published wording',
+      '10 OIYO-authored items on concepts from UCLA Loneliness Scale research (Russell, 1996) and the expectation–reality gap (Peplau & Perlman, 1982)',
       'measures the gap between expectation and reality, not the amount of social contact',
       'for self-observation, not clinical diagnosis',
     ],
