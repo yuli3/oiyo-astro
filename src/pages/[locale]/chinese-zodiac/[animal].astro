@@ -4,6 +4,8 @@ import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { LOCALES, withTrailingSlash } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import { ZODIACS, ZODIAC_ORDER, type ZodiacAnimal } from '../../../components/tools/ChineseZodiac';
+// 2026-09-28 O4: 띠 칩의 이모지 대신 결과 심볼 이미지를 쓴다.
+import { resultSymbolSrc } from '../../../components/shared/ResultSymbol';
 
 export async function getStaticPaths() {
   const animals = Object.keys(ZODIACS) as ZodiacAnimal[];
@@ -160,7 +162,7 @@ const breadcrumbJsonLd = {
 const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
 ---
 
-<Layout title={m.title} description={m.description} locale={locale} heading={`${z.emoji} ${name} (${z.chineseChar})`} intro={m.description}>
+<Layout title={m.title} description={m.description} locale={locale} heading={`${name} (${z.chineseChar})`} intro={m.description}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
   <div class="mx-auto max-w-2xl px-4 py-10">
@@ -209,8 +211,8 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
           <p class="text-xs font-bold uppercase tracking-widest text-green-700">{c.bestMatch}</p>
           <p class="mt-2 flex flex-wrap gap-2">
             {z.bestMatch.map((a) => (
-              <a href={localePath(`/chinese-zodiac/${a}`)} class="rounded-full bg-card px-3 py-1 text-sm font-semibold text-green-800 hover:bg-green-100">
-                {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
+              <a href={localePath(`/chinese-zodiac/${a}`)} class="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-sm font-semibold text-green-800 hover:bg-green-100">
+                <img src={resultSymbolSrc("chinese-zodiac", a)} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 rounded-full object-cover" /> {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
               </a>
             ))}
           </p>
@@ -219,8 +221,8 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
           <p class="text-xs font-bold uppercase tracking-widest text-amber-700">{c.worstMatch}</p>
           <p class="mt-2 flex flex-wrap gap-2">
             {z.worstMatch.map((a) => (
-              <a href={localePath(`/chinese-zodiac/${a}`)} class="rounded-full bg-card px-3 py-1 text-sm font-semibold text-amber-800 hover:bg-amber-100">
-                {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
+              <a href={localePath(`/chinese-zodiac/${a}`)} class="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-sm font-semibold text-amber-800 hover:bg-amber-100">
+                <img src={resultSymbolSrc("chinese-zodiac", a)} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 rounded-full object-cover" /> {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
               </a>
             ))}
           </p>
@@ -275,9 +277,10 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
         {otherAnimals.map((a) => (
           <a
             href={localePath(`/chinese-zodiac/${a}`)}
-            class="rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
+            class="flex flex-col items-center gap-1 rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
           >
-            {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
+            <img src={resultSymbolSrc("chinese-zodiac", a)} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-7 w-7 rounded-full object-cover" />
+            {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
           </a>
         ))}
       </div>

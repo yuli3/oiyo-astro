@@ -1157,7 +1157,7 @@ export default function ChineseZodiac({ locale }: Props) {
                       onClick={() => handleSelect(m)}
                       className="flex items-center gap-1 text-xs bg-emerald-50 border border-emerald-200 rounded-full px-2 py-0.5 hover:bg-emerald-100 transition-colors"
                     >
-                      {z.emoji} {z.name[locale]}
+                      <ResultSymbol id="chinese-zodiac" variant={z.animal} fallback={z.emoji} className="mr-1 inline-block h-5 w-5 align-[-4px]" /> {z.name[locale]}
                     </button>
                   );
                 })}
@@ -1174,7 +1174,7 @@ export default function ChineseZodiac({ locale }: Props) {
                       onClick={() => handleSelect(m)}
                       className="flex items-center gap-1 text-xs bg-rose-50 border border-rose-200 rounded-full px-2 py-0.5 hover:bg-rose-100 transition-colors"
                     >
-                      {z.emoji} {z.name[locale]}
+                      <ResultSymbol id="chinese-zodiac" variant={z.animal} fallback={z.emoji} className="mr-1 inline-block h-5 w-5 align-[-4px]" /> {z.name[locale]}
                     </button>
                   );
                 })}

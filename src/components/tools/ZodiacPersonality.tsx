@@ -836,7 +836,7 @@ export default function ZodiacPersonality({ locale }: Props) {
                 onClick={() => setSelected(k)}
                 className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold border-2 ${ELEMENT_BG[ZODIAC[k].element]} ${ELEMENT_COLOR[ZODIAC[k].element]} hover:shadow-sm transition-all`}
               >
-                {ZODIAC[k].emoji} {ZODIAC[k].name[locale]}
+                <ResultSymbol id="western-zodiac" variant={k} fallback={ZODIAC[k].emoji} className="mr-1 inline-block h-5 w-5 align-[-4px]" /> {ZODIAC[k].name[locale]}
               </button>
             ))}
           </div>
@@ -850,7 +850,7 @@ export default function ZodiacPersonality({ locale }: Props) {
                 onClick={() => setSelected(k)}
                 className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 border border-gray-200 hover:shadow-sm transition-all"
               >
-                {ZODIAC[k].emoji} {ZODIAC[k].name[locale]}
+                <ResultSymbol id="western-zodiac" variant={k} fallback={ZODIAC[k].emoji} className="mr-1 inline-block h-5 w-5 align-[-4px]" /> {ZODIAC[k].name[locale]}
               </button>
             ))}
           </div>
