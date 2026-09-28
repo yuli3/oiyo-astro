@@ -967,4 +967,1065 @@ export const TEST_EXPLAINERS: Record<string, TestExplainerMap> = {
       disclaimer: 'Los resultados del tipo de procrastinación son para autoconocimiento y conversación. No los uses para diagnóstico ni evaluación. Si la vida diaria sigue difícil mucho tiempo, considera consultar a un profesional.',
     },
   },
+  // 2026-09-28 O9 B: 검사만 있던 57개 중 GSC 노출이 있던 다섯. 새 글 규칙대로 여섯 언어 모두 친절한 존댓말.
+  "imposter-syndrome": {
+    "ko": {
+      "introTitle": "잘 해내고도 \"운이 좋았을 뿐\"이라고 느낀다면",
+      "intro": "가면 현상(Impostor Phenomenon)은 1978년 심리학자 Pauline Clance와 Suzanne Imes가 뚜렷한 성취를 거둔 사람들에게서 관찰한 경험이에요. 실력으로 해낸 일을 운이나 타이밍 덕으로 돌리고, 언젠가 부족함이 들통날 거라는 불안을 품는 것이 특징이에요. 질병 진단명이 아니라 많은 사람이 한때 겪는 흔한 경험의 이름이에요.",
+      "conceptTitle": "핵심 개념",
+      "concepts": [
+        {
+          "title": "성공을 밖으로 돌리기",
+          "body": "성과를 내 능력이 아니라 운, 도움, 우연의 결과로 설명해요."
+        },
+        {
+          "title": "들킬 것 같은 불안",
+          "body": "주변이 나를 과대평가한다고 느끼고, 부족함이 드러날까 걱정해요."
+        },
+        {
+          "title": "과잉 준비와 미루기",
+          "body": "실패를 피하려고 지나치게 준비하거나, 반대로 시작을 미루는 고리가 생기기 쉬워요."
+        }
+      ],
+      "faqTitle": "자주 묻는 질문",
+      "faqs": [
+        {
+          "question": "가면 증후군은 정신질환인가요?",
+          "answer": "아니에요. 진단 기준에 있는 질환이 아니라 경험을 부르는 이름이에요. 다만 불안이나 우울이 함께 심하다면 전문가와 이야기해 보세요."
+        },
+        {
+          "question": "점수가 높으면 어떻게 하면 좋을까요?",
+          "answer": "해낸 일을 기록해 두기, 칭찬을 반박하지 않고 받아들이기, 믿을 만한 사람과 느낌을 나누기가 도움이 된다고 알려져 있어요."
+        },
+        {
+          "question": "이 검사는 Clance 척도와 같은가요?",
+          "answer": "Clance 가면 현상 척도(CIPS)의 개념을 참고해 OIYO가 새로 쓴 문항이에요. 그래서 원래 척도의 점수와 직접 비교할 수는 없어요."
+        }
+      ],
+      "disclaimer": "이 결과는 나를 이해하기 위한 참고예요. 진단이나 채용·평가의 근거로 쓰지 마세요."
+    },
+    "en": {
+      "introTitle": "When you succeed and still think \"I just got lucky\"",
+      "intro": "The impostor phenomenon was described in 1978 by psychologists Pauline Clance and Suzanne Imes, who noticed it in people with clear achievements. It means crediting your own work to luck or timing and fearing that one day you will be found out. It is not a diagnosis, just a name for a common experience many people have at some point.",
+      "conceptTitle": "Key ideas",
+      "concepts": [
+        {
+          "title": "Explaining success away",
+          "body": "You put results down to luck, help or chance rather than your own ability."
+        },
+        {
+          "title": "Fear of being found out",
+          "body": "You feel others overrate you and worry that your gaps will show."
+        },
+        {
+          "title": "Over-preparing or putting off",
+          "body": "To avoid failing you either over-prepare or delay starting, and the loop repeats."
+        }
+      ],
+      "faqTitle": "Frequently asked questions",
+      "faqs": [
+        {
+          "question": "Is impostor syndrome a mental illness?",
+          "answer": "No. It is not a diagnostic category but a name for an experience. If strong anxiety or low mood come with it, talking to a professional can help."
+        },
+        {
+          "question": "What if my score is high?",
+          "answer": "Keeping a record of what you achieved, accepting praise without arguing, and sharing the feeling with someone you trust are commonly reported to help."
+        },
+        {
+          "question": "Is this the Clance scale?",
+          "answer": "The items were written by OIYO using the ideas behind the Clance Impostor Phenomenon Scale (CIPS), so scores are not comparable with the original scale."
+        }
+      ],
+      "disclaimer": "This result is a reference for understanding yourself. Do not use it as grounds for diagnosis, hiring or evaluation."
+    },
+    "ja": {
+      "introTitle": "うまくいっても「運がよかっただけ」と感じるなら",
+      "intro": "インポスター現象は、1978年に心理学者のポーリン・クランスとスザンヌ・アイムスが、はっきりした成果を持つ人たちに見いだした経験です。実力で成し遂げたことを運やタイミングのおかげだと考え、いつか力不足がばれるのではと不安になるのが特徴です。病名ではなく、多くの人が一度は経験するありふれた感覚の呼び名です。",
+      "conceptTitle": "主な考え方",
+      "concepts": [
+        {
+          "title": "成功を外に帰する",
+          "body": "成果を自分の力ではなく、運や助け、偶然の結果として説明します。"
+        },
+        {
+          "title": "見抜かれる不安",
+          "body": "周りが自分を買いかぶっていると感じ、足りなさが表に出るのを心配します。"
+        },
+        {
+          "title": "準備しすぎと先延ばし",
+          "body": "失敗を避けようと準備しすぎたり、逆に始めるのを先延ばしにしたりする循環が起こりがちです。"
+        }
+      ],
+      "faqTitle": "よくある質問",
+      "faqs": [
+        {
+          "question": "インポスター症候群は精神疾患ですか？",
+          "answer": "いいえ。診断基準にある病気ではなく、経験の呼び名です。強い不安や落ち込みが続くときは、専門家に相談してみてください。"
+        },
+        {
+          "question": "点数が高かったらどうすればいいですか？",
+          "answer": "できたことを記録する、ほめ言葉を否定せずに受け取る、信頼できる人に気持ちを話すことが役立つと言われています。"
+        },
+        {
+          "question": "このテストはクランス尺度と同じですか？",
+          "answer": "クランスのインポスター現象尺度（CIPS）の考え方を参考に、OIYOが新しく作った質問です。元の尺度の点数とは直接比べられません。"
+        }
+      ],
+      "disclaimer": "この結果は自分を理解するための参考です。診断や採用・評価の根拠には使わないでください。"
+    },
+    "zh": {
+      "introTitle": "明明做得很好，却觉得“只是运气好”",
+      "intro": "冒名顶替现象是心理学家 Pauline Clance 和 Suzanne Imes 在 1978 年描述的，她们在成绩突出的人身上观察到这种体验：把靠实力完成的事归功于运气或时机，并担心有一天会被人看穿。它不是疾病诊断，而是很多人都曾有过的一种常见体验。",
+      "conceptTitle": "核心概念",
+      "concepts": [
+        {
+          "title": "把成功归于外部",
+          "body": "把成果解释为运气、别人的帮助或偶然，而不是自己的能力。"
+        },
+        {
+          "title": "怕被看穿",
+          "body": "觉得别人高估了自己，担心不足之处会暴露。"
+        },
+        {
+          "title": "过度准备或拖延",
+          "body": "为了避免失败，要么准备过头，要么迟迟不开始，形成循环。"
+        }
+      ],
+      "faqTitle": "常见问题",
+      "faqs": [
+        {
+          "question": "冒名顶替综合征是精神疾病吗？",
+          "answer": "不是。它不在诊断标准里，只是对一种体验的称呼。如果同时伴有严重的焦虑或低落，可以找专业人士聊聊。"
+        },
+        {
+          "question": "分数高该怎么办？",
+          "answer": "记录自己完成的事、不反驳地接受称赞、和信任的人分享感受，通常被认为有帮助。"
+        },
+        {
+          "question": "这是 Clance 量表吗？",
+          "answer": "题目由 OIYO 参考 Clance 冒名顶替现象量表（CIPS）的概念重新编写，因此分数不能与原量表直接比较。"
+        }
+      ],
+      "disclaimer": "这个结果是帮助了解自己的参考，请不要把它当作诊断、招聘或评价的依据。"
+    },
+    "fr": {
+      "introTitle": "Quand vous réussissez et pensez encore « j’ai eu de la chance »",
+      "intro": "Le phénomène de l’imposteur a été décrit en 1978 par les psychologues Pauline Clance et Suzanne Imes chez des personnes aux réussites bien réelles. Il consiste à attribuer ses résultats à la chance ou au bon moment, et à craindre d’être un jour « démasqué ». Ce n’est pas un diagnostic, mais le nom d’une expérience courante que beaucoup vivent à un moment donné.",
+      "conceptTitle": "Notions clés",
+      "concepts": [
+        {
+          "title": "Attribuer la réussite à l’extérieur",
+          "body": "Vous expliquez vos résultats par la chance, l’aide des autres ou le hasard plutôt que par vos compétences."
+        },
+        {
+          "title": "La peur d’être démasqué",
+          "body": "Vous avez l’impression d’être surestimé et craignez que vos lacunes se voient."
+        },
+        {
+          "title": "Trop préparer ou remettre à plus tard",
+          "body": "Pour éviter l’échec, vous vous préparez à l’excès ou repoussez le début, et le cercle recommence."
+        }
+      ],
+      "faqTitle": "Questions fréquentes",
+      "faqs": [
+        {
+          "question": "Le syndrome de l’imposteur est-il une maladie mentale ?",
+          "answer": "Non. Ce n’est pas une catégorie diagnostique, mais le nom d’une expérience. Si une forte anxiété ou un moral très bas l’accompagnent, parlez-en à un professionnel."
+        },
+        {
+          "question": "Que faire si mon score est élevé ?",
+          "answer": "Noter ce que vous avez accompli, accepter un compliment sans le contester et partager ce ressenti avec une personne de confiance sont souvent cités comme utiles."
+        },
+        {
+          "question": "Ce test est-il l’échelle de Clance ?",
+          "answer": "Les questions ont été écrites par OIYO à partir des idées de l’échelle du phénomène de l’imposteur de Clance (CIPS). Les scores ne sont donc pas comparables à ceux de l’échelle d’origine."
+        }
+      ],
+      "disclaimer": "Ce résultat sert de repère pour mieux vous connaître. Ne l’utilisez pas comme base d’un diagnostic, d’un recrutement ou d’une évaluation."
+    },
+    "es": {
+      "introTitle": "Cuando lo logras y aun así piensas «solo tuve suerte»",
+      "intro": "El fenómeno del impostor lo describieron en 1978 las psicólogas Pauline Clance y Suzanne Imes en personas con logros claros. Consiste en atribuir lo que conseguiste a la suerte o al momento, y temer que algún día descubran que no eres tan capaz. No es un diagnóstico, sino el nombre de una experiencia común que mucha gente vive alguna vez.",
+      "conceptTitle": "Ideas clave",
+      "concepts": [
+        {
+          "title": "Explicar el éxito desde fuera",
+          "body": "Atribuyes tus resultados a la suerte, a la ayuda de otros o al azar, no a tu capacidad."
+        },
+        {
+          "title": "Miedo a que te descubran",
+          "body": "Sientes que los demás te sobrevaloran y temes que se noten tus carencias."
+        },
+        {
+          "title": "Prepararte de más o aplazar",
+          "body": "Para evitar fallar te preparas en exceso o retrasas el inicio, y el ciclo se repite."
+        }
+      ],
+      "faqTitle": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "question": "¿El síndrome del impostor es una enfermedad mental?",
+          "answer": "No. No es una categoría diagnóstica, sino el nombre de una experiencia. Si viene con mucha ansiedad o ánimo bajo, hablar con un profesional puede ayudarte."
+        },
+        {
+          "question": "¿Qué hago si mi puntuación es alta?",
+          "answer": "Anotar lo que has logrado, aceptar un elogio sin rebatirlo y compartir lo que sientes con alguien de confianza suelen ayudar."
+        },
+        {
+          "question": "¿Este test es la escala de Clance?",
+          "answer": "Las preguntas las escribió OIYO a partir de las ideas de la Escala del Fenómeno del Impostor de Clance (CIPS), así que la puntuación no se puede comparar con la escala original."
+        }
+      ],
+      "disclaimer": "Este resultado es una referencia para conocerte. No lo uses como base para un diagnóstico, una contratación o una evaluación."
+    }
+  },
+  "sensory-processing": {
+    "ko": {
+      "introTitle": "예민함은 결함이 아니라 정보를 깊게 처리하는 방식이에요",
+      "intro": "심리학자 Elaine Aron은 1997년 감각 처리 민감성(Sensory Processing Sensitivity)이라는 기질을 제안했어요. 소리, 빛, 분위기 같은 자극을 더 깊게 받아들이고 오래 곱씹는 성향으로, 연구에서는 인구의 약 15~20%가 여기에 가깝다고 봐요. 병이나 장애가 아니라 기질의 한 방향이에요.",
+      "conceptTitle": "핵심 개념",
+      "concepts": [
+        {
+          "title": "깊은 처리",
+          "body": "경험을 여러 번 되새기고, 결정하기 전에 오래 살펴요."
+        },
+        {
+          "title": "쉽게 과부하",
+          "body": "자극이 많은 곳에서 다른 사람보다 빨리 지쳐요."
+        },
+        {
+          "title": "정서 반응과 공감",
+          "body": "다른 사람의 감정과 작은 변화를 잘 알아채요."
+        }
+      ],
+      "faqTitle": "자주 묻는 질문",
+      "faqs": [
+        {
+          "question": "HSP는 진단명인가요?",
+          "answer": "아니에요. 연구에서 쓰는 개념이고, 감각처리장애나 자폐 스펙트럼 같은 임상 진단과는 달라요."
+        },
+        {
+          "question": "예민함을 줄여야 하나요?",
+          "answer": "기질은 바꾸기보다 다루는 쪽이 현실적이에요. 회복할 조용한 시간과 자극을 조절할 환경을 미리 마련해 두면 도움이 돼요."
+        },
+        {
+          "question": "결과를 어디까지 믿어도 되나요?",
+          "answer": "Aron의 개념을 참고한 자기 탐색용 문항이에요. 한 번의 점수보다 여러 상황에서 겪은 경험을 함께 보세요."
+        }
+      ],
+      "disclaimer": "이 결과는 나를 이해하기 위한 참고예요. 진단이나 채용·평가의 근거로 쓰지 마세요."
+    },
+    "en": {
+      "introTitle": "Sensitivity is not a flaw but a way of processing deeply",
+      "intro": "In 1997 psychologist Elaine Aron proposed a temperament trait called sensory processing sensitivity. People high in it take in sounds, light and atmosphere more deeply and mull things over longer; research suggests roughly 15–20% of people are close to this end. It is a direction of temperament, not an illness or disorder.",
+      "conceptTitle": "Key ideas",
+      "concepts": [
+        {
+          "title": "Depth of processing",
+          "body": "You go over experiences several times and look carefully before deciding."
+        },
+        {
+          "title": "Easily overstimulated",
+          "body": "You tire faster than others in busy, noisy places."
+        },
+        {
+          "title": "Emotional response and empathy",
+          "body": "You notice other people’s feelings and small changes easily."
+        }
+      ],
+      "faqTitle": "Frequently asked questions",
+      "faqs": [
+        {
+          "question": "Is HSP a diagnosis?",
+          "answer": "No. It is a research concept and differs from clinical diagnoses such as sensory processing disorder or autism."
+        },
+        {
+          "question": "Should I try to be less sensitive?",
+          "answer": "Temperament is easier to manage than to change. Planning quiet recovery time and adjusting how much stimulation you take in tends to help."
+        },
+        {
+          "question": "How far can I trust the result?",
+          "answer": "The items are for self-exploration and draw on Aron’s concept. Look at your experiences across many situations, not one score."
+        }
+      ],
+      "disclaimer": "This result is a reference for understanding yourself. Do not use it as grounds for diagnosis, hiring or evaluation."
+    },
+    "ja": {
+      "introTitle": "敏感さは欠点ではなく、情報を深く処理するあり方です",
+      "intro": "心理学者のエレイン・アーロンは1997年に、感覚処理感受性（Sensory Processing Sensitivity）という気質を提案しました。音や光、場の雰囲気といった刺激を深く受け取り、長く考え続ける傾向で、研究では人口のおよそ15〜20%がこれに近いとされます。病気や障害ではなく、気質のひとつの方向です。",
+      "conceptTitle": "主な考え方",
+      "concepts": [
+        {
+          "title": "深い処理",
+          "body": "経験を何度も振り返り、決める前にじっくり確かめます。"
+        },
+        {
+          "title": "刺激で疲れやすい",
+          "body": "刺激の多い場所では、人より早く疲れます。"
+        },
+        {
+          "title": "感情の反応と共感",
+          "body": "人の気持ちや小さな変化によく気づきます。"
+        }
+      ],
+      "faqTitle": "よくある質問",
+      "faqs": [
+        {
+          "question": "HSPは診断名ですか？",
+          "answer": "いいえ。研究で使われる概念で、感覚処理障害や自閉スペクトラム症のような臨床診断とは異なります。"
+        },
+        {
+          "question": "敏感さを減らしたほうがいいですか？",
+          "answer": "気質は変えるより付き合い方を工夫するほうが現実的です。回復のための静かな時間や、刺激を調整できる環境を用意しておくと助けになります。"
+        },
+        {
+          "question": "結果はどこまで信じていいですか？",
+          "answer": "アーロンの考え方を参考にした自己探索用の質問です。一度の点数より、さまざまな場面での経験と合わせて見てください。"
+        }
+      ],
+      "disclaimer": "この結果は自分を理解するための参考です。診断や採用・評価の根拠には使わないでください。"
+    },
+    "zh": {
+      "introTitle": "敏感不是缺点，而是深度处理信息的方式",
+      "intro": "心理学家 Elaine Aron 在 1997 年提出了一种叫“感觉处理敏感性”的气质。高敏感的人会更深地接收声音、光线和氛围，并反复琢磨；研究认为大约 15%–20% 的人接近这一端。它是一种气质取向，不是疾病或障碍。",
+      "conceptTitle": "核心概念",
+      "concepts": [
+        {
+          "title": "深度加工",
+          "body": "会反复回味经历，做决定前仔细斟酌。"
+        },
+        {
+          "title": "容易过载",
+          "body": "在嘈杂、刺激多的地方比别人更快感到疲惫。"
+        },
+        {
+          "title": "情绪反应与共情",
+          "body": "容易察觉别人的情绪和细微变化。"
+        }
+      ],
+      "faqTitle": "常见问题",
+      "faqs": [
+        {
+          "question": "高敏感人群（HSP）是诊断吗？",
+          "answer": "不是。它是研究中使用的概念，与感觉统合障碍或自闭症谱系等临床诊断不同。"
+        },
+        {
+          "question": "需要让自己不那么敏感吗？",
+          "answer": "气质与其改变，不如学会应对。预留安静的恢复时间、调节接收的刺激量，通常会有帮助。"
+        },
+        {
+          "question": "结果可以信到什么程度？",
+          "answer": "这是参考 Aron 概念的自我探索题目。与其看一次分数，不如结合自己在不同情境下的体验来看。"
+        }
+      ],
+      "disclaimer": "这个结果是帮助了解自己的参考，请不要把它当作诊断、招聘或评价的依据。"
+    },
+    "fr": {
+      "introTitle": "La sensibilité n’est pas un défaut, mais une façon de traiter l’information en profondeur",
+      "intro": "En 1997, la psychologue Elaine Aron a proposé un trait de tempérament appelé sensibilité du traitement sensoriel. Les personnes concernées perçoivent plus intensément les sons, la lumière ou l’ambiance et y repensent longtemps ; la recherche estime qu’environ 15 à 20 % des gens s’en rapprochent. C’est une orientation du tempérament, pas une maladie ni un trouble.",
+      "conceptTitle": "Notions clés",
+      "concepts": [
+        {
+          "title": "Un traitement en profondeur",
+          "body": "Vous revenez souvent sur vos expériences et prenez le temps avant de décider."
+        },
+        {
+          "title": "Vite surstimulé",
+          "body": "Dans les lieux bruyants et animés, vous vous fatiguez plus vite que les autres."
+        },
+        {
+          "title": "Émotions et empathie",
+          "body": "Vous remarquez facilement les émotions des autres et les petits changements."
+        }
+      ],
+      "faqTitle": "Questions fréquentes",
+      "faqs": [
+        {
+          "question": "L’hypersensibilité (HSP) est-elle un diagnostic ?",
+          "answer": "Non. C’est un concept de recherche, différent des diagnostics cliniques comme le trouble du traitement sensoriel ou l’autisme."
+        },
+        {
+          "question": "Faut-il chercher à être moins sensible ?",
+          "answer": "Un tempérament se gère plus facilement qu’il ne se change. Prévoir des moments calmes pour récupérer et doser les stimulations aide souvent."
+        },
+        {
+          "question": "Jusqu’où puis-je me fier au résultat ?",
+          "answer": "Ces questions servent à l’exploration de soi et s’inspirent du concept d’Aron. Regardez vos expériences dans plusieurs situations plutôt qu’un seul score."
+        }
+      ],
+      "disclaimer": "Ce résultat sert de repère pour mieux vous connaître. Ne l’utilisez pas comme base d’un diagnostic, d’un recrutement ou d’une évaluation."
+    },
+    "es": {
+      "introTitle": "La sensibilidad no es un defecto, sino una forma de procesar a fondo",
+      "intro": "En 1997 la psicóloga Elaine Aron propuso un rasgo de temperamento llamado sensibilidad de procesamiento sensorial. Quienes lo tienen perciben con más intensidad los sonidos, la luz o el ambiente y le dan más vueltas a las cosas; la investigación estima que entre un 15 y un 20 % de las personas se acerca a este extremo. Es una orientación del temperamento, no una enfermedad ni un trastorno.",
+      "conceptTitle": "Ideas clave",
+      "concepts": [
+        {
+          "title": "Procesamiento profundo",
+          "body": "Repasas tus experiencias varias veces y miras con calma antes de decidir."
+        },
+        {
+          "title": "Te saturas con facilidad",
+          "body": "En lugares ruidosos y con muchos estímulos te cansas antes que los demás."
+        },
+        {
+          "title": "Emoción y empatía",
+          "body": "Notas con facilidad las emociones de los demás y los pequeños cambios."
+        }
+      ],
+      "faqTitle": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "question": "¿Ser PAS (HSP) es un diagnóstico?",
+          "answer": "No. Es un concepto de investigación y se diferencia de diagnósticos clínicos como el trastorno del procesamiento sensorial o el autismo."
+        },
+        {
+          "question": "¿Debería intentar ser menos sensible?",
+          "answer": "El temperamento se maneja mejor de lo que se cambia. Reservar ratos tranquilos para recuperarte y regular cuántos estímulos recibes suele ayudar."
+        },
+        {
+          "question": "¿Hasta qué punto puedo fiarme del resultado?",
+          "answer": "Son preguntas de autoexploración basadas en el concepto de Aron. Mira tus experiencias en distintas situaciones, no solo una puntuación."
+        }
+      ],
+      "disclaimer": "Este resultado es una referencia para conocerte. No lo uses como base para un diagnóstico, una contratación o una evaluación."
+    }
+  },
+  "tci-personality": {
+    "ko": {
+      "introTitle": "타고난 기질과 자라나는 성격을 나눠서 봐요",
+      "intro": "정신과 의사 Robert Cloninger의 기질·성격 모델(TCI)은 성격을 두 층으로 나눠요. 비교적 타고나는 기질 네 가지(자극 추구, 위험 회피, 사회적 민감성, 인내력)와, 경험을 통해 자라는 성격 세 가지(자율성, 연대감, 자기초월)예요. 이 검사는 모델을 이해하도록 줄인 교육용 판이라 공식 TCI 점수와는 달라요.",
+      "conceptTitle": "핵심 개념",
+      "concepts": [
+        {
+          "title": "기질 네 가지",
+          "body": "새로움을 찾는 정도, 위험을 피하는 정도, 다른 사람의 인정에 반응하는 정도, 보상이 없어도 버티는 정도예요."
+        },
+        {
+          "title": "성격 세 가지",
+          "body": "스스로 방향을 정하는 힘, 다른 사람과 협력하는 힘, 나를 넘어선 가치를 느끼는 힘이에요."
+        },
+        {
+          "title": "두 층의 조합",
+          "body": "같은 기질이라도 성격이 어떻게 자랐는지에 따라 삶에서 드러나는 모습이 달라져요."
+        }
+      ],
+      "faqTitle": "자주 묻는 질문",
+      "faqs": [
+        {
+          "question": "병원에서 하는 TCI와 같은가요?",
+          "answer": "아니에요. 공식 TCI는 전문 기관이 쓰는 저작권 검사예요. 여기서는 모델을 이해하도록 줄여 만든 교육용 문항을 써요."
+        },
+        {
+          "question": "기질은 바뀌지 않나요?",
+          "answer": "기질은 비교적 안정적이지만 성격 차원은 경험과 노력으로 자라요. 그래서 결과를 정해진 운명처럼 읽지 않아요."
+        },
+        {
+          "question": "점수가 높고 낮은 게 좋고 나쁜 건가요?",
+          "answer": "아니에요. 예를 들어 위험 회피가 높으면 신중하고, 낮으면 과감해요. 상황에 따라 장단점이 달라요."
+        }
+      ],
+      "disclaimer": "이 결과는 나를 이해하기 위한 참고예요. 진단이나 채용·평가의 근거로 쓰지 마세요."
+    },
+    "en": {
+      "introTitle": "Separating the temperament you’re born with from the character you grow",
+      "intro": "Psychiatrist Robert Cloninger’s Temperament and Character model (TCI) splits personality into two layers: four largely inborn temperament traits (novelty seeking, harm avoidance, reward dependence, persistence) and three character traits that grow with experience (self-directedness, cooperativeness, self-transcendence). This is a shortened educational version, so its scores differ from the official TCI.",
+      "conceptTitle": "Key ideas",
+      "concepts": [
+        {
+          "title": "Four temperaments",
+          "body": "How much you seek novelty, avoid harm, respond to others’ approval, and keep going without reward."
+        },
+        {
+          "title": "Three character traits",
+          "body": "Setting your own direction, working with others, and feeling a value beyond yourself."
+        },
+        {
+          "title": "How the layers combine",
+          "body": "The same temperament can look very different in life depending on how character has grown."
+        }
+      ],
+      "faqTitle": "Frequently asked questions",
+      "faqs": [
+        {
+          "question": "Is this the TCI used in clinics?",
+          "answer": "No. The official TCI is a copyrighted instrument used by professionals. This page uses shortened educational items to explain the model."
+        },
+        {
+          "question": "Does temperament never change?",
+          "answer": "Temperament is fairly stable, but the character dimensions grow with experience and effort, so the result is not a fixed fate."
+        },
+        {
+          "question": "Is a high or low score good or bad?",
+          "answer": "No. High harm avoidance, for example, means caution; low means boldness. Each has strengths depending on the situation."
+        }
+      ],
+      "disclaimer": "This result is a reference for understanding yourself. Do not use it as grounds for diagnosis, hiring or evaluation."
+    },
+    "ja": {
+      "introTitle": "生まれ持った気質と、育っていく性格を分けて見ます",
+      "intro": "精神科医ロバート・クロニンジャーの気質・性格モデル（TCI）は、パーソナリティを二つの層に分けます。比較的生まれつきの気質四つ（新奇性追求・損害回避・報酬依存・固執）と、経験を通して育つ性格三つ（自己志向・協調・自己超越）です。このテストはモデルを理解するための短縮版なので、公式のTCIの得点とは異なります。",
+      "conceptTitle": "主な考え方",
+      "concepts": [
+        {
+          "title": "四つの気質",
+          "body": "新しさを求める度合い、危険を避ける度合い、人の評価に反応する度合い、報酬がなくても続ける度合いです。"
+        },
+        {
+          "title": "三つの性格",
+          "body": "自分で方向を決める力、人と協力する力、自分を超えた価値を感じる力です。"
+        },
+        {
+          "title": "二つの層の組み合わせ",
+          "body": "同じ気質でも、性格の育ち方によって生活での表れ方は変わります。"
+        }
+      ],
+      "faqTitle": "よくある質問",
+      "faqs": [
+        {
+          "question": "病院で受けるTCIと同じですか？",
+          "answer": "いいえ。公式のTCIは専門機関が使う著作権のある検査です。ここではモデルを理解するための短い教育用の質問を使っています。"
+        },
+        {
+          "question": "気質は変わらないのですか？",
+          "answer": "気質は比較的安定していますが、性格の次元は経験と努力で育ちます。結果を決まった運命として読む必要はありません。"
+        },
+        {
+          "question": "点数の高い低いに良し悪しはありますか？",
+          "answer": "ありません。たとえば損害回避が高ければ慎重、低ければ大胆です。場面によって長所も短所も変わります。"
+        }
+      ],
+      "disclaimer": "この結果は自分を理解するための参考です。診断や採用・評価の根拠には使わないでください。"
+    },
+    "zh": {
+      "introTitle": "把与生俱来的气质和逐渐成长的性格分开来看",
+      "intro": "精神科医生 Robert Cloninger 的气质与性格模型（TCI）把人格分成两层：相对天生的四种气质（新奇寻求、伤害回避、奖赏依赖、坚持），以及随经验成长的三种性格（自我导向、合作性、自我超越）。本测试是为理解模型而简化的教学版，分数与正式 TCI 不同。",
+      "conceptTitle": "核心概念",
+      "concepts": [
+        {
+          "title": "四种气质",
+          "body": "寻求新鲜感、回避风险、回应他人认可、没有奖励也能坚持的程度。"
+        },
+        {
+          "title": "三种性格",
+          "body": "自己定方向的能力、与人合作的能力、感受超越自我价值的能力。"
+        },
+        {
+          "title": "两层的组合",
+          "body": "同样的气质，会因性格的成长方式不同，在生活中表现得很不一样。"
+        }
+      ],
+      "faqTitle": "常见问题",
+      "faqs": [
+        {
+          "question": "和医院做的 TCI 一样吗？",
+          "answer": "不一样。正式 TCI 是专业机构使用的受版权保护的量表。这里用的是为理解模型而简化的教学题目。"
+        },
+        {
+          "question": "气质不会改变吗？",
+          "answer": "气质相对稳定，但性格维度会随经验和努力而成长，所以不必把结果当成定数。"
+        },
+        {
+          "question": "分数高低有好坏之分吗？",
+          "answer": "没有。比如伤害回避高代表谨慎，低代表大胆，在不同情境下各有长短。"
+        }
+      ],
+      "disclaimer": "这个结果是帮助了解自己的参考，请不要把它当作诊断、招聘或评价的依据。"
+    },
+    "fr": {
+      "introTitle": "Distinguer le tempérament inné du caractère qui se construit",
+      "intro": "Le modèle tempérament-caractère (TCI) du psychiatre Robert Cloninger sépare la personnalité en deux couches : quatre traits de tempérament en grande partie innés (recherche de nouveauté, évitement du danger, dépendance à la récompense, persistance) et trois traits de caractère qui se développent avec l’expérience (autodétermination, coopération, transcendance de soi). Ce test est une version pédagogique abrégée : ses scores diffèrent du TCI officiel.",
+      "conceptTitle": "Notions clés",
+      "concepts": [
+        {
+          "title": "Quatre tempéraments",
+          "body": "Votre goût pour la nouveauté, votre prudence face au danger, votre sensibilité à l’approbation des autres et votre persévérance sans récompense."
+        },
+        {
+          "title": "Trois traits de caractère",
+          "body": "Choisir sa propre direction, coopérer avec les autres et ressentir une valeur qui vous dépasse."
+        },
+        {
+          "title": "La combinaison des deux",
+          "body": "Un même tempérament peut se manifester très différemment selon la façon dont le caractère s’est développé."
+        }
+      ],
+      "faqTitle": "Questions fréquentes",
+      "faqs": [
+        {
+          "question": "Est-ce le TCI utilisé en clinique ?",
+          "answer": "Non. Le TCI officiel est un outil protégé utilisé par des professionnels. Cette page utilise des questions pédagogiques abrégées pour expliquer le modèle."
+        },
+        {
+          "question": "Le tempérament ne change-t-il jamais ?",
+          "answer": "Il est assez stable, mais les dimensions du caractère évoluent avec l’expérience et l’effort. Le résultat n’est donc pas un destin figé."
+        },
+        {
+          "question": "Un score élevé ou faible est-il bon ou mauvais ?",
+          "answer": "Non. Un fort évitement du danger signifie la prudence, un faible, l’audace. Chacun a ses atouts selon la situation."
+        }
+      ],
+      "disclaimer": "Ce résultat sert de repère pour mieux vous connaître. Ne l’utilisez pas comme base d’un diagnostic, d’un recrutement ou d’une évaluation."
+    },
+    "es": {
+      "introTitle": "Separar el temperamento con el que naces del carácter que se desarrolla",
+      "intro": "El modelo de temperamento y carácter (TCI) del psiquiatra Robert Cloninger divide la personalidad en dos capas: cuatro rasgos de temperamento en gran parte innatos (búsqueda de novedad, evitación del daño, dependencia de la recompensa y persistencia) y tres rasgos de carácter que crecen con la experiencia (autodirección, cooperación y autotrascendencia). Este test es una versión educativa abreviada, así que sus puntuaciones no equivalen al TCI oficial.",
+      "conceptTitle": "Ideas clave",
+      "concepts": [
+        {
+          "title": "Cuatro temperamentos",
+          "body": "Cuánto buscas lo nuevo, evitas el riesgo, respondes a la aprobación de los demás y sigues adelante sin recompensa."
+        },
+        {
+          "title": "Tres rasgos de carácter",
+          "body": "Marcar tu propio rumbo, cooperar con otros y sentir un valor que va más allá de ti."
+        },
+        {
+          "title": "Cómo se combinan",
+          "body": "Un mismo temperamento puede verse muy distinto en la vida según cómo haya crecido el carácter."
+        }
+      ],
+      "faqTitle": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "question": "¿Es el TCI que se usa en consulta?",
+          "answer": "No. El TCI oficial es un instrumento con derechos de autor que usan profesionales. Aquí se usan preguntas educativas abreviadas para explicar el modelo."
+        },
+        {
+          "question": "¿El temperamento no cambia nunca?",
+          "answer": "Es bastante estable, pero las dimensiones del carácter crecen con la experiencia y el esfuerzo, así que el resultado no es un destino fijo."
+        },
+        {
+          "question": "¿Una puntuación alta o baja es buena o mala?",
+          "answer": "No. Una evitación del daño alta indica prudencia; baja, audacia. Cada una tiene ventajas según la situación."
+        }
+      ],
+      "disclaimer": "Este resultado es una referencia para conocerte. No lo uses como base para un diagnóstico, una contratación o una evaluación."
+    }
+  },
+  "optimism": {
+    "ko": {
+      "introTitle": "낙관은 \"잘될 거야\"라고 기대하는 습관이에요",
+      "intro": "심리학자 Michael Scheier와 Charles Carver는 앞으로 좋은 일이 일어나리라 기대하는 일반적인 경향을 '성향적 낙관주의'라고 불렀고, 이를 재는 LOT-R(1994)을 만들었어요. 이 검사는 LOT-R 문항 일부에 OIYO가 네 문항을 더해 만들었어요. 낙관은 문제를 외면하는 태도가 아니라, 어려움 속에서도 목표를 붙잡게 하는 기대의 방식으로 연구돼 왔어요.",
+      "conceptTitle": "핵심 개념",
+      "concepts": [
+        {
+          "title": "성향적 낙관",
+          "body": "상황이 불확실할 때 좋은 결과를 먼저 기대하는 경향이에요."
+        },
+        {
+          "title": "현실적인 낙관",
+          "body": "좋은 결과를 기대하면서도 위험을 함께 보는 균형이에요."
+        },
+        {
+          "title": "비관의 쓸모",
+          "body": "최악을 미리 떠올리는 '방어적 비관'은 불안한 사람에게 준비하는 도구가 되기도 해요."
+        }
+      ],
+      "faqTitle": "자주 묻는 질문",
+      "faqs": [
+        {
+          "question": "낙관적일수록 좋은가요?",
+          "answer": "스트레스 대처와 건강 행동에 대체로 도움이 된다고 알려져 있어요. 다만 위험을 과소평가하는 지나친 낙관은 오히려 해가 될 수 있어요."
+        },
+        {
+          "question": "낙관은 연습으로 바뀌나요?",
+          "answer": "기대하는 습관은 조금씩 바뀔 수 있어요. 잘된 일을 기록하거나, 나쁜 일을 영원하고 전부인 것처럼 해석하는 습관을 알아채는 연습이 쓰여요."
+        },
+        {
+          "question": "LOT-R 점수와 같은가요?",
+          "answer": "같지 않아요. 낙관 문항과 비관 문항을 함께 묻고 비관 문항은 거꾸로 세는 방식은 같지만, OIYO가 더한 네 문항까지 열 문항을 모두 채점해요. 그래서 LOT-R 점수와 직접 비교할 수는 없어요."
+        }
+      ],
+      "disclaimer": "이 결과는 나를 이해하기 위한 참고예요. 진단이나 채용·평가의 근거로 쓰지 마세요."
+    },
+    "en": {
+      "introTitle": "Optimism is a habit of expecting things to turn out well",
+      "intro": "Psychologists Michael Scheier and Charles Carver called the general tendency to expect good outcomes “dispositional optimism” and built the LOT-R (1994) to measure it. This test uses several LOT-R items plus four added by OIYO. Optimism has been studied not as ignoring problems but as a way of expecting that keeps people holding on to their goals through difficulty.",
+      "conceptTitle": "Key ideas",
+      "concepts": [
+        {
+          "title": "Dispositional optimism",
+          "body": "The tendency to expect a good outcome first when things are uncertain."
+        },
+        {
+          "title": "Realistic optimism",
+          "body": "Expecting good outcomes while still looking at the risks."
+        },
+        {
+          "title": "When pessimism helps",
+          "body": "“Defensive pessimism”, picturing the worst in advance, can be a way for anxious people to prepare."
+        }
+      ],
+      "faqTitle": "Frequently asked questions",
+      "faqs": [
+        {
+          "question": "Is more optimism always better?",
+          "answer": "It is generally linked to better coping and health habits, but over-optimism that underrates risk can backfire."
+        },
+        {
+          "question": "Can optimism be practised?",
+          "answer": "Expectation habits can shift a little at a time — for example by noting what went well, or catching the habit of reading bad events as permanent and all-encompassing."
+        },
+        {
+          "question": "Is this the same as a LOT-R score?",
+          "answer": "No. Like the LOT-R it mixes optimistic and pessimistic items and reverses the pessimistic ones, but all ten items are scored, including the four OIYO added, so the total cannot be compared with LOT-R scores."
+        }
+      ],
+      "disclaimer": "This result is a reference for understanding yourself. Do not use it as grounds for diagnosis, hiring or evaluation."
+    },
+    "ja": {
+      "introTitle": "楽観とは「うまくいくはず」と期待する習慣です",
+      "intro": "心理学者のマイケル・シャイアーとチャールズ・カーヴァーは、これから良いことが起こると期待する一般的な傾向を「特性的楽観性」と呼び、それを測るLOT-R（1994）を作りました。このテストは、LOT-Rの質問の一部にOIYOが4問を加えて作りました。楽観は問題から目をそらす態度ではなく、困難の中でも目標を手放さないための期待のあり方として研究されてきました。",
+      "conceptTitle": "主な考え方",
+      "concepts": [
+        {
+          "title": "特性的楽観性",
+          "body": "先が見えないとき、まず良い結果を期待する傾向です。"
+        },
+        {
+          "title": "現実的な楽観",
+          "body": "良い結果を期待しながら、リスクも一緒に見るバランスです。"
+        },
+        {
+          "title": "悲観の効用",
+          "body": "最悪を先に思い描く「防衛的悲観主義」は、不安の強い人にとって準備の道具にもなります。"
+        }
+      ],
+      "faqTitle": "よくある質問",
+      "faqs": [
+        {
+          "question": "楽観的であるほど良いのですか？",
+          "answer": "ストレスへの対処や健康的な行動におおむね役立つとされますが、リスクを軽く見る行きすぎた楽観はかえって害になることがあります。"
+        },
+        {
+          "question": "楽観は練習で変わりますか？",
+          "answer": "期待の習慣は少しずつ変わります。うまくいったことを記録したり、悪い出来事をずっと続く全面的なものとして解釈する癖に気づいたりする練習が使われます。"
+        },
+        {
+          "question": "LOT-Rの点数と同じですか？",
+          "answer": "同じではありません。楽観と悲観の質問を両方尋ね、悲観の質問を反転して数える点はLOT-Rと同じですが、OIYOが加えた4問も含めて10問すべてを採点します。そのためLOT-Rの点数とは直接比べられません。"
+        }
+      ],
+      "disclaimer": "この結果は自分を理解するための参考です。診断や採用・評価の根拠には使わないでください。"
+    },
+    "zh": {
+      "introTitle": "乐观是一种“会好起来”的期待习惯",
+      "intro": "心理学家 Michael Scheier 和 Charles Carver 把期待未来会有好结果的一般倾向称为“特质性乐观”，并编制了测量它的 LOT-R（1994）。本测试在部分 LOT-R 题目的基础上，由 OIYO 增加了四道题。研究中的乐观并不是回避问题，而是一种让人在困难中仍能坚持目标的期待方式。",
+      "conceptTitle": "核心概念",
+      "concepts": [
+        {
+          "title": "特质性乐观",
+          "body": "在情况不确定时，先期待好结果的倾向。"
+        },
+        {
+          "title": "现实的乐观",
+          "body": "既期待好结果，也同时看到风险的平衡。"
+        },
+        {
+          "title": "悲观的用处",
+          "body": "提前设想最坏情况的“防御性悲观”，对焦虑的人来说也可以是做准备的方法。"
+        }
+      ],
+      "faqTitle": "常见问题",
+      "faqs": [
+        {
+          "question": "越乐观越好吗？",
+          "answer": "乐观通常有助于应对压力和保持健康习惯，但低估风险的过度乐观反而可能有害。"
+        },
+        {
+          "question": "乐观可以练习吗？",
+          "answer": "期待的习惯可以一点点改变，比如记录做得好的事，或留意自己把坏事解读为永久、全面的习惯。"
+        },
+        {
+          "question": "和 LOT-R 的分数一样吗？",
+          "answer": "不一样。和 LOT-R 一样同时询问乐观与悲观题目、悲观题反向计分，但包括 OIYO 增加的四题在内，十道题全部计分，因此不能与 LOT-R 分数直接比较。"
+        }
+      ],
+      "disclaimer": "这个结果是帮助了解自己的参考，请不要把它当作诊断、招聘或评价的依据。"
+    },
+    "fr": {
+      "introTitle": "L’optimisme est l’habitude de s’attendre à ce que les choses tournent bien",
+      "intro": "Les psychologues Michael Scheier et Charles Carver ont appelé « optimisme dispositionnel » la tendance générale à s’attendre à de bons résultats, et ont créé le LOT-R (1994) pour la mesurer. Ce test reprend plusieurs questions du LOT-R et en ajoute quatre écrites par OIYO. L’optimisme n’y est pas étudié comme une façon d’ignorer les problèmes, mais comme une attente qui aide à garder ses objectifs face aux difficultés.",
+      "conceptTitle": "Notions clés",
+      "concepts": [
+        {
+          "title": "Optimisme dispositionnel",
+          "body": "La tendance à attendre d’abord une issue favorable quand la situation est incertaine."
+        },
+        {
+          "title": "Optimisme réaliste",
+          "body": "Espérer un bon résultat tout en regardant les risques en face."
+        },
+        {
+          "title": "L’utilité du pessimisme",
+          "body": "Le « pessimisme défensif », qui imagine le pire à l’avance, peut aider les personnes anxieuses à se préparer."
+        }
+      ],
+      "faqTitle": "Questions fréquentes",
+      "faqs": [
+        {
+          "question": "Plus d’optimisme, est-ce toujours mieux ?",
+          "answer": "Il est en général associé à une meilleure gestion du stress et à de bonnes habitudes de santé, mais un excès d’optimisme qui sous-estime les risques peut se retourner contre vous."
+        },
+        {
+          "question": "L’optimisme se travaille-t-il ?",
+          "answer": "Les habitudes d’attente peuvent évoluer peu à peu, par exemple en notant ce qui s’est bien passé ou en repérant la tendance à voir un événement négatif comme durable et général."
+        },
+        {
+          "question": "Est-ce le même score que le LOT-R ?",
+          "answer": "Non. Comme le LOT-R, il mêle des questions optimistes et pessimistes et inverse ces dernières, mais les dix questions sont comptées, y compris les quatre ajoutées par OIYO. Le total n’est donc pas comparable à un score LOT-R."
+        }
+      ],
+      "disclaimer": "Ce résultat sert de repère pour mieux vous connaître. Ne l’utilisez pas comme base d’un diagnostic, d’un recrutement ou d’une évaluation."
+    },
+    "es": {
+      "introTitle": "El optimismo es la costumbre de esperar que las cosas salgan bien",
+      "intro": "Los psicólogos Michael Scheier y Charles Carver llamaron «optimismo disposicional» a la tendencia general a esperar buenos resultados y crearon el LOT-R (1994) para medirla. Este test usa varias preguntas del LOT-R y cuatro añadidas por OIYO. El optimismo no se ha estudiado como una forma de ignorar los problemas, sino como una manera de esperar que ayuda a mantener los objetivos en momentos difíciles.",
+      "conceptTitle": "Ideas clave",
+      "concepts": [
+        {
+          "title": "Optimismo disposicional",
+          "body": "La tendencia a esperar primero un buen resultado cuando la situación es incierta."
+        },
+        {
+          "title": "Optimismo realista",
+          "body": "Esperar lo mejor sin dejar de mirar los riesgos."
+        },
+        {
+          "title": "Para qué sirve el pesimismo",
+          "body": "El «pesimismo defensivo», imaginar lo peor de antemano, puede ayudar a las personas ansiosas a prepararse."
+        }
+      ],
+      "faqTitle": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "question": "¿Cuanto más optimista, mejor?",
+          "answer": "Suele asociarse con un mejor manejo del estrés y hábitos más sanos, pero el optimismo excesivo que subestima los riesgos puede volverse en contra."
+        },
+        {
+          "question": "¿Se puede practicar el optimismo?",
+          "answer": "Los hábitos de expectativa cambian poco a poco, por ejemplo anotando lo que salió bien o detectando la costumbre de ver lo malo como permanente y total."
+        },
+        {
+          "question": "¿Es la misma puntuación que el LOT-R?",
+          "answer": "No. Como el LOT-R, combina ítems optimistas y pesimistas e invierte los pesimistas, pero se puntúan los diez, incluidos los cuatro añadidos por OIYO, así que el total no se puede comparar con el LOT-R."
+        }
+      ],
+      "disclaimer": "Este resultado es una referencia para conocerte. No lo uses como base para un diagnóstico, una contratación o una evaluación."
+    }
+  },
+  "egogram": {
+    "ko": {
+      "introTitle": "마음속 다섯 개의 나를 그래프로 그려 봐요",
+      "intro": "에고그램은 교류분석(TA)을 만든 Eric Berne의 자아 상태 개념을, 그의 제자 John Dusay가 1970년대에 막대그래프로 그려 보인 방법이에요. 부모·어른·아이 세 자아를 다섯으로 나눠, 지금 어떤 목소리가 크고 어떤 목소리가 작은지 봐요.",
+      "conceptTitle": "핵심 개념",
+      "concepts": [
+        {
+          "title": "부모 자아 (CP·NP)",
+          "body": "규칙과 책임을 강조하는 비판적 부모(CP), 돌보고 감싸는 양육적 부모(NP)예요."
+        },
+        {
+          "title": "어른 자아 (A)",
+          "body": "감정보다 사실과 자료로 판단하는 부분이에요."
+        },
+        {
+          "title": "아이 자아 (FC·AC)",
+          "body": "자유롭게 즐기는 자유로운 아이(FC), 다른 사람에게 맞추는 순응하는 아이(AC)예요."
+        }
+      ],
+      "faqTitle": "자주 묻는 질문",
+      "faqs": [
+        {
+          "question": "어떤 모양이 가장 좋은가요?",
+          "answer": "정답인 모양은 없어요. 어느 한 자아가 유난히 크거나 작다면, 그 부분이 관계에서 어떻게 드러나는지 살펴보는 데 써요."
+        },
+        {
+          "question": "결과는 바뀌나요?",
+          "answer": "에고그램은 지금 마음의 에너지가 어떻게 나뉘어 있는지 보는 것이라, 상황과 시기에 따라 달라져요."
+        },
+        {
+          "question": "교류분석은 어디에 쓰이나요?",
+          "answer": "상담, 교육, 조직의 소통에서 대화가 어긋나는 지점을 찾는 틀로 쓰여 왔어요."
+        }
+      ],
+      "disclaimer": "이 결과는 나를 이해하기 위한 참고예요. 진단이나 채용·평가의 근거로 쓰지 마세요."
+    },
+    "en": {
+      "introTitle": "Draw the five voices inside you as a graph",
+      "intro": "The egogram is John Dusay’s 1970s way of drawing Eric Berne’s ego states — the core idea of Transactional Analysis (TA) — as a bar chart. It splits the Parent, Adult and Child ego states into five and shows which voices are loud and which are quiet right now.",
+      "conceptTitle": "Key ideas",
+      "concepts": [
+        {
+          "title": "Parent (CP · NP)",
+          "body": "The Critical Parent stresses rules and duty; the Nurturing Parent cares and protects."
+        },
+        {
+          "title": "Adult (A)",
+          "body": "The part that judges from facts and information rather than feelings."
+        },
+        {
+          "title": "Child (FC · AC)",
+          "body": "The Free Child enjoys and plays freely; the Adapted Child fits in with others."
+        }
+      ],
+      "faqTitle": "Frequently asked questions",
+      "faqs": [
+        {
+          "question": "Which shape is best?",
+          "answer": "There is no right shape. If one state is unusually high or low, use it to look at how that part shows up in your relationships."
+        },
+        {
+          "question": "Does the result change?",
+          "answer": "An egogram shows how your energy is spread right now, so it shifts with situations and phases of life."
+        },
+        {
+          "question": "Where is Transactional Analysis used?",
+          "answer": "In counselling, education and workplace communication, as a frame for spotting where conversations go wrong."
+        }
+      ],
+      "disclaimer": "This result is a reference for understanding yourself. Do not use it as grounds for diagnosis, hiring or evaluation."
+    },
+    "ja": {
+      "introTitle": "心の中の五つの自分をグラフにしてみましょう",
+      "intro": "エゴグラムは、交流分析（TA）を創始したエリック・バーンの自我状態の考え方を、弟子のジョン・デュセイが1970年代に棒グラフで示した方法です。親・大人・子どもの三つの自我を五つに分け、いまどの声が大きく、どの声が小さいかを見ます。",
+      "conceptTitle": "主な考え方",
+      "concepts": [
+        {
+          "title": "親の自我（CP・NP）",
+          "body": "規則や責任を重んじる批判的な親（CP）と、世話をして包み込む養育的な親（NP）です。"
+        },
+        {
+          "title": "大人の自我（A）",
+          "body": "感情より事実や情報をもとに判断する部分です。"
+        },
+        {
+          "title": "子どもの自我（FC・AC）",
+          "body": "自由に楽しむ自由な子ども（FC）と、周りに合わせる順応した子ども（AC）です。"
+        }
+      ],
+      "faqTitle": "よくある質問",
+      "faqs": [
+        {
+          "question": "どんな形がいちばん良いのですか？",
+          "answer": "正解の形はありません。ある自我がとくに高い・低いときに、その部分が人間関係でどう表れているかを見るのに使います。"
+        },
+        {
+          "question": "結果は変わりますか？",
+          "answer": "エゴグラムはいまの心のエネルギー配分を見るものなので、状況や時期によって変わります。"
+        },
+        {
+          "question": "交流分析はどこで使われていますか？",
+          "answer": "カウンセリングや教育、職場のコミュニケーションで、会話のすれ違いを見つける枠組みとして使われてきました。"
+        }
+      ],
+      "disclaimer": "この結果は自分を理解するための参考です。診断や採用・評価の根拠には使わないでください。"
+    },
+    "zh": {
+      "introTitle": "把心里的五个“我”画成图表",
+      "intro": "自我图（Egogram）是 John Dusay 在 20 世纪 70 年代，把其老师 Eric Berne 创立的交互分析（TA）中的自我状态画成柱状图的方法。它把父母、成人、儿童三种自我分成五个部分，看看现在哪个声音大、哪个声音小。",
+      "conceptTitle": "核心概念",
+      "concepts": [
+        {
+          "title": "父母自我（CP · NP）",
+          "body": "强调规则和责任的批判型父母（CP），以及照顾和包容的养育型父母（NP）。"
+        },
+        {
+          "title": "成人自我（A）",
+          "body": "依据事实和信息而不是情绪来判断的部分。"
+        },
+        {
+          "title": "儿童自我（FC · AC）",
+          "body": "自由享受的自由型儿童（FC），以及迁就他人的顺应型儿童（AC）。"
+        }
+      ],
+      "faqTitle": "常见问题",
+      "faqs": [
+        {
+          "question": "哪种形状最好？",
+          "answer": "没有标准答案。如果某个自我特别高或特别低，可以借此看看这部分在人际关系中是怎样表现的。"
+        },
+        {
+          "question": "结果会变吗？",
+          "answer": "自我图反映的是此刻心理能量的分配，会随情境和人生阶段而变化。"
+        },
+        {
+          "question": "交互分析用在哪里？",
+          "answer": "在咨询、教育和职场沟通中，它常被用作找出对话哪里出了偏差的框架。"
+        }
+      ],
+      "disclaimer": "这个结果是帮助了解自己的参考，请不要把它当作诊断、招聘或评价的依据。"
+    },
+    "fr": {
+      "introTitle": "Représentez en graphique les cinq voix qui sont en vous",
+      "intro": "L’égogramme est la façon dont John Dusay, dans les années 1970, a mis sous forme de diagramme en barres les états du moi d’Eric Berne, fondateur de l’analyse transactionnelle (AT). Il divise les états Parent, Adulte et Enfant en cinq et montre quelles voix sont fortes ou discrètes en ce moment.",
+      "conceptTitle": "Notions clés",
+      "concepts": [
+        {
+          "title": "Parent (PN · PC)",
+          "body": "Le Parent critique insiste sur les règles et le devoir ; le Parent nourricier prend soin et protège."
+        },
+        {
+          "title": "Adulte (A)",
+          "body": "La part qui juge à partir des faits et des informations plutôt que des émotions."
+        },
+        {
+          "title": "Enfant (EL · EA)",
+          "body": "L’Enfant libre profite et joue librement ; l’Enfant adapté s’ajuste aux autres."
+        }
+      ],
+      "faqTitle": "Questions fréquentes",
+      "faqs": [
+        {
+          "question": "Quelle forme est la meilleure ?",
+          "answer": "Il n’y a pas de bonne forme. Si un état est particulièrement haut ou bas, servez-vous-en pour observer comment cette part se manifeste dans vos relations."
+        },
+        {
+          "question": "Le résultat change-t-il ?",
+          "answer": "L’égogramme montre la répartition actuelle de votre énergie : il varie selon les situations et les périodes de la vie."
+        },
+        {
+          "question": "À quoi sert l’analyse transactionnelle ?",
+          "answer": "On l’utilise en accompagnement, en éducation et en communication au travail pour repérer où les échanges se grippent."
+        }
+      ],
+      "disclaimer": "Ce résultat sert de repère pour mieux vous connaître. Ne l’utilisez pas comme base d’un diagnostic, d’un recrutement ou d’une évaluation."
+    },
+    "es": {
+      "introTitle": "Dibuja en un gráfico las cinco voces que hay en ti",
+      "intro": "El egograma es la forma en que John Dusay, en los años setenta, representó en un gráfico de barras los estados del yo de Eric Berne, creador del análisis transaccional (AT). Divide los estados Padre, Adulto y Niño en cinco y muestra qué voces suenan más fuerte y cuáles más bajo ahora mismo.",
+      "conceptTitle": "Ideas clave",
+      "concepts": [
+        {
+          "title": "Padre (PC · PN)",
+          "body": "El Padre crítico insiste en las normas y el deber; el Padre nutricio cuida y protege."
+        },
+        {
+          "title": "Adulto (A)",
+          "body": "La parte que decide a partir de hechos y datos, no de emociones."
+        },
+        {
+          "title": "Niño (NL · NA)",
+          "body": "El Niño libre disfruta y juega con libertad; el Niño adaptado se acomoda a los demás."
+        }
+      ],
+      "faqTitle": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "question": "¿Qué forma es la mejor?",
+          "answer": "No hay una forma correcta. Si un estado está muy alto o muy bajo, úsalo para ver cómo aparece esa parte en tus relaciones."
+        },
+        {
+          "question": "¿El resultado cambia?",
+          "answer": "El egograma muestra cómo se reparte tu energía ahora, así que cambia con las situaciones y las etapas de la vida."
+        },
+        {
+          "question": "¿Para qué se usa el análisis transaccional?",
+          "answer": "En la orientación, la educación y la comunicación en el trabajo, como marco para detectar dónde se tuercen las conversaciones."
+        }
+      ],
+      "disclaimer": "Este resultado es una referencia para conocerte. No lo uses como base para un diagnóstico, una contratación o una evaluación."
+    }
+  },
 };

@@ -290,7 +290,7 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     caution: 'reflection',
   },
   'optimism-test': {
-    basis: ["Life Orientation Test–Revised (LOT-R; Scheier, Carver & Bridges, 1994) concepts", "dispositional optimism research", "OIYO-authored items — educational reference, not a validated instrument"],
+    basis: ["Life Orientation Test–Revised (LOT-R; Scheier, Carver & Bridges, 1994) — several items follow the published wording", "four OIYO-added items; all ten are scored, so totals are not LOT-R scores", "dispositional optimism research"],
     updated: '2026-09-28',
     caution: 'reflection',
   },
