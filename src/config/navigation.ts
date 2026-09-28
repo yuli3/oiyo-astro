@@ -14,9 +14,10 @@ export const FAMILY_SITES = [
 export type FamilySite = (typeof FAMILY_SITES)[number];
 
 export const familySiteHref = (f: FamilySite, locale: Locale, medium: string) => {
-  // news home is unknown to Google. /radar/ was retired 2026-08-24 (merged
-  // into the AI curator) — ai/curator/ is now the durable indexable page.
-  const path = f.host === "news.oiyo.net" ? "ai/curator/" : f.localePath ? `${locale}/` : "";
+  // 2026-09-28 O11: news 도 홈으로 보낸다. 2026-08-24 에는 "news 홈을 구글이 모른다"는 이유로
+  // ai/curator/ 로 보냈지만, 9/27 GSC 에서 news 가 노출 47·평균 5.4위를 받고 있고 다른 네 사이트
+  // 푸터는 모두 홈으로 보낸다. 라벨도 "뉴스·AI" 라서 AI 큐레이터 한 페이지로 가면 이름과 어긋난다.
+  const path = f.localePath ? `${locale}/` : "";
   return `https://${f.host}/${path}?utm_source=oiyo&utm_medium=${medium}&utm_campaign=family_nav`;
 };
 

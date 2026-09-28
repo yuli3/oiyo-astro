@@ -10,7 +10,7 @@
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, resolve } from "node:path";
 
-const CEILING = 438;          // 2026-08-31 실측 (개선 전 30,568)
+const CEILING = 354;          // 2026-09-28 실측 (08-31 438, 개선 전 30,568)
 const dist = resolve(import.meta.dirname, "..", "dist");
 const LINK = /href="\/(?:ko|en|ja|zh|fr|es)\/[a-z0-9/-]*[a-z0-9]"/g;
 
