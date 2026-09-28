@@ -89,12 +89,12 @@ function getLunarPhase(date: Date): { phase: number; emoji: string; name: Record
 /* ── UI strings ─────────────────────────────────────────────── */
 const LABELS: Record<string, Record<string, string>> = {
   title: { ko: '천문 시각', en: 'Celestial Time', ja: '天文時刻', zh: '天文时刻' },
-  subtitle: { ko: '명리학의 근간인 절기와 천체 위치를 실시간으로 확인합니다', en: 'Real-time solar term and celestial position — the astronomical foundation of BaZi', ja: '四柱推命の基盤となる節気と天体位置をリアルタイムで確認', zh: '实时查看四柱命理基础的节气与天体位置' },
+  subtitle: { ko: '명리학의 근간인 절기와 천체 위치를 실시간으로 확인해요', en: 'Real-time solar term and celestial position — the astronomical foundation of BaZi', ja: '四柱推命の基盤となる節気と天体位置をリアルタイムで確認', zh: '实时查看四柱命理基础的节气与天体位置' },
   solarTerm: { ko: '현재 절기', en: 'Current Solar Term', ja: '現在の節気', zh: '当前节气' },
   lunarPhase: { ko: '달의 위상', en: 'Lunar Phase', ja: '月の位相', zh: '月相' },
   solarLon: { ko: '태양 황경', en: 'Solar Longitude', ja: '太陽黄経', zh: '太阳黄经' },
   subLat: { ko: '태양 직하점 위도', en: 'Sub-solar Latitude', ja: '太陽直下点緯度', zh: '日下点纬度' },
-  note: { ko: '절기는 사주 해석의 기준이 됩니다. 새로운 절기가 시작되면 년주·월주가 바뀝니다.', en: 'Solar terms are the foundation of BaZi interpretation. A new term shifts the Year and Month Pillars.', ja: '節気は四柱推命の解釈基準です。新しい節気が始まると年柱・月柱が変わります。', zh: '节气是八字解读的基础。每逢节气交替，年柱和月柱随之改变。' },
+  note: { ko: '절기는 사주 해석의 기준이 돼요. 새 절기가 시작되면 연주·월주가 바뀌어요.', en: 'Solar terms are the foundation of BaZi interpretation. A new term shifts the Year and Month Pillars.', ja: '節気は四柱推命の解釈基準です。新しい節気が始まると年柱・月柱が変わります。', zh: '节气是八字解读的基础。每逢节气交替，年柱和月柱随之改变。' },
   yangPhase: { ko: '양기 고조', en: 'Yang Peak', ja: '陽気最盛', zh: '阳气最盛' },
   yinPhase: { ko: '음기 고조', en: 'Yin Peak', ja: '陰気最盛', zh: '阴气最盛' },
   qiBalance: { ko: '음양 균형', en: 'Yin-Yang Balance', ja: '陰陽バランス', zh: '阴阳平衡' },

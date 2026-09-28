@@ -18,7 +18,7 @@ const { entry, locale, testPath, ctaKind = 'test' } = Astro.props;
 const { Content } = await render(entry);
 
 const UI: Record<Locale, { cta: string; ctaNote: string; updated: string }> = {
-  ko: { cta: '테스트로 내 결과 보기', ctaNote: '읽은 개념을 내 답변에 대입해 봅니다.', updated: '마지막 검토' },
+  ko: { cta: '테스트로 내 결과 보기', ctaNote: '읽은 개념을 내 답변에 대입해 봐요.', updated: '마지막 검토' },
   en: { cta: 'Take the test', ctaNote: 'Apply what you just read to your own answers.', updated: 'Last reviewed' },
   ja: { cta: 'テストで確かめる', ctaNote: '読んだ概念を自分の回答に当てはめてみます。', updated: '最終確認' },
   zh: { cta: '去做测试', ctaNote: '把刚读到的概念用在自己的回答上。', updated: '最后审阅' },
@@ -26,7 +26,7 @@ const UI: Record<Locale, { cta: string; ctaNote: string; updated: string }> = {
   es: { cta: 'Hacer el test', ctaNote: 'Aplica lo que acabas de leer a tus propias respuestas.', updated: 'Última revisión' },
 };
 const SAJU_UI: Record<Locale, { cta: string; ctaNote: string }> = {
-  ko: { cta: '내 사주 월주 확인하기', ctaNote: '글에서 본 절입 경계가 내 사주에 어떻게 적용되는지 봅니다.' },
+  ko: { cta: '내 사주 월주 확인하기', ctaNote: '글에서 본 절입 경계가 내 사주에 어떻게 적용되는지 봐요.' },
   en: { cta: 'Check my month pillar', ctaNote: 'See how the entry-moment boundary applies to your own chart.' },
   ja: { cta: '自分の月柱を確認する', ctaNote: '記事で見た節入りの境界が自分の命式にどう効くかを見ます。' },
   zh: { cta: '查看我的月柱', ctaNote: '看看文中的交节分界如何落到自己的八字上。' },
@@ -34,7 +34,7 @@ const SAJU_UI: Record<Locale, { cta: string; ctaNote: string }> = {
   es: { cta: 'Ver mi pilar del mes', ctaNote: 'Comprueba cómo se aplica el instante de entrada a tu propia carta.' },
 };
 const DREAM_UI: Record<Locale, { cta: string; ctaNote: string }> = {
-  ko: { cta: '다른 상징 찾아보기', ctaNote: '꿈에 함께 나온 상징을 사전에서 이어 봅니다.' },
+  ko: { cta: '다른 상징 찾아보기', ctaNote: '꿈에 함께 나온 상징을 사전에서 이어 봐요.' },
   en: { cta: 'Browse other symbols', ctaNote: 'Look up the other symbols that appeared in the same dream.' },
   ja: { cta: '他の象徴を見る', ctaNote: '同じ夢に出た他の象徴も事典で辿ります。' },
   zh: { cta: '浏览其他象征', ctaNote: '继续查阅同一个梦里出现的其他象征。' },

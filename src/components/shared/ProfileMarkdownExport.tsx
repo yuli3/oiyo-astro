@@ -44,7 +44,7 @@ const INITIAL: ProfileForm = {
   favoriteKeywords: '말하기, 설득하기, 경청하기, 조립하기, 관찰하기',
   preferredActivities: '좋아하는 것들로 하루 채우기, 주변 꾸미기',
   hobbies: '',
-  favoriteDrinks: '음료를 마시다, 식혜를 마시다',
+  favoriteDrinks: '식혜, 보리차',
   happyThings: '식혜 마시기, 샤워하고 바람맞기, 따뜻한 빨래 냄새',
   sensoryComforts: '따뜻한 빨래 냄새',
   peopleToMeet: '아버지, 어머니, 할머니, 선생님',
@@ -57,7 +57,7 @@ const INITIAL: ProfileForm = {
 const COPY: Record<Locale, { title: string; desc: string; profile: string; inputs: string; output: string; copy: string; download: string; reset: string; copied: string; saved: string; privacy: string }> = {
   ko: {
     title: '내 프로필을 Markdown으로 정리',
-    desc: '생년월일, 혈액형, 별자리, MBTI, 좋아하는 키워드와 요즘 성향을 한 장의 .md 노트로 만듭니다.',
+    desc: '생년월일, 혈액형, 별자리, MBTI, 좋아하는 키워드와 요즘 성향을 한 장의 .md 노트로 만들어요.',
     profile: '기본 정보',
     inputs: '좋아하는 것과 현재 성향',
     output: 'Markdown 미리보기',
@@ -66,7 +66,7 @@ const COPY: Record<Locale, { title: string; desc: string; profile: string; input
     reset: '초기화',
     copied: '복사됨',
     saved: '이 브라우저에 자동 저장됨',
-    privacy: '입력값은 이 브라우저의 localStorage에만 저장되며 서버로 전송되지 않습니다.',
+    privacy: '입력한 내용은 이 브라우저의 localStorage에만 저장되고 서버로 보내지 않아요.',
   },
   en: {
     title: 'Export My Profile as Markdown',

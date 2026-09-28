@@ -311,7 +311,7 @@ function ProfileChip({
 }
 
 const TIME_COPY = {
-  ko: { missing: "태어난 시각이 아직 없어요", unlock: "시각을 알려 주면 시주와 상승궁이 열립니다." },
+  ko: { missing: "태어난 시각이 아직 없어요", unlock: "시각을 알려 주면 시주와 상승궁이 열려요." },
   en: { missing: "No birth time saved yet", unlock: "Add a time to unlock the hour pillar and rising sign." },
   ja: { missing: "出生時刻がまだありません", unlock: "時刻を入れると時柱と上昇宮が開きます。" },
   zh: { missing: "尚未填写出生时间", unlock: "补上时间后会打开时柱和上升宫。" },
@@ -320,7 +320,7 @@ const TIME_COPY = {
 } as const;
 
 const PLACE_COPY = {
-  ko: { missing: "출생지가 아직 없어요", unlock: "도시를 알려 주면 시간대와 상승궁이 열립니다." },
+  ko: { missing: "출생지가 아직 없어요", unlock: "도시를 알려 주면 시간대와 상승궁이 열려요." },
   en: { missing: "No birthplace saved yet", unlock: "Add a city to unlock timezone and the rising sign." },
   ja: { missing: "出生地がまだありません", unlock: "都市を入れると時差と上昇宮が開きます。" },
   zh: { missing: "尚未填写出生地", unlock: "补上城市后会打开时区和上升宫。" },
@@ -329,7 +329,7 @@ const PLACE_COPY = {
 } as const;
 
 const GENDER_COPY = {
-  ko: { missing: "성별이 아직 없어요", unlock: "성별을 알려 주면 배우자궁이 열립니다.", male: "남성", female: "여성" },
+  ko: { missing: "성별이 아직 없어요", unlock: "성별을 알려 주면 배우자궁이 열려요.", male: "남성", female: "여성" },
   en: { missing: "No gender saved yet", unlock: "Add gender to unlock spouse-palace reading.", male: "Male", female: "Female" },
   ja: { missing: "性別がまだありません", unlock: "性別を入れると配偶者宮が開きます。", male: "男性", female: "女性" },
   zh: { missing: "尚未填写性别", unlock: "补上性别后会打开配偶宫。", male: "男", female: "女" },
