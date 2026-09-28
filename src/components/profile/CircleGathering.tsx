@@ -7,6 +7,9 @@ import type { City } from "@/lib/ontology/natal/signs";
 import CityField from "@/components/shared/CityField";
 import { loadCircleDraft, saveCircleDraft } from "@/lib/symbolic-tradition/circle-draft";
 import { comparisonFromCivil } from "@/lib/symbolic-tradition/circle-input";
+import { CITIES } from "@/lib/ontology/natal/signs";
+import { resolveBirthRecord } from "@/lib/user/birth-record";
+import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import {
   allPairEdges,
   createSymbolicGroupSnapshot,
@@ -57,6 +60,7 @@ const COPY = {
     time: "시각 · 모르면 비움",
     city: "도시 · 모르면 비움",
     add: "원에 넣기",
+    useMine: "내 정보로 채우기",
     link: "또는 친구 공유 링크",
     need: "원이 그려지려면 2명이 필요합니다.",
     star: "나 중심",
@@ -92,6 +96,7 @@ const COPY = {
     time: "Time · leave blank if unknown",
     city: "City · leave blank if unknown",
     add: "Add to the circle",
+    useMine: "Fill in my saved info",
     link: "Or a friend share link",
     need: "The circle needs 2 people to draw.",
     star: "Centered on you",
@@ -127,6 +132,7 @@ const COPY = {
     time: "時刻 · わからなければ空欄",
     city: "都市 · わからなければ空欄",
     add: "円に入れる",
+    useMine: "保存した自分の情報で入力",
     link: "または友だちの共有リンク",
     need: "円を描くには2人が必要です。",
     star: "わたし中心",
@@ -162,6 +168,7 @@ const COPY = {
     time: "时间 · 不清楚可留空",
     city: "城市 · 不清楚可留空",
     add: "加入圆中",
+    useMine: "用我保存的信息填写",
     link: "或朋友的分享链接",
     need: "要画出圆需要两个人。",
     star: "以我为中心",
@@ -197,6 +204,7 @@ const COPY = {
     time: "Heure · laissez vide si inconnue",
     city: "Ville · laissez vide si inconnue",
     add: "Ajouter au cercle",
+    useMine: "Remplir avec mes infos",
     link: "Ou le lien partagé d'un ami",
     need: "Il faut deux personnes pour tracer le cercle.",
     star: "Centré sur moi",
@@ -232,6 +240,7 @@ const COPY = {
     time: "Hora · déjalo vacío si no la sabes",
     city: "Ciudad · déjalo vacío si no la sabes",
     add: "Añadir al círculo",
+    useMine: "Rellenar con mis datos",
     link: "O el enlace compartido de una amistad",
     need: "Hacen falta dos personas para dibujar el círculo.",
     star: "Centrado en mí",
@@ -290,6 +299,23 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const [time, setTime] = useState("");
   const [cityId, setCityId] = useState("");
   const [selectedCity, setSelectedCity] = useState<City | null>(null);
+  // 2026-09-28 O5 감사: 나의 지도에 생년월일·시각·도시를 저장해 둬도 원에 나를 넣으려면 다시 적어야 했다.
+  // 친구 입력칸이기도 해서 자동으로 채우지 않고, 저장된 내 정보를 한 번에 옮기는 버튼만 둔다.
+  const { parsed: myBirth, profile: myProfile } = useProfilePrefill();
+  const fillMine = () => {
+    if (!myBirth) return;
+    const pad = (n: number) => String(n).padStart(2, "0");
+    setAlias(copy.me);
+    setDate(`${myBirth.year}-${pad(myBirth.month)}-${pad(myBirth.day)}`);
+    setTime(myBirth.hour === null ? "" : `${pad(myBirth.hour)}:${pad(myBirth.minute ?? 0)}`);
+    const record = resolveBirthRecord(myProfile);
+    const city = CITIES.find((candidate) => candidate.id === myProfile.birthCityId)
+      ?? CITIES.find((candidate) => candidate.zoneId === record?.zoneId && candidate.lon === record?.longitude)
+      ?? null;
+    setCityId(city?.id ?? "");
+    setSelectedCity(city);
+    setError("");
+  };
   const [link, setLink] = useState("");
   const [error, setError] = useState("");
   const [picked, setPicked] = useState<null | { from: string; to: string }>(null);
@@ -606,6 +632,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
     ))}</ul>
 
     {people.length < 10 && <div className="mt-5 space-y-3 rounded-3xl border border-border bg-card p-4">
+      {myBirth && !date && !people.some((row) => row.label === copy.me) && <button type="button" onClick={fillMine} className="min-h-11 w-full rounded-2xl border border-primary text-sm font-black text-primary">{copy.useMine}</button>}
       <input aria-label={copy.alias} placeholder={copy.alias} value={alias} maxLength={24} onChange={(event) => setAlias(event.target.value)} className={field} />
       <input aria-label={copy.date} type="date" value={date} onChange={(event) => setDate(event.target.value)} className={field} />
       <input aria-label={copy.time} type="time" value={time} onChange={(event) => setTime(event.target.value)} className={field} />

@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { zodiacYearOf } from "../../lib/almanac/zodiac-year";
+import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 import type { Locale } from "../../i18n";
 import ResultSymbol, { resultSymbolSrc } from "../shared/ResultSymbol";
 import ShareResultButton from "../shared/ShareResultButton";
@@ -977,6 +979,19 @@ export default function ChineseZodiac({ locale }: Props) {
   const [selected, setSelected] = useState<ZodiacAnimal | null>(null);
   const [yearElement, setYearElement] = useState<Element | null>(null);
   const [error, setError] = useState("");
+  // 2026-09-28 O5 감사: 저장된 생년월일이 있으면 연도를 다시 묻지 않고 바로 띠를 보여 준다.
+  // 1~2월생은 달력 연도와 띠가 다를 수 있어, 이 페이지 안내대로 설날 경계로 띠의 해를 정한다.
+  const { parsed: birth } = useProfilePrefill();
+  useEffect(() => {
+    if (!birth) return;
+    const yr = zodiacYearOf(new Date(Date.UTC(birth.year, birth.month - 1, birth.day))).byConvention.lunarNewYear.year;
+    // 사용자가 이미 연도를 넣었거나 띠를 골랐으면 덮어쓰지 않는다.
+    if (yr < 1900 || yr > 2100 || yearInput !== "" || selected) return;
+    setYearInput(String(yr));
+    setSelected(getZodiacFromYear(yr));
+    setYearElement(getElementFromYear(yr));
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- 프로필이 도착한 순간 한 번만 채운다.
+  }, [birth]);
 
   const handleFind = () => {
     const yr = parseInt(yearInput, 10);

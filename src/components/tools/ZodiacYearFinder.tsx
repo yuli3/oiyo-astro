@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 import type { Locale } from "../../i18n";
 import {
   ANIMALS,
@@ -213,6 +214,16 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
   const [y, setY] = useState("1990");
   const [m, setM] = useState("2");
   const [d, setD] = useState("10");
+  // 2026-09-28 O5 감사: 저장된 생년월일이 있는데도 이 도구만 1990-02-10에서 다시 입력받았다.
+  // 다른 사람 날짜도 찾는 도구라 프로필 전용 필드로 바꾸지 않고, 손대기 전까지만 내 생일로 채운다.
+  const { parsed: birth } = useProfilePrefill();
+  const touched = useRef(false);
+  useEffect(() => {
+    if (!birth || touched.current) return;
+    setY(String(birth.year));
+    setM(String(birth.month));
+    setD(String(birth.day));
+  }, [birth]);
 
   const parsed = useMemo(() => {
     const yy = Number(y), mm = Number(m), dd = Number(d);
@@ -262,7 +273,7 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
                 <span className="text-xs text-slate-500">{label}</span>
                 <input
                   type="number" inputMode="numeric" min={min} max={max}
-                  value={val} onChange={(e) => set(e.target.value)}
+                  value={val} onChange={(e) => { touched.current = true; set(e.target.value); }}
                   className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 tabular-nums"
                 />
               </div>
