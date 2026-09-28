@@ -70,7 +70,7 @@ const TYPES: Record<InvestorType, TypeInfo> = {
     color: 'blue',
   },
   tech: {
-    name: { ko: 'AI·기술 혁신형', en: 'AI & Tech Innovator', ja: 'AI・技術革新型', zh: 'AI・科技创新型', fr: 'Innovateur IA et tech', es: 'Innovador en IA y tecnología' },
+    name: { ko: 'AI·기술 혁신형', en: 'AI & Tech Innovator', ja: 'AI・技術革新型', zh: 'AI·科技创新型', fr: 'Innovateur IA et tech', es: 'Innovador en IA y tecnología' },
     icon: '🤖',
     desc: { ko: 'AI 혁명의 구조적 성장에 베팅합니다. 기술 변화의 흐름을 읽고 장기 성장 기업에 집중 투자하는 성장 투자자 타입.', en: 'You bet on the structural growth of the AI revolution. A growth investor type who reads technological changes and concentrates on long-term growth companies.', ja: 'AI革命の構造的成長に賭けます。技術変化のトレンドを読み、長期成長企業に集中投資する成長投資家タイプ。', zh: '押注 AI 革命的结构性增长。是读懂技术变化潮流、集中投资长期成长企业的成长型投资者。', fr: 'Vous misez sur la croissance structurelle de la révolution de l’IA. Un investisseur de croissance qui suit les mutations technologiques et se concentre sur les entreprises à long terme.', es: 'Apuestas por el crecimiento estructural de la revolución de la IA. Un inversor de crecimiento que sigue el cambio tecnológico y se concentra en empresas de largo plazo.' },
     strategy: {
@@ -92,7 +92,7 @@ const TYPES: Record<InvestorType, TypeInfo> = {
       ko: ['달러 자산 40~50% + 비달러 선진국 20~25%', '신흥국 고성장 지역 (인도, 동남아) 15~20%', '금·원자재 달러 헤지 10~15%', '환 헤지 ETF 활용'],
       en: ['Dollar assets 40-50% + Non-dollar developed markets 20-25%', 'Emerging market high-growth regions (India, Southeast Asia) 15-20%', 'Gold/commodities dollar hedge 10-15%', 'Currency-hedged ETF utilization'],
       ja: ['ドル資産40~50%＋非ドル先進国20~25%', '新興国高成長地域（インド、東南アジア）15~20%', '金・原材料ドルヘッジ10~15%', '為替ヘッジETF活用'],
-      zh: ['美元资产 40–50% + 非美元发达市场 20–25%', '新兴市场高增长地区（印度、东南亚）15–20%', '黄金・原材料美元对冲 10–15%', '利用汇率对冲 ETF'],
+      zh: ['美元资产 40–50% + 非美元发达市场 20–25%', '新兴市场高增长地区（印度、东南亚）15–20%', '黄金·原材料美元对冲 10–15%', '利用汇率对冲 ETF'],
       fr: ['Actifs en dollars 40–50 % + pays développés hors dollar 20–25 %', 'Régions émergentes à forte croissance (Inde, Asie du Sud-Est) 15–20 %', 'Or et matières premières en couverture du dollar 10–15 %', 'Recourir à des ETF couverts contre le change'],
       es: ['Activos en dólares 40–50 % + desarrollados no dólar 20–25 %', 'Regiones emergentes de alto crecimiento (India, Sudeste Asiático) 15–20 %', 'Oro y materias primas como cobertura del dólar 10–15 %', 'Usar ETF con cobertura de divisa'],
     },
@@ -123,7 +123,7 @@ const QUESTIONS: Question[] = [
     options: [
       { text: { ko: '방산주와 에너지 ETF를 찾는다', en: 'Look for defense stocks and energy ETFs', ja: '防衛株とエネルギーETFを探す', zh: '寻找国防股和能源 ETF', fr: 'Chercher des valeurs de défense et des ETF énergie', es: 'Buscar valores de defensa y ETF de energía' }, scores: { geopolitical: 4, macro: 1, tech: 1, dollar: 2, balanced: 2 } },
       { text: { ko: '인플레이션 영향을 계산하고 채권 비중을 조정한다', en: 'Calculate inflation impact and adjust bond allocation', ja: 'インフレへの影響を計算し債券比重を調整する', zh: '计算通胀影响，调整债券比重', fr: 'Calculer l’effet sur l’inflation et ajuster la part obligataire', es: 'Calcular el efecto en la inflación y ajustar el peso de bonos' }, scores: { geopolitical: 1, macro: 4, tech: 1, dollar: 2, balanced: 2 } },
-      { text: { ko: '단기 노이즈이므로 AI·기술주 보유를 유지한다', en: 'It\'s short-term noise, so I maintain my AI/tech stock holdings', ja: '短期的なノイズなのでAI・技術株の保有を維持する', zh: '这是短期杂音，继续持有 AI・科技股', fr: 'C’est du bruit de court terme : je garde mes valeurs IA et tech', es: 'Es ruido a corto plazo: mantengo IA y tecnología' }, scores: { geopolitical: 1, macro: 1, tech: 4, dollar: 1, balanced: 2 } },
+      { text: { ko: '단기 노이즈이므로 AI·기술주 보유를 유지한다', en: 'It\'s short-term noise, so I maintain my AI/tech stock holdings', ja: '短期的なノイズなのでAI・技術株の保有を維持する', zh: '这是短期杂音，继续持有 AI·科技股', fr: 'C’est du bruit de court terme : je garde mes valeurs IA et tech', es: 'Es ruido a corto plazo: mantengo IA y tecnología' }, scores: { geopolitical: 1, macro: 1, tech: 4, dollar: 1, balanced: 2 } },
       { text: { ko: '달러와 금 비중을 높여 헤지한다', en: 'Increase dollar and gold allocation to hedge', ja: 'ドルと金の比重を高めてヘッジする', zh: '提高美元和黄金比重来对冲', fr: 'Renforcer dollar et or pour me couvrir', es: 'Subir el peso de dólar y oro para cubrirme' }, scores: { geopolitical: 2, macro: 2, tech: 0, dollar: 4, balanced: 2 } },
     ],
   },
@@ -220,7 +220,7 @@ const LABELS = {
     note: 'このクイズは投資傾向を把握するための参考ツールです。投資アドバイスではありません。',
   },
   zh: {
-    title: '岔路经济・投资风格测试',
+    title: '岔路经济·投资风格测试',
     subtitle: '你是哪种类型的投资者？',
     instruction: '请在每种情境下，选出最接近你反应的选项。',
     result: '我的投资类型',
