@@ -17,7 +17,8 @@ const { locale } = Astro.params as { locale: Locale };
 
 const meta: Record<Locale, { title: string; description: string }> = {
   ko: {
-    title: '출생 차트 계산기 — 태양·달·상승궁 무료 계산',
+    // 2026-09-28 SEO P0 쿼리 인벤토리: 자동완성의 의도어는 '네이탈 차트'·'ホロスコープ 無料'·'星盘查询'·'thème astral'·'carta astral'이었다. 제목·H1만 맞춘다.
+    title: '네이탈 차트(출생 차트) 계산기 — 태양·달·상승궁 무료 계산',
     description: '생년월일·태어난 시각·출생지를 입력하면 점성술의 핵심인 태양·달·상승궁 별자리를 정밀 계산합니다. 천문 계산 기반의 무료 출생 차트.',
   },
   en: {
@@ -25,19 +26,19 @@ const meta: Record<Locale, { title: string; description: string }> = {
     description: 'Enter your birth date, time, and place to precisely compute your Sun, Moon, and Rising signs — the core of any astrology chart. Free, astronomy-based natal chart.',
   },
   ja: {
-    title: '出生図計算機 — 太陽・月・上昇宮を無料で',
+    title: 'ホロスコープ作成（ネイタルチャート）— 太陽・月・上昇宮を無料計算',
     description: '生年月日・生まれた時刻・出生地を入力すると、占星術の核となる太陽・月・上昇宮の星座を精密に計算します。天文計算に基づく無料の出生図。',
   },
   zh: {
-    title: '出生星盘计算器 — 免费计算太阳·月亮·上升',
+    title: '星盘查询 — 免费计算出生星盘的太阳·月亮·上升',
     description: '输入出生日期、时间与地点，精确计算占星核心的太阳、月亮与上升星座。基于天文计算的免费出生星盘。',
   },
   fr: {
-    title: 'Calculateur de thème natal — Soleil, Lune et Ascendant (gratuit)',
+    title: 'Thème astral gratuit — calcul du Soleil, de la Lune et de l’Ascendant',
     description: 'Saisissez date, heure et lieu de naissance pour calculer précisément vos signes Soleil, Lune et Ascendant, le cœur de tout thème astral. Gratuit, basé sur l’astronomie.',
   },
   es: {
-    title: 'Calculadora de carta natal — Sol, Luna y Ascendente (gratis)',
+    title: 'Carta astral gratis — calcula tu Sol, Luna y Ascendente',
     description: 'Introduce fecha, hora y lugar de nacimiento para calcular con precisión tus signos Sol, Luna y Ascendente, el núcleo de toda carta astral. Gratis, basada en astronomía.',
   },
 };
