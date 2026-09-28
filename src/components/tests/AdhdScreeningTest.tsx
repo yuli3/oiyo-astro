@@ -59,7 +59,7 @@ const LABELS: Record<SupportedLang, {
     flagsOf: (n) => `${n} / 6항목`,
     guidanceLabel: '다음 단계 안내',
     disclaimerLabel: '중요 안내',
-    note: 'WHO ASRS Part A를 기반으로 한 참고용 도구입니다. 전문적 진단을 대체하지 않습니다.',
+    note: 'WHO ASRS Part A를 기반으로 한 참고용 도구입니다. 전문적 진단을 대체하지 않습니다. ASRS Screener v1.1 © 세계보건기구(WHO), Kessler 외(2005).',
     disclaimer: '이 테스트는 진단 도구가 아닙니다. 결과는 전문가 상담 전 참고 자료로만 활용하세요.',
   },
   en: {
@@ -77,7 +77,7 @@ const LABELS: Record<SupportedLang, {
     flagsOf: (n) => `${n} / 6 items`,
     guidanceLabel: 'Next Steps',
     disclaimerLabel: 'Important Note',
-    note: 'A reference tool based on WHO ASRS Part A. Does not replace professional diagnosis.',
+    note: 'A reference tool based on WHO ASRS Part A. Does not replace professional diagnosis. ASRS Screener v1.1 © World Health Organization; Kessler et al. (2005).',
     disclaimer: 'This is not a diagnostic tool. Use results only as a reference before professional consultation.',
   },
   ja: {
@@ -95,7 +95,7 @@ const LABELS: Record<SupportedLang, {
     flagsOf: (n) => `${n} / 6項目`,
     guidanceLabel: '次のステップ',
     disclaimerLabel: '重要なお知らせ',
-    note: 'WHO ASRS Part Aに基づく参考ツールです。専門的診断の代替ではありません。',
+    note: 'WHO ASRS Part Aに基づく参考ツールです。専門的診断の代替ではありません。ASRS Screener v1.1 © 世界保健機関（WHO）、Kessler ほか（2005）。',
     disclaimer: 'このテストは診断ツールではありません。結果は専門家への相談前の参考資料としてのみ使用してください。',
   },
   zh: {
@@ -113,7 +113,7 @@ const LABELS: Record<SupportedLang, {
     flagsOf: (n) => `${n} / 6항목`,
     guidanceLabel: '下一步建议',
     disclaimerLabel: '重要说明',
-    note: '本工具基于 WHO ASRS 第一部分，仅供参考，不能替代专业诊断。',
+    note: '本工具基于 WHO ASRS 第一部分，仅供参考，不能替代专业诊断。ASRS Screener v1.1 © 世界卫生组织（WHO），Kessler 等（2005）。',
     disclaimer: '本测验不是诊断工具。结果只作为咨询专业人士前的参考。',
   },
   fr: {
@@ -131,7 +131,7 @@ const LABELS: Record<SupportedLang, {
     flagsOf: (n) => `${n} / 6항목`,
     guidanceLabel: 'Prochaines étapes',
     disclaimerLabel: 'Information importante',
-    note: 'Outil indicatif fondé sur la partie A de l’ASRS de l’OMS. Il ne remplace pas un diagnostic professionnel.',
+    note: 'Outil indicatif fondé sur la partie A de l’ASRS de l’OMS. Il ne remplace pas un diagnostic professionnel. ASRS Screener v1.1 © Organisation mondiale de la santé ; Kessler et al. (2005).',
     disclaimer: 'Ce test n’est pas un outil de diagnostic. Utilisez le résultat uniquement comme repère avant de consulter un professionnel.',
   },
   es: {
@@ -149,11 +149,13 @@ const LABELS: Record<SupportedLang, {
     flagsOf: (n) => `${n} / 6항목`,
     guidanceLabel: 'Próximos pasos',
     disclaimerLabel: 'Aviso importante',
-    note: 'Herramienta orientativa basada en la parte A del ASRS de la OMS. No sustituye un diagnóstico profesional.',
+    note: 'Herramienta orientativa basada en la parte A del ASRS de la OMS. No sustituye un diagnóstico profesional. ASRS Screener v1.1 © Organización Mundial de la Salud; Kessler et al. (2005).',
     disclaimer: 'Este test no es una herramienta de diagnóstico. Usa el resultado solo como referencia antes de consultar a un profesional.',
   },
 }
 
+// 2026-09-28 M5: ASRS 6문항 선별검사는 무료 사용이지만 WHO 저작권 표기가 사용 조건이라 note 에 붙였다.
+// 문항 문구의 WHO 공식 번역 대조는 배포처(hcp.med.harvard.edu)가 503 이라 후속으로 남긴다.
 const QUESTIONS: Record<SupportedLang, Question[]> = {
   ko: [
     { id: 'q1', text: '어려운 부분을 끝낸 뒤 프로젝트의 마무리 작업을 완수하는 데 어려움을 겪나요?' },
