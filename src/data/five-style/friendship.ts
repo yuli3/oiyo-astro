@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import { useRecordFinishedTest } from '@/lib/user/use-record-finished-test'
-import ShareResultButton from '../shared/ShareResultButton'
+import type { FiveStyleCopy, FiveStyleSpec } from "@/components/tests/FiveStyleTest";
+import type { Locale } from "@/i18n";
 
 /**
  * 우정 스타일 — 친구 사이에서 내가 서는 자리.
  *
- * 2026-09-23 에 새로 세웠다. 옛 `ontology/traits/friendship-style` 이 다섯 유형과
- * 여섯 언어 자료를 갖고 있었지만 화면이 없어 죽은 코드였고, 정리 때 걷어냈다.
- * 유형의 뼈대(모험·웃음·살림·지지·생각)만 이어받고 문항과 문구는 여섯 언어로
- * 새로 썼다 — 옛 문구는 번역투가 섞여 있었다.
- *
- * 한 유형으로 자르지 않는다. 사람은 상황마다 다른 자리에 서므로 으뜸과 버금을
- * 함께 내고, 다섯의 비율을 그대로 보여 준다.
+ * 2026-09-23 에 새로 세운 검사. 2026-09-28 M7: 음악 취향과 같은 모양의 화면이 두 벌이라
+ * FiveStyleTest 엔진으로 합쳤다. 문항·결과 문구는 그대로 옮겼고, 아래에서 엔진 형식으로 묶는다.
+ * 선택지는 언제나 모험·웃음·살림·지지·생각 순서다.
  */
 
 type Style = 'adventurer' | 'entertainer' | 'organizer' | 'supporter' | 'thinker'
@@ -224,127 +219,40 @@ const RESULTS: Record<Style, Record<Lang, Result>> = {
   },
 }
 
-interface Props { locale?: string }
+const BACK: Record<Lang, string> = { ko: "이전 질문", en: "Previous question", ja: "前の質問", zh: "上一题", fr: "Question précédente", es: "Pregunta anterior" };
 
-export default function FriendshipStyleTest({ locale: lp = 'ko' }: Props) {
-  const lang = (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(lp) ? lp : 'en') as Lang
-  const t = LABELS[lang]
-  const questions = QUESTIONS[lang]
-  const [answers, setAnswers] = useState<Style[]>([])
-  const done = answers.length === questions.length
+export const FRIENDSHIP_SPEC: FiveStyleSpec = {
+  testId: "friendship-style",
+  title: "FriendshipStyle",
+  styles: STYLES,
+  colors: STYLES.map((s) => COLORS[s]),
+};
 
-  const scores = STYLES.reduce((acc, style) => {
-    acc[style] = answers.filter((a) => a === style).length
-    return acc
-  }, {} as Record<Style, number>)
-  const ranked = [...STYLES].sort((a, b) => scores[b] - scores[a])
-  const primary = ranked[0]
-  const secondary = ranked[1]
+/** 기록에 남던 영어 유형 이름 — 옛 기록(resultLabel)과 같은 값 */
+export const FRIENDSHIP_EN_NAMES = STYLES.map((s) => LABELS.en.styleNames[s]);
 
-  useRecordFinishedTest({ testId: 'friendship-style', title: 'FriendshipStyle', finished: done, resultLabel: done ? LABELS.en.styleNames[primary] : undefined, result: done ? { primary, secondary, scores } : undefined, locale: lang })
-
-  function choose(style: Style) {
-    setAnswers((prev) => [...prev, style])
-  }
-
-  if (!done) {
-    const index = answers.length
-    const q = questions[index]
-    return (
-      <div className="space-y-6">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
-          <p className="mt-1 text-sm text-muted-foreground">{t.subtitle}</p>
-        </div>
-        <div className="rounded-xl border border-border bg-card p-5 space-y-4">
-          <div className="flex items-center justify-between text-xs font-semibold text-muted-foreground">
-            <span>{t.progress(index + 1, questions.length)}</span>
-            <span>{Math.round((index / questions.length) * 100)}%</span>
-          </div>
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
-            <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(index / questions.length) * 100}%` }} />
-          </div>
-          <p className="text-base font-semibold text-foreground [word-break:keep-all]">{q.text}</p>
-          <ul className="space-y-2">
-            {q.options.map((label, i) => (
-              <li key={label}>
-                <button
-                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-left text-sm leading-6 text-foreground transition-colors hover:bg-accent [word-break:keep-all]"
-                  onClick={() => choose(STYLES[i])}
-                  type="button"
-                >
-                  {label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <p className="text-center text-xs leading-6 text-muted-foreground [word-break:keep-all]">{t.note}</p>
-      </div>
-    )
-  }
-
-  const r = RESULTS[primary][lang]
-  return (
-    <div className="space-y-5">
-      <div className="rounded-2xl border border-border bg-card p-6 text-center">
-        <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{t.primary}</p>
-        <p className="mt-2 text-5xl">{r.emoji}</p>
-        <h2 className="mt-2 text-2xl font-black text-foreground">{r.title}</h2>
-        <p className="mt-1 text-sm text-muted-foreground">{r.tagline}</p>
-        <p className="mt-4 text-sm leading-7 text-foreground [word-break:keep-all]">{r.description}</p>
-        {/* 버금은 점수가 실제로 있을 때만 적는다 — 0 점을 두 번째 스타일이라고
-            부르면 없는 근거를 만들어 내는 셈이다. */}
-        {scores[secondary] > 0 && (
-          <p className="mt-4 text-sm text-muted-foreground">
-            {t.secondary} · <span className="font-bold text-foreground">{t.styleNames[secondary]}</span>
-          </p>
-        )}
-      </div>
-
-      <div className="rounded-2xl border border-border bg-card p-5">
-        <h3 className="text-sm font-bold text-foreground">{t.mix}</h3>
-        <ul className="mt-3 space-y-2">
-          {ranked.map((style) => (
-            <li key={style} className="flex items-center gap-3 text-sm">
-              <span className="w-28 shrink-0 text-muted-foreground">{t.styleNames[style]}</span>
-              <span className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
-                <span className="block h-full rounded-full" style={{ background: COLORS[style], width: `${(scores[style] / questions.length) * 100}%` }} />
-              </span>
-              <span className="w-12 shrink-0 text-right font-mono text-xs text-muted-foreground">{scores[style]}/{questions.length}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="grid gap-3 sm:grid-cols-2">
-        <div className="rounded-2xl border border-border bg-card p-5">
-          <h3 className="text-sm font-bold text-emerald-700">{t.strengths}</h3>
-          <ul className="mt-2 space-y-1.5">
-            {r.strengths.map((s) => <li key={s} className="text-sm leading-6 text-muted-foreground [word-break:keep-all]">+ {s}</li>)}
-          </ul>
-        </div>
-        <div className="rounded-2xl border border-border bg-card p-5">
-          <h3 className="text-sm font-bold text-amber-700">{t.watch}</h3>
-          <ul className="mt-2 space-y-1.5">
-            {r.watch.map((s) => <li key={s} className="text-sm leading-6 text-muted-foreground [word-break:keep-all]">△ {s}</li>)}
-          </ul>
-        </div>
-      </div>
-
-      <div className="rounded-2xl border border-primary/20 bg-primary/5 p-5">
-        <h3 className="text-sm font-bold text-primary">{t.pairs}</h3>
-        <p className="mt-1 text-sm leading-6 text-foreground [word-break:keep-all]">{r.pairs}</p>
-      </div>
-
-      <p className="text-center text-xs leading-6 text-muted-foreground [word-break:keep-all]">{t.note}</p>
-
-      <div className="flex gap-3">
-        <button className="flex-1 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium transition-colors hover:bg-accent" onClick={() => setAnswers([])} type="button">
-          {t.restart}
-        </button>
-      </div>
-      <ShareResultButton locale={lang} heading={t.title} resultTitle={`${r.emoji} ${r.title}`} description={r.description} />
-    </div>
-  )
-}
+export const FRIENDSHIP_COPY = Object.fromEntries(
+  (Object.keys(LABELS) as Lang[]).map((lang) => {
+    const t = LABELS[lang];
+    const copy: FiveStyleCopy = {
+      title: t.title,
+      subtitle: t.subtitle,
+      restart: t.restart,
+      back: BACK[lang],
+      primary: t.primary,
+      secondary: t.secondary,
+      mix: t.mix,
+      strengths: t.strengths,
+      watch: t.watch,
+      extra: t.pairs,
+      note: t.note,
+      styleNames: STYLES.map((s) => t.styleNames[s]),
+      questions: QUESTIONS[lang],
+      results: STYLES.map((s) => {
+        const r = RESULTS[s][lang];
+        return { emoji: r.emoji, title: r.title, tagline: r.tagline, description: r.description, strengths: r.strengths, watch: r.watch, extra: r.pairs };
+      }),
+    };
+    return [lang, copy];
+  }),
+) as Record<Locale, FiveStyleCopy>;

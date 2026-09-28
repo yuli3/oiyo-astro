@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { useRecordFinishedTest } from '@/lib/user/use-record-finished-test'
 import ShareResultButton from '../shared/ShareResultButton'
+import { Questionnaire } from '@/components/ui/questionnaire'
 
 /**
  * 다섯 결 검사 엔진 — 열두 장면에서 다섯 선택지를 고르고, 한 유형으로 자르지
  * 않고 으뜸·버금과 다섯의 비율을 보여 준다.
  *
- * 우정 스타일 검사(FriendshipStyleTest)와 같은 모양이다. 2026-09-23 에 여행지
+ * 우정 스타일·음악 취향이 이 엔진을 쓴다(우정은 2026-09-28 M7 에 합쳤다). 2026-09-23 에 여행지
  * 끌림·음악 취향을 더하면서 화면을 한 벌로 모았다. 페이지는 **그 언어의 자료만**
  * 넘긴다 — 여섯 언어를 모두 섬(island) 속성으로 싣지 않는다.
  */
@@ -87,42 +88,20 @@ export default function FiveStyleTest({ locale, spec, copy, englishNames }: Prop
   if (!done) {
     const index = answers.length
     const q = copy.questions[index]
+    // 2026-09-28 M7: 질문 화면을 공용 Questionnaire 로 — 진행 막대·이전 버튼·포커스가 다른 검사와 같아진다.
     return (
-      <div className="space-y-6">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground">{copy.title}</h1>
-          <p className="mt-1 text-sm text-muted-foreground">{copy.subtitle}</p>
-        </div>
-        <div className="space-y-4 rounded-xl border border-border bg-card p-5">
-          <div className="flex items-center justify-between text-xs font-semibold text-muted-foreground">
-            <span>{index + 1} / {total}</span>
-            <span>{Math.round((index / total) * 100)}%</span>
-          </div>
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
-            <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(index / total) * 100}%` }} />
-          </div>
-          <p className="text-base font-semibold text-foreground [word-break:keep-all]">{q.text}</p>
-          <ul className="space-y-2">
-            {q.options.map((label, i) => (
-              <li key={label}>
-                <button
-                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-left text-sm leading-6 text-foreground transition-colors hover:bg-accent [word-break:keep-all]"
-                  onClick={() => setAnswers((prev) => [...prev, i])}
-                  type="button"
-                >
-                  {label}
-                </button>
-              </li>
-            ))}
-          </ul>
-          {index > 0 && (
-            <button className="text-xs text-muted-foreground underline-offset-4 hover:underline" onClick={() => setAnswers((prev) => prev.slice(0, -1))} type="button">
-              ← {copy.back}
-            </button>
-          )}
-        </div>
-        <p className="text-center text-xs leading-6 text-muted-foreground [word-break:keep-all]">{copy.note}</p>
-      </div>
+      <Questionnaire
+        title={copy.title}
+        subtitle={copy.subtitle}
+        question={q.text}
+        questionLabel={`${index + 1} / ${total}`}
+        progress={Math.round((index / total) * 100)}
+        options={q.options.map((label, value) => ({ label, value }))}
+        note={copy.note}
+        previousLabel={index > 0 ? copy.back : undefined}
+        onPrevious={index > 0 ? () => setAnswers((prev) => prev.slice(0, -1)) : undefined}
+        onSelect={(value) => setAnswers((prev) => [...prev, value])}
+      />
     )
   }
 
