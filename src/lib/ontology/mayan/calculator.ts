@@ -1,4 +1,5 @@
 import { GALACTIC_TONES, type MayanKin, SOLAR_SEALS } from "./types";
+import { mayanSealName, mayanToneName } from "@/lib/symbolic-tradition/symbol-names";
 
 // Base Date: July 26, 1987 (Kin 34 - White Galactic Wizard)
 const BASE_YEAR = 1987;
@@ -77,13 +78,14 @@ export function calculateMayanKin(date: Date): MayanKin | null {
     affirmation: `I ${tone.keywords[0]} in order to ${seal.keywords[2]}. ${tone.keywords[1]} ${seal.keywords[1]}. I seal the ${seal.keywords[0]} of ${seal.keywords[1]} with the ${tone.name} tone of ${tone.keywords[2]}.`,
     kinName: {
       en: `${tone.name} ${seal.name}`,
-      ko: `${tone.name} ${seal.name}`, // Simplified for now, should ideally be translated
+      // 2026-09-28 M8: ko 도 영어였다. 화면(MayanReading)과 같은 여섯 언어 인장·음조 이름을 쓴다.
+      ko: `${mayanSealName(seal.id, "ko")} · ${mayanToneName(tone.number, "ko")}`,
     },
     kinNumber: kin,
     seal: { ...seal, keywords: [...seal.keywords] },
     sealName: {
       en: seal.name,
-      ko: seal.name,
+      ko: mayanSealName(seal.id, "ko"),
     },
     tone: { ...tone, keywords: [...tone.keywords] },
   };

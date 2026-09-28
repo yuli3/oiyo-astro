@@ -49,4 +49,13 @@ describe("마야 킨", () => {
   it("기준일은 킨 34 다", () => {
     expect(calculateMayanKin(new Date(1987, 6, 26))?.kinNumber).toBe(34);
   });
+
+  // 2026-09-28 M8: 한국어 이름이 영어("Galactic Wizard")로 나오던 것.
+  it("한국어 킨·인장 이름은 한국어로 준다", () => {
+    const kin = calculateMayanKin(new Date(1987, 6, 26))!;
+    expect(kin.kinName?.en).toMatch(/^[A-Za-z]+ [A-Za-z]+/);
+    expect(kin.kinName?.ko).toMatch(/[가-힣]/);
+    expect(kin.kinName?.ko).not.toMatch(/[A-Za-z]/);
+    expect(kin.sealName?.ko).toMatch(/[가-힣]/);
+  });
 });
