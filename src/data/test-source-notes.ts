@@ -51,7 +51,7 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
   },
   'loneliness-test': {
     basis: [
-      '30 items modelled on the UCLA Loneliness Scale structure',
+      'UCLA Loneliness Scale, Version 3 (Russell, 1996) — 10 items adapted from it; several follow the published wording',
       'measures the gap between expectation and reality, not the amount of social contact',
       'for self-observation, not clinical diagnosis',
     ],
