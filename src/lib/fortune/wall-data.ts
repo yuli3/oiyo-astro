@@ -42,10 +42,15 @@ const SIGN_NAMES: Record<Lang, string[]> = {
   es: ['Aries', 'Tauro', 'Géminis', 'Cáncer', 'Leo', 'Virgo', 'Libra', 'Escorpio', 'Sagitario', 'Capricornio', 'Acuario', 'Piscis'],
 };
 const SIGN_SYMBOL = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
+// 2026-09-28 O4: 카드 머리의 이모지 대신 이미 만들어 둔 결과 심볼 이미지를 쓴다. 순서는 이름 배열과 같다.
+const ANIMAL_IMAGE = ['rat', 'ox', 'tiger', 'rabbit', 'dragon', 'snake', 'horse', 'goat', 'monkey', 'rooster', 'dog', 'boar'].map((f) => `/images/result-symbols/chinese-zodiac/${f}.webp`);
+const SIGN_IMAGE = ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'].map((f) => `/images/result-symbols/western-zodiac/${f}.webp`);
 
 export interface WallCard {
   name: string;
   emoji: string;
+  /** 결과 심볼 이미지 경로. 이모지는 alt 대체용으로만 남는다. */
+  image: string;
   opening: string;
   advice: string;
   /** 운세 점수 1~99. 순위와 같은 엔진에서 나온다. */
@@ -95,6 +100,7 @@ function rankedCards(
   prefix: 'animal' | 'sign',
   names: string[],
   emoji: string[],
+  images: string[],
   fortuneLocale: FortuneLocale,
   elementOfIndex: (i: number) => number,
   used: { opening: Set<string>; advice: Set<string> },
@@ -114,6 +120,7 @@ function rankedCards(
     return {
       name: names[row.idx],
       emoji: emoji[row.idx],
+      image: images[row.idx],
       opening: r.opening,
       advice: r.advice,
       caution: r.caution,
@@ -139,7 +146,7 @@ export function buildFortuneWall(locale: string, at = civilDay()): WallSection[]
     periodLabel: PERIOD_LABELS[lang][key],
     // 순위가 높은 순으로 낸다. 12개를 무순으로 늘어놓는 것보다 "오늘 1위는
     // 누구인가"가 훨씬 강한 훅이고, 매일 순위가 바뀌므로 재방문 이유가 된다.
-    animals: rankedCards(animalRanking(key, at), key, at, 'animal', ANIMAL_NAMES[lang], ANIMAL_EMOJI, fortuneLocale, (i) => (i * 2 + 1) % 5, seen[key]),
-    signs: rankedCards(signRanking(key, at), key, at, 'sign', SIGN_NAMES[lang], SIGN_SYMBOL, fortuneLocale, (i) => (i + 2) % 5, seen[key]),
+    animals: rankedCards(animalRanking(key, at), key, at, 'animal', ANIMAL_NAMES[lang], ANIMAL_EMOJI, ANIMAL_IMAGE, fortuneLocale, (i) => (i * 2 + 1) % 5, seen[key]),
+    signs: rankedCards(signRanking(key, at), key, at, 'sign', SIGN_NAMES[lang], SIGN_SYMBOL, SIGN_IMAGE, fortuneLocale, (i) => (i + 2) % 5, seen[key]),
   }));
 }

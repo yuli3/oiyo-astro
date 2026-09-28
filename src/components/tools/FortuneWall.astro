@@ -55,7 +55,7 @@ const detailHref = `/${locale}/fortune/today/`;
                   style={`border-color:${GRADE_COLORS[c.grade]}33; background:${GRADE_COLORS[c.grade]}0d`}
                 >
                   <div class="flex items-baseline gap-2">
-                    <span class="min-w-0 flex-1 truncate text-sm font-black text-foreground">{c.emoji} {c.name}</span>
+                    <span class="flex min-w-0 flex-1 items-center gap-1.5 truncate text-sm font-black text-foreground"><img src={c.image} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 shrink-0 rounded-full object-cover" />{c.name}</span>
                     <span
                       class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-black tabular-nums"
                       style={`background:${GRADE_COLORS[c.grade]}1a;color:${GRADE_COLORS[c.grade]}`}
