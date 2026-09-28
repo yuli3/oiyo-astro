@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     opinionLabel: '의견 비교',
     outOf: '/ 5.0',
     tipsLabel: '마음을 위한 팁',
-    note: '기번스와 분크의 사회적 비교 지향 척도(INCOM) 개념을 바탕으로 한 자가성찰용 테스트입니다. 전문적 진단을 대체하지 않습니다.',
+    note: '기번스와 분크의 사회적 비교 지향 척도(INCOM) 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Social Comparison Test',

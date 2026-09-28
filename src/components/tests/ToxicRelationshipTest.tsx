@@ -33,8 +33,8 @@ const LABELS: Record<SupportedLang, {
     restart: '다시 하기', share: '결과 공유', shareMsg: '내 관계 패턴 테스트 결과는',
     yourLevel: '관계 패턴 결과', patterns: '발견된 패턴', steps: '다음 단계',
     encouragement: '당신에게', scoreLabel: '패턴 점수', outOf: '/ 45점',
-    note: '이 테스트는 관계 패턴 인식을 돕기 위한 것입니다. 결과는 단순한 참고 자료입니다.',
-    disclaimer: '어떤 결과가 나오든, 더 건강한 관계를 원하는 마음 자체가 중요합니다. 전문 상담은 언제나 좋은 선택입니다.',
+    note: '이 테스트는 관계 패턴 인식을 돕기 위한 것이에요. 결과는 단순한 참고 자료예요.',
+    disclaimer: '어떤 결과가 나오든, 더 건강한 관계를 원하는 마음 자체가 중요해요. 전문 상담은 언제나 좋은 선택이에요.',
   },
   en: {
     title: 'Relationship Pattern Test',
@@ -201,7 +201,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
 const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   healthy: {
     ko: {
-      title: '건강한 관계', subtitle: '이 관계는 전반적으로 건강해 보입니다',
+      title: '건강한 관계', subtitle: '이 관계는 전반적으로 건강해 보여요',
       description: '현재 관계에서 큰 독성 패턴이 발견되지 않았습니다. 서로를 존중하고 각자의 필요를 배려하는 균형 잡힌 관계 패턴을 보이고 있습니다.',
       patterns: ['상호 존중의 흔적', '건강한 경계 유지', '서로의 독립성 인정', '갈등을 건설적으로 해결'],
       steps: ['지금의 건강한 패턴을 의식적으로 유지하기', '소통과 경청을 꾸준히 연습하기', '서로의 성장을 지지하기'],
@@ -245,7 +245,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   some_flags: {
     ko: {
-      title: '주의 신호 있음', subtitle: '일부 패턴에 주의가 필요합니다',
+      title: '주의 신호 있음', subtitle: '일부 패턴에 주의가 필요해요',
       description: '몇 가지 주의할 만한 패턴들이 발견되었습니다. 이 패턴들이 관계에 영향을 주고 있을 수 있습니다. 이 시점에서 대화나 경계 설정이 도움이 될 수 있습니다.',
       patterns: ['가끔 소통에 어려움', '경계가 흐릿한 경우가 있음', '일부 불균형한 역동', '감정 소진 경험'],
       steps: ['파트너와 솔직한 대화 시도', '자신의 필요와 경계 명확히 하기', '관계 상담을 고려해보기', '친한 사람과 이야기 나누기'],
@@ -289,7 +289,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   notable: {
     ko: {
-      title: '패턴 주의', subtitle: '여러 독성 패턴이 관찰됩니다',
+      title: '패턴 주의', subtitle: '여러 독성 패턴이 관찰돼요',
       description: '상당수의 독성 패턴이 발견되었습니다. 이 관계가 당신의 정서적 안녕에 영향을 미치고 있을 가능성이 높습니다. 이 패턴들은 변화 가능하지만, 적극적인 노력이 필요합니다.',
       patterns: ['반복적인 경계 침해', '감정적 소진이 지속됨', '자존감 저하 경험', '관계 내 불균형한 힘의 역동'],
       steps: ['전문 상담사와 상담 고려하기', '신뢰할 수 있는 지지 네트워크 찾기', '자신의 필요를 최우선으로 두기', '관계의 지속 여부를 차분히 평가하기'],
@@ -333,7 +333,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   high_toxicity: {
     ko: {
-      title: '독성 관계', subtitle: '지금 당신에게 가장 중요한 것은 당신 자신입니다',
+      title: '독성 관계', subtitle: '지금 당신에게 가장 중요한 것은 당신 자신이에요',
       description: '높은 수준의 독성 패턴이 발견되었습니다. 이 관계는 당신의 정서적·심리적 건강에 심각한 영향을 미치고 있을 수 있습니다. 이 결과를 혼자 감당하지 마세요.',
       patterns: ['지속적인 정서적 피해', '심각한 경계 침해', '자기 가치감 손상', '관계 탈출이 어렵다는 느낌'],
       steps: ['안전한 전문가(상담사, 심리사)에게 연락하기', '신뢰할 수 있는 사람에게 현재 상황 알리기', '자신의 안전을 최우선으로 판단하기', '혼자서 해결하려 하지 않기'],

@@ -47,7 +47,7 @@ const LABELS: Record<SupportedLang, {
     growth: '성장 포인트',
     affirmation: '당신에게',
     distribution: '두려움 분포',
-    note: '이 결과는 자기 이해를 위한 참고 자료입니다. 두려움은 모두가 가지고 있으며, 이해함으로써 성장할 수 있습니다.',
+    note: '이 결과는 자기 이해를 위한 참고 자료예요. 두려움은 모두가 가지고 있으며, 이해함으로써 성장할 수 있어요.',
   },
   en: {
     title: 'Fear Type Test',

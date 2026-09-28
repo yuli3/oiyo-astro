@@ -124,7 +124,7 @@ const L: Partial<Record<Locale, UiLabels>> = {
     daily: '일일 퀘스트', weekly: '주간 퀘스트', done: '완료', do: '도전', open: '바로가기',
     badgesTitle: '획득한 배지', noBadges: '첫 퀘스트를 완료하면 배지가 열려요.',
     reset: '기록 초기화', toNext: '다음 레벨까지', honor: '명예 체크: 실제로 하고 눌러요 🙂',
-    privacy: '🔒 모든 기록은 이 브라우저에만 저장됩니다.',
+    privacy: '🔒 모든 기록은 이 브라우저에만 저장돼요.',
   },
   en: {
     title: "Adventurer's Guild", subtitle: 'Turn small daily practices into quests. Complete them, gain XP, and grow.',

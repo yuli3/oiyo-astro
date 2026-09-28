@@ -112,7 +112,7 @@ const COPY: Record<NatalLocale, {
 }> = {
   ko: {
     title: '출생 차트 — 태양·달·상승궁',
-    subtitle: '생년월일·태어난 시각·출생지를 입력하면 점성술의 핵심 세 가지(태양·달·상승궁)를 계산합니다.',
+    subtitle: '생년월일·태어난 시각·출생지를 입력하면 점성술의 핵심 세 가지(태양·달·상승궁)를 계산해요.',
     dateLabel: '생년월일', timeLabel: '태어난 시각', unknownTime: '시간 모름',
     cityLabel: '출생지', cityPlaceholder: '도시 선택',
     submit: '내 차트 보기', retake: '다시 입력',
@@ -133,7 +133,7 @@ const COPY: Record<NatalLocale, {
     moonNote: '시간을 모를 경우 달 별자리는 정오 기준 근사치이며, 별자리 경계 근처에서는 달라질 수 있습니다.',
     retro: '역행',
     method: '계산 방법: 행성 위치를 Meeus·Schlyter 천문 알고리즘으로 직접 계산하고 천체력과 대조 검증했습니다. (결과를 짐작하는 블랙박스가 아닙니다.)',
-    disclaimer: '점성술은 자기 이해와 사색을 위한 상징 체계이며, 운명을 단정하는 도구가 아닙니다.',
+    disclaimer: '점성술은 자기 이해와 사색을 위한 상징 체계이며, 운명을 단정하는 도구가 아니에요.',
     resultHeading: '나의 출생 차트',
     readMore: '점성술 사전에서 더 읽기 →',
     zodiacLink: '별자리 성격 자세히 보기 →',

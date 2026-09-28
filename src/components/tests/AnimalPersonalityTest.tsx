@@ -38,7 +38,7 @@ const LABELS: Record<SupportedLang, {
     strengths: '핵심 강점',
     shadow: '그림자 면',
     compatible: '잘 맞는 동물',
-    note: '이 테스트는 당신의 본능적 성격 패턴을 탐색하는 도구입니다.',
+    note: '이 테스트는 당신의 본능적 성격 패턴을 탐색하는 도구예요.',
   },
   en: {
     title: 'Spirit Animal Test',

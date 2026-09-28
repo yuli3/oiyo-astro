@@ -52,7 +52,7 @@ const LABELS: Record<SupportedLang, {
     allScores: '5가지 편향 점수',
     exampleLabel: '일상 속 예시',
     mitigationLabel: '편향 줄이는 법',
-    disclaimer: '이 테스트는 자기 인식을 위한 도구입니다. 인지 편향은 모든 인간에게 존재하며 나쁜 것이 아닙니다.',
+    disclaimer: '이 테스트는 자기 인식을 위한 도구예요. 인지 편향은 모든 인간에게 존재하며 나쁜 것이 아니에요.',
     dimNames: {
       confirmation: '확증 편향',
       dunningKruger: '더닝-크루거 효과',

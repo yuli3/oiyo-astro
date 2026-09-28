@@ -26,7 +26,7 @@ describe("LifeValuesTest interaction contract", () => {
 
     expect(html).toContain("삶·일 가치관 카드 정렬");
     expect(html).toContain("카드 정렬 시작");
-    expect(html).toContain("심리검사·진단·직업 적합도·검증된 가치 척도가 아닙니다");
+    expect(html).toContain("심리검사·진단·직업 적합도·검증된 가치 척도가 아니에요");
     expect(html).not.toContain("Top 5 고르기");
   });
 

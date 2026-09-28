@@ -65,7 +65,7 @@ interface UiLabels {
 const L: Partial<Record<Locale, UiLabels>> = {
   ko: {
     title: '강점 키워드 찾기',
-    subtitle: '끌리는 동사와 명사를 골라보세요. 정답은 없습니다 — 고른 단어가 곧 지금의 당신입니다.',
+    subtitle: '끌리는 동사와 명사를 골라보세요. 정답은 없어요 — 고른 단어가 곧 지금의 당신이에요.',
     verbsLabel: '끌리는 동사 (행동)',
     nounsLabel: '끌리는 명사 (가치)',
     pickHint: '마음이 가는 단어를 자유롭게 누르세요(여러 개 가능).',

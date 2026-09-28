@@ -19,7 +19,7 @@ const KIND_COLOR: Record<string, string> = {
 const OPENED_COLOR = "#94a3b8";
 
 const JAR_COPY = {
-  ko: { jar: "지금까지 연 검사", note: "공 하나가 서로 다른 검사 하나예요. 꽉 찬 공은 결과까지 본 검사, 빈 공은 열어 본 검사예요. 공을 누르면 이름이 보여요.", shake: "흔들기", finished: "결과까지", opened: "열어 봄", empty: "아직 연 검사가 없어요. 검사를 열면 여기에 공이 떨어집니다." },
+  ko: { jar: "지금까지 연 검사", note: "공 하나가 서로 다른 검사 하나예요. 꽉 찬 공은 결과까지 본 검사, 빈 공은 열어 본 검사예요. 공을 누르면 이름이 보여요.", shake: "흔들기", finished: "결과까지", opened: "열어 봄", empty: "아직 연 검사가 없어요. 검사를 열면 여기에 공이 떨어져요." },
   en: { jar: "Tests you’ve opened", note: "Each ball is one distinct test. Solid balls are tests you finished; hollow ones you opened. Tap a ball to see its name.", shake: "Shake", finished: "Finished", opened: "Opened", empty: "No tests opened yet. Open one and a ball drops here." },
   ja: { jar: "これまで開いたテスト", note: "ボール1つが異なるテスト1つです。塗りつぶしは結果まで見たテスト、中空は開いたテスト。タップで名前を表示します。", shake: "揺らす", finished: "結果まで", opened: "開いた", empty: "まだ開いたテストがありません。開くとここにボールが落ちます。" },
   zh: { jar: "打开过的测试", note: "一个球就是一个不同的测试。实心球是看到结果的测试，空心球是打开过的测试。点一下看名字。", shake: "摇一摇", finished: "看到结果", opened: "打开过", empty: "还没有打开过测试。打开一个，这里就会落下一个球。" },

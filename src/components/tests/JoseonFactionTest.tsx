@@ -39,7 +39,7 @@ const LABELS: Record<Locale, {
     traitLabel: '핵심 성향',
     descLabel: '특성 설명',
     histLabel: '역사적 맥락',
-    note: '이 테스트는 역사적 흥미를 위한 것입니다. 실제 역사적 평가와 다를 수 있습니다.',
+    note: '이 테스트는 역사적 흥미를 위한 것이에요. 실제 역사적 평가와 다를 수 있어요.',
     progress: (c, t) => `${c} / ${t}`,
   },
   en: {

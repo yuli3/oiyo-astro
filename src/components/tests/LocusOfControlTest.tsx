@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     effortLabel: '노력-보상 신념',
     outOf: '/ 5.0',
     tipsLabel: '성장 팁',
-    note: '로터(Rotter)의 통제 소재(Locus of Control) 개념을 바탕으로 한 자가성찰용 테스트입니다. 전문적 진단을 대체하지 않습니다.',
+    note: '로터(Rotter)의 통제 소재(Locus of Control) 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Locus of Control Test',

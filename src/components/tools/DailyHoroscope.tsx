@@ -647,7 +647,7 @@ const UI: Record<Locale, {
 }> = {
   ko: {
     title: "오늘의 별자리 운세",
-    subtitle: "별자리를 선택하면 오늘의 운세를 알려드립니다",
+    subtitle: "별자리를 선택하면 오늘의 운세를 알려드려요",
     selectLabel: "내 별자리",
     selectPlaceholder: "별자리 선택",
     resultDate: "오늘의 운세",

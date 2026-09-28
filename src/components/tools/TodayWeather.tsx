@@ -6,7 +6,7 @@ import { Skeleton } from '../ui/skeleton';
 const SEOUL = { lat: 37.5665, lon: 126.978 };
 
 const COPY: Record<Locale, { heading: string; fail: string; source: string }> = {
-  ko: { heading: '지금 날씨', fail: '날씨를 불러오지 못했습니다.', source: 'Open-Meteo' },
+  ko: { heading: '지금 날씨', fail: '날씨를 불러오지 못했어요.', source: 'Open-Meteo' },
   en: { heading: 'Weather now', fail: 'Could not load weather.', source: 'Open-Meteo' },
   ja: { heading: 'いまの天気', fail: '天気を取得できませんでした。', source: 'Open-Meteo' },
   zh: { heading: '现在天气', fail: '未能读取天气。', source: 'Open-Meteo' },

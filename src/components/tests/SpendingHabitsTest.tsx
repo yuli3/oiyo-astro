@@ -57,7 +57,7 @@ const LABELS: Record<SupportedLang, {
     strengthsLabel: '강점',
     watchOutLabel: '주의할 점',
     tipLabel: '실천 팁',
-    note: '이 테스트는 자기 이해를 돕기 위한 참고 도구입니다.',
+    note: '이 테스트는 자기 이해를 돕기 위한 참고 도구예요.',
   },
   en: {
     title: 'Spending Habits Test',

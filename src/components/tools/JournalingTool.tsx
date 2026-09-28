@@ -55,7 +55,7 @@ interface UiLabels {
 const L: Partial<Record<Locale, UiLabels>> = {
   ko: {
     title: '오늘의 저널',
-    subtitle: '하루 한 질문에 답하며 마음을 정리하세요. 기록은 이 브라우저에만 저장됩니다.',
+    subtitle: '하루 한 질문에 답하며 마음을 정리하세요. 기록은 이 브라우저에만 저장돼요.',
     todaysPrompt: '오늘의 질문',
     shuffle: '🎲 다른 질문',
     placeholder: '떠오르는 대로 자유롭게 적어보세요…',
@@ -64,7 +64,7 @@ const L: Partial<Record<Locale, UiLabels>> = {
     past: '지난 기록',
     empty: '아직 기록이 없어요. 오늘 첫 줄을 남겨보세요.',
     delete: '삭제',
-    privacy: '🔒 모든 기록은 이 브라우저(localStorage)에만 저장되며 서버로 전송되지 않습니다.',
+    privacy: '🔒 모든 기록은 이 브라우저(localStorage)에만 저장되며 서버로 전송되지 않아요.',
   },
   en: {
     title: "Today's Journal",

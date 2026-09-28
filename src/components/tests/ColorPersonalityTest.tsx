@@ -48,7 +48,7 @@ const LABELS: Record<SupportedLang, {
     growth: '성장 포인트',
     compatible: '잘 맞는 컬러',
     colorProfile: '컬러 프로필',
-    note: '이 검사는 성격의 다양한 면을 탐색하는 도구입니다.',
+    note: '이 검사는 성격의 다양한 면을 탐색하는 도구예요.',
   },
   en: {
     title: 'Color Personality Test',

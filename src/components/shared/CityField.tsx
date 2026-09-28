@@ -31,7 +31,7 @@ export interface CityFieldCopy {
 }
 
 const COPY: Record<NatalLocale, CityFieldCopy> = {
-  ko: { label: "출생지", placeholder: "도시 이름을 입력하세요 (예: 대구)", empty: "검색 결과가 없습니다. 로마자로도 찾아보세요 (예: Seogwipo)", hint: "전 세계 34,000여 개 도시에서 찾습니다", popular: "자주 찾는 도시", clear: "지우기", coordinates: "위치 좌표", timeZone: "시간대", verified: "계산 위치 확인" },
+  ko: { label: "출생지", placeholder: "도시 이름을 입력하세요 (예: 대구)", empty: "검색 결과가 없어요. 로마자로도 찾아보세요 (예: Seogwipo)", hint: "전 세계 34,000여 개 도시에서 찾아요", popular: "자주 찾는 도시", clear: "지우기", coordinates: "위치 좌표", timeZone: "시간대", verified: "계산 위치 확인" },
   en: { label: "Birthplace", placeholder: "Type a city name (e.g. Daegu)", empty: "No matches. Try the Latin spelling instead.", hint: "Searches 34,000+ cities worldwide", popular: "Popular cities", clear: "Clear", coordinates: "Coordinates", timeZone: "Time zone", verified: "Calculation location" },
   ja: { label: "出生地", placeholder: "都市名を入力（例: 大邱）", empty: "該当なし。ローマ字表記でもお試しください。", hint: "世界 34,000 以上の都市から検索します", popular: "よく選ばれる都市", clear: "クリア", coordinates: "位置座標", timeZone: "タイムゾーン", verified: "計算地点" },
   zh: { label: "出生地", placeholder: "输入城市名（例：大邱）", empty: "无结果。可试试拉丁拼写。", hint: "从全球 34,000 多个城市中搜索", popular: "常选城市", clear: "清除", coordinates: "位置坐标", timeZone: "时区", verified: "计算位置" },

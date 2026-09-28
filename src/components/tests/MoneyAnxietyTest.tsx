@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     avoidanceLabel: '재정 회피',
     outOf: '/ 5.0',
     tipsLabel: '마음을 위한 팁',
-    note: '재정 불안(Financial Anxiety) 및 머니 스크립트 연구 개념을 바탕으로 한 자가성찰용 테스트입니다. 재무·의학적 진단을 대체하지 않습니다.',
+    note: '재정 불안(Financial Anxiety) 및 머니 스크립트 연구 개념을 바탕으로 한 자가성찰용 테스트예요. 재무·의학적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Money Anxiety Test',

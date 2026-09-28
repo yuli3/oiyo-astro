@@ -31,7 +31,7 @@ const LABELS: Record<SupportedLang, {
     shareMsg: '내 학습 유형은',
     yourStyle: '나의 주요 학습 유형',
     yourProfile: 'VARK 학습 프로파일',
-    note: '이 결과는 자기 이해를 위한 참고 자료입니다. 학습 스타일은 상황에 따라 달라질 수 있습니다.',
+    note: '이 결과는 자기 이해를 위한 참고 자료예요. 학습 스타일은 상황에 따라 달라질 수 있어요.',
     styleNames: { visual: '시각형', auditory: '청각형', reading: '읽기/쓰기형', kinesthetic: '체험형' },
     recommendation: '추천 학습법',
     dominant: '주 유형',

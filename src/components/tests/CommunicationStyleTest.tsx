@@ -407,7 +407,7 @@ type UiText = {
 const t: Record<SupportedLocale, UiText> = {
   ko: {
     title: "소통 스타일 테스트",
-    subtitle: "당신은 어떻게 소통하십니까?",
+    subtitle: "당신은 어떻게 소통하세요?",
     progress: (cur: number, total: number) => `${cur} / ${total}`,
     resultTitle: "나의 소통 스타일",
     strength: "강점",

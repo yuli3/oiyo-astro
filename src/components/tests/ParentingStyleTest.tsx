@@ -56,7 +56,7 @@ const LABELS: Record<SupportedLang, {
     strengthsLabel: '강점',
     risksLabel: '주의할 점',
     tipLabel: '성장 팁',
-    disclaimer: '이 테스트는 Baumrind의 양육 이론을 기반으로 합니다. 부모가 아니어도 자신이 양육받은 방식이나 미래의 양육 방식을 탐색하는 데 유용합니다.',
+    disclaimer: '이 테스트는 Baumrind의 양육 이론을 기반으로 해요. 부모가 아니어도 자신이 양육받은 방식이나 미래의 양육 방식을 탐색하는 데 유용해요.',
     dimNames: {
       authoritative: '권위있는 양육',
       authoritarian: '독재적 양육',

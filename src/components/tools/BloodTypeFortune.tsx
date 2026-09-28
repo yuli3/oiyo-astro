@@ -619,7 +619,7 @@ const UI: Record<Locale, {
 }> = {
   ko: {
     title: "오늘의 혈액형 운세",
-    subtitle: "혈액형을 선택하면 오늘의 운세를 알려드립니다",
+    subtitle: "혈액형을 선택하면 오늘의 운세를 알려드려요",
     selectLabel: "내 혈액형",
     resultDate: "오늘의 운세",
     overall: "종합운",

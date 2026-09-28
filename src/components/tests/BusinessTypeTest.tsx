@@ -332,7 +332,7 @@ const LABELS: Record<Locale, {
     challenges: '주의할 점',
     idealRole: '어울리는 역할',
     famousExample: '유명 사례',
-    note: '이 테스트는 창업 심리를 탐색하는 도구입니다.',
+    note: '이 테스트는 창업 심리를 탐색하는 도구예요.',
     dimLabel: '5가지 유형 성향 분포',
     choose: '가장 나답다고 느끼는 답변을 선택하세요',
   },

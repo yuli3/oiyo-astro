@@ -43,7 +43,7 @@ const LABELS: Record<Locale, {
     selfCare: '자기 돌봄 팁',
     scoreLabel: '예민도 점수',
     outOf: '/ 75점',
-    note: '이 테스트는 Elaine Aron 박사의 HSP(고감각인) 연구를 참고한 자기 탐색 도구입니다. 전문 진단을 대체하지 않습니다.',
+    note: '이 테스트는 Elaine Aron 박사의 HSP(고감각인) 연구를 참고한 자기 탐색 도구예요. 전문 진단을 대체하지 않아요.',
     levelLabels: { high: '고감각인 (HSP)', moderate: '중간 감각인', low: '저감각인' },
     levelSubtitles: {
       high: '당신은 매우 예민하고 깊이 처리하는 사람입니다',

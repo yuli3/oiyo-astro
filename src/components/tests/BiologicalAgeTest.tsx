@@ -9,7 +9,7 @@ const LABELS: Record<Locale, {
   chronoAge: string; bioAge: string; diff: string; older: string; younger: string
   categories: Record<string, string>
 }> = {
-  ko: { title: '생체 나이 계산기', subtitle: '생활 습관으로 실제 건강 나이를 계산해보세요', calculate: '계산하기', reset: '초기화', note: '이 계산기는 과학적 참고용입니다. 정확한 건강 평가는 전문의와 상담하세요.', chronoAge: '실제 나이', bioAge: '생체 나이', diff: '차이', older: '세 더 늙은 상태', younger: '세 더 젊은 상태',
+  ko: { title: '생체 나이 계산기', subtitle: '생활 습관으로 실제 건강 나이를 계산해보세요', calculate: '계산하기', reset: '초기화', note: '이 계산기는 과학적 참고용이에요. 정확한 건강 평가는 전문의와 상담하세요.', chronoAge: '실제 나이', bioAge: '생체 나이', diff: '차이', older: '세 더 늙은 상태', younger: '세 더 젊은 상태',
     categories: { sleep: '수면', exercise: '운동', diet: '식습관', stress: '스트레스', smoking: '흡연', alcohol: '음주', bmi: 'BMI', social: '사회적 연결' } },
   en: { title: 'Biological Age Calculator', subtitle: 'Calculate your real health age based on lifestyle habits', calculate: 'Calculate', reset: 'Reset', note: 'This calculator is for scientific reference. Consult a doctor for accurate health assessment.', chronoAge: 'Chronological Age', bioAge: 'Biological Age', diff: 'Difference', older: 'years biologically older', younger: 'years biologically younger',
     categories: { sleep: 'Sleep', exercise: 'Exercise', diet: 'Diet', stress: 'Stress', smoking: 'Smoking', alcohol: 'Alcohol', bmi: 'BMI', social: 'Social Connection' } },

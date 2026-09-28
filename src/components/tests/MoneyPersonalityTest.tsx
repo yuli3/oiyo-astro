@@ -54,7 +54,7 @@ const LABELS: Record<SupportedLang, {
     strengths: '강점',
     tip: '팁',
     scoreLabel: '유형별 점수',
-    note: '이 테스트는 재정 습관에 대한 자기 이해를 돕기 위한 것입니다.',
+    note: '이 테스트는 재정 습관에 대한 자기 이해를 돕기 위한 것이에요.',
     copied: '링크가 복사되었습니다!',
   },
   en: {

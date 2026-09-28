@@ -64,7 +64,7 @@ const T: Record<SupportedLang, { title: string; subtitle: string; pick: string; 
   ko: { title: '관상 자가진단', subtitle: '얼굴 부위를 골라 전통 관상으로 보는 나의 기질',
     pick: '각 부위에서 나와 가장 가까운 모습을 골라보세요', result: '관상 보기', reset: '다시 선택',
     summary: '종합하면, 당신의 얼굴에는 위와 같은 기질과 운의 흐름이 어우러져 있습니다. 관상은 고정된 운명이 아니라, 표정과 마음가짐으로 가꿔지는 것입니다.',
-    note: '전통 관상(觀相) 해석을 바탕으로 한 참고·재미용 콘텐츠입니다. 외모로 사람을 단정하지 않으며, 절대적 해석이 아닙니다.' },
+    note: '전통 관상(觀相) 해석을 바탕으로 한 참고·재미용 콘텐츠예요. 외모로 사람을 단정하지 않으며, 절대적 해석이 아니에요.' },
   en: { title: 'Face Reading (Gwansang)', subtitle: 'Pick your features and read your temperament through traditional Korean physiognomy',
     pick: 'Choose the closest match for each feature', result: 'Read my face', reset: 'Choose again',
     summary: 'In sum, your face weaves together the temperaments and fortunes above. Physiognomy is not a fixed fate — it is shaped by your expression and your heart.',

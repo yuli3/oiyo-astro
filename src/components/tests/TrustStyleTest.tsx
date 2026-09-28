@@ -34,7 +34,7 @@ const LABELS: Record<SupportedLang, {
     yourStyle: '나의 신뢰 스타일', strengths: '이 스타일의 강점', tips: '성장 포인트',
     affirmation: '오늘의 메시지',
     dimLabels: { quick: '빠른 신뢰형', earned: '검증형', cautious: '신중형', guarded: '방어형' },
-    note: '이 테스트는 참고용이며 전문적 심리 진단을 대체하지 않습니다.',
+    note: '이 테스트는 참고용이며 전문적 심리 진단을 대체하지 않아요.',
     barLabel: '성향 분포',
   },
   en: {
@@ -213,7 +213,7 @@ const RESULTS: Record<StyleKey, Record<SupportedLang, StyleData>> = {
   quick: {
     ko: {
       title: '빠른 신뢰형',
-      subtitle: '당신은 열린 마음으로 타인을 만납니다',
+      subtitle: '당신은 열린 마음으로 타인을 만나요',
       description: '처음 만나는 사람에게도 빠르게 마음을 여는 편입니다. 관계 형성이 빠르고 따뜻한 분위기를 만들어내는 능력이 탁월합니다. 다만, 판단이 앞서 상처를 받을 수도 있어요.',
       strengths: ['새로운 관계 형성에 탁월함', '따뜻하고 열린 에너지', '협력적 환경 조성', '신뢰받는 느낌을 먼저 줌'],
       tips: ['판단보다 관찰을 먼저 하는 연습', '신뢰는 선물이 아닌 교환임을 기억하기', '경계를 설정하는 것이 냉정함이 아님을 인지하기'],
@@ -263,7 +263,7 @@ const RESULTS: Record<StyleKey, Record<SupportedLang, StyleData>> = {
   earned: {
     ko: {
       title: '검증형',
-      subtitle: '당신은 신중하게, 그러나 진심으로 믿습니다',
+      subtitle: '당신은 신중하게, 그러나 진심으로 믿어요',
       description: '신뢰를 쌓는 데 시간이 걸리지만, 한 번 형성된 신뢰는 깊고 견고합니다. 경험을 바탕으로 사람을 판단하며 균형 잡힌 대인관계를 유지합니다.',
       strengths: ['깊고 지속적인 인간관계', '균형 잡힌 신뢰 판단력', '신뢰받는 친구/동료', '감정적 안정감 제공'],
       tips: ['처음 만남에서 조금 더 열린 자세 갖기', '검증 기간이 길어질 때 상대가 느끼는 거리감 인식하기', '완벽한 신뢰는 없다는 것을 받아들이기'],
@@ -313,7 +313,7 @@ const RESULTS: Record<StyleKey, Record<SupportedLang, StyleData>> = {
   cautious: {
     ko: {
       title: '신중형',
-      subtitle: '당신은 천천히, 단단하게 관계를 쌓습니다',
+      subtitle: '당신은 천천히, 단단하게 관계를 쌓아요',
       description: '신뢰를 주는 데 매우 신중합니다. 충분한 관찰과 시간이 지난 후에야 마음을 엽니다. 이로 인해 관계가 느리게 발전하지만, 맺어진 관계는 매우 의미 있습니다.',
       strengths: ['깊이 있는 소수의 관계', '상처받을 위험 최소화', '신중한 의사 결정', '자기 자신에 대한 이해 깊음'],
       tips: ['작은 신뢰 실험을 조금씩 해보기', '모든 관계가 같은 기준을 적용할 필요는 없음', '누군가 기다려주고 있다는 것을 기억하기'],
@@ -363,7 +363,7 @@ const RESULTS: Record<StyleKey, Record<SupportedLang, StyleData>> = {
   guarded: {
     ko: {
       title: '방어형',
-      subtitle: '당신은 스스로를 보호하는 법을 알고 있습니다',
+      subtitle: '당신은 스스로를 보호하는 법을 알고 있어요',
       description: '신뢰하기가 매우 어렵게 느껴집니다. 이는 과거의 경험이나 상처에서 비롯된 경우가 많습니다. 자신을 보호하려는 본능은 자연스럽지만, 때로는 고립감으로 이어질 수 있습니다.',
       strengths: ['자기 보호 본능이 강함', '독립적이고 자율적', '조심스러운 정보 공유로 안전 유지', '깊은 내면 세계 보유'],
       tips: ['혼자 모든 것을 해결할 필요는 없음을 기억하기', '신뢰의 작은 단계들을 안전하게 실험해보기', '과거의 경험이 현재 모든 관계를 정의하지 않음'],

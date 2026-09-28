@@ -591,7 +591,7 @@ ${listLines(form.nextExperiments)}
 
       {(() => {
         const m = ({
-          ko: { title: '내 데이터 수집 현황', done: '수집됨', go: '테스트 하러가기', hint: '테스트를 하면 아래 항목이 자동으로 채워집니다.' },
+          ko: { title: '내 데이터 수집 현황', done: '수집됨', go: '테스트 하러가기', hint: '테스트를 하면 아래 항목이 자동으로 채워져요.' },
           en: { title: 'Your data collected', done: 'collected', go: 'Take the test', hint: 'Taking tests auto-fills the fields below.' },
         } as Record<string, { title: string; done: string; go: string; hint: string }>)[L] ?? ({ title: 'Your data collected', done: 'collected', go: 'Take the test', hint: 'Taking tests auto-fills the fields below.' });
         const labelsForLocale = COORDINATE_LABELS[L] ?? COORDINATE_LABELS.en;

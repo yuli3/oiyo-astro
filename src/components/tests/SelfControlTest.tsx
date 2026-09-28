@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     focusLabel: '끈기·집중',
     outOf: '/ 5.0',
     tipsLabel: '성장 팁',
-    note: '탱그니 외(Tangney et al.)의 단축 자기통제 척도(BSCS) 개념을 바탕으로 한 자가성찰용 테스트입니다. 전문적 진단을 대체하지 않습니다.',
+    note: '탱그니 외(Tangney et al.)의 단축 자기통제 척도(BSCS) 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Self-Control Test',

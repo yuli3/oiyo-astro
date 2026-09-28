@@ -398,7 +398,7 @@ const ui: Record<SupportedLocale, {
 }> = {
   ko: {
     title: "에고그램 자아 상태 테스트",
-    subtitle: "교류분석(TA) 기반의 5가지 자아 상태를 진단합니다",
+    subtitle: "교류분석(TA) 기반의 5가지 자아 상태를 진단해요",
     scale: "각 항목에 얼마나 동의하시나요?",
     progress: "질문",
     resultTitle: "나의 자아 상태 프로파일",
@@ -410,7 +410,7 @@ const ui: Record<SupportedLocale, {
     restart: "다시 테스트하기",
     share: "결과 공유",
     copied: "링크가 복사되었습니다!",
-    note: "이 테스트는 Transactional Analysis(교류분석) 이론에 기반하며, 자기 이해를 위한 참고 자료입니다.",
+    note: "이 테스트는 Transactional Analysis(교류분석) 이론에 기반하며, 자기 이해를 위한 참고 자료예요.",
   },
   en: {
     title: "Egogram Ego State Test",

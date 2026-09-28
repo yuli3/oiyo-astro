@@ -42,7 +42,7 @@ interface UiLabels {
 const L: Partial<Record<Locale, UiLabels>> = {
   ko: {
     title: '내 돈 어디에 둘까? — 자금 보관처 가이드',
-    subtitle: '목적을 고르면 어울리는 보관처를 알려드립니다. 투자 권유가 아닌 교육용 안내입니다.',
+    subtitle: '목적을 고르면 어울리는 보관처를 알려드려요. 투자 권유가 아닌 교육용 안내예요.',
     goalQ: '이 돈의 목적은?',
     goals: [
       { key: 'emergency', label: '비상금(즉시 인출)' },
@@ -51,7 +51,7 @@ const L: Partial<Record<Locale, UiLabels>> = {
       { key: 'invest', label: '불려보기(투자)' },
     ],
     recFor: '추천 보관처', liquidity: '유동성', risk: '위험', all: '전체 보기',
-    disclaimer: '교육용 일반 정보이며 투자·금융 권유가 아닙니다. 상품·세제·예금자보호 한도는 변동되므로 각 금융사·공식 사이트에서 확인하세요.',
+    disclaimer: '교육용 일반 정보이며 투자·금융 권유가 아니에요. 상품·세제·예금자보호 한도는 변동되므로 각 금융사·공식 사이트에서 확인하세요.',
   },
   en: {
     title: 'Where should your money go? — Parking Guide',

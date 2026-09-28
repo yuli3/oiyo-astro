@@ -108,7 +108,7 @@ const L: Record<SupportedLang, {
     distribution: '나의 오행 분포', lacking: '가장 부족한 기운', lackingNone: '오행이 비교적 고르게 갖춰져 있어요. 아래는 상대적으로 약한 기운의 보완법입니다.',
     prescription: '보완 처방', colorLabel: '보완 색', directionLabel: '이로운 방향', seasonLabel: '기운의 계절', numberLabel: '행운 숫자',
     energyLabel: '채워지는 기운', peopleLabel: '함께하면 좋은 사람', itemsLabel: '보완하는 색·기운·아이템',
-    note: '전통 명리학의 오행 균형 이론을 바탕으로 한 참고용 콘텐츠입니다. 절대적 해석이 아니며 재미와 자기성찰을 위한 것입니다.' },
+    note: '전통 명리학의 오행 균형 이론을 바탕으로 한 참고용 콘텐츠예요. 절대적 해석이 아니며 재미와 자기성찰을 위한 것이에요.' },
   en: { title: 'My Complementary Energy', subtitle: 'The color, direction & people that fill what your Five-Element chart lacks',
     year: 'Birth year', month: 'Month', day: 'Day', hour: 'Hour (optional)', hourUnknown: 'Unknown',
     gender: 'Gender', male: 'M', female: 'F', calc: 'See my complementary energy', recompute: 'Recompute',

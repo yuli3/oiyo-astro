@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     behavioralLabel: '행동적 질투 (확인·통제)',
     outOf: '/ 5.0',
     tipsLabel: '관계를 위한 팁',
-    note: '파이퍼와 웡(Pfeiffer & Wong)의 다차원 질투 척도 개념을 바탕으로 한 자가성찰용 테스트입니다. 전문적 진단을 대체하지 않습니다.',
+    note: '파이퍼와 웡(Pfeiffer & Wong)의 다차원 질투 척도 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Jealousy Type Test',

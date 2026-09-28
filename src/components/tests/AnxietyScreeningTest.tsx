@@ -28,8 +28,8 @@ const LABELS: Record<SupportedLang, {
 }> = {
   ko: {
     title: '불안감 자가 점검 (GAD-7)',
-    subtitle: '지난 2주 동안 당신은 다음의 문제들로 인해서 얼마나 자주 방해를 받았습니까?',
-    screeningNote: '이 검사는 선별 도구이며 진단이 아닙니다. 불안이 일상을 방해한다면 전문가와 상담하세요.',
+    subtitle: '지난 2주 동안 당신은 다음의 문제들로 인해서 얼마나 자주 방해를 받았어요?',
+    screeningNote: '이 검사는 선별 도구이며 진단이 아니에요. 불안이 일상을 방해한다면 전문가와 상담하세요.',
     questionOf: (c, t) => `${c} / ${t}`,
     scaleLabels: ['전혀 방해 받지 않았다', '며칠 동안 방해 받았다', '2주 중 절반 이상 방해 받았다', '거의 매일 방해 받았다'],
     restart: '다시 하기',
@@ -41,8 +41,8 @@ const LABELS: Record<SupportedLang, {
     affirmation: '오늘의 메시지',
     scoreLabel: 'GAD-7 점수',
     outOf: '/ 21점',
-    note: '이 결과는 의사나 정신건강 전문가의 진단을 대체하지 않습니다.',
-    compassion: '불안을 느끼는 것은 매우 자연스러운 인간의 경험입니다. 지금 이 검사를 하는 것은 자신을 이해하려는 용감한 행동입니다.',
+    note: '이 결과는 의사나 정신건강 전문가의 진단을 대체하지 않아요.',
+    compassion: '불안을 느끼는 것은 매우 자연스러운 인간의 경험이에요. 지금 이 검사를 하는 것은 자신을 이해하려는 용감한 행동이에요.',
   },
   en: {
     title: 'Anxiety Screening (GAD-7)',
@@ -200,7 +200,7 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
   minimal: {
     ko: {
       title: '최소 수준',
-      subtitle: '불안 수준이 정상 범위 내에 있습니다',
+      subtitle: '불안 수준이 정상 범위 내에 있어요',
       description: '현재 불안 수준은 낮습니다. 일상적인 긴장과 불안은 삶의 자연스러운 부분이며, 지금은 잘 조절되고 있는 것으로 보입니다.',
       tips: ['규칙적인 신체 활동 유지하기', '마음 챙김 또는 깊은 호흡 연습', '충분한 수면 확보하기', '카페인 섭취량 적절히 조절하기'],
       resources: ['정신건강 위기상담: 1577-0199', '자살예방상담전화: 109', '정신건강복지센터 방문 상담'],
@@ -250,7 +250,7 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
   mild: {
     ko: {
       title: '가벼운 불안',
-      subtitle: '불안이 가끔 일상에 영향을 미치고 있습니다',
+      subtitle: '불안이 가끔 일상에 영향을 미치고 있어요',
       description: '가벼운 불안은 매우 흔하며 여러 가지 방법으로 관리할 수 있습니다. 증상이 2주 이상 지속된다면 전문가 상담을 고려해보세요.',
       tips: ['복식 호흡: 4초 들이쉬고, 4초 참고, 6초 내쉬기', '점진적 근육 이완법 연습하기', '규칙적인 운동 (특히 유산소)', '걱정 일기 쓰기로 생각 정리하기', '수면 루틴 확립하기'],
       resources: ['정신건강 위기상담: 1577-0199', '자살예방상담전화: 109', '지역 정신건강복지센터 무료 상담'],
@@ -300,7 +300,7 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
   moderate: {
     ko: {
       title: '중등도 불안',
-      subtitle: '전문가의 도움을 받는 것을 권장합니다',
+      subtitle: '전문가의 도움을 받는 것을 권장해요',
       description: '중등도 불안은 일상 기능에 상당한 영향을 미치고 있습니다. 인지행동치료(CBT)나 약물치료가 효과적일 수 있습니다. 혼자 감당하려 하지 마세요.',
       tips: ['가능한 빨리 정신건강 전문가 상담 예약하기', 'CBT 기반 자조 앱 활용 (예: Woebot, Headspace)', '카페인, 알코올, 과도한 뉴스 소비 줄이기', '매일 같은 시간에 자고 일어나기'],
       resources: ['정신건강 위기상담: 1577-0199 (24시간)', '자살예방상담전화: 109', '국가 정신건강정보포털: www.mentalhealth.go.kr', '지역 정신건강복지센터 (무료 상담)'],

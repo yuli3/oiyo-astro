@@ -33,7 +33,7 @@ const LABELS: Record<SupportedLang, {
   ko: {
     title: '일·생활 균형 테스트',
     subtitle: '나의 워라밸 점수는?',
-    note: '이 테스트는 일과 삶의 균형을 탐색하는 자가 진단 도구입니다.',
+    note: '이 테스트는 일과 삶의 균형을 탐색하는 자가 진단 도구예요.',
     questionOf: (c, t) => `${c} / ${t}`,
     scaleLabels: ['전혀 아님', '약간 아님', '보통', '약간 그럼', '매우 그럼'],
     restart: '다시 하기',
@@ -286,7 +286,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
   imbalanced: {
     ko: {
       title: '심각한 불균형',
-      subtitle: '지금 일·생활 균형이 많이 무너진 상태입니다',
+      subtitle: '지금 일·생활 균형이 많이 무너진 상태예요',
       description: '현재 일과 삶의 균형이 크게 무너져 있습니다. 이 상태가 지속되면 번아웃, 건강 문제, 관계 손상으로 이어질 수 있습니다. 지금 즉각적인 변화가 필요합니다.',
       guidance: ['업무 외 시간 최소 하나의 고정 "쉼" 시간 만들기', '현재 일정에서 제거할 수 있는 것 리스트업', '신뢰하는 사람이나 상담사와 현 상황 공유하기', '작은 회복 루틴부터 시작하기 (15분 산책, 조기 취침)'],
     },
@@ -324,7 +324,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
   strained: {
     ko: {
       title: '불안정한 균형',
-      subtitle: '균형이 흔들리고 있습니다',
+      subtitle: '균형이 흔들리고 있어요',
       description: '일과 삶의 균형이 불안정한 상태입니다. 어떤 영역은 괜찮지만 다른 영역이 부담이 되고 있습니다. 지금 의도적인 조정이 필요한 시점입니다.',
       guidance: ['가장 취약한 영역에 우선 집중하기', '매주 "균형 점검" 시간 10분 갖기', '회복에 도움이 되는 활동 하나를 일과에 추가하기', '디지털 기기 사용 시간 의도적으로 제한하기'],
     },
@@ -362,7 +362,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
   developing: {
     ko: {
       title: '발전 중인 균형',
-      subtitle: '균형을 잡아가고 있습니다',
+      subtitle: '균형을 잡아가고 있어요',
       description: '전반적으로 균형을 잡아가고 있지만, 아직 최적화의 여지가 있습니다. 지금의 방향은 맞습니다. 조금 더 세밀하게 조정하면 더 좋은 균형을 이룰 수 있습니다.',
       guidance: ['현재 잘 되고 있는 것들을 의식적으로 유지하기', '개선 여지가 있는 영역 하나씩 접근하기', '일과 삶 모두에서 "충분히 좋다"는 기준 설정하기', '자신의 에너지 패턴에 맞는 일정 최적화'],
     },
@@ -400,7 +400,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
   balanced: {
     ko: {
       title: '균형 잡힌 삶',
-      subtitle: '훌륭한 워라밸을 유지하고 있습니다',
+      subtitle: '훌륭한 워라밸을 유지하고 있어요',
       description: '현재 일과 삶의 균형이 건강하게 유지되고 있습니다. 이 균형을 지속적으로 의식하고 유지하는 것이 중요합니다. 변화하는 상황 속에서도 이 균형을 지켜나가세요.',
       guidance: ['현재 균형을 가능하게 하는 요소들을 파악하고 보호하기', '새로운 도전에 직면할 때 균형이 흔들리지 않도록 주의하기', '주변 사람들에게도 균형 잡힌 삶의 패턴 나누기', '정기적인 자기 점검으로 균형 모니터링'],
     },

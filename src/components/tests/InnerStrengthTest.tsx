@@ -101,7 +101,7 @@ const LABELS = {
     strengthLabel: '강점',
     growthLabel: '성장 기회',
     totalLabel: '총 내면 근력 지수',
-    note: '이 진단은 자기이해를 돕기 위한 참고 도구입니다. 전문적 상담을 대체하지 않습니다.',
+    note: '이 진단은 자기이해를 돕기 위한 참고 도구예요. 전문적 상담을 대체하지 않아요.',
     next: '다음',
     prev: '이전',
     submit: '결과 보기',

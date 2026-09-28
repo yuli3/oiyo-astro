@@ -33,7 +33,7 @@ const LABELS: Record<SupportedLang, {
   ko: {
     title: '개인 경계선 강도 테스트',
     subtitle: '나의 경계는 얼마나 건강한가?',
-    note: '경계선은 자기 보호와 건강한 관계를 위한 필수 요소입니다. 이 테스트는 자기 인식을 돕는 도구입니다.',
+    note: '경계선은 자기 보호와 건강한 관계를 위한 필수 요소예요. 이 테스트는 자기 인식을 돕는 도구예요.',
     questionOf: (c, t) => `${c} / ${t}`,
     scaleLabels: ['전혀 아님', '가끔 그럼', '자주 그럼', '항상 그럼'],
     restart: '다시 하기',
@@ -226,7 +226,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
   porous: {
     ko: {
       title: '유동적 경계선',
-      subtitle: '경계선이 불명확할 수 있습니다',
+      subtitle: '경계선이 불명확할 수 있어요',
       description: '현재 경계선이 흐릿하거나 일관적이지 않을 수 있습니다. 이는 타인의 요구에 쉽게 압도되거나, 자신의 필요를 자주 뒤로 미룰 수 있음을 의미합니다. 경계선은 훈련을 통해 강화할 수 있습니다.',
       guidance: ['"아니오"를 연습하는 것부터 시작하기', '자신의 감정과 필요를 일기로 기록하기', '신뢰하는 상담사나 치료사와 경계선 작업', '매일 하나의 작은 경계 설정 연습하기'],
     },
@@ -264,7 +264,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
   developing: {
     ko: {
       title: '발전 중인 경계선',
-      subtitle: '경계선을 만들어가는 중입니다',
+      subtitle: '경계선을 만들어가는 중이에요',
       description: '일부 영역에서 경계선이 형성되고 있지만, 아직 전 영역에서 일관적이지 않을 수 있습니다. 이미 시작한 것은 좋은 신호입니다. 꾸준한 연습이 차이를 만듭니다.',
       guidance: ['강한 영역의 경계를 더욱 강화하기', '약한 영역 하나를 집중적으로 개선하기', '경계를 표현하는 언어 연습하기', '경계가 지켜졌을 때 자신을 인정하기'],
     },
@@ -302,7 +302,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
   balanced: {
     ko: {
       title: '균형 잡힌 경계선',
-      subtitle: '건강한 경계선을 가지고 있습니다',
+      subtitle: '건강한 경계선을 가지고 있어요',
       description: '전반적으로 건강한 경계선이 형성되어 있습니다. 자신의 필요와 타인의 필요를 적절하게 균형 잡고 있으며, 이는 관계의 건강성에 매우 긍정적입니다.',
       guidance: ['현재의 경계선 패턴을 의식적으로 유지하기', '새로운 관계에서도 일관성 있게 적용하기', '경계선 기술을 주변 사람들과 나누기', '스트레스 상황에서도 경계 유지 연습'],
     },
@@ -340,7 +340,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
   firm: {
     ko: {
       title: '견고한 경계선',
-      subtitle: '매우 강한 경계선을 가지고 있습니다',
+      subtitle: '매우 강한 경계선을 가지고 있어요',
       description: '경계선이 매우 강하게 설정되어 있습니다. 이는 훌륭한 자기 보호 능력을 의미합니다. 단, 경계가 너무 단단하면 가끔 친밀감 형성이 어려울 수 있습니다. 유연성도 함께 고려해보세요.',
       guidance: ['경계가 타인을 완전히 차단하지 않는지 점검하기', '신뢰하는 사람들에게 유연하게 열리는 연습', '경계와 단절의 차이 인식하기', '취약성을 안전한 공간에서 허용하는 연습'],
     },

@@ -11,12 +11,12 @@ const L: Record<Locale, {
   animals: string[]; note: string;
 }> = {
   ko: {
-    title: '여러 명 함께 보기', subtitle: '태어난 해만 넣으면 여러 사람(가족·세대)의 오행·띠를 한 화면에서 비교합니다.',
+    title: '여러 명 함께 보기', subtitle: '태어난 해만 넣으면 여러 사람(가족·세대)의 오행·띠를 한 화면에서 비교해요.',
     labelPlaceholder: '예: 나, 엄마, 아빠', yearPlaceholder: '태어난 해',
-    add: '추가', remove: '삭제', empty: '아직 추가된 사람이 없습니다. 태어난 해를 입력해 보세요.',
+    add: '추가', remove: '삭제', empty: '아직 추가된 사람이 없어요. 태어난 해를 입력해 보세요.',
     elements: { wood: '목(木)', fire: '화(火)', earth: '토(土)', metal: '금(金)', water: '수(水)' },
     animals: ['쥐', '소', '호랑이', '토끼', '용', '뱀', '말', '양', '원숭이', '닭', '개', '돼지'],
-    note: '연도 기준 사주 오행·12지신 요약이며, 별자리는 월·일이 필요해 이 비교에서는 제외됩니다.',
+    note: '연도 기준 사주 오행·12지신 요약이며, 별자리는 월·일이 필요해 이 비교에서는 제외돼요.',
   },
   en: {
     title: 'Compare several people', subtitle: 'Enter birth years to compare Saju elements and Chinese zodiac across family or generations at a glance.',

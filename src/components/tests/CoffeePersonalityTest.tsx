@@ -52,7 +52,7 @@ const LABELS: Record<SupportedLang, {
     shareMsg: '내 커피 성격 유형은',
     yourType: '나의 커피 타입',
     traits: '나의 특성',
-    note: '가장 많이 선택된 커피 유형이 당신의 성격을 나타냅니다.',
+    note: '가장 많이 선택된 커피 유형이 당신의 성격을 나타내요.',
     copied: '링크가 복사되었습니다!',
   },
   en: {

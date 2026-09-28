@@ -35,7 +35,7 @@ const PALACE_NAME: Record<PalaceKey, Record<Lang, string>> = {
 };
 
 const COPY: Record<Lang, { hint: string }> = {
-  ko: { hint: "드래그해 12궁을 돌려보세요. 밝은 별이 명궁입니다." },
+  ko: { hint: "드래그해 12궁을 돌려보세요. 밝은 별이 명궁이에요." },
   en: { hint: "Drag to rotate the 12 palaces. The brightest node is the life palace." },
   ja: { hint: "ドラッグして十二宮を回してみましょう。一番明るい星が命宮です。" },
   zh: { hint: "拖动查看十二宫。最亮的星是命宫。" },

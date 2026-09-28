@@ -30,7 +30,7 @@ const AXIS_INFO: Record<SupportedLang, {
     state:    { name: '국가',  left: '권위주의',  right: '자유지상주의' },
     resultTitle: '나의 정치적 가치관 스펙트럼',
     resultSub: '4가지 축에서 내 위치를 확인해보세요',
-    disclaimer: '이 테스트는 자기 이해를 위한 참고 도구이며, 특정 정당이나 이념을 지지하지 않습니다.',
+    disclaimer: '이 테스트는 자기 이해를 위한 참고 도구이며, 특정 정당이나 이념을 지지하지 않아요.',
   },
   en: {
     economic: { name: 'Economics', left: 'Equality',     right: 'Market' },
@@ -142,7 +142,7 @@ const UI: Record<SupportedLang, {
     axes: '4가지 측정 축',
     disagree: '동의 안 함', neutral: '모름', agree: '동의함',
     prev: '이전', next: '다음', submit: '결과 보기', restart: '다시 하기',
-    loading: '분석 중...', error: '모든 문항에 답해주세요.', unanswered: '번이 아직 미답변입니다.', privacy: '응답은 이 기기에서만 채점되며 문항별 답변은 저장하거나 외부 서버로 보내지 않습니다. 완료하면 4축 요약 코드만 이 기기에 저장됩니다.',
+    loading: '분석 중...', error: '모든 문항에 답해주세요.', unanswered: '번이 아직 미답변입니다.', privacy: '응답은 이 기기에서만 채점되며 문항별 답변은 저장하거나 외부 서버로 보내지 않아요. 완료하면 4축 요약 코드만 이 기기에 저장돼요.',
     step1: '경제관', step2: '사회관', step3: '세계관', step4: '국가관',
   },
   en: {

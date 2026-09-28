@@ -52,7 +52,7 @@ const LABELS: Record<SupportedLang, {
     dimensionsLabel: '4가지 유머 스타일 점수',
     strengthLabel: '강점',
     watchoutLabel: '주의할 점',
-    disclaimer: '이 테스트는 Martin의 유머 스타일 이론을 기반으로 한 자기 이해 도구입니다.',
+    disclaimer: '이 테스트는 Martin의 유머 스타일 이론을 기반으로 한 자기 이해 도구예요.',
     dimNames: {
       affiliative: '친화적 유머',
       selfEnhancing: '자기강화 유머',

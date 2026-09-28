@@ -17,7 +17,7 @@ const OrbitScene = lazy(() => import("./NumerologyOrbitScene"));
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY: Record<Lang, { hint: string }> = {
-  ko: { hint: "숫자가 클수록 별이 커집니다. 금빛 별은 마스터 넘버입니다." },
+  ko: { hint: "숫자가 클수록 별이 커져요. 금빛 별은 마스터 넘버예요." },
   en: { hint: "Bigger numbers make bigger stars. Gold stars are master numbers." },
   ja: { hint: "数字が大きいほど星も大きくなります。金色の星はマスターナンバーです。" },
   zh: { hint: "数字越大，星星越大。金色星星是大师数字。" },

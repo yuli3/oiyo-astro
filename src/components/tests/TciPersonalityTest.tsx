@@ -156,7 +156,7 @@ const L: Record<Locale, {
     temperament: '기질', character: '성격',
     lowLabel: '낮음', highLabel: '높음',
     yourProfile: '나의 TCI 프로파일',
-    disclaimer: '이 검사는 심리 교육 목적으로 제작된 약식 TCI-R입니다. 임상 진단을 대체하지 않습니다.',
+    disclaimer: '이 검사는 심리 교육 목적으로 만든 약식 TCI-R이에요. 임상 진단을 대체하지 않아요.',
     optionLabels: ['전혀 아니다', '아니다', '보통이다', '그렇다', '매우 그렇다'],
   },
   en: {

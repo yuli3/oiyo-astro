@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     negativeLabel: '부정·취약 정서 표현',
     outOf: '/ 5.0',
     tipsLabel: '성장 팁',
-    note: '그로스와 존(Gross & John)의 정서표현성 연구(Berkeley Expressivity) 개념을 바탕으로 한 자가성찰용 테스트입니다. 전문적 진단을 대체하지 않습니다.',
+    note: '그로스와 존(Gross & John)의 정서표현성 연구(Berkeley Expressivity) 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Emotional Expressiveness Test',

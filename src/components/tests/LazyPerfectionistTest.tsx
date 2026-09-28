@@ -117,7 +117,7 @@ const OPTIONS: Record<SupportedLang, string[]> = {
 
 const RESULTS: Record<ResultKey, Record<SupportedLang, Result>> = {
   starter: {
-    ko: { title: '작게 시작하는 회복형', subtitle: '이미 완벽주의를 행동으로 녹이는 중입니다', description: '당신은 기준을 낮추는 것이 아니라 시작 저항을 낮추는 법을 배우고 있습니다.', actions: ['오늘 할 일을 10분 단위로 자르기', '완성 대신 제출 기준을 정하기', '작은 완료를 기록하기'] },
+    ko: { title: '작게 시작하는 회복형', subtitle: '이미 완벽주의를 행동으로 녹이는 중이에요', description: '당신은 기준을 낮추는 것이 아니라 시작 저항을 낮추는 법을 배우고 있습니다.', actions: ['오늘 할 일을 10분 단위로 자르기', '완성 대신 제출 기준을 정하기', '작은 완료를 기록하기'] },
     en: { title: 'Tiny Starter', subtitle: 'You are turning perfectionism into motion', description: 'You are not lowering your standards. You are lowering the friction of starting.', actions: ['Cut today into a 10-minute task', 'Define done before perfect', 'Record one small finish'] },
     ja: { title: '小さく始める回復型', subtitle: '完璧主義を行動に変えています', description: '基準を下げるのではなく、始める抵抗を下げる力があります。', actions: ['今日の作業を10分に分ける', '完璧より完了条件を決める', '小さな完了を記録する'] },
     zh: { title: '小步启动的恢复型', subtitle: '你已经在把完美主义化成行动', description: '你学的不是把标准降下来，而是把「开始」的阻力降下来。', actions: ['把今天的事切成十分钟一块', '把「完成」换成「交出去」的标准', '把小小的完成记下来'] },
@@ -125,7 +125,7 @@ const RESULTS: Record<ResultKey, Record<SupportedLang, Result>> = {
     es: { title: 'Quien empieza pequeño', subtitle: 'Ya estás convirtiendo el perfeccionismo en acción', description: 'No estás aprendiendo a bajar el listón, sino a bajar la resistencia a empezar.', actions: ['Partir el día en bloques de diez minutos', 'Cambiar «terminar» por «entregar»', 'Anotar lo pequeño que sí completas'] },
   },
   planner: {
-    ko: { title: '계획 과잉형', subtitle: '준비가 행동을 대신하고 있습니다', description: '계획은 강점이지만, 지금은 시작을 늦추는 안전장치가 되었을 수 있습니다.', actions: ['계획 시간을 15분으로 제한하기', '초안 하나를 먼저 만들기', '검토는 실행 후로 미루기'] },
+    ko: { title: '계획 과잉형', subtitle: '준비가 행동을 대신하고 있어요', description: '계획은 강점이지만, 지금은 시작을 늦추는 안전장치가 되었을 수 있습니다.', actions: ['계획 시간을 15분으로 제한하기', '초안 하나를 먼저 만들기', '검토는 실행 후로 미루기'] },
     en: { title: 'Over-Planner', subtitle: 'Preparation is replacing action', description: 'Planning is a strength, but it may have become a safety behavior that delays the start.', actions: ['Limit planning to 15 minutes', 'Make one rough draft first', 'Review only after action'] },
     ja: { title: '計画過多型', subtitle: '準備が行動の代わりになっています', description: '計画力は強みですが、今は開始を遅らせる安全行動かもしれません。', actions: ['計画は15分まで', 'まず粗い下書きを作る', '見直しは実行後にする'] },
     zh: { title: '计划过量型', subtitle: '准备在替你做事', description: '会计划是长处，但现在它成了延后开始的安全垫。', actions: ['把做计划的时间限制在十五分钟', '先做出一个草稿', '复查留到执行之后'] },
@@ -133,7 +133,7 @@ const RESULTS: Record<ResultKey, Record<SupportedLang, Result>> = {
     es: { title: 'Exceso de plan', subtitle: 'Preparar está sustituyendo a actuar', description: 'Planificar es una fortaleza, pero ahora es el colchón que retrasa el arranque.', actions: ['Limitar el plan a quince minutos', 'Sacar primero un borrador', 'Dejar la revisión para después de ejecutar'] },
   },
   critic: {
-    ko: { title: '내면 비평가형', subtitle: '실패보다 자기비난을 피하고 있습니다', description: '문제는 게으름이 아니라 실패 뒤에 따라오는 가혹한 해석입니다.', actions: ['결과와 나의 가치를 분리해서 쓰기', '80점 버전을 일부러 내보기', '비판 문장을 코치 문장으로 바꾸기'] },
+    ko: { title: '내면 비평가형', subtitle: '실패보다 자기비난을 피하고 있어요', description: '문제는 게으름이 아니라 실패 뒤에 따라오는 가혹한 해석입니다.', actions: ['결과와 나의 가치를 분리해서 쓰기', '80점 버전을 일부러 내보기', '비판 문장을 코치 문장으로 바꾸기'] },
     en: { title: 'Inner Critic', subtitle: 'You are avoiding self-attack more than failure', description: 'The issue is not laziness. It is the harsh meaning you attach to imperfect outcomes.', actions: ['Separate results from self-worth', 'Publish an 80 percent version on purpose', 'Turn criticism into coaching language'] },
     ja: { title: '内なる批評家型', subtitle: '失敗より自己批判を避けています', description: '問題は怠けではなく、不完全な結果への厳しい解釈です。', actions: ['結果と自分の価値を分けて書く', '80点版をあえて出す', '批判文をコーチ文に変える'] },
     zh: { title: '内在批评者型', subtitle: '你躲的不是失败，是失败后的自责', description: '问题不在懒，而在失败之后那套严苛的解读。', actions: ['把结果和自我价值分开写下来', '故意交出一个八十分的版本', '把批评句改写成教练句'] },
@@ -141,7 +141,7 @@ const RESULTS: Record<ResultKey, Record<SupportedLang, Result>> = {
     es: { title: 'El crítico interior', subtitle: 'Lo que evitas es el reproche más que el fallo', description: 'El problema no es la pereza, sino la lectura dura que llega después del fallo.', actions: ['Escribir por separado el resultado y tu valor', 'Entregar a propósito una versión al 80 %', 'Reescribir la frase que juzga como frase que entrena'] },
   },
   recovering: {
-    ko: { title: '회복 훈련형', subtitle: '불완전한 실행을 연습 중입니다', description: '당신은 이미 패턴을 알아차리고 있습니다. 이제 반복 가능한 루틴이 필요합니다.', actions: ['매일 같은 시간 10분 실행', '실패한 날도 체크인을 유지하기', '30일 습관 도우미로 이어가기'] },
+    ko: { title: '회복 훈련형', subtitle: '불완전한 실행을 연습 중이에요', description: '당신은 이미 패턴을 알아차리고 있습니다. 이제 반복 가능한 루틴이 필요합니다.', actions: ['매일 같은 시간 10분 실행', '실패한 날도 체크인을 유지하기', '30일 습관 도우미로 이어가기'] },
     en: { title: 'Recovering Practitioner', subtitle: 'You are practicing imperfect action', description: 'You already notice the pattern. Now you need a repeatable routine.', actions: ['Act for 10 minutes at the same time daily', 'Keep check-ins even on missed days', 'Continue with the 30-day habit helper'] },
     ja: { title: '回復トレーニング型', subtitle: '不完全な実行を練習中です', description: 'すでにパターンに気づいています。次は繰り返せるルーティンです。', actions: ['毎日同じ時間に10分実行', '失敗した日も確認を続ける', '30日習慣ヘルパーにつなげる'] },
     zh: { title: '恢复练习型', subtitle: '你正在练习「不完美地做」', description: '你已经看见自己的模式了。接下来需要的是能重复的节奏。', actions: ['每天同一时间做十分钟', '失败的那天也照样签到', '用三十天的习惯表接住它'] },

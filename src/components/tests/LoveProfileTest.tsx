@@ -135,7 +135,7 @@ const UI_TEXT: Record<Lang, {
   attachLabel: string; loveLabel: string; conflictLabel: string;
   retryBtn: string; nextBtn: string; prevBtn: string; submitBtn: string; startBtn: string;
 }> = {
-  ko: { title:"통합 연애 프로파일러", subtitle:"애착유형 · 사랑언어 · 갈등방식으로 나의 연애 스타일을 분석합니다",
+  ko: { title:"통합 연애 프로파일러", subtitle:"애착유형 · 사랑언어 · 갈등방식으로 나의 연애 스타일을 분석해요",
     sections:{ A:"섹션 A: 애착 유형 (8문항)", B:"섹션 B: 사랑의 언어 (10문항)", C:"섹션 C: 갈등 방식 (10문항)" },
     progress:(n:number,t:number)=>`${n}/${t}`,
     scale:["전혀 아님","아님","보통","그렇다","매우 그렇다"],

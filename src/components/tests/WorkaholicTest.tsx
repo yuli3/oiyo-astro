@@ -62,7 +62,7 @@ const LABELS: Record<SupportedLang, {
     intrusionLabel: '일-삶 침범',
     outOf: '/ 5.0',
     tipsLabel: '회복을 위한 팁',
-    note: '버겐 일중독 척도(BWAS, Andreassen 외, 2012)의 7가지 중독 요소를 바탕으로 한 자가성찰용 테스트입니다. 의학적 진단을 대체하지 않습니다.',
+    note: '버겐 일중독 척도(BWAS, Andreassen 외, 2012)의 7가지 중독 요소를 바탕으로 한 자가성찰용 테스트예요. 의학적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Workaholism Self-Test',

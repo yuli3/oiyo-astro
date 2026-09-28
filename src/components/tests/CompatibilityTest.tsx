@@ -43,7 +43,7 @@ const LABELS: Record<Locale, {
     shareMsg: '우리의 궁합 점수는',
     overallLabel: '전체 궁합',
     dimLabels: { communication: '소통', values: '가치관', lifestyle: '라이프스타일', emotional: '정서' },
-    note: '이 테스트는 관계의 패턴을 탐색하는 도구입니다. 실제 관계는 훨씬 더 복잡하고 아름답습니다.',
+    note: '이 테스트는 관계의 패턴을 탐색하는 도구예요. 실제 관계는 훨씬 더 복잡하고 아름다워요.',
     startPartner: '파트너 질문 시작',
     compatible: '높은 궁합',
     moderate: '보통 궁합',

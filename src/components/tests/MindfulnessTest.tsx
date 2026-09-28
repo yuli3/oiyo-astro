@@ -33,7 +33,7 @@ const LABELS: Record<SupportedLang, {
     restart: '다시 하기', share: '결과 공유', shareMsg: '나의 마음챙김 수준은',
     yourLevel: '나의 마음챙김 수준', insights: '현재 패턴', practices: '수련 방법',
     affirmation: '오늘의 메시지', scoreLabel: '마음챙김 점수', outOf: '/ 90점',
-    note: '이 테스트는 MAAS(마음챙김 주의 인식 척도)를 기반으로 한 참고용 자가 진단입니다.',
+    note: '이 테스트는 MAAS(마음챙김 주의 인식 척도)를 기반으로 한 참고용 자가 진단이에요.',
   },
   en: {
     title: 'Mindfulness Test',
@@ -198,7 +198,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
 const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   autopilot: {
     ko: {
-      title: '자동조종 상태', subtitle: '마음이 자주 현재를 떠나 있습니다',
+      title: '자동조종 상태', subtitle: '마음이 자주 현재를 떠나 있어요',
       description: '현재 순간보다 과거나 미래에 마음이 머무는 시간이 많습니다. 자동적인 생각의 흐름에 따라 움직이고 있어, 지금 이 순간의 경험을 충분히 느끼지 못하고 있습니다. 이것은 누구에게나 일어나는 자연스러운 상태입니다.',
       insights: ['자동적 사고 패턴이 강함', '현재 감각보다 생각에 집중', '반추와 걱정이 많음', '순간 인식이 낮은 편'],
       practices: ['하루 3분 호흡 관찰부터 시작하기', '밥 먹을 때 음식의 맛에만 집중하기', '걸을 때 발이 땅에 닿는 감각 느끼기', '알람을 맞춰두고 현재 감각 체크하기'],
@@ -242,7 +242,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   developing: {
     ko: {
-      title: '발전 중', subtitle: '마음챙김의 씨앗이 자라고 있습니다',
+      title: '발전 중', subtitle: '마음챙김의 씨앗이 자라고 있어요',
       description: '가끔은 현재 순간을 의식하지만, 아직 자동적 사고 패턴이 자주 개입합니다. 마음챙김을 향해 나아가고 있는 과도기 단계입니다. 의도적인 연습이 이 상태를 크게 변화시킬 수 있습니다.',
       insights: ['순간 인식이 점차 늘고 있음', '때때로 현재에 집중하는 능력 발현', '연습에 따라 빠르게 발전 가능', '자기 인식이 높아지는 시기'],
       practices: ['명상 앱으로 5-10분 하루 시작하기', '감사 일지 쓰기', '자연 속 걷기를 마음챙김 실천으로 활용', '감정 레이블링 연습하기'],
@@ -286,7 +286,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   mindful: {
     ko: {
-      title: '마음챙김형', subtitle: '현재 순간과 꽤 잘 연결되어 있습니다',
+      title: '마음챙김형', subtitle: '현재 순간과 꽤 잘 연결되어 있어요',
       description: '일상에서 현재 순간을 인식하는 능력이 잘 발달되어 있습니다. 생각이 떠오를 때 그것을 알아차리고, 감각과 감정에 주의를 기울이는 습관이 형성되어 있습니다.',
       insights: ['안정적인 현재 인식 능력', '감각과 감정에 주의 기울임', '자동 반응보다 의식적 반응', '스트레스 회복력이 높은 편'],
       practices: ['더 깊은 명상 수련으로 발전시키기', '마음챙김을 어려운 순간에 적용하기', '다른 사람과 함께 실천 공유하기', '자기 연민 수련 추가하기'],
@@ -330,7 +330,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   deeply_present: {
     ko: {
-      title: '깊은 현재형', subtitle: '지금 이 순간을 깊이 살고 있습니다',
+      title: '깊은 현재형', subtitle: '지금 이 순간을 깊이 살고 있어요',
       description: '일상에서 현재 순간과 깊이 연결되어 있습니다. 생각, 감각, 감정의 흐름을 자연스럽게 관찰하며 살아가는 능력이 높습니다. 이 수준의 마음챙김은 꾸준한 연습과 자기 인식의 결과입니다.',
       insights: ['높은 수준의 현재 인식', '자동적 반응에서 자유로움', '감정과 생각을 관찰자 시각으로 봄', '내면의 평온이 안정적'],
       practices: ['더 깊은 수련 방식 탐색(명상 리트릿 등)', '주변 사람들과 마음챙김 나누기', '자기 연민과 공감 수련 심화', '어려운 감정과의 작업 심화'],

@@ -227,7 +227,7 @@ const L: Record<Locale, {
     stem: '천간', branch: '지지', animal: '띠', element: '오행',
     dominantElement: '주요 오행', strengths: '강점', weaknesses: '약점', career: '적합 직업',
     luckyColors: '행운의 색', luckyNumbers: '행운의 숫자', luckyDirections: '행운의 방위',
-    disclaimer: '사주는 동양의 전통적인 운명론으로, 과학적 근거가 없습니다. 재미와 자기 이해의 도구로만 활용하세요.',
+    disclaimer: '사주는 동양의 전통적인 운명론으로, 과학적 근거가 없어요. 재미와 자기 이해의 도구로만 활용하세요.',
     methodNote: '2026년 9월부터 연주·월주를 절기(節氣) 기준으로 계산합니다. 이전에는 달력상 연도·월을 썼기 때문에 예전에 저장하거나 공유한 결과와 다를 수 있습니다.',
   },
   en: {

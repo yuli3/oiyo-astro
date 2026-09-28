@@ -22,12 +22,12 @@ const T: Record<Locale, {
   morningItems: string[]; eveningItems: string[];
 }> = {
   ko: {
-    heading: '나의 루틴 체크리스트', sub: '체크 상태는 매일 자동으로 리셋되고, 이 브라우저에만 저장됩니다.',
+    heading: '나의 루틴 체크리스트', sub: '체크 상태는 매일 자동으로 리셋되고, 이 브라우저에만 저장돼요.',
     placeholder: '루틴 항목 추가 (예: 물 한 잔 마시기)', add: '추가',
     templates: { morning: '☀️ 아침 템플릿', evening: '🌙 저녁 템플릿' }, remove: '삭제',
     progress: (d, t) => `오늘 ${d}/${t} 완료`, empty: '템플릿을 누르거나 직접 항목을 추가해 보세요.', allDone: '🎉 오늘 루틴 완주!',
-    todayDone: '오늘 루틴을 마쳤습니다. 기록은 이 브라우저에만 있습니다.',
-    todayHint: '오늘 항목을 모두 체크하면 기록이 남습니다. 가입은 없습니다.',
+    todayDone: '오늘 루틴을 마쳤어요. 기록은 이 브라우저에만 있어요.',
+    todayHint: '오늘 항목을 모두 체크하면 기록이 남아요. 가입은 없어요.',
     streak: '연속',
     morningItems: ['기상 직후 물 한 잔', '5분 스트레칭', '오늘의 최우선 1가지 적기', '아침 햇빛 쐬기'],
     eveningItems: ['내일 할 일 3가지 메모', '10분 정리정돈', '취침 1시간 전 화면 끄기', '감사한 일 1가지 적기'],

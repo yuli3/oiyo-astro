@@ -53,7 +53,7 @@ const LABELS: Record<SupportedLang, {
     outOf: '/ 75점',
     copingLabel: '대처 전략',
     affirmationLabel: '오늘의 메시지',
-    note: '이 테스트는 Clance 가면 증후군 척도 개념을 기반으로 하며, 전문적 진단을 대체하지 않습니다.',
+    note: '이 테스트는 Clance 가면 증후군 척도 개념을 기반으로 하며, 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Imposter Syndrome Test',

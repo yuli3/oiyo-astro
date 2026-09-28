@@ -57,7 +57,7 @@ const LABELS: Record<SupportedLang, {
     strengths: '강점',
     caution: '주의',
     tip: '팁',
-    note: '이 결과는 참고용이며 전문적 심리 진단을 대체하지 않습니다.',
+    note: '이 결과는 참고용이며 전문적 심리 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Stress Response Type Test',
@@ -869,7 +869,7 @@ const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
       subtitle: '맞서는 전사',
       description: '스트레스에 정면으로 맞서는 강한 에너지를 가졌습니다. 문제가 생기면 즉각적으로 행동하고 결단을 내립니다.',
       strengths: ['결단력', '행동력', '리더십'],
-      caution: '충동적 반응이 인간관계를 해칠 수 있습니다.',
+      caution: '충동적 반응이 인간관계를 해칠 수 있어요.',
       tip: '반응 전 3초 멈춤 연습으로 충동을 조절하세요.',
     },
     en: {
@@ -925,7 +925,7 @@ const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
       subtitle: '얼어붙은 사슴',
       description: '스트레스 앞에서 동작이 멈추는 경향이 있습니다. 과부하가 걸리면 판단이 어려워지고 몸이 굳습니다.',
       strengths: ['신중함', '감수성', '깊은 공감'],
-      caution: '마비 상태가 상황을 더 악화시킬 수 있습니다.',
+      caution: '마비 상태가 상황을 더 악화시킬 수 있어요.',
       tip: '아주 작은 첫 행동 하나만 하기로 목표를 잡아보세요.',
     },
     en: {
@@ -981,7 +981,7 @@ const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
       subtitle: '자유로운 이탈자',
       description: '스트레스를 피하고 기분 전환으로 에너지를 회복합니다. 현실에서 잠시 거리를 두는 것이 자연스러운 패턴입니다.',
       strengths: ['유연성', '자기 보호 본능', '회복력'],
-      caution: '문제가 해결되지 않고 쌓일 수 있습니다.',
+      caution: '문제가 해결되지 않고 쌓일 수 있어요.',
       tip: '일시적 도피 후 반드시 문제로 돌아오는 루틴을 만드세요.',
     },
     en: {
@@ -1037,7 +1037,7 @@ const RESULTS: Record<StressType, Record<SupportedLang, ResultData>> = {
       subtitle: '분석하는 문제 해결사',
       description: '스트레스를 문제로 보고 즉각 해결책을 찾습니다. 체계적으로 상황을 분석하고 실행 계획을 만듭니다.',
       strengths: ['체계적 사고', '계획력', '효율성'],
-      caution: '과도한 분석이 오히려 피로를 유발할 수 있습니다.',
+      caution: '과도한 분석이 오히려 피로를 유발할 수 있어요.',
       tip: '때로는 해결 없이 그냥 느끼는 것도 괜찮습니다.',
     },
     en: {

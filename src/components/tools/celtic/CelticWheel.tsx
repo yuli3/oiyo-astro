@@ -16,7 +16,7 @@ const WheelScene = lazy(() => import("./CelticWheelScene"));
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY: Record<Lang, { hint: string }> = {
-  ko: { hint: "드래그해 켈트 나무 달력을 돌려보세요. 밝은 별이 당신의 나무입니다." },
+  ko: { hint: "드래그해 켈트 나무 달력을 돌려보세요. 밝은 별이 당신의 나무예요." },
   en: { hint: "Drag to rotate the Celtic tree calendar. The bright node is your tree." },
   ja: { hint: "ドラッグしてケルトの樹木暦を回してみましょう。明るい星があなたの木です。" },
   zh: { hint: "拖动查看凯尔特树历。最亮的星是你的树。" },

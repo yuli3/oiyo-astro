@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     boundaryLabel: '경계 설정',
     outOf: '/ 5.0',
     tipsLabel: '성장 팁',
-    note: 'Rathus 자기주장성 척도(RAS) 개념을 바탕으로 한 자가성찰용 테스트입니다. 전문적 진단을 대체하지 않습니다.',
+    note: 'Rathus 자기주장성 척도(RAS) 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Assertiveness Test',

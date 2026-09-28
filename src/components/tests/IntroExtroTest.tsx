@@ -294,7 +294,7 @@ const ui: Record<SupportedLocale, {
     resultTitle: "나의 내향/외향 스펙트럼", score: "스펙트럼 점수", spectrum: "내향 ←→ 외향",
     strengths: "강점", recharge: "에너지 충전법", work: "나에게 맞는 업무 스타일",
     affirmation: "오늘의 확언", restart: "다시 테스트하기", share: "결과 공유",
-    copied: "링크가 복사되었습니다!", note: "내향성-외향성은 스펙트럼이며, 어느 쪽도 우열이 없습니다. 이 테스트는 칼 융(Carl Jung)의 성격 이론에 기반합니다.",
+    copied: "링크가 복사되었습니다!", note: "내향성-외향성은 스펙트럼이며, 어느 쪽도 우열이 없어요. 이 테스트는 칼 융(Carl Jung)의 성격 이론에 기반해요.",
   },
   en: {
     title: "Introvert/Extrovert Spectrum Test", subtitle: "Am I an introvert, extrovert, or somewhere in between?",

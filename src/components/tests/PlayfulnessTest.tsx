@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     socialLabel: '관계적 놀이성',
     outOf: '/ 5.0',
     tipsLabel: '성장 팁',
-    note: '프로이어(Proyer)의 성인 놀이성(playfulness) 연구 개념을 바탕으로 한 자가성찰용 테스트입니다. 전문적 진단을 대체하지 않습니다.',
+    note: '프로이어(Proyer)의 성인 놀이성(playfulness) 연구 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Playfulness Test',

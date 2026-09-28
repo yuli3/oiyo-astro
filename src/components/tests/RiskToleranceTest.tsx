@@ -57,7 +57,7 @@ const LABELS: Record<SupportedLang, {
     overallScore: '종합 위험 선호도',
     investmentAdvice: '금융 조언',
     lifeAdvice: '인생 조언',
-    note: '이 테스트는 참고용입니다. 실제 투자 결정 전 전문가 상담을 받으세요.',
+    note: '이 테스트는 참고용이에요. 실제 투자 결정 전 전문가 상담을 받으세요.',
   },
   en: {
     title: 'Risk Tolerance Test',
@@ -245,7 +245,7 @@ const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
     ko: {
       icon: '🛡️',
       title: '안정형',
-      subtitle: '안정과 확실성을 최우선으로 합니다',
+      subtitle: '안정과 확실성을 최우선으로 해요',
       description: '손실에 대한 민감도가 높고 예측 가능성을 중시합니다. 안전한 선택을 선호하며 큰 변화를 불편하게 느낍니다. 이는 단점이 아니라 당신의 성향입니다.',
       investmentAdvice: ['예금·국채 등 안전 자산 위주', '분산 투자로 변동성 최소화', '비상금 3–6개월치 먼저 확보', 'ETF 등 저위험 상품으로 시작'],
       lifeAdvice: ['안정적인 환경에서 최고 성과 발휘', '작은 변화부터 단계적으로 시도', '자신의 안정 선호를 강점으로 인식하기'],
@@ -295,7 +295,7 @@ const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
     ko: {
       icon: '⚖️',
       title: '보수적 균형형',
-      subtitle: '안정을 선호하지만 적당한 위험은 감수합니다',
+      subtitle: '안정을 선호하지만 적당한 위험은 감수해요',
       description: '기본적으로 안정을 추구하지만 합리적인 위험을 선별적으로 수용합니다. 충분한 정보와 준비가 있을 때 도전을 고려합니다.',
       investmentAdvice: ['안전 자산 60–70%, 성장 자산 30–40% 배분', '정기 적립식 투자로 평균 매입 단가 낮추기', '포트폴리오 분기별 리밸런싱', '단기 트레이딩보다 장기 투자 선호'],
       lifeAdvice: ['리스크 분석 후 행동하는 균형 잡힌 접근', '준비된 도전은 두려움 없이 시도 가능', '지나친 안전 추구가 기회 손실로 이어질 수 있음'],
@@ -345,7 +345,7 @@ const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
     ko: {
       icon: '🌊',
       title: '균형형',
-      subtitle: '위험과 안정 사이에서 균형을 잘 유지합니다',
+      subtitle: '위험과 안정 사이에서 균형을 잘 유지해요',
       description: '위험과 보상의 트레이드오프를 합리적으로 평가합니다. 상황에 따라 공격적으로도, 방어적으로도 유연하게 접근할 수 있습니다.',
       investmentAdvice: ['성장 자산과 안전 자산의 균형 있는 배분', '섹터 분산과 지역 분산 동시 추구', '시장 변동성을 기회로 활용', '연령에 맞는 포트폴리오 주기적 조정'],
       lifeAdvice: ['다양한 상황에서 유연한 판단', '위험 수용 능력이 강점으로 작용', '충동적 결정 전 잠깐 멈추는 습관 권장'],
@@ -395,7 +395,7 @@ const RESULTS: Record<RiskLevel, Record<SupportedLang, ResultData>> = {
     ko: {
       icon: '🚀',
       title: '모험형',
-      subtitle: '높은 위험에도 기꺼이 도전합니다',
+      subtitle: '높은 위험에도 기꺼이 도전해요',
       description: '높은 위험을 감수하고 큰 보상을 추구합니다. 변화와 불확실성이 흥미롭게 느껴집니다. 이 성향은 큰 성공의 원동력이지만, 과도한 위험에 주의가 필요합니다.',
       investmentAdvice: ['성장 자산 중심 포트폴리오 구성 가능', '그러나 전체 자산의 최소 20–30%는 안전 자산으로', '레버리지 사용 시 손실 한도 엄격히 설정', '감정적 투자 결정 경계 — 흥분 상태의 판단은 위험'],
       lifeAdvice: ['높은 에너지와 도전 정신은 큰 강점', '장기 계획과 리스크 관리 병행 필수', '주변 사람들에 미치는 위험도 고려하기'],

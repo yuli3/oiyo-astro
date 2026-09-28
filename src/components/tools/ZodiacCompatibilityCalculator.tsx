@@ -298,7 +298,7 @@ const COMPAT_BG: Record<CompatType, string> = {
 
 const UI_TEXT = {
   ko: {
-    title:"별자리 궁합 계산기",subtitle:"두 별자리를 선택하면 궁합을 분석해드립니다",
+    title:"별자리 궁합 계산기",subtitle:"두 별자리를 선택하면 궁합을 분석해드려요",
     person1:"나의 별자리",person2:"상대방 별자리",calcBtn:"궁합 보기",resetBtn:"다시 하기",
     scoreLabel:"궁합 점수",aspectLabel:"관계 특성",strengthLabel:"이 관계의 강점",
     challengeLabel:"주의할 점",adviceLabel:"조언",

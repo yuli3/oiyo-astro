@@ -16,7 +16,7 @@ const SpreadScene = lazy(() => import("./TarotSpreadScene"));
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY: Record<Lang, { hint: string }> = {
-  ko: { hint: "카드를 뒤집으면 여기 있는 에너지 배열도 함께 밝아집니다." },
+  ko: { hint: "카드를 뒤집으면 여기 있는 에너지 배열도 함께 밝아져요." },
   en: { hint: "Flip a card and its energy here lights up too." },
   ja: { hint: "カードをめくると、ここのエネルギーも輝きます。" },
   zh: { hint: "翻开卡牌，这里对应的能量也会亮起。" },

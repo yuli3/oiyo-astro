@@ -204,7 +204,7 @@ const ui: Record<SupportedLocale, {
     restart: "다시 테스트하기",
     share: "결과 공유",
     copied: "링크가 복사되었습니다!",
-    note: "이 테스트는 세 가지 공감 유형(인지적·정서적·자비적 공감)에 기반하며, 자기 이해를 위한 참고 자료입니다.",
+    note: "이 테스트는 세 가지 공감 유형(인지적·정서적·자비적 공감)에 기반하며, 자기 이해를 위한 참고 자료예요.",
   },
   en: {
     title: "Empathy Type Test",

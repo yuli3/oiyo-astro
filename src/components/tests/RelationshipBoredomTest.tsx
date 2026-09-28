@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     routineLabel: '설렘·일상 권태',
     outOf: '/ 5.0',
     tipsLabel: '관계를 위한 팁',
-    note: '관계 만족도·권태 연구 개념을 바탕으로 한 자가성찰용 테스트입니다. 관계 상담이나 전문적 진단을 대체하지 않습니다.',
+    note: '관계 만족도·권태 연구 개념을 바탕으로 한 자가성찰용 테스트예요. 관계 상담이나 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Relationship Boredom Test',

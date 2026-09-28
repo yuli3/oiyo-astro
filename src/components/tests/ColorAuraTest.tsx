@@ -398,7 +398,7 @@ const LABELS: Record<Locale, {
     yourAura: '나의 오라 컬러',
     strengths: '강점',
     challenges: '주의할 점',
-    note: '이 테스트는 에너지 심리학에 기반한 자기 탐색 도구입니다.',
+    note: '이 테스트는 에너지 심리학에 기반한 자기 탐색 도구예요.',
     choose: '가장 공감되는 답변을 선택하세요',
   },
   en: {

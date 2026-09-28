@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     outOf: '/ 5.0',
     levelLabel: '그릿 단계',
     tipsLabel: '성장 팁',
-    note: '이 테스트는 앤절라 덕워스의 그릿 이론에서 영감을 받았습니다. 전문적 진단을 대체하지 않습니다.',
+    note: '이 테스트는 앤절라 덕워스의 그릿 이론에서 영감을 받았어요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Grit Scale Test',

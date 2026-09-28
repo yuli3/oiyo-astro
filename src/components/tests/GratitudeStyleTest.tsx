@@ -38,7 +38,7 @@ const LABELS: Record<SupportedLang, {
     yourLevel: '나의 감사 성향', insights: '나의 감사 패턴', practices: '감사 실천법',
     affirmation: '오늘의 메시지', scoreLabel: '감사 점수', outOf: '/ 60점',
     dimProfile: '감사 차원 분석',
-    note: '이 테스트는 GQ-6와 McCullough의 감사 연구를 기반으로 한 참고용 자가 진단입니다.',
+    note: '이 테스트는 GQ-6와 McCullough의 감사 연구를 기반으로 한 참고용 자가 진단이에요.',
     dimNames: { intensity: '강도', frequency: '빈도', span: '범위', density: '밀도' },
   },
   en: {
@@ -193,7 +193,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
 const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   low: {
     ko: {
-      title: '감사 낮음', subtitle: '감사함을 느끼기 어려운 시기일 수 있습니다',
+      title: '감사 낮음', subtitle: '감사함을 느끼기 어려운 시기일 수 있어요',
       description: '현재 감사함을 자주 경험하지 못하고 있습니다. 이것은 삶이 힘들거나 감사를 표현하는 습관이 아직 형성되지 않았기 때문일 수 있습니다. 감사는 훈련을 통해 키울 수 있는 능력입니다.',
       insights: ['현재 상황에 집중하기 어려울 수 있음', '부정적인 것에 주의가 더 쏠리는 경향', '감사 표현 습관이 아직 발달 중'],
       practices: ['매일 밤 3가지 감사한 일 적기', '누군가에게 감사 메시지 보내기', '현재 가진 것에 집중하는 5분 명상', '작은 즐거움 알아차리기 연습'],
@@ -237,7 +237,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   developing: {
     ko: {
-      title: '성장 중', subtitle: '감사의 씨앗이 자라고 있습니다',
+      title: '성장 중', subtitle: '감사의 씨앗이 자라고 있어요',
       description: '감사함을 느끼기 시작했지만, 아직 일관성이 부족할 수 있습니다. 가끔 감사함을 경험하지만 습관화되지 않은 상태입니다. 조금씩 실천하면 빠르게 성장할 수 있습니다.',
       insights: ['간헐적으로 감사함을 느낌', '의식적으로 노력할 때 감사 경험이 늘어남', '감사 실천의 효과를 경험하기 시작'],
       practices: ['감사 일지 꾸준히 쓰기', '식사 전 감사 순간 갖기', '나를 도운 사람들을 떠올리기', '자연 속에서 아름다움 발견하기'],
@@ -281,7 +281,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   appreciative: {
     ko: {
-      title: '감사형', subtitle: '삶에서 감사함을 잘 발견합니다',
+      title: '감사형', subtitle: '삶에서 감사함을 잘 발견해요',
       description: '일상에서 감사함을 자연스럽게 경험하는 능력이 잘 발달되어 있습니다. 다양한 대상과 순간에서 감사함을 느끼고, 이 감사가 삶의 만족도와 관계의 질에 긍정적인 영향을 미치고 있습니다.',
       insights: ['감사 경험이 풍부하고 다양함', '긍정적인 감정 조절 능력이 높음', '관계에서 감사 표현이 자연스러움'],
       practices: ['감사를 더 구체적이고 깊게 표현하기', '감사를 다른 사람과 나누기', '어려운 상황에서도 감사 찾기 연습', '감사 명상 심화'],
@@ -325,7 +325,7 @@ const RESULTS: Record<Level, Record<SupportedLang, LevelData>> = {
   },
   deeply_grateful: {
     ko: {
-      title: '깊은 감사형', subtitle: '감사함이 삶의 방식이 되었습니다',
+      title: '깊은 감사형', subtitle: '감사함이 삶의 방식이 되었어요',
       description: '감사는 단순한 감정이 아니라 삶을 보는 방식이 되었습니다. 큰 일과 작은 일, 보이는 것과 보이지 않는 것 모두에서 깊은 감사를 경험합니다. 이 감사는 당신의 회복탄력성과 관계에 큰 자산입니다.',
       insights: ['감사가 삶의 기본 태도로 자리잡음', '어려운 상황에서도 의미를 찾는 능력', '깊은 연결감과 풍요로움 경험', '감사가 자연스러운 습관화'],
       practices: ['감사를 더 넓게 나누고 표현하기', '어려운 이들에게 감사의 문화 전하기', '감사 실천을 더 깊은 영적 수련으로 확장', '감사 표현을 글이나 예술로 승화'],

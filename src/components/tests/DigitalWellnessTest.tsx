@@ -33,7 +33,7 @@ const LABELS: Record<SupportedLang, {
     yourLevel: '나의 디지털 건강 수준',
     scoreLabel: '디지털 의존 점수',
     outOf: '/ 75점',
-    note: '이 테스트는 자기 이해를 위한 참고 자료입니다. 심각한 경우 전문가 상담을 권장합니다.',
+    note: '이 테스트는 자기 이해를 위한 참고 자료예요. 심각한 경우 전문가 상담을 권장해요.',
   },
   en: {
     title: 'Digital Wellness Test',
@@ -108,7 +108,7 @@ const LEVEL_DATA: Record<WellnessLevel, Record<SupportedLang, LevelData>> = {
       icon: '💚',
       color: '#22c55e',
       title: '디지털 건강',
-      subtitle: '균형 잡힌 디지털 생활을 하고 있습니다',
+      subtitle: '균형 잡힌 디지털 생활을 하고 있어요',
       description: '스마트폰과 디지털 기기를 건강하게 사용하고 있습니다. 현재의 균형을 유지하는 것이 중요합니다.',
       tips: [
         '현재 습관을 유지하세요.',
@@ -182,7 +182,7 @@ const LEVEL_DATA: Record<WellnessLevel, Record<SupportedLang, LevelData>> = {
       icon: '💛',
       color: '#eab308',
       title: '주의 필요',
-      subtitle: '일부 디지털 습관을 개선할 여지가 있습니다',
+      subtitle: '일부 디지털 습관을 개선할 여지가 있어요',
       description: '디지털 기기 사용이 가끔 생활에 영향을 주고 있습니다. 몇 가지 습관을 점검해볼 시점입니다.',
       tips: [
         '취침 1시간 전 스마트폰 사용을 줄여보세요.',
@@ -256,7 +256,7 @@ const LEVEL_DATA: Record<WellnessLevel, Record<SupportedLang, LevelData>> = {
       icon: '🧡',
       color: '#f97316',
       title: '개선 권장',
-      subtitle: '디지털 사용이 생활에 영향을 미치고 있습니다',
+      subtitle: '디지털 사용이 생활에 영향을 미치고 있어요',
       description: '스마트폰과 디지털 기기가 수면, 집중력, 대인관계 등 일상에 눈에 띄는 영향을 주고 있습니다. 적극적인 변화가 필요합니다.',
       tips: [
         '하루 스크린 타임 목표를 설정하세요.',
@@ -330,7 +330,7 @@ const LEVEL_DATA: Record<WellnessLevel, Record<SupportedLang, LevelData>> = {
       icon: '❤️',
       color: '#ef4444',
       title: '디지털 과의존',
-      subtitle: '적극적인 디지털 습관 개선이 필요합니다',
+      subtitle: '적극적인 디지털 습관 개선이 필요해요',
       description: '디지털 기기 의존도가 매우 높아 일상생활의 여러 영역에 영향을 주고 있습니다. 체계적인 개선 전략이 필요합니다.',
       tips: [
         '앱 차단 도구나 스크린 타임 제한을 활용하세요.',

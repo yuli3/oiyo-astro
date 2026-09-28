@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     connectionLabel: '연결 강박',
     outOf: '/ 5.0',
     tipsLabel: '마음을 위한 팁',
-    note: '프시빌스키 외(Przybylski et al., 2013)의 FoMO 척도 개념을 바탕으로 한 자가성찰용 테스트입니다. 전문적 진단을 대체하지 않습니다.',
+    note: '프시빌스키 외(Przybylski et al., 2013)의 FoMO 척도 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
   },
   en: {
     title: 'FOMO Scale Test',

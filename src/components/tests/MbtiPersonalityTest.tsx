@@ -80,7 +80,7 @@ const LABELS: Record<SupportedLang, Labels> = {
     progress: (answered, total) => `${answered} / ${total} 완료`,
     viewResult: '결과 보기',
     retake: '다시 하기',
-    note: '이 테스트는 자기이해를 위한 간단한 성향 도구이며 전문 심리검사를 대체하지 않습니다.',
+    note: '이 테스트는 자기이해를 위한 간단한 성향 도구이며 전문 심리검사를 대체하지 않아요.',
     deepTitle: '더 깊은 해석',
     strengthsTitle: '강점',
     challengesTitle: '성장 과제',

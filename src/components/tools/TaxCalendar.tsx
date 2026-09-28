@@ -84,7 +84,7 @@ const L: Partial<Record<Locale, UiLabels>> = {
     national: '국세', local: '지방세',
     target: '대상', deadline: '기한', official: '공식 확인',
     months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    disclaimer: '기한 말일이 토·일·공휴일이면 다음 영업일로 순연됩니다. 예정신고·성실신고·결산월 등 개별 사정에 따라 달라질 수 있으니, 정확한 일정과 금액은 홈택스(국세)·위택스(지방세)에서 확인하세요. 개인화된 세무 자문이 아닙니다.',
+    disclaimer: '기한 말일이 토·일·공휴일이면 다음 영업일로 순연돼요. 예정신고·성실신고·결산월 등 개별 사정에 따라 달라질 수 있으니, 정확한 일정과 금액은 홈택스(국세)·위택스(지방세)에서 확인하세요. 개인화된 세무 자문이 아니에요.',
   },
   en: {
     title: 'Korean Tax Calendar', subtitle: 'A year of national & local filing deadlines at a glance',

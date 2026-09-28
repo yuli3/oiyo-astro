@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     adaptationLabel: '과잉적응·순응',
     outOf: '/ 5.0',
     tipsLabel: '내면아이를 위한 팁',
-    note: '내면아이(inner child) 개념에서 영감을 받은 자가성찰용 테스트입니다. 전문적 심리치료나 진단을 대체하지 않습니다.',
+    note: '내면아이(inner child) 개념에서 영감을 받은 자가성찰용 테스트예요. 전문적 심리치료나 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Inner Child Test',

@@ -53,7 +53,7 @@ type Copy = {
 const COPY: Record<Locale, Copy> = {
   ko: {
     title: "내 띠 확정하기",
-    subtitle: "조견표는 연도만 적습니다. 1월과 2월생은 그 표들이 서로 다른 답을 냅니다.",
+    subtitle: "조견표는 연도만 적어요. 1월과 2월생은 그 표들이 서로 다른 답을 내요.",
     birth: "생년월일",
     year: "년", month: "월", day: "일",
     agreeTitle: "세 관례가 모두 같습니다",

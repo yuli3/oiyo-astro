@@ -23,8 +23,8 @@ const COPY: Record<
 > = {
   ko: {
     heading: '아스트로카토그래피 — MC·ASC 선',
-    hint: '세로선은 중천(MC)·천저(IC). 곡선은 떠오름(ASC)·짐(DSC). 거주 추천이 아닙니다.',
-    disclaimer: '상징 지도입니다. 이주·여행 결정을 대신하지 않습니다.',
+    hint: '세로선은 중천(MC)·천저(IC). 곡선은 떠오름(ASC)·짐(DSC). 거주 추천이 아니에요.',
+    disclaimer: '상징 지도예요. 이주·여행 결정을 대신하지 않아요.',
     mc: 'MC', ic: 'IC', asc: 'ASC', dsc: 'DSC',
     mapView: '지도', globeView: '지구본',
   },

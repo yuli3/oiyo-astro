@@ -18,7 +18,7 @@ const LinesScene = lazy(() => import("./PalmLinesScene"));
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY: Record<Lang, { hint: string }> = {
-  ko: { hint: "선택한 선이 앞으로 떠올라 빛납니다. 실제 손금 모양 그대로예요." },
+  ko: { hint: "선택한 선이 앞으로 떠올라 빛나요. 실제 손금 모양 그대로예요." },
   en: { hint: "The selected line lifts forward and glows — traced from the real palm shape." },
   ja: { hint: "選んだ線が手前に浮かび上がって輝きます。実際の手相の形そのままです。" },
   zh: { hint: "选中的线会浮起并发光——形状完全来自真实手相。" },

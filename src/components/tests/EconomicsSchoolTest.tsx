@@ -20,7 +20,7 @@ const LABELS: Record<Locale, {
     traitLabel: '핵심 성향',
     keyThinkers: '대표 학자',
     policyLabel: '정책 입장',
-    note: '이 테스트는 교육적 흥미를 위한 것입니다. 경제학파는 학문적으로 더 복잡합니다.',
+    note: '이 테스트는 교육적 흥미를 위한 것이에요. 경제학파는 학문적으로 더 복잡해요.',
     progress: (c, t) => `${c} / ${t}`,
   },
   en: {

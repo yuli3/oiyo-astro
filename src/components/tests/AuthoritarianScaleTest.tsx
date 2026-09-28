@@ -107,7 +107,7 @@ const UI: Record<SupportedLang, {
     restart: '다시 하기',
     result: '나의 결과',
     dimScores: '차원별 점수',
-    note: '※ 이 테스트는 자기 이해를 위한 도구이며, 어떤 정치적 입장을 지지하거나 판단하지 않습니다.',
+    note: '※ 이 테스트는 자기 이해를 위한 도구이며, 어떤 정치적 입장을 지지하거나 판단하지 않아요.',
   },
   en: {
     title: 'Authoritarian Personality Scale',

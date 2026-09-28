@@ -62,7 +62,7 @@ const LABELS: Record<SupportedLang, {
     yourType: '나의 에니어그램 유형',
     typeLabel: '유형',
     scoreLabel: '점수',
-    note: '이 테스트는 에니어그램 이론을 바탕으로 하며, 전문적 진단을 대체하지 않습니다.',
+    note: '이 테스트는 에니어그램 이론을 바탕으로 하며, 전문적 진단을 대체하지 않아요.',
     topScoresLabel: '상위 점수 유형',
   },
   en: {

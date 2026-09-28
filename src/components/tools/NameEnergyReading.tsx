@@ -75,7 +75,7 @@ const UI: Record<Lang, {
     needBirth: "생년월일을 입력하면 사주에서 부족한 기운을 이름이 채우는지 함께 봅니다.",
     needDetails: "태어난 시각과 도시를 확인하면 사주에서 부족한 기운을 정확히 비교할 수 있어요.",
     addBirth: "생년월일 입력", scoreLabel: "채움 정도",
-    empty: "이름을 입력하면 소리 오행을 읽어드립니다.",
+    empty: "이름을 입력하면 소리 오행을 읽어드려요.",
   },
   en: {
     nameLabel: "Name", soundTitle: "The elements in your name's sounds", soundSub: "How each syllable's initial sound is classified",

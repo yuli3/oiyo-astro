@@ -48,7 +48,7 @@ const LABELS: Record<SupportedLang, {
     outOf: '/ 75점',
     strategies: '실천 전략',
     affirmation: '나에게 건네는 말',
-    note: '이 결과는 자기 이해를 위한 참고 자료입니다. 이것은 의지력의 문제가 아닙니다. 자신을 판단하지 마세요.',
+    note: '이 결과는 자기 이해를 위한 참고 자료예요. 이것은 의지력의 문제가 아니에요. 자신을 판단하지 마세요.',
   },
   en: {
     title: 'Emotional Eating Test',
@@ -237,7 +237,7 @@ const RESULTS: Record<EatingLevel, Record<SupportedLang, ResultData>> = {
     ko: {
       icon: '💚',
       title: '낮음',
-      subtitle: '음식과 감정이 비교적 분리되어 있습니다',
+      subtitle: '음식과 감정이 비교적 분리되어 있어요',
       description: '감정과 식욕을 잘 구별하고 있습니다. 대부분의 식사가 신체적 배고픔에 의해 이루어지고 있어, 음식과 건강한 관계를 유지하고 있습니다.',
       strategies: [
         '현재의 인식을 유지하는 연습 계속하기',
@@ -385,7 +385,7 @@ const RESULTS: Record<EatingLevel, Record<SupportedLang, ResultData>> = {
     ko: {
       icon: '🧡',
       title: '높음',
-      subtitle: '감정이 식사 선택에 상당한 영향을 미칩니다',
+      subtitle: '감정이 식사 선택에 상당한 영향을 미쳐요',
       description: '감정 상태가 식사 행동에 자주 영향을 줍니다. 음식이 주요한 감정 조절 도구가 되어 있을 수 있습니다. 이것은 의지력의 문제가 아니라, 다른 감정 해소 루틴을 만들 기회입니다.',
       strategies: [
         '음식 외의 감정 해소 루틴 만들기 (산책, 음악, 친구 통화)',
@@ -459,7 +459,7 @@ const RESULTS: Record<EatingLevel, Record<SupportedLang, ResultData>> = {
     ko: {
       icon: '❤️',
       title: '매우 높음',
-      subtitle: '감정적 식사가 일상에 큰 영향을 미치고 있습니다',
+      subtitle: '감정적 식사가 일상에 큰 영향을 미치고 있어요',
       description: '감정적 식사가 일상적인 패턴이 되어 있습니다. 이 패턴은 혼자 바꾸기 어려울 수 있습니다. 전문가의 도움을 받는 것이 효과적이며, 자신을 탓하지 않는 것이 중요합니다. 당신은 잘못된 것이 아닙니다.',
       strategies: [
         '영양사나 심리상담사와 함께 작업하는 것을 고려하세요',

@@ -54,7 +54,7 @@ const LABELS: Record<SupportedLang, {
     yourType: '나의 SNS 유형',
     strengths: '강점',
     tip: '팁',
-    note: '결과는 재미 목적이며 심리학적 진단이 아닙니다.',
+    note: '결과는 재미 목적이며 심리학적 진단이 아니에요.',
   },
   en: {
     title: 'Social Media Personality Test',

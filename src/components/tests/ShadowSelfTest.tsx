@@ -46,7 +46,7 @@ const LABELS: Record<SupportedLang, {
     repressionLabel: '억압 (안으로 누름)',
     outOf: '/ 5.0',
     tipsLabel: '통합을 위한 팁',
-    note: 'C.G. 융의 그림자(shadow) 개념에서 영감을 받은 자가성찰용 테스트입니다. 전문적 심리분석이나 진단을 대체하지 않습니다.',
+    note: 'C.G. 융의 그림자(shadow) 개념에서 영감을 받은 자가성찰용 테스트예요. 전문적 심리분석이나 진단을 대체하지 않아요.',
   },
   en: {
     title: 'Shadow Self Test',

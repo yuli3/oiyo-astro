@@ -191,7 +191,7 @@ const LABELS = {
     next: '다음',
     prev: '이전',
     submit: '결과 보기',
-    note: '이 퀴즈는 투자 성향 파악을 위한 참고 도구입니다. 투자 조언이 아닙니다.',
+    note: '이 퀴즈는 투자 성향 파악을 위한 참고 도구예요. 투자 조언이 아니에요.',
   },
   en: {
     title: 'Crossroads Economy Investor Quiz',
