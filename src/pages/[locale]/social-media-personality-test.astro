@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import TestLaneLink from '../../components/shared/TestLaneLink.astro';
+import TestExplainer from '../../components/shared/TestExplainer.astro';
+import { TEST_EXPLAINERS } from '../../data/test-explainers';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import SocialMediaPersonalityTest from '../../components/tests/SocialMediaPersonalityTest';
@@ -48,6 +50,7 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <SocialMediaPersonalityTest locale={locale as any} client:load />
+    <TestExplainer content={TEST_EXPLAINERS['social-media-personality']} locale={locale as Locale} />
   </div>
   <TestLaneLink locale={locale as Locale} path="/social-media-personality-test" />
 </Layout>
