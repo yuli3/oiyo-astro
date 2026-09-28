@@ -7,6 +7,7 @@ import {
   OIYO_ASSESSMENT_RESULTS_UPDATED_EVENT,
   type OntologySignal,
 } from "@/assessments";
+import { AssessmentWeave } from "@/components/ontology/AssessmentWeave";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const LANGS: Lang[] = ["ko", "en", "ja", "zh", "fr", "es"];
@@ -176,6 +177,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
     <section className="mt-8 rounded-[28px] border border-green-100 bg-green-50/40 p-4 shadow-sm">
       <h2 className="text-lg font-black text-foreground">🧩 {t.title}</h2>
       <p className="mt-1 text-xs leading-5 text-green-700">{t.subtitle}</p>
+      <AssessmentWeave signals={signals} lang={lang} />
       <div className="mt-4 grid gap-3 md:grid-cols-3">
         {groups.big5.length === BIG5.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.big5Role}</p>
