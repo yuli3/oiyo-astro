@@ -60,7 +60,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 더 읽을거리',
           items: [
-            { href: o('flow-state-happiness-psychology'), label: '몰입과 행복의 심리학', external: true },
+            { href: o('flow-self-control-and-happiness'), label: '몰입·자기통제·행복의 심리학', external: true },
             { href: o('psychology-of-flow'), label: '플로우 — 최적 경험의 심리학', external: true },
           ],
         },
@@ -144,7 +144,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 深く読む ',
           items: [
-            { href: o('flow-state-happiness-psychology'), label: 'フローと幸福の心理学', external: true },
+            { href: o('flow-self-control-and-happiness'), label: 'フロー・自己制御・幸福の心理学', external: true },
             { href: o('psychology-of-flow'), label: 'フロー — 最適経験の心理学', external: true },
           ],
         },
@@ -228,7 +228,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 深入阅读 ',
           items: [
-            { href: o('flow-state-happiness-psychology'), label: '心流与幸福的心理学', external: true },
+            { href: o('flow-self-control-and-happiness'), label: '心流、自控与幸福的心理学', external: true },
             { href: o('psychology-of-flow'), label: '心流——最优体验的心理学', external: true },
           ],
         },
@@ -312,7 +312,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Lire plus loin ',
           items: [
-            { href: o('flow-state-happiness-psychology'), label: 'Flow et psychologie du bonheur', external: true },
+            { href: o('flow-self-control-and-happiness'), label: 'Flow, maîtrise de soi et bonheur', external: true },
             { href: o('psychology-of-flow'), label: 'Le flow, expérience optimale', external: true },
           ],
         },
@@ -396,7 +396,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Leer más ',
           items: [
-            { href: o('flow-state-happiness-psychology'), label: 'Flow y psicología de la felicidad', external: true },
+            { href: o('flow-self-control-and-happiness'), label: 'Flow, autocontrol y felicidad', external: true },
             { href: o('psychology-of-flow'), label: 'El flow, la experiencia óptima', external: true },
           ],
         },
@@ -480,7 +480,7 @@ export function hobbiesContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Read deeper ',
           items: [
-            { href: o('flow-state-happiness-psychology'), label: 'Flow and the psychology of happiness', external: true },
+            { href: o('flow-self-control-and-happiness'), label: 'Flow, self-control and happiness', external: true },
             { href: o('psychology-of-flow'), label: 'Flow — the psychology of optimal experience', external: true },
           ],
         },
