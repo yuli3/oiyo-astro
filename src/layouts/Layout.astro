@@ -49,7 +49,6 @@ const description = Astro.props.description ?? descriptionDefaults[locale] ?? de
 const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
 const isCjk = ['ko', 'ja', 'zh'].includes(locale);
 const defaultOgImage = new URL('/og-image.png', Astro.site).toString();
-const resolvedOgImage = ogImage ?? defaultOgImage;
 const routeWithoutLocale = Astro.url.pathname.replace(
   /^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/,
   '',
@@ -58,6 +57,18 @@ const alternateRouteWithoutLocale = canonicalPath
   ? canonicalPath.replace(/^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/, '') || '/'
   : routeWithoutLocale;
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
+// 2026-09-30 B6 #1 (세운 결정: 타로·사주·검사 3종 먼저): 링크 미리보기 카드를 카테고리별로 둔다.
+// 페이지가 ogImage 를 직접 넘기면 그것이 이긴다. 결과 화면의 공유 이미지(ResultShareImage)는
+// 내려받기용이라 이것과 겹치지 않는다. 검사 판별은 getTestSourceNote 와 같은 경로 규칙(/test, -test).
+const ogCategory = (() => {
+  const parts = routeWithoutLocale.split('/').filter(Boolean);
+  if (parts[0] === 'tarot') return 'tarot';
+  if (parts[0] === 'saju') return 'saju';
+  if (parts[0] === 'tests' || parts.at(-1) === 'test' || parts.at(-1)?.endsWith('-test')) return 'tests';
+  return null;
+})();
+const resolvedOgImage = ogImage
+  ?? (ogCategory ? new URL(`/og/${ogCategory}-${locale}.jpg`, Astro.site).toString() : defaultOgImage);
 // Deindexed locales are dropped from the hreflang cluster: Google discards
 // hreflang annotations pointing at noindex URLs.
 // 2026-09-30: topic hubs exist only where the article threshold is met.
