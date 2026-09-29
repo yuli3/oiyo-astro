@@ -269,3 +269,13 @@
 /:lang/healing-inner-child/  /:lang/inner-child-test/  301
 /:lang/inner-child-wounded-self  /:lang/inner-child-test/  301
 /:lang/inner-child-wounded-self/  /:lang/inner-child-test/  301
+
+# 2026-09-29 O10 8차: 출처 없는 건강 주장 글 4편(오토파지·미토콘드리아·대사 정신의학·후성유전)을 근거 수준을 나눈 한 편으로 합쳤다(YMYL).
+/:lang/biology-autophagy-cellular-cleanup  /:lang/health-buzzwords-autophagy-mitochondria-epigenetics/  301
+/:lang/biology-autophagy-cellular-cleanup/  /:lang/health-buzzwords-autophagy-mitochondria-epigenetics/  301
+/:lang/mitochondria-life-energy-biohacking  /:lang/health-buzzwords-autophagy-mitochondria-epigenetics/  301
+/:lang/mitochondria-life-energy-biohacking/  /:lang/health-buzzwords-autophagy-mitochondria-epigenetics/  301
+/:lang/new-beginning-metabolic-health  /:lang/health-buzzwords-autophagy-mitochondria-epigenetics/  301
+/:lang/new-beginning-metabolic-health/  /:lang/health-buzzwords-autophagy-mitochondria-epigenetics/  301
+/:lang/epigenetics-ghost-in-your-genes  /:lang/health-buzzwords-autophagy-mitochondria-epigenetics/  301
+/:lang/epigenetics-ghost-in-your-genes/  /:lang/health-buzzwords-autophagy-mitochondria-epigenetics/  301
