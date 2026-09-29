@@ -512,6 +512,13 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const field = "h-12 w-full rounded-2xl border border-border bg-surface-subtle px-4 text-base font-semibold text-foreground";
 
   return <main>
+    {/* 2026-09-30 2-15: 머리 그림 한 자리에서 상태를 보여 준다 — 아직 아무도 없으면 빈 자리가
+        있는 궤도(초대 전), 한 명이라도 들어오면 모임 궤도. 두 장을 따로 쌓지 않는다. */}
+    <img
+      src={people.length === 0 ? "/images/oiyo-imagegen/hero/invite-empty-orbit.webp" : "/images/oiyo-imagegen/hero/group-circle-orbit.webp"}
+      alt="" width={1200} height={675} decoding="async"
+      className="mb-6 block h-auto max-h-56 w-full rounded-2xl border border-green-100 object-cover"
+    />
     <header className="text-center">
       <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">{copy.title}</h1>
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{copy.sub}</p>

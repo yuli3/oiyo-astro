@@ -295,6 +295,18 @@ const ELEMENT_BG: Record<string, string> = {
 
 interface FormState { date: string; time: string; unknown: boolean; city: string; }
 
+// 2026-09-30 2-15: 쓰이지 않던 imagegen 행성 토큰을 행 머리 장식으로 쓴다(세운 결정).
+// 토큰이 있는 여섯 천체와, 지평선을 뜻하는 상승궁(지구 토큰)만 붙인다. 장식이라 alt 는 비운다.
+const PLANET_TOKEN: Record<string, string> = {
+  sun: '/images/oiyo-imagegen/planets/sun.webp',
+  moon: '/images/oiyo-imagegen/planets/moon.webp',
+  asc: '/images/oiyo-imagegen/planets/earth.webp',
+  mercury: '/images/oiyo-imagegen/planets/mercury.webp',
+  venus: '/images/oiyo-imagegen/planets/venus.webp',
+  mars: '/images/oiyo-imagegen/planets/mars.webp',
+  jupiter: '/images/oiyo-imagegen/planets/jupiter.webp',
+};
+
 export default function NatalChartCalculator({ locale }: Props) {
   const t = COPY[(locale as NatalLocale)] ?? COPY.en;
   const loc = (Object.prototype.hasOwnProperty.call(COPY, locale) ? locale : 'en') as NatalLocale;
@@ -493,9 +505,14 @@ export default function NatalChartCalculator({ locale }: Props) {
             return (
               <article key={r.key} id={`natal-${r.key}`} className={`scroll-mt-20 rounded-2xl border p-4 ${ELEMENT_BG[info.element]}`}>
                 <div className="flex items-center justify-between">
-                  <div>
+                  <div className="flex items-center gap-3">
+                    {PLANET_TOKEN[r.key] && (
+                      <img src={PLANET_TOKEN[r.key]} alt="" width={40} height={40} loading="lazy" decoding="async" className="h-10 w-10 shrink-0 rounded-full" />
+                    )}
+                    <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-slate-500">{r.label}</p>
                     <p className="text-[11px] text-slate-400">{r.sub}</p>
+                    </div>
                   </div>
                   <span className="text-3xl" aria-hidden="true">{info.emoji}</span>
                 </div>
