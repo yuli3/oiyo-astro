@@ -91,3 +91,19 @@
 # 90일 검색 노출 0, GA4 방문 32 라 잃을 유입이 거의 없다.
 /:lang/resilience-boost-test  /:lang/resilience-test/  301
 /:lang/resilience-boost-test/  /:lang/resilience-test/  301
+
+# 2026-09-29 O10: 얇고 출처 없던 인지편향 글 7편(ko·en·ja)을 출처 있는 한 편으로 합쳐 새로 썼다(세운 결정 '주제별로 합쳐 다시 쓰기').
+/:lang/availability-heuristic-risk  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/availability-heuristic-risk/  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/availability-heuristic-bias  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/availability-heuristic-bias/  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/anchoring-bias-negotiation  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/anchoring-bias-negotiation/  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/base-rate-neglect-probability  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/base-rate-neglect-probability/  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/gamblers-fallacy-probability  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/gamblers-fallacy-probability/  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/framing-effect-context  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/framing-effect-context/  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/hindsight-bias-prediction  /:lang/judgment-heuristics-probability-errors/  301
+/:lang/hindsight-bias-prediction/  /:lang/judgment-heuristics-probability-errors/  301
