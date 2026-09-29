@@ -1,0 +1,91 @@
+{
+  "cards": {
+    "sectionTitle": "Pour vous",
+    "sectionSubtitle": "Choisi à partir des signaux déjà réunis",
+    "matchLabel": "Correspondance",
+    "why": "Pourquoi cette piste",
+    "explore": "Voir ensuite",
+    "emptyTitle": "Rien à recommander pour l'instant",
+    "emptyDescription": "Enregistrez votre naissance ou terminez un test pour ouvrir des suggestions.",
+    "reasonTemplate": "Choisi d'après {signals}",
+    "reasonFallback": "Choisi parmi ce qui est proche sur la carte des liens",
+    "categories": {
+      "career": "Métier",
+      "hobby": "Loisir",
+      "psychology": "Psychologie",
+      "mythology": "Mythe",
+      "science": "Science",
+      "spirituality": "Spiritualité"
+    },
+    "sources": {
+      "big5": "Big Five",
+      "mbti": "MBTI",
+      "riasec": "Intérêts",
+      "saju": "Quatre piliers",
+      "tci": "Tempérament",
+      "zodiac": "Zodiaque"
+    }
+  },
+  "career": {
+    "global_leader": {
+      "title": "Conduire des personnes",
+      "description": "Un rôle qui fixe une direction avec d'autres.",
+      "reasoning": "Cela rejoint des signaux de rassemblement et de conduite."
+    },
+    "strategic_planner": {
+      "title": "Tracer une stratégie",
+      "description": "Un rôle qui voit l'ensemble et le découpe en étapes.",
+      "reasoning": "Cela rejoint des signaux de planification et de vue large."
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "Méditation",
+      "description": "Un temps pour poser le souffle et calmer l'esprit.",
+      "reasoning": "Cela rejoint des signaux qui cherchent à faire retomber l'agitation."
+    },
+    "hiking": {
+      "title": "Marche et randonnée",
+      "description": "Du temps dehors, à bouger et à regarder le paysage.",
+      "reasoning": "Cela rejoint des signaux liés au dehors et au corps."
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "Travail de l'ombre",
+      "description": "Un exercice pour regarder calmement le côté que l'on évite.",
+      "reasoning": "Cela rejoint des signaux tournés vers l'intérieur."
+    },
+    "inner_child": {
+      "title": "Enfant intérieur",
+      "description": "Un temps pour retrouver doucement une émotion ancienne.",
+      "reasoning": "Cela rejoint des signaux de prudence et d'attention aux émotions."
+    }
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "Le voyage du héros",
+      "description": "Une forme de récit : partir, affronter une épreuve, revenir avec un sens.",
+      "reasoning": "Cela rejoint des signaux de défi et de sens."
+    },
+    "trickster_archetype": {
+      "title": "Trickster",
+      "description": "Un type de récit qui bouscule une frontière et ouvre un autre chemin.",
+      "reasoning": "Cela rejoint des signaux de franchissement et de réarrangement."
+    }
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "Pause dopamine",
+      "description": "Un exercice pour baisser les stimulations un moment, puis revenir à la tâche.",
+      "reasoning": "La recherche de nouveauté oriente vers une pause dans les stimulations."
+    }
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "Suivre le courant",
+      "description": "Un exercice pour lire le grain d'une situation au lieu de la forcer.",
+      "reasoning": "Cela rejoint des signaux qui lisent le flux plutôt que de pousser."
+    }
+  }
+}

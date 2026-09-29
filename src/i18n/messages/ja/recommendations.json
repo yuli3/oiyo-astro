@@ -1,0 +1,91 @@
+{
+  "cards": {
+    "sectionTitle": "あなたへの提案",
+    "sectionSubtitle": "これまでに集めた信号から選びました",
+    "matchLabel": "一致",
+    "why": "この提案の理由",
+    "explore": "次を見る",
+    "emptyTitle": "まだ提案がありません",
+    "emptyDescription": "生年月日を保存するか、テストを一つ終えると提案が開きます。",
+    "reasonTemplate": "{signals} をもとに選びました",
+    "reasonFallback": "関係の地図で近いものを選びました",
+    "categories": {
+      "career": "仕事",
+      "hobby": "趣味",
+      "psychology": "心理",
+      "mythology": "神話",
+      "science": "科学",
+      "spirituality": "精神"
+    },
+    "sources": {
+      "big5": "ビッグファイブ",
+      "mbti": "MBTI",
+      "riasec": "興味",
+      "saju": "四柱",
+      "tci": "気質",
+      "zodiac": "星座"
+    }
+  },
+  "career": {
+    "global_leader": {
+      "title": "人を導く仕事",
+      "description": "みんなと方向を決める役割です。",
+      "reasoning": "人を集めて導く信号と合います。"
+    },
+    "strategic_planner": {
+      "title": "戦略を組む仕事",
+      "description": "全体を見て段階に分ける役割です。",
+      "reasoning": "計画し、広く見る信号と合います。"
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "瞑想",
+      "description": "呼吸を整えて心を落ち着ける時間です。",
+      "reasoning": "高ぶりを冷ます信号と合います。"
+    },
+    "hiking": {
+      "title": "散歩とハイキング",
+      "description": "外で体を動かし、景色を見る時間です。",
+      "reasoning": "外と体を使う信号と合います。"
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "シャドウワーク",
+      "description": "見ないようにしていた面を静かに見る練習です。",
+      "reasoning": "内側を見る信号と合います。"
+    },
+    "inner_child": {
+      "title": "インナーチャイルド",
+      "description": "残っている感情に、やさしくもう一度会う時間です。",
+      "reasoning": "慎重さと感情を見る信号と合います。"
+    }
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "英雄の旅",
+      "description": "出て、ぶつかり、戻って意味を見つける物語の型です。",
+      "reasoning": "挑戦と目的の信号と合います。"
+    },
+    "trickster_archetype": {
+      "title": "トリックスター",
+      "description": "境界を揺らし、別の道を開く物語の型です。",
+      "reasoning": "境界を越え、組み直す信号と合います。"
+    }
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "ドーパミン休息",
+      "description": "刺激をしばらく減らし、していたことに戻る練習です。",
+      "reasoning": "新しさを求める信号なので、刺激を少し空ける方を選びました。"
+    }
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "流れに沿う態度",
+      "description": "無理に押さず、状況の筋を読む練習です。",
+      "reasoning": "押すより流れを読む信号と合います。"
+    }
+  }
+}

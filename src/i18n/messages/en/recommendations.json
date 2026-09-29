@@ -1,0 +1,91 @@
+{
+  "cards": {
+    "sectionTitle": "Picks for you",
+    "sectionSubtitle": "Chosen from the signals gathered so far",
+    "matchLabel": "Match",
+    "why": "Why this pick",
+    "explore": "Explore next",
+    "emptyTitle": "Nothing to recommend yet",
+    "emptyDescription": "Save your birth date or finish a test to unlock personal picks.",
+    "reasonTemplate": "Chosen from {signals}",
+    "reasonFallback": "Chosen from something nearby on your relationship map",
+    "categories": {
+      "career": "Career",
+      "hobby": "Hobby",
+      "psychology": "Psychology",
+      "mythology": "Mythology",
+      "science": "Science",
+      "spirituality": "Spirituality"
+    },
+    "sources": {
+      "big5": "Big Five",
+      "mbti": "MBTI",
+      "riasec": "Interests",
+      "saju": "Four Pillars",
+      "tci": "Temperament",
+      "zodiac": "Zodiac"
+    }
+  },
+  "career": {
+    "global_leader": {
+      "title": "Leading people",
+      "description": "A role that sets direction with other people.",
+      "reasoning": "It lines up with signals about gathering and guiding people."
+    },
+    "strategic_planner": {
+      "title": "Planning strategy",
+      "description": "A role that sees the whole and breaks it into steps.",
+      "reasoning": "It lines up with signals about planning and a wide view."
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "Meditation",
+      "description": "Time to steady the breath and settle the mind.",
+      "reasoning": "It lines up with signals about cooling excitement."
+    },
+    "hiking": {
+      "title": "Walking and hiking",
+      "description": "Time outside, moving and looking at the landscape.",
+      "reasoning": "It lines up with signals about the outdoors and the body."
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "Shadow work",
+      "description": "A practice of looking steadily at the side you tend to avoid.",
+      "reasoning": "It lines up with signals about looking inward."
+    },
+    "inner_child": {
+      "title": "Inner child",
+      "description": "Time to meet an old feeling again, gently.",
+      "reasoning": "It lines up with signals about caution and feeling."
+    }
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "The hero's journey",
+      "description": "A story shape of leaving, meeting a trial, and coming back with a purpose.",
+      "reasoning": "It lines up with signals about challenge and purpose."
+    },
+    "trickster_archetype": {
+      "title": "Trickster",
+      "description": "A story type that shakes a boundary and opens another path.",
+      "reasoning": "It lines up with signals about crossing lines and rearranging things."
+    }
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "Dopamine rest",
+      "description": "A practice of turning stimulation down for a while and coming back to the task.",
+      "reasoning": "Novelty-seeking pointed toward a pause from stimulation."
+    }
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "Following the current",
+      "description": "A practice of reading the grain of a situation instead of forcing it.",
+      "reasoning": "It lines up with signals about reading the flow rather than pushing."
+    }
+  }
+}
