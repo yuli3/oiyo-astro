@@ -60,7 +60,7 @@ export function luckContent(locale: Locale): JourneyContent {
           heading: '📖 더 읽을거리',
           items: [
             { href: o('lucky-numbers-by-birth-guide'), label: '생년월일로 보는 행운 숫자', external: true },
-            { href: o('entrance-wealth-luck'), label: '현관과 재물운 — 풍수의 지혜', external: true },
+            { href: o('feng-shui-history-and-home-design'), label: '풍수의 역사와 집이 마음에 주는 영향', external: true },
             { href: o('science-words-in-spirituality'), label: '영성 글 속 과학 용어 — 동시성·양자·임사체험', external: true },
             { href: o('saju-concepts-and-limits'), label: '사주 개념 정리 — 대운과 세운', external: true },
           ],
@@ -141,7 +141,7 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 深く読む ',
           items: [
-            { href: o('entrance-wealth-luck'), label: '玄関と金運 — 風水の知恵', external: true },
+            { href: o('feng-shui-history-and-home-design'), label: '風水の歴史と住まいが心に与える影響', external: true },
             { href: o('science-words-in-spirituality'), label: 'スピリチュアルの中の科学用語 — シンクロニシティ・量子・臨死体験', external: true },
             { href: o('saturn-return-meaning'), label: 'サターンリターンの意味', external: true },
             { href: o('moon-sign-secret-self'), label: '月星座 — 秘められた自分', external: true },
@@ -223,7 +223,7 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 深入阅读 ',
           items: [
-            { href: o('entrance-wealth-luck'), label: '玄关与财运——风水的智慧', external: true },
+            { href: o('feng-shui-history-and-home-design'), label: '风水的历史与居所对心理的影响', external: true },
             { href: o('science-words-in-spirituality'), label: '灵性文章中的科学术语——共时性、量子与濒死体验', external: true },
             { href: o('saturn-return-meaning'), label: '土星回归的意义', external: true },
             { href: o('moon-sign-secret-self'), label: '月亮星座——隐秘的自我', external: true },
@@ -305,7 +305,7 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Lire plus loin ',
           items: [
-            { href: o('entrance-wealth-luck'), label: 'Entrée et fortune — sagesse du feng shui', external: true },
+            { href: o('feng-shui-history-and-home-design'), label: 'Le feng shui, son histoire et l’influence du logement', external: true },
             { href: o('science-words-in-spirituality'), label: 'Les mots de la science dans la spiritualité — synchronicité, quantique, EMI', external: true },
             { href: o('saturn-return-meaning'), label: 'Le retour de Saturne', external: true },
             { href: o('moon-sign-secret-self'), label: 'Signe lunaire — le moi secret', external: true },
@@ -387,7 +387,7 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Leer más ',
           items: [
-            { href: o('entrance-wealth-luck'), label: 'La entrada y la fortuna — sabiduría del feng shui', external: true },
+            { href: o('feng-shui-history-and-home-design'), label: 'El feng shui, su historia y cómo influye la casa', external: true },
             { href: o('science-words-in-spirituality'), label: 'Palabras científicas en la espiritualidad — sincronicidad, cuántica, ECM', external: true },
             { href: o('saturn-return-meaning'), label: 'El retorno de Saturno', external: true },
             { href: o('moon-sign-secret-self'), label: 'Signo lunar — el yo secreto', external: true },
@@ -469,7 +469,7 @@ export function luckContent(locale: Locale): JourneyContent {
         blog: {
           heading: '📖 Read deeper ',
           items: [
-            { href: o('entrance-wealth-luck'), label: 'Entrances and wealth luck — feng shui wisdom', external: true },
+            { href: o('feng-shui-history-and-home-design'), label: 'Feng shui history and how home affects the mind', external: true },
             { href: o('science-words-in-spirituality'), label: 'Science words in spirituality — synchronicity, quantum, NDEs', external: true },
             { href: o('saturn-return-meaning'), label: 'The meaning of the Saturn return', external: true },
             { href: o('moon-sign-secret-self'), label: 'Moon sign — the secret self', external: true },
