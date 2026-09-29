@@ -249,6 +249,24 @@ const faqJsonLd = {
   <div class="mx-auto max-w-2xl px-4 py-10">
     <ZodiacPersonality client:load locale={locale} />
     <RelatedTools locale={locale} tools={['zodiacPeriodic', 'natal', 'zodiacCompat', 'saju']} current="zodiac" />
+    <figure class="mt-10 overflow-hidden rounded-2xl border border-green-100 bg-card">
+      <img
+        src="/images/mystic/zodiac-hero.webp"
+        alt={
+          locale === "ko" ? "열두 별자리 구역이 언덕 위 관측 바퀴를 이루는 상징 그림"
+          : locale === "ja" ? "十二の星座の区画が丘の上で観測の輪をつくる象徴画"
+          : locale === "zh" ? "十二星座区块在山丘上组成观测轮盘的象征图"
+          : locale === "fr" ? "Illustration symbolique : douze secteurs de constellations forment une roue d’observation au-dessus des collines"
+          : locale === "es" ? "Ilustración simbólica: doce sectores de constelaciones forman una rueda de observación sobre las colinas"
+          : "Symbolic illustration of twelve constellation sectors forming an observing wheel above hills"
+        }
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full"
+      />
+    </figure>
 
     <section class="mt-10 border-t border-green-100 pt-8">
       <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>

@@ -414,6 +414,24 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <ChineseZodiac client:load locale={locale} />
+    <figure class="mt-10 overflow-hidden rounded-2xl border border-green-100 bg-card">
+      <img
+        src="/images/mystic/chinese-zodiac-hero.webp"
+        alt={
+          locale === "ko" ? "동물 발자국 무늬로 열두 칸을 나눈 계절 달력 상징 그림"
+          : locale === "ja" ? "動物の足跡模様で十二に分けた季節の暦の象徴画"
+          : locale === "zh" ? "以动物足迹纹样分成十二格的季节历象征图"
+          : locale === "fr" ? "Illustration symbolique d’un calendrier saisonnier en douze parties marqué d’empreintes d’animaux"
+          : locale === "es" ? "Ilustración simbólica de un calendario estacional de doce partes marcado con huellas de animales"
+          : "Symbolic illustration of a twelve-part seasonal calendar marked with abstract animal tracks"
+        }
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full"
+      />
+    </figure>
 
     <section class="mt-10">
       <h2 class="text-lg font-bold text-foreground">{browseAllTitle[locale] ?? browseAllTitle.en}</h2>

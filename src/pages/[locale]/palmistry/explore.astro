@@ -416,6 +416,24 @@ const details = detailOrder
   <div class="mx-auto max-w-3xl px-4 py-10">
     <PalmistryExplorer client:load locale={locale} />
     <RelatedTools locale={locale} tools={['fortunePeriodic', 'natal', 'zodiac', 'saju']} current="palmistry" />
+    <figure class="mt-10 overflow-hidden rounded-2xl border border-green-100 bg-card">
+      <img
+        src="/images/mystic/palmistry-hero.webp"
+        alt={
+          locale === "ko" ? "펼친 손바닥의 주요 손금이 먼 나무로 가는 길이 되는 상징 그림"
+          : locale === "ja" ? "開いた手のひらの主な線が遠くの木へ続く道になる象徴画"
+          : locale === "zh" ? "张开手掌的主要掌纹化作通往远处树木小路的象征图"
+          : locale === "fr" ? "Illustration symbolique d’une paume ouverte dont les lignes principales deviennent des chemins vers un arbre lointain"
+          : locale === "es" ? "Ilustración simbólica de una palma abierta cuyas líneas principales se vuelven caminos hacia un árbol lejano"
+          : "Symbolic illustration of an open palm whose main lines become paths toward a distant tree"
+        }
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full"
+      />
+    </figure>
 
     <section class="mt-10 border-t border-green-100 pt-8">
       <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>

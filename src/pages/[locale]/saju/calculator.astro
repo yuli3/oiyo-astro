@@ -284,6 +284,24 @@ const faqJsonLd = {
     {/* Above-the-fold input form — hydrate on main-thread idle instead of blocking initial load, without waiting on viewport visibility. */}
     <SajuCalculator client:idle locale={locale} />
     <RelatedTools locale={locale} tools={['sajuPeriodic', 'natal', 'zodiac', 'numerology']} current="saju" />
+    <figure class="mt-8 overflow-hidden rounded-2xl border border-green-100 bg-card">
+      <img
+        src="/images/mystic/saju-hero.webp"
+        alt={
+          locale === "ko" ? "네 기둥이 목·화·토·금·수의 순환으로 이어진 사주 상징 그림"
+          : locale === "ja" ? "四つの柱が木・火・土・金・水の循環でつながる四柱推命の象徴画"
+          : locale === "zh" ? "四根柱子由木火土金水循环相连的四柱八字象征图"
+          : locale === "fr" ? "Illustration symbolique du saju : quatre piliers reliés par le cycle du bois, du feu, de la terre, du métal et de l’eau"
+          : locale === "es" ? "Ilustración simbólica del saju: cuatro pilares unidos por el ciclo de madera, fuego, tierra, metal y agua"
+          : "Symbolic saju illustration of four pillars linked by the cycle of wood, fire, earth, metal and water"
+        }
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full"
+      />
+    </figure>
 
     <section class="mt-4 border-t border-green-100 pt-8">
       <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>
