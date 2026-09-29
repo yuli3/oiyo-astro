@@ -14,6 +14,7 @@ interface Props {
   title: string;
   description?: string;
   locale: Locale;
+  availableLocales?: Locale[];
   noindex?: boolean;
   canonicalPath?: string;
   ogImage?: string;
@@ -36,7 +37,7 @@ const descriptionDefaults: Record<string, string> = {
   es: 'OIYO — Explora tu personalidad y tu destino',
   zh: 'OIYO — 探索你的个性与命运',
 };
-const { title, locale, noindex = false, canonicalPath, ogImage, heading, intro } = Astro.props;
+const { title, locale, noindex = false, canonicalPath, ogImage, heading, intro, availableLocales } = Astro.props;
 
 // Locale deindex list — see astro.config.mjs. Empty since 2026-09-24 (all six
 // locales indexable); a listed locale would leave the index, the sitemap, and
@@ -58,11 +59,15 @@ const alternateRouteWithoutLocale = canonicalPath
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
 // Deindexed locales are dropped from the hreflang cluster: Google discards
 // hreflang annotations pointing at noindex URLs.
-const alternateLinks = LOCALES.filter((l) => !DEINDEXED_LOCALES.has(l)).map((alternateLocale) => ({
+// 2026-09-30: topic hubs exist only where the article threshold is met.
+// Share that route inventory with navigation and hreflang, not all six locales.
+const routeLocales = LOCALES.filter((l) => (!availableLocales || availableLocales.includes(l)) && !DEINDEXED_LOCALES.has(l));
+const alternateLinks = routeLocales.map((alternateLocale) => ({
   hreflang: BCP47[alternateLocale] ?? alternateLocale,
   href: new URL(`/${alternateLocale}${alternateRouteWithoutLocale}`, Astro.site),
 }));
-const xDefaultUrl = new URL(`/ko${alternateRouteWithoutLocale}`, Astro.site);
+const xDefaultLocale = routeLocales.includes('ko') ? 'ko' : (routeLocales[0] ?? locale);
+const xDefaultUrl = new URL(`/${xDefaultLocale}${alternateRouteWithoutLocale}`, Astro.site);
 const siteUrl = Astro.site?.toString() ?? 'https://oiyo.net';
 const faviconUrl = new URL('/favicon.svg', Astro.site).toString();
 const themeColor = '#65a30d';
@@ -198,7 +203,7 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
         페이지당 제목은 하나뿐이라 이름 충돌은 생기지 않는다(충돌하면 브라우저는
         전환 전체를 건너뛴다 — audit:motion-contract 가 빌드 산출물에서 검사한다). */}
     <style is:inline set:html={`h1[data-route-title], #questionnaire-title { view-transition-name: ${routeTransitionName(Astro.url.pathname)}; }`} />
-    <Header locale={locale} />
+    <Header locale={locale} availableLocales={availableLocales} />
     {!isHomeRoute && (
       <nav aria-label="Breadcrumb" class="mx-auto flex max-w-6xl items-center gap-2 px-4 pt-5 text-xs text-muted-foreground">
         <a href={`/${locale}/`} class="hover:text-primary hover:underline">{homeLabel}</a>

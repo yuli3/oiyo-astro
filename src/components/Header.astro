@@ -7,9 +7,10 @@ import { localesForPath } from '../lib/article-locales';
 
 interface Props {
   locale: Locale;
+  availableLocales?: Locale[];
 }
 
-const { locale } = Astro.props;
+const { locale, availableLocales } = Astro.props;
 const t = await getTranslations(locale);
 // Strip only a real locale prefix (not e.g. "kn" in /knowledge/).
 const LOCALE_PREFIX = /^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/;
@@ -46,7 +47,7 @@ const currentLangItem = LANG_ITEMS.find((item) => item.code === locale) ?? LANG_
 // 글은 로케일마다 있지 않다. 없는 로케일을 제시하면 그 링크는 404 다 — 2026-09-08
 // 실측 4,566건. 현재 경로가 이관된 글이면 실제 있는 로케일로만 좁힌다. 정적 라우트는
 // 이 표에 없으므로 null 이 오고, 그때는 지금까지처럼 전부 보여준다.
-const pathLocales = await localesForPath(currentPath);
+const pathLocales = availableLocales ? new Set(availableLocales) : await localesForPath(currentPath);
 const langItems = pathLocales
   ? LANG_ITEMS.filter((item) => pathLocales.has(item.code) || item.code === locale)
   : LANG_ITEMS;
