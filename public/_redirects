@@ -107,3 +107,13 @@
 /:lang/framing-effect-context/  /:lang/judgment-heuristics-probability-errors/  301
 /:lang/hindsight-bias-prediction  /:lang/judgment-heuristics-probability-errors/  301
 /:lang/hindsight-bias-prediction/  /:lang/judgment-heuristics-probability-errors/  301
+
+# 2026-09-29 O10 2차: 손실 회피·보유 효과·피크엔드·선택의 역설 4편(ko·en·ja)을 출처 있는 한 편으로 합쳤다.
+/:lang/loss-aversion-psychology  /:lang/loss-aversion-choice-and-memory/  301
+/:lang/loss-aversion-psychology/  /:lang/loss-aversion-choice-and-memory/  301
+/:lang/endowment-effect-ownership  /:lang/loss-aversion-choice-and-memory/  301
+/:lang/endowment-effect-ownership/  /:lang/loss-aversion-choice-and-memory/  301
+/:lang/peak-end-rule-memory-bias  /:lang/loss-aversion-choice-and-memory/  301
+/:lang/peak-end-rule-memory-bias/  /:lang/loss-aversion-choice-and-memory/  301
+/:lang/paradox-of-choice-freedom  /:lang/loss-aversion-choice-and-memory/  301
+/:lang/paradox-of-choice-freedom/  /:lang/loss-aversion-choice-and-memory/  301
