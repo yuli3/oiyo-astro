@@ -68,7 +68,7 @@ export function luckContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 개념 사전',
           items: [
-            { href: o('tarot/reading'), label: '타로 메이저 아르카나', external: true },
+            { href: o('tarot/reading'), label: '타로 리딩 (78장)', external: true },
           ],
         },
         faq: {

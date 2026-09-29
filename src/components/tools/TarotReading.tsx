@@ -3,6 +3,7 @@ import { decodeResult } from '../../lib/result-permalink';
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
 import { TarotCardFace, romanMajor, tarotMajorImageSrc } from './TarotCardFace';
+import { MINOR_ARCANA, tarotMinorImageSrc, type MinorSuit } from '../../data/tarot-minor-arcana';
 import TarotSpread from './tarot/TarotSpread';
 import { shuffleDeck } from '../../lib/tarot/shuffle';
 import { prefersReducedMotion } from '../../hooks/useMotion';
@@ -37,6 +38,9 @@ const SHARE_LABELS: Record<'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh', { failed: st
 interface TarotCard {
   id: number;
   symbol: string;
+  /** 소아르카나만 있다. 대아르카나는 둘 다 없다. */
+  suit?: MinorSuit;
+  rank?: number;
   name: Record<Locale, string>;
   upright: Record<Locale, string>;
   reversed: Record<Locale, string>;
@@ -306,6 +310,19 @@ const L: Record<Locale, {
   },
 };
 
+// 2026-09-29 A1: 78장 덱. 대아르카나 id 0–21 은 그대로라 예전 공유 링크도 풀린다.
+const FULL_DECK: TarotCard[] = [...MAJOR_ARCANA, ...MINOR_ARCANA];
+
+function cardImageSrc(card: TarotCard): string {
+  return card.suit && card.rank ? tarotMinorImageSrc({ suit: card.suit, rank: card.rank }) : tarotMajorImageSrc(card.id);
+}
+
+// 모서리 표시: 숫자 카드는 숫자, 에이스·궁정 카드는 영문 머리글자(11~14 를 숫자로 보이지 않게).
+function minorCornerLabel(rank?: number): string | undefined {
+  if (!rank) return undefined;
+  return ({ 1: 'A', 11: 'P', 12: 'Kn', 13: 'Q', 14: 'K' } as Record<number, string>)[rank] ?? String(rank);
+}
+
 interface DrawnCard {
   card: TarotCard;
   reversed: boolean;
@@ -313,7 +330,7 @@ interface DrawnCard {
 }
 
 function drawCards(count: number, positionLabels: string[]): DrawnCard[] {
-  const shuffled = shuffleDeck(MAJOR_ARCANA);
+  const shuffled = shuffleDeck(FULL_DECK);
   return shuffled.slice(0, count).map((card, i) => ({
     card,
     reversed: Math.random() < 0.3,
@@ -325,7 +342,7 @@ function drawCards(count: number, positionLabels: string[]): DrawnCard[] {
 function cardsFromIds(ids: PermalinkState['drawn'], positionLabels: string[]): DrawnCard[] {
   return ids
     .map((d, i) => {
-      const card = MAJOR_ARCANA.find(c => c.id === d.id);
+      const card = FULL_DECK.find(c => c.id === d.id);
       return card ? { card, reversed: d.reversed, position: positionLabels[i] ?? '' } : null;
     })
     .filter((d): d is DrawnCard => d !== null);
@@ -335,7 +352,7 @@ function parsePermalinkState(value: unknown): PermalinkState | null {
   if (!value || typeof value !== 'object') return null;
   const candidate = value as Partial<PermalinkState>;
   if (![1, 3, 5].includes(candidate.spread ?? 0) || !Array.isArray(candidate.drawn) || candidate.drawn.length !== candidate.spread) return null;
-  if (!candidate.drawn.every(card => card && Number.isInteger(card.id) && card.id >= 0 && card.id < MAJOR_ARCANA.length && typeof card.reversed === 'boolean')) return null;
+  if (!candidate.drawn.every(card => card && Number.isInteger(card.id) && card.id >= 0 && card.id < FULL_DECK.length && typeof card.reversed === 'boolean')) return null;
   return candidate as PermalinkState;
 }
 
@@ -385,7 +402,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
     setFlipped(new Set());
     // 뽑기는 위에서 끝났다. 테이블은 뽑힌 카드가 떠오르는 모습만 보여 준다.
     if (prefersReducedMotion()) setShuffle(null);
-    else setShuffle({ key: Date.now(), chosen: next.map((dc) => MAJOR_ARCANA.indexOf(dc.card)) });
+    else setShuffle({ key: Date.now(), chosen: next.map((dc) => FULL_DECK.indexOf(dc.card)) });
   }
 
   async function share() {
@@ -466,7 +483,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
         <Suspense fallback={<div className="h-[230px] rounded-2xl bg-green-950" aria-hidden="true" />}>
           <TarotShuffleTable
             key={shuffle.key}
-            deckSize={MAJOR_ARCANA.length}
+            deckSize={FULL_DECK.length}
             chosen={shuffle.chosen}
             onDone={() => setShuffle(null)}
             label={SHUFFLING[locale] ?? SHUFFLING.en}
@@ -515,9 +532,11 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
                     >
                       <TarotCardFace
                         name={dc.card.name[locale]}
-                        imageSrc={tarotMajorImageSrc(dc.card.id)}
+                        imageSrc={cardImageSrc(dc.card)}
                         symbol={dc.card.symbol}
-                        roman={romanMajor(dc.card.id)}
+                        roman={dc.card.suit ? minorCornerLabel(dc.card.rank) : romanMajor(dc.card.id)}
+                        suit={dc.card.suit}
+                        rank={dc.card.rank}
                         reversed={dc.reversed}
                       />
                       <CardCornerFlourish className="absolute left-1 top-1 text-amber-700" />

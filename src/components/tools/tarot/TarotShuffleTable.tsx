@@ -3,7 +3,7 @@ import type MatterNS from "matter-js";
 
 /**
  * 뽑기 직전의 셔플 테이블(Matter.js). 위에서 내려다본 탁자라 중력이 없다.
- * 22장 뒷면이 소용돌이치며 섞이다가, 이미 뽑힌 카드(`chosen`, 덱 안의 자리)만
+ * 덱 전체(78장) 뒷면이 소용돌이치며 섞이다가, 이미 뽑힌 카드(`chosen`, 덱 안의 자리)만
  * 금빛으로 빛나며 떠오르고 `onDone` 을 부른다.
  *
  * 어느 카드가 나올지는 이 장면이 정하지 않는다 — `shuffleDeck` 이 먼저 정하고,
@@ -65,7 +65,10 @@ export default function TarotShuffleTable({ deckSize, chosen, onDone, label }: P
           Bodies.rectangle(width + 10, HEIGHT / 2, 20, HEIGHT, wall),
         ]);
 
-        const cw = Math.max(26, Math.min(40, width / 11));
+        // 2026-09-29: 22장 기준 크기였다. 78장 덱에서는 탁자가 꽉 차 서로 밀어내기만 해서
+        // 전체 면적이 22장일 때와 비슷하도록 장수에 맞춰 줄인다.
+        const fit = Math.min(1, Math.sqrt(22 / Math.max(1, deckSize)));
+        const cw = Math.max(16, Math.max(26, Math.min(40, width / 11)) * fit);
         const ch = cw * 1.5;
         const cards: Card[] = [];
         for (let i = 0; i < deckSize; i += 1) {
