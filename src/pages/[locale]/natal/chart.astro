@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import HeroArt from '../../../components/shared/HeroArt.astro';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
@@ -265,6 +266,7 @@ const faqJsonLd = {
 <Layout title={m.title} description={m.description} locale={locale} heading={m.title} intro={m.description}>
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10">
+    <HeroArt src="/images/oiyo-imagegen/hero/natal-chart-hero.webp" class="mb-6 max-h-56" />
     <NatalChartCalculator client:load locale={locale} />
     <RelatedTools locale={locale} tools={['fortunePeriodic', 'saju', 'zodiac', 'numerology', 'palmistry']} current="natal" />
 

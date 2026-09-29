@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import HeroArt from '../../components/shared/HeroArt.astro';
 import CircleGathering from '../../components/profile/CircleGathering';
 import RelatedTools from '../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../i18n';
@@ -641,6 +642,7 @@ const structuredData = { '@context': 'https://schema.org', '@graph': [webApplica
 <Layout title={m.title} description={m.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
+    <HeroArt src="/images/oiyo-imagegen/hero/group-circle-orbit.webp" class="mb-6 max-h-56" />
     <CircleGathering client:load locale={locale} />
 
     <div class="mx-auto mt-14 max-w-3xl border-t border-border pt-10 sm:mt-20 sm:pt-14">

@@ -702,8 +702,12 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
               <ul class="divide-y divide-primary/10 px-1">
                 {lane.tests.slice(3).map((test) => (
                   <li>
-                    <a href={test.href} class="block min-h-11 rounded-md px-3 py-3 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
-                      {test.title[locale]}
+                    {/* 2026-09-29 A2: 아이콘을 상위 3개에만 그려서 펼친 목록용으로 만든 그림 12개가 한 번도 보이지 않았다. */}
+                    <a href={test.href} class="flex min-h-11 items-center gap-3 rounded-md px-3 py-2 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                      <span class={`flex size-7 shrink-0 items-center justify-center rounded-md ${test.bg} p-0.5 text-sm`} aria-hidden="true">
+                        <TestIcon src={testIconSrc(test.href)} fallback={test.icon || "•"} />
+                      </span>
+                      <span class="min-w-0">{test.title[locale]}</span>
                     </a>
                   </li>
                 ))}

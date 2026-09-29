@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import HeroArt from '../../../components/shared/HeroArt.astro';
 import { LOCALES, type Locale } from '../../../i18n';
 import PeriodicFortune from '../../../components/tools/PeriodicFortune';
 import GenerationCompare from '../../../components/tools/GenerationCompare';
@@ -347,6 +348,7 @@ const breadcrumbJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(howToJsonLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
   <div class="mx-auto max-w-3xl px-4 py-10">
+    <HeroArt src="/images/oiyo-imagegen/hero/today-hero.webp" class="mb-6 max-h-56" />
     <div class="mb-6 text-center">
       <p class="text-xs font-black uppercase tracking-[0.24em] text-green-700">Periodic Fortune</p>
       <h1 class="mt-2 text-3xl font-black text-foreground">{m.h1}</h1>
