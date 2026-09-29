@@ -28,6 +28,8 @@ import { fill, PAIR_COPY_FULL, PAIR_NAME, type PairLang } from "@/lib/symbolic-t
 import { readPair, type Evidence, type PairReading } from "@/lib/symbolic-tradition/pair-reading";
 import { celticTreeName, egyptianDeityName, hexagramHan, hexagramMeaningKo, hexagramName, mayanSealName, mayanToneName, nakshatraName, taraName, ziweiPalaceName, ziweiStarName } from "@/lib/symbolic-tradition/symbol-names";
 import { DIFFICULT_TARA } from "@/lib/symbolic-tradition/jyotish";
+import { collectMyTastes, pairTasteRows, type SharedTaste } from "@/lib/symbolic-tradition/shared-tastes";
+import { listStoredTestResults } from "@/lib/user/test-results";
 
 import BinaryStar from "./BinaryStar";
 import SignatureCard from "./SignatureCard";
@@ -54,6 +56,8 @@ export default function PairReadingView({ locale }: { locale: string }) {
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as PairLang;
   const t = PAIR_COPY_FULL[lang];
   const [people, setPeople] = useState<SymbolicGroupParticipant[] | null>(null);
+  const [myTastes, setMyTastes] = useState<SharedTaste[]>([]);
+  useEffect(() => setMyTastes(collectMyTastes(listStoredTestResults())), []);
   const [ids, setIds] = useState<{ a: string; b: string } | null>(null);
   const [today, setToday] = useState<string | null>(null);
 
@@ -288,6 +292,10 @@ export default function PairReadingView({ locale }: { locale: string }) {
   const section = "mt-8 rounded-[2rem] border border-border bg-card p-4 sm:p-7";
   const A = people.find((p) => p.id === reading.a.id)!;
   const B = people.find((p) => p.id === reading.b.id)!;
+  // 2026-09-30 P13: 친구 링크로 받은 취향, 또는 '나'로 표시된 사람은 이 브라우저의 내 결과.
+  const tastesOf = (p: SymbolicGroupParticipant) => p.tastes ?? (p.self ? myTastes : []);
+  const tasteRows = pairTasteRows(tastesOf(A), tastesOf(B));
+  const tc = TASTE_COPY[lang];
 
   return (
     <div className="mx-auto max-w-3xl pb-10">
@@ -392,6 +400,35 @@ export default function PairReadingView({ locale }: { locale: string }) {
         <ul className="mt-3">{reading.evidence.map(evRow)}</ul>
       </section>
 
+      {/* P13 취향 겹쳐 보기 — 한쪽이라도 결과가 있을 때만 */}
+      {tasteRows.length > 0 && (
+        <section className={section}>
+          <h2 className="text-lg font-black text-foreground">{tc.title}</h2>
+          <p className="mt-1 text-xs text-muted-foreground">{tc.lead}</p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full min-w-[20rem] text-sm">
+              <thead>
+                <tr className="text-left text-xs text-muted-foreground">
+                  <th className="py-2 pr-3 font-bold">{tc.test}</th>
+                  <th className="py-2 pr-3 font-bold">{A.label}</th>
+                  <th className="py-2 font-bold">{B.label}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tasteRows.map((row) => (
+                  <tr key={row.testId} className="border-t border-border align-top">
+                    <td className="py-2 pr-3 text-muted-foreground">{row.title}</td>
+                    <td className="py-2 pr-3 font-bold text-foreground">{row.a ?? "—"}</td>
+                    <td className="py-2 font-bold text-foreground">{row.b ?? "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {tasteRows.some((row) => !row.a || !row.b) && <p className="mt-2 text-xs text-muted-foreground">{tc.missing}</p>}
+        </section>
+      )}
+
       {/* C6 둘의 무늬 */}
       <SignatureCard
         people={[A, B].map((p) => ({ id: p.id, label: p.label, element: (STEMS[p.profile.saju.day.heavenlyStem].element as FiveElement), sunElement: p.profile.sunSign.element, mayanColor: p.profile.mayanKin?.color, orbit: signatureOrbit(p.profile) }))}
@@ -411,6 +448,15 @@ export default function PairReadingView({ locale }: { locale: string }) {
     </div>
   );
 }
+
+const TASTE_COPY: Record<PairLang, { title: string; lead: string; test: string; missing: string }> = {
+  ko: { title: "취향 겹쳐 보기", lead: "같은 검사를 둘이 어떻게 답했는지 나란히 놓았어요. 같고 다름을 점수로 매기지 않아요.", test: "검사", missing: "— 는 아직 결과가 없다는 뜻이에요. 친구 링크를 만들 때 '취향 결과도 함께 보내기'를 켜면 채워져요." },
+  en: { title: "Tastes side by side", lead: "How each of you answered the same tests, placed next to each other. Sameness and difference are not scored.", test: "Test", missing: "— means no result yet. Turn on “Also send my taste results” when making a friend link to fill it in." },
+  ja: { title: "好みを並べて見る", lead: "同じ検査に二人がどう答えたかを並べました。同じか違うかを点数にはしません。", test: "検査", missing: "— はまだ結果がないという意味です。友だちリンクを作るとき「好みの結果も一緒に送る」をオンにすると埋まります。" },
+  zh: { title: "喜好并排看", lead: "把两人在同一测试中的结果并排放在一起。相同或不同都不打分。", test: "测试", missing: "— 表示还没有结果。创建好友链接时打开“同时发送喜好结果”即可补上。" },
+  fr: { title: "Goûts côte à côte", lead: "Vos résultats aux mêmes tests, placés côte à côte. Ressemblances et différences ne sont pas notées.", test: "Test", missing: "— signifie pas encore de résultat. Activez « Envoyer aussi mes résultats de goûts » en créant le lien d’ami." },
+  es: { title: "Gustos lado a lado", lead: "Sus resultados en los mismos tests, uno junto al otro. Las coincidencias y diferencias no se puntúan.", test: "Test", missing: "— significa que aún no hay resultado. Activa «Enviar también mis resultados de gustos» al crear el enlace de amigo." },
+};
 
 const SAVE: Record<PairLang, [string, string]> = {
   ko: ["이미지로 저장", "이미지를 저장했어요"],

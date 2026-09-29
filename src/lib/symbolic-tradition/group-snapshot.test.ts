@@ -57,6 +57,15 @@ describe("symbolic group snapshot", () => {
     expect(decodeSymbolicGroupSnapshot(encodeSymbolicGroupSnapshot(changed), new Date("2026-08-15T00:00:00Z"))).toBeNull();
   });
 
+  it("never carries a friend's shared tastes or the self flag into a group link (P13)", () => {
+    const withExtras = people(2).map((p, i) => ({ ...p, tastes: [{ testId: "music-taste", title: "음악", label: `L${i}` }], self: i === 0 }));
+    const snapshot = createSymbolicGroupSnapshot(withExtras, { now: new Date("2026-08-14T00:00:00Z") });
+    expect(snapshot.participants.every((p) => !("tastes" in p) && !("self" in p))).toBe(true);
+    const tampered = { ...snapshot, participants: snapshot.participants.map((p) => ({ ...p, tastes: [{ testId: "music-taste", title: "x", label: "y" }] })) };
+    const decoded = decodeSymbolicGroupSnapshot(encodeSymbolicGroupSnapshot(tampered), new Date("2026-08-15T00:00:00Z"));
+    expect(decoded?.participants.every((p) => !("tastes" in p))).toBe(true);
+  });
+
   it("rejects groups outside 2 to 10 people and expired snapshots", () => {
     // 2026-09-04: 하한이 3 → 2 로 내려갔다. 2인 전용 페이지를 걷어내고 이
     // 원 하나가 2인 이상을 모두 받는다. 1인은 비교 대상이 없어 여전히 막는다.

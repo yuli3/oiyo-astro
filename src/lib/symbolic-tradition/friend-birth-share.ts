@@ -1,4 +1,5 @@
 import type { City, NatalLocale } from "@/lib/ontology/natal/signs";
+import { parseSharedTastes, type SharedTaste } from "@/lib/symbolic-tradition/shared-tastes";
 
 export const FRIEND_BIRTH_SHARE_TOOL_ID = "circle-friend-birth-v1";
 
@@ -8,6 +9,8 @@ export interface FriendBirthShare {
   date: string;
   schemaVersion: 1;
   time: string | null;
+  /** 2026-09-30 P13: 보내는 사람이 켰을 때만 담는 취향 결과 요약. 없던 필드라 옛 링크도 그대로 풀린다. */
+  tastes?: SharedTaste[];
 }
 
 const LOCALES: NatalLocale[] = ["ko", "en", "ja", "zh", "fr", "es"];
@@ -43,11 +46,13 @@ export function parseFriendBirthShare(value: unknown): FriendBirthShare | null {
     || !(share.time === null || (typeof share.time === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(share.time)))
     || !validCity(share.city)
   ) return null;
+  const tastes = parseSharedTastes(share.tastes);
   return {
     alias: share.alias.trim(),
     city: share.city,
     date: share.date,
     schemaVersion: 1,
     time: share.time,
+    ...(tastes.length ? { tastes } : {}),
   };
 }

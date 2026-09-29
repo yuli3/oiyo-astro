@@ -10,6 +10,8 @@ import { comparisonFromCivil } from "@/lib/symbolic-tradition/circle-input";
 import { CITIES } from "@/lib/ontology/natal/signs";
 import { resolveBirthRecord } from "@/lib/user/birth-record";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
+import { listStoredTestResults } from "@/lib/user/test-results";
+import { collectMyTastes, type SharedTaste } from "@/lib/symbolic-tradition/shared-tastes";
 import {
   allPairEdges,
   createSymbolicGroupSnapshot,
@@ -259,6 +261,16 @@ const COPY = {
 
 const FALLBACK = COPY.en;
 
+// 2026-09-30 P13: 취향 결과를 함께 보내는 선택 문구. 기본은 꺼 둔다.
+const TASTE_SHARE_UI: Record<Lang, { send: (n: number) => string; none: string; received: string }> = {
+  ko: { send: (n) => `내 취향 검사 결과 ${n}개도 함께 보내기(음악·우정·가치관)`, none: "함께 보낼 취향 검사 결과가 아직 없어요", received: "함께 온 취향 결과" },
+  en: { send: (n) => `Also send my ${n} taste result${n === 1 ? "" : "s"} (music, friendship, values)`, none: "No taste results to send yet", received: "Taste results included" },
+  ja: { send: (n) => `私の好みの検査結果 ${n}件も一緒に送る(音楽・友情・価値観)`, none: "一緒に送れる好みの検査結果はまだありません", received: "一緒に届いた好みの結果" },
+  zh: { send: (n) => `同时发送我的 ${n} 项喜好测试结果(音乐·友情·价值观)`, none: "还没有可一起发送的喜好测试结果", received: "一同收到的喜好结果" },
+  fr: { send: (n) => `Envoyer aussi mes ${n} résultat${n === 1 ? "" : "s"} de goûts (musique, amitié, valeurs)`, none: "Aucun résultat de goûts à envoyer pour l’instant", received: "Résultats de goûts reçus" },
+  es: { send: (n) => `Enviar también mis ${n} resultado${n === 1 ? "" : "s"} de gustos (música, amistad, valores)`, none: "Aún no hay resultados de gustos para enviar", received: "Resultados de gustos incluidos" },
+};
+
 const FRIEND_SHARE_UI: Record<Lang, { accept: string; copied: string; failed: string; inviteBody: string; inviteTitle: string; share: string }> = {
   ko: { share: "이 친구 정보 암호화 링크", copied: "친구 링크를 복사했어요", failed: "암호화 링크를 만들지 못했어요", inviteTitle: "친구가 출생정보를 공유했어요", inviteBody: "별칭·생년월일·시각·출생도시가 암호화되어 전달됐어요. 확인하면 이 브라우저의 원에 추가됩니다.", accept: "확인하고 원에 추가" },
   en: { share: "Copy encrypted friend link", copied: "Friend link copied", failed: "Could not create the encrypted link", inviteTitle: "A friend shared birth details", inviteBody: "A nickname, birth date, time, and city arrived encrypted. Accepting adds them to this browser's circle.", accept: "Review and add to circle" },
@@ -321,6 +333,9 @@ export default function CircleGathering({ locale }: { locale: string }) {
   const [picked, setPicked] = useState<null | { from: string; to: string }>(null);
   const [copied, setCopied] = useState(false);
   const [friendShareState, setFriendShareState] = useState<"copied" | "failed" | "idle">("idle");
+  const [sendTastes, setSendTastes] = useState(false);
+  const [myTastes, setMyTastes] = useState<SharedTaste[]>([]);
+  useEffect(() => setMyTastes(collectMyTastes(listStoredTestResults())), []);
   const [pendingFriend, setPendingFriend] = useState<FriendBirthShare | null>(null);
   const [hydrated, setHydrated] = useState(false);
   // 공유 링크가 실어 온 날 — "오늘의 우리"가 여는 날이 아니라 공유한 날을 먼저 보여 준다.
@@ -409,7 +424,11 @@ export default function CircleGathering({ locale }: { locale: string }) {
     }
     try {
       const profile = comparisonFromCivil({ city: selectedCity ?? undefined, cityId: cityId || undefined, date, time: time || undefined }, { astro: true });
-      const next = person(alias || defaultLabel(copy, people.length), profile);
+      const base = person(alias || defaultLabel(copy, people.length), profile);
+      // 2026-09-30 P13: 내 출생 정보와 같으면 이 사람은 나다 — 두 사람 보기에서 저장된 내 취향을 쓴다.
+      const two = (n: number) => String(n).padStart(2, "0");
+      const myDate = myBirth ? `${myBirth.year}-${two(myBirth.month)}-${two(myBirth.day)}` : "";
+      const next = myDate && date === myDate ? { ...base, self: true } : base;
       setPeople((current) => {
         if (current.length >= 10) return current;
         const list = [...current, next];
@@ -429,7 +448,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
 
   const shareFriendBirth = async () => {
     setFriendShareState("idle");
-    const friend = parseFriendBirthShare({ alias, city: selectedCity, date, schemaVersion: 1, time: time || null });
+    const friend = parseFriendBirthShare({ alias, city: selectedCity, date, schemaVersion: 1, time: time || null, tastes: sendTastes ? myTastes : undefined });
     if (!friend) {
       setError(copy.error);
       return;
@@ -452,7 +471,8 @@ export default function CircleGathering({ locale }: { locale: string }) {
     }
     try {
       const profile = comparisonFromCivil({ city: pendingFriend.city, date: pendingFriend.date, time: pendingFriend.time || undefined }, { astro: true });
-      setPeople((current) => current.length >= 10 ? current : [...current, person(pendingFriend.alias, profile)]);
+      const friend = { ...person(pendingFriend.alias, profile), ...(pendingFriend.tastes?.length ? { tastes: pendingFriend.tastes } : {}) };
+      setPeople((current) => current.length >= 10 ? current : [...current, friend]);
       setPendingFriend(null);
       setError("");
     } catch {
@@ -541,6 +561,14 @@ export default function CircleGathering({ locale }: { locale: string }) {
         <div><dt className="inline font-bold">{copy.time}: </dt><dd className="inline">{pendingFriend.time ?? "—"}</dd></div>
         <div><dt className="inline font-bold">{copy.city}: </dt><dd className="inline">{pendingFriend.city.label[lang]}</dd></div>
       </dl>
+      {pendingFriend.tastes?.length ? (
+        <div className="mt-3 text-sm">
+          <p className="font-bold">{TASTE_SHARE_UI[lang].received}</p>
+          <ul className="mt-1 list-disc pl-5">
+            {pendingFriend.tastes.map((taste) => <li key={taste.testId}>{taste.title} — {taste.label}</li>)}
+          </ul>
+        </div>
+      ) : null}
       <button type="button" onClick={acceptPendingFriend} className="mt-3 min-h-11 rounded-xl bg-amber-800 px-4 py-2 text-sm font-black text-white">
         {FRIEND_SHARE_UI[lang].accept}
       </button>
@@ -652,6 +680,10 @@ export default function CircleGathering({ locale }: { locale: string }) {
         copy={{ label: copy.city }}
       />
       <button type="button" onClick={addByDate} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Plus className="h-4 w-4" />{copy.add}</button>
+      <label className={`flex items-start gap-2 text-xs leading-5 ${myTastes.length ? "text-foreground" : "text-muted-foreground"}`}>
+        <input type="checkbox" className="mt-0.5 h-4 w-4 accent-green-700" checked={sendTastes && myTastes.length > 0} disabled={!myTastes.length} onChange={(event) => setSendTastes(event.target.checked)} />
+        <span>{myTastes.length ? TASTE_SHARE_UI[lang].send(myTastes.length) : TASTE_SHARE_UI[lang].none}</span>
+      </label>
       <button type="button" onClick={() => void shareFriendBirth()} className="min-h-11 w-full rounded-2xl border border-primary text-sm font-black text-primary">
         {friendShareState === "copied" ? FRIEND_SHARE_UI[lang].copied : FRIEND_SHARE_UI[lang].share}
       </button>

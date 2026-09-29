@@ -7,6 +7,7 @@ import { isZiweiCoordinates } from "./ziwei-coordinates";
 import { isBirthHexagram } from "./iching";
 import { compareSymbolicProfiles } from "./index";
 import type { CompatibilityLensId, SymbolicComparisonProfile } from "./types";
+import type { SharedTaste } from "@/lib/symbolic-tradition/shared-tastes";
 
 export const SYMBOLIC_GROUP_SCHEMA_VERSION = 1 as const;
 /**
@@ -21,6 +22,10 @@ export interface SymbolicGroupParticipant {
   id: string;
   label: string;
   profile: SymbolicComparisonProfile;
+  /** 2026-09-30 P13: 친구 링크로 함께 받은 취향 결과(선택). */
+  tastes?: SharedTaste[];
+  /** 2026-09-30 P13: 이 브라우저 주인의 출생 정보로 넣은 사람. 취향은 저장된 내 결과를 쓴다. */
+  self?: boolean;
 }
 
 export interface SymbolicGroupEdge {
@@ -121,7 +126,9 @@ export function createSymbolicGroupSnapshot(
     createdAt: now.toISOString(),
     edges,
     expiresAt: new Date(now.getTime() + ttlDays * 86_400_000).toISOString(),
-    participants: participants.map((participant) => ({ ...participant, label: participant.label.trim() })),
+    // 2026-09-30 P13: 취향(tastes)은 보낸 사람이 한 사람에게 동의해 준 것이라 그룹 공유 링크로
+    // 다시 퍼지면 안 된다. self 표시도 이 브라우저에서만 뜻이 있다. 스냅샷에는 세 필드만 싣는다.
+    participants: participants.map(({ id, label, profile }) => ({ id, label: label.trim(), profile })),
     schema: "oiyo.symbolic-group-snapshot",
     schemaVersion: SYMBOLIC_GROUP_SCHEMA_VERSION,
   };
@@ -154,7 +161,8 @@ export function decodeSymbolicGroupSnapshot(encoded: string, now = new Date()): 
     const value = JSON.parse(raw || "null") as SymbolicGroupSnapshot;
     if (value?.schema !== "oiyo.symbolic-group-snapshot" || value.schemaVersion !== 1 || Date.parse(value.expiresAt) <= now.getTime()) return null;
     const rebuilt = createSymbolicGroupSnapshot(value.participants, { centerId: value.centerId, now: new Date(value.createdAt), ttlDays: Math.round((Date.parse(value.expiresAt) - Date.parse(value.createdAt)) / 86_400_000) });
-    return JSON.stringify(rebuilt.edges) === JSON.stringify(value.edges) ? value : null;
+    // 받은 참가자에 붙은 다른 필드는 버리고 재구성한 세 필드만 쓴다(2026-09-30 P13).
+    return JSON.stringify(rebuilt.edges) === JSON.stringify(value.edges) ? { ...value, participants: rebuilt.participants } : null;
   } catch {
     return null;
   }

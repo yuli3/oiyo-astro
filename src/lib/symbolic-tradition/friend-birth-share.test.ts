@@ -46,6 +46,15 @@ describe("encrypted friend birth browser journey", () => {
     expect(parseFriendBirthShare(friend)).toEqual(friend);
   });
 
+  it("carries opted-in taste results and drops disallowed ones (P13)", () => {
+    const withTastes = parseFriendBirthShare({ ...friend, tastes: [
+      { testId: "music-taste", title: "음악 취향", label: "리듬 탐험가" },
+      { testId: "political-compass", title: "정치 성향", label: "중도" },
+    ] });
+    expect(withTastes?.tastes).toEqual([{ testId: "music-taste", title: "음악 취향", label: "리듬 탐험가" }]);
+    expect(parseFriendBirthShare({ ...friend, tastes: [] })).not.toHaveProperty("tastes");
+  });
+
   it("allows unknown time but rejects invalid or overlong identity data", () => {
     expect(parseFriendBirthShare({ ...friend, time: null })?.time).toBeNull();
     expect(parseFriendBirthShare({ ...friend, alias: "x".repeat(25) })).toBeNull();
