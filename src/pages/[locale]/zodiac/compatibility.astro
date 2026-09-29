@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
+import HeroArt from '../../../components/shared/HeroArt.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import ZodiacCompatibilityCalculator from '../../../components/tools/ZodiacCompatibilityCalculator';
@@ -423,6 +424,8 @@ const faqJsonLd = {
 <Layout title={m.title} description={m.description} locale={locale} heading={m.title} intro={m.description}>
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10">
+    {/* 2026-09-30 2-15: 쓰이지 않던 별자리 관계도 그림을 별자리 궁합 머리에 연결 */}
+    <HeroArt src="/images/oiyo-imagegen/hero/selected-relationship.webp" class="mb-6 max-h-56" />
     <ZodiacCompatibilityCalculator client:load locale={locale} />
     <RelatedTools locale={locale} tools={['zodiacPeriodic', 'zodiac', 'natal', 'saju']} current="zodiacCompat" />
 
