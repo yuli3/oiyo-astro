@@ -64,7 +64,7 @@ export function personalityContent(locale: Locale): JourneyContent {
             { href: o('mbti-complete-deep-guide'), label: 'MBTI 완전 정복 가이드', external: true },
             { href: o('8-cognitive-functions-deep-dive'), label: '8가지 인지기능 깊이 읽기', external: true },
             { href: o('enneagram-mbti-integration'), label: '에니어그램 × MBTI 통합하기', external: true },
-            { href: o('evolving-self-saju-mbti'), label: '사주와 MBTI로 보는 진화하는 나', external: true },
+            { href: o('saju-concepts-and-limits'), label: '사주 개념 정리 — MBTI와 함께 볼 때', external: true },
             { href: o('jung-shadow-psychology'), label: '융의 그림자 심리학', external: true },
           ],
         },
@@ -152,7 +152,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('8-cognitive-functions-deep-dive'), label: '8つの認知機能を深く読む', external: true },
             { href: o('enneagram-mbti-integration'), label: 'エニアグラム×MBTIの統合', external: true },
-            { href: o('evolving-self-saju-mbti'), label: '四柱推命とMBTIで見る進化する自分', external: true },
+            { href: o('saju-concepts-and-limits'), label: '四柱推命の概念 — MBTIと重ねるとき', external: true },
             { href: o('jung-shadow-psychology'), label: 'ユングの影の心理学', external: true },
           ],
         },
@@ -240,7 +240,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('8-cognitive-functions-deep-dive'), label: '深入解读8种认知功能', external: true },
             { href: o('enneagram-mbti-integration'), label: '九型人格 × MBTI 整合', external: true },
-            { href: o('evolving-self-saju-mbti'), label: '八字与MBTI中进化的自我', external: true },
+            { href: o('saju-concepts-and-limits'), label: '八字概念 — 与 MBTI 一起看时', external: true },
             { href: o('jung-shadow-psychology'), label: '荣格的阴影心理学', external: true },
           ],
         },
@@ -328,7 +328,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('8-cognitive-functions-deep-dive'), label: 'Les 8 fonctions cognitives en profondeur', external: true },
             { href: o('enneagram-mbti-integration'), label: 'Intégrer ennéagramme et MBTI', external: true },
-            { href: o('evolving-self-saju-mbti'), label: 'Le soi en évolution : Saju et MBTI', external: true },
+            { href: o('saju-concepts-and-limits'), label: 'Le saju en bref — et le MBTI', external: true },
             { href: o('jung-shadow-psychology'), label: 'La psychologie de l\'ombre de Jung', external: true },
           ],
         },
@@ -416,7 +416,7 @@ export function personalityContent(locale: Locale): JourneyContent {
           items: [
             { href: o('8-cognitive-functions-deep-dive'), label: 'Las 8 funciones cognitivas a fondo', external: true },
             { href: o('enneagram-mbti-integration'), label: 'Integrar eneagrama y MBTI', external: true },
-            { href: o('evolving-self-saju-mbti'), label: 'El yo en evolución: Saju y MBTI', external: true },
+            { href: o('saju-concepts-and-limits'), label: 'El saju en resumen — y el MBTI', external: true },
             { href: o('jung-shadow-psychology'), label: 'La psicología de la sombra de Jung', external: true },
           ],
         },

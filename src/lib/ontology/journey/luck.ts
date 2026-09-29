@@ -62,7 +62,7 @@ export function luckContent(locale: Locale): JourneyContent {
             { href: o('lucky-numbers-by-birth-guide'), label: '생년월일로 보는 행운 숫자', external: true },
             { href: o('entrance-wealth-luck'), label: '현관과 재물운 — 풍수의 지혜', external: true },
             { href: o('science-synchronicity-jung-pauli'), label: '동시성의 과학 — 융과 파울리', external: true },
-            { href: o('semun-yearly-luck-strategy'), label: '세운 — 한 해 운의 전략', external: true },
+            { href: o('saju-concepts-and-limits'), label: '사주 개념 정리 — 대운과 세운', external: true },
           ],
         },
         wiki: {
