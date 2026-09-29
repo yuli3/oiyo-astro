@@ -83,14 +83,24 @@ export const useUserStore = create<UserState>()(
       },
 
       saveBirthRecord: (record) =>
-        set((state) => ({
-          profile: {
-            ...state.profile,
-            birthDate: record.civilDate,
-            birthRecord: record,
-            birthTime: record.civilTime,
-          },
-        })),
+        set((state) => {
+          // 2026-09-30 B6 #10: 값이 실제로 바뀔 때만 알린다. 도구가 계산할 때마다
+          // 같은 값을 다시 저장해도 알림이 반복되지 않게 한다(BirthSavedToast).
+          const changed =
+            state.profile.birthDate !== record.civilDate ||
+            state.profile.birthTime !== record.civilTime;
+          if (changed && typeof window !== "undefined") {
+            window.dispatchEvent(new CustomEvent("oiyo:birth-saved"));
+          }
+          return {
+            profile: {
+              ...state.profile,
+              birthDate: record.civilDate,
+              birthRecord: record,
+              birthTime: record.civilTime,
+            },
+          };
+        }),
 
       setBirthDate: (date) =>
         set((state) => ({

@@ -9,6 +9,7 @@ import Footer from '../components/Footer.astro';
 import TestSourceNote from '../components/shared/TestSourceNote.astro';
 import { getTestSourceNote } from '../data/test-source-notes';
 import TestPlayBeacon from '../components/shared/TestPlayBeacon';
+import BirthSavedToast from '../components/shared/BirthSavedToast.astro';
 
 interface Props {
   title: string;
@@ -226,6 +227,7 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
     </main>
     <Footer locale={locale} />
+    <BirthSavedToast locale={locale} />
     <script>
       import { removeStoredTestInputs } from '../lib/user/test-results';
       import { installSiteParticles } from '../lib/particles/install';
