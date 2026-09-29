@@ -1,210 +1,138 @@
 ---
 series: psychology-basics
 chapter: 3
-title: "Me in social space: social psychology and group dynamics"
-description: "Explores how the presence of others affects an individual's thoughts and actions. Gain a deep understanding of human social nature through core theories of social psychology such as conformity, obe..."
-pubDate: 2026-03-01T00:00:00.000Z
+title: "Learning — Classical Conditioning, Operant Conditioning, Cognitive Learning, Observational Learning, Rewards and Intrinsic Motivation"
+description: "How does experience change behaviour? Pavlov's dogs and the Garcia effect, Skinner's schedules of reinforcement and the limits of punishment, Tolman's cognitive maps, Bandura's Bobo doll experiment and self-efficacy, and the overjustification effect in which rewards dampen interest, at university level."
+pubDate: '2026-09-29'
 tags:
-  - Education
-  - psychology
+  - learning psychology
+  - conditioning
+  - reinforcement
+  - observational learning
+  - motivation
 locale: en
-author: Oiyo
+author: OIYO Research Team
 topic: psychology-course
 ---
-import Callout from "@/components/mdx/Callout.astro";
-import {
-  LectureTable,
-  LectureProcess,
-  LectureBarChart,
-} from "@/components/mdx/LectureVisuals";
 
-# Me in Social Space: Social Psychology and Group Dynamics
+## What is learning?
 
-"Man is a social animal." — Aristotle's proposition is the most fundamental premise in psychology. We can become **completely different people** when we are alone versus when we are in a group. Today, we dissect the reasons behind this through the classic experiments of social psychology.
+In psychology, **learning** is a relatively lasting change in behaviour or knowledge that comes from experience. Temporary changes, such as those from fatigue or drugs, and changes unrelated to experience, such as maturation, don't count.
 
----
+In the early 20th century, Watson (1913) launched **behaviourism**, arguing that psychology should study **observable behaviour** rather than invisible things like consciousness. Within this movement, research on learning became psychology's first sophisticated experimental tradition.
 
-## 1. Core Theoretical Map of Social Psychology
+## Classical conditioning: learning signals
 
-<LectureTable
-  title="Comparison of 7 Core Social Psychological Phenomena"
-  headers={["Phenomenon", "Core Mechanism", "Representative Experiment & Researcher", "Real-Life Implications"]}
-  rows={[
-    [
-      "**Social Facilitation**",
-      "Presence of others → Arousal↑ → Skilled task performance↑",
-      "Norman Triplett bicycle speed experiment",
-      "Completeness of presentation/performance practice determines audience effect",
-    ],
-    [
-      "**Social Inhibition**",
-      "Presence of others → Arousal↑ → Difficult task performance↓",
-      "Robert Zajonc cockroach experiment",
-      "Public learning can hinder unpolished skills",
-    ],
-    [
-      "**Conformity**",
-      "Normative and informational social influence",
-      "Solomon Asch line length experiment (37% conformity rate)",
-      "Even obvious errors can yield to group pressure",
-    ],
-    [
-      "**Obedience**",
-      "Passing of responsibility within authority structures (agentic state)",
-      "Stanley Milgram shock experiment (65% maximum voltage)",
-      "Psychologically legitimizing directives from figures of authority",
-    ],
-    [
-      "**Cognitive Dissonance**",
-      "Attitude-behavior inconsistency → Discomfort → Attitude change",
-      "Leon Festinger peg-turning study",
-      "Root of rationalization and self-justification mechanisms",
-    ],
-    [
-      "**Bystander Effect**",
-      "Diffusion of responsibility (increasing onlookers → probability of helping↓)",
-      "Kitty Genovese case (38 witnesses took no action)",
-      "Requesting a specific person drastically improves the likelihood of help",
-    ],
-    [
-      "**Deindividuation**",
-      "Group identity > Personal identity → Relaxation of norms",
-      "Philip Zimbardo Stanford prison experiment",
-      "Anonymity and crowds weaken moral control",
-    ],
-  ]}
-  highlightColumns={[0]}
-/>
+### Pavlov's discovery
 
----
+While studying digestion, the Russian physiologist Pavlov (1927) discovered that dogs salivated at the mere sound of the footsteps of the person who fed them, before seeing any food.
 
-## 2. Conformity and Obedience: Human Submissiveness in Numbers
+| Term | Meaning | Pavlov's example |
+|---|---|---|
+| Unconditioned stimulus (US) | A stimulus that triggers a response without learning | Food |
+| Unconditioned response (UR) | The innate response to the US | Salivation |
+| Conditioned stimulus (CS) | An originally neutral stimulus paired with the US | A bell |
+| Conditioned response (CR) | The learned response to the CS alone | Salivating at the bell |
 
-<LectureBarChart
-  title="Milgram Obedience Experiment: Obedience Rate by Scenario (%)"
-  labels={[
-    "Basic experiment (Experimenter present)",
-    "Experimenter gives instructions by phone",
-    "Ordinary person without authority gives instructions",
-    "After 2 other participants refuse",
-  ]}
-  values={[65, 21, 20, 10]}
-  unit="%"
-/>
+A learned response weakens when the CS is presented repeatedly on its own (**extinction**) and briefly returns when the CS is presented again after a break (**spontaneous recovery**). **Generalisation**, responding to similar stimuli, and **discrimination**, not responding to different ones, occur as well.
 
-<LectureProcess
-  steps={[
-    {
-      label: "Foot-in-the-Door Stage",
-      description:
-        "Starts with small commands initially. Gradually increasing from 15V → making it difficult to resist larger commands.",
-    },
-    {
-      label: "Agentic State",
-      description:
-        "By shifting responsibility to the authority figure, individuals feel like mere 'tools'. Personal moral standards are weakened.",
-    },
-    {
-      label: "Situational Variables",
-      description:
-        "The credibility of the authority figure, physical distance (phone vs. presence), and peer resistance determine the obedience rate.",
-    },
-    {
-      label: "Disengagement Strategy",
-      description:
-        "To break the cycle of obedience, 'recognition of role transition' + peer support + explicit expression of refusal are required.",
-    },
-  ]}
-/>
+### Prediction matters more than pairing
+
+Rescorla (1968) showed that even when a CS and US occur together many times, conditioning is weak if the US also often occurs without the CS. What animals learn is not a simple pairing but the information **"does this signal predict that event?"** The Rescorla–Wagner model (1972) formalised this as learning that reduces **prediction error**.
+
+### Not all connections are learned equally
+
+Garcia and Koelling's (1966) rats linked a taste with subsequent nausea **after a single experience**, but struggled to link lights and sounds with nausea; conversely, they readily linked lights and sounds with electric shock. Organisms are **prepared** to learn connections that matter for survival more easily — which is why a food that once made you sick can put you off for a long time.
+
+### Learning and extinguishing fear
+
+Watson and Rayner (1920) reported that by making a loud noise while showing 11-month-old "Little Albert" a white rat, they made him fear the rat and similar furry objects. By today's standards the experiment is **ethically unacceptable** and its methods were sloppy, but the idea that fear can be learned has been supported by later research. **Exposure therapy** for anxiety disorders builds on **extinction learning**: repeatedly experiencing a feared stimulus in a safe situation.
+
+## Operant conditioning: learning from consequences
+
+### The law of effect and the Skinner box
+
+Thorndike (1898) watched cats trapped in puzzle boxes stumble on the latch, escape, and then get out faster and faster — the **law of effect**: behaviours followed by satisfying outcomes are strengthened. Skinner (1938) systematised this into **operant conditioning**, the study of how behaviour is **shaped by its consequences**.
+
+| | Something is **added** | Something is **removed** |
+|---|---|---|
+| Behaviour **increases** | Positive reinforcement (praise, pocket money) | Negative reinforcement (buckling up stops the warning beep) |
+| Behaviour **decreases** | Positive punishment (a scolding) | Negative punishment (losing game time) |
+
+"Negative reinforcement" is easily confused with punishment, but it means **increasing a behaviour by removing something unpleasant**.
+
+### Schedules of reinforcement
+
+| Schedule | Rule | Behaviour pattern | Example |
+|---|---|---|---|
+| Fixed ratio | Reward after a set number of responses | Fast responding, brief pause after reward | A free coffee after 10 stamps |
+| Variable ratio | Reward after an unpredictable average number | Very fast and steady; **most resistant to extinction** | Slot machines, loot boxes |
+| Fixed interval | Reward for the first response after a set time | Responses bunch up near the deadline | Monthly pay, scheduled exams |
+| Variable interval | Reward after unpredictable average times | Slow but steady | Checking for messages |
+
+This table shows why **variable-ratio** schedules are used in gambling and randomised in-game rewards: when you can't tell when the next reward will come, it's hard to stop.
+
+### Shaping and the limits of punishment
+
+Through **shaping** — reinforcing successive approximations of a desired behaviour — animals can be taught complex behaviours. Punishment, by contrast, may stop a behaviour immediately but doesn't teach what **to do** instead. A meta-analysis of research on corporal punishment of children found it associated with immediate compliance, but also consistently with negative outcomes such as increased aggression and poorer parent–child relationships (Gershoff, 2002).
+
+## Cognitive learning: maps in the head
+
+Some phenomena were hard for behaviourism to explain. In Tolman and Honzik's (1930) experiment, rats that had wandered a maze without reward, once finally given food, **immediately** found their way as quickly as rats rewarded from the start. They had been learning a **cognitive map** of the maze even without reward (**latent learning**; Tolman, 1948).
+
+Köhler's (1925) chimpanzees, faced with bananas out of reach, would pause for a while and then suddenly stack boxes or join sticks to get the fruit — not trial and error but **insight learning**, grasping the structure of the problem all at once.
+
+## Observational learning: learning by watching others
+
+In Bandura, Ross and Ross's (1961) **Bobo doll experiment**, children who had watched an adult hit and shout at an inflatable doll later imitated the behaviour far more. The study showed that people can learn **simply by watching others**, without being reinforced themselves.
+
+Bandura (1977) explained observational learning as four processes.
+
+1. **Attention**: you have to notice the model's behaviour.
+2. **Retention**: you have to store what you saw in memory.
+3. **Reproduction**: you need the ability to perform the behaviour.
+4. **Motivation**: you need a reason to do it, such as having seen the model rewarded.
+
+Bandura also held that **self-efficacy** — the belief "I can do this" — governs whether people start and persist at a behaviour. Self-efficacy grows from mastery experiences, seeing similar people succeed, encouragement, and how one interprets bodily states.
+
+## When rewards undermine interest
+
+Lepper, Greene and Nisbett (1973) promised preschoolers who liked drawing a certificate for drawing, and gave it to them. Weeks later, during free time, these children **drew less** than those who hadn't been rewarded. When an external reward is attached to something done for enjoyment, people come to think "I did it for the prize," and interest drops — the **overjustification effect**.
+
+A meta-analysis of 128 studies likewise found that **expected, tangible rewards** contingent on doing a task reduced intrinsic motivation, whereas **unexpected rewards** and **specific praise** had little such effect or even helped (Deci, Koestner & Ryan, 1999). Reinforcement is a powerful tool, but it should be used with care for **things people already enjoy**. Other aspects of motivation continue in the next chapter.
+
+## Check questions
+
+**Question 1.** Someone who felt pain every time they heard the dentist's drill now tenses up at the sound of the drill alone. What are the US, UR, CS and CR here?
+
+**Answer.** The US is the pain of treatment, the UR is tension and fear in response to pain, the CS is the sound of the drill, and the CR is the tension produced by the drill sound alone.
+
+**Question 2.** A child is let off washing the dishes on days they tidy their room. What kind of reinforcement or punishment is this?
+
+**Answer.** It aims to **increase** a desired behaviour (tidying) by **removing** something unpleasant (washing up), so it is **negative reinforcement**.
+
+**Question 3.** An app gives users random rewards when they log in. Using schedules of reinforcement, explain why this keeps users hooked.
+
+**Answer.** It resembles a **variable-ratio schedule**, where you can't predict after how many tries a reward will come. This schedule produces high response rates and is **the most resistant to extinction**, so people don't easily stop even when rewards dry up for a while.
 
 ---
 
-## 3. Cognitive Dissonance: How We Rationalize Ourselves
+### References
 
-<LectureTable
-  title="Comparison of Cognitive Dissonance Resolution Strategies"
-  headers={["Strategy", "Description", "Example", "Result"]}
-  rows={[
-    ["**Behavior Change**", "Eliminating inconsistent behavior", "Quit smoking", "Most ideal but high psychological resistance"],
-    [
-      "**Attitude Change**",
-      "Changing existing beliefs (rationalization)",
-      '"Smoking reduces stress"',
-      "Most common self-defense mechanism",
-    ],
-    [
-      "**Diluting Importance**",
-      "Viewing the inconsistent element as less important",
-      '"You only live once anyway"',
-      "Short-term relief of discomfort, long-term avoidance of the issue",
-    ],
-    [
-      "**Adding New Cognitions**",
-      "Seeking information that offsets the inconsistency",
-      '"Many doctors smoked too"',
-      "Connected to Confirmation Bias",
-    ],
-  ]}
-  highlightColumns={[0]}
-/>
-
-<Callout type="note">
-  **Applying Cognitive Dissonance in Marketing and Politics**: After purchasing an expensive product, consumers search only for positive information about the product to justify their purchase decision. This is called **Post-purchase Rationalization**. Advertisers exploit this by intensively exposing messages such as "Your choice was right" immediately after purchase.
-</Callout>
-
----
-
-## 4. Morality in Groups: The Bystander Effect
-
-<LectureBarChart
-  title="Number of Witnesses and Probability of Helping Behavior (%)"
-  labels={["1 witness (alone)", "2 witnesses", "3 witnesses", "5 or more witnesses"]}
-  values={[85, 62, 31, 20]}
-  unit="%"
-/>
-
-**How to Secure Help in a Crisis**: To overcome the bystander effect, you must **point out a specific person**. Saying "Someone please help" is far less effective than saying "You in the red jacket, please call 119!"
-
----
-
-## 5. Wrapping Up: Seeing Myself Through the Mirror of Society
-
-<LectureTable
-  title="Real-Life Application Guide for Core Social Psychological Phenomena"
-  headers={["Situation", "Operating Phenomenon", "Wise Coping Strategy"]}
-  rows={[
-    [
-      "Staying silent in a meeting for fear of my opinion being wrong",
-      "Conformity (normative influence)",
-      'Practicing expressions starting with "My opinion might be wrong, but..."',
-    ],
-    [
-      "Unable to refuse an unreasonable request from a boss",
-      "Obedience (authority system)",
-      "Separating role from personal morals, setting step-by-step boundaries",
-    ],
-    [
-      "Continuously rationalizing bad habits",
-      "Cognitive Dissonance (attitude change)",
-      "Confronting behavior-outcome, starting with small behavior changes",
-    ],
-    [
-      "Just watching at an accident scene",
-      "Bystander Effect (diffusion of responsibility)",
-      "Acting first or pointing out a specific person to ask for help",
-    ],
-    [
-      "Making aggressive remarks in anonymous online spaces",
-      "Deindividuation (weakening of personal identity)",
-      'Asking oneself "Would I say this even if my name were revealed?" before writing a comment',
-    ],
-  ]}
-  highlightColumns={[0]}
-/>
-
----
-
-## 📖 References
-- **[Eichmann in Jerusalem] by Hannah Arendt**: A masterpiece connecting the Milgram experiment and real-world history through the concept of the 'banality of evil'.
-- **[Opening Skinner's Box] by Lauren Slater**: 10 experiments that changed the history of psychology, including the Milgram, Asch, and Rosenhan experiments.
-- **[Influence: The Psychology of Persuasion] by Robert Cialdini**: A classic outlining the 6 laws of persuasion, such as social proof, authority, and liking.
+- Watson, J. B. (1913). Psychology as the behaviorist views it. *Psychological Review*, 20(2), 158–177.
+- Pavlov, I. P. (1927). *Conditioned Reflexes* (G. V. Anrep, Trans.). Oxford University Press.
+- Rescorla, R. A. (1968). Probability of shock in the presence and absence of CS in fear conditioning. *Journal of Comparative and Physiological Psychology*, 66(1), 1–5.
+- Rescorla, R. A., & Wagner, A. R. (1972). A theory of Pavlovian conditioning: Variations in the effectiveness of reinforcement and nonreinforcement. In A. H. Black & W. F. Prokasy (Eds.), *Classical Conditioning II* (pp. 64–99). Appleton-Century-Crofts.
+- Garcia, J., & Koelling, R. A. (1966). Relation of cue to consequence in avoidance learning. *Psychonomic Science*, 4(1), 123–124.
+- Watson, J. B., & Rayner, R. (1920). Conditioned emotional reactions. *Journal of Experimental Psychology*, 3(1), 1–14.
+- Thorndike, E. L. (1898). Animal intelligence: An experimental study of the associative processes in animals. *Psychological Review Monograph Supplements*, 2(4), i–109.
+- Skinner, B. F. (1938). *The Behavior of Organisms*. Appleton-Century.
+- Gershoff, E. T. (2002). Corporal punishment by parents and associated child behaviors and experiences: A meta-analytic and theoretical review. *Psychological Bulletin*, 128(4), 539–579.
+- Tolman, E. C., & Honzik, C. H. (1930). Introduction and removal of reward, and maze performance in rats. *University of California Publications in Psychology*, 4, 257–275.
+- Tolman, E. C. (1948). Cognitive maps in rats and men. *Psychological Review*, 55(4), 189–208.
+- Köhler, W. (1925). *The Mentality of Apes*. Harcourt, Brace.
+- Bandura, A., Ross, D., & Ross, S. A. (1961). Transmission of aggression through imitation of aggressive models. *Journal of Abnormal and Social Psychology*, 63(3), 575–582.
+- Bandura, A. (1977). *Social Learning Theory*. Prentice-Hall.
+- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. *Psychological Review*, 84(2), 191–215.
+- Lepper, M. R., Greene, D., & Nisbett, R. E. (1973). Undermining children's intrinsic interest with extrinsic reward: A test of the "overjustification" hypothesis. *Journal of Personality and Social Psychology*, 28(1), 129–137.
+- Deci, E. L., Koestner, R., & Ryan, R. M. (1999). A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation. *Psychological Bulletin*, 125(6), 627–668.
