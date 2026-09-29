@@ -13,7 +13,7 @@ import ZiWeiWheel from "./ziwei/ZiWeiWheel";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const COPY: Record<Lang, { birthDate: string; needTime: string; needCity: string; bureau: string; life: string; auxTitle: string; star: string; empty: string }> = {
-  ko: { birthDate: "생년월일", needTime: "생년월일은 저장돼 있지만, 자미두수는 태어난 시각까지 있어야 계산됩니다. 내 지도에서 시각을 입력해 주세요.", needCity: "자미두수는 태어난 시각을 출생지의 시간으로 셈해요. 내 지도에서 출생도시를 골라 주세요.", bureau: "오행국", life: "명궁", auxTitle: "명궁의 주성", star: "지지", empty: "주성 없음(공궁) — 마주 보는 궁의 별을 빌려 읽어요" },
+  ko: { birthDate: "생년월일", needTime: "생년월일은 저장돼 있지만, 자미두수는 태어난 시각까지 있어야 계산됩니다. 나의 지도에서 시각을 입력해 주세요.", needCity: "자미두수는 태어난 시각을 출생지의 시간으로 셈해요. 나의 지도에서 출생도시를 골라 주세요.", bureau: "오행국", life: "명궁", auxTitle: "명궁의 주성", star: "지지", empty: "주성 없음(공궁) — 마주 보는 궁의 별을 빌려 읽어요" },
   en: { birthDate: "Birth date", needTime: "Your birth date is saved, but Zi Wei Dou Shu also needs your birth time. Add it on the ontology page.", needCity: "Zi Wei Dou Shu reads your birth time in the local time of your birthplace. Please choose your birth city on My Map.", bureau: "Five-element bureau", life: "Life palace", auxTitle: "Major stars in the life palace", star: "Earthly branch", empty: "No major star (empty palace) — tradition borrows the stars of the facing palace" },
   ja: { birthDate: "生年月日", needTime: "生年月日は保存されていますが、紫微斗数の計算には出生時刻も必要です。「私の地図」で時刻を入力してください。", needCity: "紫微斗数は出生時刻を出生地の時刻で計算します。「私の地図」で出生都市を選んでください。", bureau: "五行局", life: "命宮", auxTitle: "命宮の主星", star: "地支", empty: "主星なし（空宮）— 向かい合う宮の星を借りて読みます" },
   zh: { birthDate: "出生日期", needTime: "已保存出生日期，但紫微斗数还需要出生时间。请在本体页面中输入时间。", needCity: "紫微斗数按出生地的当地时间计算出生时刻。请在“我的地图”中选择出生城市。", bureau: "五行局", life: "命宫", auxTitle: "命宫主星", star: "地支", empty: "无主星（空宫）——借对宫之星来读" },

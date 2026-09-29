@@ -15,7 +15,7 @@ const MAP_LABEL: Record<Locale, string> = {
 
 const ZONE_LABEL: Record<JourneyId, Record<Locale, string>> = {
   personality: {
-    ko: '내 지도의 성격 구역',
+    ko: '나의 지도 속 성격 구역',
     en: 'Personality area of my map',
     ja: '私の地図の性格エリア',
     zh: '我的地图·性格区域',
@@ -23,7 +23,7 @@ const ZONE_LABEL: Record<JourneyId, Record<Locale, string>> = {
     es: 'Zona de personalidad de mi mapa',
   },
   hobbies: {
-    ko: '내 지도의 취미 구역',
+    ko: '나의 지도 속 취미 구역',
     en: 'Hobbies area of my map',
     ja: '私の地図の趣味エリア',
     zh: '我的地图·兴趣区域',
@@ -31,7 +31,7 @@ const ZONE_LABEL: Record<JourneyId, Record<Locale, string>> = {
     es: 'Zona de aficiones de mi mapa',
   },
   'life-purpose': {
-    ko: '내 지도의 삶의 방향 구역',
+    ko: '나의 지도 속 삶의 방향 구역',
     en: 'Life-purpose area of my map',
     ja: '私の地図の生きる目的エリア',
     zh: '我的地图·人生方向区域',
@@ -39,7 +39,7 @@ const ZONE_LABEL: Record<JourneyId, Record<Locale, string>> = {
     es: 'Zona de propósito vital de mi mapa',
   },
   luck: {
-    ko: '내 지도의 행운 구역',
+    ko: '나의 지도 속 행운 구역',
     en: 'Luck area of my map',
     ja: '私の地図の運のエリア',
     zh: '我的地图·运势区域',

@@ -18,7 +18,7 @@
   "description": "知恵の森を歩く旅を始めましょう。",
   "titlePrefix": "あなたの",
   "titleSuffix": "理想の人生を設計する",
-  "keywords": "四柱推命, タロット, 共鳴, オントロジー, 魂の地図",
+  "keywords": "四柱推命, タロット, 共鳴, 私の地図, 魂の地図",
   "errorFallbackTitle": "虚空が深まっています",
   "errorFallbackDescription": "宇宙の糸が一時的に絡まっています。調和を取り戻すまで、少々お待ちください。",
   "phase": "プロトコル: 0.1.0",

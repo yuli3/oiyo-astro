@@ -20,7 +20,7 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/compone
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 const COPY: Record<Lang, { close: string; heading: string; page: string }> = {
-  ko: { close: "닫기", heading: "내 정보", page: "내 지도에서 입력" },
+  ko: { close: "닫기", heading: "내 정보", page: "나의 지도에서 입력" },
   en: { close: "Close", heading: "Your info", page: "Enter on My Map" },
   ja: { close: "閉じる", heading: "あなたの情報", page: "私の地図で入力" },
   zh: { close: "关闭", heading: "你的信息", page: "到我的地图填写" },
