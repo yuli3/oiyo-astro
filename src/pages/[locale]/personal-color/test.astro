@@ -48,6 +48,24 @@ const quizJsonLd = buildQuizJsonLd({
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <PersonalColorTest client:load locale={locale} />
+    <figure class="mt-10">
+      <img
+        src="/img/explainers/personal-color/four-seasons.jpg"
+        alt={
+          locale === "ko" ? "봄·여름·가을·겨울 톤의 옷을 입은 네 사람이 나란히 선 그림"
+          : locale === "ja" ? "春・夏・秋・冬のトーンの服を着た4人が並んで立つイラスト"
+          : locale === "zh" ? "四个人并排站着，分别穿着春、夏、秋、冬色调服装的插图"
+          : locale === "fr" ? "Quatre personnes côte à côte, habillées dans les tons printemps, été, automne et hiver"
+          : locale === "es" ? "Cuatro personas en fila, vestidas con tonos de primavera, verano, otoño e invierno"
+          : "Four people standing side by side, dressed in spring, summer, autumn and winter tones"
+        }
+        width="1280"
+        height="720"
+        loading="lazy"
+        decoding="async"
+        class="w-full rounded-xl"
+      />
+    </figure>
     <section class="mt-10 border-t border-violet-100 pt-8"><h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2><p class="mt-4 leading-8 text-violet-800">{c.intro}</p></section>
     <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">{c.concepts.map((item) => (<article class="rounded-xl border border-violet-100 bg-card p-4"><h3 class="font-semibold text-violet-950">{item.title}</h3><p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p></article>))}</div></section>
     <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.toneGuideTitle}</h2><div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-card">{c.toneGuide.map((row) => (<div class="flex flex-col gap-1 p-4 sm:flex-row sm:items-baseline sm:gap-4"><span class="shrink-0 font-semibold text-violet-950 sm:w-40">{row.tone}</span><span class="shrink-0 text-sm font-medium text-violet-600 sm:w-40">{row.feel}</span><span class="text-sm leading-6 text-violet-700">{row.pick}</span></div>))}</div></section>
