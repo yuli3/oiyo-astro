@@ -114,7 +114,7 @@ const LABELS: Record<SupportedLang, {
   },
   es: {
     title: 'Test de curiosidad',
-    subtitle: '¿Hasta dónde llega mi ganas de explorar?',
+    subtitle: '¿Hasta dónde llegan mis ganas de explorar?',
     questionOf: (c, t) => `${c} / ${t}`,
     scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
     restart: 'Repetir',

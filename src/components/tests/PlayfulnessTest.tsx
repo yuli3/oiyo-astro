@@ -472,7 +472,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'l7', subscale: 'light', reverse: false, text: 'Vivo el día con curiosidad y algo de travesura' },
     { id: 's1', subscale: 'social', reverse: false, text: 'Me gusta intercambiar bromas con la gente' },
     { id: 's2', subscale: 'social', reverse: false, text: 'Sé aligerar el ambiente' },
-    { id: 's3', subscale: 'social', reverse: false, text: 'Cachondearme con los amigos me alegra' },
+    { id: 's3', subscale: 'social', reverse: false, text: 'Hacer el tonto con los amigos me alegra' },
     { id: 's4', subscale: 'social', reverse: false, text: 'Uso a menudo el humor para destensar' },
     { id: 's5', subscale: 'social', reverse: false, text: 'Sé crear ocasiones para reírnos juntos' },
     { id: 's6', subscale: 'social', reverse: false, text: 'Es jugando como me acerco a la gente' },

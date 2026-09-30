@@ -141,7 +141,7 @@ const LABELS: Record<SupportedLang, {
       affiliative: 'Humour affiliatif',
       selfEnhancing: 'Humour d’auto-valorisation',
       aggressive: 'Humour agressif',
-      selfDefeating: 'Humour d’autodérision',
+      selfDefeating: 'Humour d’autodénigrement',
     },
   },
   es: {
@@ -419,7 +419,7 @@ const DIM_RESULTS: Record<HumorDim, Record<SupportedLang, DimResult>> = {
       watchout: '越常这样，自尊可能越低，别人也可能低估你',
     },
     fr: {
-      title: 'Humour d’autodérision',
+      title: 'Humour d’autodénigrement',
       description: 'Vous vous tournez en ridicule pour obtenir l’approbation des autres. Cela paraît souple, mais peut peser sur l’estime de soi.',
       strength: 'Évitement des conflits, capacité à changer l’ambiance',
       watchout: 'À force, l’estime de soi baisse et les autres risquent de vous sous-estimer',
