@@ -24,8 +24,10 @@ export interface TalismanInput extends TalismanReading {
   glyph?: string;
 }
 
-const W = 200;
-const H = 340;
+export const TALISMAN_WIDTH = 200;
+export const TALISMAN_HEIGHT = 340;
+const W = TALISMAN_WIDTH;
+const H = TALISMAN_HEIGHT;
 const CX = W / 2;
 
 /** 주사 붉은색. 부적의 획은 목적·오행과 무관하게 붉다. */
@@ -91,59 +93,68 @@ export function drawTalisman(input: TalismanInput): string {
   const main = glyph ?? sym.glyph;
 
   // 머리(頭) — 부적은 위에서 기운을 불러 아래로 흘린다. 세 점과 그 아래
-  // 가로줄이 전형적인 머리 구성이다.
+  // 가로줄이 전형적인 머리 구성이다. 북두칠성은 이 머리 바로 아래에만 둔다.
+  // 2026-09-30: 별을 본자 위에 겹쳐 두니 글자가 깨져 보이고 판이 도안처럼 보였다.
   const head = [
-    ...[-14, 0, 14].map((dx) => `<circle cx="${r2(CX + dx)}" cy="26" r="3" fill="${INK}" stroke="none"/>`),
-    `<path d="M${CX} 30 L${CX} 56" stroke-width="3.4"/>`,
-    `<path d="M${CX - 30} 46 L${CX + 30} 46" stroke-width="2.2"/>`,
-    `<path d="M${CX - 20} 54 L${CX + 20} 54" stroke-width="1.6"/>`,
+    ...[-14, 0, 14].map((dx) => `<circle cx="${r2(CX + dx)}" cy="24" r="3" fill="${INK}" stroke="none"/>`),
+    `<path d="M${CX} 28 L${CX} 48" stroke-width="3.4"/>`,
+    `<path d="M${CX - 28} 40 L${CX + 28} 40" stroke-width="2"/>`,
+    `<path d="M${CX - 16} 47 L${CX + 16} 47" stroke-width="1.4"/>`,
   ].join("");
 
   // 만세력 네 기둥 — 年·月 을 왼쪽, 日·時 를 오른쪽에 세로로 내린다.
   // 간지 두 자를 위아래로 쌓는 것이 사주 표기의 기본 형태다.
+  // 본자 좌우 여백에만 둔다. 가운데 글자와 x가 겹치면 둘 다 읽히지 않는다.
   const pillarColumn = (x: number, pair: string[], y0: number) =>
     pair
-      .flatMap((gz, ci) => gz.split("").map((ch, ri) => text(x, y0 + ci * 46 + ri * 21, 17, ch, 0.9)))
+      .flatMap((gz, ci) => gz.split("").map((ch, ri) => text(x, y0 + ci * 40 + ri * 18, 15, ch, 0.92)))
       .join("");
   const columns =
-    pillarColumn(30, [pillars[0], pillars[1]], 112) +
-    pillarColumn(W - 30, [pillars[2], pillars[3]], 112);
+    pillarColumn(36, [pillars[0], pillars[1]], 118) +
+    pillarColumn(W - 36, [pillars[2], pillars[3]], 118);
 
-  // 꼬리(尾) — 네 자를 세로로 내려 맺는다.
+  // 꼬리(尾) — 네 자를 세로로 내려 맺는다. 음조 표기 아래, 테두리 안쪽.
   const tail = sym.tailGlyphs
     .split("")
-    .map((ch, i) => text(CX, 281 + i * 13, 12, ch, 0.9))
+    .map((ch, i) => text(CX, 268 + i * 14, 13, ch, 0.92))
     .join("");
 
-  // 한지 결. 사람마다 종이가 조금씩 다르도록 시드로 흔든다.
-  const fibers = Array.from({ length: 11 }, (_, i) =>
-    `<path d="M0 ${r2(14 + i * 30 + (rnd() - 0.5) * 7)} L${W} ${r2(14 + i * 30 + (rnd() - 0.5) * 7)}"/>`,
-  ).join("");
+  // 한지 결. 2026-09-30: 가로로 판을 가로지르는 선은 공책 줄처럼 보였다.
+  // 짧은 섬유만 흩고, 사람마다 다르게 보이도록 시드로 위치를 흔든다.
+  const fibers = Array.from({ length: 18 }, () => {
+    const x = 16 + rnd() * (W - 48);
+    const y = 16 + rnd() * (H - 32);
+    const len = 10 + rnd() * 22;
+    const dy = (rnd() - 0.5) * 4;
+    return `<path d="M${r2(x)} ${r2(y)} L${r2(x + len)} ${r2(y + dy)}"/>`;
+  }).join("");
+  const grainSeed = seed % 1000;
 
   return [
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">`,
-    `<defs><linearGradient id="p" x1="0" y1="0" x2="1" y2="1">`,
+    `<defs><linearGradient id="p" x1="0" y1="0" x2="0" y2="1">`,
     `<stop offset="0%" stop-color="${PAPER}"/><stop offset="100%" stop-color="${PAPER_DARK}"/>`,
-    `</linearGradient></defs>`,
+    `</linearGradient>`,
+    `<filter id="grain" x="0" y="0" width="100%" height="100%">`,
+    `<feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="${grainSeed}"/>`,
+    `<feColorMatrix type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.3  0 0 0 0 0.14  0 0 0 0.22 0"/>`,
+    `</filter></defs>`,
     `<rect width="${W}" height="${H}" fill="url(#p)"/>`,
-    `<g stroke="#c9ab6d" stroke-width="0.5" opacity="0.45">${fibers}</g>`,
-    // 이중 테두리
-    `<rect x="7" y="7" width="${W - 14}" height="${H - 14}" fill="none" stroke="${INK}" stroke-width="2.6"/>`,
-    `<rect x="13" y="13" width="${W - 26}" height="${H - 26}" fill="none" stroke="${INK}" stroke-width="0.9" opacity="0.7"/>`,
+    `<rect width="${W}" height="${H}" filter="url(#grain)"/>`,
+    `<g stroke="#b08958" stroke-width="0.6" opacity="0.35" fill="none">${fibers}</g>`,
+    `<rect x="7" y="7" width="${W - 14}" height="${H - 14}" fill="none" stroke="${INK}" stroke-width="2.4"/>`,
+    `<rect x="12" y="12" width="${W - 24}" height="${H - 24}" fill="none" stroke="${INK}" stroke-width="0.7" opacity="0.75"/>`,
     `<g fill="none" stroke="${INK}" stroke-linecap="round" stroke-linejoin="round">${head}</g>`,
-    bigDipper(CX - 34, 66, 19, (rnd() - 0.5) * 10),
+    bigDipper(CX - 21, 58, 12, (rnd() - 0.5) * 6),
     columns,
-    // 본자 — 가운데 크게
-    text(CX, 196, 86, main, 1, 700),
-    `<path d="M40 214 L${W - 40} 214" stroke="${INK}" stroke-width="1.4" opacity="0.65"/>`,
-    // 세 체계의 기호를 한 줄로: 팔괘 · 황도 12궁 · 오검
-    text(CX - 42, 240, 22, TRIGRAM[element], 0.92),
+    text(CX, 172, 58, main, 1, 700),
+    `<path d="M${CX - 22} 188 L${CX + 22} 188" stroke="${INK}" stroke-width="1.1" opacity="0.7"/>`,
+    text(CX - 46, 214, 20, TRIGRAM[element], 0.92),
     // 황도 기호는 이모지 표현이 기본인 글꼴이 많다. 변이 선택자 U+FE0E 로
     // 글자 표현을 강제하지 않으면 부적 한가운데 보라색 이모지가 박힌다.
-    text(CX, 240, 22, `${zodiac}︎`, 0.92),
-    text(CX + 42, 240, 22, ogham, 0.92),
-    // 촐킨 음조
-    mayanNumeral(CX, 258, tone),
+    text(CX, 214, 20, `${zodiac}︎`, 0.92),
+    text(CX + 46, 214, 20, ogham, 0.92),
+    mayanNumeral(CX, 240, tone),
     tail,
     `</svg>`,
   ].join("");

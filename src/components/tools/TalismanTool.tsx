@@ -24,7 +24,7 @@ import {
   type BirthRecordV2,
 } from '../../lib/user/birth-record'
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill'
-import { drawTalisman } from '../../lib/talisman/draw'
+import { drawTalisman, TALISMAN_HEIGHT, TALISMAN_WIDTH } from '../../lib/talisman/draw'
 import { ELEMENT_SYMBOLS } from '../../lib/talisman/symbols'
 import { BRANCH_ANIMAL, TRIGRAM, ZODIAC_NAME, readingFromBirth, type TalismanReading } from '../../lib/talisman/sources'
 import ResultSymbol from '../shared/ResultSymbol'
@@ -250,13 +250,13 @@ export default function TalismanTool({ locale = 'ko' }: { locale?: string }) {
 
   function downloadPng() {
     // 부적은 인쇄해 붙이거나 잠금화면에 쓰는 물건이라 화면 해상도로는 모자란다.
-    // 3배로 올려 굽는다.
-    const scale = 3
+    // 판은 200×340 이고, 6배면 긴 변이 2040px 이다.
+    const scale = 6
     const img = new Image()
     img.onload = () => {
       const canvas = document.createElement('canvas')
-      canvas.width = 200 * scale
-      canvas.height = 340 * scale
+      canvas.width = TALISMAN_WIDTH * scale
+      canvas.height = TALISMAN_HEIGHT * scale
       const ctx = canvas.getContext('2d')
       if (!ctx) return
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
@@ -339,7 +339,7 @@ export default function TalismanTool({ locale = 'ko' }: { locale?: string }) {
         <>
           <div className="flex justify-center">
             <div
-              className="rounded-lg shadow-lg [&>svg]:h-auto [&>svg]:w-[240px] sm:[&>svg]:w-[280px]"
+              className="rounded-sm shadow-lg [&>svg]:h-auto [&>svg]:w-[min(100%,320px)]"
               dangerouslySetInnerHTML={{ __html: svg }}
             />
           </div>
