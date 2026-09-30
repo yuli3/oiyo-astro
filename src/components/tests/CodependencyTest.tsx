@@ -210,7 +210,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q12', text: '我曾经为了关系放弃自己重要的计划或目标' },
     { id: 'q13', text: '我过度在意，生怕对方对我失望' },
     { id: 'q14', text: '一个人待着很不自在，觉得必须一直和人连结' },
-    { id: 'q15', text: '离开关系之后，我不太清楚自己是谁' },
+    { id: 'q15', text: '在关系之外，我不太清楚自己是谁' },
   ],
   fr: [
     { id: 'q1', text: 'Quand l’autre est en colère, je me demande sans cesse si c’est ma faute' },
@@ -225,7 +225,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q10', text: 'Les émotions de l’autre déterminent largement ma journée' },
     { id: 'q11', text: 'Je sens que les besoins de l’autre comptent plus que les miens' },
     { id: 'q12', text: 'J’ai déjà renoncé à des projets ou objectifs importants pour la relation' },
-    { id: 'q13', text: 'Je fais très attention à ne jamais décevoir l’autre' },
+    { id: 'q13', text: 'Je m’inquiète à l’excès de décevoir l’autre' },
     { id: 'q14', text: 'Être seul me met mal à l’aise ; je sens que je dois toujours être en lien' },
     { id: 'q15', text: 'En dehors de la relation, je ne sais pas bien qui je suis' },
   ],
@@ -377,7 +377,7 @@ const RESULTS: Record<ResultKey, Record<SupportedLang, ResultData>> = {
     zh: {
       title: '明显的共依存模式', subtitle: '你可能在关系中失去了自己',
       description: '共依存模式表现明显。你很可能为了维持关系，反复牺牲自己的感受、需要和目标。',
-      patterns: ['自我认同变得模糊', '对他人情绪负有过度的责任感', '对拒绝的强烈恐惧', '离开关系后自我不清晰'],
+      patterns: ['自我认同变得模糊', '对他人情绪负有过度的责任感', '对拒绝的强烈恐惧', '在关系之外，自我变得模糊'],
       steps: ['和可信任的咨询师谈谈', '试着列出自己的需要清单', '重新设定关系之外的个人目标', '开始做增强自尊的活动'],
       note: '共依存不是性格缺陷，往往是从过去经验中学到的生存策略。',
       affirmation: '你不必为了被爱而抹去自己。你本身就已足够。',

@@ -184,7 +184,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
   zh: [
     { id: 'q1', text: '完成了困难部分之后，你在收尾阶段会难以把项目做完吗？' },
     { id: 'q2', text: '做需要条理的事情时，你会难以按顺序整理好吗？' },
-    { id: 'q3', text: '你多常忘记约定或该做的事？' },
+    { id: 'q3', text: '你有多经常忘记约会或该做的事？' },
     { id: 'q4', text: '遇到需要大量思考的事时，你会拖着不开始或回避吗？' },
     { id: 'q5', text: '需要长时间坐着时，你会摆弄手脚或动来动去吗？' },
     { id: 'q6', text: '你会觉得自己像装了马达一样过度活跃，或非得一直做点什么吗？' },
@@ -409,7 +409,7 @@ const RESULTS: Record<FlagLevel, Record<SupportedLang, ResultData>> = {
     zh: {
       badge: '🧡',
       title: '多项信号',
-      subtitle: '确认到多项 ADHD 相关特征',
+      subtitle: '出现了多项 ADHD 相关特征',
       description: '观察到多项与 ADHD 相关的特征。你可能在专注、条理、冲动控制等方面反复遇到困难。和专业人士谈谈可能会有帮助。',
       guidance: [
         '建议咨询精神科医生或心理专业人士',
@@ -433,7 +433,7 @@ const RESULTS: Record<FlagLevel, Record<SupportedLang, ResultData>> = {
     es: {
       badge: '🧡',
       title: 'Varias señales',
-      subtitle: 'Se confirman varios rasgos relacionados con el TDAH',
+      subtitle: 'Aparecen varios rasgos relacionados con el TDAH',
       description: 'Se observan varios rasgos relacionados con el TDAH. Puede que tengas dificultades repetidas de atención, organización o control de impulsos. Hablar con un profesional puede ayudar.',
       guidance: [
         'Te recomendamos consultar a un psiquiatra o a un psicólogo',
