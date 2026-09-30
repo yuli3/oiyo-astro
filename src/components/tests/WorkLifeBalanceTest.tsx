@@ -150,7 +150,7 @@ const LABELS: Record<SupportedLang, {
     subtitle: '¿Cuál es mi puntuación de equilibrio?',
     note: 'Este test es una herramienta de autoevaluación para explorar el equilibrio entre trabajo y vida personal.',
     questionOf: (c, t) => `${c} / ${t}`,
-    scaleLabels: ['Nada', 'Un poco no', 'A medias', 'Un poco sí', 'Totalmente'],
+    scaleLabels: ['Nada', 'Más bien no', 'A medias', 'Más bien sí', 'Totalmente'],
     restart: 'Repetir',
     share: 'Compartir resultado',
     shareMsg: 'Mi puntuación de equilibrio trabajo-vida',

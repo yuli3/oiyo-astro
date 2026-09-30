@@ -86,7 +86,7 @@ const LABELS: Record<SupportedLang, {
     subtitle: '我的界线有多健康？',
     note: '界线是保护自己、让关系健康的必要之物。这个测验是帮你认识自己的工具。',
     questionOf: (c, t) => `${c} / ${t}`,
-    scaleLabels: ['完全不是', '偶尔如此', '经常如此', '总是如此'],
+    scaleLabels: ['从不', '偶尔如此', '经常如此', '总是如此'],
     restart: '重新测验',
     share: '分享结果',
     shareMsg: '我的个人界线强度',
