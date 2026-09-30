@@ -237,7 +237,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '🙂',
       title: 'Comparaison légère',
-      description: 'C’est le niveau ordinaire de comparaison que connaît la plupart des gens. Vous vous comparez parfois, tout en gardant votre rythme.',
+      description: 'C’est le niveau ordinaire de comparaison que connaissent la plupart des gens. Vous vous comparez parfois, tout en gardant votre rythme.',
       tips: [
         'Dès que la comparaison commence, demandez-vous : « quel est mon critère ? ».',
         'Prenez la comparaison vers le haut comme un stimulant, celle vers le bas comme une gratitude.',
@@ -291,7 +291,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
       title: '比较敏感型',
       description: '和别人的比较很明显。别人的成绩或评价，可能常常影响你的自尊和心情。',
       tips: [
-        '把容易引起比较的帐号或环境整理掉，或静音。',
+        '把容易引起比较的账号或环境整理掉，或静音。',
         '把比较的对象换成「昨天的自己」。',
         '比较刚过去时，给冒出来的情绪取个名字，拉开一点距离。',
       ],
@@ -350,7 +350,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     },
     zh: {
       icon: '🔁',
-      title: '比较过敏型',
+      title: '强烈比较型',
       description: '社会比较的倾向非常强。不停地比较可能正在啃食你的自尊，也消耗大量心力。',
       tips: [
         '每天留一段时间，把社交媒体和会引起比较的刺激断掉。',
@@ -447,7 +447,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'o7', subscale: 'opinion', reverse: false, text: '别人的评价常常会改变我的想法' },
   ],
   fr: [
-    { id: 'a1', subscale: 'ability', reverse: false, text: 'Je juge mon niveau de travail en me comparant aux autres' },
+    { id: 'a1', subscale: 'ability', reverse: false, text: 'Je juge si je m’en sors bien en me comparant aux autres' },
     { id: 'a2', subscale: 'ability', reverse: false, text: 'En voyant les réussites des autres, je mesure où j’en suis' },
     { id: 'a3', subscale: 'ability', reverse: false, text: 'Sur les réseaux, je compare ma situation à la vie des autres' },
     { id: 'a4', subscale: 'ability', reverse: false, text: 'Quand quelqu’un qui me ressemble réussit mieux, cela me travaille' },

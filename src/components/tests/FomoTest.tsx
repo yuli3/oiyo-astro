@@ -91,7 +91,7 @@ const LABELS: Record<SupportedLang, {
     yourScore: '我的 FOMO 指数',
     overallLabel: '综合 FOMO 指数',
     exclusionLabel: '错失焦虑',
-    connectionLabel: '连线强迫',
+    connectionLabel: '保持在线的强迫',
     outOf: '/ 5.0',
     tipsLabel: '给心里的建议',
     note: '本测验参考 Przybylski 等人（2013）的 FoMO 量表概念，用于自我省思，不能替代专业评估。',
@@ -293,7 +293,7 @@ const LEVEL_DATA: Record<FomoLevel, Record<SupportedLang, LevelData>> = {
       tips: [
         '每天定一段完全关掉通知的时间。',
         '刻意练习「错过也没关系」（JOMO）。',
-        '把那些引你比较的帐号整理掉，或静音。',
+        '把那些引你比较的账号整理掉，或静音。',
       ],
     },
     fr: {
@@ -350,7 +350,7 @@ const LEVEL_DATA: Record<FomoLevel, Record<SupportedLang, LevelData>> = {
     },
     zh: {
       icon: '🌀',
-      title: 'FOMO 过敏型',
+      title: '强烈 FOMO 型',
       description: '错失焦虑非常强。不停地确认和比较，很可能正在大量消耗你的心力。',
       tips: [
         '先从每天一小时的彻底断线开始。',
@@ -444,7 +444,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'c4', subscale: 'connection', reverse: false, text: '就算在休假或休息，我也会一直刷线上的消息' },
     { id: 'c5', subscale: 'connection', reverse: false, text: '一阵子没看社交媒体，我会闷得慌或心急' },
     { id: 'c6', subscale: 'connection', reverse: false, text: '睡前或一醒来，我第一件事就是刷动态' },
-    { id: 'c7', subscale: 'connection', reverse: false, text: '我常去确认按赞、留言和回应' },
+    { id: 'c7', subscale: 'connection', reverse: false, text: '我常去查看点赞、评论和回应' },
   ],
   fr: [
     { id: 'e1', subscale: 'exclusion', reverse: false, text: 'Cela me travaille que mes amis s’amusent sans moi' },

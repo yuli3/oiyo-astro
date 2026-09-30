@@ -1061,7 +1061,7 @@ const RESULTS: Record<SpendingType, Record<SupportedLang, ResultData>> = {
     zh: {
       badge: '🔍',
       title: '价值型',
-      label: '聪明的品质追求者',
+      label: '聪明的质量追求者',
       description: '以细致的调查找出最高性价比。每次购买都会充分考虑，力求不后悔。',
       strengths: ['不后悔的购买', '长期满意度高', '性价比最优化'],
       watchOut: '决策过程太长，可能错失机会。',

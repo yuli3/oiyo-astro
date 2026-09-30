@@ -76,7 +76,7 @@ const LABELS: Record<SupportedLang, {
   zh: {
     title: '孤独感自测',
     subtitle: '我现在有多孤立？',
-    note: '本测验参考 UCLA 孤独量表，属于自我观察工具，不是研究用的诊断量表。',
+    note: '本测验参考 UCLA 孤独量表，属于自我观察工具，不是临床诊断工具。',
     questionOf: (c, t) => `${c} / ${t}`,
     scaleLabels: ['完全没有', '很少', '偶尔', '经常'],
     restart: '重新测验',

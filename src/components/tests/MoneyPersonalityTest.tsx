@@ -289,8 +289,8 @@ const RESULTS: Record<MoneyType, Record<SupportedLang, ResultData>> = {
       emoji: '🎉',
       title: '消费型',
       tagline: '享受当下的人',
-      description: '你活在此刻，愿意把钱花在体验上。能提升生活品质的花费会让你高兴。',
-      strengths: ['经历丰富', '专注当下', '看重生活品质'],
+      description: '你活在此刻，愿意把钱花在体验上。能提升生活质量的花费会让你高兴。',
+      strengths: ['经历丰富', '专注当下', '看重生活质量'],
       tip: '想买的时候先等24小时，冲动买的次数会明显变少。',
     },
     fr: {

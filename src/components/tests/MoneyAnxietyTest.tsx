@@ -237,7 +237,7 @@ const LEVEL_DATA: Record<MoneyLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '🌱',
       title: 'Tension légère',
-      description: 'C’est le niveau ordinaire d’inquiétude financière que connaît la plupart des gens. Cela vous préoccupe parfois, mais vous ne fuyez pas la réalité.',
+      description: 'C’est le niveau ordinaire d’inquiétude financière que connaissent la plupart des gens. Cela vous préoccupe parfois, mais vous ne fuyez pas la réalité.',
       tips: [
         'Fixez une « journée finances » par mois pour alléger la charge.',
         'Quand l’inquiétude monte, écrivez des chiffres plutôt que de rester dans le flou.',
@@ -438,7 +438,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'w5', subscale: 'worry', reverse: false, text: '我常把自己的经济状况和别人比' },
     { id: 'w6', subscale: 'worry', reverse: false, text: '我曾因为钱而睡不好或压力很大' },
     { id: 'w7', subscale: 'worry', reverse: false, text: '就算赚得够，我也怕总是不够' },
-    { id: 'a1', subscale: 'avoidance', reverse: false, text: '我老是把查账单、对卡单往后拖' },
+    { id: 'a1', subscale: 'avoidance', reverse: false, text: '我老是把查看银行或信用卡账单往后拖' },
     { id: 'a2', subscale: 'avoidance', reverse: false, text: '我怕看清自己的财务状况，所以躲着不看' },
     { id: 'a3', subscale: 'avoidance', reverse: false, text: '跟钱有关的话题，我尽量避开' },
     { id: 'a4', subscale: 'avoidance', reverse: false, text: '做过预算或记账，但常常不了了之' },

@@ -1473,7 +1473,7 @@ const RESULTS: Record<MBTIType, Record<Locale, ResultData>> = {
     zh: {
       name: '可靠的实务者',
       careerDescription: '有责任感、细心、有条理地处理事情。以信任与稳定为基础，为组织做出重大贡献。',
-      topCareers: ['会计师/税务师', '公务员', '项目经理', '品质管理专家', '医生/护士'],
+      topCareers: ['会计师/税务师', '公务员', '项目经理', '质量管理专家', '医生/护士'],
       workStyle: '在明确的角色与责任中，有系统、细致地完成工作。',
       idealEnvironment: '稳定、可预测，有明确规则和程序的环境。',
       workStrengths: ['可靠', '细致', '责任感', '有条理地处理工作'],

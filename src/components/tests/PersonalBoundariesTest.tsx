@@ -188,7 +188,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 't2', text: '日程太满时，我会排优先级，并推掉一部分', domain: 'time' },
     { id: 't3', text: '我会刻意守住休息和照顾自己的时间', domain: 'time' },
     { id: 'd1', text: '深夜的消息，我觉得不必立刻回', domain: 'digital' },
-    { id: 'd2', text: '在社交网络上，我可以封锁或取消追踪让我不舒服的人', domain: 'digital' },
+    { id: 'd2', text: '在社交网络上，我可以屏蔽或取消追踪让我不舒服的人', domain: 'digital' },
     { id: 'd3', text: '我会规律地关掉设备，断开一段连线', domain: 'digital' },
   ],
   fr: [
@@ -321,7 +321,7 @@ const OVERALL_RESULTS: Record<OverallLevel, Record<SupportedLang, LevelData>> = 
     zh: {
       title: '均衡的界线',
       subtitle: '你的界线是健康的',
-      description: '整体上你的界线立得健康。自己的需要和别人的需要拿捏得当，这对关系的品质非常有益。',
+      description: '整体上你的界线立得健康。自己的需要和别人的需要拿捏得当，这对关系的质量非常有益。',
       guidance: ['有意识地把现在的模式保持住', '在新的关系里也一致地用上', '把设界线的做法分给身边的人', '练习在压力下也守得住界线'],
     },
     fr: {
