@@ -237,7 +237,7 @@ const LEVEL_DATA: Record<JealousyLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '🌤️',
       title: 'Jalousie légère',
-      description: 'C’est le niveau ordinaire de jalousie que connaît la plupart des gens. Cela vous préoccupe parfois, sans que vous cherchiez à contrôler la relation.',
+      description: 'C’est le niveau ordinaire de jalousie que connaissent la plupart des gens. Cela vous préoccupe parfois, sans que vous cherchiez à contrôler la relation.',
       tips: [
         'Quand la jalousie monte, séparez les faits de l’imagination.',
         'Exprimez l’inquiétude en parlant de vous plutôt qu’en accusant.',
@@ -350,7 +350,7 @@ const LEVEL_DATA: Record<JealousyLevel, Record<SupportedLang, LevelData>> = {
     },
     zh: {
       icon: '🔥',
-      title: '嫉妒过敏型',
+      title: '强烈嫉妒型',
       description: '嫉妒非常强，掌控和查看的举动也很明显。这会给你自己和关系都带来很大的紧张，需要照顾。',
       tips: [
         '看看嫉妒的根在哪（不安全依附、低自尊等）。',
@@ -387,7 +387,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'g2', subscale: 'cognitive', reverse: false, text: '연인이 나 몰래 다른 사람에게 관심을 둘까 봐 자주 생각한다' },
     { id: 'g3', subscale: 'cognitive', reverse: false, text: '연인의 과거 연애를 떠올리며 신경 쓸 때가 있다' },
     { id: 'g4', subscale: 'cognitive', reverse: false, text: '연인이 늦거나 연락이 안 되면 안 좋은 상상을 한다' },
-    { id: 'g5', subscale: 'cognitive', reverse: false, text: '연인이 이성과 함께 있는 장면을 떠올리며 괴로울 때가 있다' },
+    { id: 'g5', subscale: 'cognitive', reverse: false, text: '연인이 다른 사람과 함께 있는 장면을 떠올리며 괴로울 때가 있다' },
     { id: 'g6', subscale: 'cognitive', reverse: false, text: '연인의 말이나 행동의 숨은 의도를 자주 분석한다' },
     { id: 'g7', subscale: 'cognitive', reverse: false, text: '연인이 다른 사람을 칭찬하면 마음이 불편하다' },
     { id: 'b1', subscale: 'behavioral', reverse: false, text: '연인의 휴대폰이나 SNS를 확인하고 싶은 충동을 느낀다' },
@@ -419,7 +419,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'g2', subscale: 'cognitive', reverse: false, text: '恋人が自分に隠れて他の人に関心を持つのではとよく考える' },
     { id: 'g3', subscale: 'cognitive', reverse: false, text: '恋人の過去の恋愛を思い出して気にする時がある' },
     { id: 'g4', subscale: 'cognitive', reverse: false, text: '恋人が遅れたり連絡が取れないと悪い想像をする' },
-    { id: 'g5', subscale: 'cognitive', reverse: false, text: '恋人が異性と一緒にいる場面を想像して苦しい時がある' },
+    { id: 'g5', subscale: 'cognitive', reverse: false, text: '恋人が他の誰かと一緒にいる場面を想像して苦しい時がある' },
     { id: 'g6', subscale: 'cognitive', reverse: false, text: '恋人の言葉や行動の隠れた意図をよく分析する' },
     { id: 'g7', subscale: 'cognitive', reverse: false, text: '恋人が他の人を褒めると気持ちが落ち着かない' },
     { id: 'b1', subscale: 'behavioral', reverse: false, text: '恋人のスマホやSNSを確認したい衝動を感じる' },
@@ -435,7 +435,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'g2', subscale: 'cognitive', reverse: false, text: '我常会想，伴侣是不是背着我对别人有意思' },
     { id: 'g3', subscale: 'cognitive', reverse: false, text: '想到伴侣过去的感情，我有时会在意' },
     { id: 'g4', subscale: 'cognitive', reverse: false, text: '伴侣晚归或联络不上时，我会往不好的方向想' },
-    { id: 'g5', subscale: 'cognitive', reverse: false, text: '想到伴侣和异性在一起的画面，我有时会很难受' },
+    { id: 'g5', subscale: 'cognitive', reverse: false, text: '想到伴侣和别人在一起的画面，我有时会很难受' },
     { id: 'g6', subscale: 'cognitive', reverse: false, text: '我常去分析伴侣话里或举动背后的用意' },
     { id: 'g7', subscale: 'cognitive', reverse: false, text: '伴侣称赞别人时，我心里会不舒服' },
     { id: 'b1', subscale: 'behavioral', reverse: false, text: '我会有想看伴侣手机或社群的冲动' },

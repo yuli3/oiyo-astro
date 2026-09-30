@@ -188,8 +188,8 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
       description: 'La relación está fresca y el vínculo es fuerte. La curiosidad y la ilusión mutuas se mantienen bien.',
       tips: [
         'Sigue con lo que construyó ese vínculo: hablar y el contacto afectuoso.',
-        'Añadid experiencias nuevas juntos para renovar la ilusión.',
-        'Expresad a menudo gratitud y elogios: las emociones positivas se acumulan.',
+        'Añade experiencias nuevas en pareja para renovar la ilusión.',
+        'Expresa a menudo gratitud y elogios: las emociones positivas se acumulan.',
       ],
     },
   },
@@ -226,7 +226,7 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
     },
     zh: {
       icon: '🌿',
-      title: '安定定居型',
+      title: '安稳平淡型',
       description: '你们处在舒服的稳定期。倦怠不高，但别让熟悉硬化成漠不关心，一点小小的用心会很有用。',
       tips: [
         '别把安稳当成理所当然，偶尔刻意说出口。',
@@ -247,11 +247,11 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
     es: {
       icon: '🌿',
       title: 'Estabilidad asentada',
-      description: 'Estáis en una etapa estable y cómoda. El desgaste es bajo; solo cuidad que lo conocido no se endurezca en indiferencia.',
+      description: 'Estás en una etapa estable y cómoda. El desgaste es bajo; solo cuida que lo conocido no se endurezca en indiferencia.',
       tips: [
         'No des la estabilidad por hecha: dilo en voz alta de vez en cuando.',
         'Mete una pequeña sorpresa entre rutinas.',
-        'Poneos al día con regularidad sobre lo que va cambiando en cada uno.',
+        'Pregúntale con regularidad qué va cambiando en su vida y cuéntale lo tuyo.',
       ],
     },
   },
@@ -312,7 +312,7 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
       description: 'La ilusión ha bajado y empieza a notarse la distancia. Suele ser una fase corriente, y es buen momento para revisar la relación.',
       tips: [
         'Di con franqueza lo que se ha acumulado, en primera persona y sin reproches.',
-        'Reiniciad las experiencias compartidas con una actividad o un viaje a dos.',
+        'Renueva las experiencias compartidas con una actividad o un viaje a dos.',
         'Busca a propósito lo bueno del otro y dilo en voz alta.',
       ],
     },
@@ -375,7 +375,7 @@ const LEVEL_DATA: Record<BoredomLevel, Record<SupportedLang, LevelData>> = {
       tips: [
         'Antes que evitar o callar, crea primero un espacio donde se pueda hablar con seguridad.',
         'Distingue si el desgaste viene de la relación o de tu propio estado.',
-        'Si entre los dos no alcanza, valorad terapia de pareja.',
+        'Si entre los dos no alcanza, valora la terapia de pareja.',
       ],
     },
   },
@@ -433,7 +433,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
   zh: [
     { id: 'd1', subscale: 'distance', reverse: false, text: '最近和对方交心的对话变少了' },
     { id: 'd2', subscale: 'distance', reverse: false, text: '就算待在一起，也常常各看各的手机' },
-    { id: 'd3', subscale: 'distance', reverse: false, text: '有时候对他今天过得怎样，我提不起兴趣' },
+    { id: 'd3', subscale: 'distance', reverse: false, text: '有时候对方今天过得怎样，我提不起兴趣' },
     { id: 'd4', subscale: 'distance', reverse: false, text: '比起以前，肢体接触或表达爱意都少了' },
     { id: 'd5', subscale: 'distance', reverse: false, text: '起了冲突，比起解开，我更常回避或沉默' },
     { id: 'd6', subscale: 'distance', reverse: false, text: '心里委屈的地方，我常常不说，就这样过去' },

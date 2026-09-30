@@ -45,7 +45,8 @@ const LABELS: Record<Locale, {
     yourStyle: '葛藤解決スタイル', strengths: '強み', risks: '注意点', tip: '成長アドバイス', bestWith: '相性の良い相手',
     chartTitle: '葛藤スタイル分布',
     types: { compete: '競争型', collaborate: '協力型', compromise: '妥協型', avoid: '回避型', accommodate: '従順型' },
-  },  zh: {
+  },
+  zh: {
     title: '冲突处理风格测验', subtitle: '起冲突时，我通常怎么反应？',
     pairOf: (c, t) => `${c} / ${t}`, chooseOne: '选出更接近你的那一句',
     restart: '重新测验', share: '分享结果', shareMsg: '我的冲突风格是',
@@ -67,7 +68,7 @@ const LABELS: Record<Locale, {
     restart: 'Repetir', share: 'Compartir resultado', shareMsg: 'Mi estilo ante los conflictos es',
     yourStyle: 'Tu estilo ante los conflictos', strengths: 'Fortalezas', risks: 'Ten cuidado con', tip: 'Para crecer', bestWith: 'Buena pareja',
     chartTitle: 'Distribución de estilos',
-    types: { compete: 'Competir', collaborate: 'Colaborar', compromise: 'Ceder a medias', avoid: 'Evitar', accommodate: 'Acomodarse' },
+    types: { compete: 'Competir', collaborate: 'Colaborar', compromise: 'Transigir', avoid: 'Evitar', accommodate: 'Acomodarse' },
   },
 }
 
@@ -107,7 +108,8 @@ const PAIRS: Record<Locale, Pair[]> = {
     { a: { text: '議論より沈黙の方がいい', style: 'avoid' }, b: { text: '明確に意見を言わないと解決しない', style: 'compete' } },
     { a: { text: '共同利益のためにお互いの立場を十分に共有する', style: 'collaborate' }, b: { text: '葛藤に勝てば相手も尊重してくれる', style: 'compete' } },
     { a: { text: '相手のニーズを自分より優先する', style: 'accommodate' }, b: { text: '50:50が最も公平', style: 'compromise' } },
-  ],  zh: [
+  ],
+  zh: [
     { a: { text: '明确主张自己的立场并坚持到底', style: 'compete' }, b: { text: '先避开冲突，之后再处理', style: 'avoid' } },
     { a: { text: '一直谈到所有人都满意为止', style: 'collaborate' }, b: { text: '顺着对方的意思，保住关系', style: 'accommodate' } },
     { a: { text: '各退一步，在中间达成一致', style: 'compromise' }, b: { text: '只要我认为自己对，就坚持到底', style: 'compete' } },
@@ -168,7 +170,7 @@ const RESULTS: Record<Style, Record<Locale, ResultData>> = {
     ja: { title: '妥協型', subtitle: 'お互い少し譲って実用的に解決します', description: 'それぞれが一定部分を譲歩して適切な合意点を見つけます。時間的プレッシャーがある時や両方の立場が対等な時に効果的です。', strengths: ['実用的で素早い解決', '公平性の追求', 'バランスのとれたアプローチ'], risks: ['最適解でない可能性', '全員が部分的に不満', '協力の機会を逃す'], tip: '妥協が常に最善ではありません。時にはもっと深く掘り下げて全員が満足する解決策を探しましょう。', bestWith: 'ほとんどのスタイルとうまく機能します' },
     zh: { title: '妥协型', subtitle: '各让一步，务实收场', description: '你让双方各退一点，找到一个过得去的共识。时间紧、或两边的理由都站得住时，这样最有效。', strengths: ['务实又快', '讲究公平', '拿捏得住分寸'], risks: ['未必是最好的解法', '两边都留点不满', '错过更深的合作'], tip: '妥协不总是上策。偶尔多挖一层，也许能找到两边都真心满意的答案。', bestWith: '跟大多数风格都合得来' },
     fr: { title: 'Compromis', subtitle: 'Chacun lâche un peu, la solution est pratique', description: 'Vous cherchez un accord acceptable où chacun concède une part. Efficace sous la pression du temps ou quand les deux positions se valent.', strengths: ['Résolution rapide et concrète', 'Souci d’équité', 'Approche équilibrée'], risks: ['Pas forcément la meilleure issue', 'Chacun reste un peu sur sa faim', 'Occasion de collaborer manquée'], tip: 'Le compromis n’est pas toujours la meilleure voie. Creusez parfois jusqu’à une solution que chacun accepte vraiment.', bestWith: 'Fonctionne avec presque tous les styles' },
-    es: { title: 'Ceder a medias', subtitle: 'Cada uno cede un poco y se resuelve', description: 'Buscas un acuerdo aceptable en el que ambas partes cedan algo. Funciona con prisa o cuando las dos posturas valen lo mismo.', strengths: ['Resuelves rápido y con los pies en el suelo', 'Buscas lo justo', 'Enfoque equilibrado'], risks: ['Puede no ser la mejor salida', 'Los dos quedáis algo a medias', 'Se pierde la oportunidad de colaborar'], tip: 'Ceder a medias no siempre es lo mejor. A veces conviene escarbar hasta una solución que convenza de verdad.', bestWith: 'Funciona con casi todos los estilos' },
+    es: { title: 'Transigir', subtitle: 'Cada uno cede un poco y se resuelve', description: 'Buscas un acuerdo aceptable en el que ambas partes cedan algo. Funciona con prisa o cuando las dos posturas valen lo mismo.', strengths: ['Resuelves rápido y con los pies en el suelo', 'Buscas lo justo', 'Enfoque equilibrado'], risks: ['Puede no ser la mejor salida', 'Ambos quedan algo insatisfechos', 'Se pierde la oportunidad de colaborar'], tip: 'Transigir no siempre es lo mejor. A veces conviene escarbar hasta una solución que convenza de verdad.', bestWith: 'Funciona con casi todos los estilos' },
   },
   avoid: {
     ko: { title: '회피형', subtitle: '갈등 상황에서 한 발 물러서는 편이에요', description: '갈등을 직접 대면하기보다 물러서거나 시간이 해결해주기를 기다립니다. 중요하지 않은 갈등이나 감정이 격할 때는 유용하지만, 중요한 문제를 방치할 위험이 있습니다.', strengths: ['불필요한 갈등 방지', '감정 냉각 시간 확보', '자신을 보호'], risks: ['중요한 문제 해결 지연', '불만 축적', '상대에게 무관심으로 보일 수 있음'], tip: '작은 갈등은 피할 수 있지만, 반복되는 중요한 문제는 직면해야 합니다. 용기 있는 대화가 관계를 지킵니다.', bestWith: '협력형이나 타협형이 먼저 다가오면 더 잘 해결됩니다' },
@@ -176,7 +178,7 @@ const RESULTS: Record<Style, Record<Locale, ResultData>> = {
     ja: { title: '回避型', subtitle: '葛藤の場面では一歩引く傾向があります', description: '葛藤を直接対面するより引いたり、時間が解決してくれるのを待ちます。重要でない葛藤や感情が高ぶっている時には有用ですが、重要な問題を放置するリスクがあります。', strengths: ['不必要な葛藤の防止', '感情冷却の時間確保', '自己保護'], risks: ['重要な問題の解決の遅れ', '不満の蓄積', '相手に無関心に見える可能性'], tip: '小さな葛藤は避けられますが、繰り返す重要な問題は向き合う必要があります。勇気ある会話が関係を守ります。', bestWith: '協力型や妥協型が先に近づいてくれるとうまく解決できます' },
     zh: { title: '回避型', subtitle: '冲突当前，你倾向先退一步', description: '比起正面处理，你更常先退开，或等时间把事情带过。不重要的摩擦、或情绪正烈时，这样有用；但重要的事被搁着，会留下风险。', strengths: ['省下不必要的争执', '给情绪降温的时间', '保护自己'], risks: ['要紧的事一拖再拖', '不满会累积', '可能被看成不在乎'], tip: '小摩擦可以放过，反复出现的大问题得面对。一次有勇气的对话，才守得住关系。', bestWith: '合作型或妥协型先开口时，事情会顺得多' },
     fr: { title: 'Évitement', subtitle: 'Face au conflit, vous prenez du recul', description: 'Plutôt que d’affronter, vous vous retirez ou laissez le temps faire. Utile pour les frictions mineures ou quand les émotions montent, mais les vrais sujets risquent de rester en suspens.', strengths: ['Évite les disputes inutiles', 'Laisse retomber l’émotion', 'Vous protège'], risks: ['Les sujets importants traînent', 'Le ressentiment s’accumule', 'Peut passer pour de l’indifférence'], tip: 'On peut laisser filer les petites frictions ; ce qui revient sans cesse demande à être regardé en face. Une conversation courageuse protège la relation.', bestWith: 'Cela se passe mieux quand une personne Collaboration ou Compromis fait le premier pas' },
-    es: { title: 'Evitar', subtitle: 'Ante el conflicto, das un paso atrás', description: 'En vez de afrontarlo de frente, te retiras o dejas que el tiempo lo arregle. Sirve con roces menores o cuando los ánimos están calientes, pero los asuntos importantes pueden quedarse sin tratar.', strengths: ['Te ahorras peleas innecesarias', 'Das tiempo a que baje la emoción', 'Te proteges'], risks: ['Lo importante se aplaza', 'El malestar se acumula', 'Pueden leerlo como desinterés'], tip: 'Los roces pequeños se pueden dejar pasar; lo que se repite hay que mirarlo de frente. Una conversación valiente sostiene la relación.', bestWith: 'Va mejor cuando alguien que colabora o que cede a medias da el primer paso' },
+    es: { title: 'Evitar', subtitle: 'Ante el conflicto, das un paso atrás', description: 'En vez de afrontarlo de frente, te retiras o dejas que el tiempo lo arregle. Sirve con roces menores o cuando los ánimos están calientes, pero los asuntos importantes pueden quedarse sin tratar.', strengths: ['Te ahorras peleas innecesarias', 'Das tiempo a que baje la emoción', 'Te proteges'], risks: ['Lo importante se aplaza', 'El malestar se acumula', 'Pueden leerlo como desinterés'], tip: 'Los roces pequeños se pueden dejar pasar; lo que se repite hay que mirarlo de frente. Una conversación valiente sostiene la relación.', bestWith: 'Va mejor cuando alguien que colabora o que transige da el primer paso' },
   },
   accommodate: {
     ko: { title: '양보형', subtitle: '관계를 위해 자신의 필요를 뒤로 미뤄요', description: '갈등에서 상대방의 필요를 충족시키기 위해 자신의 입장을 양보합니다. 장기적 관계와 조화를 중시하지만, 자신의 필요가 무시될 위험이 있습니다.', strengths: ['강한 관계 유지', '갈등 완화', '팀워크 촉진'], risks: ['자신의 필요 방치', '분노와 억울함 누적', '존중받지 못함'], tip: '양보는 강점이지만, 자신의 필요와 감정을 무시하면 장기적으로 관계가 더 어려워집니다. 자신의 목소리도 소중합니다.', bestWith: '경쟁형이나 협력형과 좋은 균형을 이룹니다' },
