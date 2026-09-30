@@ -595,7 +595,7 @@ const QUESTIONS: Record<Locale, Question[]> = {
     },
     {
       id: 'q8',
-      text: '开会或发表时，我会……',
+      text: '开会或汇报时，我会……',
       options: [
         { text: '积极提出意见，主导讨论', score: { E: 2, T: 1 } },
         { text: '只在需要时发言，多半在听', score: { I: 2 } },

@@ -470,7 +470,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q8',
       text: '你的人生座右铭是？',
       options: [
-        { label: '要么做大，要么回家', type: 'espresso' },
+        { label: '要做就做到最好', type: 'espresso' },
         { label: '人生有伴更美好', type: 'latte' },
         { label: '悠哉享受吧', type: 'coldbrew' },
         { label: '大胆地表达', type: 'cappuccino' },

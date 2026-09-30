@@ -204,7 +204,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'l4', text: '比起变化，我更喜欢稳定、可预测的生活', subscale: 'life', reverse: true },
     { id: 'l5', text: '我乐于尝试没吃过的食物或陌生的体验', subscale: 'life', reverse: false },
     { id: 'l6', text: '面对重大决定（移民、跳槽、创业）时，我会感到兴奋', subscale: 'life', reverse: false },
-    { id: 'l7', text: '我因为害怕失败而不愿挑战', subscale: 'life', reverse: true },
+    { id: 'l7', text: '我常因为害怕失败而放弃挑战', subscale: 'life', reverse: true },
   ],
   fr: [
     { id: 'f1', text: 'J’investis en espérant un rendement élevé, même avec un risque de perte en capital', subscale: 'financial', reverse: false },

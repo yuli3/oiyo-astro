@@ -47,7 +47,7 @@ const TYPES: Record<InvestorType, TypeInfo> = {
       ko: ['방위산업 ETF 비중 확대', '에너지 전환 수혜주 (태양광, LNG, 원자력)', '리쇼어링 수혜 지역 (인도, 멕시코, 베트남)', '원자재 및 금 헤지 포지션'],
       en: ['Increase defense industry ETF allocation', 'Energy transition beneficiaries (solar, LNG, nuclear)', 'Reshoring beneficiary regions (India, Mexico, Vietnam)', 'Commodities and gold hedge positions'],
       ja: ['防衛産業ETFの比重拡大', 'エネルギー転換受益株（太陽光、LNG、原子力）', 'リショアリング受益地域（インド、メキシコ、ベトナム）', '原材料と金のヘッジポジション'],
-      zh: ['提高国防产业 ETF 比重', '能源转型受益股（太阳能、液化天然气、核能）', '制造业回流受益地区（印度、墨西哥、越南）', '原材料及黄金对冲部位'],
+      zh: ['提高国防产业 ETF 比重', '能源转型受益股（太阳能、液化天然气、核能）', '制造业回流受益地区（印度、墨西哥、越南）', '原材料及黄金对冲仓位'],
       fr: ['Renforcer le poids des ETF de défense', 'Valeurs bénéficiant de la transition énergétique (solaire, GNL, nucléaire)', 'Régions bénéficiant de la relocalisation (Inde, Mexique, Vietnam)', 'Positions de couverture en matières premières et en or'],
       es: ['Aumentar el peso de ETF de defensa', 'Valores beneficiados por la transición energética (solar, GNL, nuclear)', 'Regiones beneficiadas por la relocalización (India, México, Vietnam)', 'Posiciones de cobertura en materias primas y oro'],
     },
@@ -96,7 +96,7 @@ const TYPES: Record<InvestorType, TypeInfo> = {
       fr: ['Actifs en dollars 40–50 % + pays développés hors dollar 20–25 %', 'Régions émergentes à forte croissance (Inde, Asie du Sud-Est) 15–20 %', 'Or et matières premières en couverture du dollar 10–15 %', 'Recourir à des ETF couverts contre le change'],
       es: ['Activos en dólares 40–50 % + desarrollados no dólar 20–25 %', 'Regiones emergentes de alto crecimiento (India, Sudeste Asiático) 15–20 %', 'Oro y materias primas como cobertura del dólar 10–15 %', 'Usar ETF con cobertura de divisa'],
     },
-    caution: { ko: '지나친 분산은 수익률을 희석시킵니다. 핵심 포지션은 견고하게 유지하고 주변 분산에 집중하세요.', en: 'Excessive diversification dilutes returns. Keep core positions solid and focus on peripheral diversification.', ja: '過度な分散は収益率を希釈します。コアポジションは堅固に維持し、周辺の分散に集中してください。', zh: '过度分散会稀释收益。请牢牢守住核心部位，把分散集中在外围。', fr: 'Trop diversifier dilue le rendement. Gardez des positions clés solides et diversifiez à la marge.', es: 'Diversificar en exceso diluye la rentabilidad. Mantén firmes las posiciones clave y diversifica en la periferia.' },
+    caution: { ko: '지나친 분산은 수익률을 희석시킵니다. 핵심 포지션은 견고하게 유지하고 주변 분산에 집중하세요.', en: 'Excessive diversification dilutes returns. Keep core positions solid and focus on peripheral diversification.', ja: '過度な分散は収益率を希釈します。コアポジションは堅固に維持し、周辺の分散に集中してください。', zh: '过度分散会稀释收益。请牢牢守住核心仓位，把分散集中在外围。', fr: 'Trop diversifier dilue le rendement. Gardez des positions clés solides et diversifiez à la marge.', es: 'Diversificar en exceso diluye la rentabilidad. Mantén firmes las posiciones clave y diversifica en la periferia.' },
     color: 'emerald',
   },
   balanced: {
