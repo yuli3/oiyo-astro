@@ -652,7 +652,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       options: [
         { type: 'lion', text: '很快适应当地时间' },
         { type: 'bear', text: '几天就好了' },
-        { type: 'wolf', text: '反而有夜间时段的地方更舒服' },
+        { type: 'wolf', text: '到了时间更晚的时区，反而觉得更舒服' },
         { type: 'dolphin', text: '跟时差无关，我一直睡不好' },
       ],
     },
@@ -798,7 +798,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       options: [
         { type: 'lion', text: 'Je m’aligne vite sur l’heure locale' },
         { type: 'bear', text: 'Quelques jours et ça va' },
-        { type: 'wolf', text: 'Je me sens même mieux là où la vie est nocturne' },
+        { type: 'wolf', text: 'Je me sens même mieux dans un fuseau horaire plus tardif' },
         { type: 'dolphin', text: 'Décalage ou pas, je dors mal de toute façon' },
       ],
     },
@@ -944,7 +944,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       options: [
         { type: 'lion', text: 'Me ajusto rápido a la hora local' },
         { type: 'bear', text: 'Con unos días ya estoy bien' },
-        { type: 'wolf', text: 'Incluso estoy mejor donde la vida es más nocturna' },
+        { type: 'wolf', text: 'Incluso me siento mejor en un huso horario más tardío' },
         { type: 'dolphin', text: 'Con o sin cambio horario, duermo mal igual' },
       ],
     },

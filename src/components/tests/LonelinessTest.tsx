@@ -336,10 +336,10 @@ const RESULTS: Record<Level, Record<SupportedLang, ResultData>> = {
     zh: {
       title: '孤独感偏高',
       subtitle: '现在似乎相当孤立',
-      description: '你正经历着不小的孤独。这份感受是在提醒你：有重要的东西不够了。孤独是可以改善的，也有包括专业协助在内的许多支援。',
+      description: '你正经历着不小的孤独。这份感受是在提醒你：有重要的东西不够了。孤独是可以改善的，也有包括专业协助在内的许多支持。',
       tips: ['考虑找咨询师或心理治疗师谈谈', '每天试着做一件小小的社交举动', '考虑参加心理健康的支持团体', '从线上社群开始连结，也是有效的起点', '用身体活动让神经系统稳下来'],
       affirmation: '孤独不是你的错。开口求助是勇敢的举动，你值得被连结。',
-      connectionNote: '建议现在考虑寻求专业支援。',
+      connectionNote: '建议现在考虑寻求专业支持。',
     },
     fr: {
       title: 'Solitude élevée',

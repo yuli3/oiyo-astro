@@ -439,7 +439,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'e6', subscale: 'exclusion', reverse: false, text: '我怕错过潮流或正在流行的东西' },
     { id: 'e7', subscale: 'exclusion', reverse: false, text: '我担心大家都知道的事，只有我不知道' },
     { id: 'c1', subscale: 'connection', reverse: false, text: '我离开一会儿后，会一直想确认发生了什么' },
-    { id: 'c2', subscale: 'connection', reverse: false, text: '吃饭或聚会时，我也会去看社交媒体或讯息' },
+    { id: 'c2', subscale: 'connection', reverse: false, text: '吃饭或聚会时，我也会去看社交媒体或消息' },
     { id: 'c3', subscale: 'connection', reverse: false, text: '有通知来时，不马上看我会不安' },
     { id: 'c4', subscale: 'connection', reverse: false, text: '就算在休假或休息，我也会一直刷线上的消息' },
     { id: 'c5', subscale: 'connection', reverse: false, text: '一阵子没看社交媒体，我会闷得慌或心急' },

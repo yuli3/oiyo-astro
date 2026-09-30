@@ -140,7 +140,7 @@ const STYLE_RESULTS: Record<StyleType, Record<SupportedLang, StyleResult>> = {
       title: '视觉型',
       subtitle: '用画面思考的学习者',
       description: '你靠图表、颜色和版面的位置来消化信息。',
-      tips: ['画心智图和示意图', '用彩色笔和萤光笔分层', '多找信息图和视频'],
+      tips: ['画思维导图和示意图', '用彩色笔和萤光笔分层', '多找信息图和视频'],
     },
     fr: {
       icon: '👁️',
@@ -803,7 +803,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q3',
       text: '开会或上课时，我靠什么保持专注？',
       options: [
-        { type: 'visual', text: '盯着投视频或白板看' },
+        { type: 'visual', text: '盯着幻灯片或白板看' },
         { type: 'auditory', text: '专心听讲的内容' },
         { type: 'reading', text: '把重点记到本子上' },
         { type: 'kinesthetic', text: '手里摆弄点东西，或动一动' },
@@ -813,7 +813,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q4',
       text: '摸熟一支新手机时，我会…',
       options: [
-        { type: 'visual', text: '把设定画面一页页看过' },
+        { type: 'visual', text: '把设置界面一页页看过' },
         { type: 'auditory', text: '看教学视频听着讲解' },
         { type: 'reading', text: '读说明书或线上指南' },
         { type: 'kinesthetic', text: '这按按那点点就上手了' },
@@ -823,7 +823,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q5',
       text: '准备上台报告时，最帮得上忙的是…',
       options: [
-        { type: 'visual', text: '投视频里多放图和图表' },
+        { type: 'visual', text: '幻灯片里多放图和图表' },
         { type: 'auditory', text: '把内容念出声反复练' },
         { type: 'reading', text: '把讲稿写细，照着读' },
         { type: 'kinesthetic', text: '站起来像正式那样走一遍' },
@@ -833,10 +833,10 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q6',
       text: '记住学过的东西，我靠…',
       options: [
-        { type: 'visual', text: '用彩色笔画心智图' },
+        { type: 'visual', text: '用彩色笔画思维导图' },
         { type: 'auditory', text: '录下来反复听，或讲给朋友' },
         { type: 'reading', text: '把重点整理成摘要再读' },
-        { type: 'kinesthetic', text: '做单字卡，或动手抄一遍' },
+        { type: 'kinesthetic', text: '做单词卡，或动手抄一遍' },
       ],
     },
     {
@@ -885,7 +885,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       options: [
         { type: 'visual', text: '摄影、绘画、看电影' },
         { type: 'auditory', text: '听音乐、播客、广播' },
-        { type: 'reading', text: '读书、写日记、写部落格' },
+        { type: 'reading', text: '读书、写日记、写博客' },
         { type: 'kinesthetic', text: '做菜、运动、动手做东西' },
       ],
     },
@@ -893,7 +893,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q12',
       text: '上线上课程时，我会…',
       options: [
-        { type: 'visual', text: '盯着投视频和画面看' },
+        { type: 'visual', text: '盯着幻灯片和画面看' },
         { type: 'auditory', text: '专心听讲者的声音' },
         { type: 'reading', text: '看字幕或讲义跟着走' },
         { type: 'kinesthetic', text: '跟着课程中途的练习做' },

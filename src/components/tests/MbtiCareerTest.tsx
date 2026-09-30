@@ -102,7 +102,7 @@ const LABELS: Record<Locale, {
     yourType: '私の職業タイプ',
   },
   zh: {
-    title: 'MBTI 职业适性测验',
+    title: 'MBTI 职业适配测验',
     subtitle: '适合我的职业是什么？',
     questionOf: (c, t) => `${c} / ${t}`,
     restart: '重新测验',
@@ -113,7 +113,7 @@ const LABELS: Record<Locale, {
     idealEnv: '理想环境',
     workStrengths: '职业优势',
     workWeaknesses: '职业弱点',
-    careerTip: '职涯建议',
+    careerTip: '职业建议',
     avoidEnvs: '最好避开的环境',
     chartTitle: '倾向分析',
     yourType: '我的职业类型',
@@ -605,7 +605,7 @@ const QUESTIONS: Record<Locale, Question[]> = {
     },
     {
       id: 'q9',
-      text: '思考长期职涯目标时，我会……',
+      text: '思考长期职业目标时，我会……',
       options: [
         { text: '描绘十年后具体的职位和路径', score: { J: 2, S: 1 } },
         { text: '专注于大愿景和可能性，路径保持弹性', score: { N: 2, P: 1 } },
@@ -1818,7 +1818,7 @@ const RESULTS: Record<MBTIType, Record<Locale, ResultData>> = {
       idealEnvironment: '有创作自由、能按自己节奏工作的环境。',
       workStrengths: ['创造力', '感官敏锐', '弹性', '以个人价值为中心'],
       workWeaknesses: ['长期规划较弱', '自我主张不足', '回避冲突'],
-      careerTip: '你的创意才华很出色。更积极地表达和分享自己的作品与意见，是职涯成长的关键。',
+      careerTip: '你的创意才华很出色。更积极地表达和分享自己的作品与意见，是职业成长的关键。',
       avoidEnvironments: ['以严格日程为中心', '没有创意的环境', '过度竞争的文化'],
     },
     fr: {
@@ -1954,7 +1954,7 @@ const RESULTS: Record<MBTIType, Record<Locale, ResultData>> = {
       idealEnvironment: '活泼、社交性强、能立即得到反馈的环境。',
       workStrengths: ['人际关系', '即兴', '热情', '专注当下'],
       workWeaknesses: ['长期规划较弱', '具体执行不足', '难以保持专注'],
-      careerTip: '你有让人开心的天赋。为了职涯的持续成长，养成设定长期目标和计划的习惯吧。',
+      careerTip: '你有让人开心的天赋。为了职业的持续成长，养成设定长期目标和计划的习惯吧。',
       avoidEnvironments: ['孤立的重复工作', '过多的规则和形式', '没有人的环境'],
     },
     fr: {
