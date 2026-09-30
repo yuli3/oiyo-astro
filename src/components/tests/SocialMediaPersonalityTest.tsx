@@ -493,7 +493,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
         { label: '集中在创作和剪辑', type: 'creator' },
         { label: '发布和查看反应的时候', type: 'performer' },
         { label: '不知不觉频繁地刷', type: 'lurker' },
-        { label: '用在评论、私信和社群活动上', type: 'connector' },
+        { label: '用在评论、私信和社群互动上', type: 'connector' },
       ],
     },
     {

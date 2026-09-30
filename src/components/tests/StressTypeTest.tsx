@@ -540,7 +540,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       options: [
         { label: '找人说说，或用行动把它散掉', type: 'fighter' },
         { label: '想法一个接一个，睡不着', type: 'freezer' },
-        { label: '刷影片或社群，刷到睡着', type: 'fleeer' },
+        { label: '刷视频或社交媒体，刷到睡着', type: 'fleeer' },
         { label: '写下明天要做的事，把心整理一下', type: 'fixer' },
       ],
     },
@@ -611,7 +611,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
         { label: '带着队伍，做出决断', type: 'fighter' },
         { label: '等别人来拿主意', type: 'freezer' },
         { label: '尽快从那个情况里抽身', type: 'fleeer' },
-        { label: '收集资讯，分析出最好的解法', type: 'fixer' },
+        { label: '收集信息，分析出最好的解法', type: 'fixer' },
       ],
     },
   ],

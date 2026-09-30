@@ -140,7 +140,7 @@ const STYLE_RESULTS: Record<StyleType, Record<SupportedLang, StyleResult>> = {
       title: '视觉型',
       subtitle: '用画面思考的学习者',
       description: '你靠图表、颜色和版面的位置来消化信息。',
-      tips: ['画心智图和示意图', '用彩色笔和萤光笔分层', '多找信息图和影片'],
+      tips: ['画心智图和示意图', '用彩色笔和萤光笔分层', '多找信息图和视频'],
     },
     fr: {
       icon: '👁️',
@@ -184,7 +184,7 @@ const STYLE_RESULTS: Record<StyleType, Record<SupportedLang, StyleResult>> = {
       title: '听觉型',
       subtitle: '用耳朵理解的学习者',
       description: '你在听人讲、跟人说的过程里把东西弄懂。',
-      tips: ['把重点念出声，或录下来反覆听', '讲给别人听，一讲就清楚', '用播客和讲座来学'],
+      tips: ['把重点念出声，或录下来反复听', '讲给别人听，一讲就清楚', '用播客和讲座来学'],
     },
     fr: {
       icon: '👂',
@@ -793,7 +793,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q2',
       text: '学新东西，最有效的方式是…',
       options: [
-        { type: 'visual', text: '看图表、示意图和影片' },
+        { type: 'visual', text: '看图表、示意图和视频' },
         { type: 'auditory', text: '听课、听播客、听人讲' },
         { type: 'reading', text: '把书和资料仔细读一遍' },
         { type: 'kinesthetic', text: '自己动手做一次' },
@@ -803,7 +803,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q3',
       text: '开会或上课时，我靠什么保持专注？',
       options: [
-        { type: 'visual', text: '盯着投影片或白板看' },
+        { type: 'visual', text: '盯着投视频或白板看' },
         { type: 'auditory', text: '专心听讲的内容' },
         { type: 'reading', text: '把重点记到本子上' },
         { type: 'kinesthetic', text: '手里摆弄点东西，或动一动' },
@@ -814,7 +814,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       text: '摸熟一支新手机时，我会…',
       options: [
         { type: 'visual', text: '把设定画面一页页看过' },
-        { type: 'auditory', text: '看教学影片听着讲解' },
+        { type: 'auditory', text: '看教学视频听着讲解' },
         { type: 'reading', text: '读说明书或线上指南' },
         { type: 'kinesthetic', text: '这按按那点点就上手了' },
       ],
@@ -823,8 +823,8 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q5',
       text: '准备上台报告时，最帮得上忙的是…',
       options: [
-        { type: 'visual', text: '投影片里多放图和图表' },
-        { type: 'auditory', text: '把内容念出声反覆练' },
+        { type: 'visual', text: '投视频里多放图和图表' },
+        { type: 'auditory', text: '把内容念出声反复练' },
         { type: 'reading', text: '把讲稿写细，照着读' },
         { type: 'kinesthetic', text: '站起来像正式那样走一遍' },
       ],
@@ -834,7 +834,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       text: '记住学过的东西，我靠…',
       options: [
         { type: 'visual', text: '用彩色笔画心智图' },
-        { type: 'auditory', text: '录下来反覆听，或讲给朋友' },
+        { type: 'auditory', text: '录下来反复听，或讲给朋友' },
         { type: 'reading', text: '把重点整理成摘要再读' },
         { type: 'kinesthetic', text: '做单字卡，或动手抄一遍' },
       ],
@@ -855,7 +855,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       options: [
         { type: 'visual', text: '把重点整理成图表' },
         { type: 'auditory', text: '跟读书会互相讲解' },
-        { type: 'reading', text: '课本和笔记反覆读' },
+        { type: 'reading', text: '课本和笔记反复读' },
         { type: 'kinesthetic', text: '刷题，或以实作为主' },
       ],
     },
@@ -863,7 +863,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q9',
       text: '要了解一个陌生主题，我会…',
       options: [
-        { type: 'visual', text: '找信息图或影片' },
+        { type: 'visual', text: '找信息图或视频' },
         { type: 'auditory', text: '听专家讲座或播客' },
         { type: 'reading', text: '找文章和书来读' },
         { type: 'kinesthetic', text: '报名体验课或工作坊' },
@@ -893,7 +893,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q12',
       text: '上线上课程时，我会…',
       options: [
-        { type: 'visual', text: '盯着投影片和画面看' },
+        { type: 'visual', text: '盯着投视频和画面看' },
         { type: 'auditory', text: '专心听讲者的声音' },
         { type: 'reading', text: '看字幕或讲义跟着走' },
         { type: 'kinesthetic', text: '跟着课程中途的练习做' },
@@ -904,7 +904,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       text: '照新食谱做菜时，我会…',
       options: [
         { type: 'visual', text: '看着成品照片做' },
-        { type: 'auditory', text: '听着料理影片的说明做' },
+        { type: 'auditory', text: '听着料理视频的说明做' },
         { type: 'reading', text: '照着步骤读着做' },
         { type: 'kinesthetic', text: '边尝边调整分量' },
       ],
@@ -933,7 +933,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       id: 'q16',
       text: '学新游戏或新运动时，我会…',
       options: [
-        { type: 'visual', text: '先看规则讲解的影片' },
+        { type: 'visual', text: '先看规则讲解的视频' },
         { type: 'auditory', text: '听玩过的人说一遍' },
         { type: 'reading', text: '读规则书或说明' },
         { type: 'kinesthetic', text: '先玩玩看，边玩边学' },

@@ -231,7 +231,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
       tips: [
         '比较一开始，就问自己「我的标准是什么」。',
         '向上比较当成刺激，向下比较当成感谢。',
-        '提醒自己：社群上的动态是剪过的精华。',
+        '提醒自己：社交媒体上的动态是剪过的精华。',
       ],
     },
     fr: {
@@ -353,7 +353,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
       title: '比较过敏型',
       description: '社会比较的倾向非常强。不停地比较可能正在啃食你的自尊，也消耗大量心力。',
       tips: [
-        '每天留一段时间，把社群和会引起比较的刺激断掉。',
+        '每天留一段时间，把社交媒体和会引起比较的刺激断掉。',
         '练习把自己的价值放在「存在」上，而不是成绩上。',
         '如果比较已经到了痛苦的程度，考虑咨询等协助。',
       ],
@@ -433,7 +433,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
   zh: [
     { id: 'a1', subscale: 'ability', reverse: false, text: '我会拿别人来衡量自己做得好不好' },
     { id: 'a2', subscale: 'ability', reverse: false, text: '看到别人的成绩，我就会估量自己的水平' },
-    { id: 'a3', subscale: 'ability', reverse: false, text: '在社群上看别人的生活时，我会跟自己的处境比' },
+    { id: 'a3', subscale: 'ability', reverse: false, text: '在社交媒体上看别人的生活时，我会跟自己的处境比' },
     { id: 'a4', subscale: 'ability', reverse: false, text: '跟我差不多的人过得比我好时，我会在意' },
     { id: 'a5', subscale: 'ability', reverse: false, text: '我常拿自己的外表或能力去跟别人比' },
     { id: 'a6', subscale: 'ability', reverse: false, text: '身边的人有成就时，我有时会着急' },

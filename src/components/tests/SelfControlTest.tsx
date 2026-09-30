@@ -168,7 +168,7 @@ const LEVEL_DATA: Record<ControlLevel, Record<SupportedLang, LevelData>> = {
       description: '克制冲动、保持耐力的力气还在长。自控像肌肉，靠小小的练习一点点变结实。',
       tips: [
         '与其用意志压住诱惑，不如先从环境里把它拿走。',
-        '把目标定得很小，反覆累积「我做到了」。',
+        '把目标定得很小，反复累积「我做到了」。',
         '用「再五分钟」的规则，把想拖的那股劲儿撑过去。',
       ],
     },

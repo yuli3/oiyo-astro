@@ -188,7 +188,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 't2', text: '日程太满时，我会排优先级，并推掉一部分', domain: 'time' },
     { id: 't3', text: '我会刻意守住休息和照顾自己的时间', domain: 'time' },
     { id: 'd1', text: '深夜的消息，我觉得不必立刻回', domain: 'digital' },
-    { id: 'd2', text: '在社群网络上，我可以封锁或取消追踪让我不舒服的人', domain: 'digital' },
+    { id: 'd2', text: '在社交网络上，我可以封锁或取消追踪让我不舒服的人', domain: 'digital' },
     { id: 'd3', text: '我会规律地关掉设备，断开一段连线', domain: 'digital' },
   ],
   fr: [
