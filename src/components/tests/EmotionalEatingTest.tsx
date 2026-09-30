@@ -208,7 +208,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q9', text: 'Certaines émotions me donnent envie d’aliments précis (sucré, salé…)' },
     { id: 'q10', text: 'Je sens que manger me réconforte émotionnellement' },
     { id: 'q11', text: 'Quand je suis fatigué, j’ai envie de sucré ou de plats relevés' },
-    { id: 'q12', text: 'Même de bonne humeur, je mange particulièrement plus' },
+    { id: 'q12', text: 'Même de bonne humeur, je finis par manger davantage' },
     { id: 'q13', text: 'J’ai déjà abandonné un régime pour des raisons émotionnelles' },
     { id: 'q14', text: 'Mon envie de manger n’a souvent rien à voir avec une vraie faim' },
     { id: 'q15', text: 'Après avoir mangé sous le coup de l’émotion, je culpabilise pour la quantité ou le choix des aliments' },

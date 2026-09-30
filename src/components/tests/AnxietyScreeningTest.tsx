@@ -181,7 +181,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
     { id: 'q2', text: 'Une incapacité à arrêter de s’inquiéter ou à contrôler ses inquiétudes' },
     { id: 'q3', text: 'Une inquiétude excessive à propos de différentes choses' },
     { id: 'q4', text: 'Des difficultés à se détendre' },
-    { id: 'q5', text: 'Une agitation telle qu’il est difficile à tenir en place' },
+    { id: 'q5', text: 'Une agitation telle qu’il est difficile de tenir en place' },
     { id: 'q6', text: 'Une tendance à être facilement contrarié(e) ou irritable' },
     { id: 'q7', text: 'Un sentiment de peur comme si quelque chose de terrible risquait de se produire' },
   ],

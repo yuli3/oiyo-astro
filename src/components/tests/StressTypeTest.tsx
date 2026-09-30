@@ -87,7 +87,7 @@ const LABELS: Record<SupportedLang, {
   },
   zh: {
     title: '压力反应类型测验',
-    subtitle: '我是怎么受压力的？',
+    subtitle: '我是怎么应对压力的？',
     questionOf: (c, t) => `${c} / ${t}`,
     restart: '重新测验',
     share: '分享结果',
@@ -113,7 +113,7 @@ const LABELS: Record<SupportedLang, {
   },
   es: {
     title: 'Test del tipo de reacción al estrés',
-    subtitle: '¿Cómo me afecta el estrés?',
+    subtitle: '¿Cómo manejo el estrés?',
     questionOf: (c, t) => `${c} / ${t}`,
     restart: 'Repetir',
     share: 'Compartir resultado',
@@ -814,7 +814,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
       options: [
         { label: 'digo que no me parece y pido ajustarla', type: 'fighter' },
         { label: 'no sé por dónde empezar y lo aplazo', type: 'freezer' },
-        { label: 'lo trocero y esquivo lo que puedo', type: 'fleeer' },
+        { label: 'lo troceo y esquivo lo que puedo', type: 'fleeer' },
         { label: 'fijo prioridades enseguida y hago un calendario', type: 'fixer' },
       ],
     },
