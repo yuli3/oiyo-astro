@@ -85,8 +85,9 @@ export function RecommendationCards({ locale }: { locale: string }) {
 
   // Resolve every i18n key this render needs (UI chrome + card copy + node
   // labels for signal values) in one batch, same pattern as
-  // OntologyRelationOrbit's ring-label resolution. A raw-key flash before
-  // this resolves is expected and harmless.
+  // OntologyRelationOrbit's ring-label resolution. Do not paint the key
+  // while that lookup is empty: a missing `recommendations.json` left the
+  // raw key on screen. 2026-09-29.
   useEffect(() => {
     const keys = new Set<string>([
       "recommendations.cards.sectionTitle",
@@ -125,7 +126,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
     };
   }, [cards, lang]);
 
-  const tt = (key: string) => texts[key] ?? key;
+  const tt = (key: string) => texts[key] ?? "";
 
   const reasonFor = useMemo(
     () => (entry: CardEntry) => {
@@ -162,6 +163,10 @@ export function RecommendationCards({ locale }: { locale: string }) {
         <p className="mt-1 text-xs text-green-600">{texts["recommendations.cards.emptyDescription"] ?? EMPTY_COPY[lang].description}</p>
       </div>
     );
+  }
+
+  if (!texts["recommendations.cards.matchLabel"]) {
+    return <div className="h-24 rounded-[28px] border border-green-100 bg-card" aria-busy="true" />;
   }
 
   return (
