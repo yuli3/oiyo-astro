@@ -56,7 +56,11 @@ const shown = entry.data.updatedDate ?? entry.data.pubDate;
 const stamp = shown.toISOString().slice(0, 10);
 ---
 
-<article class="article-prose mx-auto max-w-2xl px-4 py-10">
+<article class:list={[
+  'article-prose mx-auto max-w-2xl px-4 py-10',
+  { 'article-prose--psychology-foundations': entry.data.series === 'psychology-basics' && entry.data.chapter === 1 },
+  { 'article-prose--psychology-comparisons': entry.data.series === 'psychology-basics' && [3, 4].includes(entry.data.chapter ?? 0) },
+]}>
   <h1 class="text-2xl font-bold leading-snug text-foreground sm:text-3xl">{entry.data.title}</h1>
   <p class="mt-3 text-muted-foreground">{entry.data.description}</p>
   <p class="mt-2 text-sm text-muted-foreground">{UPDATED[locale] ?? UPDATED.en} {stamp}</p>
@@ -77,6 +81,17 @@ const stamp = shown.toISOString().slice(0, 10);
   .article-prose a { text-decoration: underline; text-underline-offset: 3px; }
   .article-prose table { width: 100%; margin: 1.25rem 0; border-collapse: collapse; font-size: .95rem; }
   .article-prose th, .article-prose td { border: 1px solid var(--border); padding: .5rem .625rem; text-align: left; }
+  /* 2026-10-02: FR/ES words forced these comparison tables wider than the phone.
+     Scope wrapping to this reviewed chapter, retaining table semantics and text size. */
+  .article-prose--psychology-foundations th,
+  .article-prose--psychology-foundations td { overflow-wrap: anywhere; }
+  /* 2026-10-03: Browser checks found EN/FR/ES minimum word widths overflowing
+     chapters 3–4 at 360px. Keep every comparison cell and readable type size;
+     allow long terms to wrap rather than hiding content or clipping the page. */
+  .article-prose--psychology-comparisons th,
+  .article-prose--psychology-comparisons td { overflow-wrap: anywhere; }
+  /* The reviewed two-column comparison needs equal reading space on phones. */
+  .article-prose--psychology-foundations > .mt-8 > table:first-of-type { table-layout: fixed; }
   .article-prose blockquote { margin: 1.25rem 0; padding-left: 1rem; border-left: 3px solid var(--primary); color: var(--muted-foreground); }
   .article-prose code { font-size: .9em; }
   .article-prose figure { margin: 1.25rem 0 1.5rem; }

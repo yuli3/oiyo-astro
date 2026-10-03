@@ -18,11 +18,13 @@ topic: psychology-course
 
 import Callout from "@/components/mdx/Callout.astro";
 
+import StepFlow from "@/components/mdx/StepFlow.astro";
+
 # Le matériel du cerveau et de l'esprit : neurosciences, sensation et perception
 
-Bonjour à toutes et à tous, heureux de vous retrouver. La dernière fois, nous avons parcouru l'histoire de la psychologie et sa méthodologie scientifique. Aujourd'hui, nous partons vers le domaine qui connaît l'essor le plus vigoureux de la discipline : la **psychologie biologique (Biological Psychology)**.
+La psychologie biologique étudie la contribution du système nerveux à la pensée, aux émotions et au comportement. Ce chapitre examine la transmission nerveuse, les circuits cérébraux, la sensation et la perception.
 
-Si l'esprit humain est un logiciel d'une grande finesse, notre cerveau et notre système nerveux en sont le **matériel de pointe**. La tristesse, l'amour, jusqu'aux idées les plus créatives : tout cela résulte en réalité de minuscules réactions électrochimiques à l'intérieur du cerveau. Examinons aujourd'hui le fonctionnement de cette étonnante machine biologique.
+Comparer le cerveau à du matériel informatique peut aider à présenter sa structure, mais ne suffit pas à expliquer une personne. Il faut distinguer les mécanismes biologiques, l’expérience et le contexte.
 
 ---
 
@@ -32,43 +34,38 @@ Notre cerveau compte environ 86 milliards de **neurones (Neuron, cellules nerveu
 
 ### 🔄 Le mécanisme de la transmission nerveuse
 
-```mermaid
-graph LR
-    A[Dendrites : réception de l'information] --> B[Corps cellulaire : intégration]
-    B --> C[Axone : transmission]
-    C --> D{Synapse : la fente}
-    D -->|Libération de neurotransmetteurs| E[Récepteurs du neurone suivant]
+<StepFlow tone="neutral" items={[
+  { title: "Réception et intégration", body: "Les dendrites reçoivent les signaux, que le neurone intègre." },
+  { title: "Propagation du potentiel d’action", body: "Lorsque le seuil est atteint, un potentiel d’action se propage le long de l’axone." },
+  { title: "Libération des neurotransmetteurs", body: "Les terminaisons axonales libèrent les neurotransmetteurs dans la fente synaptique." },
+  { title: "Récepteurs et réponse", body: "La liaison aux récepteurs influence l’activité de la cellule réceptrice." },
+]} />
 
-    subgraph "Messagers chimiques"
-    F[Dopamine : plaisir/récompense]
-    G[Sérotonine : humeur/sommeil]
-    H[Adrénaline : tension/combat]
-    end
+Ce schéma simplifie la transmission par une synapse chimique. La réponse des récepteurs ne déclenche pas toujours un nouveau potentiel d’action. Il existe aussi des synapses électriques : ce parcours n’est donc pas universel.
 
-    F -.-> D
-    G -.-> D
-    H -.-> D
-```
+Les neurotransmetteurs participent à la transmission des signaux entre neurones, mais **la dépression ou l'addiction ne se résument pas à un manque ou à un excès d'une seule substance.** La dépression implique des facteurs génétiques, biologiques, environnementaux et psychologiques. L'addiction aux drogues fait intervenir le renforcement lié à la dopamine, mais aussi les modifications des circuits après un usage répété et des facteurs développementaux et socioculturels. Attribuer la maladie à un manque de volonté, ou affirmer qu'un « rééquilibrage chimique » suffit à la guérir, est trop simplificateur. Le traitement se décide avec un professionnel selon la situation individuelle ; ce texte ne remplace ni un diagnostic ni un traitement.
 
-Comme le dit la formule <mark><strong>« quand la sérotonine manque on déprime, quand la dopamine déborde on devient dépendant »</strong></mark>, un déséquilibre infime de ces substances suffit à transformer notre caractère et notre qualité de vie. Nous croyons volontiers pouvoir tout surmonter par la seule « force mentale », mais rétablir l'équilibre chimique du cerveau se révèle parfois un remède bien plus efficace.
+Sources : [présentation de la dépression par le NIMH](https://www.nimh.nih.gov/health/publications/depression), [résumé de la revue de Volkow et Morales sur l'addiction aux drogues (2015)](https://pubmed.ncbi.nlm.nih.gov/26276628/).
 
 ---
 
 ## 2. La carte du cerveau : fonctions et rôles par région
 
-Notre cerveau est un **système de division du travail**, où les rôles sont strictement répartis selon les régions. Ces régions coopèrent pourtant étroitement pour produire cette identité que nous appelons « moi ».
+Différentes régions sont associées à différentes fonctions, mais une fonction n'est pas attribuée exclusivement à une seule région. Ce tableau présente des exemples d'associations, et non un outil de diagnostic d'une lésion ou de ses conséquences.
 
 ### 🧠 Guide des principales régions cérébrales et de leurs fonctions
 
-| Région | Nom | Fonctions principales | Symptômes en cas de lésion |
-| :----------- | :------------- | :-------------------------------- | :-------------------------- |
-| **Cortex cérébral** | **Lobe frontal** | **Pensée supérieure**, planification, jugement, moralité | Troubles du contrôle des impulsions, changement de personnalité |
-| **Cortex cérébral** | **Lobe temporal** | Traitement auditif, stockage des souvenirs | Amnésie, incompréhension du langage |
-| **Système limbique** | **Amygdale** | **Réponses émotionnelles**, peur et colère | Émoussement affectif, incapacité à détecter le danger |
-| **Système limbique** | **Hippocampe** | Stockage à long terme des **souvenirs nouveaux** | Impossibilité d'apprendre des faits nouveaux |
-| **Cervelet** | **Cerebellum** | Équilibre, contrôle fin du mouvement | Démarche instable, gestes de précision impossibles |
+| Région | Exemples de fonctions associées |
+| --- | --- |
+| Cortex frontal | Planification et contrôle du comportement |
+| Cortex temporal | Traitement auditif et langagier |
+| Hippocampe | Formation de nouveaux souvenirs explicites |
+| Amygdale | Traitement émotionnel |
+| Cervelet | Coordination et équilibre |
 
-Ce qui distingue le plus l'humain des autres animaux, c'est <mark><strong>un lobe frontal à l'évolution fulgurante</strong></mark>. Si nous pouvons inhiber nos pulsions et planifier l'avenir, c'est entièrement grâce à lui.
+L'hippocampe n'est pas un entrepôt de tous les souvenirs. La formation de nouveaux souvenirs explicites doit être distinguée de l'ensemble des apprentissages. La [présentation des régions cérébrales par OpenStax](https://openstax.org/books/psychology-2e/pages/3-4-the-brain-and-spinal-cord) permet de vérifier ces fonctions de base.
+
+Le lobe frontal joue un rôle important dans le contrôle des impulsions et la planification, mais ces fonctions ne s'y déroulent pas de manière isolée. Il faut aussi considérer la coopération des circuits reliant différentes régions. L'[explication du NIH/NIAAA](https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/neuroscience-brain-addiction-and-recovery) distingue les fonctions exécutives préfrontales des circuits de récompense et de stress dans le contexte du trouble de l'usage de l'alcool.
 
 ---
 
@@ -88,19 +85,19 @@ Nous croyons que ce que nous voyons est la vérité. Or, du point de vue psychol
 
 ---
 
-## 4. La magie du cerveau : la plasticité (Neuroplasticity)
+## 4. La plasticité : changements liés à l'expérience et limites
 
-On a longtemps cru qu'à l'âge adulte les cellules cérébrales ne faisaient plus que décliner. Les neurosciences contemporaines ont pourtant démontré la **plasticité cérébrale**. Lorsque nous apprenons une compétence nouvelle ou réfléchissons en profondeur, les connexions physiques entre neurones (les synapses) se renforcent et de nouvelles cartes se dessinent.
+La **plasticité cérébrale** désigne la possibilité de changements des connexions et des fonctions du cerveau avec l'expérience. Observer une amélioration de l'apprentissage n'est toutefois pas mesurer une modification de synapses précises. Les résultats d'une tâche comportementale ne permettent pas d'affirmer que les synapses de tous les participants se sont renforcées.
 
-<mark><strong>« Notre cerveau peut continuer d'évoluer jusqu'à notre dernier jour. »</strong></mark> Invoquer l'âge pour renoncer est, du point de vue des neurosciences au moins, un mauvais argument.
+La plasticité ne signifie ni que l'âge n'a aucun effet, ni que tout le monde apprend à la même vitesse. Le [résumé de l'étude de Seidler (2007)](https://pubmed.ncbi.nlm.nih.gov/17602760/) rapporte un apprentissage plus rapide chez des participants âgés pratiquant plusieurs tâches motrices que chez les témoins pratiquant une seule tâche. Ce résultat ne garantit pas la récupération de toutes les capacités et ne permet pas de qualifier les difficultés individuelles de « prétextes ».
 
 ---
 
-## 5. En résumé : connaître le matériel change la vie
+## 5. Lire une affirmation neuroscientifique
 
-Nous avons étudié aujourd'hui le socle physique de l'esprit : le cerveau et les principes de la sensation. Savoir que notre esprit repose sur des bases biologiques nous rend humbles. Mais la plasticité cérébrale nous offre en même temps un espoir puissant : nous pouvons nous transformer nous-mêmes.
+Il faut distinguer le mécanisme proposé, ce qui a été mesuré et la portée du résultat. Une association entre une région cérébrale et une fonction ne permet pas d’établir une cause unique. Une amélioration dans une tâche ne permet pas, à elle seule, d’identifier le mécanisme cellulaire qui l’a produite.
 
-À cet instant même, votre cerveau traite ma voix et ce texte, et élargit sa propre carte. Retenez bien que **prendre soin de votre matériel (sommeil suffisant, exercice, stimulations nouvelles)** est la meilleure façon de prendre soin de votre esprit.
+Cette distinction permet d’examiner les données biologiques sans en faire un verdict sur la personnalité ni une promesse de traitement.
 
 ---
 
