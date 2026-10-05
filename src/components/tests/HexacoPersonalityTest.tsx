@@ -330,7 +330,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
           <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
           <p className="text-muted-foreground mt-1">{t.subtitle}</p>
         </div>
-        <div className="bg-card rounded-2xl border border-gray-200 p-5 text-left">
+        <div className="bg-card rounded-2xl border border-border p-5 text-left">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {DIM_ORDER.map(d => {
               const info = DIM_INFO[d];
@@ -365,7 +365,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {DIM_ORDER.map(d => <DimCard key={d} dimKey={d} />)}
         </div>
-        <div className="rounded-xl border border-gray-200 bg-card p-4 text-left">
+        <div className="rounded-xl border border-border bg-card p-4 text-left">
           <h2 className="text-sm font-bold text-gray-800">{t.synthesisTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.synthesis)}</p>
         </div>

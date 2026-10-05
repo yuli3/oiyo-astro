@@ -30,7 +30,7 @@ const copy = T[locale] ?? T.en;
 ---
 {lane && (
   <section class="mx-auto mt-6 max-w-2xl px-4 pb-8">
-    <a href={`${localePath(locale, '/tests')}#${lane.id}`} class="block rounded-lg border border-green-100 bg-card p-5 shadow-sm transition-colors hover:border-green-300 hover:bg-surface-subtle focus-visible:outline-2 focus-visible:outline-primary">
+    <a href={`${localePath(locale, '/tests')}#${lane.id}`} class="block rounded-lg border border-border bg-card p-5 shadow-sm transition-colors hover:border-green-300 hover:bg-surface-subtle focus-visible:outline-2 focus-visible:outline-primary">
       <p class="text-[11px] font-black uppercase tracking-widest text-primary">{copy.eyebrow}</p>
       <p class="mt-2 text-lg font-black text-foreground">{lane.question[locale] ?? lane.question.en}</p>
       <p class="mt-1 text-sm font-semibold text-primary">{copy.more} →</p>

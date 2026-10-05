@@ -477,7 +477,7 @@ export default function GrowthMindsetTest({ locale: localeProp }: Props) {
           description={`${tx.yourScore}: ${result.score} / ${maxScore}`}
         />
         <div className="flex gap-3">
-          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card">
+          <button onClick={restart} className="flex-1 rounded-xl border border-border py-3 text-sm font-medium text-gray-700 transition hover:bg-card">
             {tx.restart}
           </button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition" style={{ backgroundColor: tp.color }}>

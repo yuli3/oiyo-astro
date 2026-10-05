@@ -214,7 +214,7 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
           </section>
         ))}
       </div>
-      <p className="rounded-xl border border-green-100 bg-surface-subtle p-4 text-xs leading-relaxed text-green-800">{labels.tip}</p>
+      <p className="rounded-xl border border-border bg-surface-subtle p-4 text-xs leading-relaxed text-green-800">{labels.tip}</p>
       <button onClick={reset} className="w-full rounded-xl border bg-card px-4 py-3 text-sm font-bold hover:bg-accent">{labels.reset}</button>
     </div>
   )

@@ -218,7 +218,7 @@ export function CityField({
             onFocus={() => setOpen(true)}
             onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
             onKeyDown={onKeyDown}
-            className="h-12 w-full rounded-2xl border border-slate-200 bg-card pl-11 pr-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10"
+            className="h-12 w-full rounded-2xl border border-border bg-card pl-11 pr-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10"
           />
         </div>
       )}
@@ -229,7 +229,7 @@ export function CityField({
         <div
           id={listId}
           role="listbox"
-          className="absolute z-30 mt-1 max-h-64 w-full overflow-y-auto rounded-2xl border border-green-100 bg-card shadow-lg"
+          className="absolute z-30 mt-1 max-h-64 w-full overflow-y-auto rounded-2xl border border-border bg-card shadow-lg"
         >
           {query.trim().length < 2 && (
             <p className="px-3 pt-2 text-[11px] font-bold uppercase tracking-wider text-green-600">{c.popular}</p>

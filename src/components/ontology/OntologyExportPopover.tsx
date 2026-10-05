@@ -288,7 +288,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
     return (
       <div
         aria-busy="true"
-        className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5"
+        className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5"
       >
         <Skeleton className="h-24 rounded-2xl bg-surface-subtle" />
         <div className="mt-3 flex flex-wrap gap-1.5">
@@ -304,11 +304,11 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
   const topRecommendations = [...data.recommendations].sort((a, b) => b.matchScore - a.matchScore).slice(0, 3);
 
   return (
-    <div className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+    <div className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
       {/* PNG capture target — a compact visual summary, deliberately separate
           from the controls/raw-text preview below so the exported image
           isn't cluttered with buttons. */}
-      <div id="ontology-export-summary-card" className="mt-3 rounded-2xl border border-green-100 bg-gradient-to-b from-green-50 to-white p-4">
+      <div id="ontology-export-summary-card" className="mt-3 rounded-2xl border border-border bg-gradient-to-b from-green-50 to-white p-4">
         <p className="text-[10px] font-black uppercase tracking-wider text-green-500">OIYO · {data.exportedAt.slice(0, 10)}</p>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {data.signals.mbti && <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-black text-primary-foreground">{data.signals.mbti.type}</span>}

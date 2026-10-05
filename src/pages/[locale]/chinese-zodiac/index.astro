@@ -414,7 +414,7 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <ChineseZodiac client:load locale={locale} />
-    <figure class="mt-10 overflow-hidden rounded-2xl border border-green-100 bg-card">
+    <figure class="mt-10 overflow-hidden rounded-2xl border border-border bg-card">
       <img
         src="/images/mystic/chinese-zodiac-hero.webp"
         alt={
@@ -439,7 +439,7 @@ const faqJsonLd = {
         {ZODIAC_ORDER.map((animal) => (
           <a
             href={`/${locale}/chinese-zodiac/${animal}`}
-            class="flex flex-col items-center gap-1 rounded-xl border border-green-100 bg-card px-2 py-3 text-center hover:border-green-300 hover:bg-surface-subtle"
+            class="flex flex-col items-center gap-1 rounded-xl border border-border bg-card px-2 py-3 text-center hover:border-green-300 hover:bg-surface-subtle"
           >
             <img src={resultSymbolSrc("chinese-zodiac", animal)} alt="" width="40" height="40" loading="lazy" decoding="async" class="h-10 w-10 rounded-full object-cover" />
             <span class="text-xs font-bold text-green-900">{ZODIACS[animal].name[locale] ?? ZODIACS[animal].name.en}</span>
@@ -450,7 +450,7 @@ const faqJsonLd = {
 
     <RelatedTools locale={locale} tools={['fortunePeriodic', 'saju', 'natal', 'zodiac']} current="chineseZodiac" />
 
-    <section class="mt-10 border-t border-green-100 pt-8">
+    <section class="mt-10 border-t border-border pt-8">
       <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
     </section>
@@ -459,7 +459,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-foreground">{c.conceptTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.concepts.map((item) => (
-          <article class="rounded-xl border border-green-100 bg-card p-4">
+          <article class="rounded-xl border border-border bg-card p-4">
             <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-primary">{item.body}</p>
           </article>
@@ -481,7 +481,7 @@ const faqJsonLd = {
 
     <section class="mt-10">
       <h2 class="text-xl font-bold text-foreground">{c.faqTitle}</h2>
-      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-card">
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-border bg-card">
         {c.faqs.map((faq) => (
           <details class="group p-4">
             <summary class="cursor-pointer list-none font-semibold text-foreground">
@@ -497,7 +497,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-foreground">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-2">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-border bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-foreground">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-primary">{item.desc}</span>
           </a>

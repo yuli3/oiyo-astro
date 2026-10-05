@@ -121,7 +121,7 @@ export default function AstroCartoMap({
   }, [lines]);
 
   return (
-    <section className="mt-6 rounded-2xl border border-slate-200 bg-card p-4">
+    <section className="mt-6 rounded-2xl border border-border bg-card p-4">
       <h3 className="text-center text-sm font-bold text-green-900">{t.heading}</h3>
       <p className="mt-1 text-center text-xs text-muted-foreground">{t.hint}</p>
       <div className="mt-3 flex flex-wrap justify-center gap-1.5">
@@ -133,7 +133,7 @@ export default function AstroCartoMap({
               type="button"
               onClick={() => setOn((s) => ({ ...s, [l.body]: !s[l.body] }))}
               className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold ${
-                on[l.body] ? 'border-slate-800 text-foreground' : 'border-slate-200 text-slate-400'
+                on[l.body] ? 'border-slate-800 text-foreground' : 'border-border text-slate-400'
               }`}
               style={on[l.body] ? { borderColor: meta.color, color: meta.color } : undefined}
             >
@@ -149,7 +149,7 @@ export default function AstroCartoMap({
             type="button"
             onClick={() => setView(v)}
             className={`rounded-full border px-3 py-1 text-[11px] font-semibold ${
-              view === v ? 'border-green-800 bg-primary-strong text-white' : 'border-slate-200 text-slate-400'
+              view === v ? 'border-green-800 bg-primary-strong text-white' : 'border-border text-slate-400'
             }`}
           >
             {v === 'flat' ? t.mapView : t.globeView}

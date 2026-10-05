@@ -995,7 +995,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           )}
 
           {/* Reading map */}
-          <div className="bg-card rounded-2xl border border-gray-200 p-4">
+          <div className="bg-card rounded-2xl border border-border p-4">
             <div className="mb-4">
               <h2 className="text-sm font-semibold text-gray-800">{reading.readingMap}</h2>
               <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{reading.readingMapDesc}</p>
@@ -1011,7 +1011,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           </div>
 
           {/* Element balance */}
-          <div className="bg-card rounded-2xl border border-gray-200 p-4">
+          <div className="bg-card rounded-2xl border border-border p-4">
             <h2 className="text-sm font-semibold text-gray-700 mb-3">{reading.balanceTitle}</h2>
             <div className="space-y-2">
               {ELEMENT_ORDER.map(el => {
@@ -1059,7 +1059,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             const supportColor = ELEMENT_COLORS[support];
             const regulateColor = ELEMENT_COLORS[regulate];
             return (
-              <div className="bg-card rounded-2xl border border-gray-200 p-4">
+              <div className="bg-card rounded-2xl border border-border p-4">
                 <div className="mb-4">
                   <h2 className="text-sm font-semibold text-gray-800">{reading.relationTitle}</h2>
                   <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{reading.relationDesc}</p>
@@ -1158,7 +1158,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             );
           })()}
 
-          <div className="rounded-2xl border border-green-100 bg-surface-subtle p-4">
+          <div className="rounded-2xl border border-border bg-surface-subtle p-4">
             <h2 className="text-sm font-semibold text-green-800">{reading.profileChanges}</h2>
             <p className="mt-2 text-xs leading-relaxed text-green-900/75">{reading.profileChangesDesc}</p>
           </div>

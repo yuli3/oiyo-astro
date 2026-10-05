@@ -63,7 +63,7 @@ import { join, basename, dirname } from "node:path";
 // `text-green-800`·`text-green-600` 은 맞는 토큰이 없다. 라이브와 미리보기를
 // 나란히 놓고 검사 목록·MBTI 설명 글에서 차이가 없음을 확인. 6,053 → 4,195.
 const PALETTE_BUDGET = {
-  oiyo: 4195,
+  oiyo: 3687, // 2026-10-05 2차: 흰 바탕 → bg-card, 연한 테두리 → border-border (세운 승인, 눈에 띄는 변화). 호버가 같은 토큰인 줄은 남김.
   blog: 10764,
   wiki: 5370,
   game: 7428,

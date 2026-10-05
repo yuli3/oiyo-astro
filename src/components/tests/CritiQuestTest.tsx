@@ -503,7 +503,7 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
   if (phase === "result") {
     const r = t.results[level];
     return (
-      <div className="not-prose my-10 p-8 bg-card border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
+      <div className="not-prose my-10 p-8 bg-card border border-border rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
         <p className="text-xs font-bold text-rose-500 uppercase tracking-widest">{t.resultLabel}</p>
         <div className="text-6xl">{r.emoji}</div>
         <h3 className="text-3xl font-black text-foreground">{r.title}</h3>
@@ -526,7 +526,7 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
   }
 
   return (
-    <div className="not-prose my-10 p-8 bg-card border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto space-y-8">
+    <div className="not-prose my-10 p-8 bg-card border border-border rounded-3xl shadow-xl max-w-2xl mx-auto space-y-8">
       <div className="text-center">
         <h3 className="text-2xl font-black text-foreground">{t.title}</h3>
         <p className="text-sm text-muted-foreground mt-2">{t.description}</p>
@@ -543,7 +543,7 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
               <p className="font-semibold text-slate-800 leading-snug whitespace-pre-line">{i + 1}. {q.text}</p>
               <div className="grid grid-cols-1 gap-2">
                 {q.options.map((opt) => {
-                  let cls = "bg-card border-slate-200 text-slate-600 hover:bg-surface-subtle";
+                  let cls = "bg-card border-border text-slate-600 hover:bg-surface-subtle";
                   if (selected === opt.id) {
                     cls = isRevealed
                       ? opt.isCorrect

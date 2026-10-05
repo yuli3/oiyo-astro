@@ -125,7 +125,7 @@ const ABOUT_LABEL: Record<Locale, string> = {
         <!-- Row layout: left = system (name + status), right = chevron.
              2026-09-01: 이 주석이 오래 "right = definition link" 라고 적고 있었으나
              실제로 렌더되는 것은 셰브론뿐이다. 정의 링크는 아래 개념 절에 있다. -->
-        <ul class="divide-y divide-green-50 overflow-hidden rounded-2xl border border-green-100 bg-card">
+        <ul class="divide-y divide-green-50 overflow-hidden rounded-2xl border border-border bg-card">
           {group.items.map((s) => (
             <li data-sys={s.id} data-req={s.requires} data-testid={s.testId ?? ''}
                 data-planned={s.href ? '' : '1'}
@@ -186,7 +186,7 @@ const ABOUT_LABEL: Record<Locale, string> = {
       </div>
       <ul class="space-y-3">
         {ONTOLOGY_CONCEPTS.map((c) => (
-          <li class="rounded-2xl border border-green-100 bg-card p-4">
+          <li class="rounded-2xl border border-border bg-card p-4">
             <h3 class="flex items-center gap-2 text-sm font-black text-foreground">
               <span aria-hidden="true">{c.emoji}</span>{c.name[locale]}
             </h3>

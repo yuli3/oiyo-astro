@@ -202,7 +202,7 @@ export default function MindClearTest({ locale: localeProp }: Props) {
     const r = t.results[level];
     const barPct = Math.round(pct * 100);
     return (
-      <div className="not-prose my-10 p-8 bg-card border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
+      <div className="not-prose my-10 p-8 bg-card border border-border rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
         <p className="text-xs font-bold text-green-500 uppercase tracking-widest">{t.resultLabel}</p>
         <div className="text-6xl">{r.emoji}</div>
         <h3 className="text-3xl font-black text-foreground">{r.title}</h3>
@@ -215,7 +215,7 @@ export default function MindClearTest({ locale: localeProp }: Props) {
             <div className="h-3 bg-green-500 rounded-full transition-all" style={{ width: `${barPct}%` }} />
           </div>
         </div>
-        <div className="p-6 bg-surface-subtle rounded-2xl border border-green-100">
+        <div className="p-6 bg-surface-subtle rounded-2xl border border-border">
           <p className="text-slate-700 text-base leading-relaxed">{r.desc}</p>
         </div>
         <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-400 text-sm hover:underline">{t.retake}</button>

@@ -107,7 +107,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
   const q = !done ? COUNTRY_QUESTIONS[step] : null;
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-card p-5">
+    <div className="rounded-2xl border border-border bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{u("title")}</h1>
       {!done && step === 0 && (
         <p className="mt-2 leading-7 text-primary">{u("intro")}</p>
@@ -137,7 +137,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                 key={opt.id}
                 type="button"
                 onClick={() => pick(q.id, opt.id)}
-                className="flex w-full items-center gap-3 rounded-xl border border-green-100 bg-green-50/40 px-4 py-3 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-surface-subtle"
+                className="flex w-full items-center gap-3 rounded-xl border border-border bg-green-50/40 px-4 py-3 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-surface-subtle"
               >
                 <span className="text-lg">{opt.emoji}</span>
                 <span>{loc(opt.text as LC, locale)}</span>
@@ -167,7 +167,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
               {result.topCountries.slice(0, 3).map(({ code, data, match }) => (
                 <div
                   key={code}
-                  className="rounded-2xl border border-green-100 bg-card p-4"
+                  className="rounded-2xl border border-border bg-card p-4"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-foreground">

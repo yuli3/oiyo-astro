@@ -34,14 +34,14 @@ export default function YongsinSection({
   );
 
   return (
-    <div className="bg-card rounded-2xl border border-gray-200 p-5 space-y-5">
+    <div className="bg-card rounded-2xl border border-border p-5 space-y-5">
       <div>
         <h2 className="text-xl font-bold text-foreground">{tt(C.heading, locale)}</h2>
         <p className="mt-2 text-sm leading-relaxed text-gray-600">{tt(C.concept, locale)}</p>
       </div>
 
       {/* Strength badge */}
-      <div className="rounded-xl bg-surface-subtle border border-green-100 p-4">
+      <div className="rounded-xl bg-surface-subtle border border-border p-4">
         <div className="flex items-center gap-2">
           <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
             {tt(C.strengthLabel[strength.category], locale)}
@@ -88,7 +88,7 @@ export default function YongsinSection({
           <p className="text-xs font-semibold text-muted-foreground mb-1">{tt(C.labels.career, locale)}</p>
           <div className="flex flex-wrap gap-1.5">
             {attrs.careerKeys.map((k) => (
-              <span key={k} className="rounded-full bg-card border border-gray-200 px-2.5 py-0.5 text-xs text-gray-700">
+              <span key={k} className="rounded-full bg-card border border-border px-2.5 py-0.5 text-xs text-gray-700">
                 {tt(C.careerName[k], locale)}
               </span>
             ))}

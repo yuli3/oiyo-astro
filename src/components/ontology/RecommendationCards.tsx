@@ -158,7 +158,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
   // legitimately empty — show guidance instead of fabricating a match.
   if (hydrated && cards.length === 0) {
     return (
-      <div className="rounded-[28px] border border-green-100 bg-card p-5 text-center shadow-sm">
+      <div className="rounded-[28px] border border-border bg-card p-5 text-center shadow-sm">
         <p className="text-sm font-black text-green-900">{texts["recommendations.cards.emptyTitle"] ?? EMPTY_COPY[lang].title}</p>
         <p className="mt-1 text-xs text-green-600">{texts["recommendations.cards.emptyDescription"] ?? EMPTY_COPY[lang].description}</p>
       </div>
@@ -166,7 +166,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
   }
 
   if (!texts["recommendations.cards.matchLabel"]) {
-    return <div className="h-24 rounded-[28px] border border-green-100 bg-card" aria-busy="true" />;
+    return <div className="h-24 rounded-[28px] border border-border bg-card" aria-busy="true" />;
   }
 
   return (
@@ -175,7 +175,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
         const { rec } = entry;
         const isOpen = !!openWhy[rec.id];
         return (
-          <div key={rec.id} className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+          <div key={rec.id} className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-[10px] font-black uppercase tracking-wider text-green-500">

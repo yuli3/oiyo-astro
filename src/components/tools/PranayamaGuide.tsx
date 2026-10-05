@@ -316,7 +316,7 @@ export default function PranayamaGuide({ locale }: Props) {
     : phase === 'exhale' ? tt(technique.exhaleCue, locale) : undefined;
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-gradient-to-br from-green-50 to-green-50 p-5">
+    <div className="rounded-2xl border border-border bg-gradient-to-br from-green-50 to-green-50 p-5">
       <h1 className="text-2xl font-bold text-foreground">{u('title')}</h1>
 
       {/* Technique selector */}

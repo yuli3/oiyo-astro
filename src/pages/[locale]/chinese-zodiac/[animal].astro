@@ -271,13 +271,13 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
       </a>
     </div>
 
-    <section class="mt-10 border-t border-green-100 pt-8">
+    <section class="mt-10 border-t border-border pt-8">
       <h2 class="text-lg font-bold text-foreground">{c.otherAnimalsTitle}</h2>
       <div class="mt-4 grid grid-cols-4 gap-2">
         {otherAnimals.map((a) => (
           <a
             href={localePath(`/chinese-zodiac/${a}`)}
-            class="flex flex-col items-center gap-1 rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
+            class="flex flex-col items-center gap-1 rounded-lg border border-border bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
           >
             <img src={resultSymbolSrc("chinese-zodiac", a)} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-7 w-7 rounded-full object-cover" />
             {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}

@@ -168,7 +168,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
   };
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-card p-5">
+    <div className="rounded-2xl border border-border bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-primary">{t.subtitle}</p>
       <p className="mt-1 text-sm text-green-600/80">{t.pickHint}</p>

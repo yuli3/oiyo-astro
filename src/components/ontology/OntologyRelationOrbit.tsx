@@ -147,7 +147,7 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
               className="absolute flex w-16 -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 text-center transition-all duration-300"
               style={{ left: x, top: y }}
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-green-100 bg-card text-lg shadow-sm transition hover:border-green-400 hover:shadow">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-lg shadow-sm transition hover:border-green-400 hover:shadow">
                 {node?.icon ?? "✨"}
               </span>
               <span className="line-clamp-2 text-[10px] font-bold leading-tight text-green-800">
@@ -160,7 +160,7 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
   );
 
   return (
-    <div id="relation-orbit" className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+    <div id="relation-orbit" className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
       {webgl && !reducedMotion ? (
         <Suspense fallback={flatStage}>
           <OntologyOrbitScene

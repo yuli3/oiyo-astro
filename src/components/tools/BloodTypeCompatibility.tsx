@@ -692,7 +692,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
                     className={`py-2 rounded-lg text-sm font-bold border transition-all ${
                       type1 === t
                         ? "bg-red-500 text-white border-red-500"
-                        : "bg-card text-gray-700 border-gray-200 hover:border-red-300"
+                        : "bg-card text-gray-700 border-border hover:border-red-300"
                     }`}
                   >
                     {ui.types[t]}
@@ -711,7 +711,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
                     className={`py-2 rounded-lg text-sm font-bold border transition-all ${
                       type2 === t
                         ? "bg-green-500 text-white border-green-500"
-                        : "bg-card text-gray-700 border-gray-200 hover:border-green-300"
+                        : "bg-card text-gray-700 border-border hover:border-green-300"
                     }`}
                   >
                     {ui.types[t]}
@@ -818,7 +818,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
 
           <button
             onClick={reset}
-            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-card transition-colors"
+            className="w-full py-3 rounded-xl border border-border text-gray-600 font-medium hover:bg-card transition-colors"
           >
             {ui.resetBtn}
           </button>

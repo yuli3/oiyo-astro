@@ -548,7 +548,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
                 </button>
                 {/* Interpretation */}
                 {isFlipped && (
-                  <div className="bg-card rounded-xl border border-gray-200 p-3 space-y-1.5">
+                  <div className="bg-card rounded-xl border border-border p-3 space-y-1.5">
                     <p className="text-[10px] font-semibold text-muted-foreground">{dc.card.keywords[locale]}</p>
                     <p className="text-xs text-gray-700 leading-relaxed">
                       {dc.reversed ? dc.card.reversed[locale] : dc.card.upright[locale]}

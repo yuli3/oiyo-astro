@@ -463,7 +463,7 @@ export default function SajuFortune({ locale }: Props) {
       </div>
 
       {!result ? (
-        <div className="bg-card border border-gray-200 rounded-2xl p-6 space-y-4">
+        <div className="bg-card border border-border rounded-2xl p-6 space-y-4">
           <label className="block text-sm font-medium text-gray-700">{ui.birthYear}</label>
           <select
             value={year ?? ""}

@@ -112,14 +112,14 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
   const removeAcct = (id: number) => setAccounts((p) => (p.length > 1 ? p.filter((a) => a.id !== id) : p));
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-card p-5">
+    <div className="rounded-2xl border border-border bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{t('title')}</h1>
       <p className="mt-3 leading-7 text-green-800">{t('intro')}</p>
 
       {/* Accounts */}
       <div className="mt-6 space-y-3">
         {accounts.map((a, i) => (
-          <div key={a.id} className="rounded-xl border border-green-100 bg-green-50/50 p-3">
+          <div key={a.id} className="rounded-xl border border-border bg-green-50/50 p-3">
             <div className="mb-2 flex items-center justify-between">
               <span className="text-sm font-semibold text-green-800">{t('account')} {i + 1}</span>
               <button type="button" onClick={() => removeAcct(a.id)} className="text-xs text-green-400 hover:text-red-500">{t('remove')}</button>
@@ -167,7 +167,7 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
         {showPeak ? '▾ ' : '▸ '}{t('peakTitle')}
       </button>
       {showPeak && (
-        <div className="mt-3 rounded-2xl border border-green-100 bg-green-50/40 p-4">
+        <div className="mt-3 rounded-2xl border border-border bg-green-50/40 p-4">
           <p className="text-xs leading-5 text-primary">{t('peakSub')}</p>
           <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
             {months.map((m, i) => (

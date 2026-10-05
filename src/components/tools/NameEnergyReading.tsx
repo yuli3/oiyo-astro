@@ -198,7 +198,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
         </p>
       ) : (
         <>
-          <section className="rounded-[28px] border border-green-100 bg-card p-5">
+          <section className="rounded-[28px] border border-border bg-card p-5">
             <h2 className="text-sm font-black text-foreground">{ui.soundTitle}</h2>
             <p className="mt-1 text-xs leading-5 text-muted-foreground">{ui.soundSub}</p>
 
@@ -213,7 +213,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
             </div>
           </section>
 
-          <section className="rounded-[28px] border border-green-100 bg-card p-5">
+          <section className="rounded-[28px] border border-border bg-card p-5">
             <h2 className="text-sm font-black text-foreground">{ui.fillTitle}</h2>
             <p className="mt-1 text-xs leading-5 text-muted-foreground">{ui.fillSub}</p>
 

@@ -202,7 +202,7 @@ const breadcrumbJsonLd = {
       <h2 class="text-xl font-bold text-foreground">{c.cognitiveStackTitle}</h2>
       <div class="mt-4 grid gap-3">
         {cognitiveStack.map((f) => (
-          <article class="rounded-xl border border-green-100 bg-card p-4">
+          <article class="rounded-xl border border-border bg-card p-4">
             <p class="text-[10px] font-bold uppercase tracking-widest text-green-600">{f.role}</p>
             <h3 class="mt-1 font-semibold text-foreground">{f.code} — {f.name}</h3>
             <p class="mt-2 text-sm leading-6 text-primary">{f.narrative}</p>
@@ -248,7 +248,7 @@ const breadcrumbJsonLd = {
     {lifeKo && (
       <section class="mt-10">
         <h2 class="text-xl font-bold text-foreground">직업 적성</h2>
-        <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
+        <dl class="mt-4 grid gap-2 rounded-xl border border-border bg-green-50/60 p-4 text-sm">
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">대표 직군</dt><dd class="text-green-800">{lifeKo.career.keywords}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">살아나는 환경</dt><dd class="text-green-800">{lifeKo.career.thrives}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">시드는 환경</dt><dd class="text-green-800">{lifeKo.career.wilts}</dd></div>
@@ -269,7 +269,7 @@ const breadcrumbJsonLd = {
     {lifeKo && (
       <section class="mt-10">
         <h2 class="text-xl font-bold text-foreground">관계와 연애</h2>
-        <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
+        <dl class="mt-4 grid gap-2 rounded-xl border border-border bg-green-50/60 p-4 text-sm">
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">사랑의 언어</dt><dd class="text-green-800">{lifeKo.relationship.loveLanguage}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">설레는 순간</dt><dd class="text-green-800">{lifeKo.relationship.spark}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">식는 순간</dt><dd class="text-green-800">{lifeKo.relationship.cool}</dd></div>
@@ -297,7 +297,7 @@ const breadcrumbJsonLd = {
     {lifeKo && (
       <section class="mt-10">
         <h2 class="text-xl font-bold text-foreground">공부법</h2>
-        <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
+        <dl class="mt-4 grid gap-2 rounded-xl border border-border bg-green-50/60 p-4 text-sm">
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">맞는 리듬</dt><dd class="text-green-800">{lifeKo.study.rhythm}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">집중을 돕는 것</dt><dd class="text-green-800">{lifeKo.study.helps}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">피해야 할 방식</dt><dd class="text-green-800">{lifeKo.study.avoid}</dd></div>
@@ -328,13 +328,13 @@ const breadcrumbJsonLd = {
       </a>
     </div>
 
-    <section class="mt-10 border-t border-green-100 pt-8">
+    <section class="mt-10 border-t border-border pt-8">
       <h2 class="text-lg font-bold text-foreground">{c.otherTypesTitle}</h2>
       <div class="mt-4 grid grid-cols-4 gap-2">
         {otherTypes.map((ot) => (
           <a
             href={localePath(`/mbti/${ot.toLowerCase()}`)}
-            class="rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
+            class="rounded-lg border border-border bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
           >
             {TYPE_PROFILES[ot as keyof typeof TYPE_PROFILES].emoji} {ot}
           </a>

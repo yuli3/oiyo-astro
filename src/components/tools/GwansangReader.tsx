@@ -134,7 +134,7 @@ export default function GwansangReader({ locale: lp = 'ko' }: Props) {
               )
             })}
           </div>
-          <div className="rounded-xl bg-surface-subtle border border-green-100 p-4">
+          <div className="rounded-xl bg-surface-subtle border border-border p-4">
             <p className="text-sm text-green-900 leading-relaxed">{t.summary}</p>
           </div>
           <button onClick={() => { setDone(false); setSel({}) }}

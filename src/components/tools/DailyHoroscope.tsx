@@ -812,7 +812,7 @@ function CategoryCard({ emoji, label, score, text }: { emoji: string; label: str
       ? "from-amber-50 to-yellow-50 border-amber-200"
       : score >= 3
       ? "from-blue-50 to-sky-50 border-blue-200"
-      : "from-gray-50 to-slate-50 border-gray-200";
+      : "from-gray-50 to-slate-50 border-border";
 
   return (
     <div className={`rounded-2xl border bg-gradient-to-br p-4 ${bg}`}>
@@ -865,7 +865,7 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
 
       {/* Sign selector */}
       {!result ? (
-        <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-4">
+        <div className="rounded-2xl border border-border bg-card p-5 space-y-4">
           <p className="text-sm font-medium text-gray-700">{ui.selectLabel}</p>
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
             {SIGNS.map((s) => (
@@ -875,7 +875,7 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
                 className={`flex flex-col items-center rounded-xl border py-3 px-2 transition-all hover:border-green-400 hover:bg-surface-subtle ${
                   selected === s
                     ? "border-green-500 bg-surface-subtle"
-                    : "border-gray-200 bg-card"
+                    : "border-border bg-card"
                 }`}
               >
                 <span className="text-2xl">{SIGN_EMOJI[s]}</span>

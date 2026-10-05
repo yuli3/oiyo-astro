@@ -281,7 +281,7 @@ const faqJsonLd = {
       ))}
     </div>
 
-    <div class="mt-10 rounded-2xl border-2 border-green-100 bg-surface-subtle p-5">
+    <div class="mt-10 rounded-2xl border-2 border-border bg-surface-subtle p-5">
       <p class="mb-3 text-sm font-bold text-green-800">{txt({ ko: '지금 바로 시작하기', en: 'Start Right Now', ja: '今すぐ始める', zh: '现在就开始', fr: 'Commencer maintenant', es: 'Empieza ahora mismo' })}</p>
       <div class="flex flex-wrap gap-2">
         {links.map(({ href, label }) => (
@@ -294,7 +294,7 @@ const faqJsonLd = {
 
     <RelatedTools locale={locale} tools={['mbti', 'big5', 'attachment']} current="habit-builder-guide" />
 
-    <section class="mt-8 border-t border-green-100 pt-8">
+    <section class="mt-8 border-t border-border pt-8">
       <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
     </section>
@@ -303,7 +303,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-foreground">{c.conceptTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.concepts.map((item) => (
-          <article class="rounded-xl border border-green-100 bg-card p-4">
+          <article class="rounded-xl border border-border bg-card p-4">
             <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
@@ -325,7 +325,7 @@ const faqJsonLd = {
 
     <section class="mt-10">
       <h2 class="text-xl font-bold text-foreground">{c.faqTitle}</h2>
-      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-card">
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-border bg-card">
         {c.faqs.map((faq) => (
           <details class="group p-4">
             <summary class="cursor-pointer list-none font-semibold text-foreground">{faq.question}</summary>
@@ -339,7 +339,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-foreground">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-border bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-foreground">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>

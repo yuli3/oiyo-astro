@@ -715,7 +715,7 @@ export default function ZodiacPersonality({ locale }: Props) {
         </div>
 
         {/* Birthday lookup */}
-        <div className="rounded-xl border border-gray-200 p-4 space-y-3">
+        <div className="rounded-xl border border-border p-4 space-y-3">
           <button
             onClick={() => setShowBirthday((v) => !v)}
             className="text-sm text-green-600 font-medium hover:underline"
@@ -790,7 +790,7 @@ export default function ZodiacPersonality({ locale }: Props) {
       </div>
 
       {/* Traits */}
-      <div className="rounded-xl border border-gray-200 p-4">
+      <div className="rounded-xl border border-border p-4">
         <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.traitsLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {z.traits[locale].map((trait) => (
@@ -825,7 +825,7 @@ export default function ZodiacPersonality({ locale }: Props) {
       </div>
 
       {/* Compatibility */}
-      <div className="rounded-xl border border-gray-200 p-4 space-y-3">
+      <div className="rounded-xl border border-border p-4 space-y-3">
         <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{ui.compatibilityLabel}</h2>
         <div>
           <p className="text-xs text-muted-foreground mb-1">{compatLabel.best}</p>
@@ -848,7 +848,7 @@ export default function ZodiacPersonality({ locale }: Props) {
               <button
                 key={k}
                 onClick={() => setSelected(k)}
-                className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-surface-subtle text-gray-600 border border-gray-200 hover:shadow-sm transition-all"
+                className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-surface-subtle text-gray-600 border border-border hover:shadow-sm transition-all"
               >
                 <ResultSymbol id="western-zodiac" variant={k} fallback={ZODIAC[k].emoji} className="mr-1 inline-block h-5 w-5 align-[-4px]" /> {ZODIAC[k].name[locale]}
               </button>

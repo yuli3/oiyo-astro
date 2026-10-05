@@ -575,7 +575,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
             </div>
 
             {/* Tips */}
-            <div className="rounded-2xl border border-gray-200 bg-card p-5">
+            <div className="rounded-2xl border border-border bg-card p-5">
               <h3 className="font-semibold text-foreground mb-3">
                 {t.tipsLabel}
               </h3>

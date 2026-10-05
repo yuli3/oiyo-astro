@@ -315,7 +315,7 @@ export default function FocusBlockerTest({ locale: localeProp }: Props) {
         </div>
 
         <div className="flex gap-3">
-          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card">{tx.restart}</button>
+          <button onClick={restart} className="flex-1 rounded-xl border border-border py-3 text-sm font-medium text-gray-700 transition hover:bg-card">{tx.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition bg-orange-500 hover:bg-orange-600">{copied ? tx.copied : tx.share}</button>
         </div>
         <ShareResultButton locale={localeProp ?? 'ko'} heading={tx.title} resultTitle={categoryInfo[sorted[0]][locale].title} />

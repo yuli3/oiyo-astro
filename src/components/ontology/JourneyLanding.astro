@@ -72,7 +72,7 @@ const faqJsonLd = JSON.stringify({
     <h2 class="text-xl font-black text-foreground mb-4">{c.concepts.heading}</h2>
     <div class="grid gap-4 sm:grid-cols-2">
       {c.concepts.items.map((it) => (
-        <div class="rounded-2xl border border-green-100 bg-green-50/40 p-5">
+        <div class="rounded-2xl border border-border bg-green-50/40 p-5">
           <h3 class="font-bold text-green-900 mb-1.5">{it.title}</h3>
           <p class="text-sm text-gray-600 leading-relaxed">{it.body}</p>
         </div>
@@ -166,7 +166,7 @@ const faqJsonLd = JSON.stringify({
     <h2 class="text-xl font-black text-foreground mb-4">{c.faq.heading}</h2>
     <div class="space-y-3">
       {c.faq.items.map((f) => (
-        <details class="group rounded-2xl border border-green-100 bg-card p-4">
+        <details class="group rounded-2xl border border-border bg-card p-4">
           <summary class="cursor-pointer font-bold text-foreground list-none flex items-center justify-between gap-2">
             {f.q}
             <span class="text-green-400 transition-transform group-open:rotate-45" aria-hidden="true">＋</span>

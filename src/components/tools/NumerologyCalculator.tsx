@@ -867,7 +867,7 @@ export default function NumerologyCalculator({ locale }: Props) {
       </div>
 
       {/* Inputs */}
-      <div className="rounded-xl border border-gray-200 p-4 space-y-4">
+      <div className="rounded-xl border border-border p-4 space-y-4">
         <ProfileNameField
           label={ui.nameLabel}
           locale={locale}

@@ -109,7 +109,7 @@ export default function LottoWinSimulator({ locale }: Props) {
   const owned = catalog.filter((it) => (cart[it.name] ?? 0) > 0);
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-card p-5">
+    <div className="rounded-2xl border border-border bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-primary">{t.subtitle}</p>
 
@@ -145,7 +145,7 @@ export default function LottoWinSimulator({ locale }: Props) {
           const cnt = cart[it.name] ?? 0;
           const cant = balance < it.price;
           return (
-            <div key={it.name} className="flex items-center justify-between rounded-xl border border-green-100 bg-card p-3">
+            <div key={it.name} className="flex items-center justify-between rounded-xl border border-border bg-card p-3">
               <div className="min-w-0">
                 <div className="truncate font-semibold text-foreground">{it.emoji} {it.name}</div>
                 <div className="text-xs text-green-600">{fmt(it.price)}{currency}{cnt > 0 ? ` · ×${cnt}` : ''}</div>

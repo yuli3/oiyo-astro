@@ -464,7 +464,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
             </div>
             <dl className="mt-3 grid gap-2 sm:grid-cols-3">
               {chartData.map((item) => (
-                <div key={item.dimension} className="rounded-lg border border-gray-200 bg-card px-3 py-2">
+                <div key={item.dimension} className="rounded-lg border border-border bg-card px-3 py-2">
                   <dt className="text-xs font-medium text-gray-600">{item.name}</dt>
                   <dd className="mt-1 font-bold text-foreground">
                     {item.value} {rt.outOf} <span className="text-xs font-medium text-muted-foreground">({item.percent}%)</span>
@@ -483,7 +483,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         )}
 
         {info && !profile?.isClose && (
-        <div className="bg-card border border-gray-200 rounded-xl p-5 space-y-4">
+        <div className="bg-card border border-border rounded-xl p-5 space-y-4">
           <p className="rounded-lg bg-card p-3 text-sm leading-6 text-slate-700">{rt.clearProfileNote}</p>
           <p className="text-gray-700 leading-relaxed">{info.description[locale]}</p>
 

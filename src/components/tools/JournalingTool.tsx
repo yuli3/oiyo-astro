@@ -139,7 +139,7 @@ export default function JournalingTool({ locale }: Props) {
   const remove = (i: number) => persist(entries.filter((_, idx) => idx !== i));
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-card p-5">
+    <div className="rounded-2xl border border-border bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-primary">{t.subtitle}</p>
 
@@ -176,14 +176,14 @@ export default function JournalingTool({ locale }: Props) {
         </button>
       </div>
 
-      <div className="mt-7 border-t border-green-100 pt-5">
+      <div className="mt-7 border-t border-border pt-5">
         <h2 className="text-sm font-bold uppercase tracking-wider text-green-800">{t.past}</h2>
         {entries.length === 0 ? (
           <p className="mt-3 text-sm text-green-600">{t.empty}</p>
         ) : (
           <ul className="mt-3 space-y-3">
             {entries.map((e, i) => (
-              <li key={`${e.date}-${i}`} className="rounded-xl border border-green-100 bg-green-50/50 p-4">
+              <li key={`${e.date}-${i}`} className="rounded-xl border border-border bg-green-50/50 p-4">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold text-primary">{e.date}</span>
                   <button

@@ -141,7 +141,7 @@ export default function TaxCalendar({ locale }: Props) {
             key={p}
             onClick={() => setPayer(p)}
             className={`rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors ${
-              payer === p ? 'border-green-600 bg-primary text-primary-foreground' : 'border-gray-200 bg-card text-gray-600 hover:border-green-300'
+              payer === p ? 'border-green-600 bg-primary text-primary-foreground' : 'border-border bg-card text-gray-600 hover:border-green-300'
             }`}
           >
             {t.payer[p]}
@@ -166,7 +166,7 @@ export default function TaxCalendar({ locale }: Props) {
           const mo = idx + 1;
           const evs = visible.filter((e) => e.month === mo);
           return (
-            <div key={mo} className={`flex gap-3 rounded-xl border p-2.5 ${evs.length ? 'border-gray-200 bg-card' : 'border-transparent bg-card/50'}`}>
+            <div key={mo} className={`flex gap-3 rounded-xl border p-2.5 ${evs.length ? 'border-border bg-card' : 'border-transparent bg-card/50'}`}>
               <div className="w-12 shrink-0 pt-0.5 text-sm font-black text-gray-400">{mLabel}</div>
               <div className="flex flex-1 flex-wrap gap-2">
                 {evs.length === 0 && <span className="text-xs text-gray-300">—</span>}

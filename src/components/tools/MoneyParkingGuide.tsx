@@ -78,7 +78,7 @@ export default function MoneyParkingGuide({ locale }: Props) {
   const shown = goal ? vehicles.filter((v) => v.goals.includes(goal)) : vehicles;
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-card p-5">
+    <div className="rounded-2xl border border-border bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-primary">{t.subtitle}</p>
 
@@ -97,7 +97,7 @@ export default function MoneyParkingGuide({ locale }: Props) {
       {goal && <p className="mt-4 text-sm font-semibold text-green-800">{t.recFor}:</p>}
       <div className="mt-3 grid gap-3">
         {shown.map((v) => (
-          <div key={v.key} className="rounded-xl border border-green-100 bg-card p-4">
+          <div key={v.key} className="rounded-xl border border-border bg-card p-4">
             <div className="font-bold text-foreground">{v.name}</div>
             <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-xs text-green-600">
               <span>{t.liquidity}: <b className="text-green-800">{v.liquidity}</b></span>

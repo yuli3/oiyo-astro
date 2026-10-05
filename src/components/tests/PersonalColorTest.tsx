@@ -912,7 +912,7 @@ const SEASONS: Record<Season, SeasonData> = {
     emoji: "❄️",
     gradient: "from-slate-100 to-indigo-50",
     headerBg: "bg-gradient-to-br from-slate-200 to-indigo-100",
-    badge: "bg-surface-subtle text-slate-700 border-slate-200",
+    badge: "bg-surface-subtle text-slate-700 border-border",
     name: { ko: "겨울 쿨톤", en: "Winter Cool", ja: "ウィンター クール", fr: "Hiver Froid", es: "Invierno Frío", zh: "冬冷色" },
     subtitle: {
       ko: "선명하고 강렬한 쿨톤 — 세련되고 카리스마 있는 겨울 아우라",
@@ -1103,17 +1103,17 @@ export default function PersonalColorTest({ locale }: Props) {
       </div>
 
       {/* Tone description */}
-      <div className="rounded-xl border border-gray-200 p-4">
+      <div className="rounded-xl border border-border p-4">
         <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">{ui.toneLabel}</h2>
         <p className="text-sm text-gray-700 leading-relaxed">{sd.tone[locale]}</p>
       </div>
 
       {/* Best colors */}
-      <div className="rounded-xl border border-gray-200 p-4">
+      <div className="rounded-xl border border-border p-4">
         <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.bestColorsLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {sd.bestColors.map((c) => (
-            <div key={c.hex} className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-card border border-gray-200">
+            <div key={c.hex} className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-card border border-border">
               <div className="w-4 h-4 rounded-full border border-gray-300" style={{ backgroundColor: c.hex }} />
               <span className="text-xs text-gray-700">{c.name[locale]}</span>
             </div>
@@ -1122,11 +1122,11 @@ export default function PersonalColorTest({ locale }: Props) {
       </div>
 
       {/* Avoid colors */}
-      <div className="rounded-xl border border-gray-200 p-4">
+      <div className="rounded-xl border border-border p-4">
         <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.avoidColorsLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {sd.avoidColors.map((c) => (
-            <div key={c.hex} className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-card border border-gray-200 opacity-60">
+            <div key={c.hex} className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-card border border-border opacity-60">
               <div className="w-4 h-4 rounded-full border border-gray-300 relative overflow-hidden" style={{ backgroundColor: c.hex }}>
                 <div className="absolute inset-0 flex items-center justify-center text-white text-xs font-bold">✕</div>
               </div>
@@ -1138,7 +1138,7 @@ export default function PersonalColorTest({ locale }: Props) {
 
       {/* Makeup & Fashion */}
       <div className="grid grid-cols-2 gap-3">
-        <div className="rounded-xl border border-gray-200 p-4">
+        <div className="rounded-xl border border-border p-4">
           <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">💄 {ui.makeupLabel}</h2>
           <ul className="space-y-1">
             {sd.makeup[locale].map((m) => (
@@ -1146,7 +1146,7 @@ export default function PersonalColorTest({ locale }: Props) {
             ))}
           </ul>
         </div>
-        <div className="rounded-xl border border-gray-200 p-4">
+        <div className="rounded-xl border border-border p-4">
           <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">👗 {ui.fashionLabel}</h2>
           <ul className="space-y-1">
             {sd.fashion[locale].map((f) => (
@@ -1157,11 +1157,11 @@ export default function PersonalColorTest({ locale }: Props) {
       </div>
 
       {/* Celebs */}
-      <div className="rounded-xl border border-gray-200 p-4">
+      <div className="rounded-xl border border-border p-4">
         <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.celebsLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {sd.celebs.map((c) => (
-            <span key={c} className="px-3 py-1 rounded-full text-xs bg-surface-subtle text-gray-700 border border-gray-200">{c}</span>
+            <span key={c} className="px-3 py-1 rounded-full text-xs bg-surface-subtle text-gray-700 border border-border">{c}</span>
           ))}
         </div>
       </div>

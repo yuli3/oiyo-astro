@@ -357,7 +357,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
 
   if (showResult && (isComplete || forcedType) && profile) {
     return (
-      <section className="not-prose rounded-2xl border border-slate-200 bg-card p-6 shadow-sm md:p-8">
+      <section className="not-prose rounded-2xl border border-border bg-card p-6 shadow-sm md:p-8">
         <div className="text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-blue-600">{labels.resultLabel}</p>
           <ResultSymbol id="mbti" variant={mbtiType} fallback={profile.emoji} className="mx-auto mt-4 h-28 w-28" />
@@ -384,12 +384,12 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
         </div>
         <p className="mt-6 rounded-xl bg-blue-50 p-4 text-sm leading-6 text-blue-950">{labels.note}</p>
 
-        <section className="mt-8 border-t border-slate-200 pt-6">
+        <section className="mt-8 border-t border-border pt-6">
           <h3 className="text-xl font-black text-foreground">{labels.deepTitle}</h3>
           <p className="mt-3 leading-7 text-slate-700">{sl(deep.typeNarrative, l)}</p>
           <p className="mt-3 leading-7 text-slate-600">{sl(deep.worldview, l)}</p>
 
-          <details className="group mt-5 rounded-xl border border-slate-200 p-4">
+          <details className="group mt-5 rounded-xl border border-border p-4">
             <summary className="cursor-pointer list-none font-bold text-foreground">{labels.strengthsTitle} / {labels.challengesTitle}</summary>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <ul className="space-y-2 text-sm leading-6 text-slate-700">
@@ -401,7 +401,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
             </div>
           </details>
 
-          <details className="group mt-3 rounded-xl border border-slate-200 p-4">
+          <details className="group mt-3 rounded-xl border border-border p-4">
             <summary className="cursor-pointer list-none font-bold text-foreground">{labels.cognitiveStackTitle}</summary>
             <div className="mt-4 grid gap-3 sm:grid-cols-4">
               {([
@@ -419,7 +419,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
             </div>
           </details>
 
-          <details className="group mt-3 rounded-xl border border-slate-200 p-4">
+          <details className="group mt-3 rounded-xl border border-border p-4">
             <summary className="cursor-pointer list-none font-bold text-foreground">{labels.growthTitle} / {labels.lifeTitle}</summary>
             <p className="mt-3 text-sm leading-6 text-slate-700">{sl(deep.growthPath, l)}</p>
             <p className="mt-3 text-sm leading-6 text-slate-700">{sl(deep.lifeImplications, l)}</p>

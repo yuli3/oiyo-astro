@@ -455,7 +455,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
           </div>
 
           {/* Strengths */}
-          <div className="bg-surface-subtle border border-green-100 rounded-2xl p-4">
+          <div className="bg-surface-subtle border border-border rounded-2xl p-4">
             <p className="text-xs font-semibold text-primary mb-2">✅ {ui.strengthLabel}</p>
             {result.strengths.map((s, i) => (
               <p key={i} className="text-sm text-green-800">{s}</p>
@@ -471,14 +471,14 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
           </div>
 
           {/* Advice */}
-          <div className="bg-surface-subtle border border-green-100 rounded-2xl p-4">
+          <div className="bg-surface-subtle border border-border rounded-2xl p-4">
             <p className="text-xs font-semibold text-green-600 mb-1">💡 {ui.adviceLabel}</p>
             <p className="text-sm text-green-800 italic">"{result.advice}"</p>
           </div>
 
           <button
             onClick={reset}
-            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-card transition-colors"
+            className="w-full py-3 rounded-xl border border-border text-gray-600 font-medium hover:bg-card transition-colors"
           >
             {ui.resetBtn}
           </button>

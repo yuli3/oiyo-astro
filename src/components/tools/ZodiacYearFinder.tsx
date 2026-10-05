@@ -262,7 +262,7 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
       <h2 className="text-2xl font-bold text-foreground">{t.title}</h2>
       <p className="mt-2 leading-7 text-slate-600">{t.subtitle}</p>
 
-      <div className="mt-6 rounded-2xl border border-slate-200 bg-card p-5">
+      <div className="mt-6 rounded-2xl border border-border bg-card p-5">
         <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
           {t.birth}
         </label>
@@ -308,7 +308,7 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
 
           <table className="mt-6 w-full text-sm">
             <thead>
-              <tr className="border-b border-slate-200 text-left text-muted-foreground">
+              <tr className="border-b border-border text-left text-muted-foreground">
                 <th className="py-2">{t.colConv}</th>
                 <th className="py-2 text-right">{t.colYear}</th>
                 <th className="py-2 text-right">{t.colSexagenary}</th>

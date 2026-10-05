@@ -146,10 +146,10 @@ export function OntologyBirthInput({
   const showForm = !has || editing;
   const pill = (active: boolean) =>
     "rounded-xl border px-3 py-2 text-sm font-bold transition " +
-    (active ? "border-green-600 bg-primary text-primary-foreground" : "border-slate-200 bg-card text-slate-700 hover:border-green-400");
+    (active ? "border-green-600 bg-primary text-primary-foreground" : "border-border bg-card text-slate-700 hover:border-green-400");
 
   return (
-    <section className="mx-auto w-full max-w-md rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+    <section className="mx-auto w-full max-w-md rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
       <div className="flex items-start gap-3">
         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-surface-subtle text-green-800">
           <Calendar className="h-5 w-5" />
@@ -166,19 +166,19 @@ export function OntologyBirthInput({
             <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-date">{c.date}</label>
             <input id="ob-date" type="date" max={new Date().toISOString().slice(0, 10)}
               value={date || birthRecord?.civilDate || ""} onInput={(e) => setDate(e.currentTarget.value)} onChange={(e) => setDate(e.target.value)}
-              className="h-12 w-full rounded-2xl border border-slate-200 bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
+              className="h-12 w-full rounded-2xl border border-border bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
           <div>
             <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-time">{c.time} <span className="font-medium text-slate-400 normal-case">· {c.timeHint}</span></label>
             <input id="ob-time" type="time" value={time}
               onInput={(e) => setTime(e.currentTarget.value)} onChange={(e) => setTime(e.target.value)}
-              className="h-12 w-full rounded-2xl border border-slate-200 bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
+              className="h-12 w-full rounded-2xl border border-border bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
           <div>
             <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-name">{c.name} <span className="font-medium text-slate-400 normal-case">· {c.nameHint}</span></label>
             <input id="ob-name" type="text" maxLength={40} autoComplete="off"
               value={name} onChange={(e) => setName(e.target.value)}
-              className="h-12 w-full rounded-2xl border border-slate-200 bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
+              className="h-12 w-full rounded-2xl border border-border bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
           <CityField
             id="ob-city"

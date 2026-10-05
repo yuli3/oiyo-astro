@@ -235,7 +235,7 @@ export function EncyclopediaClient() {
               <ItemCard
                 content={
                   <div className="space-y-4 pt-4">
-                    <div className="flex items-center justify-between text-xs text-primary/70 border-b border-green-100 pb-2">
+                    <div className="flex items-center justify-between text-xs text-primary/70 border-b border-border pb-2">
                       <span>{t.time}</span>
                       <span className="font-mono font-medium text-green-900">
                         {data.time}
@@ -339,7 +339,7 @@ function StemDetail({ copy, data }: { copy: (typeof COPY)[Lang]; data: any }) {
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="bg-green-50/50 p-6 rounded-3xl border border-green-100">
+        <div className="bg-green-50/50 p-6 rounded-3xl border border-border">
           <h3 className="text-lg font-bold text-[#064e3b] mb-4 flex items-center gap-2">
             <Sparkles className="w-4 h-4" /> {copy.traits}
           </h3>

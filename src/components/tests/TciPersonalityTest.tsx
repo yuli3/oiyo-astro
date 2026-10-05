@@ -329,7 +329,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
           <p className="text-muted-foreground mt-1">{t.subtitle}</p>
         </div>
-        <div className="bg-card rounded-2xl border border-gray-200 p-6 text-left space-y-4">
+        <div className="bg-card rounded-2xl border border-border p-6 text-left space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-surface-subtle rounded-xl p-4">
               <p className="text-xs font-semibold text-green-600 mb-2">{t.temperament}</p>
@@ -387,7 +387,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-card p-4">
+        <div className="rounded-xl border border-border bg-card p-4">
           <h2 className="text-sm font-bold text-gray-800">{t.synthesisTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.synthesis)}</p>
           <h2 className="mt-4 text-sm font-bold text-gray-800">{t.lifeIntegrationTitle}</h2>

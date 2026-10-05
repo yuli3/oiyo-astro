@@ -227,7 +227,7 @@ export default function RoutineChecklist({ locale }: Props) {
           onChange={(e) => setInput(e.target.value)}
           placeholder={t.placeholder}
           maxLength={60}
-          className="min-w-0 flex-1 rounded-xl border-2 border-slate-200 px-3 py-2 text-sm focus:border-green-400 focus:outline-none"
+          className="min-w-0 flex-1 rounded-xl border-2 border-border px-3 py-2 text-sm focus:border-green-400 focus:outline-none"
         />
         <button type="submit" className="rounded-xl bg-primary px-4 py-2 text-sm font-bold text-primary-foreground transition hover:bg-primary-strong">
           {t.add}

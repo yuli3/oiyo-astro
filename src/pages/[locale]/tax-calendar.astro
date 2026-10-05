@@ -117,7 +117,7 @@ const appLd = {
       <h2 class="text-lg font-black text-foreground">{c.relatedTitle}</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
         {c.related.map((r) => (
-          <a href={r.external ? r.href : withTrailingSlash(`/${locale}${r.href}`)} class="rounded-xl border border-gray-200 p-3 transition-colors hover:border-green-300" {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+          <a href={r.external ? r.href : withTrailingSlash(`/${locale}${r.href}`)} class="rounded-xl border border-border p-3 transition-colors hover:border-green-300" {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
             <div class="text-sm font-bold text-gray-800">{r.label}</div>
             <div class="mt-0.5 text-xs text-muted-foreground">{r.desc}</div>
           </a>

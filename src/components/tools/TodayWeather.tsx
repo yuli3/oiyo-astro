@@ -44,7 +44,7 @@ export default function TodayWeather({ locale, lat, lon }: { locale: Locale; lat
   if (err) return null;
   if (!text) {
     return (
-      <div className="rounded-xl border border-slate-200 bg-card p-3">
+      <div className="rounded-xl border border-border bg-card p-3">
         <Skeleton className="h-6 w-24" />
       </div>
     );

@@ -605,7 +605,7 @@ ${listLines(form.nextExperiments)}
         const filled = items.filter((it) => form[it.key as keyof ProfileForm]).length;
         const pct = Math.round((filled / items.length) * 100);
         return (
-          <div className="mb-6 rounded-xl border border-green-100 bg-green-50/50 p-4">
+          <div className="mb-6 rounded-xl border border-border bg-green-50/50 p-4">
             <div className="mb-2 flex items-center justify-between gap-3">
               <span className="flex items-center gap-2 text-sm font-black text-foreground"><Sparkles className="h-4 w-4" /> {m.title}</span>
               <span className="text-xs font-bold text-primary">{filled}/{items.length} · {pct}%</span>
@@ -623,7 +623,7 @@ ${listLines(form.nextExperiments)}
               })}
             </div>
             {ontologyItems.length > 0 && (
-              <div className="mt-3 flex flex-wrap gap-2 border-t border-green-100 pt-3">
+              <div className="mt-3 flex flex-wrap gap-2 border-t border-border pt-3">
                 {ontologyItems.map((record) => record && (
                   <span key={record.id} className="rounded-md bg-emerald-100 px-2 py-1 text-[11px] font-semibold text-emerald-800">
                     ✓ {labelsForLocale[record.id] ?? record.id}: {record.resultLabel || 'recorded'}
@@ -638,7 +638,7 @@ ${listLines(form.nextExperiments)}
 
       <div className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
         <div className="space-y-5">
-          <div className="rounded-lg border border-green-100 bg-card p-5 shadow-sm">
+          <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
             <h2 className="mb-4 flex items-center gap-2 text-lg font-black text-foreground">
               <FileText className="h-5 w-5" /> {text.profile}
             </h2>
@@ -650,14 +650,14 @@ ${listLines(form.nextExperiments)}
                     type={type}
                     value={form[key]}
                     onChange={(event) => update(key, event.target.value)}
-                    className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none transition focus:border-green-500 focus:ring-2 focus:ring-green-100"
+                    className="mt-1 w-full rounded-lg border border-border px-3 py-2 text-sm outline-none transition focus:border-green-500 focus:ring-2 focus:ring-green-100"
                   />
                 </label>
               ))}
             </div>
           </div>
 
-          <div className="rounded-lg border border-green-100 bg-card p-5 shadow-sm">
+          <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
             <h2 className="mb-4 text-lg font-black text-foreground">{text.inputs}</h2>
             {narrativeFields.map(({ key, rows }) => (
               <label key={key} className="mb-3 block text-sm font-semibold text-slate-700">
@@ -666,14 +666,14 @@ ${listLines(form.nextExperiments)}
                   value={form[key]}
                   onChange={(event) => update(key, event.target.value)}
                   rows={rows}
-                  className="mt-1 w-full resize-y rounded-lg border border-slate-200 px-3 py-2 text-sm leading-6 outline-none transition focus:border-green-500 focus:ring-2 focus:ring-green-100"
+                  className="mt-1 w-full resize-y rounded-lg border border-border px-3 py-2 text-sm leading-6 outline-none transition focus:border-green-500 focus:ring-2 focus:ring-green-100"
                 />
               </label>
             ))}
           </div>
         </div>
 
-        <div className="rounded-lg border border-green-100 bg-card p-5 shadow-sm">
+        <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <h2 className="text-lg font-black text-foreground">{text.output}</h2>
             <div className="flex gap-2">
@@ -683,7 +683,7 @@ ${listLines(form.nextExperiments)}
               <button onClick={downloadMarkdown} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground hover:bg-primary-strong">
                 <Download className="h-4 w-4" /> {text.download}
               </button>
-              <button onClick={resetForm} className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-sm font-bold text-slate-700 hover:bg-card">
+              <button onClick={resetForm} className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-2 text-sm font-bold text-slate-700 hover:bg-card">
                 <RotateCcw className="h-4 w-4" /> {text.reset}
               </button>
             </div>

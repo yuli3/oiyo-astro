@@ -265,7 +265,7 @@ const COLOR_MAP: Record<string, { bg: string; border: string; badge: string; tex
   blue: { bg: 'bg-blue-50', border: 'border-blue-200', badge: 'bg-blue-100 text-blue-700', text: 'text-blue-700' },
   violet: { bg: 'bg-surface-subtle', border: 'border-border', badge: 'bg-green-100 text-primary', text: 'text-primary' },
   emerald: { bg: 'bg-emerald-50', border: 'border-emerald-200', badge: 'bg-emerald-100 text-emerald-700', text: 'text-emerald-700' },
-  slate: { bg: 'bg-card', border: 'border-slate-200', badge: 'bg-surface-subtle text-slate-700', text: 'text-slate-700' },
+  slate: { bg: 'bg-card', border: 'border-border', badge: 'bg-surface-subtle text-slate-700', text: 'text-slate-700' },
 };
 
 interface Props { locale?: string; }
@@ -333,7 +333,7 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
           <p className="text-slate-600 leading-relaxed">{info.desc[L]}</p>
         </div>
 
-        <div className="bg-card rounded-2xl border border-slate-200 p-6">
+        <div className="bg-card rounded-2xl border border-border p-6">
           <h3 className="font-bold text-foreground mb-4">📋 {lb.strategy}</h3>
           <ul className="space-y-2">
             {info.strategy[L].map((s, i) => (

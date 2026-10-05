@@ -352,7 +352,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
         <div className="grid gap-4 sm:grid-cols-2">
           {axes.map((ax, i) => (
-            <div key={i} className={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-surface-subtle' : 'border-slate-200 bg-card'}`}>
+            <div key={i} className={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-surface-subtle' : 'border-border bg-card'}`}>
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{ax.name}</p>
               <p className={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-green-800' : 'text-muted-foreground'}`}>{ax.label}</p>
               <div className="mt-2 flex items-center gap-1">
@@ -432,7 +432,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
       <p className="text-center text-sm font-semibold text-primary">
         {ui.stepOf(step + 1, 4)} — {stepLabels[step]}
       </p>
-      <p className="rounded-xl border border-green-100 bg-surface-subtle p-3 text-xs leading-5 text-green-900">
+      <p className="rounded-xl border border-border bg-surface-subtle p-3 text-xs leading-5 text-green-900">
         {ui.privacy}
       </p>
 
@@ -450,7 +450,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
           const isUnanswered = unanswered.includes(key)
           const current = answers[key]
           return (
-            <div key={key} className={`rounded-xl border-2 p-4 transition ${isUnanswered ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-card'}`}>
+            <div key={key} className={`rounded-xl border-2 p-4 transition ${isUnanswered ? 'border-red-300 bg-red-50' : 'border-border bg-card'}`}>
               <p className="mb-3 font-medium leading-relaxed text-slate-800">
                 <span className="mr-2 font-black text-green-600">{qi + 1}.</span>{q}
               </p>
@@ -467,7 +467,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
                           ? vi === 0 ? 'border-amber-500 bg-amber-500 text-white'
                             : vi === 2 ? 'border-green-500 bg-green-500 text-white'
                             : 'border-slate-500 bg-slate-500 text-white'
-                          : 'border-slate-200 bg-card text-slate-600 hover:border-slate-400'
+                          : 'border-border bg-card text-slate-600 hover:border-slate-400'
                       }`}
                     >
                       {labels[vi]}

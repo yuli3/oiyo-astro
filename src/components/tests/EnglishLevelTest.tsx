@@ -505,7 +505,7 @@ export default function EnglishLevelTest({ locale }: Props) {
           <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
           <p className="mt-2 text-muted-foreground">{t.subtitle}</p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-card p-6 text-left space-y-3">
+        <div className="rounded-2xl border border-border bg-card p-6 text-left space-y-3">
           {["A1", "A2", "B1", "B2", "C1", "C2"].map((lvl) => (
             <div key={lvl} className="flex items-center gap-3">
               <span className={`w-10 text-center rounded-lg py-0.5 text-sm font-bold ${LEVEL_COLORS[lvl as CEFRLevel]}`}>{lvl}</span>
@@ -540,19 +540,19 @@ export default function EnglishLevelTest({ locale }: Props) {
           />
         </div>
 
-        <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-4">
+        <div className="rounded-2xl border border-border bg-card p-5 space-y-4">
           <p className="text-base font-medium text-foreground">{currentQ.question}</p>
           <div className="space-y-2">
             {currentQ.options.map((opt, i) => {
               let cls = "w-full text-left rounded-xl border px-4 py-3 text-sm transition-all ";
               if (selected === null) {
-                cls += "border-gray-200 bg-card hover:border-green-400 hover:bg-surface-subtle text-gray-800";
+                cls += "border-border bg-card hover:border-green-400 hover:bg-surface-subtle text-gray-800";
               } else if (i === currentQ.answer) {
                 cls += "border-green-500 bg-surface-subtle text-green-800 font-medium";
               } else if (i === selected) {
                 cls += "border-red-400 bg-red-50 text-red-700";
               } else {
-                cls += "border-gray-200 bg-card text-muted-foreground opacity-60";
+                cls += "border-border bg-card text-muted-foreground opacity-60";
               }
               return (
                 <button key={i} onClick={() => handleSelect(i)} className={cls} disabled={selected !== null}>
@@ -586,7 +586,7 @@ export default function EnglishLevelTest({ locale }: Props) {
     <div className="space-y-6">
       <h1 className="text-2xl font-bold text-center text-foreground">{t.resultTitle}</h1>
 
-      <div className={`rounded-2xl border border-gray-200 ${LEVEL_BG[cefr]} p-6 text-center space-y-3`}>
+      <div className={`rounded-2xl border border-border ${LEVEL_BG[cefr]} p-6 text-center space-y-3`}>
         <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">{t.cefrLabel}</p>
         <p className={`text-6xl font-extrabold ${LEVEL_COLORS[cefr]}`}>{cefr}</p>
         <p className={`text-lg font-semibold ${LEVEL_COLORS[cefr]}`}>{t.cefrDesc[cefr].label}</p>
@@ -603,7 +603,7 @@ export default function EnglishLevelTest({ locale }: Props) {
       </div>
 
       {/* Study tips */}
-      <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-3">
+      <div className="rounded-2xl border border-border bg-card p-5 space-y-3">
         <p className="text-sm font-semibold text-gray-700">Study Tips</p>
         <ol className="space-y-2 list-decimal list-inside">
           {t.cefrDesc[cefr].tips.map((tip, i) => (

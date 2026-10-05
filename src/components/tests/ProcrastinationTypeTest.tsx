@@ -589,7 +589,7 @@ export default function ProcrastinationTypeTest({ locale: localeProp }: Props) {
         <div className="flex gap-3">
           <button
             onClick={restart}
-            className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card"
+            className="flex-1 rounded-xl border border-border py-3 text-sm font-medium text-gray-700 transition hover:bg-card"
           >
             {tx.restart}
           </button>

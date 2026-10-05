@@ -668,7 +668,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
               <select
                 value={year1}
                 onChange={(e) => setYear1(e.target.value === "" ? "" : Number(e.target.value))}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-400"
+                className="w-full px-3 py-2 border border-border rounded-lg text-sm focus:outline-none focus:border-red-400"
               >
                 <option value="">{ui.yearPlaceholder}</option>
                 {YEARS.map((y) => (
@@ -691,7 +691,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
               <select
                 value={year2}
                 onChange={(e) => setYear2(e.target.value === "" ? "" : Number(e.target.value))}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-green-400"
+                className="w-full px-3 py-2 border border-border rounded-lg text-sm focus:outline-none focus:border-green-400"
               >
                 <option value="">{ui.yearPlaceholder}</option>
                 {YEARS.map((y) => (
@@ -776,7 +776,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
           </div>
 
           {/* Relation description */}
-          <div className="bg-surface-subtle border border-green-100 rounded-2xl p-5">
+          <div className="bg-surface-subtle border border-border rounded-2xl p-5">
             <h3 className="font-bold text-green-800 text-sm mb-2">{ui.relationLabel}</h3>
             <p className="text-sm text-primary">{ui.relationDesc[result.relation]}</p>
           </div>
@@ -796,7 +796,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
 
           <button
             onClick={reset}
-            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-card transition-colors"
+            className="w-full py-3 rounded-xl border border-border text-gray-600 font-medium hover:bg-card transition-colors"
           >
             {ui.resetBtn}
           </button>

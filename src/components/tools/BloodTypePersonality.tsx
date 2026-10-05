@@ -363,7 +363,7 @@ export default function BloodTypePersonality({ locale }: Props) {
           })}
         </div>
 
-        <div className={`rounded-xl border p-4 bg-card border-gray-200`}>
+        <div className={`rounded-xl border p-4 bg-card border-border`}>
           <p className="text-xs text-gray-400 text-center leading-relaxed">
             {locale === "ko" && "혈액형 성격 이론은 과학적으로 검증되지 않은 대중 문화입니다. 재미로만 참고하세요."}
             {locale === "en" && "Blood type personality theory is popular culture, not scientifically validated. For entertainment only."}
@@ -389,7 +389,7 @@ export default function BloodTypePersonality({ locale }: Props) {
       </div>
 
       {/* Traits */}
-      <div className="rounded-xl border border-gray-200 p-4">
+      <div className="rounded-xl border border-border p-4">
         <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.traitsLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {data.traits[locale].map((trait) => (
@@ -421,7 +421,7 @@ export default function BloodTypePersonality({ locale }: Props) {
       </div>
 
       {/* Compatibility */}
-      <div className="rounded-xl border border-gray-200 p-4 space-y-3">
+      <div className="rounded-xl border border-border p-4 space-y-3">
         <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">{ui.compatibilityLabel}</h2>
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm">
@@ -440,11 +440,11 @@ export default function BloodTypePersonality({ locale }: Props) {
       </div>
 
       {/* Famous People */}
-      <div className="rounded-xl border border-gray-200 p-4">
+      <div className="rounded-xl border border-border p-4">
         <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.famousLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {data.famous.map((name) => (
-            <span key={name} className="px-3 py-1 rounded-full text-sm bg-surface-subtle text-gray-700 border border-gray-200">
+            <span key={name} className="px-3 py-1 rounded-full text-sm bg-surface-subtle text-gray-700 border border-border">
               {name}
             </span>
           ))}

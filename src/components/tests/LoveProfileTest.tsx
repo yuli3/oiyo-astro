@@ -274,7 +274,7 @@ export default function LoveProfileTest({ locale }: Props) {
         <h2 className="text-xl font-bold text-center text-gray-800">{ui.resultTitle}</h2>
 
         {/* Attach */}
-        <div className="bg-surface-subtle border border-green-100 rounded-2xl p-4">
+        <div className="bg-surface-subtle border border-border rounded-2xl p-4">
           <p className="text-xs font-semibold text-green-600 mb-1">🔐 {ui.attachLabel}</p>
           <p className="font-bold text-green-800 text-lg">{ATTACH_EMOJI[result.attach]} {ad.name}</p>
           <p className="text-sm text-primary mt-1">{ad.desc}</p>
@@ -296,7 +296,7 @@ export default function LoveProfileTest({ locale }: Props) {
           <p className="text-xs text-amber-600 mt-2 italic">💡 {cd.tip}</p>
         </div>
 
-        <button onClick={reset} className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 hover:bg-card transition-colors">
+        <button onClick={reset} className="w-full py-3 rounded-xl border border-border text-gray-600 hover:bg-card transition-colors">
           {ui.retryBtn}
         </button>
       </div>

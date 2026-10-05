@@ -100,7 +100,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
   );
 
   return (
-    <div className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+    <div className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
       <div className="mb-3 flex items-center justify-between">
         <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-black text-primary-foreground">{t.center}</span>
         <span className="text-xs font-bold text-primary">{total > 0 ? `✓ ${t.saved} · ${t.count(total)}` : t.count(0)}</span>
@@ -148,7 +148,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
           const cat = CATS.find((c) => c.id === openCat)!;
           const chips = cat.chips[lang];
           return (
-            <div className="mt-4 rounded-2xl border border-green-100 bg-surface-subtle p-3">
+            <div className="mt-4 rounded-2xl border border-border bg-surface-subtle p-3">
               <p className="mb-2 text-[11px] font-black uppercase tracking-wider text-green-600">{cat.label[lang]}</p>
               <div className="flex flex-wrap gap-2">
                 {chips.map((chip) => {
