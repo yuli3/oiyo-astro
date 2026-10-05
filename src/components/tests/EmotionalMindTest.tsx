@@ -326,10 +326,10 @@ export default function EmotionalMindTest({ locale: localeProp }: Props) {
 
     return (
       <div className="space-y-6">
-        <div className="rounded-2xl bg-gradient-to-br from-green-50 to-green-50 border border-green-200 p-6 text-center">
+        <div className="rounded-2xl bg-gradient-to-br from-green-50 to-green-50 border border-border p-6 text-center">
           <p className="text-sm font-medium text-green-600 mb-1">{tx.resultTitle}</p>
           <div className="text-5xl mb-2">🧠</div>
-          <h2 className="text-2xl font-bold text-gray-900">{overallLevel.label}</h2>
+          <h2 className="text-2xl font-bold text-foreground">{overallLevel.label}</h2>
           <p className="text-3xl font-bold text-green-600 mt-1">{percentage}%</p>
           <p className="mt-3 text-sm text-gray-600">{overallLevel.description}</p>
         </div>
@@ -344,19 +344,19 @@ export default function EmotionalMindTest({ locale: localeProp }: Props) {
               <div key={cat}>
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-sm font-semibold text-gray-700">{rd.title}</span>
-                  <span className="text-xs text-gray-500">{Math.round(avg * 20)}%</span>
+                  <span className="text-xs text-muted-foreground">{Math.round(avg * 20)}%</span>
                 </div>
-                <div className="h-2 rounded-full bg-gray-100 overflow-hidden mb-1">
+                <div className="h-2 rounded-full bg-surface-subtle overflow-hidden mb-1">
                   <div className="h-full rounded-full transition-all" style={{ width: `${avg * 20}%`, backgroundColor: r.color }} />
                 </div>
-                <p className="text-xs text-gray-500">{rd[level]}</p>
+                <p className="text-xs text-muted-foreground">{rd[level]}</p>
               </div>
             );
           })}
         </div>
 
         <div className="flex gap-3">
-          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">
+          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card">
             {tx.restart}
           </button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-primary-foreground transition bg-primary hover:bg-primary-strong">

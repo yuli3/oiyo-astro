@@ -674,8 +674,8 @@ export default function BloodTypeCompatibility({ locale }: Props) {
   return (
     <div className="w-full">
       <div className="text-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">{ui.title}</h1>
-        <p className="mt-1 text-gray-500 text-sm">{ui.subtitle}</p>
+        <h1 className="text-2xl font-bold text-foreground">{ui.title}</h1>
+        <p className="mt-1 text-muted-foreground text-sm">{ui.subtitle}</p>
       </div>
 
       {!result ? (
@@ -723,7 +723,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
 
           {/* Selected display */}
           {(type1 || type2) && (
-            <div className="flex items-center justify-center gap-4 mb-4 py-3 bg-gray-50 rounded-xl">
+            <div className="flex items-center justify-center gap-4 mb-4 py-3 bg-card rounded-xl">
               <span className={`text-2xl font-black ${type1 ? "text-red-500" : "text-gray-300"}`}>
                 {type1 ? ui.types[type1] : "?"}
               </span>
@@ -759,7 +759,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
               {gradeLabels[result.grade]}
             </div>
             <div className="mt-3 flex justify-center">
-              <div className="w-full max-w-xs bg-gray-100 rounded-full h-3">
+              <div className="w-full max-w-xs bg-surface-subtle rounded-full h-3">
                 <div
                   className="h-3 rounded-full transition-all duration-700"
                   style={{
@@ -787,7 +787,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
           {/* Strengths & Cautions */}
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-surface-subtle rounded-2xl p-4">
-              <h3 className="font-bold text-green-700 text-sm mb-2">{ui.strengthsLabel}</h3>
+              <h3 className="font-bold text-primary text-sm mb-2">{ui.strengthsLabel}</h3>
               <ul className="space-y-1">
                 {result.strengths[locale]?.map((s, i) => (
                   <li key={i} className="text-xs text-green-600 flex gap-1">
@@ -818,7 +818,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
 
           <button
             onClick={reset}
-            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-gray-50 transition-colors"
+            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-card transition-colors"
           >
             {ui.resetBtn}
           </button>

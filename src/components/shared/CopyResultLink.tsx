@@ -40,7 +40,7 @@ export default function CopyResultLink({ locale, getUrl, onCopyClick }: Props) {
       <button
         type="button"
         onClick={onCopy}
-        className="w-full rounded-xl border-2 border-slate-300 bg-slate-50 px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-100"
+        className="w-full rounded-xl border-2 border-slate-300 bg-card px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-surface-subtle"
       >
         {state === 'idle' && <>🔗 {t.copy}</>}
         {state === 'done' && <>✅ {t.copied}</>}

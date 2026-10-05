@@ -159,7 +159,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
         className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
           on
             ? 'border-green-600 bg-primary text-primary-foreground'
-            : 'border-green-200 bg-card text-green-800 hover:border-green-400'
+            : 'border-border bg-card text-green-800 hover:border-green-400'
         }`}
       >
         {w}
@@ -170,7 +170,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
   return (
     <div className="rounded-2xl border border-green-100 bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
-      <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
+      <p className="mt-2 leading-7 text-primary">{t.subtitle}</p>
       <p className="mt-1 text-sm text-green-600/80">{t.pickHint}</p>
 
       <div className="mt-6">
@@ -187,7 +187,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
         <button
           type="button"
           onClick={() => setSeed((s) => s + 1)}
-          className="rounded-full border border-green-200 bg-card px-4 py-2 text-sm font-semibold text-green-800 hover:border-green-400"
+          className="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-green-800 hover:border-green-400"
         >
           {t.shuffle}
         </button>
@@ -205,7 +205,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
               setSelected(new Set());
               setRevealed(false);
             }}
-            className="rounded-full border border-green-200 bg-card px-4 py-2 text-sm font-medium text-green-700 hover:border-green-400"
+            className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-primary hover:border-green-400"
           >
             {t.reset}
           </button>
@@ -213,13 +213,13 @@ export default function StrengthKeywordFinder({ locale }: Props) {
       </div>
 
       {revealed && (
-        <div className="mt-6 rounded-2xl border border-green-200 bg-surface-subtle p-5">
+        <div className="mt-6 rounded-2xl border border-border bg-surface-subtle p-5">
           {chosen.length === 0 ? (
             <p className="text-green-800">{t.empty}</p>
           ) : (
             <>
               <h3 className="text-lg font-bold text-foreground">{t.cardTitle}</h3>
-              <p className="mt-1 text-sm text-green-700">{t.cardLead}</p>
+              <p className="mt-1 text-sm text-primary">{t.cardLead}</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {chosen.map((w) => (
                   <span key={w} className="rounded-full bg-primary px-3 py-1 text-sm font-semibold text-primary-foreground">
@@ -235,7 +235,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
                 {copied ? t.copied : t.copy}
               </button>
 
-              <div className="mt-5 border-t border-green-200 pt-4">
+              <div className="mt-5 border-t border-border pt-4">
                 <h4 className="text-sm font-bold text-green-900">{t.reflectTitle}</h4>
                 <ul className="mt-2 space-y-1.5 text-sm leading-6 text-green-800">
                   {t.reflect.map((q) => (

@@ -102,7 +102,7 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
                 <span
                   aria-hidden="true"
                   className={cn(
-                    "flex size-6 flex-none items-center justify-center rounded-full border-2 border-green-600 text-xs font-bold text-green-700",
+                    "flex size-6 flex-none items-center justify-center rounded-full border-2 border-green-600 text-xs font-bold text-primary",
                     selected && "bg-primary text-primary-foreground",
                   )}
                 >

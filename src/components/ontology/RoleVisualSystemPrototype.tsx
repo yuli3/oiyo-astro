@@ -31,7 +31,7 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
 
   return (
     <section
-      className="role-visual mt-8 rounded-3xl border bg-card p-4 text-slate-950 shadow-sm sm:p-6"
+      className="role-visual mt-8 rounded-3xl border bg-card p-4 text-foreground shadow-sm sm:p-6"
       style={{
         "--role-primary": ROLE_VISUAL_TOKENS.primary,
         "--role-soft": ROLE_VISUAL_TOKENS.primarySoft,
@@ -45,12 +45,12 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
           <Compass size={24} strokeWidth={2} />
         </span>
         <div>
-          <h2 id="role-visual-title" className="text-lg font-black text-slate-950">{text.title}</h2>
+          <h2 id="role-visual-title" className="text-lg font-black text-foreground">{text.title}</h2>
           <p id="role-visual-note" className="mt-1 text-sm leading-6 text-slate-600">{text.note}</p>
         </div>
       </div>
 
-      <label className="mt-5 block text-sm font-bold text-slate-900">
+      <label className="mt-5 block text-sm font-bold text-foreground">
         {text.scenarioLabel}
         <select
           className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-card px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--role-focus)]"
@@ -65,7 +65,7 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
       </label>
 
       <div className="mt-5 rounded-2xl border-2 border-[var(--role-primary)] bg-[var(--role-soft)] p-4" role="status" aria-live="polite">
-        <p className="text-base font-black text-slate-950">{status.label}</p>
+        <p className="text-base font-black text-foreground">{status.label}</p>
         <p className="mt-1 text-sm leading-6 text-slate-700">{status.body}</p>
         <p className="mt-2 text-xs font-bold text-slate-700">
           {text.coverage}: {Math.round(result.dataCoverage * 100)}% · {text.confidence}: {Math.round(result.averageConfidence * 100)}%
@@ -76,7 +76,7 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
         {result.ranked.map((dimension) => (
           <div key={dimension.id}>
             <div className="mb-1 flex items-baseline justify-between gap-3 text-sm">
-              <span className="font-bold text-slate-900">{text.dimensions[dimension.id as keyof typeof text.dimensions]}</span>
+              <span className="font-bold text-foreground">{text.dimensions[dimension.id as keyof typeof text.dimensions]}</span>
               <span className="tabular-nums text-slate-700">{text.score} {dimension.score}/100 · {text.confidence} {Math.round(dimension.confidence * 100)}%</span>
             </div>
             <div
@@ -98,7 +98,7 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
         const RoleIcon = ROLE_AID_ICON[result.roleAid.icon];
         const name = text.roleAidNames[result.roleAid.dimensionId as keyof typeof text.roleAidNames];
         return (
-          <div className="mt-5 flex items-center gap-3 rounded-2xl border border-slate-300 bg-slate-50 p-3">
+          <div className="mt-5 flex items-center gap-3 rounded-2xl border border-slate-300 bg-card p-3">
             <span aria-hidden="true" className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[var(--role-soft)] text-[var(--role-primary)]">
               <RoleIcon size={18} strokeWidth={2} />
             </span>
@@ -111,9 +111,9 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
       })()}
 
       <dl className="mt-5 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-2xl border border-slate-300 bg-slate-50 p-3"><dt className="font-black text-slate-950">{text.strengthTitle}</dt><dd className="mt-1 text-sm leading-6 text-slate-700">{text.strength}</dd></div>
-        <div className="rounded-2xl border border-slate-300 bg-slate-50 p-3"><dt className="font-black text-slate-950">{text.cautionTitle}</dt><dd className="mt-1 text-sm leading-6 text-slate-700">{text.caution}</dd></div>
-        <div className="rounded-2xl border border-slate-300 bg-slate-50 p-3"><dt className="font-black text-slate-950">{text.actionTitle}</dt><dd className="mt-1 text-sm leading-6 text-slate-700">{text.action}</dd></div>
+        <div className="rounded-2xl border border-slate-300 bg-card p-3"><dt className="font-black text-foreground">{text.strengthTitle}</dt><dd className="mt-1 text-sm leading-6 text-slate-700">{text.strength}</dd></div>
+        <div className="rounded-2xl border border-slate-300 bg-card p-3"><dt className="font-black text-foreground">{text.cautionTitle}</dt><dd className="mt-1 text-sm leading-6 text-slate-700">{text.caution}</dd></div>
+        <div className="rounded-2xl border border-slate-300 bg-card p-3"><dt className="font-black text-foreground">{text.actionTitle}</dt><dd className="mt-1 text-sm leading-6 text-slate-700">{text.action}</dd></div>
       </dl>
 
       <div className="mt-5 flex flex-col gap-2 sm:flex-row">

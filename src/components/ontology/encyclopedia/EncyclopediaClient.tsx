@@ -150,7 +150,7 @@ export function EncyclopediaClient() {
       <div className="max-w-4xl mx-auto text-center space-y-4">
         <m.div
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100/50 text-green-800 text-xs font-bold uppercase tracking-widest border border-green-200/50"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100/50 text-green-800 text-xs font-bold uppercase tracking-widest border border-border/50"
           initial={{ opacity: 0, y: 20 }}
         >
           <BookOpen className="w-4 h-4" />
@@ -207,7 +207,7 @@ export function EncyclopediaClient() {
                     <div className="flex flex-wrap gap-2">
                       {data.strengths?.slice(0, 3).map((s: string) => (
                         <Badge
-                          className="text-[10px] border-green-200 bg-surface-subtle text-green-700"
+                          className="text-[10px] border-border bg-surface-subtle text-primary"
                           key={s}
                           variant="outline"
                         >
@@ -235,7 +235,7 @@ export function EncyclopediaClient() {
               <ItemCard
                 content={
                   <div className="space-y-4 pt-4">
-                    <div className="flex items-center justify-between text-xs text-green-700/70 border-b border-green-100 pb-2">
+                    <div className="flex items-center justify-between text-xs text-primary/70 border-b border-green-100 pb-2">
                       <span>{t.time}</span>
                       <span className="font-mono font-medium text-green-900">
                         {data.time}
@@ -327,7 +327,7 @@ function StemDetail({ copy, data }: { copy: (typeof COPY)[Lang]; data: any }) {
   return (
     <div className="max-w-3xl mx-auto p-8 lg:p-12 space-y-10">
       <div className="text-center space-y-4">
-        <Badge className="bg-green-100 text-green-700 border-green-200 pointer-events-none">
+        <Badge className="bg-green-100 text-primary border-border pointer-events-none">
           {copy.stemBadge}
         </Badge>
         <h2 className="text-5xl font-black text-[#064e3b] font-serif">
@@ -346,7 +346,7 @@ function StemDetail({ copy, data }: { copy: (typeof COPY)[Lang]; data: any }) {
           <ul className="space-y-3">
             {data.traits?.map((trait: string, i: number) => (
               <li
-                className="text-sm text-green-800 leading-relaxed pl-4 border-l-2 border-green-200"
+                className="text-sm text-green-800 leading-relaxed pl-4 border-l-2 border-border"
                 key={i}
               >
                 {trait}
@@ -410,7 +410,7 @@ function TabButton({ active, icon: Icon, label, onClick }: any) {
         "flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 border shadow-sm",
         active
           ? "bg-[#064e3b] text-white border-[#064e3b] shadow-green-900/20 shadow-lg scale-105"
-          : "bg-card text-green-900 border-white hover:bg-surface-subtle hover:border-green-200",
+          : "bg-card text-green-900 border-white hover:bg-surface-subtle hover:border-border",
       )}
       onClick={onClick}
     >

@@ -154,7 +154,7 @@ const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
     }
 
     return (
-        <div className="not-prose my-12 p-8 bg-slate-50 border border-slate-200 rounded-3xl shadow-lg max-w-2xl mx-auto">
+        <div className="not-prose my-12 p-8 bg-card border border-slate-200 rounded-3xl shadow-lg max-w-2xl mx-auto">
                 <div className="text-center space-y-8 py-6 animate-fade-in">
                     <div>
                         <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">{ui.resultLabel}</span>
@@ -176,7 +176,7 @@ const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
 
                     <button
                         onClick={() => {setAnswers({}); setShowResults(false);}}
-                        className="text-slate-400 text-sm hover:text-slate-900 transition-colors"
+                        className="text-slate-400 text-sm hover:text-foreground transition-colors"
                     >
                         {ui.retry}
                     </button>

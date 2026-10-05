@@ -342,9 +342,9 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
     return (
       <div className="space-y-6">
-        <div className="rounded-2xl border border-green-200 bg-surface-subtle p-6 text-center">
+        <div className="rounded-2xl border border-border bg-surface-subtle p-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-green-600">{info.resultTitle}</p>
-          <p className="mt-1 text-sm text-green-700">{info.resultSub}</p>
+          <p className="mt-1 text-sm text-primary">{info.resultSub}</p>
           <div className="mt-4 inline-flex rounded-xl border-2 border-green-800 bg-card px-6 py-3">
             <span className="font-mono text-3xl font-black tracking-[0.3em] text-green-900">{chars.slice(0,4).join('')}</span>
           </div>
@@ -352,9 +352,9 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
         <div className="grid gap-4 sm:grid-cols-2">
           {axes.map((ax, i) => (
-            <div key={i} className={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-surface-subtle' : 'border-slate-200 bg-slate-50'}`}>
-              <p className="text-xs font-bold uppercase tracking-widest text-slate-500">{ax.name}</p>
-              <p className={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-green-800' : 'text-slate-500'}`}>{ax.label}</p>
+            <div key={i} className={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-surface-subtle' : 'border-slate-200 bg-card'}`}>
+              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{ax.name}</p>
+              <p className={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-green-800' : 'text-muted-foreground'}`}>{ax.label}</p>
               <div className="mt-2 flex items-center gap-1">
                 <span className="text-xs text-slate-400">{ax.left}</span>
                 <div className="relative mx-1 h-2 flex-1 rounded-full bg-slate-200">
@@ -372,7 +372,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
         </div>
 
         {/* 정치 용어 바로 알기 — 한국 담론 오염 교정 */}
-        <div className="rounded-xl border-2 border-green-200 bg-green-50/60 p-5">
+        <div className="rounded-xl border-2 border-border bg-green-50/60 p-5">
           <p className="mb-3 flex items-center gap-2 text-sm font-black text-green-900">
             <span>📚</span>{clarify.title}
           </p>
@@ -386,7 +386,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
           </ul>
         </div>
 
-        <p className="rounded-lg bg-slate-100 p-3 text-center text-xs text-slate-500">{info.disclaimer}</p>
+        <p className="rounded-lg bg-surface-subtle p-3 text-center text-xs text-muted-foreground">{info.disclaimer}</p>
         <ShareResultButton
           locale={L}
           heading={ui.title}
@@ -405,7 +405,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
         <button
           onClick={handleRestart}
-          className="w-full rounded-xl border-2 border-green-700 bg-card py-3 font-bold text-green-700 transition hover:bg-primary hover:text-primary-foreground"
+          className="w-full rounded-xl border-2 border-green-700 bg-card py-3 font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
         >
           {ui.restart}
         </button>
@@ -419,8 +419,8 @@ export default function PoliticalCompassTest({ locale }: Props) {
     <div className="space-y-6">
       {/* 헤더 */}
       <div className="text-center">
-        <h1 className="text-2xl font-black text-slate-900">{ui.title}</h1>
-        <p className="mt-1 text-sm text-slate-500">{ui.subtitle}</p>
+        <h1 className="text-2xl font-black text-foreground">{ui.title}</h1>
+        <p className="mt-1 text-sm text-muted-foreground">{ui.subtitle}</p>
       </div>
 
       {/* 스텝 인디케이터 */}
@@ -429,7 +429,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
           <div key={i} className={`h-2 flex-1 rounded-full transition-all ${i < step ? 'bg-green-500' : i === step ? 'bg-primary' : 'bg-slate-200'}`} />
         ))}
       </div>
-      <p className="text-center text-sm font-semibold text-green-700">
+      <p className="text-center text-sm font-semibold text-primary">
         {ui.stepOf(step + 1, 4)} — {stepLabels[step]}
       </p>
       <p className="rounded-xl border border-green-100 bg-surface-subtle p-3 text-xs leading-5 text-green-900">

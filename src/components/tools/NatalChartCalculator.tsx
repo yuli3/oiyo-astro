@@ -290,7 +290,7 @@ const ELEMENT_BG: Record<string, string> = {
   fire: 'bg-orange-50 border-orange-200',
   earth: 'bg-amber-50 border-amber-200',
   air: 'bg-sky-50 border-sky-200',
-  water: 'bg-surface-subtle border-green-200',
+  water: 'bg-surface-subtle border-border',
 };
 
 interface FormState { date: string; time: string; unknown: boolean; city: string; }
@@ -489,7 +489,7 @@ export default function NatalChartCalculator({ locale }: Props) {
                 onSelect={(key) => document.getElementById(`natal-${key}`)?.scrollIntoView({ block: 'center' })}
               />
             </Suspense>
-            <p className="mt-2 text-xs leading-5 text-slate-500">{SKY_NOTE[loc] ?? SKY_NOTE.en}</p>
+            <p className="mt-2 text-xs leading-5 text-muted-foreground">{SKY_NOTE[loc] ?? SKY_NOTE.en}</p>
           </div>
         )}
         <div className="space-y-3">
@@ -497,7 +497,7 @@ export default function NatalChartCalculator({ locale }: Props) {
             const info = SIGN_INFO[r.signKey];
             if (!r.show) {
               return (
-                <div key={r.key} className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4 text-center text-sm text-slate-500">
+                <div key={r.key} className="rounded-2xl border border-dashed border-slate-300 bg-card p-4 text-center text-sm text-muted-foreground">
                   <span className="font-bold">{r.label}</span> · {t.ascNeedsTime}
                 </div>
               );
@@ -510,19 +510,19 @@ export default function NatalChartCalculator({ locale }: Props) {
                       <img src={PLANET_TOKEN[r.key]} alt="" width={40} height={40} loading="lazy" decoding="async" className="h-10 w-10 shrink-0 rounded-full" />
                     )}
                     <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-500">{r.label}</p>
+                    <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">{r.label}</p>
                     <p className="text-[11px] text-slate-400">{r.sub}</p>
                     </div>
                   </div>
                   <span className="text-3xl" aria-hidden="true">{info.emoji}</span>
                 </div>
-                <p className="mt-2 text-2xl font-black text-slate-900">
+                <p className="mt-2 text-2xl font-black text-foreground">
                   {t.degIn(r.deg.toFixed(1), info.name[loc])}
                   {r.retro && (
                     <span className="ml-2 align-middle rounded bg-rose-100 px-1.5 py-0.5 text-xs font-bold text-rose-700" title={t.retro}>℞ {t.retro}</span>
                   )}
                 </p>
-                <p className="mt-2 border-t border-slate-900/5 pt-2 text-xs leading-5 text-slate-500">{r.sub}: {info.trait[loc]}</p>
+                <p className="mt-2 border-t border-slate-900/5 pt-2 text-xs leading-5 text-muted-foreground">{r.sub}: {info.trait[loc]}</p>
               </article>
             );
           })}
@@ -559,7 +559,7 @@ export default function NatalChartCalculator({ locale }: Props) {
           <a href={`/${loc}/zodiac/personality/`} className="font-semibold text-green-600 hover:underline">{t.zodiacLink}</a>
         </div>
 
-        <p className="mt-5 rounded-xl bg-slate-50 p-3 text-center text-xs text-slate-500">{t.method}</p>
+        <p className="mt-5 rounded-xl bg-card p-3 text-center text-xs text-muted-foreground">{t.method}</p>
 
         <button
           type="button"

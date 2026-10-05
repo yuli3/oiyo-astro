@@ -201,9 +201,9 @@ export default function HappinessMeterTest({ locale: localeProp }: Props) {
     return (
       <div className="space-y-6">
         <div className="rounded-2xl p-6 text-center" style={{ background: `linear-gradient(135deg, ${level.color}18, ${level.color}08)`, border: `1px solid ${level.color}30` }}>
-          <p className="text-sm font-medium text-gray-500 mb-1">{ui.resultTitle}</p>
+          <p className="text-sm font-medium text-muted-foreground mb-1">{ui.resultTitle}</p>
           <div className="text-5xl mb-2">{level.emoji}</div>
-          <h2 className="text-2xl font-bold text-gray-900">{level.label}</h2>
+          <h2 className="text-2xl font-bold text-foreground">{level.label}</h2>
           <p className="text-3xl font-bold mt-1" style={{ color: level.color }}>{displayScore} / 7</p>
           <p className="mt-3 text-sm text-gray-600">{level.description}</p>
         </div>
@@ -221,7 +221,7 @@ export default function HappinessMeterTest({ locale: localeProp }: Props) {
         </div>
 
         <div className="flex gap-3">
-          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">
+          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card">
             {ui.restart}
           </button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition" style={{ backgroundColor: level.color }}>

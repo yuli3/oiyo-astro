@@ -454,8 +454,8 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       )}
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
-        <p className="text-gray-500 mt-1">{t.subtitle}</p>
+        <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
+        <p className="text-muted-foreground mt-1">{t.subtitle}</p>
       </div>
 
       {/* Spread selector */}
@@ -549,7 +549,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
                 {/* Interpretation */}
                 {isFlipped && (
                   <div className="bg-card rounded-xl border border-gray-200 p-3 space-y-1.5">
-                    <p className="text-[10px] font-semibold text-gray-500">{dc.card.keywords[locale]}</p>
+                    <p className="text-[10px] font-semibold text-muted-foreground">{dc.card.keywords[locale]}</p>
                     <p className="text-xs text-gray-700 leading-relaxed">
                       {dc.reversed ? dc.card.reversed[locale] : dc.card.upright[locale]}
                     </p>
@@ -584,7 +584,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
         <div>
           <button
             onClick={() => void share()}
-            className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-surface-subtle text-sm font-bold text-green-700 hover:bg-green-100 transition-colors"
+            className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-surface-subtle text-sm font-bold text-primary hover:bg-green-100 transition-colors"
           >
             {shareCopied ? `✅ ${t.shareCopied}` : `🔗 ${t.shareBtn}`}
           </button>

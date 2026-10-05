@@ -361,17 +361,17 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
         <div className="text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-blue-600">{labels.resultLabel}</p>
           <ResultSymbol id="mbti" variant={mbtiType} fallback={profile.emoji} className="mx-auto mt-4 h-28 w-28" />
-          <h2 className="mt-4 text-3xl font-black text-slate-950">{title}</h2>
+          <h2 className="mt-4 text-3xl font-black text-foreground">{title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-slate-700">{profile.desc[l]}</p>
         </div>
         <div className="mt-8 grid gap-3 sm:grid-cols-4">
           {Object.entries(DIMENSIONS).map(([dim, values]) => (
-            <div key={dim} className="rounded-xl bg-slate-50 p-4 text-center">
-              <p className="text-xs font-semibold text-slate-500">{dim}</p>
-              <p className="mt-1 text-2xl font-black text-slate-900">{mbtiType.includes(values[0]) ? values[0] : values[1]}</p>
+            <div key={dim} className="rounded-xl bg-card p-4 text-center">
+              <p className="text-xs font-semibold text-muted-foreground">{dim}</p>
+              <p className="mt-1 text-2xl font-black text-foreground">{mbtiType.includes(values[0]) ? values[0] : values[1]}</p>
               {preferenceScores && (
                 <>
-                  <p className="mt-1 text-[11px] font-semibold text-slate-500">
+                  <p className="mt-1 text-[11px] font-semibold text-muted-foreground">
                     {values[0]} {preferenceScores[dim as DimKey]}% · {values[1]} {100 - preferenceScores[dim as DimKey]}%
                   </p>
                   <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200" aria-hidden="true">
@@ -385,12 +385,12 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
         <p className="mt-6 rounded-xl bg-blue-50 p-4 text-sm leading-6 text-blue-950">{labels.note}</p>
 
         <section className="mt-8 border-t border-slate-200 pt-6">
-          <h3 className="text-xl font-black text-slate-950">{labels.deepTitle}</h3>
+          <h3 className="text-xl font-black text-foreground">{labels.deepTitle}</h3>
           <p className="mt-3 leading-7 text-slate-700">{sl(deep.typeNarrative, l)}</p>
           <p className="mt-3 leading-7 text-slate-600">{sl(deep.worldview, l)}</p>
 
           <details className="group mt-5 rounded-xl border border-slate-200 p-4">
-            <summary className="cursor-pointer list-none font-bold text-slate-900">{labels.strengthsTitle} / {labels.challengesTitle}</summary>
+            <summary className="cursor-pointer list-none font-bold text-foreground">{labels.strengthsTitle} / {labels.challengesTitle}</summary>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <ul className="space-y-2 text-sm leading-6 text-slate-700">
                 {deep.strengths.map((s, i) => <li key={i}>· {sl(s, l)}</li>)}
@@ -402,7 +402,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           </details>
 
           <details className="group mt-3 rounded-xl border border-slate-200 p-4">
-            <summary className="cursor-pointer list-none font-bold text-slate-900">{labels.cognitiveStackTitle}</summary>
+            <summary className="cursor-pointer list-none font-bold text-foreground">{labels.cognitiveStackTitle}</summary>
             <div className="mt-4 grid gap-3 sm:grid-cols-4">
               {([
                 ['dominant', deep.cognitiveStack.dominant],
@@ -410,9 +410,9 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
                 ['tertiary', deep.cognitiveStack.tertiary],
                 ['inferior', deep.cognitiveStack.inferior],
               ] as const).map(([role, fn]) => (
-                <div key={role} className="rounded-lg bg-slate-50 p-3 text-center">
-                  <p className="text-[11px] font-semibold text-slate-500">{labels.functionRole[role]}</p>
-                  <p className="mt-1 text-lg font-black text-slate-900">{fn.code}</p>
+                <div key={role} className="rounded-lg bg-card p-3 text-center">
+                  <p className="text-[11px] font-semibold text-muted-foreground">{labels.functionRole[role]}</p>
+                  <p className="mt-1 text-lg font-black text-foreground">{fn.code}</p>
                   <p className="mt-1 text-xs text-slate-600">{sl(fn.name, l)}</p>
                 </div>
               ))}
@@ -420,7 +420,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           </details>
 
           <details className="group mt-3 rounded-xl border border-slate-200 p-4">
-            <summary className="cursor-pointer list-none font-bold text-slate-900">{labels.growthTitle} / {labels.lifeTitle}</summary>
+            <summary className="cursor-pointer list-none font-bold text-foreground">{labels.growthTitle} / {labels.lifeTitle}</summary>
             <p className="mt-3 text-sm leading-6 text-slate-700">{sl(deep.growthPath, l)}</p>
             <p className="mt-3 text-sm leading-6 text-slate-700">{sl(deep.lifeImplications, l)}</p>
           </details>

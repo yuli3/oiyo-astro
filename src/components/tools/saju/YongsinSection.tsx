@@ -27,7 +27,7 @@ export default function YongsinSection({
     <div className={`rounded-xl border p-3 ${role === "fav" ? "border-emerald-200 bg-emerald-50" : "border-rose-200 bg-rose-50"}`}>
       <div className="flex items-baseline justify-between gap-2">
         <span className={`text-xs font-semibold ${role === "fav" ? "text-emerald-700" : "text-rose-700"}`}>{label}</span>
-        <span className="text-lg font-bold text-gray-900">{el(e)}</span>
+        <span className="text-lg font-bold text-foreground">{el(e)}</span>
       </div>
       {tone && <p className="mt-1 text-[11px] leading-relaxed text-gray-600">{tone}</p>}
     </div>
@@ -36,7 +36,7 @@ export default function YongsinSection({
   return (
     <div className="bg-card rounded-2xl border border-gray-200 p-5 space-y-5">
       <div>
-        <h2 className="text-xl font-bold text-gray-900">{tt(C.heading, locale)}</h2>
+        <h2 className="text-xl font-bold text-foreground">{tt(C.heading, locale)}</h2>
         <p className="mt-2 text-sm leading-relaxed text-gray-600">{tt(C.concept, locale)}</p>
       </div>
 
@@ -46,7 +46,7 @@ export default function YongsinSection({
           <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
             {tt(C.strengthLabel[strength.category], locale)}
           </span>
-          <span className="text-xs text-green-700">
+          <span className="text-xs text-primary">
             {Math.round(strength.ratio * 100)}% {locale === "ko" ? "신강도" : "self-strength"}
           </span>
         </div>
@@ -62,7 +62,7 @@ export default function YongsinSection({
           <Chip e={yongsin.yongsin} role="fav" label={tt(C.yongsinLabel, locale)} tone={tt(C.elementFavorable[yongsin.yongsin], locale)} />
           <Chip e={yongsin.huisin} role="fav" label={tt(C.huisinLabel, locale)} />
         </div>
-        <p className="mt-2 text-[11px] leading-relaxed text-gray-500">→ {tt(C.reason[yongsin.reason], locale)}</p>
+        <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">→ {tt(C.reason[yongsin.reason], locale)}</p>
       </div>
 
       {/* Unfavorable */}
@@ -75,7 +75,7 @@ export default function YongsinSection({
       </div>
 
       {/* Lucky attributes (by yongsin) */}
-      <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
+      <div className="rounded-xl border border-gray-100 bg-card p-4">
         <p className="text-sm font-bold text-gray-800 mb-3">{tt(C.attrsHeading, locale)}</p>
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
           <Row label={tt(C.labels.color, locale)} value={`${tt(C.colorName[attrs.colorKey], locale)}`} swatch={attrs.colorHex} />
@@ -85,7 +85,7 @@ export default function YongsinSection({
           <Row label={tt(C.labels.food, locale)} value={tt(C.foodName[attrs.foodKey], locale)} />
         </div>
         <div className="mt-3">
-          <p className="text-xs font-semibold text-gray-500 mb-1">{tt(C.labels.career, locale)}</p>
+          <p className="text-xs font-semibold text-muted-foreground mb-1">{tt(C.labels.career, locale)}</p>
           <div className="flex flex-wrap gap-1.5">
             {attrs.careerKeys.map((k) => (
               <span key={k} className="rounded-full bg-card border border-gray-200 px-2.5 py-0.5 text-xs text-gray-700">
@@ -109,8 +109,8 @@ export default function YongsinSection({
 function Row({ label, value, swatch }: { label: string; value: string; swatch?: string }) {
   return (
     <div className="flex items-center justify-between">
-      <span className="text-gray-500">{label}</span>
-      <span className="flex items-center gap-1.5 font-semibold text-gray-900">
+      <span className="text-muted-foreground">{label}</span>
+      <span className="flex items-center gap-1.5 font-semibold text-foreground">
         {swatch && <span className="inline-block h-3 w-3 rounded-full border border-gray-300" style={{ backgroundColor: swatch }} />}
         {value}
       </span>

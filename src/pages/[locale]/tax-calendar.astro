@@ -102,7 +102,7 @@ const appLd = {
     <TaxCalendar client:load locale={locale} />
 
     <section class="mt-12 border-t border-gray-100 pt-8">
-      <h2 class="text-lg font-black text-gray-900">{c.faqTitle}</h2>
+      <h2 class="text-lg font-black text-foreground">{c.faqTitle}</h2>
       <div class="mt-4 space-y-4">
         {c.faq.map((f) => (
           <div>
@@ -114,12 +114,12 @@ const appLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-lg font-black text-gray-900">{c.relatedTitle}</h2>
+      <h2 class="text-lg font-black text-foreground">{c.relatedTitle}</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
         {c.related.map((r) => (
           <a href={r.external ? r.href : withTrailingSlash(`/${locale}${r.href}`)} class="rounded-xl border border-gray-200 p-3 transition-colors hover:border-green-300" {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
             <div class="text-sm font-bold text-gray-800">{r.label}</div>
-            <div class="mt-0.5 text-xs text-gray-500">{r.desc}</div>
+            <div class="mt-0.5 text-xs text-muted-foreground">{r.desc}</div>
           </a>
         ))}
       </div>

@@ -401,14 +401,14 @@ export default function IntroExtroTest({ locale: localeProp }: Props) {
     return (
       <div className="space-y-6">
         <div className="text-center space-y-2">
-          <h1 className="text-2xl font-bold text-gray-900">{t.resultTitle}</h1>
+          <h1 className="text-2xl font-bold text-foreground">{t.resultTitle}</h1>
           <div className="text-4xl">{d.emoji}</div>
           <div className="inline-block px-4 py-2 rounded-full text-white font-semibold"
             style={{ backgroundColor: d.color }}>{d.label[locale]}</div>
         </div>
 
         <div className="space-y-1">
-          <div className="flex justify-between text-xs text-gray-500">
+          <div className="flex justify-between text-xs text-muted-foreground">
             <span>내향 / Introvert</span>
             <span>외향 / Extrovert</span>
           </div>
@@ -426,7 +426,7 @@ export default function IntroExtroTest({ locale: localeProp }: Props) {
             <div className="bg-surface-subtle rounded-lg p-3">
               <h3 className="font-semibold text-green-800 text-sm mb-1">✓ {t.strengths}</h3>
               <ul className="space-y-1">
-                {d.strengths[locale].map((s, i) => <li key={i} className="text-sm text-green-700">• {s}</li>)}
+                {d.strengths[locale].map((s, i) => <li key={i} className="text-sm text-primary">• {s}</li>)}
               </ul>
             </div>
             <div className="bg-blue-50 rounded-lg p-3">
@@ -454,7 +454,7 @@ export default function IntroExtroTest({ locale: localeProp }: Props) {
           description={`${t.score}: ${result.score} / ${maxScore}`}
         />
         <div className="flex gap-3 justify-center">
-          <button onClick={restart} className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
+          <button onClick={restart} className="px-5 py-2 bg-surface-subtle hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
           <button onClick={share} className="px-5 py-2 text-white rounded-full font-medium text-sm" style={{ backgroundColor: d.color }}>{copied ? t.copied : t.share}</button>
         </div>
       </div>

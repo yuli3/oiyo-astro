@@ -21,23 +21,23 @@ const copy = T[locale] ?? T.en;
 
 <section class="mx-auto mt-8 max-w-2xl px-4 pb-2">
   <div class="rounded-lg border border-green-100 bg-card p-5 shadow-sm">
-    <p class="text-[11px] font-black uppercase tracking-widest text-green-700">{copy.eyebrow}</p>
+    <p class="text-[11px] font-black uppercase tracking-widest text-primary">{copy.eyebrow}</p>
     <h2 class="mt-2 text-lg font-black text-foreground">{copy.title}</h2>
     <div class="mt-4 grid gap-4 sm:grid-cols-[1fr_1.2fr]">
       <div>
-        <h3 class="text-xs font-bold uppercase tracking-wide text-slate-500">{copy.method}</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wide text-muted-foreground">{copy.method}</h3>
         <ul class="mt-2 space-y-1.5 text-sm leading-6 text-slate-700">
           {note.basis.map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div>
-        <h3 class="text-xs font-bold uppercase tracking-wide text-slate-500">{copy.limit}</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wide text-muted-foreground">{copy.limit}</h3>
         <p class="mt-2 text-sm leading-6 text-slate-700">{getCautionText(note.caution, locale)}</p>
       </div>
     </div>
-    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-3 text-xs text-slate-500">
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-3 text-xs text-muted-foreground">
       <span>{copy.updated}: {note.updated ?? '2026-06-13'}</span>
-      <a href={localePath(locale, '/methodology')} class="font-semibold text-green-700 hover:text-green-900">{copy.methodology}</a>
+      <a href={localePath(locale, '/methodology')} class="font-semibold text-primary hover:text-green-900">{copy.methodology}</a>
     </div>
   </div>
 </section>

@@ -551,22 +551,22 @@ export default function BreakupRecoveryTest({ locale }: Props) {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">
+        <h1 className="text-2xl font-bold text-foreground">
           {t.title}
         </h1>
-        <p className="mt-1 text-gray-500">{t.subtitle}</p>
+        <p className="mt-1 text-muted-foreground">{t.subtitle}</p>
       </div>
 
       {(
         result && (
           <div className="space-y-4">
             {/* Result header */}
-            <div className="rounded-2xl bg-gradient-to-br from-green-50 to-pink-50 border border-green-200 p-6 text-center">
+            <div className="rounded-2xl bg-gradient-to-br from-green-50 to-pink-50 border border-border p-6 text-center">
               <p className="text-sm font-medium text-green-500 uppercase tracking-wider mb-2">
                 {t.resultTitle}
               </p>
               <div className="text-5xl mb-3">{result.emoji}</div>
-              <h2 className="text-2xl font-bold text-gray-900">
+              <h2 className="text-2xl font-bold text-foreground">
                 {result.name[locale] ?? result.name.en}
               </h2>
               <p className="mt-3 text-gray-600 text-sm leading-relaxed">
@@ -576,7 +576,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
 
             {/* Tips */}
             <div className="rounded-2xl border border-gray-200 bg-card p-5">
-              <h3 className="font-semibold text-gray-900 mb-3">
+              <h3 className="font-semibold text-foreground mb-3">
                 {t.tipsLabel}
               </h3>
               <ul className="space-y-2">
@@ -591,8 +591,8 @@ export default function BreakupRecoveryTest({ locale }: Props) {
 
             {/* Best match + Caution */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4">
-                <h3 className="font-semibold text-green-700 mb-2 text-sm">
+              <div className="rounded-2xl border border-border bg-surface-subtle p-4">
+                <h3 className="font-semibold text-primary mb-2 text-sm">
                   {t.bestMatchLabel}
                 </h3>
                 <p className="text-sm text-gray-700">

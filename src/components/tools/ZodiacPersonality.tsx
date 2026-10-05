@@ -138,14 +138,14 @@ export const ELEMENT_LABEL: Record<Element, Record<Locale, string>> = {
 
 const ELEMENT_BG: Record<Element, string> = {
   fire:  "bg-orange-50 border-orange-200",
-  earth: "bg-surface-subtle border-green-200",
+  earth: "bg-surface-subtle border-border",
   air:   "bg-sky-50 border-sky-200",
   water: "bg-blue-50 border-blue-200",
 };
 
 const ELEMENT_COLOR: Record<Element, string> = {
   fire:  "text-orange-700",
-  earth: "text-green-700",
+  earth: "text-primary",
   air:   "text-sky-700",
   water: "text-blue-700",
 };
@@ -710,8 +710,8 @@ export default function ZodiacPersonality({ locale }: Props) {
     return (
       <div className="space-y-6">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900">{ui.title}</h1>
-          <p className="mt-1 text-gray-500 text-sm">{ui.subtitle}</p>
+          <h1 className="text-2xl font-bold text-foreground">{ui.title}</h1>
+          <p className="mt-1 text-muted-foreground text-sm">{ui.subtitle}</p>
         </div>
 
         {/* Birthday lookup */}
@@ -781,7 +781,7 @@ export default function ZodiacPersonality({ locale }: Props) {
       <div className={`rounded-2xl p-6 text-center border-2 ${ELEMENT_BG[el]}`}>
         <ResultSymbol id="western-zodiac" variant={selected} fallback={z.emoji} className="mx-auto mb-1 h-24 w-24" />
         <h1 className={`text-3xl font-bold ${ELEMENT_COLOR[el]}`}>{z.name[locale]}</h1>
-        <div className="flex justify-center gap-4 mt-2 text-xs text-gray-500">
+        <div className="flex justify-center gap-4 mt-2 text-xs text-muted-foreground">
           <span>{ui.dateRangeLabel}: {z.dateRange[locale]}</span>
           <span>{ui.elementLabel}: {ELEMENT_LABEL[el][locale]}</span>
           <span>{ui.rulerLabel}: {z.ruler[locale]}</span>
@@ -791,7 +791,7 @@ export default function ZodiacPersonality({ locale }: Props) {
 
       {/* Traits */}
       <div className="rounded-xl border border-gray-200 p-4">
-        <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">{ui.traitsLabel}</h2>
+        <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.traitsLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {z.traits[locale].map((trait) => (
             <span
@@ -826,9 +826,9 @@ export default function ZodiacPersonality({ locale }: Props) {
 
       {/* Compatibility */}
       <div className="rounded-xl border border-gray-200 p-4 space-y-3">
-        <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{ui.compatibilityLabel}</h2>
+        <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{ui.compatibilityLabel}</h2>
         <div>
-          <p className="text-xs text-gray-500 mb-1">{compatLabel.best}</p>
+          <p className="text-xs text-muted-foreground mb-1">{compatLabel.best}</p>
           <div className="flex flex-wrap gap-2">
             {z.bestMatch.map((k) => (
               <button
@@ -842,13 +842,13 @@ export default function ZodiacPersonality({ locale }: Props) {
           </div>
         </div>
         <div>
-          <p className="text-xs text-gray-500 mb-1">{compatLabel.challenging}</p>
+          <p className="text-xs text-muted-foreground mb-1">{compatLabel.challenging}</p>
           <div className="flex flex-wrap gap-2">
             {z.challenging.map((k) => (
               <button
                 key={k}
                 onClick={() => setSelected(k)}
-                className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 border border-gray-200 hover:shadow-sm transition-all"
+                className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-surface-subtle text-gray-600 border border-gray-200 hover:shadow-sm transition-all"
               >
                 <ResultSymbol id="western-zodiac" variant={k} fallback={ZODIAC[k].emoji} className="mr-1 inline-block h-5 w-5 align-[-4px]" /> {ZODIAC[k].name[locale]}
               </button>
@@ -869,7 +869,7 @@ export default function ZodiacPersonality({ locale }: Props) {
       {/* Reset */}
       <button
         onClick={() => setSelected(null)}
-        className="w-full py-3 rounded-xl border-2 border-gray-300 text-gray-600 text-sm font-medium hover:bg-gray-50 transition-colors"
+        className="w-full py-3 rounded-xl border-2 border-gray-300 text-gray-600 text-sm font-medium hover:bg-card transition-colors"
       >
         ← {ui.resetBtn}
       </button>

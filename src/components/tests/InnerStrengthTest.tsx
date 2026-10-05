@@ -254,8 +254,8 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
       <div className="max-w-2xl mx-auto space-y-6">
         <div className="text-center py-6">
           <div className="text-5xl mb-3">🧠</div>
-          <h2 className="text-2xl font-bold text-slate-900">{lb.result}</h2>
-          <p className="text-slate-500 mt-1">{lb.totalLabel}: <span className="font-bold text-green-600 text-xl">{totalScore}/10</span></p>
+          <h2 className="text-2xl font-bold text-foreground">{lb.result}</h2>
+          <p className="text-muted-foreground mt-1">{lb.totalLabel}: <span className="font-bold text-green-600 text-xl">{totalScore}/10</span></p>
         </div>
 
         <div className="grid grid-cols-1 gap-4">
@@ -265,13 +265,13 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
             const isStrength = score >= 7;
             const isGrowth = score < 5;
             return (
-              <div key={d} className={`rounded-2xl border p-5 ${isStrength ? 'border-green-200 bg-surface-subtle' : isGrowth ? 'border-orange-200 bg-orange-50' : 'border-slate-200 bg-card'}`}>
+              <div key={d} className={`rounded-2xl border p-5 ${isStrength ? 'border-border bg-surface-subtle' : isGrowth ? 'border-orange-200 bg-orange-50' : 'border-slate-200 bg-card'}`}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl">{dim.icon}</span>
                     <div>
-                      <div className="font-bold text-slate-900 text-sm">{dim.name[L]}</div>
-                      <div className="text-xs text-slate-500">{dim.desc[L]}</div>
+                      <div className="font-bold text-foreground text-sm">{dim.name[L]}</div>
+                      <div className="text-xs text-muted-foreground">{dim.desc[L]}</div>
                     </div>
                   </div>
                   <div className="text-2xl font-black text-slate-700">{score}<span className="text-sm font-normal text-slate-400">/10</span></div>
@@ -286,7 +286,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
         </div>
 
         {strengths.length > 0 && (
-          <div className="bg-surface-subtle rounded-2xl p-5 border border-green-200">
+          <div className="bg-surface-subtle rounded-2xl p-5 border border-border">
             <div className="font-bold text-green-800 mb-2">✨ {lb.strengthLabel}</div>
             <div className="flex flex-wrap gap-2">
               {strengths.map(d => <span key={d} className="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full">{DIMENSIONS[d].icon} {DIMENSIONS[d].name[L]}</span>)}

@@ -153,8 +153,8 @@ const COLOR_MAP: Record<string, { bg: string; border: string; text: string; bar:
   rose: { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-700', bar: 'bg-rose-500', badge: 'bg-rose-100 text-rose-700' },
   yellow: { bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700', bar: 'bg-yellow-500', badge: 'bg-yellow-100 text-yellow-700' },
   teal: { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-700', bar: 'bg-teal-500', badge: 'bg-teal-100 text-teal-700' },
-  indigo: { bg: 'bg-surface-subtle', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
-  purple: { bg: 'bg-surface-subtle', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
+  indigo: { bg: 'bg-surface-subtle', border: 'border-border', text: 'text-primary', bar: 'bg-green-500', badge: 'bg-green-100 text-primary' },
+  purple: { bg: 'bg-surface-subtle', border: 'border-border', text: 'text-primary', bar: 'bg-green-500', badge: 'bg-green-100 text-primary' },
 };
 
 const L: Record<Locale, {
@@ -306,16 +306,16 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
           </div>
           <span className={`text-sm font-bold px-2 py-0.5 rounded-full ${c.badge}`}>{score}%</span>
         </div>
-        <p className="text-xs text-gray-500 mb-2">{info.desc[locale]}</p>
+        <p className="text-xs text-muted-foreground mb-2">{info.desc[locale]}</p>
         <div className="relative h-2 bg-gray-200 rounded-full mb-2">
           <div className={`absolute left-0 top-0 h-2 rounded-full transition-all ${c.bar}`} style={{ width: `${score}%` }} />
         </div>
-        <div className="flex justify-between text-xs text-gray-500">
+        <div className="flex justify-between text-xs text-muted-foreground">
           <span>{info.low[locale]}</span>
           <span>{info.high[locale]}</span>
         </div>
         <details className="group mt-2">
-          <summary className="cursor-pointer list-none text-xs font-semibold text-gray-500 underline">{t.readMore}</summary>
+          <summary className="cursor-pointer list-none text-xs font-semibold text-muted-foreground underline">{t.readMore}</summary>
           <p className="mt-2 text-xs leading-5 text-gray-700">{sl(deepByKey[dimKey].interpretation)}</p>
           <p className="mt-2 text-xs leading-5 text-gray-600">{sl(deepByKey[dimKey].growthPath)}</p>
         </details>
@@ -327,8 +327,8 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
     return (
       <div className="space-y-6 text-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
-          <p className="text-gray-500 mt-1">{t.subtitle}</p>
+          <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
+          <p className="text-muted-foreground mt-1">{t.subtitle}</p>
         </div>
         <div className="bg-card rounded-2xl border border-gray-200 p-5 text-left">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -339,7 +339,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
                 <div key={d} className={`rounded-xl p-3 ${c.bg} border ${c.border}`}>
                   <p className="text-lg mb-1">{info.emoji}</p>
                   <p className={`text-xs font-semibold ${c.text}`}>{info.label[locale]}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{info.desc[locale]}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{info.desc[locale]}</p>
                 </div>
               );
             })}
@@ -359,13 +359,13 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
       <div className="space-y-5">
         <div className="text-center">
           <ResultSymbol id="hexaco" fallback="🧭" className="mx-auto mb-3 h-24 w-24" />
-          <h1 className="text-2xl font-bold text-gray-900">{t.yourProfile}</h1>
-          <p className="text-gray-500 mt-1">{t.title}</p>
+          <h1 className="text-2xl font-bold text-foreground">{t.yourProfile}</h1>
+          <p className="text-muted-foreground mt-1">{t.title}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {DIM_ORDER.map(d => <DimCard key={d} dimKey={d} />)}
         </div>
-        <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-left">
+        <div className="rounded-xl border border-gray-200 bg-card p-4 text-left">
           <h2 className="text-sm font-bold text-gray-800">{t.synthesisTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.synthesis)}</p>
         </div>
@@ -379,7 +379,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
           description={[...DIM_ORDER].sort((a, b) => scores[b] - scores[a]).slice(1, 3).map(d => `${DIM_INFO[d].label[locale]} ${scores[d]}%`).join(' · ')}
         />
         <button onClick={restart}
-          className="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl transition-colors">
+          className="w-full py-3 bg-surface-subtle hover:bg-gray-200 text-gray-700 font-semibold rounded-xl transition-colors">
           {t.restart}
         </button>
       </div>

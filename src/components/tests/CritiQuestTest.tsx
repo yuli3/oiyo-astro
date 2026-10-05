@@ -506,13 +506,13 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
       <div className="not-prose my-10 p-8 bg-card border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
         <p className="text-xs font-bold text-rose-500 uppercase tracking-widest">{t.resultLabel}</p>
         <div className="text-6xl">{r.emoji}</div>
-        <h3 className="text-3xl font-black text-slate-900">{r.title}</h3>
+        <h3 className="text-3xl font-black text-foreground">{r.title}</h3>
         <div className="space-y-2">
-          <div className="flex justify-between text-xs text-slate-500">
+          <div className="flex justify-between text-xs text-muted-foreground">
             <span>{SCORE_LABEL[lang]}</span>
             <span className="font-bold text-rose-600">{correctCount} / {t.questions.length}</span>
           </div>
-          <div className="h-3 bg-slate-100 rounded-full">
+          <div className="h-3 bg-surface-subtle rounded-full">
             <div className="h-3 bg-rose-500 rounded-full transition-all" style={{ width: `${Math.round(pct * 100)}%` }} />
           </div>
         </div>
@@ -528,9 +528,9 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
   return (
     <div className="not-prose my-10 p-8 bg-card border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto space-y-8">
       <div className="text-center">
-        <h3 className="text-2xl font-black text-slate-900">{t.title}</h3>
-        <p className="text-sm text-slate-500 mt-2">{t.description}</p>
-        <div className="mt-3 h-2 bg-slate-100 rounded-full">
+        <h3 className="text-2xl font-black text-foreground">{t.title}</h3>
+        <p className="text-sm text-muted-foreground mt-2">{t.description}</p>
+        <div className="mt-3 h-2 bg-surface-subtle rounded-full">
           <div className="h-2 bg-rose-500 rounded-full transition-all" style={{ width: `${(Object.keys(answers).length / t.questions.length) * 100}%` }} />
         </div>
       </div>
@@ -543,7 +543,7 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
               <p className="font-semibold text-slate-800 leading-snug whitespace-pre-line">{i + 1}. {q.text}</p>
               <div className="grid grid-cols-1 gap-2">
                 {q.options.map((opt) => {
-                  let cls = "bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100";
+                  let cls = "bg-card border-slate-200 text-slate-600 hover:bg-surface-subtle";
                   if (selected === opt.id) {
                     cls = isRevealed
                       ? opt.isCorrect
@@ -569,7 +569,7 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
                 })}
               </div>
               {isRevealed && (
-                <div className="text-xs p-3 bg-slate-100 rounded-lg text-slate-600">
+                <div className="text-xs p-3 bg-surface-subtle rounded-lg text-slate-600">
                   {q.explanation}
                 </div>
               )}

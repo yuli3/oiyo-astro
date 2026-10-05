@@ -247,10 +247,10 @@ export default function LoveProfileTest({ locale }: Props) {
       <div className="max-w-xl mx-auto p-4 text-center">
         <div className="text-4xl mb-3">💑</div>
         <h2 className="text-xl font-bold text-gray-800 mb-2">{ui.title}</h2>
-        <p className="text-sm text-gray-500 mb-5">{ui.subtitle}</p>
+        <p className="text-sm text-muted-foreground mb-5">{ui.subtitle}</p>
         <div className="space-y-2 text-left mb-5">
           {(["A","B","C"] as const).map(s => (
-            <div key={s} className="bg-gray-50 rounded-xl p-3 text-sm text-gray-700">
+            <div key={s} className="bg-card rounded-xl p-3 text-sm text-gray-700">
               {s === "A" ? "🔐" : s === "B" ? "💬" : "⚡"} {ui.sections[s]}
             </div>
           ))}
@@ -277,7 +277,7 @@ export default function LoveProfileTest({ locale }: Props) {
         <div className="bg-surface-subtle border border-green-100 rounded-2xl p-4">
           <p className="text-xs font-semibold text-green-600 mb-1">🔐 {ui.attachLabel}</p>
           <p className="font-bold text-green-800 text-lg">{ATTACH_EMOJI[result.attach]} {ad.name}</p>
-          <p className="text-sm text-green-700 mt-1">{ad.desc}</p>
+          <p className="text-sm text-primary mt-1">{ad.desc}</p>
           <p className="text-xs text-green-600 mt-2 italic">💡 {ad.tip}</p>
         </div>
 
@@ -296,7 +296,7 @@ export default function LoveProfileTest({ locale }: Props) {
           <p className="text-xs text-amber-600 mt-2 italic">💡 {cd.tip}</p>
         </div>
 
-        <button onClick={reset} className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors">
+        <button onClick={reset} className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 hover:bg-card transition-colors">
           {ui.retryBtn}
         </button>
       </div>

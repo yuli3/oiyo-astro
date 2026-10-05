@@ -43,11 +43,11 @@ const ELEM_NAMES: Record<Element, Record<Locale, string>> = {
 const ELEM_EMOJIS: Record<Element, string> = { Wood: "🌿", Fire: "🔥", Earth: "🌍", Metal: "⚙️", Water: "💧" };
 
 const ELEM_COLORS: Record<Element, { bg: string; text: string; border: string; star: string }> = {
-  Wood:  { bg: "bg-surface-subtle",  text: "text-green-700",  border: "border-green-200",  star: "text-green-500" },
+  Wood:  { bg: "bg-surface-subtle",  text: "text-primary",  border: "border-border",  star: "text-green-500" },
   Fire:  { bg: "bg-red-50",    text: "text-red-700",    border: "border-red-200",    star: "text-red-500" },
   Earth: { bg: "bg-amber-50",  text: "text-amber-700",  border: "border-amber-200",  star: "text-amber-500" },
-  Metal: { bg: "bg-gray-50",   text: "text-gray-700",   border: "border-gray-300",   star: "text-gray-500" },
-  Water: { bg: "bg-surface-subtle",   text: "text-green-700",   border: "border-green-200",   star: "text-green-500" },
+  Metal: { bg: "bg-card",   text: "text-gray-700",   border: "border-gray-300",   star: "text-muted-foreground" },
+  Water: { bg: "bg-surface-subtle",   text: "text-primary",   border: "border-border",   star: "text-green-500" },
 };
 
 const TIER_STARS: Record<Tier, string> = {
@@ -458,8 +458,8 @@ export default function SajuFortune({ locale }: Props) {
   return (
     <div className="space-y-6">
       <div className="text-center space-y-1">
-        <h1 className="text-2xl font-bold text-gray-900">{ui.title}</h1>
-        <p className="text-sm text-gray-500">{ui.subtitle}</p>
+        <h1 className="text-2xl font-bold text-foreground">{ui.title}</h1>
+        <p className="text-sm text-muted-foreground">{ui.subtitle}</p>
       </div>
 
       {!result ? (
@@ -487,7 +487,7 @@ export default function SajuFortune({ locale }: Props) {
           <div className={`${colors!.bg} ${colors!.border} border rounded-2xl p-5 text-center space-y-2`}>
             <div className="text-4xl">{ELEM_EMOJIS[result.el]}</div>
             <div className={`text-2xl font-bold ${colors!.text}`}>{ELEM_NAMES[result.el][locale]}</div>
-            <div className="text-sm text-gray-500">
+            <div className="text-sm text-muted-foreground">
               {ui.stemLabel}: {STEM_NAMES[locale][result.stemIdx]}({year}) &nbsp;|&nbsp; {ui.todayLabel}: {today}
             </div>
           </div>
@@ -515,7 +515,7 @@ export default function SajuFortune({ locale }: Props) {
 
           <button
             onClick={() => { setResult(null); setYear(null); }}
-            className="w-full border border-gray-300 text-gray-600 py-2.5 rounded-xl hover:bg-gray-50 transition-colors text-sm"
+            className="w-full border border-gray-300 text-gray-600 py-2.5 rounded-xl hover:bg-card transition-colors text-sm"
           >
             {ui.resetBtn}
           </button>

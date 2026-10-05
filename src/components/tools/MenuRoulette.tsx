@@ -180,7 +180,7 @@ export default function MenuRoulette({ locale }: Props) {
 
   const optionClass = (active: boolean) =>
     `min-h-11 rounded-full border px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 ${
-      active ? 'border-green-700 bg-primary text-primary-foreground' : 'border-green-200 bg-card text-green-900 hover:border-green-500'
+      active ? 'border-green-700 bg-primary text-primary-foreground' : 'border-border bg-card text-green-900 hover:border-green-500'
     }`;
 
   const choose = <T,>(setter: (value: T) => void, value: T) => {
@@ -191,7 +191,7 @@ export default function MenuRoulette({ locale }: Props) {
   return (
     <div className="rounded-2xl border border-green-100 bg-card p-4 sm:p-6">
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
-      <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
+      <p className="mt-2 leading-7 text-primary">{t.subtitle}</p>
 
       <div className="mt-6 space-y-5">
         <fieldset>
@@ -227,15 +227,15 @@ export default function MenuRoulette({ locale }: Props) {
         </div>
       </div>
 
-      <p className="mt-5 text-sm text-green-700">{pool.length} {t.available}</p>
-      <div className="mt-3 min-h-48 rounded-2xl border border-green-200 bg-surface-subtle p-6 text-center sm:p-8">
+      <p className="mt-5 text-sm text-primary">{pool.length} {t.available}</p>
+      <div className="mt-3 min-h-48 rounded-2xl border border-border bg-surface-subtle p-6 text-center sm:p-8">
         {pool.length === 0 ? (
           <p className="mx-auto max-w-md py-10 font-semibold leading-7 text-amber-800">{t.empty}</p>
         ) : (
           <>
             <div aria-hidden="true" className={`text-6xl ${spinning ? 'motion-safe:animate-pulse' : ''}`}>{result?.emoji ?? '🍽️'}</div>
             <div className="mt-3 min-h-9 text-2xl font-extrabold text-foreground">{result ? result.names[locale] : '—'}</div>
-            {result && !spinning && <p className="mt-1 text-sm font-semibold text-green-700">{t.result}</p>}
+            {result && !spinning && <p className="mt-1 text-sm font-semibold text-primary">{t.result}</p>}
           </>
         )}
       </div>
@@ -246,9 +246,9 @@ export default function MenuRoulette({ locale }: Props) {
       </button>
 
       {treat && !spinning && (
-        <div className="mt-6 rounded-2xl border border-green-200 bg-card p-5">
+        <div className="mt-6 rounded-2xl border border-border bg-card p-5">
           <h2 className="text-sm font-bold text-green-900">{t.treatTitle}</h2>
-          <p className="mt-1 text-sm text-green-700">{t.treatLead}</p>
+          <p className="mt-1 text-sm text-primary">{t.treatLead}</p>
           <p className="mt-2 text-lg font-bold text-green-800">{treat}</p>
         </div>
       )}

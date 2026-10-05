@@ -228,9 +228,9 @@ export default function ThinkingPatternsTest({ locale: localeProp }: Props) {
     return (
       <div className="space-y-6">
         <div className="rounded-2xl p-6 text-center" style={{ background: `linear-gradient(135deg, ${r.color}18, ${r.color}08)`, border: `1px solid ${r.color}30` }}>
-          <p className="text-sm font-medium text-gray-500 mb-1">{tx.resultTitle}</p>
+          <p className="text-sm font-medium text-muted-foreground mb-1">{tx.resultTitle}</p>
           <div className="text-5xl mb-2">{r.emoji}</div>
-          <h2 className="text-2xl font-bold text-gray-900">{rd.title}</h2>
+          <h2 className="text-2xl font-bold text-foreground">{rd.title}</h2>
           <p className="mt-1 text-sm font-medium" style={{ color: r.color }}>{rd.subtitle}</p>
           <p className="mt-3 text-sm text-gray-600">{rd.description}</p>
         </div>
@@ -256,7 +256,7 @@ export default function ThinkingPatternsTest({ locale: localeProp }: Props) {
               {(Object.keys(scores) as ThinkingType[]).map((type) => (
                 <div key={type} className="flex items-center gap-3">
                   <span className="text-lg w-6">{results[type].emoji}</span>
-                  <div className="flex-1 h-2 rounded-full bg-gray-100 overflow-hidden">
+                  <div className="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
                     <div className="h-full rounded-full transition-all" style={{ width: `${(scores[type] / maxScore) * 100}%`, backgroundColor: results[type].color }} />
                   </div>
                   <span className="text-xs text-gray-400 w-4">{scores[type]}</span>
@@ -267,7 +267,7 @@ export default function ThinkingPatternsTest({ locale: localeProp }: Props) {
         </div>
 
         <div className="flex gap-3">
-          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">{tx.restart}</button>
+          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card">{tx.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition" style={{ backgroundColor: r.color }}>{copied ? tx.copied : tx.share}</button>
         </div>
         <ShareResultButton locale={localeProp ?? 'ko'} heading={tx.title} resultTitle={rd.title} emoji={r.emoji} />

@@ -130,8 +130,8 @@ export default function TaxCalendar({ locale }: Props) {
   return (
     <div className="not-prose my-8 space-y-6">
       <div className="text-center">
-        <h2 className="text-xl font-black text-gray-900">{t.title}</h2>
-        <p className="text-sm text-gray-500">{t.subtitle}</p>
+        <h2 className="text-xl font-black text-foreground">{t.title}</h2>
+        <p className="text-sm text-muted-foreground">{t.subtitle}</p>
       </div>
 
       {/* payer filter */}
@@ -152,9 +152,9 @@ export default function TaxCalendar({ locale }: Props) {
       {/* next deadline */}
       {next && (
         <div className="mx-auto max-w-md rounded-2xl bg-surface-subtle p-4 text-center">
-          <div className="text-xs font-bold uppercase tracking-wider text-green-700">{t.next}</div>
-          <div className="mt-1 text-lg font-black text-gray-900">{next.ev.name[lang]}</div>
-          <div className="text-sm text-green-700">
+          <div className="text-xs font-bold uppercase tracking-wider text-primary">{t.next}</div>
+          <div className="mt-1 text-lg font-black text-foreground">{next.ev.name[lang]}</div>
+          <div className="text-sm text-primary">
             {next.ev.window} · <b>{next.days === 0 ? t.today : `${t.dday}${next.days}`}</b>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function TaxCalendar({ locale }: Props) {
           const mo = idx + 1;
           const evs = visible.filter((e) => e.month === mo);
           return (
-            <div key={mo} className={`flex gap-3 rounded-xl border p-2.5 ${evs.length ? 'border-gray-200 bg-card' : 'border-transparent bg-gray-50/50'}`}>
+            <div key={mo} className={`flex gap-3 rounded-xl border p-2.5 ${evs.length ? 'border-gray-200 bg-card' : 'border-transparent bg-card/50'}`}>
               <div className="w-12 shrink-0 pt-0.5 text-sm font-black text-gray-400">{mLabel}</div>
               <div className="flex flex-1 flex-wrap gap-2">
                 {evs.length === 0 && <span className="text-xs text-gray-300">—</span>}
@@ -178,7 +178,7 @@ export default function TaxCalendar({ locale }: Props) {
                     rel="noopener noreferrer"
                     className={`group rounded-lg border px-2.5 py-1.5 text-left transition-colors ${
                       e.kind === 'national'
-                        ? 'border-green-200 bg-surface-subtle hover:bg-green-100'
+                        ? 'border-border bg-surface-subtle hover:bg-green-100'
                         : 'border-amber-200 bg-amber-50 hover:bg-amber-100'
                     }`}
                     title={e.note[lang]}
@@ -189,7 +189,7 @@ export default function TaxCalendar({ locale }: Props) {
                       </span>
                       <span className="text-sm font-bold text-gray-800">{e.name[lang]}</span>
                     </div>
-                    <div className="mt-0.5 text-[11px] text-gray-500">{t.deadline} {e.window} · {e.note[lang]}</div>
+                    <div className="mt-0.5 text-[11px] text-muted-foreground">{t.deadline} {e.window} · {e.note[lang]}</div>
                   </a>
                 ))}
               </div>

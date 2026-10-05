@@ -86,7 +86,7 @@ const TYPES: MBTIEntry[] = [
   { type: 'ENFP', color: 'bg-yellow-100 border-yellow-300',
     hobbies: txt({ ko: '즉흥 여행, 창작 글쓰기, SNS 콘텐츠 제작, 세계 음식 탐험, 댄스, 커뮤니티 서클', en: 'Spontaneous travel, creative writing, social media content creation, world food exploration, dance, community circles', ja: 'スポンテーニアスな旅行、創作文章、SNSコンテンツ制作、世界料理探訪、ダンス', zh: '即兴旅行、创意写作、社交媒体内容创作、世界美食探索、舞蹈、社区圈子', fr: 'Voyages spontanés, écriture créative, création de contenu sur les réseaux sociaux, exploration culinaire mondiale', es: 'Viajes espontáneos, escritura creativa, creación de contenido en redes sociales, exploración culinaria mundial' }),
     why: { ko: '끊임없는 새로움과 가능성을 탐구하는 ENFP의 에너지를 살려줌', en: 'Nurtures the ENFP\'s energy for constantly exploring novelty and possibilities', ja: '絶え間ない新しさと可能性を探求するENFPのエネルギーを活かす', zh: '激发ENFP不断探索新事物和可能性的能量', fr: 'Nourrit l\'énergie des ENFP pour explorer constamment la nouveauté et les possibilités', es: 'Nutre la energía del ENFP para explorar constantemente la novedad y las posibilidades' } },
-  { type: 'ISTJ', color: 'bg-slate-100 border-slate-300',
+  { type: 'ISTJ', color: 'bg-surface-subtle border-slate-300',
     hobbies: txt({ ko: '수집(우표·화폐·레코드), 역사 독서, 가드닝, 목공·DIY, 테이블탑 RPG(GM 역할), 뜨개질', en: 'Collecting (stamps/coins/records), history reading, gardening, woodworking/DIY, tabletop RPG (as GM), knitting', ja: 'コレクション(切手·貨幣·レコード)、歴史読書、ガーデニング、木工·DIY', zh: '收藏(邮票硬币唱片)、历史阅读、园艺、木工DIY、桌游RPG', fr: 'Collection (timbres/monnaies/disques), lecture d\'histoire, jardinage, bricolage/DIY, RPG de table', es: 'Coleccionismo (sellos/monedas/discos), lectura de historia, jardinería, carpintería/bricolaje' }),
     why: { ko: '체계와 전통을 중시하고 꾸준히 발전하는 것을 좋아하는 ISTJ에게 적합', en: 'Suited for ISTJs who value structure and tradition and enjoy steady, incremental improvement', ja: '体系と伝統を重視し、着実に発展することが好きなISTJに適しています', zh: '适合重视体系和传统、喜欢稳步进步的ISTJ', fr: 'Convient aux ISTJ qui valorisent la structure et la tradition et aiment une amélioration constante', es: 'Adecuado para ISTJs que valoran la estructura y la tradición y disfrutan la mejora gradual' } },
   { type: 'ISFJ', color: 'bg-teal-100 border-teal-300',
@@ -321,8 +321,8 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="mx-auto max-w-3xl px-4 py-10">
     <div class="mb-8 text-center">
-      <h1 class="text-3xl font-black text-slate-900">{heading}</h1>
-      <p class="mt-2 text-slate-500">{subheading}</p>
+      <h1 class="text-3xl font-black text-foreground">{heading}</h1>
+      <p class="mt-2 text-muted-foreground">{subheading}</p>
       <a
         href={localePath(locale, '/mbti/test')}
         class="mt-4 inline-flex items-center gap-2 rounded-full border-2 border-green-700 bg-primary px-5 py-2 text-sm font-bold text-primary-foreground transition hover:bg-primary-strong"
@@ -337,20 +337,20 @@ const faqJsonLd = {
           <div class="mb-3 flex items-center gap-2">
             <span class="rounded-lg bg-white/70 px-3 py-1 font-mono text-lg font-black text-slate-800">{type}</span>
           </div>
-          <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">{labelHobbies}</p>
+          <p class="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-1">{labelHobbies}</p>
           <p class="text-sm leading-relaxed text-slate-800 mb-3">{hobbies}</p>
-          <p class="text-xs text-slate-500 italic border-t border-slate-200 pt-2">{why[locale] ?? why.en}</p>
+          <p class="text-xs text-muted-foreground italic border-t border-slate-200 pt-2">{why[locale] ?? why.en}</p>
         </div>
       ))}
     </div>
 
-    <div class="mt-10 rounded-2xl border-2 border-green-200 bg-surface-subtle p-6 text-center">
+    <div class="mt-10 rounded-2xl border-2 border-border bg-surface-subtle p-6 text-center">
       <p class="text-sm text-slate-600 mb-3">
         {txt({ ko: '내 MBTI 유형이 아직 확실하지 않다면?', en: 'Not sure of your MBTI type yet?', ja: 'MBTIタイプがまだ分からない？', zh: '还不确定你的MBTI类型？', fr: 'Pas encore sûr de votre type MBTI ?', es: '¿Aún no estás seguro de tu tipo MBTI?' })}
       </p>
       <a
         href={localePath(locale, '/mbti/test')}
-        class="inline-flex items-center gap-2 rounded-xl border-2 border-green-700 bg-card px-6 py-3 font-bold text-green-700 transition hover:bg-primary hover:text-primary-foreground"
+        class="inline-flex items-center gap-2 rounded-xl border-2 border-green-700 bg-card px-6 py-3 font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
       >
         {txt({ ko: '무료 MBTI 테스트 하기', en: 'Take the Free MBTI Test', ja: '無料MBTIテストを受ける', zh: '参加免费MBTI测试', fr: 'Passer le test MBTI gratuit', es: 'Hacer el test MBTI gratis' })} →
       </a>
@@ -358,16 +358,16 @@ const faqJsonLd = {
     <RelatedTools locale={locale} tools={['mbti', 'big5', 'enneagram', 'attachment']} current="mbti-hobbies" />
 
     <section class="mt-8 border-t border-green-100 pt-8">
-      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.conceptTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.concepts.map((item) => (
           <article class="rounded-xl border border-green-100 bg-card p-4">
-            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
         ))}
@@ -375,11 +375,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
           <article class="rounded-xl bg-surface-subtle p-4">
-            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
         ))}
@@ -387,11 +387,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.faqTitle}</h2>
       <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-card">
         {c.faqs.map((faq) => (
           <details class="group p-4">
-            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <summary class="cursor-pointer list-none font-semibold text-foreground">{faq.question}</summary>
             <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
           </details>
         ))}
@@ -399,11 +399,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
           <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
-            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="font-semibold text-foreground">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>
         ))}

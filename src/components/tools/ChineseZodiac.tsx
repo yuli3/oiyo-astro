@@ -208,10 +208,10 @@ const UI: Record<
 // ─── Element colors ───────────────────────────────────────────────────────────
 
 const ELEMENT_COLORS: Record<Element, { bg: string; text: string; badge: string; border: string }> = {
-  wood:  { bg: "bg-surface-subtle",  text: "text-green-800",  badge: "bg-green-100 text-green-700",  border: "border-green-300" },
+  wood:  { bg: "bg-surface-subtle",  text: "text-green-800",  badge: "bg-green-100 text-primary",  border: "border-green-300" },
   fire:  { bg: "bg-red-50",    text: "text-red-800",    badge: "bg-red-100 text-red-700",      border: "border-red-300" },
   earth: { bg: "bg-yellow-50", text: "text-yellow-800", badge: "bg-yellow-100 text-yellow-700",border: "border-yellow-300" },
-  metal: { bg: "bg-gray-50",   text: "text-gray-800",   badge: "bg-gray-100 text-gray-700",    border: "border-gray-300" },
+  metal: { bg: "bg-card",   text: "text-gray-800",   badge: "bg-surface-subtle text-gray-700",    border: "border-gray-300" },
   water: { bg: "bg-blue-50",   text: "text-blue-800",   badge: "bg-blue-100 text-blue-700",    border: "border-blue-300" },
 };
 
@@ -1019,8 +1019,8 @@ export default function ChineseZodiac({ locale }: Props) {
       {/* Header */}
       <div className="text-center space-y-2">
         <div className="text-4xl">🐲</div>
-        <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
-        <p className="text-gray-500 text-sm">{t.subtitle}</p>
+        <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
+        <p className="text-muted-foreground text-sm">{t.subtitle}</p>
       </div>
 
       {/* Year input */}
@@ -1049,7 +1049,7 @@ export default function ChineseZodiac({ locale }: Props) {
 
       {/* Browse grid */}
       <div>
-        <p className="text-xs text-gray-500 mb-3 text-center">{t.orBrowse}</p>
+        <p className="text-xs text-muted-foreground mb-3 text-center">{t.orBrowse}</p>
         <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
           {ZODIAC_ORDER.map((animal) => {
             const z = ZODIACS[animal];
@@ -1092,7 +1092,7 @@ export default function ChineseZodiac({ locale }: Props) {
                   {data.yin ? "☯ Yin" : "☯ Yang"}
                 </span>
                 {yearElement && (
-                  <span className={`text-xs px-2 py-0.5 rounded-full font-semibold bg-green-100 text-green-700`}>
+                  <span className={`text-xs px-2 py-0.5 rounded-full font-semibold bg-green-100 text-primary`}>
                     {t.elementLabel}: {t.elements[yearElement]}
                   </span>
                 )}
@@ -1102,7 +1102,7 @@ export default function ChineseZodiac({ locale }: Props) {
 
           {/* Years */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-1">Years</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-1">Years</p>
             <div className="flex flex-wrap gap-1">
               {data.years.map((y) => (
                 <span key={y} className="text-xs bg-card bg-opacity-70 px-2 py-0.5 rounded-full text-gray-600 border border-white">

@@ -39,9 +39,9 @@ export function ExplorationRecommenderPrototype({ locale }: Props) {
     ...PROFILES[profile], accessibilityNeeds: [], budget, maxRisk: "low", socialMode, space, timeMinutes,
   }, 3, locale), [budget, locale, profile, socialMode, space, timeMinutes]);
 
-  return <section className="mt-8 rounded-3xl border border-green-200 bg-card p-4 text-slate-800 shadow-sm">
+  return <section className="mt-8 rounded-3xl border border-border bg-card p-4 text-slate-800 shadow-sm">
     <h2 className="text-lg font-black text-foreground">🧪 {c.title}</h2>
-    <p className="mt-1 text-xs leading-5 text-green-700">{c.note}</p>
+    <p className="mt-1 text-xs leading-5 text-primary">{c.note}</p>
     <div className="mt-4 grid gap-3 sm:grid-cols-2">
       <label className="text-xs font-bold">{c.profile}<select className="mt-1 w-full rounded-lg border p-2" value={profile} onChange={(event) => setProfile(event.target.value as keyof typeof PROFILES)}><option value="balanced">{c.balanced}</option><option value="maker">{c.maker}</option><option value="social">{c.social}</option></select></label>
       <label className="text-xs font-bold">{c.time}<select className="mt-1 w-full rounded-lg border p-2" value={timeMinutes} onChange={(event) => setTimeMinutes(Number(event.target.value))}><option value={20}>20m</option><option value={30}>30m</option><option value={60}>60m</option></select></label>

@@ -435,7 +435,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
     return (
       <div className="space-y-6">
         <div className="text-center space-y-2">
-          <h1 className="text-2xl font-bold text-gray-900">{t.resultTitle}</h1>
+          <h1 className="text-2xl font-bold text-foreground">{t.resultTitle}</h1>
           <div className="inline-flex max-w-full justify-center whitespace-normal px-4 py-2 rounded-2xl text-white font-semibold text-lg"
             style={{ backgroundColor: info?.color ?? "#A1A578" }}>
             {resultLabel}
@@ -450,7 +450,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         )}
 
         {profile && (
-          <div className="bg-gray-50 rounded-xl p-4">
+          <div className="bg-card rounded-xl p-4">
             <h2 className="font-semibold text-gray-700 mb-3 text-sm">{t.allTypes}</h2>
             <div className="h-36 w-full" aria-hidden="true">
               <ResponsiveContainer width="100%" height="100%">
@@ -466,8 +466,8 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
               {chartData.map((item) => (
                 <div key={item.dimension} className="rounded-lg border border-gray-200 bg-card px-3 py-2">
                   <dt className="text-xs font-medium text-gray-600">{item.name}</dt>
-                  <dd className="mt-1 font-bold text-gray-900">
-                    {item.value} {rt.outOf} <span className="text-xs font-medium text-gray-500">({item.percent}%)</span>
+                  <dd className="mt-1 font-bold text-foreground">
+                    {item.value} {rt.outOf} <span className="text-xs font-medium text-muted-foreground">({item.percent}%)</span>
                   </dd>
                 </div>
               ))}
@@ -476,7 +476,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         )}
 
         {profile?.isClose && (
-          <div className="rounded-xl border border-green-200 bg-surface-subtle p-4" role="note">
+          <div className="rounded-xl border border-border bg-surface-subtle p-4" role="note">
             <h2 className="font-semibold text-foreground">{rt.mixedTitle}</h2>
             <p className="mt-1 text-sm leading-6 text-green-800">{rt.mixedBody.replace("{gap}", String(profile.closeGap))}</p>
           </div>
@@ -484,7 +484,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
 
         {info && !profile?.isClose && (
         <div className="bg-card border border-gray-200 rounded-xl p-5 space-y-4">
-          <p className="rounded-lg bg-slate-50 p-3 text-sm leading-6 text-slate-700">{rt.clearProfileNote}</p>
+          <p className="rounded-lg bg-card p-3 text-sm leading-6 text-slate-700">{rt.clearProfileNote}</p>
           <p className="text-gray-700 leading-relaxed">{info.description[locale]}</p>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -492,7 +492,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
               <h3 className="font-semibold text-green-800 mb-2">✓ {rt.strengths}</h3>
               <ul className="space-y-1">
                 {info.strengths[locale].map((s, i) => (
-                  <li key={i} className="text-sm text-green-700">• {s}</li>
+                  <li key={i} className="text-sm text-primary">• {s}</li>
                 ))}
               </ul>
             </div>
@@ -533,7 +533,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
 
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
           <button onClick={restart}
-            className="min-h-11 px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium transition-colors text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700">
+            className="min-h-11 px-5 py-2 bg-surface-subtle hover:bg-gray-200 text-gray-700 rounded-full font-medium transition-colors text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700">
             {t.restart}
           </button>
           <button onClick={share}

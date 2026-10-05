@@ -574,15 +574,15 @@ export default function CommunicationStyleTest({ locale: localeProp }: Props) {
     return (
       <div className="space-y-6">
         <div className="rounded-2xl bg-gradient-to-br from-green-50 to-green-50 p-6 text-center">
-          <p className="mb-1 text-sm font-medium text-gray-500">{tx.resultTitle}</p>
+          <p className="mb-1 text-sm font-medium text-muted-foreground">{tx.resultTitle}</p>
           <div className="mb-2 text-5xl">{r.emoji}</div>
-          <h2 className="text-2xl font-bold text-gray-900">{rd.title}</h2>
+          <h2 className="text-2xl font-bold text-foreground">{rd.title}</h2>
           <p className="mt-3 text-gray-600">{rd.description}</p>
         </div>
 
         <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm space-y-4">
           <div>
-            <h3 className="font-semibold text-green-700">✅ {tx.strength}</h3>
+            <h3 className="font-semibold text-primary">✅ {tx.strength}</h3>
             <p className="mt-1 text-sm text-gray-600">{rd.strength}</p>
           </div>
           <div>
@@ -590,7 +590,7 @@ export default function CommunicationStyleTest({ locale: localeProp }: Props) {
             <p className="mt-1 text-sm text-gray-600">{rd.weakness}</p>
           </div>
           <div className="rounded-lg bg-surface-subtle p-4">
-            <h3 className="font-semibold text-green-700">💡 {tx.tip}</h3>
+            <h3 className="font-semibold text-primary">💡 {tx.tip}</h3>
             <p className="mt-1 text-sm text-green-800">{rd.tip}</p>
           </div>
         </div>
@@ -615,7 +615,7 @@ export default function CommunicationStyleTest({ locale: localeProp }: Props) {
         <div className="flex gap-3">
           <button
             onClick={restart}
-            className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+            className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card"
           >
             {tx.restart}
           </button>

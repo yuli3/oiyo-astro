@@ -190,14 +190,14 @@ export function RecommendationCards({ locale }: { locale: string }) {
 
             <details className="mt-2" open={isOpen} onToggle={(e) => setOpenWhy((prev) => ({ ...prev, [rec.id]: e.currentTarget.open }))}>
               <summary className="cursor-pointer text-xs font-bold text-green-600">{tt("recommendations.cards.why")}</summary>
-              <p className="mt-1 text-xs leading-5 text-green-700">{reasonFor(entry)}</p>
+              <p className="mt-1 text-xs leading-5 text-primary">{reasonFor(entry)}</p>
             </details>
 
             {entry.exploreNodeId ? (
               <button
                 type="button"
                 onClick={() => explore(entry.exploreNodeId)}
-                className="mt-3 inline-flex items-center gap-1 text-xs font-black text-green-700 hover:text-green-900"
+                className="mt-3 inline-flex items-center gap-1 text-xs font-black text-primary hover:text-green-900"
               >
                 {tt("recommendations.cards.explore")} →
               </button>

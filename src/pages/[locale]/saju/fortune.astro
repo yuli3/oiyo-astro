@@ -457,7 +457,7 @@ const faqJsonLd = {
 
     <section class="mt-8 rounded-xl border border-green-100 bg-card p-4">
       <h2 class="text-lg font-bold text-foreground">{periodHeading[locale] ?? periodHeading.en}</h2>
-      <p class="mt-2 text-sm leading-6 text-green-700">{periodDescription[locale] ?? periodDescription.en}</p>
+      <p class="mt-2 text-sm leading-6 text-primary">{periodDescription[locale] ?? periodDescription.en}</p>
       <div class="mt-4 flex flex-wrap gap-2">
         {PERIODS.map((p) => (
           <a href={`/${locale}/saju/${p}/`} class="rounded-full border border-green-100 px-4 py-2 text-sm font-bold text-green-900 transition-colors hover:border-green-300 hover:bg-surface-subtle">
@@ -478,7 +478,7 @@ const faqJsonLd = {
         {c.concepts.map((item) => (
           <article class="rounded-xl border border-green-100 bg-card p-4">
             <h3 class="font-semibold text-foreground">{item.title}</h3>
-            <p class="mt-2 text-sm leading-6 text-green-700">{item.body}</p>
+            <p class="mt-2 text-sm leading-6 text-primary">{item.body}</p>
           </article>
         ))}
       </div>
@@ -504,7 +504,7 @@ const faqJsonLd = {
             <summary class="cursor-pointer list-none font-semibold text-foreground">
               {faq.question}
             </summary>
-            <p class="mt-3 text-sm leading-6 text-green-700">{faq.answer}</p>
+            <p class="mt-3 text-sm leading-6 text-primary">{faq.answer}</p>
           </details>
         ))}
       </div>
@@ -516,7 +516,7 @@ const faqJsonLd = {
         {c.reading.map((item) => (
           <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-foreground">{item.label}</span>
-            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+            <span class="mt-2 block text-sm leading-6 text-primary">{item.desc}</span>
           </a>
         ))}
       </div>

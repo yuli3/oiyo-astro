@@ -637,13 +637,13 @@ export default function CollabRiskTest({ locale: localeProp }: Props) {
       <div className="not-prose my-10 p-8 bg-card border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
         <p className="text-xs font-bold text-orange-500 uppercase tracking-widest">{t.resultLabel}</p>
         <div className="text-6xl">{r.emoji}</div>
-        <h3 className="text-3xl font-black text-slate-900">{r.title}</h3>
+        <h3 className="text-3xl font-black text-foreground">{r.title}</h3>
         <div className="space-y-2">
-          <div className="flex justify-between text-xs text-slate-500">
+          <div className="flex justify-between text-xs text-muted-foreground">
             <span>{ui.collabHealth}</span>
             <span className="font-bold text-orange-600">{barPct}%</span>
           </div>
-          <div className="h-3 bg-slate-100 rounded-full">
+          <div className="h-3 bg-surface-subtle rounded-full">
             <div className="h-3 bg-orange-500 rounded-full transition-all" style={{ width: `${barPct}%` }} />
           </div>
         </div>

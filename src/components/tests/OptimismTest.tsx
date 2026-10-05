@@ -464,12 +464,12 @@ export default function OptimismTest({ locale: localeProp }: Props) {
     return (
       <div className="space-y-6">
         <div className="rounded-2xl p-6 text-center" style={{ background: `${lv.color}12`, border: `1px solid ${lv.color}40` }}>
-          <p className="mb-1 text-sm font-medium text-gray-500">{tx.resultTitle}</p>
+          <p className="mb-1 text-sm font-medium text-muted-foreground">{tx.resultTitle}</p>
           <div className="mb-2 text-5xl">{lv.emoji}</div>
-          <h2 className="text-2xl font-bold text-gray-900">{ld.title}</h2>
-          <p className="mt-2 text-sm text-gray-500">{tx.yourScore}: {result.score} / {maxScore}</p>
+          <h2 className="text-2xl font-bold text-foreground">{ld.title}</h2>
+          <p className="mt-2 text-sm text-muted-foreground">{tx.yourScore}: {result.score} / {maxScore}</p>
           <div className="mx-auto mt-4 max-w-xs">
-            <div className="relative h-3 w-full overflow-hidden rounded-full bg-gray-100">
+            <div className="relative h-3 w-full overflow-hidden rounded-full bg-surface-subtle">
               <div className="h-full rounded-full transition-all duration-700" style={{ width: `${pct}%`, backgroundColor: lv.color }} />
             </div>
             <div className="mt-1 flex justify-between text-xs text-gray-400">
@@ -483,7 +483,7 @@ export default function OptimismTest({ locale: localeProp }: Props) {
         </div>
         <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm space-y-4">
           <div>
-            <h3 className="font-semibold text-green-700">✅ {tx.strength}</h3>
+            <h3 className="font-semibold text-primary">✅ {tx.strength}</h3>
             <p className="mt-1 text-sm text-gray-600">{ld.strength}</p>
           </div>
           <div>
@@ -497,7 +497,7 @@ export default function OptimismTest({ locale: localeProp }: Props) {
         </div>
         <div className="flex gap-3">
           <ShareResultButton locale={locale} heading={tx.resultTitle} emoji={lv.emoji} resultTitle={ld.title} description={`${tx.yourScore}: ${result.score} / ${maxScore}`} />
-          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">{tx.restart}</button>
+          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card">{tx.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition" style={{ backgroundColor: lv.color }}>{copied ? tx.copied : tx.share}</button>
         </div>
       </div>

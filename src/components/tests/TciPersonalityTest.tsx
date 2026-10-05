@@ -134,10 +134,10 @@ const COLOR_MAP: Record<string, { bg: string; border: string; text: string; bar:
   blue: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', bar: 'bg-blue-500', badge: 'bg-blue-100 text-blue-700' },
   orange: { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', bar: 'bg-orange-500', badge: 'bg-orange-100 text-orange-700' },
   pink: { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-700', bar: 'bg-pink-500', badge: 'bg-pink-100 text-pink-700' },
-  green: { bg: 'bg-surface-subtle', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
-  indigo: { bg: 'bg-surface-subtle', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
+  green: { bg: 'bg-surface-subtle', border: 'border-border', text: 'text-primary', bar: 'bg-green-500', badge: 'bg-green-100 text-primary' },
+  indigo: { bg: 'bg-surface-subtle', border: 'border-border', text: 'text-primary', bar: 'bg-green-500', badge: 'bg-green-100 text-primary' },
   teal: { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-700', bar: 'bg-teal-500', badge: 'bg-teal-100 text-teal-700' },
-  violet: { bg: 'bg-surface-subtle', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
+  violet: { bg: 'bg-surface-subtle', border: 'border-border', text: 'text-primary', bar: 'bg-green-500', badge: 'bg-green-100 text-primary' },
 };
 
 const L: Record<Locale, {
@@ -302,7 +302,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
         <div className="relative h-2 bg-gray-200 rounded-full mb-2">
           <div className={`absolute left-0 top-0 h-2 rounded-full transition-all ${c.bar}`} style={{ width: `${score}%` }} />
         </div>
-        <div className="flex justify-between text-xs text-gray-500">
+        <div className="flex justify-between text-xs text-muted-foreground">
           <span>{info.low[locale]}</span>
           <span>{info.high[locale]}</span>
         </div>
@@ -310,7 +310,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           {score >= 60 ? info.high[locale] : score <= 40 ? info.low[locale] : `${info.low[locale]} / ${info.high[locale]}`}
         </p>
         <details className="group mt-2">
-          <summary className="cursor-pointer list-none text-xs font-semibold text-gray-500 underline">{t.readMore}</summary>
+          <summary className="cursor-pointer list-none text-xs font-semibold text-muted-foreground underline">{t.readMore}</summary>
           <p className="mt-2 text-xs leading-5 text-gray-700">{sl(deepByKey[dimKey].interpretation)}</p>
           <p className="mt-2 text-xs leading-5 text-gray-600">
             {sl((deepByKey[dimKey] as { challenges?: Record<string, string>; growthPath?: Record<string, string> }).challenges
@@ -326,8 +326,8 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
     return (
       <div className="space-y-6 text-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
-          <p className="text-gray-500 mt-1">{t.subtitle}</p>
+          <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
+          <p className="text-muted-foreground mt-1">{t.subtitle}</p>
         </div>
         <div className="bg-card rounded-2xl border border-gray-200 p-6 text-left space-y-4">
           <div className="grid grid-cols-2 gap-4">
@@ -369,8 +369,8 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
       <div className="space-y-6">
         <div className="text-center">
           <ResultSymbol id="tci" fallback="🧭" className="mx-auto mb-3 h-24 w-24" />
-          <h1 className="text-2xl font-bold text-gray-900">{t.yourProfile}</h1>
-          <p className="text-gray-500 mt-1">{t.title}</p>
+          <h1 className="text-2xl font-bold text-foreground">{t.yourProfile}</h1>
+          <p className="text-muted-foreground mt-1">{t.title}</p>
         </div>
 
         <div>
@@ -387,7 +387,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+        <div className="rounded-xl border border-gray-200 bg-card p-4">
           <h2 className="text-sm font-bold text-gray-800">{t.synthesisTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.synthesis)}</p>
           <h2 className="mt-4 text-sm font-bold text-gray-800">{t.lifeIntegrationTitle}</h2>
@@ -406,7 +406,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
         />
 
         <button onClick={restart}
-          className="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl transition-colors">
+          className="w-full py-3 bg-surface-subtle hover:bg-gray-200 text-gray-700 font-semibold rounded-xl transition-colors">
           {t.restart}
         </button>
       </div>

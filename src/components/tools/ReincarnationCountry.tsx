@@ -405,7 +405,7 @@ export default function ReincarnationCountry({ locale }: Props) {
             </button>
           ))}
         </div>
-        <p className="mt-2 text-xs text-slate-500">{COPY.filterNote[locale]}</p>
+        <p className="mt-2 text-xs text-muted-foreground">{COPY.filterNote[locale]}</p>
       </div>
 
       <label className="block text-sm text-slate-600">
@@ -440,7 +440,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       />
       <div className="space-y-1">
         {mode === "births" ? <BirthTicker locale={locale} /> : null}
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-muted-foreground">
           {fill(mode === "births" ? COPY.dustBirths[locale] : COPY.dustPopulation[locale], {
             n: formatInt(Math.round(dotValue(mode)), locale),
             r: new Intl.NumberFormat(locale === "zh" ? "zh-CN" : locale, { maximumFractionDigits: 1 }).format(birthsPerSecond()),
@@ -455,7 +455,7 @@ export default function ReincarnationCountry({ locale }: Props) {
         </div>
       ) : latest ? (
         <div className="rounded-2xl border border-slate-200 bg-card p-5">
-          <p className="text-3xl font-black tracking-tight text-slate-900">{nameOf(latest, locale)}</p>
+          <p className="text-3xl font-black tracking-tight text-foreground">{nameOf(latest, locale)}</p>
           <dl className="mt-3 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
             <div>
               <dt className="text-slate-400">{COPY.birthChance[locale]}</dt>
@@ -530,7 +530,7 @@ export default function ReincarnationCountry({ locale }: Props) {
                 shakeLabel={COPY.shake[locale]}
                 ariaLabel={`${COPY.jar[locale]}: ${results.map((row) => nameOf(row, locale)).join(", ")}`}
               />
-              <p className="mt-2 text-xs text-slate-500">{COPY.jarNote[locale]}</p>
+              <p className="mt-2 text-xs text-muted-foreground">{COPY.jarNote[locale]}</p>
             </div>
           )}
           {results.length > 0 && (
@@ -545,7 +545,7 @@ export default function ReincarnationCountry({ locale }: Props) {
             </ol>
           )}
           {results.length > 1 && (
-            <p className="mt-2 text-xs text-slate-500">
+            <p className="mt-2 text-xs text-muted-foreground">
               {counts
                 .map((row) => {
                   const country = REINCARNATION_COUNTRIES.find((item) => item.iso3 === row.iso3);
@@ -557,7 +557,7 @@ export default function ReincarnationCountry({ locale }: Props) {
           )}
         </div>
       ) : (
-        <p className="text-sm text-slate-500">{COPY.empty[locale]}</p>
+        <p className="text-sm text-muted-foreground">{COPY.empty[locale]}</p>
       )}
 
       <section>
@@ -570,12 +570,12 @@ export default function ReincarnationCountry({ locale }: Props) {
                 onClick={() => {
                   setFocus(row);
                 }}
-                className="flex w-full items-center justify-between px-4 py-2 text-left text-sm hover:bg-slate-50"
+                className="flex w-full items-center justify-between px-4 py-2 text-left text-sm hover:bg-card"
               >
                 <span>
                   {i + 1}. {nameOf(row, locale)}
                 </span>
-                <span className="text-slate-500">{formatPct(countryShare(row, mode), locale)}</span>
+                <span className="text-muted-foreground">{formatPct(countryShare(row, mode), locale)}</span>
               </button>
             </li>
           ))}
@@ -586,13 +586,13 @@ export default function ReincarnationCountry({ locale }: Props) {
         <div className="flex items-center justify-between gap-2">
           <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400">{COPY.history[locale]}</h2>
           {history.length > 0 && (
-            <button type="button" onClick={clearHistory} className="text-xs font-semibold text-slate-500 hover:underline">
+            <button type="button" onClick={clearHistory} className="text-xs font-semibold text-muted-foreground hover:underline">
               {COPY.clearHistory[locale]}
             </button>
           )}
         </div>
         {history.length === 0 ? (
-          <p className="mt-2 text-sm text-slate-500">{COPY.historyEmpty[locale]}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{COPY.historyEmpty[locale]}</p>
         ) : (
           <ol className="mt-2 divide-y divide-slate-100">
             {history.map((entry) => {

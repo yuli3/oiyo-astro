@@ -58,7 +58,7 @@ const TYPES: HabitEntry[] = [
     habits: { ko: '아침 의도 설정(한 단어), 감동 받은 것 사진으로 기록, 주 2회 새 경험 의도적으로 만들기', en: 'Morning intention setting (one word), photo-record things that move you, intentionally create 2 new experiences/week', ja: '朝の意図設定（一言）、感動したことを写真で記録、週2回新しい経験を意図的に作る', zh: '早晨设定意图（一个词），用照片记录感动的事物，每周有意识地创造2次新体验', fr: 'Définir une intention matinale (un mot), photographier ce qui vous touche, créer intentionnellement 2 nouvelles expériences/semaine', es: 'Establecer intención matutina (una palabra), fotografiar lo que te conmueve, crear intencionalmente 2 nuevas experiencias/semana' },
     exercise: { ko: '재미가 첫 번째: 줌바, 실내 암벽, 서핑, 댄스 배틀. 친구와 함께 → 훨씬 지속률 높음', en: 'Fun first: Zumba, indoor climbing, surfing, dance battles. With friends → much higher consistency', ja: '楽しさが第一：ズンバ、室内クライミング、サーフィン、ダンスバトル。友達と一緒→継続率がはるかに高い', zh: '乐趣第一：尊巴舞、室内攀岩、冲浪、舞蹈对决。与朋友一起→坚持率更高', fr: 'Le plaisir avant tout : Zumba, escalade intérieure, surf, battle de danse. Avec des amis → taux de régularité bien plus élevé', es: 'La diversión primero: Zumba, escalada interior, surf, batallas de baile. Con amigos → mucho mayor consistencia' },
     avoid: { ko: '혼자 하는 반복적인 운동, 너무 엄격한 일정', en: 'Repetitive solo workouts, overly rigid schedules', ja: '一人でする反復的な運動、厳しすぎるスケジュール', zh: '单独重复性锻炼，过于严格的时间表', fr: 'Entraînements solo répétitifs, horaires trop rigides', es: 'Entrenamientos repetitivos en solitario, horarios demasiado rígidos' } },
-  { type: 'ISTJ', color: 'border-slate-300 bg-slate-50',
+  { type: 'ISTJ', color: 'border-slate-300 bg-card',
     habits: { ko: '매일 같은 시간 기상, 체크리스트 완수 후 하루 마감, 주간 재고 점검(집·재정·건강)', en: 'Wake at the same time daily, close the day by completing a checklist, weekly review (home/finances/health)', ja: '毎日同じ時間に起床、チェックリストを完了してから1日を締める、週次棚卸し（家·財政·健康）', zh: '每天同一时间起床，完成清单后结束一天，每周盘点（家庭/财务/健康）', fr: 'Se lever à la même heure quotidiennement, terminer la journée en complétant une liste, révision hebdomadaire', es: 'Despertar a la misma hora diariamente, terminar el día completando una lista, revisión semanal (hogar/finanzas/salud)' },
     exercise: { ko: '일정하고 구조화된 루틴: 헬스장 주 3회 (같은 요일), 수영, 자전거 통근. 루틴화가 핵심', en: 'Consistent structured routines: gym 3x/week (same days), swimming, cycling commute. Routinizing is key', ja: '一貫した構造的ルーティン：ジム週3回（同じ曜日）、水泳、自転車通勤。ルーティン化が核心', zh: '一致有结构的常规：每周3次健身房（同一天），游泳，骑车通勤。形成例程是关键', fr: 'Routines structurées et cohérentes : gym 3x/semaine (mêmes jours), natation, navette à vélo. La régularité est clé', es: 'Rutinas estructuradas y consistentes: gimnasio 3x/semana (mismos días), natación, desplazamiento en bicicleta. La rutina es clave' },
     avoid: { ko: '즉흥적인 운동 초대, 계획에 없는 변경', en: 'Spontaneous exercise invitations, unplanned changes to schedule', ja: '即興の運動への誘い、計画にない変更', zh: '临时的运动邀请，计划外的变动', fr: 'Invitations spontanées à l\'exercice, changements non planifiés', es: 'Invitaciones espontáneas al ejercicio, cambios no planificados' } },
@@ -305,10 +305,10 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="mx-auto max-w-3xl px-4 py-10">
     <div class="mb-8 text-center">
-      <h1 class="text-3xl font-black text-slate-900">
+      <h1 class="text-3xl font-black text-foreground">
         {txt({ ko: 'MBTI별 추천 습관·운동', en: 'MBTI Habits & Exercise Guide', ja: 'MBTIタイプ別習慣·運動', zh: 'MBTI推荐习惯和运动', fr: 'Habitudes & Exercices par MBTI', es: 'Hábitos y Ejercicio por MBTI' })}
       </h1>
-      <p class="mt-2 text-slate-500 max-w-xl mx-auto">
+      <p class="mt-2 text-muted-foreground max-w-xl mx-auto">
         {txt({ ko: '성격 유형에 맞는 습관과 운동을 선택하면 의지력 없이도 꾸준히 이어집니다.', en: 'Choosing habits and exercises that match your personality type means you can stay consistent without relying on willpower.', ja: '性格タイプに合った習慣と運動を選ぶと、意志力なしでも継続できます。', zh: '选择符合性格类型的习惯和运动，不需要意志力也能持之以恒。', fr: 'Choisir des habitudes et exercices adaptés à votre type permet la régularité sans volonté forcée.', es: 'Elegir hábitos y ejercicios que coincidan con tu tipo de personalidad permite la consistencia sin depender de la fuerza de voluntad.' })}
       </p>
     </div>
@@ -321,16 +321,16 @@ const faqJsonLd = {
           </div>
           <div class="grid gap-3 sm:grid-cols-3">
             <div>
-              <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">✦ {labelHabits}</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">✦ {labelHabits}</p>
               <p class="text-sm leading-relaxed text-slate-800">{habits[locale] ?? habits.en}</p>
             </div>
             <div>
-              <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">◉ {labelExercise}</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">◉ {labelExercise}</p>
               <p class="text-sm leading-relaxed text-slate-800">{exercise[locale] ?? exercise.en}</p>
             </div>
             <div>
               <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">✕ {labelAvoid}</p>
-              <p class="text-sm leading-relaxed text-slate-500 italic">{avoid[locale] ?? avoid.en}</p>
+              <p class="text-sm leading-relaxed text-muted-foreground italic">{avoid[locale] ?? avoid.en}</p>
             </div>
           </div>
         </div>
@@ -345,16 +345,16 @@ const faqJsonLd = {
     <RelatedTools locale={locale} tools={['mbti', 'big5', 'enneagram', 'attachment']} current="mbti-habits" />
 
     <section class="mt-8 border-t border-green-100 pt-8">
-      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.conceptTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.concepts.map((item) => (
           <article class="rounded-xl border border-green-100 bg-card p-4">
-            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
         ))}
@@ -362,11 +362,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
           <article class="rounded-xl bg-surface-subtle p-4">
-            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
         ))}
@@ -374,11 +374,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.faqTitle}</h2>
       <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-card">
         {c.faqs.map((faq) => (
           <details class="group p-4">
-            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <summary class="cursor-pointer list-none font-semibold text-foreground">{faq.question}</summary>
             <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
           </details>
         ))}
@@ -386,11 +386,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
           <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
-            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="font-semibold text-foreground">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>
         ))}

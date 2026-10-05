@@ -358,7 +358,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   4: {
-    color: "text-green-700", bg: "bg-surface-subtle border-green-200",
+    color: "text-primary", bg: "bg-surface-subtle border-border",
     keywords: {
       ko: ["안정", "실용성", "성실함", "체계적"],
       en: ["Stability", "Practicality", "Diligence", "Systematic"],
@@ -463,7 +463,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   7: {
-    color: "text-green-700", bg: "bg-surface-subtle border-green-200",
+    color: "text-primary", bg: "bg-surface-subtle border-border",
     keywords: {
       ko: ["지혜", "분석", "영성", "내향성"],
       en: ["Wisdom", "Analysis", "Spirituality", "Introspection"],
@@ -568,7 +568,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   11: {
-    color: "text-green-700", bg: "bg-surface-subtle border-green-200",
+    color: "text-primary", bg: "bg-surface-subtle border-border",
     keywords: {
       ko: ["영감", "직관", "이상주의", "영성"],
       en: ["Inspiration", "Intuition", "Idealism", "Spirituality"],
@@ -638,7 +638,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   33: {
-    color: "text-green-700", bg: "bg-surface-subtle border-green-200",
+    color: "text-primary", bg: "bg-surface-subtle border-border",
     keywords: {
       ko: ["마스터 교사", "무조건적 사랑", "희생", "치유"],
       en: ["Master Teacher", "Unconditional Love", "Sacrifice", "Healing"],
@@ -775,7 +775,7 @@ function NumberCard({
   return (
     <div className={`rounded-xl border-2 p-4 space-y-3 ${m.bg}`}>
       <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{label}</span>
+        <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{label}</span>
         {isMaster && (
           <span className={`text-xs font-bold px-2 py-0.5 rounded-full bg-white/60 ${m.color}`}>
             ✨ {ui.masterNote}
@@ -797,11 +797,11 @@ function NumberCard({
       <p className="text-sm text-gray-700 leading-relaxed">{m.meaning[locale]}</p>
       <div className="grid grid-cols-2 gap-2">
         <div className="rounded-lg bg-white/60 p-2">
-          <p className="text-xs font-semibold text-gray-500 mb-1">🎁 {ui.giftLabel}</p>
+          <p className="text-xs font-semibold text-muted-foreground mb-1">🎁 {ui.giftLabel}</p>
           <p className="text-xs text-gray-700">{gift}</p>
         </div>
         <div className="rounded-lg bg-white/60 p-2">
-          <p className="text-xs font-semibold text-gray-500 mb-1">⚡ {ui.challengeLabel}</p>
+          <p className="text-xs font-semibold text-muted-foreground mb-1">⚡ {ui.challengeLabel}</p>
           <p className="text-xs text-gray-700">{challenge}</p>
         </div>
       </div>
@@ -862,8 +862,8 @@ export default function NumerologyCalculator({ locale }: Props) {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{ui.title}</h1>
-        <p className="mt-1 text-gray-500 text-sm">{ui.subtitle}</p>
+        <h1 className="text-2xl font-bold text-foreground">{ui.title}</h1>
+        <p className="mt-1 text-muted-foreground text-sm">{ui.subtitle}</p>
       </div>
 
       {/* Inputs */}
@@ -875,7 +875,7 @@ export default function NumerologyCalculator({ locale }: Props) {
           onChange={setName}
           warning={latinLetters(name) ? undefined : ui.latinRequired}
         />
-        <p className="text-xs leading-6 text-gray-500 [word-break:keep-all]">{ui.dateOnlyHint}</p>
+        <p className="text-xs leading-6 text-muted-foreground [word-break:keep-all]">{ui.dateOnlyHint}</p>
         <BirthDateField
           id="numerology-birth-date"
           locale={locale}
@@ -916,12 +916,12 @@ export default function NumerologyCalculator({ locale }: Props) {
             isMaster={MASTER.has(result.birthday)}
           />
           <div className="rounded-xl border-2 border-violet-200 bg-violet-50 p-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               {ui.personalYearLabel.replace("{year}", String(result.thisYear))}
             </p>
             <p className="mt-1 text-5xl font-black text-violet-700">{result.personalYear}</p>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">{PERSONAL_YEAR[result.personalYear]?.[locale]}</p>
-            <p className="mt-2 text-xs leading-5 text-gray-500">{ui.personalYearNote}</p>
+            <p className="mt-2 text-xs leading-5 text-muted-foreground">{ui.personalYearNote}</p>
           </div>
           {result.expression === null && (
             <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900 [word-break:keep-all]">

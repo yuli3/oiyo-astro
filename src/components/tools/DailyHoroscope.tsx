@@ -859,8 +859,8 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center">
-        <Heading className="text-2xl font-bold text-gray-900">{ui.title}</Heading>
-        <p className="mt-1 text-gray-500">{ui.subtitle}</p>
+        <Heading className="text-2xl font-bold text-foreground">{ui.title}</Heading>
+        <p className="mt-1 text-muted-foreground">{ui.subtitle}</p>
       </div>
 
       {/* Sign selector */}
@@ -892,13 +892,13 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
             <div className="flex items-center gap-3">
               <span className="text-4xl">{SIGN_EMOJI[result.sign]}</span>
               <div>
-                <p className="text-lg font-bold text-gray-900">{names[result.sign]}</p>
+                <p className="text-lg font-bold text-foreground">{names[result.sign]}</p>
                 <p className="text-xs text-gray-400">{result.date} · {ui.resultDate}</p>
               </div>
             </div>
             <button
               onClick={handleReset}
-              className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors"
+              className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-card transition-colors"
             >
               {ui.resetBtn}
             </button>
@@ -913,16 +913,16 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
           </div>
 
           {/* Lucky section */}
-          <div className="rounded-2xl border border-green-200 bg-gradient-to-br from-green-50 to-green-50 p-5">
+          <div className="rounded-2xl border border-border bg-gradient-to-br from-green-50 to-green-50 p-5">
             <h3 className="mb-3 text-center font-bold text-green-800">✨ {ui.luckySection}</h3>
             <div className="flex justify-center gap-10">
               <div className="text-center">
                 <p className="text-xs text-green-500 mb-1">{ui.luckyColor}</p>
-                <p className="text-lg font-semibold text-green-700">{result.luckyColor}</p>
+                <p className="text-lg font-semibold text-primary">{result.luckyColor}</p>
               </div>
               <div className="text-center">
                 <p className="text-xs text-green-500 mb-1">{ui.luckyNumber}</p>
-                <p className="text-2xl font-bold text-green-700">{result.luckyNumber}</p>
+                <p className="text-2xl font-bold text-primary">{result.luckyNumber}</p>
               </div>
             </div>
           </div>

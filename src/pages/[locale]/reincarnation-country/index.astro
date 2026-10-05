@@ -177,9 +177,9 @@ const faqJsonLd = {
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <div class="relative -mx-4 overflow-hidden rounded-3xl px-4 py-6">
     <AmbientParticles colors={["#a78bfa", "#34d399", "#fde68a"]} density={1.2} />
-    <h1 class="relative text-4xl font-black tracking-tight text-slate-900">
+    <h1 class="relative text-4xl font-black tracking-tight text-foreground">
       {m.heading}
-      <span class="mt-1 block text-xl font-bold text-slate-500">{m.question}</span>
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{m.question}</span>
     </h1>
     <p class="relative mt-3 max-w-2xl text-base leading-relaxed text-slate-600">{m.intro}</p>
     </div>
@@ -203,17 +203,17 @@ const faqJsonLd = {
     </p>
     <RelatedTools locale={locale} tools={["countryMatch"]} current="reincarnation" />
     <section class="mt-10 text-sm leading-relaxed text-slate-600">
-      <h2 class="text-lg font-bold text-slate-900">
+      <h2 class="text-lg font-bold text-foreground">
         <a class="hover:underline" href={localePath(locale, "/reincarnation-country/weights/")}>{note.title}</a>
       </h2>
       <p class="mt-2">{note.p1}</p>
       <p class="mt-2">{note.p2}</p>
     </section>
     <section class="mt-10 text-sm leading-relaxed text-slate-600">
-      <h2 class="text-lg font-bold text-slate-900">{faq.title}</h2>
+      <h2 class="text-lg font-bold text-foreground">{faq.title}</h2>
       {faq.items.map((item) => (
         <div class="mt-4">
-          <h3 class="font-bold text-slate-900">{item.q}</h3>
+          <h3 class="font-bold text-foreground">{item.q}</h3>
           <p class="mt-1">{item.a}</p>
         </div>
       ))}

@@ -52,8 +52,18 @@ import { join, basename, dirname } from "node:path";
 // 않았고(폰트만 했다), wiki·game 은 `--card-foreground` 를 빠뜨렸고, oiyo 는
 // 기록해 둔 예산보다 17개가 늘어 있었다. 셋 다 눈으로는 안 보이는 것들이다.
 // 줄이는 방향으로만 갱신한다 — 늘리는 것은 하드코딩을 승인하는 것이다.
+// 여섯 번째 라운드(2026-10-05): 화면이 달라지지 않는 것만 옮겼다. 1,155곳.
+// `text-green-700`(379) → `text-primary`(ΔL +0.027, 세 번째 라운드와 같은 폭),
+// `border-green-200`(163) → `border-border`(ΔL -0.027),
+// `text-gray-500`·`text-slate-500`(205) → `text-muted-foreground`,
+// `text-slate-950`·`text-slate-900`·`text-gray-900`(263) → `text-foreground`,
+// `bg-gray-50`·`bg-slate-50`(95) → `bg-card`(둘 다 L 0.985),
+// `bg-gray-100`·`bg-slate-100`(50) → `bg-surface-subtle`(L 0.967 → 0.966).
+// 남겨 둔 것: `border-green-100`(337)은 --border 보다 0.084 밝고,
+// `text-green-800`·`text-green-600` 은 맞는 토큰이 없다. 라이브와 미리보기를
+// 나란히 놓고 검사 목록·MBTI 설명 글에서 차이가 없음을 확인. 6,053 → 4,195.
 const PALETTE_BUDGET = {
-  oiyo: 6053,
+  oiyo: 4195,
   blog: 10764,
   wiki: 5370,
   game: 7428,

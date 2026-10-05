@@ -58,7 +58,7 @@ export function ProfileInputDialog({
           <button
             type="button"
             onClick={onClose}
-            className="h-11 w-full rounded-2xl border border-slate-200 text-sm font-bold text-slate-500 transition hover:bg-slate-50"
+            className="h-11 w-full rounded-2xl border border-slate-200 text-sm font-bold text-muted-foreground transition hover:bg-card"
           >
             {c.close}
           </button>

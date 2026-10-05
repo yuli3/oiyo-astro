@@ -180,7 +180,7 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
       <div className="rounded-xl border bg-card p-4 space-y-2">
         <div className="flex items-center justify-between text-sm">
           <span className="font-bold text-foreground">{count}/30 {labels.completed}</span>
-          <span className="text-green-700 font-bold">{percent}%</span>
+          <span className="text-primary font-bold">{percent}%</span>
         </div>
         <div className="h-3 rounded-full bg-muted overflow-hidden">
           <div className="h-full bg-primary transition-all" style={{ width: `${percent}%` }} />
@@ -201,7 +201,7 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
                   <button
                     key={task}
                     onClick={() => toggle(dayIndex)}
-                    className={`flex items-center gap-3 rounded-lg border px-3 py-2 text-left text-sm transition-colors ${checked[dayIndex] ? 'border-green-200 bg-surface-subtle text-green-900' : 'bg-card hover:bg-accent'}`}
+                    className={`flex items-center gap-3 rounded-lg border px-3 py-2 text-left text-sm transition-colors ${checked[dayIndex] ? 'border-border bg-surface-subtle text-green-900' : 'bg-card hover:bg-accent'}`}
                   >
                     <span className={`flex h-7 w-7 flex-none items-center justify-center rounded-full border text-xs font-bold ${checked[dayIndex] ? 'border-green-500 bg-green-500 text-white' : 'border-muted-foreground/30 text-muted-foreground'}`}>
                       {dayIndex + 1}

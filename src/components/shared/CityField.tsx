@@ -156,7 +156,7 @@ export function CityField({
             <button
               type="button"
               onClick={() => { setOpen(true); setQuery(""); }}
-              className="min-w-0 flex-1 truncate text-left text-base font-black text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
+              className="min-w-0 flex-1 truncate text-left text-base font-black text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
             >
               {chosen.label[lang] || chosen.label.en}
             </button>
@@ -164,12 +164,12 @@ export function CityField({
               type="button"
               aria-label={c.clear}
               onClick={() => { onChange("", null); setQuery(""); }}
-              className="shrink-0 rounded-lg p-2 text-slate-500 hover:bg-card hover:text-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
+              className="shrink-0 rounded-lg p-2 text-muted-foreground hover:bg-card hover:text-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
             >
               <X className="h-4 w-4" aria-hidden="true" />
             </button>
           </div>
-          <div className="grid gap-3 border-t border-green-200/80 bg-green-950 px-3 py-3 text-green-50 sm:grid-cols-[9rem_1fr]">
+          <div className="grid gap-3 border-t border-border/80 bg-green-950 px-3 py-3 text-green-50 sm:grid-cols-[9rem_1fr]">
             <div className="relative overflow-hidden rounded-xl bg-green-900" aria-hidden="true">
               <svg viewBox="0 0 180 72" className="h-20 w-full" role="img">
                 <title>{c.verified}</title>
@@ -218,7 +218,7 @@ export function CityField({
             onFocus={() => setOpen(true)}
             onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
             onKeyDown={onKeyDown}
-            className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 pl-11 pr-4 text-base font-black text-slate-900 outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10"
+            className="h-12 w-full rounded-2xl border border-slate-200 bg-card pl-11 pr-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10"
           />
         </div>
       )}
@@ -236,7 +236,7 @@ export function CityField({
           )}
           {busy && <p className="px-3 py-2 text-[11px] text-green-500">…</p>}
           {!busy && options.length === 0 && (
-            <p className="px-3 py-3 text-[11px] leading-5 text-slate-500">{c.empty}</p>
+            <p className="px-3 py-3 text-[11px] leading-5 text-muted-foreground">{c.empty}</p>
           )}
           <ul className="divide-y divide-green-50">
             {options.map((o, i) => {
@@ -252,7 +252,7 @@ export function CityField({
                     onClick={() => pick(o)}
                     className={`flex w-full items-baseline justify-between gap-2 px-3 py-2 text-left ${i === active ? "bg-surface-subtle" : ""}`}
                   >
-                    <span className="min-w-0 flex-1 truncate text-sm font-bold text-slate-900">{primary}</span>
+                    <span className="min-w-0 flex-1 truncate text-sm font-bold text-foreground">{primary}</span>
                     {o.latin && o.latin !== primary && (
                       <span className="shrink-0 text-[11px] text-slate-400">{o.latin}</span>
                     )}

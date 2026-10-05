@@ -24,7 +24,7 @@ import { useUserStore } from "@/lib/user/store/user-store";
  */
 
 const FIELD_CLASS =
-  "h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none transition focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400";
+  "h-12 w-full rounded-2xl border border-slate-200 bg-card px-4 text-base font-black text-foreground outline-none transition focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10 disabled:cursor-not-allowed disabled:bg-surface-subtle disabled:text-slate-400";
 
 interface BirthDateFieldProps {
   id: string;
@@ -107,15 +107,15 @@ export function BirthDateField(props: BirthDateFieldProps) {
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
-            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
           >
             <Pencil className="h-3.5 w-3.5" />
             {c.edit}
           </button>
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-green-200 bg-card px-4 py-4 text-center">
-          <p className="text-sm font-bold text-slate-500">{c.missing}</p>
+        <div className="rounded-2xl border border-dashed border-border bg-card px-4 py-4 text-center">
+          <p className="text-sm font-bold text-muted-foreground">{c.missing}</p>
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
@@ -187,15 +187,15 @@ export function ProfileNameField({ className, label, locale, onChange, value, wa
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
-            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
           >
             <Pencil className="h-3.5 w-3.5" />
             {c.edit}
           </button>
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-green-200 bg-card px-4 py-4 text-center">
-          <p className="text-sm font-bold text-slate-500">{c.missing}</p>
+        <div className="rounded-2xl border border-dashed border-border bg-card px-4 py-4 text-center">
+          <p className="text-sm font-bold text-muted-foreground">{c.missing}</p>
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
@@ -283,15 +283,15 @@ function ProfileChip({
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
-            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
           >
             <Pencil className="h-3.5 w-3.5" />
             {c.edit}
           </button>
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-green-200 bg-card px-4 py-4 text-center">
-          <p className="text-sm font-bold text-slate-500">{missing}</p>
+        <div className="rounded-2xl border border-dashed border-border bg-card px-4 py-4 text-center">
+          <p className="text-sm font-bold text-muted-foreground">{missing}</p>
           {unlock && <p className="mt-1 text-xs leading-5 text-slate-400">{unlock}</p>}
           <button
             type="button"

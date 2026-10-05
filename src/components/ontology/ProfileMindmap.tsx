@@ -103,7 +103,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
     <div className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
       <div className="mb-3 flex items-center justify-between">
         <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-black text-primary-foreground">{t.center}</span>
-        <span className="text-xs font-bold text-green-700">{total > 0 ? `✓ ${t.saved} · ${t.count(total)}` : t.count(0)}</span>
+        <span className="text-xs font-bold text-primary">{total > 0 ? `✓ ${t.saved} · ${t.count(total)}` : t.count(0)}</span>
       </div>
 
       <div className="relative mx-auto" style={{ width: SIZE, height: SIZE, maxWidth: "100%" }}>
@@ -129,7 +129,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
                 style={count > 0 && !isOpen ? { borderColor: CAT_COLORS[cat.id] } : undefined}
                 className={
                   "flex h-11 w-11 items-center justify-center rounded-full border text-sm font-black shadow-sm transition " +
-                  (isOpen ? "border-green-700 bg-primary text-primary-foreground" : count > 0 ? "border-green-600 bg-card text-green-800" : "border-green-200 bg-card text-green-700 hover:border-green-400")
+                  (isOpen ? "border-green-700 bg-primary text-primary-foreground" : count > 0 ? "border-green-600 bg-card text-green-800" : "border-border bg-card text-primary hover:border-green-400")
                 }
               >
                 {i + 1}
@@ -161,7 +161,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
                       onClick={() => toggleChip(cat.id, chip)}
                       className={
                         "rounded-full border px-3 py-1.5 text-xs font-bold transition " +
-                        (on ? "border-green-600 bg-primary text-primary-foreground" : "border-green-200 bg-card text-green-800 hover:border-green-400")
+                        (on ? "border-green-600 bg-primary text-primary-foreground" : "border-border bg-card text-green-800 hover:border-green-400")
                       }
                     >
                       {chip}

@@ -341,8 +341,8 @@ export default function BloodTypePersonality({ locale }: Props) {
     return (
       <div className="space-y-6">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900">{ui.title}</h1>
-          <p className="mt-2 text-gray-500 text-sm">{ui.subtitle}</p>
+          <h1 className="text-2xl font-bold text-foreground">{ui.title}</h1>
+          <p className="mt-2 text-muted-foreground text-sm">{ui.subtitle}</p>
         </div>
 
         <p className="text-center text-gray-600 font-medium">{ui.selectPrompt}</p>
@@ -363,7 +363,7 @@ export default function BloodTypePersonality({ locale }: Props) {
           })}
         </div>
 
-        <div className={`rounded-xl border p-4 bg-gray-50 border-gray-200`}>
+        <div className={`rounded-xl border p-4 bg-card border-gray-200`}>
           <p className="text-xs text-gray-400 text-center leading-relaxed">
             {locale === "ko" && "혈액형 성격 이론은 과학적으로 검증되지 않은 대중 문화입니다. 재미로만 참고하세요."}
             {locale === "en" && "Blood type personality theory is popular culture, not scientifically validated. For entertainment only."}
@@ -390,7 +390,7 @@ export default function BloodTypePersonality({ locale }: Props) {
 
       {/* Traits */}
       <div className="rounded-xl border border-gray-200 p-4">
-        <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">{ui.traitsLabel}</h2>
+        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.traitsLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {data.traits[locale].map((trait) => (
             <span key={trait} className={`px-3 py-1 rounded-full text-sm font-medium ${data.bg} ${data.color} border ${data.border}`}>
@@ -402,8 +402,8 @@ export default function BloodTypePersonality({ locale }: Props) {
 
       {/* Strengths & Weaknesses */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="rounded-xl border border-green-200 bg-surface-subtle p-4">
-          <h2 className="text-sm font-semibold text-green-700 mb-3">✅ {ui.strengthsLabel}</h2>
+        <div className="rounded-xl border border-border bg-surface-subtle p-4">
+          <h2 className="text-sm font-semibold text-primary mb-3">✅ {ui.strengthsLabel}</h2>
           <ul className="space-y-1">
             {data.strengths[locale].map((s) => (
               <li key={s} className="text-sm text-gray-700">• {s}</li>
@@ -422,18 +422,18 @@ export default function BloodTypePersonality({ locale }: Props) {
 
       {/* Compatibility */}
       <div className="rounded-xl border border-gray-200 p-4 space-y-3">
-        <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{ui.compatibilityLabel}</h2>
+        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">{ui.compatibilityLabel}</h2>
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm">
-            <span className="text-gray-500">{compatLabel.best}</span>
+            <span className="text-muted-foreground">{compatLabel.best}</span>
             <span className="font-semibold text-gray-800">{data.compatibility[locale].best}</span>
           </div>
           <div className="flex items-center justify-between text-sm">
-            <span className="text-gray-500">{compatLabel.good}</span>
+            <span className="text-muted-foreground">{compatLabel.good}</span>
             <span className="font-semibold text-gray-800">{data.compatibility[locale].good}</span>
           </div>
           <div className="flex items-center justify-between text-sm">
-            <span className="text-gray-500">{compatLabel.challenging}</span>
+            <span className="text-muted-foreground">{compatLabel.challenging}</span>
             <span className="font-semibold text-gray-800">{data.compatibility[locale].challenging}</span>
           </div>
         </div>
@@ -441,10 +441,10 @@ export default function BloodTypePersonality({ locale }: Props) {
 
       {/* Famous People */}
       <div className="rounded-xl border border-gray-200 p-4">
-        <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">{ui.famousLabel}</h2>
+        <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">{ui.famousLabel}</h2>
         <div className="flex flex-wrap gap-2">
           {data.famous.map((name) => (
-            <span key={name} className="px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700 border border-gray-200">
+            <span key={name} className="px-3 py-1 rounded-full text-sm bg-surface-subtle text-gray-700 border border-gray-200">
               {name}
             </span>
           ))}
@@ -463,7 +463,7 @@ export default function BloodTypePersonality({ locale }: Props) {
       {/* Reset */}
       <button
         onClick={() => setSelected(null)}
-        className="w-full py-3 rounded-xl border-2 border-gray-300 text-gray-600 font-medium hover:bg-gray-50 transition-colors"
+        className="w-full py-3 rounded-xl border-2 border-gray-300 text-gray-600 font-medium hover:bg-card transition-colors"
       >
         ← {ui.resetBtn}
       </button>

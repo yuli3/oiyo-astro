@@ -77,7 +77,7 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
   return (
     <div className="rounded-2xl border border-green-100 bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{u("title")}</h1>
-      {!done && step === 0 && <p className="mt-2 leading-7 text-green-700">{u("intro")}</p>}
+      {!done && step === 0 && <p className="mt-2 leading-7 text-primary">{u("intro")}</p>}
 
       {q && (
         <div className="mt-5">
@@ -103,9 +103,9 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
 
       {done && result && (
         <div className="mt-5 space-y-5">
-          <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4 text-center">
+          <div className="rounded-2xl border border-border bg-surface-subtle p-4 text-center">
             <p className="text-xs font-semibold text-green-600">{u("overall")}</p>
-            <p className="mt-1 text-4xl font-bold text-green-700">{Math.round(result.overallBalance)}</p>
+            <p className="mt-1 text-4xl font-bold text-primary">{Math.round(result.overallBalance)}</p>
             <p className="mt-1 text-sm font-semibold text-green-800">{tt(LEVEL[result.balanceLevel], locale)}</p>
           </div>
 
@@ -116,7 +116,7 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
                 const v = Math.round((result.scores as unknown as Record<string, number>)[k] ?? 0);
                 return (
                   <div key={k} className="flex items-center gap-2">
-                    <span className="w-20 shrink-0 text-xs text-green-700">{tt(CAT[k], locale)}</span>
+                    <span className="w-20 shrink-0 text-xs text-primary">{tt(CAT[k], locale)}</span>
                     <div className="h-2 flex-1 overflow-hidden rounded-full bg-green-100">
                       <div className="h-full bg-green-500" style={{ width: `${v}%` }} />
                     </div>
@@ -149,7 +149,7 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
             </div>
           )}
 
-          <button type="button" onClick={restart} className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-green-700 hover:bg-surface-subtle">{u("restart")}</button>
+          <button type="button" onClick={restart} className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-primary hover:bg-surface-subtle">{u("restart")}</button>
           <p className="text-[11px] leading-5 text-green-400">{u("disclaimer")}</p>
         </div>
       )}

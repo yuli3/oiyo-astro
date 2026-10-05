@@ -282,17 +282,17 @@ const ELEMENT_COLOR: Record<Element, string> = {
 
 const ELEMENT_BG: Record<Element, string> = {
   fire:"bg-orange-50 border-orange-200",earth:"bg-emerald-50 border-emerald-200",
-  air:"bg-sky-50 border-sky-200",water:"bg-surface-subtle border-green-200",
+  air:"bg-sky-50 border-sky-200",water:"bg-surface-subtle border-border",
 };
 
 const COMPAT_COLOR: Record<CompatType, string> = {
   excellent:"text-pink-600",great:"text-green-600",good:"text-blue-600",
-  neutral:"text-gray-500",challenging:"text-orange-600",
+  neutral:"text-muted-foreground",challenging:"text-orange-600",
 };
 
 const COMPAT_BG: Record<CompatType, string> = {
-  excellent:"bg-pink-100 text-pink-700",great:"bg-green-100 text-green-700",
-  good:"bg-blue-100 text-blue-700",neutral:"bg-gray-100 text-gray-600",
+  excellent:"bg-pink-100 text-pink-700",great:"bg-green-100 text-primary",
+  good:"bg-blue-100 text-blue-700",neutral:"bg-surface-subtle text-gray-600",
   challenging:"bg-orange-100 text-orange-700",
 };
 
@@ -364,7 +364,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
     <div className="max-w-xl mx-auto p-4 font-sans">
       <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-gray-800">{ui.title}</h2>
-        <p className="text-sm text-gray-500 mt-1">{ui.subtitle}</p>
+        <p className="text-sm text-muted-foreground mt-1">{ui.subtitle}</p>
       </div>
 
       {!result ? (
@@ -385,13 +385,13 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
                         className={`flex flex-col items-center py-2 px-1 rounded-xl border-2 transition-all text-xs
                           ${isSelected
                             ? `${ELEMENT_BG[el]} border-current font-bold scale-105 shadow-sm`
-                            : "bg-card border-gray-100 hover:border-gray-300 hover:bg-gray-50"
+                            : "bg-card border-gray-100 hover:border-gray-300 hover:bg-card"
                           }`}
                       >
                         <span className={`text-xl ${isSelected ? ELEMENT_COLOR[el] : "text-gray-600"}`}>
                           {SIGN_EMOJI[s]}
                         </span>
-                        <span className={`mt-0.5 leading-tight text-center ${isSelected ? ELEMENT_COLOR[el] : "text-gray-500"}`}>
+                        <span className={`mt-0.5 leading-tight text-center ${isSelected ? ELEMENT_COLOR[el] : "text-muted-foreground"}`}>
                           {names[s]}
                         </span>
                         <span className="text-[9px] text-gray-400">{SIGN_DATES[s]}</span>
@@ -440,7 +440,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
             </span>
 
             {/* Bar */}
-            <div className="mt-4 w-full bg-gray-100 rounded-full h-3">
+            <div className="mt-4 w-full bg-surface-subtle rounded-full h-3">
               <div
                 className={`h-3 rounded-full transition-all duration-700 ${getBarColor(result.score)}`}
                 style={{ width: `${result.score}%` }}
@@ -450,13 +450,13 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
 
           {/* Aspect */}
           <div className="bg-gradient-to-r from-pink-50 to-green-50 border border-pink-100 rounded-2xl p-4">
-            <p className="text-xs font-semibold text-gray-500 mb-1">{ui.aspectLabel}</p>
+            <p className="text-xs font-semibold text-muted-foreground mb-1">{ui.aspectLabel}</p>
             <p className="font-bold text-gray-800">{result.aspect}</p>
           </div>
 
           {/* Strengths */}
           <div className="bg-surface-subtle border border-green-100 rounded-2xl p-4">
-            <p className="text-xs font-semibold text-green-700 mb-2">✅ {ui.strengthLabel}</p>
+            <p className="text-xs font-semibold text-primary mb-2">✅ {ui.strengthLabel}</p>
             {result.strengths.map((s, i) => (
               <p key={i} className="text-sm text-green-800">{s}</p>
             ))}
@@ -478,7 +478,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
 
           <button
             onClick={reset}
-            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-gray-50 transition-colors"
+            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-card transition-colors"
           >
             {ui.resetBtn}
           </button>

@@ -184,7 +184,7 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
         const responseMean = (1 + (value * 4) / 100).toFixed(1);
         return <article key={id} className="rounded-2xl border bg-card p-5">
           <h2 className="font-bold">{label}</h2>
-          <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
+          <div className="mt-4 h-3 overflow-hidden rounded-full bg-surface-subtle"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
           <p className="mt-2 text-right text-sm font-bold text-green-800">{responseMean} / 5.0 · {t.level[level]}</p>
           <p className="mt-3 text-sm leading-6 text-muted-foreground">{t.descriptions[id][level]}</p>
         </article>;
@@ -192,8 +192,8 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
     </div>
     <div className="rounded-xl border bg-card p-4 text-xs leading-6 text-muted-foreground"><p>{RESPONSE_POSITION[locale]}</p><p>{DRAFT_BASIS[locale]}</p><p>{new Intl.DateTimeFormat(locale, { dateStyle: "medium" }).format(new Date(result.observedAt))} · {ATTACHMENT_INSTRUMENT.version}</p></div>
     <ShareResultButton locale={locale} heading={t.result} resultTitle={t.title} description={t.conclusion(t.level[anxietyLevel], t.level[avoidanceLevel])} analyticsId="adult_attachment" visual={{ kind: "attachment", anxiety: result.anxiety, avoidance: result.avoidance, anxietyLabel: t.anxiety, avoidanceLabel: t.avoidance }} />
-    <div className="rounded-xl border border-green-200 bg-surface-subtle p-5 text-foreground">
-      <p className="text-xs font-bold uppercase tracking-wider text-green-700">{t.nextLabel}</p>
+    <div className="rounded-xl border border-border bg-surface-subtle p-5 text-foreground">
+      <p className="text-xs font-bold uppercase tracking-wider text-primary">{t.nextLabel}</p>
       <p className="mt-2 text-base leading-7 font-medium">{t.next}</p>
     </div>
     <p className="text-sm leading-6 text-muted-foreground">{t.retake}</p>

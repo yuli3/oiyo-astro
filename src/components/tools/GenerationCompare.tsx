@@ -61,7 +61,7 @@ const L: Record<Locale, {
 };
 
 const MAX_ENTRIES = 6;
-const FIELD_CLASS = 'h-11 rounded-xl border border-slate-200 bg-slate-50 px-3 text-sm font-bold text-slate-900 outline-none transition focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10';
+const FIELD_CLASS = 'h-11 rounded-xl border border-slate-200 bg-card px-3 text-sm font-bold text-foreground outline-none transition focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10';
 
 export default function GenerationCompare({ locale = 'ko', period = 'today' }: { locale?: Locale; period?: Period }) {
   const t = L[locale] ?? L.en;
@@ -122,7 +122,7 @@ export default function GenerationCompare({ locale = 'ko', period = 'today' }: {
       </div>
 
       {results.length === 0 ? (
-        <p className="rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4 text-sm text-muted-foreground">{t.empty}</p>
+        <p className="rounded-xl border border-dashed border-slate-200 bg-card p-4 text-sm text-muted-foreground">{t.empty}</p>
       ) : (
         <div className="grid gap-3 sm:grid-cols-2">
           {results.map((e) => (

@@ -259,18 +259,18 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
 
   return (
     <section className="mx-auto max-w-2xl">
-      <h2 className="text-2xl font-bold text-slate-900">{t.title}</h2>
+      <h2 className="text-2xl font-bold text-foreground">{t.title}</h2>
       <p className="mt-2 leading-7 text-slate-600">{t.subtitle}</p>
 
       <div className="mt-6 rounded-2xl border border-slate-200 bg-card p-5">
-        <label className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
           {t.birth}
         </label>
         <div className="mt-2 grid grid-cols-3 gap-3">
           {([[y, setY, t.year, 1900, 2100], [m, setM, t.month, 1, 12], [d, setD, t.day, 1, 31]] as const).map(
             ([val, set, label, min, max]) => (
               <div key={label}>
-                <span className="text-xs text-slate-500">{label}</span>
+                <span className="text-xs text-muted-foreground">{label}</span>
                 <input
                   type="number" inputMode="numeric" min={min} max={max}
                   value={val} onChange={(e) => { touched.current = true; set(e.target.value); }}
@@ -291,7 +291,7 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
               result.agree ? "bg-emerald-50" : "bg-amber-50"
             }`}
           >
-            <h3 className="font-bold text-slate-900">
+            <h3 className="font-bold text-foreground">
               {result.agree ? t.agreeTitle : t.splitTitle}
             </h3>
             <p className="mt-2 text-sm leading-6 text-slate-700">
@@ -300,7 +300,7 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
                 : t.splitNote(fmt(result.lichun), fmt(result.lunarNewYear))}
             </p>
             {result.agree && (
-              <p className="mt-4 text-3xl font-black text-slate-900">
+              <p className="mt-4 text-3xl font-black text-foreground">
                 {sexagenaryLabel(locale, result.byConvention.solar.year)} · {names[result.byConvention.solar.animalIndex]}
               </p>
             )}
@@ -308,7 +308,7 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
 
           <table className="mt-6 w-full text-sm">
             <thead>
-              <tr className="border-b border-slate-200 text-left text-slate-500">
+              <tr className="border-b border-slate-200 text-left text-muted-foreground">
                 <th className="py-2">{t.colConv}</th>
                 <th className="py-2 text-right">{t.colYear}</th>
                 <th className="py-2 text-right">{t.colSexagenary}</th>
@@ -319,8 +319,8 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
               {rows.map((r) => (
                 <tr key={r.key} className="border-b border-slate-100 align-top">
                   <td className="py-3">
-                    <span className="font-semibold text-slate-900">{r.label}</span>
-                    <span className="mt-1 block text-xs leading-5 text-slate-500">{r.why}</span>
+                    <span className="font-semibold text-foreground">{r.label}</span>
+                    <span className="mt-1 block text-xs leading-5 text-muted-foreground">{r.why}</span>
                   </td>
                   <td className="py-3 text-right tabular-nums">{r.year}</td>
                   <td className="py-3 text-right font-semibold tabular-nums">{sexagenaryLabel(locale, r.year)}</td>
@@ -331,22 +331,22 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
           </table>
 
           <div className="mt-8">
-            <h3 className="font-bold text-slate-900">{t.whyTitle}</h3>
+            <h3 className="font-bold text-foreground">{t.whyTitle}</h3>
             <p className="mt-2 leading-7 text-slate-700">{t.whyBody}</p>
           </div>
 
           <div className="mt-8">
-            <h3 className="font-bold text-slate-900">{t.tableTitle}</h3>
+            <h3 className="font-bold text-foreground">{t.tableTitle}</h3>
             <ul className="mt-3 grid grid-cols-2 gap-2 text-sm sm:grid-cols-5">
               {neighbours.map((n) => (
-                <li key={n.year} className="rounded-lg bg-slate-50 px-3 py-2 text-center">
-                  <span className="block tabular-nums text-slate-500">{n.year}</span>
-                  <span className="block font-semibold text-slate-900">{sexagenaryLabel(locale, n.year)}</span>
+                <li key={n.year} className="rounded-lg bg-card px-3 py-2 text-center">
+                  <span className="block tabular-nums text-muted-foreground">{n.year}</span>
+                  <span className="block font-semibold text-foreground">{sexagenaryLabel(locale, n.year)}</span>
                   <span className="block text-slate-600">{names[n.animalIndex]}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-2 text-xs text-slate-500">{t.tableNote}</p>
+            <p className="mt-2 text-xs text-muted-foreground">{t.tableNote}</p>
           </div>
         </>
       )}

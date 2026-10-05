@@ -348,9 +348,9 @@ export default function CreativityTypeTest({ locale: localeProp }: Props) {
     return (
       <div className="space-y-6">
         <div className="rounded-2xl p-6 text-center" style={{ background: `${r.color}12`, border: `1px solid ${r.color}40` }}>
-          <p className="mb-1 text-sm font-medium text-gray-500">{tx.resultTitle}</p>
+          <p className="mb-1 text-sm font-medium text-muted-foreground">{tx.resultTitle}</p>
           <div className="mb-2 text-5xl">{r.emoji}</div>
-          <h2 className="text-2xl font-bold text-gray-900">{rd.title}</h2>
+          <h2 className="text-2xl font-bold text-foreground">{rd.title}</h2>
           <p className="mt-1 text-sm" style={{ color: r.color }}>{tx.famous}: {rd.famous}</p>
           <p className="mt-3 text-gray-600">{rd.description}</p>
         </div>
@@ -383,7 +383,7 @@ export default function CreativityTypeTest({ locale: localeProp }: Props) {
         </div>
 
         <div className="flex gap-3">
-          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">{tx.restart}</button>
+          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card">{tx.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition" style={{ backgroundColor: r.color }}>{copied ? tx.copied : tx.share}</button>
         </div>
         <ShareResultButton locale={locale} heading={tx.title} resultTitle={rd.title} emoji={r.emoji} description={rd.description} />

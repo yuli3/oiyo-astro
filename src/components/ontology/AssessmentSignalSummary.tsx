@@ -111,7 +111,7 @@ function AssessmentMeta({ signals, lang, t }: { signals: OntologySignal[]; lang:
   const itemCount = instrumentVersion.match(/(?:^|-)(\d+)(?=-|$)/)?.[1];
   const date = observedAt ? new Intl.DateTimeFormat(lang, { dateStyle: "medium" }).format(new Date(observedAt)) : "—";
   return (
-    <div className="mt-3 flex flex-wrap gap-1.5 text-[10px] font-bold text-green-700">
+    <div className="mt-3 flex flex-wrap gap-1.5 text-[10px] font-bold text-primary">
       <span className="rounded-full bg-surface-subtle px-2 py-1">{t.evidence}: {evidence}</span>
       <span className="rounded-full bg-surface-subtle px-2 py-1">{t.strength}: {strengthLabel(confidence, t)}</span>
       <span className="rounded-full bg-surface-subtle px-2 py-1">{t.observed}: {date} · {t.latest}</span>
@@ -124,7 +124,7 @@ function Bar({ label, value, suffix }: { label: string; value: number; suffix?: 
   return (
     <div>
       <div className="mb-1 flex justify-between text-[11px] font-black text-slate-600"><span>{label}</span><span>{Math.round(value)}%{suffix}</span></div>
-      <div className="h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
+      <div className="h-2 overflow-hidden rounded-full bg-surface-subtle"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
     </div>
   );
 }
@@ -134,7 +134,7 @@ function AttachmentBar({ label, value }: { label: string; value: number }) {
   return (
     <div>
       <div className="mb-1 flex justify-between text-[11px] font-black text-slate-600"><span>{label}</span><span>{mean} / 5.0</span></div>
-      <div className="h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
+      <div className="h-2 overflow-hidden rounded-full bg-surface-subtle"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
     </div>
   );
 }
@@ -183,58 +183,58 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
   return (
     <section className="mt-8 rounded-[28px] border border-green-100 bg-green-50/40 p-4 shadow-sm">
       <h2 className="text-lg font-black text-foreground">🧩 {t.title}</h2>
-      <p className="mt-1 text-xs leading-5 text-green-700">{t.subtitle}</p>
+      <p className="mt-1 text-xs leading-5 text-primary">{t.subtitle}</p>
       <AssessmentWeave signals={signals} lang={lang} />
       <div className="mt-4 grid gap-3 md:grid-cols-3">
         {groups.big5.length === BIG5.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.big5Role}</p>
-          <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.big5}</h3>
+          <h3 className="mt-0.5 text-lg font-black text-foreground">{t.big5}</h3>
           <div className="mt-3 space-y-2">{BIG5.map((dimension) => <Bar key={dimension} label={dimension} value={valueOf(byConstruct(groups.big5, `psychology.big5.${dimension}`)) ?? 0} />)}</div>
           <AssessmentMeta signals={groups.big5} lang={lang} t={t} />
-          <p className="mt-3 text-[11px] leading-5 text-slate-500">{t.big5Caveat}</p>
+          <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.big5Caveat}</p>
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.big5[0].provenance.instrumentVersion}</p></details>
         </article>}
 
         {groups.mbti.length === Object.keys(MBTI).length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.mbtiRole}</p>
-          <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.mbti} <span className="ml-1 rounded-full bg-slate-100 px-2 py-0.5 text-sm">{mbtiType}</span></h3>
+          <h3 className="mt-0.5 text-lg font-black text-foreground">{t.mbti} <span className="ml-1 rounded-full bg-surface-subtle px-2 py-0.5 text-sm">{mbtiType}</span></h3>
           <div className="mt-3 space-y-2">{Object.entries(MBTI).map(([axis, poles]) => {
             const value = valueOf(byConstruct(groups.mbti, `personality.mbti.preference.${axis}`)) ?? 50;
             const boundary = value >= 37.5 && value <= 62.5 ? ` · ${t.boundary}` : "";
             return <Bar key={axis} label={`${poles[0]}–${poles[1]}`} value={value} suffix={boundary} />;
           })}</div>
           <AssessmentMeta signals={groups.mbti} lang={lang} t={t} />
-          <p className="mt-3 text-[11px] leading-5 text-slate-500">{t.mbtiCaveat}</p>
+          <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.mbtiCaveat}</p>
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.mbti[0].provenance.instrumentVersion}</p></details>
         </article>}
 
         {groups.riasec.length === RIASEC.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.riasecRole}</p>
-          <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.riasec} <span className="ml-1 rounded-full bg-surface-subtle px-2 py-0.5 text-sm text-green-800">{riasecCode}</span></h3>
+          <h3 className="mt-0.5 text-lg font-black text-foreground">{t.riasec} <span className="ml-1 rounded-full bg-surface-subtle px-2 py-0.5 text-sm text-green-800">{riasecCode}</span></h3>
           <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2">{RIASEC.map((dimension) => <Bar key={dimension} label={dimension} value={valueOf(byConstruct(groups.riasec, `vocation.riasec.${dimension}`)) ?? 0} />)}</div>
           <AssessmentMeta signals={groups.riasec} lang={lang} t={t} />
-          <p className="mt-3 text-[11px] leading-5 text-slate-500">{t.riasecCaveat}</p>
+          <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.riasecCaveat}</p>
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.riasec[0].provenance.instrumentVersion}</p></details>
         </article>}
 
         {groups.attachment.length === ATTACHMENT.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.attachmentRole}</p>
-          <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.attachment}</h3>
+          <h3 className="mt-0.5 text-lg font-black text-foreground">{t.attachment}</h3>
           <div className="mt-3 space-y-3">
             <AttachmentBar label={t.attachmentAnxiety} value={valueOf(byConstruct(groups.attachment, "relationship.attachment.anxiety")) ?? 0} />
             <AttachmentBar label={t.attachmentAvoidance} value={valueOf(byConstruct(groups.attachment, "relationship.attachment.avoidance")) ?? 0} />
           </div>
           <AssessmentMeta signals={groups.attachment} lang={lang} t={t} />
-          <p className="mt-3 text-[11px] leading-5 text-slate-500">{ATTACHMENT_DRAFT_CAVEAT[lang]}</p>
+          <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{ATTACHMENT_DRAFT_CAVEAT[lang]}</p>
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.attachment[0].provenance.instrumentVersion}</p></details>
         </article>}
 
         {groups.careerValues.length > 0 && careerScores && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.careerValuesRole}</p>
-          <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.careerValues}</h3>
+          <h3 className="mt-0.5 text-lg font-black text-foreground">{t.careerValues}</h3>
           <div className="mt-3 space-y-2">{CAREER_VALUES.map((dimension) => <Bar key={dimension} label={CAREER_VALUE_LABELS[lang][dimension]} value={careerScores[dimension]} />)}</div>
           <AssessmentMeta signals={groups.careerValues} lang={lang} t={t} />
-          <p className="mt-3 text-[11px] leading-5 text-slate-500">{t.careerValuesCaveat}</p>
+          <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.careerValuesCaveat}</p>
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.careerValues[0].provenance.instrumentVersion}</p></details>
         </article>}
       </div>

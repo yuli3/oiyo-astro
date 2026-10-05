@@ -155,8 +155,8 @@ export function OntologyBirthInput({
           <Calendar className="h-5 w-5" />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-black text-slate-950">{c.title}</p>
-          <p className="mt-1 text-xs leading-5 text-slate-500">{c.prompt}</p>
+          <p className="text-sm font-black text-foreground">{c.title}</p>
+          <p className="mt-1 text-xs leading-5 text-muted-foreground">{c.prompt}</p>
         </div>
       </div>
 
@@ -166,19 +166,19 @@ export function OntologyBirthInput({
             <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-date">{c.date}</label>
             <input id="ob-date" type="date" max={new Date().toISOString().slice(0, 10)}
               value={date || birthRecord?.civilDate || ""} onInput={(e) => setDate(e.currentTarget.value)} onChange={(e) => setDate(e.target.value)}
-              className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
+              className="h-12 w-full rounded-2xl border border-slate-200 bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
           <div>
             <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-time">{c.time} <span className="font-medium text-slate-400 normal-case">· {c.timeHint}</span></label>
             <input id="ob-time" type="time" value={time}
               onInput={(e) => setTime(e.currentTarget.value)} onChange={(e) => setTime(e.target.value)}
-              className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
+              className="h-12 w-full rounded-2xl border border-slate-200 bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
           <div>
             <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-name">{c.name} <span className="font-medium text-slate-400 normal-case">· {c.nameHint}</span></label>
             <input id="ob-name" type="text" maxLength={40} autoComplete="off"
               value={name} onChange={(e) => setName(e.target.value)}
-              className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
+              className="h-12 w-full rounded-2xl border border-slate-200 bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
           <CityField
             id="ob-city"
@@ -210,7 +210,7 @@ export function OntologyBirthInput({
             <button onClick={save} disabled={!(date || birthRecord?.civilDate)}
               className="h-12 flex-1 rounded-2xl bg-primary text-sm font-black text-primary-foreground transition hover:bg-primary-strong active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50">{c.save}</button>
             {has && (
-              <button onClick={() => setEditing(false)} className="h-12 rounded-2xl px-4 text-xs font-bold text-slate-500 hover:bg-slate-50">{c.cancel}</button>
+              <button onClick={() => setEditing(false)} className="h-12 rounded-2xl px-4 text-xs font-bold text-muted-foreground hover:bg-card">{c.cancel}</button>
             )}
           </div>
         </div>
@@ -218,7 +218,7 @@ export function OntologyBirthInput({
         <div className="mt-4 flex items-center justify-between gap-3 rounded-2xl bg-surface-subtle px-3 py-3">
           <p className="flex min-w-0 flex-col gap-0.5 text-xs leading-5 text-green-800">
             <span className="flex items-center gap-1.5 font-black"><Check className="h-4 w-4 shrink-0" />{c.saved}</span>
-            <span className="text-green-700">
+            <span className="text-primary">
               {profile.name ? `${profile.name} · ` : ""}
               {birthRecord?.civilDate}
               {birthRecord?.civilTime ? ` · ${birthRecord.civilTime}` : ""}
@@ -229,7 +229,7 @@ export function OntologyBirthInput({
             {birthRecord?.needsConfirmation && <span className="text-amber-700">{c.precision}</span>}
           </p>
           <button onClick={() => { seed(); setEditing(true); }}
-            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-card px-3 py-2 text-xs font-bold text-green-800 hover:border-green-300">
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-3 py-2 text-xs font-bold text-green-800 hover:border-green-300">
             <Pencil className="h-3.5 w-3.5" />{c.edit}
           </button>
         </div>

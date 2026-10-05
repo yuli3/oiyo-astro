@@ -80,7 +80,7 @@ export default function PalmistryExplorer({ locale }: Props) {
   return (
     <section className="mx-auto w-full max-w-3xl">
       <header className="mb-6 text-center">
-        <h2 className="text-2xl font-extrabold text-slate-900">{t.title}</h2>
+        <h2 className="text-2xl font-extrabold text-foreground">{t.title}</h2>
         <p className="mt-2 text-sm text-slate-600">{t.subtitle}</p>
       </header>
 
@@ -127,7 +127,7 @@ export default function PalmistryExplorer({ locale }: Props) {
                 type="button"
                 onClick={() => setActive(l.id)}
                 className={`rounded-full px-3 py-1 text-xs font-bold transition ${
-                  l.id === active ? 'text-white' : 'text-slate-600 bg-slate-100 hover:bg-slate-200'
+                  l.id === active ? 'text-white' : 'text-slate-600 bg-surface-subtle hover:bg-slate-200'
                 }`}
                 style={l.id === active ? { backgroundColor: l.color } : undefined}
               >
@@ -141,7 +141,7 @@ export default function PalmistryExplorer({ locale }: Props) {
         <article className="rounded-2xl border border-slate-200 bg-card p-5 shadow-sm">
           <div className="flex items-center gap-2">
             <span className="inline-block h-4 w-4 rounded-full" style={{ backgroundColor: line.color }} aria-hidden="true" />
-            <h3 className="text-xl font-black text-slate-900">{line.name[loc]}</h3>
+            <h3 className="text-xl font-black text-foreground">{line.name[loc]}</h3>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-slate-700">{line.meaning[loc]}</p>
           <p className="mt-5 text-xs font-bold uppercase tracking-wider text-slate-400">{t.variationsLabel}</p>

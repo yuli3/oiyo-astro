@@ -272,7 +272,7 @@ export default function FocusBlockerTest({ locale: localeProp }: Props) {
         <div className="rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 p-6 text-center">
           <p className="text-sm font-medium text-orange-600 mb-1">{tx.resultTitle}</p>
           <div className="text-5xl mb-2">🔍</div>
-          <h2 className="text-2xl font-bold text-gray-900">{categoryInfo[sorted[0]][locale].title}</h2>
+          <h2 className="text-2xl font-bold text-foreground">{categoryInfo[sorted[0]][locale].title}</h2>
           <p className="mt-2 text-sm text-gray-600">{locale === "ko" ? "가장 큰 방해 요소" : locale === "ja" ? "最大の妨害要素" : locale === "zh" ? "最大的干扰因素" : locale === "fr" ? "Votre principal obstacle" : locale === "es" ? "Tu principal bloqueador" : "Your biggest blocker"}</p>
         </div>
 
@@ -287,7 +287,7 @@ export default function FocusBlockerTest({ locale: localeProp }: Props) {
                     <span className="text-sm text-gray-600">{ci.emoji} {ci[locale].title}</span>
                     <span className="text-xs text-gray-400">{Math.round((catAvg[cat] / 10) * 100)}%</span>
                   </div>
-                  <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
+                  <div className="h-2 rounded-full bg-surface-subtle overflow-hidden">
                     <div className="h-full rounded-full transition-all" style={{ width: `${(catAvg[cat] / maxScore) * 100}%`, backgroundColor: ci.color }} />
                   </div>
                 </div>
@@ -315,7 +315,7 @@ export default function FocusBlockerTest({ locale: localeProp }: Props) {
         </div>
 
         <div className="flex gap-3">
-          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">{tx.restart}</button>
+          <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-card">{tx.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition bg-orange-500 hover:bg-orange-600">{copied ? tx.copied : tx.share}</button>
         </div>
         <ShareResultButton locale={localeProp ?? 'ko'} heading={tx.title} resultTitle={categoryInfo[sorted[0]][locale].title} />

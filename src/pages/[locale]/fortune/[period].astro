@@ -350,7 +350,7 @@ const breadcrumbJsonLd = {
   <div class="mx-auto max-w-3xl px-4 py-10">
     <HeroArt src="/images/oiyo-imagegen/hero/today-hero.webp" class="mb-6 max-h-56" />
     <div class="mb-6 text-center">
-      <p class="text-xs font-black uppercase tracking-[0.24em] text-green-700">Periodic Fortune</p>
+      <p class="text-xs font-black uppercase tracking-[0.24em] text-primary">Periodic Fortune</p>
       <h1 class="mt-2 text-3xl font-black text-foreground">{m.h1}</h1>
       <p class="mt-2 text-sm text-muted-foreground">{m.sub}</p>
     </div>
@@ -397,8 +397,8 @@ const breadcrumbJsonLd = {
       <h2 class="text-xl font-black text-foreground">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
-          <div class="rounded-2xl bg-slate-50 p-4">
-            <h3 class="text-sm font-black text-slate-950">{item.title}</h3>
+          <div class="rounded-2xl bg-card p-4">
+            <h3 class="text-sm font-black text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </div>
         ))}
@@ -449,6 +449,6 @@ const breadcrumbJsonLd = {
       <a href={`/${locale}/saju/calculator/`} class="rounded-full border bg-card px-4 py-2 font-semibold hover:bg-accent">🔮 {locale === 'ko' ? '사주 계산기' : 'Saju'}</a>
     </div>
 
-    <p class="mt-5 text-center text-xs leading-6 text-slate-500">{c.disclaimer}</p>
+    <p class="mt-5 text-center text-xs leading-6 text-muted-foreground">{c.disclaimer}</p>
   </div>
 </Layout>

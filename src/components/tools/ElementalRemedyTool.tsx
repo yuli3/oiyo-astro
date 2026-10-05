@@ -386,7 +386,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
                 ))}
               </ul>
             </div>
-            <p className="text-sm font-medium text-green-700 leading-relaxed">{r.advice}</p>
+            <p className="text-sm font-medium text-primary leading-relaxed">{r.advice}</p>
           </div>
 
           <ShareResultButton

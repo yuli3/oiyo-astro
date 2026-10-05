@@ -578,14 +578,14 @@ export default function EgogramTest({ locale: localeProp }: Props) {
     return (
       <div className="space-y-6">
         <div className="text-center space-y-2">
-          <h1 className="text-2xl font-bold text-gray-900">{t.resultTitle}</h1>
+          <h1 className="text-2xl font-bold text-foreground">{t.resultTitle}</h1>
           <div className="inline-block px-4 py-2 rounded-full text-white font-semibold text-lg"
             style={{ backgroundColor: stateInfo[p.dominant][locale].color }}>
             {p.title[locale]}
           </div>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4">
+        <div className="bg-card rounded-xl p-4">
           <h2 className="font-semibold text-gray-700 mb-3 text-sm">{t.scores}</h2>
           <ResponsiveContainer width="100%" height={260}>
             <RadarChart data={radarData}>
@@ -614,7 +614,7 @@ export default function EgogramTest({ locale: localeProp }: Props) {
               <h3 className="font-semibold text-green-800 mb-2">✓ {t.strengths}</h3>
               <ul className="space-y-1">
                 {p.strengths[locale].map((s, i) => (
-                  <li key={i} className="text-sm text-green-700">• {s}</li>
+                  <li key={i} className="text-sm text-primary">• {s}</li>
                 ))}
               </ul>
             </div>
@@ -651,7 +651,7 @@ export default function EgogramTest({ locale: localeProp }: Props) {
 
         <div className="flex gap-3 justify-center">
           <button onClick={restart}
-            className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium transition-colors text-sm">
+            className="px-5 py-2 bg-surface-subtle hover:bg-gray-200 text-gray-700 rounded-full font-medium transition-colors text-sm">
             {t.restart}
           </button>
           <button onClick={share}

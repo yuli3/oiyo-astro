@@ -98,7 +98,7 @@ const localizedRelated = c.related.map((item) => ({ ...item, href: withTrailingS
         {localizedRelated.map((item) => (
           <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href}>
             <span class="font-semibold text-foreground">{item.label}</span>
-            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+            <span class="mt-2 block text-sm leading-6 text-primary">{item.desc}</span>
           </a>
         ))}
       </div>

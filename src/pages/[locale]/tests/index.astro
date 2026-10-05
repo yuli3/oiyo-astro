@@ -420,7 +420,7 @@ const categories = [
       },
       {
         icon: '🪞',
-        bg: 'bg-slate-50',
+        bg: 'bg-card',
         badge: '',
         title: { ko: '자기애 성향 테스트', en: 'Narcissism Test', ja: '自己愛テスト', zh: '自恋倾向测试', fr: 'Test de Narcissisme', es: 'Test de Narcisismo' },
         desc: { ko: '나르시시즘 성향 4가지 차원 진단', en: 'Assess narcissistic tendencies across 4 dimensions', ja: '4次元でナルシシズム傾向を診断', zh: '通过4个维度诊断自恋倾向', fr: 'Évaluez les tendances narcissiques selon 4 dimensions', es: 'Evalúa tendencias narcisistas en 4 dimensiones' },
@@ -474,7 +474,7 @@ const categories = [
       },
       {
         icon: '🌫️',
-        bg: 'bg-slate-50',
+        bg: 'bg-card',
         badge: 'recovery',
         title: { ko: '무기력증 테스트', en: 'Lethargy Check-In', ja: '無気力チェック', zh: '无力感测试', fr: 'Test de Léthargie', es: 'Test de Apatía' },
         desc: { ko: '에너지 저하·의미 상실·연결 필요 신호 점검', en: 'Check low energy, meaning loss, and support needs', ja: 'エネルギー低下・意味喪失・支援サインを確認', zh: '检查低能量、意义感和支持需求', fr: 'Vérifiez énergie, sens et besoin de soutien', es: 'Evalúa energía, sentido y necesidad de apoyo' },
@@ -616,7 +616,7 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
       <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3 leading-tight">
         {heading[locale]}
       </h1>
-      <p class="text-green-700 text-sm md:text-base leading-relaxed">
+      <p class="text-primary text-sm md:text-base leading-relaxed">
         {subheading[locale]}
       </p>
       <p class="mt-3">

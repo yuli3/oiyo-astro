@@ -111,7 +111,7 @@ export default function LottoWinSimulator({ locale }: Props) {
   return (
     <div className="rounded-2xl border border-green-100 bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
-      <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
+      <p className="mt-2 leading-7 text-primary">{t.subtitle}</p>
 
       {/* Jackpot picker */}
       <div className="mt-4">
@@ -120,7 +120,7 @@ export default function LottoWinSimulator({ locale }: Props) {
           {jackpots.map((j) => (
             <button key={j.label} type="button"
               onClick={() => { setJackpot(j.amount); setCart({}); }}
-              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${jackpot === j.amount ? 'border-green-600 bg-primary text-primary-foreground' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>
+              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${jackpot === j.amount ? 'border-green-600 bg-primary text-primary-foreground' : 'border-border bg-card text-green-800 hover:border-green-400'}`}>
               {j.label}
             </button>
           ))}
@@ -128,7 +128,7 @@ export default function LottoWinSimulator({ locale }: Props) {
       </div>
 
       {/* Balance bar */}
-      <div className="sticky top-2 z-10 mt-4 rounded-2xl border border-green-200 bg-surface-subtle p-4">
+      <div className="sticky top-2 z-10 mt-4 rounded-2xl border border-border bg-surface-subtle p-4">
         <div className="flex items-baseline justify-between">
           <span className="text-sm font-semibold text-green-800">{t.balance}</span>
           <span className={`font-mono text-2xl font-extrabold ${balance < 0 ? 'text-red-600' : 'text-green-900'}`}>{fmt(balance)}{currency}</span>
@@ -152,7 +152,7 @@ export default function LottoWinSimulator({ locale }: Props) {
               </div>
               <div className="flex items-center gap-1">
                 {cnt > 0 && (
-                  <button type="button" onClick={() => remove(it)} className="h-8 w-8 rounded-full border border-green-200 text-green-700 hover:border-green-400">−</button>
+                  <button type="button" onClick={() => remove(it)} className="h-8 w-8 rounded-full border border-border text-primary hover:border-green-400">−</button>
                 )}
                 <button type="button" onClick={() => add(it)} disabled={cant}
                   className="h-8 w-8 rounded-full bg-primary text-primary-foreground hover:opacity-90 disabled:opacity-30">+</button>
@@ -164,7 +164,7 @@ export default function LottoWinSimulator({ locale }: Props) {
 
       {/* Result */}
       {owned.length > 0 && (
-        <div className="mt-6 rounded-2xl border border-green-200 bg-surface-subtle p-5">
+        <div className="mt-6 rounded-2xl border border-border bg-surface-subtle p-5">
           <div className="flex items-center justify-between">
             <h2 className="font-bold text-foreground">{t.result}</h2>
             <button type="button" onClick={() => setCart({})} className="text-xs text-green-600 hover:text-green-800">{t.reset}</button>

@@ -149,11 +149,11 @@ const secondaryNavLinks = [
 
   <nav aria-label="Mobile navigation" class="flex-1 overflow-y-auto px-6 py-6 space-y-1">
     {primaryNavLinks.map(({ href, label }) => (
-      <a href={href} class="flex items-center h-11 px-2 rounded-lg text-base font-bold text-green-700 hover:bg-surface-subtle transition-colors">{label}</a>
+      <a href={href} class="flex items-center h-11 px-2 rounded-lg text-base font-bold text-primary hover:bg-surface-subtle transition-colors">{label}</a>
     ))}
     <div class="pt-3 mt-1 border-t border-green-50 space-y-1">
       {secondaryNavLinks.map(({ href, label }) => (
-        <a href={href} class="flex items-center h-9 px-2 rounded-lg text-sm font-semibold text-green-700 hover:bg-surface-subtle transition-colors">{label}</a>
+        <a href={href} class="flex items-center h-9 px-2 rounded-lg text-sm font-semibold text-primary hover:bg-surface-subtle transition-colors">{label}</a>
       ))}
     </div>
   </nav>

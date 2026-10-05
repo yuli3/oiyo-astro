@@ -193,14 +193,14 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
       <ProfileNameField label={ui.nameLabel} locale={locale} value={name} onChange={setName} />
 
       {!reading ? (
-        <p className="rounded-2xl border border-dashed border-green-200 bg-card px-4 py-6 text-center text-sm font-bold text-slate-500">
+        <p className="rounded-2xl border border-dashed border-border bg-card px-4 py-6 text-center text-sm font-bold text-muted-foreground">
           {ui.empty}
         </p>
       ) : (
         <>
           <section className="rounded-[28px] border border-green-100 bg-card p-5">
-            <h2 className="text-sm font-black text-slate-950">{ui.soundTitle}</h2>
-            <p className="mt-1 text-xs leading-5 text-slate-500">{ui.soundSub}</p>
+            <h2 className="text-sm font-black text-foreground">{ui.soundTitle}</h2>
+            <p className="mt-1 text-xs leading-5 text-muted-foreground">{ui.soundSub}</p>
 
             <p className="mt-4 text-[11px] font-black uppercase tracking-wider text-green-600">{ui.carries}</p>
             <div className="mt-2 flex flex-wrap gap-2">
@@ -214,12 +214,12 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
           </section>
 
           <section className="rounded-[28px] border border-green-100 bg-card p-5">
-            <h2 className="text-sm font-black text-slate-950">{ui.fillTitle}</h2>
-            <p className="mt-1 text-xs leading-5 text-slate-500">{ui.fillSub}</p>
+            <h2 className="text-sm font-black text-foreground">{ui.fillTitle}</h2>
+            <p className="mt-1 text-xs leading-5 text-muted-foreground">{ui.fillSub}</p>
 
             {!chart.ready ? (
-              <div className="mt-4 rounded-2xl border border-dashed border-green-200 px-4 py-4 text-center">
-                <p className="text-sm font-bold text-slate-500 [word-break:keep-all]">{birthRecord ? ui.needDetails : ui.needBirth}</p>
+              <div className="mt-4 rounded-2xl border border-dashed border-border px-4 py-4 text-center">
+                <p className="text-sm font-bold text-muted-foreground [word-break:keep-all]">{birthRecord ? ui.needDetails : ui.needBirth}</p>
                 <button
                   type="button"
                   onClick={() => setDialogOpen(true)}
@@ -245,7 +245,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
                   </div>
                   <span className="text-sm font-black text-green-800">{reading.balanceScore}%</span>
                 </div>
-                <p className="mt-1 text-xs text-slate-500">
+                <p className="mt-1 text-xs text-muted-foreground">
                   {filled.length}/{missing.length}
                 </p>
 
@@ -256,7 +256,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
             )}
           </section>
 
-          <p className="px-1 text-xs leading-5 text-slate-500 [word-break:keep-all]">{copy.narrative}</p>
+          <p className="px-1 text-xs leading-5 text-muted-foreground [word-break:keep-all]">{copy.narrative}</p>
         </>
       )}
 

@@ -24,14 +24,14 @@ const copy = T[locale] ?? T.en;
   <button
     type="button"
     onclick="window.print()"
-    class="w-full rounded-xl border-2 border-slate-300 bg-card px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-50"
+    class="w-full rounded-xl border-2 border-slate-300 bg-card px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-card"
   >
     {copy.label}
   </button>
 </div>
 <!-- Date is set client-side: this is a static build, so a server-rendered
      date would be the build date, not the day the visitor prints. -->
-<p class="hidden print:block print:mt-4 print:px-4 text-xs text-slate-500">{copy.generated}: <span data-print-date></span></p>
+<p class="hidden print:block print:mt-4 print:px-4 text-xs text-muted-foreground">{copy.generated}: <span data-print-date></span></p>
 <script>
   document.querySelectorAll('[data-print-date]').forEach((el) => {
     el.textContent = new Date().toISOString().slice(0, 10);

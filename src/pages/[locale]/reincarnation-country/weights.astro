@@ -100,22 +100,22 @@ const drawHref = localePath(locale, "/reincarnation-country/");
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <p class="text-xs font-bold uppercase tracking-wide text-emerald-700">{copy.kicker}</p>
-    <h1 class="mt-2 text-3xl font-black tracking-tight text-slate-900">{copy.heading}</h1>
+    <h1 class="mt-2 text-3xl font-black tracking-tight text-foreground">{copy.heading}</h1>
     <p class="mt-4">
       <a class="inline-flex min-h-11 items-center rounded-full bg-emerald-600 px-5 text-sm font-bold text-white hover:bg-emerald-700" href={drawHref}>{copy.cta}</a>
     </p>
     <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-600">{copy.p1}</p>
-    <h2 class="mt-10 text-lg font-bold text-slate-900">{copy.h2a}</h2>
+    <h2 class="mt-10 text-lg font-bold text-foreground">{copy.h2a}</h2>
     <p class="mt-2 text-sm leading-relaxed text-slate-600">{copy.p2}</p>
-    <h2 class="mt-8 text-lg font-bold text-slate-900">{copy.h2b}</h2>
+    <h2 class="mt-8 text-lg font-bold text-foreground">{copy.h2b}</h2>
     <p class="mt-2 text-sm leading-relaxed text-slate-600">{copy.p3}</p>
-    <h2 class="mt-8 text-lg font-bold text-slate-900">{copy.h2c}</h2>
+    <h2 class="mt-8 text-lg font-bold text-foreground">{copy.h2c}</h2>
     <p class="mt-2 text-sm leading-relaxed text-slate-600">{copy.p4}</p>
     <section class="mt-10 text-sm leading-relaxed text-slate-600">
-      <h2 class="text-lg font-bold text-slate-900">{t({ ko: "자주 묻는 질문", en: "FAQ", ja: "よくある質問", zh: "常见问题", fr: "Questions fréquentes", es: "Preguntas frecuentes" })}</h2>
+      <h2 class="text-lg font-bold text-foreground">{t({ ko: "자주 묻는 질문", en: "FAQ", ja: "よくある質問", zh: "常见问题", fr: "Questions fréquentes", es: "Preguntas frecuentes" })}</h2>
       {faqs.map((item) => (
         <div class="mt-4">
-          <h3 class="font-bold text-slate-900">{item.q}</h3>
+          <h3 class="font-bold text-foreground">{item.q}</h3>
           <p class="mt-1">{item.a}</p>
         </div>
       ))}

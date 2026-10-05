@@ -337,8 +337,8 @@ function getScoreColor(score: number): string {
 
 const RELATION_COLORS: Record<RelationType, string> = {
   triad: "bg-pink-100 text-pink-700",
-  sixharmony: "bg-green-100 text-green-700",
-  neutral: "bg-gray-100 text-gray-700",
+  sixharmony: "bg-green-100 text-primary",
+  neutral: "bg-surface-subtle text-gray-700",
   harm: "bg-yellow-100 text-yellow-700",
   conflict: "bg-orange-100 text-orange-700",
 };
@@ -655,8 +655,8 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
   return (
     <div className="w-full">
       <div className="text-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">{ui.title}</h1>
-        <p className="mt-1 text-gray-500 text-sm">{ui.subtitle}</p>
+        <h1 className="text-2xl font-bold text-foreground">{ui.title}</h1>
+        <p className="mt-1 text-muted-foreground text-sm">{ui.subtitle}</p>
       </div>
 
       {!result ? (
@@ -711,7 +711,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
 
           {/* Preview */}
           {(animal1 || animal2) && (
-            <div className="flex items-center justify-center gap-4 mb-4 py-3 bg-gray-50 rounded-xl">
+            <div className="flex items-center justify-center gap-4 mb-4 py-3 bg-card rounded-xl">
               <span className="text-4xl">{animal1 ? ANIMAL_EMOJI[animal1] : "❓"}</span>
               <span className="text-gray-400">✦</span>
               <span className="text-4xl">{animal2 ? ANIMAL_EMOJI[animal2] : "❓"}</span>
@@ -760,7 +760,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
             </div>
 
             <div className="mt-3 flex justify-center">
-              <div className="w-full max-w-xs bg-gray-100 rounded-full h-3">
+              <div className="w-full max-w-xs bg-surface-subtle rounded-full h-3">
                 <div
                   className="h-3 rounded-full transition-all duration-700"
                   style={{
@@ -778,7 +778,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
           {/* Relation description */}
           <div className="bg-surface-subtle border border-green-100 rounded-2xl p-5">
             <h3 className="font-bold text-green-800 text-sm mb-2">{ui.relationLabel}</h3>
-            <p className="text-sm text-green-700">{ui.relationDesc[result.relation]}</p>
+            <p className="text-sm text-primary">{ui.relationDesc[result.relation]}</p>
           </div>
 
           {/* Detailed description */}
@@ -796,7 +796,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
 
           <button
             onClick={reset}
-            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-gray-50 transition-colors"
+            className="w-full py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-card transition-colors"
           >
             {ui.resetBtn}
           </button>

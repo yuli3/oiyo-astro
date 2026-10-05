@@ -447,7 +447,7 @@ const LEVEL_COLORS: Record<CEFRLevel, string> = {
 };
 
 const LEVEL_BG: Record<CEFRLevel, string> = {
-  A1: "bg-gray-50",
+  A1: "bg-card",
   A2: "bg-blue-50",
   B1: "bg-surface-subtle",
   B2: "bg-yellow-50",
@@ -502,8 +502,8 @@ export default function EnglishLevelTest({ locale }: Props) {
     return (
       <div className="space-y-6 text-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
-          <p className="mt-2 text-gray-500">{t.subtitle}</p>
+          <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
+          <p className="mt-2 text-muted-foreground">{t.subtitle}</p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-card p-6 text-left space-y-3">
           {["A1", "A2", "B1", "B2", "C1", "C2"].map((lvl) => (
@@ -527,9 +527,9 @@ export default function EnglishLevelTest({ locale }: Props) {
     const progress = ((currentIdx) / totalQ) * 100;
     return (
       <div className="space-y-5">
-        <div className="flex justify-between items-center text-sm text-gray-500">
+        <div className="flex justify-between items-center text-sm text-muted-foreground">
           <span>{t.questionLabel} {currentIdx + 1} / {totalQ}</span>
-          <span className="capitalize text-xs px-2 py-0.5 rounded-full bg-gray-100">
+          <span className="capitalize text-xs px-2 py-0.5 rounded-full bg-surface-subtle">
             {currentQ.difficulty} · {currentQ.category}
           </span>
         </div>
@@ -541,18 +541,18 @@ export default function EnglishLevelTest({ locale }: Props) {
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-4">
-          <p className="text-base font-medium text-gray-900">{currentQ.question}</p>
+          <p className="text-base font-medium text-foreground">{currentQ.question}</p>
           <div className="space-y-2">
             {currentQ.options.map((opt, i) => {
               let cls = "w-full text-left rounded-xl border px-4 py-3 text-sm transition-all ";
               if (selected === null) {
-                cls += "border-gray-200 bg-gray-50 hover:border-green-400 hover:bg-surface-subtle text-gray-800";
+                cls += "border-gray-200 bg-card hover:border-green-400 hover:bg-surface-subtle text-gray-800";
               } else if (i === currentQ.answer) {
                 cls += "border-green-500 bg-surface-subtle text-green-800 font-medium";
               } else if (i === selected) {
                 cls += "border-red-400 bg-red-50 text-red-700";
               } else {
-                cls += "border-gray-200 bg-gray-50 text-gray-500 opacity-60";
+                cls += "border-gray-200 bg-card text-muted-foreground opacity-60";
               }
               return (
                 <button key={i} onClick={() => handleSelect(i)} className={cls} disabled={selected !== null}>
@@ -584,14 +584,14 @@ export default function EnglishLevelTest({ locale }: Props) {
   // Result stage
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold text-center text-gray-900">{t.resultTitle}</h1>
+      <h1 className="text-2xl font-bold text-center text-foreground">{t.resultTitle}</h1>
 
       <div className={`rounded-2xl border border-gray-200 ${LEVEL_BG[cefr]} p-6 text-center space-y-3`}>
-        <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">{t.cefrLabel}</p>
+        <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">{t.cefrLabel}</p>
         <p className={`text-6xl font-extrabold ${LEVEL_COLORS[cefr]}`}>{cefr}</p>
         <p className={`text-lg font-semibold ${LEVEL_COLORS[cefr]}`}>{t.cefrDesc[cefr].label}</p>
         <p className="text-sm text-gray-600">{t.cefrDesc[cefr].desc}</p>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-muted-foreground">
           {t.scoreLabel}: <strong>{score}</strong> / {totalQ}
         </p>
         <div className="h-3 rounded-full bg-gray-200 mx-4">
@@ -620,8 +620,8 @@ export default function EnglishLevelTest({ locale }: Props) {
             const userAns = answers[QUESTIONS.indexOf(q)];
             return (
               <div key={q.id} className="rounded-xl border border-red-200 bg-red-50 p-4 space-y-2">
-                <p className="text-sm font-medium text-gray-900">{q.question}</p>
-                <p className="text-xs text-green-700">
+                <p className="text-sm font-medium text-foreground">{q.question}</p>
+                <p className="text-xs text-primary">
                   {t.correctAnswer}: {q.options[q.answer]}
                 </p>
                 {userAns !== null && (

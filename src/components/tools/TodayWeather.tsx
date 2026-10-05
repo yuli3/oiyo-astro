@@ -51,7 +51,7 @@ export default function TodayWeather({ locale, lat, lon }: { locale: Locale; lat
   }
   return (
     <div className="rounded-xl border border-primary/20 bg-card px-4 py-3 text-center">
-      <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">{t.heading}</p>
+      <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{t.heading}</p>
       <p className="text-2xl font-black text-green-900">{text}</p>
       <p className="text-[10px] text-slate-400">{t.source}</p>
     </div>

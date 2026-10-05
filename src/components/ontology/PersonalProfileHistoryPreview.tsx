@@ -127,8 +127,8 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
     <section className="mt-8 rounded-2xl border border-slate-200 bg-card p-4 shadow-sm" aria-labelledby="profile-history-title">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h2 id="profile-history-title" className="text-lg font-black text-slate-900">{t.title}</h2>
-          <p className="mt-1 text-xs font-semibold text-green-700">{t.local}</p>
+          <h2 id="profile-history-title" className="text-lg font-black text-foreground">{t.title}</h2>
+          <p className="mt-1 text-xs font-semibold text-primary">{t.local}</p>
         </div>
         {result.ux.canRetry && (
           <button type="button" onClick={retry} className="min-h-11 rounded-xl border border-slate-300 px-3 text-sm font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">
@@ -141,9 +141,9 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
       {result.store.entries.length === 0 && <p className="mt-4 text-sm text-slate-600">{t.empty}</p>}
 
       {comparisons.map((comparison) => (
-        <article key={`${comparison.assessmentId}:${comparison.instrumentVersion}`} className="mt-4 rounded-xl bg-slate-50 p-3">
+        <article key={`${comparison.assessmentId}:${comparison.instrumentVersion}`} className="mt-4 rounded-xl bg-card p-3">
           <h3 className="font-black text-slate-800">{comparison.assessmentId}</h3>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-muted-foreground">
             {t.compare} · {comparison.instrumentVersion}
             {comparison.newer && comparison.older ? ` · ${freshnessCopy.interval(Math.max(0, Math.round((Date.parse(comparison.newer.measuredAt) - Date.parse(comparison.older.measuredAt)) / 86_400_000)))}` : ""}
           </p>
@@ -188,7 +188,7 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
           <button type="button" onClick={() => setResult(clearPersonalProfileHistory())} className="min-h-11 rounded-xl border border-red-200 px-4 text-sm font-bold text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700">{t.clear}</button>
         )}
       </div>
-      <p className="mt-2 text-xs text-slate-500">{t.captureHint}</p>
+      <p className="mt-2 text-xs text-muted-foreground">{t.captureHint}</p>
     </section>
   );
 }

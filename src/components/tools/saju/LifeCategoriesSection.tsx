@@ -45,12 +45,12 @@ export default function LifeCategoriesSection({
 
   return (
     <div className="bg-card rounded-2xl border border-gray-200 p-5 space-y-4">
-      <h2 className="text-xl font-bold text-gray-900">{tt(C.sectionHeading, locale)}</h2>
+      <h2 className="text-xl font-bold text-foreground">{tt(C.sectionHeading, locale)}</h2>
 
       <div className="grid gap-3 sm:grid-cols-2">
         {/* 재물 */}
         <div className={`rounded-xl border p-4 ${STANCE_STYLE[wealth.stance]}`}>
-          <p className="text-sm font-bold text-gray-900">💰 {tt(C.wealth.title, locale)}</p>
+          <p className="text-sm font-bold text-foreground">💰 {tt(C.wealth.title, locale)}</p>
           <Meta role={wealth.role} level={wealth.level} st={wealth.stance} />
           <p className="mt-2 text-[13px] leading-relaxed text-gray-700">
             {wealth.toneKey === "wealth.overwhelmed"
@@ -61,10 +61,10 @@ export default function LifeCategoriesSection({
 
         {/* 진로 */}
         <div className={`rounded-xl border p-4 ${STANCE_STYLE[career.stance]}`}>
-          <p className="text-sm font-bold text-gray-900">🧭 {tt(C.career.title, locale)}</p>
+          <p className="text-sm font-bold text-foreground">🧭 {tt(C.career.title, locale)}</p>
           <Meta role={career.role} level={career.level} st={career.stance} />
           <p className="mt-2 text-[13px] leading-relaxed text-gray-700">{tt(C.career.mode[career.mode], locale)}</p>
-          <p className="mt-2 text-[11px] font-semibold text-gray-500">{tt(C.career.fieldsLabel, locale)}</p>
+          <p className="mt-2 text-[11px] font-semibold text-muted-foreground">{tt(C.career.fieldsLabel, locale)}</p>
           <div className="mt-1 flex flex-wrap gap-1">
             {careerAttrs.careerKeys.slice(0, 4).map((k) => (
               <span key={k} className="rounded-full bg-card border border-gray-200 px-2 py-0.5 text-[11px] text-gray-700">
@@ -76,22 +76,22 @@ export default function LifeCategoriesSection({
 
         {/* 연애 */}
         <div className={`rounded-xl border p-4 ${STANCE_STYLE[love.stance]}`}>
-          <p className="text-sm font-bold text-gray-900">💕 {tt(C.love.title, locale)}</p>
+          <p className="text-sm font-bold text-foreground">💕 {tt(C.love.title, locale)}</p>
           <Meta role={love.role} level={love.level} st={love.stance} />
           <p className="mt-2 text-[13px] leading-relaxed text-gray-700">{tt(C.love.guide[love.stance], locale)}</p>
-          <p className="mt-2 text-[11px] text-gray-500">
+          <p className="mt-2 text-[11px] text-muted-foreground">
             {tt(C.love.palaceLabel, locale)}: <span className="font-semibold text-gray-700">{el(love.spousePalaceElement)}</span>
           </p>
         </div>
 
         {/* 건강 */}
         <div className="rounded-xl border border-gray-200 bg-card p-4">
-          <p className="text-sm font-bold text-gray-900">🌿 {tt(C.health.title, locale)}</p>
+          <p className="text-sm font-bold text-foreground">🌿 {tt(C.health.title, locale)}</p>
           <div className="mt-1 flex flex-wrap items-center gap-1.5 text-[11px]">
             <span className="rounded bg-white/70 border border-gray-200 px-1.5 py-0.5 font-medium text-gray-700">{el(health.focusElement)}</span>
           </div>
           <p className="mt-2 text-[13px] leading-relaxed text-gray-700">{tt(C.health.imbalance[health.imbalance], locale)}</p>
-          <p className="mt-2 text-[11px] text-gray-500">
+          <p className="mt-2 text-[11px] text-muted-foreground">
             {tt(C.health.organLabel, locale)}: <span className="font-semibold text-gray-700">{tt(C.health.organ[health.organKey], locale)}</span>
           </p>
         </div>

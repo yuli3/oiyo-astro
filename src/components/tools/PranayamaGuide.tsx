@@ -347,12 +347,12 @@ export default function PranayamaGuide({ locale }: Props) {
             {countdown > 0 && <span className="text-3xl font-bold text-white drop-shadow">{countdown}</span>}
           </div>
         </div>
-        {cue && <p className="mt-3 text-sm font-medium text-green-700">{cue}</p>}
+        {cue && <p className="mt-3 text-sm font-medium text-primary">{cue}</p>}
       </div>
 
       {/* Rounds + controls */}
       <div className="mb-4 text-center text-sm text-green-600">
-        {u('rounds')}: <span className="text-lg font-bold text-green-700">{rounds}</span>
+        {u('rounds')}: <span className="text-lg font-bold text-primary">{rounds}</span>
       </div>
       <p className="mb-4 text-center text-xs leading-5 text-green-800">
         {didToday ? u('todayDone') : u('todayHint')}
@@ -364,13 +364,13 @@ export default function PranayamaGuide({ locale }: Props) {
           {isRunning ? u('pause') : u('start')}
         </button>
         <button type="button" onClick={reset}
-          className="rounded-xl bg-green-100 px-6 py-3 font-semibold text-green-700 transition-all hover:bg-green-200">
+          className="rounded-xl bg-green-100 px-6 py-3 font-semibold text-primary transition-all hover:bg-green-200">
           {u('reset')}
         </button>
       </div>
 
       {/* Rhythm */}
-      <div className="mt-5 flex justify-center gap-5 rounded-2xl bg-white/70 p-3 text-sm text-green-700">
+      <div className="mt-5 flex justify-center gap-5 rounded-2xl bg-white/70 p-3 text-sm text-primary">
         {sequence.map(({ phase: p, duration }, i) => (
           <div key={`${p}-${i}`} className="flex flex-col items-center gap-1">
             <span className="text-lg font-bold text-green-600">{duration}s</span>
@@ -382,11 +382,11 @@ export default function PranayamaGuide({ locale }: Props) {
       {/* Info */}
       <div className="mt-5 space-y-4">
         <div>
-          <p className="text-xs font-bold uppercase tracking-wider text-green-700">{u('benefit')}</p>
+          <p className="text-xs font-bold uppercase tracking-wider text-primary">{u('benefit')}</p>
           <p className="mt-1 text-sm leading-6 text-green-900">{tt(technique.benefit, locale)}</p>
         </div>
         <div>
-          <p className="text-xs font-bold uppercase tracking-wider text-green-700">{u('steps')}</p>
+          <p className="text-xs font-bold uppercase tracking-wider text-primary">{u('steps')}</p>
           <ol className="mt-1 list-decimal space-y-1 pl-5 text-sm leading-6 text-green-900">
             {(tt(technique.steps, locale) ?? []).map((s, i) => <li key={i}>{s}</li>)}
           </ol>
@@ -396,7 +396,7 @@ export default function PranayamaGuide({ locale }: Props) {
             <span className="font-semibold">{u('caution')}: </span>{tt(technique.caution, locale)}
           </p>
         )}
-        <p className="text-xs leading-5 text-green-700">{u('practiceNote')}</p>
+        <p className="text-xs leading-5 text-primary">{u('practiceNote')}</p>
       </div>
     </div>
   );

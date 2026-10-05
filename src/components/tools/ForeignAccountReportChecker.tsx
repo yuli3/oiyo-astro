@@ -125,64 +125,64 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
               <button type="button" onClick={() => removeAcct(a.id)} className="text-xs text-green-400 hover:text-red-500">{t('remove')}</button>
             </div>
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-              <label className="text-xs text-green-700">
+              <label className="text-xs text-primary">
                 {t('type')}
-                <select value={a.type} onChange={(e) => update(a.id, 'type', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground">
+                <select value={a.type} onChange={(e) => update(a.id, 'type', e.target.value)} className="mt-1 w-full rounded-lg border border-border bg-card px-2 py-1.5 text-sm text-foreground">
                   {types.map((ty) => <option key={ty.key} value={ty.key}>{ty.label}</option>)}
                 </select>
               </label>
-              <label className="text-xs text-green-700">
+              <label className="text-xs text-primary">
                 {t('currency')}
-                <select value={a.currency} onChange={(e) => update(a.id, 'currency', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground">
+                <select value={a.currency} onChange={(e) => update(a.id, 'currency', e.target.value)} className="mt-1 w-full rounded-lg border border-border bg-card px-2 py-1.5 text-sm text-foreground">
                   {CURRENCIES.map((c) => <option key={c} value={c}>{c}</option>)}
                 </select>
               </label>
-              <label className="text-xs text-green-700">
+              <label className="text-xs text-primary">
                 {t('fx')}
-                <input inputMode="decimal" value={a.fx} onChange={(e) => update(a.id, 'fx', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground" />
+                <input inputMode="decimal" value={a.fx} onChange={(e) => update(a.id, 'fx', e.target.value)} className="mt-1 w-full rounded-lg border border-border bg-card px-2 py-1.5 text-sm text-foreground" />
               </label>
-              <label className="text-xs text-green-700">
+              <label className="text-xs text-primary">
                 {t('amount')}
-                <input inputMode="decimal" value={a.amount} onChange={(e) => update(a.id, 'amount', e.target.value)} placeholder="0" className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground" />
+                <input inputMode="decimal" value={a.amount} onChange={(e) => update(a.id, 'amount', e.target.value)} placeholder="0" className="mt-1 w-full rounded-lg border border-border bg-card px-2 py-1.5 text-sm text-foreground" />
               </label>
             </div>
             <div className="mt-2 text-right text-sm text-green-600">{t('krw')}: <span className="font-semibold text-green-800">₩{fmt(krwOf(a))}</span></div>
           </div>
         ))}
       </div>
-      <button type="button" onClick={addAcct} className="mt-3 rounded-full border border-green-300 px-4 py-1.5 text-sm font-medium text-green-700 hover:bg-surface-subtle">{t('add')}</button>
+      <button type="button" onClick={addAcct} className="mt-3 rounded-full border border-green-300 px-4 py-1.5 text-sm font-medium text-primary hover:bg-surface-subtle">{t('add')}</button>
 
       {/* Total + verdict */}
-      <div className={`mt-5 rounded-2xl border p-4 ${over ? 'border-amber-300 bg-amber-50' : 'border-green-200 bg-surface-subtle'}`}>
+      <div className={`mt-5 rounded-2xl border p-4 ${over ? 'border-amber-300 bg-amber-50' : 'border-border bg-surface-subtle'}`}>
         <div className="flex items-baseline justify-between">
           <span className="text-sm font-semibold text-green-800">{t('total')}</span>
           <span className="text-2xl font-bold text-foreground">₩{fmt(total)}</span>
         </div>
         <p className="mt-1 text-xs text-green-600">{t('thresholdNote')}</p>
-        <p className={`mt-2 text-sm font-medium ${over ? 'text-amber-800' : 'text-green-700'}`}>{over ? t('over') : t('under')}</p>
+        <p className={`mt-2 text-sm font-medium ${over ? 'text-amber-800' : 'text-primary'}`}>{over ? t('over') : t('under')}</p>
       </div>
 
       {/* Peak finder */}
-      <button type="button" onClick={() => setShowPeak((s) => !s)} className="mt-5 text-sm font-semibold text-green-700 underline">
+      <button type="button" onClick={() => setShowPeak((s) => !s)} className="mt-5 text-sm font-semibold text-primary underline">
         {showPeak ? '▾ ' : '▸ '}{t('peakTitle')}
       </button>
       {showPeak && (
         <div className="mt-3 rounded-2xl border border-green-100 bg-green-50/40 p-4">
-          <p className="text-xs leading-5 text-green-700">{t('peakSub')}</p>
+          <p className="text-xs leading-5 text-primary">{t('peakSub')}</p>
           <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
             {months.map((m, i) => (
-              <label key={i} className="text-xs text-green-700">
+              <label key={i} className="text-xs text-primary">
                 {locale === 'ko' ? MONTHS_KO[i] : `${i + 1} ${t('monthEnd')}`}
-                <input inputMode="decimal" value={m} onChange={(e) => setMonths((prev) => prev.map((x, j) => (j === i ? e.target.value : x)))} placeholder="₩0" className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground" />
+                <input inputMode="decimal" value={m} onChange={(e) => setMonths((prev) => prev.map((x, j) => (j === i ? e.target.value : x)))} placeholder="₩0" className="mt-1 w-full rounded-lg border border-border bg-card px-2 py-1.5 text-sm text-foreground" />
               </label>
             ))}
           </div>
           {anyMonthEntered && (
             <div className="mt-3 rounded-xl bg-card p-3 text-sm">
-              <p className="text-green-700">{t('peakResult')}: <span className="font-bold text-foreground">₩{fmt(peak.maxVal)}</span> ({locale === 'ko' ? MONTHS_KO[peak.maxIdx] : `${peak.maxIdx + 1} ${t('monthEnd')}`})</p>
-              <p className={`mt-1 font-semibold ${peakOver ? 'text-amber-800' : 'text-green-700'}`}>{peakOver ? `✅ ${t('reportYes')}` : `${t('reportNo')}`}</p>
-              {peakOver && <p className="mt-1 text-xs leading-5 text-green-700">{t('basisDate')}: {locale === 'ko' ? MONTHS_KO[peak.maxIdx] : `${peak.maxIdx + 1} ${t('monthEnd')}`} · {t('reportYesDesc')}</p>}
-              {!peakOver && <p className="mt-1 text-xs leading-5 text-green-700">{t('reportNoDesc')}</p>}
+              <p className="text-primary">{t('peakResult')}: <span className="font-bold text-foreground">₩{fmt(peak.maxVal)}</span> ({locale === 'ko' ? MONTHS_KO[peak.maxIdx] : `${peak.maxIdx + 1} ${t('monthEnd')}`})</p>
+              <p className={`mt-1 font-semibold ${peakOver ? 'text-amber-800' : 'text-primary'}`}>{peakOver ? `✅ ${t('reportYes')}` : `${t('reportNo')}`}</p>
+              {peakOver && <p className="mt-1 text-xs leading-5 text-primary">{t('basisDate')}: {locale === 'ko' ? MONTHS_KO[peak.maxIdx] : `${peak.maxIdx + 1} ${t('monthEnd')}`} · {t('reportYesDesc')}</p>}
+              {!peakOver && <p className="mt-1 text-xs leading-5 text-primary">{t('reportNoDesc')}</p>}
             </div>
           )}
         </div>
@@ -190,7 +190,7 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
 
       {/* Disclaimer */}
       <p className="mt-6 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-xs leading-5 text-amber-900">{t('disclaimer')}</p>
-      <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2235&cntntsId=7720" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-medium text-green-700 underline">{t('official')} →</a>
+      <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2235&cntntsId=7720" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-medium text-primary underline">{t('official')} →</a>
     </div>
   );
 }

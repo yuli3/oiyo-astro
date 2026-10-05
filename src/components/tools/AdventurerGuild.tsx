@@ -196,7 +196,7 @@ export default function AdventurerGuild({ locale }: Props) {
     try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* ignore */ }
   }, []);
 
-  if (!s) return <div className="rounded-2xl border border-green-100 bg-card p-5 text-green-700">…</div>;
+  if (!s) return <div className="rounded-2xl border border-green-100 bg-card p-5 text-primary">…</div>;
 
   const tierIdx = tiers.reduce((acc, tr, i) => (s.xp >= tr.min ? i : acc), 0);
   const tier = tiers[tierIdx];
@@ -235,13 +235,13 @@ export default function AdventurerGuild({ locale }: Props) {
     return (
       <div key={q.id} className={`flex items-center justify-between gap-3 rounded-xl border p-3 ${done ? 'border-green-300 bg-surface-subtle' : 'border-green-100 bg-card'}`}>
         <div className="min-w-0">
-          <div className={`font-semibold ${done ? 'text-green-700 line-through' : 'text-foreground'}`}>{q.emoji} {q.label}</div>
+          <div className={`font-semibold ${done ? 'text-primary line-through' : 'text-foreground'}`}>{q.emoji} {q.label}</div>
           <div className="text-xs text-green-600">+{q.xp} XP</div>
         </div>
         <div className="flex shrink-0 items-center gap-1">
-          <a href={withTrailingSlash(`/${locale}${q.href}`)} className="rounded-full border border-green-200 px-3 py-1 text-xs font-medium text-green-700 hover:border-green-400">{t.open}</a>
+          <a href={withTrailingSlash(`/${locale}${q.href}`)} className="rounded-full border border-border px-3 py-1 text-xs font-medium text-primary hover:border-green-400">{t.open}</a>
           <button type="button" onClick={() => complete(q)} disabled={done}
-            className={`rounded-full px-3 py-1 text-xs font-semibold ${done ? 'bg-green-200 text-green-700' : 'bg-primary text-primary-foreground hover:opacity-90'}`}>
+            className={`rounded-full px-3 py-1 text-xs font-semibold ${done ? 'bg-green-200 text-primary' : 'bg-primary text-primary-foreground hover:opacity-90'}`}>
             {done ? '✓ ' + t.done : t.do}
           </button>
         </div>
@@ -252,10 +252,10 @@ export default function AdventurerGuild({ locale }: Props) {
   return (
     <div className="rounded-2xl border border-green-100 bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
-      <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
+      <p className="mt-2 leading-7 text-primary">{t.subtitle}</p>
 
       {/* Profile */}
-      <div className="mt-5 rounded-2xl border border-green-200 bg-surface-subtle p-5">
+      <div className="mt-5 rounded-2xl border border-border bg-surface-subtle p-5">
         <input value={s.name} onChange={(e) => persist({ ...s, name: e.target.value })}
           placeholder={t.namePlaceholder}
           className="w-full bg-transparent text-lg font-bold text-foreground placeholder:text-green-400 focus:outline-none" />

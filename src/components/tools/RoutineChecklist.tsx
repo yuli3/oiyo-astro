@@ -165,22 +165,22 @@ export default function RoutineChecklist({ locale }: Props) {
   }, [allComplete, days]);
 
   return (
-    <div className="mt-10 rounded-2xl border-2 border-green-200 bg-card p-6">
+    <div className="mt-10 rounded-2xl border-2 border-border bg-card p-6">
       <div className="flex items-center justify-between gap-2">
-        <h2 className="text-lg font-black text-slate-900">✅ {t.heading}</h2>
+        <h2 className="text-lg font-black text-foreground">✅ {t.heading}</h2>
         {items.length > 0 && (
-          <span className="text-xs font-bold text-green-700">{t.progress(doneCount, items.length)}</span>
+          <span className="text-xs font-bold text-primary">{t.progress(doneCount, items.length)}</span>
         )}
       </div>
       <p className="mt-1 text-xs text-slate-400">{t.sub}</p>
 
       <div className="mt-4 flex flex-wrap gap-2">
         <button type="button" onClick={() => addTemplate(t.morningItems)}
-          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-primary hover:text-primary-foreground">
+          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground">
           {t.templates.morning}
         </button>
         <button type="button" onClick={() => addTemplate(t.eveningItems)}
-          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-primary hover:text-primary-foreground">
+          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground">
           {t.templates.evening}
         </button>
       </div>
@@ -211,9 +211,9 @@ export default function RoutineChecklist({ locale }: Props) {
       )}
 
       {allComplete && (
-        <p className="mt-4 text-sm font-bold text-green-700">{t.allDone}</p>
+        <p className="mt-4 text-sm font-bold text-primary">{t.allDone}</p>
       )}
-      <p className="mt-2 text-xs text-slate-500">
+      <p className="mt-2 text-xs text-muted-foreground">
         {didToday ? t.todayDone : t.todayHint}
         {streak >= 2 ? ` · ${streak} ${t.streak}` : ''}
       </p>
