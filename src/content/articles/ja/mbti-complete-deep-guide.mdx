@@ -22,7 +22,6 @@ topic: mbti
 
 import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
 import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
@@ -52,7 +51,6 @@ MBTIは、性格を4つの二分法的な軸で整理します。
     { label: "16の性格タイプ", value: "4×4の組み合わせ", description: "E/I × S/N × T/F × J/Pによる16通り" },
     { label: "もっとも多いタイプ", value: "ISFJ", description: "米国代表標本の13.8%" },
     { label: "もっとも珍しいタイプ", value: "INFJ", description: "米国代表標本の1.5%（男性ではさらに少ない）" },
-    { label: "韓国で人気のタイプ", value: "ENFP・INFP", description: "Kコンテンツ文化の影響もありN・Fへの関心が高い" },
     { label: "開発の歴史", value: "1943年〜", description: "ユングの1921年の心理タイプ論を基盤に、第二次世界大戦期に開発" }
   ]}
 />
@@ -90,15 +88,6 @@ MBTIを単なる4文字のラベルとして理解すると、深みが見えま
 
 ### NT型（分析家）：INTJ・INTP・ENTJ・ENTP
 
-<RadarChart
-  title="NT型の主要特性プロフィール"
-  axes={["論理的思考", "戦略的計画", "独立性", "革新性", "社会的共感", "実用的適応"]}
-  datasets={[
-    { label: "INTJ", color: "#8b5cf6", values: [95, 92, 95, 88, 40, 60] },
-    { label: "ENTP", color: "#3b82f6", values: [88, 75, 80, 98, 55, 70] }
-  ]}
-/>
-
 **共通特性**：知的好奇心、論理中心の意思決定、非効率への低い耐性、独立した思考
 
 | タイプ | ニックネーム | 核心の動力 | 主な機能 |
@@ -111,15 +100,6 @@ MBTIを単なる4文字のラベルとして理解すると、深みが見えま
 ---
 
 ### NF型（外交官）：INFJ・INFP・ENFJ・ENFP
-
-<RadarChart
-  title="NF型の主要特性プロフィール"
-  axes={["共感力", "創造性", "価値志向", "ビジョン構築", "論理的分析", "現実適応"]}
-  datasets={[
-    { label: "INFJ", color: "#10b981", values: [92, 88, 98, 95, 65, 55] },
-    { label: "ENFP", color: "#f59e0b", values: [90, 98, 88, 85, 60, 68] }
-  ]}
-/>
 
 **共通特性**：意味の探求、人間中心の価値観、理想主義、深い共感力
 

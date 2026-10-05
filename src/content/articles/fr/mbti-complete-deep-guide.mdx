@@ -22,7 +22,6 @@ topic: mbti
 
 import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
 import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
@@ -52,7 +51,6 @@ Le MBTI classe la personnalité selon quatre dimensions à deux pôles.
     { label: "16 types de personnalité", value: "Combinaisons 4×4", description: "Les 16 combinaisons de E/I × S/N × T/F × J/P" },
     { label: "Type le plus courant", value: "ISFJ", description: "13,8 % de l'échantillon représentatif américain" },
     { label: "Type le plus rare", value: "INFJ", description: "1,5 % de l'échantillon représentatif américain (plus rare encore chez les hommes)" },
-    { label: "Types populaires en Corée", value: "ENFP·INFP", description: "Préférence marquée pour N et F, portée par la culture populaire" },
     { label: "Histoire", value: "Depuis 1943", description: "Fondé sur les Types psychologiques de Jung (1921), mis au point pendant la Seconde Guerre mondiale" }
   ]}
 />
@@ -90,15 +88,6 @@ Chaque type utilise quatre fonctions dans cet ordre : **dominante → auxiliaire
 
 ### Les NT (analystes) : INTJ·INTP·ENTJ·ENTP
 
-<RadarChart
-  title="Profil des traits clés des NT"
-  axes={["Pensée logique", "Planification stratégique", "Indépendance", "Innovation", "Empathie sociale", "Adaptation pratique"]}
-  datasets={[
-    { label: "INTJ", color: "#8b5cf6", values: [95, 92, 95, 88, 40, 60] },
-    { label: "ENTP", color: "#3b82f6", values: [88, 75, 80, 98, 55, 70] }
-  ]}
-/>
-
 **Traits communs** : curiosité intellectuelle, décisions fondées sur la logique, faible tolérance à l'inefficacité, pensée indépendante
 
 | Type | Surnom | Moteur principal | Fonctions à surveiller |
@@ -111,15 +100,6 @@ Chaque type utilise quatre fonctions dans cet ordre : **dominante → auxiliaire
 ---
 
 ### Les NF (diplomates) : INFJ·INFP·ENFJ·ENFP
-
-<RadarChart
-  title="Profil des traits clés des NF"
-  axes={["Empathie", "Créativité", "Orientation valeurs", "Vision", "Analyse logique", "Adaptation au réel"]}
-  datasets={[
-    { label: "INFJ", color: "#10b981", values: [92, 88, 98, 95, 65, 55] },
-    { label: "ENFP", color: "#f59e0b", values: [90, 98, 88, 85, 60, 68] }
-  ]}
-/>
 
 **Traits communs** : quête de sens, valeurs centrées sur l'humain, idéalisme, grande empathie
 

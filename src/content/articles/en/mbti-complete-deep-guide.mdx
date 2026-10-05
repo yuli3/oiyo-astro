@@ -16,7 +16,6 @@ topic: mbti
 
 import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
 import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
@@ -84,15 +83,6 @@ Each type uses four functions in a hierarchy: **Dominant → Auxiliary → Terti
 
 ### NT Types (Analysts): INTJ · INTP · ENTJ · ENTP
 
-<RadarChart
-  title="NT Type Core Profile"
-  axes={["Logical thinking", "Strategic planning", "Independence", "Innovation", "Social empathy", "Practical adaptability"]}
-  datasets={[
-    { label: "INTJ", color: "#8b5cf6", values: [95, 92, 95, 88, 40, 60] },
-    { label: "ENTP", color: "#3b82f6", values: [88, 75, 80, 98, 55, 70] }
-  ]}
-/>
-
 **Shared traits**: intellectual curiosity, logic-driven decisions, low tolerance for inefficiency, independent thinking
 
 | Type | Nickname | Core Drive | Dominant Functions |
@@ -105,15 +95,6 @@ Each type uses four functions in a hierarchy: **Dominant → Auxiliary → Terti
 ---
 
 ### NF Types (Diplomats): INFJ · INFP · ENFJ · ENFP
-
-<RadarChart
-  title="NF Type Core Profile"
-  axes={["Empathy", "Creativity", "Value orientation", "Vision", "Logical analysis", "Practical adaptability"]}
-  datasets={[
-    { label: "INFJ", color: "#10b981", values: [92, 88, 98, 95, 65, 55] },
-    { label: "ENFP", color: "#f59e0b", values: [90, 98, 88, 85, 60, 68] }
-  ]}
-/>
 
 **Shared traits**: pursuit of meaning, human-centered values, idealism, deep empathy
 

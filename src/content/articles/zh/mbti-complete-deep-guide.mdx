@@ -22,7 +22,6 @@ topic: mbti
 
 import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
 import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
@@ -52,7 +51,6 @@ MBTI用四组二分维度来描述人格偏好。
     { label: "16种人格类型", value: "4×4组合", description: "E/I × S/N × T/F × J/P形成16种组合" },
     { label: "最常见类型", value: "ISFJ", description: "美国代表性样本的13.8%" },
     { label: "最稀有类型", value: "INFJ", description: "美国代表性样本的1.5%（男性中更少见）" },
-    { label: "韩国热门类型", value: "ENFP・INFP", description: "受K内容文化影响，对N和F的偏好较高" },
     { label: "发展历史", value: "1943年起", description: "基于荣格1921年的心理类型论，在第二次世界大战期间发展成形" }
   ]}
 />
@@ -90,15 +88,6 @@ MBTI用四组二分维度来描述人格偏好。
 
 ### NT型（分析者）：INTJ・INTP・ENTJ・ENTP
 
-<RadarChart
-  title="NT型核心特征画像"
-  axes={["逻辑思维", "战略规划", "独立性", "创新性", "社会共情", "实用适应"]}
-  datasets={[
-    { label: "INTJ", color: "#8b5cf6", values: [95, 92, 95, 88, 40, 60] },
-    { label: "ENTP", color: "#3b82f6", values: [88, 75, 80, 98, 55, 70] }
-  ]}
-/>
-
 **共同特征**：求知欲强、以逻辑为中心做决定、对低效率容忍度低、思考独立
 
 | 类型 | 别称 | 核心动力 | 主要功能 |
@@ -111,15 +100,6 @@ MBTI用四组二分维度来描述人格偏好。
 ---
 
 ### NF型（外交者）：INFJ・INFP・ENFJ・ENFP
-
-<RadarChart
-  title="NF型核心特征画像"
-  axes={["共情能力", "创造力", "价值导向", "愿景建立", "逻辑分析", "现实适应"]}
-  datasets={[
-    { label: "INFJ", color: "#10b981", values: [92, 88, 98, 95, 65, 55] },
-    { label: "ENFP", color: "#f59e0b", values: [90, 98, 88, 85, 60, 68] }
-  ]}
-/>
 
 **共同特征**：追求意义、以人为本的价值观、理想主义、深度共情
 

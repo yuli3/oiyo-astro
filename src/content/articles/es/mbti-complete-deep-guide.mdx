@@ -22,7 +22,6 @@ topic: mbti
 
 import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
 import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
@@ -52,7 +51,6 @@ El MBTI clasifica la personalidad en cuatro dimensiones de dos polos.
     { label: "16 tipos de personalidad", value: "Combinación 4×4", description: "Las 16 combinaciones de E/I × S/N × T/F × J/P" },
     { label: "Tipo más frecuente", value: "ISFJ", description: "13,8 % de la muestra representativa de EE. UU." },
     { label: "Tipo menos frecuente", value: "INFJ", description: "1,5 % de la muestra representativa de EE. UU. (aún más raro en hombres)" },
-    { label: "Tipos populares en Corea", value: "ENFP·INFP", description: "Fuerte preferencia por N y F, impulsada por la cultura popular" },
     { label: "Historia", value: "Desde 1943", description: "Basado en los Tipos psicológicos de Jung (1921), desarrollado durante la Segunda Guerra Mundial" }
   ]}
 />
@@ -90,15 +88,6 @@ Cada tipo usa cuatro funciones en este orden: **dominante → auxiliar → terci
 
 ### Los NT (analistas): INTJ·INTP·ENTJ·ENTP
 
-<RadarChart
-  title="Perfil de rasgos clave de los NT"
-  axes={["Pensamiento lógico", "Planificación estratégica", "Independencia", "Innovación", "Empatía social", "Adaptación práctica"]}
-  datasets={[
-    { label: "INTJ", color: "#8b5cf6", values: [95, 92, 95, 88, 40, 60] },
-    { label: "ENTP", color: "#3b82f6", values: [88, 75, 80, 98, 55, 70] }
-  ]}
-/>
-
 **Rasgos comunes**: curiosidad intelectual, decisiones basadas en la lógica, poca tolerancia a la ineficiencia, pensamiento independiente
 
 | Tipo | Apodo | Motor principal | Funciones a vigilar |
@@ -111,15 +100,6 @@ Cada tipo usa cuatro funciones en este orden: **dominante → auxiliar → terci
 ---
 
 ### Los NF (diplomáticos): INFJ·INFP·ENFJ·ENFP
-
-<RadarChart
-  title="Perfil de rasgos clave de los NF"
-  axes={["Empatía", "Creatividad", "Orientación a valores", "Visión", "Análisis lógico", "Adaptación a la realidad"]}
-  datasets={[
-    { label: "INFJ", color: "#10b981", values: [92, 88, 98, 95, 65, 55] },
-    { label: "ENFP", color: "#f59e0b", values: [90, 98, 88, 85, 60, 68] }
-  ]}
-/>
 
 **Rasgos comunes**: búsqueda de sentido, valores centrados en las personas, idealismo, gran empatía
 

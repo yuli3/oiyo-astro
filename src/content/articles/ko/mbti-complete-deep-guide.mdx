@@ -22,7 +22,6 @@ topic: mbti
 
 import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
 import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
@@ -52,7 +51,6 @@ MBTI는 네 가지 이분법적 차원으로 성격을 분류합니다.
     { label: "16가지 성격 유형", value: "4×4 조합", description: "E/I × S/N × T/F × J/P의 16가지 조합" },
     { label: "가장 흔한 유형", value: "ISFJ", description: "미국 대표 표본의 13.8%" },
     { label: "가장 희귀한 유형", value: "INFJ", description: "미국 대표 표본의 1.5% (남성에서 더 드묾)" },
-    { label: "한국 인기 유형", value: "ENFP·INFP", description: "K-콘텐츠 문화 영향으로 N·F 선호 높음" },
     { label: "개발 역사", value: "1943년~", description: "융의 1921년 심리 유형론 기반, 2차 세계대전 중 개발" }
   ]}
 />
@@ -90,15 +88,6 @@ MBTI를 단순한 4글자 라벨로 이해하면 깊이가 없습니다. 진짜 
 
 ### NT형 (분석가): INTJ·INTP·ENTJ·ENTP
 
-<RadarChart
-  title="NT형 핵심 특성 프로필"
-  axes={["논리적 사고", "전략적 계획", "독립성", "혁신성", "사회적 공감", "실용적 적응"]}
-  datasets={[
-    { label: "INTJ", color: "#8b5cf6", values: [95, 92, 95, 88, 40, 60] },
-    { label: "ENTP", color: "#3b82f6", values: [88, 75, 80, 98, 55, 70] }
-  ]}
-/>
-
 **공통 특성**: 지적 호기심, 논리 중심 의사결정, 비효율에 대한 낮은 내성, 독립적 사고
 
 | 유형 | 별명 | 핵심 동력 | 주의 기능 |
@@ -111,15 +100,6 @@ MBTI를 단순한 4글자 라벨로 이해하면 깊이가 없습니다. 진짜 
 ---
 
 ### NF형 (외교관): INFJ·INFP·ENFJ·ENFP
-
-<RadarChart
-  title="NF형 핵심 특성 프로필"
-  axes={["공감 능력", "창의성", "가치 지향", "비전 수립", "논리적 분석", "현실 적응"]}
-  datasets={[
-    { label: "INFJ", color: "#10b981", values: [92, 88, 98, 95, 65, 55] },
-    { label: "ENFP", color: "#f59e0b", values: [90, 98, 88, 85, 60, 68] }
-  ]}
-/>
 
 **공통 특성**: 의미 추구, 인간 중심 가치관, 이상주의, 깊은 공감 능력
 
