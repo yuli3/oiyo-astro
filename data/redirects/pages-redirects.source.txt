@@ -657,3 +657,7 @@
 /:lang/fortune-numerology-complete-guide/  /:lang/numerology-complete-guide/  301
 /:lang/fortune-2026-blood-type-annual  /:lang/fortune-blood-type-psychology/  301
 /:lang/fortune-2026-blood-type-annual/  /:lang/fortune-blood-type-psychology/  301
+
+# 2026-10-05: 출퇴근 멘탈 검사는 dbc62586 에서 대체 검사 없이 내려갔는데 ahoxy.com 이
+# 아직 이 주소로 보낸다. 주제가 같은 검사가 없어 검사 목록으로 보낸다.
+/:lang/commute-mental/test /:lang/tests/ 301
