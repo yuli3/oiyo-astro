@@ -7,9 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run build:ontology-platform:public && NODE_OPTIONS=--max-old-space-size=6144 astro build",
+    "build": "npm run redirects:check && npm run build:ontology-platform:public && NODE_OPTIONS=--max-old-space-size=6144 astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "redirects:build": "node scripts/build-redirects.mjs",
+    "redirects:check": "node scripts/build-redirects.mjs --check",
     "type-check": "astro check --minimumSeverity error",
     "type-check:active": "astro check --tsconfig tsconfig.active.json --minimumSeverity error",
     "test": "vitest",
