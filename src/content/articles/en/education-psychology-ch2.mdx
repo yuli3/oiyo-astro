@@ -1,11 +1,10 @@
 ---
 series: psychology-basics
 chapter: 2
-title: "How We Grow: Developmental Psychology"
+title: "Neuroscience, Sensation and Perception"
 description: >-
-  Study the physical, cognitive, and psychological changes humans experience
-  from birth to death, focusing on the major theories of Freud, Erikson, and
-  Piaget.
+  Review neural communication, brain circuits, sensation and perception,
+  and the limits of claims about neurochemistry and plasticity.
 pubDate: 2026-03-01T00:00:00.000Z
 tags:
   - Education
@@ -16,59 +15,65 @@ topic: psychology-course
 ---
 
 
-# How We Grow - Developmental Psychology
+import StepFlow from "@/components/mdx/StepFlow.astro";
 
-Developmental Psychology is the study of the processes of change throughout the human lifespan. We don't just get older; we mature through complex psychological stages.
+# Neuroscience, Sensation and Perception
 
----
+Biological psychology examines the nervous system's contribution to thought, emotion and behavior. The brain-as-hardware metaphor can help introduce the topic, but it is not a complete explanation of a person: biological mechanisms, experience and context need to be distinguished.
 
-## 1. Theories of Personality and Social Development
+## 1. Neurons and synapses
 
-### (1) Freud's Psychosexual Development Stages
+### Following a chemical signal
 
-Freud defined human mental energy as <mark>Libido</mark> and divided development stages based on where this energy is concentrated.
+A simplified chemical-synapse pathway is:
 
-- **Oral → Anal → Phallic → Latent → Genital**
-- He believed that if needs are not properly met at each stage, "fixation" can occur in adulthood.
+<StepFlow tone="neutral" items={[
+  { title: "Input and integration", body: "Dendrites receive input, which the neuron integrates." },
+  { title: "Action potential propagation", body: "When threshold is reached, an action potential travels along the axon." },
+  { title: "Neurotransmitter release", body: "Axon terminals release neurotransmitters into the synaptic cleft." },
+  { title: "Receptors and response", body: "Binding to receptors influences the receiving cell." },
+]} />
 
-### (2) Erikson's Psychosocial Development Stages
+Electrical signaling within a neuron and chemical signaling between cells are different processes. A receptor response does not always trigger another action potential. Electrical synapses also exist, so this pathway is not universal.
 
-Expanding on Freud's theory, Erikson proposed an 8-stage model spanning the entire life. Each stage involves a <mark>Psychosocial Crisis</mark> to be resolved.
+Neurotransmitters matter, but **depression and addiction cannot be explained by the amount of one chemical alone**. Depression involves genetic, biological, environmental and psychological factors. Drug addiction involves dopamine-related reinforcement, changes after repeated use, and developmental and sociocultural factors. Neither blaming weak willpower nor promising a cure through a simple “chemical rebalance” is adequate. Treatment decisions require individual assessment with a professional; this chapter does not provide diagnosis or treatment.
 
-- **Infancy**: Trust vs. Mistrust
-- **Adolescence**: Identity vs. Role Confusion (The most critical stage)
-- **Early Adulthood**: Intimacy vs. Isolation
+## 2. Brain regions and connected circuits
 
----
+### A functional overview—not a diagnostic chart
 
-## 2. Development of Intelligence and Thought: Jean Piaget
+| Region | Examples of associated functions |
+| --- | --- |
+| Frontal cortex | Planning and control of behavior |
+| Temporal cortex | Auditory and language processing |
+| Hippocampus | Formation of new explicit memories |
+| Amygdala | Emotional processing |
+| Cerebellum | Coordination and balance |
 
-Piaget observed that the way children understand the world is fundamentally different from that of adults.
+These are associations, not isolated departments or guarantees about the effects of an injury. Frontal regions contribute to impulse control and planning through connected circuits. The NIH/NIAAA source below discusses executive, reward and stress circuits specifically in alcohol use disorder; it is not a diagnosis of any reader's brain.
 
-| Development Stage        | Key Features                             | Core Concept                |
-| :----------------------- | :--------------------------------------- | :-------------------------- |
-| **Sensorimotor**         | Exploring the world through senses/motor | Object Permanence           |
-| **Preoperational**       | Beginning of language use, egocentrism   | Symbolic Play               |
-| **Concrete Operational** | Beginning of logical thinking            | Concept of <mark>Conservation</mark> |
-| **Formal Operational**   | Abstract and hypothetical thinking       | Deductive Reasoning         |
+## 3. Sensation and perception
 
-### Mechanisms of Knowledge Construction
+**Sensation** begins with detecting stimuli and converting them into neural signals. **Perception** involves organizing and interpreting sensory information. Incoming features and prior knowledge can both influence what we experience.
 
-- **Assimilation**: Fitting new information into existing frameworks (Schemas).
-- **Accommodation**: Modifying existing frameworks to fit new information.
+For example, a distant car occupies less of the visual field, yet we often recognize it as a full-sized car. This illustrates perceptual constancy, not an infallible copy of the outside world. When judging an observation, ask what was detected and what was inferred.
 
----
+## 4. Plasticity: change and limits
 
-## 3. Moral Development: Lawrence Kohlberg
+Plasticity concerns changes in neural connections and functions with experience. Improved task performance is not itself a direct measurement of stronger synapses, and plasticity does not mean that age has no effect or everyone learns equally quickly.
 
-Human moral judgment evolves from "Avoiding Punishment" to "Social Contract" and eventually to "Universal Ethical Principles."
+Seidler's 2007 study compared older participants practicing several motor tasks with control groups practicing one task. The multi-task group learned faster. That finding concerns specific motor tasks: it neither guarantees recovery of every ability nor justifies dismissing an individual's difficulties as “excuses.”
 
----
+## 5. Reading a neuroscience claim critically
 
-## Key Checklist
+Keep three questions separate: what mechanism is proposed, what was actually measured, and how far the result generalizes. An association between a brain region and a function does not establish a unique cause. A behavioral improvement does not identify its cellular mechanism. This distinction lets us take biological evidence seriously without turning it into a personality verdict or a promise of treatment.
 
-- [ ] In Erikson's 8 stages, which period focuses on forming an identity and asking "Who am I?" (Answer: Adolescence)
-- [ ] In Piaget's theory, what is the process of taking in new information to fit existing cognitive structures? (Answer: Assimilation)
-- [ ] What is the concept of understanding that the essential quantity of an object remains the same even if its appearance changes? (Answer: Conservation)
+Development across the lifespan is covered in [chapter 7](/en/education-psychology-ch7/); learning mechanisms follow in [chapter 3](/en/education-psychology-ch3/).
 
----
+## Sources and further reading
+
+- OpenStax, Psychology 2e: [neural communication](https://openstax.org/books/psychology-2e/pages/3-2-cells-of-the-nervous-system), [brain regions](https://openstax.org/books/psychology-2e/pages/3-4-the-brain-and-spinal-cord), [sensation and perception](https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception).
+- [NIMH: Depression](https://www.nimh.nih.gov/health/publications/depression).
+- [Volkow and Morales (2015): drug addiction review abstract](https://pubmed.ncbi.nlm.nih.gov/26276628/).
+- [NIH/NIAAA: circuits in alcohol addiction and recovery](https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/neuroscience-brain-addiction-and-recovery).
+- [Seidler (2007): older adults' motor learning, study abstract](https://pubmed.ncbi.nlm.nih.gov/17602760/).

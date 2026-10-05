@@ -18,11 +18,13 @@ topic: psychology-course
 
 import Callout from "@/components/mdx/Callout.astro";
 
+import StepFlow from "@/components/mdx/StepFlow.astro";
+
 # El hardware del cerebro y la mente: neurociencia, sensación y percepción
 
-Hola de nuevo, me alegra volver a verles. La clase pasada recorrimos la historia de la psicología y su metodología científica. Hoy partimos hacia el campo que con más fuerza está emergiendo dentro de la disciplina: la **psicología biológica (Biological Psychology)**.
+La psicología biológica estudia la contribución del sistema nervioso al pensamiento, las emociones y la conducta. Este capítulo aborda la transmisión nerviosa, los circuitos cerebrales, la sensación y la percepción.
 
-Si la mente humana es un software refinado, nuestro cerebro y sistema nervioso son el **hardware de vanguardia** sobre el que corre. La tristeza, el amor e incluso las ideas más creativas son en realidad el resultado de diminutas reacciones electroquímicas dentro del cerebro. Examinemos hoy el funcionamiento de esta asombrosa máquina biológica.
+Comparar el cerebro con el hardware ayuda a presentar su estructura, pero no basta para explicar a una persona. Hay que distinguir los mecanismos biológicos, la experiencia y el contexto.
 
 ---
 
@@ -32,43 +34,38 @@ Nuestro cerebro contiene unos 86 000 millones de **neuronas (Neuron, células ne
 
 ### 🔄 El mecanismo de la transmisión nerviosa
 
-```mermaid
-graph LR
-    A[Dendritas: recepción de la información] --> B[Soma: integración]
-    B --> C[Axón: transmisión]
-    C --> D{Sinapsis: el espacio}
-    D -->|Liberación de neurotransmisores| E[Receptores de la neurona siguiente]
+<StepFlow tone="neutral" items={[
+  { title: "Recepción e integración", body: "Las dendritas reciben señales que la neurona integra." },
+  { title: "Propagación del potencial de acción", body: "Al alcanzar el umbral, un potencial de acción se propaga por el axón." },
+  { title: "Liberación de neurotransmisores", body: "Las terminales del axón liberan neurotransmisores en la hendidura sináptica." },
+  { title: "Receptores y respuesta", body: "La unión a los receptores influye en la actividad de la célula receptora." },
+]} />
 
-    subgraph "Mensajeros químicos"
-    F[Dopamina: placer/recompensa]
-    G[Serotonina: ánimo/sueño]
-    H[Adrenalina: tensión/lucha]
-    end
+Este esquema simplifica la transmisión por una sinapsis química. La respuesta de los receptores no siempre provoca otro potencial de acción. También existen sinapsis eléctricas, por lo que este recorrido no es universal.
 
-    F -.-> D
-    G -.-> D
-    H -.-> D
-```
+Los neurotransmisores participan en la transmisión de señales entre neuronas, pero **la depresión o la adicción no se explican por la cantidad de una sola sustancia.** En la depresión intervienen factores genéticos, biológicos, ambientales y psicológicos. En la adicción a las drogas importan el refuerzo relacionado con la dopamina, los cambios en los circuitos tras el consumo repetido y los factores del desarrollo y socioculturales. Culpar a la falta de voluntad, o afirmar que «restablecer el equilibrio químico» basta para curar, simplifica demasiado. El tratamiento debe decidirse con un profesional según la situación individual; este texto no sustituye el diagnóstico ni el tratamiento.
 
-Como dice la fórmula <mark><strong>«si falta serotonina uno se deprime, si sobra dopamina uno se vuelve adicto»</strong></mark>, un desequilibrio mínimo de estas sustancias basta para transformar nuestro carácter y nuestra calidad de vida. Creemos poder superarlo todo con la sola «fuerza de voluntad», pero a veces restablecer el equilibrio químico del cerebro resulta una cura mucho más eficaz.
+Fuentes: [información del NIMH sobre la depresión](https://www.nimh.nih.gov/health/publications/depression), [resumen de la revisión de Volkow y Morales sobre la adicción a las drogas (2015)](https://pubmed.ncbi.nlm.nih.gov/26276628/).
 
 ---
 
 ## 2. El mapa del cerebro: funciones y papeles por región
 
-Nuestro cerebro es un **sistema de división del trabajo**, con funciones estrictamente repartidas por regiones. Y sin embargo esas regiones cooperan estrechamente para producir esa identidad que llamamos «yo».
+Las distintas regiones se relacionan con distintas funciones, pero una función no corresponde exclusivamente a una sola región. La tabla muestra ejemplos de asociaciones; no es una herramienta para diagnosticar una lesión ni sus consecuencias.
 
 ### 🧠 Guía de las principales regiones cerebrales y sus funciones
 
-| Región | Nombre | Funciones principales | Síntomas en caso de lesión |
-| :----------- | :------------- | :-------------------------------- | :-------------------------- |
-| **Corteza cerebral** | **Lóbulo frontal** | **Pensamiento superior**, planificación, juicio, moralidad | Trastornos del control de impulsos, cambio de personalidad |
-| **Corteza cerebral** | **Lóbulo temporal** | Procesamiento auditivo, almacenamiento de recuerdos | Amnesia, incomprensión del lenguaje |
-| **Sistema límbico** | **Amígdala** | **Respuestas emocionales**, miedo e ira | Embotamiento afectivo, incapacidad de detectar el peligro |
-| **Sistema límbico** | **Hipocampo** | Almacenamiento a largo plazo de los **recuerdos nuevos** | Imposibilidad de aprender hechos nuevos |
-| **Cerebelo** | **Cerebellum** | Equilibrio, control fino del movimiento | Marcha inestable, imposibilidad de tareas de precisión |
+| Región | Ejemplos de funciones asociadas |
+| --- | --- |
+| Corteza frontal | Planificación y control de la conducta |
+| Corteza temporal | Procesamiento auditivo y del lenguaje |
+| Hipocampo | Formación de nuevos recuerdos explícitos |
+| Amígdala | Procesamiento emocional |
+| Cerebelo | Coordinación y equilibrio |
 
-Lo que más distingue al ser humano de los demás animales es <mark><strong>un lóbulo frontal de evolución explosiva</strong></mark>. Si podemos inhibir nuestros impulsos y planificar el futuro, se lo debemos enteramente a él.
+El hipocampo no es un almacén de todos los recuerdos. La formación de nuevos recuerdos explícitos debe distinguirse de todos los tipos de aprendizaje. La [explicación de las regiones cerebrales de OpenStax](https://openstax.org/books/psychology-2e/pages/3-4-the-brain-and-spinal-cord) permite consultar estas funciones básicas.
+
+El lóbulo frontal desempeña un papel importante en el control de impulsos y la planificación, pero estas funciones no ocurren de manera aislada. También debe considerarse la cooperación entre circuitos que conectan distintas regiones. La [explicación del NIH/NIAAA](https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/neuroscience-brain-addiction-and-recovery) distingue las funciones ejecutivas prefrontales de los circuitos de recompensa y estrés en el contexto del trastorno por consumo de alcohol.
 
 ---
 
@@ -88,19 +85,19 @@ Creemos que lo que vemos es la verdad. Pero, desde el punto de vista psicológic
 
 ---
 
-## 4. La magia del cerebro: la plasticidad (Neuroplasticity)
+## 4. Plasticidad: cambios con la experiencia y límites
 
-Durante mucho tiempo se creyó que en la edad adulta las células cerebrales solo podían disminuir. La neurociencia actual ha demostrado, sin embargo, la **plasticidad cerebral**. Cuando aprendemos una habilidad nueva o pensamos en profundidad, las conexiones físicas entre neuronas (las sinapsis) se refuerzan y se dibujan mapas nuevos.
+La **plasticidad cerebral** es la posibilidad de que las conexiones y funciones del cerebro cambien con la experiencia. Sin embargo, observar una mejora del aprendizaje no equivale a medir cambios en sinapsis concretas. Los resultados de una tarea conductual no permiten afirmar que se hayan reforzado las sinapsis de todos los participantes.
 
-<mark><strong>«Nuestro cerebro puede seguir evolucionando hasta el último día.»</strong></mark> Alegar la edad para renunciar es, al menos desde la neurociencia, un mal argumento.
+La plasticidad no significa que la edad no influya ni que todas las personas aprendan al mismo ritmo. El [resumen del estudio de Seidler (2007)](https://pubmed.ncbi.nlm.nih.gov/17602760/) describe un aprendizaje más rápido en participantes mayores que practicaron varias tareas motoras que en los grupos de control que practicaron una sola. Este resultado no garantiza recuperar todas las capacidades ni permite calificar las dificultades individuales de «excusas».
 
 ---
 
-## 5. En resumen: conocer el hardware cambia la vida
+## 5. Cómo leer una afirmación neurocientífica
 
-Hoy hemos estudiado el sustrato físico de la mente: el cerebro y los principios de la sensación. Saber que nuestra mente se apoya en bases biológicas nos vuelve humildes. Pero la plasticidad cerebral nos ofrece a la vez una esperanza poderosa: podemos transformarnos.
+Hay que distinguir el mecanismo propuesto, lo que se midió y hasta dónde puede generalizarse el resultado. La asociación entre una región cerebral y una función no establece una causa única. Una mejora en una tarea no identifica por sí sola el mecanismo celular que la produjo.
 
-En este mismo instante, su cerebro procesa mi voz y este texto, y amplía su propio mapa. Recuerden bien que **cuidar su hardware (dormir lo suficiente, hacer ejercicio, buscar estímulos nuevos)** es la mejor manera de cuidar su mente.
+Esta distinción permite examinar la evidencia biológica sin convertirla en un juicio sobre la personalidad ni en una promesa de tratamiento.
 
 ---
 
