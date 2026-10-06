@@ -9,6 +9,11 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
+// 2026-10-06 (audit S1): the form posted to Formspree's public placeholder id
+// (/f/contact), so every message was silently lost while the page promised a
+// reply. Until a real inbox endpoint exists, take inquiries by email only.
+// Re-enable a form only with a verified endpoint.
+const SUPPORT_EMAIL = 'support@oiyo.net';
 ---
 
 <Layout
@@ -42,70 +47,18 @@ const t = await getTranslations(locale);
       ))}
     </div>
 
-    <div class="bg-card rounded-2xl border border-green-50 p-8">
-      <p class="font-semibold text-foreground mb-1">{t('support.contact')}</p>
-      <p class="text-sm text-green-600 mb-5">{t('support.form.descriptionPlaceholder')}</p>
-      <form
-        name="contact"
-        method="POST"
-        action="https://formspree.io/f/contact"
-        class="space-y-5"
+    <div class="bg-card rounded-2xl border border-green-50 p-8 text-center">
+      <p class="font-semibold text-foreground mb-2">{t('support.email.notice')}</p>
+      <p class="text-sm text-green-600 mb-6">{t('support.email.body')}</p>
+      <a
+        href={`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(t('support.email.subject'))}`}
+        class="inline-block w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary-strong transition-colors"
       >
-        <div>
-          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="name">
-            {t('contact.name')}
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            class="w-full px-4 py-2.5 rounded-xl border border-border bg-green-50/30 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
-            placeholder={t('contact.name')}
-          />
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="email">
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            class="w-full px-4 py-2.5 rounded-xl border border-border bg-green-50/30 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
-            placeholder="hello@example.com"
-          />
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="message">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            required
-            class="w-full px-4 py-2.5 rounded-xl border border-border bg-green-50/30 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300 resize-none"
-            placeholder={t('contact.subtitle')}
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary-strong transition-colors"
-        >
-          {t('contact.test.submit')}
-        </button>
-      </form>
-    </div>
-
-    <div class="mt-6 text-center text-sm text-green-500">
-      <a href="mailto:support@oiyo.net" class="hover:text-primary transition-colors">
-        support@oiyo.net
+        {t('support.email.button')}
       </a>
+      <p class="mt-4 text-sm text-green-500">
+        <a href={`mailto:${SUPPORT_EMAIL}`} class="hover:text-primary transition-colors">{SUPPORT_EMAIL}</a>
+      </p>
     </div>
   </section>
 </Layout>
