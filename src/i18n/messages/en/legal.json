@@ -87,7 +87,9 @@
         "body": [
           "When you use OIYO, we may collect usage data — pages visited, time on page, browser type, device type, and referring URL — automatically through Google Analytics 4.",
           "If you email us at support@oiyo.net, we receive your email address and the contents of your message.",
-          "The birth details, answers, and other inputs you enter into an assessment or tool are processed in your browser to produce a result. Unless you choose to save or share that result, they are not sent to us.",
+          "The birth date and time, birth city, answers, and other inputs you enter into an assessment or tool are processed in your browser to produce a result. Unless you choose to create a share link, they are not sent to our servers.",
+          "Features that save to this browser, such as test history or a circle draft, keep that data only in your browser's storage on your device; it is not sent to us.",
+          "When you create a share link, the result it carries (which may include your birth date and time and birth city) is first encrypted in your browser, and only the encrypted data is stored on our server (Cloudflare). The decryption key lives only in the part of the link after the #, which is never sent to the server, so we cannot read the contents. Anyone who has the link can open it until it expires, so please share it only with people you trust.",
           "We do not collect names, passwords, or payment information, and using the site does not require an account."
         ]
       },
@@ -109,7 +111,9 @@
       {
         "heading": "4. Data Retention",
         "body": [
-          "Analytics data is kept according to Google's retention settings (14 months by default). Messages you send us are kept only as long as needed to answer them."
+          "Analytics data is kept according to Google's retention settings (14 months by default). Messages you send us are kept only as long as needed to answer them.",
+          "Encrypted data stored for a share link is deleted automatically 7 days after the link is created; after that the link no longer opens. If you want it removed sooner, email the link to support@oiyo.net.",
+          "A circle draft saved in your browser expires after 30 days and is removed the next time it is opened. Other data saved in this browser, such as test history, stays on your device until you clear the site's data in your browser; we cannot see it."
         ]
       },
       {
@@ -155,7 +159,7 @@
     "title": "Privacy Policy",
     "description": "How we collect, use, and protect your information.",
     "keywords": "privacy, security, data protection",
-    "lastUpdated": "September 7, 2026",
+    "lastUpdated": "October 6, 2026",
     "lastUpdatedLabel": "Last Updated",
     "seeLabel": "See:",
     "badge": "Legal"

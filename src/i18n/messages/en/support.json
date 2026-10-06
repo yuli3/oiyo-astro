@@ -39,5 +39,11 @@
     "normal": "Normal",
     "high": "High",
     "urgent": "Urgent"
+  },
+  "email": {
+    "notice": "For now, we take inquiries by email instead of a form.",
+    "body": "Send us a message at the address below and we will get back to you. Telling us which page you were on and what went wrong helps us look into it faster.",
+    "button": "Send an email",
+    "subject": "[OIYO Support]"
   }
 }
