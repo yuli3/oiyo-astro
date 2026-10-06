@@ -13,6 +13,7 @@
 
 ## 검증
 
+- **shadcn lint 필수(2026-10-06 세운 결정, Claude·Codex·Grok Build·Grok Bot·Cursor 공통)**: UI·컴포넌트·스타일(`src/**/*.{astro,tsx,ts,jsx,js}`)을 바꿨으면 끝내기 전에 `npm run lint`(`npm run type-check` + `npm run lint:shadcn`)를 돌리고, 실패하면 push하지 않는다. `lint:shadcn`은 공식 [`@shadcn/lint`](https://github.com/shadcn-ui/lint) 규칙을 `eslint.config.mjs`로 실행하며 CI에서도 차단한다. 검사 대상: raw 팔레트 색(`bg-pink-500`), 임의값(`p-[13px]`), 인라인 style·`<style>` 요소, Tailwind가 만들지 못하는 클래스, `src/components/ui` 컴포넌트에 className으로 덧칠하기(레이아웃 클래스는 허용), 읽을 수 없는 동적 클래스. 도입 시점의 기존 위반은 `eslint-suppressions.json` 기준선이라 새 위반만 실패한다. 새 위반은 테마 토큰·컴포넌트 variant로 고치고, `--suppress-all`/`--suppress-rule`로 기준선을 늘려 통과시키지 않는다. 기존 위반을 고쳤으면 `npm run lint:shadcn:prune`으로 기준선을 줄인다.
 - `npm run type-check`(전체, CI 차단 게이트), `npm run audit:questionnaire`, `npm run audit:mystic-seo`, `npm run test -- --run`, `npm run build` 후 `npm run audit:content-depth-baseline`.
 - 검사 컴포넌트를 만들거나 고치면 `npm run audit:test-funnel-events`를 함께 돌린다. `test_completed`를 발화하는 문항형 검사에 `test_started`가 없으면 실패한다 — 2026-08-31 GA4 실측에서 완료 204건 대비 시작 14건이 나와 완주율의 분모가 없던 것이 원인이다. 계산기(`src/components/tools`)는 대상이 아니다: 계약상 `test_started`는 "첫 문항 응답"이라 입력→계산 화면엔 대응하는 순간이 없다.
 - 링크·내비게이션을 건드리면 `npm run audit:internal-link-slashes`를 함께 돌린다. 내부 링크는 서빙 형태(트레일링 슬래시)로 낸다 — `localePath()`나 `withTrailingSlash()`를 쓰고 308 리다이렉트에 의존하지 않는다. 네이버 Yeti는 리다이렉트된 페이지를 수집제한으로 분류해 목표를 색인하지 않는다(2026-08-30 서치어드바이저: 색인 0 / 수집제한 21 전부 리다이렉션). 래칫이므로 CEILING은 개선 때 낮추고 통과시키려고 올리지 않는다.
