@@ -13,6 +13,9 @@
     "redirects:build": "node scripts/build-redirects.mjs",
     "redirects:check": "node scripts/build-redirects.mjs --check",
     "type-check": "astro check --minimumSeverity error",
+    "lint": "npm run type-check && npm run lint:shadcn",
+    "lint:shadcn": "eslint --pass-on-unpruned-suppressions src",
+    "lint:shadcn:prune": "eslint --prune-suppressions src",
     "type-check:active": "astro check --tsconfig tsconfig.active.json --minimumSeverity error",
     "test": "vitest",
     "audit:page-structure": "node scripts/audit-page-structure.mjs",
@@ -135,8 +138,12 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@shadcn/lint": "^0.2.0",
     "@types/matter-js": "^0.20.2",
+    "@typescript-eslint/parser": "^8.71.1",
     "ajv": "^8.20.0",
+    "astro-eslint-parser": "^3.2.0",
+    "eslint": "^10.12.0",
     "fast-check": "^4.8.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.8"
