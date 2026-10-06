@@ -60,7 +60,43 @@ export function appName(domain: FortuneDomain, locale: Locale) {
   return labels[domain][locale]?.app ?? labels[domain].en.app;
 }
 
-export function getPeriodicPageCopy(domain: FortuneDomain, period: Period, locale: Locale): PageCopy {
+const MONTH_NAMES: Partial<Record<Locale, string[]>> = {
+  en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  fr: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+  es: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+};
+
+/** "2026年10月" / "October 2026" for the monthly page, "2026" for the yearly one; nothing for today and weekly. */
+export function periodDateLabel(period: Period, locale: Locale, now: Date = new Date()): string {
+  if (period !== 'monthly' && period !== 'yearly') return '';
+  // The site's day turns over in Korea, so the month does too.
+  const kst = new Date(now.getTime() + 9 * 3600 * 1000);
+  const year = kst.getUTCFullYear();
+  const month = kst.getUTCMonth();
+  if (period === 'yearly') return locale === 'ko' ? `${year}년` : locale === 'ja' || locale === 'zh' ? `${year}年` : String(year);
+  if (locale === 'ko') return `${year}년 ${month + 1}월`;
+  if (locale === 'ja' || locale === 'zh') return `${year}年${month + 1}月`;
+  const name = (MONTH_NAMES[locale] ?? MONTH_NAMES.en!)[month];
+  return locale === 'es' ? `${name} de ${year}` : `${name} ${year}`;
+}
+
+/**
+ * People search these pages by date ("2026年10月 運勢" brought 4 of oiyo's clicks in the
+ * 90 days to 2026-10-03, on a dated article that has since been removed and redirected
+ * here). The monthly and yearly pages therefore name the month or year they are for.
+ * The label is fixed at build time: it is right as long as the site is deployed at least
+ * once in the new month, which daily content commits do. 2026-10-06
+ */
+export function getPeriodicPageCopy(domain: FortuneDomain, period: Period, locale: Locale, now: Date = new Date()): PageCopy {
+  const copy = undatedPeriodicPageCopy(domain, period, locale);
+  const dated = periodDateLabel(period, locale, now);
+  if (!dated) return copy;
+  const lead = (text: string) => (locale === 'fr' || locale === 'es' ? `${text} (${dated})` : `${dated} ${text}`);
+  const [head, ...rest] = copy.title.split(' - ');
+  return { ...copy, title: [lead(head), ...rest].join(' - '), h1: lead(copy.h1) };
+}
+
+function undatedPeriodicPageCopy(domain: FortuneDomain, period: Period, locale: Locale): PageCopy {
   const l = labels[domain][locale] ?? labels[domain].en;
   const p = l.cycle[period];
 
