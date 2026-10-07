@@ -6,10 +6,12 @@ import {
   appendHistory,
   byIso2,
   countriesFromIso2,
+  countryNameRank,
   countryRank,
   countryShare,
   defaultHomeIso2,
   displayCountryName,
+  REINCARNATION_COUNTRIES,
   formatShareIso2,
   oneIn,
   parseHistory,
@@ -44,8 +46,27 @@ describe("reincarnation weights", () => {
     expect(pickMany("births", 0)).toHaveLength(1);
   });
 
-  it("names Korea in Korean via DisplayNames", () => {
+  it("names Korea in Korean from the committed table", () => {
     expect(displayCountryName("KR", "ko", "Korea")).toMatch(/한국|대한민국/);
+  });
+
+  // The build and the browser must print the same strings, so nothing may be left to Intl at render time.
+  it("has a name and a picker position for every country in every locale", () => {
+    for (const locale of ["ko", "en", "ja", "zh", "fr", "es"]) {
+      const ranks = new Set<number>();
+      for (const country of REINCARNATION_COUNTRIES) {
+        expect(displayCountryName(country.iso2, locale, "")).not.toBe("");
+        ranks.add(countryNameRank(country.iso2, locale));
+      }
+      expect(ranks.size).toBe(REINCARNATION_COUNTRIES.length);
+      expect(ranks.has(Number.MAX_SAFE_INTEGER)).toBe(false);
+    }
+  });
+
+  it("falls back for an unknown code or locale", () => {
+    expect(displayCountryName("ZZ", "en", "Nowhere")).toBe("Nowhere");
+    expect(displayCountryName("KR", "xx", "Korea")).toBe("Korea");
+    expect(countryNameRank("ZZ", "en")).toBe(Number.MAX_SAFE_INTEGER);
   });
 
   it("hides the far side of the globe", () => {

@@ -10,6 +10,7 @@ import {
   countryRank,
   countryShare,
   defaultHomeIso2,
+  countryNameRank,
   displayCountryName,
   formatShareIso2,
   oneIn,
@@ -184,7 +185,7 @@ export default function ReincarnationCountry({ locale }: Props) {
           iso2: row.iso2,
           label: nameOf(row, locale),
         }))
-        .sort((a, b) => a.label.localeCompare(b.label, locale === "zh" ? "zh-CN" : locale)),
+        .sort((a, b) => countryNameRank(a.iso2, locale) - countryNameRank(b.iso2, locale)),
     [locale, continent],
   );
 

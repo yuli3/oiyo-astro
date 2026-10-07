@@ -1,3 +1,4 @@
+import countryNames from "../data/reincarnation-country-names.json";
 import data from "../data/reincarnation-countries.json";
 
 export type WeightMode = "births" | "population";
@@ -71,22 +72,22 @@ export function projectLonLat(lon: number, lat: number): { x: number; y: number 
   };
 }
 
-const DISPLAY_LOCALE: Record<string, string> = {
-  ko: "ko",
-  en: "en",
-  ja: "ja",
-  zh: "zh-CN",
-  fr: "fr",
-  es: "es",
-};
+// Names and picker order come from a committed table, not from Intl.DisplayNames at render
+// time: the build and the browser carry different ICU data and disagreed on the strings, which
+// broke hydration (React #418) on every visit. See scripts/generate-reincarnation-country-names.mjs.
+const COUNTRY_NAMES = countryNames.names as Record<string, Record<string, string>>;
+const COUNTRY_ORDER = countryNames.order as Record<string, string[]>;
+const COUNTRY_RANK: Record<string, Map<string, number>> = Object.fromEntries(
+  Object.entries(COUNTRY_ORDER).map(([locale, list]) => [locale, new Map(list.map((iso2, index) => [iso2, index]))]),
+);
 
 export function displayCountryName(iso2: string, locale: string, fallback: string): string {
-  try {
-    const names = new Intl.DisplayNames([DISPLAY_LOCALE[locale] ?? locale], { type: "region" });
-    return names.of(iso2.toUpperCase()) ?? fallback;
-  } catch {
-    return fallback;
-  }
+  return COUNTRY_NAMES[locale]?.[iso2.toUpperCase()] ?? fallback;
+}
+
+/** Position of a country in the alphabetical picker for `locale`. Unknown codes sort last. */
+export function countryNameRank(iso2: string, locale: string): number {
+  return COUNTRY_RANK[locale]?.get(iso2.toUpperCase()) ?? Number.MAX_SAFE_INTEGER;
 }
 
 export function projectOrthographic(
