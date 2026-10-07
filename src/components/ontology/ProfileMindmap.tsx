@@ -1,20 +1,20 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
-import type { MoteStage } from "@/lib/particles/motes";
+import { useReducedMotion } from "@/hooks/useMotion";
+import { TREE_HEIGHT, TREE_WIDTH, leafId, litLeaves, splitLabel, toggleLeaf, treeLayout, type TreePoint } from "@/lib/ontology/mindmap-tree";
 
-import { MindmapMotes } from "./MindmapMotes";
-
-// Lane 3 "실제 나의 것": radial explore-and-select profile builder.
-// Central "나" → fixed ring of 5 category nodes (always visible, angle math
-// shared with OntologyRelationOrbit). Tapping one reveals its chips in a
-// panel below the ring (accordion: only one category open at a time).
-// A polar "fan" layout for the chips themselves was tried and dropped —
-// with 6-7 chips per category the arc-length-per-chip is smaller than a
-// readable chip's width at any radius that still fits a 320px stage, so
-// they always overlapped (confirmed in-browser at 375px before this
-// version). Stored in oiyo:profile:v1 (unchanged from prior version).
+// Lane 3 "실제 나의 것": a radial tree, read like a game's tech tree (2026-10-08, 세운).
+// "나" sits in the middle, five branches grow from it, and every chip is a leaf on its branch.
+// The overview shows the whole tree with the chosen leaves lit, so the shape of what a person
+// has picked is visible at a glance. Tapping a branch opens it upward and its leaves can be
+// switched on and off. Nothing is locked: this is a place to choose, not to earn.
+//
+// An earlier single-arc fan was dropped because six or seven labels overlap on a 320px stage.
+// The open branch now uses two staggered arcs (see treeLayout). A list view carries the same
+// choices for screen readers and for anyone who prefers plain buttons.
+// Stored in oiyo:profile:v1 as before: { chosen: { [category]: label[] } }.
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const KEY = "oiyo:profile:v1";
 
@@ -32,16 +32,16 @@ const CATS: Cat[] = [
     chips: { ko: ["성장", "안정", "자유", "영향력", "숙련", "연결", "의미"], en: ["Growth", "Stability", "Freedom", "Impact", "Mastery", "Connection", "Meaning"], ja: ["成長", "安定", "自由", "影響力", "熟達", "つながり", "意味"], zh: ["成长", "稳定", "自由", "影响力", "精通", "连接", "意义"], fr: ["Croissance", "Stabilité", "Liberté", "Impact", "Maîtrise", "Connexion", "Sens"], es: ["Crecimiento", "Estabilidad", "Libertad", "Impacto", "Maestría", "Conexión", "Sentido"] } },
 ];
 
-const UI: Record<Lang, { center: string; saved: string; count: (n: number) => string; hint: string }> = {
-  ko: { center: "나", saved: "저장됨", count: (n) => `${n}개 선택`, hint: "카테고리를 눌러 나를 채워보세요" },
-  en: { center: "Me", saved: "Saved", count: (n) => `${n} selected`, hint: "Tap a category to explore" },
-  ja: { center: "私", saved: "保存", count: (n) => `${n}個選択`, hint: "カテゴリーをタップして探索" },
-  zh: { center: "我", saved: "已保存", count: (n) => `已选 ${n}`, hint: "点击分类开始探索" },
-  fr: { center: "Moi", saved: "Enregistré", count: (n) => `${n} choisis`, hint: "Touchez une catégorie pour explorer" },
-  es: { center: "Yo", saved: "Guardado", count: (n) => `${n} elegidos`, hint: "Toca una categoría para explorar" },
+const UI: Record<Lang, { center: string; saved: string; count: (n: number) => string; hint: string; back: string; tree: string; list: string; view: string }> = {
+  ko: { center: "나", saved: "저장됨", count: (n) => `${n}개 선택`, hint: "가지를 눌러 펼쳐 보세요", back: "‘나’를 누르면 전체로 돌아가요", tree: "트리", list: "목록", view: "보기 방식" },
+  en: { center: "Me", saved: "Saved", count: (n) => `${n} selected`, hint: "Tap a branch to open it", back: "Tap “Me” to see the whole tree", tree: "Tree", list: "List", view: "View" },
+  ja: { center: "私", saved: "保存", count: (n) => `${n}個選択`, hint: "枝をタップして開きましょう", back: "「私」を押すと全体に戻ります", tree: "ツリー", list: "リスト", view: "表示方法" },
+  zh: { center: "我", saved: "已保存", count: (n) => `已选 ${n}`, hint: "点一根枝条展开看看", back: "点“我”回到整棵树", tree: "树", list: "列表", view: "显示方式" },
+  fr: { center: "Moi", saved: "Enregistré", count: (n) => `${n} choisis`, hint: "Touchez une branche pour l’ouvrir", back: "Touchez « Moi » pour revoir tout l’arbre", tree: "Arbre", list: "Liste", view: "Affichage" },
+  es: { center: "Yo", saved: "Guardado", count: (n) => `${n} elegidos`, hint: "Toca una rama para abrirla", back: "Toca «Yo» para ver todo el árbol", tree: "Árbol", list: "Lista", view: "Vista" },
 };
 
-// 카테고리마다 알갱이 색 — 고른 칩이 어느 갈래에서 왔는지 "나" 주위에서도 보인다.
+// 가지마다 색 — 켠 잎이 어느 갈래에서 왔는지 전체 보기에서도 보인다.
 const CAT_COLORS: Record<string, string> = {
   interest: "#16a34a",
   activity: "#0ea5e9",
@@ -49,17 +49,18 @@ const CAT_COLORS: Record<string, string> = {
   relation: "#e11d48",
   goal: "#8b5cf6",
 };
-
-const SIZE = 280;
-const CENTER = SIZE / 2;
-const RING_RADIUS = 92;
+const IDLE_LINE = "#cfd5c2";
+const BRANCHES = CATS.map((cat) => ({ id: cat.id, leaves: cat.chips.ko.length }));
+const TWEEN_MS = 460;
 
 export function ProfileMindmap({ locale }: { locale: string }) {
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   const t = UI[lang];
+  const reducedMotion = useReducedMotion();
   const [sel, setSel] = useState<Record<string, string[]>>({});
   const [hydrated, setHydrated] = useState(false);
-  const [openCat, setOpenCat] = useState<string | null>(null);
+  const [focus, setFocus] = useState<string | null>(null);
+  const [asList, setAsList] = useState(false);
 
   useEffect(() => {
     try { const s = localStorage.getItem(KEY); if (s) { const p = JSON.parse(s); if (p && typeof p === "object" && p.chosen) setSel(p.chosen); } } catch {}
@@ -74,95 +75,129 @@ export function ProfileMindmap({ locale }: { locale: string }) {
     } catch {}
   }, [sel, hydrated]);
 
-  const total = useMemo(() => Object.values(sel).reduce((a, c) => a + c.length, 0), [sel]);
-  const toggleChip = (cat: string, chip: string) =>
-    setSel((s) => {
-      const cur = s[cat] ?? [];
-      return { ...s, [cat]: cur.includes(chip) ? cur.filter((x) => x !== chip) : [...cur, chip] };
-    });
+  const lit = useMemo(() => Object.fromEntries(CATS.map((cat) => [cat.id, litLeaves(sel[cat.id], cat.chips)])) as Record<string, Set<number>>, [sel]);
+  const total = useMemo(() => Object.values(lit).reduce((sum, leaves) => sum + leaves.size, 0), [lit]);
+  const popRef = useRef<string | null>(null);
+  const toggle = (cat: Cat, index: number) => {
+    if (!lit[cat.id].has(index)) popRef.current = leafId(cat.id, index);
+    setSel((current) => ({ ...current, [cat.id]: toggleLeaf(current[cat.id], index, lang, cat.chips) }));
+  };
 
-  const ringPositions = useMemo(
-    () =>
-      CATS.map((cat, i) => {
-        const angle = (2 * Math.PI * i) / CATS.length - Math.PI / 2;
-        return { cat, angle, x: CENTER + RING_RADIUS * Math.cos(angle), y: CENTER + RING_RADIUS * Math.sin(angle) };
-      }),
-    [],
-  );
-  const moteStage = useMemo<MoteStage>(
-    () => ({
-      center: { x: CENTER, y: CENTER },
-      nodes: Object.fromEntries(ringPositions.map(({ cat, x, y }) => [cat.id, { x, y }])),
-      orbitMin: 40,
-      orbitMax: 60,
-    }),
-    [ringPositions],
-  );
+  // Positions are tweened by hand on the SVG nodes: a React render per frame for forty nodes
+  // would be wasteful, and SVG line endpoints do not take CSS transitions.
+  const nodes = useRef<Record<string, SVGGElement | null>>({});
+  const labels = useRef<Record<string, SVGTextElement | null>>({});
+  const lines = useRef<Record<string, SVGLineElement | null>>({});
+  const current = useRef<Record<string, TreePoint>>(treeLayout(BRANCHES, null));
+  const frame = useRef(0);
+
+  const paint = useCallback(() => {
+    const points = current.current;
+    for (const [id, point] of Object.entries(points)) {
+      const node = nodes.current[id];
+      if (node) {
+        node.setAttribute("transform", `translate(${point.x.toFixed(2)} ${point.y.toFixed(2)}) scale(${point.scale.toFixed(3)})`);
+        node.setAttribute("opacity", point.opacity.toFixed(3));
+      }
+      labels.current[id]?.setAttribute("opacity", point.label.toFixed(3));
+    }
+    for (const branch of BRANCHES) {
+      const from = points.me, to = points[branch.id];
+      const trunk = lines.current[branch.id];
+      if (trunk && from && to) {
+        trunk.setAttribute("x1", from.x.toFixed(2)); trunk.setAttribute("y1", from.y.toFixed(2));
+        trunk.setAttribute("x2", to.x.toFixed(2)); trunk.setAttribute("y2", to.y.toFixed(2));
+        trunk.setAttribute("opacity", to.opacity.toFixed(3));
+      }
+      for (let leaf = 0; leaf < branch.leaves; leaf += 1) {
+        const id = leafId(branch.id, leaf);
+        const twig = lines.current[id], end = points[id];
+        if (!twig || !to || !end) continue;
+        twig.setAttribute("x1", to.x.toFixed(2)); twig.setAttribute("y1", to.y.toFixed(2));
+        twig.setAttribute("x2", end.x.toFixed(2)); twig.setAttribute("y2", end.y.toFixed(2));
+        twig.setAttribute("opacity", end.opacity.toFixed(3));
+      }
+    }
+  }, []);
+
+  // Place the nodes before the first paint, and again whenever the tree is shown after the list.
+  // The positions are not in JSX on purpose: React would write them back on every render.
+  useLayoutEffect(() => { if (!asList) paint(); }, [asList, paint]);
+
+  useEffect(() => {
+    const from = current.current;
+    const to = treeLayout(BRANCHES, focus);
+    cancelAnimationFrame(frame.current);
+    if (reducedMotion) { current.current = to; paint(); return; }
+    const started = performance.now();
+    const ease = (p: number) => 1 - (1 - p) ** 3.2;
+    const step = (now: number) => {
+      const p = Math.min(1, (now - started) / TWEEN_MS), e = ease(p);
+      const next: Record<string, TreePoint> = {};
+      for (const [id, b] of Object.entries(to)) {
+        const a = from[id] ?? b;
+        next[id] = { x: a.x + (b.x - a.x) * e, y: a.y + (b.y - a.y) * e, scale: a.scale + (b.scale - a.scale) * e, opacity: a.opacity + (b.opacity - a.opacity) * e, label: a.label + (b.label - a.label) * e };
+      }
+      current.current = next;
+      paint();
+      if (p < 1) frame.current = requestAnimationFrame(step);
+    };
+    frame.current = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frame.current);
+  }, [focus, reducedMotion, paint]);
+
+  // A leaf that was just switched on swells for a moment, like a node being unlocked.
+  useEffect(() => {
+    const id = popRef.current;
+    popRef.current = null;
+    const node = id ? nodes.current[id] : null;
+    const point = id ? current.current[id] : null;
+    if (!node || !point || reducedMotion) return;
+    const started = performance.now();
+    let raf = 0;
+    const step = (now: number) => {
+      const p = Math.min(1, (now - started) / 380);
+      const swell = 1 + 0.32 * Math.sin(Math.PI * p) * (1 - p * 0.4);
+      node.setAttribute("transform", `translate(${point.x.toFixed(2)} ${point.y.toFixed(2)}) scale(${(point.scale * swell).toFixed(3)})`);
+      if (p < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [sel, reducedMotion]);
+
+  const press = (action: () => void) => ({
+    onClick: action,
+    onKeyDown: (event: React.KeyboardEvent) => {
+      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); action(); }
+    },
+  });
+  const focused = CATS.find((cat) => cat.id === focus) ?? null;
 
   return (
-    <div className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
-      <div className="mb-3 flex items-center justify-between">
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-black text-primary-foreground">{t.center}</span>
+    <div className="rounded-3xl border border-border bg-card p-4 shadow-sm sm:p-5">
+      <div className="mb-2 flex items-center justify-between gap-2">
         <span className="text-xs font-bold text-primary">{total > 0 ? `✓ ${t.saved} · ${t.count(total)}` : t.count(0)}</span>
-      </div>
-
-      <div className="relative mx-auto" style={{ width: SIZE, height: SIZE, maxWidth: "100%" }}>
-        {hydrated ? <MindmapMotes size={SIZE} stage={moteStage} selection={sel} colors={CAT_COLORS} /> : null}
-        <div className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-sm font-black text-primary-foreground shadow-sm">
-          {t.center}
+        <div role="group" aria-label={t.view} className="inline-flex overflow-hidden rounded-full border border-border">
+          <button type="button" aria-pressed={!asList} onClick={() => setAsList(false)} className={"min-h-10 px-4 text-xs font-bold " + (!asList ? "bg-primary text-primary-foreground" : "bg-card text-muted-foreground")}>{t.tree}</button>
+          <button type="button" aria-pressed={asList} onClick={() => setAsList(true)} className={"min-h-10 px-4 text-xs font-bold " + (asList ? "bg-primary text-primary-foreground" : "bg-card text-muted-foreground")}>{t.list}</button>
         </div>
-
-        {ringPositions.map(({ cat, x, y }, i) => {
-          const label = cat.label[lang];
-          const count = (sel[cat.id] ?? []).length;
-          const isOpen = openCat === cat.id;
-          return (
-            <button
-              key={cat.id}
-              type="button"
-              aria-expanded={isOpen}
-              onClick={() => setOpenCat((c) => (c === cat.id ? null : cat.id))}
-              className="absolute flex w-16 -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 text-center transition-all duration-300 motion-reduce:transition-none motion-reduce:duration-0"
-              style={{ left: x, top: y }}
-            >
-              <span
-                style={count > 0 && !isOpen ? { borderColor: CAT_COLORS[cat.id] } : undefined}
-                className={
-                  "flex h-11 w-11 items-center justify-center rounded-full border text-sm font-black shadow-sm transition " +
-                  (isOpen ? "border-green-700 bg-primary text-primary-foreground" : count > 0 ? "border-green-600 bg-card text-green-800" : "border-border bg-card text-primary hover:border-green-400")
-                }
-              >
-                {i + 1}
-              </span>
-              <span className="line-clamp-2 text-[10px] font-bold leading-tight text-green-800">
-                {label}
-                {count > 0 ? ` · ${count}` : ""}
-              </span>
-            </button>
-          );
-        })}
       </div>
 
-      {openCat &&
-        (() => {
-          const cat = CATS.find((c) => c.id === openCat)!;
-          const chips = cat.chips[lang];
-          return (
-            <div className="mt-4 rounded-2xl border border-border bg-surface-subtle p-3">
-              <p className="mb-2 text-[11px] font-black uppercase tracking-wider text-green-600">{cat.label[lang]}</p>
+      {asList ? (
+        <div className="space-y-4">
+          {CATS.map((cat) => (
+            <div key={cat.id}>
+              <p className="mb-2 text-xs font-black uppercase tracking-wider text-primary">{cat.label[lang]}</p>
               <div className="flex flex-wrap gap-2">
-                {chips.map((chip) => {
-                  const on = (sel[cat.id] ?? []).includes(chip);
+                {cat.chips[lang].map((chip, index) => {
+                  const on = lit[cat.id].has(index);
                   return (
                     <button
                       key={chip}
                       type="button"
                       aria-pressed={on}
-                      onClick={() => toggleChip(cat.id, chip)}
-                      className={
-                        "rounded-full border px-3 py-1.5 text-xs font-bold transition " +
-                        (on ? "border-green-600 bg-primary text-primary-foreground" : "border-border bg-card text-green-800 hover:border-green-400")
-                      }
+                      onClick={() => toggle(cat, index)}
+                      className={"min-h-10 rounded-full border px-3.5 text-xs font-bold transition " + (on ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-foreground")}
                     >
                       {chip}
                     </button>
@@ -170,10 +205,98 @@ export function ProfileMindmap({ locale }: { locale: string }) {
                 })}
               </div>
             </div>
-          );
-        })()}
+          ))}
+        </div>
+      ) : (
+        <>
+          <svg viewBox={`0 0 ${TREE_WIDTH} ${TREE_HEIGHT}`} role="group" aria-label={t.view} className="mx-auto block h-auto w-full max-w-sm touch-manipulation select-none">
+            <g aria-hidden="true">
+              {CATS.map((cat) => {
+                const has = lit[cat.id].size > 0;
+                return (
+                  <g key={cat.id}>
+                    <line ref={(el) => { lines.current[cat.id] = el; }} stroke={has ? CAT_COLORS[cat.id] : IDLE_LINE} strokeWidth={has ? 2.4 : 1.4} strokeLinecap="round" />
+                    {cat.chips.ko.map((_, index) => {
+                      const on = lit[cat.id].has(index);
+                      return <line key={index} ref={(el) => { lines.current[leafId(cat.id, index)] = el; }} stroke={on ? CAT_COLORS[cat.id] : IDLE_LINE} strokeWidth={on ? 2.2 : 1.1} strokeDasharray={on ? undefined : "2 5"} strokeLinecap="round" />;
+                    })}
+                  </g>
+                );
+              })}
+            </g>
 
-      {total === 0 && !openCat && <p className="mt-2 text-center text-xs font-bold text-green-500">{t.hint}</p>}
+            {CATS.map((cat) =>
+              cat.chips[lang].map((chip, index) => {
+                const id = leafId(cat.id, index);
+                const on = lit[cat.id].has(index);
+                const open = focus === cat.id;
+                const parts = splitLabel(chip);
+                return (
+                  <g
+                    key={id}
+                    ref={(el) => { nodes.current[id] = el; }}
+                    role="button"
+                    aria-pressed={on}
+                    aria-label={chip}
+                    aria-hidden={open ? undefined : true}
+                    tabIndex={open ? 0 : -1}
+                    pointerEvents={open ? "auto" : "none"}
+                    className="cursor-pointer outline-none"
+                    {...press(() => toggle(cat, index))}
+                  >
+                    <circle r={22} fill="transparent" />
+                    {on ? <circle r={21} fill={CAT_COLORS[cat.id]} opacity={0.2} /> : null}
+                    <circle r={15} fill={on ? CAT_COLORS[cat.id] : undefined} stroke={on ? CAT_COLORS[cat.id] : undefined} strokeWidth={1.5} className={on ? undefined : "fill-card stroke-border"} />
+                    {on ? <path d="M-5.5 0.5 L-1.5 4.5 L6 -4" fill="none" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" className="stroke-primary-foreground" /> : null}
+                    <text ref={(el) => { labels.current[id] = el; }} textAnchor="middle" fontSize={10} fontWeight={700} className="fill-foreground">
+                      {parts.map((part, line) => <tspan key={part} x={0} y={27 + line * 11}>{part}</tspan>)}
+                    </text>
+                  </g>
+                );
+              }),
+            )}
+
+            {CATS.map((cat, index) => {
+              const count = lit[cat.id].size;
+              const open = focus === cat.id;
+              const label = cat.label[lang] + (count > 0 ? ` · ${count}` : "");
+              return (
+                <g
+                  key={cat.id}
+                  ref={(el) => { nodes.current[cat.id] = el; }}
+                  role="button"
+                  aria-expanded={open}
+                  aria-label={label}
+                  tabIndex={0}
+                  className="cursor-pointer outline-none"
+                  {...press(() => setFocus(open ? null : cat.id))}
+                >
+                  <circle r={28} fill="transparent" />
+                  {count > 0 || open ? <circle r={26} fill={CAT_COLORS[cat.id]} opacity={0.16} /> : null}
+                  <circle r={21} fill={open ? CAT_COLORS[cat.id] : undefined} stroke={count > 0 || open ? CAT_COLORS[cat.id] : undefined} strokeWidth={1.6} className={open ? undefined : count > 0 ? "fill-card" : "fill-card stroke-border"} />
+                  <text textAnchor="middle" y={4.5} fontSize={13} fontWeight={700} fill={!open && count > 0 ? CAT_COLORS[cat.id] : undefined} className={open ? "fill-primary-foreground" : count > 0 ? undefined : "fill-primary"}>{index + 1}</text>
+                  <text ref={(el) => { labels.current[cat.id] = el; }} textAnchor="middle" y={36} fontSize={11} fontWeight={700} className="fill-foreground">{label}</text>
+                </g>
+              );
+            })}
+
+            <g
+              ref={(el) => { nodes.current.me = el; }}
+              role="button"
+              aria-label={focus ? t.back : t.center}
+              tabIndex={focus ? 0 : -1}
+              className={focus ? "cursor-pointer outline-none" : "outline-none"}
+              {...press(() => setFocus(null))}
+            >
+              <circle r={31} className="fill-primary" />
+              <text textAnchor="middle" y={5} fontSize={15} fontWeight={700} className="fill-primary-foreground">{t.center}</text>
+            </g>
+          </svg>
+          <p aria-live="polite" className="mt-1 min-h-5 text-center text-xs font-bold text-muted-foreground">
+            {focused ? `${focused.label[lang]} · ${lit[focused.id].size}/${focused.chips.ko.length} — ${t.back}` : t.hint}
+          </p>
+        </>
+      )}
     </div>
   );
 }
