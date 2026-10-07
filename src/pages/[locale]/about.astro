@@ -22,6 +22,16 @@ const introCopy: Record<string, { label: string; caption: string }> = {
   es: { label: "Vídeo de presentación de OIYO", caption: "OIYO en diez segundos: un mapa para entenderte. Se reproduce con sonido." },
 };
 const intro = introCopy[locale] ?? introCopy.en;
+// 브랜드 영상(큰 글자 + 떠 있는 기기 화면). 영상 속 글자가 있어 ko 판과 en 판 두 벌이다.
+const brandCopy: Record<string, { label: string; caption: string }> = {
+  ko: { label: "OIYO 브랜드 영상", caption: "타고난 것, 드러난 것, 고른 것을 하나의 지도로. 재생하면 소리가 나요." },
+  en: { label: "OIYO brand film", caption: "What you’re born with, what you discover and what you choose, on one map. Plays with sound." },
+  ja: { label: "OIYOブランド動画", caption: "生まれ持ったもの、見えてきたもの、選んだものを一枚の地図に。再生すると音が出ます。" },
+  zh: { label: "OIYO 品牌视频", caption: "与生俱来的、测出来的、自己选择的，汇成一张地图。播放时有声音。" },
+  fr: { label: "Film de marque OIYO", caption: "Ce que vous avez reçu, ce que vous découvrez et ce que vous choisissez, sur une seule carte. La lecture est sonore." },
+  es: { label: "Vídeo de marca de OIYO", caption: "Lo que traes de nacimiento, lo que descubres y lo que eliges, en un solo mapa. Se reproduce con sonido." },
+};
+const brand = brandCopy[locale] ?? brandCopy.en;
 const introScreens = locale === "ko" ? "ko" : "en";
 
 const values = [
@@ -63,7 +73,17 @@ const values = [
     </div>
   </section>
 
-  <section class="mx-auto max-w-3xl px-4 pt-10">
+  <section class="mx-auto max-w-3xl space-y-8 px-4 pt-10">
+    <UsageClip
+      sound
+      src={`/motion/oiyo-brand-${introScreens}.mp4`}
+      poster={`/motion/oiyo-brand-${introScreens}.jpg`}
+      width={1280}
+      height={720}
+      label={brand.label}
+      caption={brand.caption}
+      replay=""
+    />
     <UsageClip
       sound
       src={`/motion/oiyo-intro-${introScreens}.mp4`}
