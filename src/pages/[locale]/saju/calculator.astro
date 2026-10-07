@@ -1,4 +1,5 @@
 ---
+import UsageClip from '../../../components/shared/UsageClip.astro';
 import Layout from '../../../layouts/Layout.astro';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../../i18n';
@@ -274,6 +275,16 @@ const faqJsonLd = {
     },
   })),
 };
+const usageClipCopy: Record<string, { label: string; caption: string; replay: string }> = {
+  ko: { label: "사주 계산기 사용법 영상", caption: "생년월일과 태어난 시각, 출생지를 넣고 저장한 뒤 ‘사주 보기’를 누르면 네 기둥이 나와요.", replay: "다시 보기" },
+  en: { label: "How to use the saju calculator", caption: "Enter your birth date, time and birthplace, save, then press Read My Saju to see the four pillars.", replay: "Replay" },
+  ja: { label: "四柱推命計算機の使い方動画", caption: "生年月日・生まれた時刻・出生地を入れて保存し、「四柱推命を見る」を押すと四つの柱が表示されます。", replay: "もう一度見る" },
+  zh: { label: "四柱计算器使用方法视频", caption: "填入出生日期、出生时间和出生地并保存，再点“查看我的四柱”，四根柱子就会显示出来。", replay: "重新播放" },
+  fr: { label: "Vidéo : utiliser le calculateur de saju", caption: "Indiquez votre date, votre heure et votre lieu de naissance, enregistrez, puis appuyez sur « Lire mon Saju » pour voir les quatre piliers.", replay: "Revoir" },
+  es: { label: "Vídeo: cómo usar la calculadora de saju", caption: "Introduce tu fecha, hora y lugar de nacimiento, guarda y pulsa «Leer mi Saju» para ver los cuatro pilares.", replay: "Ver de nuevo" },
+};
+const usageClip = usageClipCopy[locale] ?? usageClipCopy.en;
+
 ---
 
 <Layout title={m.title} description={m.description} locale={locale} heading={headings[locale] ?? headings.en}>
@@ -283,6 +294,17 @@ const faqJsonLd = {
     <CelestialClock client:visible locale={locale} />
     {/* Above-the-fold input form — hydrate on main-thread idle instead of blocking initial load, without waiting on viewport visibility. */}
     <SajuCalculator client:idle locale={locale} />
+    {/* 2026-10-07 사용법 클립. 완료율(test_completed) 전후 28일 비교의 기준일이다. */}
+    <UsageClip
+      class="max-w-xs"
+      src={`/motion/saju-calculator-${locale}.mp4`}
+      poster={`/motion/saju-calculator-${locale}.jpg`}
+      width={640}
+      height={800}
+      label={usageClip.label}
+      caption={usageClip.caption}
+      replay={usageClip.replay}
+    />
     <RelatedTools locale={locale} tools={['sajuPeriodic', 'natal', 'zodiac', 'numerology']} current="saju" />
     <figure class="mt-8 overflow-hidden rounded-2xl border border-border bg-card">
       <img

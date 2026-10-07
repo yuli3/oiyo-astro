@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import HeroArt from '../../components/shared/HeroArt.astro';
+import UsageClip from '../../components/shared/UsageClip.astro';
 import { LOCALES, getTranslations } from '../../i18n';
 import type { Locale } from '../../i18n';
 
@@ -10,6 +11,18 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
+
+// 2026-10-07 소개 영상. 화면 속 글자는 ko 판과 en 판 두 벌이고, 문장은 여기 HTML 이 맡는다.
+const introCopy: Record<string, { label: string; caption: string }> = {
+  ko: { label: "OIYO 소개 영상", caption: "나를 이해하는 지도, OIYO를 10초로 봐요. 재생하면 소리가 나요." },
+  en: { label: "OIYO intro video", caption: "OIYO in ten seconds: a map for understanding yourself. Plays with sound." },
+  ja: { label: "OIYO紹介動画", caption: "自分を理解するための地図、OIYOを10秒で。再生すると音が出ます。" },
+  zh: { label: "OIYO 介绍视频", caption: "十秒看懂 OIYO：一张理解自己的地图。播放时有声音。" },
+  fr: { label: "Vidéo de présentation d’OIYO", caption: "OIYO en dix secondes : une carte pour mieux se comprendre. La lecture est sonore." },
+  es: { label: "Vídeo de presentación de OIYO", caption: "OIYO en diez segundos: un mapa para entenderte. Se reproduce con sonido." },
+};
+const intro = introCopy[locale] ?? introCopy.en;
+const introScreens = locale === "ko" ? "ko" : "en";
 
 const values = [
   { key: 'free', icon: '🌍' },
@@ -48,6 +61,19 @@ const values = [
         {t('marketing.about.hero.description')}
       </p>
     </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 pt-10">
+    <UsageClip
+      sound
+      src={`/motion/oiyo-intro-${introScreens}.mp4`}
+      poster={`/motion/oiyo-intro-${introScreens}.jpg`}
+      width={1280}
+      height={720}
+      label={intro.label}
+      caption={intro.caption}
+      replay=""
+    />
   </section>
 
   <!-- Mission -->
