@@ -5,7 +5,7 @@ import type { Locale } from '../../i18n'
    Computes the subsolar point and related astronomical data
    used in 명리학/사주 as seasonal/qi indicators.              */
 
-function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string; jieqiName: Record<string, string> } {
+export function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string; jieqiName: Record<string, string> } {
   const JD = date.getTime() / 86400000 + 2440587.5
   const T = (JD - 2451545.0) / 36525
   const L0 = (280.46646 + T * (36000.76983 + T * 0.0003032)) % 360
@@ -24,15 +24,13 @@ function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string
   const uth = date.getUTCHours() + date.getUTCMinutes() / 60
   let lon = ((12 - uth) * 15 + 540) % 360 - 180
 
-  // Solar longitude (ecliptic) → 절기 (24 solar terms)
+  // Solar longitude (ecliptic) → 절기 (24 solar terms).
+  // 황경 0°는 춘분이고 15°마다 다음 절기다. 표는 반드시 춘분에서 시작한다.
+  // 2026-10-07 이전에는 표가 소한(285°)에서 시작해 모든 날짜가 105° 어긋났다
+  // (10월 7일에 추분 대신 소서를 표시).
   const solarLon = ((lambda % 360) + 360) % 360
   const jieqiIndex = Math.floor(solarLon / 15) % 24
   const jieqiNames: Record<string, string>[] = [
-    { ko: '소한', en: 'Minor Cold', ja: '小寒', zh: '小寒' },
-    { ko: '대한', en: 'Major Cold', ja: '大寒', zh: '大寒' },
-    { ko: '입춘', en: 'Start of Spring', ja: '立春', zh: '立春' },
-    { ko: '우수', en: 'Rain Water', ja: '雨水', zh: '雨水' },
-    { ko: '경칩', en: 'Awakening of Insects', ja: '啓蟄', zh: '惊蛰' },
     { ko: '춘분', en: 'Spring Equinox', ja: '春分', zh: '春分' },
     { ko: '청명', en: 'Clear and Bright', ja: '清明', zh: '清明' },
     { ko: '곡우', en: 'Grain Rain', ja: '穀雨', zh: '谷雨' },
@@ -52,6 +50,11 @@ function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string
     { ko: '소설', en: 'Minor Snow', ja: '小雪', zh: '小雪' },
     { ko: '대설', en: 'Major Snow', ja: '大雪', zh: '大雪' },
     { ko: '동지', en: 'Winter Solstice', ja: '冬至', zh: '冬至' },
+    { ko: '소한', en: 'Minor Cold', ja: '小寒', zh: '小寒' },
+    { ko: '대한', en: 'Major Cold', ja: '大寒', zh: '大寒' },
+    { ko: '입춘', en: 'Start of Spring', ja: '立春', zh: '立春' },
+    { ko: '우수', en: 'Rain Water', ja: '雨水', zh: '雨水' },
+    { ko: '경칩', en: 'Awakening of Insects', ja: '啓蟄', zh: '惊蛰' },
   ]
 
   return {
