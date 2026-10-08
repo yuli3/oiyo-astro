@@ -1,233 +1,156 @@
 ---
 locale: fr
-author: Oiyo
+title: "Biais cognitifs et jugement : 20 notions et leurs conditions"
+description: "Comprenez le biais de confirmation, l’erreur de planification et les phénomènes associés. Distinguez pertes, coûts irrécupérables, attribution et biais du présent, puis examinez les conditions d’un exemple de probabilité."
 pubDate: "2026-06-02"
-title: "Guide complet des biais cognitifs : 20 pièges psychologiques qui faussent notre jugement"
-description: "Découvrez les 20 biais cognitifs majeurs — biais de confirmation, de disponibilité, d'ancrage, de statu quo, etc. — leurs mécanismes, leur impact au quotidien et les méthodes pour prendre de meilleures décisions."
+updatedDate: "2026-10-08"
+author: Rédaction OIYO
 tags:
-  - biais cognitifs
-  - économie comportementale
-  - prise de décision
-  - psychologie
-  - pensée critique
-  - Kahneman
+  - cognitive-bias
+  - behavioral-economics
+  - decision-making
+  - psychology
 topic: cognitive-bias
 ---
 
-import TestCTA from "@/components/mdx/TestCTA.astro";
-import Callout from "@/components/mdx/Callout.astro"
+import { LectureTable, LectureProcess } from "@/components/mdx/LectureVisuals";
+import { CoinAssumptionsExample } from "@/components/content/academy/CoinAssumptionsExample";
 
-Nous aimons nous considérer comme des êtres rationnels, mais notre cerveau utilise d'innombrables raccourcis (heuristiques) façonnés par des millions d'années d'évolution. Si ces raccourcis sont utiles dans de nombreuses situations, ils engendrent également des erreurs systématiques — les biais cognitifs — qui altèrent notre jugement. Les travaux de Daniel Kahneman et Amos Tversky ont permis de mettre ces biais en lumière de manière scientifique.
+## Vérifiez les conditions avant de poser une étiquette
 
-## Qu'est-ce qu'un biais cognitif ?
+Les biais cognitifs décrivent des tendances systématiques du jugement dans certaines tâches. Ce ne sont ni des étiquettes pour les personnes dont les choix nous déplaisent, ni des diagnostics fondés sur une seule erreur. Les heuristiques peuvent constituer des raccourcis utiles et produire des erreurs lorsqu’elles ne conviennent pas à la situation.
 
-Un biais cognitif (Cognitive Bias) est une **erreur de jugement systématique et répétitive**. Il ne provient pas de l'ignorance ou de la stupidité, mais du fonctionnement même de notre cerveau.
+Ces 20 entrées comprennent des biais de jugement et des phénomènes associés, comme les changements d’attitude, la conformité et l’inconfort. Il ne s’agit pas toujours du même type d’erreur. Sauf mention explicite d’une recherche, les exemples quotidiens et les questions de réexamen sont proposés par notre rédaction.
 
-### Système 1 et Système 2 (Kahneman)
+[La page de la conférence Nobel de Kahneman](https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/) et [le texte de la conférence hébergé par une université](https://www.alice.id.tue.nl/references/kahnemann-2003.pdf) distinguent l’intuition rapide de la vérification exigeant un effort, tout en abordant l’intuition experte et les erreurs de délibération.
 
-| Système 1 | Système 2 |
-|---------|---------|
-| Rapide, automatique | Lent, délibéré |
-| Intuition, émotion | Logique, analyse |
-| Sans effort | Consommateur d'énergie |
-| Vulnérable aux biais | Capable de corriger les biais |
+<LectureTable
+  title="Deux modes de traitement, pas une opposition entre erreur et vérité"
+  headers={["Mode", "Caractéristiques", "Précaution"]}
+  rows={[
+    ["Système 1", "Les jugements rapides et automatiques occupent une place centrale.", "Une intuition experte est possible. La rapidité ne suffit pas à rendre un jugement faux."],
+    ["Système 2", "L’attention et l’effort servent à examiner les jugements.", "Il peut appliquer des règles incorrectes ou manquer une vérification. Réfléchir plus longtemps ne garantit pas une réponse correcte."]
+  ]}
+/>
 
-Les biais cognitifs surviennent principalement lors de la pensée automatique du **Système 1**.
+## Distinguez 20 notions dans leur contexte
 
-## 20 biais cognitifs majeurs
+### 1. Biais de confirmation
 
-### 1. Biais de confirmation (Confirmation Bias)
+Tendance à rechercher des preuves favorables à son idée ou à ne pas suffisamment considérer les preuves contraires. [Le résumé de l’étude de Wason sur la découverte de règles](https://journals.sagepub.com/doi/10.1080/17470216008416717) présente une tâche classique. Cherchez des cas qui départagent des explications concurrentes, pas seulement des cas compatibles avec la vôtre. Cela n’oblige pas à accepter une preuve de mauvaise qualité au seul motif qu’elle vous contredit.
 
-Tendance à ne rechercher que les informations qui confirment nos croyances préexistantes et à ignorer celles qui les contredisent.
+### 2. Heuristique et biais de disponibilité
 
-**Exemple concret** : Partager uniquement les nouvelles positives sur un politicien que l'on apprécie, ou ne lire que les analyses qui soutiennent nos investissements.
+Utiliser des exemples faciles à rappeler pour juger une fréquence ou une probabilité. Un accident récent qui vient facilement à l’esprit n’est pas nécessairement le plus fréquent. Les comparaisons demandent des données portant sur des populations, des périodes et des dénominateurs comparables. Distinguez la facilité de rappel de la fréquence observée. [Source de cette définition](https://www.alice.id.tue.nl/references/kahnemann-2003.pdf).
 
-**Comment y remédier** : Rechercher activement des opinions opposées (« Quelles preuves existeraient si cet argument était faux ? »).
+### 3. Ancrage
 
----
+Une valeur initiale ou un point de référence influence les estimations ultérieures. Dans un exemple de la rédaction, « prix initial 100 → promotion 50 » peut faire paraître 50 bon marché ; il faut pourtant examiner séparément les produits comparables et leur qualité. Vérifiez aussi si 100 était réellement un prix de vente. La présence d’un chiffre initial ne prouve pas, à elle seule, une erreur. [Source de cette définition](https://www.alice.id.tue.nl/references/kahnemann-2003.pdf).
 
-### 2. Biais de disponibilité (Availability Bias)
+### 4. Aversion à la perte
 
-Tendance à juger l'importance ou la fréquence d'un événement en fonction de la facilité avec laquelle des exemples nous viennent à l'esprit.
+Pondération plus forte des pertes que des gains équivalents par rapport à un point de référence. Ce n’est pas une loi selon laquelle la douleur de chacun serait toujours exactement deux fois son plaisir. [Une recherche sur ses limites](https://journals.sagepub.com/doi/10.1509/jmkr.42.2.119.62292) distingue les usages de l’argent et les contextes de transaction. Continuer à cause d’un coût passé impossible à récupérer relève d’une autre définition : l’erreur des coûts irrécupérables.
 
-**Exemple concret** : Avoir peur de prendre l'avion après avoir vu un reportage sur un crash (alors que la voiture est statistiquement bien plus dangereuse).
+### 5. Biais de statu quo
 
-**Comment y remédier** : Vérifier les statistiques réelles.
+Accorder un poids supplémentaire à l’option existante parce qu’elle est déjà en place. [L’article de Samuelson et Zeckhauser](https://rzeckhauser.scholars.harvard.edu/sites/g/files/omnuum4441/files/rzeckhauser/files/status_quo_bias_in_decision_making.pdf) examine aussi des raisons rationnelles de rester, dont les coûts de changement et l’incertitude. Ne pas changer ne suffit pas à prouver un biais. Comparez les bénéfices et les coûts réels du changement.
 
----
+### 6. Effet Dunning–Kruger
 
-### 3. Biais d'ancrage (Anchoring Bias)
+[Le résumé original](https://pubmed.ncbi.nlm.nih.gov/10626367/) rapporte une surestimation parmi les groupes les moins performants dans des tâches d’humour, de grammaire et de logique. Il ne classe pas les connaissances ou la conscience de soi d’une personne dans tous les domaines. Examinez les critères propres à la tâche et les retours reçus, plutôt que la seule confiance. Ne présentez pas une courbe de confiance figée trouvée sur Internet comme un graphique mesuré dans cette étude.
 
-La première information reçue (l'ancre) influence de manière disproportionnée les jugements ultérieurs.
+### 7. Biais rétrospectif
 
-**Exemple concret** : Une étiquette indiquant « Prix initial 100 € → 50 € en solde », ou le premier montant proposé lors d'une négociation salariale.
+Après avoir appris un résultat, le considérer comme plus prévisible à l’époque. [Le glossaire de l’AHRQ](https://psnet.ahrq.gov/glossary/hindsight-bias) explique les problèmes que cela peut créer dans l’analyse d’incidents. Comparez une attente consignée avant le résultat avec l’explication donnée après. N’exigez pas que les personnes aient connu une information alors indisponible.
 
-**Comment y remédier** : Identifier l'ancre et explorer intentionnellement d'autres points de référence.
+### 8. Pensée de groupe
 
----
+Problème de décision collective où la préservation de l’accord étouffe la contradiction et l’examen critique. [L’explication d’OpenStax sur l’influence du groupe](https://openstax.org/books/psychology-2e/pages/12-4-conformity-compliance-and-obedience) présente la notion. L’accord et une bonne coopération ne sont pas synonymes de pensée de groupe. Notre rédaction propose, par exemple, de consigner les jugements individuels et leurs raisons avant qu’un responsable annonce sa préférence.
 
-### 4. Aversion à la perte (Loss Aversion)
+### 9. Erreur fondamentale d’attribution
 
-La douleur ressentie lors d'une perte est deux fois plus intense que le plaisir procuré par un gain équivalent.
+Surpondérer les caractéristiques personnelles et sous-pondérer les influences de la situation lorsqu’on explique le comportement d’autrui. Avant de juger irresponsable un collègue en retard, vérifiez les circonstances. [La discussion d’OpenStax sur l’attribution](https://openstax.org/books/psychology-2e/pages/12-1-what-is-social-psychology) distingue cette notion des différences acteur–observateur. « Ma situation contre sa personnalité » n’en constitue pas toute la définition.
 
-**Exemple concret** : Vendre en panique lors d'une baisse boursière, ou maintenir un mauvais investissement par peur de perdre l'argent déjà dépensé (erreur des coûts irrécupérables).
+### 10. Biais d’auto-complaisance
 
-**Comment y remédier** : Se demander : « Si je devais prendre cette décision aujourd'hui, sans tenir compte du passé, que ferais-je ? »
+Nous examinons ici sa forme attributive : expliquer les succès par ses capacités et les échecs par des facteurs externes. Cela ne signifie pas que les causes réelles sont toujours inverses. Vérifiez si les critères d’explication ont changé avec le résultat et si les mêmes preuves ont été considérées pour les succès et les échecs. [Source de cette définition](https://openstax.org/books/psychology-2e/pages/12-1-what-is-social-psychology).
 
----
+### 11. Jugements sur la « main chaude »
 
-### 5. Biais de statu quo (Status Quo Bias)
+Croire que des succès récents ont augmenté la probabilité d’un nouveau succès. Il faut distinguer le hasard indépendant de la performance réelle. [Le résumé de Miller et Sanjurjo de 2018](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA14943) décrit un biais dans les statistiques sélectionnant les résultats après des séries, ainsi qu’une réinterprétation de résultats classiques. On ne peut en déduire ni une indépendance universelle ni la garantie que toute série se poursuivra.
 
-Préférence pour l'état actuel des choses plutôt que pour le changement.
+### 12. Erreur du parieur
 
-**Exemple concret** : Ne pas changer d'assurance alors qu'une offre plus avantageuse existe, ou conserver des routines inefficaces.
+Attendre que le prochain résultat d’un essai indépendant compense les résultats précédents. Si la pièce reste équilibrée au prochain lancer et que ce résultat est indépendant de toute la séquence antérieure, trois faces laissent toujours 50 % de chances d’obtenir face ensuite. N’appliquez pas ce chiffre à tout processus réel sans en vérifier les conditions.
 
-**Comment y remédier** : Se demander : « Si la situation actuelle n'était pas la norme, que choisirais-je ? »
+### 13. Conformité et suivi de la majorité
 
----
+Adapter son comportement aux jugements d’autrui ou aux normes du groupe. On peut rechercher l’acceptation ou penser que les autres possèdent des informations utiles. La conformité n’est pas toujours une erreur. Distinguez les répétitions d’une même affirmation de preuves indépendantes. [Source de cette définition](https://openstax.org/books/psychology-2e/pages/12-4-conformity-compliance-and-obedience).
 
-### 6. Effet Dunning-Kruger (Dunning-Kruger Effect)
+### 14. Effet de halo
 
-Plus on possède peu de connaissances, plus on a tendance à surestimer ses propres capacités.
+Une impression globale ou une évaluation sur une dimension déborde sur une autre. Une présentation soignée ne suffit pas à établir l’exactitude de ses données. La notion ne se limite pas à l’apparence ou aux célébrités. Cherchez une preuve directe pour la dimension évaluée. [Source de cette définition](https://openstax.org/books/psychology-2e/pages/12-1-what-is-social-psychology).
 
-**La « double malédiction »** : Les personnes incompétentes n'ont pas les capacités nécessaires pour reconnaître leur propre incompétence.
+### 15. Effet de cadrage
 
-**Exemple concret** : Un débutant en bourse qui pense pouvoir faire mieux qu'un expert.
+[Le résumé classique](https://pubmed.ncbi.nlm.nih.gov/7455683/) décrit des préférences qui changent selon la présentation d’un problème. Dans un exemple fictif de la rédaction, « 90 % réussissent » et « 10 % échouent » décrivent la même proportion uniquement pour le même groupe et la même période. Des populations ou des périodes différentes donnent des informations différentes. Reformulez et comparez les conséquences des options sur une base commune.
 
-**Comment y remédier** : Développer sa métacognition — se demander souvent : « Qu'est-ce que je ne sais pas ? »
+### 16. Biais du présent
 
----
+Accorder un poids supplémentaire à l’utilité immédiate lorsque le présent entre en jeu. [L’article d’O’Donoghue et Rabin](https://bpb-us-e1.wpmucdn.com/blogs.cornell.edu/dist/b/5495/files/2015/10/OD-Rabin-AERpnp-2015-x02qub.pdf) distingue l’actualisation ordinaire, l’incertitude sur un paiement futur et les contraintes. Choisir une fois une récompense immédiate plus petite ne suffit pas à établir un biais du présent.
 
-### 7. Biais rétrospectif (Hindsight Bias)
+### 17. Effet de simple exposition
 
-Tendance à croire, après avoir pris connaissance d'un résultat, que l'on « savait » qu'il allait se produire.
+L’exposition répétée peut influencer l’appréciation. [L’article publié par Zajonc en 1968](https://web.mit.edu/curhan/www/docs/Articles/biases/9_J_Personality_Social_Psychology_1_(Zajonc).pdf) souligne la nécessité d’examiner des conditions telles que la fréquence, l’espacement et les stimuli. Répéter ne garantit pas de faire apprécier. Distinguez la familiarité d’une preuve de qualité.
 
-**Exemple concret** : « Je savais que cet investissement allait échouer », « Je savais dès le début que cette personne n'était pas fiable ».
+### 18. Dissonance cognitive
 
-**Impact** : Empêche d'apprendre de ses erreurs passées.
+Inconfort lié à des attitudes, comportements ou cognitions incompatibles, et motivation à le réduire. [L’explication d’OpenStax](https://openstax.org/books/psychology-2e/pages/12-3-attitudes-and-persuasion) présente notamment la modification du comportement ou des cognitions parmi plusieurs réponses. La dissonance elle-même n’est ni un mensonge ni une erreur de jugement. Examinez séparément le processus si réduire l’inconfort conduit à ignorer des preuves contraires.
 
----
+### 19. Effet de dotation
 
-### 8. Pensée de groupe (Groupthink)
+Tendance à valoriser davantage un objet lorsqu’on le possède que lorsqu’on ne le possède pas. Par exemple, le montant exigé pour y renoncer peut dépasser celui qu’on paierait pour l’acquérir. Un objet déjà détenu peut avoir une véritable valeur d’usage et des coûts de remplacement ; ne pas vouloir le vendre ne suffit donc pas à prouver une erreur. Demandez-vous comment vous évalueriez son acquisition aujourd’hui. Cette question ne garantit pas d’éliminer l’effet de dotation. [Source de cette définition](https://benny.aeaweb.org/articles?id=10.1257/jep.5.1.193).
 
-Suppression de la pensée critique au profit de l'harmonie au sein d'un groupe.
+### 20. Erreur de planification
 
-**Exemple historique** : L'explosion de la navette spatiale Challenger — les ingénieurs avaient exprimé des inquiétudes, mais elles ont été ignorées sous la pression du groupe.
+Estimations optimistes du délai d’achèvement, centrées sur le plan actuel et utilisant insuffisamment l’expérience passée pertinente. [L’article de Buehler, Griffin et Ross](https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf) examine ce phénomène. Tout retard n’est pas un biais. Comparez les durées réelles de tâches similaires ainsi que les différences de périmètre et de ressources. Les données passées ne garantissent pas des prévisions exactes.
 
-**Comment y remédier** : Désigner un « avocat du diable » et mettre en place un système de feedback anonyme.
+## Des notions proches demandent des questions différentes
 
----
+<LectureTable
+  title="Trois distinctions à conserver"
+  headers={["Confusion possible", "Questions différentes", "Point à vérifier"]}
+  rows={[
+    ["Aversion à la perte / coûts irrécupérables", "Pondère-t-on une perte par rapport à une référence, ou poursuit-on à cause d’un investissement passé irrécupérable ?", "Séparez les coûts et bénéfices futurs des investissements passés."],
+    ["Attribution fondamentale / différence acteur–observateur", "Sous-estime-t-on les circonstances d’autrui, ou les explications diffèrent-elles entre soi et autrui ?", "Précisez les informations sur la situation et la comparaison."],
+    ["Biais du présent / actualisation temporelle", "Le présent reçoit-il un poids supplémentaire, ou considère-t-on les coûts d’attente et l’incertitude ?", "Comparez les échéances, les conditions et les contraintes réelles."]
+  ]}
+/>
 
-### 9. Erreur fondamentale d'attribution (Fundamental Attribution Error)
+## L’indépendance est une hypothèse nécessaire à la conclusion
 
-Expliquer le comportement des autres par leur personnalité, mais le sien par la situation.
+Si face et pile sont équiprobables au prochain lancer et que ce résultat est indépendant de toute la séquence précédente, la probabilité de face est de 50 %. Elle n’augmente pas parce que face serait « en retard ». Retirer une hypothèse ne fournit pas assez d’informations pour calculer une autre valeur. Les cases ci-dessous modifient des hypothèses illustratives ; elles ne testent pas une pièce réelle.
 
-**Exemple concret** : « Cette personne est égoïste » vs « Je n'avais pas d'autre choix que d'agir ainsi ».
+<CoinAssumptionsExample locale="fr" client:visible />
 
----
+Ne transposez pas directement cette illustration à une performance sportive, à la qualité d’un produit ou au jugement d’une personne réelle. Ces situations demandent d’examiner les changements de conditions et les dépendances. Comprendre une probabilité n’est pas non plus mesurer un biais psychologique.
 
-### 10. Biais d'auto-complaisance (Self-Serving Bias)
+## Réexaminez vos décisions avec des traces et des comparaisons
 
-Attribuer ses succès à ses propres compétences et ses échecs à des facteurs externes.
+Dans un exemple de la rédaction, avoir consacré beaucoup d’heures à une nouvelle tâche n’empêche pas d’examiner l’effort et les bénéfices encore à venir. Les heures passées sont irrécupérables, mais l’apprentissage et les ressources réutilisables peuvent conserver une valeur. « Ignorer les investissements passés » ne doit pas effacer une valeur restante réelle.
 
----
+<LectureProcess
+  title="Un réexamen en quatre étapes proposé par la rédaction"
+  steps={[
+    { label: "Consignez les critères", description: "Précisez la décision et les preuves qui vous feraient changer d’avis." },
+    { label: "Cherchez des comparaisons", description: "Examinez les preuves contraires, les fréquences observées et les traces de tâches similaires, avec des populations et conditions comparables." },
+    { label: "Séparez options et hypothèses", description: "Distinguez investissements passés, coûts futurs, coûts de changement et contraintes actuelles. Imaginer un échec n’établit pas sa cause." },
+    { label: "Comparez après le résultat", description: "Comparez la trace préalable avec ce qui s’est produit. Un succès ou un échec unique ne permet pas d’établir la valeur de toute la méthode." }
+  ]}
+/>
 
-### 11. Illusion de la main chaude (Hot Hand Fallacy)
+Il s’agit d’une aide de la rédaction, pas d’une prescription validée qui éliminerait les erreurs. [Une activité de réflexion associée](/fr/cognitive-bias-test/) n’est présentée ici ni comme un diagnostic ni comme une mesure validée de l’intelligence ou de la rationalité. Ne vous classez pas vous-même, ni autrui, à partir d’un seul résultat.
 
-Croyance erronée selon laquelle une série de succès passés prédit un succès futur.
+## Distinguez ce que les sources établissent
 
-**Exemple concret** : « Cet investisseur a eu raison trois fois de suite, il aura donc raison cette fois-ci » (alors que les événements sont indépendants).
-
----
-
-### 12. Erreur du parieur (Gambler's Fallacy)
-
-Tendance à chercher des motifs dans des événements indépendants.
-
-**Exemple concret** : « La pièce est tombée 10 fois sur face, donc elle va forcément tomber sur pile cette fois » (la probabilité reste de 50 %).
-
----
-
-### 13. Effet de mode (Bandwagon Effect)
-
-Tendance à croire qu'une chose est vraie ou juste parce qu'un grand nombre de personnes y adhère.
-
----
-
-### 14. Effet de halo (Halo Effect)
-
-Supposer qu'une personne excellente dans un domaine l'est aussi dans tous les autres.
-
----
-
-### 15. Effet de cadrage (Framing Effect)
-
-La perception d'une même information varie selon la manière dont elle est présentée.
-
-**Exemple concret** : « 90 % de taux de survie » vs « 10 % de taux de mortalité » — le sens est identique, mais la perception diffère.
-
----
-
-### 16. Biais du présent (Present Bias)
-
-Préférence pour une petite récompense immédiate plutôt qu'une grande récompense future.
-
----
-
-### 17. Effet de simple exposition (Mere Exposure Effect)
-
-Tendance à apprécier davantage ce que l'on a souvent rencontré.
-
----
-
-### 18. Dissonance cognitive (Cognitive Dissonance)
-
-Inconfort ressenti lorsque nos croyances et nos actions entrent en conflit, menant à une justification pour aligner la croyance sur l'action.
-
----
-
-### 19. Effet de dotation (Endowment Effect)
-
-Tendance à accorder une valeur plus élevée à ce que l'on possède.
-
----
-
-### 20. Erreur de planification (Planning Fallacy)
-
-Tendance à toujours sous-estimer le temps nécessaire pour accomplir une tâche future.
-
-**Exemple concret** : Les devis de rénovation ou les calendriers de développement logiciel qui sont systématiquement dépassés.
-
-**Comment y remédier** : Se référer au temps réel passé sur des projets similaires (prévision par classe de référence).
-
-## Prendre de meilleures décisions
-
-### Le « Pre-Mortem » (Pré-autopsie)
-
-Avant de prendre une décision, imaginez que le projet a échoué : « Quelles en seraient les raisons ? »
-
-### Adopter un regard extérieur
-
-Imaginez que vous conseillez un ami dans la même situation. Quel conseil lui donneriez-vous ?
-
-### Journal de décision
-
-Notez vos décisions importantes et les raisons qui les motivent. En relisant ce journal plus tard, vous identifierez vos propres schémas de biais.
-
-### Multiplier les perspectives
-
-Recherchez activement les arguments les plus solides de ceux qui s'opposent à votre opinion.
-
-<Callout type="tip">
-**Contenu associé** : Académie de l'économie comportementale · Guide complet de la psychologie de l'argent · [Pensée critique et état d'esprit de croissance](https://oiyo.net/ko/growth-mindset-fixed-mindset-guide/)
-</Callout>
-
-<TestCTA test="cognitive-bias-quiz" title="Testez votre rationalité" description="Découvrez quels biais influencent le plus vos décisions quotidiennes." locale="fr" />
-
-## Références
-
-Les notions et les études évoquées ci-dessus s’appuient sur les sources suivantes.
-
-- Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. *Science*, 185(4157), 1124–1131.
-- Tversky, A., & Kahneman, D. (1981). The framing of decisions and the psychology of choice. *Science*, 211(4481), 453–458.
-- Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
+Les articles et les résumés d’auteurs étayent des résultats dans leurs tâches, échantillons et conditions propres. OpenStax et l’AHRQ expliquent des concepts ; ils n’ont pas testé expérimentalement chaque exemple de cet article. Nous ne présentons pas les méthodes détaillées ou les chiffres d’articles consultés seulement sous forme de résumé comme si leur texte intégral avait été lu. Chaque lien soutient un point particulier, pas les 20 notions ni l’efficacité du processus de réexamen.
