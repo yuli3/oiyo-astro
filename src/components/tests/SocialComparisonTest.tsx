@@ -39,14 +39,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['전혀 아니다', '거의 아니다', '가끔 그렇다', '자주 그렇다', '항상 그렇다'],
     restart: '다시 하기',
     share: '결과 공유',
-    shareMsg: '나의 사회적 비교 지수는',
-    yourScore: '나의 사회적 비교 지수',
-    overallLabel: '종합 비교 성향',
+    shareMsg: '사회적 비교 활동의 응답 평균은',
+    yourScore: '이번 응답의 평균',
+    overallLabel: '전체 응답 평균',
     abilityLabel: '능력 비교',
     opinionLabel: '의견 비교',
     outOf: '/ 5.0',
-    tipsLabel: '마음을 위한 팁',
-    note: '기번스와 분크의 사회적 비교 지향 척도(INCOM) 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
+    tipsLabel: '원하면 돌아볼 질문과 제안',
+    note: '능력·의견 비교 개념을 참고한 OIYO 자체 14문항 활동이에요. 11문항 INCOM 원척도와 다르며 상향·하향 방향을 따로 측정하지 않아요. 유형·막대는 응답 요약이지 진단이나 인구 백분위가 아니에요. 언어별 타당도와 제안의 치료 효과는 확인되지 않았어요.',
   },
   en: {
     title: 'Social Comparison Test',
@@ -55,14 +55,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['Never', 'Rarely', 'Sometimes', 'Often', 'Always'],
     restart: 'Retake',
     share: 'Share Result',
-    shareMsg: 'My social comparison score is',
-    yourScore: 'Your Social Comparison Score',
-    overallLabel: 'Overall Comparison Tendency',
+    shareMsg: 'My response average in the social comparison activity is',
+    yourScore: 'Your response average',
+    overallLabel: 'Overall response average',
     abilityLabel: 'Ability Comparison',
     opinionLabel: 'Opinion Comparison',
     outOf: '/ 5.0',
-    tipsLabel: 'Tips for Your Mind',
-    note: 'This self-reflection test is based on the Iowa-Netherlands Comparison Orientation Measure (INCOM) by Gibbons & Buunk. It does not replace professional assessment.',
+    tipsLabel: 'Optional reflection questions and suggestions',
+    note: 'This original OIYO 14-question activity draws on ability and opinion comparison. It differs from the original 11-item INCOM and does not measure upward and downward directions separately. Types and bars summarize responses, not diagnoses or population percentiles. Language-specific validity and therapeutic effects of the suggestions are unconfirmed.',
   },
   ja: {
     title: '社会的比較傾向テスト',
@@ -71,14 +71,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['全くない', 'ほとんどない', '時々ある', 'よくある', 'いつもある'],
     restart: 'もう一度',
     share: '結果を共有',
-    shareMsg: '私の社会的比較度は',
-    yourScore: 'あなたの社会的比較度',
-    overallLabel: '総合比較傾向',
+    shareMsg: '社会的比較の活動での回答の平均は',
+    yourScore: '今回の回答の平均',
+    overallLabel: '全回答の平均',
     abilityLabel: '能力比較',
     opinionLabel: '意見比較',
     outOf: '/ 5.0',
-    tipsLabel: '心のためのヒント',
-    note: 'このテストはGibbons & Buunkの社会的比較志向尺度（INCOM）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
+    tipsLabel: '希望する場合の問いと提案',
+    note: '能力・意見比較を参考にしたOIYO独自の14問です。11項目の原INCOMとは異なり、上方・下方の方向を別々に測定しません。タイプや棒は回答の要約で、診断や人口のパーセンタイルではありません。言語別の妥当性や提案の治療効果は未確認です。',
   },
   zh: {
     title: '社会比较倾向测验',
@@ -87,14 +87,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['从不', '很少', '偶尔如此', '经常如此', '总是如此'],
     restart: '重新测验',
     share: '分享结果',
-    shareMsg: '我的社会比较指数是',
-    yourScore: '我的社会比较指数',
-    overallLabel: '综合比较倾向',
+    shareMsg: '我在社会比较活动中的回答平均分是',
+    yourScore: '本次回答的平均分',
+    overallLabel: '全部回答平均分',
     abilityLabel: '能力比较',
     opinionLabel: '意见比较',
     outOf: '/ 5.0',
-    tipsLabel: '给心里的建议',
-    note: '本测验参考 Gibbons 与 Buunk 的社会比较倾向量表（INCOM）概念，用于自我省思，不能替代专业评估。',
+    tipsLabel: '可选择的反思问题与建议',
+    note: '这是参考能力、意见比较概念的OIYO自编14题活动，与11题INCOM原量表不同，不分别测量向上、向下方向。类型和条形图只是回答摘要，不是诊断或人群百分位。各语言的效度和建议的治疗效果尚未确认。',
   },
   fr: {
     title: 'Test de la tendance à la comparaison sociale',
@@ -103,14 +103,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['Jamais', 'Rarement', 'Parfois', 'Souvent', 'Toujours'],
     restart: 'Recommencer',
     share: 'Partager le résultat',
-    shareMsg: 'Mon indice de comparaison sociale',
-    yourScore: 'Votre indice de comparaison sociale',
-    overallLabel: 'Tendance globale',
+    shareMsg: 'La moyenne de mes réponses à l’activité de comparaison sociale',
+    yourScore: 'La moyenne de vos réponses',
+    overallLabel: 'Moyenne de toutes les réponses',
     abilityLabel: 'Comparaison de capacités',
     opinionLabel: 'Comparaison d’opinions',
     outOf: '/ 5.0',
-    tipsLabel: 'Un conseil pour l’esprit',
-    note: 'Ce test reprend les notions de l’échelle d’orientation à la comparaison sociale (INCOM) de Gibbons et Buunk, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+    tipsLabel: 'Questions et suggestions facultatives',
+    note: 'Cette activité OIYO de 14 questions s’inspire des comparaisons de capacités et d’opinions. Elle diffère de l’INCOM original de 11 items et ne mesure pas séparément les directions ascendante et descendante. Types et barres résument les réponses, sans diagnostic ni percentile de population. La validité par langue et les effets thérapeutiques des suggestions ne sont pas confirmés.',
   },
   es: {
     title: 'Test de tendencia a la comparación social',
@@ -119,14 +119,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['Nunca', 'Rara vez', 'A veces', 'A menudo', 'Siempre'],
     restart: 'Repetir',
     share: 'Compartir resultado',
-    shareMsg: 'Mi índice de comparación social',
-    yourScore: 'Tu índice de comparación social',
-    overallLabel: 'Tendencia global',
+    shareMsg: 'La media de mis respuestas en la actividad de comparación social',
+    yourScore: 'La media de tus respuestas',
+    overallLabel: 'Media de todas las respuestas',
     abilityLabel: 'Comparación de capacidades',
     opinionLabel: 'Comparación de opiniones',
     outOf: '/ 5.0',
-    tipsLabel: 'Un consejo para la cabeza',
-    note: 'Este test recoge las ideas de la escala de orientación a la comparación social (INCOM) de Gibbons y Buunk, para la reflexión personal. No sustituye una evaluación profesional.',
+    tipsLabel: 'Preguntas y sugerencias opcionales',
+    note: 'Esta actividad OIYO de 14 preguntas se inspira en las comparaciones de capacidades y opiniones. Difiere del INCOM original de 11 ítems y no mide por separado las direcciones ascendente y descendente. Los tipos y las barras resumen respuestas, sin diagnóstico ni percentil de población. La validez por lengua y los efectos terapéuticos de las sugerencias no están confirmados.',
   },
 }
 
@@ -135,9 +135,9 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     ko: {
       icon: '🧭',
       title: '자기 기준형',
-      description: '남보다 자신의 기준으로 판단하는 편입니다. 타인의 성취나 의견에 크게 흔들리지 않고 중심을 잡습니다.',
+      description: '이번 활동의 비교 관련 질문에 낮은 값을 선택한 편이에요. 자기 기준이 단단하다거나 타인의 평가에 흔들리지 않는다고 확인한 결과는 아니에요.',
       tips: [
-        '지금의 단단한 자기 기준을 의식적으로 지켜 나가세요.',
+        '원하면 이번 선택에서 중요하게 본 기준을 적어 보세요.',
         '가끔의 비교는 배움의 기회로 가볍게 활용하세요.',
         '나만의 가치와 진척을 정기적으로 점검하세요.',
       ],
@@ -145,9 +145,9 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     en: {
       icon: '🧭',
       title: 'Self-Referenced',
-      description: 'You tend to judge by your own standards rather than others. You stay centered without being swayed much by others\' achievements or opinions.',
+      description: 'You selected lower values on this activity’s comparison questions. This does not establish firm personal standards or immunity to others’ judgments.',
       tips: [
-        'Consciously protect the solid inner compass you already have.',
+        'If you wish, note which criterion mattered in a recent choice.',
         'Use the occasional comparison lightly, as a chance to learn.',
         'Regularly review your own values and progress.',
       ],
@@ -155,9 +155,9 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     ja: {
       icon: '🧭',
       title: '自己基準型',
-      description: '他人より自分の基準で判断する方です。他者の成果や意見に大きく揺れず、中心を保てます。',
+      description: '今回の比較に関する質問では低めの値を選んでいました。自己基準が確かだ、他人の評価に揺れないと確認した結果ではありません。',
       tips: [
-        '今ある確かな自己基準を意識して守りましょう。',
+        '希望する場合、最近の選択で重視した基準を書いてみましょう。',
         '時々の比較は学びの機会として軽く活用しましょう。',
         '自分の価値と進捗を定期的に点検しましょう。',
       ],
@@ -165,9 +165,9 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     zh: {
       icon: '🧭',
       title: '自我标准型',
-      description: '比起看别人，你更用自己的标准来判断。别人的成绩或意见不太动摇得了你，你守得住重心。',
+      description: '本次比较相关问题中，你选择的数值较低。这不证明个人标准坚实，也不证明你不会受他人评价影响。',
       tips: [
-        '有意识地守住现在这份结实的自我标准。',
+        '如果愿意，可以写下最近一次选择中看重的标准。',
         '偶尔的比较，就轻轻当成学习的机会。',
         '定期回看自己的价值和进度。',
       ],
@@ -175,9 +175,9 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '🧭',
       title: 'Critères propres',
-      description: 'Vous jugez d’après vos propres critères plutôt que d’après les autres. Les réussites ou les avis d’autrui ne vous font pas vaciller : vous gardez votre centre.',
+      description: 'Vous avez choisi des valeurs plus faibles aux questions de comparaison de cette activité. Cela ne démontre ni des critères personnels solides ni une insensibilité aux jugements d’autrui.',
       tips: [
-        'Préservez consciemment ces repères solides.',
+        'Si vous le souhaitez, notez le critère qui comptait dans un choix récent.',
         'Prenez les comparaisons occasionnelles comme de simples occasions d’apprendre.',
         'Faites le point régulièrement sur vos valeurs et vos progrès.',
       ],
@@ -185,9 +185,9 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     es: {
       icon: '🧭',
       title: 'Criterios propios',
-      description: 'Juzgas según tus criterios antes que según los demás. Los logros o las opiniones ajenas no te tambalean: conservas el centro.',
+      description: 'Elegiste valores más bajos en las preguntas de comparación de esta actividad. Esto no demuestra criterios personales firmes ni inmunidad a los juicios ajenos.',
       tips: [
-        'Cuida conscientemente esos criterios firmes.',
+        'Si quieres, anota qué criterio importaba en una elección reciente.',
         'Toma las comparaciones ocasionales como simples ocasiones de aprender.',
         'Revisa con regularidad tus valores y tus avances.',
       ],
@@ -197,60 +197,60 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     ko: {
       icon: '🙂',
       title: '가벼운 비교형',
-      description: '대부분의 사람이 하는 일상적인 수준의 비교입니다. 가끔 남과 견주지만 자기 페이스를 유지합니다.',
+      description: '이번 응답 평균은 자체 분류의 낮은 중간 범위였어요. 대부분 사람과 같은 수준이라는 뜻은 아니며 두 축은 따로 살펴볼 수 있어요.',
       tips: [
         '비교가 시작되면 "내 기준은 무엇인가" 자문하세요.',
-        '상향 비교는 자극제로, 하향 비교는 감사로 활용하세요.',
+        '비교한 대상과 그 뒤에 떠오른 생각을 따로 적어 보세요.',
         'SNS 피드는 편집된 하이라이트임을 떠올리세요.',
       ],
     },
     en: {
       icon: '🙂',
       title: 'Mild Comparer',
-      description: 'An everyday level of comparison that most people do. You measure against others sometimes but keep your own pace.',
+      description: 'Your response average fell in this activity’s lower intermediate range. It does not mean you match most people; the two dimensions can be considered separately.',
       tips: [
         'When comparison starts, ask "what is my own standard?"',
-        'Use upward comparison as fuel and downward comparison as gratitude.',
+        'Note the person you compared with and the thought that followed separately.',
         'Remember that feeds are edited highlight reels.',
       ],
     },
     ja: {
       icon: '🙂',
       title: '軽い比較型',
-      description: '多くの人がする日常的なレベルの比較です。時々他人と比べますが、自分のペースを保てます。',
+      description: '今回の平均は独自の分類の低めの中間範囲でした。多くの人と同じ程度という意味ではなく、2つの側面を別々に見られます。',
       tips: [
         '比較が始まったら「自分の基準は何か」と自問しましょう。',
-        '上方比較は刺激に、下方比較は感謝に活用しましょう。',
+        '比較した相手と、その後に浮かんだ考えを分けて書いてみましょう。',
         'SNSのフィードは編集されたハイライトだと思い出しましょう。',
       ],
     },
     zh: {
       icon: '🙂',
       title: '轻度比较型',
-      description: '这是大多数人都会有的日常比较。偶尔会跟人比一比，但你守得住自己的节奏。',
+      description: '本次回答平均分处于自定分类中较低的中间范围。不代表与大多数人相同，两个维度可以分别查看。',
       tips: [
         '比较一开始，就问自己「我的标准是什么」。',
-        '向上比较当成刺激，向下比较当成感谢。',
+        '可以分别记下比较的对象和之后出现的想法。',
         '提醒自己：社交媒体上的动态是剪过的精华。',
       ],
     },
     fr: {
       icon: '🙂',
       title: 'Comparaison légère',
-      description: 'C’est le niveau ordinaire de comparaison que connaissent la plupart des gens. Vous vous comparez parfois, tout en gardant votre rythme.',
+      description: 'La moyenne de vos réponses se situait dans la plage intermédiaire basse de cette activité. Cela ne signifie pas que vous correspondez à la plupart des gens ; les deux dimensions peuvent être examinées séparément.',
       tips: [
         'Dès que la comparaison commence, demandez-vous : « quel est mon critère ? ».',
-        'Prenez la comparaison vers le haut comme un stimulant, celle vers le bas comme une gratitude.',
+        'Notez séparément la personne de référence et la pensée qui a suivi.',
         'Rappelez-vous qu’un fil d’actualité est un montage de moments choisis.',
       ],
     },
     es: {
       icon: '🙂',
       title: 'Comparación leve',
-      description: 'Es el nivel corriente de comparación que tiene la mayoría. A veces te comparas, pero mantienes tu ritmo.',
+      description: 'La media de tus respuestas quedó en el intervalo intermedio bajo de esta actividad. No significa que coincidas con la mayoría; puedes mirar las dos dimensiones por separado.',
       tips: [
         'En cuanto empieza la comparación, pregúntate «¿cuál es mi criterio?».',
-        'Toma la comparación hacia arriba como estímulo y la de abajo como gratitud.',
+        'Anota por separado la persona con la que te comparaste y el pensamiento posterior.',
         'Recuerda que un feed es un montaje de momentos escogidos.',
       ],
     },
@@ -259,7 +259,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     ko: {
       icon: '⚖️',
       title: '비교 민감형',
-      description: '남과의 비교가 뚜렷하게 나타납니다. 타인의 성취나 평가가 자존감과 기분에 자주 영향을 줄 수 있습니다.',
+      description: '이번 응답 평균은 자체 분류의 높은 중간 범위였어요. 자존감이나 기분에 어떤 영향을 받는지 측정한 결과는 아니에요.',
       tips: [
         '비교가 잦은 계정·환경을 정리하거나 음소거하세요.',
         '"어제의 나"와 비교하는 자기 기준 비교로 전환하세요.',
@@ -269,7 +269,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     en: {
       icon: '⚖️',
       title: 'Comparison-Sensitive',
-      description: 'Comparison with others shows up clearly. Others\' achievements or judgments may frequently affect your self-esteem and mood.',
+      description: 'Your response average fell in this activity’s upper intermediate range. It does not measure effects on your self-esteem or mood.',
       tips: [
         'Clean up or mute accounts and environments that trigger comparison.',
         'Shift to self-referenced comparison with "yesterday\'s you."',
@@ -279,7 +279,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     ja: {
       icon: '⚖️',
       title: '比較敏感型',
-      description: '他人との比較がはっきり表れています。他者の成果や評価が自尊心や気分にしばしば影響する可能性があります。',
+      description: '今回の平均は独自の分類の高めの中間範囲でした。自尊心や気分への影響を測定した結果ではありません。',
       tips: [
         '比較を誘発するアカウントや環境を整理・ミュートしましょう。',
         '「昨日の自分」と比べる自己基準比較に切り替えましょう。',
@@ -289,7 +289,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     zh: {
       icon: '⚖️',
       title: '比较敏感型',
-      description: '和别人的比较很明显。别人的成绩或评价，可能常常影响你的自尊和心情。',
+      description: '本次回答平均分处于自定分类中较高的中间范围。这不是对自尊或情绪影响的测量。',
       tips: [
         '把容易引起比较的账号或环境整理掉，或静音。',
         '把比较的对象换成「昨天的自己」。',
@@ -299,7 +299,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '⚖️',
       title: 'Sensible à la comparaison',
-      description: 'La comparaison avec les autres est nette. Les réussites ou les jugements d’autrui influencent souvent votre estime et votre humeur.',
+      description: 'La moyenne de vos réponses se situait dans la plage intermédiaire haute de cette activité. Elle ne mesure pas les effets sur votre estime de vous ou votre humeur.',
       tips: [
         'Faites le tri ou mettez en sourdine les comptes et les contextes qui nourrissent la comparaison.',
         'Déplacez la comparaison vers « moi d’hier ».',
@@ -309,7 +309,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     es: {
       icon: '⚖️',
       title: 'Sensible a la comparación',
-      description: 'La comparación con otros es clara. Los logros o los juicios ajenos influyen a menudo en tu autoestima y tu ánimo.',
+      description: 'La media de tus respuestas quedó en el intervalo intermedio alto de esta actividad. No mide efectos en tu autoestima ni en tu ánimo.',
       tips: [
         'Limpia o silencia las cuentas y los contextos que alimentan la comparación.',
         'Cambia la comparación hacia «el yo de ayer».',
@@ -321,7 +321,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     ko: {
       icon: '🔁',
       title: '비교 과민형',
-      description: '사회적 비교 성향이 매우 강합니다. 끊임없는 비교가 자존감을 갉아먹고 마음의 에너지를 크게 소모할 수 있습니다.',
+      description: '이번 응답 평균은 자체 분류의 가장 높은 범위였어요. 유형명은 응답 요약일 뿐 자존감 손상이나 정신건강 문제를 확인한 진단이 아니에요.',
       tips: [
         '하루 일정 시간 SNS·비교 자극을 차단해 보세요.',
         '나의 가치를 성취가 아닌 존재 자체에서 찾는 연습을 하세요.',
@@ -331,7 +331,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     en: {
       icon: '🔁',
       title: 'Comparison-Overwhelmed',
-      description: 'Your social comparison tendency is very strong. Constant comparison can erode self-esteem and drain a lot of mental energy.',
+      description: 'Your response average fell in this activity’s highest range. The type name summarizes responses, not a diagnosis of damaged self-esteem or a mental health problem.',
       tips: [
         'Block social media and comparison triggers for set hours each day.',
         'Practice finding your worth in your being, not in achievements.',
@@ -341,7 +341,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     ja: {
       icon: '🔁',
       title: '比較過敏型',
-      description: '社会的比較傾向が非常に強いです。絶え間ない比較が自尊心を蝕み、心のエネルギーを大きく消耗させる可能性があります。',
+      description: '今回の平均は独自の分類の最も高い範囲でした。タイプ名は回答の要約で、自尊心の傷つきや精神的健康の問題を確認する診断ではありません。',
       tips: [
         '一日の一定時間、SNSや比較刺激を遮断してみましょう。',
         '自分の価値を成果ではなく存在そのものに見出す練習をしましょう。',
@@ -351,7 +351,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     zh: {
       icon: '🔁',
       title: '强烈比较型',
-      description: '社会比较的倾向非常强。不停地比较可能正在啃食你的自尊，也消耗大量心力。',
+      description: '本次回答平均分处于自定分类的最高范围。类型名称只是回答摘要，不是对自尊损害或心理健康问题的诊断。',
       tips: [
         '每天留一段时间，把社交媒体和会引起比较的刺激断掉。',
         '练习把自己的价值放在「存在」上，而不是成绩上。',
@@ -361,7 +361,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '🔁',
       title: 'Comparaison intense',
-      description: 'Votre tendance à la comparaison sociale est très forte. Comparer sans cesse peut ronger votre estime de vous et consommer beaucoup d’énergie mentale.',
+      description: 'La moyenne de vos réponses se situait dans la plage la plus élevée de cette activité. Le nom du type résume les réponses, sans diagnostiquer une estime de vous endommagée ou un problème de santé mentale.',
       tips: [
         'Réservez chaque jour un temps sans réseaux ni stimulus de comparaison.',
         'Entraînez-vous à situer votre valeur dans le fait d’être, plutôt que dans les résultats.',
@@ -371,7 +371,7 @@ const LEVEL_DATA: Record<CompLevel, Record<SupportedLang, LevelData>> = {
     es: {
       icon: '🔁',
       title: 'Comparación intensa',
-      description: 'Tu tendencia a la comparación social es muy fuerte. Compararte sin parar puede desgastar tu autoestima y consumir mucha energía mental.',
+      description: 'La media de tus respuestas quedó en el intervalo más alto de esta actividad. El nombre resume respuestas, no diagnostica daños en la autoestima ni problemas de salud mental.',
       tips: [
         'Reserva cada día un rato sin redes ni estímulos de comparación.',
         'Practica situar tu valor en el hecho de ser, más que en los logros.',
@@ -480,6 +480,8 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
   ],
 }
 
+// 2026-10-08: these existing editorial cutoffs summarize this activity's answers.
+// Preserve saved-result behavior; neither these cutoffs nor bars are INCOM norms.
 function calcLevel(score: number): CompLevel {
   if (score <= 2.3) return 'self'
   if (score <= 3.2) return 'mild'

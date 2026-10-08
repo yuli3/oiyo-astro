@@ -13,27 +13,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "사회적 비교 성향 테스트 — 나는 남과 얼마나 비교하는가?",
-    description: "사회적 비교 지향 척도(INCOM) 기반 — 14문항으로 능력 비교와 의견 비교 성향을 측정해 나의 비교 지수를 확인하세요.",
+    description: "14개 질문으로 능력과 의견을 타인과 비교한 경험을 돌아보세요. OIYO 자체 자가성찰 활동이며, 검증된 INCOM 원척도나 진단 검사는 아니에요.",
   },
   en: {
     title: "Social Comparison Test — How Much Do You Compare Yourself to Others?",
-    description: "Based on the INCOM scale — measure ability comparison and opinion comparison with 14 questions to find your social comparison score.",
+    description: "Reflect on comparing abilities and opinions with others through 14 questions. This original OIYO reflection activity is not the validated original INCOM scale or a diagnostic test.",
   },
   ja: {
     title: "社会的比較傾向テスト — 自分は他人とどれくらい比較するか？",
-    description: "社会的比較志向尺度（INCOM）に基づく — 14の設問で能力比較と意見比較の傾向を測定し、比較度を確認しましょう。",
+    description: "14問で、能力や意見を他人と比べた経験を振り返りましょう。OIYO独自の自己省察の活動で、妥当性が検証されたINCOM原尺度や診断検査ではありません。",
   },
   fr: {
     title: "Test de Comparaison Sociale — À quel point vous comparez-vous aux autres ?",
-    description: "Basé sur l'échelle INCOM — mesurez la comparaison de capacités et d'opinions en 14 questions pour connaître votre score de comparaison sociale.",
+    description: "Réfléchissez à vos comparaisons de capacités et d’opinions en 14 questions. Cette activité originale OIYO n’est ni l’échelle INCOM originale validée ni un test diagnostique.",
   },
   es: {
     title: "Test de Comparación Social — ¿Cuánto te comparas con los demás?",
-    description: "Basado en la escala INCOM — mide la comparación de habilidades y de opiniones con 14 preguntas para conocer tu puntuación de comparación social.",
+    description: "Reflexiona sobre cómo comparas capacidades y opiniones con otras personas mediante 14 preguntas. Esta actividad original OIYO no es la escala INCOM original validada ni una prueba diagnóstica.",
   },
   zh: {
     title: "社会比较倾向测试 — 你有多常与他人比较？",
-    description: "基于社会比较取向量表（INCOM）— 用14个问题测量能力比较与意见比较倾向，了解你的社会比较指数。",
+    description: "通过14个问题，反思自己与他人比较能力和意见的经历。这是OIYO自编的反思活动，不是经过效度验证的INCOM原量表或诊断测验。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];

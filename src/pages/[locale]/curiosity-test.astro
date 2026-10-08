@@ -13,27 +13,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "호기심 테스트 — 나의 탐구심은 얼마나 깊을까?",
-    description: "카쉬단의 호기심·탐구 척도(CEI-II) 기반 — 14문항으로 탐색 추구와 불확실성 수용을 측정해 나의 호기심을 확인하세요.",
+    description: "14개 질문으로 새로움을 탐색하고 불확실성을 받아들이는 방식을 돌아보세요. OIYO의 자가성찰 활동이며, 검증된 CEI-II 원척도나 진단 검사는 아니에요.",
   },
   en: {
     title: "Curiosity Test — How Deep Does Your Curiosity Run?",
-    description: "Based on Kashdan's Curiosity and Exploration Inventory (CEI-II) — measure stretching and embracing uncertainty with 14 questions to find your curiosity.",
+    description: "Reflect on seeking novelty and welcoming uncertainty through 14 questions. This OIYO activity is not the validated original CEI-II scale or a diagnostic test.",
   },
   ja: {
     title: "好奇心テスト — あなたの探究心はどれほど深いか？",
-    description: "Kashdanの好奇心・探究尺度（CEI-II）に基づく — 14の設問で探索追求と不確実性の受容を測定し、好奇心を確認しましょう。",
+    description: "14の質問で、新しさを探り、不確実さを受け入れる姿勢を振り返りましょう。OIYOの自己省察用の活動で、妥当性が検証されたCEI-II原尺度や診断検査ではありません。",
   },
   fr: {
     title: "Test de Curiosité — Quelle est la profondeur de votre curiosité ?",
-    description: "Basé sur l'inventaire de curiosité et d'exploration de Kashdan (CEI-II) — mesurez la recherche et l'acceptation de l'incertitude en 14 questions.",
+    description: "Réfléchissez à la recherche de nouveauté et à l’accueil de l’incertitude en 14 questions. Cette activité OIYO n’est ni l’échelle originale CEI-II validée ni un test diagnostique.",
   },
   es: {
     title: "Test de Curiosidad — ¿Cuán profunda es tu curiosidad?",
-    description: "Basado en el Inventario de Curiosidad y Exploración de Kashdan (CEI-II) — mide la búsqueda y la aceptación de la incertidumbre con 14 preguntas.",
+    description: "Reflexiona sobre buscar novedades y acoger la incertidumbre con 14 preguntas. Esta actividad OIYO no es la escala original CEI-II validada ni una prueba diagnóstica.",
   },
   zh: {
     title: "好奇心测试 — 你的探究心有多深？",
-    description: "基于卡什丹的好奇心与探索量表（CEI-II）— 用14个问题测量探索追求与不确定性接纳，了解你的好奇心。",
+    description: "通过14个问题，反思自己探索新事物和接纳不确定性的方式。这是OIYO的自我反思活动，不是经过效度验证的CEI-II原量表或诊断测验。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
