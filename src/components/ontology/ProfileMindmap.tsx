@@ -3,6 +3,9 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 import { useReducedMotion } from "@/hooks/useMotion";
+import { collectAssessmentSignals } from "@/assessments";
+import { MINDMAP_CATS, MINDMAP_STORAGE_KEY, type MindmapCat, type MindmapLang } from "@/lib/ontology/mindmap-data";
+import { hasRecommendationSource, recommendLeaves, type LeafRecommendation } from "@/lib/ontology/mindmap-recommend";
 import { TREE_HEIGHT, TREE_WIDTH, leafId, litLeaves, splitLabel, toggleLeaf, treeLayout, type TreePoint } from "@/lib/ontology/mindmap-tree";
 
 // Lane 3 "실제 나의 것": a radial tree, read like a game's tech tree (2026-10-08, 세운).
@@ -15,30 +18,18 @@ import { TREE_HEIGHT, TREE_WIDTH, leafId, litLeaves, splitLabel, toggleLeaf, tre
 // The open branch now uses two staggered arcs (see treeLayout). A list view carries the same
 // choices for screen readers and for anyone who prefers plain buttons.
 // Stored in oiyo:profile:v1 as before: { chosen: { [category]: label[] } }.
-type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
-const KEY = "oiyo:profile:v1";
+type Lang = MindmapLang;
+type Cat = MindmapCat;
+const KEY = MINDMAP_STORAGE_KEY;
+const CATS = MINDMAP_CATS;
 
-type Cat = { id: string; label: Record<Lang, string>; chips: Record<Lang, string[]> };
-const CATS: Cat[] = [
-  { id: "interest", label: { ko: "관심", en: "Interests", ja: "関心", zh: "兴趣", fr: "Intérêts", es: "Intereses" },
-    chips: { ko: ["글쓰기", "정리", "탐험", "분석", "창작", "배움", "수집"], en: ["Writing", "Organizing", "Exploring", "Analyzing", "Creating", "Learning", "Collecting"], ja: ["書く", "整理", "探検", "分析", "創作", "学び", "収集"], zh: ["写作", "整理", "探索", "分析", "创作", "学习", "收藏"], fr: ["Écrire", "Organiser", "Explorer", "Analyser", "Créer", "Apprendre", "Collectionner"], es: ["Escribir", "Organizar", "Explorar", "Analizar", "Crear", "Aprender", "Coleccionar"] } },
-  { id: "activity", label: { ko: "활동", en: "Activities", ja: "活動", zh: "活动", fr: "Activités", es: "Actividades" },
-    chips: { ko: ["운동", "여행", "요리", "독서", "음악", "게임", "명상"], en: ["Exercise", "Travel", "Cooking", "Reading", "Music", "Gaming", "Meditation"], ja: ["運動", "旅行", "料理", "読書", "音楽", "ゲーム", "瞑想"], zh: ["运动", "旅行", "烹饪", "阅读", "音乐", "游戏", "冥想"], fr: ["Sport", "Voyage", "Cuisine", "Lecture", "Musique", "Jeux", "Méditation"], es: ["Ejercicio", "Viajar", "Cocinar", "Leer", "Música", "Juegos", "Meditación"] } },
-  { id: "environment", label: { ko: "환경", en: "Environment", ja: "環境", zh: "环境", fr: "Environnement", es: "Entorno" },
-    chips: { ko: ["자연", "도시", "바다", "산", "카페", "집", "야외"], en: ["Nature", "City", "Sea", "Mountains", "Café", "Home", "Outdoors"], ja: ["自然", "都市", "海", "山", "カフェ", "家", "屋外"], zh: ["自然", "城市", "海", "山", "咖啡馆", "家", "户外"], fr: ["Nature", "Ville", "Mer", "Montagne", "Café", "Maison", "Plein air"], es: ["Naturaleza", "Ciudad", "Mar", "Montaña", "Café", "Casa", "Aire libre"] } },
-  { id: "relation", label: { ko: "관계", en: "Relationships", ja: "関係", zh: "关系", fr: "Relations", es: "Relaciones" },
-    chips: { ko: ["혼자", "팀", "가족", "소수 친구", "커뮤니티", "멘토"], en: ["Solo", "Team", "Family", "Few friends", "Community", "Mentor"], ja: ["一人", "チーム", "家族", "少数の友人", "コミュニティ", "メンター"], zh: ["独处", "团队", "家庭", "少数朋友", "社群", "导师"], fr: ["Seul", "Équipe", "Famille", "Quelques amis", "Communauté", "Mentor"], es: ["Solo", "Equipo", "Familia", "Pocos amigos", "Comunidad", "Mentor"] } },
-  { id: "goal", label: { ko: "목표", en: "Goals", ja: "目標", zh: "目标", fr: "Objectifs", es: "Metas" },
-    chips: { ko: ["성장", "안정", "자유", "영향력", "숙련", "연결", "의미"], en: ["Growth", "Stability", "Freedom", "Impact", "Mastery", "Connection", "Meaning"], ja: ["成長", "安定", "自由", "影響力", "熟達", "つながり", "意味"], zh: ["成长", "稳定", "自由", "影响力", "精通", "连接", "意义"], fr: ["Croissance", "Stabilité", "Liberté", "Impact", "Maîtrise", "Connexion", "Sens"], es: ["Crecimiento", "Estabilidad", "Libertad", "Impacto", "Maestría", "Conexión", "Sentido"] } },
-];
-
-const UI: Record<Lang, { center: string; saved: string; count: (n: number) => string; hint: string; back: string; tree: string; list: string; view: string }> = {
-  ko: { center: "나", saved: "저장됨", count: (n) => `${n}개 선택`, hint: "가지를 눌러 펼쳐 보세요", back: "‘나’를 누르면 전체로 돌아가요", tree: "트리", list: "목록", view: "보기 방식" },
-  en: { center: "Me", saved: "Saved", count: (n) => `${n} selected`, hint: "Tap a branch to open it", back: "Tap “Me” to see the whole tree", tree: "Tree", list: "List", view: "View" },
-  ja: { center: "私", saved: "保存", count: (n) => `${n}個選択`, hint: "枝をタップして開きましょう", back: "「私」を押すと全体に戻ります", tree: "ツリー", list: "リスト", view: "表示方法" },
-  zh: { center: "我", saved: "已保存", count: (n) => `已选 ${n}`, hint: "点一根枝条展开看看", back: "点“我”回到整棵树", tree: "树", list: "列表", view: "显示方式" },
-  fr: { center: "Moi", saved: "Enregistré", count: (n) => `${n} choisis`, hint: "Touchez une branche pour l’ouvrir", back: "Touchez « Moi » pour revoir tout l’arbre", tree: "Arbre", list: "Liste", view: "Affichage" },
-  es: { center: "Yo", saved: "Guardado", count: (n) => `${n} elegidos`, hint: "Toca una rama para abrirla", back: "Toca «Yo» para ver todo el árbol", tree: "Árbol", list: "Lista", view: "Vista" },
+const UI: Record<Lang, { center: string; saved: string; count: (n: number) => string; hint: string; back: string; tree: string; list: string; view: string; suggested: string; why: string; noTests: string; tests: string }> = {
+  ko: { center: "나", saved: "저장됨", count: (n) => `${n}개 선택`, hint: "가지를 눌러 펼쳐 보세요", back: "‘나’를 누르면 전체로 돌아가요", tree: "트리", list: "목록", view: "보기 방식", suggested: "추천", why: "점선은 내 검사 결과와 닿아 있는 잎이에요", noTests: "검사를 하면 닿아 있는 잎이 점선으로 표시돼요.", tests: "검사 보러 가기" },
+  en: { center: "Me", saved: "Saved", count: (n) => `${n} selected`, hint: "Tap a branch to open it", back: "Tap “Me” to see the whole tree", tree: "Tree", list: "List", view: "View", suggested: "suggested", why: "Dashed rings are leaves your test results point at", noTests: "Take a test and the leaves it points at get a dashed ring.", tests: "See the tests" },
+  ja: { center: "私", saved: "保存", count: (n) => `${n}個選択`, hint: "枝をタップして開きましょう", back: "「私」を押すと全体に戻ります", tree: "ツリー", list: "リスト", view: "表示方法", suggested: "おすすめ", why: "点線は検査結果とつながる葉です", noTests: "検査を受けると、結果とつながる葉が点線で表示されます。", tests: "検査を見る" },
+  zh: { center: "我", saved: "已保存", count: (n) => `已选 ${n}`, hint: "点一根枝条展开看看", back: "点“我”回到整棵树", tree: "树", list: "列表", view: "显示方式", suggested: "推荐", why: "虚线圈是与你的测试结果相连的叶子", noTests: "做了测试后，与结果相连的叶子会以虚线圈显示。", tests: "去看测试" },
+  fr: { center: "Moi", saved: "Enregistré", count: (n) => `${n} choisis`, hint: "Touchez une branche pour l’ouvrir", back: "Touchez « Moi » pour revoir tout l’arbre", tree: "Arbre", list: "Liste", view: "Affichage", suggested: "suggéré", why: "Les anneaux en pointillé sont les feuilles liées à vos résultats", noTests: "Passez un test : les feuilles liées à vos résultats apparaîtront en pointillé.", tests: "Voir les tests" },
+  es: { center: "Yo", saved: "Guardado", count: (n) => `${n} elegidos`, hint: "Toca una rama para abrirla", back: "Toca «Yo» para ver todo el árbol", tree: "Árbol", list: "Lista", view: "Vista", suggested: "sugerido", why: "Los anillos punteados son hojas ligadas a tus resultados", noTests: "Haz un test y las hojas ligadas a tus resultados aparecerán con un anillo punteado.", tests: "Ver los tests" },
 };
 
 // 가지마다 색 — 켠 잎이 어느 갈래에서 왔는지 전체 보기에서도 보인다.
@@ -50,6 +41,34 @@ const CAT_COLORS: Record<string, string> = {
   goal: "#8b5cf6",
 };
 const IDLE_LINE = "#cfd5c2";
+
+// How a recommendation names its source in the one-line reason under an open branch.
+const VALUE_LABEL: Record<string, Record<Lang, string>> = {
+  security: { ko: "안정", en: "security", ja: "安定", zh: "安定", fr: "sécurité", es: "seguridad" },
+  achievement: { ko: "성취", en: "achievement", ja: "達成", zh: "成就", fr: "réussite", es: "logro" },
+  autonomy: { ko: "자율", en: "autonomy", ja: "自律", zh: "自主", fr: "autonomie", es: "autonomía" },
+  service: { ko: "봉사", en: "service", ja: "奉仕", zh: "服务", fr: "service", es: "servicio" },
+  creativity: { ko: "창의", en: "creativity", ja: "創造", zh: "创造", fr: "créativité", es: "creatividad" },
+  status: { ko: "지위", en: "status", ja: "地位", zh: "地位", fr: "statut", es: "estatus" },
+};
+const VALUES_NAME: Record<Lang, string> = { ko: "직업가치", en: "Work values", ja: "仕事の価値観", zh: "职业价值", fr: "Valeurs au travail", es: "Valores laborales" };
+function sourceLabel(rec: LeafRecommendation, lang: Lang): string {
+  if (rec.source === "riasec") return `RIASEC ${rec.key}`;
+  if (rec.source === "mbti") return `MBTI ${rec.key}`;
+  if (rec.source === "big5") return rec.key.endsWith("-") ? `Big Five ${rec.key.slice(0, -1)}↓` : `Big Five ${rec.key}↑`;
+  return `${VALUES_NAME[lang]} · ${VALUE_LABEL[rec.key]?.[lang] ?? rec.key}`;
+}
+// "RIASEC A → 창작, 글쓰기" rather than the source repeated once per leaf.
+function reasonGroups(recs: readonly LeafRecommendation[], lang: Lang): { label: string; leaves: number[] }[] {
+  const groups: { label: string; leaves: number[] }[] = [];
+  for (const rec of recs) {
+    const label = sourceLabel(rec, lang);
+    const group = groups.find((item) => item.label === label);
+    if (group) group.leaves.push(rec.leaf);
+    else groups.push({ label, leaves: [rec.leaf] });
+  }
+  return groups;
+}
 const BRANCHES = CATS.map((cat) => ({ id: cat.id, leaves: cat.chips.ko.length }));
 const TWEEN_MS = 460;
 
@@ -61,6 +80,19 @@ export function ProfileMindmap({ locale }: { locale: string }) {
   const [hydrated, setHydrated] = useState(false);
   const [focus, setFocus] = useState<string | null>(null);
   const [asList, setAsList] = useState(false);
+  // Recommendations are worked out from the test results on this device each time; nothing is stored.
+  const [recs, setRecs] = useState<LeafRecommendation[]>([]);
+  const [hasTests, setHasTests] = useState(true);
+  useEffect(() => {
+    try {
+      const signals = collectAssessmentSignals();
+      setRecs(recommendLeaves(signals));
+      setHasTests(hasRecommendationSource(signals));
+    } catch {
+      setRecs([]);
+    }
+  }, []);
+  const recByLeaf = useMemo(() => new Map(recs.map((rec) => [leafId(rec.branch, rec.leaf), rec])), [recs]);
 
   useEffect(() => {
     try { const s = localStorage.getItem(KEY); if (s) { const p = JSON.parse(s); if (p && typeof p === "object" && p.chosen) setSel(p.chosen); } } catch {}
@@ -172,6 +204,8 @@ export function ProfileMindmap({ locale }: { locale: string }) {
     },
   });
   const focused = CATS.find((cat) => cat.id === focus) ?? null;
+  // Leaves already switched on need no nudge, so their reason is not repeated.
+  const focusedRecs = focused ? recs.filter((rec) => rec.branch === focused.id && !lit[focused.id].has(rec.leaf)) : [];
 
   return (
     <div className="rounded-3xl border border-border bg-card p-4 shadow-sm sm:p-5">
@@ -231,13 +265,14 @@ export function ProfileMindmap({ locale }: { locale: string }) {
                 const on = lit[cat.id].has(index);
                 const open = focus === cat.id;
                 const parts = splitLabel(chip);
+                const suggested = !on && recByLeaf.has(id);
                 return (
                   <g
                     key={id}
                     ref={(el) => { nodes.current[id] = el; }}
                     role="button"
                     aria-pressed={on}
-                    aria-label={chip}
+                    aria-label={suggested ? `${chip} (${t.suggested})` : chip}
                     aria-hidden={open ? undefined : true}
                     tabIndex={open ? 0 : -1}
                     pointerEvents={open ? "auto" : "none"}
@@ -246,6 +281,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
                   >
                     <circle r={22} fill="transparent" />
                     {on ? <circle r={21} fill={CAT_COLORS[cat.id]} opacity={0.2} /> : null}
+                    {suggested ? <circle r={20} fill="none" stroke={CAT_COLORS[cat.id]} strokeWidth={1.6} strokeDasharray="3.5 3.5" /> : null}
                     <circle r={15} fill={on ? CAT_COLORS[cat.id] : undefined} stroke={on ? CAT_COLORS[cat.id] : undefined} strokeWidth={1.5} className={on ? undefined : "fill-card stroke-border"} />
                     {on ? <path d="M-5.5 0.5 L-1.5 4.5 L6 -4" fill="none" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" className="stroke-primary-foreground" /> : null}
                     <text ref={(el) => { labels.current[id] = el; }} textAnchor="middle" fontSize={10} fontWeight={700} className="fill-foreground">
@@ -295,6 +331,16 @@ export function ProfileMindmap({ locale }: { locale: string }) {
           <p aria-live="polite" className="mt-1 min-h-5 text-center text-xs font-bold text-muted-foreground">
             {focused ? `${focused.label[lang]} · ${lit[focused.id].size}/${focused.chips.ko.length} — ${t.back}` : t.hint}
           </p>
+          {focused && focusedRecs.length > 0 ? (
+            <p className="mt-1 text-center text-xs leading-relaxed text-muted-foreground">
+              {t.why} · {reasonGroups(focusedRecs, lang).map((group) => `${group.label} → ${group.leaves.map((leaf) => focused.chips[lang][leaf]).join(", ")}`).join(" · ")}
+            </p>
+          ) : null}
+          {!focused && !hasTests ? (
+            <p className="mt-1 text-center text-xs leading-relaxed text-muted-foreground">
+              {t.noTests} <a href={`/${lang}/tests/`} className="font-bold text-primary underline underline-offset-2">{t.tests}</a>
+            </p>
+          ) : null}
         </>
       )}
     </div>
