@@ -25,12 +25,12 @@ const g = GRADE_LABELS[lang];
 const noRepeat = MIN_CYCLE_BEFORE_REPEAT;
 
 const UI = {
-  ko: { rank: '위', top: '1위', deltaUp: '상승', deltaDown: '하락', lucky: '행운의 수', more: '내 생년월일로 자세히 보기', scale: `같은 조언은 ${noRepeat}일 안에 다시 나오지 않아요. 문장 풀을 한 바퀴 다 돈 뒤에야 재등장하거든요.` },
-  en: { rank: '', top: 'Top', deltaUp: 'up', deltaDown: 'down', lucky: 'Lucky no.', more: 'See it in detail with your birth date', scale: `No advice repeats within ${noRepeat} days — each line cycles through the whole pool before it can return.` },
-  ja: { rank: '位', top: '1位', deltaUp: '上昇', deltaDown: '下降', lucky: 'ラッキー数', more: '生年月日で詳しく見る', scale: `同じ助言は ${noRepeat} 日以内に再び出ません。文のプールを一巡してから再登場します。` },
-  zh: { rank: '名', top: '第一', deltaUp: '上升', deltaDown: '下降', lucky: '幸运数', more: '用出生日期查看详情', scale: `同一条建议 ${noRepeat} 天内不会重复 — 每句都要走完整个池子才会再次出现。` },
-  fr: { rank: 'e', top: 'Top', deltaUp: 'hausse', deltaDown: 'baisse', lucky: 'Nombre', more: 'Voir en détail avec votre date de naissance', scale: `Aucun conseil ne se répète avant ${noRepeat} jours : chaque ligne parcourt tout le réservoir avant de revenir.` },
-  es: { rank: 'º', top: 'Top', deltaUp: 'sube', deltaDown: 'baja', lucky: 'Número', more: 'Verlo en detalle con tu fecha de nacimiento', scale: `Ningún consejo se repite en ${noRepeat} días: cada línea recorre todo el conjunto antes de volver.` },
+  ko: { byYear: '출생 연도별', rank: '위', top: '1위', deltaUp: '상승', deltaDown: '하락', lucky: '행운의 수', more: '내 생년월일로 자세히 보기', scale: `같은 조언은 ${noRepeat}일 안에 다시 나오지 않아요. 문장 풀을 한 바퀴 다 돈 뒤에야 재등장하거든요.` },
+  en: { byYear: 'By birth year', rank: '', top: 'Top', deltaUp: 'up', deltaDown: 'down', lucky: 'Lucky no.', more: 'See it in detail with your birth date', scale: `No advice repeats within ${noRepeat} days — each line cycles through the whole pool before it can return.` },
+  ja: { byYear: '生まれ年別', rank: '位', top: '1位', deltaUp: '上昇', deltaDown: '下降', lucky: 'ラッキー数', more: '生年月日で詳しく見る', scale: `同じ助言は ${noRepeat} 日以内に再び出ません。文のプールを一巡してから再登場します。` },
+  zh: { byYear: '按出生年份', rank: '名', top: '第一', deltaUp: '上升', deltaDown: '下降', lucky: '幸运数', more: '用出生日期查看详情', scale: `同一条建议 ${noRepeat} 天内不会重复 — 每句都要走完整个池子才会再次出现。` },
+  fr: { byYear: 'Par année de naissance', rank: 'e', top: 'Top', deltaUp: 'hausse', deltaDown: 'baisse', lucky: 'Nombre', more: 'Voir en détail avec votre date de naissance', scale: `Aucun conseil ne se répète avant ${noRepeat} jours : chaque ligne parcourt tout le réservoir avant de revenir.` },
+  es: { byYear: 'Por año de nacimiento', rank: 'º', top: 'Top', deltaUp: 'sube', deltaDown: 'baja', lucky: 'Número', more: 'Verlo en detalle con tu fecha de nacimiento', scale: `Ningún consejo se repite en ${noRepeat} días: cada línea recorre todo el conjunto antes de volver.` },
 }[lang];
 
 const detailHref = `/${locale}/fortune/today/`;
@@ -84,6 +84,17 @@ const detailHref = `/${locale}/fortune/today/`;
                   <p class="mt-1.5 text-xs leading-5 text-green-900">{c.opening}</p>
                   <p class="mt-1 text-[11px] font-semibold text-green-600">{c.advice}</p>
                   <p class="mt-1 text-[11px] leading-5 text-primary/80">{c.caution}</p>
+                  {c.years && c.years.length > 0 && (
+                    <ul class="mt-2 space-y-1 border-t border-border pt-2" aria-label={UI.byYear}>
+                      {c.years.map((y) => (
+                        <li class="flex items-baseline gap-2 text-xs leading-5 text-foreground">
+                          <span class="shrink-0 font-black tabular-nums text-primary">{y.label}</span>
+                          <span class="min-w-0 flex-1">{y.line}</span>
+                          <span class="shrink-0 font-bold tabular-nums text-muted-foreground">{y.score}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
