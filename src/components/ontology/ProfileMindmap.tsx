@@ -5,7 +5,10 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { useReducedMotion } from "@/hooks/useMotion";
 import { collectAssessmentSignals } from "@/assessments";
 import { MINDMAP_CATS, MINDMAP_STORAGE_KEY, type MindmapCat, type MindmapLang } from "@/lib/ontology/mindmap-data";
-import { hasRecommendationSource, recommendLeaves, type LeafRecommendation } from "@/lib/ontology/mindmap-recommend";
+import { compareLeaves } from "@/lib/ontology/mindmap-compare";
+import { hasRecommendationSource, pointedLeaves, recommendLeaves, type LeafRecommendation } from "@/lib/ontology/mindmap-recommend";
+
+import { MindmapCompare } from "./MindmapCompare";
 import { TREE_HEIGHT, TREE_WIDTH, dropTwigs, leafId, litLeaves, readTwigs, splitLabel, toggleLeaf, toggleTwig, treeLayout, twigId, type TreePoint, type TwigSelection } from "@/lib/ontology/mindmap-tree";
 
 // Lane 3 "실제 나의 것": a radial tree, read like a game's tech tree (2026-10-08, 세운).
@@ -89,14 +92,17 @@ export function ProfileMindmap({ locale }: { locale: string }) {
   const [asList, setAsList] = useState(false);
   // Recommendations are worked out from the test results on this device each time; nothing is stored.
   const [recs, setRecs] = useState<LeafRecommendation[]>([]);
+  const [pointed, setPointed] = useState<LeafRecommendation[]>([]);
   const [hasTests, setHasTests] = useState(true);
   useEffect(() => {
     try {
       const signals = collectAssessmentSignals();
       setRecs(recommendLeaves(signals));
+      setPointed(pointedLeaves(signals));
       setHasTests(hasRecommendationSource(signals));
     } catch {
       setRecs([]);
+      setPointed([]);
     }
   }, []);
   const recByLeaf = useMemo(() => new Map(recs.map((rec) => [leafId(rec.branch, rec.leaf), rec])), [recs]);
@@ -119,6 +125,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
   // Items under a leaf only count while the leaf itself is lit.
   const twigsOn = useCallback((cat: Cat, leaf: number) => (lit[cat.id].has(leaf) ? subSel[leafId(cat.id, leaf)] ?? [] : []), [lit, subSel]);
   const subTotal = useMemo(() => CATS.reduce((sum, cat) => sum + cat.chips.ko.reduce((inner, _, leaf) => inner + twigsOn(cat, leaf).length, 0), 0), [twigsOn]);
+  const comparison = useMemo(() => compareLeaves(CATS.flatMap((cat) => cat.chips.ko.map((_, leaf) => leafId(cat.id, leaf)).filter((_, leaf) => lit[cat.id].has(leaf))), pointed), [lit, pointed]);
   const popRef = useRef<string | null>(null);
   const toggle = (cat: Cat, index: number) => {
     if (!lit[cat.id].has(index)) popRef.current = leafId(cat.id, index);
@@ -454,6 +461,14 @@ export function ProfileMindmap({ locale }: { locale: string }) {
           ) : null}
         </>
       )}
+      {hasTests ? (
+        <MindmapCompare
+          lang={lang}
+          comparison={comparison}
+          sourceLabel={(rec) => sourceLabel(rec, lang)}
+          onLight={(branch, leaf) => { const cat = CATS.find((item) => item.id === branch); if (cat && !lit[branch].has(leaf)) toggle(cat, leaf); }}
+        />
+      ) : null}
     </div>
   );
 }
