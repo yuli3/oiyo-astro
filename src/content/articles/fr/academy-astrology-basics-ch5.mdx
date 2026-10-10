@@ -1,0 +1,94 @@
+---
+locale: fr
+title: "Les aspects : séparation angulaire, orbes et limites de l’interprétation"
+series: Les bases de l’astrologie
+chapter: 5
+author: Rédaction OIYO
+tags:
+  - astrologie
+  - thème natal
+  - maisons
+  - aspects
+description: "Calculez le plus petit angle et l’écart à un aspect, comparez les orbes et vérifiez les figures composées sans confondre géométrie et prédiction personnelle."
+pubDate: '2026-06-01'
+topic: astrology
+---
+
+import Callout from "@/components/mdx/Callout.astro"
+
+## Calcul et interprétation symbolique sont distincts
+
+Un aspect classe la relation angulaire de deux astres à partir de leurs longitudes écliptiques. Le mot énergie est une métaphore astrologique, pas une énergie physique mesurée ou une force agissant sur une personne. Calculer un angle ne valide pas une prédiction de personnalité, de talent ou d’événement.
+
+### Trouver le plus petit angle
+
+Prenez les longitudes λ₁ et λ₂ dans le même référentiel et au même instant, normalisées à partir de 0° inclus et en dessous de 360°.
+
+1. Calculez la différence d = |λ₁ − λ₂|.
+2. Prenez le plus petit angle Δ = min(d, 360° − d).
+3. Trouvez l’écart ε = |Δ − A| par rapport à l’angle cible A.
+4. Pour un orbe choisi o, classez la paire dans cet aspect si ε ≤ o.
+
+Entre 359° et 1°, la plus petite séparation vaut 2°, pas 358°. La paire entre dans une conjonction avec un orbe de 8°. À l’inverse, 1° et 29° du Bélier sont séparés de 28° et ne satisfont pas cette règle. Partager un signe ne suffit pas.
+
+La [documentation technique Swiss Ephemeris](https://www.astro.com/swisseph/swisseph.htm) explique les positions et référentiels, pas une validation empirique des orbes ou des symboles ci-dessous.
+
+## Orbes choisis pour ce chapitre
+
+L’orbe est un réglage de classification : l’écart maximal accepté autour de l’angle exact. Il varie selon les écoles, astres et techniques. Ces valeurs rendent nos exemples cohérents ; elles ne sont ni une norme universelle ni une description garantie des réglages du service.
+
+| Aspect | Angle cible | Orbe ici | Thème traditionnel |
+|---|---:|---:|---|
+| Conjonction | 0° | 8° | Association, concentration |
+| Sextile | 60° | 4° | Coopération, occasion |
+| Carré | 90° | 8° | Tension, ajustement |
+| Trigone | 120° | 8° | Harmonie, fluidité |
+| Opposition | 180° | 8° | Contraste, équilibre |
+
+Une implémentation doit préciser si elle inclut les valeurs limites, attribue des orbes différents au Soleil et à la Lune et gère d’éventuels chevauchements. Un orbe plus large retient davantage de paires, sans démontrer une meilleure précision.
+
+### Exemple de trigone
+
+125° et 242° donnent 117° de séparation. L’écart à 120° vaut 3°, dans notre orbe de 8°. Avec un orbe de 2°, la paire serait exclue.
+
+La classification dépend donc des paramètres. Un écart plus petit signifie seulement une proximité accrue avec l’angle cible, pas une influence psychologique plus forte mesurée.
+
+## Lire les cinq aspects
+
+- La conjonction réunit les thèmes attribués aux astres. Elle n’est pas nécessairement la plus forte ou toujours bénéfique.
+- Le sextile utilise les thèmes de coopération et d’occasion, sans garantir des occasions réelles ou de la chance relationnelle.
+- Le carré fournit un cadre de tension et d’ajustement. Il ne justifie pas la souffrance comme nécessaire et ne garantit pas une progression des aptitudes.
+- Le trigone emploie harmonie et fluidité. Distinguez la classification des signes d’une relation exacte à 120° de la classification par degrés avec un orbe. Ce n’est pas un test de talent.
+- L’opposition met des thèmes en regard. Elle ne révèle pas l’intention, le consentement d’autrui ou la cause d’un conflit.
+
+| Association symbolique | Exercice de lecture | Ce qu’elle ne mesure pas |
+|---|---|---|
+| Conjonction Soleil-Saturne | Décrire expression de soi et limitation ensemble | Responsabilité ou ambition réelles |
+| Carré Mars-Saturne | Formuler une question opposant action et limitation | Diagnostic d’impulsivité ou de patience |
+| Trigone Lune-Vénus | Réfléchir aux émotions et à l’harmonie relationnelle | Talent artistique ou approbation d’autrui |
+
+## Aspects mineurs et figures
+
+Les aspects mineurs comprennent le semi-sextile à 30°, le semi-carré à 45°, le sesquicarré à 135° et le quinconce à 150°. Fixez leurs orbes séparément, sans reprendre automatiquement ceux des aspects majeurs.
+
+| Figure | Relations à vérifier | Précaution |
+|---|---|---|
+| Grand trigone | Les trois paires sont à environ 120° | Un même élément ne suffit pas |
+| Carré en T, T-Square | Une paire à environ 180°, les deux autres à environ 90° | L’astre au sommet participe aux deux carrés |
+| Grand carré, Grand Cross | Quatre points espacés d’environ 90°, deux diagonales à environ 180° | Quelques relations correctes ne prouvent pas toute la figure |
+| Yod | Une paire à environ 60°, les deux autres à environ 150° | Pas une preuve de mission particulière |
+| Stellium | Plusieurs astres regroupés dans un signe ou une maison | Définir le nombre et les objets inclus ; distinguer une concentration d’une figure à angles fixes |
+
+Les positions d’un vrai thème ne sont pas des nombres arbitraires indépendants. Des degrés inventés illustrent la géométrie. Pour parler d’un véritable thème natal, il faut pouvoir le reproduire avec date, heure, lieu et réglages.
+
+## Garder une trace avant d’interpréter
+
+Notez les longitudes, l’instant, le référentiel et l’incertitude sur l’heure. Définissez angles cibles, orbes et inclusion des limites ; calculez Δ et ε pour chaque paire, puis les figures. Ajoutez séparément la lecture symbolique. Il n’existe pas un ordre d’interprétation universel.
+
+Si l’heure est incertaine, n’affirmez pas une position lunaire précise ou des relations impliquant Ascendant et maisons. Distinguer un aspect appliquant d’un aspect séparant demande le mouvement relatif dans le temps, pas une simple liste d’angles instantanés.
+
+<Callout type="tip">**Précédent** : [Ch4. Les maisons](/fr/academy-astrology-basics-ch4/) · **Suivant** : [Ch6. Trois cas reproductibles](/fr/academy-astrology-basics-ch6/)</Callout>
+
+## Sources et portée
+
+Les exemples peuvent être recalculés à partir des nombres indiqués. Les orbes sont des réglages pédagogiques, pas des seuils validés empiriquement. Consultez [Swiss Ephemeris](https://www.astro.com/swisseph/swisseph.htm) pour les positions et coordonnées. L’interprétation historique ne remplace pas une évaluation psychologique, des soins ou des preuves relatives à une carrière.
