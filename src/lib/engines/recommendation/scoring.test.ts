@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import type { RecommendationContext } from "./contracts";
 import { CAREER_DEFINITIONS, HOBBY_DEFINITIONS } from "./data/definitions";
-import { computeMatchScore, MIN_DISPLAY_SCORE } from "./scoring";
+import { computeMatchScore, MIN_DISPLAY_SCORE, SAJU_DEFICIENT_MAX_COUNT } from "./scoring";
 
 function ctx(overrides: Partial<RecommendationContext> = {}): RecommendationContext {
   return { interpretation: {}, ...overrides };
@@ -95,5 +95,30 @@ describe("computeMatchScore", () => {
   it("respects MIN_DISPLAY_SCORE as a sane threshold (0 < threshold <= 100)", () => {
     expect(MIN_DISPLAY_SCORE).toBeGreaterThan(0);
     expect(MIN_DISPLAY_SCORE).toBeLessThanOrEqual(100);
+  });
+
+  describe("saju element balance", () => {
+    const hiking = HOBBY_DEFINITIONS.find((d) => d.id === "hiking")!; // deficient: Earth
+    const meditation = HOBBY_DEFINITIONS.find((d) => d.id === "meditation")!; // excess: Fire, Wood
+    const sajuOnly = (def: typeof hiking) => ({ ...def, scoring: { saju: def.scoring.saju } });
+    const counts = (overrides: Record<string, number>) => ({ earth: 2, fire: 2, metal: 1, water: 2, wood: 1, ...overrides });
+
+    it("matches `excess` against the lowercase element collectSignals() emits", () => {
+      const score = computeMatchScore(sajuOnly(meditation), ctx({ signals: { saju: { element: "fire", tenGods: [] } } }));
+      expect(score).toBe(100);
+    });
+
+    it("matches `deficient` only when that element is actually scarce in the tally", () => {
+      const scarce = ctx({ signals: { saju: { element: "water", tenGods: [], elementCounts: counts({ earth: SAJU_DEFICIENT_MAX_COUNT, water: 3 }) } } });
+      const plentiful = ctx({ signals: { saju: { element: "water", tenGods: [], elementCounts: counts({ earth: 2, water: 3 }) } } });
+      expect(computeMatchScore(sajuOnly(hiking), scarce)).toBe(100);
+      expect(computeMatchScore(sajuOnly(hiking), plentiful)).toBe(0);
+    });
+
+    it("no longer treats a dominant element outside the deficient list as a match", () => {
+      // Before 2026-10-10 this scored 100: "water" is not in ["Earth"].
+      const noTally = ctx({ signals: { saju: { element: "water", tenGods: [] } } });
+      expect(computeMatchScore(sajuOnly(hiking), noTally)).toBe(0);
+    });
   });
 });
