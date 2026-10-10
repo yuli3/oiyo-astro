@@ -40,6 +40,24 @@ describe("explainMatch", () => {
     expect(sajuSignal?.nodeId).toBe("fire");
   });
 
+  it("explains a deficient-element match with the scarce element, not the dominant one", () => {
+    const def = HOBBY_DEFINITIONS.find((d) => d.id === "hiking")!; // saju.elementBalance.deficient: Earth
+    const signals = explainMatch(
+      def,
+      ctx({ signals: { saju: { element: "water", tenGods: [], elementCounts: { earth: 0, fire: 2, metal: 2, water: 3, wood: 1 } } } }),
+      10,
+    );
+    const sajuSignal = signals.find((s) => s.source === "saju");
+    expect(sajuSignal?.value).toBe("Earth");
+    expect(sajuSignal?.nodeId).toBe("earth");
+  });
+
+  it("gives no deficient-element signal without a five-element tally", () => {
+    const def = HOBBY_DEFINITIONS.find((d) => d.id === "hiking")!;
+    const signals = explainMatch(def, ctx({ signals: { saju: { element: "water", tenGods: [] } } }), 10);
+    expect(signals.find((s) => s.source === "saju")).toBeUndefined();
+  });
+
   it("ranks signals by contribution weight descending", () => {
     const def = CAREER_DEFINITIONS[0]; // global_leader: mbti(traits) + riasec + big5 + saju
     const signals = explainMatch(

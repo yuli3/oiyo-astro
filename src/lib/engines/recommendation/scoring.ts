@@ -33,6 +33,8 @@ export interface ResolvedProfile {
   riasecCode?: string;
   sajuDominantTenGod?: string;
   sajuElement?: string;
+  /** Lowercase-keyed five-element tally (sums to 8); absent when only the dominant element is known. */
+  sajuElementCounts?: Record<string, number>;
   tciHigh: string[];
   zodiac?: string;
 }
@@ -53,6 +55,33 @@ export const CATEGORY_WEIGHT = {
   zodiac: 20,
 };
 
+/**
+ * An element counts as deficient at 0 or 1 of the eight pillar characters,
+ * i.e. below the 1.6 even-split average. 0 alone (`missingElements` in
+ * `analyzeSaju`) is too rare to drive a hobby/career match.
+ */
+export const SAJU_DEFICIENT_MAX_COUNT = 1;
+
+/**
+ * Definitions spell elements "Fire"/"Earth" while `analyzeSaju` (and so
+ * `collectSignals()`) emits `FiveElement` values "fire"/"earth". Before
+ * 2026-10-10 the comparison was case-sensitive, so the signals path never
+ * matched `excess` and always matched `deficient`.
+ */
+export function sameElement(a: string, b: string): boolean {
+  return a.toLowerCase() === b.toLowerCase();
+}
+
+/** Rule elements the profile is actually short on; [] when no five-element tally is available. */
+export function deficientRuleElements(ruleElements: readonly string[], profile: ResolvedProfile): string[] {
+  const counts = profile.sajuElementCounts;
+  if (!counts) return [];
+  return ruleElements.filter((element) => {
+    const count = counts[element.toLowerCase()];
+    return typeof count === "number" && count <= SAJU_DEFICIENT_MAX_COUNT;
+  });
+}
+
 /** Only surface recommendations with a meaningful signal match, not every definition at a near-zero score. */
 export const MIN_DISPLAY_SCORE = 20;
 
@@ -69,6 +98,7 @@ export function resolveProfile(ctx: RecommendationContext): ResolvedProfile {
     riasecCode: signals?.riasec?.code,
     sajuDominantTenGod: interpretation.saju?.tenGodProfile?.dominant ?? signals?.saju?.tenGods?.[0],
     sajuElement: interpretation.saju?.element ?? signals?.saju?.element,
+    sajuElementCounts: signals?.saju?.elementCounts,
     tciHigh: (interpretation.tci?.temperamentDimensions ?? [])
       .filter((dimension) => dimension.level === "high")
       .map((dimension) => dimension.name.en),
@@ -102,22 +132,18 @@ function scoreSaju(rules: ScoringRules["saju"], profile: ResolvedProfile): Contr
     ]);
   }
   if (rules.elementBalance?.excess?.length) {
+    const element = profile.sajuElement;
     contributions.push([
       CATEGORY_WEIGHT.sajuElementExcess,
-      profile.sajuElement && rules.elementBalance.excess.includes(profile.sajuElement) ? 1 : 0,
+      element && rules.elementBalance.excess.some((excess) => sameElement(excess, element)) ? 1 : 0,
     ]);
   }
   if (rules.elementBalance?.deficient?.length) {
-    // `signals.saju`/`interpretation.saju` only expose the *dominant* element,
-    // not a full five-element count breakdown, so this can only check a
-    // necessary condition: an element can't be both deficient and dominant at
-    // once. Absence from the deficient list is weak positive evidence, not
-    // proof of an actual deficiency.
-    // TODO(Phase1 step2 통합 후): signals.ts에 elementCounts가 노출되면 실제 결핍 여부로 교체.
-    contributions.push([
-      CATEGORY_WEIGHT.sajuElementDeficient,
-      profile.sajuElement && !rules.elementBalance.deficient.includes(profile.sajuElement) ? 1 : 0,
-    ]);
+    // Without a tally (interpretation-only context, or a pre-2026-10-10
+    // shared permalink) there is no evidence of a deficiency, so it scores 0
+    // rather than guessing from the dominant element.
+    const matched = deficientRuleElements(rules.elementBalance.deficient, profile).length;
+    contributions.push([CATEGORY_WEIGHT.sajuElementDeficient, matched / rules.elementBalance.deficient.length]);
   }
   return contributions;
 }
