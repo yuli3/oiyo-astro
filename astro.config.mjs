@@ -4,6 +4,7 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap, { ChangeFreqEnum } from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
+import { unified } from '@astrojs/markdown-remark';
 import remarkGfm from 'remark-gfm';
 import remarkCjkFriendly from 'remark-cjk-friendly';
 import robotsTxt from 'astro-robots-txt';
@@ -32,11 +33,16 @@ const SITEMAP_ENTRY_LIMIT = 100;
 export default defineConfig({
   site: 'https://oiyo.net',
   output: 'static',
+  // 2026-10-09: preserve Astro 6's lossless whitespace handling during the
+  // security upgrade; Astro 7's JSX default removes existing inline spacing.
+  compressHTML: true,
   // 한글·CJK 본문의 **강조**는 기본 파서가 인식하지 못한다 — 별표가 글자 그대로
   // 남는다. blog 가 같은 이유로 remark-cjk-friendly 를 쓰고 audit:emphasis 로
   // 지킨다. 표는 gfm 이 필요하다.
   markdown: {
-    remarkPlugins: [remarkGfm, remarkCjkFriendly],
+    // 2026-10-09: Astro 7 defaults to Sätteri; retain the existing GFM/CJK
+    // pipeline so a security upgrade does not silently change article meaning.
+    processor: unified({ remarkPlugins: [remarkGfm, remarkCjkFriendly] }),
   },
   integrations: [
     react(),
