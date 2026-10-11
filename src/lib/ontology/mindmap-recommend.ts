@@ -75,7 +75,11 @@ function num(signals: readonly OntologySignal[], id: string): number | undefined
   return typeof signal?.value === "number" ? Math.max(0, Math.min(100, signal.value)) : undefined;
 }
 
-export function recommendLeaves(signals: readonly OntologySignal[]): LeafRecommendation[] {
+/**
+ * Every leaf the results point at, one row per source, with no cap per branch. The comparison
+ * view needs all of them (and every reason); the tree's dashed rings use recommendLeaves.
+ */
+export function pointedLeaves(signals: readonly OntologySignal[]): LeafRecommendation[] {
   const found: LeafRecommendation[] = [];
   const add = (names: readonly (keyof typeof LEAF)[], source: RecommendationSource, key: string) => {
     for (const name of names) {
@@ -120,6 +124,11 @@ export function recommendLeaves(signals: readonly OntologySignal[]): LeafRecomme
     if (tf !== undefined && 100 - tf >= MBTI_CLEAR) add(MBTI.F, "mbti", "F");
   }
 
+  return found;
+}
+
+export function recommendLeaves(signals: readonly OntologySignal[]): LeafRecommendation[] {
+  const found = pointedLeaves(signals);
   // One entry per leaf (the first, strongest source wins) and at most two leaves per branch.
   const seen = new Set<string>();
   const perBranch = new Map<string, number>();
