@@ -12,7 +12,18 @@ interface ElementItem {
 interface Props {
   title?: string;
   items?: ElementItem[];
+  locale?: string;
 }
+
+// 아래 상생 띠는 글이 items 를 넘겨도 이 컴포넌트가 그린다. 언어별로 둔다.
+const CYCLE: Record<string, { names: string[]; verb: string; label: string }> = {
+  ko: { names: ["목", "화", "토", "금", "수"], verb: "생", label: "오행 생극 흐름" },
+  en: { names: ["Wood", "Fire", "Earth", "Metal", "Water"], verb: "→", label: "Five-element generating cycle" },
+  ja: { names: ["木", "火", "土", "金", "水"], verb: "生", label: "五行の相生の流れ" },
+  zh: { names: ["木", "火", "土", "金", "水"], verb: "生", label: "五行相生循环" },
+  fr: { names: ["Bois", "Feu", "Terre", "Métal", "Eau"], verb: "→", label: "Cycle d’engendrement des cinq éléments" },
+  es: { names: ["Madera", "Fuego", "Tierra", "Metal", "Agua"], verb: "→", label: "Ciclo generativo de los cinco elementos" },
+};
 
 const defaultItems: ElementItem[] = [
   { name: "목", label: "성장", score: 68, note: "방향, 시작, 확장", color: "#16a34a" },
@@ -22,7 +33,9 @@ const defaultItems: ElementItem[] = [
   { name: "수", label: "사고", score: 72, note: "깊이, 회복, 적응", color: "#2563eb" },
 ];
 
-const { title = "오행 분포 예시", items = defaultItems } = Astro.props;
+const { title = "오행 분포 예시", items = defaultItems, locale = "ko" } = Astro.props;
+const cycle = CYCLE[locale] ?? CYCLE.ko;
+const cycleNames = [...cycle.names, cycle.names[0]];
 ---
 
 <section class="five-elements">
@@ -46,8 +59,8 @@ const { title = "오행 분포 예시", items = defaultItems } = Astro.props;
       })
     }
   </div>
-  <div class="five-elements__cycle" aria-label="오행 생극 흐름">
-    <span>목</span><b>생</b><span>화</span><b>생</b><span>토</span><b>생</b><span>금</span><b>생</b><span>수</span><b>생</b><span>목</span>
+  <div class="five-elements__cycle" aria-label={cycle.label}>
+    {cycleNames.map((n, i) => (i === 0 ? <span>{n}</span> : <><b>{cycle.verb}</b><span>{n}</span></>))}
   </div>
 </section>
 
