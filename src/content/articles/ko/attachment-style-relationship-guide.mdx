@@ -22,8 +22,6 @@ topic: attachment
 
 import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
-import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
@@ -35,7 +33,7 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ### 애착 이론의 핵심 가정
 
-1. **초기 경험의 영향력**: 생후 2년간의 양육자 반응성이 애착 패턴을 결정
+1. **초기 경험의 영향력**: 생애 초기 양육자의 반응성이 애착 패턴 형성에 큰 영향을 줌
 2. **안전기지(Secure Base)**: 안정적인 애착 대상이 있어야 세상 탐색이 가능
 3. **연속성**: 어린 시절 애착 패턴은 성인기 연애·우정·직장 관계로 이어짐
 4. **가변성**: 의식적인 노력과 치료로 애착 패턴 변화 가능
@@ -45,15 +43,17 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 ## 1. 애착 유형 핵심 통계
 
 <StatCards
-  title="성인 애착 유형 분포 (글로벌 연구 기준)"
+  title="성인 애착 유형 분포 예시 (Hazan & Shaver, 1987 신문 독자 표본)"
   cols={2}
   items={[
-    { label: "안정 애착 (Secure)", value: "약 55~60%", description: "긍정적인 자기상 + 긍정적인 타인상. 친밀감을 편안하게 추구" },
-    { label: "불안 애착 (Anxious·Preoccupied)", value: "약 15~20%", description: "부정적인 자기상 + 긍정적인 타인상. 버림받음에 대한 두려움" },
-    { label: "회피 애착 (Avoidant·Dismissing)", value: "약 15~20%", description: "긍정적인 자기상 + 부정적인 타인상. 친밀감 회피, 독립성 과도 강조" },
-    { label: "혼란 애착 (Disorganized·Fearful)", value: "약 5~10%", description: "부정적인 자기상 + 부정적인 타인상. 관계를 원하지만 두려워함" }
+    { label: "안정 애착 (Secure)", value: "약 56%", description: "긍정적인 자기상 + 긍정적인 타인상. 친밀감을 편안하게 추구" },
+    { label: "불안 애착 (Anxious·Preoccupied)", value: "약 19%", description: "부정적인 자기상 + 긍정적인 타인상. 버림받음에 대한 두려움" },
+    { label: "회피 애착 (Avoidant·Dismissing)", value: "약 25%", description: "긍정적인 자기상 + 부정적인 타인상. 친밀감 회피, 독립성 과도 강조" },
+    { label: "혼란·두려움 애착 (Fearful)", value: "4분류 모델", description: "부정적인 자기상 + 부정적인 타인상. Bartholomew & Horowitz(1991)가 추가한 유형으로, 비율은 표본마다 다름" }
   ]}
 />
+
+위 수치는 3분류(안정·불안·회피) 자기보고 연구의 한 예입니다. 표본과 측정 방식에 따라 비율은 달라지며, 4분류 모델에서는 안정형 비율이 더 낮게 나오기도 합니다. 최근 연구는 애착을 딱 떨어지는 유형보다 **불안·회피 두 차원의 연속선**으로 보는 경우가 많습니다.
 
 ---
 
@@ -87,8 +87,8 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 - 자기 비하와 동시에 파트너 이상화 경향
 - 이별 후 회복이 느리고 집착적
 
-<Callout type="info" title="불안 애착의 신경생물학">
-불안 애착인의 뇌는 위협 신호(파트너의 거리두기)에 더 민감하게 반응합니다. 이는 초기 불일관된 양육으로 인해 편도체 반응성이 높아진 결과일 수 있습니다. '과잉 반응'이 아니라 '생존 전략'으로 형성된 패턴입니다.
+<Callout type="info" title="불안 애착과 위협 민감성">
+불안 애착인은 파트너의 거리두기 같은 관계 위협 신호에 더 민감하게 반응하는 경향이 있습니다. 일부 뇌영상 연구에서 불안 애착과 편도체 반응성 사이의 관련이 보고되었지만, 원인과 결과는 아직 확립되지 않았습니다. '과잉 반응'이라기보다 경험 속에서 익힌 '생존 전략'으로 이해해 볼 수 있습니다.
 </Callout>
 
 ---
@@ -112,14 +112,15 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 **핵심 내면의 목소리**: *"당신이 필요한데 당신이 두렵다."*
 
-주양육자가 동시에 **안전의 원천이자 공포의 원천**이었을 때 형성됩니다. 학대, 심각한 방임, 양육자의 정신 건강 문제 등과 연관이 깊습니다.
+주양육자가 동시에 **안전의 원천이자 공포의 원천**이었을 때 형성됩니다. 학대, 심각한 방임, 양육자의 해결되지 않은 트라우마 등과 연관이 깊습니다.
+
+참고로 '혼란 애착(disorganized)'은 원래 메인과 솔로몬(Main & Solomon, 1990)이 영아 관찰에서 정의한 범주이고, 성인 연구에서 이에 가장 가까운 것은 바솔로뮤(Bartholomew)의 '두려움-회피형(fearful-avoidant)'입니다. 이 글에서는 두 개념을 함께 다룹니다.
 
 **특징**:
 - 친밀감을 원하면서 동시에 두려워하는 상충된 욕구
 - 관계에서 예측하기 어려운 반응 패턴
 - 감정 조절의 어려움, 충동적 행동
-- 자해나 해리 등의 증상과 연관될 수 있음
-- 치료로 가장 많이 변화 가능한 유형
+- 어려움이 크다면 혼자 감당하기보다 전문가와 함께 다루기를 권장
 
 ---
 
@@ -140,62 +141,36 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ---
 
-## 4. 애착 유형별 강점·약점 레이더 차트
+## 4. 나의 애착 유형 바꿀 수 있을까?
 
-<RadarChart
-  title="애착 유형별 관계 역량 비교"
-  axes={["감정 조절", "친밀감 허용", "독립성", "갈등 해결", "신뢰 구축", "자기 표현"]}
-  datasets={[
-    { label: "안정 애착", color: "#10b981", values: [90, 88, 85, 88, 92, 85] },
-    { label: "불안 애착", color: "#f59e0b", values: [45, 95, 40, 50, 70, 78] },
-    { label: "회피 애착", color: "#3b82f6", values: [75, 35, 95, 55, 55, 45] },
-    { label: "혼란 애착", color: "#ef4444", values: [30, 50, 45, 30, 40, 40] }
-  ]}
-/>
-
----
-
-## 5. 나의 애착 유형 바꿀 수 있을까?
-
-결론부터: **가능합니다.** 애착 이론의 가장 희망적인 발견은, 어린 시절에 형성된 불안정 애착이 **성인기 경험과 의식적 노력으로 변화**할 수 있다는 뜻입니다.
+결론부터: **가능합니다.** 애착 연구의 가장 희망적인 발견은, 어린 시절에 형성된 불안정 애착이 **성인기 경험과 의식적 노력으로 변화**할 수 있다는 점입니다.
 
 ### 변화 경로
 
 **1. 안정적인 파트너와의 관계**
 - 일관되게 반응적이고 신뢰할 수 있는 파트너와의 장기 관계는 내적작동모델을 재조직합니다
-- 이를 "교정적 정서 경험(Corrective Emotional Experience)"이라 합니다
+- 불안정한 출발에도 이후 경험을 거쳐 안정 애착에 이르는 경우를 '획득된 안정(earned security)'이라고 부릅니다
 
 **2. 심리치료**
 - **애착 기반 치료(Attachment-Based Therapy)**: 치료자와의 안정적 관계가 안전기지가 됨
-- **EMDR**: 특히 혼란 애착과 트라우마에 효과적
+- **EMDR**: 트라우마(PTSD) 치료법으로, 애착 문제가 트라우마와 얽혀 있을 때 고려됨
 - **EFT(정서 중심 치료)**: 커플 관계의 애착 패턴 개선에 특화
 
 **3. 자기 인식과 마음챙김**
 - 자신의 반응 패턴을 인식하는 것만으로도 자동적 반응을 줄일 수 있음
-- 마음챙김 명상이 감정 조절 능력 향상에 효과적
-
-<BarChart
-  title="치료 방법별 불안정 애착 개선 효과 (연구 기반 상대 비교)"
-  data={[
-    { label: "장기 심리치료", value: 85 },
-    { label: "안정 파트너 관계", value: 75 },
-    { label: "EFT 커플 치료", value: 78 },
-    { label: "EMDR (트라우마)", value: 72 },
-    { label: "마음챙김 훈련", value: 60 }
-  ]}
-/>
+- 마음챙김 명상이 감정 조절에 도움이 될 수 있음
 
 ---
 
-## 6. 연애 관계별 애착 유형 조합과 패턴
+## 5. 연애 관계별 애착 유형 조합과 패턴
 
 | 조합 | 관계 역동 | 성장 방향 |
 |-----|---------|---------|
 | 안정 × 안정 | 가장 건강하고 안정적인 관계 | 지속적 성장, 서로의 안전기지 |
-| 불안 × 회피 | 가장 흔하고 고통스러운 '불꽃 관계' — 당김과 밀어냄의 반복 | 상대 유형 이해, 의사소통 명시화 |
+| 불안 × 회피 | 고통스러운 '불꽃 관계'가 되기 쉬움 — 당김과 밀어냄의 반복 | 상대 유형 이해, 의사소통 명시화 |
 | 불안 × 불안 | 상호 확인 욕구로 감정적 소진, 높은 갈등 강도 | 독립성 훈련, 자기 진정 능력 개발 |
 | 회피 × 회피 | 표면적 안정, 심층 친밀감 결여 | 취약성 표현 연습, 감정 공유 |
-| 안정 × 불안/회피 | 안정형이 불안정형을 점차 안정화 | 안정형의 소진 방지, 경계 유지 |
+| 안정 × 불안/회피 | 안정형의 일관성이 불안정형의 안정에 도움이 될 수 있음 | 안정형의 소진 방지, 경계 유지 |
 
 <Callout type="tip" title="불안×회피 커플에게">
 '불안 애착 + 회피 애착' 조합은 서로 잡아당기는 강한 인력이 있습니다. 불안형은 가까워지려 하고, 회피형은 멀어지려 합니다. 이 패턴을 인식하는 것만으로도 관계의 품질이 크게 달라질 수 있습니다. 커플 상담으로 새로운 소통 패턴을 만들어보세요.
@@ -203,22 +178,26 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ---
 
-## 7. 직장에서의 애착 유형
+## 6. 직장에서의 애착 유형
 
-애착 패턴은 연애뿐 아니라 **직장 관계**에도 영향을 미칩니다.
+애착 패턴은 연애뿐 아니라 **직장 관계**에도 영향을 미칠 수 있습니다(Hazan & Shaver, 1990). 아래는 경향일 뿐이며 개인차가 큽니다.
 
-| 애착 유형 | 상사와의 관계 | 동료와의 관계 | 성과 패턴 |
-|---------|-----------|-----------|--------|
-| 안정 | 피드백을 편안하게 수용 | 협력적, 갈등 건설적 해결 | 일관된 고성과, 리더십 발휘 |
-| 불안 | 상사의 평가에 과도하게 의존 | 인정 욕구 강함, 갈등 회피 | 잠재력 있으나 불안정한 성과 |
-| 회피 | 독립적 작업 선호, 피드백 회피 | 표면적 협력, 친밀감 거부 | 개인 성과 높으나 팀 시너지 낮음 |
-| 혼란 | 예측 불가, 권위에 복잡한 반응 | 불규칙한 사회적 패턴 | 높은 잠재력, 높은 이직률 |
+| 애착 유형 | 상사와의 관계 | 동료와의 관계 |
+|---------|-----------|-----------|
+| 안정 | 피드백을 편안하게 수용 | 협력적, 갈등 건설적 해결 |
+| 불안 | 상사의 평가에 과도하게 의존 | 인정 욕구 강함, 갈등 회피 |
+| 회피 | 독립적 작업 선호, 피드백 회피 | 표면적 협력, 친밀감 거부 |
+| 혼란 | 예측 불가, 권위에 복잡한 반응 | 불규칙한 사회적 패턴 |
 
 ---
 
-## 8. 애착 유형 테스트 해보기
+## 7. 애착 유형 테스트 해보기
 
-<ToolCTA tool="attachment-style" />
+<ToolCTA tool="attachment-style" locale="ko" />
+
+<Callout type="info" title="안내">
+이 글과 테스트는 자기 이해를 돕기 위한 일반 정보이며 진단이 아닙니다. 관계나 감정의 어려움이 오래 이어진다면 심리 전문가와 상담해 보세요.
+</Callout>
 
 ---
 
@@ -226,7 +205,10 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 - **John Bowlby, "Attachment and Loss" (Vol. 1-3, 1969-1980)**: 애착 이론 원전
 - **Mary Ainsworth, "Patterns of Attachment" (1978)**: 낯선 상황 실험 원전
-- **Amir Levine & Rachel Heller, "Attached" (2010)**: 성인 애착 이론 대중서 (한국어 번역: "내가 사랑에 집착하는 이유")
-- **위키피디아 — 애착 이론**: [https://ko.wikipedia.org/wiki/애착이론](https://ko.wikipedia.org/wiki/애착이론)
+- **Amir Levine & Rachel Heller, "Attached" (2010)**: 성인 애착 이론 대중서
+- **위키피디아 — Attachment theory (영문)**: [https://en.wikipedia.org/wiki/Attachment_theory](https://en.wikipedia.org/wiki/Attachment_theory)
 - **Psychology Today — Attachment**: [https://www.psychologytoday.com/us/basics/attachment](https://www.psychologytoday.com/us/basics/attachment)
 - **Journal of Personality and Social Psychology**: Hazan & Shaver (1987) — 성인 낭만 애착 연구 논문
+- **Hazan & Shaver (1990)**, "Love and work: An attachment-theoretical perspective", *JPSP* 59(2) — 애착과 직장 생활
+- **Bartholomew & Horowitz (1991)**, "Attachment styles among young adults: A test of a four-category model", *JPSP* 61(2) — 4분류 모델
+- **Main & Solomon (1990)**, *Attachment in the Preschool Years* 수록 — 혼란 애착 범주
