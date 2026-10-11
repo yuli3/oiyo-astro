@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  experiments: { label: string; baseline: number; outcome: number; baselineLabel: string; outcomeLabel: string; differenceLabel: string }[];
+  note: string;
+  locale: string;
+}
+const { title, experiments, note, locale } = Astro.props;
+const number = new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+// 2026-10-11: fixed 0–100 scales preserve the common denominator; auto-scaling exaggerates small effects.
+---
+<section class="my-8 rounded-xl border border-border bg-muted/20 p-4 sm:p-6" aria-label={title}>
+  <h3 class="mb-4 text-lg font-semibold">{title}</h3>
+  <div class="space-y-4">
+    {experiments.map((experiment) => (
+      <details class="rounded-lg border border-border p-4">
+        <summary class="cursor-pointer font-medium">{experiment.label}</summary>
+        <dl class="mt-4 space-y-3">
+          <div>
+            <dt>{experiment.baselineLabel}</dt>
+            <dd class="flex items-center gap-3"><meter min="0" max="100" value={experiment.baseline} aria-label={experiment.baselineLabel} class="w-full" /><span>{number.format(experiment.baseline)}%</span></dd>
+          </div>
+          <div>
+            <dt>{experiment.outcomeLabel}</dt>
+            <dd class="flex items-center gap-3"><meter min="0" max="100" value={experiment.outcome} aria-label={experiment.outcomeLabel} class="w-full" /><span>{number.format(experiment.outcome)}%</span></dd>
+          </div>
+          <div><dt>{experiment.differenceLabel}</dt><dd class="font-semibold">+{number.format(experiment.outcome - experiment.baseline)}</dd></div>
+        </dl>
+      </details>
+    ))}
+  </div>
+  <p class="mt-4 text-sm text-muted-foreground">{note}</p>
+</section>
