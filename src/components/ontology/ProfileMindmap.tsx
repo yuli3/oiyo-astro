@@ -94,6 +94,9 @@ export function ProfileMindmap({ locale }: { locale: string }) {
   const [recs, setRecs] = useState<LeafRecommendation[]>([]);
   const [pointed, setPointed] = useState<LeafRecommendation[]>([]);
   const [hasTests, setHasTests] = useState(true);
+  // The comparison waits for the results to be read: rendered on the server it would show an
+  // empty section to everyone, then vanish for people with no tests.
+  const [testsRead, setTestsRead] = useState(false);
   useEffect(() => {
     try {
       const signals = collectAssessmentSignals();
@@ -104,6 +107,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
       setRecs([]);
       setPointed([]);
     }
+    setTestsRead(true);
   }, []);
   const recByLeaf = useMemo(() => new Map(recs.map((rec) => [leafId(rec.branch, rec.leaf), rec])), [recs]);
 
@@ -461,7 +465,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
           ) : null}
         </>
       )}
-      {hasTests ? (
+      {testsRead && hasTests ? (
         <MindmapCompare
           lang={lang}
           comparison={comparison}

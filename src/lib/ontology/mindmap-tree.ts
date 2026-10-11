@@ -54,7 +54,9 @@ export function treeLayout(branches: readonly TreeBranch[], focus: string | null
       const angle = branchAngle(index) * RAD;
       out[branch.id] = { x: CENTER_X + RING_RADIUS * Math.cos(angle), y: CENTER_Y + RING_RADIUS * Math.sin(angle), scale: 1, opacity: 1, label: 1 };
       for (let leaf = 0; leaf < branch.leaves; leaf += 1) {
-        const spread = (branchAngle(index) + (leaf - (branch.leaves - 1) / 2) * 9.5) * RAD;
+        // Long branches (up to ten leaves) squeeze their step so a fan stays inside its own fifth of the circle.
+        const step = branch.leaves > 1 ? Math.min(9.5, 62 / (branch.leaves - 1)) : 0;
+        const spread = (branchAngle(index) + (leaf - (branch.leaves - 1) / 2) * step) * RAD;
         const radius = LEAF_RADIUS + (leaf % 2 ? 14 : 0);
         const point = { x: CENTER_X + radius * Math.cos(spread), y: CENTER_Y + radius * Math.sin(spread) };
         out[leafId(branch.id, leaf)] = { ...point, scale: 0.38, opacity: 1, label: 0 };
@@ -72,9 +74,12 @@ export function treeLayout(branches: readonly TreeBranch[], focus: string | null
   for (const branch of branches) {
     if (branch.id === focus) {
       out[branch.id] = { ...open, scale: 1.08, opacity: 1, label: 1 };
+      // Ten leaves do not fit the usual arcs (neighbours come within 48px), so a branch that long
+      // opens wider and lower with both arcs pulled in: 61px apart at worst (searched 2026-10-11).
+      const [start, span, inner, outer] = branch.leaves >= 10 ? [-170, 146, 110, 170] : [-152, 124, 134, 204];
       for (let leaf = 0; leaf < branch.leaves; leaf += 1) {
-        const angle = (-152 + (branch.leaves > 1 ? (124 / (branch.leaves - 1)) * leaf : 62)) * RAD;
-        const radius = Math.min(leaf % 2 === 1 ? 204 : 134, 146 / Math.max(0.01, Math.abs(Math.cos(angle))));
+        const angle = (start + (branch.leaves > 1 ? (span / (branch.leaves - 1)) * leaf : span / 2)) * RAD;
+        const radius = Math.min(leaf % 2 === 1 ? outer : inner, 146 / Math.max(0.01, Math.abs(Math.cos(angle))));
         const point = { x: open.x + radius * Math.cos(angle), y: open.y + radius * Math.sin(angle) };
         out[leafId(branch.id, leaf)] = { ...point, scale: 1.22, opacity: 1, label: 1 };
         hideTwigs(out, branch, leaf, point);
