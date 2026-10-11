@@ -13,6 +13,7 @@ describe("leaf table", () => {
   it("points at the leaves it names", () => {
     const expected: Record<string, string> = {
       writing: "Writing", organizing: "Organizing", exploring: "Exploring", analyzing: "Analyzing", creating: "Creating", learning: "Learning",
+      making: "Making", caring: "Caring", leading: "Leading",
       exercise: "Exercise", travel: "Travel", outdoors: "Outdoors", solo: "Solo", team: "Team", fewFriends: "Few friends", community: "Community",
       growth: "Growth", stability: "Stability", freedom: "Freedom", impact: "Impact", mastery: "Mastery", connection: "Connection", meaning: "Meaning",
     };
@@ -33,7 +34,7 @@ describe("recommendLeaves", () => {
     expect(names(riasec({ R: 20, I: 80, A: 70, S: 30, E: 40, C: 10 }))).toEqual(["Analyzing<riasec:I", "Learning<riasec:I"]);
     // Only I clears 55; the runner-up at 50 is not used.
     expect(names(riasec({ R: 20, I: 80, A: 50, S: 30, E: 40, C: 10 }))).toEqual(["Analyzing<riasec:I", "Learning<riasec:I"]);
-    expect(names(riasec({ R: 60, I: 20, A: 10, S: 30, E: 70, C: 10 }))).toEqual(["Impact<riasec:E", "Team<riasec:E", "Exercise<riasec:R", "Outdoors<riasec:R"]);
+    expect(names(riasec({ R: 60, I: 20, A: 10, S: 30, E: 70, C: 10 }))).toEqual(["Leading<riasec:E", "Impact<riasec:E", "Making<riasec:R", "Outdoors<riasec:R"]);
   });
 
   it("skips an unfinished RIASEC result", () => {

@@ -2,13 +2,8 @@ import { describe, expect, it } from "vitest";
 import { MINDMAP_CATS } from "./mindmap-data";
 import { TREE_HEIGHT, TREE_WIDTH, dropTwigs, leafId, litLeaves, readTwigs, splitLabel, toggleLeaf, toggleTwig, treeLayout, twigId } from "./mindmap-tree";
 
-const BRANCHES = [
-  { id: "interest", leaves: 7 },
-  { id: "activity", leaves: 7 },
-  { id: "environment", leaves: 7 },
-  { id: "relation", leaves: 6 },
-  { id: "goal", leaves: 7 },
-];
+// The real branch sizes, so the spacing checks follow the data when leaves are added.
+const BRANCHES = MINDMAP_CATS.map((cat) => ({ id: cat.id, leaves: cat.chips.ko.length }));
 const LABELS = { ko: ["글쓰기", "정리", "탐험"], en: ["Writing", "Organizing", "Exploring"] };
 
 describe("treeLayout", () => {
@@ -23,7 +18,7 @@ describe("treeLayout", () => {
 
   it("opens only the focused branch and hides the other leaves", () => {
     const layout = treeLayout(BRANCHES, "relation");
-    for (let leaf = 0; leaf < 6; leaf += 1) expect(layout[leafId("relation", leaf)].label).toBe(1);
+    for (let leaf = 0; leaf < BRANCHES[3].leaves; leaf += 1) expect(layout[leafId("relation", leaf)].label).toBe(1);
     expect(layout[leafId("goal", 0)].opacity).toBe(0);
     expect(layout.goal.opacity).toBeGreaterThan(0.5);
   });
