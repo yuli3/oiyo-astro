@@ -84,9 +84,9 @@ export function calculateBirthSaju(record: BirthRecordV2): BirthSajuResolution {
       })();
 
   const dayMaster = dayPillar.heavenlyStem;
-  yearPillar.tenGod = calculateTenGod(dayMaster, yearPillar.heavenlyStem);
-  monthPillar.tenGod = calculateTenGod(dayMaster, monthPillar.heavenlyStem);
-  if (hourPillar) hourPillar.tenGod = calculateTenGod(dayMaster, hourPillar.heavenlyStem);
+  yearPillar.tenGod = calculateTenGod(dayMaster, yearPillar.heavenlyStem, "stem");
+  monthPillar.tenGod = calculateTenGod(dayMaster, monthPillar.heavenlyStem, "stem");
+  if (hourPillar) hourPillar.tenGod = calculateTenGod(dayMaster, hourPillar.heavenlyStem, "stem");
 
   return {
     status: "resolved",
