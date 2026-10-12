@@ -29,7 +29,15 @@ import {
   SPIRITUALITY_DEFINITIONS,
 } from "./data/definitions";
 import { RIASEC_LETTER_TO_NODE_ID } from "./graph-fallback";
-import { BIG5_HIGH_THRESHOLD, BIG5_LOW_THRESHOLD, CATEGORY_WEIGHT, resolveProfile, type ResolvedProfile } from "./scoring";
+import {
+  BIG5_HIGH_THRESHOLD,
+  BIG5_LOW_THRESHOLD,
+  CATEGORY_WEIGHT,
+  deficientRuleElements,
+  resolveProfile,
+  sameElement,
+  type ResolvedProfile,
+} from "./scoring";
 
 type ScoringRules = RecommendationDefinition["scoring"];
 
@@ -79,24 +87,24 @@ function explainSaju(rules: ScoringRules["saju"], profile: ResolvedProfile): Mat
   if (rules.dominantTenGod?.length && profile.sajuDominantTenGod && rules.dominantTenGod.includes(profile.sajuDominantTenGod)) {
     signals.push({ source: "saju", value: profile.sajuDominantTenGod, weight: CATEGORY_WEIGHT.sajuDominantTenGod });
   }
-  if (rules.elementBalance?.excess?.length && profile.sajuElement && rules.elementBalance.excess.includes(profile.sajuElement)) {
+  const element = profile.sajuElement;
+  if (rules.elementBalance?.excess?.length && element && rules.elementBalance.excess.some((excess) => sameElement(excess, element))) {
     signals.push({
       source: "saju",
-      value: profile.sajuElement,
-      nodeId: profile.sajuElement.toLowerCase(),
+      value: element,
+      nodeId: element.toLowerCase(),
       weight: CATEGORY_WEIGHT.sajuElementExcess,
     });
   }
-  // Mirrors scoring.ts's caveat: absence from the deficient list is weak
-  // positive evidence (no full five-element breakdown available), so this
-  // still surfaces `sajuElement` as "the element that explains it" even
-  // though it's technically the dominant element, not the deficient one.
-  if (rules.elementBalance?.deficient?.length && profile.sajuElement && !rules.elementBalance.deficient.includes(profile.sajuElement)) {
+  // Explain with the element the profile is short on, not the dominant one.
+  const deficientRules = rules.elementBalance?.deficient ?? [];
+  const deficient = deficientRuleElements(deficientRules, profile);
+  if (deficient.length > 0) {
     signals.push({
       source: "saju",
-      value: profile.sajuElement,
-      nodeId: profile.sajuElement.toLowerCase(),
-      weight: CATEGORY_WEIGHT.sajuElementDeficient,
+      value: deficient[0],
+      nodeId: deficient[0].toLowerCase(),
+      weight: CATEGORY_WEIGHT.sajuElementDeficient * (deficient.length / deficientRules.length),
     });
   }
   return signals;

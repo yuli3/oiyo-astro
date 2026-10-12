@@ -10,12 +10,12 @@ tags:
   - probability
   - illusion of control
   - addiction prevention
-description: "'Double your bet after a loss and you'll eventually break even' — see the math on why Martingale actually speeds up bankruptcy. Play 1,000 hands and you'll hit the breaking point with 99.9% certainty."
+description: "'Double your bet after a loss and you'll eventually break even' — see the math on why Martingale actually speeds up bankruptcy. Play 1,000 hands and you'll hit the breaking point with over 96% probability."
 pubDate: '2026-07-29'
 topic: addiction
 ---
 
-Chapter 3 ended on a brutal note: a 100% bust rate at 10,000 hands.
+Chapter 3 ended on a brutal note: about 70% of players went bust by 10,000 hands, and 100% by 100,000.
 
 So a thought naturally follows: **"What if I don't just bet randomly, but bet strategically?"**
 
@@ -66,29 +66,29 @@ Let's calculate it. Starting at $10 and doubling with each loss, here's the **cu
 <HighlightBox>
 **A $1,000 bankroll survives up to 6 consecutive losses. Loss number 7 ends it.**
 
-And at that 7th loss, you lose your entire $1,000. Everything you'd earned with Martingale up to that point had come **$10 at a time.**
+After 6 losses you've already lost $630, and the $370 left can't cover the $640 the next bet requires. Bet what's left and lose a 7th time, and your entire $1,000 is gone. Everything you'd earned with Martingale up to that point had come **$10 at a time.**
 </HighlightBox>
 
 ## How rare is a 7-loss streak, really?
 
 This is the crux of it. If "surely 7 losses in a row won't happen" is your instinct, that's exactly where the instinct is wrong.
 
-At the baccarat banker's roughly 54.1% chance of losing a given hand, the probability of 7 straight losses is:
+A banker bet in baccarat wins about 45.86% of the time, loses about 44.62%, and ties about 9.52% (Chapter 2). A tie just returns your stake and doesn't break a losing streak, so counting only decided hands, the chance of losing is about 49.3%. The probability of 7 straight losses is:
 
 <FormulaBox>
-0.541⁷ ≈ 0.0136 = about 1.36% (roughly once every 73 hands)
+0.493⁷ ≈ 0.0071 = about 0.71% (roughly 1 in 141)
 </FormulaBox>
 
-1.36% looks small. But gambling isn't a single hand — it's many hands. The probability of hitting a 7-loss streak **at least once** over a session, from simulation:
+0.71% looks small. But gambling isn't a single hand — it's many hands. The probability of hitting a 7-loss streak **at least once** over a session, from simulation:
 
 | Total hands played | Probability of hitting a 7-loss streak |
 |---:|---:|
-| 50 | 26.0% |
-| 100 | 45.9% |
-| 300 | 85.5% |
-| **1,000** | **99.9%** |
+| 50 | 13.8% |
+| 100 | 27.1% |
+| 300 | 62.6% |
+| **1,000** | **96.4%** |
 
-**At 1,000 hands, it's effectively certain.** As Chapter 3 showed, 1,000 hands can happen in a matter of hours online.
+**At 1,000 hands, it's almost impossible to avoid.** As Chapter 3 showed, 1,000 hands can happen in a matter of hours online.
 
 ## What Martingale actually does
 
@@ -98,6 +98,8 @@ To sum it up, Martingale is this trade:
 - **What you lose**: your **entire bankroll**, rarely — but inevitably
 
 High win rate, catastrophic loss. Psychologically, this is the worst possible combination. **Every day of small wins builds the conviction that "this method works" — and that conviction is at its peak the moment bankruptcy arrives.**
+
+On top of that, a winning banker bet pays only 95% after the 5% commission. From the 5th consecutive loss onward, even a win no longer recovers what you've lost. "Win once and you're always $10 ahead" only holds in a commission-free 1:1 game.
 
 <Callout>
 Martingale **does not eliminate the house edge.** No matter the order or size of your bets, the expected value of every single hand stays negative, and no clever arrangement of negative-expected-value bets can add up to a positive total. **This is mathematically inescapable.**
@@ -121,7 +123,7 @@ Answer: **If the method were real, using it yourself would be far more profitabl
 
 1. Martingale's **logic is sound, but its premise (infinite money) doesn't exist in reality.**
 2. A $1,000 bankroll survives **only 6 consecutive losses.** A 7th loss wipes it out.
-3. A 7-loss streak isn't rare. **Play 1,000 hands and you'll hit one 99.9% of the time.**
+3. A 7-loss streak isn't rare. **Play 1,000 hands and you'll hit one more than 96% of the time.**
 4. No betting strategy **changes the expected value.** It only reshapes the distribution.
 
 Next chapter examines an assumption baked into every calculation so far — **that the rules of the game are actually being followed.** Most gambling teens actually encounter isn't like that at all.
@@ -130,7 +132,7 @@ Next chapter examines an assumption baked into every calculation so far — **th
 
 ## Sources
 
-- Loss-streak probabilities come from a seeded Monte Carlo simulation (20,000 trials per condition).
+- Loss-streak probabilities are calculated exactly (Markov chain) from the banker odds in Chapter 2 (win 45.86% · loss 44.62% · tie 9.52%), treating a tie as continuing the streak.
 - Cumulative required amounts are a geometric series based on a $10 starting bet, doubled after each loss.
 - Verified: 2026-07-29
 

@@ -154,7 +154,7 @@ describe("collectSignals", () => {
       zoneId: "America/New_York",
     }));
 
-    expect(collectSignals().saju).toEqual({
+    expect(collectSignals().saju).toMatchObject({
       element: "fire",
       tenGods: [
         "PYEON_GWAN",
@@ -166,6 +166,23 @@ describe("collectSignals", () => {
         "SANG_GWAN",
       ],
     });
+  });
+
+  it("exposes the full five-element tally alongside the dominant element", () => {
+    useUserStore.getState().setProfile({ gender: "male" });
+    useUserStore.getState().saveBirthRecord(createBirthRecord({
+      civilDate: "2002-09-01",
+      civilTime: "09:00",
+      longitude: -77.0369,
+      needsConfirmation: false,
+      utcOffsetMinutesAtBirth: -240,
+      zoneId: "America/New_York",
+    }));
+
+    const counts = collectSignals().saju?.elementCounts;
+    expect(counts && Object.keys(counts).sort()).toEqual(["earth", "fire", "metal", "wood", "water"].sort());
+    expect(Object.values(counts ?? {}).reduce((sum, n) => sum + n, 0)).toBe(8);
+    expect(counts?.fire).toBe(Math.max(...Object.values(counts ?? {})));
   });
 
   it("prefers a quiz-recorded mbti signal over the profile-store fallback", () => {

@@ -33,7 +33,12 @@ export interface ProfileSignals {
   riasec?: { code: string; scores: Record<string, number>; scoreScale?: "normalized-0-100" };
   enneagram?: string;
   zodiac?: string;
-  saju?: { element: string; tenGods: string[] };
+  /**
+   * `elementCounts` is the five-element tally over the eight pillar
+   * characters (lowercase keys, sums to 8). Optional because shared
+   * permalinks encoded before 2026-10-10 carry only `element`/`tenGods`.
+   */
+  saju?: { element: string; tenGods: string[]; elementCounts?: Record<string, number> };
 }
 
 const RIASEC_DIMENSIONS = ["R", "I", "A", "S", "E", "C"] as const;
@@ -152,7 +157,7 @@ export function mergeAssessmentSignals(
   return next;
 }
 
-/** Canonical birthplace-wall-clock pillars → the light `{element, tenGods}` signal shape. */
+/** Canonical birthplace-wall-clock pillars → the light `{element, tenGods, elementCounts}` signal shape. */
 function computeSajuSignal(profile: UserProfile): ProfileSignals["saju"] | null {
   const record = resolveBirthRecord(profile);
   if (!record) return null;
@@ -174,7 +179,7 @@ function computeSajuSignal(profile: UserProfile): ProfileSignals["saju"] | null 
       .filter(([, count]) => count > 0)
       .sort(([, a], [, b]) => b - a)
       .map(([tenGod]) => tenGod);
-    return { element: analysis.dominantElement, tenGods };
+    return { element: analysis.dominantElement, tenGods, elementCounts: { ...analysis.elementCounts } };
   } catch {
     return null;
   }

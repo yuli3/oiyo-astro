@@ -31,18 +31,21 @@ type LeafRef = readonly [branch: string, leaf: number];
 // name below against that list, so reordering the chips cannot silently move a recommendation.
 export const LEAF: Record<string, LeafRef> = {
   writing: ["interest", 0], organizing: ["interest", 1], exploring: ["interest", 2], analyzing: ["interest", 3], creating: ["interest", 4], learning: ["interest", 5],
+  making: ["interest", 7], caring: ["interest", 8], leading: ["interest", 9],
   exercise: ["activity", 0], travel: ["activity", 1],
   outdoors: ["environment", 6],
   solo: ["relation", 0], team: ["relation", 1], fewFriends: ["relation", 3], community: ["relation", 4],
   growth: ["goal", 0], stability: ["goal", 1], freedom: ["goal", 2], impact: ["goal", 3], mastery: ["goal", 4], connection: ["goal", 5], meaning: ["goal", 6],
 };
 
+// R, S and E point at their own interest leaves since 2026-10-11; before that the tree had no
+// leaf for making, caring or leading and the three were sent to other branches instead.
 const RIASEC: Record<string, readonly (keyof typeof LEAF)[]> = {
-  R: ["exercise", "outdoors"],
+  R: ["making", "outdoors"],
   I: ["analyzing", "learning"],
   A: ["creating", "writing"],
-  S: ["community", "connection"],
-  E: ["impact", "team"],
+  S: ["caring", "community"],
+  E: ["leading", "impact"],
   C: ["organizing", "stability"],
 };
 const VALUES: Record<string, keyof typeof LEAF> = {
@@ -75,7 +78,11 @@ function num(signals: readonly OntologySignal[], id: string): number | undefined
   return typeof signal?.value === "number" ? Math.max(0, Math.min(100, signal.value)) : undefined;
 }
 
-export function recommendLeaves(signals: readonly OntologySignal[]): LeafRecommendation[] {
+/**
+ * Every leaf the results point at, one row per source, with no cap per branch. The comparison
+ * view needs all of them (and every reason); the tree's dashed rings use recommendLeaves.
+ */
+export function pointedLeaves(signals: readonly OntologySignal[]): LeafRecommendation[] {
   const found: LeafRecommendation[] = [];
   const add = (names: readonly (keyof typeof LEAF)[], source: RecommendationSource, key: string) => {
     for (const name of names) {
@@ -120,6 +127,11 @@ export function recommendLeaves(signals: readonly OntologySignal[]): LeafRecomme
     if (tf !== undefined && 100 - tf >= MBTI_CLEAR) add(MBTI.F, "mbti", "F");
   }
 
+  return found;
+}
+
+export function recommendLeaves(signals: readonly OntologySignal[]): LeafRecommendation[] {
+  const found = pointedLeaves(signals);
   // One entry per leaf (the first, strongest source wins) and at most two leaves per branch.
   const seen = new Set<string>();
   const perBranch = new Map<string, number>();
