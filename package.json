@@ -19,6 +19,8 @@
     "type-check:active": "astro check --tsconfig tsconfig.active.json --minimumSeverity error",
     "test": "vitest",
     "audit:page-structure": "node scripts/audit-page-structure.mjs",
+    "audit:bar-chart-html": "node --test scripts/audit-bar-chart-html.mjs",
+    "audit:bar-chart-fixtures": "node scripts/audit-bar-chart-fixtures.mjs",
     "audit:content-depth-baseline": "node scripts/audit-content-depth-baseline.mjs",
     "audit:mystic-seo": "python3 scripts/audit-mystic-seo.py",
     "audit:assessment-release-gates": "node scripts/audit-assessment-release-gates.mjs",

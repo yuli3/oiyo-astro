@@ -60,7 +60,7 @@ const stamp = shown.toISOString().slice(0, 10);
   'article-prose mx-auto max-w-2xl px-4 py-10',
   { 'article-prose--psychology-foundations': entry.data.series === 'psychology-basics' && entry.data.chapter === 1 },
   { 'article-prose--psychology-comparisons': entry.data.series === 'psychology-basics' && [3, 4].includes(entry.data.chapter ?? 0) },
-]} data-locus-guide={entry.id.split('/').at(-1)?.replace(/\.mdx$/, '') === 'magazine-locus-of-control-psychology' ? 'true' : undefined} data-course={/^academy-astrology-basics-ch[1-6]$/.test(entry.id.split('/').at(-1) ?? '') ? 'astrology-basics' : undefined}>
+]} data-locus-guide={entry.id.split('/').at(-1)?.replace(/\.mdx$/, '') === 'magazine-locus-of-control-psychology' ? 'true' : undefined} data-treatment-guide={entry.id.split('/').at(-1)?.replace(/\.mdx$/, '') === 'existing-treatments-brain-energy' ? 'true' : undefined} data-course={/^academy-astrology-basics-ch[1-6]$/.test(entry.id.split('/').at(-1) ?? '') ? 'astrology-basics' : undefined} data-reading={['magazine-learning-style-guide', 'life-values-and-happiness', 'adler-environment', 'time-zone-productivity-guide', 'power-of-purpose', 'satisfaction-octagon', 'existing-treatments-brain-energy', 'magazine-locus-of-control-psychology'].includes(entry.id.split('/').at(-1)?.replace(/\.mdx$/, '') ?? '') ? 'responsive-tables' : undefined}>
   <h1 class="text-2xl font-bold leading-snug text-foreground sm:text-3xl">{entry.data.title}</h1>
   <p class="mt-3 text-muted-foreground">{entry.data.description}</p>
   <p class="mt-2 text-sm text-muted-foreground">{UPDATED[locale] ?? UPDATED.en} {stamp}</p>
@@ -81,11 +81,20 @@ const stamp = shown.toISOString().slice(0, 10);
   .article-prose a { text-decoration: underline; text-underline-offset: 3px; }
   .article-prose table { width: 100%; margin: 1.25rem 0; border-collapse: collapse; font-size: .95rem; }
   .article-prose th, .article-prose td { border: 1px solid var(--border); padding: .5rem .625rem; text-align: left; }
+  /* WHY (2026-10-11): browser checks at 320/375px found translated terms forcing
+     reviewed guides wider than the viewport. Apply the same wrap to the revised
+     time-zone, purpose and octagon tables; keep long words readable without
+     shrinking type, removing cells, or changing unrelated article tables.
+     2026-10-12: include the treatment guide after its French ECT term made the
+     320px document overflow; preserve the complete medical term and cautions. */
+  .article-prose[data-reading="responsive-tables"] th,
+  .article-prose[data-reading="responsive-tables"] td { overflow-wrap: anywhere; }
+  /* WHY (2026-10-12): wrapping alone left the French treatment-name column
+     only ~75px wide at 320px. Equal columns retain names and cautions legibly. */
+  .article-prose[data-treatment-guide] table { table-layout: fixed; }
   /* WHY (2026-10-12): EN/FR/ES locus comparison columns overflowed at 320px.
      Keep all three columns and text size, wrapping words only in this reviewed guide. */
   .article-prose[data-locus-guide] table { table-layout: fixed; }
-  .article-prose[data-locus-guide] th,
-  .article-prose[data-locus-guide] td { overflow-wrap: anywhere; }
   /* WHY (2026-10-10): the Spanish aspect comparison exceeded the actual 360px
      document width in the 375px browser viewport. Let translated words wrap
      within reviewed course tables without shrinking type or hiding cells. */

@@ -15,16 +15,13 @@ author: Oiyo
 topic: work
 ---
 
-import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
-import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## ¿Qué es RIASEC (Teoría de Holland)?
 
-**RIASEC** es una teoría de intereses profesionales publicada en 1959 por el psicólogo **John L. Holland (1919-2008)** y desarrollada a lo largo de varias décadas. Clasifica la personalidad profesional y los intereses de una persona en 6 tipos, bajo la premisa fundamental de que **el grado de coincidencia entre el entorno laboral y el tipo de personalidad** determina la satisfacción y el rendimiento profesional.
+**RIASEC** es el modelo de intereses profesionales de John L. Holland. Sus seis áreas ayudan a explorar actividades y entornos preferidos; la coincidencia de intereses por sí sola no determina satisfacción ni rendimiento.
 
 | Tipo | Inglés | Apodo | Motivador clave |
 |-----|-----|-----|---------|
@@ -39,18 +36,7 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## 1. Indicadores clave de los 6 tipos RIASEC
 
-<StatCards
-  title="Estado actual de RIASEC"
-  cols={3}
-  items={[
-    { label: "Desarrollo teórico", value: "1959~", description: "Publicación de 'A Theory of Vocational Choice' de Holland" },
-    { label: "Uso global", value: "140+ países", description: "Adoptado oficialmente por O*NET (base de datos laboral de EE. UU.)" },
-    { label: "Tipos más comunes", value: "S·C", description: "Los tipos Social y Convencional representan más del 40% del total" },
-    { label: "Coincidencia óptima", value: "Código de 3 letras", description: "Tipo principal + 2 auxiliares (ej. ISA, REC)" },
-    { label: "Modelo hexagonal", value: "Hexágono RIASEC", description: "Tipos adyacentes tienen alta similitud, los opuestos son contrarios" },
-    { label: "Servicios de empleo", value: "En uso", description: "Base de las pruebas de psicología ocupacional" }
-  ]}
-/>
+El O*NET Interest Profiler explora seis áreas de intereses profesionales. Este artículo no establece proporciones de población ni satisfacción media por tipo. [Descripción oficial](https://www.onetcenter.org/IP.html)
 
 ---
 
@@ -128,56 +114,27 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ---
 
-## 3. Comparativa de competencias de los 6 tipos RIASEC
+## 3. Distinga intereses y capacidades
 
-<RadarChart
-  title="Comparativa de competencias clave por tipo RIASEC"
-  axes={["Practicidad", "Análisis", "Creatividad", "Relaciones interpersonales", "Liderazgo", "Precisión"]}
-  datasets={[
-    { label: "R (Realista)", color: "#6b7280", values: [95, 55, 40, 40, 50, 65] },
-    { label: "I (Investigador)", color: "#3b82f6", values: [60, 98, 70, 40, 45, 75] },
-    { label: "A (Artístico)", color: "#8b5cf6", values: [40, 55, 98, 60, 50, 35] },
-    { label: "S (Social)", color: "#10b981", values: [50, 50, 60, 98, 65, 50] },
-    { label: "E (Emprendedor)", color: "#f59e0b", values: [65, 55, 65, 75, 98, 45] },
-    { label: "C (Convencional)", color: "#ef4444", values: [70, 80, 30, 45, 40, 98] }
-  ]}
-/>
+Una etiqueta no permite puntuar sobre 100 análisis, creatividad o liderazgo. Los intereses sugieren actividades preferidas; compruebe capacidades por separado mediante tareas, experiencia y comentarios.
+
+| Aspecto | Cómo comprobarlo |
+| --- | --- |
+| Intereses | Actividades laborales que desea explorar |
+| Capacidades | Tareas reales y comentarios |
+| Condiciones | Entorno, valores y limitaciones |
 
 ---
 
-## 4. Entendiendo el hexágono de Holland
+## 4. Límites del hexágono
 
-Los 6 tipos RIASEC se organizan en un hexágono:
-
-```
-        R
-    C       I
-    E       A
-        S
-```
-
-- **Tipos adyacentes** (ej. R-I, I-A): Características similares, combinan bien como tipos complejos.
-- **Tipos opuestos** (ej. R-S, I-E, A-C): Características contrarias, pueden generar conflictos de intereses.
-
-<Callout type="info" title="Interpretación del código de 3 letras">
-Los resultados RIASEC suelen expresarse mediante el código de las 3 letras con mayor puntuación (ej. ISA = Investigador + Social + Artístico). El primer tipo es la tendencia principal, y las investigaciones sugieren que existe una mayor satisfacción laboral cuando **al menos 2 de las 3 letras del código personal coinciden con el código del puesto de trabajo**.
-</Callout>
+El orden convencional es R → I → A → S → E → C → R. Posición y distancia describen un modelo de intereses, no compatibilidad entre personas. Al usar un código de tres letras, revise instrumento, diferencias y empates. Compartir dos letras no garantiza satisfacción ni éxito.
 
 ---
 
-## 5. Satisfacción laboral por tipo
+## 5. Preguntas en lugar de porcentajes
 
-<BarChart
-  title="Satisfacción al coincidir con el tipo RIASEC (Promedio de estudios)"
-  data={[
-    { label: "Coincidencia tipo R", value: 78 },
-    { label: "Coincidencia tipo I", value: 82 },
-    { label: "Coincidencia tipo A", value: 85 },
-    { label: "Coincidencia tipo S", value: 83 },
-    { label: "Coincidencia tipo E", value: 80 },
-    { label: "Coincidencia tipo C", value: 76 }
-  ]}
-/>
+Este artículo no aporta muestra, medida común ni fuente que respalde tasas de satisfacción por tipo. Por eso no presenta esos porcentajes ni medias de investigación. Examine tareas reales, capacidades necesarias y condiciones laborales; contraste expectativas con entrevistas o una breve experiencia relevante.
 
 ---
 
@@ -200,12 +157,7 @@ Los resultados RIASEC suelen expresarse mediante el código de las 3 letras con 
 
 ## 7. Realizar el test RIASEC
 
-<ToolCTA 
-  tool="riasec" 
-  title="Descubre tu perfil profesional" 
-  description="Realiza el test RIASEC para identificar tus intereses y encontrar la carrera que mejor se adapta a ti." 
-  locale="es" 
-/>
+<ToolCTA tool="riasec" locale="es" title="Explore sus intereses profesionales" description="Sus respuestas ayudan a reflexionar sobre actividades que le interesan. Este test no garantiza capacidad, empleo ni rendimiento." />
 
 ---
 

@@ -20,16 +20,13 @@ author: Oiyo
 topic: work
 ---
 
-import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
-import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## RIASEC(홀랜드 이론)이란?
 
-**RIASEC**은 심리학자 **존 홀랜드(John L. Holland, 1919~2008)**가 1959년에 발표하고 이후 수십 년에 걸쳐 발전시킨 직업 흥미 이론입니다. 사람의 직업적 성격과 관심사를 6가지 유형으로 분류하며, **직업 환경과 개인 유형의 일치 정도**가 직업 만족도와 성과를 결정한다는 핵심 전제를 가집니다.
+**RIASEC**은 John L. Holland의 직업 흥미 모형이에요. 여섯 영역으로 선호 활동과 직업 환경을 살펴보지만, 흥미 일치만으로 만족도나 업무 성과를 결정하지 않아요.
 
 | 유형 | 영문 | 별명 | 핵심 동인 |
 |-----|-----|-----|---------|
@@ -44,18 +41,7 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## 1. RIASEC 6가지 유형 핵심 지표
 
-<StatCards
-  title="RIASEC 현황"
-  cols={3}
-  items={[
-    { label: "이론 개발", value: "1959년~", description: "홀랜드의 A Theory of Vocational Choice 발표" },
-    { label: "글로벌 활용", value: "140개국+", description: "O*NET (미국 직업 데이터베이스) 공식 채용" },
-    { label: "가장 흔한 유형", value: "S·C형", description: "사회형과 관습형이 전체의 40% 이상" },
-    { label: "최적 일치", value: "3자리 코드", description: "주 유형 + 보조 2개 (예: ISA, REC)" },
-    { label: "육각형 모델", value: "RIASEC 헥사곤", description: "인접 유형끼리 유사성 높음, 대각 유형은 상반됨" },
-    { label: "한국 고용서비스", value: "활용 중", description: "워크넷 직업 심리검사 기반" }
-  ]}
-/>
+O*NET Interest Profiler는 여섯 직업 흥미 영역을 살펴보는 진로 탐색 도구예요. 유형별 인구 비율이나 직업 만족도 평균은 이 글에서 제시하지 않아요. [공식 도구 설명](https://www.onetcenter.org/IP.html)
 
 ---
 
@@ -133,56 +119,27 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ---
 
-## 3. RIASEC 6유형 역량 비교
+## 3. 흥미와 능력을 구분해요
 
-<RadarChart
-  title="RIASEC 유형별 핵심 역량 비교"
-  axes={["실용성", "분석력", "창의성", "대인관계", "리더십", "정확성"]}
-  datasets={[
-    { label: "R (현실형)", color: "#6b7280", values: [95, 55, 40, 40, 50, 65] },
-    { label: "I (탐구형)", color: "#3b82f6", values: [60, 98, 70, 40, 45, 75] },
-    { label: "A (예술형)", color: "#8b5cf6", values: [40, 55, 98, 60, 50, 35] },
-    { label: "S (사회형)", color: "#10b981", values: [50, 50, 60, 98, 65, 50] },
-    { label: "E (진취형)", color: "#f59e0b", values: [65, 55, 65, 75, 98, 45] },
-    { label: "C (관습형)", color: "#ef4444", values: [70, 80, 30, 45, 40, 98] }
-  ]}
-/>
+유형 이름만으로 분석력·창의성·리더십을 0~100점으로 매길 수 없어요. 흥미는 선호하는 활동을 살펴보는 단서이며 능력은 실제 과제·경험·학습 결과로 따로 확인해요.
+
+| 살펴볼 것 | 확인 방법 |
+| --- | --- |
+| 흥미 | 어떤 업무를 더 해 보고 싶은지 |
+| 능력 | 실제 과제와 피드백 |
+| 조건 | 근무 환경·가치·제약 |
 
 ---
 
-## 4. 홀랜드 헥사곤 이해
+## 4. 육각형을 읽을 때의 한계
 
-RIASEC 6유형은 육각형(Hexagon)으로 배열됩니다:
-
-```
-        R
-    C       I
-    E       A
-        S
-```
-
-- **인접 유형** (예: R-I, I-A): 특성 유사 — 복합 유형으로 잘 어울림
-- **대각 유형** (예: R-S, I-E, A-C): 특성 상반 — 갈등 가능성 있음
-
-<Callout type="info" title="3자리 코드 해석">
-RIASEC 결과는 보통 가장 높은 3유형 코드로 표현됩니다 (예: ISA = 탐구형+사회형+예술형). 첫 번째 유형이 주 성향이며, 직업 선택 시 **본인 코드와 직업 코드가 3자리 중 2자리 이상 일치**하면 높은 만족도를 보인다는 연구 결과가 있습니다.
-</Callout>
+전통적인 유형 순서는 R → I → A → S → E → C → R이에요. 순서와 거리는 흥미 구조를 설명하는 모형이지 사람 간 궁합표가 아니에요. 세 글자 코드를 쓸 때는 검사 종류·점수 차이·동점을 확인해요. 두 글자가 겹친다고 만족도나 성공을 보장하지 않아요.
 
 ---
 
-## 5. 유형별 직업 만족도
+## 5. 만족도 수치 대신 확인할 질문
 
-<BarChart
-  title="RIASEC 유형별 직업 일치 시 만족도 (연구 평균 점수)"
-  data={[
-    { label: "R형 직업 일치", value: 78 },
-    { label: "I형 직업 일치", value: 82 },
-    { label: "A형 직업 일치", value: 85 },
-    { label: "S형 직업 일치", value: 83 },
-    { label: "E형 직업 일치", value: 80 },
-    { label: "C형 직업 일치", value: 76 }
-  ]}
-/>
+이 글에는 유형별 만족도를 같은 척도로 비교할 표본·측정법·출처가 없어요. 따라서 유형별 백분율이나 연구 평균을 제시하지 않아요. 관심 직무의 실제 업무, 요구 역량, 근무 조건을 확인하고 짧은 경험이나 인터뷰로 예상과 현실을 비교해요.
 
 ---
 
@@ -205,7 +162,7 @@ RIASEC 결과는 보통 가장 높은 3유형 코드로 표현됩니다 (예: IS
 
 ## 7. RIASEC 검사 받기
 
-<ToolCTA tool="riasec" />
+<ToolCTA tool="riasec" locale="ko" title="직업 흥미를 살펴봐요" description="답변을 통해 관심 활동을 정리해요. 적성·취업·성과를 보장하는 검사는 아니에요." />
 
 ---
 

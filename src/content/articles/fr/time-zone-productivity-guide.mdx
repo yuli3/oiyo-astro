@@ -1,0 +1,79 @@
+---
+title: "Fuseaux horaires : organiser une réunion avec des hypothèses explicites"
+description: "Distinguez décalage UTC et fuseau local, calculez les heures de travail communes et choisissez le repère d’un rendez-vous récurrent."
+pubDate: 2026-04-15
+updatedDate: 2026-10-11
+tags:
+  - TimeZone
+  - Productivity
+  - RemoteWork
+  - GlobalWork
+  - Lifestyle
+locale: fr
+author: Oiyo
+topic: self
+---
+
+## 1. Un décalage n’est pas un fuseau horaire
+
+Le décalage UTC indique la différence entre une heure locale et UTC à un instant donné. Un fuseau lié à un lieu fournit les règles permettant de déterminer ce décalage à une date. Découper la Terre en 24 bandes égales est une image pédagogique, pas une description exacte de l’heure civile. Les frontières et changements d’heure résultent de décisions politiques.
+
+La base IANA conserve l’historique et les règles locales. Pour New York, utilisez un identifiant comme `America/New_York` plutôt que de supposer UTC−5 toute l’année. Une abréviation comme CST peut désigner des heures différentes selon la région.
+
+| Information | Ce qu’elle précise | Ce qu’elle ne précise pas seule |
+|---|---|---|
+| Instant UTC | Un point sur une chronologie commune | La date locale |
+| Décalage, par exemple UTC−5 | La différence à cet instant | Les futures règles d’heure d’été |
+| Fuseau lié à un lieu | Les règles de conversion entre heure locale et UTC | Les horaires de travail d’une personne |
+
+GMT et UTC donnent souvent la même lecture à décalage nul pour les rendez-vous ordinaires. Mais Londres n’est pas à GMT toute l’année : elle utilise BST pendant l’heure d’été. Indiquez une date complète et un fuseau local, pas seulement une abréviation.
+
+## 2. Vérifiez les changements d’heure ville par ville
+
+Selon les règles vérifiées le 11 octobre 2026, New York applique l’heure d’été américaine du deuxième dimanche de mars au premier dimanche de novembre. Londres change le dernier dimanche de mars et d’octobre. L’écart est généralement de cinq heures lorsque les deux villes sont à l’heure standard ou toutes deux à l’heure d’été, et de quatre heures pendant les périodes de transition décalées. Il n’est pas de quatre heures tout l’été.
+
+Le NIST décrit les règles américaines et leurs exceptions ; le gouvernement britannique publie les dates britanniques. Toutes les régions ne changent pas d’heure. Maintenez à jour les données de fuseaux de votre système et de votre calendrier. Lors d’une transition, une heure locale peut être sautée ou répétée : « 01:30 », sans date, fuseau et vérification de l’ambiguïté, ne désigne pas forcément un instant unique.
+
+## 3. Calculez les véritables heures de travail communes
+
+Ces exemples supposent un travail de 09:00 à 18:00 dans chaque ville, sans pause déjeuner, jour férié ni contrainte personnelle. Les décalages d’heure standard sont Séoul UTC+9, Pékin UTC+8, Londres UTC+0, New York UTC−5 et Los Angeles UTC−8. Ce n’est pas un horaire valable toute l’année.
+
+| Participants | Créneau commun, heure de Séoul | Explication |
+|---|---|---|
+| Séoul, Tokyo, Pékin | 10:00–18:00 | 09:00 à Pékin correspond à 10:00 à Séoul |
+| Séoul, Londres | Seulement la limite de 18:00 | Londres commence quand Séoul termine : aucun intervalle de durée positive |
+| Séoul, New York | Aucun | New York commence à 23:00 à Séoul |
+| Séoul, Los Angeles | Aucun | Los Angeles commence à 02:00 le lendemain à Séoul |
+
+Accepter une réunion hors horaires relève d’un accord, pas d’un chevauchement des heures de travail. Convertissez chaque début et fin, avec leur date, sur une chronologie commune. Retenez le début le plus tardif et la fin la plus précoce. Si la fin n’est pas postérieure au début, aucun intervalle utilisable n’existe. Retirez ensuite pauses et indisponibilités.
+
+## 4. Choisissez le repère d’un rendez-vous récurrent
+
+| Intention | Repère | Ce qui peut changer |
+|---|---|---|
+| Réunion quotidienne à 09:00 à New York | Heure locale de New York | Heure de participation ailleurs |
+| Traitement informatique à heure UTC fixe | UTC | Lecture des horloges locales |
+| Partager les créneaux difficiles | Rotation convenue explicitement | Vérifiez la charge réelle de chacun |
+
+Si les décalages changent, un même événement ne peut conserver à la fois une heure UTC fixe et la même heure locale dans toutes les villes. Pour une échéance unique, précisez date, fuseau et instant converti. Pour une réunion récurrente, convenez de la ville de référence et vérifiez les occurrences autour des transitions.
+
+<details>
+<summary>Avant d’envoyer une invitation entre plusieurs villes</summary>
+
+Vérifiez les dates locales, les fuseaux liés aux lieux, les horaires individuels et la récurrence. Demandez aux participants de confirmer l’heure locale affichée par leur calendrier. Évitez les heures répétées ou sautées, ou confirmez explicitement le décalage voulu.
+
+</details>
+
+## 5. Réduisez les présences simultanées inutiles
+
+Une décision écrite peut préciser responsable, contexte, action attendue et délai de réponse. Réservez les réunions aux sujets nécessitant un échange. Il n’existe pas de seuil universel de deux heures communes ni de nombre hebdomadaire idéal : tenez compte du travail, de l’urgence, de l’accessibilité et des contraintes des personnes. Faites tourner les réunions très matinales ou tardives inévitables.
+
+Pour les marchés financiers, une conversion horaire n’est pas un calendrier de négociation. Vérifiez séparément les séances officielles actuelles, jours fériés, clôtures anticipées, pauses et séances proposées par le courtier. La préouverture n’est pas la négociation de contrats à terme. Cet article ne recommande aucun créneau rentable.
+
+## Sources et limites
+
+IANA étaye la distinction entre règles locales et décalages fixes ; le NIST et GOV.UK étayent la comparaison des transitions. Les tableaux sont des exemples arithmétiques sous hypothèses explicites, pas des mesures de productivité. Règles vérifiées le 11 octobre 2026, susceptibles de changer ensuite.
+
+- [IANA Time Zone Database](https://www.iana.org/time-zones)
+- [NIST: Daylight Saving Time Rules](https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst)
+- [GOV.UK: When do the clocks change?](https://www.gov.uk/when-do-the-clocks-change)
