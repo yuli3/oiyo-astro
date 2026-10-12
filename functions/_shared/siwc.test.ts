@@ -81,7 +81,7 @@ describe("siwc derived values match the site's saju engine", () => {
     expect(counts).toEqual(expected);
   });
 
-  it("uses the same ten gods for every stem pair except 辛 as the other stem", () => {
+  it("uses the same ten gods for every stem pair", () => {
     const hanja: Record<TenGod, string> = {
       [TenGod.BI_GYEON]: "比肩", [TenGod.GEOP_JAE]: "劫財", [TenGod.SIK_SIN]: "食神", [TenGod.SANG_GWAN]: "傷官",
       [TenGod.PYEON_JAE]: "偏財", [TenGod.JEONG_JAE]: "正財", [TenGod.PYEON_GWAN]: "偏官", [TenGod.JEONG_GWAN]: "正官",
@@ -89,11 +89,7 @@ describe("siwc derived values match the site's saju engine", () => {
     };
     for (let day = 0; day < 10; day += 1) {
       for (let other = 0; other < 10; other += 1) {
-        // calculateTenGod looks the target up in earthlyBranches first, and
-        // "SIN" is both the stem 辛 and the branch 申, so the site reads 辛 as
-        // 申's main stem 庚 (2026-10-12, reported separately). Checked below.
-        if (other === 7) continue;
-        const site = calculateTenGod(STEM_ORDER[day] as HeavenlyStem, STEM_ORDER[other] as HeavenlyStem);
+        const site = calculateTenGod(STEM_ORDER[day] as HeavenlyStem, STEM_ORDER[other] as HeavenlyStem, "stem");
         expect(tenGodOfStem(day, other)).toBe(hanja[site]);
       }
     }

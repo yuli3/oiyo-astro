@@ -111,18 +111,18 @@ export function computeDayMasterStrength(saju: SajuResult): StrengthResult {
     gwansung: 0,
   };
 
-  const add = (char: Parameters<typeof calculateTenGod>[1], w: number) => {
-    const tg = calculateTenGod(dm, char);
+  const add = (char: Parameters<typeof calculateTenGod>[1], w: number, kind: "stem" | "branch") => {
+    const tg = calculateTenGod(dm, char, kind);
     roleCounts[roleOfTenGod(tg)] += w;
   };
 
-  add(saju.year.heavenlyStem, POS_WEIGHTS.yearStem);
-  add(saju.year.earthlyBranch, POS_WEIGHTS.yearBranch);
-  add(saju.month.heavenlyStem, POS_WEIGHTS.monthStem);
-  add(saju.month.earthlyBranch, POS_WEIGHTS.monthBranch);
-  add(saju.day.earthlyBranch, POS_WEIGHTS.dayBranch);
-  add(saju.hour.heavenlyStem, POS_WEIGHTS.hourStem);
-  add(saju.hour.earthlyBranch, POS_WEIGHTS.hourBranch);
+  add(saju.year.heavenlyStem, POS_WEIGHTS.yearStem, "stem");
+  add(saju.year.earthlyBranch, POS_WEIGHTS.yearBranch, "branch");
+  add(saju.month.heavenlyStem, POS_WEIGHTS.monthStem, "stem");
+  add(saju.month.earthlyBranch, POS_WEIGHTS.monthBranch, "branch");
+  add(saju.day.earthlyBranch, POS_WEIGHTS.dayBranch, "branch");
+  add(saju.hour.heavenlyStem, POS_WEIGHTS.hourStem, "stem");
+  add(saju.hour.earthlyBranch, POS_WEIGHTS.hourBranch, "branch");
 
   // Day stem IS the day master → inherent self presence (counts as 비겁/self).
   const SELF_WEIGHT = 1.5;
