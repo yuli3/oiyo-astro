@@ -1,11 +1,129 @@
 // @vitest-environment jsdom
 import React, { act } from 'react'
 import { createRoot } from 'react-dom/client'
-import { expect, it } from 'vitest'
+import { beforeEach, expect, it } from 'vitest'
+import { JSDOM } from 'jsdom'
+import { CAREER_STORAGE_COPY } from '../career/career-note-storage-copy'
+import { CAREER_NOTES_KEY, createCareerNoteStore } from '@/lib/career-exploration-storage'
 import CareerComparison from '../career/CareerComparison'
 import RiasecCareerTest from './RiasecCareerTest'
 
 Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true })
+beforeEach(() => {
+  // Node 26 exposes its own localStorage getter; use a real origin-scoped DOM storage instead.
+  Object.defineProperty(window, 'localStorage', { configurable: true, value: new JSDOM('', { url: 'https://oiyo.net' }).window.localStorage })
+})
+
+it('saves only by explicit choice, restores after confirmation and deletes only saved exploration notes', async () => {
+  const host = document.createElement('div')
+  document.body.append(host)
+  const root = createRoot(host)
+  const button = (text: string) => [...host.querySelectorAll<HTMLButtonElement>('button')].find(node => node.textContent === text)!
+  try {
+    window.localStorage.setItem('unrelated', 'keep')
+    await act(async () => root.render(<CareerComparison locale="en" careers={[
+      { id: 'a', title: 'Alpha work', code: 'I', description: 'Explore' },
+      { id: 'z', title: 'Zebra work', code: 'R', description: 'Build' },
+    ]} onRemove={() => {}} />))
+    await act(async () => button('Find tasks in a listing · about 15 min').click())
+    const field = host.querySelector('textarea')!
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')!.set!.call(field, 'My private reflection')
+      field.dispatchEvent(new Event('input', { bubbles: true }))
+    })
+    expect(window.localStorage.getItem(CAREER_NOTES_KEY)).toBeNull()
+    expect(button('Save in this browser').disabled).toBe(true)
+    await act(async () => host.querySelector<HTMLInputElement>('input[data-career-storage-consent]')!.click())
+    await act(async () => button('Save in this browser').click())
+    expect(host.textContent).toContain('Saved in this browser.')
+    await act(async () => button('Clear notes for this activity').click())
+    expect(host.textContent).toContain('Changed since saving.')
+    await act(async () => button('Restore this pair').click())
+    expect(host.querySelector('textarea')!.value).toBe('')
+    await act(async () => button('Replace current notes').click())
+    expect(host.querySelector('textarea')!.value).toBe('My private reflection')
+    await act(async () => button('Delete all saved exploration notes').click())
+    await act(async () => button('Confirm deletion').click())
+    expect(window.localStorage.getItem(CAREER_NOTES_KEY)).toBeNull()
+    expect(window.localStorage.getItem('unrelated')).toBe('keep')
+    expect(host.querySelector('textarea')!.value).toBe('My private reflection')
+  } finally { await act(async () => root.unmount()); host.remove() }
+})
+
+it('shows storage failure without losing the draft and detects changes in another tab', async () => {
+  const host = document.createElement('div')
+  document.body.append(host)
+  const root = createRoot(host)
+  const button = (text: string) => [...host.querySelectorAll<HTMLButtonElement>('button')].find(node => node.textContent === text)!
+  const real = window.localStorage
+  Object.defineProperty(window, 'localStorage', { configurable: true, value: {
+    getItem: real.getItem.bind(real), removeItem: real.removeItem.bind(real),
+    setItem() { throw new DOMException('Quota exceeded', 'QuotaExceededError') },
+  } })
+  try {
+    await act(async () => root.render(<CareerComparison locale="en" careers={[
+      { id: 'a', title: 'Alpha work', code: 'I', description: 'Explore' },
+      { id: 'z', title: 'Zebra work', code: 'R', description: 'Build' },
+    ]} onRemove={() => {}} />))
+    await act(async () => button('Find tasks in a listing · about 15 min').click())
+    const field = host.querySelector('textarea')!
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')!.set!.call(field, 'Keep this draft')
+      field.dispatchEvent(new Event('input', { bubbles: true }))
+      host.querySelector<HTMLInputElement>('input[data-career-storage-consent]')!.click()
+    })
+    await act(async () => button('Save in this browser').click())
+    expect(host.textContent).toContain('The storage change failed.')
+    expect(host.querySelector('textarea')!.value).toBe('Keep this draft')
+    await act(async () => window.dispatchEvent(new StorageEvent('storage', { key: CAREER_NOTES_KEY })))
+    expect(host.textContent).toContain('Another tab changed the records.')
+    expect(document.activeElement).toBe(button('Reload saved list'))
+    expect(button('Save in this browser').disabled).toBe(true)
+  } finally { await act(async () => root.unmount()); host.remove() }
+})
+
+it.each(Object.keys(CAREER_STORAGE_COPY) as (keyof typeof CAREER_STORAGE_COPY)[])('provides explicit storage and damaged-data recovery in %s', async locale => {
+  const host = document.createElement('div')
+  const root = createRoot(host)
+  const copy = CAREER_STORAGE_COPY[locale]
+  window.localStorage.setItem(CAREER_NOTES_KEY, '{broken')
+  try {
+    await act(async () => root.render(<CareerComparison locale={locale} careers={[
+      { id: 'a', title: 'Alpha work', code: 'I', description: 'Explore' },
+      { id: 'z', title: 'Zebra work', code: 'R', description: 'Build' },
+    ]} onRemove={() => {}} />))
+    expect(host.textContent).toContain(copy.status.corrupt)
+    const button = (text: string) => [...host.querySelectorAll<HTMLButtonElement>('button')].find(node => node.textContent === text)!
+    expect(button(copy.save).disabled).toBe(true)
+    await act(async () => button(copy.clear).click())
+    expect(window.localStorage.getItem(CAREER_NOTES_KEY)).toBe('{broken')
+    await act(async () => button(copy.confirmDelete).click())
+    expect(window.localStorage.getItem(CAREER_NOTES_KEY)).toBeNull()
+    expect(host.textContent).toContain(copy.deleted)
+  } finally { await act(async () => root.unmount()); host.remove() }
+})
+
+it('restores saved original-language notes after remounting in another locale, never automatically', async () => {
+  const store = createCareerNoteStore(window.localStorage, ['a', 'z'])
+  store.save({ careerIds: ['z', 'a'], activities: Array.from({ length: 3 }, (_, activityId) => ({ activityId, fields: ['한국어로 남긴 메모', '', ''], done: true })) }, null)
+  const host = document.createElement('div')
+  document.body.append(host)
+  const root = createRoot(host)
+  const button = (text: string) => [...host.querySelectorAll<HTMLButtonElement>('button')].find(node => node.textContent === text)!
+  try {
+    await act(async () => root.render(<CareerComparison locale="ja" careers={[
+      { id: 'a', title: '研究職', code: 'I', description: '研究する' },
+      { id: 'z', title: '制作職', code: 'A', description: '作る' },
+    ]} onRemove={() => {}} />))
+    expect(host.querySelectorAll('textarea')).toHaveLength(0)
+    expect(host.textContent).not.toContain('한국어로 남긴 메모')
+    await act(async () => button(CAREER_STORAGE_COPY.ja.restore).click())
+    await act(async () => button(CAREER_STORAGE_COPY.ja.replace).click())
+    expect(host.querySelector('textarea')!.value).toBe('한국어로 남긴 메모')
+    expect(host.querySelector<HTMLInputElement>('input[type="checkbox"]')!.checked).toBe(true)
+    expect(document.activeElement).toBe(button(CAREER_STORAGE_COPY.ja.reload))
+  } finally { await act(async () => root.unmount()); host.remove() }
+})
 
 it('returns focus to the selected activity when the reader skips it', async () => {
   const host = document.createElement('div')

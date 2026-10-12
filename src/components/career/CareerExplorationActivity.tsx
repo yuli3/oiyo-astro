@@ -1,10 +1,12 @@
 import { useId, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
+import type { CareerExample } from '@/lib/career-exploration'
+import CareerNoteStorage from './CareerNoteStorage'
 
 const COPY = {
   ko: {
     title: '작게 해 보고 판단해요', intro: '두 직업 중 궁금한 쪽부터 시작해 보세요. 활동은 예시라 다른 방법으로 탐색하거나 건너뛰어도 괜찮아요. 소요 시간은 대략적인 분량이에요.',
-    temporary: '메모는 이 화면에서만 유지돼요. 새로고침·페이지 이동·비교 직업 변경 시 사라져요. 필요한 내용은 먼저 따로 복사해 주세요. 검사 점수나 공유 결과에는 반영하지 않아요.',
+    temporary: '저장하지 않은 메모는 새로고침·페이지 이동·비교 직업 변경 시 사라져요. 아래에서 명시적으로 저장한 기록은 따로 불러올 수 있어요. 검사 점수나 공유 결과에는 반영하지 않아요.',
     activities: [
       { title: '공고에서 업무 찾기 · 약 15분', body: '실제 채용 공고 하나를 읽고 반복되는 업무 세 가지를 찾아보세요. 공고 하나가 직업 전체를 대표하지는 않아요. 자격·근무환경은 따로 확인해 주세요.' },
       { title: '개인용 초안 만들기 · 약 20분', body: '관심 업무와 관련된 작은 글·도표·계획을 개인 연습용으로 만들어 보세요. 실제 고객 업무나 자격이 필요한 실무는 하지 않아요. 완성도보다 어느 부분에 흥미가 생기는지 살펴봐요.' },
@@ -13,7 +15,7 @@ const COPY = {
   },
   en: {
     title: 'Try something small before deciding', intro: 'Start with whichever of the two careers interests you. These are optional examples: explore another way or skip them. Times are approximate activity lengths.',
-    temporary: 'Notes stay only on this screen. Reloading, leaving the page or changing the compared careers clears them. Copy anything you need first. Notes do not affect test scores or shared results.',
+    temporary: 'Unsaved notes disappear when you reload, leave the page or change the compared careers. Records you explicitly save below can be restored separately. Notes do not affect test scores or shared results.',
     activities: [
       { title: 'Find tasks in a listing · about 15 min', body: 'Read one actual job listing and identify three recurring tasks. One listing does not represent an entire profession. Check qualifications and working conditions separately.' },
       { title: 'Make a private draft · about 20 min', body: 'Create a short text, diagram or plan related to a task that interests you, for personal practice only. Do not take on real client work or work requiring qualifications. Notice what engages you rather than judging the finished product.' },
@@ -22,7 +24,7 @@ const COPY = {
   },
   ja: {
     title: '小さく試してから考えましょう', intro: '二つの職業のうち、気になる方から始めてください。任意の活動例なので、別の方法を選んだり、見送ったりしても構いません。時間はおおよその目安です。',
-    temporary: 'メモはこの画面でのみ保持されます。再読み込み・ページ移動・比較する職業の変更で消えるため、必要な内容は先に別の場所へコピーしてください。検査の得点や共有結果には反映されません。',
+    temporary: '未保存のメモは、再読み込み・ページ移動・比較する職業の変更で消えます。下で明示的に保存した記録は別途読み込めます。検査の得点や共有結果には反映されません。',
     activities: [
       { title: '求人から業務を探す · 約15分', body: '実際の求人を一つ読み、繰り返し出てくる業務を三つ探してください。一つの求人が職業全体を代表するわけではありません。資格や勤務環境は別途確認してください。' },
       { title: '個人練習の草案を作る · 約20分', body: '気になる業務に関する短い文章・図・計画を、個人練習として作ってみてください。実際の顧客業務や資格が必要な実務は行いません。完成度より、どの部分に興味が湧くかを見てみましょう。' },
@@ -31,7 +33,7 @@ const COPY = {
   },
   zh: {
     title: '先做一次小尝试，再作判断', intro: '请从两种职业中更好奇的一种开始。这些活动仅供选择，您也可以换一种探索方式或跳过。时间只是大致参考。',
-    temporary: '笔记仅在当前页面保留。刷新、离开页面或更换比较职业都会清除笔记，请先另行复制需要的内容。笔记不会影响测试得分或分享结果。',
+    temporary: '未保存的笔记会在刷新、离开页面或更换比较职业时清除。您在下方主动保存的记录可另行恢复。笔记不会影响测试得分或分享结果。',
     activities: [
       { title: '从招聘信息找任务 · 约15分钟', body: '阅读一则真实招聘信息，找出三项反复出现的工作任务。一则信息不能代表整个职业，资格与工作环境仍需另行核实。' },
       { title: '做一份个人练习草稿 · 约20分钟', body: '围绕感兴趣的任务，写一段文字、画一张图或拟一份计划，仅供个人练习。不要承担真实客户业务或需要专业资格的工作。先观察哪些部分让您感兴趣，而不是评判成品质量。' },
@@ -40,7 +42,7 @@ const COPY = {
   },
   fr: {
     title: 'Faites un petit essai avant de décider', intro: 'Commencez par celui des deux métiers qui vous intrigue. Ces activités sont facultatives : vous pouvez explorer autrement ou les passer. Les durées sont indicatives.',
-    temporary: 'Les notes restent uniquement sur cet écran. Elles disparaissent si vous rechargez, quittez la page ou changez les métiers comparés. Copiez d’abord ce que vous souhaitez garder. Elles ne modifient ni les scores ni les résultats partagés.',
+    temporary: 'Les notes non enregistrées disparaissent si vous rechargez, quittez la page ou changez les métiers comparés. Les enregistrements effectués explicitement ci-dessous peuvent être restaurés séparément. Les notes ne modifient ni les scores ni les résultats partagés.',
     activities: [
       { title: 'Repérer les tâches d’une offre · environ 15 min', body: 'Lisez une offre réelle et repérez trois tâches récurrentes. Une seule offre ne représente pas toute une profession. Vérifiez séparément les qualifications et les conditions de travail.' },
       { title: 'Créer un brouillon personnel · environ 20 min', body: 'Rédigez un court texte, un schéma ou un plan lié à une tâche qui vous intéresse, pour vous entraîner uniquement. N’effectuez pas de travail pour un vrai client ni de tâche exigeant une qualification. Observez ce qui vous intéresse plutôt que la qualité du résultat.' },
@@ -49,7 +51,7 @@ const COPY = {
   },
   es: {
     title: 'Haga una pequeña prueba antes de decidir', intro: 'Empiece por la profesión que más curiosidad le despierte. Estas actividades son opcionales: puede explorar de otra forma u omitirlas. Los tiempos son orientativos.',
-    temporary: 'Las notas solo permanecen en esta pantalla. Se borran al recargar, salir de la página o cambiar las profesiones comparadas. Copie primero lo que quiera conservar. No modifican las puntuaciones ni los resultados compartidos.',
+    temporary: 'Las notas no guardadas se borran al recargar, salir de la página o cambiar las profesiones comparadas. Los registros que guarde expresamente abajo pueden restaurarse por separado. Las notas no modifican las puntuaciones ni los resultados compartidos.',
     activities: [
       { title: 'Identificar tareas en una oferta · unos 15 min', body: 'Lea una oferta real e identifique tres tareas recurrentes. Una sola oferta no representa toda una profesión. Compruebe por separado los requisitos y las condiciones laborales.' },
       { title: 'Crear un borrador personal · unos 20 min', body: 'Prepare un texto breve, un diagrama o un plan relacionado con una tarea que le interese, solo como práctica personal. No realice trabajo para clientes reales ni tareas que requieran habilitación profesional. Observe qué le interesa, sin juzgar la calidad del resultado.' },
@@ -61,7 +63,7 @@ const COPY = {
 type Note = { fields: string[]; done: boolean }
 const emptyNote = (): Note => ({ fields: ['', '', ''], done: false })
 
-export default function CareerExplorationActivity({ locale }: { locale: keyof typeof COPY }) {
+export default function CareerExplorationActivity({ locale, careerIds, catalog }: { locale: keyof typeof COPY; careerIds: string[]; catalog: readonly CareerExample[] }) {
   const copy = COPY[locale]
   const id = useId()
   const activityButtons = useRef<(HTMLButtonElement | null)[]>([])
@@ -72,7 +74,7 @@ export default function CareerExplorationActivity({ locale }: { locale: keyof ty
     if (active === null) return
     setNotes(previous => previous.map((entry, index) => index === active ? update(entry) : entry))
   }
-  // 2026-10-12 PRD batch 2: private reflection is transient, never a test score or share payload.
+  // 2026-10-12 approved batch 3: drafts stay transient; only the explicit save control persists reflection.
   return <section aria-labelledby={`${id}-title`} className="space-y-4 border-t border-border pt-5 print:hidden" data-html2canvas-ignore="true">
     <h5 id={`${id}-title`} className="text-base font-semibold">{copy.title}</h5>
     <p className="text-sm leading-relaxed text-muted-foreground">{copy.intro}</p>
@@ -98,5 +100,9 @@ export default function CareerExplorationActivity({ locale }: { locale: keyof ty
         }}>{copy.skip}</Button>
       </div>
     </>}</div>
+    <CareerNoteStorage locale={locale} catalog={catalog} draft={{ careerIds, activities: notes.map((entry, activityId) => ({ activityId, fields: entry.fields, done: entry.done })) }} onRestore={record => {
+      setNotes(record.activities.map(entry => ({ fields: [...entry.fields], done: entry.done })))
+      setActive(0)
+    }} />
   </section>
 }

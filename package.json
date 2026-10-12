@@ -139,6 +139,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@shadcn/lint": "^0.2.0",
+    "@types/jsdom": "^30.0.0",
     "@types/matter-js": "^0.20.2",
     "@typescript-eslint/parser": "^8.71.1",
     "ajv": "^8.20.0",

@@ -565,7 +565,7 @@ export default function RiasecCareerTest({ locale: lp = 'ko', careerExamples = [
             <p className="text-sm leading-relaxed text-muted-foreground">{careerCopy.caution}</p>
             <p className="text-sm leading-relaxed text-muted-foreground">{resultProfile.isMixed ? comparisonCopy.neutral : comparisonCopy.grouped}</p>
           </div>
-          <CareerComparison locale={locale} careers={comparedCareers} onRemove={removeComparison} />
+          <CareerComparison locale={locale} careers={comparedCareers} catalog={careerExamples} onRemove={removeComparison} />
           <label className="block space-y-2 text-sm font-medium">
             <span>{careerCopy.search}</span>
             <input

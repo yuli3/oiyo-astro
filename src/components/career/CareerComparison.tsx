@@ -12,9 +12,9 @@ export const CAREER_COMPARISON_COPY = {
   es: { title: 'Explore dos profesiones en paralelo', intro: 'Elija hasta dos profesiones y compare sus descripciones. Esto no determina cuál encaja mejor con usted.', add: 'Añadir a la comparación', selected: 'Añadida a la comparación', full: 'Ha elegido dos profesiones. Quite una para elegir otra.', empty: 'Elija profesiones de la lista de abajo.', one: 'Elija otra profesión para compararlas en paralelo.', remove: 'Quitar', description: 'Resumen del trabajo', code: 'Código de interés', missing: 'Aún no se ha comprobado.', question: '¿Qué podría comprobar después?', prompt: 'Busque tres tareas recurrentes en ofertas reales de cada profesión. Compruebe por separado los requisitos y las condiciones laborales; estos resúmenes no bastan para establecerlos.', neutral: 'Sus puntuaciones de interés son cercanas: las profesiones se ordenan por nombre, no por adecuación.', grouped: 'Las profesiones se agrupan por código de interés, no por adecuación.', removeLabel: (name: string) => `Quitar ${name}`, count: (n: number) => `${n} / 2 profesiones seleccionadas` },
 }
 
-type Props = { locale: keyof typeof CAREER_COMPARISON_COPY; careers: readonly CareerExample[]; onRemove: (id: string) => void }
+type Props = { locale: keyof typeof CAREER_COMPARISON_COPY; careers: readonly CareerExample[]; catalog?: readonly CareerExample[]; onRemove: (id: string) => void }
 
-export default function CareerComparison({ locale, careers, onRemove }: Props) {
+export default function CareerComparison({ locale, careers, catalog = careers, onRemove }: Props) {
   const copy = CAREER_COMPARISON_COPY[locale]
   const titleId = useId()
   return (
@@ -38,7 +38,7 @@ export default function CareerComparison({ locale, careers, onRemove }: Props) {
         <summary className="min-h-11 cursor-pointer py-3 font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring">{copy.question}</summary>
         <p className="pb-2 leading-relaxed text-muted-foreground">{copy.prompt}</p>
       </details>}
-      {careers.length === 2 && <CareerExplorationActivity key={JSON.stringify(careers.map(career => career.id).sort())} locale={locale} />}
+      {careers.length === 2 && <CareerExplorationActivity key={JSON.stringify(careers.map(career => career.id).sort())} locale={locale} careerIds={careers.map(career => career.id)} catalog={catalog} />}
     </section>
   )
 }
