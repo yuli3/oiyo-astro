@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import TrademarkNotice from '../../../components/TrademarkNotice.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -73,6 +74,9 @@ const LINKS: Record<number, { label: string; href: string }[]> = {
           ))
         }
         <p class="text-xs text-green-500">{doc.description}</p>
+      </div>
+      <div class="mt-6">
+        <TrademarkNotice locale={locale} />
       </div>
     </div>
   </section>

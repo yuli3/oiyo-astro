@@ -1,0 +1,26 @@
+---
+import type { Locale } from '../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+
+// The Myers-Briggs Company trademark guidelines ask for this acknowledgement on the site's
+// legal information pages. The English sentence is their required wording, so it stays verbatim
+// in every locale (decision: company-brain mbti-strong-licensing-decision-2026-10-12.md).
+const notice = 'MBTI and Myers-Briggs are trademarks or registered trademarks of Myers & Briggs Foundation, Inc. in the United States and other countries.';
+const copy: Record<Locale, { heading: string; body: string }> = {
+  ko: { heading: '상표 안내', body: 'OIYO의 성격 유형 검사와 읽을거리는 OIYO가 직접 만든 자기이해 도구이며, 공식 MBTI® 검사가 아니고 Myers & Briggs Foundation 또는 The Myers-Briggs Company와 제휴·보증 관계가 없습니다.' },
+  en: { heading: 'Trademarks', body: "OIYO's personality-type tests and articles are OIYO-authored self-reflection tools. They are not the official MBTI® assessment and are not affiliated with or endorsed by Myers & Briggs Foundation or The Myers-Briggs Company." },
+  ja: { heading: '商標について', body: 'OIYOの性格タイプ診断と読み物はOIYOが独自に作成した自己理解ツールです。公式のMBTI®検査ではなく、Myers & Briggs FoundationおよびThe Myers-Briggs Companyとの提携・保証関係はありません。' },
+  zh: { heading: '商标说明', body: 'OIYO的性格类型测试和文章是OIYO自行编写的自我理解工具，并非官方MBTI®测评，与Myers & Briggs Foundation或The Myers-Briggs Company没有合作或背书关系。' },
+  fr: { heading: 'Marques', body: "Les tests de type de personnalité et les articles d'OIYO sont des outils de réflexion conçus par OIYO. Ils ne sont pas l'évaluation officielle MBTI® et ne sont ni affiliés à Myers & Briggs Foundation ou The Myers-Briggs Company, ni approuvés par elles." },
+  es: { heading: 'Marcas', body: 'Los tests de tipo de personalidad y los artículos de OIYO son herramientas de autorreflexión creadas por OIYO. No son la evaluación oficial MBTI® ni están afiliados a Myers & Briggs Foundation o The Myers-Briggs Company, ni cuentan con su respaldo.' },
+};
+const text = copy[locale] ?? copy.en;
+---
+
+<div class="rounded-2xl border border-border bg-card p-6">
+  <h2 class="mb-2 text-lg font-bold text-foreground">{text.heading}</h2>
+  <p class="text-sm leading-relaxed text-muted-foreground">{text.body}</p>
+  <p class="mt-2 text-xs text-muted-foreground">{notice}</p>
+</div>
