@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 import { recordTestResult } from '@/lib/user/test-results'
@@ -6,6 +6,9 @@ import { gaEvent } from '@/lib/analytics/ga-event'
 import { buildRiasecProfile, type RiasecType } from '../../lib/riasec-profile'
 import RiasecHexagonChart from '../shared/RiasecHexagonChart'
 import type { CareerExample } from '@/lib/career-exploration'
+import { orderCareerExamples } from '@/lib/career-exploration-order'
+import CareerComparison, { CAREER_COMPARISON_COPY } from '../career/CareerComparison'
+import { Button } from '@/components/ui/button'
 import {
   buildRiasecResult,
   recordAssessmentResult,
@@ -418,6 +421,10 @@ export default function RiasecCareerTest({ locale: lp = 'ko', careerExamples = [
   const [done, setDone] = useState(false)
   const [careerQuery, setCareerQuery] = useState('')
   const [careerLimit, setCareerLimit] = useState(18)
+  // 2026-10-12: comparison is transient; it must not alter saved assessment responses or profile choices.
+  const [comparedIds, setComparedIds] = useState<string[]>([])
+  const comparisonButtons = useRef(new Map<string, HTMLButtonElement>())
+  const explorationHeading = useRef<HTMLHeadingElement>(null)
 
   function pick(val: number) {
     if (Object.keys(responses).length === 0) gaEvent('test_started', { test_id: 'riasec' })
@@ -436,7 +443,7 @@ export default function RiasecCareerTest({ locale: lp = 'ko', careerExamples = [
     setCurrent(current - 1)
   }
 
-  function restart() { setScores({ R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 }); setResponses({}); setCurrent(0); setDone(false) }
+  function restart() { setScores({ R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 }); setResponses({}); setCurrent(0); setDone(false); setComparedIds([]); setCareerQuery(''); setCareerLimit(18) }
 
   // Record the result once, when the quiz is actually finished.
   useEffect(() => {
@@ -497,9 +504,18 @@ export default function RiasecCareerTest({ locale: lp = 'ko', careerExamples = [
   const interpretationTypes = resultProfile.interpretationTypes
   const careerCopy = CAREER_COPY[locale]
   const normalizedQuery = careerQuery.trim().toLocaleLowerCase(locale)
-  const matchingCareers = careerExamples
-    .filter(career => !normalizedQuery || `${career.title} ${career.description}`.toLocaleLowerCase(locale).includes(normalizedQuery))
-    .sort((a, b) => sorted.indexOf(a.code[0] as RiasecType) - sorted.indexOf(b.code[0] as RiasecType) || a.title.localeCompare(b.title, locale))
+  const matchingCareers = orderCareerExamples(careerExamples
+    .filter(career => !normalizedQuery || `${career.title} ${career.description}`.toLocaleLowerCase(locale).includes(normalizedQuery)), resultProfile, locale)
+  const comparisonCopy = CAREER_COMPARISON_COPY[locale]
+  const comparedCareers = comparedIds.flatMap(id => {
+    const career = careerExamples.find(row => row.id === id)
+    return career ? [career] : []
+  })
+  function removeComparison(id: string) {
+    setComparedIds(ids => ids.filter(value => value !== id))
+    // 2026-10-12: filtering can hide the original control; keep keyboard focus in the exploration either way.
+    ;(comparisonButtons.current.get(id) ?? explorationHeading.current)?.focus()
+  }
   const minScore = 4
   const maxScore = 20
 
@@ -545,9 +561,11 @@ export default function RiasecCareerTest({ locale: lp = 'ko', careerExamples = [
       {careerExamples.length > 0 && (
         <section className="rounded-xl border bg-card p-4 sm:p-6 space-y-4" aria-labelledby="career-exploration-title">
           <div className="space-y-1">
-            <h3 id="career-exploration-title" className="text-lg font-bold">{careerCopy.title}</h3>
+            <h3 ref={explorationHeading} tabIndex={-1} id="career-exploration-title" className="text-lg font-bold">{careerCopy.title}</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">{careerCopy.caution}</p>
+            <p className="text-sm leading-relaxed text-muted-foreground">{resultProfile.isMixed ? comparisonCopy.neutral : comparisonCopy.grouped}</p>
           </div>
+          <CareerComparison locale={locale} careers={comparedCareers} onRemove={removeComparison} />
           <label className="block space-y-2 text-sm font-medium">
             <span>{careerCopy.search}</span>
             <input
@@ -566,6 +584,15 @@ export default function RiasecCareerTest({ locale: lp = 'ko', careerExamples = [
                   <h4 className="font-semibold text-sm">{career.title}</h4>
                   <p className="text-xs text-muted-foreground">{careerCopy.interest}: {career.code.split('').join(' · ')}</p>
                   <p className="text-sm leading-relaxed text-muted-foreground">{career.description}</p>
+                  <Button
+                    ref={node => { if (node) comparisonButtons.current.set(career.id, node); else comparisonButtons.current.delete(career.id) }}
+                    type="button"
+                    variant={comparedIds.includes(career.id) ? 'secondary' : 'outline'}
+                    aria-pressed={comparedIds.includes(career.id)}
+                    aria-label={`${comparedIds.includes(career.id) ? comparisonCopy.selected : comparisonCopy.add}: ${career.title}`}
+                    disabled={comparedIds.length >= 2 && !comparedIds.includes(career.id)}
+                    onClick={() => setComparedIds(ids => ids.includes(career.id) ? ids.filter(id => id !== career.id) : ids.length < 2 ? [...ids, career.id] : ids)}
+                  >{comparedIds.includes(career.id) ? comparisonCopy.selected : comparisonCopy.add}</Button>
                 </li>
               ))}
             </ul>
