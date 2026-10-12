@@ -1,0 +1,122 @@
+---
+locale: es
+title: "La ley de los grandes números — la tasa de ruina contada en 2.000 simulaciones"
+series: "La arquitectura del juego de azar"
+chapter: 3
+author: OIYO Research Team
+tags:
+  - prevención del juego
+  - ley de los grandes números
+  - simulación
+  - probabilidad
+  - prevención de adicciones
+description: "Una simulación de Montecarlo para ver cómo se cumple en la práctica el «promedio» del valor esperado. El 71 % quedó en bancarrota a las 10.000 manos y el 100 % a las 100.000."
+pubDate: '2026-07-29'
+topic: addiction
+---
+
+En el capítulo 2 calculamos el valor esperado. Pero el valor esperado es solo un **promedio**. Aunque el promedio sea negativo, ¿no podría un jugador con suerte salir ganando?
+
+Este capítulo responde a esa pregunta con una **simulación**: no con un cálculo, sino ejecutando de verdad los números.
+
+## El diseño del experimento
+
+Creamos un programa que repite apuestas a la Banca en el bacará con estas condiciones:
+
+- Capital inicial: **1.000 $**
+- Apuesta por mano: **10 $**
+- Probabilidad de ganar **45,86 %**, con una comisión del 5 % sobre las ganancias
+- Empates (alrededor del **9,52 %**): se devuelve la apuesta
+- Si el capital baja de la cantidad apostada, la partida **se cuenta como bancarrota y se detiene**
+- Cada condición se simula con **2.000 jugadores independientes**
+
+Es decir, se mide lo siguiente: «Si 2.000 personas empiezan con el mismo dinero y juegan al mismo juego, ¿cuántas sobreviven?».
+
+## Resultados
+
+| Manos jugadas | Tasa de bancarrota | Saldo medio restante |
+|---:|---:|---:|
+| 100 | **0,0 %** | 990,21 $ |
+| 1.000 | **0,1 %** | 893,45 $ |
+| 10.000 | **70,7 %** | 264,02 $ |
+| 100.000 | **100,0 %** | 5,19 $ |
+
+<HighlightBox>
+**De los 2.000 jugadores, ni uno solo aguantó 100.000 manos.** Ni el que tenía suerte, ni el que tenía buen instinto, ni el que estaba en un buen día. Todos acabaron en bancarrota.
+</HighlightBox>
+
+## La fila más importante de la tabla
+
+**La fila de las 100 manos. Tasa de bancarrota: 0 %.**
+
+Nadie que jugó 100 manos se arruinó. De media perdieron unos 10 $, y aun así el 45 % de los 2.000 iba ganando. En esta etapa, el juego **parece una partida que vale la pena jugar.**
+
+Y esa es exactamente la trampa. **Lo que pasa en sus primeras 100 manos no le dice nada sobre lo que viene después.** Más bien siembra la convicción contraria.
+
+## ¿Qué es la ley de los grandes números?
+
+La **ley de los grandes números** dice que, a medida que aumenta el número de intentos, **los resultados reales se acercan al valor esperado.**
+
+- Si lanza una moneda 10 veces, puede salir cara 7 veces (70 %).
+- Si la lanza 10.000 veces, la proporción de caras quedará casi con seguridad cerca del 50 %.
+
+Aplicado al juego, significa esto:
+
+<FormulaBox>
+Pocas manos = manda la suerte · Muchas manos = manda la ventaja de la casa
+</FormulaBox>
+
+La suerte no desaparece. Pero **cuantas más manos se juegan, menor es su peso relativo**, y solo queda ese 1,06 % que se escapa de forma constante en cada mano.
+
+## La asimetría de capital — donde de verdad se decide la partida
+
+A esto se suma una segunda pieza estructural: **el operador y el jugador no tienen la misma cantidad de dinero.**
+
+- El capital del operador es prácticamente ilimitado.
+- El de una persona tiene un final.
+
+Incluso en un **juego perfectamente justo, con un valor esperado exactamente igual a cero**, el lado con menos dinero llega antes a cero. Esto se conoce como el problema de la **ruina del jugador** (Gambler's Ruin).
+
+<Callout>
+Incluso en un juego justo, quien tiene menos capital acaba arruinándose. Si además se añade la ventaja de la casa, como ocurre en el juego real, **«si juego lo suficiente, al final recupero lo perdido» simplemente no puede cumplirse.** Cuanto más tiempo se juega, más se acerca a 100 % la probabilidad de bancarrota.
+</Callout>
+
+## «Entonces basta con retirarse cuando se va ganando»
+
+En teoría es cierto. En la práctica casi nunca ocurre, por dos razones.
+
+**Primero, no hay manera de saber cuándo se ha llegado al punto más alto.** Retirarse ganando exige saber que «este es el máximo», y esa información no existe.
+
+**Segundo, ganar no hace que la gente pare, sino que siga.** Tiene que ver con el sistema de recompensa del cerebro, que veremos en el capítulo 6. Quienes ya han ganado tienden a jugar durante más tiempo y a apostar más fuerte.
+
+Vuelva a mirar el saldo medio a las 10.000 manos: 264,02 $. **Es una pérdida media de más del 70 %, y 7 de cada 10 jugadores se arruinaron.** Muchos de ellos seguramente fueron ganando en algún momento del camino.
+
+<Quiz>
+**Para pensar**
+
+Si pensó «¿quién juega 10.000 manos?», hagamos la cuenta.
+
+Si una ronda en línea dura 30 segundos, 10.000 manos son unas **83 horas**. A 3 horas al día, eso es **menos de un mes.**
+
+100.000 manos son unas **833 horas**, es decir, **unos 9 meses** a 3 horas al día. Para un hábito que dura meses o años, no es una cifra lejana.
+</Quiz>
+
+## Resumen
+
+1. A las 100 manos **nadie se arruina**, y casi la mitad va ganando. Por eso la gente empieza.
+2. A las 1.000 manos las bancarrotas siguen siendo raras, pero **el saldo medio ya ha bajado más de un 10 %.** A estas alturas ya cuesta parar.
+3. A las 10.000 manos, **el 71 % se arruina.**
+4. A las 100.000 manos, **el 100 % se arruina.** Sin excepciones en esta simulación.
+5. Quien tiene un capital limitado acaba arruinándose, **incluso en un juego perfectamente justo.**
+
+En el próximo capítulo veremos el intento de darle la vuelta a esta conclusión —las **estrategias de apuesta**— y por qué en realidad aceleran la bancarrota en lugar de evitarla.
+
+---
+
+## Fuentes
+
+- Las cifras de este capítulo proceden de una simulación de Montecarlo con semilla fija (2.000 ensayos independientes por condición).
+- La probabilidad de ganar y la comisión siguen las reglas estándar del bacará; los resultados reales varían según las reglas de la casa y la forma de apostar.
+- Verificado: 2026-07-29 (recalculado el 2026-10-12 tratando los empates como devolución de la apuesta)
+
+**Si el juego le está causando problemas — en Corea, llame a la línea de ayuda para problemas con el juego al 1336 (sin prefijo, 24 horas, todos los días, gratuita).** Si vive fuera de Corea, busque la línea nacional de ayuda para problemas con el juego de su país.
