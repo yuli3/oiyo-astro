@@ -197,7 +197,7 @@ export function analyzeSaju(result: SajuResult): SajuAnalysis {
     const branchData = earthlyBranches[branch];
     if (!branchData?.hiddenStems) return [];
     return branchData.hiddenStems.map((stem) =>
-      calculateTenGod(result.dayMaster, stem),
+      calculateTenGod(result.dayMaster, stem, "stem"),
     );
   });
 
@@ -376,9 +376,9 @@ export function calculateSaju(
   // Calculate Ten Gods relative to Day Master
   const dayMaster = dayGanzhi.stem;
 
-  yearPillar.tenGod = calculateTenGod(dayMaster, yearPillar.heavenlyStem);
-  monthPillar.tenGod = calculateTenGod(dayMaster, monthPillar.heavenlyStem);
-  hourPillar.tenGod = calculateTenGod(dayMaster, hourPillar.heavenlyStem);
+  yearPillar.tenGod = calculateTenGod(dayMaster, yearPillar.heavenlyStem, "stem");
+  monthPillar.tenGod = calculateTenGod(dayMaster, monthPillar.heavenlyStem, "stem");
+  hourPillar.tenGod = calculateTenGod(dayMaster, hourPillar.heavenlyStem, "stem");
 
   return {
     birthDate,
@@ -392,9 +392,13 @@ export function calculateSaju(
   };
 }
 
+// `kind` is required because the ids collide: "SIN" is both the stem 辛 and
+// the branch 申. Looking it up in earthlyBranches first read every 辛 stem as
+// 申's main stem 庚 (wrong ten god for any chart with 辛; fixed 2026-10-12).
 export function calculateTenGod(
   dayMaster: HeavenlyStem,
   target: EarthlyBranch | HeavenlyStem,
+  kind: "stem" | "branch",
 ): TenGod {
   if (!target || !dayMaster) return TenGod.BI_GYEON;
 
@@ -406,7 +410,7 @@ export function calculateTenGod(
   let targetElement: FiveElement;
   let targetYinYang: YinYang;
 
-  if (target in earthlyBranches) {
+  if (kind === "branch") {
     const branch = earthlyBranches[target as EarthlyBranch];
     if (!branch) return TenGod.BI_GYEON;
     // Use the main hidden stem (last one) for Ten God calculation
@@ -421,13 +425,11 @@ export function calculateTenGod(
 
     targetElement = heavenlyStems[mainHiddenStem].element;
     targetYinYang = heavenlyStems[mainHiddenStem].yinYang;
-  } else if (target in heavenlyStems) {
+  } else {
     // Guard against invalid stem reference
     if (!heavenlyStems[target as HeavenlyStem]) return TenGod.BI_GYEON;
     targetElement = heavenlyStems[target as HeavenlyStem].element;
     targetYinYang = heavenlyStems[target as HeavenlyStem].yinYang;
-  } else {
-    return TenGod.BI_GYEON;
   }
 
   const relation = getElementRelation(dmElement, targetElement);

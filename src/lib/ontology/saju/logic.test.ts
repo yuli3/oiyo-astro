@@ -5,8 +5,8 @@ import {
   calculateGreatFortune,
   calculateTrueSolarTime,
 } from "../../ontology/saju-core/advanced-logic";
-import { calculateSaju, STANDARD_MERIDIAN_KST } from "./logic";
-import { EarthlyBranch, HeavenlyStem } from "./types";
+import { calculateSaju, calculateTenGod, STANDARD_MERIDIAN_KST } from "./logic";
+import { EarthlyBranch, HeavenlyStem, TenGod } from "./types";
 
 // The golden data below is cut in KST, but nothing in the engine may depend on the
 // runtime timezone — the "Timezone independence" block flips process.env.TZ to prove
@@ -222,5 +222,14 @@ describe("Saju Logic Golden Suite", () => {
       // 23:45 should be Rat (Ja) hour
       expect(result.hour.earthlyBranch).toBe(EarthlyBranch.JA);
     });
+  });
+});
+
+describe("calculateTenGod with the shared SIN id", () => {
+  it("reads the stem 辛 as Yin Metal and the branch 申 by its main hidden stem 庚", () => {
+    expect(calculateTenGod(HeavenlyStem.GAP, HeavenlyStem.SIN, "stem")).toBe(TenGod.JEONG_GWAN);
+    expect(calculateTenGod(HeavenlyStem.GAP, EarthlyBranch.SIN, "branch")).toBe(TenGod.PYEON_GWAN);
+    expect(calculateTenGod(HeavenlyStem.GI, HeavenlyStem.SIN, "stem")).toBe(TenGod.SIK_SIN);
+    expect(calculateTenGod(HeavenlyStem.GYEONG, HeavenlyStem.SIN, "stem")).toBe(TenGod.GEOP_JAE);
   });
 });

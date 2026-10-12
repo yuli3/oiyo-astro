@@ -2,7 +2,7 @@ import { parseSajuInputState, parseSajuTime, type SajuInputState } from '../../l
 import { calculateBirthSaju } from '../../lib/ontology/saju/birth-contract';
 import { projectSajuCalculator } from '../../lib/ontology/saju/calculator-projection';
 import { resolveJeolgiBadgeAtInstant } from '../../lib/ontology/saju/jeolgi-badge';
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef, lazy, Suspense } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField';
 import CityField from '../shared/CityField';
@@ -26,6 +26,10 @@ import { prefersReducedMotion } from '../../hooks/useMotion';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import ResultSymbol from '../shared/ResultSymbol';
+
+// Off until OpenAI issues the client ID; the chunk is never fetched while off.
+const SIWC_ON = import.meta.env.PUBLIC_SIWC_ENABLED === '1';
+const ChatGptInterpretation = lazy(() => import('./saju/ChatGptInterpretation'));
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
@@ -1162,6 +1166,12 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             <h2 className="text-sm font-semibold text-green-800">{reading.profileChanges}</h2>
             <p className="mt-2 text-xs leading-relaxed text-green-900/75">{reading.profileChangesDesc}</p>
           </div>
+
+          {SIWC_ON && projection?.status === 'resolved' && (
+            <Suspense fallback={null}>
+              <ChatGptInterpretation locale={locale} pillars={projection.pillars} />
+            </Suspense>
+          )}
 
           <Card className="border-primary/20 bg-primary/[0.04] shadow-sm">
             <CardHeader className="pb-3 text-center">
