@@ -15,8 +15,6 @@ topic: attachment
 
 import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
-import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
@@ -28,7 +26,7 @@ Bowlby argued that humans are born with a biological drive to stay close to an a
 
 ### Core Assumptions of Attachment Theory
 
-1. **The power of early experience**: The caregiver's responsiveness in the first two years of life determines attachment patterns
+1. **The power of early experience**: The caregiver's responsiveness early in life strongly shapes attachment patterns
 2. **Secure base**: Stable attachment figures are necessary for safe exploration of the world
 3. **Continuity**: Childhood attachment patterns carry forward into adult romance, friendship, and work relationships
 4. **Changeability**: Insecure attachment patterns can shift through conscious effort and therapy
@@ -38,15 +36,17 @@ Bowlby argued that humans are born with a biological drive to stay close to an a
 ## 1. Key Statistics on Attachment Styles
 
 <StatCards
-  title="Adult Attachment Style Distribution (Global Research)"
+  title="Example Adult Attachment Distribution (Hazan & Shaver, 1987, newspaper-reader sample)"
   cols={2}
   items={[
-    { label: "Secure Attachment", value: "~55–60%", description: "Positive self-image + positive view of others. Comfortable pursuing intimacy" },
-    { label: "Anxious Attachment (Preoccupied)", value: "~15–20%", description: "Negative self-image + positive view of others. Fear of abandonment" },
-    { label: "Avoidant Attachment (Dismissing)", value: "~15–20%", description: "Positive self-image + negative view of others. Avoids intimacy, over-emphasizes independence" },
-    { label: "Disorganized Attachment (Fearful)", value: "~5–10%", description: "Negative self-image + negative view of others. Wants relationships but is afraid of them" }
+    { label: "Secure Attachment", value: "~56%", description: "Positive self-image + positive view of others. Comfortable pursuing intimacy" },
+    { label: "Anxious Attachment (Preoccupied)", value: "~19%", description: "Negative self-image + positive view of others. Fear of abandonment" },
+    { label: "Avoidant Attachment (Dismissing)", value: "~25%", description: "Positive self-image + negative view of others. Avoids intimacy, over-emphasizes independence" },
+    { label: "Disorganized / Fearful Attachment", value: "4-category model", description: "Negative self-image + negative view of others. Added by Bartholomew & Horowitz (1991); its share varies by sample" }
   ]}
 />
+
+These figures come from one three-category (secure, anxious, avoidant) self-report study. Proportions vary with the sample and the measure, and four-category studies often find a lower share of secure adults. Many researchers now describe attachment less as fixed types and more as **two continuous dimensions: anxiety and avoidance**.
 
 ---
 
@@ -80,8 +80,8 @@ Forms when a caregiver responded **inconsistently** — sometimes attentive, som
 - Simultaneously self-critical and idealizing of the partner
 - Slow recovery after breakups; prone to fixation
 
-<Callout type="info" title="The Neurobiology of Anxious Attachment">
-The anxious brain is more sensitized to threat signals — such as a partner pulling away. This heightened amygdala reactivity is likely a result of early inconsistent caregiving. What looks like "overreacting" from the outside is actually a survival strategy formed through experience.
+<Callout type="info" title="Anxious Attachment and Threat Sensitivity">
+Anxiously attached people tend to react more strongly to relationship threat signals, such as a partner pulling away. Some brain-imaging studies have linked attachment anxiety with amygdala reactivity, but cause and effect have not been established. What looks like "overreacting" from the outside can be understood as a survival strategy learned through experience.
 </Callout>
 
 ---
@@ -105,14 +105,15 @@ Forms when a caregiver was **consistently unresponsive or rejecting**. Repeated 
 
 **Core inner voice**: *"I need you, and you terrify me."*
 
-Forms when the primary caregiver was simultaneously **a source of safety and a source of fear** — associated with abuse, severe neglect, or significant caregiver mental illness.
+Forms when the primary caregiver was simultaneously **a source of safety and a source of fear** — associated with abuse, severe neglect, or a caregiver's unresolved trauma.
+
+A note on terms: "disorganized" was originally defined by Main & Solomon (1990) from observations of infants. In adult research, the closest counterpart is Bartholomew's "fearful-avoidant" style. This guide discusses the two together.
 
 **Characteristics**:
 - Conflicting desires: craves closeness while being afraid of it
 - Unpredictable behavioral patterns in relationships
 - Difficulty regulating emotions; impulsive actions
-- May be associated with self-harm or dissociation
-- The style most amenable to change through therapy
+- If the struggle feels heavy, working through it with a professional is recommended rather than carrying it alone
 
 ---
 
@@ -133,22 +134,7 @@ Forms when the primary caregiver was simultaneously **a source of safety and a s
 
 ---
 
-## 4. Relationship Strengths Radar Chart by Attachment Style
-
-<RadarChart
-  title="Relational Competency Comparison by Attachment Style"
-  axes={["Emotional Regulation", "Allowing Intimacy", "Independence", "Conflict Resolution", "Building Trust", "Self-Expression"]}
-  datasets={[
-    { label: "Secure", color: "#10b981", values: [90, 88, 85, 88, 92, 85] },
-    { label: "Anxious", color: "#f59e0b", values: [45, 95, 40, 50, 70, 78] },
-    { label: "Avoidant", color: "#3b82f6", values: [75, 35, 95, 55, 55, 45] },
-    { label: "Disorganized", color: "#ef4444", values: [30, 50, 45, 30, 40, 40] }
-  ]}
-/>
-
----
-
-## 5. Can You Change Your Attachment Style?
+## 4. Can You Change Your Attachment Style?
 
 The short answer: **yes**. The most hopeful finding in attachment research is that insecure attachment formed in childhood **can change through adult experiences and conscious effort**.
 
@@ -156,39 +142,28 @@ The short answer: **yes**. The most hopeful finding in attachment research is th
 
 **1. A Relationship with a Stable Partner**
 - A long-term relationship with a consistently responsive, trustworthy partner can reorganize the internal working model
-- This is called a "Corrective Emotional Experience"
+- Reaching secure attachment later in life despite an insecure start is called "earned security"
 
 **2. Psychotherapy**
 - **Attachment-Based Therapy**: The therapist's stable relationship becomes a secure base
-- **EMDR**: Particularly effective for disorganized attachment and trauma
+- **EMDR**: A trauma (PTSD) treatment, considered when attachment difficulties are tangled up with trauma
 - **EFT (Emotionally Focused Therapy)**: Specialized for improving attachment patterns in couples
 
 **3. Self-Awareness and Mindfulness**
 - Simply recognizing your own reactive patterns can reduce automatic responses
-- Mindfulness meditation effectively improves emotional regulation
-
-<BarChart
-  title="Effectiveness of Treatment Approaches for Insecure Attachment (Research-Based Comparison)"
-  data={[
-    { label: "Long-term Psychotherapy", value: 85 },
-    { label: "Stable Partner Relationship", value: 75 },
-    { label: "EFT Couples Therapy", value: 78 },
-    { label: "EMDR (Trauma)", value: 72 },
-    { label: "Mindfulness Training", value: 60 }
-  ]}
-/>
+- Mindfulness meditation may help with emotional regulation
 
 ---
 
-## 6. Romantic Pairing Patterns by Attachment Style
+## 5. Romantic Pairing Patterns by Attachment Style
 
 | Pairing | Relational Dynamics | Growth Direction |
 |---------|---------------------|-----------------|
 | Secure × Secure | The healthiest, most stable pairing | Sustained growth; each serves as the other's secure base |
-| Anxious × Avoidant | The most common and painful "push-pull" dynamic | Understand each other's style; make communication explicit |
+| Anxious × Avoidant | An often painful "push-pull" dynamic | Understand each other's style; make communication explicit |
 | Anxious × Anxious | Mutual reassurance needs → emotional exhaustion, intense conflict | Practice independence; develop self-soothing capacity |
 | Avoidant × Avoidant | Surface stability, lack of deep intimacy | Practice expressing vulnerability; share emotions |
-| Secure × Anxious/Avoidant | The secure partner gradually stabilizes the insecure one | Prevent burnout in the secure partner; maintain boundaries |
+| Secure × Anxious/Avoidant | The secure partner's consistency can help the insecure one feel safer | Prevent burnout in the secure partner; maintain boundaries |
 
 <Callout type="tip" title="For the Anxious × Avoidant Couple">
 This pairing exerts a powerful gravitational pull on both people. The anxious partner moves toward connection; the avoidant partner moves away. Simply naming this pattern can dramatically improve the quality of the relationship. Couples counseling can help both partners build new communication habits.
@@ -196,22 +171,26 @@ This pairing exerts a powerful gravitational pull on both people. The anxious pa
 
 ---
 
-## 7. Attachment Styles at Work
+## 6. Attachment Styles at Work
 
-Attachment patterns influence not only romantic relationships but also **workplace dynamics**.
+Attachment patterns can influence not only romantic relationships but also **workplace dynamics** (Hazan & Shaver, 1990). The table shows tendencies only; individual differences are large.
 
-| Style | With Managers | With Colleagues | Performance Patterns |
-|-------|--------------|-----------------|---------------------|
-| Secure | Receptive to feedback | Collaborative; resolves conflict constructively | Consistent high performance; natural leadership |
-| Anxious | Over-reliant on manager's approval | Strong need for recognition; avoids conflict | High potential but inconsistent output |
-| Avoidant | Prefers independent work; avoids feedback | Surface cooperation; resists closeness | Strong individual performance, low team synergy |
-| Disorganized | Unpredictable; complex reactions to authority | Irregular social patterns | High potential, high turnover |
+| Style | With Managers | With Colleagues |
+|-------|--------------|-----------------|
+| Secure | Receptive to feedback | Collaborative; resolves conflict constructively |
+| Anxious | Over-reliant on manager's approval | Strong need for recognition; avoids conflict |
+| Avoidant | Prefers independent work; avoids feedback | Surface cooperation; resists closeness |
+| Disorganized | Unpredictable; complex reactions to authority | Irregular social patterns |
 
 ---
 
-## 8. Take the Attachment Style Test
+## 7. Take the Attachment Style Test
 
-<ToolCTA tool="attachment-style" />
+<ToolCTA tool="attachment-style" locale="en" />
+
+<Callout type="info" title="Please note">
+This article and test offer general information for self-understanding and are not a diagnosis. If relationship or emotional difficulties persist, consider talking with a mental health professional.
+</Callout>
 
 ---
 
@@ -223,3 +202,6 @@ Attachment patterns influence not only romantic relationships but also **workpla
 - **Wikipedia — Attachment Theory**: [https://en.wikipedia.org/wiki/Attachment_theory](https://en.wikipedia.org/wiki/Attachment_theory)
 - **Psychology Today — Attachment**: [https://www.psychologytoday.com/us/basics/attachment](https://www.psychologytoday.com/us/basics/attachment)
 - **Journal of Personality and Social Psychology**: Hazan & Shaver (1987) — Adult romantic attachment research
+- **Hazan & Shaver (1990)**, "Love and work: An attachment-theoretical perspective", *JPSP* 59(2) — Attachment and work life
+- **Bartholomew & Horowitz (1991)**, "Attachment styles among young adults: A test of a four-category model", *JPSP* 61(2) — Four-category model
+- **Main & Solomon (1990)**, in *Attachment in the Preschool Years* — The disorganized category

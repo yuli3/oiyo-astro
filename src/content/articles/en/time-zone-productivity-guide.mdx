@@ -48,13 +48,13 @@ As the world becomes more interconnected, understanding time zones has evolved f
   rows={[
     { left: "Atomic clock-based — the most precise international standard", right: "Based on Earth's rotation — an astronomical measurement" },
     { left: "Used globally for IT, telecom, aviation, and finance", right: "Historical standard for navigation and geography (still widely used)" },
-    { left: "Maintained within ±0.9 seconds via leap seconds", right: "Minor drift occurs due to irregular Earth rotation" },
+    { left: "Kept within 0.9 seconds of Earth-rotation time (UT1) via leap seconds", right: "Minor drift occurs due to irregular Earth rotation" },
     { left: "Officially replaced GMT as the international standard in 1972", right: "Used interchangeably with UTC in everyday speech — both are fine" }
   ]}
 />
 
 <Callout type="info" title="Daylight Saving Time (DST) — Things to Watch Out For">
-In the US, clocks spring forward one hour on the second Sunday of March and fall back on the first Sunday of November. During US Daylight Saving Time, the offset between the US East Coast and Europe narrows by one hour, which can quietly shift the window for your scheduled meetings. **Always verify DST status when planning cross-timezone calls or trades.**
+In the US, clocks spring forward one hour on the second Sunday of March and fall back on the first Sunday of November. Europe switches on different dates (last Sunday of March and last Sunday of October), so for a few weeks each spring and autumn the gap between the US East Coast and Europe shrinks by one hour, which can quietly shift the window for your scheduled meetings. **Always verify DST status when planning cross-timezone calls or trades.**
 </Callout>
 
 ---
@@ -69,7 +69,7 @@ The most common friction point in remote and global teams: "What time works for 
 |----------------|----------------------------------|-------|
 | New York + London | 9:00 AM–12:00 PM ET | London is 5 hrs ahead (winter), 4 hrs (summer) |
 | New York + Tokyo | Very limited (13–14 hrs apart) | One party will need to be outside business hours |
-| New York + Sydney | Very limited (14–15 hrs apart) | Schedule for early morning ET / late afternoon AEST |
+| New York + Sydney | Very limited (14–16 hrs apart) | Try late afternoon ET / early morning Sydney (next day) |
 | New York + Los Angeles | All business hours | Only 3 hrs apart |
 | London + Berlin + Paris | Full business day overlap | Same or adjacent time zones |
 
@@ -81,7 +81,7 @@ When overlap is less than two hours per day, an **async-first strategy** is esse
 
 ## 4. Global Stock Market Hours
 
-| Exchange | Local Hours | Eastern Time (Winter/Summer) |
+| Exchange | Local Hours | Eastern Time (Winter, EST) |
 |----------|-------------|------------------------------|
 | NYSE / NASDAQ | 9:30 AM–4:00 PM ET | 9:30 AM–4:00 PM ET |
 | London Stock Exchange (LSE) | 8:00 AM–4:30 PM GMT | 3:00 AM–11:30 AM ET |
@@ -89,13 +89,15 @@ When overlap is less than two hours per day, an **async-first strategy** is esse
 | Hong Kong Exchange (HKEX) | 9:30 AM–4:00 PM HKT | 8:30 PM–3:00 AM ET (prev. day) |
 | Shanghai Exchange (SSE) | 9:30 AM–3:00 PM CST | 8:30 PM–2:00 AM ET (prev. day) |
 
+Times are for US winter. During US Daylight Saving Time, add one hour to the Asian rows; LSE stays at 3:00–11:30 AM ET because the UK shifts too. Hong Kong and Shanghai also pause for a midday lunch break.
+
 ---
 
 ## 5. Productivity Strategies by Time Zone
 
 ### Freelancers and Digital Nomads
 
-- **Serving US clients from Europe**: European morning overlaps with US East Coast afternoon. Use that window for calls and async delivery; do deep work in your evening.
+- **Serving US clients from Europe**: European afternoon overlaps with the US East Coast morning. Use that window for calls and async delivery; do deep work in your morning.
 - **Serving European clients from the Americas**: Early morning ET aligns with EU business hours — front-load your day with communication.
 - **The Golden Rule**: Block a fixed "communication window" that matches your clients' working hours; protect the rest of your day for focused work.
 
@@ -103,13 +105,13 @@ When overlap is less than two hours per day, an **async-first strategy** is esse
 
 - **US pre-market session**: 4:00–9:30 AM ET — early price discovery, lower volume
 - **European open overlap with US pre-market**: 3:00–9:30 AM ET — can see increased volatility, especially for companies with EU exposure
-- **US market close overlap with Asia open**: 4:00–5:00 PM ET — watch for after-hours moves that affect the following day's Asian session
+- **US close to Asia open**: Tokyo opens at 7:00 PM ET in winter (8:00 PM in summer) — after-hours moves in the US can carry into the Asian session
 
 ---
 
 ## 6. World Clock Tool
 
-<ToolCTA tool="worldclock" />
+<ToolCTA tool="worldclock" locale="en" />
 
 ---
 
