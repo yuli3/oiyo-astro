@@ -4,6 +4,7 @@ import { LOCALES, type Locale } from '../../../i18n';
 import PeriodicFortune from '../../../components/tools/PeriodicFortune';
 import { PERIODS, appName, getPeriodicPageCopy, periodName } from '../../../lib/fortune/periodic-page-content';
 import type { Period } from '../../../lib/fortune/periodic';
+import { getNewYearReportCopy } from '../../../lib/fortune/new-year-report-copy';
 
 export function getStaticPaths() {
   return LOCALES.flatMap((locale) => PERIODS.map((period) => ({ params: { locale, period } })));
@@ -11,6 +12,7 @@ export function getStaticPaths() {
 
 const { locale, period } = Astro.params as { locale: Locale; period: Period };
 const copy = getPeriodicPageCopy('saju', period, locale);
+const newYear = getNewYearReportCopy(locale);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const routeBase = `/${locale}/saju`;
 const periodLinks = PERIODS.map((p) => ({
@@ -77,6 +79,13 @@ const howToJsonLd = {
         </a>
       ))}
     </nav>
+
+    {period === 'yearly' && (
+      <a href={`/${locale}/saju/new-year-2027/`} class="mt-6 block rounded-xl border border-primary bg-card p-4 transition hover:bg-muted">
+        <span class="text-sm font-black text-primary">🐐 {newYear.page.eyebrow}</span>
+        <span class="mt-1 block text-sm leading-relaxed text-muted-foreground">{newYear.page.sub}</span>
+      </a>
+    )}
 
     <div class="mt-8 rounded-2xl border bg-card p-5 shadow-sm">
       <PeriodicFortune client:load locale={locale} period={period} focus="saju" />
