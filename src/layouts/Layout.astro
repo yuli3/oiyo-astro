@@ -197,10 +197,17 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       }
     </script>
 
-    <!-- Google AdSense Auto Ads — same publisher as blog/wiki (ca-pub-9541920090543312) -->
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-    <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
-    <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9541920090543312" crossorigin="anonymous"></script>
+    <!-- Google AdSense Auto Ads — same publisher as blog/wiki (ca-pub-9541920090543312).
+         Pages the author explicitly keeps out of the index (draft tests, gated results,
+         private pair pages, prototypes) carry no ads, as on blog/game/wiki/news. Gated on
+         the explicit prop only: deindexed locales are real content and keep earning. -->
+    {!noindex && (
+      <>
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+        <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9541920090543312" crossorigin="anonymous"></script>
+      </>
+    )}
   </head>
   <body>
     <a
