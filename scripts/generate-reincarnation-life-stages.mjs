@@ -233,6 +233,45 @@ const FAMOUS_BLOCK =
   }
 }
 
+// --- National symbols as pictures (2026-10-13 세운: "국기, 국조 등의 상징을 그림으로").
+// Facts from Wikidata (CC0): coat of arms (P94) and official symbols (P2238). Pictures are
+// Wikimedia Commons thumbnails, kept only when the file is public domain, CC0, CC BY or CC BY-SA,
+// and shown with author, licence and a link to the file page. Flags come from flag-icons (MIT).
+if (existsSync(`${dir}/reincarnation-stats-6/symbols.csv`)) {
+  const KIND_ORDER = ["emblem", "bird", "animal", "flower", "tree"];
+  const COMMONS_THUMB = "https://upload.wikimedia.org/wikipedia/commons/thumb/";
+  const byIso = new Map();
+  for (const row of readCsv("reincarnation-stats-6/symbols.csv")) {
+    if (!wanted.has(row.iso3) || !row.image_url.startsWith(COMMONS_THUMB)) continue;
+    const list = byIso.get(row.iso3) ?? [];
+    list.push(row);
+    byIso.set(row.iso3, list);
+  }
+  const clip = (text, max) => (text.length > max ? `${text.slice(0, max - 1).trimEnd()}…` : text);
+  for (const [iso3, list] of byIso) {
+    list.sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || a.name_en.localeCompare(b.name_en));
+    // One emblem and at most three living symbols, so the strip stays one row on a phone.
+    const emblem = list.filter((row) => row.kind === "emblem").slice(0, 1);
+    const living = list.filter((row) => row.kind !== "emblem").slice(0, 3);
+    put(
+      iso3,
+      "symbols",
+      [...emblem, ...living].map((row) => ({
+        kind: row.kind,
+        // "국화 (식물)" is a disambiguated Wikipedia-style label; the bracket means nothing on a card.
+        ko: row.name_ko.replace(/\s*\([^)]*\)$/, "") || undefined,
+        en: row.name_en.charAt(0).toUpperCase() + row.name_en.slice(1),
+        // Path under COMMONS_THUMB; the file page is rebuilt from it in reincarnation-stages.ts.
+        img: row.image_url.slice(COMMONS_THUMB.length),
+        licence: row.licence,
+        licenceUrl: row.licence_url || undefined,
+        by: clip(row.artist.replace(/\s+/g, " ").trim(), 80) || undefined,
+      })),
+    );
+  }
+  coverage.symbols = byIso.size;
+}
+
 const sorted = Object.fromEntries(
   Object.keys(countries)
     .filter((iso3) => wanted.has(iso3) && Object.keys(countries[iso3]).length > 0)
@@ -244,7 +283,7 @@ for (const [key, n] of Object.entries(coverage).sort()) console.log(`${key}: ${n
 
 const out = {
   source:
-    "UN World Population Prospects 2024 (survival, mother’s age, fertility); UN World Urbanization Prospects 2025; UN World Marriage Data 2019; UN DESA International Migrant Stock 2024; World Bank (electricity); UNDP Human Development Report (expected schooling); Penn World Table 11.0 (working hours); FAOSTAT Food Balance Sheets; Copernicus ERA5 via Our World in Data (temperature, contains modified Copernicus Climate Change Service information 2026); CIA World Factbook (median age); Wikidata (driving side, people born in each country); SSA, INSEE, SSB, Statistics Canada, NSW BDM and ONS (baby names).",
+    "UN World Population Prospects 2024 (survival, mother’s age, fertility); UN World Urbanization Prospects 2025; UN World Marriage Data 2019; UN DESA International Migrant Stock 2024; World Bank (electricity); UNDP Human Development Report (expected schooling); Penn World Table 11.0 (working hours); FAOSTAT Food Balance Sheets; Copernicus ERA5 via Our World in Data (temperature, contains modified Copernicus Climate Change Service information 2026); CIA World Factbook (median age); Wikidata (driving side, people born in each country, national symbols); SSA, INSEE, SSB, Statistics Canada, NSW BDM and ONS (baby names).",
   asOf: `latest year with data, up to ${MAX_YEAR}; temperature is the ${MAX_YEAR - TEMP_WINDOW + 1}–${MAX_YEAR} mean`,
   countries: sorted,
 };

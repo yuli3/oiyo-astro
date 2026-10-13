@@ -32,6 +32,7 @@ import { birthsPerSecond, dotValue } from "../../lib/reincarnation-particles";
 import { useReducedMotion } from "../../hooks/useMotion";
 import { sameSecondBirths } from "../../lib/reincarnation-life";
 import ReincarnationGlobe from "./ReincarnationGlobe";
+import CountryFlag from "./CountryFlag";
 import ReincarnationLife from "./ReincarnationLife";
 import PhysicsJar from "../visual/PhysicsJar";
 
@@ -462,7 +463,10 @@ export default function ReincarnationCountry({ locale }: Props) {
         </div>
       ) : latest ? (
         <div className="rounded-2xl border border-border bg-card p-5">
-          <p className="text-3xl font-black tracking-tight text-foreground">{nameOf(latest, locale)}</p>
+          <div className="flex items-center gap-3">
+            <CountryFlag iso2={latest.iso2} className="h-9 sm:h-11" />
+            <p className="min-w-0 text-3xl font-black leading-tight tracking-tight text-balance text-foreground">{nameOf(latest, locale)}</p>
+          </div>
           <dl className="mt-3 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
             <div>
               <dt className="text-slate-400">{COPY.birthChance[locale]}</dt>
@@ -544,8 +548,14 @@ export default function ReincarnationCountry({ locale }: Props) {
             <ol className="mt-4 grid gap-1 text-sm text-slate-700 sm:grid-cols-2" aria-label={COPY.lives[locale]}>
               {results.map((country, index) => (
                 <li key={`${country.iso3}-${index}`}>
-                  <button type="button" className="underline-offset-2 hover:underline" onClick={() => setFocus(country)}>
-                    {index + 1}. {nameOf(country, locale)}
+                  <button
+                    type="button"
+                    className="inline-flex min-h-11 items-center gap-2 underline-offset-2 hover:underline sm:min-h-0"
+                    onClick={() => setFocus(country)}
+                  >
+                    <span className="w-5 text-right tabular-nums text-muted-foreground">{index + 1}</span>
+                    <CountryFlag iso2={country.iso2} className="h-3.5" />
+                    {nameOf(country, locale)}
                   </button>
                 </li>
               ))}
@@ -587,12 +597,14 @@ export default function ReincarnationCountry({ locale }: Props) {
                 onClick={() => {
                   setFocus(row);
                 }}
-                className="flex w-full items-center justify-between px-4 py-2 text-left text-sm hover:bg-card"
+                className="flex min-h-11 w-full items-center justify-between gap-2 px-4 py-2 text-left text-sm hover:bg-surface-subtle"
               >
-                <span>
-                  {i + 1}. {nameOf(row, locale)}
+                <span className="flex min-w-0 items-center gap-2">
+                  <span className="w-5 text-right tabular-nums text-muted-foreground">{i + 1}</span>
+                  <CountryFlag iso2={row.iso2} className="h-3.5" />
+                  <span className="truncate">{nameOf(row, locale)}</span>
                 </span>
-                <span className="text-muted-foreground">{formatPct(countryShare(row, mode), locale)}</span>
+                <span className="shrink-0 tabular-nums text-muted-foreground">{formatPct(countryShare(row, mode), locale)}</span>
               </button>
             </li>
           ))}
