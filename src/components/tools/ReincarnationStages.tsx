@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import type { Locale } from "../../i18n";
 import { displayCountryName, type ReincarnationCountry as Country } from "../../lib/reincarnation";
 import {
   famousNames,
   lifeStops,
   STALE_SURVEY_YEAR,
+  SYMBOL_LISTS,
   symbolFilePage,
   symbolImage,
   type NationalSymbol,
@@ -127,7 +128,15 @@ const COPY = {
   animal: { ko: "나라 동물", en: "National animal", ja: "国の動物", zh: "国家动物", fr: "Animal national", es: "Animal nacional" },
   flower: { ko: "나라 꽃", en: "National flower", ja: "国花", zh: "国花", fr: "Fleur nationale", es: "Flor nacional" },
   tree: { ko: "나라 나무", en: "National tree", ja: "国の木", zh: "国树", fr: "Arbre national", es: "Árbol nacional" },
-  credits: { ko: "그림 출처", en: "Image credits", ja: "画像の出典", zh: "图片来源", fr: "Crédits des images", es: "Créditos de las imágenes" },
+  credits: { ko: "그림·자료 출처", en: "Image and data credits", ja: "画像・資料の出典", zh: "图片与资料来源", fr: "Crédits des images et des données", es: "Créditos de imágenes y datos" },
+  lists: {
+    ko: "나라 새·동물·꽃 일부는 영어 위키백과 목록에서 가져왔어요. 공식 지정이 아닌 것도 섞여 있어요",
+    en: "Some national birds, animals and flowers come from English Wikipedia lists, which include unofficial ones",
+    ja: "国鳥・動物・花の一部は英語版ウィキペディアの一覧から。公式指定でないものも含みます",
+    zh: "部分国鸟、动物和花取自英文维基百科列表，其中也有非官方的",
+    fr: "Certains oiseaux, animaux et fleurs viennent de listes de Wikipédia en anglais, officiels ou non",
+    es: "Algunas aves, animales y flores vienen de listas de Wikipedia en inglés, oficiales o no",
+  },
   famous: { ko: "이 나라에서 태어난 사람", en: "Also born here", ja: "この国で生まれた人", zh: "同样出生在这里", fr: "Nés ici aussi", es: "También nacieron aquí" },
   famousNote: {
     ko: "위키백과 언어판이 많은 예술가·과학자·작가·운동선수 순이에요.",
@@ -274,6 +283,23 @@ function SymbolStrip({ symbols, locale, countryName }: { symbols: NationalSymbol
               </a>
             </li>
           ))}
+          {shown.some((symbol) => symbol.wiki) && (
+            <li className="break-words">
+              {COPY.lists[locale]}:{" "}
+              {SYMBOL_LISTS.map((list, i) => (
+                <Fragment key={list.url}>
+                  {i > 0 && ", "}
+                  <a className="underline underline-offset-2" href={list.url} target="_blank" rel="noopener noreferrer">
+                    {list.title}
+                  </a>
+                </Fragment>
+              ))}
+              ,{" "}
+              <a className="underline underline-offset-2" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
+                CC BY-SA 4.0
+              </a>
+            </li>
+          )}
         </ul>
       </details>
     </div>

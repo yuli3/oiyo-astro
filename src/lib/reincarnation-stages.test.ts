@@ -44,7 +44,7 @@ describe("reincarnation life-stages data", () => {
 
 describe("national symbols", () => {
   it("only links Commons files under an allowed licence, emblem first", () => {
-    const allowed = /^(Public domain|CC0|CC BY(-SA)? \d\.\d)$/;
+    const allowed = /^(Public domain|CC0|CC BY(-SA)? \d\.\d( [a-z]{2})?)$/;
     for (const [iso3, row] of Object.entries(ROWS)) {
       for (const symbol of row.symbols ?? []) expect(symbol.licence, iso3).toMatch(allowed);
       const kinds = (row.symbols ?? []).map((symbol) => symbol.kind);
@@ -52,6 +52,16 @@ describe("national symbols", () => {
       expect(kinds.length, iso3).toBeLessThanOrEqual(4);
     }
     expect(ROWS.KOR.symbols?.[0].kind).toBe("emblem");
+  });
+
+  it("adds a bird, an animal or a flower for most countries from the Wikipedia lists", () => {
+    const living = Object.values(ROWS).filter((row) => row.symbols?.some((symbol) => symbol.kind !== "emblem"));
+    expect(living.length).toBeGreaterThan(120);
+    // 까치·호랑이·무궁화: one of each kind before a second of any.
+    expect(ROWS.KOR.symbols?.map((symbol) => symbol.kind)).toEqual(["emblem", "bird", "animal", "flower"]);
+    expect(ROWS.KOR.symbols?.find((symbol) => symbol.kind === "flower")?.ko).toBe("무궁화");
+    // Wikidata's own official symbol stays ahead of the list (흰머리수리).
+    expect(ROWS.USA.symbols?.find((symbol) => symbol.kind === "bird")?.wiki).toBeUndefined();
   });
 
   it("rebuilds the thumbnail and file page from the stored path", () => {
