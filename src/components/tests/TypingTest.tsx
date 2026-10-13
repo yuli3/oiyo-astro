@@ -48,7 +48,10 @@ type GameState = 'idle' | 'running' | 'done';
 const TypingTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
   const t = L[locale] ?? L.en;
   const [duration, setDuration] = useState(30);
-  const [passage, setPassage] = useState(getPassage);
+  // 2026-10-09: SSR and hydration must start with identical text; randomize
+  // only after hydration so the first input is not discarded by React recovery.
+  const [passage, setPassage] = useState(PASSAGES[0]);
+  useEffect(() => { setPassage(getPassage()); }, []);
   const [typed, setTyped] = useState('');
   const [state, setState] = useState<GameState>('idle');
   const [timeLeft, setTimeLeft] = useState(30);

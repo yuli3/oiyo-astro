@@ -17,17 +17,27 @@ const T: Record<Locale, { eyebrow: string; title: string; method: string; limit:
   es: { eyebrow: 'Fuentes', title: 'Modelos que referencia este test', method: 'Escalas y teorías', limit: 'Antes de leer', updated: 'Nota de fuentes actualizada', methodology: 'Ver metodología' },
 };
 const copy = T[locale] ?? T.en;
+const performanceLabels: Record<Locale, { title: string; method: string }> = {
+  ko: { title: '측정 방식과 한계', method: '계산 방법' },
+  en: { title: 'Measurement and limits', method: 'How scores are calculated' },
+  ja: { title: '測定方法と限界', method: '計算方法' },
+  zh: { title: '测量方法与局限', method: '计算方法' },
+  fr: { title: 'Mesure et limites', method: 'Calcul des scores' },
+  es: { title: 'Medición y límites', method: 'Cálculo de las puntuaciones' },
+};
+// 2026-10-10: a typing measurement must not claim a referenced personality model.
+const labels = note.caution === 'performance' ? performanceLabels[locale] : copy;
 ---
 
 <section class="mx-auto mt-8 max-w-2xl px-4 pb-2">
   <div class="rounded-lg border border-border bg-card p-5 shadow-sm">
     <p class="text-[11px] font-black uppercase tracking-widest text-primary">{copy.eyebrow}</p>
-    <h2 class="mt-2 text-lg font-black text-foreground">{copy.title}</h2>
+    <h2 class="mt-2 text-lg font-black text-foreground">{labels.title}</h2>
     <div class="mt-4 grid gap-4 sm:grid-cols-[1fr_1.2fr]">
       <div>
-        <h3 class="text-xs font-bold uppercase tracking-wide text-muted-foreground">{copy.method}</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wide text-muted-foreground">{labels.method}</h3>
         <ul class="mt-2 space-y-1.5 text-sm leading-6 text-slate-700">
-          {note.basis.map((item) => <li>{item}</li>)}
+          {(note.basisByLocale?.[locale] ?? note.basis).map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div>

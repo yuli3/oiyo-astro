@@ -37,7 +37,13 @@ type QuestionnaireProps<TValue extends QuestionnaireValue = number> = {
   headingLevel?: 1 | 2;
 };
 
-export function Questionnaire<TValue extends QuestionnaireValue = number>({
+export function Questionnaire<TValue extends QuestionnaireValue = number>(props: QuestionnaireProps<TValue>) {
+  // 2026-10-09: answer updates are not a new question. Remount only at the displayed step boundary,
+  // so delayed parents stay locked while identical-text consecutive questions and previous steps unlock.
+  return <QuestionnaireStep key={JSON.stringify([props.questionLabel, props.question])} {...props} />;
+}
+
+function QuestionnaireStep<TValue extends QuestionnaireValue = number>({
   title,
   subtitle,
   question,
@@ -53,6 +59,22 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
 }: QuestionnaireProps<TValue>) {
   const Heading = headingLevel === 2 ? "h2" : "h1";
   const legendRef = React.useRef<HTMLLegendElement>(null);
+  const selectionRef = React.useRef(false);
+  const [pending, setPending] = React.useState(false);
+
+  function select(value: TValue) {
+    // 2026-10-09: a state-only disabled flag commits after the event; the ref also blocks same-tick clicks.
+    if (selectionRef.current) return;
+    selectionRef.current = true;
+    setPending(true);
+    try {
+      onSelect(value);
+    } catch (error) {
+      selectionRef.current = false;
+      setPending(false);
+      throw error;
+    }
+  }
 
   React.useEffect(() => {
     legendRef.current?.focus({ preventScroll: true });
@@ -80,7 +102,7 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
         />
       </div>
 
-      <FieldSet className="rounded-xl border bg-card p-4 sm:p-6">
+      <FieldSet disabled={pending} aria-busy={pending} className="rounded-xl border bg-card p-4 sm:p-6">
         <FieldLegend ref={legendRef} tabIndex={-1}>
           {question}
         </FieldLegend>
@@ -92,7 +114,8 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
                 key={option.value}
                 type="button"
                 aria-pressed={selected}
-                onClick={() => onSelect(option.value)}
+                disabled={pending}
+                onClick={() => select(option.value)}
                 className={cn(
                   "flex min-h-12 w-full items-center gap-3 rounded-lg border bg-background px-4 py-3 text-left text-sm outline-none transition-colors motion-reduce:transition-none",
                   "hover:border-green-500 hover:bg-surface-subtle focus-visible:border-green-600 focus-visible:ring-2 focus-visible:ring-green-600/30",
@@ -116,7 +139,9 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
       </FieldSet>
 
       {onPrevious && previousLabel ? (
-        <Button type="button" variant="outline" className="w-full sm:w-auto" onClick={onPrevious}>
+        <Button type="button" variant="outline" className="w-full sm:w-auto" disabled={pending} onClick={() => {
+          if (!selectionRef.current) onPrevious();
+        }}>
           {previousLabel}
         </Button>
       ) : null}

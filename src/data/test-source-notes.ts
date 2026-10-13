@@ -2,9 +2,10 @@ import type { Locale } from '../i18n';
 
 export interface TestSourceNote {
   basis: string[];
+  basisByLocale?: Record<Locale, string[]>;
   /** 출처 표기를 마지막으로 고친 날. 없으면 첫 작성일(2026-06-13). */
   updated?: string;
-  caution: 'clinical' | 'reflection' | 'symbolic' | 'style' | 'color' | 'finance';
+  caution: 'clinical' | 'reflection' | 'symbolic' | 'style' | 'color' | 'finance' | 'performance';
 }
 
 export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
@@ -106,7 +107,17 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
       'measures typing speed (WPM) and accuracy — not a psychological test',
       'values shift with keyboard, language and passage, so they are not for absolute comparison',
     ],
-    caution: 'style',
+    // 2026-10-10: typing is a task measurement, not a personality typology.
+    basisByLocale: {
+      ko: ['정확하게 입력한 글자 수를 5로 나누고 경과 시간(분)으로 나눠 WPM을 계산해요.', '정확도는 전체 입력 글자 중 오류가 아닌 글자의 비율이에요.'],
+      en: ['WPM is correctly typed characters divided by 5 and by elapsed minutes.', 'Accuracy is the share of entered characters that are not errors.'],
+      ja: ['WPMは正しく入力した文字数を5で割り、経過時間（分）で割って計算します。', '正確率は入力した文字のうち誤りでない文字の割合です。'],
+      zh: ['WPM等于正确输入的字符数除以5，再除以经过的分钟数。', '准确率是已输入字符中没有错误的字符所占比例。'],
+      fr: ['Le WPM correspond aux caractères correctement saisis, divisés par 5 puis par les minutes écoulées.', 'La précision est la proportion de caractères saisis sans erreur.'],
+      es: ['El WPM se calcula dividiendo los caracteres correctos entre 5 y entre los minutos transcurridos.', 'La precisión es la proporción de caracteres introducidos sin error.'],
+    },
+    updated: '2026-10-10',
+    caution: 'performance',
   },
   'productivity-style-test': {
     basis: [
@@ -562,6 +573,14 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
 };
 
 const CAUTION_TEXT: Record<TestSourceNote['caution'], Record<Locale, string>> = {
+  performance: {
+    ko: '입력 속도와 정확도를 재는 연습 도구예요. 성격이나 지능, 업무 능력을 판정하지 않아요. WPM은 실제 단어 수가 아닌 5글자 환산값이며, 언어·키보드·예문·연습량이 다르면 점수를 직접 비교하기 어려워요.',
+    en: 'This practice tool measures typing speed and accuracy, not personality, intelligence or job ability. WPM uses five-character units, not actual word counts. Scores are not directly comparable across languages, keyboards, passages or practice levels.',
+    ja: '入力速度と正確さを測る練習ツールで、性格・知能・仕事の能力を判定するものではありません。WPMは実際の単語数ではなく5文字単位の換算値です。言語・キーボード・例文・練習量が異なる得点は単純に比較できません。',
+    zh: '这是测量打字速度和准确率的练习工具，不用于判断性格、智力或工作能力。WPM以五个字符为一个单位换算，并非实际词数。语言、键盘、例文或练习程度不同时，分数不能直接比较。',
+    fr: 'Cet outil mesure la vitesse et la précision de frappe, pas la personnalité, l’intelligence ou les aptitudes professionnelles. Le WPM utilise des unités de cinq caractères, pas le nombre réel de mots. Les scores ne sont pas directement comparables entre langues, claviers, textes ou niveaux de pratique.',
+    es: 'Esta herramienta mide la velocidad y precisión al escribir, no la personalidad, inteligencia o capacidad laboral. El WPM usa unidades de cinco caracteres, no palabras reales. Las puntuaciones no son directamente comparables entre idiomas, teclados, textos o niveles de práctica.',
+  },
   clinical: {
     ko: '이 검사는 자기 점검용 선별 참고 자료이고 의학적 진단을 대신하지 않아요. 일상 기능에 어려움이 있거나 위험 신호가 있다면 전문가 상담을 먼저 받으세요.',
     en: 'This is a self-check screening reference, not a medical diagnosis. If symptoms affect daily life or feel unsafe, professional support comes first.',

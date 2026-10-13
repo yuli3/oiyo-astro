@@ -61,6 +61,13 @@ jobs:
         env:
           NODE_OPTIONS: --max-old-space-size=6144
 
+      # 2026-10-12: inspect actual six-locale chart output only after HTML exists.
+      - name: Audit static bar chart labels, values and scale
+        run: npm run audit:bar-chart-html
+
+      - name: Build and audit isolated bar chart edge cases
+        run: npm run audit:bar-chart-fixtures
+
       - name: Audit assessment release gates
         run: npm run audit:assessment-release-gates
 

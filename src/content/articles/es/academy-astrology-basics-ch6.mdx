@@ -1,0 +1,123 @@
+---
+locale: es
+title: "Leer una carta natal: tres casos reproducibles y sus límites"
+series: Fundamentos de astrología
+chapter: 6
+author: Redacción OIYO
+tags:
+  - astrología
+  - carta natal
+  - aspectos
+  - signo entero
+description: "Compara posiciones, casas de signo entero y aspectos de 2000, 2010 y 2020 con los mismos ajustes, separando la salida del motor de la interpretación simbólica."
+pubDate: '2026-06-01'
+topic: astrology
+---
+
+import Callout from "@/components/mdx/Callout.astro"
+
+## Fijar las condiciones antes de leer
+
+No clasificamos personas como líderes o artistas. Tres cartas con los mismos ajustes permiten separar **entrada → posición → casa → ángulo → interpretación simbólica**. Son fechas de cálculo elegidas por la redacción, no registros de nacimiento de participantes.
+
+| Condición | Ajustes compartidos |
+|---|---|
+| Lugar | Seúl: latitud 37,5665° norte, longitud 126,978° este |
+| Instante | 1 de enero a las 12:00 UTC de cada año, las 21:00 en Corea |
+| Zodiaco | Tropical, doce intervalos de 30° desde 0° |
+| Posiciones | Algoritmos aproximados computeNatalChart de OIYO |
+| Casas | Signo entero, calculadas aparte para este capítulo |
+| Orbes mayores | Conjunción, cuadratura, trígono y oposición: 8°; sextil: 4° |
+| Presentación | Tres decimales, sin garantía de exactitud |
+
+Los números reproducen la salida del motor. No son una comparación con efemérides independientes ni una cota de error verificada. La primera casa de signo entero empieza en 0° del signo ascendente, no en el grado exacto del Ascendente. No supongas que todas las pantallas de una herramienta usan ese sistema.
+
+Para obtener la casa, resta el índice del signo ascendente al del astro, lleva la diferencia al intervalo de 0 a 11 y suma uno. Con Leo ascendente, Leo es I, Virgo II y Capricornio VI.
+
+La [documentación de casas de Swiss Ephemeris](https://www.astro.com/swisseph/swisseph.htm) explica signo entero frente a casas iguales desde el Ascendente. Los valores siguientes no se calcularon con Swiss Ephemeris.
+
+## Caso 1: 2000, compartir signo no basta para una conjunción
+
+| Astro o punto | Longitud / signo | Casa de signo entero |
+|---|---|---:|
+| Sol | 280,373° / Capricornio | 6 |
+| Luna | 223,318° / Escorpio | 4 |
+| Ascendente | 145,435° / Leo | 1 |
+| Mercurio | 271,907° / Capricornio | 6 |
+| Venus | 241,579° / Sagitario | 5 |
+| Marte | 327,976° / Acuario | 7 |
+| Júpiter | 25,273° / Aries | 9 |
+| Saturno | 40,376° / Tauro | 10 |
+| Urano | 314,816° / Acuario | 7 |
+| Neptuno | 303,191° / Acuario | 7 |
+| Plutón | 251,458° / Sagitario | 5 |
+
+Sol y Mercurio están en Capricornio, pero se separan 8,466°. Supera nuestro orbe de 8° y se excluye la conjunción. Redondear primero a 8° cambiaría la decisión en el límite.
+
+Luna 223,318° y Saturno 40,376° difieren 182,942°. El ángulo menor es 177,058°, a 2,942° de la oposición exacta, dentro de 8°. Revisa grados, no solo nombres de signos.
+
+Se puede asociar simbólicamente la expresión personal del Sol con el trabajo cotidiano de VI. Eso no demuestra competencia laboral o un problema de salud. Formula preguntas sobre experiencia, sin dejar que la carta responda por la persona.
+
+## Caso 2: 2010, Sol similar y Luna distinta
+
+| Astro o punto | Longitud / signo | Casa de signo entero |
+|---|---|---:|
+| Sol | 280,964° / Capricornio | 6 |
+| Luna | 110,752° / Cáncer | 12 |
+| Ascendente | 145,893° / Leo | 1 |
+| Mercurio | 288,467° / Capricornio | 6 |
+| Venus | 278,487° / Capricornio | 6 |
+| Marte | 138,740° / Leo | 1 |
+| Júpiter | 326,459° / Acuario | 7 |
+| Saturno | 184,506° / Libra | 3 |
+| Urano | 353,109° / Piscis | 8 |
+| Neptuno | 324,602° / Acuario | 7 |
+| Plutón | 273,317° / Capricornio | 6 |
+
+El Sol comparte Capricornio y VI con el primer caso, pero la Luna está en Cáncer y XII. Igual signo solar no hace idéntica toda la configuración. Lunas distintas tampoco prueban diferencias reales de personalidad.
+
+Sol 280,964° y Venus 278,487° dan 2,477° y entran en conjunción. La separación Luna-Sol es 170,212°, a 9,788° de la oposición: se excluye con nuestra regla de 8°. Una impresión visual de posiciones casi opuestas no basta.
+
+Una lectura puede reunir expresión personal y relaciones en el trabajo cotidiano. No establece talento artístico ni suerte social. Las capacidades se contrastan con trabajo y experiencia; las relaciones, con palabras y actos de la otra persona.
+
+## Caso 3: 2020, agruparse no implica conjunción de todas las parejas
+
+| Astro o punto | Longitud / signo | Casa de signo entero |
+|---|---|---:|
+| Sol | 280,519° / Capricornio | 6 |
+| Luna | 352,075° / Piscis | 8 |
+| Ascendente | 145,558° / Leo | 1 |
+| Mercurio | 275,188° / Capricornio | 6 |
+| Venus | 315,034° / Acuario | 7 |
+| Marte | 238,736° / Escorpio | 4 |
+| Júpiter | 276,805° / Capricornio | 6 |
+| Saturno | 291,451° / Capricornio | 6 |
+| Urano | 32,716° / Tauro | 10 |
+| Neptuno | 346,299° / Piscis | 8 |
+| Plutón | 292,408° / Capricornio | 6 |
+
+Sol, Mercurio, Júpiter, Saturno y Plutón se agrupan en Capricornio y VI. Compartir signo es distinto de estar todos en conjunción por parejas.
+
+Sol-Mercurio da 5,331° y Sol-Júpiter 3,714°: ambos se incluyen. Sol-Saturno da 10,932° y Sol-Plutón 11,889°: ambos se excluyen. Saturno-Plutón da 0,957° y se incluye. Decir que todo se combina con fuerza, sin identificar las parejas verificadas, oculta las diferencias.
+
+Luna-Neptuno da 5,776°, dentro del orbe. No mide empatía, espiritualidad ni capacidad de curar. Un relato que combine vida cotidiana, responsabilidad y concentración no determina profesión o éxito futuro.
+
+## Comprobar una carta real
+
+1. Registra fecha local, hora, zona, horario de verano y coordenadas. Mediodía local no equivale automáticamente a mediodía UTC.
+2. Revisa zodiaco tropical o sideral, casas, astros incluidos y algoritmo.
+3. Cerca de un límite de signo, considera errores de entrada y cálculo. Sin hora conocida no afirmes Ascendente o casas.
+4. Aplica el ángulo menor y los orbes del capítulo 5 a cada pareja. El color de las líneas cambia según el programa.
+5. Separa resultados numéricos de significados tradicionales. No fuerces la experiencia para que encaje con la lectura.
+
+Introducir mediodía cuando se desconoce la hora es una hipótesis de cálculo, no una hora recuperada. No publiques ni compartas la fecha, el lugar y la hora de nacimiento de otra persona sin su consentimiento, aunque busques calcular su carta con mayor precisión.
+
+## Qué se completa en esta serie
+
+Has aplicado las diferencias entre historia, signos, astros, casas y aspectos a ejemplos numéricos reproducibles. Precisión del cálculo, interpretación simbólica y conocimiento validado de las personas son niveles diferentes. Terminar el ejercicio no certifica capacidad de predecir el futuro.
+
+<Callout type="tip">**Anterior**: [Ch5. Los aspectos](/es/academy-astrology-basics-ch5/) · **Herramienta**: [Calculadora de carta natal](/es/natal/chart/)</Callout>
+
+## Fuentes y límites
+
+Las posiciones proceden del motor aproximado de OIYO y pueden diferir de otras efemérides o correcciones de coordenadas. Consulta [Swiss Ephemeris](https://www.astro.com/swisseph/swisseph.htm) para comparar casas. Esa documentación no valida la exactitud del motor ni sus lecturas de personalidad. Salud, profesión y relaciones requieren evidencia real.

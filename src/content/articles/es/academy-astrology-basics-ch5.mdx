@@ -1,0 +1,94 @@
+---
+locale: es
+title: "Los aspectos: separación angular, orbes y límites de la interpretación"
+series: Fundamentos de astrología
+chapter: 5
+author: Redacción OIYO
+tags:
+  - astrología
+  - carta natal
+  - casas
+  - aspectos
+description: "Calcula el ángulo menor y la desviación respecto a un aspecto, compara orbes y comprueba figuras compuestas sin confundir geometría con predicción personal."
+pubDate: '2026-06-01'
+topic: astrology
+---
+
+import Callout from "@/components/mdx/Callout.astro"
+
+## Cálculo e interpretación simbólica son distintos
+
+Un aspecto clasifica la relación angular entre dos astros a partir de sus longitudes eclípticas. Energía es una metáfora astrológica, no una energía física medida ni una fuerza sobre una persona. Calcular el ángulo no valida predicciones de personalidad, talento o acontecimientos.
+
+### Encontrar el ángulo menor
+
+Toma longitudes λ₁ y λ₂ del mismo sistema de referencia e instante, normalizadas desde 0° inclusive hasta menos de 360°.
+
+1. Calcula la diferencia d = |λ₁ − λ₂|.
+2. Toma el ángulo menor Δ = min(d, 360° − d).
+3. Calcula la desviación ε = |Δ − A| respecto al ángulo objetivo A.
+4. Con un orbe elegido o, clasifica la pareja en ese aspecto cuando ε ≤ o.
+
+Entre 359° y 1° hay una separación menor de 2°, no 358°. La pareja entra en conjunción con orbe de 8°. En cambio, 1° y 29° de Aries están separados 28° y no cumplen la regla. Compartir signo no basta.
+
+La [documentación técnica de Swiss Ephemeris](https://www.astro.com/swisseph/swisseph.htm) explica posiciones y referencias, no una validación empírica de los orbes o símbolos siguientes.
+
+## Orbes elegidos para este capítulo
+
+El orbe es un ajuste de clasificación: la desviación máxima admitida del ángulo exacto. Varía según escuelas, astros y técnicas. Estos valores mantienen coherentes los ejemplos; no son una norma universal ni garantizan la configuración del servicio.
+
+| Aspecto | Ángulo objetivo | Orbe aquí | Tema tradicional |
+|---|---:|---:|---|
+| Conjunción | 0° | 8° | Asociación, concentración |
+| Sextil | 60° | 4° | Cooperación, oportunidad |
+| Cuadratura | 90° | 8° | Tensión, ajuste |
+| Trígono | 120° | 8° | Armonía, fluidez |
+| Oposición | 180° | 8° | Contraste, equilibrio |
+
+Una implementación debe aclarar si incluye valores límite, si Sol y Luna reciben otros orbes y cómo trata clasificaciones superpuestas. Un orbe más amplio incluye más parejas, sin demostrar mayor precisión.
+
+### Ejemplo de trígono
+
+125° y 242° producen 117° de separación. La desviación respecto a 120° es 3°, dentro del orbe de 8°. Un método con orbe de 2° la excluiría.
+
+La clasificación depende de los ajustes. Una desviación menor solo significa mayor proximidad al ángulo objetivo, no una influencia psicológica más intensa medida.
+
+## Leer los cinco aspectos
+
+- La conjunción reúne los temas atribuidos a los astros. No es necesariamente la más fuerte ni siempre beneficiosa.
+- El sextil utiliza cooperación y oportunidad, sin garantizar oportunidades reales o suerte social.
+- La cuadratura ofrece un marco de tensión y ajuste. No justifica el sufrimiento como necesario ni garantiza crecimiento de capacidades.
+- El trígono emplea armonía y fluidez. Distingue la clasificación de signos de una relación exacta de 120° del cálculo por grados con orbe. No es una prueba de talento.
+- La oposición compara temas contrastantes. No revela intenciones, consentimiento ajeno o la causa de un conflicto.
+
+| Combinación simbólica | Ejercicio interpretativo | Lo que no mide |
+|---|---|---|
+| Conjunción Sol-Saturno | Describir expresión personal y limitación juntas | Responsabilidad o ambición reales |
+| Cuadratura Marte-Saturno | Formular preguntas contraponiendo acción y límite | Diagnóstico de impulsividad o paciencia |
+| Trígono Luna-Venus | Reflexionar sobre emociones y armonía relacional | Talento artístico o aprobación ajena |
+
+## Aspectos menores y figuras
+
+Los menores incluyen semisextil de 30°, semicuadratura de 45°, sesquicuadratura de 135° y quincuncio de 150°. Define sus orbes por separado; no copies automáticamente los mayores.
+
+| Figura | Relaciones que comprobar | Precaución |
+|---|---|---|
+| Gran trígono | Las tres parejas están aproximadamente a 120° | Compartir elemento no basta |
+| T cuadrada, T-Square | Una pareja a unos 180°, las otras dos a unos 90° | El astro del vértice participa en ambas cuadraturas |
+| Gran cruz, Grand Cross | Cuatro puntos separados unos 90°, dos diagonales a unos 180° | Comprobar unas parejas no confirma la figura completa |
+| Yod | Una pareja a unos 60°, las otras dos a unos 150° | No prueba una misión especial |
+| Stellium | Varios astros agrupados en un signo o casa | Definir cantidad y objetos incluidos; distinguir concentración de figura angular fija |
+
+Las posiciones de una carta real no son números arbitrarios independientes. Grados inventados sirven para geometría. Para presentarla como carta natal real debe reproducirse con fecha, hora, lugar y ajustes.
+
+## Registrar el cálculo antes de interpretar
+
+Anota longitudes, instante, referencia e incertidumbre horaria. Define objetivos, orbes y límites; calcula Δ y ε para cada pareja y comprueba las figuras. Añade por separado la interpretación simbólica. No existe un único orden universal de lectura.
+
+Con una hora incierta no afirmes una Luna precisa o relaciones con Ascendente y casas. Distinguir aspecto aplicativo y separativo exige movimiento relativo en el tiempo, no solo una lista de ángulos en un instante.
+
+<Callout type="tip">**Anterior**: [Ch4. Las casas](/es/academy-astrology-basics-ch4/) · **Siguiente**: [Ch6. Tres casos reproducibles](/es/academy-astrology-basics-ch6/)</Callout>
+
+## Fuentes y alcance
+
+Los ejemplos pueden recalcularse con los números indicados. Los orbes son ajustes didácticos, no umbrales validados empíricamente. Consulta [Swiss Ephemeris](https://www.astro.com/swisseph/swisseph.htm) para posiciones y coordenadas. Una interpretación histórica no sustituye evaluación psicológica, atención médica o evidencia profesional.

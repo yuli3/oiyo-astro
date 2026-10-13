@@ -1,49 +1,63 @@
 ---
 locale: fr
-title: La preuve sociale
+title: La preuve sociale (Social Proof)
 author: Antigravity
 tags:
   - psychology
   - influence
   - marketing
   - behavior
-description: >-
-  L'instinct grégaire. Le phénomène psychologique qui nous pousse à imiter les
-  autres pour savoir comment bien agir, et les recherches clés d'Asch et de
-  Cialdini.
+description: "Distinguez les influences informationnelle et normative et interprétez les conditions et les chiffres des expériences de conformité et de réutilisation des serviettes."
 pubDate: '2024-12-21'
 topic: social
 ---
 
-## Les expériences de conformité d'Asch
+import ExperimentComparison from '../../../components/mdx/ExperimentComparison.astro';
 
-En 1951, Solomon Asch a mené une série d'expériences en laboratoire qui ont révélé la force étonnante du conformisme. On montrait aux participants une ligne et on leur demandait de choisir, parmi trois lignes de référence, celle qui avait la même longueur. La réponse était évidente.
-Pourtant, le participant se trouvait dans une pièce avec plusieurs complices (généralement six à huit) qui s'étaient mis d'accord à l'avance pour donner la _mauvaise_ réponse.
+## Les expériences de conformité d’Asch (Asch Conformity Experiments)
 
-- **Résultat** : environ 75 % des participants ont donné au moins une fois la mauvaise réponse pour se conformer au groupe.
-- **Conclusion** : nous sommes prêts à nier ce que nos propres sens nous montrent pour éviter les frictions sociales ou le sentiment d'être à l'écart.
+En 1951, Solomon Asch a mené une série d’expériences révélant la redoutable puissance du conformisme. Il montrait aux participants une ligne et leur demandait de désigner, parmi trois lignes de référence, celle de même longueur. La bonne réponse était évidente.
+Mais chaque participant était placé dans une pièce avec 7 complices qui s’étaient entendus à l’avance pour donner une réponse *fausse*.
+
+
+Environ 75% des participants ont suivi au moins une fois une réponse incorrecte de la majorité ; cela ne signifie pas que 75% de toutes les réponses étaient fausses. Les motivations variaient, notamment le doute sur son propre jugement. On ne peut pas conclure que tous répondaient sciemment faux pour éviter l’exclusion.
+
+[Asch (1955), PDF](https://pdodds.w3.uvm.edu/files/papers/others/1955/asch1955a.pdf)
 
 ## Influence informationnelle et influence normative
 
-La preuve sociale passe par deux voies cognitives distinctes :
+La preuve sociale emprunte deux voies cognitives distinctes.
 
-1. **L'influence sociale informationnelle** : « Ils doivent savoir quelque chose que j'ignore. » Elle apparaît dans les situations ambiguës (par exemple, choisir un restaurant dans une ville inconnue). Si le restaurant A est plein et le B vide, nous supposons que A est meilleur. C'est un raccourci mental pour trouver la bonne réponse.
-2. **L'influence sociale normative** : « Je veux être apprécié et accepté. » Elle agit même lorsque la situation est claire (comme dans l'expérience d'Asch). Nous nous conformons pour éviter la moquerie ou l'exclusion.
+1.  **Influence sociale informationnelle (Informational Social Influence)** : « Ils doivent savoir quelque chose que j’ignore. » Elle apparaît dans les situations ambiguës (par exemple, choisir un restaurant dans une ville inconnue). Si le restaurant A est bondé et le B vide, on suppose que A est meilleur. C’est une heuristique pour trouver la bonne réponse.
+2.  **Influence sociale normative (Normative Social Influence)** : « Je veux être apprécié, je veux être accepté. » Elle opère même quand la situation est claire, comme dans l’expérience d’Asch. On se conforme pour éviter la moquerie ou l’exclusion.
 
-## Cialdini et « Influence et manipulation »
+## Serviettes d’hôtel : distinguer les messages des résultats
 
-Dans son ouvrage de référence _Influence : The Psychology of Persuasion_ (1984 ; publié en français sous le titre _Influence et manipulation_), Robert Cialdini a fait de la preuve sociale l'un des six grands principes de l'influence (l'édition révisée de 2021 en ajoute un septième, l'unité). Une expérience de terrain bien connue, menée dans un hôtel par Goldstein, Cialdini et Griskevicius (2008), l'a mise à l'épreuve avec des messages sur la réutilisation des serviettes.
+Goldstein, Cialdini et Griskevicius (2008) ont comparé des messages de réutilisation des serviettes dans un hôtel. Les 75% annoncés sur le panneau étaient une information normative présentée aux clients, pas le taux observé dans cette expérience.
 
-- **Message standard** : « Aidez à protéger l'environnement. » → environ 35 % de réutilisation.
-- **Message de preuve sociale** : « Environ 75 % des clients de cet hôtel ont réutilisé leurs serviettes. » → **environ 44 % de réutilisation**.
+| Expérience | Condition du message | Réutilisation observée |
+| --- | --- | --- |
+| 1 | Appel écologique | 35,1% |
+| 1 | Norme des clients en général | 44,1% |
+| 2 | Appel écologique | 37,2% |
+| 2 | Norme des clients de la même chambre | 49,3% |
 
-## L'effet Werther
+L’écart de l’expérience 1 est de 9,0 points de pourcentage. Ne comparez pas directement la condition « même chambre » de l’expérience 2 à la condition écologique de l’expérience 1. Les chercheurs observaient si les clients restant au moins deux nuits suspendaient au moins une serviette à l’endroit prévu lors du premier jour où ils pouvaient participer, et non sur tout le séjour. Ces résultats ne garantissent pas le même effet partout.
 
-L'Organisation mondiale de la santé (OMS) présente des données montrant que la manière dont le suicide est traité dans les médias, ainsi que la visibilité et la répétition de cette couverture, peuvent influer sur le risque chez les personnes vulnérables. On parle de contagion suicidaire ou d'**effet Werther**. Cela ne signifie pas qu'un seul signal social suffit à expliquer le geste d'une personne. La préoccupation de santé publique est plus précise : une couverture sensationnaliste ou répétée, la description explicite des moyens et l'idéalisation d'un décès peuvent augmenter le risque, tandis qu'une communication responsable, qui met en avant le rétablissement et la recherche d'aide, peut avoir un effet protecteur.
+<ExperimentComparison locale="fr" title="Comparez au sein de chaque expérience" note="Dépliez chaque expérience pour comparer. Toutes les jauges vont de 0 à 100 %. Les conditions diffèrent : ne mélangez pas les valeurs de référence." experiments={[
+  { label: "Expérience 1", baseline: 35.1, outcome: 44.1, baselineLabel: "Appel environnemental", outcomeLabel: "Norme des clients en général", differenceLabel: "Écart (points de pourcentage)" },
+  { label: "Expérience 2", baseline: 37.2, outcome: 49.3, baselineLabel: "Appel environnemental", outcomeLabel: "Norme des clients de la même chambre", differenceLabel: "Écart (points de pourcentage)" }
+]} />
 
-> **Si vous avez besoin d'aide :** si vous pensez au suicide ou à vous faire du mal, ne restez pas seul et contactez dès maintenant les services d'urgence ou d'aide en situation de crise de votre pays. En France, vous pouvez appeler le **3114** (24 h/24, 7 j/7).
+[Goldstein et al. (2008), PDF](https://www.influenceatwork.com/wp-content/uploads/2012/08/article08222012.pdf)
 
-> **À retenir :** nous utilisons le comportement des autres comme un indice, mais l'influence sociale n'est pas un ordre qui détermine entièrement nos actes. Les médias et les créateurs de contenu ont la responsabilité de tenir compte de cette influence lorsqu'ils abordent des sujets à risque.
+## L’effet Werther (The Werther Effect)
+
+L’Organisation mondiale de la santé (OMS) explique que la manière dont le suicide est traité dans les médias, ainsi que la répétition et l’exposition, peuvent influer sur le risque chez les personnes vulnérables. On parle de contagion suicidaire (suicide contagion) ou d’effet Werther. Un comportement individuel ne s’explique toutefois pas par la seule preuve sociale : l’essentiel des recommandations de santé publique est que les reportages sensationnalistes ou répétés, la description précise des moyens et la glorification peuvent accroître le risque. À l’inverse, une communication responsable, qui montre que le rétablissement et la demande d’aide sont possibles, peut avoir un effet protecteur.
+
+> **Si vous avez besoin d’aide :** si vous pensez au suicide ou à vous faire du mal, ne restez pas seul. En France, appelez le **3114** (numéro national de prévention du suicide, 24 h/24), ou contactez les services d’urgence ou d’aide en situation de crise de votre pays.
+
+> **À retenir :** nous tirons des indices de jugement du comportement des autres, mais les médias et les créateurs de contenu doivent mesurer cette influence lorsqu’ils abordent des sujets sensibles. L’influence sociale n’est pas un ordre qui nous détermine entièrement : c’est un indice de l’environnement que l’on peut examiner consciemment.
 
 ## Principales sources
 

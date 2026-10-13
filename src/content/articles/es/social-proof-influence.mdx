@@ -1,49 +1,63 @@
 ---
 locale: es
-title: La prueba social
+title: La prueba social (Social Proof)
 author: Antigravity
 tags:
   - psychology
   - influence
   - marketing
   - behavior
-description: >-
-  El instinto de rebaño. El fenómeno psicológico por el que tomamos la conducta
-  de los demás como guía de lo correcto, y las investigaciones clave de Asch y
-  Cialdini.
+description: "Distinga las influencias informativa y normativa e interprete las condiciones y los datos de los experimentos de conformidad y reutilización de toallas."
 pubDate: '2024-12-21'
 topic: social
 ---
 
-## Los experimentos de conformidad de Asch
+import ExperimentComparison from '../../../components/mdx/ExperimentComparison.astro';
 
-En 1951, Solomon Asch realizó una serie de experimentos de laboratorio que revelaron la sorprendente fuerza de la conformidad. A los participantes se les mostraba una línea y se les pedía que eligieran, entre tres líneas de referencia, la que tenía la misma longitud. La respuesta era evidente.
-Sin embargo, el participante estaba en una sala con varios cómplices (normalmente entre seis y ocho) que habían acordado de antemano dar la respuesta _incorrecta_.
+## Los experimentos de conformidad de Asch (Asch Conformity Experiments)
 
-- **Resultado**: alrededor del 75 % de los participantes dio la respuesta incorrecta al menos una vez para coincidir con el grupo.
-- **Conclusión**: las personas llegan a negar lo que ven con sus propios ojos para evitar fricciones sociales o la sensación de quedarse fuera.
+En 1951, Solomon Asch llevó a cabo una serie de experimentos que revelaron el inquietante poder de la conformidad. Mostraba a los participantes una línea y les pedía que eligieran, entre tres líneas de referencia, la de igual longitud. La respuesta correcta era evidente.
+Sin embargo, cada participante estaba en una sala con 7 cómplices que habían acordado de antemano dar una respuesta *incorrecta*.
+
+
+Que aproximadamente el 75% siguiera al menos una vez la respuesta incorrecta de la mayoría no significa que el 75% de todas las respuestas fueran erróneas. Los motivos variaban, incluida la duda sobre el propio juicio. No se puede afirmar que todos respondieran mal a sabiendas para evitar la exclusión.
+
+[Asch (1955), PDF](https://pdodds.w3.uvm.edu/files/papers/others/1955/asch1955a.pdf)
 
 ## Influencia informativa frente a influencia normativa
 
-La prueba social actúa a través de dos vías cognitivas distintas:
+La prueba social funciona por dos vías cognitivas bien diferenciadas.
 
-1. **Influencia social informativa**: «Ellos deben de saber algo que yo no sé». Aparece en situaciones ambiguas (por ejemplo, al elegir restaurante en una ciudad desconocida). Si el restaurante A está lleno y el B vacío, suponemos que A es mejor. Es un atajo mental para acertar.
-2. **Influencia social normativa**: «Quiero caer bien y ser aceptado». Aparece incluso cuando la situación es clara (como en el experimento de Asch). Nos conformamos para evitar la burla o la exclusión.
+1.  **Influencia social informativa (Informational Social Influence)**: «Seguro que saben algo que yo no sé». Aparece en situaciones ambiguas (por ejemplo, al elegir restaurante en una ciudad desconocida). Si el restaurante A está lleno y el B vacío, suponemos que A es mejor. Es un atajo mental para dar con la respuesta correcta.
+2.  **Influencia social normativa (Normative Social Influence)**: «Quiero caer bien, quiero que me acepten». Se da incluso cuando la situación es clara, como en el experimento de Asch. Nos conformamos para evitar la burla o la exclusión.
 
-## Cialdini y «Influencia»
+## Toallas de hotel: distinguir mensajes y resultados
 
-En su influyente libro _Influence: The Psychology of Persuasion_ (1984; en español, _Influencia: la psicología de la persuasión_), Robert Cialdini sistematizó la prueba social como uno de los seis principios clave de la influencia (la edición revisada de 2021 añadió un séptimo, la unidad). Un conocido experimento de campo en un hotel, realizado por Goldstein, Cialdini y Griskevicius (2008), lo puso a prueba con carteles sobre la reutilización de toallas.
+Goldstein, Cialdini y Griskevicius (2008) compararon mensajes de reutilización de toallas en un hotel. El 75% anunciado en el cartel era información normativa presentada a los huéspedes, no la tasa observada en ese experimento.
 
-- **Cartel estándar**: «Ayude a proteger el medio ambiente». → alrededor de un 35 % de reutilización.
-- **Cartel de prueba social**: «Alrededor del 75 % de los huéspedes de este hotel reutilizó sus toallas». → **alrededor de un 44 % de reutilización**.
+| Experimento | Condición del mensaje | Reutilización observada |
+| --- | --- | --- |
+| 1 | Mensaje ambiental | 35,1% |
+| 1 | Norma de huéspedes en general | 44,1% |
+| 2 | Mensaje ambiental | 37,2% |
+| 2 | Norma de huéspedes de la misma habitación | 49,3% |
 
-## El efecto Werther
+La diferencia del experimento 1 fue de 9,0 puntos porcentuales. No compare directamente la condición de la misma habitación del experimento 2 con la ambiental del experimento 1. Se observó si los huéspedes de al menos dos noches colgaban una toalla o más en el lugar indicado el primer día en que podían participar, no durante toda la estancia. Los resultados no garantizan el mismo efecto en todos los hoteles o conductas.
 
-La Organización Mundial de la Salud (OMS) recoge evidencia de que la forma en que se informa sobre el suicidio, así como la visibilidad y la repetición de esa cobertura, puede influir en el riesgo de las personas vulnerables. Esto se conoce como contagio suicida o **efecto Werther**. No significa que una sola señal social explique la conducta de una persona. La preocupación de salud pública es más concreta: la cobertura sensacionalista o repetida, la descripción explícita de los métodos y la idealización de una muerte pueden aumentar el riesgo, mientras que una comunicación responsable que destaque la recuperación y la búsqueda de ayuda puede tener un efecto protector.
+<ExperimentComparison locale="es" title="Compare dentro de cada experimento" note="Despliegue cada experimento para comparar. Todas las escalas van de 0 a 100 %. Las condiciones difieren: no mezcle las referencias entre experimentos." experiments={[
+  { label: "Experimento 1", baseline: 35.1, outcome: 44.1, baselineLabel: "Mensaje ambiental", outcomeLabel: "Norma de los huéspedes en general", differenceLabel: "Diferencia (puntos porcentuales)" },
+  { label: "Experimento 2", baseline: 37.2, outcome: 49.3, baselineLabel: "Mensaje ambiental", outcomeLabel: "Norma de huéspedes de la misma habitación", differenceLabel: "Diferencia (puntos porcentuales)" }
+]} />
 
-> **Si necesita ayuda:** si está pensando en el suicidio o en hacerse daño, no lo afronte en soledad y contacte ahora mismo con los servicios de emergencia o de atención a crisis de su país. En España puede llamar al **024** (gratuito, las 24 horas).
+[Goldstein et al. (2008), PDF](https://www.influenceatwork.com/wp-content/uploads/2012/08/article08222012.pdf)
 
-> **Idea clave:** usamos el comportamiento de los demás como una pista, pero la influencia social no es una orden que determine por completo nuestros actos. Los medios y los creadores de contenido tienen la responsabilidad de tener en cuenta esa influencia al tratar temas de riesgo.
+## El efecto Werther (The Werther Effect)
+
+La Organización Mundial de la Salud (OMS) explica que la forma en que se informa sobre el suicidio, así como su repetición y grado de exposición, puede influir en el riesgo de las personas vulnerables. Es lo que se conoce como contagio suicida (suicide contagion) o efecto Werther. Aun así, la conducta individual no puede explicarse solo por la prueba social: lo esencial de las recomendaciones de salud pública es que la cobertura sensacionalista o repetitiva, la descripción detallada de métodos y la glorificación pueden aumentar el riesgo. Por el contrario, una comunicación responsable que muestre que la recuperación y la petición de ayuda son posibles puede tener un efecto protector.
+
+> **Si necesitas ayuda:** si piensas en hacerte daño o en el suicidio, no lo afrontes en soledad. En España puedes llamar al **024** (línea de atención a la conducta suicida, 24 horas); en otros países, contacta con los servicios locales de emergencia o de atención en crisis.
+
+> **Lección clave:** las personas obtienen pistas para juzgar a partir de la conducta ajena, pero los medios y los creadores de contenido deben tener en cuenta esa influencia al tratar temas de riesgo. La influencia social no es una orden que nos determine por completo, sino una pista del entorno que podemos examinar conscientemente.
 
 ## Fuentes principales
 

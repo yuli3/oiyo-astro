@@ -19,6 +19,8 @@
     "type-check:active": "astro check --tsconfig tsconfig.active.json --minimumSeverity error",
     "test": "vitest",
     "audit:page-structure": "node scripts/audit-page-structure.mjs",
+    "audit:bar-chart-html": "node --test scripts/audit-bar-chart-html.mjs",
+    "audit:bar-chart-fixtures": "node scripts/audit-bar-chart-fixtures.mjs",
     "audit:content-depth-baseline": "node scripts/audit-content-depth-baseline.mjs",
     "audit:mystic-seo": "python3 scripts/audit-mystic-seo.py",
     "audit:assessment-release-gates": "node scripts/audit-assessment-release-gates.mjs",
@@ -77,8 +79,9 @@
     "audit:saju-longitude": "node scripts/audit-saju-longitude-explicit.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^6.0.3",
-    "@astrojs/react": "^5.0.7",
+    "@astrojs/markdown-remark": "7.3.2",
+    "@astrojs/mdx": "8.0.3",
+    "@astrojs/react": "7.0.1",
     "@astrojs/sitemap": "^3.7.3",
     "@number-flow/react": "^0.6.0",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -104,7 +107,7 @@
     "@tailwindcss/vite": "^4.3.0",
     "@types/react": "^19.2.16",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.4.3",
+    "astro": "7.3.8",
     "astro-robots-txt": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -132,9 +135,6 @@
     "vaul": "^1.1.2",
     "web-vitals": "^5.3.0",
     "zustand": "^5.0.14"
-  },
-  "overrides": {
-    "vite": "^7"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
