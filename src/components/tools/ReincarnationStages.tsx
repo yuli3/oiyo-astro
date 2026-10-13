@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 import type { Locale } from "../../i18n";
 import { displayCountryName, type ReincarnationCountry as Country } from "../../lib/reincarnation";
-import { famousNames, lifeStops, STALE_SURVEY_YEAR, type StageStats, type StopLine } from "../../lib/reincarnation-stages";
+import {
+  famousNames,
+  lifeStops,
+  STALE_SURVEY_YEAR,
+  symbolFilePage,
+  symbolImage,
+  type NationalSymbol,
+  type StageStats,
+  type StopLine,
+} from "../../lib/reincarnation-stages";
+import CountryFlag from "./CountryFlag";
 
 /**
  * 환생 결과의 "인생 정거장"(5·15·30·50·70세)과 "이 나라 첫인상".
@@ -111,6 +121,13 @@ const COPY = {
   right: { ko: "오른쪽", en: "right", ja: "右側", zh: "靠右", fr: "à droite", es: "por la derecha" },
   median: { ko: "절반이 이 나이보다 어려요", en: "Half the people are younger than", ja: "半数がこの年齢より若い", zh: "一半人比这个年龄小", fr: "La moitié a moins de", es: "La mitad tiene menos de" },
   migrants: { ko: "다른 나라에서 태어난 이웃", en: "Neighbours born abroad", ja: "外国生まれの隣人", zh: "出生在国外的邻居", fr: "Voisins nés à l’étranger", es: "Vecinos nacidos en el extranjero" },
+  symbols: { ko: "나라 상징", en: "National symbols", ja: "国のシンボル", zh: "国家象征", fr: "Symboles nationaux", es: "Símbolos nacionales" },
+  emblem: { ko: "국장", en: "Emblem", ja: "国章", zh: "国徽", fr: "Emblème", es: "Escudo" },
+  bird: { ko: "나라 새", en: "National bird", ja: "国鳥", zh: "国鸟", fr: "Oiseau national", es: "Ave nacional" },
+  animal: { ko: "나라 동물", en: "National animal", ja: "国の動物", zh: "国家动物", fr: "Animal national", es: "Animal nacional" },
+  flower: { ko: "나라 꽃", en: "National flower", ja: "国花", zh: "国花", fr: "Fleur nationale", es: "Flor nacional" },
+  tree: { ko: "나라 나무", en: "National tree", ja: "国の木", zh: "国树", fr: "Arbre national", es: "Árbol nacional" },
+  credits: { ko: "그림 출처", en: "Image credits", ja: "画像の出典", zh: "图片来源", fr: "Crédits des images", es: "Créditos de las imágenes" },
   famous: { ko: "이 나라에서 태어난 사람", en: "Also born here", ja: "この国で生まれた人", zh: "同样出生在这里", fr: "Nés ici aussi", es: "También nacieron aquí" },
   famousNote: {
     ko: "위키백과 언어판이 많은 예술가·과학자·작가·운동선수 순이에요.",
@@ -163,13 +180,15 @@ function lineText(line: StopLine, locale: Locale, homeName: string): string {
   }
 }
 
-type Fact = { key: keyof typeof COPY; value: string; sub?: string; home?: string };
+// wide: 값이 길어 모바일 두 칸 격자에서 한 줄을 다 쓰는 카드.
+type Fact = { key: keyof typeof COPY; value: string; sub?: string; home?: string; wide?: boolean };
 
 function plate(stats: StageStats, locale: Locale): string | null {
   const food = stats.food;
   if (!food) return null;
   const parts = (["rice", "wheat", "meat", "coffee"] as const)
-    .filter((item) => food[item] !== undefined)
+    // 커피를 거의 안 마시는 나라에서 "커피 0kg"은 정보가 아니다.
+    .filter((item) => food[item] !== undefined && (item !== "coffee" || (food.coffee ?? 0) >= 0.5))
     .map((item) => `${COPY[item][locale]} ${num(food[item] ?? 0, locale, (food[item] ?? 0) < 10 ? 1 : 0)}kg`);
   return parts.length ? parts.join(" · ") : null;
 }
@@ -189,13 +208,76 @@ function facts(stats: StageStats, homeStats: StageStats | undefined, locale: Loc
     out.push({ key: "kcal", value: k, sub: old, home: kcal(homeStats) });
   }
   const p = plate(stats, locale);
-  if (p) out.push({ key: "plate", value: p, home: homeStats ? (plate(homeStats, locale) ?? undefined) : undefined });
+  if (p) out.push({ key: "plate", value: p, home: homeStats ? (plate(homeStats, locale) ?? undefined) : undefined, wide: true });
   if (stats.drive) out.push({ key: "drive", value: COPY[stats.drive][locale], home: homeStats?.drive ? COPY[homeStats.drive][locale] : undefined });
   const m = median(stats);
   if (m) out.push({ key: "median", value: m, home: median(homeStats) });
   const g = migrants(stats);
   if (g) out.push({ key: "migrants", value: g, home: migrants(homeStats) });
   return out;
+}
+
+function symbolName(symbol: NationalSymbol, locale: Locale): string {
+  if (symbol.kind === "emblem") return COPY.emblem[locale];
+  return (locale === "ko" && symbol.ko) || symbol.en;
+}
+
+/**
+ * 국장과 나라 새·동물·꽃·나무. 그림은 Wikimedia Commons 에서 바로 받고(퍼블릭 도메인·CC0·CC BY·
+ * CC BY-SA 만), 저작자·라이선스·원본 문서를 접힌 "그림 출처"에 모두 적는다.
+ */
+function SymbolStrip({ symbols, locale, countryName }: { symbols: NationalSymbol[]; locale: Locale; countryName: string }) {
+  // Commons 가 파일을 옮기거나 지우면 빈 칸 대신 그 그림을 뺀다.
+  const [broken, setBroken] = useState<ReadonlySet<string>>(new Set());
+  const shown = symbols.filter((symbol) => !broken.has(symbol.img));
+  if (shown.length === 0) return null;
+  return (
+    <div className="mt-3">
+      <ul className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
+        {shown.map((symbol) => (
+          <li key={symbol.img} className="overflow-hidden rounded-xl bg-surface-subtle">
+            <div className="flex aspect-square items-center justify-center bg-card p-2">
+              <img
+                src={symbolImage(symbol)}
+                alt={symbol.kind === "emblem" ? `${countryName} ${COPY.emblem[locale]}` : symbolName(symbol, locale)}
+                className={`size-full ${symbol.kind === "emblem" ? "object-contain" : "rounded-lg object-cover"}`}
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                onError={() => setBroken((prev) => new Set(prev).add(symbol.img))}
+              />
+            </div>
+            <p className="px-3 pt-2 text-xs text-muted-foreground">{COPY[symbol.kind][locale]}</p>
+            <p className="px-3 pb-2 text-sm font-bold leading-snug text-foreground">
+              {symbol.kind === "emblem" ? countryName : symbolName(symbol, locale)}
+            </p>
+          </li>
+        ))}
+      </ul>
+      <details className="mt-2 text-xs text-muted-foreground">
+        <summary className="min-h-11 cursor-pointer py-3">{COPY.credits[locale]}</summary>
+        <ul className="space-y-1 pb-1">
+          {shown.map((symbol) => (
+            <li key={symbol.img} className="break-words">
+              {COPY[symbol.kind][locale]} · {symbolName(symbol, locale)}
+              {symbol.by && <>: {symbol.by}</>},{" "}
+              {symbol.licenceUrl ? (
+                <a className="underline underline-offset-2" href={symbol.licenceUrl} target="_blank" rel="noopener noreferrer">
+                  {symbol.licence}
+                </a>
+              ) : (
+                symbol.licence
+              )}
+              ,{" "}
+              <a className="underline underline-offset-2" href={symbolFilePage(symbol)} target="_blank" rel="noopener noreferrer">
+                Wikimedia Commons
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </div>
+  );
 }
 
 export default function ReincarnationStages({ locale, country, home }: Props) {
@@ -221,6 +303,7 @@ export default function ReincarnationStages({ locale, country, home }: Props) {
   const list = facts(stats, homeStats, locale);
   const people = famousNames(stats, locale === "ko");
   const names = stats.names?.f && stats.names.m ? stats.names : undefined;
+  const symbols = stats.symbols ?? [];
 
   return (
     <>
@@ -247,16 +330,28 @@ export default function ReincarnationStages({ locale, country, home }: Props) {
         </section>
       )}
 
+      {symbols.length > 0 && (
+        <section className="rounded-2xl border border-border bg-card p-5" aria-labelledby="reincarnation-symbols">
+          <h3 id="reincarnation-symbols" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+            <CountryFlag iso2={country.iso2} className="h-3.5" />
+            {COPY.symbols[locale]}
+          </h3>
+          <SymbolStrip symbols={symbols} locale={locale} countryName={displayCountryName(country.iso2, locale, country.name)} />
+        </section>
+      )}
+
       {(list.length > 0 || people.length > 0 || names) && (
         <section className="rounded-2xl border border-border bg-card p-5" aria-labelledby="reincarnation-first-look">
-          <h3 id="reincarnation-first-look" className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+          <h3 id="reincarnation-first-look" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+            <CountryFlag iso2={country.iso2} className="h-3.5" />
             {COPY.firstLook[locale]}
           </h3>
-          <dl className="mt-3 grid gap-3 sm:grid-cols-2">
+          {/* 짧은 숫자는 모바일에서도 두 칸으로 놓아 한 화면에 더 많이 보이게 한다. */}
+          <dl className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
             {list.map((fact) => (
-              <div key={fact.key} className="rounded-xl bg-surface-subtle p-3">
+              <div key={fact.key} className={`rounded-xl bg-surface-subtle p-3 ${fact.wide ? "col-span-2" : ""}`}>
                 <dt className="text-xs text-muted-foreground">{COPY[fact.key][locale]}</dt>
-                <dd className="mt-0.5 text-base font-bold text-foreground">{fact.value}</dd>
+                <dd className="mt-0.5 text-base font-bold tabular-nums text-foreground">{fact.value}</dd>
                 {fact.sub && <dd className="text-xs text-muted-foreground">{fact.sub}</dd>}
                 {fact.home && fact.home !== fact.value && (
                   <dd className="mt-1 text-xs text-muted-foreground">{fill(COPY.homeValue[locale], { home: homeName, v: fact.home })}</dd>
@@ -264,26 +359,27 @@ export default function ReincarnationStages({ locale, country, home }: Props) {
               </div>
             ))}
             {names && (
-              <div className="rounded-xl bg-surface-subtle p-3">
+              <div className="col-span-2 rounded-xl bg-surface-subtle p-3 sm:col-span-1">
                 <dt className="text-xs text-muted-foreground">
                   {COPY.names[locale]} · {names.year}
                 </dt>
-                <dd className="mt-0.5 text-base font-bold text-foreground">{fill(COPY.girlBoy[locale], { f: names.f ?? "", m: names.m ?? "" })}</dd>
+                <dd className="mt-0.5 text-base font-bold tabular-nums text-foreground">{fill(COPY.girlBoy[locale], { f: names.f ?? "", m: names.m ?? "" })}</dd>
                 {country.iso3 === "AUS" && <dd className="text-xs text-muted-foreground">{COPY.nsw[locale]}</dd>}
                 {country.iso3 === "GBR" && <dd className="text-xs text-muted-foreground">{COPY.engWales[locale]}</dd>}
               </div>
             )}
             {people.length > 0 && (
-              <div className="rounded-xl bg-surface-subtle p-3 sm:col-span-2">
+              <div className="col-span-2 rounded-xl bg-surface-subtle p-3">
                 <dt className="text-xs text-muted-foreground">{COPY.famous[locale]}</dt>
-                <dd className="mt-0.5 text-base font-bold text-foreground">
-                  {people.map((person, i) => (
-                    <span key={person.name}>
-                      {i > 0 && ", "}
-                      <span>{person.name}</span>
-                      {person.reading && <span className="ml-1 text-xs font-normal text-muted-foreground">({person.reading})</span>}
-                    </span>
-                  ))}
+                <dd className="mt-1">
+                  <ul className="grid gap-2 sm:grid-cols-3">
+                    {people.map((person) => (
+                      <li key={person.name} className="min-w-0">
+                        <span className="block text-base font-bold leading-snug text-foreground">{person.name}</span>
+                        {person.reading && <span className="block text-xs text-muted-foreground">{person.reading}</span>}
+                      </li>
+                    ))}
+                  </ul>
                 </dd>
                 <dd className="text-xs text-muted-foreground">{COPY.famousNote[locale]}</dd>
               </div>

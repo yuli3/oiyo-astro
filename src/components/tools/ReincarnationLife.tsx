@@ -10,6 +10,7 @@ import {
   type LifePhase,
   type LifeStats,
 } from "../../lib/reincarnation-life";
+import CountryFlag from "./CountryFlag";
 import ReincarnationStages from "./ReincarnationStages";
 
 /**
@@ -304,11 +305,19 @@ export default function ReincarnationLife({ locale, country, home, sameSecond, o
 
   return (
     <div className="space-y-4">
-      <section className="rounded-2xl border border-border bg-card p-5" aria-labelledby="reincarnation-birth-card">
-        <p id="reincarnation-birth-card" className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-          {COPY.card[locale]} · {name}
-        </p>
-        <div className="mt-2 space-y-1 text-base leading-relaxed text-foreground">
+      <section className="rounded-2xl border border-border bg-card p-5" aria-labelledby="reincarnation-birth-card reincarnation-birth-name">
+        <div className="flex items-center gap-3">
+          <CountryFlag iso2={country.iso2} className="h-10 sm:h-12" />
+          <div className="min-w-0">
+            <p id="reincarnation-birth-card" className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+              {COPY.card[locale]}
+            </p>
+            <p id="reincarnation-birth-name" className="text-2xl font-bold leading-tight text-balance text-foreground sm:text-3xl">
+              {name}
+            </p>
+          </div>
+        </div>
+        <div className="mt-3 space-y-1 text-base leading-relaxed text-pretty text-foreground">
           {story(stats, homeStats, name, homeName, isHome, locale).map((line) => (
             <p key={line}>{line}</p>
           ))}
@@ -317,7 +326,7 @@ export default function ReincarnationLife({ locale, country, home, sameSecond, o
           {lines.map((line, i) => (
             <div key={line.key} className="rounded-xl bg-surface-subtle p-3">
               <dt className="text-xs text-muted-foreground">{COPY[line.key][locale]}</dt>
-              <dd className="mt-0.5 text-lg font-bold text-foreground">{line.value ?? COPY.noData[locale]}</dd>
+              <dd className="mt-0.5 text-lg font-bold tabular-nums text-foreground">{line.value ?? COPY.noData[locale]}</dd>
               {line.sub && <dd className="text-xs text-muted-foreground">{line.sub}</dd>}
               {!isHome && homeLines[i]?.value && (
                 <dd className="mt-1 text-xs text-muted-foreground">
@@ -373,11 +382,14 @@ export default function ReincarnationLife({ locale, country, home, sameSecond, o
                   <button
                     type="button"
                     onClick={() => onSelect(row)}
-                    className="flex min-h-11 w-full items-baseline justify-between gap-2 rounded-xl border border-border px-3 py-2 text-left text-sm hover:bg-surface-subtle"
+                    className="flex min-h-11 w-full items-center justify-between gap-2 rounded-xl border border-border px-3 py-2 text-left text-sm hover:bg-surface-subtle"
                   >
-                    <span className="font-semibold text-foreground">{displayCountryName(row.iso2, locale, row.name)}</span>
+                    <span className="flex min-w-0 items-center gap-2 font-semibold text-foreground">
+                      <CountryFlag iso2={row.iso2} className="h-3.5" />
+                      <span className="truncate">{displayCountryName(row.iso2, locale, row.name)}</span>
+                    </span>
                     {life !== undefined && (
-                      <span className="shrink-0 text-xs text-muted-foreground">
+                      <span className="shrink-0 text-xs tabular-nums text-muted-foreground">
                         {COPY.lifeExpectancy[locale]} {fill(COPY.years[locale], { n: num(life, locale) })}
                       </span>
                     )}

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import data from "../data/reincarnation-life-stages.json";
 import countries from "../data/reincarnation-countries.json";
-import { famousNames, lifeStops, outOf10, outOf100, weeklyHours, type StageStats } from "./reincarnation-stages";
+import { famousNames, lifeStops, outOf10, outOf100, symbolFilePage, symbolImage, weeklyHours, type StageStats } from "./reincarnation-stages";
 
 const ROWS = (data as { countries: Record<string, StageStats> }).countries;
 
@@ -39,6 +39,27 @@ describe("reincarnation life-stages data", () => {
     ]);
     expect(famousNames({ famous: [{ ko: "몰리에르", en: "Molière", native: "Molière" }] }, false)).toEqual([{ name: "Molière" }]);
     expect(famousNames({ famous: [{ ko: "한강", en: "Han Kang" }] }, true)).toEqual([{ name: "한강" }]);
+  });
+});
+
+describe("national symbols", () => {
+  it("only links Commons files under an allowed licence, emblem first", () => {
+    const allowed = /^(Public domain|CC0|CC BY(-SA)? \d\.\d)$/;
+    for (const [iso3, row] of Object.entries(ROWS)) {
+      for (const symbol of row.symbols ?? []) expect(symbol.licence, iso3).toMatch(allowed);
+      const kinds = (row.symbols ?? []).map((symbol) => symbol.kind);
+      if (kinds.includes("emblem")) expect(kinds[0], iso3).toBe("emblem");
+      expect(kinds.length, iso3).toBeLessThanOrEqual(4);
+    }
+    expect(ROWS.KOR.symbols?.[0].kind).toBe("emblem");
+  });
+
+  it("rebuilds the thumbnail and file page from the stored path", () => {
+    const symbol = { kind: "emblem" as const, en: "Emblem of South Korea", img: "9/96/Emblem_of_South_Korea.svg/330px-Emblem_of_South_Korea.svg.png", licence: "Public domain" };
+    expect(symbolImage(symbol)).toBe(
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Emblem_of_South_Korea.svg/330px-Emblem_of_South_Korea.svg.png",
+    );
+    expect(symbolFilePage(symbol)).toBe("https://commons.wikimedia.org/wiki/File:Emblem_of_South_Korea.svg");
   });
 });
 

@@ -38,6 +38,33 @@ export interface StageStats {
   famous?: { ko: string; en: string; native?: string; born?: number }[];
   /** 그해 신생아 이름 1위. 통계청 자료가 공개된 나라만. */
   names?: { year: number; scope: string; f?: string; m?: string };
+  /** 국장과 나라 새·동물·꽃·나무 그림(Wikidata 사실, Wikimedia Commons 그림). 국장이 먼저 온다. */
+  symbols?: NationalSymbol[];
+}
+
+export type SymbolKind = "emblem" | "bird" | "animal" | "flower" | "tree";
+
+export interface NationalSymbol {
+  kind: SymbolKind;
+  ko?: string;
+  en: string;
+  /** COMMONS_THUMB 아래 경로. 예: "9/96/Emblem_of_South_Korea.svg/330px-Emblem_of_South_Korea.svg.png" */
+  img: string;
+  licence: string;
+  licenceUrl?: string;
+  by?: string;
+}
+
+const COMMONS_THUMB = "https://upload.wikimedia.org/wikipedia/commons/thumb/";
+
+/** 330px 썸네일 주소. */
+export function symbolImage(symbol: NationalSymbol): string {
+  return `${COMMONS_THUMB}${symbol.img}`;
+}
+
+/** 저작자·라이선스를 볼 수 있는 Commons 파일 문서. 경로의 세 번째 조각이 파일 이름이다. */
+export function symbolFilePage(symbol: NationalSymbol): string {
+  return `https://commons.wikimedia.org/wiki/File:${symbol.img.split("/")[2]}`;
 }
 
 export const STOP_AGES = [5, 15, 30, 50, 70] as const;
