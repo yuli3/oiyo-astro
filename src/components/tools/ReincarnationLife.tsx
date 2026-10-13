@@ -73,6 +73,34 @@ const COPY = {
     fr: "Environ quatre bébés naissent chaque seconde. Voici d’autres vies du même instant, tirées selon la part des naissances.",
     es: "Nacen unos cuatro bebés por segundo. Estas son otras vidas de ese mismo instante, sorteadas según la proporción de nacimientos.",
   },
+  storyBorn: { ko: "당신은 {country}에서 태어났어요.", en: "You were born in {country}.", ja: "あなたは{country}に生まれました。", zh: "你出生在{country}。", fr: "Cette fois, vous naissez : {country}.", es: "Naciste en {country}." },
+  storyLife: { ko: "이곳 사람들은 평균 {n}년을 살아요.", en: "People here live {n} years on average.", ja: "ここの人は平均{n}年生きます。", zh: "这里的人平均活{n}岁。", fr: "Ici, on vit en moyenne {n} ans.", es: "Aquí la gente vive {n} años de media." },
+  storyLonger: { ko: "{home}보다 {d}년 길어요.", en: "That’s {d} years longer than {home}.", ja: "{home}より{d}年長いです。", zh: "比{home}长{d}年。", fr: "C’est {d} ans de plus que pour {home}.", es: "Son {d} años más que en {home}." },
+  storyShorter: { ko: "{home}보다 {d}년 짧아요.", en: "That’s {d} years shorter than {home}.", ja: "{home}より{d}年短いです。", zh: "比{home}短{d}年。", fr: "C’est {d} ans de moins que pour {home}.", es: "Son {d} años menos que en {home}." },
+  storyChildHigh: {
+    ko: "같은 해 태어난 아이 {n}명 중 1명은 다섯 살 생일을 맞지 못해요.",
+    en: "Of the children born the same year, 1 in {n} won’t reach a fifth birthday.",
+    ja: "同じ年に生まれた子どもの{n}人に1人は、5歳の誕生日を迎えられません。",
+    zh: "同年出生的孩子里，每{n}个就有1个活不到5岁生日。",
+    fr: "Parmi les enfants nés la même année, 1 sur {n} n’atteindra pas ses cinq ans.",
+    es: "De los niños nacidos ese año, 1 de cada {n} no llegará a cumplir cinco años.",
+  },
+  storyChildLow: {
+    ko: "다섯 살 전에 세상을 떠나는 아이는 {n}명 중 1명뿐이에요.",
+    en: "Only 1 child in {n} dies before age five.",
+    ja: "5歳になる前に亡くなる子どもは{n}人に1人だけです。",
+    zh: "5岁前夭折的孩子只有{n}分之一。",
+    fr: "Seul 1 enfant sur {n} meurt avant cinq ans.",
+    es: "Solo 1 de cada {n} niños muere antes de los cinco años.",
+  },
+  storyAdult: {
+    ko: "어른이 되면 하루 ${x} 정도로 살아가고, 열 명 중 {k}명은 인터넷을 써요.",
+    en: "As an adult you’d live on about ${x} a day, and {k} in 10 people around you use the internet.",
+    ja: "大人になると1日${x}ほどで暮らし、10人中{k}人がインターネットを使います。",
+    zh: "长大后每天大约靠${x}生活，身边10个人里有{k}个上网。",
+    fr: "Adulte, vous vivriez avec environ {x} $ par jour, et {k} personnes sur 10 autour de vous utilisent Internet.",
+    es: "De adulto vivirías con unos ${x} al día, y {k} de cada 10 personas a tu alrededor usan internet.",
+  },
   source: { ko: "출처", en: "Source", ja: "出典", zh: "来源", fr: "Source", es: "Fuente" },
 } satisfies Record<string, Copy>;
 
@@ -113,6 +141,31 @@ function statLines(stats: LifeStats, locale: Locale): StatLine[] {
     },
     { key: "internet", value: stats.internet !== undefined ? fill(COPY.people[locale], { n: num(stats.internet, locale, 0) }) : null },
   ];
+}
+
+// 2026-10-13 세운: "흥미·호기심을 높이되 자연스러운 문체". 표보다 먼저 읽히는 두세 문장.
+// 아동 사망은 50명 중 1명보다 흔하면 그대로 말하고, 드물면 "뿐"으로 말한다. 꾸미지 않는다.
+function story(stats: LifeStats, homeStats: LifeStats, name: string, homeName: string, isHome: boolean, locale: Locale): string[] {
+  const out = [fill(COPY.storyBorn[locale], { country: name })];
+  if (stats.lifeExpectancy !== undefined) {
+    let line = fill(COPY.storyLife[locale], { n: num(stats.lifeExpectancy, locale, 0) });
+    const diff = homeStats.lifeExpectancy !== undefined ? Math.round(stats.lifeExpectancy - homeStats.lifeExpectancy) : 0;
+    if (!isHome && Math.abs(diff) >= 1) {
+      line += ` ${fill((diff > 0 ? COPY.storyLonger : COPY.storyShorter)[locale], { home: homeName, d: String(Math.abs(diff)) })}`;
+    }
+    out.push(line);
+  }
+  const children = oneInChildren(stats.childMortality);
+  if (children !== null) {
+    out.push(fill((children <= 50 ? COPY.storyChildHigh : COPY.storyChildLow)[locale], { n: num(children, locale, 0) }));
+  }
+  if (stats.dailyIncome !== undefined && stats.internet !== undefined) {
+    out.push(fill(COPY.storyAdult[locale], {
+      x: num(stats.dailyIncome, locale, stats.dailyIncome < 10 ? 1 : 0),
+      k: String(Math.round(stats.internet / 10)),
+    }));
+  }
+  return out;
 }
 
 function phaseClass(phase: LifePhase | null): string {
@@ -254,6 +307,11 @@ export default function ReincarnationLife({ locale, country, home, sameSecond, o
         <p id="reincarnation-birth-card" className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
           {COPY.card[locale]} · {name}
         </p>
+        <div className="mt-2 space-y-1 text-base leading-relaxed text-foreground">
+          {story(stats, homeStats, name, homeName, isHome, locale).map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </div>
         <dl className="mt-3 grid gap-3 sm:grid-cols-2">
           {lines.map((line, i) => (
             <div key={line.key} className="rounded-xl bg-surface-subtle p-3">
