@@ -12,8 +12,9 @@
 // Licence gate: the site carries ads, so only sources that allow commercial reuse are read
 // here. Left out on purpose: WHO GHO-derived files (smoking, obesity, vehicles, cause of death,
 // alcohol: CC BY-NC-SA 3.0 IGO or unclear), UNDP HDI/GII and FAO undernourishment (no licence
-// in the files), World Happiness Report, twin births and UN household size (unclear),
-// and the Wikipedia national-symbol lists (CC BY-SA would bind the JSON to share-alike).
+// in the files), World Happiness Report, twin births and UN household size (unclear).
+// The Wikipedia national animal/flower lists are CC BY-SA 4.0: allowed commercially with credit
+// and share-alike, which the page gives (2026-10-13 세운 chose to widen symbols with them).
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
@@ -237,6 +238,13 @@ const FAMOUS_BLOCK =
 // Facts from Wikidata (CC0): coat of arms (P94) and official symbols (P2238). Pictures are
 // Wikimedia Commons thumbnails, kept only when the file is public domain, CC0, CC BY or CC BY-SA,
 // and shown with author, licence and a link to the file page. Flags come from flag-icons (MIT).
+// Batch 7 adds national birds, animals and flowers from English Wikipedia's lists (CC BY-SA 4.0,
+// revisions in WIKIPEDIA_LISTS), linked to the same Wikidata items and Commons pictures. These
+// lists mix official and customary symbols, so the page never calls them "official".
+const WIKIPEDIA_LISTS = {
+  "List of national animals": 1379858579,
+  "List of national flowers": 1377321774,
+};
 if (existsSync(`${dir}/reincarnation-stats-6/symbols.csv`)) {
   const KIND_ORDER = ["emblem", "bird", "animal", "flower", "tree"];
   const COMMONS_THUMB = "https://upload.wikimedia.org/wikipedia/commons/thumb/";
@@ -247,12 +255,28 @@ if (existsSync(`${dir}/reincarnation-stats-6/symbols.csv`)) {
     list.push(row);
     byIso.set(row.iso3, list);
   }
+  if (existsSync(`${dir}/reincarnation-stats-7/symbols_wikipedia.csv`)) {
+    for (const row of readCsv("reincarnation-stats-7/symbols_wikipedia.csv")) {
+      if (!wanted.has(row.iso3) || !row.image_url.startsWith(COMMONS_THUMB)) continue;
+      if (!(row.list_page in WIKIPEDIA_LISTS)) throw new Error(`unknown list ${row.list_page}`);
+      const list = byIso.get(row.iso3) ?? [];
+      if (list.some((other) => other.qid === row.qid)) continue;
+      list.push({ ...row, wiki: true });
+      byIso.set(row.iso3, list);
+    }
+  }
   const clip = (text, max) => (text.length > max ? `${text.slice(0, max - 1).trimEnd()}…` : text);
   for (const [iso3, list] of byIso) {
-    list.sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || a.name_en.localeCompare(b.name_en));
+    // Within a kind, Wikidata's official symbols come before the Wikipedia lists.
+    list.sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || Number(!!a.wiki) - Number(!!b.wiki));
     // One emblem and at most three living symbols, so the strip stays one row on a phone.
+    // A bird, an animal and a flower beat three animals, so take one of each kind first.
     const emblem = list.filter((row) => row.kind === "emblem").slice(0, 1);
-    const living = list.filter((row) => row.kind !== "emblem").slice(0, 3);
+    const rest = list.filter((row) => row.kind !== "emblem");
+    const firsts = rest.filter((row, i) => rest.findIndex((other) => other.kind === row.kind) === i);
+    const living = [...firsts, ...rest.filter((row) => !firsts.includes(row))]
+      .slice(0, 3)
+      .sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind));
     put(
       iso3,
       "symbols",
@@ -266,6 +290,7 @@ if (existsSync(`${dir}/reincarnation-stats-6/symbols.csv`)) {
         licence: row.licence,
         licenceUrl: row.licence_url || undefined,
         by: clip(row.artist.replace(/\s+/g, " ").trim(), 80) || undefined,
+        wiki: row.wiki || undefined,
       })),
     );
   }
@@ -283,7 +308,7 @@ for (const [key, n] of Object.entries(coverage).sort()) console.log(`${key}: ${n
 
 const out = {
   source:
-    "UN World Population Prospects 2024 (survival, mother’s age, fertility); UN World Urbanization Prospects 2025; UN World Marriage Data 2019; UN DESA International Migrant Stock 2024; World Bank (electricity); UNDP Human Development Report (expected schooling); Penn World Table 11.0 (working hours); FAOSTAT Food Balance Sheets; Copernicus ERA5 via Our World in Data (temperature, contains modified Copernicus Climate Change Service information 2026); CIA World Factbook (median age); Wikidata (driving side, people born in each country, national symbols); SSA, INSEE, SSB, Statistics Canada, NSW BDM and ONS (baby names).",
+    "UN World Population Prospects 2024 (survival, mother’s age, fertility); UN World Urbanization Prospects 2025; UN World Marriage Data 2019; UN DESA International Migrant Stock 2024; World Bank (electricity); UNDP Human Development Report (expected schooling); Penn World Table 11.0 (working hours); FAOSTAT Food Balance Sheets; Copernicus ERA5 via Our World in Data (temperature, contains modified Copernicus Climate Change Service information 2026); CIA World Factbook (median age); Wikidata (driving side, people born in each country, national symbols); English Wikipedia, List of national animals (oldid 1379858579) and List of national flowers (oldid 1377321774), CC BY-SA 4.0 (national animals and flowers); SSA, INSEE, SSB, Statistics Canada, NSW BDM and ONS (baby names).",
   asOf: `latest year with data, up to ${MAX_YEAR}; temperature is the ${MAX_YEAR - TEMP_WINDOW + 1}–${MAX_YEAR} mean`,
   countries: sorted,
 };

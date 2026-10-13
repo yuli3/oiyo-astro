@@ -53,7 +53,15 @@ export interface NationalSymbol {
   licence: string;
   licenceUrl?: string;
   by?: string;
+  /** 나라 새·동물·꽃이라는 사실이 위키백과 목록(CC BY-SA 4.0)에서 왔다. 없으면 Wikidata(CC0). */
+  wiki?: boolean;
 }
+
+/** 위키백과 목록 판. scripts/generate-reincarnation-life-stages.mjs 의 WIKIPEDIA_LISTS 와 같다. */
+export const SYMBOL_LISTS = [
+  { title: "List of national animals", url: "https://en.wikipedia.org/w/index.php?title=List_of_national_animals&oldid=1379858579" },
+  { title: "List of national flowers", url: "https://en.wikipedia.org/w/index.php?title=List_of_national_flowers&oldid=1377321774" },
+] as const;
 
 const COMMONS_THUMB = "https://upload.wikimedia.org/wikipedia/commons/thumb/";
 
