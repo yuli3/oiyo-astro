@@ -1,0 +1,442 @@
+{
+ "batchcomplete": true,
+ "query": {
+  "redirects": [
+   {
+    "from": "Cow in Hinduism",
+    "to": "Cattle in religion and mythology",
+    "tofragment": "Sacred status of cow"
+   },
+   {
+    "from": "Cow",
+    "to": "Cattle"
+   },
+   {
+    "from": "Copihue",
+    "to": "Lapageria"
+   },
+   {
+    "from": "Flanders poppy",
+    "to": "Papaver rhoeas"
+   },
+   {
+    "from": "Eurasian Lynx",
+    "to": "Eurasian lynx"
+   },
+   {
+    "from": "Cornflower",
+    "to": "Centaurea cyanus"
+   },
+   {
+    "from": "Cock of Barcelos",
+    "to": "Rooster of Barcelos"
+   },
+   {
+    "from": "Eurasian blackbird",
+    "to": "Common blackbird"
+   }
+  ],
+  "pages": [
+   {
+    "pageid": 4461,
+    "ns": 0,
+    "title": "Galjoen",
+    "pageprops": {
+     "wikibase_item": "Q3644227"
+    }
+   },
+   {
+    "pageid": 8420,
+    "ns": 0,
+    "title": "Dodo",
+    "pageprops": {
+     "wikibase_item": "Q43502"
+    }
+   },
+   {
+    "pageid": 8531,
+    "ns": 0,
+    "title": "Dragon",
+    "pageprops": {
+     "wikibase_item": "Q7559"
+    }
+   },
+   {
+    "pageid": 9061,
+    "ns": 0,
+    "title": "Dolphin",
+    "pageprops": {
+     "wikibase_item": "Q7369"
+    }
+   },
+   {
+    "pageid": 12713,
+    "ns": 0,
+    "title": "Giant panda",
+    "pageprops": {
+     "wikibase_item": "Q33602"
+    }
+   },
+   {
+    "pageid": 12717,
+    "ns": 0,
+    "title": "Giraffe",
+    "pageprops": {
+     "wikibase_item": "Q862089"
+    }
+   },
+   {
+    "pageid": 37602,
+    "ns": 0,
+    "title": "Eagle",
+    "pageprops": {
+     "wikibase_item": "Q2092297"
+    }
+   },
+   {
+    "pageid": 38869,
+    "ns": 0,
+    "title": "Flax",
+    "pageprops": {
+     "wikibase_item": "Q45108"
+    }
+   },
+   {
+    "pageid": 39059,
+    "ns": 0,
+    "title": "European bison",
+    "pageprops": {
+     "wikibase_item": "Q81091"
+    }
+   },
+   {
+    "pageid": 57622,
+    "ns": 0,
+    "title": "Common sunflower",
+    "pageprops": {
+     "wikibase_item": "Q171497"
+    }
+   },
+   {
+    "pageid": 60244,
+    "ns": 0,
+    "title": "Dugong",
+    "pageprops": {
+     "wikibase_item": "Q129544"
+    }
+   },
+   {
+    "pageid": 60703,
+    "ns": 0,
+    "title": "Fennec fox",
+    "pageprops": {
+     "wikibase_item": "Q131564"
+    }
+   },
+   {
+    "pageid": 73624,
+    "ns": 0,
+    "title": "Dryas octopetala",
+    "pageprops": {
+     "wikibase_item": "Q161621"
+    }
+   },
+   {
+    "pageid": 76894,
+    "ns": 0,
+    "title": "Emu",
+    "pageprops": {
+     "wikibase_item": "Q93208"
+    }
+   },
+   {
+    "pageid": 77591,
+    "ns": 0,
+    "title": "Dianthus caryophyllus",
+    "pageprops": {
+     "wikibase_item": "Q158984"
+    }
+   },
+   {
+    "pageid": 96957,
+    "ns": 0,
+    "title": "Fleur-de-lis",
+    "pageprops": {
+     "wikibase_item": "Q211568"
+    }
+   },
+   {
+    "pageid": 184826,
+    "ns": 0,
+    "title": "Common blackbird",
+    "pageprops": {
+     "wikibase_item": "Q25234"
+    }
+   },
+   {
+    "pageid": 244004,
+    "ns": 0,
+    "title": "Lapageria",
+    "pageprops": {
+     "wikibase_item": "Q1072906"
+    }
+   },
+   {
+    "pageid": 275290,
+    "ns": 0,
+    "title": "Eurasian lynx",
+    "pageprops": {
+     "wikibase_item": "Q43375"
+    }
+   },
+   {
+    "pageid": 305152,
+    "ns": 0,
+    "title": "Papaver rhoeas",
+    "pageprops": {
+     "wikibase_item": "Q130201"
+    }
+   },
+   {
+    "pageid": 312864,
+    "ns": 0,
+    "title": "Cattle in religion and mythology",
+    "pageprops": {
+     "wikibase_item": "Q1178242"
+    }
+   },
+   {
+    "pageid": 335568,
+    "ns": 0,
+    "title": "European fallow deer",
+    "pageprops": {
+     "wikibase_item": "Q159857"
+    }
+   },
+   {
+    "pageid": 484881,
+    "ns": 0,
+    "title": "Ganges river dolphin",
+    "pageprops": {
+     "wikibase_item": "Q210872"
+    }
+   },
+   {
+    "pageid": 566041,
+    "ns": 0,
+    "title": "Centaurea cyanus",
+    "pageprops": {
+     "wikibase_item": "Q156921"
+    }
+   },
+   {
+    "pageid": 670345,
+    "ns": 0,
+    "title": "Giant ibis",
+    "pageprops": {
+     "wikibase_item": "Q931759"
+    }
+   },
+   {
+    "pageid": 973858,
+    "ns": 0,
+    "title": "European hedgehog",
+    "pageprops": {
+     "wikibase_item": "Q6145"
+    }
+   },
+   {
+    "pageid": 1061108,
+    "ns": 0,
+    "title": "Formosan black bear",
+    "pageprops": {
+     "wikibase_item": "Q716455"
+    }
+   },
+   {
+    "pageid": 1626384,
+    "ns": 0,
+    "title": "Fjord horse",
+    "pageprops": {
+     "wikibase_item": "Q857040"
+    }
+   },
+   {
+    "pageid": 1850412,
+    "ns": 0,
+    "title": "Double-headed eagle",
+    "pageprops": {
+     "wikibase_item": "Q622964"
+    }
+   },
+   {
+    "pageid": 2437062,
+    "ns": 0,
+    "title": "Erythrina crista-galli",
+    "pageprops": {
+     "wikibase_item": "Q162849"
+    }
+   },
+   {
+    "pageid": 2861976,
+    "ns": 0,
+    "title": "Coat of arms of the Czech Republic",
+    "pageprops": {
+     "wikibase_item": "Q179596"
+    }
+   },
+   {
+    "pageid": 4098021,
+    "ns": 0,
+    "title": "Giant sable antelope",
+    "pageprops": {
+     "wikibase_item": "Q2044963"
+    }
+   },
+   {
+    "pageid": 5054457,
+    "ns": 0,
+    "title": "European perch",
+    "pageprops": {
+     "wikibase_item": "Q166812"
+    }
+   },
+   {
+    "pageid": 5984234,
+    "ns": 0,
+    "title": "Gallic rooster",
+    "pageprops": {
+     "wikibase_item": "Q2488240"
+    }
+   },
+   {
+    "pageid": 6536540,
+    "ns": 0,
+    "title": "Daboia palaestinae",
+    "pageprops": {
+     "wikibase_item": "Q1089236"
+    }
+   },
+   {
+    "pageid": 7107564,
+    "ns": 0,
+    "title": "Giant barb",
+    "pageprops": {
+     "wikibase_item": "Q1513246"
+    }
+   },
+   {
+    "pageid": 7521591,
+    "ns": 0,
+    "title": "Druk",
+    "pageprops": {
+     "wikibase_item": "Q2344734"
+    }
+   },
+   {
+    "pageid": 11267605,
+    "ns": 0,
+    "title": "Gobi bear",
+    "pageprops": {
+     "wikibase_item": "Q1533533"
+    }
+   },
+   {
+    "pageid": 12494103,
+    "ns": 0,
+    "title": "Cuban trogon",
+    "pageprops": {
+     "wikibase_item": "Q742552"
+    }
+   },
+   {
+    "pageid": 15164197,
+    "ns": 0,
+    "title": "Cyclamen cyprium",
+    "pageprops": {
+     "wikibase_item": "Q2234185"
+    }
+   },
+   {
+    "pageid": 18508684,
+    "ns": 0,
+    "title": "Countries of the United Kingdom",
+    "pageprops": {
+     "wikibase_item": "Q3336843"
+    }
+   },
+   {
+    "pageid": 24556191,
+    "ns": 0,
+    "title": "European rabbit",
+    "pageprops": {
+     "wikibase_item": "Q25851"
+    }
+   },
+   {
+    "pageid": 26051975,
+    "ns": 0,
+    "title": "Cattle",
+    "pageprops": {
+     "wikibase_item": "Q830"
+    }
+   },
+   {
+    "pageid": 30760070,
+    "ns": 0,
+    "title": "Rooster of Barcelos",
+    "pageprops": {
+     "wikibase_item": "Q2996913"
+    }
+   },
+   {
+    "pageid": 39498606,
+    "ns": 0,
+    "title": "Gloriosa superba",
+    "pageprops": {
+     "wikibase_item": "Q2175092"
+    }
+   },
+   {
+    "pageid": 43477402,
+    "ns": 0,
+    "title": "Eurasian hoopoe",
+    "pageprops": {
+     "wikibase_item": "Q25247"
+    }
+   },
+   {
+    "pageid": 43499495,
+    "ns": 0,
+    "title": "Dahlia pinnata",
+    "pageprops": {
+     "wikibase_item": "Q1549236"
+    }
+   },
+   {
+    "pageid": 44839920,
+    "ns": 0,
+    "title": "Costus spectabilis",
+    "pageprops": {
+     "wikibase_item": "Q15326829"
+    }
+   },
+   {
+    "pageid": 61646412,
+    "ns": 0,
+    "title": "Garcinia sessilis",
+    "pageprops": {
+     "wikibase_item": "Q15391104"
+    }
+   },
+   {
+    "pageid": 75266310,
+    "ns": 0,
+    "title": "Cyprus mouflon",
+    "pageprops": {
+     "wikibase_item": "Q867506"
+    }
+   }
+  ]
+ }
+}

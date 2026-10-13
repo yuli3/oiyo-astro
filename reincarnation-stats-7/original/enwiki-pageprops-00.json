@@ -1,0 +1,422 @@
+{
+ "batchcomplete": true,
+ "query": {
+  "redirects": [
+   {
+    "from": "Baltic herring",
+    "to": "Atlantic herring",
+    "tofragment": "Baltic herring"
+   },
+   {
+    "from": "Arabian camel",
+    "to": "Dromedary"
+   },
+   {
+    "from": "Blue marlin",
+    "to": "Makaira"
+   }
+  ],
+  "pages": [
+   {
+    "pageid": 874,
+    "ns": 0,
+    "title": "Ancient Egypt",
+    "pageprops": {
+     "wikibase_item": "Q11768"
+    }
+   },
+   {
+    "pageid": 2494,
+    "ns": 0,
+    "title": "Aurochs",
+    "pageprops": {
+     "wikibase_item": "Q168903"
+    }
+   },
+   {
+    "pageid": 4401,
+    "ns": 0,
+    "title": "Bald eagle",
+    "pageprops": {
+     "wikibase_item": "Q127216"
+    }
+   },
+   {
+    "pageid": 4402,
+    "ns": 0,
+    "title": "Brown bear",
+    "pageprops": {
+     "wikibase_item": "Q36341"
+    }
+   },
+   {
+    "pageid": 4462,
+    "ns": 0,
+    "title": "Blue crane",
+    "pageprops": {
+     "wikibase_item": "Q756674"
+    }
+   },
+   {
+    "pageid": 7844,
+    "ns": 0,
+    "title": "Chimpanzee",
+    "pageprops": {
+     "wikibase_item": "Q4126704"
+    }
+   },
+   {
+    "pageid": 43618,
+    "ns": 0,
+    "title": "Black panther",
+    "pageprops": {
+     "wikibase_item": "Q207963"
+    }
+   },
+   {
+    "pageid": 49725,
+    "ns": 0,
+    "title": "American bison",
+    "pageprops": {
+     "wikibase_item": "Q82728"
+    }
+   },
+   {
+    "pageid": 66174,
+    "ns": 0,
+    "title": "Barn swallow",
+    "pageprops": {
+     "wikibase_item": "Q25429"
+    }
+   },
+   {
+    "pageid": 66203,
+    "ns": 0,
+    "title": "Chinese dragon",
+    "pageprops": {
+     "wikibase_item": "Q215605"
+    }
+   },
+   {
+    "pageid": 89044,
+    "ns": 0,
+    "title": "Centaurea",
+    "pageprops": {
+     "wikibase_item": "Q156414"
+    }
+   },
+   {
+    "pageid": 160656,
+    "ns": 0,
+    "title": "Carabao",
+    "pageprops": {
+     "wikibase_item": "Q773939"
+    }
+   },
+   {
+    "pageid": 166716,
+    "ns": 0,
+    "title": "Chamomile",
+    "pageprops": {
+     "wikibase_item": "Q14169150"
+    }
+   },
+   {
+    "pageid": 207697,
+    "ns": 0,
+    "title": "Black crowned crane",
+    "pageprops": {
+     "wikibase_item": "Q379761"
+    }
+   },
+   {
+    "pageid": 207888,
+    "ns": 0,
+    "title": "Atlantic herring",
+    "pageprops": {
+     "wikibase_item": "Q2396858"
+    }
+   },
+   {
+    "pageid": 214296,
+    "ns": 0,
+    "title": "Brown pelican",
+    "pageprops": {
+     "wikibase_item": "Q208714"
+    }
+   },
+   {
+    "pageid": 221151,
+    "ns": 0,
+    "title": "Bengal tiger",
+    "pageprops": {
+     "wikibase_item": "Q80952"
+    }
+   },
+   {
+    "pageid": 242068,
+    "ns": 0,
+    "title": "Bulldog",
+    "pageprops": {
+     "wikibase_item": "Q38383"
+    }
+   },
+   {
+    "pageid": 307157,
+    "ns": 0,
+    "title": "Andean condor",
+    "pageprops": {
+     "wikibase_item": "Q170598"
+    }
+   },
+   {
+    "pageid": 318875,
+    "ns": 0,
+    "title": "Black-tailed godwit",
+    "pageprops": {
+     "wikibase_item": "Q18841"
+    }
+   },
+   {
+    "pageid": 326340,
+    "ns": 0,
+    "title": "Dromedary",
+    "pageprops": {
+     "wikibase_item": "Q71516"
+    }
+   },
+   {
+    "pageid": 328501,
+    "ns": 0,
+    "title": "Cherry blossom",
+    "pageprops": {
+     "wikibase_item": "Q871991"
+    }
+   },
+   {
+    "pageid": 378319,
+    "ns": 0,
+    "title": "Asian arowana",
+    "pageprops": {
+     "wikibase_item": "Q728584"
+    }
+   },
+   {
+    "pageid": 379035,
+    "ns": 0,
+    "title": "Asian elephant",
+    "pageprops": {
+     "wikibase_item": "Q133006"
+    }
+   },
+   {
+    "pageid": 444154,
+    "ns": 0,
+    "title": "Chukar partridge",
+    "pageprops": {
+     "wikibase_item": "Q194043"
+    }
+   },
+   {
+    "pageid": 457042,
+    "ns": 0,
+    "title": "Coat of arms of Austria",
+    "pageprops": {
+     "wikibase_item": "Q160322"
+    }
+   },
+   {
+    "pageid": 566041,
+    "ns": 0,
+    "title": "Centaurea cyanus",
+    "pageprops": {
+     "wikibase_item": "Q156921"
+    }
+   },
+   {
+    "pageid": 648714,
+    "ns": 0,
+    "title": "Coat of arms of Germany",
+    "pageprops": {
+     "wikibase_item": "Q133018"
+    }
+   },
+   {
+    "pageid": 937029,
+    "ns": 0,
+    "title": "Arabian oryx",
+    "pageprops": {
+     "wikibase_item": "Q237286"
+    }
+   },
+   {
+    "pageid": 966870,
+    "ns": 0,
+    "title": "Baird's tapir",
+    "pageprops": {
+     "wikibase_item": "Q215997"
+    }
+   },
+   {
+    "pageid": 1131045,
+    "ns": 0,
+    "title": "Barbary lion",
+    "pageprops": {
+     "wikibase_item": "Q221094"
+    }
+   },
+   {
+    "pageid": 1157853,
+    "ns": 0,
+    "title": "Bellis perennis",
+    "pageprops": {
+     "wikibase_item": "Q26158"
+    }
+   },
+   {
+    "pageid": 1403259,
+    "ns": 0,
+    "title": "Canadian horse",
+    "pageprops": {
+     "wikibase_item": "Q573906"
+    }
+   },
+   {
+    "pageid": 1440912,
+    "ns": 0,
+    "title": "Campanula rotundifolia",
+    "pageprops": {
+     "wikibase_item": "Q27989"
+    }
+   },
+   {
+    "pageid": 1941388,
+    "ns": 0,
+    "title": "Adalia bipunctata",
+    "pageprops": {
+     "wikibase_item": "Q233024"
+    }
+   },
+   {
+    "pageid": 1959451,
+    "ns": 0,
+    "title": "Arbutus unedo",
+    "pageprops": {
+     "wikibase_item": "Q329046"
+    }
+   },
+   {
+    "pageid": 2025982,
+    "ns": 0,
+    "title": "Canaan Dog",
+    "pageprops": {
+     "wikibase_item": "Q38602"
+    }
+   },
+   {
+    "pageid": 2490728,
+    "ns": 0,
+    "title": "African fish eagle",
+    "pageprops": {
+     "wikibase_item": "Q217497"
+    }
+   },
+   {
+    "pageid": 2542661,
+    "ns": 0,
+    "title": "Anemone coronaria",
+    "pageprops": {
+     "wikibase_item": "Q511179"
+    }
+   },
+   {
+    "pageid": 2913328,
+    "ns": 0,
+    "title": "Cantua buxifolia",
+    "pageprops": {
+     "wikibase_item": "Q290394"
+    }
+   },
+   {
+    "pageid": 3291487,
+    "ns": 0,
+    "title": "Calla lily",
+    "pageprops": {
+     "wikibase_item": "Q28699150"
+    }
+   },
+   {
+    "pageid": 3664749,
+    "ns": 0,
+    "title": "American flamingo",
+    "pageprops": {
+     "wikibase_item": "Q208004"
+    }
+   },
+   {
+    "pageid": 4964166,
+    "ns": 0,
+    "title": "Andean cock-of-the-rock",
+    "pageprops": {
+     "wikibase_item": "Q490393"
+    }
+   },
+   {
+    "pageid": 5002366,
+    "ns": 0,
+    "title": "Makaira",
+    "pageprops": {
+     "wikibase_item": "Q905232"
+    }
+   },
+   {
+    "pageid": 12279446,
+    "ns": 0,
+    "title": "Cattleya trianae",
+    "pageprops": {
+     "wikibase_item": "Q369006"
+    }
+   },
+   {
+    "pageid": 12345985,
+    "ns": 0,
+    "title": "Cheirolophus crassifolius",
+    "pageprops": {
+     "wikibase_item": "Q288247"
+    }
+   },
+   {
+    "pageid": 22119187,
+    "ns": 0,
+    "title": "Argyranthemum frutescens",
+    "pageprops": {
+     "wikibase_item": "Q2062517"
+    }
+   },
+   {
+    "pageid": 23218293,
+    "ns": 0,
+    "title": "Angraecum eburneum",
+    "pageprops": {
+     "wikibase_item": "Q2249647"
+    }
+   },
+   {
+    "pageid": 23245921,
+    "ns": 0,
+    "title": "Cattleya mossiae",
+    "pageprops": {
+     "wikibase_item": "Q1318790"
+    }
+   },
+   {
+    "pageid": 30875080,
+    "ns": 0,
+    "title": "Abyssinian cat",
+    "pageprops": {
+     "wikibase_item": "Q7955"
+    }
+   }
+  ]
+ }
+}

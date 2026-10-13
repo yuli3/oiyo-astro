@@ -1,0 +1,290 @@
+{
+ "batchcomplete": true,
+ "query": {
+  "redirects": [
+   {
+    "from": "Yigüirro",
+    "to": "Clay-colored thrush"
+   },
+   {
+    "from": "Y Ddraig Goch",
+    "to": "Welsh Dragon"
+   },
+   {
+    "from": "Xoloitzcuintli",
+    "to": "Xoloitzcuintle"
+   }
+  ],
+  "pages": [
+   {
+    "ns": 0,
+    "title": "Tribulus omanense",
+    "missing": true
+   },
+   {
+    "pageid": 33702,
+    "ns": 0,
+    "title": "Wolf",
+    "pageprops": {
+     "wikibase_item": "Q18498"
+    }
+   },
+   {
+    "pageid": 43236,
+    "ns": 0,
+    "title": "Unicorn",
+    "pageprops": {
+     "wikibase_item": "Q7246"
+    }
+   },
+   {
+    "pageid": 48647,
+    "ns": 0,
+    "title": "Thai language",
+    "pageprops": {
+     "wikibase_item": "Q9217"
+    }
+   },
+   {
+    "pageid": 50111,
+    "ns": 0,
+    "title": "Zebu",
+    "pageprops": {
+     "wikibase_item": "Q46889"
+    }
+   },
+   {
+    "pageid": 58708,
+    "ns": 0,
+    "title": "Water buffalo",
+    "pageprops": {
+     "wikibase_item": "Q42710"
+    }
+   },
+   {
+    "pageid": 76815,
+    "ns": 0,
+    "title": "White-throated dipper",
+    "pageprops": {
+     "wikibase_item": "Q201831"
+    }
+   },
+   {
+    "pageid": 171191,
+    "ns": 0,
+    "title": "Troms",
+    "pageprops": {
+     "wikibase_item": "Q50631"
+    }
+   },
+   {
+    "pageid": 171198,
+    "ns": 0,
+    "title": "Østfold",
+    "pageprops": {
+     "wikibase_item": "Q50614"
+    }
+   },
+   {
+    "pageid": 201575,
+    "ns": 0,
+    "title": "White-tailed eagle",
+    "pageprops": {
+     "wikibase_item": "Q25438"
+    }
+   },
+   {
+    "pageid": 214484,
+    "ns": 0,
+    "title": "White wagtail",
+    "pageprops": {
+     "wikibase_item": "Q25399"
+    }
+   },
+   {
+    "pageid": 237782,
+    "ns": 0,
+    "title": "White stork",
+    "pageprops": {
+     "wikibase_item": "Q25352"
+    }
+   },
+   {
+    "pageid": 243549,
+    "ns": 0,
+    "title": "Xoloitzcuintle",
+    "pageprops": {
+     "wikibase_item": "Q38856"
+    }
+   },
+   {
+    "pageid": 261463,
+    "ns": 0,
+    "title": "Tilia",
+    "pageprops": {
+     "wikibase_item": "Q127849"
+    }
+   },
+   {
+    "pageid": 307018,
+    "ns": 0,
+    "title": "Whooper swan",
+    "pageprops": {
+     "wikibase_item": "Q25612"
+    }
+   },
+   {
+    "pageid": 312281,
+    "ns": 0,
+    "title": "Turul",
+    "pageprops": {
+     "wikibase_item": "Q581083"
+    }
+   },
+   {
+    "pageid": 379609,
+    "ns": 0,
+    "title": "Vaquita",
+    "pageprops": {
+     "wikibase_item": "Q725493"
+    }
+   },
+   {
+    "pageid": 569459,
+    "ns": 0,
+    "title": "White-tailed deer",
+    "pageprops": {
+     "wikibase_item": "Q215887"
+    }
+   },
+   {
+    "pageid": 572518,
+    "ns": 0,
+    "title": "Vicuña",
+    "pageprops": {
+     "wikibase_item": "Q167797"
+    }
+   },
+   {
+    "pageid": 639754,
+    "ns": 0,
+    "title": "Turkish Angora",
+    "pageprops": {
+     "wikibase_item": "Q42720"
+    }
+   },
+   {
+    "pageid": 1031639,
+    "ns": 0,
+    "title": "Victoria amazonica",
+    "pageprops": {
+     "wikibase_item": "Q162070"
+    }
+   },
+   {
+    "pageid": 1325294,
+    "ns": 0,
+    "title": "Wild goat",
+    "pageprops": {
+     "wikibase_item": "Q178228"
+    }
+   },
+   {
+    "pageid": 1349318,
+    "ns": 0,
+    "title": "West Indian manatee",
+    "pageprops": {
+     "wikibase_item": "Q40261"
+    }
+   },
+   {
+    "pageid": 1800922,
+    "ns": 0,
+    "title": "Venezuelan troupial",
+    "pageprops": {
+     "wikibase_item": "Q997708"
+    }
+   },
+   {
+    "pageid": 1979836,
+    "ns": 0,
+    "title": "Welsh Dragon",
+    "pageprops": {
+     "wikibase_item": "Q2745280"
+    }
+   },
+   {
+    "pageid": 1993223,
+    "ns": 0,
+    "title": "Zantedeschia aethiopica",
+    "pageprops": {
+     "wikibase_item": "Q1945905"
+    }
+   },
+   {
+    "pageid": 2413798,
+    "ns": 0,
+    "title": "Wood mouse",
+    "pageprops": {
+     "wikibase_item": "Q212185"
+    }
+   },
+   {
+    "pageid": 3411763,
+    "ns": 0,
+    "title": "Clay-colored thrush",
+    "pageprops": {
+     "wikibase_item": "Q551736"
+    }
+   },
+   {
+    "pageid": 3568307,
+    "ns": 0,
+    "title": "Turquoise-browed motmot",
+    "pageprops": {
+     "wikibase_item": "Q922754"
+    }
+   },
+   {
+    "pageid": 4692188,
+    "ns": 0,
+    "title": "Two-toed sloth",
+    "pageprops": {
+     "wikibase_item": "Q511079"
+    }
+   },
+   {
+    "pageid": 4692238,
+    "ns": 0,
+    "title": "Three-toed sloth",
+    "pageprops": {
+     "wikibase_item": "Q185167"
+    }
+   },
+   {
+    "pageid": 7093172,
+    "ns": 0,
+    "title": "Ugandan kob",
+    "pageprops": {
+     "wikibase_item": "Q5419779"
+    }
+   },
+   {
+    "pageid": 19595060,
+    "ns": 0,
+    "title": "Tulip",
+    "pageprops": {
+     "wikibase_item": "Q93201"
+    }
+   },
+   {
+    "pageid": 62330666,
+    "ns": 0,
+    "title": "Vernonia djalonensis",
+    "pageprops": {
+     "wikibase_item": "Q15566586"
+    }
+   }
+  ]
+ }
+}

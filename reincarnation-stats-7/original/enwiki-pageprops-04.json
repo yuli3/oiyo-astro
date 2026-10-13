@@ -1,0 +1,445 @@
+{
+ "batchcomplete": true,
+ "query": {
+  "redirects": [
+   {
+    "from": "Seven-spot ladybird",
+    "to": "Coccinella septempunctata"
+   },
+   {
+    "from": "Sisserou parrot",
+    "to": "Imperial amazon"
+   },
+   {
+    "from": "Sranantongo",
+    "to": "Sranan Tongo"
+   },
+   {
+    "from": "Tahitian gardenia",
+    "to": "Gardenia taitensis"
+   },
+   {
+    "from": "Romduol",
+    "to": "Sphaerocoryne lefevrei"
+   },
+   {
+    "from": "Simpoh Ayer",
+    "to": "Dillenia suffruticosa"
+   },
+   {
+    "from": "Sampaguita",
+    "to": "Jasminum sambac"
+   },
+   {
+    "from": "Rosa polyantha",
+    "to": "Rosa multiflora"
+   },
+   {
+    "from": "Scabiosa comosa",
+    "to": "Lomelosia comosa"
+   }
+  ],
+  "pages": [
+   {
+    "pageid": 26537,
+    "ns": 0,
+    "title": "Rose",
+    "pageprops": {
+     "wikibase_item": "Q34687"
+    }
+   },
+   {
+    "pageid": 28580,
+    "ns": 0,
+    "title": "Springbok",
+    "pageprops": {
+     "wikibase_item": "Q213084"
+    }
+   },
+   {
+    "pageid": 65153,
+    "ns": 0,
+    "title": "Tahiti",
+    "pageprops": {
+     "wikibase_item": "Q42000"
+    }
+   },
+   {
+    "pageid": 200942,
+    "ns": 0,
+    "title": "Red kite",
+    "pageprops": {
+     "wikibase_item": "Q156250"
+    }
+   },
+   {
+    "pageid": 205716,
+    "ns": 0,
+    "title": "Secretarybird",
+    "pageprops": {
+     "wikibase_item": "Q168748"
+    }
+   },
+   {
+    "pageid": 215506,
+    "ns": 0,
+    "title": "Red kangaroo",
+    "pageprops": {
+     "wikibase_item": "Q104831614"
+    }
+   },
+   {
+    "pageid": 291860,
+    "ns": 0,
+    "title": "Small tortoiseshell",
+    "pageprops": {
+     "wikibase_item": "Q157609"
+    }
+   },
+   {
+    "pageid": 390425,
+    "ns": 0,
+    "title": "Sranan Tongo",
+    "pageprops": {
+     "wikibase_item": "Q33989"
+    }
+   },
+   {
+    "pageid": 449821,
+    "ns": 0,
+    "title": "Red-crowned crane",
+    "pageprops": {
+     "wikibase_item": "Q232906"
+    }
+   },
+   {
+    "pageid": 488458,
+    "ns": 0,
+    "title": "Rosa multiflora",
+    "pageprops": {
+     "wikibase_item": "Q133617"
+    }
+   },
+   {
+    "pageid": 501176,
+    "ns": 0,
+    "title": "Swallowtail butterfly",
+    "pageprops": {
+     "wikibase_item": "Q59905"
+    }
+   },
+   {
+    "pageid": 503201,
+    "ns": 0,
+    "title": "Ring-tailed lemur",
+    "pageprops": {
+     "wikibase_item": "Q185385"
+    }
+   },
+   {
+    "pageid": 543466,
+    "ns": 0,
+    "title": "Siberian tiger",
+    "pageprops": {
+     "wikibase_item": "Q69581"
+    }
+   },
+   {
+    "pageid": 595962,
+    "ns": 0,
+    "title": "Striped hyena",
+    "pageprops": {
+     "wikibase_item": "Q188657"
+    }
+   },
+   {
+    "pageid": 595995,
+    "ns": 0,
+    "title": "Spotted hyena",
+    "pageprops": {
+     "wikibase_item": "Q178089"
+    }
+   },
+   {
+    "pageid": 611919,
+    "ns": 0,
+    "title": "Sri Lankan junglefowl",
+    "pageprops": {
+     "wikibase_item": "Q21346306"
+    }
+   },
+   {
+    "pageid": 638291,
+    "ns": 0,
+    "title": "Red squirrel",
+    "pageprops": {
+     "wikibase_item": "Q4388"
+    }
+   },
+   {
+    "pageid": 658253,
+    "ns": 0,
+    "title": "Silver fern",
+    "pageprops": {
+     "wikibase_item": "Q135179367"
+    }
+   },
+   {
+    "pageid": 754740,
+    "ns": 0,
+    "title": "Steppe eagle",
+    "pageprops": {
+     "wikibase_item": "Q179359"
+    }
+   },
+   {
+    "pageid": 799223,
+    "ns": 0,
+    "title": "Saker falcon",
+    "pageprops": {
+     "wikibase_item": "Q165974"
+    }
+   },
+   {
+    "pageid": 936851,
+    "ns": 0,
+    "title": "Sable antelope",
+    "pageprops": {
+     "wikibase_item": "Q239381"
+    }
+   },
+   {
+    "pageid": 944781,
+    "ns": 0,
+    "title": "Scarlet macaw",
+    "pageprops": {
+     "wikibase_item": "Q243761"
+    }
+   },
+   {
+    "pageid": 1171466,
+    "ns": 0,
+    "title": "Takin",
+    "pageprops": {
+     "wikibase_item": "Q193469"
+    }
+   },
+   {
+    "pageid": 1320257,
+    "ns": 0,
+    "title": "Resplendent quetzal",
+    "pageprops": {
+     "wikibase_item": "Q459267"
+    }
+   },
+   {
+    "pageid": 1619665,
+    "ns": 0,
+    "title": "Red-billed streamertail",
+    "pageprops": {
+     "wikibase_item": "Q952376"
+    }
+   },
+   {
+    "pageid": 1800916,
+    "ns": 0,
+    "title": "Ruta graveolens",
+    "pageprops": {
+     "wikibase_item": "Q25062"
+    }
+   },
+   {
+    "pageid": 2225180,
+    "ns": 0,
+    "title": "Taveuni",
+    "pageprops": {
+     "wikibase_item": "Q1138545"
+    }
+   },
+   {
+    "pageid": 2488206,
+    "ns": 0,
+    "title": "Rhanterium epapposum",
+    "pageprops": {
+     "wikibase_item": "Q7320211"
+    }
+   },
+   {
+    "pageid": 2599233,
+    "ns": 0,
+    "title": "Siamese fighting fish",
+    "pageprops": {
+     "wikibase_item": "Q549"
+    }
+   },
+   {
+    "pageid": 4169991,
+    "ns": 0,
+    "title": "Jasminum sambac",
+    "pageprops": {
+     "wikibase_item": "Q1356614"
+    }
+   },
+   {
+    "pageid": 4454920,
+    "ns": 0,
+    "title": "Coccinella septempunctata",
+    "pageprops": {
+     "wikibase_item": "Q159543"
+    }
+   },
+   {
+    "pageid": 4675242,
+    "ns": 0,
+    "title": "Red-crested turaco",
+    "pageprops": {
+     "wikibase_item": "Q769898"
+    }
+   },
+   {
+    "pageid": 5513448,
+    "ns": 0,
+    "title": "Imperial amazon",
+    "pageprops": {
+     "wikibase_item": "Q1165844"
+    }
+   },
+   {
+    "pageid": 6068527,
+    "ns": 0,
+    "title": "Spanish Fighting Bull",
+    "pageprops": {
+     "wikibase_item": "Q1249724"
+    }
+   },
+   {
+    "pageid": 6370573,
+    "ns": 0,
+    "title": "Ruizia boutoniana",
+    "pageprops": {
+     "wikibase_item": "Q119980776"
+    }
+   },
+   {
+    "pageid": 7156383,
+    "ns": 0,
+    "title": "Saint Vincent amazon",
+    "pageprops": {
+     "wikibase_item": "Q845184"
+    }
+   },
+   {
+    "pageid": 7439782,
+    "ns": 0,
+    "title": "Tamil Eelam",
+    "pageprops": {
+     "wikibase_item": "Q242036"
+    }
+   },
+   {
+    "pageid": 9923926,
+    "ns": 0,
+    "title": "Rufous-bellied thrush",
+    "pageprops": {
+     "wikibase_item": "Q609283"
+    }
+   },
+   {
+    "pageid": 10959012,
+    "ns": 0,
+    "title": "Rufous hornero",
+    "pageprops": {
+     "wikibase_item": "Q852731"
+    }
+   },
+   {
+    "pageid": 11651627,
+    "ns": 0,
+    "title": "South Andean deer",
+    "pageprops": {
+     "wikibase_item": "Q860736"
+    }
+   },
+   {
+    "pageid": 12424432,
+    "ns": 0,
+    "title": "Saint Lucia amazon",
+    "pageprops": {
+     "wikibase_item": "Q373310"
+    }
+   },
+   {
+    "pageid": 15295535,
+    "ns": 0,
+    "title": "Snow leopard",
+    "pageprops": {
+     "wikibase_item": "Q30197"
+    }
+   },
+   {
+    "pageid": 15873366,
+    "ns": 0,
+    "title": "Rhododendron arboreum",
+    "pageprops": {
+     "wikibase_item": "Q2659683"
+    }
+   },
+   {
+    "pageid": 17252148,
+    "ns": 0,
+    "title": "Serbian eagle",
+    "pageprops": {
+     "wikibase_item": "Q7452903"
+    }
+   },
+   {
+    "pageid": 17597582,
+    "ns": 0,
+    "title": "Gardenia taitensis",
+    "pageprops": {
+     "wikibase_item": "Q1245878"
+    }
+   },
+   {
+    "pageid": 24083172,
+    "ns": 0,
+    "title": "Sphaerocoryne lefevrei",
+    "pageprops": {
+     "wikibase_item": "Q126487702"
+    }
+   },
+   {
+    "pageid": 26877337,
+    "ns": 0,
+    "title": "Dillenia suffruticosa",
+    "pageprops": {
+     "wikibase_item": "Q5276875"
+    }
+   },
+   {
+    "pageid": 32788990,
+    "ns": 0,
+    "title": "Shaheen falcon",
+    "pageprops": {
+     "wikibase_item": "Q3309750"
+    }
+   },
+   {
+    "pageid": 37618889,
+    "ns": 0,
+    "title": "Ramonda nathaliae",
+    "pageprops": {
+     "wikibase_item": "Q1966416"
+    }
+   },
+   {
+    "pageid": 82965912,
+    "ns": 0,
+    "title": "Lomelosia comosa",
+    "pageprops": {
+     "wikibase_item": "Q104399517"
+    }
+   }
+  ]
+ }
+}

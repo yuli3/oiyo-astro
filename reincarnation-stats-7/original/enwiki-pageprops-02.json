@@ -1,0 +1,453 @@
+{
+ "batchcomplete": true,
+ "query": {
+  "redirects": [
+   {
+    "from": "Korean Language",
+    "to": "Korean language"
+   },
+   {
+    "from": "Guelder rose",
+    "to": "Viburnum opulus"
+   },
+   {
+    "from": "Hebrew",
+    "to": "Hebrew language"
+   },
+   {
+    "from": "Leontopodium nivale",
+    "to": "Edelweiss"
+   },
+   {
+    "from": "Golden Shower Tree",
+    "to": "Cassia fistula"
+   },
+   {
+    "from": "Korean magpie",
+    "to": "Oriental magpie"
+   },
+   {
+    "from": "Lavender",
+    "to": "Lavandula"
+   },
+   {
+    "from": "Iberian Wolf",
+    "to": "Iberian wolf"
+   },
+   {
+    "from": "Irish hare",
+    "to": "Lepus timidus hibernicus"
+   },
+   {
+    "from": "Gray wolf",
+    "to": "Wolf"
+   },
+   {
+    "from": "Hibiscus rosa-sinensis",
+    "to": "Hibiscus × rosa-sinensis"
+   }
+  ],
+  "pages": [
+   {
+    "pageid": 5216,
+    "ns": 0,
+    "title": "Khmer language",
+    "pageprops": {
+     "wikibase_item": "Q9205"
+    }
+   },
+   {
+    "pageid": 13450,
+    "ns": 0,
+    "title": "Hebrew language",
+    "pageprops": {
+     "wikibase_item": "Q9288"
+    }
+   },
+   {
+    "pageid": 16217,
+    "ns": 0,
+    "title": "Jaguar",
+    "pageprops": {
+     "wikibase_item": "Q35694"
+    }
+   },
+   {
+    "pageid": 16756,
+    "ns": 0,
+    "title": "Korean language",
+    "pageprops": {
+     "wikibase_item": "Q9176"
+    }
+   },
+   {
+    "pageid": 17360,
+    "ns": 0,
+    "title": "Komodo dragon",
+    "pageprops": {
+     "wikibase_item": "Q4504"
+    }
+   },
+   {
+    "pageid": 17362,
+    "ns": 0,
+    "title": "Kiwi (bird)",
+    "pageprops": {
+     "wikibase_item": "Q43642"
+    }
+   },
+   {
+    "pageid": 17459,
+    "ns": 0,
+    "title": "Koi",
+    "pageprops": {
+     "wikibase_item": "Q378846"
+    }
+   },
+   {
+    "pageid": 17643,
+    "ns": 0,
+    "title": "Lavandula",
+    "pageprops": {
+     "wikibase_item": "Q171892"
+    }
+   },
+   {
+    "pageid": 18606,
+    "ns": 0,
+    "title": "Liberation Tigers of Tamil Eelam",
+    "pageprops": {
+     "wikibase_item": "Q80312"
+    }
+   },
+   {
+    "pageid": 33702,
+    "ns": 0,
+    "title": "Wolf",
+    "pageprops": {
+     "wikibase_item": "Q18498"
+    }
+   },
+   {
+    "pageid": 44303,
+    "ns": 0,
+    "title": "Leopard",
+    "pageprops": {
+     "wikibase_item": "Q34706"
+    }
+   },
+   {
+    "pageid": 88295,
+    "ns": 0,
+    "title": "Golden eagle",
+    "pageprops": {
+     "wikibase_item": "Q41181"
+    }
+   },
+   {
+    "pageid": 98585,
+    "ns": 0,
+    "title": "Jasmine",
+    "pageprops": {
+     "wikibase_item": "Q82014"
+    }
+   },
+   {
+    "pageid": 334415,
+    "ns": 0,
+    "title": "Green pheasant",
+    "pageprops": {
+     "wikibase_item": "Q425900"
+    }
+   },
+   {
+    "pageid": 357978,
+    "ns": 0,
+    "title": "Harpy eagle",
+    "pageprops": {
+     "wikibase_item": "Q53745"
+    }
+   },
+   {
+    "pageid": 418582,
+    "ns": 0,
+    "title": "Edelweiss",
+    "pageprops": {
+     "wikibase_item": "Q178265"
+    }
+   },
+   {
+    "pageid": 442954,
+    "ns": 0,
+    "title": "Kashubia",
+    "pageprops": {
+     "wikibase_item": "Q147804"
+    }
+   },
+   {
+    "pageid": 505567,
+    "ns": 0,
+    "title": "Hibiscus syriacus",
+    "pageprops": {
+     "wikibase_item": "Q157756"
+    }
+   },
+   {
+    "pageid": 507063,
+    "ns": 0,
+    "title": "Hibiscus × rosa-sinensis",
+    "pageprops": {
+     "wikibase_item": "Q159534"
+    }
+   },
+   {
+    "pageid": 548255,
+    "ns": 0,
+    "title": "Indian peafowl",
+    "pageprops": {
+     "wikibase_item": "Q61865"
+    }
+   },
+   {
+    "pageid": 919493,
+    "ns": 0,
+    "title": "Kouprey",
+    "pageprops": {
+     "wikibase_item": "Q321255"
+    }
+   },
+   {
+    "pageid": 988912,
+    "ns": 0,
+    "title": "Grey crowned crane",
+    "pageprops": {
+     "wikibase_item": "Q335992"
+    }
+   },
+   {
+    "pageid": 1021764,
+    "ns": 0,
+    "title": "Grasshopper",
+    "pageprops": {
+     "wikibase_item": "Q18398431"
+    }
+   },
+   {
+    "pageid": 1068967,
+    "ns": 0,
+    "title": "Kangal Shepherd Dog",
+    "pageprops": {
+     "wikibase_item": "Q38508"
+    }
+   },
+   {
+    "pageid": 1310829,
+    "ns": 0,
+    "title": "Ilish",
+    "pageprops": {
+     "wikibase_item": "Q1709642"
+    }
+   },
+   {
+    "pageid": 1366092,
+    "ns": 0,
+    "title": "Cassia fistula",
+    "pageprops": {
+     "wikibase_item": "Q161117"
+    }
+   },
+   {
+    "pageid": 1519794,
+    "ns": 0,
+    "title": "Karabakh horse",
+    "pageprops": {
+     "wikibase_item": "Q748655"
+    }
+   },
+   {
+    "pageid": 1982191,
+    "ns": 0,
+    "title": "Keel-billed toucan",
+    "pageprops": {
+     "wikibase_item": "Q47501"
+    }
+   },
+   {
+    "pageid": 2736034,
+    "ns": 0,
+    "title": "Grizzled giant squirrel",
+    "pageprops": {
+     "wikibase_item": "Q1055842"
+    }
+   },
+   {
+    "pageid": 2810814,
+    "ns": 0,
+    "title": "Himalayan monal",
+    "pageprops": {
+     "wikibase_item": "Q742818"
+    }
+   },
+   {
+    "pageid": 2823016,
+    "ns": 0,
+    "title": "Viburnum opulus",
+    "pageprops": {
+     "wikibase_item": "Q156928"
+    }
+   },
+   {
+    "pageid": 3588744,
+    "ns": 0,
+    "title": "Italian wolf",
+    "pageprops": {
+     "wikibase_item": "Q1188023"
+    }
+   },
+   {
+    "pageid": 5323507,
+    "ns": 0,
+    "title": "Indian elephant",
+    "pageprops": {
+     "wikibase_item": "Q591305"
+    }
+   },
+   {
+    "pageid": 5605341,
+    "ns": 0,
+    "title": "Iberian wolf",
+    "pageprops": {
+     "wikibase_item": "Q1068694"
+    }
+   },
+   {
+    "pageid": 5642032,
+    "ns": 0,
+    "title": "Iris croatica",
+    "pageprops": {
+     "wikibase_item": "Q6070345"
+    }
+   },
+   {
+    "pageid": 5822645,
+    "ns": 0,
+    "title": "Heliconia rostrata",
+    "pageprops": {
+     "wikibase_item": "Q2703222"
+    }
+   },
+   {
+    "pageid": 5838294,
+    "ns": 0,
+    "title": "Grenada dove",
+    "pageprops": {
+     "wikibase_item": "Q905437"
+    }
+   },
+   {
+    "pageid": 5907841,
+    "ns": 0,
+    "title": "Leo Belgicus",
+    "pageprops": {
+     "wikibase_item": "Q545043"
+    }
+   },
+   {
+    "pageid": 6853801,
+    "ns": 0,
+    "title": "Oriental magpie",
+    "pageprops": {
+     "wikibase_item": "Q1133750"
+    }
+   },
+   {
+    "pageid": 8243595,
+    "ns": 0,
+    "title": "Javan hawk-eagle",
+    "pageprops": {
+     "wikibase_item": "Q795558"
+    }
+   },
+   {
+    "pageid": 9124528,
+    "ns": 0,
+    "title": "Jasminum grandiflorum",
+    "pageprops": {
+     "wikibase_item": "Q2718279"
+    }
+   },
+   {
+    "pageid": 11120323,
+    "ns": 0,
+    "title": "Ixora coccinea",
+    "pageprops": {
+     "wikibase_item": "Q1856114"
+    }
+   },
+   {
+    "pageid": 12494096,
+    "ns": 0,
+    "title": "Hispaniolan trogon",
+    "pageprops": {
+     "wikibase_item": "Q1276050"
+    }
+   },
+   {
+    "pageid": 19973790,
+    "ns": 0,
+    "title": "Hawksbill sea turtle",
+    "pageprops": {
+     "wikibase_item": "Q203538"
+    }
+   },
+   {
+    "pageid": 22316046,
+    "ns": 0,
+    "title": "Jasminum officinale",
+    "pageprops": {
+     "wikibase_item": "Q515610"
+    }
+   },
+   {
+    "pageid": 27394479,
+    "ns": 0,
+    "title": "Gyrfalcon",
+    "pageprops": {
+     "wikibase_item": "Q177688"
+    }
+   },
+   {
+    "pageid": 35408783,
+    "ns": 0,
+    "title": "Indus river dolphin",
+    "pageprops": {
+     "wikibase_item": "Q260018"
+    }
+   },
+   {
+    "pageid": 38710532,
+    "ns": 0,
+    "title": "Iris nigricans",
+    "pageprops": {
+     "wikibase_item": "Q15296155"
+    }
+   },
+   {
+    "pageid": 51851037,
+    "ns": 0,
+    "title": "Iris haynei",
+    "pageprops": {
+     "wikibase_item": "Q7033724"
+    }
+   },
+   {
+    "pageid": 76428882,
+    "ns": 0,
+    "title": "Lepus timidus hibernicus",
+    "pageprops": {
+     "wikibase_item": "Q11931468"
+    }
+   }
+  ]
+ }
+}
