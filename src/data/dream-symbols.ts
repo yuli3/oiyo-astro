@@ -476,7 +476,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       ko: {
         name: '추락', keywords: ['통제 상실', '불안', '놓침', '높은 곳'],
         traditional: '해몽서에서 추락은 지위·기반·통제력의 상실로 읽혔습니다.',
-        psych: '잠들 무렵 떨어지는 느낌은 꿈이 아니라 수면 경련입니다. 서사가 있는 추락 꿈은 통제감이 흔들리는 상태와 이어질 수 있습니다.',
+        psych: '잠들 무렵의 움찔거림은 수면 경련일 수 있습니다. 몸의 움직임과 기억나는 꿈 장면은 구별해야 합니다. 서사가 있는 추락 꿈은 통제감이 흔들리는 상태와 이어질 수 있지만 예고는 아닙니다.',
         scenes: [
           { when: '높은 곳에서 떨어진다', reads: '자리나 평판이 흔들린다고 보았습니다.' },
           { when: '떨어지다 깨어난다', reads: '결말이 정해지지 않은 걱정으로 읽혔습니다.' },
@@ -486,7 +486,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       en: {
         name: 'Falling', keywords: ['loss of control', 'anxiety', 'letting go', 'heights'],
         traditional: 'Manuals read falling as the loss of standing, footing or control.',
-        psych: 'The jolt as you drift off is a hypnic jerk, not a dream. A falling dream with a story may track a shaken sense of control.',
+        psych: 'A twitch as you drift off may be a hypnic jerk. Distinguish the bodily movement from remembered dream scenes. A falling dream with a story may relate to a shaken sense of control, but is not a prediction.',
         scenes: [
           { when: 'You fall from a height', reads: 'Taken as position or reputation being shaken.' },
           { when: 'You wake mid-fall', reads: 'Read as a worry whose ending is not yet settled.' },
@@ -496,7 +496,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       ja: {
         name: '落下', keywords: ['制御の喪失', '不安', '手放し', '高所'],
         traditional: '夢占書では落下を地位・基盤・制御の喪失として読みました。',
-        psych: '寝入りばなの落ちる感覚は夢ではなくジャーキング（睡眠時痙攣）です。物語のある落下夢は、制御感の揺らぎと繋がりうる場面です。',
+        psych: '寝入りばなのぴくつきは入眠時ミオクローヌスの場合があります。体の動きと覚えている夢の場面は区別しましょう。物語のある落下夢は制御感の揺らぎと関係する可能性がありますが、予告ではありません。',
         scenes: [
           { when: '高い所から落ちる', reads: '地位や評判が揺らぐと見ました。' },
           { when: '落ちる途中で目が覚める', reads: '結末の定まらない心配と読まれました。' },
@@ -506,7 +506,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       zh: {
         name: '坠落', keywords: ['失控', '焦虑', '放手', '高处'],
         traditional: '解梦书把坠落读作地位、根基与控制力的丧失。',
-        psych: '入睡时的下坠感不是梦，而是入睡抽动。有情节的坠落梦可能与当下控制感的动摇相连。',
+        psych: '入睡时身体突然抖动，可能是入睡抽动。身体动作与记得的梦境画面需要区分。有情节的坠落梦可能与当下控制感的动摇有关，但不是预兆。',
         scenes: [
           { when: '从高处坠落', reads: '视为地位或名声动摇。' },
           { when: '坠落途中惊醒', reads: '读作结局未定的忧虑。' },
@@ -516,7 +516,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       fr: {
         name: 'La chute', keywords: ['perte de contrôle', 'anxiété', 'lâcher prise', 'hauteur'],
         traditional: 'Les manuels lisent la chute comme perte de rang, d’assise ou de contrôle.',
-        psych: "La secousse à l'endormissement est une myoclonie, pas un rêve. Une chute avec récit peut suivre un sentiment de contrôle ébranlé.",
+        psych: "Une secousse à l'endormissement peut être une myoclonie d'endormissement. Distinguez le mouvement du corps des scènes de rêve dont vous vous souvenez. Un rêve de chute avec un récit peut être lié à un sentiment de contrôle ébranlé, sans être une prédiction.",
         scenes: [
           { when: "Vous tombez d'une hauteur", reads: 'Tenu pour une position ou une réputation ébranlée.' },
           { when: 'Vous vous réveillez en pleine chute', reads: "Lu comme un souci dont l'issue n'est pas fixée." },
@@ -526,7 +526,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       es: {
         name: 'La caída', keywords: ['pérdida de control', 'ansiedad', 'soltar', 'altura'],
         traditional: 'Los manuales leen la caída como pérdida de posición, base o control.',
-        psych: 'La sacudida al dormirse es una mioclonía, no un sueño. Una caída con relato puede seguir a una sensación de control quebrada.',
+        psych: 'Una sacudida al dormirse puede ser una sacudida hípnica. Conviene distinguir el movimiento corporal de las escenas de sueño que recuerdas. Una caída con relato puede relacionarse con una sensación de pérdida de control, pero no es una predicción.',
         scenes: [
           { when: 'Caes desde una altura', reads: 'Se tomaba como posición o reputación en peligro.' },
           { when: 'Despiertas en plena caída', reads: 'Leído como una preocupación sin desenlace fijado.' },
@@ -540,8 +540,8 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
     l10n: {
       ko: {
         name: '이빨 빠짐', keywords: ['상실', '노화', '말', '가족'],
-        traditional: '거의 모든 해몽 전통이 상실로 읽습니다. 한국에서는 어느 이가 빠졌는지로 가족의 일을 나누어 보는 관습이 더해졌습니다.',
-        psych: '이갈이로 생긴 턱·치아 압박 감각이 꿈 장면에 섞여 들 수 있습니다. 자주 꾸고 아침에 턱이 뻐근하면 치과가 먼저입니다.',
+        traditional: '전통 해몽에서 상실의 상징으로 읽혀 왔습니다. 한국에서는 어느 이가 빠졌는지로 가족의 일을 나누어 보는 관습이 더해졌습니다.',
+        psych: '대학생 210명의 자기보고 연구에서 치아 꿈은 치아 긴장감과 관련됐지만, 이갈이나 심리적 고통과의 유의한 관련은 없었습니다. 원인이나 진단을 뜻하지 않으며, 꿈과 별개로 턱 통증이 있다면 치과에 상담하세요.',
         scenes: [
           { when: '앞니가 빠진다', reads: '가까운 사람의 일로 보았습니다.' },
           { when: '피가 나며 빠진다', reads: '손실이나 다툼에 대한 경고로 읽혔습니다.' },
@@ -550,8 +550,8 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       },
       en: {
         name: 'Teeth falling out', keywords: ['loss', 'aging', 'speech', 'family'],
-        traditional: 'Almost every tradition reads this as loss. Korean practice adds a family reading keyed to which tooth fell.',
-        psych: 'Jaw and tooth pressure from night-time grinding can bleed into the dream. Frequent dreams plus a sore jaw point to a dentist first.',
+        traditional: 'Traditional dream readings have interpreted this as a symbol of loss. Korean practice adds a family reading keyed to which tooth fell.',
+        psych: 'In a self-report study of 210 university students, teeth dreams were associated with dental tension, but not significantly with grinding or psychological distress. This establishes neither cause nor diagnosis. Consult a dentist about jaw pain independently of the dream.',
         scenes: [
           { when: 'A front tooth falls out', reads: 'Taken as concerning someone close.' },
           { when: 'It falls out bleeding', reads: 'Read as a warning of loss or conflict.' },
@@ -560,8 +560,8 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       },
       ja: {
         name: '歯が抜ける', keywords: ['喪失', '老い', '発話', '家族'],
-        traditional: 'ほとんどの伝統が喪失として読みます。韓国ではどの歯が抜けたかで家族の出来事を分ける慣習が加わりました。',
-        psych: '歯ぎしりによる顎や歯の圧迫感が夢の場面に混じることがあります。頻繁に見て朝に顎が重いなら、まず歯科です。',
+        traditional: '伝統的な夢解きでは喪失の象徴として読まれてきました。韓国ではどの歯が抜けたかで家族の出来事を分ける慣習が加わりました。',
+        psych: '大学生210人の自己報告研究では、歯の夢は歯の緊張感と関連しましたが、歯ぎしりや心理的苦痛との有意な関連はありませんでした。原因や診断を示すものではありません。夢とは別に顎の痛みがあれば歯科で相談しましょう。',
         scenes: [
           { when: '前歯が抜ける', reads: '身近な人の出来事と見ました。' },
           { when: '血が出て抜ける', reads: '損失や争いの警告と読まれました。' },
@@ -570,8 +570,8 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       },
       zh: {
         name: '牙齿脱落', keywords: ['丧失', '衰老', '言语', '家人'],
-        traditional: '几乎所有传统都读作丧失。朝鲜半岛还添了按脱落位置对应家人的读法。',
-        psych: '夜间磨牙造成的颌与牙压迫感可能混入梦境。常做此梦且晨起颌部酸胀，应先看牙医。',
+        traditional: '传统解梦曾将其视为丧失的象征。朝鲜半岛还添了按脱落位置对应家人的读法。',
+        psych: '一项针对210名大学生的自我报告研究发现，牙齿梦与牙齿紧张感有关，但与磨牙或心理困扰没有显著关联。这不能确定因果，也不能用于诊断。若有下颌疼痛，应就症状咨询牙医，而不是依据梦境判断。',
         scenes: [
           { when: '门牙脱落', reads: '视为身边亲近之人的事。' },
           { when: '带血脱落', reads: '读作损失或争执的警示。' },
@@ -580,8 +580,8 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       },
       fr: {
         name: 'Perdre ses dents', keywords: ['perte', 'vieillissement', 'parole', 'famille'],
-        traditional: 'Presque toutes les traditions y lisent une perte. L’usage coréen y ajoute une lecture familiale selon la dent tombée.',
-        psych: "La pression sur mâchoire et dents due au bruxisme peut s'infiltrer dans le rêve. Rêve fréquent et mâchoire douloureuse : voyez d'abord un dentiste.",
+        traditional: 'Les lectures traditionnelles des rêves y ont vu un symbole de perte. L’usage coréen y ajoute une lecture familiale selon la dent tombée.',
+        psych: "Dans une étude par autoquestionnaire auprès de 210 étudiants, les rêves de dents étaient associés à une tension dentaire, mais pas de façon significative au grincement des dents ni à la détresse psychologique. Cela ne démontre ni cause ni diagnostic. Consultez un dentiste pour une douleur à la mâchoire, indépendamment du rêve.",
         scenes: [
           { when: 'Une incisive tombe', reads: 'Tenu pour concerner un proche.' },
           { when: 'Elle tombe en saignant', reads: "Lu comme l'annonce d'une perte ou d'un conflit." },
@@ -590,8 +590,8 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
       },
       es: {
         name: 'Perder los dientes', keywords: ['pérdida', 'envejecimiento', 'habla', 'familia'],
-        traditional: 'Casi toda tradición lo lee como pérdida. El uso coreano añade una lectura familiar según qué diente cayó.',
-        psych: 'La presión en mandíbula y dientes por bruxismo puede colarse en el sueño. Si se repite y amaneces con la mandíbula dolorida, primero el dentista.',
+        traditional: 'Las interpretaciones tradicionales de los sueños lo han leído como símbolo de pérdida. El uso coreano añade una lectura familiar según qué diente cayó.',
+        psych: 'En un estudio de autoinforme con 210 universitarios, los sueños de dientes se asociaron con tensión dental, pero no de forma significativa con rechinar los dientes ni con malestar psicológico. Esto no demuestra causas ni permite diagnosticar. Consulta a un dentista por dolor mandibular, independientemente del sueño.',
         scenes: [
           { when: 'Se cae un incisivo', reads: 'Se tomaba como algo relativo a alguien cercano.' },
           { when: 'Cae sangrando', reads: 'Leído como aviso de pérdida o conflicto.' },

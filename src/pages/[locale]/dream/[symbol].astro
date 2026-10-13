@@ -7,6 +7,9 @@
 //
 // 긴 해설(explainers)은 있으면 아래에 덧붙는다. 없으면 사전 항목만 보인다.
 import Layout from '../../../layouts/Layout.astro';
+// 2026-10-13: this route renders Markdown without the ExplainerArticle wrapper;
+// import its shared typography so tables and headings are styled here too.
+import '../../../styles/explainer-prose.css';
 import { render, getCollection } from 'astro:content';
 import { DREAM_SYMBOLS, DREAM_SYMBOL_BY_ID, DREAM_CATEGORY_LABELS } from '../../../data/dream-symbols';
 import { LOCALES } from '../../../i18n';
