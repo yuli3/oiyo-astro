@@ -14,7 +14,7 @@
 // alcohol: CC BY-NC-SA 3.0 IGO or unclear), UNDP HDI/GII and FAO undernourishment (no licence
 // in the files), World Happiness Report, twin births and UN household size (unclear),
 // and the Wikipedia national-symbol lists (CC BY-SA would bind the JSON to share-alike).
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const MAX_YEAR = 2025;
@@ -181,6 +181,22 @@ const FAMOUS_ALLOW =
 const FAMOUS_BLOCK =
   /politic|military|soldier|officer|monarch|sovereign|king|queen|emperor|ruler|dictator|revolutionary|head of (government|state)|statesperson|diplomat|minister|governor|president|aristocrat|perpetrator|criminal|terrorist|murderer|activist|priest|bishop|pope|theologian|religious|prophet|missionary|cleric|imam|rabbi|monk|nun|saint/i;
 {
+  // Names in the person's own language (scripts/fetch-reincarnation-native-names.mjs).
+  // East Slavic labels are often the full legal name: "Лев Николаевич Толстой" → "Лев Толстой",
+  // and Ukrainian ones put the surname first: "Гоголь Микола Васильович" → "Микола Гоголь".
+  const PATRONYMIC = /^[А-ЯЁІЇЄҐ][а-яёіїєґ]+(ович|евич|ьевич|ич|овна|евна|ьевна|ична|инична)$/u;
+  const shortName = (name) => {
+    const parts = name.split(" ");
+    if (parts.length !== 3) return name;
+    if (PATRONYMIC.test(parts[1])) return `${parts[0]} ${parts[2]}`;
+    if (PATRONYMIC.test(parts[2])) return `${parts[1]} ${parts[0]}`;
+    return name;
+  };
+  const nativeName = new Map(
+    existsSync(`${dir}/reincarnation-stats-5/famous_native.csv`)
+      ? readCsv("reincarnation-stats-5/famous_native.csv").map((row) => [row.qid, shortName(row.native)])
+      : [],
+  );
   const byIso = new Map();
   for (const row of readCsv("reincarnation-stats-5/famous_people_top30.csv")) {
     if (!FAMOUS_ALLOW.test(row.occupations) || FAMOUS_BLOCK.test(row.occupations)) continue;
@@ -196,6 +212,8 @@ const FAMOUS_BLOCK =
       list.slice(0, 3).map((row) => ({
         ko: row.name_ko || row.name,
         en: row.name || row.name_ko,
+        // Korean pages already show Korean; Wikidata's native name for Psy is the Latin "Psy".
+        native: iso3 === "KOR" ? undefined : nativeName.get(row.wikidata_qid) || undefined,
         born: row.birth_year === "" ? undefined : Number(row.birth_year),
       })),
     );

@@ -276,7 +276,15 @@ export default function ReincarnationStages({ locale, country, home }: Props) {
             {people.length > 0 && (
               <div className="rounded-xl bg-surface-subtle p-3 sm:col-span-2">
                 <dt className="text-xs text-muted-foreground">{COPY.famous[locale]}</dt>
-                <dd className="mt-0.5 text-base font-bold text-foreground">{people.join(", ")}</dd>
+                <dd className="mt-0.5 text-base font-bold text-foreground">
+                  {people.map((person, i) => (
+                    <span key={person.name}>
+                      {i > 0 && ", "}
+                      <span>{person.name}</span>
+                      {person.reading && <span className="ml-1 text-xs font-normal text-muted-foreground">({person.reading})</span>}
+                    </span>
+                  ))}
+                </dd>
                 <dd className="text-xs text-muted-foreground">{COPY.famousNote[locale]}</dd>
               </div>
             )}

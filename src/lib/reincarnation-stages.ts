@@ -35,7 +35,7 @@ export interface StageStats {
   /** 중위 연령. */
   medianAge?: number;
   /** 이 나라에서 태어난 예술가·과학자·작가·운동선수(정치·군·종교 인물 제외). */
-  famous?: { ko: string; en: string; born?: number }[];
+  famous?: { ko: string; en: string; native?: string; born?: number }[];
   /** 그해 신생아 이름 1위. 통계청 자료가 공개된 나라만. */
   names?: { year: number; scope: string; f?: string; m?: string };
 }
@@ -125,7 +125,16 @@ export function lifeStops(stats: StageStats, home?: StageStats): LifeStop[] {
   );
 }
 
-/** 한국어 화면은 한국어 이름, 그 밖의 로케일은 Wikidata 영어 이름. */
-export function famousNames(stats: StageStats, korean: boolean): string[] {
-  return (stats.famous ?? []).map((row) => (korean ? row.ko : row.en)).filter((name) => name.length > 0);
+/**
+ * 유명인 이름은 그 사람 말로 쓴다(2026-10-13 세운: "현지이름 그대로"). 松尾芭蕉, Лев Толстой.
+ * 읽을 수 없는 글자일 수 있으니, 화면 언어 이름(한국어 화면은 한국어, 그 밖은 영어)이 다르면
+ * reading 으로 같이 준다.
+ */
+export function famousNames(stats: StageStats, korean: boolean): { name: string; reading?: string }[] {
+  return (stats.famous ?? []).flatMap((row) => {
+    const local = korean ? row.ko : row.en;
+    const name = row.native || local;
+    if (!name) return [];
+    return local && local !== name ? [{ name, reading: local }] : [{ name }];
+  });
 }

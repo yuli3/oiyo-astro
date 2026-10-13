@@ -26,9 +26,19 @@ describe("reincarnation life-stages data", () => {
   });
 
   it("never lists political, military or religious figures as famous births", () => {
-    expect(famousNames(ROWS.AUT, false)).not.toContain("Adolf Hitler");
-    expect(famousNames(ROWS.RUS, false)).not.toContain("Vladimir Putin");
+    const all = (iso3: string) => famousNames(ROWS[iso3], false).flatMap((row) => [row.name, row.reading]);
+    expect(all("AUT")).not.toContain("Adolf Hitler");
+    expect(all("RUS")).not.toContain("Vladimir Putin");
+    expect(all("RUS")).not.toContain("Владимир Путин");
     expect(famousNames(ROWS.KOR, true).length).toBeGreaterThan(0);
+  });
+
+  it("writes famous names in their own language with a reading for the page language", () => {
+    expect(famousNames({ famous: [{ ko: "마쓰오 바쇼", en: "Matsuo Bashō", native: "松尾芭蕉" }] }, true)).toEqual([
+      { name: "松尾芭蕉", reading: "마쓰오 바쇼" },
+    ]);
+    expect(famousNames({ famous: [{ ko: "몰리에르", en: "Molière", native: "Molière" }] }, false)).toEqual([{ name: "Molière" }]);
+    expect(famousNames({ famous: [{ ko: "한강", en: "Han Kang" }] }, true)).toEqual([{ name: "한강" }]);
   });
 });
 
