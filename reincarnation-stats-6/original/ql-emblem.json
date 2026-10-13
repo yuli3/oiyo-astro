@@ -1,0 +1,7792 @@
+{
+ "head": {
+  "vars": [
+   "c",
+   "iso",
+   "cEn",
+   "img",
+   "coa",
+   "coaEn",
+   "coaKo"
+  ]
+ },
+ "results": {
+  "bindings": [
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q8836"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "베네수엘라의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Venezuela"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q717"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Venezuela"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "VEN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Venezuela.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17201"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "필리핀의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Philippines"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q928"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Philippines"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PHL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Philippines.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q107158"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "조선민주주의인민공화국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of North Korea"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q423"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "North Korea"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PRK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20North%20Korea.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q107152"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "카메룬의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Cameroon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1009"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cameroon"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CMR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cameroon.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207526"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "과테말라의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Guatemala"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q774"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Guatemala"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GTM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guatemala.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207531"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "나미비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Namibia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1030"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Namibia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NAM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Namibia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207701"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아이티의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of Arms of Haiti"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q790"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Haiti"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "HTI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Haiti.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207533"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "적도 기니의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Equatorial Guinea"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q983"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Equatorial Guinea"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GNQ"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Equatorial%20Guinea.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207785"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "볼리비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Bolivia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q750"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Bolivia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BOL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20de%20Bolivia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q107140"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "카보베르데의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "National emblem of Cape Verde"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1011"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cape Verde"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CPV"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cape%20Verde.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q44783"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "리비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Libya"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1016"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Libya"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LBY"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Government%20of%20National%20Unity%20%28Libya%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q86881"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "노르웨이의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Norway"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q20"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Norway"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NOR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Norway.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q106605"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "이집트의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Egypt"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q79"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Egypt"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "EGY"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Egypt%20%28Official%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q124768"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "키프로스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Cyprus"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q229"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cyprus"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CYP"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cyprus%20%282006%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q4530"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "페루의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Peru"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q419"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Peru"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PER"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20nacional%20del%20Per%C3%BA.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q4722"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "온두라스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Honduras"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q783"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Honduras"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "HND"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Honduras.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207510"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "토고의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Togo"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q945"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Togo"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TGO"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20du%20Togo.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207512"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "나이지리아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Nigeria"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1033"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Nigeria"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NGA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Nigeria.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q107282"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "보츠와나의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Botswana"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q963"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Botswana"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BWA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Botswana.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q107948"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "감비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Gambia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1005"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "The Gambia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GMB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20The%20Gambia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1511666"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "생마르탱의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Collectivity of Saint Martin"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q126125"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Saint-Martin"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MAF"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/St%20Martin%20Coat.png"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q211759"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "파라과이의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Paraguay"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q733"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Paraguay"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PRY"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Paraguay.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q752773"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "저지섬의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Jersey"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q785"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Jersey"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JEY"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Jersey.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209816"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "타지키스탄의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Tajikistan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q863"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Tajikistan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TJK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Tajikistan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q26562"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "중화민국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Blue Sky with a White Sun"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q865"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Taiwan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TWN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Emblem%20of%20the%20Republic%20of%20China.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209234"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "코모로의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "National seal of the Union of the Comoros"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q970"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Comoros"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "COM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Comoros.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q109125"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "지부티의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Djibouti"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q977"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Djibouti"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "DJI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Djibouti.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q109120"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "에리트레아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Eritrea"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q986"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Eritrea"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ERI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Eritrea%20%28or%20argent%20azur%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q211232"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "모로코의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Morocco"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1028"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Morocco"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MAR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Morocco.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209248"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "모잠비크의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Mozambique"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1029"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mozambique"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MOZ"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Mozambique.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209265"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "니제르의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Niger"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1032"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Niger"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NER"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Niger.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209259"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "세네갈의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Senegal"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1041"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Senegal"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SEN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Senegal%20%28official%20version%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q210560"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "수단의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Sudan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1049"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Sudan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SDN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Sudan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1520976"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "프랑스령 기아나의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of French Guiana"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q3769"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "French Guiana"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GUF"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20French%20Guiana%2C%20according%20to%20the%20original%20displayed%20at%20the%20Museum%20Franconie%2C%20at%20Cayenne.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q721069"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "건지섬의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Guernsey"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25230"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Guernsey"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GGY"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guernsey.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q752770"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "앵귈라의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Anguilla"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25228"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Anguilla"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AIA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Anguilla.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1973713"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "퀴라소의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Curaçao"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25279"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Curaçao"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CUW"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cura%C3%A7ao.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q2301719"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "신트마르턴의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Sint Maarten"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q26273"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Sint Maarten"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SXM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Wapen%20van%20Sint%20Maarten.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q41549"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "캐나다의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Canada"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Canada"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CAN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Royal%20Coat%20of%20arms%20of%20Canada.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q142845"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "인도네시아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Indonesia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q252"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Indonesia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "IDN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Indonesia%20Garuda%20Pancasila.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q865977"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "푸에르토리코의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Puerto Rico"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1183"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Puerto Rico"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PRI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Commonwealth%20of%20Puerto%20Rico.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q827843"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "올란드 제도의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Åland"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Åland"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20%C3%85land.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1281643"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "과들루프의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Guadeloupe"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17012"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Guadeloupe"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GLP"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guadeloupe.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q927263"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "프랑스령 폴리네시아의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of French Polynesia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q30971"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "French Polynesia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PYF"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20French%20Polynesia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209213"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "콩고 민주 공화국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Arms of the Democratic Republic of the Congo"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q974"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Democratic Republic of the Congo"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "COD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Democratic%20Republic%20of%20the%20Congo%20%28black%20spear%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209204"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "모나코의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Monaco"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q235"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Monaco"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MCO"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Monaco.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q131947"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "싱가포르의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Singapore"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q334"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Singapore"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SGP"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Singapore.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q133018"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "독일의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Germany"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q183"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Germany"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "DEU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Germany.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q160322"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "오스트리아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Austria"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q40"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Austria"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AUT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Austria.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q162058"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "알바니아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Albania"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q222"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Albania"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Albania.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q109103"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "부룬디의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Burundi"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q967"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Burundi"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BDI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Burundi.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q108570"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "우간다의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Uganda"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1036"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Uganda"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "UGA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Uganda.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q164845"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "에스토니아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Estonia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q191"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Estonia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "EST"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Estonia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q212994"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "미얀마의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "State Seal of Myanmar"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q836"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Myanmar"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MMR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/State%20Seal%20of%20the%20Republic%20of%20the%20Union%20of%20Myanmar.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q170496"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "폴란드의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Poland"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Poland"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "POL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Herb%20Polski.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q208159"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "스리랑카의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Sri Lanka"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q854"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Sri Lanka"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LKA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Sri%20Lanka.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q208148"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "남수단의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of South Sudan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q958"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "South Sudan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SSD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20South%20Sudan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q642877"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "팔레스타인의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Palestine"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q219060"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Palestine"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PSE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Palestine.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q643116"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "세인트키츠 네비스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Saint Kitts and Nevis"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q763"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Saint Kitts and Nevis"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "KNA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Saint%20Kitts%20and%20Nevis.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q208661"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "자메이카의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Jamaica"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q766"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Jamaica"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JAM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Jamaica.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209224"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "네팔의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Nepal"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q837"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Nepal"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NPL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Nepal.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q657108"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아루바의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Aruba"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q21203"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Aruba"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ABW"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Aruba%20wapen.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q208656"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "우루과이의 국장"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q77"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Uruguay"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "URY"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Uruguay.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q221024"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "오스트레일리아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Australia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q408"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Australia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AUS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Commonwealth%20of%20Australia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209302"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "캄보디아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Royal Coat of Arms of Cambodia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q424"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cambodia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "KHM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Royal%20arms%20of%20Cambodia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q167927"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "피지의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Fiji"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q712"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Fiji"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FJI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Fiji.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q213034"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "니카라과의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Nicaragua"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q811"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Nicaragua"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NIC"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Nicaragua.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q209608"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "말레이시아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Malaysia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q833"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Malaysia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MYS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Malaysia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q213037"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "시리아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Syria"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q858"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Syria"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SYR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Syria%20%282025%E2%80%93present%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q165432"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "프랑스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of France"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q142"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "France"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FRA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Arms%20of%20the%20French%20Republic.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q165762"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "영국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "royal coat of arms of the United Kingdom"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q145"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "United Kingdom"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GBR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20United%20Kingdom%20%282022%2C%20variant%202%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q165508"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "러시아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Russia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q159"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Russia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "RUS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20the%20Russian%20Federation.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q168897"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아제르바이잔의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Azerbaijan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q227"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Azerbaijan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AZE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Azerbaijan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q170553"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "안도라의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Andorra"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q228"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Andorra"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AND"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Andorra.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242025"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "세인트루시아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Saint Lucia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q760"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Saint Lucia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LCA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Saint%20Lucia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242909"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "말라위의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Malawi coat of arms"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1020"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Malawi"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MWI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Malawi.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q171384"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아르메니아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Armenia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q399"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Armenia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ARM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Armenia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q171663"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "미국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Great Seal of the United States of America"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q30"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "United States"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "USA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Greater%20coat%20of%20arms%20of%20the%20United%20States.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q170867"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "멕시코의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mexican coat of arms"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q96"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mexico"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MEX"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Mexico.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242944"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "동티모르의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of East Timor"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q574"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Timor-Leste"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TLS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20East%20Timor.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242938"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "시에라리온의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Sierra Leone"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1044"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Sierra Leone"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SLE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Sierra%20Leone.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q213023"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "몰디브의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Maldives"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q826"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Maldives"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MDV"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Maldives.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q213018"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "기니의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Guinea"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1006"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Guinea"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guinea.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q235837"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "키리바시의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Kiribati"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q710"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kiribati"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "KIR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Kiribati.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q235826"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "콜롬비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Colombia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q739"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Colombia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "COL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Colombia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q235850"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "요르단의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Jordan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q810"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Jordan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JOR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Jordan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q238722"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "키르기스스탄의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Kyrgyzstan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q813"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kyrgyzstan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "KGZ"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Kyrgyzstan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q239279"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "카타르의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Qatar"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q846"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Qatar"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "QAT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Qatar-2022.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q235854"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "중앙아프리카 공화국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Central African Republic"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q929"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Central African Republic"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CAF"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Central%20African%20Republic.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q237840"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "베냉의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Benin"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q962"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Benin"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BEN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Benin.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q235906"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "부르키나파소의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Burkina Faso"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q965"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Burkina Faso"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BFA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Burkina%20Faso%20%281984-2025%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q237870"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "가봉의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Gabon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1000"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Gabon"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GAB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Gabon.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q241861"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "레소토의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Lesotho"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1013"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Lesotho"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LSO"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Lesotho.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q237852"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "바베이도스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Barbados"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q244"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Barbados"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BRB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Barbados%20%282%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242927"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "쿠웨이트의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Kuwait"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q817"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kuwait"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "KWT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20the%20State%20of%20Kuwait.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242912"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "쿠바의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Cuba"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q241"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cuba"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CUB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cuba.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q244988"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "에콰도르의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Ecuador"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q736"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Ecuador"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ECU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Ecuador.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q171708"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "핀란드의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Finland"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finland"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Finland.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q173189"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "슬로베니아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Slovenia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q215"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Slovenia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SVN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Slovenia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q173163"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불가리아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Bulgaria"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q219"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Bulgaria"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BGR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Bulgaria.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q173213"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "루마니아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Romania"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q218"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Romania"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ROU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Romania.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q269821"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "모리타니의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Seal of Mauritania"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1025"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mauritania"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MRT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Seal%20of%20Mauritania.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q269818"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "에스와티니의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Eswatini"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1050"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Eswatini"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SWZ"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Eswatini.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q233996"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "칠레의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Chile"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q298"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Chile"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CHL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Chile%20%28c%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q219719"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "나우루의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Nauru"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q697"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Nauru"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NRU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Nauru%20%282020%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q233954"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "앤티가 바부다의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Antigua and Barbuda"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q781"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Antigua and Barbuda"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ATG"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Antigua%20and%20Barbuda.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q213029"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "세이셸의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Seychelles"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1042"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Seychelles"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SYC"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Seychelles.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q213177"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "코소보의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Kosovo"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1246"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kosovo"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "XKS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20the%20Republic%20of%20Kosovo.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q170556"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "국화문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Imperial crest of Japan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Japan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamon%20of%20the%20Imperial%20House%20of%20Japan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q170600"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "스페인의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Spain"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q29"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Spain"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ESP"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20de%20Espa%C3%B1a%20%28variant%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q213031"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "가나의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Ghana"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q117"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Ghana"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GHA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Ghana.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242981"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "엘살바도르의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of El Salvador"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q792"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "El Salvador"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SLV"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20El%20Salvador.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242985"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "파나마의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Panama"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q804"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Panama"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PAN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Panama.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q318966"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "예멘의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Yemen"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q805"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Yemen"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "YEM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Yemen%20%282%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q320699"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "코트디부아르의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Ivory Coast"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1008"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Ivory Coast"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CIV"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Ivory%20Coast%20%282%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q189590"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "슬로바키아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Slovakia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q214"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Slovakia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SVK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Slovakia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q190085"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "몰타의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Malta"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q233"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Malta"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MLT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Malta.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q380354"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "통가의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Tonga"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q678"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Tonga"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TON"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tonga.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q435561"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "영국령 버진아일랜드의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the British Virgin Islands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25305"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "British Virgin Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "VGB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20British%20Virgin%20Islands.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q435431"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "영국령 인도양 지역의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of the British Indian Ocean Territory"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q43448"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "British Indian Ocean Territory"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "IOT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20British%20Indian%20Ocean%20Territory.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q457635"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "케이맨 제도의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Cayman Islands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5785"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cayman Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CYM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Cayman%20Islands%20Coat%20of%20Arms.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q437414"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "포클랜드 제도의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Falkland Islands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q9648"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Falkland Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FLK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20the%20Falkland%20Islands%20%28relief%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q459128"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "맨섬의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Isle of Man"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q9676"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Isle of Man"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "IMN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Isle%20of%20Man.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q189560"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "스위스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Switzerland"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q39"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Switzerland"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CHE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Switzerland.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q184275"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "라트비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Latvia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q211"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Latvia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LVA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Latvia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188294"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "바레인의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Bahrain"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q398"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Bahrain"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BHR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20The%20Kingdom%20of%20Bahrain.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188320"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "브라질의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Brazil"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q155"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Brazil"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BRA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Brazil.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188084"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "차드의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Chad"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q657"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Chad"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TCD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Chad.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188053"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "태국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Thailand"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q869"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Thailand"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "THA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Thailand.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q321746"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "수리남의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Suriname"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q730"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Suriname"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SUR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Suriname.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188028"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "이란의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Iran"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q794"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Iran"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "IRN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Iran.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q321317"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "기니비사우의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Guinea-Bissau"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1007"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Guinea-Bissau"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GNB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Guinea-Bissau.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q187385"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아일랜드의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Ireland"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q27"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Ireland"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "IRL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Ireland.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q321755"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "그린란드의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Greenland"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q223"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Greenland"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GRL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Greenland.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q478816"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "팔라우의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Seal of Palau"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q695"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Palau"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PLW"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20Palau.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q484823"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아프가니스탄의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Afghanistan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q889"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Afghanistan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AFG"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Arms%20of%20the%20Islamic%20Emirate%20of%20Afghanistan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q475471"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "지브롤터의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Gibraltar"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1410"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Gibraltar"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GIB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Gibraltar1.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q461780"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "트리니다드 토바고의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Trinidad and Tobago"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q754"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Trinidad and Tobago"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TTO"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Trinidad%20and%20Tobago%20%282025%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q462724"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "터크스 케이커스 제도의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of the Turks and Caicos Islands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q18221"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Turks and Caicos Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TCA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Turks%20and%20Caicos%20Islands.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q487081"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "우즈베키스탄의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Uzbekistan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q265"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Uzbekistan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "UZB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Uzbekistan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q330184"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "세인트빈센트 그레나딘의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Saint Vincent and the Grenadines"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q757"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Saint Vincent and the Grenadines"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "VCT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Saint%20Vincent%20and%20the%20Grenadines.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q330402"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "도미니카 연방의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Dominica"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q784"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Dominica"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "DMA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Dominica.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q369400"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "버뮤다의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Bermuda"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q23635"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Bermuda"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BMU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Bermuda.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q190129"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "스웨덴의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Sweden"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q34"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Sweden"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SWE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20coat%20of%20arms%20of%20Sweden.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q504591"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "그레나다의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Grenada"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q769"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Grenada"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GRD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Grenada.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q199668"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "앙골라의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Angola"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q916"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Angola"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AGO"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Angola.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q598635"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "마카오의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Macau"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q14773"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Macau"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MAC"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Regional%20Emblem%20of%20Macau.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q199614"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "벨기에의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Belgium"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q31"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Belgium"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BEL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20coat%20of%20arms%20of%20Belgium.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q199433"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "우크라이나의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Ukrainiae"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q212"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Ukraine"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "UKR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Ukraine%20%28Pantone%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q199860"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "세르비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Serbia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q403"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Serbia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SRB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Serbia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q199858"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아르헨티나의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Argentina"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q414"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Argentina"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ARG"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Argentina.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q199432"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "이탈리아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Italy"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q38"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Italy"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ITA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Italy.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q190785"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "방글라데시의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Bangladesh"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q902"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Bangladesh"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BGD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Bangladesh.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q193715"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "산마리노의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of San Marino"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q238"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "San Marino"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SMR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20San%20Marino.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q191728"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "몬테네그로의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Montenegro"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q236"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Montenegro"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MNE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Montenegro.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q459696"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "사모아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Samoa"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q683"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Samoa"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "WSM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Public%20Seal%20of%20Samoa.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q459704"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "바누아투의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Vanuatu"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q686"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Vanuatu"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "VUT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Vanuatu.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q461197"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "솔로몬 제도의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Solomon Islands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q685"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Solomon Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SLB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Solomon%20Islands.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q459549"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "미크로네시아 연방의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Seal of the Federated States of Micronesia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q702"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Federated States of Micronesia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FSM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Federated%20States%20of%20Micronesia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q459364"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "마셜 제도의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Seal of the Marshall Islands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q709"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Marshall Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MHL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Marshall%20Islands.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q193718"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "몽골의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Mongolia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q711"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mongolia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MNG"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/State%20emblem%20of%20Mongolia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q193781"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "에티오피아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Ethiopia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q115"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Ethiopia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ETH"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Ethiopia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q263371"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "가이아나의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Guyana"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q734"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Guyana"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GUY"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guyana.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q271201"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "도미니카 공화국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Dominican Republic"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q786"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Dominican Republic"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "DOM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Dominican%20Republic.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q271203"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "마다가스카르의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Seal of Madagascar"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1019"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Madagascar"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MDG"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20Madagascar.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q244996"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "상투메 프린시페의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of São Tomé and Príncipe"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1039"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "São Tomé and Príncipe"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "STP"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20S%C3%A3o%20Tom%C3%A9%20and%20Pr%C3%ADncipe.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q179611"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "덴마크의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Denmark"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q35"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Denmark"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "DNK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20coat%20of%20arms%20of%20Denmark.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q181137"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "헝가리의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Hungary"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q28"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Hungary"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "HUN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Hungary.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q179866"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아이슬란드의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Iceland"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q189"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Iceland"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Iceland.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200630"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "탄자니아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Tanzania"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q924"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Tanzania"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TZA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tanzania.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200182"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "사우디아라비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of Arms of Saudi Arabia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Saudi Arabia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SAU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Saudi%20Arabia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201160"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "룩셈부르크의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Luxembourg"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q32"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Luxembourg"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LUX"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Greater%20coat%20of%20arms%20of%20the%20grand-duchy%20of%20Luxembourg.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q309159"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "투발루의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Tuvalu"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q672"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Tuvalu"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TUV"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tuvalu.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q274170"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "파푸아뉴기니의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Papua New Guinea"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q691"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Papua New Guinea"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PNG"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Papua%20New%20Guinea.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q271213"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "잠비아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Zambia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q953"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Zambia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ZMB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Zambia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q271210"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "라이베리아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Liberia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1014"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Liberia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LBR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Liberia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q181147"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "그리스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Greece"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q41"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Greece"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GRC"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Greece.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q179602"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "벨라루스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Belarus"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q184"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Belarus"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BLR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Belarus%20%282020%E2%80%93present%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q179596"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "체코의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of the Czech Republic"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q213"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Czech Republic"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CZE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Czech%20Republic.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200972"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "뉴질랜드의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of New Zealand"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q664"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "New Zealand"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NZL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20New%20Zealand.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201112"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "라오스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Laos"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q819"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Laos"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LAO"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Laos%20%281991-2025%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200455"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "베트남의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Vietnam"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q881"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Vietnam"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "VNM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Vietnam.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201058"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "대한민국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of South Korea"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q884"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "South Korea"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "KOR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20South%20Korea.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201068"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "케냐의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Kenya"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q114"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kenya"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "KEN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Kenya%20%28Official%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201044"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "몰도바의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Moldova"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q217"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Moldova"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MDA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Moldova.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200198"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "바티칸 시국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Vatican City"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q237"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Vatican City"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "VAT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Vatican%20City%20%282023%E2%80%93present%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q271186"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "콩고 공화국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Republic of the Congo"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q971"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Republic of the Congo"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "COG"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Republic%20of%20the%20Congo.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q271183"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "모리셔스의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Mauritius"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1027"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mauritius"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MUS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Mauritius.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q269824"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "르완다의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Rwanda"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1037"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Rwanda"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "RWA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Rwanda.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q171869"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "인도의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of India"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q668"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "India"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "IND"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q202782"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "레바논의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Lebanon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q822"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Lebanon"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LBN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Lebanon.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q203016"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "벨리즈의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Belize"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q242"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Belize"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BLZ"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Belize.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201133"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "알제리의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Algeria"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q262"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Algeria"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "DZA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Emblem%20of%20Algeria%20%28bronze%20effect%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201128"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "투르크메니스탄의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Turkmenistan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q874"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Turkmenistan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TKM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Turkmenistan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q273093"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "바하마의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Bahamas"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q778"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "The Bahamas"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BHS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Bahamas.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q186593"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "이라크의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Iraq"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q796"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Iraq"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "IRQ"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Iraq.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q184991"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "이스라엘의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Israel"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Israel"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Israel.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q272235"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "짐바브웨의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Zimbabwe"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q954"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Zimbabwe"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ZWE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Zimbabwe.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188047"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "리투아니아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Lithuania"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q37"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Lithuania"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LTU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Lithuania.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q187327"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "중화인민공화국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of China"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q148"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "People's Republic of China"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CHN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q184252"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "크로아티아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Croatia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q224"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Croatia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "HRV"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Croatia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q182404"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "카자흐스탄의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Kazakhstan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q232"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kazakhstan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "KAZ"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Kazakhstan%20latin.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200191"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "네덜란드의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Netherlands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q29999"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kingdom of the Netherlands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NLD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Royal%20coat%20of%20arms%20of%20the%20Netherlands.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200191"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "네덜란드의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Netherlands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q29999"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kingdom of the Netherlands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NLD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/State%20coat%20of%20arms%20of%20the%20Netherlands.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200195"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "포르투갈의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Portugal"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q45"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Portugal"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PRT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Portugal.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q199862"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "보스니아 헤르체고비나의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Bosnia and Herzegovina"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q225"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Bosnia and Herzegovina"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BIH"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Bosnia%20and%20Herzegovina.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q200053"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "조지아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Georgia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q230"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Georgia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GEO"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Greater%20coat%20of%20arms%20of%20Georgia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201168"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "파키스탄의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of Arms of Pakistan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q843"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Pakistan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PAK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/State%20emblem%20of%20Pakistan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q201178"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "북마케도니아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of North Macedonia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q221"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "North Macedonia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MKD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20North%20Macedonia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207282"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "리히텐슈타인의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Liechtenstein"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q347"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Liechtenstein"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "LIE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Staatswappen-Liechtensteins.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q206398"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "코스타리카의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Costa Rica"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q800"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Costa Rica"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CRI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Costa%20Rica.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207285"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "오만의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Oman"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q842"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Oman"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "OMN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Oman.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207288"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "말리의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of Arms of Mali"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q912"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mali"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MLI"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Mali.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q203330"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "남아프리카 공화국의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of South Africa"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q258"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "South Africa"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ZAF"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20South%20Africa%20%28heraldic%29.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q203740"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아랍에미리트의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of the United Arab Emirates"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q878"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "United Arab Emirates"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ARE"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20the%20United%20Arab%20Emirates.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q204949"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "튀니지의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Tunisia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q948"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Tunisia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TUN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tunisia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207354"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "부탄의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of Bhutan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q917"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Bhutan"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BTN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Bhutan.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q203378"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "브루나이의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "emblem of Brunei"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q921"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Brunei"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BRN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Brunei.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q203362"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "소말리아의 국장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Somalia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1045"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Somalia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SOM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Somalia.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q207296"
+    },
+    "coaKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "페로 제도의 문장"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of the Faroe Islands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q4628"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Faroe Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FRO"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Faroe%20Islands.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q131008"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Johnston Atoll"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JTN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20Seal%20of%20the%20United%20States%20%28obverse%29.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q165783"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "British Antarctic Territory"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ATB"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20British%20Antarctic%20Territory.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q189999"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Queen Maud Land"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ATN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Norway.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q3405693"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Sark"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CRQ"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Sark.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q31890709"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Ascension"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ASC"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Ascension%20Island.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q8646"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Hong Kong"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "HKG"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Regional%20Emblem%20of%20Hong%20Kong.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q11703"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "United States Virgin Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "VIR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20United%20States%20Virgin%20Islands.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16635"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Guam"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GUM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20Guam.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16641"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "American Samoa"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ASM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20American%20Samoa.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16644"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Northern Mariana Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MNP"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Northern%20Mariana%20Islands.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17070"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Réunion"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "REU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20R%C3%A9union.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25362"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Saint Barthélemy"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BLM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Blason%20St%20Barth%C3%A9l%C3%A9my%20TOM%20entire.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q26988"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cook Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "COK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Cook%20Islands.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q31057"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Norfolk Island"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NFK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Norfolk%20Island.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33788"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "New Caledonia"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NCL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20New%20Caledonia.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q34617"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Saint Pierre and Miquelon"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SPM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20SaintPierreetMiquelon.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q35086"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "South Georgia and the South Sandwich Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SGS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20South%20Georgia%20and%20the%20South%20Sandwich%20Islands.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q35555"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Wallis and Futuna"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "WLF"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/BlasonWallisetFutuna.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q35672"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Pitcairn Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "PCN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Pitcairn%20Islands.svg"
+    }
+   },
+   {
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36004"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cocos (Keeling) Islands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CCK"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Clunies-Ross%20family%20arms.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1559726"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of French Southern and Antarctic Lands"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q129003"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "French Southern and Antarctic Lands"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ATF"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20Terres%20australes%20et%20antarctiques%20fran%C3%A7aises.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q223483"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Montserrat"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q13353"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Montserrat"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MSR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Montserrat.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q605149"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "coat of arms of Mayotte"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17063"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mayotte"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MYT"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Mayotte.svg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q15883769"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coat of arms of Niue"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q34020"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Niue"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NIU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Niue.jpg"
+    }
+   },
+   {
+    "coa": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q536644"
+    },
+    "coaEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Symbol of Tokelau"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36823"
+    },
+    "cEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Tokelau"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "TKL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Badge%20of%20Tokelau.svg"
+    }
+   }
+  ]
+ }
+}

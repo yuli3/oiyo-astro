@@ -1,0 +1,4078 @@
+{
+ "head": {
+  "vars": [
+   "c",
+   "iso",
+   "s",
+   "sEn",
+   "sMul",
+   "taxon",
+   "sKo",
+   "sDesc",
+   "img",
+   "roleEn"
+  ]
+ },
+ "results": {
+  "bindings": [
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "flower"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q161117"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "카시아"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Cassia fistula"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Cassia fistula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q869"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "THA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Cassia%20fistula%20%281%29.JPG"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Cassia fistula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q133006"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아시아코끼리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Elephas maximus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Asian elephant"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q869"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "THA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/ZOO%20Praha%2C%20Elephas%20maximus%2C%2008.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Elephas maximus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q133006"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아시아코끼리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Elephas maximus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Asian elephant"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q869"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "THA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Asian%20elephant%20-%20melbourne%20zoo.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Elephas maximus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q133006"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아시아코끼리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Elephas maximus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Asian elephant"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q869"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "THA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Female%20elephas%20maximus%20at%20hamburg.JPG"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Elephas maximus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q133006"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아시아코끼리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Elephas maximus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Asian elephant"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q869"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "THA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Elephas%20maximus%20%28Bandipur%29.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Elephas maximus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q122069"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "유럽노루"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Capreolus capreolus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "roe deer"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Reh%20EO5P1624-2.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Capreolus capreolus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q122069"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "유럽노루"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Capreolus capreolus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "roe deer"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Capreolus%20%28js%2911.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Capreolus capreolus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "flower"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q139970"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Trochetia boutoniana"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Trochetia boutoniana"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1027"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MUS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Trochetia%20boutoniana%20leaf.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Trochetia boutoniana"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "flower"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q15530181"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Chrysanthemum morifolium"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Chrysanthemum morifolium"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Chrysanthemum%20morifolium%2008NOV.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Chrysanthemum morifolium"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "국화 (식물)"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "flower"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q871991"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "blossom of the cherry tree"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "cherry blossom"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/.00%203019%20Japanische%20Bl%C3%BCtenkirsche%20%28Prunus%20serrulata%29.jpg"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "벚나무"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "flower"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q871991"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "blossom of the cherry tree"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "cherry blossom"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikosan%20Kaen%20Slope%20car.jpg"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "벚나무"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "flower"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q101711"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은방울꽃"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Convallaria majalis"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Convallaria majalis"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Convallaria%20majalis%20inflorescence%20-%20Keila.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Convallaria majalis"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "horse"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1001507"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "horse breed"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnhorse"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Finnhorse%20pony.jpg"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "fish"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q166812"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of perch found in Europe"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "유라시아민물농어"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Perca fluviatilis"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "European perch"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Perca%20fluviatilis%202008%20G1.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Perca fluviatilis"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "fish"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q166812"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of perch found in Europe"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "유라시아민물농어"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Perca fluviatilis"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "European perch"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Abborre%2C%20Iduns%20kokbok.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Perca fluviatilis"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "fish"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q165278"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of fish"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "강꼬치고기"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Esox lucius"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "pike"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Hecht.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Esox lucius"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "fish"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q165278"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of fish"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "강꼬치고기"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Esox lucius"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "pike"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Esox%20Lucius.JPG"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Esox lucius"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "tree"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Betula%20pendula0.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "tree"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betula%20pendula%20in%20Sedovo%201.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "tree"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betula%20pendula%20Finland.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "building"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q2141912"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "open pavilion"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "sala"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q869"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "THA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Salawatrajbopit04.jpg"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "dog"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q29195"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "dog breed"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "핀란드 스피츠"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Spitz"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Finnish%20Spitz%20600.jpg"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "insect"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q159543"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of beetle"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "칠성무당벌레"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Coccinella septempunctata"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Coccinella septempunctata"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/BIEDRONA.JPG"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Coccinella septempunctata"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "floral emblem"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q15326829"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Costus spectabilis"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Costus spectabilis"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1033"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "NGA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Costus%20spectabilis00.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Costus spectabilis"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q843346"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "모리셔스 황조롱이"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Falco punctatus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Mauritius Kestrel"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1027"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MUS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Mauritius%20kestrel%20%28Falco%20punctatus%29.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Falco punctatus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q924911"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "괌뜸부기"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Gallirallus owstoni"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Guam Rail"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16635"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "GUM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/GuamRail02.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Gallirallus owstoni"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q425900"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "일본꿩"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Phasianus versicolor"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Green pheasant"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Phasianus%20versicolor%20in%20Japan.JPG"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Phasianus versicolor"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q425900"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "일본꿩"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Phasianus versicolor"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Green pheasant"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Phasianus%20versicolor%20female.JPG"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Phasianus versicolor"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "lake"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q18335389"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "lake in Sund, Finland"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Kyrksunden"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kyrksunden"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyrkosund.png"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national symbol"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q81056"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아메리카비버"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Castor canadensis"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Canadian beaver"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CAN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/North%20American%20Beaver%2C%20Humber%20River%20near%20Kleinburg%2C%20Ontario%20%2839637607974%29.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Castor canadensis"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kansallis-Osake-Pankki"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Betula%20pendula0.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kansallis-Osake-Pankki"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betula%20pendula%20in%20Sedovo%201.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Kansallis-Osake-Pankki"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betula%20pendula%20Finland.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "sport"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q40561"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Japanese form of full-contact wrestling"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "스모"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "相撲"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "sumo"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Asashoryu%20fight%20Jan08.JPG"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "plant"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q157552"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "황화구륜초"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Primula veris"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Primula veris"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Common%20Cowslip.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Primula veris"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "floral emblem"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q516233"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of wattle"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Acacia pycnantha"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Acacia pycnantha"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q408"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AUS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Acacia%20pycnantha%20Golden%20Wattle.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Acacia pycnantha"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national dish"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188788"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Middle Eastern fried bean dish"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falafel"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Falafel%20beim%20Isarinselfest%20M%C3%BCnchen%202.jpg"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "팔라펠"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national dish"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188788"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Middle Eastern fried bean dish"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falafel"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Falafel%201.JPG"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "팔라펠"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national dish"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q188788"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Middle Eastern fried bean dish"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falafel"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Falafel.JPG"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "팔라펠"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "floral emblem"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q511179"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Anemone coronaria"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Anemone coronaria"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Anemones5.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Anemone coronaria"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "아네모네"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "butterfly"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q714716"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of butterfly"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "왕오색나비"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Sasakia charonda"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Sasakia charonda"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasakia%20charonda%20male%20and%20female.png"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Sasakia charonda"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "butterfly"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q714716"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of butterfly"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "왕오색나비"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Sasakia charonda"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Sasakia charonda"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JPN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasakia%20charonda%20formosana%20male%20back%2020140525.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Sasakia charonda"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Suomen Kennelliitto"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q29195"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "dog breed"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "핀란드 스피츠"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Spitz"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Finnish%20Spitz%20600.jpg"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Association for Nature Conservation"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Betula%20pendula0.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Association for Nature Conservation"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betula%20pendula%20in%20Sedovo%201.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Association for Nature Conservation"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betula%20pendula%20Finland.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "heraldic animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/202309%20Ezo%20brown%20bear.svg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Helsingin Sanomat"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/202309%20Ezo%20brown%20bear.svg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "heraldic animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Brown%20bear.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Helsingin Sanomat"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Brown%20bear.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "heraldic animal"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamchatka%20Brown%20Bear%20near%20Dvuhyurtochnoe%20on%202015-07-23.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Helsingin Sanomat"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamchatka%20Brown%20Bear%20near%20Dvuhyurtochnoe%20on%202015-07-23.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Association for Nature Conservation"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/202309%20Ezo%20brown%20bear.svg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Association for Nature Conservation"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Brown%20bear.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Association for Nature Conservation"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q36341"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "불곰"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Ursus arctos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "brown bear"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamchatka%20Brown%20Bear%20near%20Dvuhyurtochnoe%20on%202015-07-23.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Ursus arctos"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national stone"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q171058"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "silica mineraloid"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "오팔"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "opal"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q408"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "AUS"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Opal%20banded.jpg"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national tree"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q37083"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "olive plant, species of plant used as food"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "올리브나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Olea europaea"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Olea europaea"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Perell%C3%B3%20-%20Old%20olive%20tree.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Olea europaea"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "rock"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q41177"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "common type of intrusive, felsic, igneous rock with grained texture"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "화강암"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "granite"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Calangianus%2C%20cava%20di%20granito%20dismessa%20%2802%29.jpg"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "rock"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q23757"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "sedimentary rocks made of the chemical substance calcium carbonate"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "석회암"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "limestone"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Limestone%20outcrop%20in%20Citatah.jpg"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "de facto"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q43489"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "genus of birds"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "매속"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Falco"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falcon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SAU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Amur%20Falcon%20%28Falco%20amurensis%29%20male%20%2816794543415%29.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Falco"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "de facto"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q43489"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "genus of birds"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "매속"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Falco"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falcon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SAU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Faucon%20pelerin%207%20mai.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Falco"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "de facto"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q43489"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "genus of birds"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "매속"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Falco"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falcon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SAU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%93gea%20%28Falco%20subbuteo%29.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Falco"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "floral emblem"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q130918"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "genus of plants"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "다알리아속"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Dahlia"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Dahlia"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q96"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MEX"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Syrphe%20%C3%A0%20ceintures%20sur%20un%20dahlia%20en%20novembre.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Dahlia"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25612"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "큰고니"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Cygnus cygnus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Whooper Swan"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Cygnus%20cygnus%20070416%20IOL.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Cygnus cygnus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25438"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "흰꼬리수리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Haliaeetus albicilla"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "White-tailed Eagle"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Aquila%20di%20mare%20FS1.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Haliaeetus albicilla"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25438"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "흰꼬리수리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Haliaeetus albicilla"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "White-tailed Eagle"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5689"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ALA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Adult%20White-tailed%20Eagle%20defending%20prey%2C%20Rezerwat%20Gostynin-Wloclawek%2C%20Poland.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Haliaeetus albicilla"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "arboreal emblem"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q214733"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "설탕단풍"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Acer saccharum"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Acer saccharum"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CAN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Acer%20saccharum.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Acer saccharum"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "arboreal emblem"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q214733"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "설탕단풍"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Acer saccharum"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Acer saccharum"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "CAN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Acer%20saccharum%20foliage.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Acer saccharum"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q127216"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird of prey found in North America"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "흰머리수리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Haliaeetus leucocephalus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bald eagle"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q30"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "USA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Juvenile%20Bald%20Eagle%2C%20Conowingo%20Dam%2C%20Susquehanna%20River%2C%20MD%202016-01-03.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Haliaeetus leucocephalus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q127216"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird of prey found in North America"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "흰머리수리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Haliaeetus leucocephalus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "bald eagle"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q30"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "USA"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bald%20Eagle%20%28Haliaeetus%20leucocephalus%29%20Kachemak%20Bay%2C%20Alaska.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Haliaeetus leucocephalus"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Dendrological Society"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Betula%20pendula0.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Dendrological Society"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betula%20pendula%20in%20Sedovo%201.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Finnish Dendrological Society"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q156895"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "은자작나무"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Betula pendula"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betula%20pendula%20Finland.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Betula pendula"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "National dog"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q38602"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "dog breed"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "케이넌 도그"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Canaan Dog"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/CanaanDogChakede1.jpg"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national flower"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q2663639"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Nymphaea nouchali"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q902"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BGD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/South%20Vietnam%27s%20Water%20Lily.JPG"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Nymphaea nouchali"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Nymphaea nouchali"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q140"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of big cat"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "사자"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Panthera leo"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "lion"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q219"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BGR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PZ%20lion%20pride.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Panthera leo"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q130201"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "개양귀비"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Papaver rhoeas"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Papaver rhoeas"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q31"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "BEL"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Papaver%20rhoeas%20LC0050.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Papaver rhoeas"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q2424230"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "hybrid orchid"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Papilionanthe 'Miss Joaquim'"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q334"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SGP"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/VandaMissJoaquim.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Vanda teres × Vanda hookeriana"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q792871"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of insect"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "푸른부전나비"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Celastrina%20argiolus%20-%20Museo%20Tazzetti%201238-2023.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q792871"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of insect"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "푸른부전나비"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Holly%20blue%20butterfly%20%28Celastrina%20argiolus%29%20female.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q792871"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of insect"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "푸른부전나비"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q33"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "FIN"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Holly%20blue%20%28Celastrina%20argiolus%29%20male.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Celastrina argiolus"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q171869"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "National emblem of the Republic of India"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "인도의 국장"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Emblem of India"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q668"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "IND"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q358209"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "heraldic animal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "살라딘의 수리"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Eagle of Saladin"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q805"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "YEM"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Eagle%20of%20Saladin%20blank.svg"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q15296155"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of plant of genus Iris in the family Iridaceae"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Iris nigricans"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Iris nigricans"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q810"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "JOR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Iris%20nigricans-Jordanie%20%282%29.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Iris nigricans"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q82037"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "오카피"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q974"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "COD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Saint-Aignan%20%28Loir-et-Cher%29.%20Okapi.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q82037"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "오카피"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q974"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "COD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Okapia%20johnstoni%20-Marwell%20Wildlife%2C%20Hampshire%2C%20England-8a.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    }
+   },
+   {
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q82037"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of mammal"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "오카피"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q974"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "COD"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Okapi%20and%20son.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Okapia johnstoni"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25247"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "후투티"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Upupa epops"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Eurasian Hoopoe"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Upupa%20epops%20Madrid%2002.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Upupa epops"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q25247"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "후투티"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Upupa epops"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Eurasian Hoopoe"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q801"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "ISR"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Common%20Hoopoe%20Photograph%20By%20Shantanu%20Kuveskar.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Upupa epops"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q43489"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "genus of birds"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "매속"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Falco"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falcon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SAU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Amur%20Falcon%20%28Falco%20amurensis%29%20male%20%2816794543415%29.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Falco"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q43489"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "genus of birds"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "매속"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Falco"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falcon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SAU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Faucon%20pelerin%207%20mai.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Falco"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q43489"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "genus of birds"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "매속"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Falco"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "falcon"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "SAU"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%93gea%20%28Falco%20subbuteo%29.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Falco"
+    }
+   },
+   {
+    "roleEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "national bird"
+    },
+    "s": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q41181"
+    },
+    "sDesc": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "species of bird of prey"
+    },
+    "sKo": {
+     "xml:lang": "ko",
+     "type": "literal",
+     "value": "검독수리"
+    },
+    "sMul": {
+     "xml:lang": "mul",
+     "type": "literal",
+     "value": "Aquila chrysaetos"
+    },
+    "sEn": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Golden Eagle"
+    },
+    "c": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q96"
+    },
+    "iso": {
+     "type": "literal",
+     "value": "MEX"
+    },
+    "img": {
+     "type": "uri",
+     "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Maakotka%20%28Aquila%20chrysaetos%29%20by%20Jarkko%20J%C3%A4rvinen.jpg"
+    },
+    "taxon": {
+     "type": "literal",
+     "value": "Aquila chrysaetos"
+    }
+   }
+  ]
+ }
+}

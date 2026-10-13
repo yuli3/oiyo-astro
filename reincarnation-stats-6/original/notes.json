@@ -1,0 +1,23 @@
+{
+ "non_iso_code": [
+  "ASC",
+  "ATB",
+  "ATN",
+  "CRQ",
+  "JTN",
+  "XKS"
+ ],
+ "emblem_dupe_iso": [],
+ "symbol_unclassified": [
+  "ALA Q18335389 Kyrksunden [lake]",
+  "ALA Q23757 limestone [rock]",
+  "AUS Q171058 opal [national stone]",
+  "FIN Q41177 granite [rock]",
+  "IND Q171869 Emblem of India []",
+  "ISR Q188788 falafel [national dish]",
+  "JPN Q40561 sumo [sport]",
+  "THA Q2141912 sala [building]",
+  "YEM Q358209 Eagle of Saladin []"
+ ],
+ "symbol_no_image": []
+}

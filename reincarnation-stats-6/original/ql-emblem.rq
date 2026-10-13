@@ -1,0 +1,8 @@
+SELECT ?c ?iso ?cEn ?img ?coa ?coaEn ?coaKo WHERE {
+  ?c wdt:P298 ?iso ; wdt:P94 ?img .
+  FILTER NOT EXISTS { ?c wdt:P576 ?end }
+  OPTIONAL { ?c rdfs:label ?cEn FILTER(LANG(?cEn)="en") }
+  OPTIONAL { ?c wdt:P237 ?coa .
+    OPTIONAL { ?coa rdfs:label ?coaEn FILTER(LANG(?coaEn)="en") }
+    OPTIONAL { ?coa rdfs:label ?coaKo FILTER(LANG(?coaKo)="ko") } }
+}

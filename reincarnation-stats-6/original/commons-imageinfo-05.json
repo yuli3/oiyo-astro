@@ -1,0 +1,2876 @@
+{
+ "batchcomplete": true,
+ "query": {
+  "pages": [
+   {
+    "pageid": 552174,
+    "ns": 6,
+    "title": "File:Seal of Guam.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Seal_of_Guam.svg/330px-Seal_of_Guam.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 480,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Seal_of_Guam.svg/960px-Seal_of_Guam.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Seal_of_Guam.svg/330px-Seal_of_Guam.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 480,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Seal_of_Guam.svg/960px-Seal_of_Guam.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Seal_of_Guam.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_Guam.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=552174",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2022-07-19 13:47:59",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of Guam",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Coats of arms of Guam|Sailboats in heraldry|CC-Zero|PD OpenClipart|PD US not renewed|Palms in heraldry|Vesica piscis|With insignia|SVG coats of arms of the United States|Vector images using elements from other vector images|CC-PD-Mark|Valid SVG created with Other tools:Seals|PD US Unincorporated Territories|Seals of Territories of the United States",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "The <a href=\"https://en.wikipedia.org/wiki/Seal_of_Guam\" class=\"extiw\" title=\"w:Seal of Guam\">Seal of Guam</a>.  This is a simple modification of <a href=\"//commons.wikimedia.org/wiki/File:Flag_of_Guam.svg\" title=\"File:Flag of Guam.svg\">Flag of Guam.svg</a>, which was written by Andrew Duhan.",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "1946",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Open Clipart",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "Andrew Duhan",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 1054067,
+    "ns": 6,
+    "title": "File:VandaMissJoaquim.jpg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/VandaMissJoaquim.jpg/330px-VandaMissJoaquim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 240,
+      "responsiveUrls": {
+       "2": "https://upload.wikimedia.org/wikipedia/commons/2/20/VandaMissJoaquim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/VandaMissJoaquim.jpg/330px-VandaMissJoaquim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 240,
+       "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/20/VandaMissJoaquim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/VandaMissJoaquim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:VandaMissJoaquim.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1054067",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2006-08-14 18:56:23",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "VandaMissJoaquim",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Vanda 'Miss Joaquim'|GFDL|Taken with Canon PowerShot A410|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work|Orchids in the Singapore Botanic Gardens|Close-ups of orchid cultivars",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "The <i>Vanda</i> Miss Joaquim, a natural <a href=\"https://en.wikipedia.org/wiki/Orchidaceae\" class=\"extiw\" title=\"w:Orchidaceae\">orchid</a> hybrid between <i>Vanda teres</i> and <i>Vanda hookeriana</i>, was first discovered in the garden of Agnes Joaquim in <a href=\"https://en.wikipedia.org/wiki/Singapore\" class=\"extiw\" title=\"w:Singapore\">Singapore</a> in 1893. On <a href=\"https://en.wikipedia.org/wiki/15_April\" class=\"extiw\" title=\"w:15 April\">15 April</a> <a href=\"//commons.wikimedia.org/wiki/1981\" title=\"1981\">1981</a> it was declared to be Singapore's <a href=\"https://en.wikipedia.org/wiki/floral_emblem\" class=\"extiw\" title=\"w:floral emblem\">national flower</a>.",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2006-08-05 19:21",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>.",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"https://en.wikipedia.org/wiki/User:Calvin_Teo\" class=\"extiw\" title=\"w:User:Calvin Teo\">Calvin Teo</a>.",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "CC-BY-SA-1.0, 2.0, 2.5, 3.0; GFDL.",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "CC BY-SA 3.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 3.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-sa-3.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 2559695,
+    "ns": 6,
+    "title": "File:Seal of Madagascar.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Seal_of_Madagascar.svg/330px-Seal_of_Madagascar.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Seal_of_Madagascar.svg/960px-Seal_of_Madagascar.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Seal_of_Madagascar.svg/330px-Seal_of_Madagascar.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Seal_of_Madagascar.svg/960px-Seal_of_Madagascar.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Seal_of_Madagascar.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_Madagascar.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2559695",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2023-10-09 01:23:40",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of Madagascar",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "With insignia|Self-published work|PD-self|Files with derivative versions|National emblem of Madagascar",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Seal of Madagascar",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2007-08-13",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Ndriana\" title=\"User:Ndriana\">Ndriana</a>",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 2880209,
+    "ns": 6,
+    "title": "File:State emblem of Pakistan.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/State_emblem_of_Pakistan.svg/330px-State_emblem_of_Pakistan.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 367,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/State_emblem_of_Pakistan.svg/960px-State_emblem_of_Pakistan.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/State_emblem_of_Pakistan.svg/330px-State_emblem_of_Pakistan.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 367,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/State_emblem_of_Pakistan.svg/960px-State_emblem_of_Pakistan.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:State_emblem_of_Pakistan.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2880209",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2016-06-22 14:36:10",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "State emblem of Pakistan",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "PD-Pakistan|With insignia|National coat of arms of Pakistan",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "State emblem of <a href=\"https://en.wikipedia.org/wiki/Pakistan\" class=\"extiw\" title=\"en:Pakistan\">Pakistan</a>.",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "8 October 2007 (original upload date), originally adopted in 1954 and modified in 1973",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Pakistani government",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "Meraj Muhammad",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate restriction-insignia\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Insignia\"><img alt=\"Insignia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/120px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"77\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/250px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"609\" data-file-height=\"731\"></a><figcaption>Insignia</figcaption></figure>\n</td>\n<td style=\"border:none;\">This image shows a <a href=\"https://en.wikipedia.org/wiki/flag\" class=\"extiw\" title=\"w:flag\">flag</a>, a <a href=\"https://en.wikipedia.org/wiki/coat_of_arms\" class=\"extiw\" title=\"w:coat of arms\">coat of arms</a>, a <a href=\"https://en.wikipedia.org/wiki/seal_(emblem)\" class=\"extiw\" title=\"w:seal (emblem)\">seal</a> or some other official <b><a href=\"https://en.wikipedia.org/wiki/insignia\" class=\"extiw\" title=\"w:insignia\">insignia</a></b>. The use of such symbols is restricted in many countries. These restrictions are independent of the <a href=\"https://en.wikipedia.org/wiki/copyright\" class=\"extiw\" title=\"w:copyright\">copyright</a> status.\n</td></tr></tbody></table>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 3498958,
+    "ns": 6,
+    "title": "File:Seal of the Comoros.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Seal_of_the_Comoros.svg/330px-Seal_of_the_Comoros.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Seal_of_the_Comoros.svg/960px-Seal_of_the_Comoros.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Seal_of_the_Comoros.svg/330px-Seal_of_the_Comoros.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Seal_of_the_Comoros.svg/960px-Seal_of_the_Comoros.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Seal_of_the_Comoros.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_Comoros.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3498958",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2019-11-09 15:26:04",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of the Comoros",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Stars in heraldry|With insignia|Self-published work|PD-self|Seals of the Comoros|1 crescent vert in heraldry|Valid SVG created with Inkscape:Flags|Arabic-language seals|French-language seals|National emblem of the Comoros|African Comorian Arabic script",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "<a href=\"https://en.wikipedia.org/wiki/National_Seal_of_the_Comoros\" class=\"extiw\" title=\"w:National Seal of the Comoros\">National Seal</a> of the <a href=\"//commons.wikimedia.org/wiki/Category:Comoros\" title=\"Category:Comoros\">Comoros</a>.<br> Arabic text reads جمهورية القمر المتحدة  <i>Jumhuriyat al-Qamar al-Muttaḥidah</i>.",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2007-03-08",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"http://beit-salam.km/symboles-de-letat/\">Symboles de l'État</a>. <i>Beit-Salam</i>.</li>\n<li><a rel=\"nofollow\" class=\"external text\" href=\"https://www.facebook.com/beitsalam/photos/a.1730520460556470.1073741829.1728386754103174/1755589221382927/?type=3\">Beit-Salam - Présidence de l'</a><a href=\"//commons.wikimedia.org/wiki/Category:Comoros\" title=\"Category:Comoros\">Union des Comores</a> (Facebook)</li></ul>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Tonyjeff\" class=\"mw-redirect\" title=\"User:Tonyjeff\">Tonyjeff</a>, based on national symbol, with the help of users <a href=\"//commons.wikimedia.org/wiki/User:AnonMoos\" title=\"User:AnonMoos\">AnonMoos</a>, <a href=\"//commons.wikimedia.org/wiki/User:Kafka1\" title=\"User:Kafka1\">Kafka1</a>, <a href=\"//commons.wikimedia.org/w/index.php?title=User:Omar86&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Omar86 (page does not exist)\">Omar86</a>, <a href=\"//commons.wikimedia.org/wiki/User:%D8%B2%D9%87%D9%8A%D8%B1_%D8%AD%D8%B1%D8%A8\" title=\"User:زهير حرب\">زهير حرب</a> and <a href=\"//commons.wikimedia.org/wiki/User:Thommy9\" title=\"User:Thommy9\">Thommy</a>.",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "<table class=\"licensetpl\" style=\"display:none\">\n<tbody><tr>\n<td><span class=\"licensetpl_short\">Public domain</span><span class=\"licensetpl_long\">Public domain</span><span class=\"licensetpl_link_req\">false</span><span class=\"licensetpl_attr_req\">false</span>\n</td></tr></tbody></table>\n<table style=\"width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;\" dir=\"ltr\" class=\"layouttemplate\" lang=\"en\">\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span title=\"Public domain\"><img alt=\"Public domain\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"196\" data-file-height=\"196\"></span></span>\n</td>\n<td>I, the copyright holder of this work, release this work into the <b><a href=\"https://en.wikipedia.org/wiki/en:public_domain\" class=\"extiw\" title=\"w:en:public domain\">public domain</a></b>. This applies worldwide.<br><small>In some countries this may not be legally possible; if so:</small><br><i>I grant anyone the right to use this work <b>for any purpose</b>, without any conditions, unless such conditions are required by law.</i>\n</td></tr></tbody></table>\n<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate restriction-insignia\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Insignia\"><img alt=\"Insignia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/120px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"77\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/250px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"609\" data-file-height=\"731\"></a><figcaption>Insignia</figcaption></figure>\n</td>\n<td style=\"border:none;\">This image shows a <a href=\"https://en.wikipedia.org/wiki/flag\" class=\"extiw\" title=\"w:flag\">flag</a>, a <a href=\"https://en.wikipedia.org/wiki/coat_of_arms\" class=\"extiw\" title=\"w:coat of arms\">coat of arms</a>, a <a href=\"https://en.wikipedia.org/wiki/seal_(emblem)\" class=\"extiw\" title=\"w:seal (emblem)\">seal</a> or some other official <b><a href=\"https://en.wikipedia.org/wiki/insignia\" class=\"extiw\" title=\"w:insignia\">insignia</a></b>. The use of such symbols is restricted in many countries. These restrictions are independent of the <a href=\"https://en.wikipedia.org/wiki/copyright\" class=\"extiw\" title=\"w:copyright\">copyright</a> status.\n</td></tr></tbody></table>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 3498967,
+    "ns": 6,
+    "title": "File:Regional Emblem of Macau.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Regional_Emblem_of_Macau.svg/330px-Regional_Emblem_of_Macau.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Regional_Emblem_of_Macau.svg/960px-Regional_Emblem_of_Macau.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Regional_Emblem_of_Macau.svg/330px-Regional_Emblem_of_Macau.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Regional_Emblem_of_Macau.svg/960px-Regional_Emblem_of_Macau.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Regional_Emblem_of_Macau.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Regional_Emblem_of_Macau.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3498967",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2022-01-25 13:40:43",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Regional Emblem of Macau",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "PD-PRC-exempt|With insignia|PD MacaoGov|Valid SVG created with Text Editor|Valid SVG created with Inkscape-hand:Emblems|SVG five-pointed stars|Emblems of cities in China|Emblem of Macau",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "The emblem of the Macau Special Administrative Region",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2007-03-08",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Own work using: <a rel=\"nofollow\" class=\"external text\" href=\"http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=B0D79F4733AB2043BFF907B526ECEB60\">GB 17655-2008 Regional emblem of Macao Special Administrative Region</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Tonyjeff\" class=\"mw-redirect\" title=\"User:Tonyjeff\">Tonyjeff</a> (extracted from the <a href=\"//commons.wikimedia.org/wiki/File:Flag_of_Macau.svg\" title=\"File:Flag of Macau.svg\">flag of Macau</a>, provided at the <a rel=\"nofollow\" class=\"external text\" href=\"http://openclipart.org/\">Open Clip Art</a> website.) (2022 version: <a href=\"//commons.wikimedia.org/wiki/User_talk:Mike_Rohsopht\" title=\"User talk:Mike Rohsopht\">Mike Rohsopht</a>)",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 4235503,
+    "ns": 6,
+    "title": "File:Seal of American Samoa.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Seal_of_American_Samoa.svg/330px-Seal_of_American_Samoa.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Seal_of_American_Samoa.svg/960px-Seal_of_American_Samoa.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Seal_of_American_Samoa.svg/330px-Seal_of_American_Samoa.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Seal_of_American_Samoa.svg/960px-Seal_of_American_Samoa.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Seal_of_American_Samoa.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_American_Samoa.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4235503",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2022-09-08 15:11:31",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of American Samoa",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "PD US Government|Samoan language|Seal of American Samoa|With insignia|Vector-Images.com images|CC-PD-Mark|Valid SVG created with Inkscape:Seals|Seals of Territories of the United States",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Seal of American Samoa",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2008-08-17",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Own work using: <a rel=\"nofollow\" class=\"external free\" href=\"http://vector-images.com/image.php?epsid=4787\">http://vector-images.com/image.php?epsid=4787</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<ul><li>Original: Vector-Images.com (vectorized by Gvido Petersons)</li>\n<li>Converted from EPS to SVG by: <a href=\"//commons.wikimedia.org/wiki/User:Oren_neu_dag\" title=\"User:Oren neu dag\">Oren neu dag</a></li></ul>",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "This work is in the <b><a href=\"https://en.wikipedia.org/wiki/en:Public_domain\" class=\"extiw\" title=\"w:en:Public domain\">public domain</a></b> in the United States because it is a <a href=\"https://en.wikipedia.org/wiki/en:Copyright_status_of_work_by_the_U.S._government\" class=\"extiw\" title=\"w:en:Copyright status of work by the U.S. government\">work prepared by an officer or employee of the United States Federal Government as part of that person’s official duties</a> under the terms of <i><a href=\"https://en.wikisource.org/wiki/en:United_States_Code/Title_17/Chapter_1/Sections_105_and_106\" class=\"extiw\" title=\"s:en:United States Code/Title 17/Chapter 1/Sections 105 and 106\">Title 17, Chapter 1, Section 105</a> of the <a href=\"https://en.wikipedia.org/wiki/United_States_Code\" class=\"extiw\" title=\"w:United States Code\">US Code</a></i>.\n<small style=\"font-weight:bold\"><u>Note</u>:  This only applies to original works of the Federal Government and not to the work of any individual <a href=\"https://en.wikipedia.org/wiki/U.S._state\" class=\"extiw\" title=\"en:U.S. state\">U.S. state</a>, <a href=\"https://en.wikipedia.org/wiki/United_States_Territory\" class=\"extiw\" title=\"w:United States Territory\">territory</a>, commonwealth, county, municipality, or any other subdivision. This template also does not apply to postage stamp designs published by the <a href=\"https://en.wikipedia.org/wiki/United_States_Postal_Service\" class=\"extiw\" title=\"w:United States Postal Service\">United States Postal Service</a> <a href=\"//commons.wikimedia.org/wiki/Stamps_of_the_United_States#Copyright-Note_up_to_1978\" title=\"Stamps of the United States\">since 1978</a>. (See § <a rel=\"nofollow\" class=\"external text\" href=\"https://copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf\">313.6(C)(1)</a> of Compendium of U.S. Copyright Office Practices). It also does not apply to certain US coins; see <a rel=\"nofollow\" class=\"external text\" href=\"https://www.usmint.gov/policies/terms-of-use\">The US Mint Terms of Use</a>.</small>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 5069093,
+    "ns": 6,
+    "title": "File:South Vietnam's Water Lily.JPG",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/South_Vietnam%27s_Water_Lily.JPG/330px-South_Vietnam%27s_Water_Lily.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 240,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/South_Vietnam%27s_Water_Lily.JPG/960px-South_Vietnam%27s_Water_Lily.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/South_Vietnam%27s_Water_Lily.JPG/330px-South_Vietnam%27s_Water_Lily.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 240,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/South_Vietnam%27s_Water_Lily.JPG/960px-South_Vietnam%27s_Water_Lily.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/South_Vietnam%27s_Water_Lily.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:South_Vietnam%27s_Water_Lily.JPG",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=5069093",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2008-10-26 05:49:47",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "South Vietnam's Water Lily",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Nymphaea nouchali|Taken with Sony DSC-S750|Self-published work",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "A pond of water lily. This photo is shot in late noon, so it look so dark.<br><b>Tiếng Việt:</b> Hình chụp ao súng lúc xế chiều, hình không được rõ lắm và có phần hơi tối.",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2008-10-26",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Es.ntp\" title=\"User:Es.ntp\">Nguyễn Tấn Phát</a>",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "CC BY-SA 3.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 3.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-sa-3.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6340163,
+    "ns": 6,
+    "title": "File:Royal arms of Cambodia.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Royal_arms_of_Cambodia.svg/330px-Royal_arms_of_Cambodia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 371,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Royal_arms_of_Cambodia.svg/960px-Royal_arms_of_Cambodia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Royal_arms_of_Cambodia.svg/330px-Royal_arms_of_Cambodia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 371,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Royal_arms_of_Cambodia.svg/960px-Royal_arms_of_Cambodia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Royal_arms_of_Cambodia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Royal_arms_of_Cambodia.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6340163",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2024-02-05 20:41:26",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Royal arms of Cambodia",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "GFDL|Swords in heraldry|CC-BY-SA-3.0,2.5,2.0,1.0|License migration redundant|House of Norodom|With insignia|Self-published work|Crowned coats of arms|SVG coats of arms of Cambodia|PD Cambodia Government|Invalid SVG created with Inkscape:CoA-SO|National coat of arms of Cambodia|CoA Lab-cm:Sodacan|Heraldic mottos in compartments|Amalgamated lions in supporters|Gajasimha in heraldry|Singha in heraldry|Chatra in heraldry",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Royal Arms of the Kingdom of Cambodia.\n<ul><li>Depicting: a Golden sword atop two ceremonial bowls, above it is the sacred \"Aum\", below is a laurel wreath and the Royal Order. The Arms is supported by two creatures, a gajasingha and a singha, they are holding two five-tiered royal umbrellas. Atop the arms is the Royal crown with rays of light emitting from it. Below is a ribbon with the words in Khmer script: <div lang=\"km\" dir=\"ltr\" class=\"description km\" style=\"display:inline;\">ព្រះចៅ ក្រុង កម្ពុជា</div> <i>Preah Chau Krong Kampuchea</i>: \"King of the Kingdom of Cambodia\".</li></ul>",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2009-03-26",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Own work by uploader, based on: <a class=\"external autonumber\" data-mw-original-href=\"http://en.wikipedia.org/wiki/File:Royal_Arms_of_Cambodia.jpg\" href=\"https://en.wikipedia.org/wiki/File:Royal_Arms_of_Cambodia.jpg\">[1]</a>, <a rel=\"nofollow\" class=\"external autonumber\" href=\"http://www.ngw.nl/heraldrywiki/index.php?title=Cambodia\">[2]</a> and <a class=\"external autonumber\" data-mw-original-href=\"http://en.wikipedia.org/wiki/File:2325349553_4274d23799_o.jpg\" href=\"https://en.wikipedia.org/wiki/File:2325349553_4274d23799_o.jpg\">[3]</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Sodacan\" title=\"User:Sodacan\">Sodacan</a>",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "You may select the license of your choice.",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7035637,
+    "ns": 6,
+    "title": "File:Seal of the Federated States of Micronesia.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_the_Federated_States_of_Micronesia.svg/330px-Seal_of_the_Federated_States_of_Micronesia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_the_Federated_States_of_Micronesia.svg/960px-Seal_of_the_Federated_States_of_Micronesia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_the_Federated_States_of_Micronesia.svg/330px-Seal_of_the_Federated_States_of_Micronesia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_the_Federated_States_of_Micronesia.svg/960px-Seal_of_the_Federated_States_of_Micronesia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Seal_of_the_Federated_States_of_Micronesia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_Federated_States_of_Micronesia.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=7035637",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2011-07-24 04:05:30",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of the Federated States of Micronesia",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Coats of arms of the Federated States of Micronesia|Palms in heraldry|1979 in art|Self-published work|PD-self|Uploaded with derivativeFX|SVG coats of arms of Oceania",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Seal of the <a href=\"//commons.wikimedia.org/wiki/Federated_States_of_Micronesia\" title=\"Federated States of Micronesia\">Federated States of Micronesia</a>",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2009-06-16 00:48",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<ul><li><a href=\"//commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Federated_States_of_Micronesia.jpg\" title=\"File:Coat of arms of the Federated States of Micronesia.jpg\">Coat_of_arms_of_the_Federated_States_of_Micronesia.jpg</a></li></ul>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<ul><li><a href=\"//commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Federated_States_of_Micronesia.jpg\" title=\"File:Coat of arms of the Federated States of Micronesia.jpg\">Coat_of_arms_of_the_Federated_States_of_Micronesia.jpg</a>: <a href=\"//commons.wikimedia.org/wiki/User:Aotearoa\" title=\"User:Aotearoa\">Aotearoa</a></li>\n<li>derivative work: <a href=\"//commons.wikimedia.org/wiki/User:Pbroks13\" title=\"User:Pbroks13\">Pbroks13</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Pbroks13\" class=\"mw-redirect\" title=\"User talk:Pbroks13\"><span class=\"signature-talk\">talk</span></a>)</li></ul>",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7400380,
+    "ns": 6,
+    "title": "File:State emblem of Mongolia.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/State_emblem_of_Mongolia.svg/330px-State_emblem_of_Mongolia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 355,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/State_emblem_of_Mongolia.svg/960px-State_emblem_of_Mongolia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/State_emblem_of_Mongolia.svg/330px-State_emblem_of_Mongolia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 355,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/State_emblem_of_Mongolia.svg/960px-State_emblem_of_Mongolia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/State_emblem_of_Mongolia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:State_emblem_of_Mongolia.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=7400380",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2021-11-20 23:09:35",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "State emblem of Mongolia",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Soyombo symbol|With insignia|Valid SVG created with Text Editor|Swastikas in heraldry|SVG national emblem of Mongolia|PD-Mongolia-exempt (coats of arms)|Dharmacakra in heraldry|Valid SVG created with Adobe-hand:Emblems",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "State <a href=\"https://en.wikipedia.org/wiki/Emblem_of_Mongolia\" class=\"extiw\" title=\"w:Emblem of Mongolia\">Emblem of Mongolia</a> (adopted in 1992)",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "1992-01-13",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<a href=\"https://en.wikipedia.org/wiki/Constitution_of_Mongolia\" class=\"extiw\" title=\"w:Constitution of Mongolia\">Constitution of Mongolia</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "Tseveendorjiin Oidov (Honored Artist of Mongolia)",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17630088,
+    "ns": 6,
+    "title": "File:Seal of the Northern Mariana Islands.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Seal_of_the_Northern_Mariana_Islands.svg/330px-Seal_of_the_Northern_Mariana_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Seal_of_the_Northern_Mariana_Islands.svg/960px-Seal_of_the_Northern_Mariana_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Seal_of_the_Northern_Mariana_Islands.svg/330px-Seal_of_the_Northern_Mariana_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Seal_of_the_Northern_Mariana_Islands.svg/960px-Seal_of_the_Northern_Mariana_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Seal_of_the_Northern_Mariana_Islands.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_Northern_Mariana_Islands.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17630088",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2023-04-19 01:53:53",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of the Northern Mariana Islands",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Coats of arms of the Northern Mariana Islands|With insignia|Self-published work|PD-self|Valid SVG created with Inkscape:Seals|Latte stones in heraldry|Seals of Territories of the United States|Five-pointed white stars",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Seal of the Northern Mariana Islands",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Based off the header at <a rel=\"nofollow\" class=\"external autonumber\" href=\"http://gov.mp/\">[1]</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "CoA: <a href=\"//commons.wikimedia.org/wiki/File:Flag_of_the_Northern_Mariana_Islands.svg\" title=\"File:Flag of the Northern Mariana Islands.svg\">File:Flag of the Northern Mariana Islands.svg</a> (Open Clip Art Library)<br><a href=\"//commons.wikimedia.org/wiki/User:Connormah\" title=\"User:Connormah\">User:Connormah</a>",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "<table class=\"licensetpl\" style=\"display:none\">\n<tbody><tr>\n<td><span class=\"licensetpl_short\">Public domain</span><span class=\"licensetpl_long\">Public domain</span><span class=\"licensetpl_link_req\">false</span><span class=\"licensetpl_attr_req\">false</span>\n</td></tr></tbody></table>\n<table style=\"width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;\" dir=\"ltr\" class=\"layouttemplate\" lang=\"en\">\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span title=\"Public domain\"><img alt=\"Public domain\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"196\" data-file-height=\"196\"></span></span>\n</td>\n<td>I, the copyright holder of this work, release this work into the <b><a href=\"https://en.wikipedia.org/wiki/en:public_domain\" class=\"extiw\" title=\"w:en:public domain\">public domain</a></b>. This applies worldwide.<br><small>In some countries this may not be legally possible; if so:</small><br><i>I grant anyone the right to use this work <b>for any purpose</b>, without any conditions, unless such conditions are required by law.</i>\n</td></tr></tbody></table>\n<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate restriction-insignia\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Insignia\"><img alt=\"Insignia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/120px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"77\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/250px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"609\" data-file-height=\"731\"></a><figcaption>Insignia</figcaption></figure>\n</td>\n<td style=\"border:none;\">This image shows a <a href=\"https://en.wikipedia.org/wiki/flag\" class=\"extiw\" title=\"w:flag\">flag</a>, a <a href=\"https://en.wikipedia.org/wiki/coat_of_arms\" class=\"extiw\" title=\"w:coat of arms\">coat of arms</a>, a <a href=\"https://en.wikipedia.org/wiki/seal_(emblem)\" class=\"extiw\" title=\"w:seal (emblem)\">seal</a> or some other official <b><a href=\"https://en.wikipedia.org/wiki/insignia\" class=\"extiw\" title=\"w:insignia\">insignia</a></b>. The use of such symbols is restricted in many countries. These restrictions are independent of the <a href=\"https://en.wikipedia.org/wiki/copyright\" class=\"extiw\" title=\"w:copyright\">copyright</a> status.\n</td></tr></tbody></table>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18524899,
+    "ns": 6,
+    "title": "File:Ógea (Falco subbuteo).jpg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/%C3%93gea_%28Falco_subbuteo%29.jpg/330px-%C3%93gea_%28Falco_subbuteo%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 410,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/%C3%93gea_%28Falco_subbuteo%29.jpg/960px-%C3%93gea_%28Falco_subbuteo%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/%C3%93gea_%28Falco_subbuteo%29.jpg/330px-%C3%93gea_%28Falco_subbuteo%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 410,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/%C3%93gea_%28Falco_subbuteo%29.jpg/960px-%C3%93gea_%28Falco_subbuteo%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/%C3%93gea_%28Falco_subbuteo%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:%C3%93gea_(Falco_subbuteo).jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=18524899",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2020-05-18 17:46:53",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Ógea (Falco subbuteo)",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Flickr images uploaded by Flickr upload bot|Falco subbuteo in flight",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "<a href=\"https://en.wikipedia.org/wiki/Eurasian_hobby\" class=\"extiw\" title=\"en:Eurasian hobby\">Eurasian hobby</a> flying",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2011-05-11 17:50:29",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/Flickr\" class=\"mw-redirect\" title=\"Flickr\">Flickr</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/32639361@N02/5724643606\">Ógea (Falco subbuteo)</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/32639361@N02\">Rodrigo  de Almeida</a>",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "<table id=\"FlickrReview\" style=\"width:100%; margin:0.3em auto; text-align:start; background-color:var(--background-color-success-subtle,#d5fdf4); padding: 3px; border:1px solid var(--border-color-base,#a2a9b1); color:inherit;\" dir=\"ltr\" lang=\"en\">\n\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/60px-Checked_copyright_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"50\" height=\"48\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/120px-Checked_copyright_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"160\" data-file-height=\"153\"></span></span>\n</td>\n<td>This image, which was originally posted to <b><a href=\"https://en.wikipedia.org/wiki/Flickr\" class=\"extiw\" title=\"en:Flickr\">Flickr</a></b>, was uploaded to Commons using <b><a href=\"//commons.wikimedia.org/wiki/User:Flickr_upload_bot\" title=\"User:Flickr upload bot\">Flickr upload bot</a></b> on 28 February 2012, 11:19 by <span id=\"flickr_upload_bot_reviewer\"><b><a href=\"//commons.wikimedia.org/wiki/User:Kersti_Nebelsiek\" title=\"User:Kersti Nebelsiek\">Kersti Nebelsiek</a></b></span>. On that date, it was confirmed to be licensed under the terms of the license indicated.\n</td>\n<td><span typeof=\"mw:File\"><span><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Flickr_dots.svg/60px-Flickr_dots.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"50\" height=\"50\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Flickr_dots.svg/120px-Flickr_dots.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></span></span>\n</td></tr></tbody></table>\n<div class=\"responsive-license-cc layouttemplate licensetpl\" dir=\"ltr\" lang=\"en\"><div class=\"rlicense-icons\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"w:en:Creative Commons\"><img alt=\"w:en:Creative Commons\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"90\" height=\"36\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/250px-CC_some_rights_reserved.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"744\" data-file-height=\"300\"></span></span><br>\n<span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"attribution\"><img alt=\"attribution\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/60px-Cc-by_new_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span></div><div class=\"rlicense-text\"><div class=\"rlicense-declaration\">This file is licensed under the <a href=\"https://en.wikipedia.org/wiki/en:Creative_Commons\" class=\"extiw\" title=\"w:en:Creative Commons\">Creative Commons</a> <a href=\"//creativecommons.org/licenses/by/2.0/deed.en\" class=\"extiw\" title=\"creativecommons:by/2.0/deed.en\">Attribution 2.0 Generic</a> license.</div><div class=\"rlicense-desc\" style=\"text-align:start;\" dir=\"ltr\" lang=\"en\">\n<dl><dd>You are free:\n<ul><li><b>to share</b> – to copy, distribute and transmit the work</li>\n<li><b>to remix</b> – to adapt the work</li></ul></dd>\n<dd>Under the following conditions:\n<ul><li><b>attribution</b> – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li></ul></dd></dl>\n</div><span class=\"licensetpl_link\" style=\"display:none;\">https://creativecommons.org/licenses/by/2.0</span><span class=\"licensetpl_short\" style=\"display:none;\">CC BY 2.0 </span><span class=\"licensetpl_long\" style=\"display:none;\">Creative Commons Attribution 2.0 </span><span class=\"licensetpl_link_req\" style=\"display:none;\">true</span><span class=\"licensetpl_attr_req\" style=\"display:none;\">true</span></div></div>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "CC BY 2.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution 2.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by/2.0",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-2.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 28413310,
+    "ns": 6,
+    "title": "File:Royal coat of arms of the Netherlands.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Royal_coat_of_arms_of_the_Netherlands.svg/330px-Royal_coat_of_arms_of_the_Netherlands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 351,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Royal_coat_of_arms_of_the_Netherlands.svg/960px-Royal_coat_of_arms_of_the_Netherlands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Royal_coat_of_arms_of_the_Netherlands.svg/330px-Royal_coat_of_arms_of_the_Netherlands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 351,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Royal_coat_of_arms_of_the_Netherlands.svg/960px-Royal_coat_of_arms_of_the_Netherlands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Royal_coat_of_arms_of_the_Netherlands.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Royal_coat_of_arms_of_the_Netherlands.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=28413310",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2019-11-13 05:03:41",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Royal coat of arms of the Netherlands",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Crowns in heraldry|With insignia|Self-published work|SVG coats of arms of the Netherlands|Valid SVG created with Inkscape:Emblems|Greater royal coats of arms of the Netherlands|Coats of arms with heraldic pavilions|Azure a lion or in civic heraldry|Heraldic mottos in compartments",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Royal Coat of Arms of the Netherlands",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2013-09-20 16:14:36",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Own work based on: <a href=\"//commons.wikimedia.org/wiki/File:Nederlands_Rijkswapen_van_1907.jpg\" class=\"mw-redirect\" title=\"File:Nederlands Rijkswapen van 1907.jpg\">Painting by Johannes Evert van Leeuwen (1855-1931)</a> (from 1907)",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Sodacan\" title=\"User:Sodacan\">Sodacan</a>",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "This coat of arms was drawn based on its <b><a href=\"https://en.wikipedia.org/wiki/blazon\" class=\"extiw\" title=\"w:blazon\">blazon</a></b> which – being a written description – <i>is free from copyright</i>. Any illustration conforming with the blazon of the arms is considered to be <i>heraldically correct</i>. Thus several different artistic interpretations of the same coat of arms can exist. Sometimes, the design officially used by the armiger is likely to be protected by copyright, in which case it cannot be used here.<br><small>Individual representations of a coat of arms, drawn from a blazon, may have a copyright belonging to the artist, but are not necessarily <a href=\"//commons.wikimedia.org/wiki/Commons:Derivative_works\" title=\"Commons:Derivative works\">derivative works</a>.</small><small><style data-mw-deduplicate=\"TemplateStyles:r428405392\">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output .hatnote i,.mw-parser-output .hatnote.noitalic{font-style:normal}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output div.hatnote+div.hatnote{margin-top:-0.5em}@media print{.mw-parser-output .hatnote{display:none}}</style><div role=\"note\" class=\"hatnote navigation-not-searchable\">Further information: <a href=\"//commons.wikimedia.org/wiki/Commons:Coats_of_arms\" title=\"Commons:Coats of arms\">Commons:Coats of arms</a>  and <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Template:Coa_blazon\" title=\"Special:MyLanguage/Template:Coa blazon\">Template:Coa blazon</a> </div></small>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "CC BY-SA 3.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 3.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-sa-3.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29227081,
+    "ns": 6,
+    "title": "File:Trochetia boutoniana leaf.jpg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Trochetia_boutoniana_leaf.jpg/330px-Trochetia_boutoniana_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 482,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Trochetia_boutoniana_leaf.jpg/960px-Trochetia_boutoniana_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Trochetia_boutoniana_leaf.jpg/330px-Trochetia_boutoniana_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 482,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Trochetia_boutoniana_leaf.jpg/960px-Trochetia_boutoniana_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Trochetia_boutoniana_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Trochetia_boutoniana_leaf.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=29227081",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2013-10-27 16:09:28",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Trochetia boutoniana leaf",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "GFDL|Taken with Nikon D5000|License migration redundant|Ruizia boutoniana|Self-published work|Information field template with formatting|Files with coordinates missing SDC location of creation",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "GPSLatitude": {
+        "value": "48.400000",
+        "source": "commons-desc-page"
+       },
+       "GPSLongitude": {
+        "value": "-4.433333",
+        "source": "commons-desc-page"
+       },
+       "GPSMapDatum": {
+        "value": "WGS-84",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "<i><a href=\"//commons.wikimedia.org/w/index.php?title=Trochetia_boutoniana&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Trochetia boutoniana (page does not exist)\">Trochetia boutoniana</a></i> at <a href=\"//commons.wikimedia.org/wiki/Category:Conservatoire_botanique_national_de_Brest\" title=\"Category:Conservatoire botanique national de Brest\">Conservatoire botanique national de Brest</a>",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2012-08",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<table style=\"margin: 1.5em auto; width:60%; background-color:#CCCCCC; border:2px solid #aaaaaa; padding:1px;\" cellspacing=\"10\">\n\n\n<tbody><tr>\n<td align=\"center\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Dialog-warning.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Dialog-warning.svg/120px-Dialog-warning.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"80\" height=\"80\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Dialog-warning.svg/250px-Dialog-warning.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"48\" data-file-height=\"48\"></a></span>\n</td>\n<td><b>This illustration</b> <b>was made by</b> <i><b><a href=\"//commons.wikimedia.org/wiki/User:Citron\" title=\"User:Citron\"><b>Citron</b></a></b></i>\n<p>You must credit this : <i>Citron / CC-BY-SA-3.0</i>\n</p>\n</td></tr></tbody></table>",
+        "source": "commons-desc-page"
+       },
+       "Attribution": {
+        "value": "© <a href=\"//commons.wikimedia.org/wiki/User:Citron\" title=\"User:Citron\">Citron</a>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "CC BY-SA 3.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 3.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-sa-3.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30626967,
+    "ns": 6,
+    "title": "File:Staatswappen-Liechtensteins.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Staatswappen-Liechtensteins.svg/330px-Staatswappen-Liechtensteins.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 356,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Staatswappen-Liechtensteins.svg/960px-Staatswappen-Liechtensteins.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Staatswappen-Liechtensteins.svg/330px-Staatswappen-Liechtensteins.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 356,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Staatswappen-Liechtensteins.svg/960px-Staatswappen-Liechtensteins.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Staatswappen-Liechtensteins.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Staatswappen-Liechtensteins.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=30626967",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2026-05-18 04:00:30",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Staatswappen-Liechtensteins",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "With insignia|Self-published work|SVG coats of arms of Liechtenstein|Greater princely coats of arms of Liechtenstein",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Staatswappen Liechtensteins",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "SVG 2014",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Own work based on: <a href=\"//commons.wikimedia.org/wiki/File:Coat_of_arms_of_Liechtenstein.png\" title=\"File:Coat of arms of Liechtenstein.png\">File:Coat of arms of Liechtenstein.png</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "SVG <a href=\"//commons.wikimedia.org/w/index.php?title=User:Added_ramos&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Added ramos (page does not exist)\">Added Ramos</a>",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "I, the copyright holder of this work, hereby publish it under the following license:",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "CC BY-SA 3.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 3.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-sa-3.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32949793,
+    "ns": 6,
+    "title": "File:Seal of the Marshall Islands.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Seal_of_the_Marshall_Islands.svg/330px-Seal_of_the_Marshall_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 334,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Seal_of_the_Marshall_Islands.svg/960px-Seal_of_the_Marshall_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Seal_of_the_Marshall_Islands.svg/330px-Seal_of_the_Marshall_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 334,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Seal_of_the_Marshall_Islands.svg/960px-Seal_of_the_Marshall_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Seal_of_the_Marshall_Islands.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_Marshall_Islands.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=32949793",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2022-06-15 12:07:30",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of the Marshall Islands",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Chains in heraldry|Boats in heraldry|With insignia|Self-published work|PD-self|Maps in heraldry|Files not protected by international copyright agreements|National emblem of the Marshall Islands|PD Marshall Islands|PD MH|Palm trees in heraldry|Sun in heraldry of the United States",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Seal of the Republic of the Marshall Islands.",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2014-05-24 19:34:44",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Ericmetro\" title=\"User:Ericmetro\">Ericmetro</a>",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36493476,
+    "ns": 6,
+    "title": "File:Sasakia charonda formosana male back 20140525.jpg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Sasakia_charonda_formosana_male_back_20140525.jpg/330px-Sasakia_charonda_formosana_male_back_20140525.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 213,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Sasakia_charonda_formosana_male_back_20140525.jpg/960px-Sasakia_charonda_formosana_male_back_20140525.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Sasakia_charonda_formosana_male_back_20140525.jpg/330px-Sasakia_charonda_formosana_male_back_20140525.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 213,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Sasakia_charonda_formosana_male_back_20140525.jpg/960px-Sasakia_charonda_formosana_male_back_20140525.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Sasakia_charonda_formosana_male_back_20140525.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Sasakia_charonda_formosana_male_back_20140525.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=36493476",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2014-10-30 12:17:53",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Sasakia charonda formosana male back 20140525",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Sasakia charonda|Taken with Sony SLT-A99|Nymphalidae of Taiwan|Taiwan photographs taken on 2014-05-25|Self-published work",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "​大紫蛺蝶 Sasakia charonda formosana",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2014-05-25 10:27:50",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Peellden\" title=\"User:Peellden\">Peellden</a>",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "CC BY-SA 4.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 4.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-sa-4.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44636698,
+    "ns": 6,
+    "title": "File:Regional Emblem of Hong Kong.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Regional_Emblem_of_Hong_Kong.svg/330px-Regional_Emblem_of_Hong_Kong.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Regional_Emblem_of_Hong_Kong.svg/960px-Regional_Emblem_of_Hong_Kong.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Regional_Emblem_of_Hong_Kong.svg/330px-Regional_Emblem_of_Hong_Kong.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Regional_Emblem_of_Hong_Kong.svg/960px-Regional_Emblem_of_Hong_Kong.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Regional_Emblem_of_Hong_Kong.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Regional_Emblem_of_Hong_Kong.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=44636698",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2026-10-03 20:41:23",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Emblem of Hong Kong</i></div></div><div style=\"display: none;\">label QS:Les,\"Escudo de Hong Kong\"</div><div style=\"display: none;\">label QS:Lyue,\"香港特別行政區區徽\"</div><div style=\"display: none;\">label QS:Lhu,\"Hongkong címere\"</div><div style=\"display: none;\">label QS:Lis,\"Merki Hong Kong\"</div><div style=\"display: none;\">label QS:Lms,\"Lambang Hong Kong\"</div><div style=\"display: none;\">label QS:Lde,\"Wappen Hongkongs\"</div><div style=\"display: none;\">label QS:Lfa,\"نشان رسمی هنگ کنگ\"</div><div style=\"display: none;\">label QS:Lzh,\"香港特別行政區區徽\"</div><div style=\"display: none;\">label QS:Ltr,\"Hong Kong arması\"</div><div style=\"display: none;\">label QS:Lzh-hk,\"香港特別行政區區徽\"</div><div style=\"display: none;\">label QS:Lhe,\"סמל הונג קונג\"</div><div style=\"display: none;\">label QS:Lzh-hant,\"香港特別行政區區徽\"</div><div style=\"display: none;\">label QS:Lzh-cn,\"香港特别行政区区徽\"</div><div style=\"display: none;\">label QS:Lko,\"홍콩의 문장\"</div><div style=\"display: none;\">label QS:Lka,\"ჰონგ-კონგის გერბი\"</div><div style=\"display: none;\">label QS:Leo,\"emblemo de Honkongo\"</div><div style=\"display: none;\">label QS:Lmk,\"грб на Хонгконг\"</div><div style=\"display: none;\">label QS:Lbs,\"Grb Hong Konga\"</div><div style=\"display: none;\">label QS:Lit,\"emblema di Hong Kong\"</div><div style=\"display: none;\">label QS:Lbn,\"হংকংয়ের প্রতীক\"</div><div style=\"display: none;\">label QS:Lfr,\"Emblème de Hong Kong\"</div><div style=\"display: none;\">label QS:Lel,\"Εθνόσημο του Χονγκ Κονγκ\"</div><div style=\"display: none;\">label QS:Lhr,\"Grb Hong Konga\"</div><div style=\"display: none;\">label QS:Lru,\"Герб Гонконга\"</div><div style=\"display: none;\">label QS:Lzh-my,\"香港特别行政区区徽\"</div><div style=\"display: none;\">label QS:Luz,\"Gonkong gerbi\"</div><div style=\"display: none;\">label QS:Lyo,\"Àmì ọ̀pá àṣẹ ilẹ̀ Họ́ng Kọng\"</div><div style=\"display: none;\">label QS:Lca,\"emblema de Hong Kong\"</div><div style=\"display: none;\">label QS:Lpt,\"Emblema regional de Hong Kong\"</div><div style=\"display: none;\">label QS:Luk,\"Герб Гонконгу\"</div><div style=\"display: none;\">label QS:Lzh-tw,\"香港特別行政區區徽\"</div><div style=\"display: none;\">label QS:Lzh-mo,\"香港特別行政區區徽\"</div><div style=\"display: none;\">label QS:Lsr,\"Грб Хонгконга\"</div><div style=\"display: none;\">label QS:Laz,\"Honkonq gerbi\"</div><div style=\"display: none;\">label QS:Lsco,\"Emblem o Hong Kong\"</div><div style=\"display: none;\">label QS:Lid,\"Lambang Hong Kong\"</div><div style=\"display: none;\">label QS:Lzh-sg,\"香港特别行政区区徽\"</div><div style=\"display: none;\">label QS:Lth,\"ตราประจำเขตบริหารพิเศษฮ่องกง\"</div><div style=\"display: none;\">label QS:Lpl,\"Godło Hongkongu\"</div><div style=\"display: none;\">label QS:Lnl,\"Emblem of Hong Kong\"</div><div style=\"display: none;\">label QS:Lsh,\"Grb Hong Konga\"</div><div style=\"display: none;\">label QS:Llt,\"Honkongo herbas\"</div><div style=\"display: none;\">label QS:Let,\"Hongkongi vapp\"</div><div style=\"display: none;\">label QS:Lcs,\"Znak Hongkongu\"</div><div style=\"display: none;\">label QS:Lvi,\"Khu huy Hồng Kông\"</div><div style=\"display: none;\">label QS:Len,\"Emblem of Hong Kong\"</div><div style=\"display: none;\">label QS:Lar,\"شعار هونغ كونغ\"</div><div style=\"display: none;\">label QS:Lzh-hans,\"香港特别行政区区徽\"</div><div style=\"display: none;\">label QS:Lfi,\"Hongkongin vaakuna\"</div></div>",
+        "source": "commons-desc-page"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Tao Ho|With insignia|Artworks with Wikidata item|PD-PRC-GB mandatory standard|Artworks with Wikidata item missing author|Valid SVG created with Adobe Illustrator:Emblems|Artworks with Wikidata item missing genre|Vectorizations|Five-pointed stars in logos|Emblems of cities in China|SVG roundels of Hong Kong|Artworks with SDC link missing|Regional Emblem of the Hong Kong Special Administrative Region of the People's Republic of China|Circle logos (periphery arrangements)",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Artist": {
+        "value": "<div class=\"fn value\">\n<div style=\"display:inline-block;padding:0 3px;background-color:#CCF\">Original:</div> <div style=\"display:inline-block;padding:3px 0;\"><a href=\"https://en.wikipedia.org/wiki/Tao_Ho\" class=\"extiw\" title=\"w:Tao Ho\">Tao Ho</a> : <a href=\"https://zh.wikipedia.org/wiki/%E4%BD%95%E5%BC%A2\" class=\"extiw\" title=\"zh:何弢\">何弢</a></div> <div style=\"display:inline-block;padding:0 3px;background-color:#CCF\">Vector: </div> <div style=\"display:inline-block;\"><a href=\"//commons.wikimedia.org/wiki/User_talk:HyBoxwood\" title=\"User talk:HyBoxwood\">HyBoxwood</a></div></div>",
+        "source": "commons-desc-page"
+       },
+       "ImageDescription": {
+        "value": "The <a href=\"https://en.wikipedia.org/wiki/Emblem_of_Hong_Kong\" class=\"extiw\" title=\"w:Emblem of Hong Kong\">Emblem of Hong Kong</a>.",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "25 December 1996<div style=\"display: none;\">date QS:P571,+1996-12-25T00:00:00Z/11</div>",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<p><a href=\"https://www.wikidata.org/wiki/Q18020434\" class=\"extiw\" title=\"d:Q18020434\"><span title=\"predecessor of the State Administration for Market Regulation\">General Administration of Quality Supervision, Inspection and Quarantine <small>(Q18020434)</small></span></a>、<a href=\"https://www.wikidata.org/wiki/Q63961\" class=\"extiw\" title=\"d:Q63961\"><span title=\"national standards organization of China\">National Standardization Administration <small>(Q63961)</small></span></a>：\n</p>\n<a rel=\"nofollow\" class=\"external text\" href=\"http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=B5F09BFB5A0128C5CDCB8713F544510A\">GB 16690-2008 Regional emblem of Hong Kong special administrative region</a>",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate restriction-insignia\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Insignia\"><img alt=\"Insignia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/120px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"77\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/250px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"609\" data-file-height=\"731\"></a><figcaption>Insignia</figcaption></figure>\n</td>\n<td style=\"border:none;\">This image shows a <a href=\"https://en.wikipedia.org/wiki/flag\" class=\"extiw\" title=\"w:flag\">flag</a>, a <a href=\"https://en.wikipedia.org/wiki/coat_of_arms\" class=\"extiw\" title=\"w:coat of arms\">coat of arms</a>, a <a href=\"https://en.wikipedia.org/wiki/seal_(emblem)\" class=\"extiw\" title=\"w:seal (emblem)\">seal</a> or some other official <b><a href=\"https://en.wikipedia.org/wiki/insignia\" class=\"extiw\" title=\"w:insignia\">insignia</a></b>. The use of such symbols is restricted in many countries. These restrictions are independent of the <a href=\"https://en.wikipedia.org/wiki/copyright\" class=\"extiw\" title=\"w:copyright\">copyright</a> status.\n</td></tr></tbody></table>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44751119,
+    "ns": 6,
+    "title": "File:Seal of the United States Virgin Islands.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Seal_of_the_United_States_Virgin_Islands.svg/330px-Seal_of_the_United_States_Virgin_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Seal_of_the_United_States_Virgin_Islands.svg/960px-Seal_of_the_United_States_Virgin_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Seal_of_the_United_States_Virgin_Islands.svg/330px-Seal_of_the_United_States_Virgin_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Seal_of_the_United_States_Virgin_Islands.svg/960px-Seal_of_the_United_States_Virgin_Islands.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Seal_of_the_United_States_Virgin_Islands.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_United_States_Virgin_Islands.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=44751119",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2020-06-15 02:53:45",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of the United States Virgin Islands",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Coats of arms of the United States Virgin Islands|Islands in heraldry|With insignia|Unspec SVG created with Inkscape|Vector-Images.com images|Derivative versions|CC-PD-Mark|Official emblems with transparent background|Unspec New SVG created with Inkscape|PD US Unincorporated Territories|Seals of Territories of the United States|Exotic birds in heraldry|Coereba flaveola (illustrations)|Tecoma stans- botanical illustrations",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "The seal of the <a href=\"https://en.wikipedia.org/wiki/United_States_Virgin_Islands\" class=\"extiw\" title=\"w:United States Virgin Islands\">United States Virgin Islands</a> (USVI).\n<p><br>For explanation of seal, see description at:\n</p>\n<ul><li>Original page: <a rel=\"nofollow\" class=\"external free\" href=\"https://virginislandsthisweek.com/press-release/a-trace-of-denmark-in-the-official-seal-of-the-us-virgin-islands/\">https://virginislandsthisweek.com/press-release/a-trace-of-denmark-in-the-official-seal-of-the-us-virgin-islands/</a></li>\n<li>Archive: <a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20200615022249/https://virginislandsthisweek.com/press-release/a-trace-of-denmark-in-the-official-seal-of-the-us-virgin-islands/\">https://web.archive.org/web/20200615022249/https://virginislandsthisweek.com/press-release/a-trace-of-denmark-in-the-official-seal-of-the-us-virgin-islands/</a></li></ul>\n<p>Further notes:\n</p>\n<ul><li>Version 5 (14 June 2020) was created from scratch, not using the \"trace bitmap\" function that was apparently used for Versions 1 - 4. In Version 5, text has much truer rendering, and rope ring is consistent, and an Anneburg Ruins representation is inserted onto St. John island per the above reference to replace the unrecognizable blob in other online versions.</li>\n<li>Credit: American Flag in Version 5 is derived from <a href=\"//commons.wikimedia.org/wiki/File:Flag_of_the_United_States.svg\" title=\"File:Flag of the United States.svg\">File:Flag of the United States.svg</a></li></ul>\n<p><br>\n</p>\n<ul><li>For Version 5: <div style=\"display:table;width:;vertical-align:middle;direction:ltr;float:left;line-height:22px;height:24px;font-size:.96em;margin:0px;padding:2px 4px 2px 6px;color:var(--color-base,#000);background:var(--background-color-neutral-subtle,#F8F9FA);border:1px solid #BAB;border-collapse:separate;border-spacing:0px;background:#FEE;border:1px solid #600;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Inkscape-ws.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Inkscape-ws.svg/40px-Inkscape-ws.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Inkscape-ws.svg/60px-Inkscape-ws.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"390\" data-file-height=\"390\"></a></span> This <i>W3C-unspecified</i> <a href=\"https://en.wikipedia.org/wiki/Vector_images\" class=\"extiw\" title=\"w:Vector images\">vector image</a> was created with <a href=\"https://en.wikipedia.org/wiki/Inkscape\" class=\"extiw\" title=\"w:Inkscape\">Inkscape</a> .</div></li></ul>",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "3 November 2015 (original upload date)",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "This file was derived from:  <a href=\"//commons.wikimedia.org/wiki/File:Seal_of_the_US_Virgin_Islands.gif\" class=\"mw-redirect\" title=\"File:Seal of the US Virgin Islands.gif\">Seal of the US Virgin Islands.gif</a><br> (Version 1)",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Benedikt_Aron\" title=\"User:Benedikt Aron\">Benedikt Thorolfsson</a> (Versions 1-4)",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate restriction-insignia\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Insignia\"><img alt=\"Insignia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/120px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"77\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/250px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"609\" data-file-height=\"731\"></a><figcaption>Insignia</figcaption></figure>\n</td>\n<td style=\"border:none;\">This image shows a <a href=\"https://en.wikipedia.org/wiki/flag\" class=\"extiw\" title=\"w:flag\">flag</a>, a <a href=\"https://en.wikipedia.org/wiki/coat_of_arms\" class=\"extiw\" title=\"w:coat of arms\">coat of arms</a>, a <a href=\"https://en.wikipedia.org/wiki/seal_(emblem)\" class=\"extiw\" title=\"w:seal (emblem)\">seal</a> or some other official <b><a href=\"https://en.wikipedia.org/wiki/insignia\" class=\"extiw\" title=\"w:insignia\">insignia</a></b>. The use of such symbols is restricted in many countries. These restrictions are independent of the <a href=\"https://en.wikipedia.org/wiki/copyright\" class=\"extiw\" title=\"w:copyright\">copyright</a> status.\n</td></tr></tbody></table>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 102415654,
+    "ns": 6,
+    "title": "File:Seal of the Government of National Unity (Libya).svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Seal_of_the_Government_of_National_Unity_%28Libya%29.svg/330px-Seal_of_the_Government_of_National_Unity_%28Libya%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Seal_of_the_Government_of_National_Unity_%28Libya%29.svg/960px-Seal_of_the_Government_of_National_Unity_%28Libya%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Seal_of_the_Government_of_National_Unity_%28Libya%29.svg/330px-Seal_of_the_Government_of_National_Unity_%28Libya%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Seal_of_the_Government_of_National_Unity_%28Libya%29.svg/960px-Seal_of_the_Government_of_National_Unity_%28Libya%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Seal_of_the_Government_of_National_Unity_%28Libya%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_Government_of_National_Unity_(Libya).svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=102415654",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2022-03-10 19:52:04",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of the Government of National Unity (Libya)",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "PD-Libya|With insignia|SVG coats of arms of Libya|PD-old missing SDC copyright status",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Seal of the Government of National Unity of Libya",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2021-03-26",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "Own work, based on logo from <a rel=\"nofollow\" class=\"external text\" href=\"https://pm.gov.ly/pm/resource/image/logo.jpg\">government website</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "Government of National Unity of the State of Libya",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 122797246,
+    "ns": 6,
+    "title": "File:Royal Coat of arms of Canada.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Royal_Coat_of_arms_of_Canada.svg/330px-Royal_Coat_of_arms_of_Canada.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 441,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Royal_Coat_of_arms_of_Canada.svg/960px-Royal_Coat_of_arms_of_Canada.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Royal_Coat_of_arms_of_Canada.svg/330px-Royal_Coat_of_arms_of_Canada.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 441,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Royal_Coat_of_arms_of_Canada.svg/960px-Royal_Coat_of_arms_of_Canada.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Royal_Coat_of_arms_of_Canada.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Royal_Coat_of_arms_of_Canada.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=122797246",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2022-09-27 10:05:18",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Royal Coat of arms of Canada",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Royal coat of arms of Canada|Files with no machine-readable author|Lilies in heraldry|Thistles in heraldry|A mari usque ad mare|With trademark|1994 in Canada|Maple branches in heraldry|Self-published work|Coats of arms of Queen Elizabeth II of the United Kingdom|Unicorns in coats of arms of Canada|PD coat of arms definitions|Union Jack in heraldry|Trefoils gules in heraldry|Valid SVG created with Inkscape:CoA-SO|Torses in heraldry|Azure three fleurs-de-lis or|Lions passant guardant in crest|Official emblems with transparent background|Tinctures not specified|Coats of arms of Charles III of the United Kingdom|CoA Lab-cm:Sodacan|Heraldic lambrequins argent and gules|The Lion and the Unicorn in supporters|Flags in supporters|Heraldic mottos in compartments|Three maple leaves|Crown of St Edward in crest|Lions rampant gules armed and langued azure|Lions or in supporters|Maple leaves in heraldry of Canada|Crowned lions in crest|SVG royal coat of arms of Canada|Order of Canada in heraldry|Roses in compartments|Symbols of Charles III of Canada|Symbols of Elizabeth II of Canada",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "DateTimeOriginal": {
+        "value": "8 September 2022",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "This coat of arms was drawn based on its <b><a href=\"https://en.wikipedia.org/wiki/blazon\" class=\"extiw\" title=\"w:blazon\">blazon</a></b> which – being a written description – <i>is free from copyright</i>. Any illustration conforming with the blazon of the arms is considered to be <i>heraldically correct</i>. Thus several different artistic interpretations of the same coat of arms can exist. Sometimes, the design officially used by the armiger is likely to be protected by copyright, in which case it cannot be used here.<br><small>Individual representations of a coat of arms, drawn from a blazon, may have a copyright belonging to the artist, but are not necessarily <a href=\"//commons.wikimedia.org/wiki/Commons:Derivative_works\" title=\"Commons:Derivative works\">derivative works</a>.</small><small><style data-mw-deduplicate=\"TemplateStyles:r428405392\">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output .hatnote i,.mw-parser-output .hatnote.noitalic{font-style:normal}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output div.hatnote+div.hatnote{margin-top:-0.5em}@media print{.mw-parser-output .hatnote{display:none}}</style><div role=\"note\" class=\"hatnote navigation-not-searchable\">Further information: <a href=\"//commons.wikimedia.org/wiki/Commons:Coats_of_arms\" title=\"Commons:Coats of arms\">Commons:Coats of arms</a>  and <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Template:Coa_blazon\" title=\"Special:MyLanguage/Template:Coa blazon\">Template:Coa blazon</a> </div></small>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "CC BY-SA 4.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 4.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "trademarked",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-sa-4.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 145582073,
+    "ns": 6,
+    "title": "File:Seal of Palau.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Seal_of_Palau.svg/330px-Seal_of_Palau.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Seal_of_Palau.svg/960px-Seal_of_Palau.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Seal_of_Palau.svg/330px-Seal_of_Palau.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Seal_of_Palau.svg/960px-Seal_of_Palau.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Seal_of_Palau.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seal_of_Palau.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=145582073",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2024-02-20 09:16:01",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Seal of Palau",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Seals of Palau|With insignia|Path text SVG|Created with Inkscape-undef|Files not protected by international copyright agreements|Valid SVG created with Inkscape:Seals",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "<a href=\"https://en.wikipedia.org/wiki/Seal_of_Palau\" class=\"extiw\" title=\"w:Seal of Palau\">Seal of Palau</a>",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2009-02-23",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/File:Coat_of_arms_of_Palau.png\" class=\"mw-redirect\" title=\"File:Coat of arms of Palau.png\">File:Coat of arms of Palau.png</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "originally Washiucho",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "<table class=\"licensetpl\" style=\"display:none\">\n<tbody><tr>\n<td><span class=\"licensetpl_short\">Public domain</span><span class=\"licensetpl_long\">Public domain</span><span class=\"licensetpl_link_req\">false</span><span class=\"licensetpl_attr_req\">false</span>\n</td></tr></tbody></table>\n<table style=\"width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;\" dir=\"ltr\" class=\"layouttemplate\" lang=\"en\">\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span title=\"Public domain\"><img alt=\"Public domain\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"196\" data-file-height=\"196\"></span></span>\n</td>\n<td>This work was first published on the <a href=\"https://en.wikipedia.org/wiki/Palau\" class=\"extiw\" title=\"en:Palau\">Palau</a> and is now in the <b><a href=\"https://en.wikipedia.org/wiki/public_domain\" class=\"extiw\" title=\"en:public domain\">public domain</a></b> because its copyright protection has expired by virtue of the <i><a rel=\"nofollow\" class=\"external text\" href=\"http://www.wipo.int/wipolex/en/details.jsp?id=8122\">Republic of Palau Copyright Act of 2003</a></i> (<a href=\"//commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Palau\" title=\"Commons:Copyright rules by territory/Palau\">details</a>). The work meets one of the following criteria:<br>\n<div style=\"font-size:85%;\">\n<ul><li>It is an anonymous work, pseudonymous work or a work made for hire and 75 years have passed since the date of its publication or 100 years have passed since the date of its creation, whichever expires first</li>\n<li>It is an audiovisual or collective work and 75 years have passed since the date of its publication or 100 years have passed since the date of its creation, whichever expires first</li>\n<li>It is another kind of work, and 50 years have passed since the year of death of the author (or last-surviving author)</li>\n<li>It is one of \"official public legislative, administrative or legal texts, or any official translations thereof\"</li></ul></div>\n</td>\n<td><figure class=\"mw-halign-right\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Flag_of_Palau.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Palau.svg/120px-Flag_of_Palau.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"80\" height=\"50\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Palau.svg/250px-Flag_of_Palau.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"800\" data-file-height=\"500\"></a><figcaption></figcaption></figure>\n</td></tr></tbody></table>\n<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Palau\" title=\"Copyright notes\"><img alt=\"Copyright notes\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Unfree_image.svg/120px-Unfree_image.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Unfree_image.svg/250px-Unfree_image.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"48\" data-file-height=\"48\"></a><figcaption>Copyright notes</figcaption></figure><br><br><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Palau\" title=\"Copyright notes\"><img alt=\"Copyright notes\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Palau.svg/120px-Flag_of_Palau.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"40\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Palau.svg/250px-Flag_of_Palau.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"800\" data-file-height=\"500\"></a><figcaption>Copyright notes</figcaption></figure>\n</td>\n<td style=\"border:none;\">Per <a href=\"//commons.wikimedia.org/wiki/File:U.S._Copyright_Office_circular_38a.pdf\" title=\"File:U.S. Copyright Office circular 38a.pdf\">U.S. Circ. 38a</a>, the following countries are not participants in the <a href=\"https://en.wikipedia.org/wiki/en:Berne_Convention\" class=\"extiw\" title=\"w:en:Berne Convention\">Berne Convention</a> or <a href=\"https://en.wikipedia.org/wiki/en:Universal_Copyright_Convention\" class=\"extiw\" title=\"w:en:Universal Copyright Convention\"><span title=\"1952 international copyright treaty that requires copyright notices\">Universal Copyright Convention</span></a> and there is no presidential proclamation restoring U.S. copyright protection to works of these countries on the basis of reciprocal treatment of the works of U.S. nationals or domiciliaries:\n<ul><li><i>Eritrea, Ethiopia, Iran, Iraq, Marshall Islands, Palau, Somalia, Somaliland, and South Sudan</i>.</li></ul>\n<p>As such, works published by citizens of these countries in these countries are usually not subject to copyright protection outside of these countries. Hence, such works may be in the public domain in most other countries worldwide.\n</p><p><b>However:</b>\n</p>\n<ul><li>Works published in these countries by citizens or permanent residents of other countries that are signatories to the Berne Convention or any other treaty on copyright will still be protected in their home country and internationally as well as locally by local copyright law (if it exists).</li>\n<li>Similarly, works published outside of these countries within 30 days of publication within these countries will also usually be subject to protection in the foreign country of publication. When works are subject to copyright outside of these countries, the term of such copyright protection may exceed the term of copyright inside them.</li>\n<li>Unpublished works from these countries may be fully copyrighted.</li>\n<li>A work from one of these countries may become copyrighted in the United States under the <a href=\"https://en.wikipedia.org/wiki/URAA\" class=\"extiw\" title=\"w:URAA\">URAA</a> if the work's home country enters a copyright treaty or agreement with the United States and the work is still under copyright in its home country.</li></ul>\n<hr>The <b>Republic of Palau</b> has enacted the <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wipo.int/edocs/lexdocs/laws/en/pw/pw006en.pdf\">Copyright Act of 2003</a> which came into force on 26 November 2003.\n</td></tr></tbody></table>\n<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate restriction-insignia\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Insignia\"><img alt=\"Insignia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/120px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"77\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat-elements-2.png/250px-Coat-elements-2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"609\" data-file-height=\"731\"></a><figcaption>Insignia</figcaption></figure>\n</td>\n<td style=\"border:none;\">This image shows a <a href=\"https://en.wikipedia.org/wiki/flag\" class=\"extiw\" title=\"w:flag\">flag</a>, a <a href=\"https://en.wikipedia.org/wiki/coat_of_arms\" class=\"extiw\" title=\"w:coat of arms\">coat of arms</a>, a <a href=\"https://en.wikipedia.org/wiki/seal_(emblem)\" class=\"extiw\" title=\"w:seal (emblem)\">seal</a> or some other official <b><a href=\"https://en.wikipedia.org/wiki/insignia\" class=\"extiw\" title=\"w:insignia\">insignia</a></b>. The use of such symbols is restricted in many countries. These restrictions are independent of the <a href=\"https://en.wikipedia.org/wiki/copyright\" class=\"extiw\" title=\"w:copyright\">copyright</a> status.\n</td></tr></tbody></table>",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 164147931,
+    "ns": 6,
+    "title": "File:Wapen van Sint Maarten.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Wapen_van_Sint_Maarten.svg/330px-Wapen_van_Sint_Maarten.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 337,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Wapen_van_Sint_Maarten.svg/960px-Wapen_van_Sint_Maarten.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Wapen_van_Sint_Maarten.svg/330px-Wapen_van_Sint_Maarten.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 337,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Wapen_van_Sint_Maarten.svg/960px-Wapen_van_Sint_Maarten.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Wapen_van_Sint_Maarten.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Wapen_van_Sint_Maarten.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=164147931",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2025-05-29 13:38:00",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Wapen van Sint Maarten",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Coats of arms of Sint Maarten|Self-published work|PD-self|Derivative versions|PD Dutch coat of arms|CC-PD-Mark",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Coat of arms of Sint Maarten",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2025-04-25",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "This file was derived from:  <a href=\"//commons.wikimedia.org/wiki/File:Sint_Maarten_eiland_wapen.svg\" title=\"File:Sint Maarten eiland wapen.svg\">Sint Maarten eiland wapen.svg</a><br>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:%C3%86toms\" title=\"User:Ætoms\">Ætoms</a> (derivative work)",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 177721596,
+    "ns": 6,
+    "title": "File:Syrphe à ceintures sur un dahlia en novembre.jpg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg/330px-Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 320,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg/960px-Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg/330px-Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 320,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg/960px-Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Syrphe_%C3%A0_ceintures_sur_un_dahlia_en_novembre.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=177721596",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2025-12-29 17:43:12",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "Syrphe à ceintures sur un dahlia en novembre",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Self-published work|Dahlia gardens|Files with coordinates missing SDC location of creation (50° N, 3° E)|Episyrphus balteatus on flowers|Insects on Dahlia flowers|Animals with Dahlia|Nature of Monchecourt",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "quality",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "GPSLatitude": {
+        "value": "50.308724",
+        "source": "commons-desc-page"
+       },
+       "GPSLongitude": {
+        "value": "3.209638",
+        "source": "commons-desc-page"
+       },
+       "GPSMapDatum": {
+        "value": "WGS-84",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Syrphe à ceintures sur un dahlia en novembre",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2025-11-02 10:53:02",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:JackyM59\" title=\"User:JackyM59\">JackyM59</a>",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "CC BY 4.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Creative Commons Attribution 4.0",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "source": "commons-desc-page"
+       },
+       "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "cc-by-4.0",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 178489528,
+    "ns": 6,
+    "title": "File:State Seal of the Republic of the Union of Myanmar.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg/330px-State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 267,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg/960px-State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg/330px-State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 267,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg/960px-State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178489528",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2025-11-15 13:40:01",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "State Seal of the Republic of the Union of Myanmar",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "State Seal of the Republic of the Union of Myanmar",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2025-08-11",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "This file was derived from:  <a href=\"//commons.wikimedia.org/wiki/File:State_seal_of_Myanmar.png\" title=\"File:State seal of Myanmar.png\">State seal of Myanmar.png</a>: <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:State_seal_of_Myanmar.png\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/State_seal_of_Myanmar.png/60px-State_seal_of_Myanmar.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"50\" height=\"42\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/State_seal_of_Myanmar.png/120px-State_seal_of_Myanmar.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1800\" data-file-height=\"1500\"></a></span><br>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "<ul><li><a href=\"//commons.wikimedia.org/wiki/File:State_seal_of_Myanmar.png\" title=\"File:State seal of Myanmar.png\">File:State seal of Myanmar.png</a>: Unknown author<span style=\"display: none;\">Unknown author</span></li>\n<li>derivative work: <a href=\"//commons.wikimedia.org/wiki/User:Pho_Sai\" title=\"User:Pho Sai\">Pho Sai</a></li></ul>",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 189248970,
+    "ns": 6,
+    "title": "File:中華人民共和國國徽.svg",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg/330px-%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 347,
+      "responsiveUrls": {
+       "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg/960px-%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg/330px-%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 347,
+       "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg/960px-%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=189248970",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2026-04-30 12:06:47",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Emblem of China</i></div></div><div style=\"display: none;\">label QS:Les,\"Emblema Nacional de la República Popular China\"</div><div style=\"display: none;\">label QS:Lis,\"Merki Alþýðulýðveldisins Kína\"</div><div style=\"display: none;\">label QS:Lms,\"Lambang negara China\"</div><div style=\"display: none;\">label QS:Len-gb,\"National Emblem of the People's Republic of China\"</div><div style=\"display: none;\">label QS:Lbpy,\"গণচীনর চিনত্হান\"</div><div style=\"display: none;\">label QS:Lbg,\"Герб на Китайската народна република\"</div><div style=\"display: none;\">label QS:Ltr,\"Çin arması\"</div><div style=\"display: none;\">label QS:Lzh-hk,\"中華人民共和國國徽\"</div><div style=\"display: none;\">label QS:Lsv,\"Kinas statsvapen\"</div><div style=\"display: none;\">label QS:Luk,\"Герб Китайської Народної Республіки\"</div><div style=\"display: none;\">label QS:Lzh-hant,\"中華人民共和國國徽\"</div><div style=\"display: none;\">label QS:Lzh-cn,\"中华人民共和国国徽\"</div><div style=\"display: none;\">label QS:Luz,\"Xitoy gerbi\"</div><div style=\"display: none;\">label QS:Leo,\"Nacia emblemo de Ĉinio\"</div><div style=\"display: none;\">label QS:Lcs,\"Státní znak Čínské lidové republiky\"</div><div style=\"display: none;\">label QS:Lbs,\"Grb Kine\"</div><div style=\"display: none;\">label QS:Lfr,\"Emblème de la République populaire de Chine\"</div><div style=\"display: none;\">label QS:Lhr,\"Grb Kine\"</div><div style=\"display: none;\">label QS:Ldv,\"ސީނުކަރައިގެ ނިޝާން\"</div><div style=\"display: none;\">label QS:Lvi,\"Quốc huy Cộng hòa Nhân dân Trung Hoa\"</div><div style=\"display: none;\">label QS:Lsr,\"грб Народне Републике Кине\"</div><div style=\"display: none;\">label QS:Lpt-br,\"brasão da República Popular da China\"</div><div style=\"display: none;\">label QS:Lzh-sg,\"中华人民共和国国徽\"</div><div style=\"display: none;\">label QS:Lnb,\"Folkerepublikken Kinas riksvåpen\"</div><div style=\"display: none;\">label QS:Len,\"Emblem of China\"</div><div style=\"display: none;\">label QS:Lar,\"شعار الصين\"</div><div style=\"display: none;\">label QS:Lyue,\"中華人民共和國國徽\"</div><div style=\"display: none;\">label QS:Lhu,\"Kína címere\"</div><div style=\"display: none;\">label QS:Leu,\"Txinako ikurra\"</div><div style=\"display: none;\">label QS:Last,\"escudu de China\"</div><div style=\"display: none;\">label QS:Lca,\"Emblema Nacional de la República Popular de la Xina\"</div><div style=\"display: none;\">label QS:Lde-ch,\"Wappen der Volksrepublik China\"</div><div style=\"display: none;\">label QS:Lde,\"Wappen der Volksrepublik China\"</div><div style=\"display: none;\">label QS:Lbe,\"Герб Кітая\"</div><div style=\"display: none;\">label QS:Lhy,\"Չինաստանի զինանշան\"</div><div style=\"display: none;\">label QS:Lzh,\"中华人民共和国国徽\"</div><div style=\"display: none;\">label QS:Lda,\"Folkerepublikken Kinas nationalvåben\"</div><div style=\"display: none;\">label QS:Lka,\"ჩინეთის გერბი\"</div><div style=\"display: none;\">label QS:Lja,\"中華人民共和国の国章\"</div><div style=\"display: none;\">label QS:Larz,\"شعار الصين\"</div><div style=\"display: none;\">label QS:Lhe,\"סמל הרפובליקה העממית של סין\"</div><div style=\"display: none;\">label QS:Lhi,\"चीनी जनवादी गणराज्य का राष्ट्रीय प्रतीक\"</div><div style=\"display: none;\">label QS:Lfi,\"Kiinan vaakuna\"</div><div style=\"display: none;\">label QS:Len-ca,\"National Emblem of the People's Republic of China\"</div><div style=\"display: none;\">label QS:Lit,\"stemma della Repubblica Popolare Cinese\"</div><div style=\"display: none;\">label QS:Let,\"Hiina Rahvavabariigi vapp\"</div><div style=\"display: none;\">label QS:Lyo,\"Àmì ọ̀pá àṣẹ ilẹ̀ Orílẹ̀-èdè Olómìnira àwọn Ará ilẹ̀ Ṣáínà\"</div><div style=\"display: none;\">label QS:Lru,\"Герб Китая\"</div><div style=\"display: none;\">label QS:Lsr-el,\"Grb Narodne Republike Kine\"</div><div style=\"display: none;\">label QS:Lzh-hans,\"中华人民共和国国徽\"</div><div style=\"display: none;\">label QS:Lbe-tarask,\"Герб Кітаю\"</div><div style=\"display: none;\">label QS:Lzh-tw,\"中華人民共和國國徽\"</div><div style=\"display: none;\">label QS:Llt,\"Kinijos Liaudies Respublikos herbas\"</div><div style=\"display: none;\">label QS:Lsl,\"Grb Kitajske\"</div><div style=\"display: none;\">label QS:Lsr-ec,\"Грб Народне Републике Кине\"</div><div style=\"display: none;\">label QS:Lko,\"중화인민공화국의 국장\"</div><div style=\"display: none;\">label QS:Lpt,\"Brasão de armas da República Popular da China\"</div><div style=\"display: none;\">label QS:Lth,\"ตราแผ่นดินของสาธารณรัฐประชาชนจีน\"</div><div style=\"display: none;\">label QS:Lpl,\"Godło Chińskiej Republiki Ludowej\"</div><div style=\"display: none;\">label QS:Lro,\"Stema Republicii Populare Chineze\"</div><div style=\"display: none;\">label QS:Lnl,\"Wapen van de Volksrepubliek China\"</div><div style=\"display: none;\">label QS:Lsh,\"Grb Narodne Republike Kine\"</div><div style=\"display: none;\">label QS:Lmk,\"Грб на Кина\"</div><div style=\"display: none;\">label QS:Lid,\"Lambang Nasional Republik Rakyat Tiongkok\"</div><div style=\"display: none;\">label QS:Lsco,\"Coat o airms o the Fowkrepublic o Cheenae\"</div><div style=\"display: none;\">label QS:Lgl,\"Escudo da República Popular da China\"</div><div style=\"display: none;\">label QS:Lsq,\"Stema e R.P të Kinës\"</div><div style=\"display: none;\">label QS:Lel,\"Εθνικό Έμβλημα της Λαϊκής Δημοκρατίας της Κίνας\"</div><div style=\"display: none;\">label QS:Lfa,\"نشان ملی جمهوری خلق چین\"</div></div>",
+        "source": "commons-desc-page"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Buildings in heraldry|With insignia|Artworks with Wikidata item|Supersedes|PD-PRC-GB mandatory standard|Artworks with Wikidata item missing author|Five-pointed golden stars|Valid SVG created with Adobe Illustrator:Emblems|Artworks with Wikidata item missing genre|Communist symbols|SVG national emblem of the People's Republic of China|Rice in supporters|Wheat in supporters|Yellow star as a Chinese symbol",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Artist": {
+        "value": "multiple people, e.g. Lin Huiyin and Liang Sicheng, see <a rel=\"nofollow\" class=\"external autonumber\" href=\"https://xsg.tsinghua.edu.cn/info/1003/3051.htm\">[2]</a>",
+        "source": "commons-desc-page"
+       },
+       "ImageDescription": {
+        "value": "National emblem of the People's Republic of China",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "3 April 2025",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<p>将<a rel=\"nofollow\" class=\"external text\" href=\"https://www.gov.cn/guoqing/guohui/3dsz/index.html\">国徽3D数字模型</a>的正投影三角面参照<a href=\"https://en.wikisource.org/wiki/zh:GB_15093-2025_%E5%9B%BD%E5%BE%BD\" class=\"extiw\" title=\"s:zh:GB 15093-2025 国徽\">GB 15093-2025 国徽</a>的图4和图A.1清理得到的结果，参照<a href=\"//commons.wikimedia.org/wiki/File:%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.png\" title=\"File:中華人民共和國國徽.png\">File:中華人民共和國國徽.png </a>上色。\n</p>\n<ul class=\"gallery mw-gallery-nolines\">\n\t\t<li class=\"gallerybox\" style=\"width: 125px\">\n\t\t\t<div class=\"thumb\" style=\"width: 120px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.png\" class=\"mw-file-description\" title=\"中華人民共和國國徽.png\"><img alt=\"中華人民共和國國徽.png\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.png/120px-%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"111\" height=\"120\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.png/250px-%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"3348\" data-file-height=\"3630\"></a></span></div>\n\t\t\t<div class=\"gallerytext\"><div class=\"center\"><a href=\"//commons.wikimedia.org/wiki/File:%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.png\" title=\"File:中華人民共和國國徽.png\">中華人民共和國國徽.png</a></div></div>\n\t\t</li>\n\t\t<li class=\"gallerybox\" style=\"width: 125px\">\n\t\t\t<div class=\"thumb\" style=\"width: 120px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1.svg\" class=\"mw-file-description\" title=\"国徽3D数字模型 Mesh正投影.svg\"><img alt=\"国徽3D数字模型 Mesh正投影.svg\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1.svg/120px-%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"111\" height=\"120\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1.svg/250px-%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"555\"></a></span></div>\n\t\t\t<div class=\"gallerytext\"><div class=\"center\"><a href=\"//commons.wikimedia.org/wiki/File:%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1.svg\" title=\"File:国徽3D数字模型 Mesh正投影.svg\">国徽3D数字模型 Mesh正投影.svg</a></div></div>\n\t\t</li>\n\t\t<li class=\"gallerybox\" style=\"width: 125px\">\n\t\t\t<div class=\"thumb\" style=\"width: 120px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1_%E6%B8%85%E7%90%86%E5%90%8E.svg\" class=\"mw-file-description\" title=\"国徽3D数字模型 Mesh正投影 清理后.svg\"><img alt=\"国徽3D数字模型 Mesh正投影 清理后.svg\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1_%E6%B8%85%E7%90%86%E5%90%8E.svg/120px-%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1_%E6%B8%85%E7%90%86%E5%90%8E.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"111\" height=\"120\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1_%E6%B8%85%E7%90%86%E5%90%8E.svg/250px-%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1_%E6%B8%85%E7%90%86%E5%90%8E.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"555\"></a></span></div>\n\t\t\t<div class=\"gallerytext\"><div class=\"center\"><a href=\"//commons.wikimedia.org/wiki/File:%E5%9B%BD%E5%BE%BD3D%E6%95%B0%E5%AD%97%E6%A8%A1%E5%9E%8B_Mesh%E6%AD%A3%E6%8A%95%E5%BD%B1_%E6%B8%85%E7%90%86%E5%90%8E.svg\" title=\"File:国徽3D数字模型 Mesh正投影 清理后.svg\">国徽3D数字模型 Mesh正投影 清理后.svg</a></div></div>\n\t\t</li>\n</ul>",
+        "source": "commons-desc-page"
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia|communist",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 195697977,
+    "ns": 6,
+    "title": "File:St Martin Coat.png",
+    "imagerepository": "local",
+    "imageinfo": [
+     {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/St_Martin_Coat.png/330px-St_Martin_Coat.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 320,
+      "thumbheight": 401,
+      "responsiveUrls": {
+       "2": "https://upload.wikimedia.org/wikipedia/commons/5/56/St_Martin_Coat.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+      },
+      "thumbattribs": {
+       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/St_Martin_Coat.png/330px-St_Martin_Coat.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "decoding": "async",
+       "loading": "lazy",
+       "width": 320,
+       "height": 401,
+       "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/56/St_Martin_Coat.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/St_Martin_Coat.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:St_Martin_Coat.png",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=195697977",
+      "extmetadata": {
+       "DateTime": {
+        "value": "2020-05-27 10:47:25",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+       },
+       "ObjectName": {
+        "value": "St Martin Coat",
+        "source": "mediawiki-metadata"
+       },
+       "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+       },
+       "Categories": {
+        "value": "Coats of arms of Saint-Martin (France)|Coat of arms images that should use vector graphics|PD ineligible|With insignia|PNG that should use vector graphics",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+       },
+       "ImageDescription": {
+        "value": "Coat of Saint-Martin",
+        "source": "commons-desc-page"
+       },
+       "DateTimeOriginal": {
+        "value": "2017-05-06",
+        "source": "commons-desc-page"
+       },
+       "Credit": {
+        "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.com-saint-martin.fr/images/newsletter/e-newsletter-20-fevrier-mars-2016.pdf\">http://www.com-saint-martin.fr/images/newsletter/e-newsletter-20-fevrier-mars-2016.pdf</a>",
+        "source": "commons-desc-page"
+       },
+       "Artist": {
+        "value": "Government of Collectivity of Saint-Martin",
+        "source": "commons-desc-page"
+       },
+       "Permission": {
+        "value": "This <i> coat of arms</i> image could be re-created <b>using <a href=\"https://en.wikipedia.org/wiki/vector_graphics\" class=\"extiw\" title=\"w:vector graphics\">vector graphics</a> as a <a href=\"https://en.wikipedia.org/wiki/Scalable_Vector_Graphics\" class=\"extiw\" title=\"w:Scalable Vector Graphics\">SVG</a> file.</b> This has several advantages; see <a href=\"//commons.wikimedia.org/wiki/Commons:Media_for_cleanup#PNG_or_JPEG_images_that_should_be_SVG\" title=\"Commons:Media for cleanup\">Commons:Media for cleanup</a> for more information. If a SVG form of this image is available, please upload it and afterwards replace this template with <code>{{<a href=\"//commons.wikimedia.org/wiki/Template:Vector_version_available\" title=\"Template:Vector version available\">vector version available</a>|<i>new image name</i>}}</code>.<br>It is recommended to name the SVG file “St Martin Coat.svg”—then the template <a href=\"//commons.wikimedia.org/wiki/Template:Vector_version_available\" title=\"Template:Vector version available\">Vector version available</a> (or <a href=\"//commons.wikimedia.org/wiki/Template:Vva\" class=\"mw-redirect\" title=\"Template:Vva\">Vva</a>) does not need the <i>new image name</i> parameter.",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "LicenseShortName": {
+        "value": "Public domain",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "UsageTerms": {
+        "value": "Public domain",
+        "source": "commons-desc-page"
+       },
+       "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Copyrighted": {
+        "value": "False",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "Restrictions": {
+        "value": "insignia",
+        "source": "commons-desc-page",
+        "hidden": ""
+       },
+       "License": {
+        "value": "pd",
+        "source": "commons-templates",
+        "hidden": ""
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

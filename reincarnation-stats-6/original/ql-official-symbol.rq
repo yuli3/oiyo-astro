@@ -1,0 +1,14 @@
+SELECT ?c ?iso ?s ?sEn ?sMul ?taxon ?sKo ?sDesc ?img ?roleEn WHERE {
+  ?c wdt:P298 ?iso ; p:P2238 ?st .
+  FILTER NOT EXISTS { ?c wdt:P576 ?end }
+  ?st ps:P2238 ?s .
+  FILTER NOT EXISTS { ?st wikibase:rank wikibase:DeprecatedRank }
+  FILTER NOT EXISTS { ?st pq:P582 ?stEnd }
+  OPTIONAL { ?s wdt:P18 ?img }
+  OPTIONAL { ?s rdfs:label ?sEn FILTER(LANG(?sEn)="en") }
+  OPTIONAL { ?s rdfs:label ?sMul FILTER(LANG(?sMul)="mul") }
+  OPTIONAL { ?s wdt:P225 ?taxon }
+  OPTIONAL { ?s rdfs:label ?sKo FILTER(LANG(?sKo)="ko") }
+  OPTIONAL { ?s schema:description ?sDesc FILTER(LANG(?sDesc)="en") }
+  OPTIONAL { ?st ?pq ?role . ?qp wikibase:qualifier ?pq . ?role rdfs:label ?roleEn FILTER(LANG(?roleEn)="en") }
+}
