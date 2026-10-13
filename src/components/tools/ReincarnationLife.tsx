@@ -10,6 +10,7 @@ import {
   type LifePhase,
   type LifeStats,
 } from "../../lib/reincarnation-life";
+import ReincarnationStages from "./ReincarnationStages";
 
 /**
  * 환생 결과 아래에 붙는 "그다음 삶": 탄생 카드, 인생 지도 100칸, 같은 1초에 태어난 4명.
@@ -336,6 +337,8 @@ export default function ReincarnationLife({ locale, country, home, sameSecond, o
           {COPY.save[locale]}
         </button>
       </section>
+
+      <ReincarnationStages locale={locale} country={country} home={home} />
 
       <section className="rounded-2xl border border-border bg-card p-5" aria-labelledby="reincarnation-life-map">
         <h3 id="reincarnation-life-map" className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
