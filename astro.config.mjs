@@ -119,8 +119,8 @@ export default defineConfig({
         '@clerk/nextjs': path.resolve(__dirname, './src/lib/shims/clerk.ts'),
         'next/image': path.resolve(__dirname, './src/lib/shims/next-image.tsx'),
         '@google/generative-ai': path.resolve(__dirname, './src/lib/shims/google-ai.ts'),
-        // Redirect legacy src/messages/ imports to src/i18n/messages/
-        '../messages': path.resolve(__dirname, './src/i18n/messages'),
+        // 2026-10-13: legacy ../messages imports are gone. A relative alias here
+        // also captures Astro 7's internal messages/runtime.js and breaks dev.
       },
     },
   },
