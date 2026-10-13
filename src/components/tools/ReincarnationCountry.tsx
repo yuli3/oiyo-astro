@@ -30,7 +30,9 @@ import {
 } from "../../lib/reincarnation";
 import { birthsPerSecond, dotValue } from "../../lib/reincarnation-particles";
 import { useReducedMotion } from "../../hooks/useMotion";
+import { sameSecondBirths } from "../../lib/reincarnation-life";
 import ReincarnationGlobe from "./ReincarnationGlobe";
+import ReincarnationLife from "./ReincarnationLife";
 import PhysicsJar from "../visual/PhysicsJar";
 
 interface Props {
@@ -167,6 +169,7 @@ export default function ReincarnationCountry({ locale }: Props) {
   const [drawKey, setDrawKey] = useState(0);
   const [jarKey, setJarKey] = useState(0);
   const [revealed, setRevealed] = useState(true);
+  const [sameSecond, setSameSecond] = useState<Country[]>([]);
   const revealTimer = useRef<number | null>(null);
   const reducedMotion = useReducedMotion();
 
@@ -199,6 +202,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       setFocus(sharedRows[sharedRows.length - 1] ?? null);
       setDraws(sharedRows.length);
       setJarKey((key) => key + 1);
+      setSameSecond(sameSecondBirths());
     }
     try {
       setHistory(parseHistory(window.localStorage.getItem(REINCARNATION_HISTORY_KEY)));
@@ -226,6 +230,7 @@ export default function ReincarnationCountry({ locale }: Props) {
   function roll() {
     const next = pickMany(mode, draws);
     setResults(next);
+    setSameSecond(sameSecondBirths());
     setFocus(next[next.length - 1] ?? null);
     persistHistory(next, mode);
     setDrawKey((key) => key + 1);
@@ -277,6 +282,7 @@ export default function ReincarnationCountry({ locale }: Props) {
     setFocus(rows[rows.length - 1] ?? null);
     setRevealed(true);
     setJarKey((key) => key + 1);
+    setSameSecond(sameSecondBirths());
   }
 
   function clearHistory() {
@@ -440,7 +446,7 @@ export default function ReincarnationCountry({ locale }: Props) {
         }}
       />
       <div className="space-y-1">
-        {mode === "births" ? <BirthTicker locale={locale} /> : null}
+        <BirthTicker locale={locale} />
         <p className="text-xs text-muted-foreground">
           {fill(mode === "births" ? COPY.dustBirths[locale] : COPY.dustPopulation[locale], {
             n: formatInt(Math.round(dotValue(mode)), locale),
@@ -559,6 +565,16 @@ export default function ReincarnationCountry({ locale }: Props) {
         </div>
       ) : (
         <p className="text-sm text-muted-foreground">{COPY.empty[locale]}</p>
+      )}
+
+      {revealed && latest && (
+        <ReincarnationLife
+          locale={locale}
+          country={focus ?? latest}
+          home={home}
+          sameSecond={results.length ? sameSecond : []}
+          onSelect={(row) => setFocus(row)}
+        />
       )}
 
       <section>
