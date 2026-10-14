@@ -1,75 +1,66 @@
 ---
 topic: mbti
 locale: fr
-title: "MBTI (16 types de personnalité) : le langage le plus simple pour parler de soi"
-description: "Découvrez les termes et la notion de préférence utilisés pour décrire les types de personnalité MBTI."
-definition: "E et I, T et F..."
-updated: 2026-01-18
+title: "MBTI : lire quatre paires de préférences et seize combinaisons"
+description: "Comprenez les quatre préférences, les limites des fonctions cognitives, le calcul propre à OIYO et pourquoi les résultats ne servent ni au diagnostic ni au recrutement."
+definition: "MBTI désigne un modèle de quatre paires de préférences et une évaluation officielle. Une activité utilisant les mêmes quatre lettres n’est pas automatiquement l’instrument officiel."
+updated: 2026-10-14
 ---
 
-> **Résumé (Abstract)**
->
-> "Tu es T ?" En Corée, cette question est presque devenue une formule de salutation. <abbr title="Indicateur typologique de Myers-Briggs (Myers-Briggs Type Indicator). Test de personnalité fondé sur la typologie psychologique de Carl Jung. Il combine quatre axes pour classer les personnes en 16 types.">Le MBTI</abbr> a depassé le simple effet de mode : il est devenu une langue commune pour comprendre nos differences. Mais c'est en regardant au-dela des mêmes Internet et en comprenant ses racines psychologiques que nous pouvons vraiment respecter les autres.
+Le **Myers-Briggs Type Indicator (MBTI)** est un modèle de préférences et une approche d’évaluation développés à partir des types psychologiques de Jung par Katharine Cook Briggs et Isabel Briggs Myers. Quatre lettres peuvent fournir un vocabulaire pour discuter, mais ne déterminent ni les capacités, ni la santé mentale, ni l’aptitude professionnelle, ni l’avenir d’une relation.
 
-## 1. Origine : l'intuition de Jung et le devouement de deux femmes
+Distinguez le modèle officiel, les recherches sur une version précise d’un instrument et l’activité propre à OIYO. La popularité ou une description qui vous semble familière ne prouvent ni l’exactitude ni la supériorité sur d’autres outils.
 
-Au debut du XXe siècle, le psychologue Carl Jung a distingue les fonctions psychiques humaines en sensation (S), intuition (N), pensee (T) et sentiment (F). C'est Katharine Briggs et sa fille Isabel Myers qui ont voulu rendre cette théorie complexe utilisable par des personnes ordinaires dans la vie quotidienne. Grace a leur engagement pendant cinquante ans, nous pouvons aujourd'hui dire tranquillement : "Je suis INFP" pour nous présenter.
+## 1. Quelles sont les quatre paires de préférences ?
 
-## 2. Les 4 indicateurs de préférence : les poignées de l'esprit
+L’[explication officielle des préférences par la Fondation](https://www.myersbriggs.org/my-mbti-personality-type/the-mbti-preferences/) indique que chacun peut utiliser les deux côtés. Ce tableau résume les termes du modèle ; il n’impose pas un seul comportement.
 
-Un droitier peut utiliser sa main gauche, mais sa main droite lui semble plus naturelle. De la même façon, le MBTI parle de **préférences**.
+| Paire de préférences | Centre d’attention distingué dans le modèle | Ne concluez pas que |
+| --- | --- | --- |
+| Extraversion E / Introversion I | L’attention se dirige vers les personnes et activités extérieures ou les idées et réflexions intérieures | E possède de meilleures compétences sociales et I est timide |
+| Sensation S / Intuition N | Les informations concrètes et l’expérience, ou les schémas et possibilités, sont examinés en premier | S manque d’imagination et N connaît l’avenir |
+| Pensée T / Sentiment F | Les décisions privilégient la cohérence logique ou les valeurs et conséquences pour les personnes | T n’a pas d’émotions et F ne raisonne pas |
+| Jugement J / Perception P | On cherche à conclure ou à garder des options ouvertes dans la vie extérieure | J est consciencieux et P irresponsable |
 
-### ① Direction de l'énergie : extraversion (E) vs introversion (I)
+Le Sentiment désigne ici un jugement fondé sur les valeurs, pas simplement l’intensité des émotions. L’Introversion ne diagnostique ni solitude ni anxiété sociale, et l’Intuition n’est pas un pouvoir surnaturel.
 
-- **E (Extraversion) :** Vous rechargez votre énergie en rencontrant des gens et en etant actif.
-- **I (Introversion) :** Vous recuperez de l'énergie dans le temps passé seul.
+## 2. Seize combinaisons et fonctions cognitives
 
-### ② Fonction de perception : sensation (S) vs intuition (N)
+Choisir une lettre par paire donne 2×2×2×2=16 combinaisons : ISTJ, ISFJ, INFJ, INTJ, ISTP, ISFP, INFP, INTP, ESTP, ESFP, ENFP, ENTP, ESTJ, ESFJ, ENFJ et ENTJ. INFP signifie lire ensemble I, N, F et P dans ce modèle, pas que toutes les caractéristiques d’une personne sont fixées.
 
-- **S (Sensing) :** Vous accordez de l'importance au réel, a l'expérience et a ce que les cinq sens peuvent saisir. Vous voyez "les arbres avant la foret".
-- **N (Intuition) :** Vous accordez de l'importance au sixieme sens, a l'inspiration et aux possibilités futures. Vous voyez "la foret avant les arbres".
+L’[explication officielle de la dynamique des types](https://www.myersbriggs.org/unique-features-of-myers-briggs/type-dynamics-overview/) combine Sensation, Intuition, Pensée et Sentiment avec des orientations intérieure et extérieure, et décrit un ordre comprenant des processus dominant et auxiliaire. C’est un système d’interprétation interne au modèle. Quatre lettres ou des réponses OIYO ne mesurent pas les circuits cérébraux, les capacités réelles de huit fonctions ou le stade de développement d’un individu. Nous ne présentons pas les surnoms « héros », « parent » ou « enfant » comme s’ils étaient tous des catégories officielles de mesure.
 
-### ③ Fonction de jugement : pensee (T) vs sentiment (F)
+Des lettres comme NT ou NF peuvent être regroupées, mais « Analystes », « Diplomates », « Sentinelles » et « Explorateurs » ne sont pas traités ici comme des catégories officielles universelles. Ce guide ne prescrit ni métiers ni relations à partir de ces surnoms.
 
-- **T (Thinking) :** Vous examinez la logique, les principes et les faits. "Donc, quelle est la conclusion ?"
-- **F (Feeling) :** Vous observez les relations, l'harmonie et les emotions. "Cela a du être vraiment difficile."
+## 3. Séparer les hypothèses du modèle des résultats de recherche
 
-### ④ Mode de vie : jugement (J) vs perception (P)
+Les explications officielles proposent de considérer les préférences comme des dispositions naturelles et innées. Ne transformez pas cette théorie en preuve mesurée qu’un individu est figé à vie ou qu’un comportement opposé exigera toujours davantage d’énergie. Les habitudes, compétences et comportements en situation sont plus complexes que quatre lettres. Nous n’utilisons pas non plus « persona » comme autre nom d’une fonction opposée.
 
-- **J (Judging) :** Vous êtes organise et methodique. Vous respectez les delais.
-- **P (Perceiving) :** Vous êtes autonome et flexible. Vous vous adaptez avec souplesse aux situations.
+Le [résumé institutionnel de l’étude originale de McCrae et Costa de 1989](https://scholars.duke.edu/publication/1458465) rapporte que les données de 468 personnes ne soutenaient pas l’existence de préférences véritablement dichotomiques ou de types qualitativement distincts, et propose une interprétation dimensionnelle des quatre indices. Seul le résumé institutionnel a été consulté pour cette révision. Une étude ancienne d’un instrument précis ne tranche pas la validité de toutes les versions, langues et utilisations actuelles. Inversement, la présentation officielle d’un modèle n’établit pas que les fonctions cognitives sont rigoureusement validées ou qu’il s’agit de l’outil « le plus utile ».
 
-## 3. L'univers des 16 types
+## 4. Que calcule l’activité OIYO actuelle ?
 
-Ces quatre lettres composent 16 univers distincts.
+L’activité utilise actuellement 16 items à deux options rédigés par OIYO, quatre par paire de préférences. Pour chaque axe, elle divise par quatre le nombre de choix du premier pôle — E, S, T ou J — puis multiplie par 100. Les nombres 0, 1, 2, 3 ou 4 donnent 0, 25, 50, 75 ou 100 %. Une valeur d’au moins 50 sélectionne la première lettre ; une valeur inférieure sélectionne l’autre. Une égalité 2–2 choisit donc aussi la première lettre. C’est une règle du code, pas une égalité résolue sur le plan psychologique.
 
-- **Analystes (NT) :** Strateges methodiques (INTJ), penseurs logiques (INTP)...
-- **Diplomates (NF) :** Defenseurs bienveillants (INFJ), mediateurs passionnes (INFP)...
-- **Sentinelles (SJ) :** Logisticiens integres (ISTJ), protecteurs courageux (ISFJ)...
-- **Explorateurs (SP) :** Virtuoses touche-a-tout (ISTP), artistes curieux (ISFP)...
+50 % n’est ni un percentile de population, ni une probabilité diagnostique, ni la moitié de votre personnalité. Une réponse modifiée peut changer une lettre près de la frontière. Les ordres de fonctions et descriptions approfondies associés au résultat sont aussi des interprétations, pas des fonctions mesurées séparément par les réponses.
 
-## 4. Idees recues et réalité
+L’activité OIYO n’est pas le Form M ou Form Q officiel. L’équivalence des items, la validité indépendante et les normes, l’équivalence des traductions et les éventuels droits nécessaires ne sont pas vérifiés ou certifiés par cette explication. Une mention d’items originaux dans le code ne remplace ni certification officielle ni autorisation juridique.
 
-Le MBTI n'est pas un test de capacite. Les T ne sont pas plus intelligents que les F, et les J ne travaillent pas mieux que les P.
-La personnalité n'est pas non plus figée. Au fil de la vie, nous développons nos fonctions opposées, ou persona, et devenons des personnes plus matures.
+## 5. Transformer les différences en conversation
 
-## 5. Conclusion : une grille de lecture facile a mal utiliser
+Imaginez qu’une personne souhaite conclure une réunion, tandis qu’une autre veut davantage d’informations. Au lieu de déclarer que J/P rend le conflit inévitable, vérifiez l’échéance, les informations manquantes et les conditions de révision de la décision. C’est un exemple éditorial, pas une technique de médiation validée.
 
-Le MBTI ne doit pas devenir une prison qui declare : "Tu es comme ca." Il doit être une fenêtre qui permet de dire : "Ah, tu vois le monde autrement que moi." Quand 16 fleurs differentes poussent ensemble, le jardin du monde devient plus beau.
+| Affirmation courante | Question à poser plutôt |
+| --- | --- |
+| T veut seulement des solutions ; F seulement de l’empathie | Préférez-vous que j’écoute maintenant ou que nous cherchions une solution ensemble ? |
+| Des fonctions différentes entraînent forcément des conflits | Quels besoins et contraintes réels se sont opposés ? |
+| Votre type détermine votre métier | Quelles tâches aimez-vous, et quelles compétences, qualifications et conditions comptent ? |
+| Un nouveau résultat signifie que toute votre personnalité a changé | La situation, les items, la langue et les scores proches de la frontière étaient-ils les mêmes ? |
 
----
+Le [code de déontologie officiel](https://www.myersbriggs.org/using-type-as-a-professional/mbti-code-of-ethics/) met aussi en garde contre les étiquettes absolues, la sélection à l’embauche ou les prescriptions de carrière et de relation fondées sur le seul type. N’utilisez pas les résultats OIYO pour diagnostiquer, recruter ou juger la fiabilité d’une personne. Le partage est facultatif ; personne n’a à subir de pression pour révéler son type.
 
-### References
+## Sources et limites d’utilisation
 
-> **Isabel Briggs Myers** (1980) *Gifts Differing: Understanding Personality Type*
-> **Carl Jung** (1921) *Psychological Types*
+Les passages pertinents des pages officielles sur les préférences, la dynamique des types et la déontologie, ainsi que le résumé institutionnel de l’étude originale, ont été consultés. L’article intégral et les manuels actuels complets des Form M/Q n’ont pas été lus.
 
----
-
-### Questions fréquentes (FAQ)
-
-**Q : Mon MBTI change sans cesse.**
-A : C'est naturel. Votre environnement peut changer, et vos préférences peuvent évoluer avec votre croissance personnelle. Il se peut aussi que vous ayez répondu selon votre moi idéal plutôt que selon vos réactions habituelles.
-
-**Q : Je me dispute souvent a cause de la difference entre T et F.**
-A : Les T cherchent une solution ; les F cherchent de l'empathie. Les T peuvent s'entrainer a commencer par dire "cela a du être difficile", la langue des F. Les F peuvent s'entrainer a demander "que pourrait-on faire ?", la langue des T.
+Les [informations de The Myers-Briggs Company sur les droits et autorisations](https://www.themyersbriggs.com/en-US/Support/Copyright-and-Permissions) expliquent que reproduire, modifier ou traduire des documents officiels nécessite une autorisation distincte. Expliquer le modèle ou citer une source n’autorise pas la copie d’items ou de rapports officiels. Cette page ne reproduit pas l’évaluation officielle et ne certifie ni les droits d’OIYO ni la qualité de ses mesures.
