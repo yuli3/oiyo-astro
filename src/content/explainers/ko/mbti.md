@@ -2,7 +2,7 @@
 topic: mbti
 locale: ko
 title: "MBTI (16가지 성격 유형): 나를 설명하는 가장 쉬운 언어"
-description: ">-"
+description: "MBTI 성격 유형을 설명할 때 쓰는 용어와 선호 개념을 살펴봐요."
 definition: "E와 I, T와 F..."
 updated: 2026-01-18
 ---

@@ -2,7 +2,7 @@
 topic: mbti
 locale: es
 title: "MBTI (16 tipos de personalidad): el idioma más simple para explicarme"
-description: ">-"
+description: "Conoce los términos y el concepto de preferencias usados para describir los tipos de personalidad MBTI."
 definition: "E e I, T y F..."
 updated: 2026-01-18
 ---

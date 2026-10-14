@@ -2,7 +2,7 @@
 topic: mbti
 locale: ja
 title: "MBTI (16の性格タイプ)：私を説明する最も優しい言語"
-description: ">-"
+description: "MBTIの性格タイプを説明する用語と、選好という考え方を紹介します。"
 definition: "EとI、TとF..."
 updated: 2026-01-18
 ---

@@ -2,7 +2,7 @@
 topic: mbti
 locale: zh
 title: "MBTI（16 种人格类型）：描述自己的最简单语言"
-description: ">-"
+description: "了解描述MBTI人格类型时使用的术语和偏好概念。"
 definition: "E 与 I、T 与 F……短短四个字母里藏着我的心理代码。本文从 Carl Jung 的理论说起，理解 MBTI 如何成为世界上最大众化的人格测验，以及它真正的意义。"
 updated: 2026-01-18
 ---

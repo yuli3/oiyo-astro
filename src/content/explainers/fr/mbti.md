@@ -2,7 +2,7 @@
 topic: mbti
 locale: fr
 title: "MBTI (16 types de personnalité) : le langage le plus simple pour parler de soi"
-description: ">-"
+description: "Découvrez les termes et la notion de préférence utilisés pour décrire les types de personnalité MBTI."
 definition: "E et I, T et F..."
 updated: 2026-01-18
 ---

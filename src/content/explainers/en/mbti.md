@@ -2,7 +2,7 @@
 topic: mbti
 locale: en
 title: "MBTI: The Cognitive Engine and the 16 Architectures"
-description: ">-"
+description: "Explore the terms and concept of preferences used to describe MBTI personality types."
 definition: "Beyond the memes lies a rigorous system of cognitive processing."
 updated: 2026-01-18
 ---
