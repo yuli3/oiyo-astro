@@ -1,79 +1,72 @@
 ---
 topic: cognitive-bias
 locale: en
-title: "Cognitive Biases: The Bugs in Our Brain"
-description: "Explore cognitive bias terms, including confirmation bias and anchoring, through everyday examples."
-definition: "Why do smart people make stupid decisions?"
-updated: 2026-01-18
+title: "Cognitive biases: judgment standards, base rates and self-report limits"
+description: "Distinguish confirmation, availability, anchoring and loss aversion, with a base-rate example and the limits of OIYO's own response scores."
+definition: "A cognitive bias describes a systematic departure from a comparison standard under particular conditions."
+updated: 2026-10-14
 ---
 
-> **Abstract**
->
-> The human brain is not a logic machine; it is a survival machine. To process millions of bits of data per second, it relies on <abbr title="Mental shortcuts or 'rules of thumb' that allow us to solve problems and make judgments quickly and efficiently, though often irrationally.">Heuristics</abbr> . Often these shortcuts work, but frequently they lead to systematic errors known as **Cognitive Biases**. This whitepaper explores the "Bugs" in our operating system identified by Nobel laureate Daniel Kahneman.
+Calling a judgment biased requires a comparison standard. Violating probability rules, overlooking relevant evidence and judging the same evidence unevenly are different problems. Disagreement or one mistake does not establish that a person is irrational.
 
-## 1. Genesis: System 1 vs. System 2
+## A shortcut is not automatically an error
 
-In _Thinking, Fast and Slow_, Kahneman distinguishes two modes of thought:
+A heuristic simplifies a complex judgment. Speed does not establish error, and thinking longer does not guarantee accuracy. Tversky and Kahneman's 1974 paper discusses representativeness, availability and anchoring in probability and quantity judgments. Read findings alongside their tasks and comparison standards. This page does not use the unsupported claim that fast thinking controls 95% of life.
 
-- **System 1 (Fast):** Automatic, emotional, unconscious. (e.g., Driving a car on an empty road, recognizing a face).
-- **System 2 (Slow):** Effortful, logical, conscious. (e.g., Parallel parking, calculating 17 x 24).
+## Distinguish processes rather than labeling people
 
-Biases occur because System 1 is in charge 95% of the time. It jumps to conclusions to save System 2 from doing the hard work.
+| Concept | Process to examine | What does not follow |
+| --- | --- | --- |
+| Confirmation bias | Seeking or interpreting evidence in favor of an existing belief | Contrary opinions are not automatically correct |
+| Availability | Using ease of recall as evidence of frequency | One vivid case does not establish a population rate |
+| Anchoring | Retaining an initial number as a starting point for estimation | Giving the first number does not guarantee winning a negotiation |
+| Loss aversion | Evaluating losses and gains relative to a reference point | Losses do not hurt exactly twice as much for everyone |
 
-## 2. The Big Bugs (Major Biases)
+Nickerson reviews selective acquisition and interpretation of evidence. Your existing belief may be true; the question is whether you apply a stricter standard only to contrary evidence. Prospect theory's gain-loss asymmetry is not a formula deciding every behavior or an individual's investment choice.
 
-### ① Confirmation Bias
+## Attribution and actor-observer differences are distinct
 
-- **The Bug:** We notice data that supports our beliefs and ignore data that contradicts them.
-- **Example:** You believe "Left-handed people are creative." Whenever you meet a creative lefty, you say "Aha!" When you meet an uncreative lefty, you forget it instantly.
+Inferring a stable trait without adequately allowing for situational pressure differs from the hypothesis that people explain their own and others' actions differently. Reducing both to “their character, my circumstances” mixes the questions being measured.
 
-### ② Sunk Cost Fallacy
+Malle's 2006 meta-analysis of 173 studies found limited support for the classic actor-observer asymmetry as a general explanation and examined differences across conditions. That does not establish that every attribution error is absent. Do not replace an overgeneralization with its opposite.
 
-- **The Bug:** We continue a losing course of action because of what we have already invested, rather than the future value.
-- **Example:** Staying in a bad relationship or finishing a boring movie because "I've already put in two years/two hours."
-- **Logic:** The past investment is "sunk" (gone). The only question is: "Is the future worth it?"
+## Work through a base rate
 
-### ③ Anchoring Bias
+This is an editorial hypothetical, not factory data. Suppose 10 of 1,000 components are defective. An inspection flags 80% of defective components and incorrectly flags 10% of sound components.
 
-- **The Bug:** We rely too heavily on the first piece of information offered (the "anchor").
-- **Example:** A shirt is marked "$100" but on sale for "$50." You feel it's a steal. If it was just marked "$50," you might think it's expensive. The initial $100 anchored your perception of value.
+| Actual condition | Total | Flagged |
+| --- | --- | --- |
+| Defective | 10 | 8 |
+| Sound | 990 | 99 |
+| Total | 1,000 | 107 |
 
-### ④ Fundamental Attribution Error
+Among flagged components, 8 ÷ 107, approximately 7.5%, are defective. “Flags 80% of defects” differs from “80% of flagged components are defective.” The calculation depends on these assumptions; it is not evidence about human ability, medical tests or real products.
 
-- **The Bug:** We judge others by their character, but ourselves by our circumstances.
-- **Example:** If someone cuts you off in traffic, they are a "jerk" (Character). If you cut someone off, it's because "I'm late for a meeting" (Circumstance).
+## What the current OIYO activity summarizes
 
-## 3. The Dunning-Kruger Effect
+The activity assigns 15 OIYO-authored items to five labeled areas, three per area, and sums answers from 1 to 5. The labels are confirmation, Dunning-Kruger, availability, loss aversion and attribution. Bars show the rounded sum ÷ 15 × 100.
 
-Perhaps the most dangerous bias: **Incompetent people overestimate their competence.**
-Because they lack the knowledge to know how much they don't know, they feel confident. Conversely, experts often underestimate their competence because they assume what is easy for them is easy for everyone.
+| Three answers for one area | Sum | Display |
+| --- | --- | --- |
+| All score 1 | 3 | 20% |
+| All score 3 | 9 | 60% |
+| All score 5 | 15 | 100% |
 
-> **Scholarly Insight**
->
-> **Naive Realism:** The belief that "I see the world as it is, and those who disagree are biased." The moment you think you are unbiased, you are exhibiting Naive Realism.
+60% is not a population percentile or a probability of making an error. The activity does not compare actual task performance with correct answers, so these self-reports do not establish experimental bias effects or a discrepancy between actual competence and self-evaluation. A higher score is not a diagnosis or a judgment of intelligence, morality or suitability for employment. Item validity and translation equivalence have not been established here.
 
-## 4. Modern Relevance: The Algorithms of Anger
+The current display emphasizes the two highest areas. With ties, existing area order can influence which appears first; presentation order is not evidence of a reliable difference. Examine all answers.
 
-Social media algorithms weaponize our biases. They feed **Confirmation Bias** by showing us only what we agree with, creating echo chambers. They exploit **Negativity Bias** (we pay more attention to bad news) to keep us scrolling. Understanding these bugs is a form of digital self-defense.
+## Questions for reviewing a decision
 
-## 5. Conclusion: Debugging the Mind
+Record the evidence you used, the standard you applied and what finding would change your mind. This is an editorial reflection example, not a validated treatment or bias-removal program. Contrary claims also require relevant, credible evidence; you need not give both sides equal weight.
 
-You cannot remove your biases; they are part of your biology. But you can become aware of them. By pausing to engage System 2—"Am I only reading this because it makes me feel right?"—you can overwrite the faulty code and make decisions based on reality, not instinct.
+This page establishes neither complete elimination nor permanent impossibility of reducing biases. It concerns examining a specified judgment and its evidence.
 
----
+## Sources and reading scope
 
-### References
+Nickerson's definition and evidence-selection passages were read. The introduction, base-rate, availability and anchoring pages of the scanned 1974 paper were inspected. The 1979 introduction and value-function passages, and Malle's abstract, relevant discussion and summary were examined. All study tables and analyses were not independently reverified. The component example and OIYO score table are not measurements reported by these papers.
 
-> **Daniel Kahneman** (2011) *Thinking, Fast and Slow*
-> **Tversky & Kahneman** (1974) *Judgment under Uncertainty: Heuristics and Biases*
-> **Dan Ariely** (2008) *Predictably Irrational*
-
----
-
-### FAQ
-
-**Q: Are biases always bad?**
-A: No. System 1 is fast for a reason. If a lion jumps out, you don't want System 2 to calculate the trajectory. You want the fear bias to make you run. Biases are speed-accuracy trade-offs.
-
-**Q: How can I avoid Sunk Cost?**
-A: Ask yourself: "If I hadn't invested anything yet, would I start this project today?" If the answer is no, quit.
+- [Nickerson (1998)](https://psy.ucsd.edu/~mckenzie/nickersonConfirmationBias.pdf)
+- [Tversky & Kahneman (1974)](https://cebma.org/assets/Uploads/Tversky_Kahneman_1974.pdf)
+- [Kahneman & Tversky (1979)](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Behavioral_Decision_Theory/Kahneman_Tversky_1979_Prospect_theory.pdf)
+- [Malle (2006)](https://research.clps.brown.edu/SocCogSci/Publications/Pubs/Malle_(2006)_ActObs_meta.pdf)
