@@ -2,7 +2,7 @@
 topic: perfectionism
 locale: en
 title: "Perfectionism: The Psychology of the Never-Enough"
-description: ">-"
+description: "Explore perfectionism terms and examples of standards, self-criticism and responses to mistakes."
 definition: "Is your high standard a pursuit of excellence or a defense mechanism?"
 updated: 2026-01-18
 ---

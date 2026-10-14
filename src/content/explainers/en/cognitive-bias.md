@@ -2,7 +2,7 @@
 topic: cognitive-bias
 locale: en
 title: "Cognitive Biases: The Bugs in Our Brain"
-description: ">-"
+description: "Explore cognitive bias terms, including confirmation bias and anchoring, through everyday examples."
 definition: "Why do smart people make stupid decisions?"
 updated: 2026-01-18
 ---

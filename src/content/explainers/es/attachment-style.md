@@ -2,7 +2,7 @@
 topic: attachment-style
 locale: es
 title: "Teoría del apego (Attachment Theory): la ecuación del amor"
-description: ">-"
+description: "Conoce los términos de la teoría del apego y ejemplos de cercanía, búsqueda de seguridad y distancia en las relaciones."
 definition: "¿Por qué en cada relación amorosa te sientes ansioso o quieres escapar?"
 updated: 2026-01-18
 ---

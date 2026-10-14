@@ -2,7 +2,7 @@
 topic: perfectionism
 locale: zh
 title: "完美主义（Perfectionism）：伪装成卓越的不安"
-description: ">-"
+description: "了解完美主义的术语，以及标准、自我批评和面对失误时的反应。"
 definition: "你是在追求完美，还是害怕失败？这篇文章写给那些觉得“不是 100 分就是 0 分”的人，谈一谈“适度”的美学。"
 updated: 2026-01-18
 ---

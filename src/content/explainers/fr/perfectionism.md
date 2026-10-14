@@ -2,7 +2,7 @@
 topic: perfectionism
 locale: fr
 title: "Perfectionnisme (Perfectionism) : l'anxiété deguisee en excellence"
-description: ">-"
+description: "Découvrez les termes liés au perfectionnisme et des exemples d’exigences, d’autocritique et de réactions aux erreurs."
 definition: "Cherchez-vous vraiment la perfection, ou avez-vous peur d'échouer ?"
 updated: 2026-01-18
 ---

@@ -2,7 +2,7 @@
 topic: attachment-style
 locale: en
 title: "Attachment Theory: The Science of Bonds"
-description: ">-"
+description: "Explore attachment theory terms and examples of closeness, reassurance and distance in relationships."
 definition: "Why do you push people away?"
 updated: 2026-01-18
 ---

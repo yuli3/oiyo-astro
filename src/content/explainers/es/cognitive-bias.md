@@ -2,7 +2,7 @@
 topic: cognitive-bias
 locale: es
 title: "Sesgos cognitivos: el estafador que vive dentro de tu cabeza"
-description: ">-"
+description: "Conoce términos sobre sesgos cognitivos, como la confirmación y el anclaje, con ejemplos cotidianos."
 definition: "Creemos que somos racionales."
 updated: 2026-01-18
 ---

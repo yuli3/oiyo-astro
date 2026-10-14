@@ -2,7 +2,7 @@
 topic: cognitive-bias
 locale: zh
 title: "认知偏差（Cognitive Biases）：藏在脑中的骗子"
-description: ">-"
+description: "通过日常例子，了解确认偏差和锚定效应等认知偏差术语。"
 definition: "我们相信自己很理性。但大脑为了节省能量，会不断选择“捷径”。本文揭开大脑欺骗你的四种常见手法。"
 updated: 2026-01-18
 ---

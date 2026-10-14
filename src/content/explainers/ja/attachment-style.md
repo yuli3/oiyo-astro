@@ -2,7 +2,7 @@
 topic: attachment-style
 locale: ja
 title: "愛着理論 (Attachment Theory)：愛の方程式"
-description: ">-"
+description: "愛着理論の用語と、関係の中での親密さ、安心感、距離の取り方の例を紹介します。"
 definition: "恋愛するたびになぜ不安になったり逃げ出したくなるのでしょうか？幼い頃の両親との関係が、あなたの恋愛パターンを決めています。3つの愛着タイプを通じて自分を理解してみてください。"
 updated: 2026-01-18
 ---

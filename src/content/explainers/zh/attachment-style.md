@@ -2,7 +2,7 @@
 topic: attachment-style
 locale: zh
 title: "依恋理论（Attachment Theory）：爱的方程式"
-description: ">-"
+description: "了解依恋理论的术语，以及关系中的亲密、安心感和距离的例子。"
 definition: "为什么每次恋爱都会不安，或想要逃开？童年与父母的关系会影响你的恋爱模式。通过3种依恋类型，更好地理解自己。"
 updated: 2026-01-18
 ---

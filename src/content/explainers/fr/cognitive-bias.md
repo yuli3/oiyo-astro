@@ -2,7 +2,7 @@
 topic: cognitive-bias
 locale: fr
 title: "Biais cognitifs : les escrocs logés dans votre tête"
-description: ">-"
+description: "Découvrez les termes liés aux biais cognitifs, dont la confirmation et l’ancrage, à travers des exemples du quotidien."
 definition: "Nous aimons croire que nous sommes rationnels."
 updated: 2026-01-18
 ---

@@ -2,7 +2,7 @@
 topic: cognitive-bias
 locale: ko
 title: "인지 편향 (Cognitive Biases): 내 머릿속의 사기꾼"
-description: ">-"
+description: "확증 편향과 닻 내림 효과 등 판단을 설명하는 인지 편향 용어와 일상 예시를 살펴봐요."
 definition: "우리는 우리가 합리적이라고 믿습니다."
 updated: 2026-01-18
 ---

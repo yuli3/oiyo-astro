@@ -2,7 +2,7 @@
 topic: perfectionism
 locale: es
 title: "Perfeccionismo: ansiedad disfrazada de excelencia"
-description: ">-"
+description: "Conoce términos sobre perfeccionismo y ejemplos de exigencias, autocrítica y reacciones ante los errores."
 definition: "¿Buscas la perfección o temes fracasar?"
 updated: 2026-01-18
 ---

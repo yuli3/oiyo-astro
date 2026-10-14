@@ -2,7 +2,7 @@
 topic: attachment-style
 locale: fr
 title: "Théorie de l'attachement (Attachment Theory) : l'équation de l'amour"
-description: ">-"
+description: "Découvrez les termes de la théorie de l’attachement et des exemples de proximité, de réassurance et de distance dans les relations."
 definition: "Pourquoi devenons-nous anxieux ou avons-nous envie de fuir à chaque relation amoureuse ?"
 updated: 2026-01-18
 ---
