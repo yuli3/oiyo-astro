@@ -8,7 +8,7 @@ import type { Locale } from '../../i18n';
 // four unrelated emoji vocabularies (doors/tests/map/value-props each used
 // their own set). lucide-react is already a project dependency; these are
 // static SVGs, no client directive needed.
-import { Wand2, Sun, ClipboardCheck, FlaskConical, Lock } from 'lucide-react';
+import { Wand2, Sun, ClipboardCheck, FlaskConical, Lock, Globe2, ArrowRight } from 'lucide-react';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -83,6 +83,12 @@ const heroSubDisplay = txt({
 const ctaStartTest = txt({ ko: '검사 시작하기', en: 'Start a Test', ja: '検査を始める', zh: '开始测试', fr: 'Commencer un test', es: 'Empezar un test' })
 const ctaSeeMap = txt({ ko: '나의 지도 보기', en: 'See My Map', ja: '私の地図を見る', zh: '查看我的地图', fr: 'Voir ma carte', es: 'Ver mi mapa' })
 
+const reincarnationEntry = {
+  title: txt({ ko: '환생 — 다시 태어난다면 어느 나라?', en: 'Reincarnation — born again, in which country?', ja: '転生 — 生まれ変わるとしたらどの国？', zh: '投胎 — 如果再出生会在哪个国家？', fr: 'Réincarnation — si vous renaissiez, dans quel pays ?', es: 'Reencarnación — si nacieras de nuevo, ¿en qué país?' }),
+  description: txt({ ko: '출생 수나 인구 비중으로 나라를 뽑아봐요. 운세 예측이 아닌 가중 추첨이에요.', en: 'Draw a country using birth or population shares. A weighted draw, not a prediction.', ja: '出生数や人口の割合で国を引いてみましょう。運勢の予測ではなく、重み付き抽選です。', zh: '按出生数或人口比重抽取国家。这是加权抽取，不是命运预测。', fr: 'Tirez un pays selon les naissances ou la population. Un tirage pondéré, pas une prédiction.', es: 'Sortea un país según los nacimientos o la población. Es un sorteo ponderado, no una predicción.' }),
+  action: txt({ ko: '다시 태어나 보기', en: 'Try a new life', ja: '生まれ変わってみる', zh: '试试重新出生', fr: 'Essayer une nouvelle vie', es: 'Probar una nueva vida' }),
+}
+
 const tarotCard = {
   title: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロットリーディング', zh: '塔罗牌解读', fr: 'Tirage de Tarot', es: 'Lectura de Tarot' }),
   href: localePath(locale, '/tarot/reading'),
@@ -112,6 +118,22 @@ const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テス�
       <p class="text-primary font-medium text-sm md:text-base max-w-lg mx-auto leading-relaxed">
         {heroSubDisplay}
       </p>
+      <!-- WHY (2026-10-14): the draw entry precedes secondary home actions so
+           its full prompt remains visible in narrow, long-copy locales. -->
+      <a
+        href={localePath(locale, '/reincarnation-country')}
+        data-reincarnation-entry
+        class="mt-8 flex items-start gap-4 rounded-2xl border border-border bg-surface-subtle p-5 text-left text-foreground transition-colors hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+      >
+        <Globe2 size={28} strokeWidth={1.75} className="mt-1 shrink-0 text-primary" aria-hidden="true" />
+        <div class="min-w-0">
+          <h2 class="text-lg font-bold leading-snug">{reincarnationEntry.title}</h2>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{reincarnationEntry.description}</p>
+          <span class="mt-3 inline-flex items-center gap-2 text-sm font-bold text-primary">
+            {reincarnationEntry.action}<ArrowRight size={16} className="shrink-0" aria-hidden="true" />
+          </span>
+        </div>
+      </a>
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
         <a
           href={localePath(locale, '/tests')}

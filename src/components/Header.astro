@@ -70,6 +70,9 @@ const primaryNavLinks = [
   { href: localePath(locale, '/articles'), label: { ko: '읽을거리', en: 'Articles', ja: '記事', zh: '文章', fr: 'Articles', es: 'Artículos' }[locale] ?? 'Articles' },
 ];
 const secondaryNavLinks = [
+  // WHY (2026-10-14): expose the existing reincarnation draw in the mobile
+  // drawer without changing the established five primary destinations.
+  { href: localePath(locale, '/reincarnation-country'), label: { ko: '환생', en: 'Reincarnation', ja: '転生', zh: '投胎', fr: 'Réincarnation', es: 'Reencarnación' }[locale] },
   { href: localePath(locale, '/about'), label: t('nav.about') },
   { href: localePath(locale, '/faq'), label: 'FAQ' },
 ];
@@ -153,7 +156,7 @@ const secondaryNavLinks = [
     ))}
     <div class="pt-3 mt-1 border-t border-green-50 space-y-1">
       {secondaryNavLinks.map(({ href, label }) => (
-        <a href={href} class="flex items-center h-9 px-2 rounded-lg text-sm font-semibold text-primary hover:bg-surface-subtle transition-colors">{label}</a>
+        <a href={href} class="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm font-semibold text-primary transition-colors hover:bg-surface-subtle">{label}</a>
       ))}
     </div>
   </nav>
