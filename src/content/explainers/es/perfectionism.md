@@ -1,55 +1,70 @@
 ---
 topic: perfectionism
 locale: es
-title: "Perfeccionismo: ansiedad disfrazada de excelencia"
-description: "Conoce términos sobre perfeccionismo y ejemplos de exigencias, autocrítica y reacciones ante los errores."
-definition: "¿Buscas la perfección o temes fracasar?"
-updated: 2026-01-18
+title: "Perfeccionismo: distinguir exigencias altas, valor personal y costes"
+description: "Explora tres dimensiones del perfeccionismo, cuándo las exigencias resultan costosas y los límites de la investigación parental y de salud mental. Distingue la actividad OIYO de ocho ítems de las escalas de investigación."
+definition: "El perfeccionismo es un constructo multidimensional sobre exigencias de desempeño, evaluaciones de uno mismo y de otras personas, y preocupación por los errores. No es la ansiedad en sí ni una clasificación del riesgo de las personas."
+updated: 2026-10-14
 ---
 
-> **Resumen (Abstract)**
->
-> Crecimos escuchando el mandato de "ser perfectos". Pero en psicología, el <abbr title="Tendencia a fijarse estándares excesivamente altos y criticarse con dureza cuando no se alcanzan. Puede impulsar logros, pero en exceso se relaciona con depresión y conductas obsesivas.">perfeccionismo</abbr> no es la llave del éxito, sino un veneno que desgasta la autoestima. No es simplemente "querer hacerlo mejor"; es un mecanismo de defensa para evitar la crítica.
+Entender el perfeccionismo no consiste solo en ver lo altas que son las exigencias: considera **de qué depende tu valor personal y qué cuesta mantener esas exigencias**. Querer hacerlo bien no es automáticamente un problema, y perfeccionismo no es otro nombre para la ansiedad.
 
-## 1. Tres rostros del perfeccionismo (modelo de Hewitt & Flett)
+El [material educativo del CCI de Australia Occidental](https://cci.health.wa.gov.au/~/media/CCI/Consumer-Modules/Perfectionism-in-Perspective/Perfectionism-in-Perspective---01---What-is-Perfectionism.pdf) describe la búsqueda persistente de criterios excesivamente exigentes, una valoración personal demasiado dependiente del logro y la continuación de ese patrón pese a sus costes. No pide a todo el mundo abandonar las exigencias altas ni diagnostica las motivaciones de un lector concreto.
 
-1. **Orientado a uno mismo (Self-Oriented):** "Tengo que ser perfecto." La persona no deja de exigirse. Puede lograr mucho, pero también aumenta el riesgo de depresión.
-2. **Orientado a otras personas (Other-Oriented):** "Tú tienes que ser perfecto." Aplica criterios rígidos a los demás. Las relaciones pueden romperse con facilidad.
-3. **Socialmente impuesto (Socially Prescribed):** "La gente espera que yo sea perfecto." Vive demasiado pendiente de la mirada ajena y actúa detrás de una máscara. Es el tipo más peligroso.
+## 1. Tres dimensiones no son tres clases de personas
 
-## 2. La diferencia entre esfuerzo y perfeccionismo
+El [artículo de Hewitt y Flett de 1991](https://hewittlab.sites.olt.ubc.ca/files/2014/11/Hewitt-Flett-1991-Perfectionism-in-the-self-and-social-contexts-conceptualization-assessment-and-association-with-psychopathology.pdf) distingue las dimensiones orientada a uno mismo, orientada a otras personas y socialmente prescrita. Varias pueden coexistir en alguien; los grados continuos no deben convertirse en calificaciones de toda una persona.
 
-Quien se esfuerza disfruta el **proceso** y recibe el fracaso como aprendizaje.
-La persona perfeccionista se obsesiona con el **resultado** y vive el fracaso como una negación de su propio valor.
-Si puedes decir "hice lo mejor que pude, está bien", estás esforzándote. Si piensas "no quedé en primer lugar, entonces no valgo nada", estás atrapado en perfeccionismo.
+| Dimensión | Dirección de las exigencias y la evaluación | Límite de interpretación |
+| --- | --- | --- |
+| Orientada a uno mismo | Exigirte un alto nivel y evaluar tu desempeño | Puede incluir afán de logro o evitación del fracaso, sin establecer éxito o enfermedad |
+| Orientada a otras personas | Exigir y evaluar un alto desempeño ajeno | Importan las demandas reales y el contexto relacional; no es un veredicto de que alguien sea malo |
+| Socialmente prescrita | Percibir que personas importantes te exigen un alto nivel | Percibir una exigencia no establece lo que la otra persona pide realmente |
 
-## 3. La verdadera causa de la procrastinación
+No diagnostiques a alguien como «conductor», «juez» o «víctima», ni leas la dimensión socialmente prescrita como «la persona más peligrosa». Un resultado de una escala de investigación y una descripción cotidiana de uno mismo también son información distinta.
 
-Las personas perfeccionistas suelen postergar tanto que ni siquiera empiezan. No es pereza. Es **miedo al fracaso**. La idea inconsciente de "si no puedo hacerlo bien, mejor no lo hago" termina paralizándote.
+## 2. Observa la rigidez y los costes, no solo las exigencias
 
-## 4. La regla del 80% (principio de Pareto)
+Para examinar si las exigencias ayudan, pregunta si puedes adaptarlas a la situación. Convertir un borrador inacabado en «no valgo nada» difiere de «el alcance y el tiempo no encajaban; debo revisar el plan». Son ejemplos explicativos, no ítems que separan dos clases de personas.
 
-La sanación empieza practicando hacer las cosas "suficientemente bien".
-No gastes toda tu energía buscando 100 puntos; usa 20% de energía para llegar a 80. Guarda el resto para tu bienestar. Diez resultados de 80 puntos valen más que una fantasía perfecta de 100 que nunca sale al mundo.
+Si comprobar repetidamente retrasa la entrega y desplaza una y otra vez el sueño u otros compromisos, examina si comprobar más mejora la calidad necesaria o solo añade costes. La procrastinación no siempre se debe al perfeccionismo; también merecen atención la carga real y la claridad de las instrucciones.
 
-## 5. Cierre: una vasija rota puede ser más bella
+El [material del CCI sobre ajustar las exigencias](https://cci.health.wa.gov.au/~/media/CCI/Consumer-Modules/Perfectionism-in-Perspective/Perfectionism-in-Perspective---04---Changing-Perfectionism.pdf) propone pensar en un continuo en vez de en blanco y negro, sustituir criterios rígidos por exigencias altas realistas y elegir un ámbito específico y pequeñas metas de conducta. No es una fórmula de eficiencia ni una promesa terapéutica de que «20 % de esfuerzo producen un resultado de 80 puntos».
 
-Existe un arte japonés llamado kintsugi. En lugar de tirar una pieza rota de cerámica, se rellenan sus grietas con oro y se convierte en una obra más valiosa.
-Tus errores, tus carencias, tus heridas... precisamente eso puede ser el oro que te vuelve único y hermoso. Ojalá puedas amar a esa versión tuya que no necesita ser perfecta.
+## 3. Qué pueden decir los estudios parentales y de salud mental
 
----
+El [resumen del metaanálisis de Curran y Hill](https://ray.yorksj.ac.uk/id/eprint/5802) distingue las correlaciones que implican expectativas y críticas parentales de las tendencias temporales en cómo los universitarios perciben las actitudes de sus padres. Una asociación no significa que todo progenitor crítico produzca un hijo perfeccionista. No deduzcas la conducta parental pasada de las respuestas actuales ni atribuyas la causa a una persona.
 
-### Referencias
+El [metaanálisis de Smith y colaboradores](https://cruxpsychology.ca/wp-content/uploads/2018/07/Smithetal.2018.522-542.pdf) examina asociaciones entre algunos aspectos del perfeccionismo e ideas o intentos de suicidio en 45 estudios con 11 747 participantes. Ideas, intentos y muertes son resultados distintos; las asociaciones o predicciones longitudinales no pueden convertirse en la probabilidad individual de morir. Estas pruebas no justifican afirmar «la mayor correlación» entre todas las características psicológicas ni asignar un nivel de riesgo actual a una persona.
 
-> **Paul Hewitt & Gordon Flett** (1991) *Dimensions of Perfectionism*
-> **Brene Brown** (2010) *The Gifts of Imperfection*
+El sufrimiento o las preocupaciones de seguridad necesitan atención independientemente de la etiqueta del resultado. Si el funcionamiento cotidiano se vuelve muy difícil o te preocupa tu seguridad, puedes buscar apoyo profesional cualificado en salud mental, en vez de concluir a partir de una actividad autónoma. Otra etiqueta de resultado tampoco garantiza seguridad.
 
----
+## 4. Concreta las exigencias para una tarea de bajo riesgo
 
-### Preguntas frecuentes (FAQ)
+La tabla es un ejemplo editorial de reflexión para tareas de consecuencias pequeñas, como notas privadas. No es un programa terapéutico validado ni una garantía de productividad.
 
-**P: Si dejo el perfeccionismo, ¿no me quedaré atrás?**
-R: Al contrario. El lema de Silicon Valley es "Done is better than perfect": terminado es mejor que perfecto. Quien falla rápido y corrige avanza mucho más que quien se queda inmóvil buscando perfección.
+| Qué examinar | Ejemplo: notas personales de lectura |
+| --- | --- |
+| Calidad necesaria | Escribir tres puntos que permitan recordar las ideas principales después |
+| Alcance de la revisión | Revisar una vez los errores que cambian la comprensión |
+| Cuándo terminar | Al llegar la hora prevista, anotar preguntas pendientes y parar |
+| Costes reales y contraejemplos | Recordar cuándo revisar ayudó a comprender y cuándo consumió tiempo sin ayudar |
 
-**P: Mi hijo muestra rasgos de perfeccionismo.**
-R: Elogia el proceso, como el esfuerzo, no solo el resultado o la calificación. En lugar de decir "sacaste 100, excelente", di "seguiste intentando hasta el final". Es importante darle la seguridad de que fallar también está permitido.
+Ajustar exigencias no significa entregar siempre deprisa. No reduzcas las verificaciones necesarias ni las normas profesionales en tareas relacionadas con la vida, la salud, el derecho o la seguridad. Escribir por separado las mejoras posibles de un trabajo y tu valor humano también es un ejemplo de reflexión, no una demostración de eficacia terapéutica.
+
+## 5. ¿Qué calcula la actividad OIYO?
+
+La dirección actual del test de perfeccionismo lleva a la [actividad sobre perfeccionismo y procrastinación](/es/lazy-perfectionist/test/) del mismo idioma. La actividad usa ocho ítems con cuatro opciones y muestra uno de cuatro resultados editoriales: `starter`, `planner`, `critic` o `recovering`. No es una versión oficial validada que mida las tres dimensiones de investigación anteriores.
+
+En cada ítem, el cálculo añade puntos de base predefinidos a los cuatro ejes, y después tres puntos al eje correspondiente a la opción elegida. Tras ocho ítems elige el total mayor; los empates favorecen al primer resultado del orden `starter → planner → critic → recovering`. Por tanto, no cuenta simplemente elecciones ni constituye una puntuación basada en baremos poblacionales o una evaluación del riesgo.
+
+Un nombre relacionado con «recuperación» o `recovering` no demuestra recuperación clínica, progreso terapéutico, una causa o éxito futuro. Esta explicación no certifica la validez de los ítems, la equivalencia de traducciones ni los derechos necesarios. Usa el resultado solo para hablar de situaciones reales, no para diagnosticar, contratar o juzgar el valor de otra persona.
+
+## Fuentes y alcance de la comprobación
+
+- [CCI Module 1](https://cci.health.wa.gov.au/~/media/CCI/Consumer-Modules/Perfectionism-in-Perspective/Perfectionism-in-Perspective---01---What-is-Perfectionism.pdf) y [Module 4](https://cci.health.wa.gov.au/~/media/CCI/Consumer-Modules/Perfectionism-in-Perspective/Perfectionism-in-Perspective---04---Changing-Perfectionism.pdf) : se consultaron los pasajes pertinentes sobre definición, beneficios y costes, ajuste de exigencias y metas de conducta. No se verificó la eficacia terapéutica de todo el programa ni resultados idénticos para todas las personas.
+- [Hewitt y Flett (1991)](https://hewittlab.sites.olt.ubc.ca/files/2014/11/Hewitt-Flett-1991-Perfectionism-in-the-self-and-social-contexts-conceptualization-assessment-and-association-with-psychopathology.pdf) : se consultaron la introducción, las definiciones de las tres dimensiones y parte del desarrollo de escalas. No se volvieron a verificar todas las tablas y análisis ni se validó la actividad OIYO.
+- [Smith y colaboradores (2018)](https://cruxpsychology.ca/wp-content/uploads/2018/07/Smithetal.2018.522-542.pdf) : se consultaron el resumen, la introducción y las descripciones de constructos. No se verificaron todas las tablas de tamaños del efecto, los efectos moderadores ni la precisión de predicción individual del riesgo.
+- [Curran y Hill (2022), repositorio universitario](https://ray.yorksj.ac.uk/id/eprint/5802) : se consultaron el registro institucional y el resumen; no se leyó íntegramente el manuscrito aceptado enlazado.
+
+Los resultados numéricos de la literatura y las observaciones del cálculo OIYO se presentan por separado. Este texto explica pruebas y límites para comprenderse, no es un artículo de investigación original ni un plan personal de tratamiento.
