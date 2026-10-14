@@ -1,0 +1,22 @@
+---
+import { localePath, type Locale } from '../../i18n';
+
+interface Props { locale: Locale; path: string; }
+const { locale, path } = Astro.props;
+const copy: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '모델과 결과 해석의 한계 읽기', description: '이 모델이 설명하는 내용과 OIYO 결과를 읽을 때 주의할 점을 살펴봐요.' },
+  en: { title: 'Read about the model and interpretation limits', description: 'Explore what the model describes and what to consider when reading your OIYO result.' },
+  ja: { title: 'モデルと結果の解釈の限界について', description: 'モデルが説明する内容と、OIYOの結果を読む際の注意点を確認しましょう。' },
+  zh: { title: '了解模型与结果解读的局限', description: '了解模型描述的内容，以及阅读 OIYO 结果时需要注意的事项。' },
+  fr: { title: 'Comprendre le modèle et les limites de son interprétation', description: 'Découvrez ce que décrit le modèle et les précautions à prendre pour lire votre résultat OIYO.' },
+  es: { title: 'Conoce el modelo y los límites de su interpretación', description: 'Explora qué describe el modelo y qué debes tener en cuenta al leer tu resultado de OIYO.' },
+};
+const t = copy[locale];
+// WHY (2026-10-14): the model explanation must be reachable without completing
+// the questionnaire or waiting for client hydration; keep it after the questions.
+const href = localePath(locale, path);
+---
+<aside class="my-6 rounded-xl border border-border bg-card p-4">
+  <a href={href} class="font-semibold text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring">{t.title}</a>
+  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{t.description}</p>
+</aside>
