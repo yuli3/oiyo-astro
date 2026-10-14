@@ -1,65 +1,72 @@
 ---
 topic: tci
 locale: en
-title: "TCI: separating temperament from character — and the limits of that split"
-description: "The TCI measures four temperament dimensions and three character dimensions, as designed by Cloninger. It also covers the part later research did not support well: the original mapping of each temperament onto a neurotransmitter."
-definition: "The Temperament and Character Inventory measures personality as four temperament dimensions, held to be strongly heritable, and three character dimensions shaped by development and experience. Cloninger set out the model in 1993."
-updated: 2026-09-03
+title: "TCI: temperament, character, and what a score cannot establish"
+description: "Understand the four temperament and three character dimensions, distinguish early biological hypotheses from diagnosis, and read OIYO's 35-item summary cautiously."
+definition: "Cloninger's TCI model distinguishes four temperament dimensions and three character dimensions. A questionnaire score does not measure a person's neurotransmitter levels."
+updated: 2026-10-14
 ---
 
-What separates the TCI from other personality inventories is not the number of factors but **its two-layer design**: an attempt to measure inborn response tendencies and the self-concept built over a life as separate things.
+The **Temperament and Character Inventory (TCI)** distinguishes temperament from character within Cloninger's model. The distinction organizes different kinds of personality description. It does not split a person into an unchangeable biological half and a half that can be improved by willpower.
 
-## 1. The two-layer design
+The original inventory and OIYO's short activity are not interchangeable. A study of one version is not validation of a different set of items, translations or score bands.
 
-Cloninger divided personality into **temperament** and **character**.
+## 1. The four-plus-three structure
 
-**Four temperament dimensions** — automatic response tendencies, appearing early and held to be substantially heritable.
+The [1993 paper's author-institution record and abstract](https://profiles.wustl.edu/en/publications/a-psychobiological-model-of-temperament-and-character/) describe seven dimensions in a self-report instrument. The abstract reports evidence from a general-population sample of 300 people. That finding concerns the instrument and sample studied, not OIYO's implementation.
 
-| Dimension | When high |
-| --- | --- |
-| Novelty Seeking (NS) | Drawn to the new, bored easily |
-| Harm Avoidance (HA) | Worry comes first, cautious |
-| Reward Dependence (RD) | Responsive to approval and warmth |
-| Persistence (P) | Keeps at it without reward |
+| Layer in the model | Dimension | Subject of the description |
+| --- | --- | --- |
+| Temperament | Novelty Seeking (NS) | Responses to novelty and exploration |
+| Temperament | Harm Avoidance (HA) | Caution and anticipation of possible harm |
+| Temperament | Reward Dependence (RD) | Responsiveness to social reward and approval |
+| Temperament | Persistence (P) | Continuing effort despite difficulty |
+| Character | Self-Directedness (SD) | Goals, responsibility and directing one's actions |
+| Character | Cooperativeness (C) | Relating to and working with other people |
+| Character | Self-Transcendence (ST) | How the self relates to something beyond itself |
 
-**Three character dimensions** — about what you take as your goals and how you see yourself; held to develop and change.
+These are concise educational descriptions, not diagnostic thresholds or approved item wording. The layer names belong to the model; they do not establish that a particular score is inherited, permanent or morally good. In particular, OIYO's rescaled response value does not establish an individual's maturity, even though the original model discusses character development.
 
-| Dimension | When high |
-| --- | --- |
-| Self-Directedness (SD) | Decides and takes responsibility |
-| Cooperativeness (C) | Accepts others and works with them |
-| Self-Transcendence (ST) | Feels part of something larger |
+## 2. A biological hypothesis is not a brain measurement
 
-The usefulness of the split is that it **gives maturity its own axis**. Low Self-Directedness and Cooperativeness were taken to indicate difficulty adapting whatever the temperament, and that is why the TCI found clinical use.
+The [1987 paper's PubMed abstract](https://pubmed.ncbi.nlm.nih.gov/3579504/) discusses proposed biological foundations for temperament dimensions. A proposal about a model is different from a method for measuring an individual's neurochemistry.
 
-## 2. The part that was not well supported — neurotransmitters
+Answering a questionnaire does not reveal your dopamine, serotonin or norepinephrine level. A high Harm Avoidance score does not establish a chemical deficiency, a disorder, or a treatment you need. This guide does not claim to have settled all subsequent biological research; it limits what a questionnaire result can support.
 
-Almost every introduction to the TCI carries the same passage: Novelty Seeking maps to dopamine, Harm Avoidance to serotonin, Reward Dependence to norepinephrine.
+Likewise, a Big Five heritability study cannot automatically establish the heritability of TCI dimensions. Do not use a genetic estimate for a population to decide which part of one person is fixed or how much effort should change them.
 
-That was **a hypothesis Cloninger proposed in 1987**, and **later research did not support it well**. Evidence for a one-to-one correspondence between a temperament dimension and a specific neurotransmitter system has not accumulated sufficiently.
+## 3. What OIYO currently calculates
 
-This does not mean the model collapsed. The descriptive usefulness of the dimensions and the question of how they are biologically implemented are separate matters. But **"my harm avoidance is high because of serotonin" is not a sentence the test result supports.**
+OIYO's current activity contains 35 items, five per dimension, answered from 1 to 5. Designated reverse-keyed responses are scored as 6 minus the chosen answer. A dimension's sum is divided by its maximum possible sum, then rounded to a percentage.
 
-## 3. "Temperament does not change" is also overstated
+| After any reverse scoring | Sum out of 25 | Displayed value |
+| --- | --- | --- |
+| Five responses each scored 1 | 5 | 20% |
+| Five responses each scored 3 | 15 | 60% |
+| Five responses each scored 5 | 25 | 100% |
 
-The neat split — temperament fixed, character malleable — is firmer in the telling than in the evidence.
+This describes the current code, not an official TCI norm. **60% is not a population percentile**, a probability of illness, or a measurement of how developed your character is. Compare the actual answers and circumstances before comparing numbers.
 
-Temperament dimensions are moderately heritable and **do change with age**. Novelty Seeking tends to fall and Persistence to rise over adulthood. Conversely, character dimensions do not grow on their own.
+We have not established here that these 35 items reproduce an official TCI or TCI-R version, that the translations are equivalent, or that the result categories have measurement evidence. Do not use the output as a clinical report or as evidence that somebody is immature, irresponsible or unsuitable for a job.
 
-Put precisely, the difference between the layers is **not whether they change but what they are dimensions of**. Temperament is about how you respond to stimuli; character is about what you take as goals and how you regard yourself.
+## 4. Interpret a tendency in context
 
-## 4. How to read a result
+Consider a person who checks risks carefully before an unfamiliar task. That action may be appropriate where mistakes have serious consequences. The same amount of checking could be frustrating in a routine task with little at stake. A questionnaire summary does not decide which interpretation fits.
 
-- **Temperament scores are not good or bad.** High Harm Avoidance is prudence and it is avoidance; low Harm Avoidance is boldness and it is recklessness. The score gives direction, not value.
-- **The character side is where effort has purchase.** Rather than trying to lower Harm Avoidance, deciding what to do while carrying a worry-prone self (Self-Directedness) is actionable.
-- **It is self-report, and it came from a clinical purpose.** Do not read a result as a diagnosis. The TCI is used clinically, but a score is not a diagnosis.
+As an editorial reflection exercise, ask what you pictured while answering, what the stakes were, and whether a recent counterexample exists. You can then choose a small action appropriate to the situation. This is not a treatment, a validated intervention, or advice to change one model layer instead of another.
 
-## References
+Self-Transcendence does not rank people's spiritual worth. Self-Directedness does not by itself determine personal responsibility in a real conflict. Resources, constraints and actual behavior still need to be considered.
 
-> **C. Robert Cloninger, Dragan M. Svrakic & Thomas R. Przybeck** (1993) *A psychobiological model of temperament and character*, Archives of General Psychiatry 50(12) — the four-plus-three structure.
+## 5. Official inventory use is a separate matter
 
-> **C. Robert Cloninger** (1987) *A systematic method for clinical description and classification of personality variants*, Archives of General Psychiatry 44(6) — the original mapping of temperament onto neurotransmitters.
+[Anthropedia's research-use information](https://anthropedia.org/tci-research) describes an application and approval process for research use. The TCI should not be introduced as an unrestricted public item bank.
 
-> **Kerry L. Jang et al.** (1996) *Heritability of the big five personality dimensions and their facets*, Journal of Personality 64(3) — the standard twin-study finding of moderate heritability.
+This explanation does not authorize reproduction of official items. OIYO's item provenance, equivalence and any necessary permissions require separate review. Calling an activity “educational” or “abridged” does not establish that it is an approved official instrument.
 
-> **Brent W. Roberts, Kate E. Walton & Wolfgang Viechtbauer** (2006) *Patterns of mean-level change in personality traits across the life course*, Psychological Bulletin 132(1) — a meta-analysis showing systematic change across the lifespan.
+## Sources and reading limits
+
+- [Cloninger, Svrakic and Przybeck (1993), author-institution record](https://profiles.wustl.edu/en/publications/a-psychobiological-model-of-temperament-and-character/): the seven-dimension model and the study summarized in its abstract.
+- [Cloninger (1987), PubMed](https://pubmed.ncbi.nlm.nih.gov/3579504/): the earlier biological proposal, not an individual neurotransmitter test.
+- [Anthropedia, TCI in Research](https://anthropedia.org/tci-research): information about research-use procedures.
+
+The paper abstracts and records, not their complete full texts, were checked for this revision. The numerical examples describe OIYO's implementation and are not results reported by those papers.
