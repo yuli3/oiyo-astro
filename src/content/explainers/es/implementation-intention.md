@@ -1,72 +1,61 @@
 ---
 topic: implementation-intention
 locale: es
-title: "Intenciones de implementación: una condicional en lugar de fuerza de voluntad"
-description: "Una intención de implementación es un plan «si X, entonces Y» que ata de antemano una situación a una acción. El trabajo original de Gollwitzer, el tamaño del efecto en un metaanálisis de 94 estudios y los casos en que no funciona."
-definition: "Una intención de implementación es un plan con la forma «si se da la situación X, hago Y». A diferencia de una intención-meta, ata el cuándo, el dónde y el cómo a una señal situacional."
-updated: 2026-09-03
+title: "Intenciones de implementación: conectar una situación con una acción"
+description: "Distingue objetivos y planes si-entonces, interpreta el metaanálisis de 2006 y revisa ejemplos concretos y condiciones que pueden obstaculizar la acción."
+definition: "Una intención de implementación vincula cuándo, dónde o cómo actuar para un objetivo con una señal situacional concreta."
+updated: 2026-10-14
 ---
 
-«Debería hacer más ejercicio» y «al llegar a casa, antes de colgar el abrigo, me pongo las zapatillas» no son la misma resolución. La primera es una **intención-meta**; la segunda, una **intención de implementación**. La distinción no es un juego de palabras: es uno de los hallazgos mejor replicados en investigación sobre autorregulación desde los años noventa.
+«Debería estudiar más» expresa un objetivo. «Después de comer, cuando me siento al escritorio, leo el primer ejercicio» conecta una situación con una respuesta. Escribir la segunda frase no termina tus estudios, pero concreta cuándo empezar.
 
-## 1. El formato es fijo
+## 1. Separa el objetivo de su ejecución
 
-Peter Gollwitzer propone una sola forma:
+[El artículo de Gollwitzer de 1999](https://bpb-us-e1.wpmucdn.com/wp.nyu.edu/dist/c/6235/files/2019/02/gollwitzer-1999-implementation-intentions.pdf) distingue elegir un objetivo de especificar las condiciones para actuar. Una forma habitual es «Si aparece la situación X, entonces hago Y».
 
-> **Si se da la situación X, entonces hago Y.**
+| Resultado deseado | Señal perceptible | Acción prevista |
+| --- | --- | --- |
+| Empezar a estudiar | Sentarse al escritorio después de comer | Leer la primera frase de un ejercicio preparado |
+| Prepararse para hacer ejercicio | Llegar a casa del trabajo | Ponerse las zapatillas |
+| Reducir el uso del móvil | Prepararse para acostarse | Dejar el móvil en el lugar de carga elegido |
 
-X tiene que ser una **señal situacional que puedas notar**, e Y una **acción que puedas empezar de inmediato**. Si cualquiera de las dos se difumina, el efecto cae.
+Son ejemplos editoriales, no efectos medidos experimentalmente para esas acciones concretas. Ponerse las zapatillas también difiere de completar la cantidad de ejercicio necesaria. Comprueba si la señal aparece y si la respuesta ayuda al objetivo.
 
-| Intención-meta | Intención de implementación |
-| --- | --- |
-| Hacer más ejercicio | Al llegar a casa, antes de colgar el abrigo, me pongo las zapatillas |
-| Estudiar | Después de comer, al sentarme, hago el primer ejercicio |
-| Usar menos el móvil | Al tumbarme en la cama, dejo el móvil en el escritorio |
-| Enfadarme menos | Cuando la voz empiece a subirme, bebo un sorbo de agua |
+## 2. d = 0,65 no significa un 65 % de éxito
 
-Lo que comparte la columna derecha: **no queda nada por decidir**. Cuando llega la situación, lo siguiente ya está resuelto.
+[El metaanálisis de Gollwitzer y Sheeran de 2006](https://doi.org/10.1016/S0065-2601%2806%2938002-1) informa de un tamaño del efecto medio d = 0,65 sobre el logro de objetivos en 94 pruebas independientes. No lo conviertas en 94 artículos distintos.
 
-## 2. Cuánto es el efecto
+| Cifra de investigación | Significado | Lo que no significa |
+| --- | --- | --- |
+| 94 pruebas independientes | Comparaciones independientes incluidas en la síntesis | 94 replicaciones con resultados idénticos en cualquier contexto |
+| d = 0,65 | Diferencia estandarizada entre grupos comparados | Un 65 % de éxito o un 65 % más de rendimiento |
+| Efecto medio | Síntesis de la investigación incluida | Éxito garantizado para una persona concreta |
 
-Gollwitzer y Sheeran reunieron 94 estudios. Frente a fijarse solo una meta, formar una intención de implementación dio un tamaño del efecto de **d ≈ 0,65**: medio-alto según los usos de las ciencias del comportamiento, y notablemente barato, porque la intervención es escribir una frase.
+Lee conjuntamente las condiciones de comparación, las tareas, los participantes y las medidas. Esta estimación histórica no valida todas las aplicaciones actuales ni la herramienta de planificación OIYO. Tampoco demuestra igual relación coste-eficacia para cualquier actividad que consista en escribir una frase.
 
-Vino con una advertencia: **las intenciones de implementación no crean la meta.** Ponerle una condicional a algo que no quieres hacer no hará que lo hagas. Lo que la estrategia cubre es **la distancia entre la intención y la conducta**, no el hueco donde no hay intención.
+## 3. ¿Por qué conectar antes la señal y la respuesta?
 
-## 3. Por qué funciona: automaticidad, no voluntad
+Las investigaciones examinan cómo detectar las oportunidades especificadas e iniciar respuestas dirigidas al objetivo. No significa actuar sin juicio en cualquier estado. El cansancio, la falta de recursos, otras obligaciones o el peligro pueden exigir revisar el plan.
 
-El mecanismo no es «decidirlo con más firmeza».
+Planificar cómo perseguir un objetivo difiere de elegirlo. Si no lo deseas o no tienes medios, revisa el objetivo y las condiciones en vez de limitarte a pulir una frase.
 
-Atar de antemano una señal a una acción hace que encontrarse con la señal ponga en marcha la acción **con menos deliberación consciente**. No vuelves a jugar cada vez el «¿lo hago ahora o no?», así que se gasta menos en decidir.
+## 4. Qué revisar cuando la acción se atasca
 
-De ahí dos casos donde resulta especialmente útil:
+Si escribiste «cuando tenga tiempo», concreta una ocasión reconocible. Si varias acciones comparten una situación, considera su orden o prioridad. Es una sugerencia de planificación, no una ley según la cual compartir señales haga fracasar todos los planes.
 
-- **Acciones con mucha resistencia de arranque**: desaparece el paso de decidir y el primer movimiento se aligera.
-- **El final del día, ya agotado**: el juicio no está, pero el vínculo señal-acción sí.
+Si solo anotaste una conducta que quieres evitar, considera una alternativa que puedas realizar. No deduzcas que los planes de inhibición siempre son ineficaces ni que las acciones sustitutivas son mejores para cualquier hábito.
 
-## 4. Cuándo no funciona
+## 5. Revisa un plan con una tarea pequeña
 
-Conocer bien una estrategia es también conocer sus límites.
+Elige algo que realmente quieras hacer esta semana y escribe la señal y la acción en una frase. Una hora concreta o un evento posterior a otra rutina pueden servir según la situación. Esta guía no considera uno universalmente superior.
 
-- **Cuando la señal es vaga.** «Cuando tenga tiempo» no es una señal: no hay modo de notar ese momento.
-- **Cuando la acción es grande.** «Hago ejercicio» rinde menos que «me pongo las zapatillas». Cuanto más pequeño el primer gesto, mejor engancha.
-- **Cuando las señales chocan.** Varias condicionales colgadas de la misma situación y ninguna se dispara sola.
-- **Cuando no te apetece.** Como se dijo: no fabrica un motivo ausente.
+Puedes empezar con una acción manejable y revisar por separado si encontraste la señal y si ejecutaste la respuesta. «Un gesto de menos de un minuto» es un ejemplo editorial para concretar el inicio, no un umbral temporal validado. Observa también cuánto del objetivo completaste después de empezar.
 
-Un apunte más. Para **quitar** un hábito, «si X, entonces no hago Y» rinde peor que **«si X, entonces hago Z en su lugar»**. No hacer no es una acción, así que no puede atarse a una señal.
+Usa la actividad para reflexionar sobre tus planes. No justifica omitir comprobaciones médicas, jurídicas o de seguridad necesarias, ni juzgar la voluntad o el carácter de alguien que tiene dificultades para actuar.
 
-## 5. Escribe una frase ahora
+## Fuentes y alcance de la revisión
 
-- Elige una cosa que quisieras hacer esta semana.
-- Decide **dónde y justo después de qué** la harás. Una acción previa engancha mejor que una hora del reloj («al abrir la puerta al volver del trabajo»).
-- Reduce la acción a **un primer gesto de menos de un minuto**.
-- Escríbela en una frase. Escribirla forma parte de la estrategia.
+- [Gollwitzer (1999), texto público del laboratorio del autor](https://bpb-us-e1.wpmucdn.com/wp.nyu.edu/dist/c/6235/files/2019/02/gollwitzer-1999-implementation-intentions.pdf)
+- [Gollwitzer y Sheeran (2006), capítulo del editor original](https://doi.org/10.1016/S0065-2601%2806%2938002-1)
 
-## Referencias
-
-> **Peter M. Gollwitzer** (1999) *Implementation intentions: Strong effects of simple plans*, American Psychologist 54(7) — el concepto y el formato si-entonces.
-
-> **Peter M. Gollwitzer & Paschal Sheeran** (2006) *Implementation intentions and goal achievement: A meta-analysis of effects and processes*, Advances in Experimental Social Psychology 38 — 94 estudios, d ≈ 0,65.
-
-> **Paschal Sheeran & Thomas L. Webb** (2016) *The intention–behavior gap*, Social and Personality Psychology Compass 10(9) — el problema al que responde la estrategia.
-
-> **Thomas L. Webb & Paschal Sheeran** (2006) *Does changing behavioral intentions engender behavior change?*, Psychological Bulletin 132(2) — cambiar solo las intenciones mueve la conducta sorprendentemente poco.
+Se revisaron las definiciones y los pasajes sobre automaticidad del texto público de 1999, y el resumen del editor original de 2006 devuelto por la búsqueda. Las restricciones de acceso impidieron leer el texto completo de 2006 en la editorial. No reanaliza todos los datos originales de los estudios incluidos ni revisa exhaustivamente la literatura más reciente. Los ejemplos cotidianos se distinguen de los datos de investigación.

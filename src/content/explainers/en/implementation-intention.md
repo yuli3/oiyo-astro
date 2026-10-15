@@ -1,72 +1,61 @@
 ---
 topic: implementation-intention
 locale: en
-title: "Implementation intentions: using a conditional instead of willpower"
-description: "An implementation intention is an 'if X, then Y' plan that binds a situation to an action in advance. Gollwitzer's original work, the effect size from a 94-study meta-analysis, and the cases where it does not work."
-definition: "An implementation intention is a plan in the form 'if situation X arises, I will do Y'. Unlike a goal intention, it ties the when, where and how of an action to a situational cue."
-updated: 2026-09-03
+title: "Implementation intentions: linking a situation to an action"
+description: "Distinguish goals from if-then plans, interpret the 2006 meta-analysis, and review concrete examples and conditions that can obstruct action."
+definition: "An implementation intention links when, where or how to act toward a goal with a specified situational cue."
+updated: 2026-10-14
 ---
 
-"I should exercise more" and "when I get home, I put my running shoes on before I hang up my coat" are not the same resolution. The first is a **goal intention**, the second an **implementation intention**. The distinction is not word-play: it is one of the better-replicated findings in self-regulation research since the 1990s.
+“I should study more” states a goal. “After lunch, when I sit at my desk, I read the first problem” links a situation to a response. Writing the second sentence does not finish your studying, but it specifies when to begin.
 
-## 1. The format is fixed
+## 1. Separate the goal from its execution
 
-Peter Gollwitzer's format is a single sentence:
+[Gollwitzer's 1999 paper](https://bpb-us-e1.wpmucdn.com/wp.nyu.edu/dist/c/6235/files/2019/02/gollwitzer-1999-implementation-intentions.pdf) distinguishes choosing a goal from specifying conditions for acting on it. A typical form is “If situation X arises, then I will do Y.”
 
-> **If situation X arises, then I will do Y.**
+| Desired result | Noticeable cue | Planned action |
+| --- | --- | --- |
+| Begin studying | Sitting at the desk after lunch | Read the first sentence of a prepared problem |
+| Prepare to exercise | Arriving home after work | Put on running shoes |
+| Reduce phone use | Getting ready for bed | Put the phone at the chosen charging place |
 
-X has to be a **noticeable situational cue**, and Y an **action you can start immediately**. Blur either one and the effect drops.
+These are editorial examples, not experimentally measured effects of these particular actions. Putting on shoes also differs from completing the needed exercise. Check whether the cue occurs and whether the response serves your goal.
 
-| Goal intention | Implementation intention |
-| --- | --- |
-| Exercise more | When I get home, before hanging up my coat, I put my running shoes on |
-| Study | After lunch, when I sit down, I do the first problem |
-| Use my phone less | When I lie down in bed, I put the phone on the desk |
-| Get less angry | When my voice starts to rise, I take a sip of water |
+## 2. d = 0.65 does not mean 65% success
 
-What the right column has in common is that **nothing is left to decide**. When the situation arrives, what happens next has already been settled.
+[Gollwitzer and Sheeran's 2006 meta-analysis](https://doi.org/10.1016/S0065-2601%2806%2938002-1) reports an average effect size of d = 0.65 on goal attainment across 94 independent tests. Do not recast this as 94 separate papers.
 
-## 2. How large is the effect
+| Research figure | Meaning | What it does not mean |
+| --- | --- | --- |
+| 94 independent tests | Independent comparisons included in the synthesis | 94 replications with identical results in every setting |
+| d = 0.65 | A standardized difference between comparison groups | 65% success or a 65% increase in performance |
+| Average effect | A synthesis of the included research | Guaranteed success for an individual reader |
 
-Gollwitzer and Sheeran pooled 94 studies. Compared with forming a goal alone, forming an implementation intention produced an effect size of **d ≈ 0.65** — medium-to-large by behavioural-science conventions, and unusually cheap given that the intervention is writing one sentence.
+Read the comparison conditions, tasks, participants and measurements together. This historical pooled estimate does not validate every current app or OIYO planning tool. It also does not establish equal cost-effectiveness for every activity that involves writing one sentence.
 
-A caution came with it. **Implementation intentions do not create the goal.** Attaching a conditional to something you do not want to do will not make you do it. What the strategy closes is **the gap between intention and behaviour**, not the space where an intention is absent.
+## 3. Why connect the cue and response in advance?
 
-## 3. Why it works — automaticity, not willpower
+The research examines noticing specified opportunities and initiating goal-directed responses. This does not mean acting without judgment in every state. Fatigue, insufficient resources, competing duties or danger can require reviewing the plan.
 
-The mechanism is not "resolving harder".
+Planning how to pursue a goal differs from choosing that goal. If you do not want it or lack the means to pursue it, review the goal and conditions rather than only polishing a planning sentence.
 
-Binding a cue to an action in advance means that meeting the cue starts the action **with less conscious deliberation**. You are not re-deciding "shall I, now?" each time, so less is spent on the deciding.
+## 4. What to inspect when action stalls
 
-That makes the strategy especially useful in two cases:
+If you wrote “when I have time,” make the occasion easier to recognize. If several actions share one situation, consider their order or priority. This is a planning suggestion, not a law that overlapping cues make every plan fail.
 
-- **Actions with high starting resistance**: the decision step disappears, so the first move gets easier.
-- **The depleted end of a day**: when judgement is gone, the cue-action link is still there.
+If you wrote only an action to avoid, consider an alternative you can actually perform. Do not infer that inhibition plans are always ineffective or that replacement actions outperform them for every habit.
 
-## 4. When it does not work
+## 5. Review a plan with a small task
 
-Knowing a strategy properly means knowing its limits.
+Choose something you actually intend to do this week and write the cue and action in one sentence. A clock time or an event following another routine can be a cue, depending on the situation. This guide does not rank one as universally superior.
 
-- **When the cue is vague.** "When I have time" is not a cue — there is no way to notice the moment.
-- **When the action is large.** "I exercise" is worse than "I put my shoes on". The smaller the first move, the more reliably it catches.
-- **When cues collide.** Several conditionals hanging on the same situation means none of them fires automatically.
-- **When you do not want to.** As above: it cannot manufacture a motive that is absent.
+You can start with a manageable action and review separately whether you encountered the cue and performed the response. “An action taking under a minute” is an editorial example for making the start concrete, not a validated time threshold. Also examine how much of the goal you completed after starting.
 
-One more. For **removing** a habit, "if X, then I will not do Y" works worse than **"if X, then I do Z instead"**. Not-doing is not an action, so it cannot be bound to a cue.
+Use the exercise to reflect on your own plans. It does not justify omitting necessary medical, legal or safety checks, or judging another person's willpower or character from difficulties acting.
 
-## 5. Write one sentence now
+## Sources and review scope
 
-- Pick one thing you meant to do this week.
-- Decide **where, and immediately after what**, you will do it. A preceding action catches better than a clock time ("when I open the front door after work").
-- Reduce the action to **a first move that takes under a minute**.
-- Write it down as one sentence. The writing down is part of the strategy.
+- [Gollwitzer (1999), public paper from the author's research lab](https://bpb-us-e1.wpmucdn.com/wp.nyu.edu/dist/c/6235/files/2019/02/gollwitzer-1999-implementation-intentions.pdf)
+- [Gollwitzer and Sheeran (2006), original publisher's chapter](https://doi.org/10.1016/S0065-2601%2806%2938002-1)
 
-## References
-
-> **Peter M. Gollwitzer** (1999) *Implementation intentions: Strong effects of simple plans*, American Psychologist 54(7) — the concept and the if-then format.
-
-> **Peter M. Gollwitzer & Paschal Sheeran** (2006) *Implementation intentions and goal achievement: A meta-analysis of effects and processes*, Advances in Experimental Social Psychology 38 — 94 studies, d ≈ 0.65.
-
-> **Paschal Sheeran & Thomas L. Webb** (2016) *The intention–behavior gap*, Social and Personality Psychology Compass 10(9) — the problem the strategy addresses.
-
-> **Thomas L. Webb & Paschal Sheeran** (2006) *Does changing behavioral intentions engender behavior change?*, Psychological Bulletin 132(2) — changing intentions alone moves behaviour surprisingly little.
+The review covered the relevant definitions and automaticity passages in the public 1999 paper, and the original publisher's 2006 abstract returned by search. Access restrictions prevented reading the 2006 publisher full text. It does not reanalyze every included study's raw data or comprehensively review the latest literature. The everyday examples in the tables are distinct from research data.
