@@ -1,74 +1,74 @@
 ---
 topic: cognitive-load
 locale: en
-title: "Cognitive load: working memory is narrow, and an explanation has to fit through it"
-description: "Cognitive load theory addresses where learning hits the limits of working memory. Intrinsic versus extraneous load, the expertise reversal effect, and why it must not be confused with learning styles."
-definition: "Cognitive load is the demand a task places on working memory. Cognitive load theory holds that learning material should be designed against the limits of working memory."
-updated: 2026-09-03
+title: "Cognitive load: content, prior knowledge and instructional design"
+description: "Compare intrinsic and extraneous load, the goal-free effect, split attention and redundancy. See why instructional choices depend on the task and the learner's knowledge."
+definition: "Cognitive load is the demand placed on working memory during a task. Consider interacting elements, the learner's knowledge, and how information and activities are presented."
+updated: 2026-10-15
 ---
 
-Two people hear the same explanation; one understands it and the other does not. This usually gets filed under **being clever or not**. Cognitive load theory looks somewhere else: **was that explanation built to fit through the narrow gate of working memory?**
+Difficulty understanding an explanation does not establish a lack of ability. Consider whether unfamiliar concepts must be connected at once, whether necessary information is scattered, or whether familiar explanations require needless comparison.
 
-## 1. There is a narrow gate
+## 1. Prior knowledge changes the demand
 
-Working memory holds what you are handling right now, and it is **very narrow**. The number of new elements you can juggle at once is small, and they fade in seconds.
+Working memory temporarily maintains and processes information. Its capacity and duration are limited especially for novel information. This is not a rule that everyone always handles a fixed number of items or loses information after an exact number of seconds.
 
-Long-term memory, by contrast, is effectively unlimited. So **learning is the business of moving things through a narrow gate into a large warehouse.** That is where John Sweller's cognitive load theory stands.
+Cognitive load theory emphasizes organized knowledge in long-term memory. Experienced learners can treat related elements as a knowledge structure. An unfamiliar equation may become a familiar solution step with experience. This concerns domain-specific knowledge, not a test of intelligence.
 
-It also explains the difference between expert and novice. An expert holds several elements bound into **one chunk (a schema)** in long-term memory, so they count as one what a novice counts as five. The gate did not widen — **the load has been tied into a single bundle.**
+## 2. Intrinsic and extraneous load
 
-## 2. Load splits in two
+[Sweller, van Merriënboer and Paas (2019)](https://link.springer.com/article/10.1007/s10648-019-09465-5) consider element interactivity together with the learner's knowledge.
 
-| Kind | What it is | How to handle it |
+| Category | What it concerns | Design question |
 | --- | --- | --- |
-| Intrinsic load | The complexity of the content itself; larger when elements interact | Cannot be removed. Break the order into stages |
-| Extraneous load | Demand created by **the way it is explained** | Should be reduced. What you save goes to learning |
+| Intrinsic load | Relations among the elements to be learned and prior knowledge | Can the scope change or prerequisite knowledge be learned first? |
+| Extraneous load | Demand arising from presentation and required activities | Can unnecessary search, integration or redundant processing be reduced? |
 
-The point is this: **extraneous load is made by the designer and has nothing to do with the content**, so it can be removed.
+Intrinsic load is not an immutable property of content. Extraneous load is not wholly unrelated to content, and redesign does not necessarily eliminate all of it.
 
-Common ways of creating it:
+Accounts of germane load differ. In this paper's reformulation, it concerns allocating working-memory resources to learning-relevant processing rather than adding an independent third load. Not all publications use the same classification.
 
-- **Split attention** — the diagram and the text sit apart, so the eye must travel
-- **Redundancy** — the same content in writing and speech at once, forcing a comparison
-- **Goal-free search** — wandering without knowing what to look for
+## 3. Similar-looking effects have different conditions
 
-*A third category, "germane load", was long discussed alongside these, but the distinction became contested and Sweller himself reformulated it. Treating load as intrinsic and extraneous is the cleaner account today.*
+| Effect | Condition and design direction | Avoid concluding |
+| --- | --- | --- |
+| Split attention | Integrate diagram and explanation when separate sources cannot be understood alone | Pictures and text should always be combined |
+| Redundancy | Unnecessary repetition of self-contained information can add processing | Concurrent text and speech are always harmful |
+| Modality | Diagrams with necessary spoken explanation can help | A diagram and printed text use separate visual and auditory channels |
+| Worked examples | Studying solutions can help with low prior knowledge and complex interacting elements | Novices should never solve problems themselves |
 
-## 3. Well-replicated prescriptions
+Do not remove captions or text alternatives on this table's authority. Consider access, replay, and the learner's control over pacing.
 
-- **Worked examples** — for novices, **showing a completed solution** beats having them solve it. Solving consumes working memory on search.
-- **Put the diagram and the text together** — do not separate them.
-- **One thing at a time** — do not deliver interacting elements simultaneously.
+## 4. Goal-free does not mean abandoned exploration
 
-## 4. The expertise reversal effect — where the prescription flips
+“Goal-free search” should be distinguished from the paper's goal-free effect: means-ends analysis, continually comparing a current state with a specified target, can be demanding. Reducing goal specificity, for example by asking for several relevant quantities, can reduce demand in some tasks.
 
-The most practical part of the theory. **What is good design for a novice is harmful for the skilled.**
+This is neither a prescription to leave learners without guidance nor a claim that setting goals is always harmful. The task and the required search matter.
 
-Worked examples help novices, but for someone who already holds the schema they become **redundant load: rereading what they know.** At that stage, having them solve it directly is better.
+## 5. Guidance can fade as knowledge grows
 
-So the question is never "is this method good" but **"good for whom, at what stage."**
+With expertise reversal, an instructional advantage can shrink, disappear or reverse as knowledge increases. This does not mean every example harms every experienced learner.
 
-## 5. Do not confuse it with learning styles
+The paper also discusses fading guidance from studying solutions to completing partial solutions and then solving problems. Adjust this progression to knowledge of the actual task, not a fixed school-year rule.
 
-Cognitive load theory is often blended with **"visual learner / auditory learner"** style theory. They are entirely different.
+<details>
+<summary>Fictional example: one equation, different guidance</summary>
 
-- Cognitive load theory concerns **the design of material.** Its prescriptions have been replicated.
-- Learning-style theory **sorts people into types** and holds each has a matching mode. **No evidence has been found that matching instruction to a preferred style improves learning.**
+A beginning algebra learner may need a solution explaining why each transformation is used. Someone who understands that principle may instead attempt a variation. Both need access to relevant equations and explanations. This is an OIYO editorial example, not an experimental result.
 
-Pairing a diagram with text is generally good not because someone is "a visual learner" but because working memory **divides visual and auditory channels** to a degree. It is about the structure of information processing, not about types of people.
+</details>
 
-## 6. Limits
+## 6. Learning styles and measurement limits
 
-- Working memory load is hard to measure directly; it is inferred from self-report or secondary tasks.
-- Many prescriptions were validated on **well-defined tasks** — mathematics, physics problems. Carrying them over to open tasks or long projects deserves care.
-- Reducing load is not always good. A separate line of research on **desirable difficulty** finds that some struggle makes memory last.
+[Pashler and colleagues (2008)](https://doi.org/10.1111/j.1539-6053.2009.01038.x) found insufficient evidence for improving learning by classifying learners as visual or auditory and matching instruction accordingly. This does not mean preferences do not exist or accessibility needs can be ignored.
 
-## References
+Pictures and printed text are both visually presented. Distinguish these from diagrams with narration, long explanations that disappear, and text that can be revisited. More pictures, words or sound do not automatically improve instruction.
 
-> **John Sweller** (1988) *Cognitive load during problem solving: Effects on learning*, Cognitive Science 12(2) — the origin of cognitive load theory.
+Self-reports and secondary tasks can estimate load, but each method has limits. Difficulty alone does not diagnose the category of load; less effort does not automatically establish more learning. The 2019 paper discusses how effects depend on knowledge and task conditions.
 
-> **John Sweller, Jeroen J. G. van Merriënboer & Fred Paas** (2019) *Cognitive architecture and instructional design: 20 years later*, Educational Psychology Review 31 — the reformulation and the tidying of load categories.
+## Sources and review scope
 
-> **Slava Kalyuga et al.** (2003) *The expertise reversal effect*, Educational Psychologist 38(1) — prescriptions flipping with expertise.
+- [Sweller, van Merriënboer and Paas (2019), publisher's open article](https://link.springer.com/article/10.1007/s10648-019-09465-5)
+- [Pashler, McDaniel, Rohrer and Bjork (2008), original publisher](https://doi.org/10.1111/j.1539-6053.2009.01038.x)
 
-> **Harold Pashler et al.** (2008) *Learning styles: Concepts and evidence*, Psychological Science in the Public Interest 9(3) — the synthesis finding no support for the learning-styles hypothesis.
+The corrections draw on the 2019 article's classification, instructional effects and measurement sections, and the relevant conclusions of the 2008 review. They are not a review of every original experiment or all current literature. The tables are editorial comparisons, not guarantees of individual learning outcomes.
