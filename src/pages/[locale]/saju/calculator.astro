@@ -308,6 +308,31 @@ const usageClip = usageClipCopy[locale] ?? usageClipCopy.en;
     />
     <RelatedTools locale={locale} tools={['sajuPeriodic', 'natal', 'zodiac', 'numerology']} current="saju" />
     <NewYearBanner locale={locale} />
+
+    {/* tools.oiyo.net 2026 공휴일 및 영업일 조회기 연결 */}
+    <aside class="my-6 rounded-2xl border border-border bg-card p-5 shadow-sm transition-colors hover:border-primary/40">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-primary">
+            <span class="rounded bg-primary/10 px-2 py-0.5 border border-primary/20">2026 달력 도구</span>
+          </div>
+          <h3 class="text-base font-bold text-foreground">
+            {locale === "ko" ? "2026년 공휴일 & 영업일 달력 계산기" : "2026 Public Holidays & Business Day Checker"}
+          </h3>
+          <p class="text-xs text-muted-foreground leading-relaxed">
+            {locale === "ko"
+              ? "운세 및 주요 일정 계획 시 관공서 공휴일 규정 및 대체공휴일이 적용된 2026년 공식 영업일을 즉시 확인하세요."
+              : "Check official statutory public holidays and business working days for South Korea in 2026."}
+          </p>
+        </div>
+        <a
+          href="https://tools.oiyo.net/ko/business-day-checker/"
+          class="inline-flex shrink-0 items-center justify-center rounded-xl bg-primary px-4 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90"
+        >
+          {locale === "ko" ? "영업일 조회하기 →" : "Check Business Days →"}
+        </a>
+      </div>
+    </aside>
     <figure class="mt-8 overflow-hidden rounded-2xl border border-border bg-card">
       <img
         src="/images/mystic/saju-hero.webp"
