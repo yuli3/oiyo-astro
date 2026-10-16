@@ -175,4 +175,43 @@ describe("reincarnation weights", () => {
     expect(borders.RUS?.length).toBeGreaterThan(0);
     expect(borders.AUS?.[0].length).toBeGreaterThan(8);
   });
+
+  it("instruments GA4 roll and share events without sending country results or personal inputs", () => {
+    const here = dirname(fileURLToPath(import.meta.url));
+    const countrySrc = readFileSync(resolve(here, "../components/tools/ReincarnationCountry.tsx"), "utf8");
+    const lifeSrc = readFileSync(resolve(here, "../components/tools/ReincarnationLife.tsx"), "utf8");
+    const extract = (src: string) =>
+      [...src.matchAll(/gaEvent\(\s*"([^"]+)"\s*,\s*\{([^}]*)\}\s*\)/g)].map(([, event, body]) => ({
+        event,
+        keys: [...body.matchAll(/([a-zA-Z_]+)\s*(?::|,|$)/g)]
+          .map(([, k]) => k)
+          .filter((k) => !["reincarnation", "country", "reroll", "first", "native", "link", "text", "card", "shared", "copied", "downloaded", "String", "isReroll", "outcome"].includes(k)),
+      }));
+
+    const countryPayloads = extract(countrySrc);
+    const lifePayloads = extract(lifeSrc);
+
+    expect(countryPayloads.map((p) => p.event)).toEqual([
+      "test_started",
+      "test_completed",
+      "share_click",
+      "share_completed",
+      "share_completed",
+      "share_click",
+      "share_completed",
+      "share_click",
+      "share_completed",
+    ]);
+    expect(lifePayloads.map((p) => p.event)).toEqual(["share_click", "share_completed"]);
+
+    const allowedKeys = new Set(["test_id", "mode", "draws", "roll_type", "share_surface", "share_outcome"]);
+    for (const payload of [...countryPayloads, ...lifePayloads]) {
+      for (const key of payload.keys) {
+        expect(allowedKeys.has(key)).toBe(true);
+      }
+      expect(payload.keys).not.toEqual(
+        expect.arrayContaining(["iso2", "iso3", "country", "results", "home", "homeIso2", "name"]),
+      );
+    }
+  });
 });

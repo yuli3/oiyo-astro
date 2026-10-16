@@ -35,6 +35,7 @@ import ReincarnationGlobe from "./ReincarnationGlobe";
 import CountryFlag from "./CountryFlag";
 import ReincarnationLife from "./ReincarnationLife";
 import PhysicsJar from "../visual/PhysicsJar";
+import { gaEvent } from "../../lib/analytics/ga-event";
 
 interface Props {
   locale: Locale;
@@ -229,12 +230,24 @@ export default function ReincarnationCountry({ locale }: Props) {
   }, []);
 
   function roll() {
+    const isReroll = results.length > 0;
     const next = pickMany(mode, draws);
     setResults(next);
     setSameSecond(sameSecondBirths());
     setFocus(next[next.length - 1] ?? null);
     persistHistory(next, mode);
     setDrawKey((key) => key + 1);
+    // 2026-10-16: Privacy-safe funnel metrics (2026-10-14-reincarnation-growth-study.md §8 P0).
+    // Never send drawn countries or user inputs to GA4.
+    if (!isReroll) {
+      gaEvent("test_started", { test_id: "reincarnation-country", mode, draws: String(draws) });
+    }
+    gaEvent("test_completed", {
+      test_id: "reincarnation-country",
+      mode,
+      draws: String(draws),
+      roll_type: isReroll ? "reroll" : "first",
+    });
     if (revealTimer.current) window.clearTimeout(revealTimer.current);
     if (reducedMotion) {
       setRevealed(true);
@@ -302,6 +315,7 @@ export default function ReincarnationCountry({ locale }: Props) {
 
   async function shareNative() {
     if (!latest || typeof window === "undefined") return;
+    gaEvent("share_click", { test_id: "reincarnation-country", share_surface: "native", mode });
     const rows = results.length ? results : [latest];
     const url = window.location.href;
     const title = nameOf(latest, locale);
@@ -309,6 +323,7 @@ export default function ReincarnationCountry({ locale }: Props) {
     try {
       if (navigator.share) {
         await navigator.share({ title, text, url });
+        gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "native", share_outcome: "shared" });
         flashShared("share");
         return;
       }
@@ -316,19 +331,24 @@ export default function ReincarnationCountry({ locale }: Props) {
       /* fall through to copy */
     }
     await navigator.clipboard.writeText(`${text}\n${url}`);
+    gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "native", share_outcome: "copied" });
     flashShared("link");
   }
 
   async function copyLink() {
     if (typeof window === "undefined") return;
+    gaEvent("share_click", { test_id: "reincarnation-country", share_surface: "link", mode });
     await navigator.clipboard.writeText(window.location.href);
+    gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "link", share_outcome: "copied" });
     flashShared("link");
   }
 
   async function copyText() {
     if (!latest) return;
+    gaEvent("share_click", { test_id: "reincarnation-country", share_surface: "text", mode });
     const rows = results.length ? results : [latest];
     await navigator.clipboard.writeText(`${shareMessage(locale, mode, rows)}\n${window.location.href}`);
+    gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "text", share_outcome: "copied" });
     flashShared("text");
   }
 

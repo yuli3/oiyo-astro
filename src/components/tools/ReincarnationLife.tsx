@@ -12,6 +12,7 @@ import {
 } from "../../lib/reincarnation-life";
 import CountryFlag from "./CountryFlag";
 import ReincarnationStages from "./ReincarnationStages";
+import { gaEvent } from "../../lib/analytics/ga-event";
 
 /**
  * 환생 결과 아래에 붙는 "그다음 삶": 탄생 카드, 인생 지도 100칸, 같은 1초에 태어난 4명.
@@ -265,12 +266,12 @@ async function shareCard(locale: Locale, name: string, lines: StatLine[], cells:
   ctx.fillText("oiyo.net", 250, H - 130);
 
   const blob: Blob | null = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
-  if (!blob) return;
+  if (!blob) return null;
   const file = new File([blob], "oiyo-birth-card.png", { type: "image/png" });
   const nav = navigator as Navigator & { canShare?: (data: unknown) => boolean };
   if (nav.canShare && nav.canShare({ files: [file] })) {
     await navigator.share({ files: [file], title: `${COPY.card[locale]} · ${name}`, url: window.location.href } as ShareData);
-    return;
+    return "shared" as const;
   }
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -278,6 +279,7 @@ async function shareCard(locale: Locale, name: string, lines: StatLine[], cells:
   a.download = "oiyo-birth-card.png";
   a.click();
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  return "downloaded" as const;
 }
 
 export default function ReincarnationLife({ locale, country, home, sameSecond, onSelect }: Props) {
@@ -294,8 +296,12 @@ export default function ReincarnationLife({ locale, country, home, sameSecond, o
 
   async function save() {
     setBusy(true);
+    gaEvent("share_click", { test_id: "reincarnation-country", share_surface: "card" });
     try {
-      await shareCard(locale, name, lines, cells);
+      const outcome = await shareCard(locale, name, lines, cells);
+      if (outcome) {
+        gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "card", share_outcome: outcome });
+      }
     } catch {
       /* 공유 취소 또는 미지원 */
     } finally {
