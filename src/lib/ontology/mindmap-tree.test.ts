@@ -49,10 +49,9 @@ describe("leaf items", () => {
   const WITH_TWIGS = MINDMAP_CATS.map((cat) => ({ id: cat.id, leaves: cat.chips.ko.length, twigs: cat.chips.ko.map((_, leaf) => cat.twigs?.ko[leaf]?.length ?? 0) }));
   const opened = WITH_TWIGS.flatMap((branch) => branch.twigs.map((count, leaf) => [branch.id, leaf, count] as const)).filter(([, , count]) => count > 0);
 
-  it("has four items in every language for each leaf of the first three branches, and none for the rest", () => {
+  it("has four items in every language for each leaf of all five branches", () => {
     for (const cat of MINDMAP_CATS) {
-      const deep = ["interest", "activity", "environment"].includes(cat.id);
-      expect(Boolean(cat.twigs)).toBe(deep);
+      expect(Boolean(cat.twigs)).toBe(true);
       if (!cat.twigs) continue;
       for (const lang of Object.keys(cat.chips) as (keyof typeof cat.chips)[]) {
         expect(cat.twigs[lang]).toHaveLength(cat.chips[lang].length);
@@ -82,7 +81,8 @@ describe("leaf items", () => {
   });
 
   it("stays in the branch view for a leaf without items or out of range", () => {
-    expect(treeLayout(WITH_TWIGS, "relation", 0)).toEqual(treeLayout(WITH_TWIGS, "relation"));
+    const WITHOUT_RELATION_TWIGS = WITH_TWIGS.map((b) => (b.id === "relation" ? { ...b, twigs: b.twigs.map(() => 0) } : b));
+    expect(treeLayout(WITHOUT_RELATION_TWIGS, "relation", 0)).toEqual(treeLayout(WITHOUT_RELATION_TWIGS, "relation"));
     expect(treeLayout(WITH_TWIGS, "interest", 12)).toEqual(treeLayout(WITH_TWIGS, "interest"));
   });
 
