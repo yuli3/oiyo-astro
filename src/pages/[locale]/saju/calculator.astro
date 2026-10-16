@@ -5,6 +5,7 @@ import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import SajuCalculator from '../../../components/tools/SajuCalculator';
+import NewYearBanner from '../../../components/tools/NewYearBanner.astro';
 import CelestialClock from '../../../components/ui/CelestialClock';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
 import PrintReportButton from '../../../components/shared/PrintReportButton.astro';
@@ -306,6 +307,7 @@ const usageClip = usageClipCopy[locale] ?? usageClipCopy.en;
       replay={usageClip.replay}
     />
     <RelatedTools locale={locale} tools={['sajuPeriodic', 'natal', 'zodiac', 'numerology']} current="saju" />
+    <NewYearBanner locale={locale} />
     <figure class="mt-8 overflow-hidden rounded-2xl border border-border bg-card">
       <img
         src="/images/mystic/saju-hero.webp"

@@ -2,6 +2,7 @@
 import React, { act } from 'react'
 import { createRoot } from 'react-dom/client'
 import { beforeEach, expect, it } from 'vitest'
+// @ts-expect-error jsdom is loaded by vitest environment
 import { JSDOM } from 'jsdom'
 import { CAREER_STORAGE_COPY } from '../career/career-note-storage-copy'
 import { CAREER_NOTES_KEY, createCareerNoteStore } from '@/lib/career-exploration-storage'

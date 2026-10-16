@@ -1,0 +1,79 @@
+---
+import type { Locale } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+type BannerCopy = {
+  badge: string;
+  title: string;
+  desc: string;
+  cta: string;
+};
+
+const copy: Record<Locale, BannerCopy> = {
+  ko: {
+    badge: "2027 정미년(丁未年)",
+    title: "2027년 신년운세 미리보기",
+    desc: "붉은 양의 해, 내 사주 원국과 2027년 천간(정화)·지지(미토)의 오행 조화를 미리 짚어봅니다.",
+    cta: "신년운세 미리보기 →",
+  },
+  en: {
+    badge: "2027 Year of the Red Sheep",
+    title: "2027 Saju New Year Fortune Preview",
+    desc: "Preview how the Yin Fire and Earthly Branch of 2027 interact with your personal Four Pillars.",
+    cta: "Preview 2027 Fortune →",
+  },
+  ja: {
+    badge: "2027年 丁未年",
+    title: "2027年 新年運勢プレビュー",
+    desc: "2027年の干支（丁未）と五行があなたの命式とどう調和するか、ひと足早く確認できます。",
+    cta: "新年運勢を見る →",
+  },
+  zh: {
+    badge: "2027 丁未年",
+    title: "2027丁未年新年运势前瞻",
+    desc: "提前解析2027年天干地支（丁火未土）与个人命盘的五行能量契合度与年度指引。",
+    cta: "抢先看运势 →",
+  },
+  fr: {
+    badge: "2027 Année du Mouton Rouge",
+    title: "Aperçu de la fortune du Nouvel An 2027",
+    desc: "Découvrez à l'avance l'harmonie des éléments de 2027 avec votre thème natal Saju.",
+    cta: "Voir l'aperçu 2027 →",
+  },
+  es: {
+    badge: "2027 Año de la Oveja Roja",
+    title: "Avance de la fortuna de Año Nuevo 2027",
+    desc: "Descubre con antelación la armonía elemental de 2027 con tus Cuatro Pilares del Destino.",
+    cta: "Ver avance 2027 →",
+  },
+};
+
+const c = copy[locale] ?? copy.en;
+---
+
+<aside class="my-6 rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40 shadow-sm" aria-label={c.title}>
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+    <div>
+      <span class="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-bold text-foreground border border-border">
+        {c.badge}
+      </span>
+      <h3 class="mt-1.5 text-base font-black text-foreground sm:text-lg">
+        {c.title}
+      </h3>
+      <p class="mt-1 text-xs text-muted-foreground leading-relaxed">
+        {c.desc}
+      </p>
+    </div>
+    <a
+      href={`/${locale}/saju/new-year-2027/`}
+      class="inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-xs font-bold text-primary-foreground transition-colors hover:bg-primary/90 shrink-0 shadow-sm"
+    >
+      {c.cta}
+    </a>
+  </div>
+</aside>
