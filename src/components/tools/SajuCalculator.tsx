@@ -364,6 +364,8 @@ const READING_COPY: Record<Locale, {
   jeolgiSourceKasi: string;
   jeolgiSourceLocal: string;
   jeolgiUnavailable: string;
+  copySummary: string;
+  copiedSummary: string;
 }> = {
   ko: {
     readingMap: '사주 해석 지도',
@@ -391,6 +393,8 @@ const READING_COPY: Record<Locale, {
     controls: '극하는 오행',
     balanceQuestions: '보완 질문',
     balanceQuestionItems: ['강한 오행이 생활에서 과하게 드러나는 장면은?', '부족한 오행을 행동·환경·관계로 보완할 방법은?', '최근 스트레스가 특정 오행의 약점처럼 나타나지는 않는가?'],
+    copySummary: '오행 요약 복사',
+    copiedSummary: '요약 복사 완료!',
   },
   en: {
     readingMap: 'Saju Reading Map',
@@ -418,6 +422,8 @@ const READING_COPY: Record<Locale, {
     controls: 'Controls',
     balanceQuestions: 'Balancing Questions',
     balanceQuestionItems: ['Where does the strong element show up too intensely?', 'How can the weaker element be supported through habits, place, or relationships?', 'Does recent stress resemble the shadow side of one element?'],
+    copySummary: 'Copy Element Summary',
+    copiedSummary: 'Summary copied!',
   },
   ja: {
     readingMap: '四柱の読み方マップ',
@@ -445,6 +451,8 @@ const READING_COPY: Record<Locale, {
     controls: '剋する五行',
     balanceQuestions: 'バランスの問い',
     balanceQuestionItems: ['強い五行が過剰に出る場面は？', '弱い五行を習慣・環境・関係で補う方法は？', '最近のストレスは特定の五行の影として出ていないか？'],
+    copySummary: '五行の要約をコピー',
+    copiedSummary: '要約をコピーしました!',
   },
   fr: {
     readingMap: 'Carte de lecture Saju',
@@ -472,6 +480,8 @@ const READING_COPY: Record<Locale, {
     controls: 'Contrôle',
     balanceQuestions: "Questions d'équilibre",
     balanceQuestionItems: ["Où l'élément fort devient-il excessif ?", "Comment soutenir l'élément faible par les habitudes, le lieu ou les relations ?", 'Le stress récent ressemble-t-il à une ombre élémentaire ?'],
+    copySummary: 'Copier le résumé des 5 éléments',
+    copiedSummary: 'Résumé copié !',
   },
   es: {
     readingMap: 'Mapa de lectura Saju',
@@ -499,6 +509,8 @@ const READING_COPY: Record<Locale, {
     controls: 'Controla',
     balanceQuestions: 'Preguntas de equilibrio',
     balanceQuestionItems: ['¿Dónde aparece demasiado fuerte el elemento dominante?', '¿Cómo apoyar el elemento débil con hábitos, lugar o relaciones?', '¿El estrés reciente se parece al lado difícil de un elemento?'],
+    copySummary: 'Copiar resumen de 5 elementos',
+    copiedSummary: '¡Resumen copiado!',
   },
   zh: {
     readingMap: '四柱解读地图',
@@ -526,6 +538,8 @@ const READING_COPY: Record<Locale, {
     controls: '相克',
     balanceQuestions: '平衡提问',
     balanceQuestionItems: ['较强的五行在哪些生活场景中过度表现？', '较弱的五行能否透过习惯、环境或关系补足？', '最近的压力是否像某个五行的阴影面？'],
+    copySummary: '复制五行分析摘要',
+    copiedSummary: '摘要已复制!',
   },
 };
 
@@ -603,6 +617,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [shareFailed, setShareFailed] = useState(false);
   const [legacyShare, setLegacyShare] = useState<SajuInputState | null>(null);
   const [imageSharing, setImageSharing] = useState(false);
+  const [elementSummaryCopied, setElementSummaryCopied] = useState(false);
   const [selectedCity, setSelectedCity] = useState<City | null>(null);
   const [cityId, setCityId] = useState('');
   const [locationError, setLocationError] = useState('');
@@ -768,6 +783,44 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   );
 
   const daysInMonth = new Date(year, month, 0).getDate();
+
+  async function copyElementSummary() {
+    if (!result) return;
+    const total = result.pillars.length * 2;
+    const lines: string[] = [];
+    lines.push(`[OIYO ${t.title} - ${reading.balanceTitle}]`);
+    lines.push(`• ${reading.abundance}: ${ELEMENTS[result.sortedElements[0]][locale]}`);
+    lines.push(`• ${reading.scarcity}: ${ELEMENTS[result.scarceElements[0]][locale]}`);
+    lines.push(`• ${reading.missing}: ${result.missingElements.length > 0 ? result.missingElements.map((el) => ELEMENTS[el][locale]).join(', ') : reading.noMissing}`);
+    lines.push('');
+    lines.push(`${reading.balanceTitle}:`);
+    for (const el of ELEMENT_ORDER) {
+      const count = result.elementCount[el] || 0;
+      const pct = Math.round((count / total) * 100);
+      lines.push(`  ${ELEMENT_EMOJIS[el]} ${ELEMENTS[el][locale]}: ${count} (${pct}%)`);
+    }
+    const text = lines.join('\n');
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.left = '-9999px';
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        area.remove();
+      }
+      setElementSummaryCopied(true);
+      setTimeout(() => setElementSummaryCopied(false), 2500);
+      gaEvent('copy_click', { test_id: 'saju', surface: 'element_summary' });
+    } catch {
+      /* ignore */
+    }
+  }
 
   function handleCalc() {
     const clampedDay = Math.min(day, daysInMonth);
@@ -1016,7 +1069,19 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
           {/* Element balance */}
           <div className="bg-card rounded-2xl border border-border p-4">
-            <h2 className="text-sm font-semibold text-gray-700 mb-3">{reading.balanceTitle}</h2>
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+              <h2 className="text-sm font-semibold text-gray-700">{reading.balanceTitle}</h2>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={copyElementSummary}
+                aria-label={reading.copySummary}
+              >
+                <span>{elementSummaryCopied ? '✓' : '📋'}</span>
+                <span>{elementSummaryCopied ? reading.copiedSummary : reading.copySummary}</span>
+              </Button>
+            </div>
             <div className="space-y-2">
               {ELEMENT_ORDER.map(el => {
                 const c = ELEMENT_COLORS[el];
