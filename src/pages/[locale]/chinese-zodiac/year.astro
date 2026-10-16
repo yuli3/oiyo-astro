@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
+import NewYearBanner from '../../../components/tools/NewYearBanner.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import ZodiacYearFinder from '../../../components/tools/ZodiacYearFinder';
@@ -132,6 +133,7 @@ const jsonLd = [
       </div>
     </section>
 
+    <NewYearBanner locale={locale} />
     <RelatedTools locale={locale} tools={['saju', 'natal', 'zodiac', 'fortunePeriodic']} current="chineseZodiac" />
   </div>
 </Layout>
