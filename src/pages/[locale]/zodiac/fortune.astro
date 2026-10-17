@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import DailyHoroscope from '../../../components/tools/DailyHoroscope';
+import ZodiacCelestial3D from '../../../components/tools/ZodiacCelestial3D';
 import { PERIODS, periodName } from '../../../lib/fortune/periodic-page-content';
 import { ZODIAC, ELEMENT_LABEL } from '../../../components/tools/ZodiacPersonality';
 
@@ -464,6 +465,10 @@ const signs = SIGN_ORDER.map((key) => {
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <DailyHoroscope client:load locale={locale} />
+
+    <section class="mt-8">
+      <ZodiacCelestial3D client:load locale={locale} />
+    </section>
 
     <section class="mt-8 rounded-xl border border-border bg-card p-4">
       <h2 class="text-lg font-bold text-foreground">{periodHeading[locale] ?? periodHeading.en}</h2>
