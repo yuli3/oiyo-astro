@@ -19,6 +19,7 @@ import {
 import YongsinSection from './saju/YongsinSection';
 import LifeCategoriesSection from './saju/LifeCategoriesSection';
 import FiveElementsOrbit from './saju/FiveElementsOrbit';
+import SajuElementCube3D from './saju/SajuElementCube3D';
 import { decodeResult } from '../../lib/result-permalink';
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
@@ -1020,6 +1021,14 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             elementCount={result.elementCount}
             dominantElement={result.sortedElements[0]}
             missingElements={result.missingElements}
+          />
+
+          <SajuElementCube3D
+            locale={locale}
+            elementCount={result.elementCount}
+            dominantElement={result.sortedElements[0]}
+            missingElements={result.missingElements}
+            dayMaster={result.pillars[2] ? ['갑(木)', '을(木)', '병(火)', '정(火)', '무(土)', '기(土)', '경(金)', '신(金)', '임(水)', '계(水)'][result.pillars[2].stem] : '목(木)'}
           />
 
           {/* Four Pillars */}
