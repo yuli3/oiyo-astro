@@ -2,17 +2,26 @@
 import React, { act } from 'react'
 import { createRoot } from 'react-dom/client'
 import { beforeEach, expect, it } from 'vitest'
-// @ts-expect-error jsdom is loaded by vitest environment
-import { JSDOM } from 'jsdom'
 import { CAREER_STORAGE_COPY } from '../career/career-note-storage-copy'
 import { CAREER_NOTES_KEY, createCareerNoteStore } from '@/lib/career-exploration-storage'
 import CareerComparison from '../career/CareerComparison'
 import RiasecCareerTest from './RiasecCareerTest'
 
+function createMemoryStorage(): Storage {
+  const map = new Map<string, string>()
+  return {
+    getItem: (key: string) => map.get(key) ?? null,
+    setItem: (key: string, val: string) => { map.set(key, String(val)) },
+    removeItem: (key: string) => { map.delete(key) },
+    clear: () => { map.clear() },
+    key: (i: number) => Array.from(map.keys())[i] ?? null,
+    get length() { return map.size },
+  }
+}
+
 Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true })
 beforeEach(() => {
-  // Node 26 exposes its own localStorage getter; use a real origin-scoped DOM storage instead.
-  Object.defineProperty(window, 'localStorage', { configurable: true, value: new JSDOM('', { url: 'https://oiyo.net' }).window.localStorage })
+  Object.defineProperty(window, 'localStorage', { configurable: true, value: createMemoryStorage() })
 })
 
 it('saves only by explicit choice, restores after confirmation and deletes only saved exploration notes', async () => {
