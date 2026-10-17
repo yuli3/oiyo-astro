@@ -9,19 +9,44 @@
  */
 
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
+import { RotateCcw } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useMotion";
 
 const OrbitScene = lazy(() => import("./FiveElementsOrbitScene"));
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
-const COPY: Record<Lang, { hint: string; legend: string }> = {
-  ko: { hint: "드래그해 오행의 상생·상극 관계를 돌려보세요.", legend: "바깥 고리 = 상생 · 안쪽 별 = 상극 · 빛 알갱이 = 상생 흐름(낳는 오행이 많을수록 많고, 비어 있는 오행 앞에서는 멈춰 쌓임)" },
-  en: { hint: "Drag to rotate the generating and controlling cycles.", legend: "Outer ring = generates · inner star = controls · particles = generating flow (more when the source element is strong; they pile up before an empty element)" },
-  ja: { hint: "ドラッグして相生・相剋の関係を回してみましょう。", legend: "外側の輪＝相生・内側の星＝相剋・光の粒＝相生の流れ（生む五行が多いほど多く、空の五行の手前で止まって溜まる）" },
-  zh: { hint: "拖动查看五行相生相克的关系。", legend: "外环＝相生 · 内星＝相克 · 光点＝相生之流（生方五行越多越多，遇到空缺的五行会停下堆积）" },
-  fr: { hint: "Faites glisser pour explorer génération et contrôle.", legend: "Anneau extérieur = génère · étoile intérieure = contrôle · particules = flux de génération (plus nombreuses si l’élément source est fort ; elles s’accumulent devant un élément absent)" },
-  es: { hint: "Arrastra para ver la generación y el control de los elementos.", legend: "Anillo exterior = genera · estrella interior = controla · partículas = flujo de generación (más cuando el elemento origen es fuerte; se acumulan ante un elemento vacío)" },
+const COPY: Record<Lang, { hint: string; legend: string; reset: string }> = {
+  ko: {
+    hint: "드래그해 오행의 상생·상극 관계를 돌려보세요.",
+    legend: "바깥 고리 = 상생 · 안쪽 별 = 상극 · 빛 알갱이 = 상생 흐름",
+    reset: "3D 정면 보기",
+  },
+  en: {
+    hint: "Drag to rotate the generating and controlling cycles.",
+    legend: "Outer ring = generates · inner star = controls · particles = generating flow",
+    reset: "Reset View",
+  },
+  ja: {
+    hint: "ドラッグして相生・相剋の関係を回してみましょう。",
+    legend: "外側の輪＝相生・内側の星＝相剋・光の粒＝相生の流れ",
+    reset: "正面に戻す",
+  },
+  zh: {
+    hint: "拖动查看五行相生相克的关系。",
+    legend: "外环＝相生 · 内星＝相克 · 光点＝相生之流",
+    reset: "重置视角",
+  },
+  fr: {
+    hint: "Faites glisser pour explorer génération et contrôle.",
+    legend: "Anneau extérieur = génère · étoile intérieure = contrôle · particules = flux",
+    reset: "Réinitialiser la vue",
+  },
+  es: {
+    hint: "Arrastra para ver la generación y el control de los elementos.",
+    legend: "Anillo exterior = genera · estrella interior = controla · partículas = flujo",
+    reset: "Centrar vista",
+  },
 };
 
 function useInView<T extends HTMLElement>(): [React.RefObject<T | null>, boolean] {
@@ -58,6 +83,7 @@ export default function FiveElementsOrbit({ locale, elementCount, dominantElemen
   const reducedMotion = useReducedMotion();
   const [containerRef, inView] = useInView<HTMLDivElement>();
   const [isNarrow, setIsNarrow] = useState(false);
+  const [sceneKey, setSceneKey] = useState(0);
 
   useEffect(() => {
     const query = window.matchMedia("(max-width: 640px)");
@@ -67,12 +93,29 @@ export default function FiveElementsOrbit({ locale, elementCount, dominantElemen
     return () => query.removeEventListener("change", onChange);
   }, []);
 
+  const handleResetView = () => {
+    setSceneKey((k) => k + 1);
+  };
+
   return (
-    <div className="mt-3 overflow-hidden rounded-2xl border border-gray-800 bg-[#0b1220]">
+    <div className="mt-3 overflow-hidden rounded-2xl border border-border bg-card relative">
+      <div className="absolute top-2 right-2 z-10">
+        <button
+          type="button"
+          onClick={handleResetView}
+          className="flex items-center gap-1 rounded-lg border border-border bg-secondary/80 px-2 py-1 text-xs font-medium text-secondary-foreground backdrop-blur transition hover:bg-accent"
+          title={copy.reset}
+        >
+          <RotateCcw className="h-3 w-3" />
+          <span className="hidden sm:inline">{copy.reset}</span>
+        </button>
+      </div>
+
       <div ref={containerRef} className="h-56 w-full sm:h-64">
         {inView && (
           <Suspense fallback={null}>
             <OrbitScene
+              key={sceneKey}
               elementCount={elementCount}
               dominantElement={dominantElement}
               missingElements={missingElements}
@@ -82,7 +125,9 @@ export default function FiveElementsOrbit({ locale, elementCount, dominantElemen
           </Suspense>
         )}
       </div>
-      <p className="px-3 py-2 text-[11px] font-medium text-gray-400">{copy.hint} · {copy.legend}</p>
+      <p className="px-3 py-2 text-xs font-medium text-muted-foreground border-t border-border/60">
+        {copy.hint} · {copy.legend}
+      </p>
     </div>
   );
 }
