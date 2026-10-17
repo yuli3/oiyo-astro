@@ -12,12 +12,12 @@ const t = await getTranslations(locale);
 
 const year = new Date().getFullYear();
 const copy = {
-  en: { site: 'Tests', info: 'Information', family: 'OIYO family', knowledge: 'Knowledge index', support: 'Support OIYO', disclaimer: 'All results across OIYO are for entertainment and self-reflection — symbolic tools, not a substitute for career, financial, medical, legal, or relationship decisions.', methodology: 'View methodology' },
-  ko: { site: '검사', info: '안내', family: 'OIYO 패밀리', knowledge: '지식 목록', support: 'OIYO 후원', disclaimer: 'OIYO의 모든 결과는 오락과 자기 성찰을 위한 상징 도구이며, 진로·투자·의료·법률·관계 등 중요한 결정을 대신하지 않아요.', methodology: '방법론 보기' },
-  ja: { site: 'テスト', info: 'ご案内', family: 'OIYOファミリー', knowledge: '知識一覧', support: 'OIYOを支援', disclaimer: 'OIYOのすべての結果は娯楽と自己省察のための象徴的なツールであり、進路・投資・医療・法律・人間関係などの重要な決定の代わりにはなりません。', methodology: '方法論を見る' },
-  zh: { site: '测试', info: '信息', family: 'OIYO 系列', knowledge: '知识索引', support: '支持 OIYO', disclaimer: 'OIYO 的所有结果均为娱乐与自我反思用的象征工具，不能替代职业、投资、医疗、法律或人际关系等重要决策。', methodology: '查看方法论' },
-  fr: { site: 'Tests', info: 'Informations', family: 'Famille OIYO', knowledge: 'Index des connaissances', support: 'Soutenir OIYO', disclaimer: "Tous les résultats d'OIYO sont des outils symboliques destinés au divertissement et à la réflexion — ils ne remplacent pas une décision professionnelle, financière, médicale, juridique ou relationnelle.", methodology: 'Voir la méthodologie' },
-  es: { site: 'Tests', info: 'Información', family: 'Familia OIYO', knowledge: 'Índice de conocimiento', support: 'Apoyar OIYO', disclaimer: 'Todos los resultados de OIYO son herramientas simbólicas de entretenimiento y reflexión — no sustituyen decisiones profesionales, financieras, médicas, legales o relacionales.', methodology: 'Ver metodología' },
+  en: { site: 'Tests', info: 'Information', family: 'OIYO family', knowledge: 'Knowledge index', support: 'Support OIYO', disclaimer: 'All results across OIYO are for entertainment and self-reflection — symbolic tools, not a substitute for career, financial, medical, legal, or relationship decisions.', methodology: 'View methodology', license: 'License' },
+  ko: { site: '검사', info: '안내', family: 'OIYO 패밀리', knowledge: '지식 목록', support: 'OIYO 후원', disclaimer: 'OIYO의 모든 결과는 오락과 자기 성찰을 위한 상징 도구이며, 진로·투자·의료·법률·관계 등 중요한 결정을 대신하지 않아요.', methodology: '방법론 보기', license: '라이선스' },
+  ja: { site: 'テスト', info: 'ご案内', family: 'OIYOファミリー', knowledge: '知識一覧', support: 'OIYOを支援', disclaimer: 'OIYOのすべての結果は娯楽と自己省察のための象徴的なツールであり、進路・投資・医療・法律・人間関係などの重要な決定の代わりにはなりません。', methodology: '方法論を見る', license: 'ライセンス' },
+  zh: { site: '测试', info: '信息', family: 'OIYO 系列', knowledge: '知识索引', support: '支持 OIYO', disclaimer: 'OIYO 的所有结果均为娱乐与自我反思用的象征工具，不能替代职业、投资、医疗、法律或人际关系等重要决策。', methodology: '查看方法论', license: '许可协议' },
+  fr: { site: 'Tests', info: 'Informations', family: 'Famille OIYO', knowledge: 'Index des connaissances', support: 'Soutenir OIYO', disclaimer: "Tous les résultats d'OIYO sont des outils symboliques destinés au divertissement et à la réflexion — ils ne remplacent pas une décision professionnelle, financière, médicale, juridique ou relationnelle.", methodology: 'Voir la méthodologie', license: 'Licence' },
+  es: { site: 'Tests', info: 'Información', family: 'Familia OIYO', knowledge: 'Índice de conocimiento', support: 'Apoyar OIYO', disclaimer: 'Todos los resultados de OIYO son herramientas simbólicas de entretenimiento y reflexión — no sustituyen decisiones profesionales, financieras, médicas, legales o relacionales.', methodology: 'Ver metodología', license: 'Licencia' },
 }[locale];
 ---
 
@@ -38,6 +38,7 @@ const copy = {
         <a href={localePath(locale, '/methodology')} class="hover:text-primary">{locale === 'ko' ? '신뢰와 방법론' : locale === 'ja' ? '信頼と方法論' : locale === 'zh' ? '信任与方法论' : locale === 'fr' ? 'Méthodologie' : locale === 'es' ? 'Metodología' : 'Trust & Methodology'}</a>
         <a href={localePath(locale, '/legal/privacy')} class="hover:text-primary">{t('nav.privacy')}</a>
         <a href={localePath(locale, '/legal/terms')} class="hover:text-primary">{t('nav.terms')}</a>
+        <a href={`https://blog.oiyo.net/${locale}/license/`} class="hover:text-primary">{copy.license}</a>
         <a href={localePath(locale, '/contact')} class="hover:text-primary">{t('nav.contact')}</a>
         <a href="https://paypal.me/chosean" target="_blank" rel="noopener noreferrer" class="hover:text-primary">{copy.support}</a>
         <a href="https://ko-fi.com/tqqq3" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Ko-fi</a>
@@ -61,7 +62,7 @@ const copy = {
       <a href={localePath(locale, '/methodology')} class="underline decoration-dotted underline-offset-2 hover:text-primary">{copy.methodology}</a>
     </p>
     <div class="mt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
-      <span>© {year} OIYO</span><a href="mailto:support@oiyo.net" class="hover:text-primary">support@oiyo.net</a>
+      <span>© {year} Oiyo Tech · <a href={`https://blog.oiyo.net/${locale}/license/`} class="hover:text-primary">{copy.license}</a></span><a href="mailto:support@oiyo.net" class="hover:text-primary">support@oiyo.net</a>
     </div>
   </div>
 </footer>
