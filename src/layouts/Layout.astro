@@ -10,6 +10,7 @@ import TestSourceNote from '../components/shared/TestSourceNote.astro';
 import { getTestSourceNote } from '../data/test-source-notes';
 import TestPlayBeacon from '../components/shared/TestPlayBeacon';
 import BirthSavedToast from '../components/shared/BirthSavedToast.astro';
+import ManualAds from '../components/ads/ManualAds.astro';
 
 interface Props {
   title: string;
@@ -243,6 +244,7 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       )}
       <slot />
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
+      <ManualAds locale={locale} noindex={noindex} />
     </main>
     <Footer locale={locale} />
     <BirthSavedToast locale={locale} />

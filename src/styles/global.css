@@ -301,3 +301,7 @@ main .grid > :has(.google-auto-placed) { min-width: 0; }
     scroll-behavior: auto !important;
   }
 }
+
+@utility adsbygoogle {
+  display: block;
+}

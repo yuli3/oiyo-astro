@@ -1,0 +1,79 @@
+---
+/**
+ * Hand-placed AdSense units for OIYO.net, alongside Auto ads (세운 결정 2026-10-17: 하이브리드 전환).
+ *
+ * Places a clean, responsive display unit strictly AFTER test/calculator results,
+ * above the footer and below the main result surface.
+ *
+ * Ensures:
+ * 1) Gated on !noindex (never places ads on draft or private pages).
+ * 2) Height reservation (min-h-72) to prevent Cumulative Layout Shift (CLS).
+ * 3) IntersectionObserver lazy loading (loads only within 300px of viewport to protect viewability).
+ * 4) MutationObserver auto-hiding when AdSense returns 'unfilled'.
+ * 5) Localized '광고 / Advertisement' disclaimer.
+ */
+import type { Locale } from "../../i18n";
+
+interface Props {
+  locale?: Locale;
+  noindex?: boolean;
+  slot?: string;
+}
+
+const { locale = "ko", noindex = false, slot = "2768903568" } = Astro.props as Props;
+const client = "ca-pub-9541920090543312";
+
+const LABEL: Record<string, string> = {
+  ko: "광고",
+  en: "Advertisement",
+  ja: "広告",
+  zh: "广告",
+  fr: "Publicité",
+  es: "Publicidad",
+};
+
+const payload = JSON.stringify({
+  client,
+  slot,
+  label: LABEL[locale] ?? LABEL.en,
+});
+---
+
+{!noindex && (
+  <aside class="my-10 min-h-72 rounded-2xl border border-border bg-card/60 p-3 shadow-xs max-w-3xl mx-auto" data-manual-ad="oiyo-result-below" aria-label={LABEL[locale] ?? LABEL.en}>
+    <p class="mb-1 text-center text-xs text-muted-foreground">{LABEL[locale] ?? LABEL.en}</p>
+    <ins
+      class="adsbygoogle block"
+      data-ad-client={client}
+      data-ad-slot={slot}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />
+  </aside>
+  <script is:inline set:html={`(function(){
+  var cfg=${payload};
+  var host=location.hostname;
+  var preview=false;try{preview=localStorage.getItem("oiyo:ads-preview")==="1"}catch(e){}
+  if(!/(^|\\.)oiyo\\.net$/.test(host)&&!preview)return;
+  var wrap=document.querySelector('[data-manual-ad="oiyo-result-below"]');
+  if(!wrap)return;
+  var ins=wrap.querySelector('ins.adsbygoogle');
+  if(!ins)return;
+  if("MutationObserver" in window){
+    new MutationObserver(function(){
+      if(ins.getAttribute("data-ad-status")==="unfilled")wrap.hidden=true;
+    }).observe(ins,{attributes:true,attributeFilter:["data-ad-status"]});
+  }
+  function fill(){try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}wrap.setAttribute("data-manual-ad-requested","1")}
+  if(!("IntersectionObserver" in window)){fill();return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      if(wrap.getAttribute("data-manual-ad-requested"))return;
+      fill();
+      io.unobserve(wrap);
+    });
+  },{rootMargin:"300px 0px"});
+  io.observe(wrap);
+})()`} />
+)}
