@@ -103,8 +103,8 @@ const payload = JSON.stringify({
       // Resolve the visitor's MBTI type, if any
       let mbti: string | null = null;
       try {
-        const store = JSON.parse(localStorage.getItem('oiyo-user-storage') || 'null');
-        mbti = store?.state?.profile?.mbti ?? null;
+        const store = JSON.parse(localStorage.getItem('oiyo_user_state') || localStorage.getItem('oiyo-user-storage') || 'null');
+        mbti = store?.state?.profile?.mbtiType ?? store?.state?.profile?.mbti ?? null;
         if (!mbti) {
           const legacy = localStorage.getItem('oiyo_mbti_result');
           if (legacy) {

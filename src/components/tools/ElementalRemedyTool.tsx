@@ -215,7 +215,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
         year: resolution.standard.year,
       }))
       saveBirthRecord(record)
-      setProfile({ gender })
+      setProfile({ gender, ...(selectedCity ? { birthCityId: selectedCity.id } : {}) })
       setDone(true)
     } catch {
       setInputError(selectedCity || savedLocationRecord ? inputCopy.invalidTime : inputCopy.cityRequired)

@@ -178,7 +178,7 @@ export default function TalismanTool({ locale = 'ko' }: { locale?: string }) {
   const [ignoreProfileLocation, setIgnoreProfileLocation] = useState(false)
   const [error, setError] = useState('')
   const [reading, setReading] = useState<TalismanReading | null>(null)
-  const { profile, parsed, saveBirthRecord } = useProfilePrefill()
+  const { profile, parsed, saveBirthRecord, setProfile } = useProfilePrefill()
 
   useEffect(() => {
     if (!parsed) return
@@ -233,6 +233,7 @@ export default function TalismanTool({ locale = 'ko' }: { locale?: string }) {
         element: analysis.weakElement,
       }))
       saveBirthRecord(record)
+      if (selectedCity) setProfile({ birthCityId: selectedCity.id })
     } catch {
       setError(selectedCity || savedLocationRecord ? t.invalid : t.cityRequired)
       setReading(null)
