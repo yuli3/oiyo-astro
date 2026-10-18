@@ -10,7 +10,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { YEAR, ZODIAC_2027 } from "./zodiac-2027-copy.mjs";
+import { YEAR, ZODIAC_2027 } from "../../src/lib/fortune/zodiac-2027-copy.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const outDir = join(root, ".tmp/shorts/zodiac-2027");
