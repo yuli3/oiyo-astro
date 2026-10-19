@@ -8,7 +8,8 @@
 //   node scripts/shorts/render-zodiac-2027.mjs            # 12편
 //   node scripts/shorts/render-zodiac-2027.mjs horse      # 한 편
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { YEAR, ZODIAC_2027 } from "../../src/lib/fortune/zodiac-2027-copy.mjs";
@@ -23,8 +24,16 @@ const VOICE_TAIL = 0.5;
 
 // headless_shell은 --window-size를 뷰포트 그대로 쓴다. 일반 Chrome의 --headless=new는 창 테두리만큼
 // 뷰포트가 줄어 아래가 비므로 html 배경을 같이 칠해 둔다.
+// Mac mini에는 Chrome이 없고 Playwright 캐시의 headless shell만 있다 (2026-10-19).
+function playwrightShells() {
+  const cache = join(homedir(), "Library/Caches/ms-playwright");
+  if (!existsSync(cache)) return [];
+  return readdirSync(cache).filter((d) => d.startsWith("chromium_headless_shell-")).sort().reverse()
+    .flatMap((d) => ["chrome-headless-shell-mac-arm64", "chrome-headless-shell-mac-x64"]
+      .map((arch) => join(cache, d, arch, "chrome-headless-shell")));
+}
 const CHROME = [process.env.CHROME_PATH, "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
-  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"].find((p) => p && existsSync(p));
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", ...playwrightShells()].find((p) => p && existsSync(p));
 if (!CHROME) throw new Error("Chromium을 찾지 못했어요. CHROME_PATH를 지정하세요.");
 
 const MOOD = {
