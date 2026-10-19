@@ -22,6 +22,8 @@ const REPORT_ID = "new-year-2027";
 const WAITLIST_KEY = "oiyo:waitlist:new-year-2027";
 // 미리보기로 전부 보여 주는 달. 1월은 아직 병오년이지만 리포트가 가장 먼저 쓰일 달이다.
 const PREVIEW_MONTH = 1;
+// 출시 알림은 news 메일링이 주간 소식과 따로 동의받아 보관한다. 이 페이지는 주소를 받지 않는다 (2026-10-19).
+const NOTIFY_URL = "https://news.oiyo.net/subscribe/new-year-2027/?utm_source=oiyo&utm_medium=new_year_preview&utm_campaign=new_year_2027";
 
 function pillarLabel(p: Pick<PeriodReading, "stem" | "branch">): string {
   return `${STEM_HANJA[p.stem]}${BRANCH_HANJA[p.branch]}`;
@@ -155,7 +157,18 @@ export default function NewYearReportPreview({ locale }: Props) {
                   ))}
                 </ul>
                 {joined ? (
-                  <p className="font-bold text-primary" role="status">{copy.ui.waitlistDone}</p>
+                  <div className="space-y-2">
+                    <p className="font-bold text-primary" role="status">{copy.ui.waitlistDone}</p>
+                    {copy.ui.notifyCta && (
+                      <a
+                        href={NOTIFY_URL}
+                        onClick={() => gaEvent("report_notify_click", { report_id: REPORT_ID, locale })}
+                        className="inline-flex min-h-11 items-center font-bold text-primary underline underline-offset-4"
+                      >
+                        {copy.ui.notifyCta}
+                      </a>
+                    )}
+                  </div>
                 ) : (
                   <Button size="lg" onClick={joinWaitlist}>
                     {copy.ui.waitlistCta}

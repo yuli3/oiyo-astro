@@ -42,6 +42,8 @@ export interface NewYearReportCopy {
     lockedBadge: string;
     waitlistCta: string;
     waitlistDone: string;
+    /** 출시 알림 메일 신청 링크 문구. news 메일링이 한국어뿐이라 ko에만 둔다 (2026-10-19). */
+    notifyCta?: string;
     disclaimer: string;
   };
   role: Record<Role, RoleText>;
@@ -84,6 +86,7 @@ const ko: NewYearReportCopy = {
     lockedBadge: "전체 리포트",
     waitlistCta: "전체 리포트 나오면 볼래요",
     waitlistDone: "관심 고마워요. 누른 분이 충분하면 전체 리포트를 만들어 이 페이지에 열게요.",
+    notifyCta: "나오면 메일로 알려 주세요 →",
     disclaimer: "전통 명리의 상징 해석이에요. 중요한 결정은 사실과 전문가 조언을 바탕으로 하세요.",
   },
   role: {
