@@ -1,0 +1,22 @@
+---
+interface Props { lang: 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es' }
+const { lang } = Astro.props;
+// 2026-10-19: fictional conditions are not measured SCC dimensions or predictions.
+const texts = {
+  ko: ['같은 사람, 서로 다른 조건', '가상 사례예요. 진단이나 연구 결과가 아니에요.', '관측 행동|가능한 설명|아직 모르는 것', '친구와 대화|주로 듣는 역할을 해요.|듣는 역할이 편할 수도 있어요.|늘 듣기를 선호하는지, 당시 피곤했는지는 몰라요.', '준비된 발표|익숙한 업무 발표를 먼저 맡아요.|준비와 익숙함이 참여를 도울 수 있어요.|자발적인 선택인지, 부담은 어느 정도인지 확인해야 해요.', '준비 없는 발표|이 사례에는 행동 관측이 없어요.|준비 시간에 따라 행동이 달라질 수 있다는 가설이에요.|다음 경험을 보기 전에는 말이 줄거나 늘 거라고 단정할 수 없어요.'],
+  en: ['One person, different conditions', 'A fictional example, not a diagnosis or research finding.', 'Observed behavior|Possible explanation|Still unknown', 'Talking with friends|She usually listens.|Listening may feel comfortable.|We do not know whether she always prefers listening or was tired that day.', 'A prepared presentation|She volunteers to present familiar work.|Preparation and familiarity may support participation.|Her willingness and the burden she feels still need checking.', 'An unprepared presentation|No behavior is observed in this example.|Behavior might change with preparation time; this is a hypothesis.|We cannot predict more or less talking before observing another experience.'],
+  ja: ['同じ人でも、条件は違います', '架空の例です。診断や研究結果ではありません。', '観察された行動|考えられる説明|まだ分からないこと', '友人との会話|主に聞き役になります。|聞く役割が心地よいのかもしれません。|いつも聞く方を好むのか、その日は疲れていたのかは分かりません。', '準備した発表|慣れた仕事の発表に自ら手を挙げます。|準備や慣れが参加を支える可能性があります。|自発的か、どれほど負担を感じるかは確認が必要です。', '準備のない発表|この例には行動の観察がありません。|準備時間で行動が変わるかもしれない、という仮説です。|次の経験を見る前に発言が増減するとは断定できません。'],
+  zh: ['同一个人，不同的条件', '这是虚构案例，不是诊断或研究结果。', '观察到的行为|可能的解释|仍不清楚的事', '与朋友交谈|她通常倾听。|倾听可能让她感到自在。|不知道她是否总喜欢倾听，或当天是否疲惫。', '准备充分的汇报|她主动汇报熟悉的工作。|准备和熟悉程度可能有助于参与。|是否自愿、感到多大负担，仍需确认。', '未经准备的汇报|本例没有观察到相关行为。|准备时间可能影响行为，这只是一个假设。|观察下一次经历前，不能断定她会说得更多或更少。'],
+  fr: ['Une même personne, des conditions différentes', 'Un exemple fictif, ni diagnostic ni résultat de recherche.', 'Comportement observé|Explication possible|Ce qui reste inconnu', 'Discuter avec des amis|Elle écoute le plus souvent.|Écouter lui convient peut-être.|On ignore si elle préfère toujours écouter ou si elle était fatiguée ce jour-là.', 'Une présentation préparée|Elle se propose pour présenter un travail familier.|La préparation et la familiarité peuvent faciliter sa participation.|Son envie de participer et la charge ressentie restent à vérifier.', 'Une présentation non préparée|Aucun comportement n’est observé dans cet exemple.|La préparation pourrait modifier le comportement : c’est une hypothèse.|Avant une autre observation, on ne peut prédire qu’elle parlera davantage ou moins.'],
+  es: ['Una misma persona, distintas condiciones', 'Un ejemplo ficticio, no un diagnóstico ni un resultado de investigación.', 'Conducta observada|Posible explicación|Lo que aún no sabemos', 'Conversar con amistades|Suele escuchar.|Puede sentirse cómoda escuchando.|No sabemos si siempre prefiere escuchar o si ese día estaba cansada.', 'Una presentación preparada|Se ofrece para presentar un trabajo conocido.|La preparación y la familiaridad pueden facilitar su participación.|Aún hay que comprobar si lo desea y qué carga percibe.', 'Una presentación sin preparar|Este ejemplo no incluye una conducta observada.|La preparación podría cambiar la conducta; es una hipótesis.|Antes de otra experiencia, no podemos predecir si hablará más o menos.'],
+}[lang];
+const labels = texts[2].split('|');
+const rows = texts.slice(3).map(text => text.split('|'));
+---
+<section aria-labelledby="self-context-title" class="my-6 space-y-4">
+  <h3 id="self-context-title">{texts[0]}</h3><p>{texts[1]}</p>
+  {rows.map(row => <article class="rounded-lg border border-border bg-surface-subtle p-4 text-foreground">
+    <h4 class="mt-0 font-semibold">{row[0]}</h4>
+    <dl class="space-y-3">{labels.map((label, index) => <div><dt class="font-semibold">{label}</dt><dd class="m-0">{row[index + 1]}</dd></div>)}</dl>
+  </article>)}
+</section>
