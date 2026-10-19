@@ -42,7 +42,7 @@ export interface NewYearReportCopy {
     lockedBadge: string;
     waitlistCta: string;
     waitlistDone: string;
-    /** 출시 알림 메일 신청 링크 문구. news 메일링이 한국어뿐이라 ko에만 둔다 (2026-10-19). */
+    /** 출시 알림 메일 신청 링크 문구. ko 외 언어는 news의 영어 신청 페이지로 가므로 (영어) 표시를 붙인다 (2026-10-19). */
     notifyCta?: string;
     disclaimer: string;
   };
@@ -135,6 +135,7 @@ const en: NewYearReportCopy = {
     lockedBadge: "Full report",
     waitlistCta: "I'd read the full report",
     waitlistDone: "Thanks. If enough people ask, we'll build the full report and open it on this page.",
+    notifyCta: "Email me when it's out →",
     disclaimer: "This is a symbolic reading from traditional Saju. Base important decisions on facts and professional advice.",
   },
   role: {
@@ -183,6 +184,7 @@ const ja: NewYearReportCopy = {
     lockedBadge: "完全版",
     waitlistCta: "完全版が出たら読みたい",
     waitlistDone: "ありがとうございます。希望が十分集まったら完全版を作り、このページで公開します。",
+    notifyCta: "出たらメールで知らせて（英語のメール）→",
     disclaimer: "伝統的な命理の象徴的な解釈です。大切な決定は事実と専門家の助言に基づいて行ってください。",
   },
   role: {
@@ -231,6 +233,7 @@ const zh: NewYearReportCopy = {
     lockedBadge: "完整报告",
     waitlistCta: "完整版出来我想看",
     waitlistDone: "谢谢。想看的人足够多时,我们会制作完整报告并在本页开放。",
+    notifyCta: "上线时发邮件通知我（英文邮件）→",
     disclaimer: "这是传统命理的象征性解读。重要决定请以事实和专业意见为依据。",
   },
   role: {
@@ -279,6 +282,7 @@ const fr: NewYearReportCopy = {
     lockedBadge: "Rapport complet",
     waitlistCta: "Je lirais le rapport complet",
     waitlistDone: "Merci. Si assez de personnes le demandent, nous préparerons le rapport complet et l'ouvrirons sur cette page.",
+    notifyCta: "Prévenez-moi par e-mail (en anglais) →",
     disclaimer: "Il s'agit d'une lecture symbolique du Saju traditionnel. Fondez vos décisions importantes sur les faits et des conseils professionnels.",
   },
   role: {
@@ -327,6 +331,7 @@ const es: NewYearReportCopy = {
     lockedBadge: "Informe completo",
     waitlistCta: "Leería el informe completo",
     waitlistDone: "Gracias. Si lo piden suficientes personas, prepararemos el informe completo y lo abriremos en esta página.",
+    notifyCta: "Avísenme por correo (en inglés) →",
     disclaimer: "Es una lectura simbólica del Saju tradicional. Basa las decisiones importantes en hechos y en consejo profesional.",
   },
   role: {
