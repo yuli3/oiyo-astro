@@ -1,5 +1,6 @@
 import countryNames from "../data/reincarnation-country-names.json";
 import data from "../data/reincarnation-countries.json";
+import birthsByYear from "../data/reincarnation-births-by-year.json";
 
 export type WeightMode = "births" | "population";
 
@@ -42,27 +43,67 @@ export const REINCARNATION_HISTORY_MAX = 24;
 
 export const REINCARNATION_COUNTRIES = data.countries as ReincarnationCountry[];
 
-export function weightTotal(mode: WeightMode): number {
-  return REINCARNATION_COUNTRIES.reduce((sum, row) => sum + row[mode], 0);
+// Birth year for the births weight (2026-10-19, brainstorm B6). 2024 is "today" and uses each
+// row's `births`; the other years come from WPP 2024 (2050 is a projection). Population mode has
+// no year. A country without a WPP series (Channel Islands) weighs 0 in the other years.
+export const BIRTH_YEARS = [1950, 1990, 2024, 2050] as const;
+export type BirthYear = (typeof BIRTH_YEARS)[number];
+export const CURRENT_BIRTH_YEAR: BirthYear = 2024;
+export const BIRTHS_BY_YEAR_SOURCE = birthsByYear.source;
+const BIRTHS_BY_YEAR = birthsByYear.births as Record<string, Partial<Record<string, number>>>;
+
+export function parseBirthYear(raw: string | null | undefined): BirthYear {
+  const value = Number(raw);
+  return (BIRTH_YEARS as readonly number[]).includes(value) ? (value as BirthYear) : CURRENT_BIRTH_YEAR;
 }
 
-export function countryShare(row: ReincarnationCountry, mode: WeightMode): number {
-  const total = weightTotal(mode);
-  return total === 0 ? 0 : row[mode] / total;
+export function birthsIn(row: ReincarnationCountry, year: BirthYear = CURRENT_BIRTH_YEAR): number {
+  if (year === CURRENT_BIRTH_YEAR) return row.births;
+  return BIRTHS_BY_YEAR[row.iso3]?.[String(year)] ?? 0;
 }
 
-export function pickCountry(mode: WeightMode, random = Math.random): ReincarnationCountry {
-  let ticket = random() * weightTotal(mode);
+export function weightOf(row: ReincarnationCountry, mode: WeightMode, year: BirthYear = CURRENT_BIRTH_YEAR): number {
+  return mode === "births" ? birthsIn(row, year) : row.population;
+}
+
+const totals = new Map<string, number>();
+
+export function weightTotal(mode: WeightMode, year: BirthYear = CURRENT_BIRTH_YEAR): number {
+  const key = mode === "births" ? `births-${year}` : mode;
+  let total = totals.get(key);
+  if (total === undefined) {
+    total = REINCARNATION_COUNTRIES.reduce((sum, row) => sum + weightOf(row, mode, year), 0);
+    totals.set(key, total);
+  }
+  return total;
+}
+
+export function countryShare(row: ReincarnationCountry, mode: WeightMode, year: BirthYear = CURRENT_BIRTH_YEAR): number {
+  const total = weightTotal(mode, year);
+  return total === 0 ? 0 : weightOf(row, mode, year) / total;
+}
+
+export function pickCountry(mode: WeightMode, random = Math.random, year: BirthYear = CURRENT_BIRTH_YEAR): ReincarnationCountry {
+  let ticket = random() * weightTotal(mode, year);
+  let last = REINCARNATION_COUNTRIES[REINCARNATION_COUNTRIES.length - 1];
   for (const row of REINCARNATION_COUNTRIES) {
-    ticket -= row[mode];
+    const weight = weightOf(row, mode, year);
+    if (weight <= 0) continue;
+    last = row;
+    ticket -= weight;
     if (ticket <= 0) return row;
   }
-  return REINCARNATION_COUNTRIES[REINCARNATION_COUNTRIES.length - 1];
+  return last;
 }
 
-export function pickMany(mode: WeightMode, count: number, random = Math.random): ReincarnationCountry[] {
+export function pickMany(
+  mode: WeightMode,
+  count: number,
+  random = Math.random,
+  year: BirthYear = CURRENT_BIRTH_YEAR,
+): ReincarnationCountry[] {
   const n = Math.max(1, Math.min(20, Math.floor(count)));
-  return Array.from({ length: n }, () => pickCountry(mode, random));
+  return Array.from({ length: n }, () => pickCountry(mode, random, year));
 }
 
 export function projectLonLat(lon: number, lat: number): { x: number; y: number } {
@@ -131,12 +172,14 @@ export function byIso2(iso2: string): ReincarnationCountry | undefined {
   return REINCARNATION_COUNTRIES.find((row) => row.iso2 === code);
 }
 
-export function ranked(mode: WeightMode): ReincarnationCountry[] {
-  return [...REINCARNATION_COUNTRIES].sort((a, b) => b[mode] - a[mode] || a.iso3.localeCompare(b.iso3));
+export function ranked(mode: WeightMode, year: BirthYear = CURRENT_BIRTH_YEAR): ReincarnationCountry[] {
+  return [...REINCARNATION_COUNTRIES].sort(
+    (a, b) => weightOf(b, mode, year) - weightOf(a, mode, year) || a.iso3.localeCompare(b.iso3),
+  );
 }
 
-export function countryRank(row: ReincarnationCountry, mode: WeightMode): number {
-  return ranked(mode).findIndex((item) => item.iso3 === row.iso3) + 1;
+export function countryRank(row: ReincarnationCountry, mode: WeightMode, year: BirthYear = CURRENT_BIRTH_YEAR): number {
+  return ranked(mode, year).findIndex((item) => item.iso3 === row.iso3) + 1;
 }
 
 export function oneIn(share: number): number {
@@ -144,10 +187,15 @@ export function oneIn(share: number): number {
   return Math.max(1, Math.round(1 / share));
 }
 
-export function vsHome(row: ReincarnationCountry, home: ReincarnationCountry, mode: WeightMode): number {
-  const base = countryShare(home, mode);
+export function vsHome(
+  row: ReincarnationCountry,
+  home: ReincarnationCountry,
+  mode: WeightMode,
+  year: BirthYear = CURRENT_BIRTH_YEAR,
+): number {
+  const base = countryShare(home, mode, year);
   if (base <= 0) return 0;
-  return countryShare(row, mode) / base;
+  return countryShare(row, mode, year) / base;
 }
 
 export function yawToCenter(lon: number): number {
@@ -189,6 +237,8 @@ export type ReincarnationHistoryEntry = {
   at: string;
   mode: WeightMode;
   iso2: string[];
+  /** Absent in entries saved before 2026-10-19, which were all today's births. */
+  year?: BirthYear;
 };
 
 export function parseHistory(raw: unknown): ReincarnationHistoryEntry[] {
@@ -216,7 +266,8 @@ export function parseHistory(raw: unknown): ReincarnationHistoryEntry[] {
           .slice(0, 20)
       : [];
     if (!iso2.length) continue;
-    out.push({ id: rec.id.slice(0, 40), at: rec.at, mode, iso2 });
+    const year = typeof rec.year === "number" ? parseBirthYear(String(rec.year)) : undefined;
+    out.push({ id: rec.id.slice(0, 40), at: rec.at, mode, iso2, ...(year && year !== CURRENT_BIRTH_YEAR ? { year } : {}) });
     if (out.length >= REINCARNATION_HISTORY_MAX) break;
   }
   return out;

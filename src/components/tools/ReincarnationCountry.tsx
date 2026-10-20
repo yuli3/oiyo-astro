@@ -1,10 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Locale } from "../../i18n";
 import {
+  BIRTH_YEARS,
+  BIRTHS_BY_YEAR_SOURCE,
+  CURRENT_BIRTH_YEAR,
   REINCARNATION_COUNTRIES,
   REINCARNATION_HISTORY_KEY,
   REINCARNATION_META,
   appendHistory,
+  birthsIn,
   byIso2,
   countriesFromIso2,
   countryRank,
@@ -14,6 +18,7 @@ import {
   displayCountryName,
   formatShareIso2,
   oneIn,
+  parseBirthYear,
   parseHistory,
   parseShareIso2,
   pickMany,
@@ -23,6 +28,7 @@ import {
   ranked,
   tallyIso3,
   vsHome,
+  type BirthYear,
   type Continent,
   type ReincarnationCountry as Country,
   type ReincarnationHistoryEntry,
@@ -83,6 +89,13 @@ const COPY = {
   dustBirths: { ko: "초록 점 하나 ≈ 한 해 출생 {n}명. 반짝이는 금빛은 실제 출생 속도(초당 약 {r}명)로 출생 비중에 따라 켜집니다.", en: "Each green dot ≈ {n} births a year. Gold sparks light up at the real birth rate (about {r} per second), placed by birth share.", ja: "緑の点1つ ≈ 年間出生{n}人。金色のきらめきは実際の出生速度（毎秒約{r}人）で出生比重に沿って灯ります。", zh: "每个绿点 ≈ 每年 {n} 名新生儿。金色闪光按真实出生速度（每秒约 {r} 人）、按出生比重亮起。", fr: "Chaque point vert ≈ {n} naissances par an. Les étincelles dorées s’allument au rythme réel des naissances (environ {r} par seconde), selon la part des naissances.", es: "Cada punto verde ≈ {n} nacimientos al año. Las chispas doradas se encienden al ritmo real de nacimientos (unos {r} por segundo), según la proporción de nacimientos." },
   dustPopulation: { ko: "하늘색 점 하나 ≈ 지금 사는 사람 {n}명.", en: "Each blue dot ≈ {n} people alive today.", ja: "水色の点1つ ≈ いま生きている人{n}人。", zh: "每个蓝点 ≈ 现在活着的 {n} 人。", fr: "Chaque point bleu ≈ {n} personnes vivantes.", es: "Cada punto azul ≈ {n} personas vivas hoy." },
   ticker: { ko: "이 페이지를 연 뒤 세계에서 태어난 아기 ≈ {n}명", en: "Babies born worldwide since you opened this page ≈ {n}", ja: "このページを開いてから世界で生まれた赤ちゃん ≈ {n}人", zh: "打开本页后全球出生的婴儿 ≈ {n} 名", fr: "Bébés nés dans le monde depuis l’ouverture de cette page ≈ {n}", es: "Bebés nacidos en el mundo desde que abriste esta página ≈ {n}" },
+  bornIn: { ko: "태어난 해", en: "Birth year", ja: "生まれた年", zh: "出生年份", fr: "Année de naissance", es: "Año de nacimiento" },
+  bornInYear: { ko: "{y}년 출생 기준", en: "If born in {y}", ja: "{y}年生まれ基準", zh: "按{y}年出生", fr: "Si né en {y}", es: "Si naciera en {y}" },
+  birthsInYear: { ko: "{y}년 신생아", en: "Births in {y}", ja: "{y}年の新生児", zh: "{y}年新生儿", fr: "Naissances en {y}", es: "Nacimientos en {y}" },
+  yearNow: { ko: "지금", en: "now", ja: "現在", zh: "现在", fr: "aujourd’hui", es: "hoy" },
+  yearProjected: { ko: "추계", en: "projected", ja: "推計", zh: "预测", fr: "projection", es: "proyección" },
+  yearNote: { ko: "{y}년에 태어난 아기 수로 뽑습니다. 지구본의 점과 아래 삶의 통계는 지금 기준입니다.", en: "The draw uses births in {y}. The globe dots and the life statistics below are today’s.", ja: "{y}年に生まれた赤ちゃんの数で抽選します。地球儀の点と下の人生の統計は現在の値です。", zh: "按{y}年出生的婴儿数抽签。地球仪上的点和下方的人生统计是现在的数据。", fr: "Le tirage utilise les naissances de {y}. Les points du globe et les statistiques de vie ci-dessous sont ceux d’aujourd’hui.", es: "El sorteo usa los nacimientos de {y}. Los puntos del globo y las estadísticas de vida de abajo son de hoy." },
+  yearProjectionNote: { ko: "2050년은 UN 중위 추계입니다.", en: "2050 is a UN medium-variant projection.", ja: "2050年は国連の中位推計です。", zh: "2050年为联合国中方案预测。", fr: "2050 est une projection (variante moyenne de l’ONU).", es: "2050 es una proyección (variante media de la ONU)." },
   filterNote: { ko: "대륙 필터는 목록과 검색만 바꿉니다. 환생 추첨은 전 세계 출생·인구 비중 그대로입니다.", en: "The region filter changes the list and search only. The draw still uses worldwide birth and population weights.", ja: "大陸フィルターは一覧と検索だけを変えます。転生の抽選は世界の出生・人口比重のままです。", zh: "大洲筛选只改列表和搜索。投胎抽签仍按全世界出生与人口比重。", fr: "Le filtre régional ne change que la liste et la recherche. Le tirage garde les poids mondiaux.", es: "El filtro regional solo cambia la lista y la búsqueda. El sorteo sigue usando pesos mundiales." },
 };
 
@@ -139,16 +152,29 @@ function nameOf(row: Country, locale: Locale): string {
   return displayCountryName(row.iso2, locale, row.name);
 }
 
-function readQuery(): { mode: WeightMode; iso2: string[]; continent: Continent | "all" } {
-  if (typeof window === "undefined") return { mode: "births", iso2: [], continent: "all" };
+function readQuery(): { mode: WeightMode; iso2: string[]; continent: Continent | "all"; year: BirthYear } {
+  if (typeof window === "undefined") return { mode: "births", iso2: [], continent: "all", year: CURRENT_BIRTH_YEAR };
   const params = new URLSearchParams(window.location.search);
   const mode = params.get("mode") === "population" ? "population" : "births";
-  return { mode, iso2: parseShareIso2(params.get("c")), continent: parseContinent(params.get("region")) };
+  return {
+    mode,
+    iso2: parseShareIso2(params.get("c")),
+    continent: parseContinent(params.get("region")),
+    year: parseBirthYear(params.get("y")),
+  };
 }
 
-function shareMessage(locale: Locale, mode: WeightMode, rows: Country[]): string {
+function birthsLabel(locale: Locale, year: BirthYear): string {
+  return year === CURRENT_BIRTH_YEAR ? COPY.births[locale] : fill(COPY.birthsInYear[locale], { y: String(year) });
+}
+
+function birthChanceLabel(locale: Locale, year: BirthYear): string {
+  return year === CURRENT_BIRTH_YEAR ? COPY.birthChance[locale] : fill(COPY.bornInYear[locale], { y: String(year) });
+}
+
+function shareMessage(locale: Locale, mode: WeightMode, rows: Country[], year: BirthYear): string {
   const names = rows.map((row) => displayCountryName(row.iso2, locale, row.name)).join(", ");
-  const weight = mode === "population" ? COPY.population[locale] : COPY.births[locale];
+  const weight = mode === "population" ? COPY.population[locale] : birthsLabel(locale, year);
   return `${weight} · ${names}`;
 }
 
@@ -158,6 +184,7 @@ function newHistoryId() {
 
 export default function ReincarnationCountry({ locale }: Props) {
   const [mode, setMode] = useState<WeightMode>("births");
+  const [year, setYear] = useState<BirthYear>(CURRENT_BIRTH_YEAR);
   const [draws, setDraws] = useState(1);
   const [yaw, setYaw] = useState(20);
   const [results, setResults] = useState<Country[]>([]);
@@ -179,9 +206,11 @@ export default function ReincarnationCountry({ locale }: Props) {
   const latest = results[results.length - 1] ?? focus;
   const counts = useMemo(() => tallyIso3(results), [results]);
   const hitIso3 = useMemo(() => results.map((row) => row.iso3), [results]);
+  // Population has no birth year; only the births weight follows the picked year.
+  const drawYear: BirthYear = mode === "births" ? year : CURRENT_BIRTH_YEAR;
   const top = useMemo(
-    () => ranked(mode).filter((row) => matchesContinent(row, continent)).slice(0, 10),
-    [mode, continent],
+    () => ranked(mode, drawYear).filter((row) => matchesContinent(row, continent)).slice(0, 10),
+    [mode, drawYear, continent],
   );
   const options = useMemo(
     () =>
@@ -197,6 +226,7 @@ export default function ReincarnationCountry({ locale }: Props) {
   useEffect(() => {
     const incoming = readQuery();
     setMode(incoming.mode);
+    setYear(incoming.year);
     setContinent(incoming.continent);
     const sharedRows = countriesFromIso2(incoming.iso2);
     if (sharedRows.length) {
@@ -218,12 +248,13 @@ export default function ReincarnationCountry({ locale }: Props) {
     if (!ready || typeof window === "undefined") return;
     const params = new URLSearchParams();
     if (mode !== "births") params.set("mode", mode);
+    if (drawYear !== CURRENT_BIRTH_YEAR) params.set("y", String(drawYear));
     if (continent !== "all") params.set("region", continent);
     const codes = formatShareIso2((results.length ? results : latest ? [latest] : []).map((row) => row.iso2));
     if (codes) params.set("c", codes);
     const next = `${window.location.pathname}${params.toString() ? `?${params}` : ""}`;
     window.history.replaceState(null, "", next);
-  }, [ready, mode, continent, results, latest?.iso2]);
+  }, [ready, mode, drawYear, continent, results, latest?.iso2]);
 
   useEffect(() => () => {
     if (revealTimer.current) window.clearTimeout(revealTimer.current);
@@ -231,11 +262,11 @@ export default function ReincarnationCountry({ locale }: Props) {
 
   function roll() {
     const isReroll = results.length > 0;
-    const next = pickMany(mode, draws);
+    const next = pickMany(mode, draws, Math.random, drawYear);
     setResults(next);
     setSameSecond(sameSecondBirths());
     setFocus(next[next.length - 1] ?? null);
-    persistHistory(next, mode);
+    persistHistory(next, mode, drawYear);
     setDrawKey((key) => key + 1);
     // 2026-10-16: Privacy-safe funnel metrics (2026-10-14-reincarnation-growth-study.md §8 P0).
     // Never send drawn countries or user inputs to GA4.
@@ -269,12 +300,13 @@ export default function ReincarnationCountry({ locale }: Props) {
     if (row) setFocus(row);
   }
 
-  function persistHistory(next: Country[], nextMode: WeightMode) {
+  function persistHistory(next: Country[], nextMode: WeightMode, nextYear: BirthYear) {
     const entry: ReincarnationHistoryEntry = {
       id: newHistoryId(),
       at: new Date().toISOString(),
       mode: nextMode,
       iso2: next.map((row) => row.iso2),
+      ...(nextYear !== CURRENT_BIRTH_YEAR ? { year: nextYear } : {}),
     };
     setHistory((prev) => {
       const merged = appendHistory(prev, entry);
@@ -291,6 +323,7 @@ export default function ReincarnationCountry({ locale }: Props) {
     const rows = countriesFromIso2(entry.iso2);
     if (!rows.length) return;
     setMode(entry.mode);
+    setYear(entry.year ?? CURRENT_BIRTH_YEAR);
     setDraws(rows.length);
     setResults(rows);
     setFocus(rows[rows.length - 1] ?? null);
@@ -319,7 +352,7 @@ export default function ReincarnationCountry({ locale }: Props) {
     const rows = results.length ? results : [latest];
     const url = window.location.href;
     const title = nameOf(latest, locale);
-    const text = shareMessage(locale, mode, rows);
+    const text = shareMessage(locale, mode, rows, drawYear);
     try {
       if (navigator.share) {
         await navigator.share({ title, text, url });
@@ -347,7 +380,7 @@ export default function ReincarnationCountry({ locale }: Props) {
     if (!latest) return;
     gaEvent("share_click", { test_id: "reincarnation-country", share_surface: "text", mode });
     const rows = results.length ? results : [latest];
-    await navigator.clipboard.writeText(`${shareMessage(locale, mode, rows)}\n${window.location.href}`);
+    await navigator.clipboard.writeText(`${shareMessage(locale, mode, rows, drawYear)}\n${window.location.href}`);
     gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "text", share_outcome: "copied" });
     flashShared("text");
   }
@@ -370,9 +403,9 @@ export default function ReincarnationCountry({ locale }: Props) {
           </select>
         </label>
         <p className="mt-2">
-          {nameOf(home, locale)} · {COPY.birthChance[locale]} {formatPct(countryShare(home, "births"), locale)} (
-          {COPY.oneIn[locale]} {formatInt(oneIn(countryShare(home, "births")), locale)}) · {COPY.rank[locale]}{" "}
-          {countryRank(home, "births")}
+          {nameOf(home, locale)} · {birthChanceLabel(locale, year)} {formatPct(countryShare(home, "births", year), locale)} (
+          {COPY.oneIn[locale]} {formatInt(oneIn(countryShare(home, "births", year)), locale)}) · {COPY.rank[locale]}{" "}
+          {countryRank(home, "births", year)}
         </p>
       </div>
 
@@ -416,6 +449,34 @@ export default function ReincarnationCountry({ locale }: Props) {
           {COPY.spin[locale]}
         </button>
       </div>
+
+      {mode === "births" && (
+        <div>
+          <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">{COPY.bornIn[locale]}</p>
+          <div className="flex flex-wrap gap-2">
+            {BIRTH_YEARS.map((key) => (
+              <button
+                key={key}
+                type="button"
+                aria-pressed={year === key}
+                onClick={() => setYear(key)}
+                className={`min-h-11 rounded-full px-3 py-1.5 text-sm font-semibold sm:min-h-0 ${
+                  year === key ? "bg-primary text-primary-foreground" : "border border-border text-muted-foreground"
+                }`}
+              >
+                {key}
+                {key === CURRENT_BIRTH_YEAR ? ` · ${COPY.yearNow[locale]}` : key > CURRENT_BIRTH_YEAR ? ` · ${COPY.yearProjected[locale]}` : ""}
+              </button>
+            ))}
+          </div>
+          {year !== CURRENT_BIRTH_YEAR && (
+            <p className="mt-2 text-xs text-muted-foreground">
+              {fill(COPY.yearNote[locale], { y: String(year) })}
+              {year > CURRENT_BIRTH_YEAR ? ` ${COPY.yearProjectionNote[locale]}` : ""}
+            </p>
+          )}
+        </div>
+      )}
 
       <div>
         <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">{COPY.region[locale]}</p>
@@ -489,11 +550,11 @@ export default function ReincarnationCountry({ locale }: Props) {
           </div>
           <dl className="mt-3 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
             <div>
-              <dt className="text-slate-400">{COPY.birthChance[locale]}</dt>
+              <dt className="text-slate-400">{birthChanceLabel(locale, year)}</dt>
               <dd className="font-semibold">
-                {formatPct(countryShare(latest, "births"), locale)} · {COPY.oneIn[locale]}{" "}
-                {formatInt(oneIn(countryShare(latest, "births")), locale)} · {COPY.rank[locale]}{" "}
-                {countryRank(latest, "births")}
+                {formatPct(countryShare(latest, "births", year), locale)} · {COPY.oneIn[locale]}{" "}
+                {formatInt(oneIn(countryShare(latest, "births", year)), locale)} · {COPY.rank[locale]}{" "}
+                {countryRank(latest, "births", year)}
               </dd>
             </div>
             <div>
@@ -509,14 +570,14 @@ export default function ReincarnationCountry({ locale }: Props) {
               <dd>{formatInt(latest.population, locale)}</dd>
             </div>
             <div>
-              <dt className="text-slate-400">{COPY.births[locale]}</dt>
-              <dd>{formatInt(latest.births, locale)}</dd>
+              <dt className="text-slate-400">{birthsLabel(locale, year)}</dt>
+              <dd>{formatInt(birthsIn(latest, year), locale)}</dd>
             </div>
           </dl>
           {latest.iso3 !== home.iso3 && (
             <p className="mt-3 text-sm text-slate-600">
-              {COPY.vs[locale]} {nameOf(home, locale)}: {COPY.births[locale]}{" "}
-              {formatX(vsHome(latest, home, "births"), locale)} · {COPY.population[locale]}{" "}
+              {COPY.vs[locale]} {nameOf(home, locale)}: {birthsLabel(locale, year)}{" "}
+              {formatX(vsHome(latest, home, "births", year), locale)} · {COPY.population[locale]}{" "}
               {formatX(vsHome(latest, home, "population"), locale)}
             </p>
           )}
@@ -608,7 +669,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       )}
 
       <section>
-        <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400">{COPY.top[locale]} · {COPY[mode][locale]}</h2>
+        <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400">{COPY.top[locale]} · {mode === "births" ? birthsLabel(locale, year) : COPY.population[locale]}</h2>
         <ol className="mt-2 divide-y divide-slate-100 rounded-2xl border border-border bg-card">
           {top.map((row, i) => (
             <li key={row.iso3}>
@@ -624,7 +685,7 @@ export default function ReincarnationCountry({ locale }: Props) {
                   <CountryFlag iso2={row.iso2} className="h-3.5" />
                   <span className="truncate">{nameOf(row, locale)}</span>
                 </span>
-                <span className="shrink-0 tabular-nums text-muted-foreground">{formatPct(countryShare(row, mode), locale)}</span>
+                <span className="shrink-0 tabular-nums text-muted-foreground">{formatPct(countryShare(row, mode, drawYear), locale)}</span>
               </button>
             </li>
           ))}
@@ -657,7 +718,7 @@ export default function ReincarnationCountry({ locale }: Props) {
                       {rows.map((row) => nameOf(row, locale)).join(", ")}
                     </span>
                     <span className="text-xs text-slate-400">
-                      {when} · {COPY[entry.mode][locale]} · {rows.length}
+                      {when} · {entry.mode === "births" ? birthsLabel(locale, entry.year ?? CURRENT_BIRTH_YEAR) : COPY.population[locale]} · {rows.length}
                     </span>
                   </button>
                   <span className="shrink-0 text-[11px] font-bold uppercase tracking-wide text-slate-400">{COPY.restore[locale]}</span>
@@ -675,6 +736,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       </p>
       <p className="text-xs leading-relaxed text-slate-400">
         {COPY.source[locale]}: {REINCARNATION_META.source} ({REINCARNATION_META.asOf})
+        {drawYear !== CURRENT_BIRTH_YEAR ? ` · ${BIRTHS_BY_YEAR_SOURCE}` : ""}
       </p>
     </div>
   );

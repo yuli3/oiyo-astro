@@ -1,12 +1,14 @@
 import { useState, useMemo } from 'react';
 import type { Locale } from '../../i18n';
+import { holidaysKnown, krTaxDeadline } from '../../lib/finance/kr-business-day';
 
 /* ────────────────────────────────────────────────────────────────────────────
  * TaxCalendar — Korean annual tax-filing timeline. National (국세) + local (지방세)
  * deadlines on a 12-month track, filterable by taxpayer type, with a live D-day to
  * the next deadline. ko-first; other locales fall back to en for chrome. YMYL: dates
- * are the standard statutory windows — a holiday/weekend pushes the last day to the
- * next business day, so the tool links to the official portals for confirmation.
+ * are the standard statutory windows; when the last day is a weekend or holiday the
+ * card and the D-day use the next business day (kr-business-day.ts). The tool still
+ * links to the official portals for confirmation.
  * ────────────────────────────────────────────────────────────────────────── */
 
 type Payer = 'all' | 'individual' | 'soleprop' | 'corp';
@@ -73,6 +75,8 @@ interface UiLabels {
   national: string; local: string;
   target: string; deadline: string; official: string;
   months: string[];
+  weekdays: string[];
+  movedTo: string; weekendOnly: string;
   disclaimer: string;
 }
 
@@ -84,7 +88,9 @@ const L: Partial<Record<Locale, UiLabels>> = {
     national: '국세', local: '지방세',
     target: '대상', deadline: '기한', official: '공식 확인',
     months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    disclaimer: '기한 말일이 토·일·공휴일이면 다음 영업일로 순연돼요. 예정신고·성실신고·결산월 등 개별 사정에 따라 달라질 수 있으니, 정확한 일정과 금액은 홈택스(국세)·위택스(지방세)에서 확인하세요. 개인화된 세무 자문이 아니에요.',
+    weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+    movedTo: '휴일이라 실제 마감', weekendOnly: '공휴일 미반영',
+    disclaimer: '기한 말일이 토·일·공휴일이면 다음 영업일로 순연돼요(국세기본법 제5조). 카드와 D-day는 순연된 날짜로 보여 줘요. 예정신고·성실신고·결산월 등 개별 사정에 따라 달라질 수 있으니, 정확한 일정과 금액은 홈택스(국세)·위택스(지방세)에서 확인하세요. 개인화된 세무 자문이 아니에요.',
   },
   en: {
     title: 'Korean Tax Calendar', subtitle: 'A year of national & local filing deadlines at a glance',
@@ -93,7 +99,9 @@ const L: Partial<Record<Locale, UiLabels>> = {
     national: 'National', local: 'Local',
     target: 'Applies to', deadline: 'Window', official: 'Official',
     months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    disclaimer: 'If a deadline falls on a weekend or holiday it moves to the next business day. Preliminary/honest-reporting rules and fiscal year-end can change dates, so confirm exact schedules and amounts on Hometax (national) and Wetax (local). This is not personalized tax advice.',
+    weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    movedTo: 'Holiday, so actually due', weekendOnly: 'holidays not yet listed',
+    disclaimer: 'If a deadline falls on a weekend or holiday it moves to the next business day; the cards and the D-day already show the moved date. Preliminary/honest-reporting rules and fiscal year-end can change dates, so confirm exact schedules and amounts on Hometax (national) and Wetax (local). This is not personalized tax advice.',
   },
 };
 
@@ -109,21 +117,39 @@ export default function TaxCalendar({ locale }: Props) {
     [payer]
   );
 
-  const next = useMemo(() => {
+  // The coming occurrence of each deadline, moved past weekends and holidays.
+  const upcoming = useMemo(() => {
     const now = new Date();
-    const y = now.getFullYear();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const map = new Map<string, { statutory: Date; actual: Date }>();
+    for (const e of EVENTS) {
+      let statutory = new Date(today.getFullYear(), e.month - 1, e.day);
+      let actual = krTaxDeadline(statutory);
+      if (actual < today) {
+        statutory = new Date(today.getFullYear() + 1, e.month - 1, e.day);
+        actual = krTaxDeadline(statutory);
+      }
+      map.set(e.id, { statutory, actual });
+    }
+    return { today, map };
+  }, []);
+
+  const next = useMemo(() => {
     const cand = visible
-      .map((e) => {
-        let d = new Date(y, e.month - 1, e.day);
-        if (d < now) d = new Date(y + 1, e.month - 1, e.day);
-        return { e, d };
-      })
+      .map((e) => ({ e, d: upcoming.map.get(e.id)!.actual }))
       .sort((a, b) => a.d.getTime() - b.d.getTime());
     if (cand.length === 0) return null;
     const top = cand[0];
-    const days = Math.ceil((top.d.getTime() - now.getTime()) / 86400000);
-    return { ev: top.e, days };
-  }, [visible]);
+    const days = Math.round((top.d.getTime() - upcoming.today.getTime()) / 86400000);
+    return { ev: top.e, days, d: top.d };
+  }, [visible, upcoming]);
+
+  const fmtDay = (d: Date) => `${d.getMonth() + 1}/${d.getDate()}(${t.weekdays[d.getDay()]})`;
+  const moved = (id: string) => {
+    const u = upcoming.map.get(id)!;
+    if (u.actual.getTime() === u.statutory.getTime()) return null;
+    return `${t.movedTo} ${u.actual.getFullYear()} ${fmtDay(u.actual)}${holidaysKnown(u.statutory.getFullYear()) ? '' : ` · ${t.weekendOnly}`}`;
+  };
 
   const payers: Payer[] = ['all', 'individual', 'soleprop', 'corp'];
 
@@ -155,7 +181,7 @@ export default function TaxCalendar({ locale }: Props) {
           <div className="text-xs font-bold uppercase tracking-wider text-primary">{t.next}</div>
           <div className="mt-1 text-lg font-black text-foreground">{next.ev.name[lang]}</div>
           <div className="text-sm text-primary">
-            {next.ev.window} · <b>{next.days === 0 ? t.today : `${t.dday}${next.days}`}</b>
+            {next.d.getFullYear()} {fmtDay(next.d)} · <b>{next.days === 0 ? t.today : `${t.dday}${next.days}`}</b>
           </div>
         </div>
       )}
@@ -190,6 +216,7 @@ export default function TaxCalendar({ locale }: Props) {
                       <span className="text-sm font-bold text-gray-800">{e.name[lang]}</span>
                     </div>
                     <div className="mt-0.5 text-[11px] text-muted-foreground">{t.deadline} {e.window} · {e.note[lang]}</div>
+                    {moved(e.id) && <div className="mt-0.5 text-xs font-semibold text-foreground">{moved(e.id)}</div>}
                   </a>
                 ))}
               </div>
