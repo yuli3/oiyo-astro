@@ -9,30 +9,32 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params as { locale: Locale };
+// WHY 2026-10-21: This tool uses English passages in every UI locale;
+// distinguish its short drills from the localized one-minute typing-speed-test.
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
-    title: "타이핑 속도 테스트 — WPM 측정",
-    description: "15초·30초·1분 모드로 타이핑 속도(WPM)와 정확도를 즉시 측정해보세요.",
+    title: "영문 타자 연습 — 15초·30초·1분 WPM 측정",
+    description: "영문 지문으로 15초·30초·1분 동안 연습하며 WPM과 정확도를 확인해 보세요. 공식 자격증 시험이 아닌 짧은 타자 연습이에요.",
   },
   en: {
-    title: "Typing Speed Test — Measure Your WPM",
-    description: "Test your typing speed and accuracy in 15s, 30s or 1-minute mode. Track WPM, accuracy, and errors in real time.",
+    title: "English Typing Practice — 15, 30 & 60 Seconds",
+    description: "Practice with English passages for 15, 30 or 60 seconds and check your WPM and accuracy. This is a short practice drill, not an official certification exam.",
   },
   ja: {
-    title: "タイピング速度テスト — WPM測定",
-    description: "15秒・30秒・1分モードでタイピング速度(WPM)と正確率を即時測定できます。",
+    title: "英語タイピング練習 — 15秒・30秒・60秒でWPM測定",
+    description: "英語の文章を15秒・30秒・60秒で入力して、WPMと正確率を確認できます。公式な資格試験ではなく、短時間の練習用です。",
   },
   fr: {
-    title: "Test de vitesse de frappe — Mesurez votre WPM",
-    description: "Testez votre vitesse et précision de frappe en mode 15s, 30s ou 1 minute. Suivi en temps réel.",
+    title: "Frappe en anglais — Entraînement de 15, 30 ou 60 secondes",
+    description: "Entraînez-vous sur des textes anglais pendant 15, 30 ou 60 secondes et consultez votre vitesse et votre précision. Cet exercice ne constitue pas un examen de certification.",
   },
   es: {
-    title: "Test de velocidad de escritura — Mide tu PPM",
-    description: "Prueba tu velocidad y precisión de escritura en modo 15s, 30s o 1 minuto. Seguimiento en tiempo real.",
+    title: "Mecanografía en inglés — Práctica de 15, 30 o 60 segundos",
+    description: "Practica con textos en inglés durante 15, 30 o 60 segundos y consulta tu velocidad y precisión. Es un ejercicio breve, no un examen oficial de certificación.",
   },
   zh: {
-    title: "打字速度测试 — 测量你的WPM",
-    description: "在15秒、30秒或1分钟模式下测试你的打字速度和准确率，实时追踪WPM。",
+    title: "英文打字练习 — 15、30、60秒测速",
+    description: "用英文短文进行15秒、30秒或60秒练习，查看WPM和准确率。这是短时打字练习，不是官方认证考试。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
