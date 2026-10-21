@@ -5,8 +5,11 @@
 //
 //   npm i --no-save playwright-core        # 한 번만
 //   node scripts/shorts/render-tool-demo.mjs electricity [--base http://localhost:4321]
+//   node scripts/shorts/render-tool-demo.mjs game-today [--base http://localhost:4400]
 //
-// --base 를 안 주면 공개 사이트(https://blog.oiyo.net)를 찍는다. 로컬 dev 서버를 찍을 때는 Astro dev 툴바를 숨긴다.
+// --base 를 안 주면 데모의 기본 사이트(electricity는 https://blog.oiyo.net, game-today는 https://game.oiyo.net)를 찍는다.
+// 로컬 dev 서버를 찍을 때는 Astro dev 툴바를 숨긴다.
+// 데모가 `steps: async ({ page, snap, base, hideToolbar }) => {...}` 를 가지면 앞뒤 카드 사이를 그 순서로 찍는다.
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
@@ -29,6 +32,48 @@ const DEMOS = {
     outro: ["한 줄만 적으면", "누진 구간까지 계산해요"],
     url: "blog.oiyo.net 전기요금 계산기",
   },
+  // 포털 홈의 "오늘의 게임" 카드 → 그날 게임으로 들어가 몇 수 둔다. 오늘의 게임은 KST 날짜로만 정해지므로
+  // 페이지 시계를 2026-10-20 정오(KST)로 고정한다. 이날의 게임은 2048이라 방향 버튼 클릭만으로 보여 줄 수 있다.
+  "game-today": {
+    site: "https://game.oiyo.net",
+    intro: ["오늘은 뭐 하고 놀지?", "고민은 접어 두세요"],
+    introSub: "매일 자정, 오늘의 게임이 하나씩 열려요",
+    outro: ["매일 하나씩,", "새 게임이 기다려요"],
+    url: "game.oiyo.net 오늘의 게임",
+    steps: async ({ page, snap, base, hideToolbar }) => {
+      await page.clock.setFixedTime(new Date("2026-10-20T12:00:00+09:00"));
+      await page.goto(base + "/ko/", { waitUntil: "networkidle", timeout: 120000 });
+      await hideToolbar();
+      const card = page.locator("[data-todays-game]").first();
+      await page.locator("[data-todays-streak]:not([hidden])").first().waitFor({ timeout: 15000 });
+      await page.waitForTimeout(400);
+      await snap(1.6);
+      await card.evaluate((el) => el.scrollIntoView({ block: "center", behavior: "instant" }));
+      await page.waitForTimeout(400);
+      await snap(2.4);
+      await Promise.all([page.waitForURL(/\/ko\/[^/]+\/$/, { timeout: 120000 }), card.click()]);
+      await page.waitForLoadState("networkidle", { timeout: 120000 });
+      await hideToolbar();
+      // 게임 보드와 방향 버튼이 한 화면에 들어오게 맞춘다.
+      const pad = page.getByRole("button", { name: "Up", exact: true }).first();
+      await pad.waitFor({ timeout: 30000 });
+      await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+      await page.waitForTimeout(500);
+      await snap(1.6);
+      await page.evaluate(() => {
+        const down = document.querySelector('button[aria-label="Down"]');
+        window.scrollTo({ top: Math.max(0, down.getBoundingClientRect().bottom + window.scrollY - 620), behavior: "instant" });
+      });
+      await page.waitForTimeout(400);
+      await snap(1.2);
+      for (const dir of ["Left", "Up", "Right", "Up", "Left", "Down", "Left", "Up"]) {
+        await page.getByRole("button", { name: dir, exact: true }).first().click();
+        await page.waitForTimeout(260);
+        await snap(0.7);
+      }
+      await snap(1.0);
+    },
+  },
 };
 
 function card(lines, sub, accent) {
@@ -48,7 +93,7 @@ async function main() {
   const demo = DEMOS[id];
   if (!demo) throw new Error(`모르는 데모: ${id}`);
   const baseIdx = process.argv.indexOf("--base");
-  const base = baseIdx > 0 ? process.argv[baseIdx + 1] : "https://blog.oiyo.net";
+  const base = baseIdx > 0 ? process.argv[baseIdx + 1] : (demo.site ?? "https://blog.oiyo.net");
   const { chromium } = await import("playwright-core").catch(() => {
     throw new Error("playwright-core가 없어요. `npm i --no-save playwright-core` 후 다시 돌리세요.");
   });
@@ -67,8 +112,29 @@ async function main() {
   await page.setContent(card(demo.intro, { text: demo.introSub }, "#f2c94c"));
   await snap(2.8);
 
+  const hideToolbar = () => page.addStyleTag({ content: "astro-dev-toolbar{display:none!important}" });
+  if (demo.steps) await demo.steps({ page, snap, base, hideToolbar });
+  else await inputSteps(page, snap, base, demo, hideToolbar);
+
+  await page.setContent(card(demo.outro, { text: demo.url, accent: true }, "#f2c94c"));
+  await snap(3.0);
+  await browser.close();
+
+  const list = frames.flatMap(([f, s]) => [`file '${f}'`, `duration ${s}`]);
+  list.push(`file '${frames.at(-1)[0]}'`); // concat demuxer는 마지막 장면을 한 번 더 적어야 길이를 지킨다.
+  writeFileSync(join(dir, "frames.txt"), list.join("\n"));
+  const total = frames.reduce((a, [, s]) => a + s, 0);
+  const out = join(root, ".tmp/shorts/tool-demo", `${id}.mp4`);
+  execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", join(dir, "frames.txt"),
+    "-vf", "scale=1080:1920:flags=lanczos,fps=30,format=yuv420p", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+    "-movflags", "+faststart", "-an", "-t", total.toFixed(2), out]);
+  console.log(out, `${total.toFixed(1)}s`);
+}
+
+// 기본 순서: 도구 화면에서 한 줄 입력 → 채우기 → 결과 두 장면.
+async function inputSteps(page, snap, base, demo, hideToolbar) {
   await page.goto(base + demo.path, { waitUntil: "networkidle", timeout: 120000 });
-  await page.addStyleTag({ content: "astro-dev-toolbar{display:none!important}" });
+  await hideToolbar();
   const box = page.getByPlaceholder(demo.input.placeholder, { exact: false }).first();
   await box.evaluate((el) => el.scrollIntoView({ block: "center", behavior: "instant" }));
   await snap(1.0);
@@ -88,20 +154,6 @@ async function main() {
   await page.getByText(demo.extra, { exact: false }).first().evaluate((el) => el.scrollIntoView({ block: "center", behavior: "instant" }));
   await page.waitForTimeout(300);
   await snap(3.0);
-
-  await page.setContent(card(demo.outro, { text: demo.url, accent: true }, "#f2c94c"));
-  await snap(3.0);
-  await browser.close();
-
-  const list = frames.flatMap(([f, s]) => [`file '${f}'`, `duration ${s}`]);
-  list.push(`file '${frames.at(-1)[0]}'`); // concat demuxer는 마지막 장면을 한 번 더 적어야 길이를 지킨다.
-  writeFileSync(join(dir, "frames.txt"), list.join("\n"));
-  const total = frames.reduce((a, [, s]) => a + s, 0);
-  const out = join(root, ".tmp/shorts/tool-demo", `${id}.mp4`);
-  execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", join(dir, "frames.txt"),
-    "-vf", "scale=1080:1920:flags=lanczos,fps=30,format=yuv420p", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
-    "-movflags", "+faststart", "-an", "-t", total.toFixed(2), out]);
-  console.log(out, `${total.toFixed(1)}s`);
 }
 
 await main();
