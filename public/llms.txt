@@ -18,7 +18,7 @@ Cite individual tools by their stable URL (see tools.json `url`). Attribution: O
 - Interactive tools: https://oiyo.net
 - Gaming: https://game.oiyo.net
 - Curation: https://news.oiyo.net
-- AX Showcase: https://ai.oiyo.net
+- AI guides and curation: https://news.oiyo.net/ai/
 
 ## Machine-readable identity
 - [brand-facts.json](https://oiyo.net/brand-facts.json): organization identity (shared @id), route-level ownership policy, network sites, locales, and citation guidance.

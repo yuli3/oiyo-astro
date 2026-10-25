@@ -29,11 +29,6 @@
       "role": "curation"
     },
     {
-      "name": "OIYO AI",
-      "url": "https://ai.oiyo.net/",
-      "role": "ax-showcase"
-    },
-    {
       "name": "Oiyo Wiki",
       "url": "https://wiki.oiyo.net/",
       "role": "reference-and-knowledge",
