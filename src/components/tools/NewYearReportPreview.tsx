@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Lock } from "lucide-react";
+import { BokssiThanks } from "./BokssiThanks";
 
 import { BirthDateField } from "@/components/shared/BirthDateField";
 import { Badge } from "@/components/ui/badge";
@@ -183,6 +184,7 @@ export default function NewYearReportPreview({ locale }: Props) {
           </Card>
 
           <p className="text-xs text-muted-foreground">{copy.ui.disclaimer}</p>
+          <BokssiThanks locale={locale} />
         </>
       )}
     </div>
