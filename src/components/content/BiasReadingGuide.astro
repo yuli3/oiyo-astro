@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  items: { name: string; explanation: string }[];
+  note: string;
+}
+const { title, items, note } = Astro.props;
+// WHY 2026-10-25: these comparisons explain different concepts, not scores or
+// a compulsory sequence. Keep all labels and caveats visible without hydration.
+---
+<figure class="my-5 space-y-3 border-y border-border py-4" data-bias-reading-guide>
+  <figcaption class="text-base font-semibold leading-relaxed">{title}</figcaption>
+  <dl class="m-0 grid gap-3 sm:grid-cols-2">
+    {items.map(item => <div class="min-w-0 rounded-lg border border-border bg-muted/20 p-3">
+      <dt class="break-words font-semibold leading-relaxed">{item.name}</dt>
+      <dd class="m-0 mt-1 break-words text-sm leading-relaxed">{item.explanation}</dd>
+    </div>)}
+  </dl>
+  <p class="text-sm leading-relaxed text-muted-foreground">{note}</p>
+</figure>

@@ -8,52 +8,68 @@ tags:
   - organizations
   - policy
   - statistics
-description: "We search where it is easy, look only at what survived, and hit the number while missing the point. Five traps that make people and organisations look in the wrong place, with historical cases, research and critiques."
+description: "Distinguish observed and missing groups, real objectives and proxy metrics, and the different status of five concepts, historical illustrations and policy evidence."
 pubDate: '2026-09-29'
+updatedDate: '2026-10-25'
 topic: cognitive-bias
 ---
 
-## The problem is not the answer but where we look
+import BiasReadingGuide from "@/components/content/BiasReadingGuide.astro";
 
-What undermines good judgement is often not a wrong calculation but **looking in the wrong place**. When our gaze is drawn to where the data is, what stands out, or numbers that are easy to measure, we miss what matters. This article covers five traps common in individuals and organisations.
+## Separate observation, metrics and policy hypotheses
 
-## The streetlight effect: searching where it is easy
+These five labels are not the same kind of “psychological law.” The streetlight effect is a metaphor about observation; survivorship bias concerns inference from a selected sample. The cobra effect names an incentive problem, broken windows is a debated social and policy hypothesis, and the law of triviality is an organisational satire.
 
-A man is looking for his keys under a streetlight at night. A passer-by asks, "Did you lose them here?" "No, over in the park. But the light is better here." Philosopher Abraham Kaplan (1964) used this story to warn that researchers tend to choose questions that are **easy to measure** rather than those that matter.
+Before asking whether a calculation is correct, ask **who was counted, and which number stands in for which purpose**. Naming an effect does not establish a cause or a remedy.
 
-It is common in everyday life too: when sales fall, staring only at the metrics already on the dashboard whatever the cause, or tracking step counts because they are easy to measure while calling it "looking after your health."
+<BiasReadingGuide title="Check the observation boundary and the purpose separately" items={[
+{name:"Observed group ↔ missing group",explanation:"Responding customers ↔ former customers and nonrespondents. Success stories alone cannot give an overall success rate."},
+{name:"Actual purpose ↔ proxy measure",explanation:"Solving problems ↔ tickets closed. Check whether quickly closed requests return."}
+]} note="Imagined editorial examples, not measured results or policy evaluations. Check group sizes, reasons for missingness and metric definitions." />
 
-**Check question**: "Where is the answer likely to be — and is that where I am looking?"
+## Streetlight effect: easy to search versus likely to answer
 
-## Survivorship bias: look only at survivors and the conclusion flips
+The story of searching for keys only under a streetlight distinguishes “easy to see” from “likely to contain the answer.” Here it is an illustration, not a verified event or a documented quotation by a historical person.
 
-During the Second World War, statistician Abraham Wald analysed bullet holes in bombers returning from missions. Some argued for armouring the wings and fuselage, which had the most holes. Wald argued the opposite: **armour the places with no holes**, such as the engines, because planes hit there did not come back (his analysis is described by Mangel & Samaniego, 1984).
+If sales decline, clicks already on a dashboard may omit refund reasons or the experience of customers who abandoned a purchase. That does not make the current metric useless. It means specifying the questions it cannot answer.
 
-Stories of "the college dropout who became a billionaire" or "how I got rich doing this" fall into the same trap. The people who did the same things and failed do not become stories.
+**Check question**: “Where might the answer be, and does this evidence include that place?”
 
-**Check question**: "Who is invisible in this conclusion — where are the failures that disappeared?"
+## Survivorship bias: investigate unobserved cases
 
-## The cobra effect: reward the number and you get the number
+Survivorship bias arises when visible or surviving cases are used to infer outcomes for a group that also contains unobserved cases. Stories of successful founders omit failures, withdrawals and nonresponse when used to estimate success probabilities.
 
-In 1902 the French colonial government in Hanoi paid a bounty for rat tails to reduce the rat population. Soon, living rats without tails were being found in the streets: cutting off the tail and letting the rat breed kept the bounties coming (Vann, 2003). When an incentive produces the opposite of its purpose, it is often called the **cobra effect** (Siebert, 2001).
+Wald’s aircraft survivability work is a familiar illustration ([Mangel and Samaniego, 1984](https://doi.org/10.1080/01621459.1984.10478038)). Treat the popular “armour where there are no holes” diagram as a compressed explanation of selection, not a reconstruction here of an exact wartime conversation or every aircraft’s fate.
 
-Economist Charles Goodhart (1975) made the observation now summarised as "when a measure becomes a target, it ceases to be a good measure," and social scientist Donald Campbell (1979) warned that the more a quantitative indicator is used for decisions, the more it is subject to **corruption and distortion pressures**.
+**Check question**: “Who entered the sample, why, and how could missing outcomes be investigated?” Missing cases increase uncertainty; they do not simply reverse the observed success rate.
 
-**Check question**: "Does the easiest way to raise this number harm the real goal?"
+## Cobra effect: when the metric and the goal diverge
 
-## Broken windows: does disorder breed disorder?
+The cobra effect names a possible mismatch between a rewarded metric and the actual objective. It is not a law that all rewards fail or everyone manipulates metrics.
 
-Wilson and Kelling (1982) argued that leaving one broken window unrepaired signals that "nobody cares," inviting greater disorder and crime. In field experiments by Keizer and colleagues (2008), people in an alley covered with graffiti littered more, supporting the idea that **signs of disorder increase rule-breaking**.
+The Hanoi rat hunt is a case in Vann’s historical research; see an [interview with the researcher](https://madeinchinajournal.com/2020/08/20/the-great-hanoi-rat-hunt/). Do not reduce every participant’s motive or all colonial policy outcomes to money alone. The Indian cobra bounty story is not presented here as a verified event.
 
-Whether **aggressive enforcement of minor offences** based on this theory reduced crime, however, is hotly debated. Harcourt and Ludwig (2006) found it hard to credit New York's crime decline to the policy, and a meta-analysis of multiple studies (Braga et al., 2015) found that **community problem-solving that improved places** reduced crime, while aggressive arrest-focused tactics showed no clear effect.
+Rewarding only closed tickets could encourage postponing difficult cases or closing easy ones prematurely. This is a **hypothetical design risk**, not an allegation of observed manipulation. Examine speed alongside repeat contacts and actual resolution.
 
-**Check question**: "Which actually worked — fixing small signals, or punishing people?"
+**Check question**: “Does the easiest route to a higher number also advance the real objective?”
 
-## The law of triviality: the easier the item, the longer the debate
+## Broken windows: environmental cues are not policy effects
 
-C. Northcote Parkinson (1957) satirised a committee that approved the budget for a nuclear reactor in minutes, then argued at length about the roofing material for a staff bicycle shed. The reactor was too complex for anyone to comment on, but **everyone could say something** about a bike shed. This is the **law of triviality**, often called "bikeshedding."
+Broken windows proposes that signals of minor disorder can influence behaviour and local order. Experiments about environmental cues, changes in neighbourhood crime and evaluations of enforcement are different questions. Evidence for one does not automatically establish the other two.
 
-**Check question**: "Is the item we are discussing longest really the most important one?" Setting importance and time for each agenda item in advance helps.
+[Braga and colleagues’ 2015 systematic review and meta-analysis](https://doi.org/10.1177/0022427815576576) reports differences across interventions. Community problem-solving at places should not be treated as interchangeable with aggressive enforcement against individual minor offences.
+
+Compare controls, other changes over the same period, crime outcomes, implementation and adverse effects. This article does not recommend expanding enforcement or punishment in any country, and is not current local legal guidance.
+
+**Check question**: “What intervention changed, what outcome was measured, and how far were alternative explanations ruled out?”
+
+## Law of triviality: satire versus meeting evaluation
+
+Parkinson’s bicycle-shed story **satirises** a committee discussing an accessible roofing decision longer than a complex reactor budget. It is not an experimentally established law of all meetings, or evidence that small agenda items never matter.
+
+Long discussion may be necessary when safety, responsibility or interests are complex. Identify impact and irreversibility before judging the time spent. Do not cut discussion merely because it is long.
+
+**Check question**: “Does discussion time fit the impact, risk and uncertainty that need resolving?”
 
 ## Checklist at a glance
 
@@ -65,7 +81,7 @@ C. Northcote Parkinson (1957) satirised a committee that approved the budget for
 | Broken windows | Which approach actually worked? |
 | Law of triviality | Is the longest discussion the most important item? |
 
-All five arise **when what is easy to see differs from what matters**. Asking "where am I looking right now?" before deciding can save a great deal of wasted effort.
+This checklist is a thinking aid, not a proven guarantee of fewer errors. Compare actual evidence and alternatives, and record what would change your judgement.
 
 ---
 
