@@ -20,7 +20,10 @@ interface Props {
   slot?: string;
 }
 
-const { locale = "ko", noindex = false, slot = "2768903568" } = Astro.props as Props;
+// Off switch: false removes the unit from every page. oiyo-main-result-below has been oiyo.net's own
+// unit since 2026-10-26; before that it borrowed blog's article-end slot, which mixed the per-site numbers.
+const ENABLED = true;
+const { locale = "ko", noindex = false, slot = "9017730065" } = Astro.props as Props;
 const client = "ca-pub-9541920090543312";
 
 const LABEL: Record<string, string> = {
@@ -39,7 +42,7 @@ const payload = JSON.stringify({
 });
 ---
 
-{!noindex && (
+{ENABLED && !noindex && (
   <aside class="my-10 min-h-72 rounded-2xl border border-border bg-card/60 p-3 shadow-xs max-w-3xl mx-auto" data-manual-ad="oiyo-result-below" aria-label={LABEL[locale] ?? LABEL.en}>
     <p class="mb-1 text-center text-xs text-muted-foreground">{LABEL[locale] ?? LABEL.en}</p>
     <ins
