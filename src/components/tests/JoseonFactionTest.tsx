@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { FACTIONS, getFactionCopy } from '@/data/joseon-faction-locales'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import { markOntologyCoordinateRecorded } from '@/lib/ontology/progress'
 import { recordTestResult } from '@/lib/user/test-results'
@@ -102,35 +103,6 @@ const LABELS: Record<Locale, {
   zh: { title: '朝鲜王朝派系测试', subtitle: '如果你是朝鲜官员，你会属于哪个派系？', start: '开始测试', restart: '重新测试', result: '你的派系', share: '分享结果', yourFaction: '你是', traitLabel: '核心特质', descLabel: '描述', histLabel: '历史背景', note: '此测试仅供历史兴趣之用。', progress: (c, t) => `${c} / ${t}` },
 }
 
-const FACTIONS: Record<FactionKey, {
-  ko: { name: string; desc: string; traits: string[]; history: string; color: string; emoji: string }
-  en: { name: string; desc: string; traits: string[]; history: string; color: string; emoji: string }
-}> = {
-  dongin: {
-    ko: { name: '동인 (東人)', desc: '학문의 순수성과 이상 사회를 꿈꾸는 원칙주의자. 도덕적 신념이 강하고 타협보다 원칙을 선택합니다.', traits: ['이상주의', '원칙 중시', '학문적', '도덕적 신념 강함'], history: '이황의 제자들 중심. 남인과 북인으로 분화되며, 정여립의 난 이후 서인에게 압박받았습니다.', color: 'blue', emoji: '📜' },
-    en: { name: 'Dongin (Eastern)', desc: 'A principled idealist who dreams of scholarly purity and an ideal society. Strong moral convictions and prefers principle over compromise.', traits: ['Idealism', 'Principle-oriented', 'Scholarly', 'Strong morality'], history: 'Centered around disciples of Yi Hwang. Split into Namin and Bukin; pressured by Seoin after the Jeong Yeo-rip rebellion.', color: 'blue', emoji: '📜' },
-  },
-  seoin: {
-    ko: { name: '서인 (西人)', desc: '현실적 효율과 체계적 질서를 중시하는 실용주의자. 논리적이고 제도 안에서 최대 성과를 추구합니다.', traits: ['현실주의', '효율적', '체계적', '논리적'], history: '이이의 제자들 중심. 노론과 소론으로 분화되며, 17세기 이후 정치 주도권을 잡았습니다.', color: 'amber', emoji: '⚖️' },
-    en: { name: 'Seoin (Western)', desc: 'A pragmatist who values realistic efficiency and systematic order. Logical and seeks maximum results within established systems.', traits: ['Realism', 'Efficient', 'Systematic', 'Logical'], history: 'Centered around disciples of Yi I. Split into Noron and Soron; dominated politics after the 17th century.', color: 'amber', emoji: '⚖️' },
-  },
-  namin: {
-    ko: { name: '남인 (南人)', desc: '학문적 깊이와 절제된 균형을 추구하는 온건파. 극단을 피하고 조화와 포용을 중시합니다.', traits: ['조화 추구', '학문적 깊이', '온건', '포용력'], history: '동인에서 분리. 숙종 시대 권력을 잡았으나 갑술환국으로 몰락. 실학자들이 많이 배출되었습니다.', color: 'green', emoji: '🌿' },
-    en: { name: 'Namin (Southern)', desc: 'A moderate who seeks scholarly depth and restrained balance. Avoids extremes and values harmony and inclusivity.', traits: ['Harmony', 'Scholarly depth', 'Moderate', 'Inclusive'], history: 'Split from Dongin. Rose to power during Sukjong\'s reign but fell during the Gapsul Hwanguk. Produced many Silhak scholars.', color: 'green', emoji: '🌿' },
-  },
-  bukin: {
-    ko: { name: '북인 (北人)', desc: '강한 실천의식과 과감한 개혁 정신을 가진 행동파. 신념에 따른 결과를 중시하고 변화를 두려워하지 않습니다.', traits: ['실천적', '개혁 정신', '단호함', '결과 지향'], history: '동인에서 분리. 광해군을 지지하며 집권했으나, 인조반정으로 몰락하여 이후 정치에서 완전히 배제되었습니다.', color: 'red', emoji: '⚡' },
-    en: { name: 'Bukin (Northern)', desc: 'An activist with strong conviction and bold reformist spirit. Values results over process and embraces change.', traits: ['Action-oriented', 'Reformist', 'Decisive', 'Results-driven'], history: 'Split from Dongin. Supported King Gwanghaegun and rose to power, but fell during the Injo Coup and was permanently excluded from politics.', color: 'red', emoji: '⚡' },
-  },
-  noron: {
-    ko: { name: '노론 (老論)', desc: '전통 질서와 정당성을 수호하는 보수파. 탄탄한 논리와 조직력으로 안정을 추구하며, 검증된 방식을 신뢰합니다.', traits: ['전통 수호', '조직적', '보수적', '안정 추구'], history: '서인에서 분리. 송시열을 중심으로 강력한 세력을 형성하고, 조선 후기 정치를 170년 이상 주도했습니다.', color: 'purple', emoji: '🏛️' },
-    en: { name: 'Noron (Old Doctrine)', desc: 'A conservative who guards traditional order and legitimacy. Seeks stability through strong logic and organization; trusts proven methods.', traits: ['Tradition', 'Organized', 'Conservative', 'Stability-seeking'], history: 'Split from Seoin. Formed a strong force around Song Si-yeol and dominated late Joseon politics for over 170 years.', color: 'purple', emoji: '🏛️' },
-  },
-  soron: {
-    ko: { name: '소론 (少論)', desc: '유연한 사고와 진보적 개방성을 가진 실용적 개혁파. 다양한 목소리를 수용하며 의미 있는 변화를 선도합니다.', traits: ['유연성', '진보적', '개방적', '실용적'], history: '서인에서 분리. 경종을 지지하며 노론에 대항했으나, 영조 시대 이후 정치적 영향력을 잃었습니다.', color: 'teal', emoji: '🌊' },
-    en: { name: 'Soron (Young Doctrine)', desc: 'A pragmatic progressive with flexible thinking and openness. Embraces diverse voices and leads meaningful change.', traits: ['Flexibility', 'Progressive', 'Open-minded', 'Pragmatic'], history: 'Split from Seoin. Supported King Gyeongjong against Noron, but lost political influence after King Yeongjo\'s reign.', color: 'teal', emoji: '🌊' },
-  },
-}
 
 const QUESTIONS: Record<Locale, Question[]> = {
   ko: [
@@ -237,9 +209,7 @@ export default function JoseonFactionTest({ locale }: Props) {
 
   const restart = () => { setStarted(false); setCurrent(0); setScores({ dongin: 0, seoin: 0, namin: 0, bukin: 0, noron: 0, soron: 0 }); setResult(null) }
 
-  const isKo = locale === 'ko'
-  const faction = result ? FACTIONS[result] : null
-  const fd = faction ? (isKo ? faction.ko : faction.en) : null
+  const fd = result ? getFactionCopy(result, locale) : null
 
   useEffect(() => {
     if (!result || !fd) return
@@ -264,7 +234,7 @@ export default function JoseonFactionTest({ locale }: Props) {
         <p className="text-muted-foreground">{l.subtitle}</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-lg mx-auto text-sm">
           {(Object.keys(FACTIONS) as FactionKey[]).map(k => {
-            const f = isKo ? FACTIONS[k].ko : FACTIONS[k].en
+            const f = getFactionCopy(k, locale)
             return (
               <div key={k} className={`rounded-xl border p-2.5 ${COLORS[f.color]}`}>
                 <span className="mr-1">{f.emoji}</span>{f.name}
@@ -280,7 +250,7 @@ export default function JoseonFactionTest({ locale }: Props) {
   }
 
   if (result && fd) {
-    const f = isKo ? FACTIONS[result].ko : FACTIONS[result].en
+    const f = getFactionCopy(result, locale)
     return (
       <div className="space-y-6 py-4">
         <div className="text-center">
