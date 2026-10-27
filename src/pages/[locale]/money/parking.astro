@@ -39,7 +39,7 @@ const content: Record<string, {
     relatedTitle: '함께 보면 좋은 것',
     related: [
       { href: '/strengths/keywords', label: '강점 키워드 찾기', desc: '내 가치관 점검.' },
-      { href: '/lotto/simulator', label: '로또 당첨 시뮬', desc: '목돈이 생긴다면 우선순위는?' },
+      { href: 'https://tools.oiyo.net/ko/lotto/', label: '로또 실수령액·써 보기', desc: '목돈이 생긴다면 우선순위는?' },
       { href: '/journal/today', label: '오늘의 저널', desc: '돈에 대한 내 생각 적기.' },
     ],
     disclaimer: '교육용 일반 정보이며 투자·금융 권유가 아니에요. 금리·세제·예금자보호 한도는 변동되니 각 금융사·공식 사이트(금융감독원·각 사)에서 반드시 확인하세요.',
@@ -50,14 +50,15 @@ const content: Record<string, {
     relatedTitle: 'Pairs well with',
     related: [
       { href: '/strengths/keywords', label: 'Strength Keywords', desc: 'Check your values.' },
-      { href: '/lotto/simulator', label: 'Lotto Win Simulator', desc: 'If a windfall came, your priorities?' },
+      { href: 'https://tools.oiyo.net/en/lotto/', label: 'Lotto after tax and spend', desc: 'If a windfall came, your priorities?' },
       { href: '/journal/today', label: "Today's Journal", desc: 'Write your thoughts on money.' },
     ],
     disclaimer: 'General educational info, not financial advice. Rates, tax rules, and insurance limits change — verify with each institution and official regulators.',
   },
 };
 const c = content[locale] ?? content.en;
-const localizedRelated = c.related.map((item) => ({ ...item, href: withTrailingSlash(`/${locale}${item.href}`) }));
+// The lotto simulator moved to tools.oiyo.net on 2026-10-27 (W3); absolute links stay as they are.
+const localizedRelated = c.related.map((item) => ({ ...item, href: item.href.startsWith('https://') ? item.href : withTrailingSlash(`/${locale}${item.href}`) }));
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
