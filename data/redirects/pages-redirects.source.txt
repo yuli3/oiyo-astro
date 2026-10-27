@@ -24,6 +24,32 @@
 /es/financial-ratios https://blog.oiyo.net/es/financial-ratios/ 301
 /es/financial-ratios/ https://blog.oiyo.net/es/financial-ratios/ 301
 
+# ── 2026-10-27 (W4): 해외주식 양도세·해외금융계좌 자가진단은 tools.oiyo.net으로 옮겼다 ──
+/ko/overseas-stock-tax https://tools.oiyo.net/ko/overseas-stock-tax/ 301
+/ko/overseas-stock-tax/ https://tools.oiyo.net/ko/overseas-stock-tax/ 301
+/en/overseas-stock-tax https://tools.oiyo.net/en/overseas-stock-tax/ 301
+/en/overseas-stock-tax/ https://tools.oiyo.net/en/overseas-stock-tax/ 301
+/ja/overseas-stock-tax https://tools.oiyo.net/ja/overseas-stock-tax/ 301
+/ja/overseas-stock-tax/ https://tools.oiyo.net/ja/overseas-stock-tax/ 301
+/zh/overseas-stock-tax https://tools.oiyo.net/zh/overseas-stock-tax/ 301
+/zh/overseas-stock-tax/ https://tools.oiyo.net/zh/overseas-stock-tax/ 301
+/fr/overseas-stock-tax https://tools.oiyo.net/fr/overseas-stock-tax/ 301
+/fr/overseas-stock-tax/ https://tools.oiyo.net/fr/overseas-stock-tax/ 301
+/es/overseas-stock-tax https://tools.oiyo.net/es/overseas-stock-tax/ 301
+/es/overseas-stock-tax/ https://tools.oiyo.net/es/overseas-stock-tax/ 301
+/ko/foreign-account https://tools.oiyo.net/ko/foreign-account/ 301
+/ko/foreign-account/ https://tools.oiyo.net/ko/foreign-account/ 301
+/en/foreign-account https://tools.oiyo.net/en/foreign-account/ 301
+/en/foreign-account/ https://tools.oiyo.net/en/foreign-account/ 301
+/ja/foreign-account https://tools.oiyo.net/ja/foreign-account/ 301
+/ja/foreign-account/ https://tools.oiyo.net/ja/foreign-account/ 301
+/zh/foreign-account https://tools.oiyo.net/zh/foreign-account/ 301
+/zh/foreign-account/ https://tools.oiyo.net/zh/foreign-account/ 301
+/fr/foreign-account https://tools.oiyo.net/fr/foreign-account/ 301
+/fr/foreign-account/ https://tools.oiyo.net/fr/foreign-account/ 301
+/es/foreign-account https://tools.oiyo.net/es/foreign-account/ 301
+/es/foreign-account/ https://tools.oiyo.net/es/foreign-account/ 301
+
 # ── 2026-10-27 (W3): 세금 달력·메뉴 룰렛·로또 시뮬레이터는 tools.oiyo.net 한 벌로 옮겼다 ──
 /ko/tax-calendar https://tools.oiyo.net/ko/tax-calendar/ 301
 /ko/tax-calendar/ https://tools.oiyo.net/ko/tax-calendar/ 301
