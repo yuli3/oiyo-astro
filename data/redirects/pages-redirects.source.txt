@@ -24,6 +24,44 @@
 /es/financial-ratios https://blog.oiyo.net/es/financial-ratios/ 301
 /es/financial-ratios/ https://blog.oiyo.net/es/financial-ratios/ 301
 
+# ── 2026-10-27 (W3): 세금 달력·메뉴 룰렛·로또 시뮬레이터는 tools.oiyo.net 한 벌로 옮겼다 ──
+/ko/tax-calendar https://tools.oiyo.net/ko/tax-calendar/ 301
+/ko/tax-calendar/ https://tools.oiyo.net/ko/tax-calendar/ 301
+/en/tax-calendar https://tools.oiyo.net/en/tax-calendar/ 301
+/en/tax-calendar/ https://tools.oiyo.net/en/tax-calendar/ 301
+/ja/tax-calendar https://tools.oiyo.net/ja/tax-calendar/ 301
+/ja/tax-calendar/ https://tools.oiyo.net/ja/tax-calendar/ 301
+/zh/tax-calendar https://tools.oiyo.net/zh/tax-calendar/ 301
+/zh/tax-calendar/ https://tools.oiyo.net/zh/tax-calendar/ 301
+/fr/tax-calendar https://tools.oiyo.net/fr/tax-calendar/ 301
+/fr/tax-calendar/ https://tools.oiyo.net/fr/tax-calendar/ 301
+/es/tax-calendar https://tools.oiyo.net/es/tax-calendar/ 301
+/es/tax-calendar/ https://tools.oiyo.net/es/tax-calendar/ 301
+/ko/menu/roulette https://tools.oiyo.net/ko/menu-roulette/ 301
+/ko/menu/roulette/ https://tools.oiyo.net/ko/menu-roulette/ 301
+/en/menu/roulette https://tools.oiyo.net/en/menu-roulette/ 301
+/en/menu/roulette/ https://tools.oiyo.net/en/menu-roulette/ 301
+/ja/menu/roulette https://tools.oiyo.net/ja/menu-roulette/ 301
+/ja/menu/roulette/ https://tools.oiyo.net/ja/menu-roulette/ 301
+/zh/menu/roulette https://tools.oiyo.net/zh/menu-roulette/ 301
+/zh/menu/roulette/ https://tools.oiyo.net/zh/menu-roulette/ 301
+/fr/menu/roulette https://tools.oiyo.net/fr/menu-roulette/ 301
+/fr/menu/roulette/ https://tools.oiyo.net/fr/menu-roulette/ 301
+/es/menu/roulette https://tools.oiyo.net/es/menu-roulette/ 301
+/es/menu/roulette/ https://tools.oiyo.net/es/menu-roulette/ 301
+/ko/lotto/simulator https://tools.oiyo.net/ko/lotto/ 301
+/ko/lotto/simulator/ https://tools.oiyo.net/ko/lotto/ 301
+/en/lotto/simulator https://tools.oiyo.net/en/lotto/ 301
+/en/lotto/simulator/ https://tools.oiyo.net/en/lotto/ 301
+/ja/lotto/simulator https://tools.oiyo.net/ja/lotto/ 301
+/ja/lotto/simulator/ https://tools.oiyo.net/ja/lotto/ 301
+/zh/lotto/simulator https://tools.oiyo.net/zh/lotto/ 301
+/zh/lotto/simulator/ https://tools.oiyo.net/zh/lotto/ 301
+/fr/lotto/simulator https://tools.oiyo.net/fr/lotto/ 301
+/fr/lotto/simulator/ https://tools.oiyo.net/fr/lotto/ 301
+/es/lotto/simulator https://tools.oiyo.net/es/lotto/ 301
+/es/lotto/simulator/ https://tools.oiyo.net/es/lotto/ 301
+
 # ── wiki 에서 넘어온 meaning-of-* 를 실제 페이지로 보낸다 (2026-09-03) ──
 # wiki 는 /:lang/meaning-of-* 한 줄로 이쪽에 넘긴다. 주제별 목적지 매핑을
 # 거기 두면 wiki 의 규칙 예산을 먹어 뒤쪽 정적 규칙이 죽었다(실측). oiyo 는

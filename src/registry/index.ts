@@ -58,30 +58,6 @@ const journalManifest: FeatureManifest = {
   },
 };
 
-// Payday Menu Roulette — random meal picker + small treat idea (G11).
-const menuRouletteManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#16a34a",
-  domain: "ontology",
-  icon: "Utensils",
-  id: "menu-roulette",
-  path: "/menu/roulette",
-  status: "production",
-  name: {
-    zh: "发薪日菜单轮盘", en: "Payday Menu Roulette", es: "Ruleta de menú",
-    fr: "Roulette du menu", ja: "給料日メニュールーレット", ko: "월급날 메뉴 룰렛",
-  },
-  description: {
-    zh: "不知道吃什么？转动轮盘随机推荐一餐。",
-    en: "Can't decide what to eat? Spin for a random meal by cuisine.",
-    es: "¿No sabes qué comer? Gira para una comida aleatoria.",
-    fr: "Indécis sur le repas ? Tournez pour un plat aléatoire.",
-    ja: "何食べるか迷ったら回す。料理別ランダム推薦。",
-    ko: "뭐 먹지 고민될 때 돌리는 메뉴 추천 룰렛(+월급날 작은 사치).",
-  },
-};
-
 // Emotion Release — name → breathe → sage line → release (G20).
 const emotionReleaseManifest: FeatureManifest = {
   badge: "new",
@@ -127,30 +103,6 @@ const intervalTimerManifest: FeatureManifest = {
     fr: "Minuteur d'intervalles personnalisable pour Tabata et HIIT.",
     ja: "運動・休憩・セットを設定できるタバタ／HIIT用タイマー。",
     ko: "운동·휴식·세트 커스텀 인터벌 타이머(타바타·HIIT·홈트).",
-  },
-};
-
-// Lotto Win Simulator — spend a jackpot, see your priorities (G10).
-const lottoSimManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#16a34a",
-  domain: "ontology",
-  icon: "Coins",
-  id: "lotto-simulator",
-  path: "/lotto/simulator",
-  status: "production",
-  name: {
-    zh: "彩票中奖模拟器", en: "Lotto Win Simulator", es: "Simulador de lotería",
-    fr: "Simulateur de gain loto", ja: "宝くじ当選シミュレーター", ko: "로또 당첨 시뮬레이터",
-  },
-  description: {
-    zh: "选择奖金，自由花在房子车旅行上，余额实时变化。",
-    en: "Pick a jackpot and spend it on home/car/travel; balance updates live.",
-    es: "Elige un premio y gástalo; el saldo se actualiza en vivo.",
-    fr: "Choisissez un gain et dépensez-le ; le solde se met à jour.",
-    ja: "当選金を選んで自由に使う。残額がリアルタイム更新。",
-    ko: "당첨금을 골라 집·차·여행에 써보는 시뮬(잔액 실시간).",
   },
 };
 
@@ -421,38 +373,13 @@ const incomeTaxFlowManifest: FeatureManifest = {
   },
 };
 
-const taxCalendarManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#059669",
-  domain: "ontology",
-  icon: "Timer",
-  id: "tax-calendar",
-  path: "/tax-calendar",
-  status: "production",
-  name: {
-    zh: "韩国报税日历", en: "Korean Tax Calendar", es: "Calendario fiscal coreano",
-    fr: "Calendrier fiscal coréen", ja: "韓国税務カレンダー", ko: "세금 신고 캘린더",
-  },
-  description: {
-    zh: "按纳税人查看韩国国税与地方税的年度申报缴纳日程及下次截止倒计时。",
-    en: "Korea's national & local tax deadlines by taxpayer, with a live D-day to the next filing.",
-    es: "Los plazos fiscales nacionales y locales de Corea por contribuyente, con cuenta atrás.",
-    fr: "Les échéances fiscales coréennes (national et local) par contribuable, avec compte à rebours.",
-    ja: "韓国の国税・地方税の年間申告・納付日程を対象者別に確認、次の締切までのD-day付き。",
-    ko: "부가세·종소세·법인세·재산세 등 국세·지방세 연간 신고·납부 일정을 대상자별로 보고 다음 마감 D-day 확인.",
-  },
-};
-
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
   strengthKeywordsManifest,
   journalManifest,
-  menuRouletteManifest,
   emotionReleaseManifest,
   intervalTimerManifest,
-  lottoSimManifest,
   moneyParkingManifest,
   guildManifest,
   pranayamaManifest,
@@ -464,7 +391,6 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   overseasStockTaxManifest,
   incomeStatementGameManifest,
   incomeTaxFlowManifest,
-  taxCalendarManifest,
 ];
 
 // Helper to get features easily
