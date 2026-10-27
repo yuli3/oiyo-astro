@@ -178,30 +178,6 @@ const pranayamaManifest: FeatureManifest = {
   },
 };
 
-// 해외금융계좌 신고 자가진단 — Korea overseas financial account reporting checker.
-const foreignAccountManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#16a34a",
-  domain: "ontology",
-  icon: "Landmark",
-  id: "foreign-account",
-  path: "/foreign-account",
-  status: "production",
-  name: {
-    zh: "海外金融账户申报自测", en: "Overseas Account Reporting Checker", es: "Verificador de cuentas en el extranjero",
-    fr: "Vérificateur de comptes étrangers", ja: "海外金融口座申告セルフチェック", ko: "해외금융계좌 신고 자가진단",
-  },
-  description: {
-    zh: "把海外存款、股票（RSU）、基金、保险、虚拟资产折算为韩元，判断月末合计是否超过5亿韩元及申报基准日。",
-    en: "Convert overseas deposit/stock(RSU)/fund/insurance/crypto balances to KRW and check the ₩500M month-end test and basis date.",
-    es: "Convierte saldos de cuentas en el extranjero a KRW y comprueba el umbral de ₩500M a fin de mes.",
-    fr: "Convertit les soldes de comptes étrangers en KRW et vérifie le seuil de 500M₩ en fin de mois.",
-    ja: "海外の預金・株式（RSU）・ファンド・保険・暗号資産を韓国ウォン換算し、月末合計が5億ウォン超か・申告基準日を判定。",
-    ko: "해외 예금·주식(RSU)·펀드·보험·가상자산을 원화로 환산해 매월 말일 5억원 초과 여부와 신고 기준일을 자가진단.",
-  },
-};
-
 // 나에게 맞는 나라 — surfaces the country-archetype ontology engine.
 const countryMatchManifest: FeatureManifest = {
   badge: "new",
@@ -301,30 +277,6 @@ const cashflowManifest: FeatureManifest = {
   },
 };
 
-// Overseas Stock / RSU capital-gains tax estimator (Korea resident).
-const overseasStockTaxManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#16a34a",
-  domain: "ontology",
-  icon: "Calculator",
-  id: "overseas-stock-tax",
-  path: "/overseas-stock-tax",
-  status: "production",
-  name: {
-    zh: "海外股票·RSU税金计算", en: "Foreign Stock & RSU Tax", es: "Impuesto acciones extranjeras y RSU",
-    fr: "Impôt actions étrangères & RSU", ja: "海外株式・RSU 税金計算", ko: "해외주식·RSU 양도세 계산기",
-  },
-  description: {
-    zh: "估算韩国居民海外股票及美企RSU的资本利得税(年250万韩元扣除·22%)。",
-    en: "Estimate Korean capital-gains tax on foreign stocks and US-company RSUs (₩2.5M deduction, 22%).",
-    es: "Estima el impuesto coreano sobre acciones extranjeras y RSU (deducción ₩2.5M, 22%).",
-    fr: "Estimez l'impôt coréen sur actions étrangères et RSU (déduction ₩2,5M, 22%).",
-    ja: "海外株式・米企業RSUの韓国譲渡所得税を試算(年250万ウォン控除・22%)。",
-    ko: "해외주식 양도차익과 미국 회사 RSU의 양도소득세를 계산(연 250만 공제·22%).",
-  },
-};
-
 // Income Statement Builder game — classify accounts, watch profit layers build.
 const incomeStatementGameManifest: FeatureManifest = {
   badge: "new",
@@ -383,12 +335,10 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   moneyParkingManifest,
   guildManifest,
   pranayamaManifest,
-  foreignAccountManifest,
   countryMatchManifest,
   reincarnationCountryManifest,
   balanceWheelManifest,
   cashflowManifest,
-  overseasStockTaxManifest,
   incomeStatementGameManifest,
   incomeTaxFlowManifest,
 ];

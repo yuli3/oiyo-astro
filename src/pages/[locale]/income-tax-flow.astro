@@ -43,7 +43,7 @@ const content: Record<string, {
     ],
     relatedTitle: "이어서 배우기",
     related: [
-      { href: "/overseas-stock-tax", label: "해외주식·RSU 양도세 계산기", desc: "해외주식 22% 양도세." },
+      { href: "https://tools.oiyo.net/{locale}/overseas-stock-tax/", label: "해외주식·RSU 양도세 계산기", desc: "해외주식 22% 양도세.", external: true },
     ],
   },
   en: {
@@ -58,12 +58,13 @@ const content: Record<string, {
     ],
     relatedTitle: "Keep learning",
     related: [
-      { href: "/overseas-stock-tax", label: "Foreign stock & RSU tax", desc: "22% capital-gains tax." },
+      { href: "https://tools.oiyo.net/{locale}/overseas-stock-tax/", label: "Foreign stock & RSU tax", desc: "22% capital-gains tax.", external: true },
     ],
   },
 };
 const c = content[locale] ?? content.en;
-const related = c.related.map((r) => ({ ...r, href: r.external ? r.href : withTrailingSlash(`/${locale}${r.href}`) }));
+// 2026-10-27 (W4): the foreign stock calculator lives on tools.oiyo.net in every locale.
+const related = c.related.map((r) => ({ ...r, href: r.external ? r.href.replace('{locale}', locale) : withTrailingSlash(`/${locale}${r.href}`) }));
 
 const faqJsonLd = JSON.stringify({
   "@context": "https://schema.org",
