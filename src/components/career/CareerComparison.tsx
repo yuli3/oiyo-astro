@@ -2,6 +2,7 @@ import { useId } from 'react'
 import { Button } from '@/components/ui/button'
 import type { CareerExample } from '@/lib/career-exploration'
 import CareerExplorationActivity from './CareerExplorationActivity'
+import CareerSkillBridge from './CareerSkillBridge'
 
 export const CAREER_COMPARISON_COPY = {
   ko: { title: '두 직업을 나란히 살펴봐요', intro: '관심 있는 직업을 최대 두 개 골라 설명을 비교해 보세요. 더 잘 맞는 직업을 판정하는 기능은 아니에요.', add: '비교에 담기', selected: '비교에 담았어요', full: '두 개를 골랐어요. 바꾸려면 먼저 하나를 빼 주세요.', empty: '아래 목록에서 비교할 직업을 골라 주세요.', one: '하나 더 고르면 나란히 볼 수 있어요.', remove: '빼기', description: '하는 일 요약', code: '흥미 코드', missing: '아직 확인하지 않았어요.', question: '다음에는 무엇을 확인할까요?', prompt: '각 직업의 실제 채용 공고에서 자주 하는 업무를 세 가지씩 찾아보세요. 설명만으로 알 수 없는 자격·근무환경도 따로 확인해 보세요.', neutral: '흥미 점수가 비슷해 직업명순으로 보여 드려요. 순서는 적합도 순위가 아니에요.', grouped: '흥미 코드로 묶어 보여 드려요. 순서는 적합도 순위가 아니에요.', removeLabel: (name: string) => `${name} 비교에서 빼기`, count: (n: number) => `비교할 직업 ${n} / 2개` },
@@ -38,6 +39,7 @@ export default function CareerComparison({ locale, careers, catalog = careers, o
         <summary className="min-h-11 cursor-pointer py-3 font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring">{copy.question}</summary>
         <p className="pb-2 leading-relaxed text-muted-foreground">{copy.prompt}</p>
       </details>}
+      <CareerSkillBridge locale={locale} careers={careers} />
       {careers.length === 2 && <CareerExplorationActivity key={JSON.stringify(careers.map(career => career.id).sort())} locale={locale} careerIds={careers.map(career => career.id)} catalog={catalog} />}
     </section>
   )
