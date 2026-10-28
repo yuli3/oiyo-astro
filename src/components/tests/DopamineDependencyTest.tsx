@@ -1,3 +1,4 @@
+import SmallNextAction from '../shared/SmallNextAction';
 import { useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire'
@@ -172,7 +173,7 @@ export default function DopamineDependencyTest({ locale }: Props) {
         <div className="text-center">
           <h2 className="text-xl font-bold mb-1">{l.yourLevel}</h2>
           <div className={`inline-block px-4 py-2 rounded-xl border text-lg font-bold ${rd.bg} ${rd.color}`}>{rd.title}</div>
-          <p className="text-sm text-muted-foreground mt-2">{l.scoreLabel}: <strong>{score}</strong> {l.outOf}</p>
+          <p className="text-sm text-muted-foreground mt-2">{l.scoreLabel}: <strong>{score}</strong> {l.outOf.replace('50', String(questions.length * (l.scaleLabels.length - 1)))}</p>
         </div>
         <div>
           <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">{l.symptoms}</h3>
@@ -184,6 +185,7 @@ export default function DopamineDependencyTest({ locale }: Props) {
         </div>
         <p className="text-xs text-muted-foreground border-t pt-4">{l.note}</p>
         <button onClick={restart} className="w-full py-3 border rounded-xl text-sm font-medium hover:bg-accent transition-colors">{l.restart}</button>
+        <SmallNextAction locale={locale} />
         <ShareResultButton locale={locale} heading={l.title} resultTitle={rd.title} />
       </div>
     )

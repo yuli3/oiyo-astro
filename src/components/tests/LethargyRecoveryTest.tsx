@@ -1,3 +1,4 @@
+import SmallNextAction from '../shared/SmallNextAction';
 import { useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
@@ -203,6 +204,7 @@ export default function LethargyRecoveryTest({ locale: rawLocale = 'ko' }: Props
           </ul>
         </div>
         <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs leading-relaxed text-amber-800">{data.supportNote}</p>
+        <SmallNextAction locale={locale} />
         <ShareResultButton
           locale={locale}
           heading={labels.title}
