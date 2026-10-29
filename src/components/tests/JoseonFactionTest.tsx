@@ -4,6 +4,7 @@ import { Questionnaire } from '@/components/ui/questionnaire'
 import { markOntologyCoordinateRecorded } from '@/lib/ontology/progress'
 import { recordTestResult } from '@/lib/user/test-results'
 import ShareResultButton from '../shared/ShareResultButton'
+import JoseonTwoLenses from '../ontology/JoseonTwoLenses'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
 
@@ -274,6 +275,7 @@ export default function JoseonFactionTest({ locale }: Props) {
           </div>
         </div>
         <p className="text-xs text-muted-foreground text-center border-t pt-4">{l.note}</p>
+        <JoseonTwoLenses locale={locale} scores={scores} />
         <ShareResultButton
           locale={locale}
           heading={l.title}
