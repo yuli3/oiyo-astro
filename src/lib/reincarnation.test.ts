@@ -196,7 +196,6 @@ describe("reincarnation weights", () => {
       "test_completed",
       "share_click",
       "share_completed",
-      "share_completed",
       "share_click",
       "share_completed",
       "share_click",
