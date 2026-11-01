@@ -41,6 +41,7 @@ import ReincarnationGlobe from "./ReincarnationGlobe";
 import CountryFlag from "./CountryFlag";
 import ReincarnationLife from "./ReincarnationLife";
 import PhysicsJar from "../visual/PhysicsJar";
+import { deliverReincarnationShare } from "../../lib/reincarnation-share";
 import { gaEvent } from "../../lib/analytics/ga-event";
 
 interface Props {
@@ -66,6 +67,8 @@ const COPY = {
   vs: { ko: "대비", en: "vs", ja: "対", zh: "对比", fr: "contre", es: "frente a" },
   top: { ko: "상위 10", en: "Top 10", ja: "上位10", zh: "前10", fr: "Top 10", es: "Top 10" },
   share: { ko: "공유", en: "Share", ja: "共有", zh: "分享", fr: "Partager", es: "Compartir" },
+  shareDone: { ko: "공유했어요", en: "Shared", ja: "共有しました", zh: "已分享", fr: "Partagé", es: "Compartido" },
+  shareFailed: { ko: "공유하지 못했어요. 링크 복사를 다시 시도해 주세요.", en: "Could not share. Please try copying the link.", ja: "共有できませんでした。リンクのコピーをお試しください。", zh: "分享失败，请尝试复制链接。", fr: "Le partage a échoué. Essayez de copier le lien.", es: "No se pudo compartir. Intenta copiar el enlace." },
   copied: { ko: "복사됨", en: "Copied", ja: "コピーしました", zh: "已复制", fr: "Copié", es: "Copiado" },
   copyLink: { ko: "링크 복사", en: "Copy link", ja: "リンクをコピー", zh: "复制链接", fr: "Copier le lien", es: "Copiar enlace" },
   copyText: { ko: "결과 복사", en: "Copy result", ja: "結果をコピー", zh: "复制结果", fr: "Copier le résultat", es: "Copiar resultado" },
@@ -191,6 +194,7 @@ export default function ReincarnationCountry({ locale }: Props) {
   const [focus, setFocus] = useState<Country | null>(null);
   const [homeIso2, setHomeIso2] = useState(defaultHomeIso2(locale));
   const [query, setQuery] = useState("");
+  const [shareFailed, setShareFailed] = useState(false);
   const [shared, setShared] = useState<"link" | "text" | "share" | null>(null);
   const [ready, setReady] = useState(false);
   const [history, setHistory] = useState<ReincarnationHistoryEntry[]>([]);
@@ -353,25 +357,23 @@ export default function ReincarnationCountry({ locale }: Props) {
     const url = window.location.href;
     const title = nameOf(latest, locale);
     const text = shareMessage(locale, mode, rows, drawYear);
-    try {
-      if (navigator.share) {
-        await navigator.share({ title, text, url });
-        gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "native", share_outcome: "shared" });
-        flashShared("share");
-        return;
-      }
-    } catch {
-      /* fall through to copy */
-    }
-    await navigator.clipboard.writeText(`${text}\n${url}`);
-    gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "native", share_outcome: "copied" });
-    flashShared("link");
+    setShareFailed(false);
+    const outcome = await deliverReincarnationShare({ title, text, url }, {
+      share: navigator.share ? (data) => navigator.share(data) : undefined,
+      copy: (value) => navigator.clipboard.writeText(value),
+    });
+    if (outcome === "cancelled") return;
+    if (outcome === "failed") { setShareFailed(true); return; }
+    gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "native", share_outcome: outcome });
+    flashShared(outcome === "shared" ? "share" : "link");
   }
 
   async function copyLink() {
     if (typeof window === "undefined") return;
     gaEvent("share_click", { test_id: "reincarnation-country", share_surface: "link", mode });
-    await navigator.clipboard.writeText(window.location.href);
+    setShareFailed(false);
+    try { await navigator.clipboard.writeText(window.location.href); }
+    catch { setShareFailed(true); return; }
     gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "link", share_outcome: "copied" });
     flashShared("link");
   }
@@ -380,7 +382,9 @@ export default function ReincarnationCountry({ locale }: Props) {
     if (!latest) return;
     gaEvent("share_click", { test_id: "reincarnation-country", share_surface: "text", mode });
     const rows = results.length ? results : [latest];
-    await navigator.clipboard.writeText(`${shareMessage(locale, mode, rows, drawYear)}\n${window.location.href}`);
+    setShareFailed(false);
+    try { await navigator.clipboard.writeText(`${shareMessage(locale, mode, rows, drawYear)}\n${window.location.href}`); }
+    catch { setShareFailed(true); return; }
     gaEvent("share_completed", { test_id: "reincarnation-country", share_surface: "text", share_outcome: "copied" });
     flashShared("text");
   }
@@ -587,7 +591,7 @@ export default function ReincarnationCountry({ locale }: Props) {
               onClick={() => void shareNative()}
               className="rounded-full border border-border px-3 py-1.5 text-sm font-semibold text-slate-700"
             >
-              {shared === "share" ? COPY.copied[locale] : COPY.share[locale]}
+              {shared === "share" ? COPY.shareDone[locale] : COPY.share[locale]}
             </button>
             <button
               type="button"
@@ -604,6 +608,7 @@ export default function ReincarnationCountry({ locale }: Props) {
               {shared === "text" ? COPY.copied[locale] : COPY.copyText[locale]}
             </button>
           </div>
+          <p role="status" aria-live="polite" className="mt-2 text-sm text-muted-foreground">{shareFailed ? COPY.shareFailed[locale] : shared ? (shared === "share" ? COPY.shareDone[locale] : COPY.copied[locale]) : ""}</p>
           {results.length > 0 && !reducedMotion && (
             <div className="mt-4">
               <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">{COPY.jar[locale]}</p>
