@@ -230,6 +230,45 @@ const pastLife1426Manifest: FeatureManifest = {
   },
 };
 
+const joseon1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#a8322d",
+  domain: "ontology",
+  icon: "Landmark",
+  id: "joseon-1426",
+  path: "/joseon-1426",
+  status: "production",
+  name: { zh: "600年前朝鲜的我", en: "You in Joseon, 1426", es: "Tú en Joseon, 1426", fr: "Vous à Joseon, 1426", ja: "600年前の朝鮮のわたし", ko: "600년 전 조선의 나" },
+  description: { zh: "按经国大典编制和世宗实录地理志人口抽取官职、故乡、官服与俸禄。", en: "Your 1426 office, province, robe and stipend from Gyeongguk daejeon seats and the Sejong Sillok gazetteer.", es: "Tu cargo, provincia, túnica y estipendio en 1426 según fuentes de Joseon.", fr: "Votre charge, province, robe et traitement en 1426 d'après les sources de Joseon.", ja: "経国大典の定員と世宗実録地理志で1426年の官職・故郷・官服・禄俸を引きます。", ko: "경국대전 정원과 세종실록지리지로 1426년 내 관직·고향·관복·녹봉을 뽑아요." },
+};
+
+const europe1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7c3aed",
+  domain: "ontology",
+  icon: "Crown",
+  id: "europe-1426",
+  path: "/europe-1426",
+  status: "production",
+  name: { zh: "1426年欧洲王座", en: "Your throne in 1426 Europe", es: "Tu trono en 1426", fr: "Votre trône en 1426", ja: "1426年欧州の玉座", ko: "600년 전 유럽의 왕좌" },
+  description: { zh: "1426年欧洲30个真实王座之一，附君主肖像和同龄名人。", en: "One of 30 real thrones of 1426 Europe, with the ruler's portrait and famous people your age.", es: "Uno de los 30 tronos reales de 1426, con retrato y famosos de tu edad.", fr: "L'un des 30 vrais trônes de 1426, avec portrait et célébrités de votre âge.", ja: "1426年欧州の実在30の玉座から一つ。君主の肖像と同い年の有名人も。", ko: "1426년 유럽에 실제로 있던 30개 왕좌 중 하나. 군주 초상과 동갑 유명인까지." },
+};
+
+const usBirthStateManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2563eb",
+  domain: "ontology",
+  icon: "Baby",
+  id: "us-birth-state",
+  path: "/us-birth-state",
+  status: "production",
+  name: { zh: "如果生在美国", en: "Born in the US", es: "Nacido en EE. UU.", fr: "Né aux États-Unis", ja: "米国で生まれたら", ko: "미국에서 태어났다면" },
+  description: { zh: "按2024年各州出生数抽州，再按SSA名字统计取名。", en: "A state by 2024 births and a name from SSA baby-name data, on a birth certificate.", es: "Un estado según los nacimientos de 2024 y un nombre según la SSA.", fr: "Un État selon les naissances 2024 et un prénom selon la SSA.", ja: "2024年の州別出生で州を、SSAの統計で名前を引きます。", ko: "2024년 주별 출생 수로 주를, SSA 아기 이름 통계로 이름을 뽑아요." },
+};
+
 const reincarnationCountryManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -366,6 +405,9 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   countryMatchManifest,
   reincarnationCountryManifest,
   pastLife1426Manifest,
+  joseon1426Manifest,
+  europe1426Manifest,
+  usBirthStateManifest,
   balanceWheelManifest,
   cashflowManifest,
   incomeStatementGameManifest,

@@ -1,4 +1,7 @@
 import {
+  JOSEON_PROVINCES,
+  type JoseonProvince,
+  type Robe,
   JOSEON_GROUP_VECTORS,
   JOSEON_POSTS,
   REALMS_1426,
@@ -135,4 +138,31 @@ export function parseShare(search: string): PastLife | null {
   const realm = REALMS_1426.find((r) => r.id === params.get("e"));
   const state = US_STATES.find((st) => st.code === (params.get("u") ?? "").toUpperCase());
   return post && realm && state ? { post, realm, state } : null;
+}
+
+// ── Joseon extras ────────────────────────────────────────────────────────────
+
+export const PROVINCE_PEOPLE_TOTAL = JOSEON_PROVINCES.reduce((sum, p) => sum + p.people, 0);
+export const provinceShare = (p: JoseonProvince) => p.people / PROVINCE_PEOPLE_TOTAL;
+export function drawProvince(random: () => number = Math.random): JoseonProvince {
+  return weightedPick(JOSEON_PROVINCES, (p) => p.people, random);
+}
+
+/** Grade number 1–9 and whether it is senior (정) from a rank like "정3품 당상" or "종2품~종6품". */
+export function parseRank(rank: string): { grade: number; senior: boolean } | null {
+  const m = /^(정|종)(\d)품/.exec(rank);
+  return m ? { grade: Number(m[2]), senior: m[1] === "정" } : null;
+}
+
+export function robeFor(rank: string): Robe | null {
+  const r = parseRank(rank);
+  if (!r) return null;
+  if (r.grade <= 2 || (r.grade === 3 && r.senior)) return "red";
+  if (r.grade <= 6) return "blue";
+  return "green";
+}
+
+export function tabletFor(rank: string): "ivory" | "wood" | null {
+  const r = parseRank(rank);
+  return r ? (r.grade <= 4 ? "ivory" : "wood") : null;
 }

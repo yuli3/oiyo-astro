@@ -81,3 +81,24 @@ describe("share link", () => {
     expect(parseShare("?j=nope&e=england&u=CA")).toBeNull();
   });
 });
+
+import { JOSEON_PROVINCES } from "../data/past-life-1426";
+import { PROVINCE_PEOPLE_TOTAL, drawProvince, robeFor, tabletFor } from "./past-life-1426";
+
+describe("joseon extras", () => {
+  it("sums the eight provinces from the Sejong Sillok gazetteer", () => {
+    expect(JOSEON_PROVINCES).toHaveLength(8);
+    expect(PROVINCE_PEOPLE_TOTAL).toBe(692477);
+    expect(drawProvince(() => 0).id).toBe("gyeonggi");
+  });
+  it("maps rank to robe colour and tablet", () => {
+    expect(robeFor("정1품")).toBe("red");
+    expect(robeFor("정3품 당상")).toBe("red");
+    expect(robeFor("종3품")).toBe("blue");
+    expect(robeFor("정6품")).toBe("blue");
+    expect(robeFor("정8품")).toBe("green");
+    expect(robeFor("종2품~종6품")).toBe("red");
+    expect(tabletFor("정4품")).toBe("ivory");
+    expect(tabletFor("정5품")).toBe("wood");
+  });
+});

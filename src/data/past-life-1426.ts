@@ -224,3 +224,45 @@ export const US_REGION_VECTORS: Record<UsRegion, Vector> = {
   midwest: { principle: -0.4, tradition: 0.4, action: -0.6 },
   west: { principle: -0.4, tradition: -0.9, action: 0.8 },
 };
+
+// ── Joseon provinces (세종실록 지리지, compiled 1432, printed with the Sejong Sillok 1454) ──
+// 호·구 per 도 and three of each 도's listed 厥貢 (tribute) items, read from the Wikisource
+// transcription of 세종실록 148–155권 on 2026-11-02. The original text is public domain.
+// Recorded 口 counts tax-liable people, not everyone: the total (692,477) is far below the real
+// population, so this is "where the registers put you", not a census share.
+export interface JoseonProvince {
+  id: string;
+  ko: string;
+  hanja: string;
+  en: string;
+  households: number;
+  people: number;
+  volume: number;
+  tribute: { hanja: string; ko: string; en: string; fr: string; es: string }[];
+}
+
+const tr = (hanja: string, ko: string, en: string, fr: string, es: string) => ({ hanja, ko, en, fr, es });
+
+export const JOSEON_PROVINCES: JoseonProvince[] = [
+  { id: "gyeonggi", ko: "경기", hanja: "京畿", en: "Gyeonggi", households: 20882, people: 50352, volume: 148, tribute: [tr("木瓜", "모과", "quince", "coing", "membrillo"), tr("栗", "밤", "chestnuts", "châtaignes", "castañas"), tr("山參", "산삼", "wild ginseng", "ginseng sauvage", "ginseng silvestre")] },
+  { id: "chungcheong", ko: "충청도", hanja: "忠淸道", en: "Chungcheong", households: 24170, people: 100790, volume: 149, tribute: [tr("虎皮", "호랑이 가죽", "tiger pelts", "peaux de tigre", "pieles de tigre"), tr("熊皮", "곰 가죽", "bear hides", "peaux d'ours", "pieles de oso"), tr("鹿", "사슴", "deer", "cerfs", "ciervos")] },
+  { id: "gyeongsang", ko: "경상도", hanja: "慶尙道", en: "Gyeongsang", households: 42227, people: 173759, volume: 150, tribute: [tr("虎皮", "호랑이 가죽", "tiger pelts", "peaux de tigre", "pieles de tigre"), tr("鹿皮", "사슴 가죽", "deerskins", "peaux de cerf", "pieles de ciervo"), tr("山水獺皮", "수달 가죽", "otter pelts", "peaux de loutre", "pieles de nutria")] },
+  { id: "jeolla", ko: "전라도", hanja: "全羅道", en: "Jeolla", households: 24073, people: 94248, volume: 151, tribute: [tr("蜂蜜", "꿀", "honey", "miel", "miel"), tr("黃蠟", "밀랍", "beeswax", "cire d'abeille", "cera de abeja"), tr("虎皮", "호랑이 가죽", "tiger pelts", "peaux de tigre", "pieles de tigre")] },
+  { id: "hwanghae", ko: "황해도", hanja: "黃海道", en: "Hwanghae", households: 23511, people: 71897, volume: 152, tribute: [tr("栗", "밤", "chestnuts", "châtaignes", "castañas"), tr("松子", "잣", "pine nuts", "pignons", "piñones"), tr("五味子", "오미자", "magnolia berries", "baies de schisandra", "bayas de esquisandra")] },
+  { id: "gangwon", ko: "강원도", hanja: "江原道", en: "Gangwon", households: 11084, people: 29009, volume: 153, tribute: [tr("蜂蜜", "꿀", "honey", "miel", "miel"), tr("松子", "잣", "pine nuts", "pignons", "piñones"), tr("胡桃", "호두", "walnuts", "noix", "nueces")] },
+  { id: "pyeongan", ko: "평안도", hanja: "平安道", en: "Pyeongan", households: 41167, people: 105444, volume: 154, tribute: [tr("貂", "담비", "sable", "zibeline", "marta cebellina"), tr("靑鼠", "청서 가죽", "squirrel furs", "fourrures d'écureuil", "pieles de ardilla"), tr("豹", "표범", "leopard", "léopard", "leopardo")] },
+  { id: "hamgil", ko: "함길도", hanja: "咸吉道", en: "Hamgil", households: 14739, people: 66978, volume: 155, tribute: [tr("豹皮", "표범 가죽", "leopard pelts", "peaux de léopard", "pieles de leopardo"), tr("鹿角", "녹각", "deer antlers", "bois de cerf", "astas de ciervo"), tr("狐尾", "여우 꼬리", "fox tails", "queues de renard", "colas de zorro")] },
+];
+
+export const PROVINCE_SOURCES = [
+  { label: "세종실록 지리지 148–155권 (위키문헌 전사)", url: "https://ko.wikisource.org/wiki/%EC%A1%B0%EC%84%A0%EC%99%95%EC%A1%B0%EC%8B%A4%EB%A1%9D/%EC%84%B8%EC%A2%85%EC%9E%A5%ED%97%8C%EB%8C%80%EC%99%95%EC%8B%A4%EB%A1%9D/152%EA%B6%8C" },
+];
+
+// ── Official robe colour by rank (경국대전 공복 단령, 한국민족문화대백과 「관복」 E0004850) ──
+// 1품~정3품 홍포, 종3품~6품 청포, 7~9품 녹포. 홀: 4품 이상 상홀(象笏), 5품 이하 목홀(木笏) (「공복」 E0004314).
+// 「공복」 E0004314: these boundaries are the 공복 rule set in 1426(세종 8) 2월 as carried into 경국대전, so they fit 1426.
+export type Robe = "red" | "blue" | "green";
+export const ROBE_SOURCES = [
+  { label: "한국민족문화대백과 「관복」", url: "https://encykorea.aks.ac.kr/Article/E0004850" },
+  { label: "한국민족문화대백과 「공복」", url: "https://encykorea.aks.ac.kr/Article/E0004314" },
+];

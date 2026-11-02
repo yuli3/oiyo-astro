@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+/* static: SVG fills read these as var(), which Tailwind cannot see as utility usage. */
+@theme static {
+  /* Joseon 1426 illustration palette (hopae wood, robes) — /joseon-1426/, 2026-11-02 */
+  --color-joseon-wood-1: #c89b62;
+  --color-joseon-wood-2: #dcb57e;
+  --color-joseon-wood-3: #b8864d;
+  --color-joseon-ink: #2b1708;
+  --color-joseon-rim: #8a5a2b;
+  --color-joseon-red: #a8322d;
+  --color-joseon-blue: #24508f;
+  --color-joseon-green: #2f6b45;
+  --color-joseon-hat: #1c1c1c;
+  --color-joseon-skin: #f1d3b3;
+  --color-joseon-ivory: #f3ead2;
+}
+
 @theme inline {
   --shadow-sm: none;
   --shadow: none;
