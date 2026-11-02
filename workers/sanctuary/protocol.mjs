@@ -1,4 +1,4 @@
-export const SCENES = ['temple', 'fire', 'water'];
+export const SCENES = ['temple', 'fire', 'water', 'fireworks', 'cosmos'];
 export const GESTURES = ['greet', 'bow', 'petal'];
 export const CAPACITY = 12;
 export const PROTOCOL = 'oiyo-sanctuary-v1';

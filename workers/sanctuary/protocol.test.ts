@@ -3,7 +3,7 @@ import { validRoom, parseAction, chooseSeat, applyAction, publicMembers } from '
 
 describe('sanctuary public room rules',()=>{
   it('bounds rooms and scenes to avoid arbitrary object creation',()=>{
-    expect(validRoom('temple','0')).toBe(true);expect(validRoom('fire',7)).toBe(true);
+    expect(validRoom('temple','0')).toBe(true);expect(validRoom('fire',7)).toBe(true);expect(validRoom('fireworks','3')).toBe(true);expect(validRoom('cosmos','0')).toBe(true);
     for(const [scene,room] of [['temple','8'],['temple','00'],['other','1'],['water','-1']])expect(validRoom(scene,room)).toBe(false);
   });
   it('accepts only bounded typed gestures and seat commands',()=>{

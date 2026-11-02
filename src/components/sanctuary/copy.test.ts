@@ -7,8 +7,8 @@ describe('sanctuary six-language surface',()=>{
       const t=sanctuaryCopy[locale];
       expect(Object.keys(t).sort()).toEqual(Object.keys(sanctuaryCopy.en).sort());
       expect(Object.keys(t.statuses).sort()).toEqual(Object.keys(sanctuaryCopy.en.statuses).sort());
-      expect(t.scenes).toHaveLength(3);
-      for(const key of ['privacy','soundNote','art','help'] as const)expect(t[key].length).toBeGreaterThan(10);
+      expect(t.scenes).toHaveLength(5);
+      for(const key of ['privacy','soundNote','art','art3d','help','fireworksdesc','cosmosdesc'] as const)expect(t[key].length).toBeGreaterThan(10);
     }
   });
 });
