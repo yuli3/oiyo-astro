@@ -1,0 +1,178 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import PastLife1426 from "../../components/tools/PastLife1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+import { JOSEON_SEAT_TOTAL, US_BIRTH_TOTAL } from "../../lib/past-life-1426";
+import { REALMS_1426 } from "../../data/past-life-1426";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const seats = JOSEON_SEAT_TOTAL.toLocaleString("en-US");
+const births = US_BIRTH_TOTAL.toLocaleString("en-US");
+const realms = REALMS_1426.length;
+
+type Copy = { title: string; description: string; heading: string; question: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "600년 전 나는? 1426년 조선 관직·유럽 왕좌·지금 미국에서 태어난다면 어느 주",
+    description: "경국대전 관직 정원, 1426년 실제 유럽 군주, CDC 2024년 주별 출생 수로 뽑아요. 랜덤으로 돌리거나 MBTI·붕당 결과, 세 가지 질문으로 맞출 수 있어요.",
+    heading: "600년 전 나는?",
+    question: "1426년 조선의 관직, 유럽의 왕좌, 그리고 미국의 주",
+    intro: "600년 전은 1426년, 세종 8년이에요. 조선 관직은 경국대전 정원 수만큼, 유럽 왕좌는 나라마다 하나씩, 미국 주는 실제 출생 수만큼 당첨 확률을 줬어요.",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      `조선: 의정부·6조·사헌부·사간원·승정원·지방 수령·지방 무관 ${seats}석을 정원 수대로 가중했어요. 정원은 1485년 경국대전 기준이라 1426년 당시와 조금 다를 수 있어요.`,
+      `유럽: 1426년에 실제로 존재한 ${realms}개 왕국·제국·공국·공화국·기사단의 최고 자리를 같은 확률로 뽑고, 그해 실제로 그 자리에 있던 사람을 함께 보여줘요.`,
+      `미국: 1426년엔 미국이 없어서, 지금 미국에서 태어난다고 가정해요. 2024년 주별 출생 ${births}명(CDC 집계) 비중으로 뽑아요.`,
+      "성향 맞춤은 원칙↔실리, 전통↔변화, 행동↔숙고 세 축에 OIYO가 정한 놀이용 좌표로 가장 가까운 무리를 고른 다음, 그 안에서 위와 같은 실제 비중으로 뽑아요. 검증된 성격 이론이 아니에요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "양반이 아니면 관직에 못 오르지 않았나요?", a: "맞아요. 1426년 조선 사람 대부분은 관직이 없었어요. 이 도구는 '관직을 하나 받는다면'을 정원 비중으로 뽑는 놀이라, 신분 확률은 반영하지 않아요." },
+      { q: "왜 영의정이 잘 안 나오나요?", a: `영의정은 1석, 현감은 141석이라 그래요. 영의정은 ${seats}번에 한 번꼴이에요.` },
+      { q: "유럽은 왜 왕좌만 나오나요?", a: "나라별 관직 정원을 같은 기준으로 비교할 자료가 없어서, 나라마다 하나뿐인 최고 자리로 맞췄어요. 실제 인물과 재위 기간은 위키백과·위키데이터 기준이에요." },
+      { q: "결과는 어디에 저장되나요?", a: "서버에 저장하지 않아요. 결과 링크 주소에 관직·나라·주 코드만 담겨요. 성향 맞춤은 이 브라우저에 저장된 MBTI·붕당 결과만 읽어요." },
+    ],
+  },
+  en: {
+    title: "600 years ago: your Joseon office, European throne, and US state",
+    description: "Drawn from Gyeongguk daejeon seat counts, Europe's real rulers of 1426 and CDC 2024 births by state. Random, or matched to your MBTI, Joseon faction or three quick questions.",
+    heading: "Who were you 600 years ago?",
+    question: "An office in 1426 Joseon, a throne in Europe, and a US state",
+    intro: "600 years ago was 1426, year 8 of King Sejong. Joseon offices are weighted by their official seat counts, European thrones are one per realm, and US states by actual births.",
+    howTitle: "How the draw works",
+    how: [
+      `Joseon: ${seats} seats across the State Council, six ministries, censorate, royal secretariat, county magistrates and provincial commanders, weighted by headcount. Counts follow the 1485 Gyeongguk daejeon code, so 1426 may differ slightly.`,
+      `Europe: the top seat of ${realms} kingdoms, empires, duchies, republics and military orders that existed in 1426, each equally likely, shown with the person who actually held it that year.`,
+      `United States: there was no US in 1426, so this assumes you are born there today, weighted by ${births} births by state in 2024 (CDC).`,
+      "Trait matching places principle↔pragmatism, tradition↔change and action↔reflection on OIYO's playful coordinates, picks the nearest group, then draws inside it with the same real weights. It is not a validated personality theory.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Weren't most people never officials?", a: "Yes. Most people in 1426 Joseon held no office. This draw asks 'if you held one office, which?' by seat share; it does not model social class." },
+      { q: "Why is Chief State Councillor so rare?", a: `There was one seat, versus 141 township magistrates. It comes up about once in ${seats} draws.` },
+      { q: "Why only thrones for Europe?", a: "There is no comparable seat roster across realms, so each realm contributes its single top seat. Rulers and reign years follow Wikipedia and Wikidata." },
+      { q: "Where are results stored?", a: "Nowhere on a server. The result link carries only the office, realm and state codes. Trait matching reads only MBTI or faction results saved in this browser." },
+    ],
+  },
+  ja: {
+    title: "600年前のわたし：1426年の朝鮮の官職・欧州の玉座・米国の州",
+    description: "経国大典の定員、1426年の実在の欧州君主、CDC 2024年の州別出生で抽選。ランダム、またはMBTI・党派の結果や3つの質問で合わせます。",
+    heading: "600年前のわたしは？",
+    question: "1426年の朝鮮の官職、ヨーロッパの玉座、そして米国の州",
+    intro: "600年前は1426年、世宗8年です。朝鮮の官職は経国大典の定員数、欧州の玉座は国ごとに一つ、米国の州は実際の出生数で確率を決めました。",
+    howTitle: "抽選のしくみ",
+    how: [
+      `朝鮮：議政府・六曹・司憲府・司諫院・承政院・地方守令・地方武官の${seats}席を定員で重み付け。定員は1485年の経国大典基準で、1426年当時とは少し違う可能性があります。`,
+      `欧州：1426年に実在した${realms}の王国・帝国・公国・共和国・騎士団の最高位を同じ確率で引き、その年に実際にその座にいた人物も表示します。`,
+      `米国：1426年には米国がないため、いま米国で生まれると仮定し、2024年の州別出生${births}人（CDC）の比率で抽選します。`,
+      "性格マッチは原則↔実利、伝統↔変化、行動↔熟考の3軸にOIYOが決めた遊びの座標で最も近いグループを選び、その中で同じ実データの比率で抽選します。検証済みの性格理論ではありません。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [
+      { q: "ほとんどの人は官職がなかったのでは？", a: "その通りです。この抽選は「官職を一つ得るなら」を定員比で引く遊びで、身分の確率は反映していません。" },
+      { q: "なぜ領議政はめったに出ない？", a: `領議政は1席、県監は141席だからです。約${seats}回に1回です。` },
+      { q: "結果はどこに保存されますか？", a: "サーバーには保存しません。結果リンクに官職・国・州のコードだけが入ります。" },
+    ],
+  },
+  zh: {
+    title: "600年前的我：1426年朝鲜官职·欧洲王座·美国州",
+    description: "依据经国大典官职编制、1426年欧洲真实君主、CDC 2024年各州出生数抽取。可随机，也可按MBTI、朋党结果或三个问题匹配。",
+    heading: "600年前的我是谁？",
+    question: "1426年朝鲜的官职、欧洲的王座，以及美国的州",
+    intro: "600年前是1426年，世宗八年。朝鲜官职按经国大典编制人数、欧洲王座每国一个、美国各州按实际出生数决定概率。",
+    howTitle: "怎么抽",
+    how: [
+      `朝鲜：议政府、六曹、司宪府、司谏院、承政院、地方守令、地方武官共${seats}个编制，按人数加权。编制依据1485年的经国大典，可能与1426年略有不同。`,
+      `欧洲：1426年真实存在的${realms}个王国、帝国、公国、共和国与骑士团的最高位置等概率抽取，并显示当年实际在位的人。`,
+      `美国：1426年还没有美国，所以假设你今天在美国出生，按2024年各州出生${births}人（CDC）的比重抽取。`,
+      "性格匹配在原则↔实利、传统↔变化、行动↔深思三轴上用OIYO设定的游戏坐标找最近的群组，再按同样的真实比重抽取。这不是经过验证的性格理论。",
+    ],
+    faqTitle: "常见问题",
+    faq: [
+      { q: "大多数人不是没有官职吗？", a: "是的。这只是按编制比重抽取“如果得到一个官职会是哪个”，不反映身份等级的概率。" },
+      { q: "为什么领议政很少出现？", a: `领议政只有1个编制，县监有141个。约${seats}次出现一次。` },
+      { q: "结果存在哪里？", a: "不存服务器。结果链接只包含官职、国家和州的代码。" },
+    ],
+  },
+  fr: {
+    title: "Il y a 600 ans : votre charge à Joseon, votre trône en Europe, votre État américain",
+    description: "Tirage d'après les effectifs du Gyeongguk daejeon, les vrais souverains européens de 1426 et les naissances 2024 par État (CDC). Au hasard ou selon votre profil.",
+    heading: "Qui étiez-vous il y a 600 ans ?",
+    question: "Une charge à Joseon en 1426, un trône en Europe et un État américain",
+    intro: "Il y a 600 ans, c'était 1426, an 8 du roi Sejong. Les charges de Joseon sont pondérées par leurs effectifs officiels, un trône par royaume en Europe, et les États américains par leurs naissances réelles.",
+    howTitle: "Comment se fait le tirage",
+    how: [
+      `Joseon : ${seats} postes (Conseil d'État, six ministères, censorat, secrétariat royal, magistrats et commandants provinciaux), pondérés par effectif. Les chiffres suivent le code de 1485 et peuvent différer légèrement de 1426.`,
+      `Europe : la plus haute charge de ${realms} royaumes, empires, duchés, républiques et ordres militaires de 1426, à chances égales, avec la personne qui l'occupait réellement.`,
+      `États-Unis : ils n'existaient pas en 1426 ; on suppose une naissance aujourd'hui, pondérée par ${births} naissances par État en 2024 (CDC).`,
+      "Le profil place principe↔pragmatisme, tradition↔changement et action↔réflexion sur des coordonnées ludiques d'OIYO, choisit le groupe le plus proche puis tire avec les mêmes poids réels. Ce n'est pas une théorie validée.",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [
+      { q: "La plupart des gens n'avaient-ils pas aucune charge ?", a: "Exact. Le tirage répond à « si vous aviez une charge, laquelle ? » selon les effectifs ; il ne modélise pas la classe sociale." },
+      { q: "Où sont stockés les résultats ?", a: "Nulle part sur un serveur. Le lien ne contient que les codes de la charge, du royaume et de l'État." },
+    ],
+  },
+  es: {
+    title: "Hace 600 años: tu cargo en Joseon, tu trono en Europa y tu estado de EE. UU.",
+    description: "Sorteo según las plazas del Gyeongguk daejeon, los gobernantes europeos reales de 1426 y los nacimientos 2024 por estado (CDC). Al azar o según tu perfil.",
+    heading: "¿Quién eras hace 600 años?",
+    question: "Un cargo en Joseon en 1426, un trono en Europa y un estado de EE. UU.",
+    intro: "Hace 600 años fue 1426, año 8 del rey Sejong. Los cargos de Joseon pesan según sus plazas oficiales, un trono por reino en Europa y los estados de EE. UU. según nacimientos reales.",
+    howTitle: "Cómo funciona el sorteo",
+    how: [
+      `Joseon: ${seats} plazas (Consejo de Estado, seis ministerios, censorado, secretaría real, magistrados y comandantes provinciales), ponderadas por número. Siguen el código de 1485 y pueden diferir algo de 1426.`,
+      `Europa: el cargo supremo de ${realms} reinos, imperios, ducados, repúblicas y órdenes militares de 1426, con igual probabilidad, junto a quien lo ocupaba de verdad.`,
+      `Estados Unidos: no existía en 1426; se supone que naces allí hoy, según ${births} nacimientos por estado en 2024 (CDC).`,
+      "El perfil sitúa principio↔pragmatismo, tradición↔cambio y acción↔reflexión en coordenadas lúdicas de OIYO, elige el grupo más cercano y sortea con los mismos pesos reales. No es una teoría validada.",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [
+      { q: "¿La mayoría no tenía ningún cargo?", a: "Así es. El sorteo responde a «si tuvieras un cargo, ¿cuál?» según las plazas; no modela la clase social." },
+      { q: "¿Dónde se guardan los resultados?", a: "En ningún servidor. El enlace solo lleva los códigos del cargo, el reino y el estado." },
+    ],
+  },
+};
+
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: c.faq.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })),
+};
+---
+
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/past-life-1426/")}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <h1 class="text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.question}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6">
+      <PastLife1426 locale={locale} client:load />
+    </div>
+    <RelatedTools locale={locale} tools={["reincarnation", "joseon"]} current="pastLife1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((item) => (
+        <div class="mt-4">
+          <h3 class="font-bold text-foreground">{item.q}</h3>
+          <p class="mt-1">{item.a}</p>
+        </div>
+      ))}
+    </section>
+  </div>
+</Layout>

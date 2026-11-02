@@ -484,4 +484,9 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     title: {"ko": "환생 — 다시 태어난다면 어느 나라?", "en": "Reincarnation — if you were born again, which country?", "ja": "転生 — 生まれ変わるとしたらどの国？", "zh": "投胎 — 如果再出生会在哪个国家？", "fr": "Réincarnation — si vous renaissiez, dans quel pays ?", "es": "Reencarnación — si nacieras de nuevo, ¿en qué país?"},
     description: {"ko": "점이 아닙니다. 세계은행 인구와 출생 추정으로 나라를 가중 추첨합니다. 신생아 기준과 인구 기준을 바꿀 수 있고, 여러 번도 가능합니다.", "en": "Not a fortune. A World Bank weighted draw using current births or current population. Multiple independent lives allowed.", "ja": "占いではありません。世界銀行のデータで出生または人口の重み抽選。複数回も独立です。", "zh": "不是占卜。用世界银行数据按新生儿或人口加权抽取，可独立多次。", "fr": "Ce n'est pas une voyance. Tirage pondéré Banque mondiale, naissances ou population.", "es": "No es un horóscopo. Sorteo ponderado del Banco Mundial, nacimientos o población."},
   },
+  {
+    slug: "past-life-1426",
+    title: {"ko": "600년 전 나는? 조선 관직·유럽 왕좌·미국 주", "en": "600 years ago: your Joseon office, European throne and US state", "ja": "600年前のわたし：朝鮮の官職・欧州の玉座・米国の州", "zh": "600年前的我：朝鲜官职·欧洲王座·美国州", "fr": "Il y a 600 ans : charge à Joseon, trône européen, État américain", "es": "Hace 600 años: cargo en Joseon, trono europeo y estado de EE. UU."},
+    description: {"ko": "경국대전 정원, 1426년 실제 군주, 2024년 미국 출생 통계로 뽑아요. 랜덤 또는 성향 맞춤.", "en": "Drawn from Gyeongguk daejeon seats, the real rulers of 1426 and 2024 US births. Random or matched to your traits.", "ja": "経国大典の定員、1426年の実在の君主、米国2024年の出生統計で抽選。ランダムまたは性格マッチ。", "zh": "依据经国大典编制、1426年真实君主与美国2024年出生统计抽取。随机或按性格匹配。", "fr": "D'après le Gyeongguk daejeon, les vrais souverains de 1426 et les naissances américaines 2024. Au hasard ou selon votre profil.", "es": "Según el Gyeongguk daejeon, los gobernantes reales de 1426 y los nacimientos de EE. UU. de 2024. Al azar o según tu perfil."},
+  },
 ];

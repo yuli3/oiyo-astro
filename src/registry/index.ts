@@ -202,6 +202,34 @@ const countryMatchManifest: FeatureManifest = {
   },
 };
 
+// 600년 전 나는? — 1426 Joseon office / European throne / US state draw (2026-11-02).
+const pastLife1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7c3aed",
+  domain: "ontology",
+  icon: "Crown",
+  id: "past-life-1426",
+  path: "/past-life-1426",
+  status: "production",
+  name: {
+    zh: "600年前的我 — 朝鲜官职·欧洲王座·美国州",
+    en: "600 years ago — Joseon office, European throne, US state",
+    es: "Hace 600 años — cargo en Joseon, trono europeo, estado de EE. UU.",
+    fr: "Il y a 600 ans — charge à Joseon, trône européen, État américain",
+    ja: "600年前のわたし — 朝鮮の官職・欧州の玉座・米国の州",
+    ko: "600년 전 나는? — 조선 관직·유럽 왕좌·미국 주",
+  },
+  description: {
+    zh: "按经国大典编制、1426年欧洲实际君主、美国2024年各州出生数抽取。也可按性格匹配。",
+    en: "Drawn from Gyeongguk daejeon seat counts, Europe's actual 1426 rulers and 2024 US births by state. Or match by traits.",
+    es: "Sorteo con plazas del Gyeongguk daejeon, los gobernantes reales de 1426 y nacimientos de 2024 por estado.",
+    fr: "Tirage d'après les effectifs du Gyeongguk daejeon, les souverains réels de 1426 et les naissances 2024 par État.",
+    ja: "経国大典の定員、1426年の実在の君主、米国2024年の州別出生で抽選。性格に合わせることも。",
+    ko: "경국대전 관직 정원, 1426년 실제 유럽 군주, 2024년 미국 주별 출생 수로 뽑아요. 성향으로 맞출 수도 있어요.",
+  },
+};
+
 const reincarnationCountryManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -337,6 +365,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   pranayamaManifest,
   countryMatchManifest,
   reincarnationCountryManifest,
+  pastLife1426Manifest,
   balanceWheelManifest,
   cashflowManifest,
   incomeStatementGameManifest,
