@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+type Card = { href: string; emoji: string; title: string; body: string; cta: string };
+type Copy = { title: string; description: string; heading: string; intro: string; cards: Card[]; note: string };
+
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "600년 전 나는? 조선 관직·유럽 왕좌·미국 출생 주 뽑기",
+    description: "1426년 조선의 관직과 고향, 같은 해 유럽의 왕좌, 그리고 지금 미국에서 태어난다면 어느 주인지. 실제 역사·통계 자료로 따로따로 뽑아요.",
+    heading: "600년 전 나는?",
+    intro: "세 가지를 따로 뽑아요. 각 페이지는 랜덤으로 돌리거나 내 성향에 맞출 수 있어요.",
+    cards: [
+      { href: "/joseon-1426/", emoji: "🏯", title: "600년 전 조선의 나", body: "1426년 세종 8년. 경국대전 정원으로 관직을, 세종실록지리지 인구로 고향을 뽑아 호패와 관복으로 보여줘요.", cta: "호패 받으러 가기" },
+      { href: "/europe-1426/", emoji: "👑", title: "600년 전 유럽의 왕좌", body: "같은 해 유럽 30개 나라의 실제 군주 자리 중 하나에 앉아요. 군주 초상과 나와 같은 나이였던 유명인까지.", cta: "왕좌에 앉으러 가기" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "미국에서 태어났다면", body: "지금 미국에서 태어난다면 어느 주일까요? 2024년 주별 출생 수로 뽑고, 그 주에서 가장 흔한 아기 이름도 붙여줘요.", cta: "출생 신고하러 가기" },
+    ],
+    note: "점이 아니라 실제 자료의 비중으로 뽑는 놀이예요. 자료와 한계는 각 페이지 아래에 적었어요.",
+  },
+  en: {
+    title: "Who were you 600 years ago? Joseon office, European throne, US birth state",
+    description: "Your office and province in 1426 Joseon, a European throne in the same year, and the US state you would be born in today, each drawn from real historical and statistical data.",
+    heading: "Who were you 600 years ago?",
+    intro: "Three separate draws. Each page can spin at random or match your traits.",
+    cards: [
+      { href: "/joseon-1426/", emoji: "🏯", title: "You in Joseon, 1426", body: "Year 8 of King Sejong. Your office by official seat counts and your province by the Sejong Sillok gazetteer, shown on a hopae tag and court robe.", cta: "Get my hopae" },
+      { href: "/europe-1426/", emoji: "👑", title: "Your throne in 1426 Europe", body: "Take one of 30 real European thrones of 1426, with the ruler's portrait and famous people your age that year.", cta: "Take a throne" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "Born in the US today", body: "Which state would you be born in? Drawn by 2024 births per state, with that state's most common baby names.", cta: "Register my birth" },
+    ],
+    note: "Not a fortune: each draw is weighted by real data. Sources and limits are listed on each page.",
+  },
+  ja: {
+    title: "600年前のわたしは？ 朝鮮の官職・欧州の玉座・米国の出生州",
+    description: "1426年朝鮮の官職と故郷、同じ年の欧州の玉座、いま米国で生まれるなら何州か。実データで別々に引きます。",
+    heading: "600年前のわたしは？",
+    intro: "三つを別々に引きます。各ページはランダムでも性格に合わせても引けます。",
+    cards: [
+      { href: "/joseon-1426/", emoji: "🏯", title: "600年前の朝鮮のわたし", body: "世宗8年。経国大典の定員で官職、世宗実録地理志の人口で故郷を引き、号牌と官服で見せます。", cta: "号牌を受け取る" },
+      { href: "/europe-1426/", emoji: "👑", title: "1426年欧州の玉座", body: "同じ年の欧州30か国の実在の玉座に座ります。君主の肖像と同い年の有名人も。", cta: "玉座に座る" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "米国で生まれたら", body: "2024年の州別出生数で州を引き、その州で多い赤ちゃんの名前も付けます。", cta: "出生届を出す" },
+    ],
+    note: "占いではなく実データの比率で引く遊びです。",
+  },
+  zh: {
+    title: "600年前的我是谁？朝鲜官职·欧洲王座·美国出生州",
+    description: "1426年朝鲜的官职与故乡、同年欧洲的王座，以及今天在美国出生会是哪个州，分别用真实资料抽取。",
+    heading: "600年前的我是谁？",
+    intro: "三个分开抽。每页都可以随机，也可以按性格匹配。",
+    cards: [
+      { href: "/joseon-1426/", emoji: "🏯", title: "600年前朝鲜的我", body: "世宗八年。按经国大典编制抽官职、按世宗实录地理志人口抽故乡，用号牌和官服展示。", cta: "领取号牌" },
+      { href: "/europe-1426/", emoji: "👑", title: "1426年欧洲王座", body: "坐上同年欧洲30国中的一个真实王座，附君主肖像和同龄名人。", cta: "登上王座" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "如果生在美国", body: "按2024年各州出生数抽州，并配上该州最常见的婴儿名字。", cta: "去报出生" },
+    ],
+    note: "不是占卜，而是按真实资料比重抽取的游戏。",
+  },
+  fr: {
+    title: "Qui étiez-vous il y a 600 ans ? Charge à Joseon, trône européen, État de naissance",
+    description: "Votre charge à Joseon en 1426, un trône européen la même année et l'État américain où vous naîtriez aujourd'hui, tirés séparément de données réelles.",
+    heading: "Qui étiez-vous il y a 600 ans ?",
+    intro: "Trois tirages séparés, au hasard ou selon votre profil.",
+    cards: [
+      { href: "/joseon-1426/", emoji: "🏯", title: "Vous à Joseon, 1426", body: "Charge selon les effectifs officiels, province selon le registre des Annales de Sejong, sur un hopae et une robe de cour.", cta: "Recevoir mon hopae" },
+      { href: "/europe-1426/", emoji: "👑", title: "Votre trône en 1426", body: "L'un des 30 vrais trônes européens de 1426, avec le portrait du souverain et des célébrités de votre âge.", cta: "Monter sur le trône" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "Né aux États-Unis", body: "L'État tiré selon les naissances 2024, avec les prénoms les plus courants de cet État.", cta: "Déclarer ma naissance" },
+    ],
+    note: "Pas une voyance : chaque tirage suit des données réelles.",
+  },
+  es: {
+    title: "¿Quién eras hace 600 años? Cargo en Joseon, trono europeo, estado de nacimiento",
+    description: "Tu cargo en la Joseon de 1426, un trono europeo ese mismo año y el estado de EE. UU. donde nacerías hoy, sorteados por separado con datos reales.",
+    heading: "¿Quién eras hace 600 años?",
+    intro: "Tres sorteos separados, al azar o según tu perfil.",
+    cards: [
+      { href: "/joseon-1426/", emoji: "🏯", title: "Tú en Joseon, 1426", body: "Cargo según las plazas oficiales y provincia según el registro de los Anales de Sejong, en un hopae y una túnica de corte.", cta: "Recibir mi hopae" },
+      { href: "/europe-1426/", emoji: "👑", title: "Tu trono en 1426", body: "Uno de los 30 tronos europeos reales de 1426, con el retrato del soberano y famosos de tu edad.", cta: "Ocupar el trono" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "Nacido en EE. UU.", body: "El estado según los nacimientos de 2024, con los nombres de bebé más comunes allí.", cta: "Registrar mi nacimiento" },
+    ],
+    note: "No es un horóscopo: cada sorteo sigue datos reales.",
+  },
+};
+const c = copy[locale] ?? copy.en;
+---
+
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/past-life-1426/")}>
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <h1 class="text-4xl font-black tracking-tight text-foreground">{c.heading}</h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6 grid gap-4">
+      {c.cards.map((card) => (
+        <a href={localePath(locale, card.href)} class="group flex gap-4 rounded-3xl border border-border bg-card p-5 shadow-sm transition hover:shadow-md">
+          <span class="text-5xl" aria-hidden="true">{card.emoji}</span>
+          <span class="block">
+            <span class="block text-xl font-black text-foreground">{card.title}</span>
+            <span class="mt-1 block text-sm leading-relaxed text-muted-foreground">{card.body}</span>
+            <span class="mt-3 inline-block text-sm font-bold text-primary group-hover:underline">{card.cta} →</span>
+          </span>
+        </a>
+      ))}
+    </div>
+    <p class="mt-6 text-sm text-muted-foreground">{c.note}</p>
+    <RelatedTools locale={locale} tools={["reincarnation", "joseon"]} current="pastLife1426" />
+  </div>
+</Layout>

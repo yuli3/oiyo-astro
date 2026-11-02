@@ -25,6 +25,7 @@ function weightedVector(weights: Readonly<Record<string,number>>, basis: Readonl
   for (const axis of LENS_AXES) vector[axis]=entries.reduce((sum,[key,value])=>sum+(value/total)*basis[key][axis],0);
   return vector;
 }
+export function factionLensVector(faction: JoseonFaction): LensVector { return { ...factionVectors[faction] }; }
 export function responseLens(scores: Readonly<Record<string,number>>) { return weightedVector(scores,factionVectors,true); }
 export function birthSymbolLens(counts: Readonly<Record<string,number>>) {
   // A complete eight-character tally is required; omitted pillars are unknown,

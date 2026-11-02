@@ -202,6 +202,73 @@ const countryMatchManifest: FeatureManifest = {
   },
 };
 
+// 600년 전 나는? — 1426 Joseon office / European throne / US state draw (2026-11-02).
+const pastLife1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7c3aed",
+  domain: "ontology",
+  icon: "Crown",
+  id: "past-life-1426",
+  path: "/past-life-1426",
+  status: "production",
+  name: {
+    zh: "600年前的我 — 朝鲜官职·欧洲王座·美国州",
+    en: "600 years ago — Joseon office, European throne, US state",
+    es: "Hace 600 años — cargo en Joseon, trono europeo, estado de EE. UU.",
+    fr: "Il y a 600 ans — charge à Joseon, trône européen, État américain",
+    ja: "600年前のわたし — 朝鮮の官職・欧州の玉座・米国の州",
+    ko: "600년 전 나는? — 조선 관직·유럽 왕좌·미국 주",
+  },
+  description: {
+    zh: "按经国大典编制、1426年欧洲实际君主、美国2024年各州出生数抽取。也可按性格匹配。",
+    en: "Drawn from Gyeongguk daejeon seat counts, Europe's actual 1426 rulers and 2024 US births by state. Or match by traits.",
+    es: "Sorteo con plazas del Gyeongguk daejeon, los gobernantes reales de 1426 y nacimientos de 2024 por estado.",
+    fr: "Tirage d'après les effectifs du Gyeongguk daejeon, les souverains réels de 1426 et les naissances 2024 par État.",
+    ja: "経国大典の定員、1426年の実在の君主、米国2024年の州別出生で抽選。性格に合わせることも。",
+    ko: "경국대전 관직 정원, 1426년 실제 유럽 군주, 2024년 미국 주별 출생 수로 뽑아요. 성향으로 맞출 수도 있어요.",
+  },
+};
+
+const joseon1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#a8322d",
+  domain: "ontology",
+  icon: "Landmark",
+  id: "joseon-1426",
+  path: "/joseon-1426",
+  status: "production",
+  name: { zh: "600年前朝鲜的我", en: "You in Joseon, 1426", es: "Tú en Joseon, 1426", fr: "Vous à Joseon, 1426", ja: "600年前の朝鮮のわたし", ko: "600년 전 조선의 나" },
+  description: { zh: "按经国大典编制和世宗实录地理志人口抽取官职、故乡、官服与俸禄。", en: "Your 1426 office, province, robe and stipend from Gyeongguk daejeon seats and the Sejong Sillok gazetteer.", es: "Tu cargo, provincia, túnica y estipendio en 1426 según fuentes de Joseon.", fr: "Votre charge, province, robe et traitement en 1426 d'après les sources de Joseon.", ja: "経国大典の定員と世宗実録地理志で1426年の官職・故郷・官服・禄俸を引きます。", ko: "경국대전 정원과 세종실록지리지로 1426년 내 관직·고향·관복·녹봉을 뽑아요." },
+};
+
+const europe1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7c3aed",
+  domain: "ontology",
+  icon: "Crown",
+  id: "europe-1426",
+  path: "/europe-1426",
+  status: "production",
+  name: { zh: "1426年欧洲王座", en: "Your throne in 1426 Europe", es: "Tu trono en 1426", fr: "Votre trône en 1426", ja: "1426年欧州の玉座", ko: "600년 전 유럽의 왕좌" },
+  description: { zh: "1426年欧洲30个真实王座之一，附君主肖像和同龄名人。", en: "One of 30 real thrones of 1426 Europe, with the ruler's portrait and famous people your age.", es: "Uno de los 30 tronos reales de 1426, con retrato y famosos de tu edad.", fr: "L'un des 30 vrais trônes de 1426, avec portrait et célébrités de votre âge.", ja: "1426年欧州の実在30の玉座から一つ。君主の肖像と同い年の有名人も。", ko: "1426년 유럽에 실제로 있던 30개 왕좌 중 하나. 군주 초상과 동갑 유명인까지." },
+};
+
+const usBirthStateManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2563eb",
+  domain: "ontology",
+  icon: "Baby",
+  id: "us-birth-state",
+  path: "/us-birth-state",
+  status: "production",
+  name: { zh: "如果生在美国", en: "Born in the US", es: "Nacido en EE. UU.", fr: "Né aux États-Unis", ja: "米国で生まれたら", ko: "미국에서 태어났다면" },
+  description: { zh: "按2024年各州出生数抽州，再按SSA名字统计取名。", en: "A state by 2024 births and a name from SSA baby-name data, on a birth certificate.", es: "Un estado según los nacimientos de 2024 y un nombre según la SSA.", fr: "Un État selon les naissances 2024 et un prénom selon la SSA.", ja: "2024年の州別出生で州を、SSAの統計で名前を引きます。", ko: "2024년 주별 출생 수로 주를, SSA 아기 이름 통계로 이름을 뽑아요." },
+};
+
 const reincarnationCountryManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -337,6 +404,10 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   pranayamaManifest,
   countryMatchManifest,
   reincarnationCountryManifest,
+  pastLife1426Manifest,
+  joseon1426Manifest,
+  europe1426Manifest,
+  usBirthStateManifest,
   balanceWheelManifest,
   cashflowManifest,
   incomeStatementGameManifest,
