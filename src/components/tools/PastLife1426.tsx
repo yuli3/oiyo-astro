@@ -216,7 +216,7 @@ function Result({ life, l, fmt }: { life: PastLife; l: L; fmt: Intl.NumberFormat
         <p>{odds(realmShare())}</p>
         <Sources l={l} items={EUROPE_SOURCES} />
       </Card>
-      <Card label={pick(C.us, l)} main={state.name[l]} sub={`${fmt.format(state.births)} ${pick(C.births, l)}`}>
+      <Card label={pick(C.us, l)} main={state.name[l]} sub={l === "ko" ? `2024년 출생 ${fmt.format(state.births)}명` : l === "ja" ? `2024年の出生 ${fmt.format(state.births)}人` : l === "zh" ? `2024年出生 ${fmt.format(state.births)}人` : `${fmt.format(state.births)} ${pick(C.births, l)}`}>
         <p>{odds(stateShare(state))}</p>
         <Sources l={l} items={US_SOURCES} />
       </Card>
