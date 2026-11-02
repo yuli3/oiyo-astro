@@ -1,0 +1,3391 @@
+[
+ {
+  "id": "england",
+  "title": "Kingdom of England",
+  "resolved_title": "Kingdom of England",
+  "redirected": false,
+  "qid": "Q179876",
+  "emblem": {
+   "commons_file": "Royal arms of England.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Royal_arms_of_England.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Royal_arms_of_England.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Royal_arms_of_England.svg/960px-Royal_arms_of_England.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 410,
+   "height": 478,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "",
+   "Credit": "Own work",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "20 July 2010",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/england.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Royal_arms_of_England.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 133177,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {
+    "P580": "+1198-00-00T00:00:00Z",
+    "P582": "+1340-00-00T00:00:00Z"
+   }
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Henry VI of England",
+  "ruler_qid": "Q160337",
+  "ruler_resolved_title": "Henry VI of England",
+  "portrait": {
+   "commons_file": "Henry VI of England, Shrewsbury book.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Henry_VI_of_England,_Shrewsbury_book.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Henry_VI_of_England%2C_Shrewsbury_book.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Henry_VI_of_England%2C_Shrewsbury_book.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 552,
+   "height": 794,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Poems and Romances (Shrewsbury book), illuminated by the MASTER OF JOHN TALBOT",
+   "Credit": "This image has an extracted file: Shrewsbury Book f.405.jpg.",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "between 1444 and 1445date QS:P,+1444-00-00T00:00:00Z/8,P1319,+1444-00-00T00:00:00Z/9,P1326,+1445-00-00T00:00:00Z/9",
+   "ImageDescription": "Illuminated miniature of Henry VI of England",
+   "licence_ok": true,
+   "local": "rulers-eu/england.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Henry_VI_of_England%2C_Shrewsbury_book.jpg/330px-Henry_VI_of_England%2C_Shrewsbury_book.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 67515,
+   "pixels": [
+    330,
+    475
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of England",
+  "wikidata_label_ko": "잉글랜드 왕국",
+  "ruler_label_en": "Henry VI of England",
+  "ruler_label_ko": "헨리 6세",
+  "ruler_birth": "+1421-12-06T00:00:00Z",
+  "ruler_death": "+1471-05-21T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "statement dated 1198-1340; by 1426 England quartered France",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Royal arms of England.svg",
+    "rank": "preferred",
+    "q": {
+     "P580": "+1198-00-00T00:00:00Z",
+     "P582": "+1340-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Royal Arms of England (1154-1189).svg",
+    "rank": "normal",
+    "q": {
+     "P582": "+1189-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Royal Arms of England (1189-1198).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1189-00-00T00:00:00Z",
+     "P582": "+1198-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of England (-1340).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1327-00-00T00:00:00Z",
+     "P582": "+1340-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Edward III of England (1327-1377) (Attributed).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1340-00-00T00:00:00Z",
+     "P582": "+1377-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Richard II of England (1377-1399) Variant 3.svg",
+    "rank": "normal",
+    "q": {
+     "P582": "+1399-00-00T00:00:00Z",
+     "P585": "+1377-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Henry IV of England (1399-1413).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1399-00-00T00:00:00Z",
+     "P582": "+1413-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Henry IV & V of England (1413-1422).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1413-00-00T00:00:00Z",
+     "P582": "+1422-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Henry VI of England (1422-1471).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1422-00-00T00:00:00Z",
+     "P582": "+1461-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Edward IV of England (1461-1483).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1461-00-00T00:00:00Z",
+     "P582": "+1470-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Henry VI of England (1422-1471).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1470-00-00T00:00:00Z",
+     "P582": "+1471-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Edward IV of England (1461-1483).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1471-00-00T00:00:00Z",
+     "P582": "+1483-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Edward V of England (1483).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1483-00-00T00:00:00Z",
+     "P582": "+1483-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Richard III of England (1483-1485).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1483-00-00T00:00:00Z",
+     "P582": "+1485-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Henry VII of England (1485-1509).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1485-00-00T00:00:00Z",
+     "P582": "+1509-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of England (1509-1554).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1509-00-00T00:00:00Z",
+     "P582": "+1554-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of England (1554-1558).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1554-00-00T00:00:00Z",
+     "P582": "+1558-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of England (1558-1603).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1558-00-00T00:00:00Z",
+     "P582": "+1603-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of arms of England (1603–1649).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1603-00-00T00:00:00Z",
+     "P582": "+1649-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of England (1660-1689).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1660-00-00T00:00:00Z",
+     "P582": "+1689-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of England (c. 1690).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1690-00-00T00:00:00Z",
+     "P582": "+1690-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of arms of England (1702–1707).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1702-00-00T00:00:00Z",
+     "P582": "+1707-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of arms of England (1689–1694).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of arms of England (1694–1702).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of England.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1545-01-01T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Royal Banner of England.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1100-00-00T00:00:00Z"
+    }
+   }
+  ]
+ },
+ {
+  "id": "france",
+  "title": "Kingdom of France",
+  "resolved_title": "Kingdom of France",
+  "redirected": false,
+  "qid": "Q70972",
+  "emblem": {
+   "commons_file": "Grand Royal Coat of Arms of France & Navarre.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Grand_Royal_Coat_of_Arms_of_France_%26_Navarre.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Grand_Royal_Coat_of_Arms_of_France_%26_Navarre.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Grand_Royal_Coat_of_Arms_of_France_%26_Navarre.svg/960px-Grand_Royal_Coat_of_Arms_of_France_%26_Navarre.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 1190,
+   "height": 1585,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "Artist": "",
+   "Credit": "Own work based on: on blazon and sources; Créations des chevaliers de l'Ordre du St Esprit faits par Louis le Grand. (1689). Recueil de mémoires et documents concernant divers Ordres français ou étrangers. (1700). With element from: File:Navarre Arms.svg",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "15 October 2009",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/france.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Grand_Royal_Coat_of_Arms_of_France_%26_Navarre.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 6245378,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Charles VII of France",
+  "ruler_qid": "Q133372",
+  "ruler_resolved_title": "Charles VII of France",
+  "portrait": {
+   "commons_file": "KarlVII.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:KarlVII.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/KarlVII.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/KarlVII.jpg/960px-KarlVII.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 3307,
+   "height": 4025,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "",
+   "Credit": "Swedish Wikipedia, uploaded there by user Lamré on 2005-01-25, 04:39",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "",
+   "ImageDescription": "Charles VII of France",
+   "licence_ok": true,
+   "local": "rulers-eu/france.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/KarlVII.jpg/330px-KarlVII.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 47487,
+   "pixels": [
+    330,
+    402
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of France",
+  "wikidata_label_ko": "프랑스 왕국",
+  "ruler_label_en": "Charles VII of France",
+  "ruler_label_ko": "샤를 7세",
+  "ruler_birth": "+1403-02-22T00:00:00Z",
+  "ruler_death": "+1461-07-22T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "France & Navarre grand arms are Bourbon-era (post-1589)",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Grand Royal Coat of Arms of France & Navarre.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Royal Standard of the King of France.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "scotland",
+  "title": "Kingdom of Scotland",
+  "resolved_title": "Kingdom of Scotland",
+  "redirected": false,
+  "qid": "Q230791",
+  "emblem": {
+   "commons_file": "Coat of Arms of Scotland (1702-1707).svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Scotland_(1702-1707).svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Coat_of_Arms_of_Scotland_%281702-1707%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Coat_of_Arms_of_Scotland_%281702-1707%29.svg/960px-Coat_of_Arms_of_Scotland_%281702-1707%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 1550,
+   "height": 1500,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "Artist": "",
+   "Credit": "Own work based on: Coat of Arms of Scotland (1694-1702).svg by Sodacan",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "26 May 2022",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/scotland.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Coat_of_Arms_of_Scotland_%281702-1707%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 2956138,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {
+    "P580": "+1702-00-00T00:00:00Z"
+   }
+  },
+  "emblem_rejected": [],
+  "ruler_title": "James I of Scotland",
+  "ruler_qid": "Q235234",
+  "ruler_resolved_title": "James I of Scotland",
+  "portrait": {
+   "commons_file": "King James I of Scotland.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:King_James_I_of_Scotland.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/King_James_I_of_Scotland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/King_James_I_of_Scotland.jpg/960px-King_James_I_of_Scotland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 6930,
+   "height": 8645,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "anonymous",
+   "Credit": "National Galleries Scotland",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1579",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "rulers-eu/scotland.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/King_James_I_of_Scotland.jpg/330px-King_James_I_of_Scotland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 41256,
+   "pixels": [
+    330,
+    412
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of Scotland",
+  "wikidata_label_ko": "스코틀랜드 왕국",
+  "ruler_label_en": "James I of Scotland",
+  "ruler_label_ko": "제임스 1세",
+  "ruler_birth": "+1394-07-25T00:00:00Z",
+  "ruler_death": "+1437-02-21T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "file is 1702-1707",
+  "portrait_note": "1579 image",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Scotland (1702-1707).svg",
+    "rank": "preferred",
+    "q": {
+     "P580": "+1702-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Royal Arms of the Kingdom of Scotland.svg",
+    "rank": "normal",
+    "q": {
+     "P582": "+1558-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Royal Arms of the Kingdom of Scotland (1558-1559).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1558-00-00T00:00:00Z",
+     "P582": "+1559-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Royal Arms of the Kingdom of Scotland (1559-1560).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1559-00-00T00:00:00Z",
+     "P582": "+1560-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Royal Arms of the Kingdom of Scotland (1560-1565).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1560-00-00T00:00:00Z",
+     "P582": "+1565-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Royal Coat of Arms of the Kingdom of Scotland (Variant 1).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1565-00-00T00:00:00Z",
+     "P582": "+1603-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Royal Coat of arms of Scotland (1603–1651).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1603-00-00T00:00:00Z",
+     "P582": "+1651-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Scotland (1660-1689).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1687-00-00T00:00:00Z",
+     "P582": "+1689-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Scotland (1689-1694).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1689-00-00T00:00:00Z",
+     "P582": "+1694-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Scotland (1694-1702).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1694-00-00T00:00:00Z",
+     "P582": "+1702-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Scotland (1542–2003, sky blue).svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "castile",
+  "title": "Crown of Castile",
+  "resolved_title": "Crown of Castile",
+  "redirected": false,
+  "qid": "Q217196",
+  "emblem": {
+   "commons_file": "Royal Coat of Arms of the Crown of Castile (15th Century).svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Royal_Coat_of_Arms_of_the_Crown_of_Castile_(15th_Century).svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Royal_Coat_of_Arms_of_the_Crown_of_Castile_%2815th_Century%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Royal_Coat_of_Arms_of_the_Crown_of_Castile_%2815th_Century%29.svg/960px-Royal_Coat_of_Arms_of_the_Crown_of_Castile_%2815th_Century%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 874,
+   "height": 1228,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "Artist": "Heralder",
+   "Credit": "Menéndez-Pidal De Navascués, Faustino; El escudo; Menéndez Pidal y Navascués, Faustino; O´Donnell, Hugo; Lolo, Begoña. Símbolos de España. Madrid: Centro de Estudios Políticos y Constitucionales, 1999. ISBN 84-259-1074-9",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2011-04-15",
+   "ImageDescription": "Royal Coat of arms of the Crown of Castile (15th Century Design)",
+   "licence_ok": true,
+   "local": "coa-eu/castile.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Royal_Coat_of_Arms_of_the_Crown_of_Castile_%2815th_Century%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 561010,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "John II of Castile",
+  "ruler_qid": "Q297278",
+  "ruler_resolved_title": "John II of Castile",
+  "portrait": {
+   "commons_file": "1881, Indumentaria española documentos para su estudio, desde la época visigoda hasta nuestros dias, D. Juan II, siglo XV, Francisco Aznar (cropped).jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:1881,_Indumentaria_espa%C3%B1ola_documentos_para_su_estudio,_desde_la_%C3%A9poca_visigoda_hasta_nuestros_dias,_D._Juan_II,_siglo_XV,_Francisco_Aznar_(cropped).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/1881%2C_Indumentaria_espa%C3%B1ola_documentos_para_su_estudio%2C_desde_la_%C3%A9poca_visigoda_hasta_nuestros_dias%2C_D._Juan_II%2C_siglo_XV%2C_Francisco_Aznar_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/1881%2C_Indumentaria_espa%C3%B1ola_documentos_para_su_estudio%2C_desde_la_%C3%A9poca_visigoda_hasta_nuestros_dias%2C_D._Juan_II%2C_siglo_XV%2C_Francisco_Aznar_%28cropped%29.jpg/960px-1881%2C_Indumentaria_espa%C3%B1ola_documentos_para_su_estudio%2C_desde_la_%C3%A9poca_visigoda_hasta_nuestros_dias%2C_D._Juan_II%2C_siglo_XV%2C_Francisco_Aznar_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 1277,
+   "height": 1501,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Francisco Aznar",
+   "Credit": "Biblioteca Virtual del Patrimonio Bibliográfico",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1881",
+   "ImageDescription": "D. Juan II, siglo XV : Retablo de la Cartuja de Miraflores, Burgos. Indumentaria española : documentos para su estudio, desde la época visigoda hasta nuestros dias (Lám. 54).",
+   "licence_ok": true,
+   "local": "rulers-eu/castile.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/1881%2C_Indumentaria_espa%C3%B1ola_documentos_para_su_estudio%2C_desde_la_%C3%A9poca_visigoda_hasta_nuestros_dias%2C_D._Juan_II%2C_siglo_XV%2C_Francisco_Aznar_%28cropped%29.jpg/330px-1881%2C_Indumentaria_espa%C3%B1ola_documentos_para_su_estudio%2C_desde_la_%C3%A9poca_visigoda_hasta_nuestros_dias%2C_D._Juan_II%2C_siglo_XV%2C_Francisco_Aznar_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 29763,
+   "pixels": [
+    330,
+    388
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Crown of Castile",
+  "wikidata_label_ko": "카스티야 연합왕국",
+  "ruler_label_en": "John II of Castile",
+  "ruler_label_ko": "후안 2세 데 카스티야",
+  "ruler_birth": "+1405-03-06T00:00:00Z",
+  "ruler_death": "+1454-07-21T00:00:00Z",
+  "period_fit_1426": "ok",
+  "period_note": "labelled 15th century",
+  "portrait_note": "1881 engraving after a retablo",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Royal Coat of Arms of the Crown of Castile (15th Century).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Royal Banner of the Crown of Castille (15th Century Style).svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "aragon",
+  "title": "Crown of Aragon",
+  "resolved_title": "Crown of Aragon",
+  "redirected": false,
+  "qid": "Q204920",
+  "emblem": {
+   "commons_file": "Armas del soberano de Aragón.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Armas_del_soberano_de_Arag%C3%B3n.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Armas_del_soberano_de_Arag%C3%B3n.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Armas_del_soberano_de_Arag%C3%B3n.svg/960px-Armas_del_soberano_de_Arag%C3%B3n.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 540,
+   "height": 790,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "HansenBCN",
+   "Credit": "Own work",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "2008-04-13",
+   "ImageDescription": "Armas del soberano de Argón: Aragón timbrado con corona real abierta.",
+   "licence_ok": true,
+   "local": "coa-eu/aragon.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Armas_del_soberano_de_Arag%C3%B3n.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 86612,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Alfonso V of Aragon",
+  "ruler_qid": "Q312304",
+  "ruler_resolved_title": "Alfonso V of Aragon",
+  "portrait": {
+   "commons_file": "Jaume Mateu - Alfons IV the Magnanimous - Google Art Project.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Jaume_Mateu_-_Alfons_IV_the_Magnanimous_-_Google_Art_Project.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Jaume_Mateu_-_Alfons_IV_the_Magnanimous_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Jaume_Mateu_-_Alfons_IV_the_Magnanimous_-_Google_Art_Project.jpg/960px-Jaume_Mateu_-_Alfons_IV_the_Magnanimous_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 3592,
+   "height": 4584,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Jaume Mateu",
+   "Credit": "Google Arts &amp; Culture: Home page – Image",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1427",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "rulers-eu/aragon.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Jaume_Mateu_-_Alfons_IV_the_Magnanimous_-_Google_Art_Project.jpg/330px-Jaume_Mateu_-_Alfons_IV_the_Magnanimous_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 51361,
+   "pixels": [
+    330,
+    421
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Crown of Aragon",
+  "wikidata_label_ko": "아라곤 연합왕국",
+  "ruler_label_en": "Alfonso V of Aragon",
+  "ruler_label_ko": "알폰소 5세 데 아라곤",
+  "ruler_birth": "+1396-02-24T00:00:00Z",
+  "ruler_death": "+1458-06-27T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Armas del soberano de Aragón.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Royal arms of Aragon (Crowned).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Blason d'Aragon.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Royal Banner of Aragón.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Sinyal d'Aragón.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "portugal",
+  "title": "Kingdom of Portugal",
+  "resolved_title": "Kingdom of Portugal",
+  "redirected": false,
+  "qid": "Q45670",
+  "emblem": {
+   "commons_file": "Coats of arms of the Kingdom of Portugal and Algarves (1834 to 1910) - Lesser.png",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coats_of_arms_of_the_Kingdom_of_Portugal_and_Algarves_(1834_to_1910)_-_Lesser.png",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Coats_of_arms_of_the_Kingdom_of_Portugal_and_Algarves_%281834_to_1910%29_-_Lesser.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Coats_of_arms_of_the_Kingdom_of_Portugal_and_Algarves_%281834_to_1910%29_-_Lesser.png/960px-Coats_of_arms_of_the_Kingdom_of_Portugal_and_Algarves_%281834_to_1910%29_-_Lesser.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/png",
+   "width": 963,
+   "height": 1115,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "Portugal1908",
+   "Credit": "https://pt.ucoin.net/coin/portugal-200-reis-1909/?ucid=17813650 https://www.numiscorner.com/pt/products/900439-coin-portugal-carlos-i-100-reis-1900-vf-30-35-copper-nickel-km-546 https://colnect.com/pt/coins/coin/29721-10000_R%C3%A9is_Coroa-1861-1889_D_Lu%C3%ADs_I_O_Popular-Portugal",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2023-04-27",
+   "ImageDescription": "This is an accurate version of the coat of arms of Portugal during the period of the constitutional monarchy (1834-1910). It was based on coin and currency bill patterns, seals and stamps. The laurel wreath was made by me and based on the original patterns. Note how in the pictures of the coins, the",
+   "licence_ok": true,
+   "local": "coa-eu/portugal.png",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Coats_of_arms_of_the_Kingdom_of_Portugal_and_Algarves_%281834_to_1910%29_-_Lesser.png/330px-Coats_of_arms_of_the_Kingdom_of_Portugal_and_Algarves_%281834_to_1910%29_-_Lesser.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 149337,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {},
+   "pixels": [
+    330,
+    382
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "emblem_rejected": [],
+  "ruler_title": "John I of Portugal",
+  "ruler_qid": "Q201575",
+  "ruler_resolved_title": "John I of Portugal",
+  "portrait": {
+   "commons_file": "Anoniem - Koning Johan I van Portugal (1450-1500) - Lissabon Museu Nacional de Arte Antiga 19-10-2010 16-12-61.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Anoniem_-_Koning_Johan_I_van_Portugal_(1450-1500)_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg/960px-Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 1497,
+   "height": 1948,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "anonymous",
+   "Credit": "Own work, 2010-10-19",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "early 15th centurydate QS:P571,+1450-00-00T00:00:00Z/7",
+   "ImageDescription": "Portrait of King John I of Portugal (1357-1433)",
+   "licence_ok": true,
+   "local": "rulers-eu/portugal.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg/330px-Anoniem_-_Koning_Johan_I_van_Portugal_%281450-1500%29_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-12-61.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 56785,
+   "pixels": [
+    330,
+    429
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of Portugal",
+  "wikidata_label_ko": "포르투갈 왕국",
+  "ruler_label_en": "John I of Portugal",
+  "ruler_label_ko": "주앙 1세",
+  "ruler_birth": "+1357-04-11T00:00:00Z",
+  "ruler_death": "+1433-08-14T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "file is 1834-1910",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coats of arms of the Kingdom of Portugal and Algarves (1834 to 1910) - Lesser.png",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Portugal (1830–1910).svg",
+    "rank": "preferred",
+    "q": {
+     "P580": "+1830-00-00T00:00:00Z",
+     "P582": "+1910-10-05T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "PortugueseFlag1143.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1143-00-00T00:00:00Z",
+     "P582": "+1185-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "PortugueseFlag1185.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1185-00-00T00:00:00Z",
+     "P582": "+1248-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Kingdom of Portugal (1248–1385).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1248-00-00T00:00:00Z",
+     "P582": "+1385-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Kingdom of Portugal (1385–1485).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1385-00-00T00:00:00Z",
+     "P582": "+1485-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Kingdom of Portugal (1485–mid-16th century).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1485-00-00T00:00:00Z",
+     "P582": "+1521-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Portugal (1495).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1495-00-00T00:00:00Z",
+     "P582": "+1521-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Portugal (1521).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1521-00-00T00:00:00Z",
+     "P582": "+1578-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Portugal (1578).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1578-00-00T00:00:00Z",
+     "P582": "+1640-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Portugal (1640).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1640-00-00T00:00:00Z",
+     "P582": "+1667-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Portugal (1667).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1667-00-00T00:00:00Z",
+     "P582": "+1707-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Portugal (1707).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1707-00-00T00:00:00Z",
+     "P582": "+1816-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the United Kingdom of Portugal, Brazil, and the Algarves (1815-1825).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1816-03-13T00:00:00Z",
+     "P582": "+1826-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Portugal (1707).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1826-00-00T00:00:00Z",
+     "P582": "+1830-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "PortugueseFlag1095.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1139-07-25T00:00:00Z",
+     "P582": "+1143-00-00T00:00:00Z"
+    }
+   }
+  ]
+ },
+ {
+  "id": "navarre",
+  "title": "Kingdom of Navarre",
+  "resolved_title": "Kingdom of Navarre",
+  "redirected": false,
+  "qid": "Q200262",
+  "emblem": {
+   "commons_file": "Coat of Arms of the Kingdom of Navarre.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_the_Kingdom_of_Navarre.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Coat_of_Arms_of_the_Kingdom_of_Navarre.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Coat_of_Arms_of_the_Kingdom_of_Navarre.svg/960px-Coat_of_Arms_of_the_Kingdom_of_Navarre.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 707,
+   "height": 908,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "Artist": "Tom Lemmens",
+   "Credit": "This vector image includes elements that have been taken or adapted from this file:",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "",
+   "ImageDescription": "Coat of Arms of the Kingdom of Navarre (Commonly used before the 17th Century)",
+   "licence_ok": true,
+   "local": "coa-eu/navarre.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Coat_of_Arms_of_the_Kingdom_of_Navarre.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 235755,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {
+    "P580": "+1234-00-00T00:00:00Z",
+    "P582": "+1423-00-00T00:00:00Z"
+   }
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Blanche I of Navarre",
+  "ruler_qid": "Q233865",
+  "ruler_resolved_title": "Blanche I of Navarre",
+  "portrait": {
+   "commons_file": "BlancaI navarra.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:BlancaI_navarra.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/BlancaI_navarra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/BlancaI_navarra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 286,
+   "height": 378,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "David Teniers the Younger / Jan van Kessel the Elder",
+   "Credit": "This image has an extracted file: David Teniers II and Jan van Kessel I - The Presentation of the Captain General's Baton to Antonio de Moncada by the Queen Regent Blanca of Sicily in 1410.jpg.",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1664",
+   "ImageDescription": "The Presentation of the Captain General's Baton to Antonio de Moncada by the Queen Regent Blanca of Sicily in 1410",
+   "licence_ok": true,
+   "local": "rulers-eu/navarre.jpg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/BlancaI_navarra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 151857,
+   "pixels": [
+    286,
+    378
+   ]
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of Navarre",
+  "wikidata_label_ko": "나바라 왕국",
+  "ruler_label_en": "Blanche I of Navarre",
+  "ruler_label_ko": "블랑카",
+  "ruler_birth": "+1387-07-06T00:00:00Z",
+  "ruler_death": "+1441-04-01T00:00:00Z",
+  "period_fit_1426": "check",
+  "period_note": "statement ends 1423",
+  "portrait_note": "1664 painting; description names a 1410 scene with Blanca",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of the Kingdom of Navarre.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1234-00-00T00:00:00Z",
+     "P582": "+1423-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Bandera de Reino de Navarra.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "kalmar",
+  "title": "Kalmar Union",
+  "resolved_title": "Kalmar Union",
+  "redirected": false,
+  "qid": "Q62623",
+  "emblem": {
+   "commons_file": "Flag of the Kalmar Union.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Kalmar_Union.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_the_Kalmar_Union.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": null,
+   "mime": "image/svg+xml",
+   "width": 1600,
+   "height": 1000,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "ThrashedParanoid",
+   "Credit": "Own work Original PNG made by E70.",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "",
+   "ImageDescription": "This is merely a recreation of what the flag is thought to have looked like. There are no surviving flags or pictorial evidence as to its appearance. See article at Flags of the World.",
+   "licence_ok": true,
+   "local": "coa-eu/kalmar.svg",
+   "wikidata_property": null,
+   "source_of_choice": "enwiki article image, not a Wikidata statement"
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Eric of Pomerania",
+  "ruler_qid": "Q161958",
+  "ruler_resolved_title": "Erik of Pomerania",
+  "portrait": {
+   "commons_file": "Erik I, 1382-1459, hertig av Pommern konung av Danmark Norge och Sverige - Nationalmuseum - 15058.tif",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Erik_I,_1382-1459,_hertig_av_Pommern_konung_av_Danmark_Norge_och_Sverige_-_Nationalmuseum_-_15058.tif",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Erik_I%2C_1382-1459%2C_hertig_av_Pommern_konung_av_Danmark_Norge_och_Sverige_-_Nationalmuseum_-_15058.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Erik_I%2C_1382-1459%2C_hertig_av_Pommern_konung_av_Danmark_Norge_och_Sverige_-_Nationalmuseum_-_15058.tif/lossy-page1-960px-Erik_I%2C_1382-1459%2C_hertig_av_Pommern_konung_av_Danmark_Norge_och_Sverige_-_Nationalmuseum_-_15058.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/tiff",
+   "width": 3202,
+   "height": 3872,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Unknown authorUnknown author",
+   "Credit": "Nationalmuseum",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "Unknown date",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "rulers-eu/kalmar.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Erik_I%2C_1382-1459%2C_hertig_av_Pommern_konung_av_Danmark_Norge_och_Sverige_-_Nationalmuseum_-_15058.tif/lossy-page1-330px-Erik_I%2C_1382-1459%2C_hertig_av_Pommern_konung_av_Danmark_Norge_och_Sverige_-_Nationalmuseum_-_15058.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 30952,
+   "pixels": [
+    330,
+    399
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kalmar Union",
+  "wikidata_label_ko": "칼마르 동맹",
+  "ruler_label_en": "Eric of Pomerania",
+  "ruler_label_ko": "포메라니아의 에릭",
+  "ruler_birth": "+1381-01-01T00:00:00Z",
+  "ruler_death": "+1459-05-03T00:00:00Z",
+  "period_fit_1426": "fallback",
+  "period_note": "no P94/P41 in Wikidata",
+  "portrait_note": null,
+  "all_p94_p41": []
+ },
+ {
+  "id": "poland",
+  "title": "Kingdom of Poland (1385–1569)",
+  "resolved_title": "Crown of the Kingdom of Poland",
+  "redirected": true,
+  "qid": "Q171348",
+  "emblem": {
+   "commons_file": "Coat of arms of the Crown of the Kingdom of Poland (Sigismund III Vasa).svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Crown_of_the_Kingdom_of_Poland_(Sigismund_III_Vasa).svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Coat_of_arms_of_the_Crown_of_the_Kingdom_of_Poland_%28Sigismund_III_Vasa%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Coat_of_arms_of_the_Crown_of_the_Kingdom_of_Poland_%28Sigismund_III_Vasa%29.svg/960px-Coat_of_arms_of_the_Crown_of_the_Kingdom_of_Poland_%28Sigismund_III_Vasa%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 360,
+   "height": 430,
+   "LicenseShortName": "CC BY 3.0",
+   "License": "cc-by-3.0",
+   "UsageTerms": "Creative Commons Attribution 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "Artist": "Samhanin",
+   "Credit": "Own work",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "1601",
+   "ImageDescription": "Coat of arms of the Crown of the Kingdom of Poland (Sigismund III Vasa)",
+   "licence_ok": true,
+   "local": "coa-eu/poland.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Coat_of_arms_of_the_Crown_of_the_Kingdom_of_Poland_%28Sigismund_III_Vasa%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 100698,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Władysław II Jagiełło",
+  "ruler_qid": "Q54049",
+  "ruler_resolved_title": "Władysław II Jagiełło",
+  "portrait": {
+   "commons_file": "Jogaila of Lithuania.Image from around 1475-1480.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Jogaila_of_Lithuania.Image_from_around_1475-1480.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Jogaila_of_Lithuania.Image_from_around_1475-1480.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Jogaila_of_Lithuania.Image_from_around_1475-1480.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 600,
+   "height": 654,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Unknown authorUnknown author",
+   "Credit": "Scan from A.Bumblauskas, Senosios Lietuvos istorija 1009 - 1795",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "between 1475 and 1480date QS:P,+1450-00-00T00:00:00Z/7,P1319,+1475-00-00T00:00:00Z/9,P1326,+1480-00-00T00:00:00Z/9",
+   "ImageDescription": "Presumably Jogaila's image from around 1475-1480.",
+   "licence_ok": true,
+   "local": "rulers-eu/poland.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Jogaila_of_Lithuania.Image_from_around_1475-1480.jpg/330px-Jogaila_of_Lithuania.Image_from_around_1475-1480.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 48692,
+   "pixels": [
+    330,
+    360
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Crown of the Kingdom of Poland",
+  "wikidata_label_ko": "폴란드 왕국 왕관령",
+  "ruler_label_en": "Władysław II Jagiełło",
+  "ruler_label_ko": "브와디스와프 2세",
+  "ruler_birth": "+1362-01-01T00:00:00Z",
+  "ruler_death": "+1434-06-01T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "Sigismund III Vasa, 1587-1632",
+  "portrait_note": "ca.1475-1480, 'presumably' Jogaila",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of arms of the Crown of the Kingdom of Poland (Sigismund III Vasa).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Banner of Sigismund III Vasa.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "lithuania",
+  "title": "Grand Duchy of Lithuania",
+  "resolved_title": "Grand Duchy of Lithuania",
+  "redirected": false,
+  "qid": "Q49683",
+  "emblem": {
+   "commons_file": "POL COA Grand Duchy of Lithuania.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:POL_COA_Grand_Duchy_of_Lithuania.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/POL_COA_Grand_Duchy_of_Lithuania.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/POL_COA_Grand_Duchy_of_Lithuania.svg/960px-POL_COA_Grand_Duchy_of_Lithuania.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 512,
+   "height": 512,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "Guccee This W3C-unspecified vector image was created with Inkscape .",
+   "Credit": "Own work",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2024-03-03",
+   "ImageDescription": "The Grand Duchy of Lithuania is a historical state that once existed in Europe. The coat of arms of this country depicted a armored rider on a horse, commonly called Pogoń",
+   "licence_ok": true,
+   "local": "coa-eu/lithuania.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/POL_COA_Grand_Duchy_of_Lithuania.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 156442,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Vytautas",
+  "ruler_qid": "Q218186",
+  "ruler_resolved_title": "Vytautas the Great",
+  "portrait": {
+   "commons_file": "Vytautas dydysis.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Vytautas_dydysis.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Vytautas_dydysis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Vytautas_dydysis.jpg/960px-Vytautas_dydysis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 1033,
+   "height": 1443,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Jan Matejko",
+   "Credit": "Jan Matejko",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1878",
+   "ImageDescription": "fragment of a canvas painting of Jan Matejko about the Battle of Grunvald",
+   "licence_ok": true,
+   "local": "rulers-eu/lithuania.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Vytautas_dydysis.jpg/330px-Vytautas_dydysis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 74565,
+   "pixels": [
+    330,
+    461
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Grand Duchy of Lithuania",
+  "wikidata_label_ko": "리투아니아 대공국",
+  "ruler_label_en": "Vytautas",
+  "ruler_label_ko": "비타우타스",
+  "ruler_birth": "+1350-00-00T00:00:00Z",
+  "ruler_death": "+1430-10-27T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "modern drawing of the Vytis",
+  "portrait_note": "1878 Matejko fragment",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "POL COA Grand Duchy of Lithuania.svg",
+    "rank": "preferred",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Royal banner of the Grand Duchy of Lithuania.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "hungary",
+  "title": "Kingdom of Hungary (1301–1526)",
+  "resolved_title": "Kingdom of Hungary (1301–1526)",
+  "redirected": false,
+  "qid": "Q16056854",
+  "emblem": {
+   "commons_file": "Coa Hungary Country History Mathias Corvinus (1458-1490) big.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coa_Hungary_Country_History_Mathias_Corvinus_(1458-1490)_big.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Coa_Hungary_Country_History_Mathias_Corvinus_%281458-1490%29_big.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Coa_Hungary_Country_History_Mathias_Corvinus_%281458-1490%29_big.svg/960px-Coa_Hungary_Country_History_Mathias_Corvinus_%281458-1490%29_big.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 800,
+   "height": 800,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "Madboy74",
+   "Credit": "Own work",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2011-06-04",
+   "ImageDescription": "coats of arms of Mathias Corvinus of Hungary (1458–1490).",
+   "licence_ok": true,
+   "local": "coa-eu/hungary.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Coa_Hungary_Country_History_Mathias_Corvinus_%281458-1490%29_big.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 385064,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {
+    "P580": "+1458-00-00T00:00:00Z",
+    "P582": "+1490-00-00T00:00:00Z"
+   }
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Sigismund, Holy Roman Emperor",
+  "ruler_qid": "Q57124",
+  "ruler_resolved_title": "Sigismund, Holy Roman Emperor",
+  "portrait": {
+   "commons_file": "Pisanello 024b.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Pisanello_024b.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pisanello_024b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pisanello_024b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 695,
+   "height": 1000,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Formerly attributed to Pisanello",
+   "Credit": "Kunsthistorisches Museum Wien, Bilddatenbank.",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1433date QS:P571,+1433-00-00T00:00:00Z/9",
+   "ImageDescription": "Person depicted: Emperor Sigismund I. Son of Charles IV of Luxembourg",
+   "licence_ok": true,
+   "local": "rulers-eu/hungary.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Pisanello_024b.jpg/330px-Pisanello_024b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 70008,
+   "pixels": [
+    330,
+    475
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of Hungary",
+  "wikidata_label_ko": null,
+  "ruler_label_en": "Sigismund",
+  "ruler_label_ko": "지기스문트",
+  "ruler_birth": "+1368-02-14T00:00:00Z",
+  "ruler_death": "+1437-12-09T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "Matthias Corvinus, 1458-1490",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Mathias Corvinus (1458-1490) big.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1458-00-00T00:00:00Z",
+     "P582": "+1490-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Ladislaus V (1440 – 1457).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1444-00-00T00:00:00Z",
+     "P582": "+1457-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Vladislaus I (1440–1444).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1440-00-00T00:00:00Z",
+     "P582": "+1444-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Endre (1342-1345).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1385-00-00T00:00:00Z",
+     "P582": "+1386-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Charles I 2 (1310-1342).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1382-00-00T00:00:00Z",
+     "P582": "+1385-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Otto (1305-1307).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1305-00-00T00:00:00Z",
+     "P582": "+1307-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Charles I (1310-1342).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1310-00-00T00:00:00Z",
+     "P582": "+1342-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Venczel (1301-1305).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1301-00-00T00:00:00Z",
+     "P582": "+1305-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Coa Hungary Country History Lajos I.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1342-00-00T00:00:00Z",
+     "P582": "+1382-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Louis II of Hungary.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1516-00-00T00:00:00Z",
+     "P582": "+1526-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Vladislaus II of Hungary.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1490-00-00T00:00:00Z",
+     "P582": "+1516-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Matthias I of Hungary.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1458-00-00T00:00:00Z",
+     "P582": "+1490-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Vladislaus I of Hungary.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1440-00-00T00:00:00Z",
+     "P582": "+1444-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Sigismund of Hungary.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1387-00-00T00:00:00Z",
+     "P582": "+1437-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Hungary (1301-1382).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1301-00-00T00:00:00Z",
+     "P582": "+1382-00-00T00:00:00Z"
+    }
+   }
+  ]
+ },
+ {
+  "id": "hre",
+  "title": "Holy Roman Empire",
+  "resolved_title": "Holy Roman Empire",
+  "redirected": false,
+  "qid": "Q12548",
+  "emblem": {
+   "commons_file": "Holy Roman Empire Arms-double head.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Holy_Roman_Empire_Arms-double_head.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Holy_Roman_Empire_Arms-double_head.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Holy_Roman_Empire_Arms-double_head.svg/960px-Holy_Roman_Empire_Arms-double_head.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 550,
+   "height": 659,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "Artist": "Ipankonin",
+   "Credit": "File:Banner of the Holy Roman Emperor (after 1400).svg",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2008-04-15",
+   "ImageDescription": "Coat of arms of the Holy Roman Empire from ca. 1433 (emperor Sigismund was the first to use the double-headed eagle, but the single-headed eagle continued to see some use well into the 16th century). The style is loosely based on that of the mid-16th century (cf. e.g. Jacob Kallenberg (1545)), but l",
+   "licence_ok": true,
+   "local": "coa-eu/hre.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Holy_Roman_Empire_Arms-double_head.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 594587,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Sigismund, Holy Roman Emperor",
+  "ruler_qid": "Q57124",
+  "ruler_resolved_title": "Sigismund, Holy Roman Emperor",
+  "portrait": {
+   "commons_file": "Pisanello 024b.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Pisanello_024b.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pisanello_024b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pisanello_024b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 695,
+   "height": 1000,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Formerly attributed to Pisanello",
+   "Credit": "Kunsthistorisches Museum Wien, Bilddatenbank.",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1433date QS:P571,+1433-00-00T00:00:00Z/9",
+   "ImageDescription": "Person depicted: Emperor Sigismund I. Son of Charles IV of Luxembourg",
+   "licence_ok": true,
+   "local": "rulers-eu/hre.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Pisanello_024b.jpg/330px-Pisanello_024b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 70008,
+   "pixels": [
+    330,
+    475
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [
+   "Same ruler as hungary; portrait file copied."
+  ],
+  "wikidata_label_en": "Holy Roman Empire",
+  "wikidata_label_ko": "신성 로마 제국",
+  "period_fit_1426": "mismatch",
+  "period_note": "double-headed from ca.1433 per file description",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Holy Roman Empire Arms-double head.svg",
+    "rank": "preferred",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of the Holy Roman Emperor (c.1433-c.1450).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of arms of the Holy Roman Empire (1200 - 1400).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Heiliges Römisches Reich - Reichssturmfahne vor 1433 (Nimbierter Adler).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Königsbanner 14Jh.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Banner of the Holy Roman Emperor with haloes (1430-1806).svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "naples",
+  "title": "Kingdom of Naples",
+  "resolved_title": "Kingdom of Naples",
+  "redirected": false,
+  "qid": "Q173065",
+  "emblem": {
+   "commons_file": "Image-Blason Sicile Péninsulaire.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Image-Blason_Sicile_P%C3%A9ninsulaire.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Image-Blason_Sicile_P%C3%A9ninsulaire.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Image-Blason_Sicile_P%C3%A9ninsulaire.svg/960px-Image-Blason_Sicile_P%C3%A9ninsulaire.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 600,
+   "height": 660,
+   "LicenseShortName": "CC BY 3.0",
+   "License": "cc-by-3.0",
+   "UsageTerms": "Creative Commons Attribution 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "Artist": "",
+   "Credit": "This vector image includes elements that have been taken or adapted from this file:",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "16 September 2005",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/naples.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Image-Blason_Sicile_P%C3%A9ninsulaire.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 12373,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Joanna II of Naples",
+  "ruler_qid": "Q236933",
+  "ruler_resolved_title": "Joanna II of Naples",
+  "portrait": {
+   "commons_file": "Château de Beauregard - Galerie des Illustres 34 - Jeanne II de Naples.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Beauregard_-_Galerie_des_Illustres_34_-_Jeanne_II_de_Naples.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Ch%C3%A2teau_de_Beauregard_-_Galerie_des_Illustres_34_-_Jeanne_II_de_Naples.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Ch%C3%A2teau_de_Beauregard_-_Galerie_des_Illustres_34_-_Jeanne_II_de_Naples.jpg/960px-Ch%C3%A2teau_de_Beauregard_-_Galerie_des_Illustres_34_-_Jeanne_II_de_Naples.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 2000,
+   "height": 2455,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "UnknownUnknown , French School",
+   "Credit": "Self-photographed, 2022-07-24 13:33:00",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "between 1617 and 1638date QS:P571,+1650-00-00T00:00:00Z/7,P1319,+1617-00-00T00:00:00Z/9,P1326,+1638-00-00T00:00:00Z/9",
+   "ImageDescription": "Portrait of Louis of France, Duke of Orléans.",
+   "licence_ok": true,
+   "local": "rulers-eu/naples.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Ch%C3%A2teau_de_Beauregard_-_Galerie_des_Illustres_34_-_Jeanne_II_de_Naples.jpg/330px-Ch%C3%A2teau_de_Beauregard_-_Galerie_des_Illustres_34_-_Jeanne_II_de_Naples.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 36204,
+   "pixels": [
+    330,
+    405
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of Naples",
+  "wikidata_label_ko": "나폴리 왕국",
+  "ruler_label_en": "Joanna II of Naples",
+  "ruler_label_ko": "조반나 2세 디 나폴리",
+  "ruler_birth": "+1373-06-25T00:00:00Z",
+  "ruler_death": "+1435-02-02T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "",
+  "portrait_note": "Commons description names Louis of Orleans, filename says Jeanne II; check identity",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Image-Blason Sicile Péninsulaire.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Kingdom of Naples.svg",
+    "rank": "normal",
+    "q": {
+     "P582": "+1442-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Bandera de Nápoles - Trastámara.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1442-00-00T00:00:00Z",
+     "P582": "+1516-01-23T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Cross of Burgundy.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1516-01-23T00:00:00Z",
+     "P582": "+1700-11-01T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Spain (1701–1760).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1700-11-01T00:00:00Z",
+     "P582": "+1713-03-14T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Banner of the Holy Roman Emperor with haloes (1430-1806).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1713-03-14T00:00:00Z",
+     "P582": "+1738-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Kingdom of the Two Sicilies (1816).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1738-00-00T00:00:00Z",
+     "P582": "+1806-03-30T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Kingdom of Naples (1808).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1808-06-06T00:00:00Z",
+     "P582": "+1811-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Kingdom of Naples (1806-1808).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1806-03-30T00:00:00Z",
+     "P582": "+1808-06-06T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Kingdom of Naples (1811).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1811-00-00T00:00:00Z"
+    }
+   }
+  ]
+ },
+ {
+  "id": "cyprus",
+  "title": "Kingdom of Cyprus",
+  "resolved_title": "Kingdom of Cyprus",
+  "redirected": false,
+  "qid": "Q213638",
+  "emblem": {
+   "commons_file": "Coat of Arms of the House of Lusignan (Kings of Armenia, Cyprus and Jerusalem).svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_the_House_of_Lusignan_(Kings_of_Armenia,_Cyprus_and_Jerusalem).svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Coat_of_Arms_of_the_House_of_Lusignan_%28Kings_of_Armenia%2C_Cyprus_and_Jerusalem%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Coat_of_Arms_of_the_House_of_Lusignan_%28Kings_of_Armenia%2C_Cyprus_and_Jerusalem%29.svg/960px-Coat_of_Arms_of_the_House_of_Lusignan_%28Kings_of_Armenia%2C_Cyprus_and_Jerusalem%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 410,
+   "height": 478,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "James2813",
+   "Credit": "This vector image includes elements that have been taken or adapted from this file:",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2021-02-12",
+   "ImageDescription": "Coat of arms of the kings of Armenia, Cyprus and Jerusalem. Text from: Flags of the World[1] Third \"flag\" of Cyprus (1393-1474/1489) In 1393, after the death in exile of his kinsman Leo V, James I of Jerusalem and Cyprus assumed the claim to Armenia, which had been conquered by the Mamluk Sultanate ",
+   "licence_ok": true,
+   "local": "coa-eu/cyprus.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Coat_of_Arms_of_the_House_of_Lusignan_%28Kings_of_Armenia%2C_Cyprus_and_Jerusalem%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 149207,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Janus of Cyprus",
+  "ruler_qid": "Q878345",
+  "ruler_resolved_title": "Janus, King of Cyprus",
+  "portrait": {
+   "commons_file": "Janus of Cyprus CharlotteVendome.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Janus_of_Cyprus_CharlotteVendome.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Janus_of_Cyprus_CharlotteVendome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Janus_of_Cyprus_CharlotteVendome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 302,
+   "height": 383,
+   "LicenseShortName": "CC BY-SA 3.0 cz",
+   "License": "cc-by-sa-3.0-cz",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0 cz",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/cz/deed.en",
+   "Artist": "User:Rama",
+   "Credit": "http://commons.wikimedia.org/wiki/File:Chartres_cathedral_2875.jpg",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2007",
+   "ImageDescription": "Janus of Cyprus and Charlotte of Bourbon",
+   "licence_ok": true,
+   "local": "rulers-eu/cyprus.jpg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Janus_of_Cyprus_CharlotteVendome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 51604,
+   "pixels": [
+    302,
+    383
+   ]
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of Cyprus",
+  "wikidata_label_ko": "키프로스 왕국",
+  "ruler_label_en": "Janus, King of Cyprus",
+  "ruler_label_ko": null,
+  "ruler_birth": "+1375-01-01T00:00:00Z",
+  "ruler_death": "+1432-06-29T00:00:00Z",
+  "period_fit_1426": "ok",
+  "period_note": "source text dates it 1393-1474/1489",
+  "portrait_note": "CC BY-SA 3.0 cz, modern photo; attribution + share-alike",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of the House of Lusignan (Kings of Armenia, Cyprus and Jerusalem).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Royal banner of Janus of Cyprus.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "bosnia",
+  "title": "Kingdom of Bosnia",
+  "resolved_title": "Kingdom of Bosnia",
+  "redirected": false,
+  "qid": "Q2980623",
+  "emblem": {
+   "commons_file": "Coat of arms of Kingdom of Bosnia.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Kingdom_of_Bosnia.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Coat_of_arms_of_Kingdom_of_Bosnia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Coat_of_arms_of_Kingdom_of_Bosnia.svg/960px-Coat_of_arms_of_Kingdom_of_Bosnia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 458,
+   "height": 559,
+   "LicenseShortName": "CC BY 3.0",
+   "License": "cc-by-3.0",
+   "UsageTerms": "Creative Commons Attribution 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "Artist": "Samhanin",
+   "Credit": "Own work, source is rodoslovlje.com site's image.",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2016-06-19",
+   "ImageDescription": "Coat of arms of Kingdom of Bosnia.",
+   "licence_ok": true,
+   "local": "coa-eu/bosnia.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Coat_of_arms_of_Kingdom_of_Bosnia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 56183,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Tvrtko II of Bosnia",
+  "ruler_qid": "Q965696",
+  "ruler_resolved_title": "Tvrtko II of Bosnia",
+  "portrait": {
+   "commons_file": "Coin of Tvrtko II.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coin_of_Tvrtko_II.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Coin_of_Tvrtko_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Coin_of_Tvrtko_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 600,
+   "height": 306,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Unknown authorUnknown author",
+   "Credit": "http://i1155.photobucket.com/albums/p544/kedza3/Nove%20fotke/Staribosanskinovac_zps5bbbe6be.jpg",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "circa 1435date QS:P,+1435-00-00T00:00:00Z/9,P1480,Q5727902",
+   "ImageDescription": "Coin of Tvrtko II",
+   "licence_ok": true,
+   "local": "rulers-eu/bosnia.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Coin_of_Tvrtko_II.jpg/500px-Coin_of_Tvrtko_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 60614,
+   "pixels": [
+    500,
+    255
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Kingdom of Bosnia",
+  "wikidata_label_ko": "보스니아 왕국",
+  "ruler_label_en": "Tvrtko II of Bosnia",
+  "ruler_label_ko": null,
+  "ruler_birth": "+1385-00-00T00:00:00Z",
+  "ruler_death": "+1443-11-01T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "",
+  "portrait_note": "coin, not a portrait",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of arms of Kingdom of Bosnia.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Kraljevina Bosna steg.png",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "papal",
+  "title": "Papal States",
+  "resolved_title": "Papal States",
+  "redirected": false,
+  "qid": "Q170174",
+  "emblem": {
+   "commons_file": "CoA Pontifical States 02.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:CoA_Pontifical_States_02.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/CoA_Pontifical_States_02.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/CoA_Pontifical_States_02.svg/960px-CoA_Pontifical_States_02.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 618,
+   "height": 710,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "Artist": "Gambo7",
+   "Credit": "Own work based on: File:Comtat Venaissin flag.svg",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2014-01-20 14:41:01",
+   "ImageDescription": "Coat of arms of Papal States",
+   "licence_ok": true,
+   "local": "coa-eu/papal.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/CoA_Pontifical_States_02.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 19371,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Pope Martin V",
+  "ruler_qid": "Q169612",
+  "ruler_resolved_title": "Pope Martin V",
+  "portrait": {
+   "commons_file": "Bicci di lorenzo, Papa Martino V consacra la chiesa di Sant'Egidio a Firenze, 1424 ca., 02(cropped).jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Bicci_di_lorenzo,_Papa_Martino_V_consacra_la_chiesa_di_Sant%27Egidio_a_Firenze,_1424_ca.,_02(cropped).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Bicci_di_lorenzo%2C_Papa_Martino_V_consacra_la_chiesa_di_Sant%27Egidio_a_Firenze%2C_1424_ca.%2C_02%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Bicci_di_lorenzo%2C_Papa_Martino_V_consacra_la_chiesa_di_Sant%27Egidio_a_Firenze%2C_1424_ca.%2C_02%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 462,
+   "height": 624,
+   "LicenseShortName": "CC BY 3.0",
+   "License": "cc-by-3.0",
+   "UsageTerms": "Creative Commons Attribution 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "Artist": "Sailko (photographer); Lorenzo di Bicci (artist)",
+   "Credit": "File:Bicci_di_lorenzo,_Papa_Martino_V_consacra_la_chiesa_di_Sant'Egidio_a_Firenze,_1424_ca.,_02.jpg",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "circa 1424date QS:P,+1424-00-00T00:00:00Z/9,P1480,Q5727902",
+   "ImageDescription": "Consecration of the new church of St. Egidio by Pope Martin V in september 1420",
+   "licence_ok": true,
+   "local": "rulers-eu/papal.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Bicci_di_lorenzo%2C_Papa_Martino_V_consacra_la_chiesa_di_Sant%27Egidio_a_Firenze%2C_1424_ca.%2C_02%28cropped%29.jpg/330px-Bicci_di_lorenzo%2C_Papa_Martino_V_consacra_la_chiesa_di_Sant%27Egidio_a_Firenze%2C_1424_ca.%2C_02%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 66527,
+   "pixels": [
+    330,
+    446
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Papal States",
+  "wikidata_label_ko": "교황령",
+  "ruler_label_en": "Martin V",
+  "ruler_label_ko": "교황 마르티노 5세",
+  "ruler_birth": "+1369-01-01T00:00:00Z",
+  "ruler_death": "+1431-02-20T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "",
+  "portrait_note": "CC BY 3.0 photo; attribution",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "CoA Pontifical States 02.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "CoA Pontifical States 01.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Papal States (1825-1870).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1825-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Papal States (1803-1825).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1803-00-00T00:00:00Z",
+     "P582": "+1825-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Papal States (pre 1808).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+0754-00-00T00:00:00Z",
+     "P582": "+1803-00-00T00:00:00Z"
+    }
+   }
+  ]
+ },
+ {
+  "id": "venice",
+  "title": "Republic of Venice",
+  "resolved_title": "Republic of Venice",
+  "redirected": false,
+  "qid": "Q4948",
+  "emblem": {
+   "commons_file": "Coat of arms of Republic of Venice.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Republic_of_Venice.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Coat_of_arms_of_Republic_of_Venice.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Coat_of_arms_of_Republic_of_Venice.svg/960px-Coat_of_arms_of_Republic_of_Venice.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 323,
+   "height": 410,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "Facquis",
+   "Credit": "Own work basato sulle monete da 140 soldi dette \"scudo della croce\" coniate tra il 1595 e il 1797",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2019-09-16",
+   "ImageDescription": "Official coat of arms of the Venetian Republic 16th-18th centuries",
+   "licence_ok": true,
+   "local": "coa-eu/venice.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Coat_of_arms_of_Republic_of_Venice.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 986032,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Francesco Foscari",
+  "ruler_qid": "Q503874",
+  "ruler_resolved_title": "Francesco Foscari",
+  "portrait": {
+   "commons_file": "(Venice) Portrait of the Venecian doge Francesco Foscari by Lazzaro Bastiani - Correr Museum.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:(Venice)_Portrait_of_the_Venecian_doge_Francesco_Foscari_by_Lazzaro_Bastiani_-_Correr_Museum.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/42/%28Venice%29_Portrait_of_the_Venecian_doge_Francesco_Foscari_by_Lazzaro_Bastiani_-_Correr_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/%28Venice%29_Portrait_of_the_Venecian_doge_Francesco_Foscari_by_Lazzaro_Bastiani_-_Correr_Museum.jpg/960px-%28Venice%29_Portrait_of_the_Venecian_doge_Francesco_Foscari_by_Lazzaro_Bastiani_-_Correr_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 4969,
+   "height": 6404,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "Didier Descouens",
+   "Credit": "Own work",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "Taken on 11 May 2023",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "rulers-eu/venice.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/%28Venice%29_Portrait_of_the_Venecian_doge_Francesco_Foscari_by_Lazzaro_Bastiani_-_Correr_Museum.jpg/330px-%28Venice%29_Portrait_of_the_Venecian_doge_Francesco_Foscari_by_Lazzaro_Bastiani_-_Correr_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 53392,
+   "pixels": [
+    330,
+    425
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Republic of Venice",
+  "wikidata_label_ko": "베네치아 공화국",
+  "ruler_label_en": "Francesco Foscari",
+  "ruler_label_ko": "프란체스코 포스카리",
+  "ruler_birth": "+1373-06-19T00:00:00Z",
+  "ruler_death": "+1457-11-01T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "16th-18th c. per description",
+  "portrait_note": "CC BY-SA 4.0 photo, 2023; attribution + share-alike",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of arms of Republic of Venice.svg",
+    "rank": "preferred",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of the Republic of Venice.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Greater coat of arms of the Republic of Venice, 1706.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Republic of Venice (1659-1675).svg",
+    "rank": "preferred",
+    "q": {
+     "P580": "+1659-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Serene Republic of Venice.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Most Serene Republic of Venice.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "florence",
+  "title": "Republic of Florence",
+  "resolved_title": "Republic of Florence",
+  "redirected": false,
+  "qid": "Q148540",
+  "emblem": {
+   "commons_file": "Stemma di Firenze dal 1251.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Stemma_di_Firenze_dal_1251.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Stemma_di_Firenze_dal_1251.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Stemma_di_Firenze_dal_1251.svg/960px-Stemma_di_Firenze_dal_1251.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 737,
+   "height": 1029,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "Horemhat",
+   "Credit": "(c) 1251",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2019-02-06",
+   "ImageDescription": "Coat of arms of Florence from 1251",
+   "licence_ok": true,
+   "local": "coa-eu/florence.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Stemma_di_Firenze_dal_1251.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 59081,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": null,
+  "ruler_qid": null,
+  "ruler_resolved_title": null,
+  "portrait": null,
+  "portrait_rejected": [],
+  "notes": [
+   "No ruler title supplied in the brief (republic)."
+  ],
+  "wikidata_label_en": "Republic of Florence",
+  "wikidata_label_ko": "피렌체 공화국",
+  "period_fit_1426": "ok",
+  "period_note": "from 1251",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Stemma di Firenze dal 1251.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Stemma di Firenze fino al 1251.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "State Flag of the Republic of Florence.svg",
+    "rank": "preferred",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Bandiera Firenze Calcio Storico.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "milan",
+  "title": "Duchy of Milan",
+  "resolved_title": "Duchy of Milan",
+  "redirected": false,
+  "qid": "Q153529",
+  "emblem": {
+   "commons_file": "Coat of arms of the Duchy of Milan (Sforza period).svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Duchy_of_Milan_(Sforza_period).svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Coat_of_arms_of_the_Duchy_of_Milan_%28Sforza_period%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Coat_of_arms_of_the_Duchy_of_Milan_%28Sforza_period%29.svg/960px-Coat_of_arms_of_the_Duchy_of_Milan_%28Sforza_period%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 1187,
+   "height": 1075,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "MostEpic",
+   "Credit": "Own work",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2023-05-31",
+   "ImageDescription": "Coat of arms of the Duchy of Milan (Sforza period)",
+   "licence_ok": true,
+   "local": "coa-eu/milan.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Coat_of_arms_of_the_Duchy_of_Milan_%28Sforza_period%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 1023085,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Filippo Maria Visconti",
+  "ruler_qid": "Q289285",
+  "ruler_resolved_title": "Filippo Maria Visconti",
+  "portrait": {
+   "commons_file": "Pisanello - Codex Vallardi 2484.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Pisanello_-_Codex_Vallardi_2484.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Pisanello_-_Codex_Vallardi_2484.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Pisanello_-_Codex_Vallardi_2484.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 372,
+   "height": 579,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Pisanello",
+   "Credit": "Département des Arts Graphiques du Louvre",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "15th centurydate QS:P571,+1450-00-00T00:00:00Z/7",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "rulers-eu/milan.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Pisanello_-_Codex_Vallardi_2484.jpg/330px-Pisanello_-_Codex_Vallardi_2484.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 54056,
+   "pixels": [
+    330,
+    514
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Duchy of Milan",
+  "wikidata_label_ko": "밀라노 공국",
+  "ruler_label_en": "Filippo Maria Visconti",
+  "ruler_label_ko": "필리포 마리아 비스콘티",
+  "ruler_birth": "+1392-09-03T00:00:00Z",
+  "ruler_death": "+1447-08-13T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "Sforza period; Visconti ruled in 1426",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of arms of the Duchy of Milan (Sforza period).svg",
+    "rank": "preferred",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Coat of Arms of Louis XII (Milan).svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Duchy of Milan (1450).svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "savoy",
+  "title": "Duchy of Savoy",
+  "resolved_title": "Duchy of Savoy",
+  "redirected": false,
+  "qid": "Q426025",
+  "emblem": {
+   "commons_file": "Blason duché fr Savoie.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Blason_duch%C3%A9_fr_Savoie.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Blason_duch%C3%A9_fr_Savoie.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Blason_duch%C3%A9_fr_Savoie.svg/960px-Blason_duch%C3%A9_fr_Savoie.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 600,
+   "height": 660,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "",
+   "Credit": "Own work",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "6 July 2007",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/savoy.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Blason_duch%C3%A9_fr_Savoie.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 1450,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Amadeus VIII, Duke of Savoy",
+  "ruler_qid": "Q312636",
+  "ruler_resolved_title": "Amadeus VIII of Savoy",
+  "portrait": {
+   "commons_file": "Ritratto di Amedeo VIII - Google Art Project (cropped).jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Ritratto_di_Amedeo_VIII_-_Google_Art_Project_(cropped).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Ritratto_di_Amedeo_VIII_-_Google_Art_Project_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ritratto_di_Amedeo_VIII_-_Google_Art_Project_%28cropped%29.jpg/960px-Ritratto_di_Amedeo_VIII_-_Google_Art_Project_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 3030,
+   "height": 4842,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Unknown authorUnknown author (1700/1799)",
+   "Credit": "8QEjp9xVhYKt1Q at Google Cultural Institute, zoom level maximum",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1700/1799",
+   "ImageDescription": "Restored by the Foundation Conservation and Restoration Centre La Venaria Reale",
+   "licence_ok": true,
+   "local": "rulers-eu/savoy.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ritratto_di_Amedeo_VIII_-_Google_Art_Project_%28cropped%29.jpg/330px-Ritratto_di_Amedeo_VIII_-_Google_Art_Project_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 27390,
+   "pixels": [
+    330,
+    527
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Duchy of Savoy",
+  "wikidata_label_ko": "사보이아 공국",
+  "ruler_label_en": "Amadeus VIII of Savoy",
+  "ruler_label_ko": "아메데오 8세 디 사보이아",
+  "ruler_birth": "+1383-09-04T00:00:00Z",
+  "ruler_death": "+1451-01-07T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "",
+  "portrait_note": "18th c. image",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Blason duché fr Savoie.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Savoie.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "burgundy",
+  "title": "Duchy of Burgundy",
+  "resolved_title": "Duchy of Burgundy",
+  "redirected": false,
+  "qid": "Q4712",
+  "emblem": {
+   "commons_file": "Blason Ducs Bourgogne (ancien).svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Blason_Ducs_Bourgogne_(ancien).svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Blason_Ducs_Bourgogne_%28ancien%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Blason_Ducs_Bourgogne_%28ancien%29.svg/960px-Blason_Ducs_Bourgogne_%28ancien%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 600,
+   "height": 660,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "Artist": "",
+   "Credit": "Own work",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "21 November 2006",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/burgundy.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Blason_Ducs_Bourgogne_%28ancien%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 1806,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Philip the Good",
+  "ruler_qid": "Q239337",
+  "ruler_resolved_title": "Philip the Good",
+  "portrait": {
+   "commons_file": "Philipp the Good - Van der Weyden.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Philipp_the_Good_-_Van_der_Weyden.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Philipp_the_Good_-_Van_der_Weyden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Philipp_the_Good_-_Van_der_Weyden.jpg/960px-Philipp_the_Good_-_Van_der_Weyden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 3475,
+   "height": 5224,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "After Rogier van der Weyden",
+   "Credit": "Lukas - Art in Flanders VZW",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1450",
+   "ImageDescription": "Van dit portrettype van Filips de Goede, hertog van Bourgondië, bestaan meer dan tien exemplaren. Het toont het busteportret van de hertog in een zwart kleed met bontkraag, de halsketting van het Gulden Vlies en een perkamentrol in zijn handen. Op het hoofd draagt hij de kaproen, het typisch Bourgon",
+   "licence_ok": true,
+   "local": "rulers-eu/burgundy.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Philipp_the_Good_-_Van_der_Weyden.jpg/330px-Philipp_the_Good_-_Van_der_Weyden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 44158,
+   "pixels": [
+    330,
+    496
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Duchy of Burgundy",
+  "wikidata_label_ko": "부르고뉴 공국",
+  "ruler_label_en": "Philip III the Good",
+  "ruler_label_ko": "선량공 필리프",
+  "ruler_birth": "+1396-07-31T00:00:00Z",
+  "ruler_death": "+1467-06-15T00:00:00Z",
+  "period_fit_1426": "check",
+  "period_note": "file named 'ancien'; Valois dukes used quartered arms",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Blason Ducs Bourgogne (ancien).svg",
+    "rank": "preferred",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Blason Philippe II de Bourgogne.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Ancient Flag of Burgundy.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Duchy of Burgundy.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "brittany",
+  "title": "Duchy of Brittany",
+  "resolved_title": "Duchy of Brittany",
+  "redirected": false,
+  "qid": "Q71747",
+  "emblem": {
+   "commons_file": "Armoiries Bretagne - Arms of Brittany.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Armoiries_Bretagne_-_Arms_of_Brittany.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Armoiries_Bretagne_-_Arms_of_Brittany.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Armoiries_Bretagne_-_Arms_of_Brittany.svg/960px-Armoiries_Bretagne_-_Arms_of_Brittany.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 600,
+   "height": 660,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "",
+   "Credit": "Own work",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "27 October 2007",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/brittany.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Armoiries_Bretagne_-_Arms_of_Brittany.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 1694,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "John V, Duke of Brittany",
+  "ruler_qid": "Q454013",
+  "ruler_resolved_title": "John V of Brittany",
+  "portrait": {
+   "commons_file": "Sceau Jean V de Bretagne.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Sceau_Jean_V_de_Bretagne.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Sceau_Jean_V_de_Bretagne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Sceau_Jean_V_de_Bretagne.jpg/960px-Sceau_Jean_V_de_Bretagne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 1103,
+   "height": 1295,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Dom Hyacinthe Morice",
+   "Credit": "Dom Morice (H.), Mémoires pour servir de preuves à l’histoire ecclésiastique et civile de Bretagne, tirés des archives de cette province, des celles de France &amp; d’Angleterre, des Recueils de plusieurs sçavants Antiquaires, &amp; mis en ordre, par Dom Hyacinthe Morice, Prêtre, Religieux Bénédictin de la Congrégation de S. Maur (tomes I-II, planches)",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1742",
+   "ImageDescription": "Sceau de Jean V de Bretagne, duc de Bretagne.",
+   "licence_ok": true,
+   "local": "rulers-eu/brittany.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Sceau_Jean_V_de_Bretagne.jpg/330px-Sceau_Jean_V_de_Bretagne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 63517,
+   "pixels": [
+    330,
+    387
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Duchy of Brittany",
+  "wikidata_label_ko": "브르타뉴 공국",
+  "ruler_label_en": "John V",
+  "ruler_label_ko": null,
+  "ruler_birth": "+1389-12-24T00:00:00Z",
+  "ruler_death": "+1442-08-29T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "",
+  "portrait_note": "seal, not a portrait",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Armoiries Bretagne - Arms of Brittany.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P94",
+    "file": "Blason Pierre Ier de Bretagne.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Drapeau de la province de Bretagne (1532).svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "austria",
+  "title": "Duchy of Austria",
+  "resolved_title": "Duchy of Austria",
+  "redirected": false,
+  "qid": "Q3624335",
+  "emblem": {
+   "commons_file": "Arms of the Archduchy of Austria.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Arms_of_the_Archduchy_of_Austria.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Arms_of_the_Archduchy_of_Austria.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Arms_of_the_Archduchy_of_Austria.svg/960px-Arms_of_the_Archduchy_of_Austria.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 825,
+   "height": 963,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "Artist": "Heralder",
+   "Credit": "File:Coat of arms of the archduchy of Austria.svg (was: File:Austria coat of arms simple.svg, now redircet) Own work",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2013-06-05 03:37:40",
+   "ImageDescription": "Arms of the Archduchy of Austria",
+   "licence_ok": true,
+   "local": "coa-eu/austria.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Arms_of_the_Archduchy_of_Austria.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 2468,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Albert II of Germany",
+  "ruler_qid": "Q157112",
+  "ruler_resolved_title": "Albert II of Germany",
+  "portrait": {
+   "commons_file": "Albrecht II. von Habsburg.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Albrecht_II._von_Habsburg.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Albrecht_II._von_Habsburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Albrecht_II._von_Habsburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 578,
+   "height": 800,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "anonymous",
+   "Credit": "Kunsthistorisches Museum Wien, Bilddatenbank.",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "16th centurydate QS:P,+1550-00-00T00:00:00Z/7",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "rulers-eu/austria.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Albrecht_II._von_Habsburg.jpg/330px-Albrecht_II._von_Habsburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 55025,
+   "pixels": [
+    330,
+    457
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Duchy of Austria",
+  "wikidata_label_ko": "오스트리아 공국",
+  "ruler_label_en": "Albert II of Germany",
+  "ruler_label_ko": "알브레히트 2세",
+  "ruler_birth": "+1397-08-16T00:00:00Z",
+  "ruler_death": "+1439-10-27T00:00:00Z",
+  "period_fit_1426": "check",
+  "period_note": "labelled Archduchy; title postdates 1426",
+  "portrait_note": null,
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Arms of the Archduchy of Austria.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Austria (1-1).svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "moldavia",
+  "title": "Moldavia",
+  "resolved_title": "Moldavia",
+  "redirected": false,
+  "qid": "Q10957559",
+  "emblem": {
+   "commons_file": "Coat of arms of Moldavia.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Moldavia.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Coat_of_arms_of_Moldavia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Coat_of_arms_of_Moldavia.svg/960px-Coat_of_arms_of_Moldavia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 675,
+   "height": 750,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Shtephan",
+   "Credit": "Own work",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "",
+   "ImageDescription": "Coat of arms of Moldavia (reconstruction). Base: Seals of Stephen III of Moldavia",
+   "licence_ok": true,
+   "local": "coa-eu/moldavia.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Coat_of_arms_of_Moldavia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 11877,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {
+    "P580": "+1775-00-00T00:00:00Z",
+    "P582": "+1777-00-00T00:00:00Z"
+   }
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Alexander the Good",
+  "ruler_qid": "Q435994",
+  "ruler_resolved_title": "Alexander the Good",
+  "portrait": {
+   "commons_file": "Stamp of Moldova 440.gif",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Stamp_of_Moldova_440.gif",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Stamp_of_Moldova_440.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Stamp_of_Moldova_440.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/gif",
+   "width": 331,
+   "height": 533,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Post of Moldova",
+   "Credit": "http://www.posta.md/en/filatelia.html",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1995, 183",
+   "ImageDescription": "Alexandru cel Bun (1400-1432). Pursues the consolidation of the centralised feudal state. Strengthened the organisation of the military. Contributed to the recognition of the metropolitan bishops seat Suceava by the Constantinople patriarchy.",
+   "licence_ok": true,
+   "local": "rulers-eu/moldavia.gif",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Stamp_of_Moldova_440.gif/330px-Stamp_of_Moldova_440.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 52936,
+   "pixels": [
+    330,
+    531
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Principality of Moldavia",
+  "wikidata_label_ko": "몰다비아 공국",
+  "ruler_label_en": "Alexander I of Moldavia",
+  "ruler_label_ko": null,
+  "ruler_birth": "+1375-00-00T00:00:00Z",
+  "ruler_death": "+1432-01-01T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "statement dated 1775-1777; reconstruction from later seals",
+  "portrait_note": "1995 Moldovan stamp, GIF; check PD basis",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of arms of Moldavia.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1775-00-00T00:00:00Z",
+     "P582": "+1777-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "COA of Moldavia 1855.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1855-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of Moldavia.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1500-00-00T00:00:00Z",
+     "P582": "+1574-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Civil ensign of the Principality of Moldavia (1834-1861).png",
+    "rank": "normal",
+    "q": {
+     "P580": "+1849-00-00T00:00:00Z",
+     "P582": "+1859-00-00T00:00:00Z"
+    }
+   }
+  ]
+ },
+ {
+  "id": "serbia",
+  "title": "Serbian Despotate",
+  "resolved_title": "Serbian Despotate",
+  "redirected": false,
+  "qid": "Q878319",
+  "emblem": {
+   "commons_file": "Coat of arms of the Serbian Despotate.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Serbian_Despotate.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Coat_of_arms_of_the_Serbian_Despotate.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Coat_of_arms_of_the_Serbian_Despotate.svg/960px-Coat_of_arms_of_the_Serbian_Despotate.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 392,
+   "height": 480,
+   "LicenseShortName": "CC BY-SA 3.0",
+   "License": "cc-by-sa-3.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 3.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "Artist": "Samhanin",
+   "Credit": "Own work, Color and design source: Serbian Despotate, Chronicon Helvetiae, 1576.jpg",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "2018-04-28",
+   "ImageDescription": "Coat of arms of the Serbian Despotate (Rascia) from Western Armorials. This particular COA is from an Armorial by Christoph Silberysen (1576).",
+   "licence_ok": true,
+   "local": "coa-eu/serbia.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Coat_of_arms_of_the_Serbian_Despotate.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 21651,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Stefan Lazarević",
+  "ruler_qid": "Q336531",
+  "ruler_resolved_title": "Stefan Lazarević",
+  "portrait": {
+   "commons_file": "Stefan Lazarevic.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Stefan_Lazarevic.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Stefan_Lazarevic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Stefan_Lazarevic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 321,
+   "height": 474,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "own work",
+   "Credit": "Musée nationale de Serbie",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "2007-03-23",
+   "ImageDescription": "le Desposte Stefan Lazarevic",
+   "licence_ok": true,
+   "local": "rulers-eu/serbia.jpg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Stefan_Lazarevic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 161517,
+   "pixels": [
+    321,
+    474
+   ]
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Serbian Despotate",
+  "wikidata_label_ko": "세르비아 전제군주국",
+  "ruler_label_en": "Stefan Lazarević",
+  "ruler_label_ko": "스테판 라자레비치",
+  "ruler_birth": "+1374-01-01T00:00:00Z",
+  "ruler_death": "+1427-07-19T00:00:00Z",
+  "period_fit_1426": "check",
+  "period_note": "source armorial is 1576",
+  "portrait_note": "check date/medium",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of arms of the Serbian Despotate.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Serbian Despotate.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "muscovy",
+  "title": "Grand Duchy of Moscow",
+  "resolved_title": "Grand Principality of Moscow",
+  "redirected": true,
+  "qid": "Q170770",
+  "emblem": {
+   "commons_file": "Seal of Ivan 3 (reverse).svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Seal_of_Ivan_3_(reverse).svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Seal_of_Ivan_3_%28reverse%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Seal_of_Ivan_3_%28reverse%29.svg/960px-Seal_of_Ivan_3_%28reverse%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 617,
+   "height": 634,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Лобачев Владимир",
+   "Credit": "File:Seal of Ivan 3.png",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "2013-05-12 19:27:56",
+   "ImageDescription": "Double-headed eagle on the reverse of the seal of Ivan III of Russia",
+   "licence_ok": true,
+   "local": "coa-eu/muscovy.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Seal_of_Ivan_3_%28reverse%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 350433,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {
+    "P585": "+1489-00-00T00:00:00Z"
+   }
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Vasily II of Moscow",
+  "ruler_qid": "Q210359",
+  "ruler_resolved_title": "Vasily II of Moscow",
+  "portrait": {
+   "commons_file": "Titulyarnik - Vasily Vasiliyevich.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Titulyarnik_-_Vasily_Vasiliyevich.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Titulyarnik_-_Vasily_Vasiliyevich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Titulyarnik_-_Vasily_Vasiliyevich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 640,
+   "height": 850,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "collective",
+   "Credit": "http://www.runivers.ru/lib/book19624/580499/",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1672",
+   "ImageDescription": "Василий Васильевич",
+   "licence_ok": true,
+   "local": "rulers-eu/muscovy.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Titulyarnik_-_Vasily_Vasiliyevich.jpg/330px-Titulyarnik_-_Vasily_Vasiliyevich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 72788,
+   "pixels": [
+    330,
+    438
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Grand Principality of Moscow",
+  "wikidata_label_ko": "모스크바 대공국",
+  "ruler_label_en": "Vasily II of Moscow",
+  "ruler_label_ko": "바실리 2세",
+  "ruler_birth": "+1415-03-10T00:00:00Z",
+  "ruler_death": "+1462-03-27T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "seal of Ivan III, 1489",
+  "portrait_note": "1672 Titulyarnik",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Seal of Ivan 3 (reverse).svg",
+    "rank": "preferred",
+    "q": {
+     "P585": "+1489-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P94",
+    "file": "Seal of Ivan 3 (obverse).png",
+    "rank": "normal",
+    "q": {
+     "P585": "+1472-00-00T00:00:00Z"
+    }
+   }
+  ]
+ },
+ {
+  "id": "byzantium",
+  "title": "Byzantine Empire",
+  "resolved_title": "Byzantine Empire",
+  "redirected": false,
+  "qid": "Q12544",
+  "emblem": {
+   "commons_file": "Byzantine imperial flag, 14th century, square.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Byzantine_imperial_flag,_14th_century,_square.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Byzantine_imperial_flag%2C_14th_century%2C_square.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": null,
+   "mime": "image/svg+xml",
+   "width": 700,
+   "height": 700,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Dragases at English Wikipedia",
+   "Credit": "Transferred from en.wikipedia to Commons.",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "21 April 2006 (original upload date)",
+   "ImageDescription": "The flag of the late Eastern Roman Empire under the Palaiologos dynasty, as depicted in the Catalan Atlas of 1375. See also the images at: Category talk:Flags of the Palaiologos dynasty#About the Bs.",
+   "licence_ok": true,
+   "local": "coa-eu/byzantium.svg",
+   "wikidata_property": null,
+   "source_of_choice": "enwiki article image, not a Wikidata statement"
+  },
+  "emblem_rejected": [],
+  "ruler_title": "John VIII Palaiologos",
+  "ruler_qid": "Q37062",
+  "ruler_resolved_title": "John VIII Palaiologos",
+  "portrait": {
+   "commons_file": "Palaio.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Palaio.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Palaio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Palaio.jpg/960px-Palaio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/jpeg",
+   "width": 1818,
+   "height": 2502,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "",
+   "Credit": "",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "",
+   "ImageDescription": "John VIII Palaiologus, by Benozzo Gozzoli",
+   "licence_ok": true,
+   "local": "rulers-eu/byzantium.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Palaio.jpg/330px-Palaio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 72267,
+   "pixels": [
+    330,
+    454
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Byzantine Empire",
+  "wikidata_label_ko": "동로마 제국",
+  "ruler_label_en": "John VIII Palaiologos",
+  "ruler_label_ko": "요한네스 8세 팔라이올로고스",
+  "ruler_birth": "+1392-12-18T00:00:00Z",
+  "ruler_death": "+1448-10-31T00:00:00Z",
+  "period_fit_1426": "fallback",
+  "period_note": "no P94/P41 in Wikidata",
+  "portrait_note": "Gozzoli figure, identification traditional",
+  "all_p94_p41": []
+ },
+ {
+  "id": "ottoman",
+  "title": "Ottoman Empire",
+  "resolved_title": "Ottoman Empire",
+  "redirected": false,
+  "qid": "Q12560",
+  "emblem": {
+   "commons_file": "Coat of arms of the Ottoman Empire (1882–1922).svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Ottoman_Empire_(1882%E2%80%931922).svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Coat_of_arms_of_the_Ottoman_Empire_%281882%E2%80%931922%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Coat_of_arms_of_the_Ottoman_Empire_%281882%E2%80%931922%29.svg/960px-Coat_of_arms_of_the_Ottoman_Empire_%281882%E2%80%931922%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 1595,
+   "height": 1906,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Juris Tiltins",
+   "Credit": "Own work based on Derivative works of this file: Enver bey and Niyazi bey postcard 1908.jpg",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "2008-01-19",
+   "ImageDescription": "Every sultan of the Ottoman Empire had his own monogram, called the tughra, which served as a royal symbol. A coat of arms in the European heraldic sense was created in the late 19th century. Hampton Court requested from the Ottoman Empire a coat of arms to be included in their collection. As the co",
+   "licence_ok": true,
+   "local": "coa-eu/ottoman.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Coat_of_arms_of_the_Ottoman_Empire_%281882%E2%80%931922%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 1946176,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {
+    "P580": "+1882-00-00T00:00:00Z",
+    "P582": "+1922-00-00T00:00:00Z"
+   }
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Murad II",
+  "ruler_qid": "Q131394",
+  "ruler_resolved_title": "Murad II",
+  "portrait": {
+   "commons_file": "Murad II. Semailname (Millet Library, Ali Emîrî Collection, History, MS no. 1216).jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Murad_II._Semailname_(Millet_Library,_Ali_Em%C3%AEr%C3%AE_Collection,_History,_MS_no._1216).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Murad_II._Semailname_%28Millet_Library%2C_Ali_Em%C3%AEr%C3%AE_Collection%2C_History%2C_MS_no._1216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Murad_II._Semailname_%28Millet_Library%2C_Ali_Em%C3%AEr%C3%AE_Collection%2C_History%2C_MS_no._1216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 924,
+   "height": 1614,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "16th century artist",
+   "Credit": "This image has been extracted from another file",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1579",
+   "ImageDescription": "Murad II. Semailname (Millet Library, Ali Emîrî Collection, History, MS no. 1216)",
+   "licence_ok": true,
+   "local": "rulers-eu/ottoman.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Murad_II._Semailname_%28Millet_Library%2C_Ali_Em%C3%AEr%C3%AE_Collection%2C_History%2C_MS_no._1216%29.jpg/330px-Murad_II._Semailname_%28Millet_Library%2C_Ali_Em%C3%AEr%C3%AE_Collection%2C_History%2C_MS_no._1216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 108940,
+   "pixels": [
+    330,
+    576
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Ottoman Empire",
+  "wikidata_label_ko": "오스만 제국",
+  "ruler_label_en": "Murad II",
+  "ruler_label_ko": "무라트 2세",
+  "ruler_birth": "+1404-06-00T00:00:00Z",
+  "ruler_death": "+1451-02-03T00:00:00Z",
+  "period_fit_1426": "mismatch",
+  "period_note": "1882-1922; file text says no European-style arms existed before",
+  "portrait_note": "1579 miniature",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Coat of arms of the Ottoman Empire (1882–1922).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1882-00-00T00:00:00Z",
+     "P582": "+1922-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Ottoman Empire (1844–1922).svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1844-00-00T00:00:00Z",
+     "P582": "+1922-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Fictitious Ottoman flag 3.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1517-00-00T00:00:00Z",
+     "P582": "+1844-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Fictitious Ottoman flag 2.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1453-00-00T00:00:00Z",
+     "P582": "+1517-00-00T00:00:00Z"
+    }
+   },
+   {
+    "prop": "P41",
+    "file": "Fictitious Ottoman flag 1.svg",
+    "rank": "normal",
+    "q": {
+     "P580": "+1299-00-00T00:00:00Z",
+     "P582": "+1453-00-00T00:00:00Z"
+    }
+   }
+  ]
+ },
+ {
+  "id": "teutonic",
+  "title": "State of the Teutonic Order",
+  "resolved_title": "State of the Teutonic Order",
+  "redirected": false,
+  "qid": "Q156020",
+  "emblem": {
+   "commons_file": "Insignia Germany Order Teutonic.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Insignia_Germany_Order_Teutonic.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Insignia_Germany_Order_Teutonic.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Insignia_Germany_Order_Teutonic.svg/960px-Insignia_Germany_Order_Teutonic.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 260,
+   "height": 300,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "",
+   "Credit": "Own work",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "8 August 2011",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/teutonic.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Insignia_Germany_Order_Teutonic.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 1988,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Paul von Rusdorf",
+  "ruler_qid": "Q77415",
+  "ruler_resolved_title": "Paul von Rusdorf",
+  "portrait": {
+   "commons_file": "Paul von Rusdorf, Christoph Hartknoch 1684.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Paul_von_Rusdorf,_Christoph_Hartknoch_1684.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Paul_von_Rusdorf%2C_Christoph_Hartknoch_1684.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Paul_von_Rusdorf%2C_Christoph_Hartknoch_1684.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 231,
+   "height": 400,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Christoph Hartknoch",
+   "Credit": "Christoph Hartknoch: Alt- und neues Preussen, Frankfurt and Leipzig 1684, p. 308. http://www.heimatfreunde-roisdorf.de/paulus.html",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "1684",
+   "ImageDescription": "Paul von Rusdorf was the 29th grandmaster of the Teutonic Order, serving from 1422 to 1441",
+   "licence_ok": true,
+   "local": "rulers-eu/teutonic.jpg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Paul_von_Rusdorf%2C_Christoph_Hartknoch_1684.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 32042,
+   "pixels": [
+    231,
+    400
+   ]
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "State of the Teutonic Order",
+  "wikidata_label_ko": "튜턴 기사단국",
+  "ruler_label_en": "Paul von Rusdorf",
+  "ruler_label_ko": null,
+  "ruler_birth": "+1385-01-01T00:00:00Z",
+  "ruler_death": "+1441-01-09T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "",
+  "portrait_note": "1684 engraving",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Insignia Germany Order Teutonic.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the State of the Teutonic Order.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Teutonic Order.svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ },
+ {
+  "id": "hospitaller",
+  "title": "Knights Hospitaller",
+  "resolved_title": "Knights Hospitaller",
+  "redirected": false,
+  "qid": "Q187549",
+  "emblem": {
+   "commons_file": "Blason Ordre de Saint-Jean de Jérusalem.svg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Blason_Ordre_de_Saint-Jean_de_J%C3%A9rusalem.svg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Blason_Ordre_de_Saint-Jean_de_J%C3%A9rusalem.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Blason_Ordre_de_Saint-Jean_de_J%C3%A9rusalem.svg/960px-Blason_Ordre_de_Saint-Jean_de_J%C3%A9rusalem.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "mime": "image/svg+xml",
+   "width": 600,
+   "height": 660,
+   "LicenseShortName": "CC BY-SA 4.0",
+   "License": "cc-by-sa-4.0",
+   "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+   "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "Artist": "",
+   "Credit": "This SVG coat of arms includes elements from this file:",
+   "Copyrighted": "True",
+   "DateTimeOriginal": "18 June 2016",
+   "ImageDescription": "",
+   "licence_ok": true,
+   "local": "coa-eu/hospitaller.svg",
+   "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Blason_Ordre_de_Saint-Jean_de_J%C3%A9rusalem.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "bytes": 809,
+   "wikidata_property": "P94",
+   "statement_qualifiers": {}
+  },
+  "emblem_rejected": [],
+  "ruler_title": "Antoni de Fluvià",
+  "ruler_qid": "Q601990",
+  "ruler_resolved_title": "Anton Flavian de Ripa",
+  "portrait": {
+   "commons_file": "Antoine Fulvian.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Antoine_Fulvian.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Antoine_Fulvian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Antoine_Fulvian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "mime": "image/jpeg",
+   "width": 951,
+   "height": 1377,
+   "LicenseShortName": "Public domain",
+   "License": "pd",
+   "UsageTerms": "Public domain",
+   "LicenseUrl": "",
+   "Artist": "Laurent Cars",
+   "Credit": "Histoire des chevaliers hospitaliers de S. Jean de Jérusalem, appelez depuis les chevaliers de Rhodes et aujourd'hui les chevaliers de Malte (René Aubert de Vertot)",
+   "Copyrighted": "False",
+   "DateTimeOriginal": "18th centurydate QS:P571,+1750-00-00T00:00:00Z/7",
+   "ImageDescription": "Antonio Fluvian de la Riviere (d. 1437), grand maître de l'ordre de Saint-Jean de Jérusalem",
+   "licence_ok": true,
+   "local": "rulers-eu/hospitaller.jpg",
+   "fetched_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Antoine_Fulvian.jpg/330px-Antoine_Fulvian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "bytes": 78786,
+   "pixels": [
+    330,
+    478
+   ],
+   "thumbnail_note": "Commons serves fixed thumbnail steps; 500px wide (landscape) or 330px wide (portrait) used to keep near the 512px limit"
+  },
+  "portrait_rejected": [],
+  "notes": [],
+  "wikidata_label_en": "Knights Hospitaller",
+  "wikidata_label_ko": "구호기사단",
+  "ruler_label_en": "Anton Flavian de Ripa",
+  "ruler_label_ko": null,
+  "ruler_birth": "+1400-01-01T00:00:00Z",
+  "ruler_death": "+1437-10-29T00:00:00Z",
+  "period_fit_1426": "undated",
+  "period_note": "",
+  "portrait_note": "18th c. image",
+  "all_p94_p41": [
+   {
+    "prop": "P94",
+    "file": "Blason Ordre de Saint-Jean de Jérusalem.svg",
+    "rank": "normal",
+    "q": {}
+   },
+   {
+    "prop": "P41",
+    "file": "Flag of the Order of St. John (various).svg",
+    "rank": "normal",
+    "q": {}
+   }
+  ]
+ }
+]

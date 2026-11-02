@@ -1,0 +1,82 @@
+{
+ "source": "세종실록 지리지 (국사편찬위원회 조선왕조실록, 국역)",
+ "caveat_from_source": "본조(本朝)는 인구(人口)의 법이 밝지 못하여, 문적에 적힌 것이 겨우 열의 한둘이 되므로, 나라에서 매양 바로잡으려 하나, 너무 인심(人心)을 잃게 되어, 그럭저럭 이제까지 이르렀으므로, 각도 각 고을의 인구수가 이렇게 되었고, 다른 도들도 모두 이렇다. 】",
+ "dating_note": "도별 수치의 기준 연도는 원문에 명시되지 않음. encykorea: 편찬 1424 시작, 신찬팔도지리지 1432 완성, 세종실록 첨재 1454, 1419~1432 변화 첨가. 1426 시점 값이 아니라 1420~30년대 근사치.",
+ "provinces": [
+  {
+   "province": "경기",
+   "households": 20882,
+   "population_registered": 50352,
+   "quote": "호수가 2만 8백 82호, 인구가 5만 3백 52명",
+   "url": "https://sillok.history.go.kr/id/kda_400040"
+  },
+  {
+   "province": "충청도",
+   "households": 24170,
+   "population_registered": 100790,
+   "quote": "호수가 2만 4천 1백 70호(戶)요, 인구가 10만 7백 90명",
+   "url": "https://sillok.history.go.kr/id/kda_400050"
+  },
+  {
+   "province": "경상도",
+   "households": 42227,
+   "population_registered": 173759,
+   "quote": "호수는 4만 2천 2백 27호, 인구가 17만 3천 7백 59명",
+   "url": "https://sillok.history.go.kr/id/kda_400060"
+  },
+  {
+   "province": "전라도",
+   "households": 24073,
+   "population_registered": 94248,
+   "quote": "호수[戶]는 2만 4천 73호요, 인구[口]는 9만 4천 2백 48명",
+   "url": "https://sillok.history.go.kr/id/kda_400070"
+  },
+  {
+   "province": "황해도",
+   "households": 23511,
+   "population_registered": 71897,
+   "quote": "호수가 2만 3천 5백 11호요, 인구가 7만 1천 8백 97명",
+   "url": "https://sillok.history.go.kr/id/kda_400080"
+  },
+  {
+   "province": "강원도",
+   "households": 11084,
+   "population_registered": 29009,
+   "quote": "호수가 1만 1천 84호요, 인구가 2만 9천 단(單) 9명",
+   "url": "https://sillok.history.go.kr/id/kda_400090"
+  },
+  {
+   "province": "평안도",
+   "households": 41167,
+   "population_registered": 105444,
+   "quote": "호수가 4만 1천 1백 67호, 인구가 10만 5천 4백 44명",
+   "url": "https://sillok.history.go.kr/id/kda_400100"
+  },
+  {
+   "province": "함길도",
+   "households": 14739,
+   "population_registered": 66978,
+   "quote": "호수가 1만 4천 7백 39호요, 인구가 6만 6천 9백 78명",
+   "url": "https://sillok.history.go.kr/id/kda_400110"
+  }
+ ],
+ "totals_8_provinces": {
+  "households": 201853,
+  "population_registered": 692477
+ },
+ "capitals_not_in_province_totals_unverified": {
+  "hanseong": {
+   "ojeok_households": 17015,
+   "seongjeo_sipni_households": 1779,
+   "population": "not stated in matched passage",
+   "url": "https://sillok.history.go.kr/id/kda_400020"
+  },
+  "gaeseong": {
+   "city_households": 4819,
+   "city_population": 8372,
+   "sokhyeon_households": 844,
+   "sokhyeon_population": 2021,
+   "url": "https://sillok.history.go.kr/id/kda_400030"
+  }
+ }
+}

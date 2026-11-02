@@ -1,0 +1,4648 @@
+{
+ "latest_year": 2025,
+ "source": "https://web.archive.org/web/20261014172026id_/https://www.ssa.gov/oact/babynames/state/namesbystate.zip",
+ "original_url": "https://www.ssa.gov/oact/babynames/state/namesbystate.zip",
+ "states": {
+  "AK": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 32
+    },
+    {
+     "name": "Amelia",
+     "count": 31
+    },
+    {
+     "name": "Emma",
+     "count": 29
+    },
+    {
+     "name": "Evelyn",
+     "count": 26
+    },
+    {
+     "name": "Aurora",
+     "count": 24
+    },
+    {
+     "name": "Olivia",
+     "count": 24
+    },
+    {
+     "name": "Penelope",
+     "count": 24
+    },
+    {
+     "name": "Violet",
+     "count": 24
+    },
+    {
+     "name": "Eleanor",
+     "count": 23
+    },
+    {
+     "name": "Ellie",
+     "count": 21
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 46
+    },
+    {
+     "name": "Theodore",
+     "count": 45
+    },
+    {
+     "name": "Henry",
+     "count": 44
+    },
+    {
+     "name": "Oliver",
+     "count": 41
+    },
+    {
+     "name": "James",
+     "count": 39
+    },
+    {
+     "name": "William",
+     "count": 36
+    },
+    {
+     "name": "Elias",
+     "count": 33
+    },
+    {
+     "name": "Liam",
+     "count": 31
+    },
+    {
+     "name": "Elijah",
+     "count": 30
+    },
+    {
+     "name": "Levi",
+     "count": 29
+    }
+   ],
+   "tied_at_10th": {
+    "F": 2,
+    "M": 1
+   }
+  },
+  "AL": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 224
+    },
+    {
+     "name": "Amelia",
+     "count": 204
+    },
+    {
+     "name": "Olivia",
+     "count": 203
+    },
+    {
+     "name": "Elizabeth",
+     "count": 163
+    },
+    {
+     "name": "Emma",
+     "count": 158
+    },
+    {
+     "name": "Mary",
+     "count": 155
+    },
+    {
+     "name": "Harper",
+     "count": 150
+    },
+    {
+     "name": "Ava",
+     "count": 143
+    },
+    {
+     "name": "Eleanor",
+     "count": 143
+    },
+    {
+     "name": "Ellie",
+     "count": 141
+    }
+   ],
+   "male": [
+    {
+     "name": "John",
+     "count": 343
+    },
+    {
+     "name": "William",
+     "count": 331
+    },
+    {
+     "name": "James",
+     "count": 292
+    },
+    {
+     "name": "Liam",
+     "count": 255
+    },
+    {
+     "name": "Noah",
+     "count": 246
+    },
+    {
+     "name": "Oliver",
+     "count": 217
+    },
+    {
+     "name": "Hudson",
+     "count": 199
+    },
+    {
+     "name": "Samuel",
+     "count": 199
+    },
+    {
+     "name": "Henry",
+     "count": 196
+    },
+    {
+     "name": "Elijah",
+     "count": 184
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "AR": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 148
+    },
+    {
+     "name": "Amelia",
+     "count": 122
+    },
+    {
+     "name": "Olivia",
+     "count": 119
+    },
+    {
+     "name": "Isabella",
+     "count": 103
+    },
+    {
+     "name": "Eleanor",
+     "count": 95
+    },
+    {
+     "name": "Evelyn",
+     "count": 87
+    },
+    {
+     "name": "Emma",
+     "count": 83
+    },
+    {
+     "name": "Harper",
+     "count": 83
+    },
+    {
+     "name": "Willow",
+     "count": 79
+    },
+    {
+     "name": "Sophia",
+     "count": 78
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 167
+    },
+    {
+     "name": "Hudson",
+     "count": 147
+    },
+    {
+     "name": "Oliver",
+     "count": 143
+    },
+    {
+     "name": "Elijah",
+     "count": 138
+    },
+    {
+     "name": "Noah",
+     "count": 134
+    },
+    {
+     "name": "James",
+     "count": 131
+    },
+    {
+     "name": "Henry",
+     "count": 128
+    },
+    {
+     "name": "William",
+     "count": 125
+    },
+    {
+     "name": "Waylon",
+     "count": 122
+    },
+    {
+     "name": "Theodore",
+     "count": 106
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "AZ": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Olivia",
+     "count": 353
+    },
+    {
+     "name": "Sophia",
+     "count": 315
+    },
+    {
+     "name": "Mia",
+     "count": 300
+    },
+    {
+     "name": "Amelia",
+     "count": 289
+    },
+    {
+     "name": "Isabella",
+     "count": 288
+    },
+    {
+     "name": "Emma",
+     "count": 286
+    },
+    {
+     "name": "Charlotte",
+     "count": 249
+    },
+    {
+     "name": "Eliana",
+     "count": 242
+    },
+    {
+     "name": "Camila",
+     "count": 225
+    },
+    {
+     "name": "Sofia",
+     "count": 215
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 437
+    },
+    {
+     "name": "Noah",
+     "count": 434
+    },
+    {
+     "name": "Mateo",
+     "count": 419
+    },
+    {
+     "name": "Santiago",
+     "count": 361
+    },
+    {
+     "name": "Oliver",
+     "count": 295
+    },
+    {
+     "name": "Elias",
+     "count": 294
+    },
+    {
+     "name": "Sebastian",
+     "count": 277
+    },
+    {
+     "name": "Theodore",
+     "count": 268
+    },
+    {
+     "name": "Elijah",
+     "count": 266
+    },
+    {
+     "name": "Ezra",
+     "count": 250
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "CA": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Olivia",
+     "count": 1796
+    },
+    {
+     "name": "Mia",
+     "count": 1788
+    },
+    {
+     "name": "Sophia",
+     "count": 1685
+    },
+    {
+     "name": "Camila",
+     "count": 1682
+    },
+    {
+     "name": "Emma",
+     "count": 1641
+    },
+    {
+     "name": "Isabella",
+     "count": 1506
+    },
+    {
+     "name": "Amelia",
+     "count": 1370
+    },
+    {
+     "name": "Sofia",
+     "count": 1339
+    },
+    {
+     "name": "Eliana",
+     "count": 1323
+    },
+    {
+     "name": "Valentina",
+     "count": 1146
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 2624
+    },
+    {
+     "name": "Noah",
+     "count": 2607
+    },
+    {
+     "name": "Mateo",
+     "count": 2239
+    },
+    {
+     "name": "Santiago",
+     "count": 1991
+    },
+    {
+     "name": "Sebastian",
+     "count": 1954
+    },
+    {
+     "name": "Julian",
+     "count": 1680
+    },
+    {
+     "name": "Oliver",
+     "count": 1456
+    },
+    {
+     "name": "Elias",
+     "count": 1342
+    },
+    {
+     "name": "Benjamin",
+     "count": 1257
+    },
+    {
+     "name": "Elijah",
+     "count": 1257
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 3
+   }
+  },
+  "CO": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 293
+    },
+    {
+     "name": "Olivia",
+     "count": 256
+    },
+    {
+     "name": "Sophia",
+     "count": 242
+    },
+    {
+     "name": "Emma",
+     "count": 227
+    },
+    {
+     "name": "Mia",
+     "count": 217
+    },
+    {
+     "name": "Evelyn",
+     "count": 214
+    },
+    {
+     "name": "Amelia",
+     "count": 187
+    },
+    {
+     "name": "Sofia",
+     "count": 177
+    },
+    {
+     "name": "Isabella",
+     "count": 172
+    },
+    {
+     "name": "Eleanor",
+     "count": 161
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 397
+    },
+    {
+     "name": "Theodore",
+     "count": 373
+    },
+    {
+     "name": "Noah",
+     "count": 348
+    },
+    {
+     "name": "Oliver",
+     "count": 310
+    },
+    {
+     "name": "James",
+     "count": 256
+    },
+    {
+     "name": "Henry",
+     "count": 252
+    },
+    {
+     "name": "Mateo",
+     "count": 244
+    },
+    {
+     "name": "William",
+     "count": 228
+    },
+    {
+     "name": "Cooper",
+     "count": 196
+    },
+    {
+     "name": "Elias",
+     "count": 193
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "CT": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 176
+    },
+    {
+     "name": "Sophia",
+     "count": 166
+    },
+    {
+     "name": "Olivia",
+     "count": 151
+    },
+    {
+     "name": "Amelia",
+     "count": 149
+    },
+    {
+     "name": "Mia",
+     "count": 143
+    },
+    {
+     "name": "Emma",
+     "count": 133
+    },
+    {
+     "name": "Isabella",
+     "count": 111
+    },
+    {
+     "name": "Nora",
+     "count": 99
+    },
+    {
+     "name": "Sofia",
+     "count": 99
+    },
+    {
+     "name": "Madison",
+     "count": 95
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 268
+    },
+    {
+     "name": "Liam",
+     "count": 241
+    },
+    {
+     "name": "Theodore",
+     "count": 182
+    },
+    {
+     "name": "James",
+     "count": 156
+    },
+    {
+     "name": "Luca",
+     "count": 153
+    },
+    {
+     "name": "Oliver",
+     "count": 144
+    },
+    {
+     "name": "Henry",
+     "count": 143
+    },
+    {
+     "name": "Jack",
+     "count": 140
+    },
+    {
+     "name": "Lucas",
+     "count": 134
+    },
+    {
+     "name": "Joseph",
+     "count": 124
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "DC": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Emma",
+     "count": 36
+    },
+    {
+     "name": "Sophia",
+     "count": 36
+    },
+    {
+     "name": "Charlotte",
+     "count": 34
+    },
+    {
+     "name": "Lucy",
+     "count": 31
+    },
+    {
+     "name": "Zoe",
+     "count": 31
+    },
+    {
+     "name": "Eleanor",
+     "count": 30
+    },
+    {
+     "name": "Ava",
+     "count": 29
+    },
+    {
+     "name": "Sofia",
+     "count": 29
+    },
+    {
+     "name": "Amelia",
+     "count": 27
+    },
+    {
+     "name": "Olivia",
+     "count": 27
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 58
+    },
+    {
+     "name": "Theodore",
+     "count": 53
+    },
+    {
+     "name": "Henry",
+     "count": 49
+    },
+    {
+     "name": "Liam",
+     "count": 49
+    },
+    {
+     "name": "William",
+     "count": 43
+    },
+    {
+     "name": "James",
+     "count": 37
+    },
+    {
+     "name": "Charles",
+     "count": 34
+    },
+    {
+     "name": "John",
+     "count": 34
+    },
+    {
+     "name": "Mateo",
+     "count": 34
+    },
+    {
+     "name": "George",
+     "count": 33
+    }
+   ],
+   "tied_at_10th": {
+    "F": 2,
+    "M": 3
+   }
+  },
+  "DE": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Mia",
+     "count": 43
+    },
+    {
+     "name": "Sophia",
+     "count": 41
+    },
+    {
+     "name": "Isabella",
+     "count": 35
+    },
+    {
+     "name": "Charlotte",
+     "count": 34
+    },
+    {
+     "name": "Emma",
+     "count": 32
+    },
+    {
+     "name": "Olivia",
+     "count": 32
+    },
+    {
+     "name": "Amelia",
+     "count": 29
+    },
+    {
+     "name": "Ailany",
+     "count": 28
+    },
+    {
+     "name": "Ava",
+     "count": 27
+    },
+    {
+     "name": "Layla",
+     "count": 26
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 63
+    },
+    {
+     "name": "Liam",
+     "count": 59
+    },
+    {
+     "name": "Oliver",
+     "count": 39
+    },
+    {
+     "name": "James",
+     "count": 37
+    },
+    {
+     "name": "Lucas",
+     "count": 36
+    },
+    {
+     "name": "Theodore",
+     "count": 35
+    },
+    {
+     "name": "Benjamin",
+     "count": 34
+    },
+    {
+     "name": "Elijah",
+     "count": 34
+    },
+    {
+     "name": "John",
+     "count": 32
+    },
+    {
+     "name": "Cooper",
+     "count": 30
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 4
+   }
+  },
+  "FL": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Olivia",
+     "count": 1020
+    },
+    {
+     "name": "Mia",
+     "count": 993
+    },
+    {
+     "name": "Isabella",
+     "count": 992
+    },
+    {
+     "name": "Emma",
+     "count": 986
+    },
+    {
+     "name": "Sophia",
+     "count": 970
+    },
+    {
+     "name": "Amelia",
+     "count": 908
+    },
+    {
+     "name": "Charlotte",
+     "count": 773
+    },
+    {
+     "name": "Sofia",
+     "count": 705
+    },
+    {
+     "name": "Valentina",
+     "count": 600
+    },
+    {
+     "name": "Eliana",
+     "count": 515
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 1865
+    },
+    {
+     "name": "Noah",
+     "count": 1749
+    },
+    {
+     "name": "Lucas",
+     "count": 935
+    },
+    {
+     "name": "Elijah",
+     "count": 868
+    },
+    {
+     "name": "Oliver",
+     "count": 831
+    },
+    {
+     "name": "Mateo",
+     "count": 775
+    },
+    {
+     "name": "Luca",
+     "count": 710
+    },
+    {
+     "name": "James",
+     "count": 672
+    },
+    {
+     "name": "Benjamin",
+     "count": 660
+    },
+    {
+     "name": "Matthew",
+     "count": 658
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "GA": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Amelia",
+     "count": 450
+    },
+    {
+     "name": "Charlotte",
+     "count": 438
+    },
+    {
+     "name": "Olivia",
+     "count": 418
+    },
+    {
+     "name": "Emma",
+     "count": 397
+    },
+    {
+     "name": "Isabella",
+     "count": 342
+    },
+    {
+     "name": "Sophia",
+     "count": 310
+    },
+    {
+     "name": "Ava",
+     "count": 301
+    },
+    {
+     "name": "Evelyn",
+     "count": 296
+    },
+    {
+     "name": "Mia",
+     "count": 296
+    },
+    {
+     "name": "Elizabeth",
+     "count": 291
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 661
+    },
+    {
+     "name": "Noah",
+     "count": 653
+    },
+    {
+     "name": "William",
+     "count": 475
+    },
+    {
+     "name": "Elijah",
+     "count": 473
+    },
+    {
+     "name": "James",
+     "count": 451
+    },
+    {
+     "name": "Oliver",
+     "count": 432
+    },
+    {
+     "name": "Henry",
+     "count": 385
+    },
+    {
+     "name": "John",
+     "count": 369
+    },
+    {
+     "name": "Theodore",
+     "count": 315
+    },
+    {
+     "name": "Asher",
+     "count": 306
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "HI": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Isla",
+     "count": 40
+    },
+    {
+     "name": "Emma",
+     "count": 37
+    },
+    {
+     "name": "Luna",
+     "count": 36
+    },
+    {
+     "name": "Sophia",
+     "count": 36
+    },
+    {
+     "name": "Olivia",
+     "count": 34
+    },
+    {
+     "name": "Amelia",
+     "count": 31
+    },
+    {
+     "name": "Ava",
+     "count": 29
+    },
+    {
+     "name": "Chloe",
+     "count": 29
+    },
+    {
+     "name": "Kaia",
+     "count": 29
+    },
+    {
+     "name": "Aria",
+     "count": 28
+    }
+   ],
+   "male": [
+    {
+     "name": "Elijah",
+     "count": 49
+    },
+    {
+     "name": "Noah",
+     "count": 46
+    },
+    {
+     "name": "Liam",
+     "count": 42
+    },
+    {
+     "name": "Luca",
+     "count": 42
+    },
+    {
+     "name": "Luke",
+     "count": 41
+    },
+    {
+     "name": "Ezekiel",
+     "count": 40
+    },
+    {
+     "name": "Levi",
+     "count": 40
+    },
+    {
+     "name": "Theodore",
+     "count": 38
+    },
+    {
+     "name": "Henry",
+     "count": 34
+    },
+    {
+     "name": "John",
+     "count": 33
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "IA": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 158
+    },
+    {
+     "name": "Evelyn",
+     "count": 117
+    },
+    {
+     "name": "Emma",
+     "count": 116
+    },
+    {
+     "name": "Amelia",
+     "count": 112
+    },
+    {
+     "name": "Eleanor",
+     "count": 109
+    },
+    {
+     "name": "Olivia",
+     "count": 107
+    },
+    {
+     "name": "Sophia",
+     "count": 104
+    },
+    {
+     "name": "Lainey",
+     "count": 101
+    },
+    {
+     "name": "Harper",
+     "count": 98
+    },
+    {
+     "name": "Violet",
+     "count": 97
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 198
+    },
+    {
+     "name": "Liam",
+     "count": 185
+    },
+    {
+     "name": "Henry",
+     "count": 176
+    },
+    {
+     "name": "Theodore",
+     "count": 176
+    },
+    {
+     "name": "Cooper",
+     "count": 133
+    },
+    {
+     "name": "Hudson",
+     "count": 124
+    },
+    {
+     "name": "James",
+     "count": 118
+    },
+    {
+     "name": "Noah",
+     "count": 118
+    },
+    {
+     "name": "Bennett",
+     "count": 113
+    },
+    {
+     "name": "Owen",
+     "count": 106
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "ID": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 104
+    },
+    {
+     "name": "Amelia",
+     "count": 94
+    },
+    {
+     "name": "Evelyn",
+     "count": 89
+    },
+    {
+     "name": "Emma",
+     "count": 85
+    },
+    {
+     "name": "Olivia",
+     "count": 85
+    },
+    {
+     "name": "Hazel",
+     "count": 82
+    },
+    {
+     "name": "Lainey",
+     "count": 72
+    },
+    {
+     "name": "Sophia",
+     "count": 71
+    },
+    {
+     "name": "Violet",
+     "count": 66
+    },
+    {
+     "name": "Lucy",
+     "count": 65
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 128
+    },
+    {
+     "name": "Theodore",
+     "count": 124
+    },
+    {
+     "name": "Henry",
+     "count": 119
+    },
+    {
+     "name": "Liam",
+     "count": 106
+    },
+    {
+     "name": "Hudson",
+     "count": 103
+    },
+    {
+     "name": "Cooper",
+     "count": 86
+    },
+    {
+     "name": "William",
+     "count": 86
+    },
+    {
+     "name": "Noah",
+     "count": 78
+    },
+    {
+     "name": "Asher",
+     "count": 76
+    },
+    {
+     "name": "James",
+     "count": 76
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 2
+   }
+  },
+  "IL": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Olivia",
+     "count": 501
+    },
+    {
+     "name": "Charlotte",
+     "count": 500
+    },
+    {
+     "name": "Sophia",
+     "count": 473
+    },
+    {
+     "name": "Emma",
+     "count": 458
+    },
+    {
+     "name": "Mia",
+     "count": 412
+    },
+    {
+     "name": "Amelia",
+     "count": 405
+    },
+    {
+     "name": "Sofia",
+     "count": 343
+    },
+    {
+     "name": "Isabella",
+     "count": 338
+    },
+    {
+     "name": "Camila",
+     "count": 298
+    },
+    {
+     "name": "Evelyn",
+     "count": 296
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 690
+    },
+    {
+     "name": "Noah",
+     "count": 683
+    },
+    {
+     "name": "Oliver",
+     "count": 541
+    },
+    {
+     "name": "Theodore",
+     "count": 537
+    },
+    {
+     "name": "Henry",
+     "count": 462
+    },
+    {
+     "name": "Mateo",
+     "count": 417
+    },
+    {
+     "name": "James",
+     "count": 406
+    },
+    {
+     "name": "Leo",
+     "count": 385
+    },
+    {
+     "name": "Benjamin",
+     "count": 365
+    },
+    {
+     "name": "Sebastian",
+     "count": 360
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "IN": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 351
+    },
+    {
+     "name": "Amelia",
+     "count": 331
+    },
+    {
+     "name": "Eleanor",
+     "count": 265
+    },
+    {
+     "name": "Evelyn",
+     "count": 252
+    },
+    {
+     "name": "Sophia",
+     "count": 234
+    },
+    {
+     "name": "Emma",
+     "count": 230
+    },
+    {
+     "name": "Olivia",
+     "count": 230
+    },
+    {
+     "name": "Harper",
+     "count": 195
+    },
+    {
+     "name": "Lainey",
+     "count": 190
+    },
+    {
+     "name": "Violet",
+     "count": 183
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 428
+    },
+    {
+     "name": "Liam",
+     "count": 393
+    },
+    {
+     "name": "Theodore",
+     "count": 366
+    },
+    {
+     "name": "Henry",
+     "count": 359
+    },
+    {
+     "name": "Noah",
+     "count": 345
+    },
+    {
+     "name": "James",
+     "count": 263
+    },
+    {
+     "name": "Hudson",
+     "count": 241
+    },
+    {
+     "name": "Elijah",
+     "count": 230
+    },
+    {
+     "name": "Benjamin",
+     "count": 226
+    },
+    {
+     "name": "Cooper",
+     "count": 219
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "KS": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 178
+    },
+    {
+     "name": "Olivia",
+     "count": 127
+    },
+    {
+     "name": "Evelyn",
+     "count": 123
+    },
+    {
+     "name": "Amelia",
+     "count": 120
+    },
+    {
+     "name": "Eleanor",
+     "count": 118
+    },
+    {
+     "name": "Sophia",
+     "count": 117
+    },
+    {
+     "name": "Emma",
+     "count": 105
+    },
+    {
+     "name": "Harper",
+     "count": 103
+    },
+    {
+     "name": "Lainey",
+     "count": 99
+    },
+    {
+     "name": "Mia",
+     "count": 93
+    }
+   ],
+   "male": [
+    {
+     "name": "Theodore",
+     "count": 183
+    },
+    {
+     "name": "Oliver",
+     "count": 179
+    },
+    {
+     "name": "Noah",
+     "count": 167
+    },
+    {
+     "name": "Liam",
+     "count": 164
+    },
+    {
+     "name": "Henry",
+     "count": 150
+    },
+    {
+     "name": "James",
+     "count": 141
+    },
+    {
+     "name": "Hudson",
+     "count": 135
+    },
+    {
+     "name": "William",
+     "count": 121
+    },
+    {
+     "name": "Elijah",
+     "count": 119
+    },
+    {
+     "name": "Bennett",
+     "count": 118
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "KY": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Amelia",
+     "count": 212
+    },
+    {
+     "name": "Charlotte",
+     "count": 187
+    },
+    {
+     "name": "Sophia",
+     "count": 166
+    },
+    {
+     "name": "Evelyn",
+     "count": 164
+    },
+    {
+     "name": "Lainey",
+     "count": 160
+    },
+    {
+     "name": "Emma",
+     "count": 159
+    },
+    {
+     "name": "Willow",
+     "count": 156
+    },
+    {
+     "name": "Ellie",
+     "count": 152
+    },
+    {
+     "name": "Eleanor",
+     "count": 149
+    },
+    {
+     "name": "Harper",
+     "count": 147
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 278
+    },
+    {
+     "name": "Liam",
+     "count": 253
+    },
+    {
+     "name": "Hudson",
+     "count": 229
+    },
+    {
+     "name": "Waylon",
+     "count": 223
+    },
+    {
+     "name": "Noah",
+     "count": 203
+    },
+    {
+     "name": "Henry",
+     "count": 191
+    },
+    {
+     "name": "Theodore",
+     "count": 191
+    },
+    {
+     "name": "Elijah",
+     "count": 185
+    },
+    {
+     "name": "James",
+     "count": 181
+    },
+    {
+     "name": "William",
+     "count": 173
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "LA": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Amelia",
+     "count": 212
+    },
+    {
+     "name": "Olivia",
+     "count": 162
+    },
+    {
+     "name": "Charlotte",
+     "count": 161
+    },
+    {
+     "name": "Emma",
+     "count": 125
+    },
+    {
+     "name": "Sophia",
+     "count": 123
+    },
+    {
+     "name": "Harper",
+     "count": 119
+    },
+    {
+     "name": "Ellie",
+     "count": 114
+    },
+    {
+     "name": "Eleanor",
+     "count": 112
+    },
+    {
+     "name": "Evelyn",
+     "count": 110
+    },
+    {
+     "name": "Lucy",
+     "count": 106
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 237
+    },
+    {
+     "name": "Liam",
+     "count": 223
+    },
+    {
+     "name": "James",
+     "count": 187
+    },
+    {
+     "name": "Elijah",
+     "count": 186
+    },
+    {
+     "name": "John",
+     "count": 181
+    },
+    {
+     "name": "Oliver",
+     "count": 172
+    },
+    {
+     "name": "William",
+     "count": 149
+    },
+    {
+     "name": "Hudson",
+     "count": 133
+    },
+    {
+     "name": "Joseph",
+     "count": 130
+    },
+    {
+     "name": "Henry",
+     "count": 125
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 2
+   }
+  },
+  "MA": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 348
+    },
+    {
+     "name": "Sophia",
+     "count": 318
+    },
+    {
+     "name": "Emma",
+     "count": 287
+    },
+    {
+     "name": "Olivia",
+     "count": 281
+    },
+    {
+     "name": "Isabella",
+     "count": 258
+    },
+    {
+     "name": "Amelia",
+     "count": 245
+    },
+    {
+     "name": "Mia",
+     "count": 243
+    },
+    {
+     "name": "Nora",
+     "count": 223
+    },
+    {
+     "name": "Grace",
+     "count": 193
+    },
+    {
+     "name": "Chloe",
+     "count": 187
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 468
+    },
+    {
+     "name": "Liam",
+     "count": 446
+    },
+    {
+     "name": "Henry",
+     "count": 372
+    },
+    {
+     "name": "Theodore",
+     "count": 358
+    },
+    {
+     "name": "James",
+     "count": 323
+    },
+    {
+     "name": "Jack",
+     "count": 319
+    },
+    {
+     "name": "Benjamin",
+     "count": 312
+    },
+    {
+     "name": "Oliver",
+     "count": 310
+    },
+    {
+     "name": "William",
+     "count": 271
+    },
+    {
+     "name": "Lucas",
+     "count": 261
+    }
+   ],
+   "tied_at_10th": {
+    "F": 2,
+    "M": 1
+   }
+  },
+  "MD": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Ailany",
+     "count": 225
+    },
+    {
+     "name": "Charlotte",
+     "count": 222
+    },
+    {
+     "name": "Olivia",
+     "count": 218
+    },
+    {
+     "name": "Mia",
+     "count": 217
+    },
+    {
+     "name": "Sophia",
+     "count": 210
+    },
+    {
+     "name": "Eliana",
+     "count": 206
+    },
+    {
+     "name": "Emma",
+     "count": 196
+    },
+    {
+     "name": "Isabella",
+     "count": 175
+    },
+    {
+     "name": "Amelia",
+     "count": 159
+    },
+    {
+     "name": "Zoe",
+     "count": 158
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 463
+    },
+    {
+     "name": "Noah",
+     "count": 377
+    },
+    {
+     "name": "Lucas",
+     "count": 221
+    },
+    {
+     "name": "Theodore",
+     "count": 214
+    },
+    {
+     "name": "Oliver",
+     "count": 210
+    },
+    {
+     "name": "William",
+     "count": 185
+    },
+    {
+     "name": "Ethan",
+     "count": 183
+    },
+    {
+     "name": "Henry",
+     "count": 183
+    },
+    {
+     "name": "James",
+     "count": 180
+    },
+    {
+     "name": "Thiago",
+     "count": 168
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "ME": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 89
+    },
+    {
+     "name": "Amelia",
+     "count": 45
+    },
+    {
+     "name": "Eleanor",
+     "count": 45
+    },
+    {
+     "name": "Violet",
+     "count": 44
+    },
+    {
+     "name": "Harper",
+     "count": 43
+    },
+    {
+     "name": "Evelyn",
+     "count": 40
+    },
+    {
+     "name": "Lucy",
+     "count": 39
+    },
+    {
+     "name": "Olivia",
+     "count": 39
+    },
+    {
+     "name": "Grace",
+     "count": 37
+    },
+    {
+     "name": "Ivy",
+     "count": 36
+    }
+   ],
+   "male": [
+    {
+     "name": "Theodore",
+     "count": 83
+    },
+    {
+     "name": "Oliver",
+     "count": 77
+    },
+    {
+     "name": "Henry",
+     "count": 66
+    },
+    {
+     "name": "Noah",
+     "count": 54
+    },
+    {
+     "name": "Levi",
+     "count": 53
+    },
+    {
+     "name": "Wesley",
+     "count": 46
+    },
+    {
+     "name": "Jack",
+     "count": 44
+    },
+    {
+     "name": "James",
+     "count": 43
+    },
+    {
+     "name": "William",
+     "count": 43
+    },
+    {
+     "name": "Bennett",
+     "count": 41
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 3
+   }
+  },
+  "MI": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 381
+    },
+    {
+     "name": "Amelia",
+     "count": 368
+    },
+    {
+     "name": "Sophia",
+     "count": 341
+    },
+    {
+     "name": "Eleanor",
+     "count": 294
+    },
+    {
+     "name": "Evelyn",
+     "count": 286
+    },
+    {
+     "name": "Olivia",
+     "count": 285
+    },
+    {
+     "name": "Violet",
+     "count": 261
+    },
+    {
+     "name": "Emma",
+     "count": 257
+    },
+    {
+     "name": "Lainey",
+     "count": 250
+    },
+    {
+     "name": "Harper",
+     "count": 235
+    }
+   ],
+   "male": [
+    {
+     "name": "Theodore",
+     "count": 490
+    },
+    {
+     "name": "Noah",
+     "count": 478
+    },
+    {
+     "name": "Oliver",
+     "count": 469
+    },
+    {
+     "name": "Henry",
+     "count": 433
+    },
+    {
+     "name": "James",
+     "count": 342
+    },
+    {
+     "name": "Jack",
+     "count": 337
+    },
+    {
+     "name": "Hudson",
+     "count": 333
+    },
+    {
+     "name": "Liam",
+     "count": 332
+    },
+    {
+     "name": "Levi",
+     "count": 315
+    },
+    {
+     "name": "Elijah",
+     "count": 312
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "MN": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 238
+    },
+    {
+     "name": "Evelyn",
+     "count": 230
+    },
+    {
+     "name": "Violet",
+     "count": 196
+    },
+    {
+     "name": "Eleanor",
+     "count": 194
+    },
+    {
+     "name": "Nora",
+     "count": 194
+    },
+    {
+     "name": "Olivia",
+     "count": 194
+    },
+    {
+     "name": "Sophia",
+     "count": 194
+    },
+    {
+     "name": "Emma",
+     "count": 190
+    },
+    {
+     "name": "Lucy",
+     "count": 189
+    },
+    {
+     "name": "Hazel",
+     "count": 176
+    }
+   ],
+   "male": [
+    {
+     "name": "Theodore",
+     "count": 339
+    },
+    {
+     "name": "Henry",
+     "count": 313
+    },
+    {
+     "name": "Oliver",
+     "count": 298
+    },
+    {
+     "name": "Liam",
+     "count": 277
+    },
+    {
+     "name": "Noah",
+     "count": 236
+    },
+    {
+     "name": "James",
+     "count": 227
+    },
+    {
+     "name": "William",
+     "count": 226
+    },
+    {
+     "name": "Jack",
+     "count": 218
+    },
+    {
+     "name": "Leo",
+     "count": 207
+    },
+    {
+     "name": "Bennett",
+     "count": 205
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "MO": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 334
+    },
+    {
+     "name": "Amelia",
+     "count": 288
+    },
+    {
+     "name": "Olivia",
+     "count": 260
+    },
+    {
+     "name": "Eleanor",
+     "count": 248
+    },
+    {
+     "name": "Evelyn",
+     "count": 227
+    },
+    {
+     "name": "Sophia",
+     "count": 211
+    },
+    {
+     "name": "Emma",
+     "count": 196
+    },
+    {
+     "name": "Violet",
+     "count": 183
+    },
+    {
+     "name": "Willow",
+     "count": 183
+    },
+    {
+     "name": "Harper",
+     "count": 176
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 405
+    },
+    {
+     "name": "Theodore",
+     "count": 393
+    },
+    {
+     "name": "Henry",
+     "count": 327
+    },
+    {
+     "name": "Noah",
+     "count": 322
+    },
+    {
+     "name": "Hudson",
+     "count": 284
+    },
+    {
+     "name": "Liam",
+     "count": 284
+    },
+    {
+     "name": "William",
+     "count": 253
+    },
+    {
+     "name": "James",
+     "count": 248
+    },
+    {
+     "name": "Cooper",
+     "count": 222
+    },
+    {
+     "name": "Bennett",
+     "count": 216
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "MS": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Amelia",
+     "count": 105
+    },
+    {
+     "name": "Ava",
+     "count": 100
+    },
+    {
+     "name": "Charlotte",
+     "count": 94
+    },
+    {
+     "name": "Olivia",
+     "count": 86
+    },
+    {
+     "name": "Elizabeth",
+     "count": 81
+    },
+    {
+     "name": "Mary",
+     "count": 71
+    },
+    {
+     "name": "Emma",
+     "count": 69
+    },
+    {
+     "name": "Ivy",
+     "count": 67
+    },
+    {
+     "name": "Nova",
+     "count": 65
+    },
+    {
+     "name": "Lainey",
+     "count": 63
+    }
+   ],
+   "male": [
+    {
+     "name": "James",
+     "count": 160
+    },
+    {
+     "name": "William",
+     "count": 155
+    },
+    {
+     "name": "John",
+     "count": 151
+    },
+    {
+     "name": "Noah",
+     "count": 120
+    },
+    {
+     "name": "Elijah",
+     "count": 109
+    },
+    {
+     "name": "Waylon",
+     "count": 106
+    },
+    {
+     "name": "Liam",
+     "count": 104
+    },
+    {
+     "name": "Henry",
+     "count": 93
+    },
+    {
+     "name": "Hudson",
+     "count": 90
+    },
+    {
+     "name": "Thomas",
+     "count": 82
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "MT": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 46
+    },
+    {
+     "name": "Lucy",
+     "count": 41
+    },
+    {
+     "name": "Amelia",
+     "count": 40
+    },
+    {
+     "name": "Lainey",
+     "count": 38
+    },
+    {
+     "name": "Nora",
+     "count": 37
+    },
+    {
+     "name": "Harper",
+     "count": 36
+    },
+    {
+     "name": "Violet",
+     "count": 36
+    },
+    {
+     "name": "Sophia",
+     "count": 34
+    },
+    {
+     "name": "Evelyn",
+     "count": 32
+    },
+    {
+     "name": "Isla",
+     "count": 32
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 62
+    },
+    {
+     "name": "Henry",
+     "count": 58
+    },
+    {
+     "name": "William",
+     "count": 52
+    },
+    {
+     "name": "Hudson",
+     "count": 45
+    },
+    {
+     "name": "Theodore",
+     "count": 45
+    },
+    {
+     "name": "James",
+     "count": 44
+    },
+    {
+     "name": "Waylon",
+     "count": 43
+    },
+    {
+     "name": "Weston",
+     "count": 43
+    },
+    {
+     "name": "Cooper",
+     "count": 41
+    },
+    {
+     "name": "Colter",
+     "count": 39
+    }
+   ],
+   "tied_at_10th": {
+    "F": 2,
+    "M": 2
+   }
+  },
+  "NC": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Amelia",
+     "count": 459
+    },
+    {
+     "name": "Charlotte",
+     "count": 453
+    },
+    {
+     "name": "Olivia",
+     "count": 441
+    },
+    {
+     "name": "Sophia",
+     "count": 396
+    },
+    {
+     "name": "Emma",
+     "count": 391
+    },
+    {
+     "name": "Isabella",
+     "count": 342
+    },
+    {
+     "name": "Mia",
+     "count": 325
+    },
+    {
+     "name": "Eliana",
+     "count": 321
+    },
+    {
+     "name": "Evelyn",
+     "count": 317
+    },
+    {
+     "name": "Eleanor",
+     "count": 315
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 684
+    },
+    {
+     "name": "Liam",
+     "count": 680
+    },
+    {
+     "name": "Oliver",
+     "count": 507
+    },
+    {
+     "name": "William",
+     "count": 500
+    },
+    {
+     "name": "James",
+     "count": 471
+    },
+    {
+     "name": "Henry",
+     "count": 450
+    },
+    {
+     "name": "Elijah",
+     "count": 426
+    },
+    {
+     "name": "Theodore",
+     "count": 425
+    },
+    {
+     "name": "Levi",
+     "count": 376
+    },
+    {
+     "name": "John",
+     "count": 360
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "ND": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 42
+    },
+    {
+     "name": "Lainey",
+     "count": 39
+    },
+    {
+     "name": "Olivia",
+     "count": 34
+    },
+    {
+     "name": "Ellie",
+     "count": 33
+    },
+    {
+     "name": "Evelyn",
+     "count": 32
+    },
+    {
+     "name": "Amelia",
+     "count": 30
+    },
+    {
+     "name": "Ella",
+     "count": 29
+    },
+    {
+     "name": "Hazel",
+     "count": 29
+    },
+    {
+     "name": "Ivy",
+     "count": 29
+    },
+    {
+     "name": "Emma",
+     "count": 28
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 56
+    },
+    {
+     "name": "Henry",
+     "count": 49
+    },
+    {
+     "name": "Theodore",
+     "count": 49
+    },
+    {
+     "name": "Noah",
+     "count": 48
+    },
+    {
+     "name": "Oliver",
+     "count": 47
+    },
+    {
+     "name": "Cooper",
+     "count": 40
+    },
+    {
+     "name": "Hudson",
+     "count": 37
+    },
+    {
+     "name": "Bennett",
+     "count": 34
+    },
+    {
+     "name": "James",
+     "count": 33
+    },
+    {
+     "name": "Colter",
+     "count": 32
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "NE": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 95
+    },
+    {
+     "name": "Evelyn",
+     "count": 82
+    },
+    {
+     "name": "Harper",
+     "count": 80
+    },
+    {
+     "name": "Amelia",
+     "count": 79
+    },
+    {
+     "name": "Olivia",
+     "count": 75
+    },
+    {
+     "name": "Eleanor",
+     "count": 74
+    },
+    {
+     "name": "Ailany",
+     "count": 58
+    },
+    {
+     "name": "Ivy",
+     "count": 58
+    },
+    {
+     "name": "Mia",
+     "count": 58
+    },
+    {
+     "name": "Violet",
+     "count": 58
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 149
+    },
+    {
+     "name": "Theodore",
+     "count": 128
+    },
+    {
+     "name": "Henry",
+     "count": 113
+    },
+    {
+     "name": "Noah",
+     "count": 109
+    },
+    {
+     "name": "Oliver",
+     "count": 101
+    },
+    {
+     "name": "Cooper",
+     "count": 82
+    },
+    {
+     "name": "James",
+     "count": 73
+    },
+    {
+     "name": "William",
+     "count": 71
+    },
+    {
+     "name": "Benjamin",
+     "count": 69
+    },
+    {
+     "name": "Hudson",
+     "count": 68
+    }
+   ],
+   "tied_at_10th": {
+    "F": 4,
+    "M": 1
+   }
+  },
+  "NH": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 80
+    },
+    {
+     "name": "Olivia",
+     "count": 64
+    },
+    {
+     "name": "Sophia",
+     "count": 58
+    },
+    {
+     "name": "Maeve",
+     "count": 56
+    },
+    {
+     "name": "Violet",
+     "count": 52
+    },
+    {
+     "name": "Amelia",
+     "count": 51
+    },
+    {
+     "name": "Lucy",
+     "count": 51
+    },
+    {
+     "name": "Nora",
+     "count": 51
+    },
+    {
+     "name": "Isla",
+     "count": 50
+    },
+    {
+     "name": "Eleanor",
+     "count": 49
+    }
+   ],
+   "male": [
+    {
+     "name": "Theodore",
+     "count": 101
+    },
+    {
+     "name": "Henry",
+     "count": 77
+    },
+    {
+     "name": "Oliver",
+     "count": 66
+    },
+    {
+     "name": "Jack",
+     "count": 65
+    },
+    {
+     "name": "James",
+     "count": 65
+    },
+    {
+     "name": "Liam",
+     "count": 63
+    },
+    {
+     "name": "Lucas",
+     "count": 62
+    },
+    {
+     "name": "Noah",
+     "count": 59
+    },
+    {
+     "name": "Wesley",
+     "count": 57
+    },
+    {
+     "name": "Owen",
+     "count": 56
+    }
+   ],
+   "tied_at_10th": {
+    "F": 2,
+    "M": 2
+   }
+  },
+  "NJ": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Emma",
+     "count": 428
+    },
+    {
+     "name": "Mia",
+     "count": 427
+    },
+    {
+     "name": "Olivia",
+     "count": 396
+    },
+    {
+     "name": "Sophia",
+     "count": 396
+    },
+    {
+     "name": "Isabella",
+     "count": 368
+    },
+    {
+     "name": "Charlotte",
+     "count": 340
+    },
+    {
+     "name": "Amelia",
+     "count": 317
+    },
+    {
+     "name": "Ailany",
+     "count": 299
+    },
+    {
+     "name": "Sofia",
+     "count": 292
+    },
+    {
+     "name": "Ava",
+     "count": 286
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 749
+    },
+    {
+     "name": "Noah",
+     "count": 742
+    },
+    {
+     "name": "Lucas",
+     "count": 399
+    },
+    {
+     "name": "Luca",
+     "count": 378
+    },
+    {
+     "name": "Joseph",
+     "count": 374
+    },
+    {
+     "name": "James",
+     "count": 350
+    },
+    {
+     "name": "Michael",
+     "count": 343
+    },
+    {
+     "name": "Theodore",
+     "count": 338
+    },
+    {
+     "name": "Oliver",
+     "count": 335
+    },
+    {
+     "name": "Jack",
+     "count": 333
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "NM": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Mia",
+     "count": 66
+    },
+    {
+     "name": "Olivia",
+     "count": 65
+    },
+    {
+     "name": "Sophia",
+     "count": 65
+    },
+    {
+     "name": "Sofia",
+     "count": 60
+    },
+    {
+     "name": "Camila",
+     "count": 59
+    },
+    {
+     "name": "Eliana",
+     "count": 57
+    },
+    {
+     "name": "Isabella",
+     "count": 56
+    },
+    {
+     "name": "Amelia",
+     "count": 53
+    },
+    {
+     "name": "Aria",
+     "count": 45
+    },
+    {
+     "name": "Aurora",
+     "count": 45
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 115
+    },
+    {
+     "name": "Liam",
+     "count": 109
+    },
+    {
+     "name": "Mateo",
+     "count": 99
+    },
+    {
+     "name": "Elijah",
+     "count": 76
+    },
+    {
+     "name": "Santiago",
+     "count": 70
+    },
+    {
+     "name": "Sebastian",
+     "count": 69
+    },
+    {
+     "name": "Ezra",
+     "count": 67
+    },
+    {
+     "name": "Elias",
+     "count": 66
+    },
+    {
+     "name": "Ezekiel",
+     "count": 66
+    },
+    {
+     "name": "Levi",
+     "count": 63
+    }
+   ],
+   "tied_at_10th": {
+    "F": 3,
+    "M": 1
+   }
+  },
+  "NV": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Olivia",
+     "count": 146
+    },
+    {
+     "name": "Mia",
+     "count": 122
+    },
+    {
+     "name": "Emma",
+     "count": 114
+    },
+    {
+     "name": "Isabella",
+     "count": 113
+    },
+    {
+     "name": "Sophia",
+     "count": 111
+    },
+    {
+     "name": "Amelia",
+     "count": 102
+    },
+    {
+     "name": "Charlotte",
+     "count": 99
+    },
+    {
+     "name": "Sofia",
+     "count": 99
+    },
+    {
+     "name": "Luna",
+     "count": 90
+    },
+    {
+     "name": "Camila",
+     "count": 86
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 205
+    },
+    {
+     "name": "Mateo",
+     "count": 184
+    },
+    {
+     "name": "Noah",
+     "count": 176
+    },
+    {
+     "name": "Santiago",
+     "count": 138
+    },
+    {
+     "name": "Oliver",
+     "count": 114
+    },
+    {
+     "name": "Sebastian",
+     "count": 106
+    },
+    {
+     "name": "Elijah",
+     "count": 105
+    },
+    {
+     "name": "Elias",
+     "count": 102
+    },
+    {
+     "name": "James",
+     "count": 92
+    },
+    {
+     "name": "Julian",
+     "count": 89
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "NY": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Emma",
+     "count": 774
+    },
+    {
+     "name": "Olivia",
+     "count": 740
+    },
+    {
+     "name": "Mia",
+     "count": 738
+    },
+    {
+     "name": "Sophia",
+     "count": 721
+    },
+    {
+     "name": "Charlotte",
+     "count": 664
+    },
+    {
+     "name": "Isabella",
+     "count": 629
+    },
+    {
+     "name": "Amelia",
+     "count": 622
+    },
+    {
+     "name": "Leah",
+     "count": 550
+    },
+    {
+     "name": "Sofia",
+     "count": 545
+    },
+    {
+     "name": "Zoe",
+     "count": 478
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 1381
+    },
+    {
+     "name": "Liam",
+     "count": 1368
+    },
+    {
+     "name": "Theodore",
+     "count": 738
+    },
+    {
+     "name": "Lucas",
+     "count": 705
+    },
+    {
+     "name": "Oliver",
+     "count": 703
+    },
+    {
+     "name": "Luca",
+     "count": 680
+    },
+    {
+     "name": "Joseph",
+     "count": 667
+    },
+    {
+     "name": "James",
+     "count": 658
+    },
+    {
+     "name": "Jacob",
+     "count": 631
+    },
+    {
+     "name": "Ethan",
+     "count": 630
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "OH": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 551
+    },
+    {
+     "name": "Amelia",
+     "count": 482
+    },
+    {
+     "name": "Sophia",
+     "count": 464
+    },
+    {
+     "name": "Evelyn",
+     "count": 420
+    },
+    {
+     "name": "Olivia",
+     "count": 392
+    },
+    {
+     "name": "Eleanor",
+     "count": 376
+    },
+    {
+     "name": "Emma",
+     "count": 362
+    },
+    {
+     "name": "Lainey",
+     "count": 334
+    },
+    {
+     "name": "Violet",
+     "count": 329
+    },
+    {
+     "name": "Nora",
+     "count": 301
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 653
+    },
+    {
+     "name": "Theodore",
+     "count": 611
+    },
+    {
+     "name": "Noah",
+     "count": 551
+    },
+    {
+     "name": "Henry",
+     "count": 543
+    },
+    {
+     "name": "Liam",
+     "count": 530
+    },
+    {
+     "name": "Hudson",
+     "count": 455
+    },
+    {
+     "name": "William",
+     "count": 431
+    },
+    {
+     "name": "James",
+     "count": 403
+    },
+    {
+     "name": "Elijah",
+     "count": 393
+    },
+    {
+     "name": "Jack",
+     "count": 389
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "OK": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Olivia",
+     "count": 178
+    },
+    {
+     "name": "Charlotte",
+     "count": 174
+    },
+    {
+     "name": "Amelia",
+     "count": 161
+    },
+    {
+     "name": "Sophia",
+     "count": 133
+    },
+    {
+     "name": "Emma",
+     "count": 123
+    },
+    {
+     "name": "Evelyn",
+     "count": 122
+    },
+    {
+     "name": "Isabella",
+     "count": 120
+    },
+    {
+     "name": "Harper",
+     "count": 109
+    },
+    {
+     "name": "Violet",
+     "count": 104
+    },
+    {
+     "name": "Eleanor",
+     "count": 101
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 232
+    },
+    {
+     "name": "Noah",
+     "count": 189
+    },
+    {
+     "name": "Oliver",
+     "count": 188
+    },
+    {
+     "name": "Theodore",
+     "count": 177
+    },
+    {
+     "name": "Elijah",
+     "count": 175
+    },
+    {
+     "name": "Hudson",
+     "count": 167
+    },
+    {
+     "name": "Henry",
+     "count": 151
+    },
+    {
+     "name": "Waylon",
+     "count": 138
+    },
+    {
+     "name": "Mateo",
+     "count": 136
+    },
+    {
+     "name": "James",
+     "count": 133
+    }
+   ],
+   "tied_at_10th": {
+    "F": 2,
+    "M": 1
+   }
+  },
+  "OR": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 167
+    },
+    {
+     "name": "Amelia",
+     "count": 163
+    },
+    {
+     "name": "Olivia",
+     "count": 149
+    },
+    {
+     "name": "Emma",
+     "count": 139
+    },
+    {
+     "name": "Sophia",
+     "count": 124
+    },
+    {
+     "name": "Evelyn",
+     "count": 121
+    },
+    {
+     "name": "Violet",
+     "count": 115
+    },
+    {
+     "name": "Hazel",
+     "count": 110
+    },
+    {
+     "name": "Penelope",
+     "count": 98
+    },
+    {
+     "name": "Aurora",
+     "count": 97
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 199
+    },
+    {
+     "name": "Theodore",
+     "count": 188
+    },
+    {
+     "name": "Liam",
+     "count": 185
+    },
+    {
+     "name": "Henry",
+     "count": 182
+    },
+    {
+     "name": "Noah",
+     "count": 151
+    },
+    {
+     "name": "Mateo",
+     "count": 127
+    },
+    {
+     "name": "Benjamin",
+     "count": 123
+    },
+    {
+     "name": "Hudson",
+     "count": 121
+    },
+    {
+     "name": "William",
+     "count": 117
+    },
+    {
+     "name": "Jack",
+     "count": 113
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "PA": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 560
+    },
+    {
+     "name": "Sophia",
+     "count": 507
+    },
+    {
+     "name": "Olivia",
+     "count": 487
+    },
+    {
+     "name": "Amelia",
+     "count": 468
+    },
+    {
+     "name": "Emma",
+     "count": 427
+    },
+    {
+     "name": "Isabella",
+     "count": 328
+    },
+    {
+     "name": "Mia",
+     "count": 319
+    },
+    {
+     "name": "Evelyn",
+     "count": 318
+    },
+    {
+     "name": "Ava",
+     "count": 314
+    },
+    {
+     "name": "Nora",
+     "count": 311
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 744
+    },
+    {
+     "name": "Liam",
+     "count": 566
+    },
+    {
+     "name": "Theodore",
+     "count": 549
+    },
+    {
+     "name": "Oliver",
+     "count": 545
+    },
+    {
+     "name": "Henry",
+     "count": 464
+    },
+    {
+     "name": "James",
+     "count": 432
+    },
+    {
+     "name": "Benjamin",
+     "count": 405
+    },
+    {
+     "name": "Cooper",
+     "count": 402
+    },
+    {
+     "name": "Lucas",
+     "count": 391
+    },
+    {
+     "name": "Michael",
+     "count": 385
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "RI": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 49
+    },
+    {
+     "name": "Olivia",
+     "count": 41
+    },
+    {
+     "name": "Amelia",
+     "count": 39
+    },
+    {
+     "name": "Sophia",
+     "count": 35
+    },
+    {
+     "name": "Ava",
+     "count": 34
+    },
+    {
+     "name": "Isabella",
+     "count": 33
+    },
+    {
+     "name": "Isla",
+     "count": 33
+    },
+    {
+     "name": "Aurora",
+     "count": 31
+    },
+    {
+     "name": "Mia",
+     "count": 31
+    },
+    {
+     "name": "Aria",
+     "count": 28
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 67
+    },
+    {
+     "name": "Liam",
+     "count": 64
+    },
+    {
+     "name": "Oliver",
+     "count": 56
+    },
+    {
+     "name": "Theodore",
+     "count": 52
+    },
+    {
+     "name": "Luca",
+     "count": 48
+    },
+    {
+     "name": "Benjamin",
+     "count": 45
+    },
+    {
+     "name": "Lucas",
+     "count": 45
+    },
+    {
+     "name": "Henry",
+     "count": 44
+    },
+    {
+     "name": "John",
+     "count": 40
+    },
+    {
+     "name": "Owen",
+     "count": 38
+    }
+   ],
+   "tied_at_10th": {
+    "F": 4,
+    "M": 1
+   }
+  },
+  "SC": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 249
+    },
+    {
+     "name": "Amelia",
+     "count": 241
+    },
+    {
+     "name": "Olivia",
+     "count": 187
+    },
+    {
+     "name": "Emma",
+     "count": 179
+    },
+    {
+     "name": "Sophia",
+     "count": 160
+    },
+    {
+     "name": "Evelyn",
+     "count": 156
+    },
+    {
+     "name": "Ava",
+     "count": 148
+    },
+    {
+     "name": "Eleanor",
+     "count": 143
+    },
+    {
+     "name": "Isabella",
+     "count": 139
+    },
+    {
+     "name": "Mia",
+     "count": 134
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 276
+    },
+    {
+     "name": "Liam",
+     "count": 271
+    },
+    {
+     "name": "William",
+     "count": 269
+    },
+    {
+     "name": "James",
+     "count": 250
+    },
+    {
+     "name": "Elijah",
+     "count": 215
+    },
+    {
+     "name": "John",
+     "count": 205
+    },
+    {
+     "name": "Oliver",
+     "count": 201
+    },
+    {
+     "name": "Henry",
+     "count": 199
+    },
+    {
+     "name": "Theodore",
+     "count": 178
+    },
+    {
+     "name": "Lucas",
+     "count": 156
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "SD": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Lainey",
+     "count": 50
+    },
+    {
+     "name": "Charlotte",
+     "count": 44
+    },
+    {
+     "name": "Evelyn",
+     "count": 39
+    },
+    {
+     "name": "Emma",
+     "count": 36
+    },
+    {
+     "name": "Olivia",
+     "count": 36
+    },
+    {
+     "name": "Eleanor",
+     "count": 32
+    },
+    {
+     "name": "Ellie",
+     "count": 31
+    },
+    {
+     "name": "Harper",
+     "count": 31
+    },
+    {
+     "name": "Nora",
+     "count": 31
+    },
+    {
+     "name": "Amelia",
+     "count": 30
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 66
+    },
+    {
+     "name": "Liam",
+     "count": 60
+    },
+    {
+     "name": "Henry",
+     "count": 50
+    },
+    {
+     "name": "Hudson",
+     "count": 50
+    },
+    {
+     "name": "Noah",
+     "count": 50
+    },
+    {
+     "name": "Theodore",
+     "count": 47
+    },
+    {
+     "name": "Beau",
+     "count": 42
+    },
+    {
+     "name": "William",
+     "count": 41
+    },
+    {
+     "name": "Leo",
+     "count": 40
+    },
+    {
+     "name": "Maverick",
+     "count": 38
+    }
+   ],
+   "tied_at_10th": {
+    "F": 2,
+    "M": 1
+   }
+  },
+  "TN": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 423
+    },
+    {
+     "name": "Amelia",
+     "count": 342
+    },
+    {
+     "name": "Olivia",
+     "count": 276
+    },
+    {
+     "name": "Emma",
+     "count": 270
+    },
+    {
+     "name": "Sophia",
+     "count": 244
+    },
+    {
+     "name": "Eleanor",
+     "count": 242
+    },
+    {
+     "name": "Evelyn",
+     "count": 242
+    },
+    {
+     "name": "Harper",
+     "count": 220
+    },
+    {
+     "name": "Elizabeth",
+     "count": 218
+    },
+    {
+     "name": "Willow",
+     "count": 197
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 444
+    },
+    {
+     "name": "Liam",
+     "count": 425
+    },
+    {
+     "name": "Oliver",
+     "count": 411
+    },
+    {
+     "name": "James",
+     "count": 385
+    },
+    {
+     "name": "Henry",
+     "count": 376
+    },
+    {
+     "name": "William",
+     "count": 374
+    },
+    {
+     "name": "Hudson",
+     "count": 323
+    },
+    {
+     "name": "Theodore",
+     "count": 323
+    },
+    {
+     "name": "Waylon",
+     "count": 299
+    },
+    {
+     "name": "John",
+     "count": 297
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "TX": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Emma",
+     "count": 1707
+    },
+    {
+     "name": "Olivia",
+     "count": 1580
+    },
+    {
+     "name": "Isabella",
+     "count": 1559
+    },
+    {
+     "name": "Mia",
+     "count": 1483
+    },
+    {
+     "name": "Sophia",
+     "count": 1359
+    },
+    {
+     "name": "Camila",
+     "count": 1349
+    },
+    {
+     "name": "Amelia",
+     "count": 1329
+    },
+    {
+     "name": "Sofia",
+     "count": 1307
+    },
+    {
+     "name": "Eliana",
+     "count": 1275
+    },
+    {
+     "name": "Ailany",
+     "count": 1213
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 2688
+    },
+    {
+     "name": "Noah",
+     "count": 2450
+    },
+    {
+     "name": "Mateo",
+     "count": 2081
+    },
+    {
+     "name": "Santiago",
+     "count": 1829
+    },
+    {
+     "name": "Sebastian",
+     "count": 1498
+    },
+    {
+     "name": "Elijah",
+     "count": 1455
+    },
+    {
+     "name": "Oliver",
+     "count": 1361
+    },
+    {
+     "name": "Elias",
+     "count": 1321
+    },
+    {
+     "name": "Levi",
+     "count": 1163
+    },
+    {
+     "name": "Julian",
+     "count": 1115
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "UT": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Emma",
+     "count": 193
+    },
+    {
+     "name": "Charlotte",
+     "count": 191
+    },
+    {
+     "name": "Lucy",
+     "count": 189
+    },
+    {
+     "name": "Olivia",
+     "count": 184
+    },
+    {
+     "name": "Evelyn",
+     "count": 179
+    },
+    {
+     "name": "Amelia",
+     "count": 155
+    },
+    {
+     "name": "Hazel",
+     "count": 148
+    },
+    {
+     "name": "Eleanor",
+     "count": 138
+    },
+    {
+     "name": "Lainey",
+     "count": 137
+    },
+    {
+     "name": "Lily",
+     "count": 129
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 274
+    },
+    {
+     "name": "Liam",
+     "count": 227
+    },
+    {
+     "name": "Theodore",
+     "count": 221
+    },
+    {
+     "name": "Jack",
+     "count": 209
+    },
+    {
+     "name": "Noah",
+     "count": 206
+    },
+    {
+     "name": "Henry",
+     "count": 203
+    },
+    {
+     "name": "Hudson",
+     "count": 189
+    },
+    {
+     "name": "William",
+     "count": 178
+    },
+    {
+     "name": "James",
+     "count": 171
+    },
+    {
+     "name": "Brooks",
+     "count": 162
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "VA": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 460
+    },
+    {
+     "name": "Emma",
+     "count": 341
+    },
+    {
+     "name": "Sophia",
+     "count": 319
+    },
+    {
+     "name": "Olivia",
+     "count": 311
+    },
+    {
+     "name": "Amelia",
+     "count": 296
+    },
+    {
+     "name": "Isabella",
+     "count": 293
+    },
+    {
+     "name": "Evelyn",
+     "count": 254
+    },
+    {
+     "name": "Eleanor",
+     "count": 245
+    },
+    {
+     "name": "Mia",
+     "count": 245
+    },
+    {
+     "name": "Ava",
+     "count": 244
+    }
+   ],
+   "male": [
+    {
+     "name": "Liam",
+     "count": 590
+    },
+    {
+     "name": "Noah",
+     "count": 556
+    },
+    {
+     "name": "Theodore",
+     "count": 392
+    },
+    {
+     "name": "Oliver",
+     "count": 390
+    },
+    {
+     "name": "Henry",
+     "count": 372
+    },
+    {
+     "name": "James",
+     "count": 368
+    },
+    {
+     "name": "William",
+     "count": 358
+    },
+    {
+     "name": "Elijah",
+     "count": 314
+    },
+    {
+     "name": "Lucas",
+     "count": 311
+    },
+    {
+     "name": "John",
+     "count": 277
+    }
+   ],
+   "tied_at_10th": {
+    "F": 2,
+    "M": 1
+   }
+  },
+  "VT": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 35
+    },
+    {
+     "name": "Evelyn",
+     "count": 27
+    },
+    {
+     "name": "Eleanor",
+     "count": 26
+    },
+    {
+     "name": "Nora",
+     "count": 22
+    },
+    {
+     "name": "Sophia",
+     "count": 22
+    },
+    {
+     "name": "Violet",
+     "count": 18
+    },
+    {
+     "name": "Ava",
+     "count": 17
+    },
+    {
+     "name": "Amelia",
+     "count": 16
+    },
+    {
+     "name": "Aurora",
+     "count": 16
+    },
+    {
+     "name": "Harper",
+     "count": 16
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 35
+    },
+    {
+     "name": "Theodore",
+     "count": 34
+    },
+    {
+     "name": "Henry",
+     "count": 27
+    },
+    {
+     "name": "Cooper",
+     "count": 26
+    },
+    {
+     "name": "Hudson",
+     "count": 24
+    },
+    {
+     "name": "Jack",
+     "count": 24
+    },
+    {
+     "name": "James",
+     "count": 21
+    },
+    {
+     "name": "Weston",
+     "count": 21
+    },
+    {
+     "name": "Bennett",
+     "count": 20
+    },
+    {
+     "name": "Liam",
+     "count": 20
+    }
+   ],
+   "tied_at_10th": {
+    "F": 3,
+    "M": 4
+   }
+  },
+  "WA": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Olivia",
+     "count": 327
+    },
+    {
+     "name": "Charlotte",
+     "count": 311
+    },
+    {
+     "name": "Amelia",
+     "count": 283
+    },
+    {
+     "name": "Sophia",
+     "count": 277
+    },
+    {
+     "name": "Evelyn",
+     "count": 262
+    },
+    {
+     "name": "Mia",
+     "count": 222
+    },
+    {
+     "name": "Emma",
+     "count": 220
+    },
+    {
+     "name": "Eleanor",
+     "count": 213
+    },
+    {
+     "name": "Sofia",
+     "count": 211
+    },
+    {
+     "name": "Isabella",
+     "count": 208
+    }
+   ],
+   "male": [
+    {
+     "name": "Noah",
+     "count": 426
+    },
+    {
+     "name": "Liam",
+     "count": 403
+    },
+    {
+     "name": "Oliver",
+     "count": 383
+    },
+    {
+     "name": "Theodore",
+     "count": 372
+    },
+    {
+     "name": "Henry",
+     "count": 338
+    },
+    {
+     "name": "Benjamin",
+     "count": 259
+    },
+    {
+     "name": "Mateo",
+     "count": 254
+    },
+    {
+     "name": "James",
+     "count": 251
+    },
+    {
+     "name": "Samuel",
+     "count": 246
+    },
+    {
+     "name": "Elijah",
+     "count": 244
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "WI": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 282
+    },
+    {
+     "name": "Eleanor",
+     "count": 195
+    },
+    {
+     "name": "Sophia",
+     "count": 195
+    },
+    {
+     "name": "Evelyn",
+     "count": 194
+    },
+    {
+     "name": "Emma",
+     "count": 192
+    },
+    {
+     "name": "Amelia",
+     "count": 186
+    },
+    {
+     "name": "Nora",
+     "count": 185
+    },
+    {
+     "name": "Olivia",
+     "count": 182
+    },
+    {
+     "name": "Violet",
+     "count": 172
+    },
+    {
+     "name": "Lainey",
+     "count": 162
+    }
+   ],
+   "male": [
+    {
+     "name": "Oliver",
+     "count": 336
+    },
+    {
+     "name": "Theodore",
+     "count": 323
+    },
+    {
+     "name": "Henry",
+     "count": 307
+    },
+    {
+     "name": "Liam",
+     "count": 274
+    },
+    {
+     "name": "Noah",
+     "count": 245
+    },
+    {
+     "name": "Hudson",
+     "count": 209
+    },
+    {
+     "name": "Jack",
+     "count": 201
+    },
+    {
+     "name": "James",
+     "count": 199
+    },
+    {
+     "name": "Cooper",
+     "count": 197
+    },
+    {
+     "name": "Levi",
+     "count": 194
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 1
+   }
+  },
+  "WV": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Charlotte",
+     "count": 84
+    },
+    {
+     "name": "Amelia",
+     "count": 82
+    },
+    {
+     "name": "Lainey",
+     "count": 68
+    },
+    {
+     "name": "Harper",
+     "count": 62
+    },
+    {
+     "name": "Willow",
+     "count": 61
+    },
+    {
+     "name": "Sophia",
+     "count": 54
+    },
+    {
+     "name": "Violet",
+     "count": 54
+    },
+    {
+     "name": "Oaklynn",
+     "count": 53
+    },
+    {
+     "name": "Paisley",
+     "count": 53
+    },
+    {
+     "name": "Ava",
+     "count": 52
+    }
+   ],
+   "male": [
+    {
+     "name": "Waylon",
+     "count": 115
+    },
+    {
+     "name": "Hudson",
+     "count": 106
+    },
+    {
+     "name": "Oliver",
+     "count": 96
+    },
+    {
+     "name": "Noah",
+     "count": 85
+    },
+    {
+     "name": "Wyatt",
+     "count": 70
+    },
+    {
+     "name": "Cooper",
+     "count": 68
+    },
+    {
+     "name": "Asher",
+     "count": 67
+    },
+    {
+     "name": "Weston",
+     "count": 63
+    },
+    {
+     "name": "Liam",
+     "count": 60
+    },
+    {
+     "name": "Theodore",
+     "count": 60
+    }
+   ],
+   "tied_at_10th": {
+    "F": 1,
+    "M": 2
+   }
+  },
+  "WY": {
+   "year": 2025,
+   "female": [
+    {
+     "name": "Aurora",
+     "count": 20
+    },
+    {
+     "name": "Evelyn",
+     "count": 19
+    },
+    {
+     "name": "Amelia",
+     "count": 18
+    },
+    {
+     "name": "Charlotte",
+     "count": 15
+    },
+    {
+     "name": "Elizabeth",
+     "count": 15
+    },
+    {
+     "name": "Hazel",
+     "count": 15
+    },
+    {
+     "name": "Eleanor",
+     "count": 14
+    },
+    {
+     "name": "Emma",
+     "count": 14
+    },
+    {
+     "name": "Harper",
+     "count": 14
+    },
+    {
+     "name": "Lainey",
+     "count": 13
+    }
+   ],
+   "male": [
+    {
+     "name": "Theodore",
+     "count": 27
+    },
+    {
+     "name": "James",
+     "count": 25
+    },
+    {
+     "name": "William",
+     "count": 24
+    },
+    {
+     "name": "Oliver",
+     "count": 23
+    },
+    {
+     "name": "Rowan",
+     "count": 19
+    },
+    {
+     "name": "Ezra",
+     "count": 18
+    },
+    {
+     "name": "Carter",
+     "count": 16
+    },
+    {
+     "name": "Cooper",
+     "count": 16
+    },
+    {
+     "name": "Hudson",
+     "count": 16
+    },
+    {
+     "name": "Levi",
+     "count": 16
+    }
+   ],
+   "tied_at_10th": {
+    "F": 4,
+    "M": 6
+   }
+  }
+ }
+}

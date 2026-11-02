@@ -1,0 +1,2228 @@
+{
+ "states": {
+  "AK": {
+   "code": "AK",
+   "qid": "Q797",
+   "name_en": "Alaska",
+   "name_ko": "알래스카주",
+   "enwiki": "Alaska",
+   "nicknames_en": [
+    "The Last Frontier"
+   ],
+   "capital": [
+    {
+     "qid": "Q29445",
+     "en": "Juneau",
+     "ko": "주노"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Alaska.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Alaska.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Alaska.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1416,
+    "height": 1000,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Benny Benson",
+    "Credit": "It is an edited form of a file from openclipart.org, specifically usa_alaska.svg.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1927-05-02",
+    "ImageDescription": "Flag of Alaska",
+    "licence_ok": true,
+    "local": "flags-us/AK.svg"
+   },
+   "state_bird": {
+    "common": "Willow ptarmigan",
+    "scientific": "Lagopus lagopus",
+    "year": "1955",
+    "enwiki": "Willow ptarmigan"
+   }
+  },
+  "AL": {
+   "code": "AL",
+   "qid": "Q173",
+   "name_en": "Alabama",
+   "name_ko": "앨라배마주",
+   "enwiki": "Alabama",
+   "nicknames_en": [
+    "The Yellowhammer State",
+    "Heart of Dixie"
+   ],
+   "capital": [
+    {
+     "qid": "Q29364",
+     "en": "Montgomery",
+     "ko": "몽고메리"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Alabama.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Alabama.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Alabama.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 600,
+    "height": 400,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Steve Hall",
+    "Credit": "Own work using: http://openclipart.org/clipart//signs_and_symbols/flags/america/united_states/usa_alabama.svg",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "Flag of Alabama",
+    "licence_ok": true,
+    "local": "flags-us/AL.svg"
+   },
+   "state_bird": {
+    "common": "Yellowhammer (northern flicker)",
+    "scientific": "Colaptes auratus",
+    "year": "1927",
+    "enwiki": "Northern flicker"
+   }
+  },
+  "AR": {
+   "code": "AR",
+   "qid": "Q1612",
+   "name_en": "Arkansas",
+   "name_ko": "아칸소주",
+   "enwiki": "Arkansas",
+   "nicknames_en": [
+    "The Natural State"
+   ],
+   "capital": [
+    {
+     "qid": "Q33405",
+     "en": "Little Rock",
+     "ko": "리틀록"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Arkansas.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 450,
+    "height": 300,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "",
+    "Credit": "",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "",
+    "licence_ok": true,
+    "local": "flags-us/AR.svg"
+   },
+   "state_bird": {
+    "common": "Northern mockingbird",
+    "scientific": "Mimus polyglottos",
+    "year": "1929",
+    "enwiki": "Northern mockingbird"
+   }
+  },
+  "AZ": {
+   "code": "AZ",
+   "qid": "Q816",
+   "name_en": "Arizona",
+   "name_ko": "애리조나주",
+   "enwiki": "Arizona",
+   "nicknames_en": [
+    "The Grand Canyon State"
+   ],
+   "capital": [
+    {
+     "qid": "Q16556",
+     "en": "Phoenix",
+     "ko": "피닉스"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Arizona.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Arizona.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arizona.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 900,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Original: Unknown author Vector: Madden",
+    "Credit": "https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/41/00851.htm",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1917-02-27",
+    "ImageDescription": "ᎡᏩᏐᎾ ᎦᏓᏘ",
+    "licence_ok": true,
+    "local": "flags-us/AZ.svg"
+   },
+   "state_bird": {
+    "common": "Cactus wren",
+    "scientific": "Campylorhynchusbrunneicapillus",
+    "year": "1931",
+    "enwiki": "Cactus wren"
+   }
+  },
+  "CA": {
+   "code": "CA",
+   "qid": "Q99",
+   "name_en": "California",
+   "name_ko": "캘리포니아주",
+   "enwiki": "California",
+   "nicknames_en": [
+    "The Golden State"
+   ],
+   "capital": [
+    {
+     "qid": "Q18013",
+     "en": "Sacramento",
+     "ko": "새크라멘토"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of California.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_California.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 900,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Original: Donald Graeme Kelley Vectorization: Devin Cook",
+    "Credit": "Own work",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1953",
+    "ImageDescription": "Flag of California. This version is designed to accurately depict the standard print of the bear as well as adhere to the official flag code regarding the size, position and proportion of the bear, the colors of the flag, and the position and size of the star.",
+    "licence_ok": true,
+    "local": "flags-us/CA.svg"
+   },
+   "state_bird": {
+    "common": "California quail",
+    "scientific": "Callipepla californica",
+    "year": "1931",
+    "enwiki": "California quail"
+   }
+  },
+  "CO": {
+   "code": "CO",
+   "qid": "Q1261",
+   "name_en": "Colorado",
+   "name_ko": "콜로라도주",
+   "enwiki": "Colorado",
+   "nicknames_en": [
+    "The Centennial State"
+   ],
+   "capital": [
+    {
+     "qid": "Q16554",
+     "en": "Denver",
+     "ko": "덴버"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Colorado.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Colorado.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Flag_of_Colorado.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1800,
+    "height": 1200,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Original: Andrew Carlyle Carson Vector: Fleminra",
+    "Credit": "Own work based on: Colorado State Flag – 50states. 50states.com. Retrieved on 2025-04-14.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2005-09-10",
+    "ImageDescription": "Flag of Colorado designed by Andrew Carlisle Carson",
+    "licence_ok": true,
+    "local": "flags-us/CO.svg"
+   },
+   "state_bird": {
+    "common": "Lark bunting",
+    "scientific": "Calamospiza melanocorys",
+    "year": "1931",
+    "enwiki": "Lark bunting"
+   }
+  },
+  "CT": {
+   "code": "CT",
+   "qid": "Q779",
+   "name_en": "Connecticut",
+   "name_ko": "코네티컷주",
+   "enwiki": "Connecticut",
+   "nicknames_en": [
+    "The Constitution State",
+    "The Provisions State",
+    "The Nutmeg State",
+    "The Land of Steady Habits"
+   ],
+   "capital": [
+    {
+     "qid": "Q33486",
+     "en": "Hartford",
+     "ko": "하트퍼드"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Connecticut.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Connecticut.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Flag_of_Connecticut.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 330,
+    "height": 260,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Jean-Pierre Demailly, xrmap authors, Commons users (SVG)",
+    "Credit": "Register and manual - State of Connecticut (1932), derived from the xrmap flags collection, version 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2005",
+    "ImageDescription": "Flag of Connecticut",
+    "licence_ok": true,
+    "local": "flags-us/CT.svg"
+   },
+   "state_bird": {
+    "common": "American robin",
+    "scientific": "Turdus migratorius",
+    "year": "1943",
+    "enwiki": "American robin"
+   }
+  },
+  "DC": {
+   "code": "DC",
+   "qid": "Q61",
+   "name_en": "Washington, D.C.",
+   "name_ko": "워싱턴 D.C.",
+   "enwiki": "Washington, D.C.",
+   "nicknames_en": [],
+   "capital": [],
+   "flag": {
+    "commons_file": "Flag of Washington, D.C.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Washington,_D.C.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Washington%2C_D.C.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 2000,
+    "height": 1000,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "(of code) cs:User:-xfi-",
+    "Credit": "own code according to Construction Details (Government of the District of Columbia, untitled monograph, 1963, pp. 21-23.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "15 October 1938",
+    "ImageDescription": "Flag of the District of Columbia",
+    "licence_ok": true,
+    "local": "flags-us/DC.svg"
+   },
+   "state_bird": {
+    "common": "Wood thrush",
+    "scientific": "Hylocichla mustelina",
+    "year": "1938",
+    "enwiki": "Wood thrush"
+   }
+  },
+  "DE": {
+   "code": "DE",
+   "qid": "Q1393",
+   "name_en": "Delaware",
+   "name_ko": "델라웨어주",
+   "enwiki": "Delaware",
+   "nicknames_en": [
+    "The First State",
+    "The Small Wonder",
+    "Blue Hen State",
+    "The Diamond State"
+   ],
+   "capital": [
+    {
+     "qid": "Q33518",
+     "en": "Dover",
+     "ko": "도버"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Delaware.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Delaware.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Flag_of_Delaware.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 600,
+    "height": 400,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "xrmap flag collection",
+    "Credit": "Based on image from xrmap flag collection 2.7, colors from image at World Flag Database",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "Flag of Delaware",
+    "licence_ok": true,
+    "local": "flags-us/DE.svg"
+   },
+   "state_bird": {
+    "common": "Blue Hen Chicken",
+    "scientific": "Gallus gallus domesticus",
+    "year": "1939",
+    "enwiki": "Blue Hen Chicken"
+   }
+  },
+  "FL": {
+   "code": "FL",
+   "qid": "Q812",
+   "name_en": "Florida",
+   "name_ko": "플로리다주",
+   "enwiki": "Florida",
+   "nicknames_en": [
+    "The Sunshine State"
+   ],
+   "capital": [
+    {
+     "qid": "Q37043",
+     "en": "Tallahassee",
+     "ko": "탤러해시"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Florida.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 4500,
+    "height": 3000,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Template:Brendon Tiana",
+    "Credit": "SVG based in this image",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1985-05-21",
+    "ImageDescription": "Flag of Florida, United States.",
+    "licence_ok": true,
+    "local": "flags-us/FL.svg"
+   },
+   "state_bird": {
+    "common": "Northern mockingbird",
+    "scientific": "Mimus polyglottos",
+    "year": "1927",
+    "enwiki": "Northern mockingbird"
+   }
+  },
+  "GA": {
+   "code": "GA",
+   "qid": "Q1428",
+   "name_en": "Georgia",
+   "name_ko": "조지아주",
+   "enwiki": "Georgia (U.S. state)",
+   "nicknames_en": [
+    "Peach State",
+    "Empire State of the South"
+   ],
+   "capital": [
+    {
+     "qid": "Q23556",
+     "en": "Atlanta",
+     "ko": "애틀랜타"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of the State of Georgia.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_State_of_Georgia.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_the_State_of_Georgia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 960,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "",
+    "Credit": "",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "",
+    "licence_ok": true,
+    "local": "flags-us/GA.svg"
+   },
+   "state_bird": {
+    "common": "Brown thrasher",
+    "scientific": "Toxostoma rufum",
+    "year": "1928",
+    "enwiki": "Brown thrasher"
+   }
+  },
+  "HI": {
+   "code": "HI",
+   "qid": "Q782",
+   "name_en": "Hawaii",
+   "name_ko": "하와이주",
+   "enwiki": "Hawaii",
+   "nicknames_en": [
+    "The Aloha State"
+   ],
+   "capital": [
+    {
+     "qid": "Q18094",
+     "en": "Honolulu",
+     "ko": "호놀룰루"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Hawaii.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Hawaii.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Hawaii.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1200,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Dbenbenn",
+    "Credit": "This SVG flag includes elements that have been taken or adapted from this flag:",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2005-09-16",
+    "ImageDescription": "Flag of Hawaii",
+    "licence_ok": true,
+    "local": "flags-us/HI.svg"
+   },
+   "state_bird": {
+    "common": "Nene (Hawaiian goose)",
+    "scientific": "Branta sandvicensis",
+    "year": "1957",
+    "enwiki": "Nene (bird)"
+   }
+  },
+  "IA": {
+   "code": "IA",
+   "qid": "Q1546",
+   "name_en": "Iowa",
+   "name_ko": "아이오와주",
+   "enwiki": "Iowa",
+   "nicknames_en": [
+    "The Hawkeye State"
+   ],
+   "capital": [
+    {
+     "qid": "Q39709",
+     "en": "Des Moines",
+     "ko": "디모인"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Iowa.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Iowa.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Iowa.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 714,
+    "height": 477,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "",
+    "Credit": "",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "",
+    "licence_ok": true,
+    "local": "flags-us/IA.svg"
+   },
+   "state_bird": {
+    "common": "Eastern goldfinch (American goldfinch)",
+    "scientific": "Spinus tristis tristis",
+    "year": "1933",
+    "enwiki": "American goldfinch"
+   }
+  },
+  "ID": {
+   "code": "ID",
+   "qid": "Q1221",
+   "name_en": "Idaho",
+   "name_ko": "아이다호주",
+   "enwiki": "Idaho",
+   "nicknames_en": [
+    "Gem State"
+   ],
+   "capital": [
+    {
+     "qid": "Q35775",
+     "en": "Boise",
+     "ko": "보이시"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Idaho.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Idaho.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_Idaho.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 3168,
+    "height": 2496,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Paul B. Evans, based on a work by the Adjutant General of Idaho and Emma Edwards Green",
+    "Credit": "https://www.rickjust.com/blog/the-state-flag",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "between 1957 and 1962date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1957-00-00T00:00:00Z/9,P1326,+1962-00-00T00:00:00Z/9",
+    "ImageDescription": "Flag of Idaho, from the xrmap flag collection 2.7.",
+    "licence_ok": true,
+    "local": "flags-us/ID.svg"
+   },
+   "state_bird": {
+    "common": "Mountain bluebird",
+    "scientific": "Sialia currucoides",
+    "year": "1931",
+    "enwiki": "Mountain bluebird"
+   }
+  },
+  "IL": {
+   "code": "IL",
+   "qid": "Q1204",
+   "name_en": "Illinois",
+   "name_ko": "일리노이주",
+   "enwiki": "Illinois",
+   "nicknames_en": [
+    "Land of Lincoln",
+    "Prairie State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28515",
+     "en": "Springfield",
+     "ko": "스프링필드"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Illinois.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Illinois.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Illinois.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 500,
+    "height": 300,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Denelson83",
+    "Credit": "Own work",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "21 January 2006 (upload date)",
+    "ImageDescription": "Flag of Illinois, from the xrmap flag collection 2.7.",
+    "licence_ok": true,
+    "local": "flags-us/IL.svg"
+   },
+   "state_bird": {
+    "common": "Northern cardinal",
+    "scientific": "Cardinalis cardinalis",
+    "year": "1929",
+    "enwiki": "Northern cardinal"
+   }
+  },
+  "IN": {
+   "code": "IN",
+   "qid": "Q1415",
+   "name_en": "Indiana",
+   "name_ko": "인디애나주",
+   "enwiki": "Indiana",
+   "nicknames_en": [
+    "The Hoosier State"
+   ],
+   "capital": [
+    {
+     "qid": "Q6346",
+     "en": "Indianapolis",
+     "ko": "인디애나폴리스"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Indiana.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Indiana.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Flag_of_Indiana.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 750,
+    "height": 500,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "The Indiana state flag was designed by Paul Hadley in 1917. This SVG file was made by Zscout370 with some modifications by HoosierMan1816.",
+    "Credit": "[1] [2]",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1917-05-11",
+    "ImageDescription": "Flag of Indiana",
+    "licence_ok": true,
+    "local": "flags-us/IN.svg"
+   },
+   "state_bird": {
+    "common": "Northern cardinal",
+    "scientific": "Cardinalis cardinalis",
+    "year": "1933",
+    "enwiki": "Northern cardinal"
+   }
+  },
+  "KS": {
+   "code": "KS",
+   "qid": "Q1558",
+   "name_en": "Kansas",
+   "name_ko": "캔자스주",
+   "enwiki": "Kansas",
+   "nicknames_en": [
+    "The Sunflower State",
+    "The Wheat State",
+    "The Free State"
+   ],
+   "capital": [
+    {
+     "qid": "Q41057",
+     "en": "Topeka",
+     "ko": "토피카"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Kansas.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kansas.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Kansas.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 500,
+    "height": 300,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Xrmap",
+    "Credit": "from the xrmap flag collection 2.7.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "Unknown date",
+    "ImageDescription": "Flag of Kansas",
+    "licence_ok": true,
+    "local": "flags-us/KS.svg"
+   },
+   "state_bird": {
+    "common": "Western meadowlark",
+    "scientific": "Sturnella neglecta",
+    "year": "1933",
+    "enwiki": "Western meadowlark"
+   }
+  },
+  "KY": {
+   "code": "KY",
+   "qid": "Q1603",
+   "name_en": "Kentucky",
+   "name_ko": "켄터키주",
+   "enwiki": "Kentucky",
+   "nicknames_en": [
+    "Bluegrass State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28603",
+     "en": "Frankfort",
+     "ko": "프랭크퍼트"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Kentucky.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kentucky.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Flag_of_Kentucky.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 950,
+    "height": 500,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Commonwealth of Kentucky",
+    "Credit": "Flag of Kentucky, from the xrmap flag collection 2.7 (ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/data/)",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1962-06-14[1]",
+    "ImageDescription": "Flag of Kentucky",
+    "licence_ok": true,
+    "local": "flags-us/KY.svg"
+   },
+   "state_bird": {
+    "common": "Northern cardinal",
+    "scientific": "Cardinalis cardinalis",
+    "year": "1926",
+    "enwiki": "Northern cardinal"
+   }
+  },
+  "LA": {
+   "code": "LA",
+   "qid": "Q1588",
+   "name_en": "Louisiana",
+   "name_ko": "루이지애나주",
+   "enwiki": "Louisiana",
+   "nicknames_en": [
+    "Pelican State",
+    "Bayou State",
+    "Child of the Mississippi",
+    "Creole State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28218",
+     "en": "Baton Rouge",
+     "ko": "배턴루지"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Louisiana.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Louisiana.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Flag_of_Louisiana.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 7040,
+    "height": 4556,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Curtis Vann, Jr.",
+    "Credit": "From the xrmap flag collection 2.7.official specifications",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2010-11-22",
+    "ImageDescription": "For more information, see: Louisiana adds blood drops to state flag New Louisiana state flag with bleeding pelican is unfurled",
+    "licence_ok": true,
+    "local": "flags-us/LA.svg"
+   },
+   "state_bird": {
+    "common": "Eastern brown pelican",
+    "scientific": "Pelecanus occidentalis",
+    "year": "1966",
+    "enwiki": "Brown pelican"
+   }
+  },
+  "MA": {
+   "code": "MA",
+   "qid": "Q771",
+   "name_en": "Massachusetts",
+   "name_ko": "매사추세츠주",
+   "enwiki": "Massachusetts",
+   "nicknames_en": [
+    "The Bay State"
+   ],
+   "capital": [
+    {
+     "qid": "Q100",
+     "en": "Boston",
+     "ko": "보스턴"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Massachusetts.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Massachusetts.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Massachusetts.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1500,
+    "height": 900,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "State of Massachusetts",
+    "Credit": "from the xrmap flag collection 2.7. Rendered from 950 CMR 34.00: Commonwealth of Massachusetts Flags, Arms, and Seal Specifications",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1908",
+    "ImageDescription": "Flag of Massachusetts",
+    "licence_ok": true,
+    "local": "flags-us/MA.svg"
+   },
+   "state_bird": {
+    "common": "Black-capped chickadee",
+    "scientific": "Poecile atricapillus",
+    "year": "1941",
+    "enwiki": "Black-capped chickadee"
+   }
+  },
+  "MD": {
+   "code": "MD",
+   "qid": "Q1391",
+   "name_en": "Maryland",
+   "name_ko": "메릴랜드주",
+   "enwiki": "Maryland",
+   "nicknames_en": [
+    "Old Line State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28271",
+     "en": "Annapolis",
+     "ko": "아나폴리스"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Maryland.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Maryland.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_Maryland.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 750,
+    "height": 500,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Michael Wheeler",
+    "Credit": "https://openclipart.org/detail/90175/usa-maryland https://sos.maryland.gov/Pages/Services/MdFlag.aspx",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2010-10-12",
+    "ImageDescription": "Flag of Maryland",
+    "licence_ok": true,
+    "local": "flags-us/MD.svg"
+   },
+   "state_bird": {
+    "common": "Baltimore oriole",
+    "scientific": "Icterus galbula",
+    "year": "1947",
+    "enwiki": "Baltimore oriole"
+   }
+  },
+  "ME": {
+   "code": "ME",
+   "qid": "Q724",
+   "name_en": "Maine",
+   "name_ko": "메인주",
+   "enwiki": "Maine",
+   "nicknames_en": [
+    "The Pine Tree State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28206",
+     "en": "Augusta",
+     "ko": "오거스타"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Maine.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Maine.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Maine.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 6336,
+    "height": 4992,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "",
+    "Credit": "",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "",
+    "licence_ok": true,
+    "local": "flags-us/ME.svg"
+   },
+   "state_bird": {
+    "common": "Chickadee",
+    "scientific": "Poecile, species not specified(de facto Poecile atricapillus)",
+    "year": "1927",
+    "enwiki": "Chickadee"
+   }
+  },
+  "MI": {
+   "code": "MI",
+   "qid": "Q1166",
+   "name_en": "Michigan",
+   "name_ko": "미시간주",
+   "enwiki": "Michigan",
+   "nicknames_en": [
+    "The Great Lakes State",
+    "The Wolverine State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28237",
+     "en": "Lansing",
+     "ko": "랜싱"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Michigan.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Michigan.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flag_of_Michigan.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 512,
+    "height": 342,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "",
+    "Credit": "",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "",
+    "licence_ok": true,
+    "local": "flags-us/MI.svg"
+   },
+   "state_bird": {
+    "common": "American robin",
+    "scientific": "Turdus migratorius",
+    "year": "1931",
+    "enwiki": "American robin"
+   }
+  },
+  "MN": {
+   "code": "MN",
+   "qid": "Q1527",
+   "name_en": "Minnesota",
+   "name_ko": "미네소타주",
+   "enwiki": "Minnesota",
+   "nicknames_en": [
+    "Land of 10,000 Lakes",
+    "Gopher State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28848",
+     "en": "Saint Paul",
+     "ko": "세인트폴"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Minnesota.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Minnesota.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Minnesota.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1000,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Original: Minnesota State Emblems Redesign Commission Vector: Jamie Eilat, Undertiago",
+    "Credit": "Own work based on: The New Official Flag and Great Seal — Report of the Minnesota State Emblems Redesign Commission to the Minnesota Legislature and Governor",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "Published on 19 December 2023",
+    "ImageDescription": "The flag of Minnesota, since May 11, 2024.",
+    "licence_ok": true,
+    "local": "flags-us/MN.svg"
+   },
+   "state_bird": {
+    "common": "Common loon",
+    "scientific": "Gavia immer",
+    "year": "1961",
+    "enwiki": "Common loon"
+   }
+  },
+  "MO": {
+   "code": "MO",
+   "qid": "Q1581",
+   "name_en": "Missouri",
+   "name_ko": "미주리주",
+   "enwiki": "Missouri",
+   "nicknames_en": [
+    "The Show Me State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28180",
+     "en": "Jefferson City",
+     "ko": "제퍼슨시티"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Missouri.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Missouri.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Missouri.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 2400,
+    "height": 1400,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Marie Watkins Oliver",
+    "Credit": "from the xrmap flag collection 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1913",
+    "ImageDescription": "Flag of Missouri, adopted in 1913.",
+    "licence_ok": true,
+    "local": "flags-us/MO.svg"
+   },
+   "state_bird": {
+    "common": "Eastern bluebird",
+    "scientific": "Sialia sialis",
+    "year": "1927",
+    "enwiki": "Eastern bluebird"
+   }
+  },
+  "MS": {
+   "code": "MS",
+   "qid": "Q1494",
+   "name_en": "Mississippi",
+   "name_ko": "미시시피주",
+   "enwiki": "Mississippi",
+   "nicknames_en": [
+    "The Magnolia State",
+    "The Hospitality State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28198",
+     "en": "Jackson",
+     "ko": "잭슨"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Mississippi (1996–2020).svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mississippi_(1996%E2%80%932020).svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Flag_of_Mississippi_%281996%E2%80%932020%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 900,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Rocky Vaughn, Sue Anna Joe, Dominique Pugh, Clay Moss, Kara Giles, and the Mississippi Department of Archives and History",
+    "Credit": "Own work using: https://www.mdah.ms.gov/flagpoll-top2",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2020",
+    "ImageDescription": "Flag of Mississippi from 1996 to 2020.",
+    "licence_ok": true,
+    "local": "flags-us/MS.svg"
+   },
+   "state_bird": {
+    "common": "Northern mockingbird",
+    "scientific": "Mimus polyglottos",
+    "year": "1944",
+    "enwiki": "Northern mockingbird"
+   }
+  },
+  "MT": {
+   "code": "MT",
+   "qid": "Q1212",
+   "name_en": "Montana",
+   "name_ko": "몬태나주",
+   "enwiki": "Montana",
+   "nicknames_en": [
+    "Big Sky Country",
+    "Treasure State"
+   ],
+   "capital": [
+    {
+     "qid": "Q38733",
+     "en": "Helena",
+     "ko": "헬레나"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Montana.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Montana.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_Montana.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 768,
+    "height": 512,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "N.a",
+    "Credit": "xrmap flag collection, specifically \"usa_montana.svg\" in flags-2.7-src.tar.bz2",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1905",
+    "ImageDescription": "Flag of Montana",
+    "licence_ok": true,
+    "local": "flags-us/MT.svg"
+   },
+   "state_bird": {
+    "common": "Western meadowlark",
+    "scientific": "Sturnella neglecta",
+    "year": "1941",
+    "enwiki": "Western meadowlark"
+   }
+  },
+  "NC": {
+   "code": "NC",
+   "qid": "Q1454",
+   "name_en": "North Carolina",
+   "name_ko": "노스캐롤라이나주",
+   "enwiki": "North Carolina",
+   "nicknames_en": [
+    "Old North State",
+    "Tar Heel State"
+   ],
+   "capital": [
+    {
+     "qid": "Q41087",
+     "en": "Raleigh",
+     "ko": "롤리"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of North Carolina.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Carolina.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Flag_of_North_Carolina.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 750,
+    "height": 500,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "",
+    "Credit": "",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "",
+    "licence_ok": true,
+    "local": "flags-us/NC.svg"
+   },
+   "state_bird": {
+    "common": "Northern cardinal",
+    "scientific": "Cardinalis cardinalis",
+    "year": "1943",
+    "enwiki": "Northern cardinal"
+   }
+  },
+  "ND": {
+   "code": "ND",
+   "qid": "Q1207",
+   "name_en": "North Dakota",
+   "name_ko": "노스다코타주",
+   "enwiki": "North Dakota",
+   "nicknames_en": [
+    "Peace Garden State"
+   ],
+   "capital": [
+    {
+     "qid": "Q37066",
+     "en": "Bismarck",
+     "ko": "비즈마크"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of North Dakota.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Dakota.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Flag_of_North_Dakota.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1247,
+    "height": 983,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Unknown authorUnknown author",
+    "Credit": "Source: State Historical Society of North Dakota. North Dakota Flag Colors Handout. August 13, 2019. https://www.history.nd.gov/pdf/ND-Flag-Colors-Handout.pdf",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "3 March 1911 (adopted); 1943 (last changed)",
+    "ImageDescription": "Flag of North Dakota",
+    "licence_ok": true,
+    "local": "flags-us/ND.svg"
+   },
+   "state_bird": {
+    "common": "Western meadowlark",
+    "scientific": "Sturnella neglecta",
+    "year": "1947",
+    "enwiki": "Western meadowlark"
+   }
+  },
+  "NE": {
+   "code": "NE",
+   "qid": "Q1553",
+   "name_en": "Nebraska",
+   "name_ko": "네브래스카주",
+   "enwiki": "Nebraska",
+   "nicknames_en": [
+    "Cornhusker State"
+   ],
+   "capital": [
+    {
+     "qid": "Q28260",
+     "en": "Lincoln",
+     "ko": "링컨"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Nebraska.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nebraska.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Nebraska.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 750,
+    "height": 450,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Liamgabby79",
+    "Credit": "from the xrmap flag collection 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1963",
+    "ImageDescription": "Flag of Nebraska",
+    "licence_ok": true,
+    "local": "flags-us/NE.svg"
+   },
+   "state_bird": {
+    "common": "Western meadowlark",
+    "scientific": "Sturnella neglecta",
+    "year": "1929",
+    "enwiki": "Western meadowlark"
+   }
+  },
+  "NH": {
+   "code": "NH",
+   "qid": "Q759",
+   "name_en": "New Hampshire",
+   "name_ko": "뉴햄프셔주",
+   "enwiki": "New Hampshire",
+   "nicknames_en": [
+    "The Granite State",
+    "Mother of Rivers",
+    "White Mountain State",
+    "Switzerland of America"
+   ],
+   "capital": [
+    {
+     "qid": "Q28249",
+     "en": "Concord",
+     "ko": "콩코드"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of New Hampshire.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Hampshire.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Flag_of_New_Hampshire.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 660,
+    "height": 440,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Xrmap flag collection",
+    "Credit": "from the xrmap flag collection 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "Flag of New Hampshire",
+    "licence_ok": true,
+    "local": "flags-us/NH.svg"
+   },
+   "state_bird": {
+    "common": "Purple finch",
+    "scientific": "Haemorhous purpureus",
+    "year": "1957",
+    "enwiki": "Purple finch"
+   }
+  },
+  "NJ": {
+   "code": "NJ",
+   "qid": "Q1408",
+   "name_en": "New Jersey",
+   "name_ko": "뉴저지주",
+   "enwiki": "New Jersey",
+   "nicknames_en": [
+    "The Garden State",
+    "Jersey"
+   ],
+   "capital": [
+    {
+     "qid": "Q25330",
+     "en": "Trenton",
+     "ko": "트렌턴"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of New Jersey.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Jersey.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_New_Jersey.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1000,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "author of xrmap, with modifications by Denelson83 and ChrisRuvolo",
+    "Credit": "Courtesy an e-mail from the author of xrmap, with modifications by Denelson83 and ChrisRuvolo.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "Flag of New Jersey, adopted in 1965.",
+    "licence_ok": true,
+    "local": "flags-us/NJ.svg"
+   },
+   "state_bird": {
+    "common": "Eastern goldfinch (American goldfinch)",
+    "scientific": "Spinus tristis tristis",
+    "year": "1935",
+    "enwiki": "American goldfinch"
+   }
+  },
+  "NM": {
+   "code": "NM",
+   "qid": "Q1522",
+   "name_en": "New Mexico",
+   "name_ko": "뉴멕시코주",
+   "enwiki": "New Mexico",
+   "nicknames_en": [
+    "Land of Enchantment"
+   ],
+   "capital": [
+    {
+     "qid": "Q38555",
+     "en": "Santa Fe",
+     "ko": "샌타페이"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of New Mexico.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Mexico.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_New_Mexico.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1800,
+    "height": 1200,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "",
+    "Credit": "",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "",
+    "licence_ok": true,
+    "local": "flags-us/NM.svg"
+   },
+   "state_bird": {
+    "common": "Greater roadrunner",
+    "scientific": "Geococcyx californianus",
+    "year": "1949",
+    "enwiki": "Greater roadrunner"
+   }
+  },
+  "NV": {
+   "code": "NV",
+   "qid": "Q1227",
+   "name_en": "Nevada",
+   "name_ko": "네바다주",
+   "enwiki": "Nevada",
+   "nicknames_en": [
+    "Silver State"
+   ],
+   "capital": [
+    {
+     "qid": "Q40881",
+     "en": "Carson City",
+     "ko": "카슨시티"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Nevada.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nevada.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Flag_of_Nevada.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 600,
+    "height": 400,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Caleb Moore",
+    "Credit": "Original vector image from OpenClipart: usa_nevada.svg; specifications",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1991-07-25",
+    "ImageDescription": "Flag of the State of Nevada. The flag is described in Nevada Revised Statutes Chapter 235, Sec. 20 as follows: The body of the flag must be of solid cobalt blue. On the field in the upper left quarter thereof must be two sprays of Sagebrush with the stems crossed at the bottom to form a half wreath.",
+    "licence_ok": true,
+    "local": "flags-us/NV.svg"
+   },
+   "state_bird": {
+    "common": "Mountain bluebird",
+    "scientific": "Sialia currucoides",
+    "year": "1967",
+    "enwiki": "Mountain bluebird"
+   }
+  },
+  "NY": {
+   "code": "NY",
+   "qid": "Q1384",
+   "name_en": "New York",
+   "name_ko": "뉴욕주",
+   "enwiki": "New York (state)",
+   "nicknames_en": [
+    "The Empire State"
+   ],
+   "capital": [
+    {
+     "qid": "Q24861",
+     "en": "Albany",
+     "ko": "올버니"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of New York.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_New_York.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_New_York.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 900,
+    "height": 450,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "State of New York",
+    "Credit": "xrmap flag collection 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2 April 1901 (Adopted); the coat of arms were created and published in 1882.[1] The flag and coat of arms were updated in 2020.[2][3][4][5]",
+    "ImageDescription": "Flag of the state of New York",
+    "licence_ok": true,
+    "local": "flags-us/NY.svg"
+   },
+   "state_bird": {
+    "common": "Eastern bluebird",
+    "scientific": "Sialia sialis",
+    "year": "1970",
+    "enwiki": "Eastern bluebird"
+   }
+  },
+  "OH": {
+   "code": "OH",
+   "qid": "Q1397",
+   "name_en": "Ohio",
+   "name_ko": "오하이오주",
+   "enwiki": "Ohio",
+   "nicknames_en": [
+    "The Buckeye State",
+    "Birthplace of Aviation"
+   ],
+   "capital": [
+    {
+     "qid": "Q16567",
+     "en": "Columbus",
+     "ko": "콜럼버스"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Ohio.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ohio.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Ohio.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 520,
+    "height": 320,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "John Eisenmann",
+    "Credit": "Own work based on: The Ohio State Flag (design).jpg and US D34810 S.pdf and http://www.sos.state.oh.us/sos/upload/publications/agency/flag-110.pdf",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2013-01-03",
+    "ImageDescription": "The flag of the U.S. state of Ohio, officially known as the \"Ohio Burgee\"",
+    "licence_ok": true,
+    "local": "flags-us/OH.svg"
+   },
+   "state_bird": {
+    "common": "Northern cardinal",
+    "scientific": "Cardinalis cardinalis",
+    "year": "1933",
+    "enwiki": "Northern cardinal"
+   }
+  },
+  "OK": {
+   "code": "OK",
+   "qid": "Q1649",
+   "name_en": "Oklahoma",
+   "name_ko": "오클라호마주",
+   "enwiki": "Oklahoma",
+   "nicknames_en": [
+    "Sooner State"
+   ],
+   "capital": [
+    {
+     "qid": "Q34863",
+     "en": "Oklahoma City",
+     "ko": "오클라호마시티"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Oklahoma.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Oklahoma.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Flag_of_Oklahoma.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 675,
+    "height": 450,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "xrmap",
+    "Credit": "from the xrmap flag collection 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2006-11-01",
+    "ImageDescription": "Flag of Oklahoma, adopted in November 2006.",
+    "licence_ok": true,
+    "local": "flags-us/OK.svg"
+   },
+   "state_bird": {
+    "common": "Scissor-tailed flycatcher",
+    "scientific": "Tyrannus forficatus",
+    "year": "1951",
+    "enwiki": "Scissor-tailed flycatcher"
+   }
+  },
+  "OR": {
+   "code": "OR",
+   "qid": "Q824",
+   "name_en": "Oregon",
+   "name_ko": "오리건주",
+   "enwiki": "Oregon",
+   "nicknames_en": [
+    "Beaver State"
+   ],
+   "capital": [
+    {
+     "qid": "Q43919",
+     "en": "Salem",
+     "ko": "세일럼"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Oregon.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Oregon.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Oregon.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 768,
+    "height": 512,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "User:Denelson83",
+    "Credit": "From the xrmap flag collection 2.7. Colors derived from image at World Flag Database.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1925",
+    "ImageDescription": "Flag of Oregon (obverse): The flag was adopted by the state on February 26, 1925.[1] The state seal was decided in 1903.[2][3]",
+    "licence_ok": true,
+    "local": "flags-us/OR.svg"
+   },
+   "state_bird": {
+    "common": "Western meadowlark (state songbird)",
+    "scientific": "Sturnella neglecta",
+    "year": "19272017",
+    "enwiki": "Western meadowlark"
+   }
+  },
+  "PA": {
+   "code": "PA",
+   "qid": "Q1400",
+   "name_en": "Pennsylvania",
+   "name_ko": "펜실베이니아주",
+   "enwiki": "Pennsylvania",
+   "nicknames_en": [
+    "Keystone State",
+    "Quaker State"
+   ],
+   "capital": [
+    {
+     "qid": "Q25280",
+     "en": "Harrisburg",
+     "ko": "해리스버그"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Pennsylvania.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Pennsylvania.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Pennsylvania.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 740,
+    "height": 540,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Simtropolitan, Jean-Pierre Demailly (old version) permission= Insignia This image shows a flag, a coat of arms, a seal or some other official insignia. The use of such symbols is restricted in many countries. These restrictions are independent of the copyright status.",
+    "Credit": "from the xrmap flag collection 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1907",
+    "ImageDescription": "Flag of Pennsylvania",
+    "licence_ok": true,
+    "local": "flags-us/PA.svg"
+   },
+   "state_bird": {
+    "common": "Ruffed grouse(state game bird)",
+    "scientific": "Bonasa umbellus",
+    "year": "1931",
+    "enwiki": "Ruffed grouse"
+   }
+  },
+  "RI": {
+   "code": "RI",
+   "qid": "Q1387",
+   "name_en": "Rhode Island",
+   "name_ko": "로드아일랜드주",
+   "enwiki": "Rhode Island",
+   "nicknames_en": [
+    "The Ocean State",
+    "Little Rhody"
+   ],
+   "capital": [
+    {
+     "qid": "Q18383",
+     "en": "Providence",
+     "ko": "프로비던스"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Rhode Island.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhode_Island.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Rhode_Island.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 660,
+    "height": 580,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Xrmap flag collection 2.7",
+    "Credit": "Xrmap flag collection 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1897",
+    "ImageDescription": "Flag of Rhode Island",
+    "licence_ok": true,
+    "local": "flags-us/RI.svg"
+   },
+   "state_bird": {
+    "common": "Rhode Island Red",
+    "scientific": "Gallus gallus domesticus",
+    "year": "1954",
+    "enwiki": "Rhode Island Red"
+   }
+  },
+  "SC": {
+   "code": "SC",
+   "qid": "Q1456",
+   "name_en": "South Carolina",
+   "name_ko": "사우스캐롤라이나주",
+   "enwiki": "South Carolina",
+   "nicknames_en": [
+    "The Palmetto State"
+   ],
+   "capital": [
+    {
+     "qid": "Q38453",
+     "en": "Columbia",
+     "ko": "컬럼비아"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of South Carolina.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Carolina.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_South_Carolina.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 750,
+    "height": 500,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Design by South Carolina General Assembly, SVG by Steve Hall",
+    "Credit": "openclipart.org, specifically usa_southcarolina.svg",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1940",
+    "ImageDescription": "Flag of South Carolina",
+    "licence_ok": true,
+    "local": "flags-us/SC.svg"
+   },
+   "state_bird": {
+    "common": "Carolina wren",
+    "scientific": "Thryothorus ludovicianus",
+    "year": "1948",
+    "enwiki": "Carolina wren"
+   }
+  },
+  "SD": {
+   "code": "SD",
+   "qid": "Q1211",
+   "name_en": "South Dakota",
+   "name_ko": "사우스다코타주",
+   "enwiki": "South Dakota",
+   "nicknames_en": [
+    "The Mount Rushmore State",
+    "The Sunshine State",
+    "The 605"
+   ],
+   "capital": [
+    {
+     "qid": "Q40747",
+     "en": "Pierre",
+     "ko": "피어"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of South Dakota.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Dakota.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_South_Dakota.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 720,
+    "height": 450,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "xrmap",
+    "Credit": "xrmap flag collection 2.7 Outer text improved from original version",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1992",
+    "ImageDescription": "Flag of South Dakota",
+    "licence_ok": true,
+    "local": "flags-us/SD.svg"
+   },
+   "state_bird": {
+    "common": "Ring-necked pheasant",
+    "scientific": "Phasianus colchicus",
+    "year": "1943",
+    "enwiki": "Common pheasant"
+   }
+  },
+  "TN": {
+   "code": "TN",
+   "qid": "Q1509",
+   "name_en": "Tennessee",
+   "name_ko": "테네시주",
+   "enwiki": "Tennessee",
+   "nicknames_en": [
+    "The Volunteer State"
+   ],
+   "capital": [
+    {
+     "qid": "Q23197",
+     "en": "Nashville",
+     "ko": "내슈빌"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Tennessee.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tennessee.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Tennessee.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1000,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "-xfi-",
+    "Credit": "Based on tnmilitary.org (original) and crwflags.com (original)",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2006-07-14",
+    "ImageDescription": "Flag of Tennessee",
+    "licence_ok": true,
+    "local": "flags-us/TN.svg"
+   },
+   "state_bird": {
+    "common": "Northern mockingbird",
+    "scientific": "Mimus polyglottos",
+    "year": "1933",
+    "enwiki": "Northern mockingbird"
+   }
+  },
+  "TX": {
+   "code": "TX",
+   "qid": "Q1439",
+   "name_en": "Texas",
+   "name_ko": "텍사스주",
+   "enwiki": "Texas",
+   "nicknames_en": [
+    "The Lone Star State"
+   ],
+   "capital": [
+    {
+     "qid": "Q16559",
+     "en": "Austin",
+     "ko": "오스틴"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Texas.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 900,
+    "height": 600,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Paul B. Joiner",
+    "Credit": "https://web.archive.org/web/20060904132538/http://openclipart.org/clipart//signs_and_symbols/flags/america/united_states/usa_texas.svg",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1839-01-25",
+    "ImageDescription": "Flag of Texas",
+    "licence_ok": true,
+    "local": "flags-us/TX.svg"
+   },
+   "state_bird": {
+    "common": "Northern mockingbird",
+    "scientific": "Mimus polyglottos",
+    "year": "1927",
+    "enwiki": "Northern mockingbird"
+   }
+  },
+  "UT": {
+   "code": "UT",
+   "qid": "Q829",
+   "name_en": "Utah",
+   "name_ko": "유타주",
+   "enwiki": "Utah",
+   "nicknames_en": [
+    "Beehive State"
+   ],
+   "capital": [
+    {
+     "qid": "Q23337",
+     "en": "Salt Lake City",
+     "ko": "솔트레이크시티"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Utah.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Utah.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Utah.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 720,
+    "height": 432,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "The State of Utah",
+    "Credit": "Utah Department of Cultural &amp; Community Engagement: https://flag.utah.gov/content/ (from the SVG in \"download graphic package\")",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "Published on 10 November 2022",
+    "ImageDescription": "The flag of Utah (2024-present). This is the final design submitted for consideration to be adopted as a new state flag of Utah. The design evokes images of snowy mountains and red rocks to represent the geography of Utah, the beehive represents \"Industry\" (the state's slogan) and Utah's nickname as",
+    "licence_ok": true,
+    "local": "flags-us/UT.svg"
+   },
+   "state_bird": {
+    "common": "California gull",
+    "scientific": "Larus californicus",
+    "year": "1955",
+    "enwiki": "California gull"
+   }
+  },
+  "VA": {
+   "code": "VA",
+   "qid": "Q1370",
+   "name_en": "Virginia",
+   "name_ko": "버지니아주",
+   "enwiki": "Virginia",
+   "nicknames_en": [
+    "Old Dominion",
+    "Mother of Presidents and the Mother of Statesmen"
+   ],
+   "capital": [
+    {
+     "qid": "Q43421",
+     "en": "Richmond",
+     "ko": "리치먼드"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Virginia.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Virginia.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Virginia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 512,
+    "height": 341,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "LadyofHats with additional editing by 痛 and Patrickneil / Charles Keck",
+    "Credit": "This file was derived from: Seal of Virginia.svg Code of Virginia, Article 1. Symbols of Sovereignty. § 1-506. Flag of the Commonwealth. The flag of the Commonwealth shall be a deep blue field, with a circular white centre of the same material. Upon this circle shall be painted or embroidered, to show on both sides alike, the coat of arms of the Commonwealth, as described in § 1-500 for the obverse of the great seal of the Commonwealth; and there may be a white fringe on the outer edge, furthest from the flagstaff. This shall be known and respected as the flag of the Commonwealth.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1986",
+    "ImageDescription": "Flag of the Commonwealth of Virginia, adopted in February 1950 and last modified in 2006.",
+    "licence_ok": true,
+    "local": "flags-us/VA.svg"
+   },
+   "state_bird": {
+    "common": "Northern cardinal",
+    "scientific": "Cardinalis cardinalis",
+    "year": "1950",
+    "enwiki": "Northern cardinal"
+   }
+  },
+  "VT": {
+   "code": "VT",
+   "qid": "Q16551",
+   "name_en": "Vermont",
+   "name_ko": "버몬트주",
+   "enwiki": "Vermont",
+   "nicknames_en": [
+    "The Green Mountain State"
+   ],
+   "capital": [
+    {
+     "qid": "Q26426",
+     "en": "Montpelier",
+     "ko": "몬트필리어"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Vermont.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Vermont.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Vermont.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 800,
+    "height": 480,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "User:SimtropolitanOriginal by User:Denelson83",
+    "Credit": "Own work, based on Vermont Historical Society specimen: original from the xrmap flag collection 2.7",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "Flag of Vermont",
+    "licence_ok": true,
+    "local": "flags-us/VT.svg"
+   },
+   "state_bird": {
+    "common": "Hermit thrush",
+    "scientific": "Catharus guttatus",
+    "year": "1941",
+    "enwiki": "Hermit thrush"
+   }
+  },
+  "WA": {
+   "code": "WA",
+   "qid": "Q1223",
+   "name_en": "Washington",
+   "name_ko": "워싱턴주",
+   "enwiki": "Washington (state)",
+   "nicknames_en": [
+    "The Evergreen State"
+   ],
+   "capital": [
+    {
+     "qid": "Q42735",
+     "en": "Olympia",
+     "ko": "올림피아"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Washington.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Washington.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Washington.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1600,
+    "height": 1000,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "WA Secretary of State",
+    "Credit": "SVG generated from EPS file available from State of Washington website. Downloads listed here and file retrieved on 14:25, 2 March 2006 (UTC) from here.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "1967",
+    "ImageDescription": "Flag of Washington",
+    "licence_ok": true,
+    "local": "flags-us/WA.svg"
+   },
+   "state_bird": {
+    "common": "Willow goldfinch (American goldfinch)",
+    "scientific": "Spinus tristis salicamans",
+    "year": "1951",
+    "enwiki": "American goldfinch"
+   }
+  },
+  "WI": {
+   "code": "WI",
+   "qid": "Q1537",
+   "name_en": "Wisconsin",
+   "name_ko": "위스콘신주",
+   "enwiki": "Wisconsin",
+   "nicknames_en": [
+    "The Badger State",
+    "America's Dairyland"
+   ],
+   "capital": [
+    {
+     "qid": "Q43788",
+     "en": "Madison",
+     "ko": "매디슨"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Wisconsin.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Wisconsin.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_Wisconsin.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 300,
+    "height": 200,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "",
+    "Credit": "",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "",
+    "licence_ok": true,
+    "local": "flags-us/WI.svg"
+   },
+   "state_bird": {
+    "common": "American robin",
+    "scientific": "Turdus migratorius",
+    "year": "1949",
+    "enwiki": "American robin"
+   }
+  },
+  "WV": {
+   "code": "WV",
+   "qid": "Q1371",
+   "name_en": "West Virginia",
+   "name_ko": "웨스트버지니아주",
+   "enwiki": "West Virginia",
+   "nicknames_en": [
+    "Mountain State"
+   ],
+   "capital": [
+    {
+     "qid": "Q44564",
+     "en": "Charleston",
+     "ko": "찰스턴"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of West Virginia.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_West_Virginia.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_West_Virginia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 760,
+    "height": 400,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "Militaryace, Denelson83",
+    "Credit": "Militaryace &amp; Denelson83, some elements used are from the xrmap flag collection 2.7.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "2008-04-15",
+    "ImageDescription": "Flag of West Virginia",
+    "licence_ok": true,
+    "local": "flags-us/WV.svg"
+   },
+   "state_bird": {
+    "common": "Northern cardinal",
+    "scientific": "Cardinalis cardinalis",
+    "year": "1949",
+    "enwiki": "Northern cardinal"
+   }
+  },
+  "WY": {
+   "code": "WY",
+   "qid": "Q1214",
+   "name_en": "Wyoming",
+   "name_ko": "와이오밍주",
+   "enwiki": "Wyoming",
+   "nicknames_en": [
+    "Equality State",
+    "Cowboy State",
+    "Big Wyoming"
+   ],
+   "capital": [
+    {
+     "qid": "Q39042",
+     "en": "Cheyenne",
+     "ko": "샤이엔"
+    }
+   ],
+   "flag": {
+    "commons_file": "Flag of Wyoming.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Wyoming.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Wyoming.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumburl": null,
+    "mime": "image/svg+xml",
+    "width": 1000,
+    "height": 700,
+    "LicenseShortName": "Public domain",
+    "License": "pd",
+    "UsageTerms": "Public domain",
+    "LicenseUrl": "",
+    "Artist": "User:Dbenbenn",
+    "Credit": "Own work: It is from openclipart.org, specifically usa_wyoming.svg, by Caleb Moore.",
+    "Copyrighted": "False",
+    "DateTimeOriginal": "",
+    "ImageDescription": "Flag of Wyoming",
+    "licence_ok": true,
+    "local": "flags-us/WY.svg"
+   },
+   "state_bird": {
+    "common": "Western meadowlark",
+    "scientific": "Sturnella neglecta",
+    "year": "1927",
+    "enwiki": "Western meadowlark"
+   }
+  }
+ },
+ "rejected_flags": [
+  {
+   "code": "MS",
+   "file": "Flag of Mississippi.svg",
+   "licence": "Copyrighted free use"
+  }
+ ]
+}
