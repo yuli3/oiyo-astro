@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import type { Locale } from "../../../i18n";
 import { EUROPE_SOURCES, REALMS_1426, REALM_KIND_VECTORS, type Realm, type Vector } from "../../../data/past-life-1426";
 import generated from "../../../data/past-life-1426-generated.json";
-import { nearest, oneIn, realmShare, seededRandom, weightedPick } from "../../../lib/past-life-1426";
+import { birthdayRandom, nearest, oneIn, realmShare, seededRandom, weightedPick } from "../../../lib/past-life-1426";
 import { Button } from "../../ui/button";
-import { CopyLink, ModeTabs, Panel, Sources, TraitPicker, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L, type Six } from "./shared";
+import { BirthdayPicker, FriendBanner, FriendCompare, ModeTabs3, RarityBadge, SaveCard, SeriesNext, TimeWarp, isOwn, rarityLabel, rememberOwn, stampEpisode, useWarp, type Mode } from "./timeslip";
+import { CopyLink, Panel, Sources, TraitPicker, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L, type Six } from "./shared";
 
 interface Portrait {
   page: string;
@@ -127,26 +128,42 @@ function Peers({ l, age, onAge }: { l: L; age: number; onAge: (a: number) => voi
 export default function EuropePastLife({ locale }: { locale: Locale }) {
   const l = toL(locale);
   const fmt = numberFormat(l);
-  const [mode, setMode] = useState<"random" | "trait">("random");
+  const [mode, setMode] = useState<Mode>("random");
   const [realm, setRealm] = useState<Realm | null>(null);
+  const [friend, setFriend] = useState<Realm | null>(null);
   const [age, setAge] = useState(30);
   const [round, setRound] = useState(0);
   const funnel = useFunnel("europe-1426");
+  const warp = useWarp();
 
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
     const shared = REALMS_1426.find((r) => r.id === q.get("e"));
-    if (shared) setRealm(shared);
+    if (shared) {
+      setRealm(shared);
+      if (!isOwn("europe-1426", `e=${shared.id}`)) setFriend(shared);
+    }
     const a = Number(q.get("a"));
     if (q.has("a") && Number.isInteger(a) && a >= 0 && a < 60) setAge(a);
   }, []);
 
-  function show(next: Realm, how: string) {
+  function show(next: Realm, how: string, nextAge = age) {
     funnel(how);
-    setRealm(next);
-    setRound((r) => r + 1);
-    setShareQuery(format(next, age));
+    warp.start(() => {
+      setRealm(next);
+      setAge(nextAge);
+      setRound((r) => r + 1);
+      setShareQuery(format(next, nextAge));
+      rememberOwn("europe-1426", `e=${next.id}`);
+      stampEpisode("europe-1426");
+    });
   }
+  function fromBirthday(b: string) {
+    // Your age today becomes your age in 1426, so the same-age people list matches you.
+    const years = Math.floor((Date.now() - new Date(`${b}T00:00:00Z`).getTime()) / (365.2425 * 86400000));
+    show(weightedPick(REALMS_1426, () => 1, birthdayRandom("europe-1426", b)), "birthday", Math.max(0, Math.min(59, years)));
+  }
+  const realmLabel = (r: Realm) => `${r.title[l]} · ${r.name[l]}`;
   function updateAge(a: number) {
     setAge(a);
     if (realm) setShareQuery(format(realm, a));
@@ -164,17 +181,31 @@ export default function EuropePastLife({ locale }: { locale: Locale }) {
 
   return (
     <div className="space-y-6">
-      <ModeTabs mode={mode} onMode={setMode} l={l} />
+      {warp.warping && <TimeWarp from={2026} to={1426} l={l} onDone={warp.finish} />}
+      <ModeTabs3 mode={mode} onMode={setMode} l={l} />
       {mode === "random" ? (
         <Button size="lg" className="w-full" onClick={() => show(weightedPick(REALMS_1426, () => 1), "random")}>
-          {realm ? pick(C.again, l) : pick(C.draw, l)}
+          {realm && realm !== friend ? pick(C.again, l) : pick(C.draw, l)}
         </Button>
+      ) : mode === "birthday" ? (
+        <BirthdayPicker l={l} onSubmit={fromBirthday} />
       ) : (
         <TraitPicker l={l} onSubmit={(v, source) => show(drawMatched(v, source), `trait-${source}`)} />
       )}
 
+      {realm && friend && realm === friend && <FriendBanner l={l} />}
+
       {realm && (
         <div key={round} className="animate-fadeInUp space-y-4" aria-live="polite">
+          {friend && realm !== friend && (
+            <FriendCompare
+              l={l}
+              fmt={fmt}
+              testId="europe-1426"
+              mine={{ label: realmLabel(realm), n: oneIn(realmShare()) }}
+              friend={{ label: realmLabel(friend), n: oneIn(realmShare()) }}
+            />
+          )}
           <section className="overflow-hidden rounded-3xl border border-border bg-card shadow-md">
             <div className="flex flex-col items-center gap-4 bg-muted p-6 sm:flex-row sm:items-end">
               {portrait ? (
@@ -221,8 +252,24 @@ export default function EuropePastLife({ locale }: { locale: Locale }) {
               <Sources l={l} items={EUROPE_SOURCES} />
             </div>
           </section>
+          <RarityBadge n={oneIn(realmShare())} l={l} fmt={fmt} />
           <Peers l={l} age={age} onAge={updateAge} />
+          <SaveCard
+            l={l}
+            testId="europe-1426"
+            filename={`oiyo-europe-1426-${realm.id}`}
+            spec={{
+              kicker: pick(C.you, l),
+              title: realm.title[l],
+              subtitle: realm.name[l],
+              badge: `★ ${rarityLabel(oneIn(realmShare()), l)} · ${oneInText(oneIn(realmShare()), l, fmt)}`,
+              lines: realm.ruler !== "—" ? [`${pick(C.real, l)}: ${realm.ruler} (${realm.reign})`] : [],
+              footer: "oiyo.net · 1426",
+              accent: "#6b4c1e",
+            }}
+          />
           <CopyLink l={l} testId="europe-1426" />
+          <SeriesNext l={l} locale={locale} current="europe-1426" round={round} />
         </div>
       )}
     </div>

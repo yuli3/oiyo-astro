@@ -124,14 +124,13 @@ export function TraitPicker({ l, onSubmit }: { l: L; onSubmit: (v: Vector, sourc
   );
 }
 
-/** GA funnel: first draw fires test_started once, every draw fires test_completed. */
+/** GA funnel: first draw fires test_started once, every draw fires test_completed, draws after the first also fire reroll. */
 export function useFunnel(testId: string) {
-  const [started, setStarted] = useState(false);
+  const [draws, setDraws] = useState(0);
   return (mode: string) => {
-    if (!started) {
-      setStarted(true);
-      gaEvent("test_started", { test_id: testId, mode });
-    }
+    if (draws === 0) gaEvent("test_started", { test_id: testId, mode });
+    else gaEvent("reroll", { test_id: testId, mode, draw_index: String(draws + 1) });
+    setDraws((n) => n + 1);
     gaEvent("test_completed", { test_id: testId, mode });
   };
 }

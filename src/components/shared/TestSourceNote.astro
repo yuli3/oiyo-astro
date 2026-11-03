@@ -1,6 +1,6 @@
 ---
 import { localePath, type Locale } from '../../i18n';
-import { getCautionText, type TestSourceNote } from '../../data/test-source-notes';
+import { getCautionText, getLocalizedBasis, type TestSourceNote } from '../../data/test-source-notes';
 
 interface Props {
   locale: Locale;
@@ -37,7 +37,7 @@ const labels = note.caution === 'performance' ? performanceLabels[locale] : copy
       <div>
         <h3 class="text-xs font-bold uppercase tracking-wide text-muted-foreground">{labels.method}</h3>
         <ul class="mt-2 space-y-1.5 text-sm leading-6 text-slate-700">
-          {(note.basisByLocale?.[locale] ?? note.basis).map((item) => <li>{item}</li>)}
+          {getLocalizedBasis(note, locale).map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div>

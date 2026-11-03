@@ -102,3 +102,34 @@ describe("joseon extras", () => {
     expect(tabletFor("정5품")).toBe("wood");
   });
 });
+
+import { JOSEON_SEAT_TOTAL as SEATS, birthdayRandom, compareRank, isValidBirthday, rarityTier, stateShare } from "./past-life-1426";
+
+describe("time-slip quick wins", () => {
+  it("rarity tiers follow the authored cut-offs", () => {
+    expect(rarityTier(oneIn(1 / SEATS))).toBe("legendary");
+    expect(rarityTier(30)).toBe("uncommon");
+    const biggest = US_STATES.reduce((a, b) => (a.births > b.births ? a : b));
+    expect(rarityTier(oneIn(stateShare(biggest)))).toBe("common");
+  });
+  it("validates birthdays", () => {
+    const today = new Date("2026-11-03T00:00:00Z");
+    expect(isValidBirthday("1990-02-28", today)).toBe(true);
+    expect(isValidBirthday("1990-02-30", today)).toBe(false);
+    expect(isValidBirthday("2030-01-01", today)).toBe(false);
+    expect(isValidBirthday("1899-12-31", today)).toBe(false);
+    expect(isValidBirthday("90-1-1", today)).toBe(false);
+  });
+  it("birthday seed is stable per episode", () => {
+    const a = birthdayRandom("joseon-1426", "1990-05-05");
+    const b = birthdayRandom("joseon-1426", "1990-05-05");
+    expect([a(), a(), a()]).toEqual([b(), b(), b()]);
+    expect(birthdayRandom("europe-1426", "1990-05-05")()).not.toBe(birthdayRandom("joseon-1426", "1990-05-05")());
+  });
+  it("compares Joseon ranks", () => {
+    expect(compareRank("정1품", "종6품")).toBe("me");
+    expect(compareRank("종3품", "정3품 당상")).toBe("friend");
+    expect(compareRank("정5품", "정5품")).toBe("same");
+    expect(compareRank("무품", "정5품")).toBeNull();
+  });
+});
