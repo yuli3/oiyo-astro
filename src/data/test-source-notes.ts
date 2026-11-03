@@ -1,5 +1,9 @@
 import type { Locale } from '../i18n';
 import { BASIS_KO } from './test-source-notes-basis-ko';
+import { BASIS_JA } from './test-source-notes-basis-ja';
+import { BASIS_ZH } from './test-source-notes-basis-zh';
+import { BASIS_FR } from './test-source-notes-basis-fr';
+import { BASIS_ES } from './test-source-notes-basis-es';
 
 export interface TestSourceNote {
   basis: string[];
@@ -649,7 +653,7 @@ export function getCautionText(caution: TestSourceNote['caution'], locale: Local
 
 // 2026-11-03: 화면에 보일 근거 목록. basisByLocale 이 있으면 그것, 없으면 영어 원문을
 // 로케일 번역표로 바꾼다. 번역표가 없는 로케일·줄은 영어 원문으로 둔다.
-const BASIS_BY_LOCALE: Partial<Record<Locale, Record<string, string>>> = { ko: BASIS_KO };
+export const BASIS_BY_LOCALE: Partial<Record<Locale, Record<string, string>>> = { ko: BASIS_KO, ja: BASIS_JA, zh: BASIS_ZH, fr: BASIS_FR, es: BASIS_ES };
 
 export function getLocalizedBasis(note: TestSourceNote, locale: Locale): string[] {
   const explicit = note.basisByLocale?.[locale];

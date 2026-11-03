@@ -7,6 +7,8 @@ import Header from '../components/Header.astro';
 import { routeTransitionName } from '../lib/system/view-transition-name';
 import Footer from '../components/Footer.astro';
 import TestSourceNote from '../components/shared/TestSourceNote.astro';
+import TestLaneLink from '../components/shared/TestLaneLink.astro';
+import { LANE_BY_PATH } from '../data/test-question-lanes';
 import { getTestSourceNote } from '../data/test-source-notes';
 import TestPlayBeacon from '../components/shared/TestPlayBeacon';
 import BirthSavedToast from '../components/shared/BirthSavedToast.astro';
@@ -58,6 +60,9 @@ const alternateRouteWithoutLocale = canonicalPath
   ? canonicalPath.replace(/^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/, '') || '/'
   : routeWithoutLocale;
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
+// 2026-11-03: 같은 질문 묶음의 다음 검사는 페이지가 아니라 Layout 이 경로로 그린다.
+const laneRoute = routeWithoutLocale.replace(/\/+$/, '') || '/';
+const hasLane = laneRoute in LANE_BY_PATH;
 // 2026-09-30 B6 #1 (세운 결정: 타로·사주·검사 3종 먼저): 링크 미리보기 카드를 카테고리별로 둔다.
 // 페이지가 ogImage 를 직접 넘기면 그것이 이긴다. 결과 화면의 공유 이미지(ResultShareImage)는
 // 내려받기용이라 이것과 겹치지 않는다. 검사 판별은 getTestSourceNote 와 같은 경로 규칙(/test, -test).
@@ -243,6 +248,7 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
         </div>
       )}
       <slot />
+      {hasLane && <TestLaneLink locale={locale} path={laneRoute} />}
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
       <ManualAds locale={locale} noindex={noindex} />
     </main>
