@@ -5,6 +5,8 @@ import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recha
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
 import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
+import { PairArrivedNote, PairResultPanel } from '../shared/PairResult'
+import { isLoveLang } from '@/lib/pair-result'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Lang = 'words' | 'acts' | 'gifts' | 'time' | 'touch'
@@ -599,6 +601,17 @@ const RESULTS: Record<Lang, Record<Locale, ResultData>> = {
   },
 }
 
+// 둘이 하는 결과 링크의 비교 문장. 순위나 궁합 점수 없이 "상대가 가장 반기는
+// 표현"과 그 예시 하나만 보여 준다(2026-11-03 메모 1번).
+const PAIR_COPY: Record<Locale, { same: (x: string) => string; diff: (a: string, b: string) => string; tryThis: string }> = {
+  ko: { same: (x) => `둘 다 '${x}'을(를) 가장 반겨요. 같은 방식으로 주고받으면 마음이 잘 전해져요.`, diff: (a, b) => `나는 '${a}', 상대는 '${b}'을(를) 가장 반겨요. 상대에게는 '${b}' 쪽으로 한 번 더 표현해 보세요.`, tryThis: '상대에게 해 볼 것' },
+  en: { same: (x) => `You both welcome “${x}” most. Giving it the same way tends to land well.`, diff: (a, b) => `You welcome “${a}” most; they welcome “${b}”. Try expressing it their way once more.`, tryThis: 'Something to try for them' },
+  ja: { same: (x) => `ふたりとも「${x}」を一番喜びます。同じやり方でやり取りすると気持ちが伝わりやすいです。`, diff: (a, b) => `わたしは「${a}」、相手は「${b}」を一番喜びます。相手には「${b}」の形でもう一度伝えてみましょう。`, tryThis: '相手にしてみること' },
+  zh: { same: (x) => `你们都最喜欢“${x}”。用同样的方式表达，心意更容易传达。`, diff: (a, b) => `我最喜欢“${a}”，对方最喜欢“${b}”。试着多用“${b}”的方式向对方表达。`, tryThis: '可以为对方做的事' },
+  fr: { same: (x) => `Vous appréciez tous les deux surtout « ${x} ». Donner de la même façon passe bien.`, diff: (a, b) => `Vous appréciez surtout « ${a} », l’autre « ${b} ». Essayez de l’exprimer à sa façon une fois de plus.`, tryThis: 'À essayer pour l’autre' },
+  es: { same: (x) => `A los dos os llega más «${x}». Darlo de la misma forma suele funcionar.`, diff: (a, b) => `A ti te llega más «${a}» y a la otra persona «${b}». Prueba a expresarlo a su manera una vez más.`, tryThis: 'Algo que probar con la otra persona' },
+}
+
 interface Props { locale?: string }
 
 export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
@@ -667,6 +680,8 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
     const pair = pairs[current]
     const progress = Math.round((current / pairs.length) * 100)
     return (
+      <>
+      <PairArrivedNote locale={locale} testId="love-language" isValid={isLoveLang} />
       <Questionnaire<'a' | 'b'>
         title={lb.title}
         subtitle={lb.subtitle}
@@ -687,6 +702,7 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
         onPrevious={current > 0 && selected === null ? () => setCurrent(current - 1) : undefined}
         onSelect={pick}
       />
+      </>
     )
   }
 
@@ -759,6 +775,25 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
         symbolSrc={resultSymbolSrc('love-language', result.primary)}
         analyticsId="love-language"
       />
+      {hasAnswerScores && (
+        <PairResultPanel
+          locale={locale}
+          testId="love-language"
+          myCode={result.primary}
+          isValid={isLoveLang}
+          renderCompare={(theirs) => {
+            const them = theirs as Lang
+            const mine = lb.types[result.primary]
+            const theirName = lb.types[them]
+            return (
+              <div className="space-y-2 text-sm leading-6 text-foreground">
+                <p>{them === result.primary ? PAIR_COPY[locale].same(mine) : PAIR_COPY[locale].diff(mine, theirName)}</p>
+                <p className="text-muted-foreground">{PAIR_COPY[locale].tryThis}: {RESULTS[them][locale].examples[0]}</p>
+              </div>
+            )
+          }}
+        />
+      )}
       <ResultNextSteps
         locale={locale}
         links={[
