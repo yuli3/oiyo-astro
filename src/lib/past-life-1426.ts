@@ -166,3 +166,48 @@ export function tabletFor(rank: string): "ivory" | "wood" | null {
   const r = parseRank(rank);
   return r ? (r.grade <= 4 ? "ivory" : "wood") : null;
 }
+
+// ── Time-slip series quick wins (2026-11-03, company-brain past-life-series-design-2026-11-03.md) ──
+
+export type EpisodeId = "joseon-1426" | "europe-1426" | "us-birth-state";
+export const EPISODES: readonly EpisodeId[] = ["joseon-1426", "europe-1426", "us-birth-state"];
+
+export type Rarity = "legendary" | "rare" | "uncommon" | "common";
+/**
+ * Badge tier from "1 in N". Cut-offs are authored for play, chosen so that
+ * Joseon's one-seat posts (1 in 551) are legendary, a 1-in-30 throne is uncommon
+ * and the biggest US states (about 1 in 8) are common.
+ */
+export function rarityTier(n: number): Rarity {
+  if (n >= 300) return "legendary";
+  if (n >= 60) return "rare";
+  if (n >= 15) return "uncommon";
+  return "common";
+}
+
+/** Valid YYYY-MM-DD birthday between 1900-01-01 and today. */
+export function isValidBirthday(value: string, today: Date = new Date()): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const d = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(d.getTime()) || d.toISOString().slice(0, 10) !== value) return false;
+  return value >= "1900-01-01" && d.getTime() <= today.getTime();
+}
+
+/** Same birthday, same episode → same result, on any visit. */
+export function birthdayRandom(episode: EpisodeId, birthday: string): () => number {
+  return seededRandom(`${episode}|birthday|${birthday}`);
+}
+
+/** Lower is higher: 정1품 = 1, 종1품 = 2 … 종9품 = 18. null when the rank has no grade. */
+export function rankOrder(rank: string): number | null {
+  const r = parseRank(rank);
+  return r ? r.grade * 2 - (r.senior ? 1 : 0) : null;
+}
+
+/** "me" when my post outranks the friend's, "friend" when theirs does, "same" when equal, null when unknown. */
+export function compareRank(mine: string, friend: string): "me" | "friend" | "same" | null {
+  const a = rankOrder(mine);
+  const b = rankOrder(friend);
+  if (a === null || b === null) return null;
+  return a < b ? "me" : a > b ? "friend" : "same";
+}

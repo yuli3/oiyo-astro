@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import type { Locale } from "../../../i18n";
 import { US_REGION_VECTORS, US_SOURCES, US_STATES, type UsState, type Vector } from "../../../data/past-life-1426";
 import generated from "../../../data/past-life-1426-generated.json";
-import { nearest, oneIn, seededRandom, stateShare, weightedPick } from "../../../lib/past-life-1426";
+import { birthdayRandom, nearest, oneIn, seededRandom, stateShare, weightedPick } from "../../../lib/past-life-1426";
 import { Button } from "../../ui/button";
-import { CopyLink, ModeTabs, Panel, Sources, TraitPicker, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L } from "./shared";
+import { BirthdayPicker, FriendBanner, FriendCompare, ModeTabs3, RarityBadge, SaveCard, SeriesNext, TimeWarp, isOwn, rarityLabel, rememberOwn, stampEpisode, useWarp, type Mode } from "./timeslip";
+import { CopyLink, Panel, Sources, TraitPicker, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L } from "./shared";
 
 type Sex = "female" | "male";
 interface StateInfo {
@@ -66,29 +67,39 @@ function parse(search: string): Birth | null {
 export default function UsBirthState({ locale }: { locale: Locale }) {
   const l = toL(locale);
   const fmt = numberFormat(l);
-  const [mode, setMode] = useState<"random" | "trait">("random");
+  const [mode, setMode] = useState<Mode>("random");
   const [sexChoice, setSexChoice] = useState<Sex | "any">("any");
   const [birth, setBirth] = useState<Birth | null>(null);
+  const [friend, setFriend] = useState<Birth | null>(null);
   const [round, setRound] = useState(0);
   const funnel = useFunnel("us-birth-state");
+  const warp = useWarp();
 
   useEffect(() => {
     const shared = parse(window.location.search);
-    if (shared) setBirth(shared);
+    if (shared) {
+      setBirth(shared);
+      if (!isOwn("us-birth-state", format(shared))) setFriend(shared);
+    }
   }, []);
 
   function show(next: Birth, how: string) {
     funnel(how);
-    setBirth(next);
-    setRound((r) => r + 1);
-    setShareQuery(format(next));
+    warp.start(() => {
+      setBirth(next);
+      setRound((r) => r + 1);
+      setShareQuery(format(next));
+      rememberOwn("us-birth-state", format(next));
+      stampEpisode("us-birth-state");
+    });
   }
 
-  function drawRandom(): Birth {
-    const state = weightedPick(US_STATES, (st) => st.births);
-    const sex = pickSex(sexChoice);
-    return { state, sex, name: pickName(state, sex) };
+  function drawRandom(random: () => number = Math.random): Birth {
+    const state = weightedPick(US_STATES, (st) => st.births, random);
+    const sex = pickSex(sexChoice, random);
+    return { state, sex, name: pickName(state, sex, random) };
   }
+  const birthLabel = (b: Birth) => `${b.name} · ${b.state.name[l]}`;
   function drawMatched(v: Vector, source: string): Birth {
     const random = seededRandom(`us|${source}|${sexChoice}|${v.principle},${v.tradition},${v.action}`);
     const region = nearest(v, US_REGION_VECTORS);
@@ -111,17 +122,31 @@ export default function UsBirthState({ locale }: { locale: Locale }) {
           ))}
         </div>
       </div>
-      <ModeTabs mode={mode} onMode={setMode} l={l} />
+      {warp.warping && <TimeWarp from={1426} to={2026} l={l} onDone={warp.finish} />}
+      <ModeTabs3 mode={mode} onMode={setMode} l={l} />
       {mode === "random" ? (
         <Button size="lg" className="w-full" onClick={() => show(drawRandom(), "random")}>
-          {birth ? pick(C.again, l) : pick(C.draw, l)}
+          {birth && birth !== friend ? pick(C.again, l) : pick(C.draw, l)}
         </Button>
+      ) : mode === "birthday" ? (
+        <BirthdayPicker l={l} onSubmit={(b) => show(drawRandom(birthdayRandom("us-birth-state", `${b}|${sexChoice}`)), "birthday")} />
       ) : (
         <TraitPicker l={l} onSubmit={(v, source) => show(drawMatched(v, source), `trait-${source}`)} />
       )}
 
+      {birth && friend && birth === friend && <FriendBanner l={l} />}
+
       {birth && info && (
         <div key={round} className="animate-fadeInUp space-y-4" aria-live="polite">
+          {friend && birth !== friend && (
+            <FriendCompare
+              l={l}
+              fmt={fmt}
+              testId="us-birth-state"
+              mine={{ label: birthLabel(birth), n: oneIn(stateShare(birth.state)) }}
+              friend={{ label: birthLabel(friend), n: oneIn(stateShare(friend.state)) }}
+            />
+          )}
           <section className="rounded-3xl border-4 border-double border-border bg-card p-5 shadow-md">
             <p className="text-center font-serif text-xs uppercase tracking-widest text-muted-foreground">{pick(C.cert, l)}</p>
             <div className="mt-4 flex items-center gap-4">
@@ -158,6 +183,7 @@ export default function UsBirthState({ locale }: { locale: Locale }) {
               )}
             </dl>
           </section>
+          <RarityBadge n={oneIn(stateShare(birth.state))} l={l} fmt={fmt} />
 
           <Panel label={pick(C.births, l)}>
             <p className="text-2xl font-black">{fmt.format(birth.state.births)}</p>
@@ -183,7 +209,22 @@ export default function UsBirthState({ locale }: { locale: Locale }) {
             />
           </Panel>
 
+          <SaveCard
+            l={l}
+            testId="us-birth-state"
+            filename={`oiyo-us-birth-${birth.state.code}`}
+            spec={{
+              kicker: pick(C.cert, l),
+              title: birth.name,
+              subtitle: birth.state.name[l],
+              badge: `★ ${rarityLabel(oneIn(stateShare(birth.state)), l)} · ${oneInText(oneIn(stateShare(birth.state)), l, fmt)}`,
+              lines: [info.capital ? `${pick(C.capital, l)}: ${l === "ko" && info.capital.ko ? info.capital.ko : info.capital.en}` : "", info.nickname ? `${pick(C.nickname, l)}: ${info.nickname}` : ""].filter(Boolean),
+              footer: "oiyo.net",
+              accent: "#1f3b6b",
+            }}
+          />
           <CopyLink l={l} testId="us-birth-state" />
+          <SeriesNext l={l} locale={locale} current="us-birth-state" round={round} />
         </div>
       )}
     </div>
