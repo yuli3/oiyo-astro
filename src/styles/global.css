@@ -14,6 +14,14 @@
   --color-joseon-hat: #1c1c1c;
   --color-joseon-skin: #f1d3b3;
   --color-joseon-ivory: #f3ead2;
+  /* Silla court-robe colours (자·비·청·황) — /silla-golpum/, 2026-11-03 */
+  --color-silla-purple: #6b3d8f;
+  --color-silla-crimson: #b0283c;
+  --color-silla-blue: #2b5a9a;
+  --color-silla-yellow: #c99a1e;
+  /* France 1789 tricolour accents — /france-1789/, 2026-11-03 */
+  --color-fr-blue: #1f3f8f;
+  --color-fr-red: #c0312b;
 }
 
 @theme inline {
