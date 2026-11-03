@@ -54,12 +54,71 @@ const NOTES: Record<Locale, Record<MbtiDim, { name: string; same: string; diff: 
   },
 };
 
+// 재미 요소(2026-11-03): 같은 축 개수로 "우리 조합 이름"을 붙인다. 좋고 나쁨의 등급이
+// 아니라 모양의 이름이다. 0개여도 나쁜 말로 쓰지 않는다.
+const CHEMISTRY: Record<Locale, { emoji: string; name: string; line: string }[]> = {
+  ko: [
+    { emoji: '🧩', name: '정반대 퍼즐 조각', line: '네 축이 모두 달라요. 서로 없는 칸을 채워 주는 조합이에요.' },
+    { emoji: '🌗', name: '다른 듯 닮은 짝', line: '하나만 같고 셋이 달라요. 공통점 하나가 둘의 다리가 돼요.' },
+    { emoji: '⚖️', name: '반반 듀오', line: '둘은 같고 둘은 달라요. 편하면서도 새로운 조합이에요.' },
+    { emoji: '👯', name: '거의 쌍둥이', line: '셋이 같고 하나만 달라요. 그 하나가 대화거리예요.' },
+    { emoji: '🪞', name: '거울 쌍둥이', line: '네 축이 모두 같아요. 말 안 해도 통하지만, 둘 다 놓치는 것도 같을 수 있어요.' },
+  ],
+  en: [
+    { emoji: '🧩', name: 'Opposite puzzle pieces', line: 'All four axes differ. Each of you fills the other’s gaps.' },
+    { emoji: '🌗', name: 'Different, yet alike', line: 'One axis matches, three differ. That one match is your bridge.' },
+    { emoji: '⚖️', name: 'Half-and-half duo', line: 'Two match, two differ: comfortable and fresh at once.' },
+    { emoji: '👯', name: 'Almost twins', line: 'Three match, one differs. That one is your best conversation topic.' },
+    { emoji: '🪞', name: 'Mirror twins', line: 'All four match. You click without words, but may miss the same things.' },
+  ],
+  ja: [
+    { emoji: '🧩', name: '正反対のパズル', line: '4つの軸がすべて違います。お互いの空白を埋める組み合わせです。' },
+    { emoji: '🌗', name: '違うようで似たふたり', line: '1つだけ同じで3つ違います。その1つがふたりの橋です。' },
+    { emoji: '⚖️', name: '半々コンビ', line: '2つ同じで2つ違います。気楽で新鮮な組み合わせです。' },
+    { emoji: '👯', name: 'ほぼ双子', line: '3つ同じで1つだけ違います。その1つが話のタネです。' },
+    { emoji: '🪞', name: '鏡の双子', line: '4つすべて同じ。言わなくても通じますが、見落とすところも同じかもしれません。' },
+  ],
+  zh: [
+    { emoji: '🧩', name: '相反的拼图', line: '四个维度全都不同。你们正好补上彼此的空缺。' },
+    { emoji: '🌗', name: '看似不同却相像', line: '一个相同、三个不同。这一个共同点就是你们的桥。' },
+    { emoji: '⚖️', name: '一半一半组合', line: '两个相同、两个不同。既自在又新鲜。' },
+    { emoji: '👯', name: '几乎是双胞胎', line: '三个相同、一个不同。那一个就是最好的话题。' },
+    { emoji: '🪞', name: '镜子双胞胎', line: '四个全都相同。不用说也懂，但也可能一起漏掉同样的事。' },
+  ],
+  fr: [
+    { emoji: '🧩', name: 'Pièces de puzzle opposées', line: 'Les quatre axes diffèrent : chacun comble les vides de l’autre.' },
+    { emoji: '🌗', name: 'Différents mais proches', line: 'Un axe en commun, trois différents. Ce point commun est votre pont.' },
+    { emoji: '⚖️', name: 'Duo moitié-moitié', line: 'Deux pareils, deux différents : confortable et nouveau à la fois.' },
+    { emoji: '👯', name: 'Presque jumeaux', line: 'Trois pareils, un différent. Celui-là est votre meilleur sujet.' },
+    { emoji: '🪞', name: 'Jumeaux miroirs', line: 'Les quatre pareils. Vous vous comprenez sans mots, mais risquez de rater les mêmes choses.' },
+  ],
+  es: [
+    { emoji: '🧩', name: 'Piezas de puzle opuestas', line: 'Los cuatro ejes son distintos: cada uno llena los huecos del otro.' },
+    { emoji: '🌗', name: 'Distintos pero parecidos', line: 'Un eje igual y tres distintos. Ese punto en común es vuestro puente.' },
+    { emoji: '⚖️', name: 'Dúo mitad y mitad', line: 'Dos iguales y dos distintos: cómodo y nuevo a la vez.' },
+    { emoji: '👯', name: 'Casi gemelos', line: 'Tres iguales y uno distinto. Ese es vuestro mejor tema de charla.' },
+    { emoji: '🪞', name: 'Gemelos espejo', line: 'Los cuatro iguales. Os entendéis sin palabras, pero quizá se os escapen las mismas cosas.' },
+  ],
+};
+
+export function mbtiChemistry(locale: string, mine: string, theirs: string) {
+  const l = (locale in CHEMISTRY ? locale : 'en') as Locale;
+  const same = compareMbti(mine, theirs).filter((r) => r.same).length;
+  return CHEMISTRY[l][same];
+}
+
 export default function MbtiPairCompare({ locale, mine, theirs }: { locale: string; mine: string; theirs: string }) {
   const l = (locale in UI ? locale : 'en') as Locale;
   const ui = UI[l];
   const rows = compareMbti(mine, theirs);
+  const chem = mbtiChemistry(l, mine, theirs);
   return (
     <div className="space-y-3">
+      <div className="animate-fadeInUp rounded-2xl border border-primary/40 bg-primary/5 p-4 text-center">
+        <p className="text-4xl" aria-hidden="true">{chem.emoji}</p>
+        <p className="mt-1 text-xl font-black text-foreground">{chem.name}</p>
+        <p className="mt-1 text-sm leading-6 text-muted-foreground">{chem.line}</p>
+      </div>
       <p className="text-center text-2xl font-black text-foreground">
         {ui.me} {mine.toUpperCase()} · {ui.them} {theirs.toUpperCase()}
       </p>

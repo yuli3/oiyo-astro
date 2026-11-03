@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
 import { gaEvent } from '@/lib/analytics/ga-event';
 import { listStoredTestResults } from '@/lib/user/test-results';
-import { buildYearRecap, recapKeywordIndex, type YearRecap as Recap } from '@/lib/year-recap';
+import { buildYearRecap, recapKeywordIndex, recapTitleTier, type YearRecap as Recap } from '@/lib/year-recap';
 
 // 나의 한 해 결산 카드. 이 브라우저의 검사 기록만 읽어 카드 한 장으로 묶는다.
 // 서버로 보내는 것은 없고, 공유는 사용자가 이미지 저장을 눌렀을 때만 일어난다.
@@ -19,6 +19,25 @@ const KEYWORDS: Record<Locale, string[]> = {
   zh: ['一步一步', '轻装上阵', '更深一点', '一起', '重新开始', '做自己', '慢慢来', '更宽广', '整理', '勇气', '休息', '好奇心'],
   fr: ['Pas à pas', 'Plus léger', 'Plus profond', 'Ensemble', 'Nouveau départ', 'Fidèle à moi', 'Doucement', 'Plus large', 'Faire le tri', 'Courage', 'Repos', 'Curiosité'],
   es: ['Paso a paso', 'Más ligero', 'Más hondo', 'Juntos', 'Nuevo comienzo', 'Fiel a mí', 'Despacio', 'Más amplio', 'Ordenar', 'Valor', 'Descanso', 'Curiosidad'],
+};
+
+// 재미 요소(2026-11-03): 해 본 검사 가짓수에 따른 올해의 칭호와, 키워드를 봉투처럼 열어 보는 단계.
+const TITLES: Record<Locale, { name: string; emoji: string }[]> = {
+  ko: [{ emoji: '🌱', name: '첫 발자국' }, { emoji: '🧭', name: '호기심 탐험가' }, { emoji: '📚', name: '자기 탐구 수집가' }, { emoji: '🏆', name: 'OIYO 마스터' }],
+  en: [{ emoji: '🌱', name: 'First Steps' }, { emoji: '🧭', name: 'Curious Explorer' }, { emoji: '📚', name: 'Self-Discovery Collector' }, { emoji: '🏆', name: 'OIYO Master' }],
+  ja: [{ emoji: '🌱', name: 'はじめの一歩' }, { emoji: '🧭', name: '好奇心の探検家' }, { emoji: '📚', name: '自分探しコレクター' }, { emoji: '🏆', name: 'OIYOマスター' }],
+  zh: [{ emoji: '🌱', name: '第一步' }, { emoji: '🧭', name: '好奇探险家' }, { emoji: '📚', name: '自我探索收藏家' }, { emoji: '🏆', name: 'OIYO 大师' }],
+  fr: [{ emoji: '🌱', name: 'Premiers pas' }, { emoji: '🧭', name: 'Explorateur curieux' }, { emoji: '📚', name: 'Collectionneur de soi' }, { emoji: '🏆', name: 'Maître OIYO' }],
+  es: [{ emoji: '🌱', name: 'Primeros pasos' }, { emoji: '🧭', name: 'Explorador curioso' }, { emoji: '📚', name: 'Coleccionista de sí' }, { emoji: '🏆', name: 'Maestro OIYO' }],
+};
+
+const FUN: Record<Locale, { titleLabel: string; envelope: string; envelopeNote: string }> = {
+  ko: { titleLabel: '올해의 칭호', envelope: '내년 키워드 봉투 열기', envelopeNote: '올해 결과로 봉해 둔 한 단어예요.' },
+  en: { titleLabel: 'Title of the year', envelope: 'Open next year’s word', envelopeNote: 'One word sealed from this year’s results.' },
+  ja: { titleLabel: '今年の称号', envelope: '来年のキーワードを開ける', envelopeNote: '今年の結果で封をした一語です。' },
+  zh: { titleLabel: '年度称号', envelope: '拆开明年的关键词', envelopeNote: '用今年的结果封好的一个词。' },
+  fr: { titleLabel: 'Titre de l’année', envelope: 'Ouvrir le mot de l’an prochain', envelopeNote: 'Un mot scellé à partir des résultats de cette année.' },
+  es: { titleLabel: 'Título del año', envelope: 'Abrir la palabra del año que viene', envelopeNote: 'Una palabra sellada con los resultados de este año.' },
 };
 
 const T: Record<Locale, {
@@ -129,6 +148,7 @@ export default function YearRecap({ locale }: { locale: string }) {
   const l = (locale in T ? locale : 'en') as Locale;
   const t = T[l];
   const [recap, setRecap] = useState<Recap | null>(null);
+  const [opened, setOpened] = useState(false);
 
   useEffect(() => {
     const next = buildYearRecap(listStoredTestResults(), YEAR);
@@ -160,6 +180,8 @@ export default function YearRecap({ locale }: { locale: string }) {
 
   const keywords = KEYWORDS[l];
   const keyword = keywords[recapKeywordIndex(recap.items, keywords.length)];
+  const title = TITLES[l][recapTitleTier(recap.distinctTests)];
+  const fun = FUN[l];
   const description = recap.items.map((i) => (i.title ? `${i.title}: ${i.resultLabel}` : i.resultLabel)).join(' · ');
 
   return (
@@ -168,6 +190,10 @@ export default function YearRecap({ locale }: { locale: string }) {
         <p className="text-xs font-bold uppercase tracking-widest text-primary">{t.heading}</p>
         <h2 className="mt-2 text-3xl font-black text-foreground">{t.title}</h2>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">{t.stats(recap.totalRuns, recap.distinctTests)}</p>
+        <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-sm font-bold text-foreground">
+          <span aria-hidden="true">{title.emoji}</span>
+          <span>{fun.titleLabel} · {title.name}</span>
+        </p>
         <ul className="mt-5 space-y-2">
           {recap.items.map((item) => (
             <li key={item.testId} className="flex items-center justify-between gap-3 rounded-xl border border-border px-4 py-3">
@@ -181,16 +207,30 @@ export default function YearRecap({ locale }: { locale: string }) {
             </li>
           ))}
         </ul>
-        <div className="mt-5 rounded-xl bg-surface-subtle p-4 text-center">
-          <p className="text-xs font-bold text-muted-foreground">{t.keyword}</p>
-          <p className="mt-1 text-2xl font-black text-foreground">{keyword}</p>
-          <p className="mt-2 text-xs leading-5 text-muted-foreground">{t.keywordNote}</p>
-        </div>
+        {opened ? (
+          <div className="mt-5 animate-fadeInUp rounded-xl bg-surface-subtle p-4 text-center">
+            <p className="text-xs font-bold text-muted-foreground">{t.keyword}</p>
+            <p className="mt-1 text-2xl font-black text-foreground">{keyword}</p>
+            <p className="mt-2 text-xs leading-5 text-muted-foreground">{t.keywordNote}</p>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => {
+              setOpened(true);
+              gaEvent('year_recap_open', { tier: String(recapTitleTier(recap.distinctTests)) });
+            }}
+            className="mt-5 flex min-h-14 w-full flex-col items-center justify-center rounded-xl border border-dashed border-primary bg-surface-subtle p-4 text-center"
+          >
+            <span className="text-base font-black text-foreground"><span aria-hidden="true">✉️ </span>{fun.envelope}</span>
+            <span className="mt-1 text-xs text-muted-foreground">{fun.envelopeNote}</span>
+          </button>
+        )}
       </div>
       <ShareResultButton
         locale={l}
         heading={t.heading}
-        resultTitle={`${t.keyword}: ${keyword}`}
+        resultTitle={`${title.emoji} ${title.name} · ${t.keyword}: ${keyword}`}
         emoji="🗓️"
         description={description}
         analyticsId="year-recap-2026"

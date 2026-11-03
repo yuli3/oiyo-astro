@@ -56,3 +56,11 @@ export function recapKeywordIndex(items: RecapItem[], size: number): number {
   }
   return (h >>> 0) % size;
 }
+
+/** 재미 요소(2026-11-03): 올해 해 본 검사 가짓수로 칭호 단계(0~3)를 고른다. */
+export function recapTitleTier(distinctTests: number): 0 | 1 | 2 | 3 {
+  if (distinctTests >= 8) return 3;
+  if (distinctTests >= 5) return 2;
+  if (distinctTests >= 3) return 1;
+  return 0;
+}

@@ -82,3 +82,38 @@ export const TOJEONG_LOWER: Record<number, TojeongLower> = {
 };
 
 export const TOJEONG_LIMIT = '토정비결은 조선 후기부터 새해 신수를 보던 세시 풍속이에요. 이 풀이는 OIYO가 세 괘를 각각 새로 풀어 이어 붙인 것이고, 앞일을 예언하거나 건강·투자·시험 결과를 알려 주지 않아요. 한 해를 시작하며 마음을 정리하는 읽을거리로 봐 주세요.';
+
+// ── 재미 요소 (2026-11-03): 2027 행운 카드 ──────────────────────────────────
+// 전통 토정비결에는 없는 OIYO의 놀이다. 화면에도 "재미로 뽑은"이라고 밝힌다.
+// 색은 상괘(한 해의 바탕), 물건은 중괘(사람과 일)에 붙여 같은 괘면 늘 같은 답이 나온다.
+
+export const TOJEONG_LUCKY_COLOR: Record<number, { name: string; why: string }> = {
+  1: { name: '연두', why: '언 땅에서 처음 올라오는 싹 색' },
+  2: { name: '호박색', why: '갈림길을 비추는 등불 색' },
+  3: { name: '하늘색', why: '돛을 미는 맑은 바람 색' },
+  4: { name: '먹색', why: '깊은 샘 바닥의 차분한 색' },
+  5: { name: '흰색', why: '구름이 걷힌 뒤 드러나는 색' },
+  6: { name: '황토색', why: '먼 길을 가는 소의 흙빛' },
+  7: { name: '쪽빛', why: '새로 바른 문살과 장독대의 색' },
+  8: { name: '보라', why: '높은 곳에서 보는 저녁 하늘 색' },
+};
+
+export const TOJEONG_LUCKY_ITEM: Record<number, { name: string; tip: string }> = {
+  1: { name: '손편지', tip: '고마운 사람에게 한 장 써 보세요.' },
+  2: { name: '좋은 펜', tip: '중요한 말은 적어 두고 하세요.' },
+  3: { name: '처음 가 보는 길', tip: '한 달에 한 번은 다른 길로 걸어 보세요.' },
+  4: { name: '오래된 사진', tip: '연락이 뜸한 사람을 떠올리게 해 줘요.' },
+  5: { name: '빈 서랍 하나', tip: '줄일 것을 넣어 두는 자리예요.' },
+  6: { name: '작은 수첩', tip: '혼자 내린 결정을 한 줄씩 남겨 두세요.' },
+};
+
+const MONTH_NAMES = ['정월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '섣달'];
+
+/** 하괘의 흐름(처음·가운데·끝)에 상괘·중괘를 더해 그 구간 안에서 한 달을 고른다. */
+export function tojeongLuckyMonth(upper: number, middle: number, lower: number): string {
+  const start = (lower - 1) * 4; // 1: 정월~4월, 2: 5~8월, 3: 9월~섣달
+  return MONTH_NAMES[start + ((upper + middle) % 4)];
+}
+
+/** 가족판에 올릴 때 고르는 이름표. 자유 입력을 받지 않아 개인정보가 남지 않는다. */
+export const TOJEONG_FAMILY_LABELS = ['나', '엄마', '아빠', '배우자', '형제자매', '자녀', '할머니', '할아버지', '친구'] as const;

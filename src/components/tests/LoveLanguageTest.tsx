@@ -603,6 +603,16 @@ const RESULTS: Record<Lang, Record<Locale, ResultData>> = {
 
 // 둘이 하는 결과 링크의 비교 문장. 순위나 궁합 점수 없이 "상대가 가장 반기는
 // 표현"과 그 예시 하나만 보여 준다(2026-11-03 메모 1번).
+// 재미 요소(2026-11-03): 둘의 조합 이름. 같으면 "같은 말을 쓰는 둘", 다르면 "통역이 필요한 둘".
+const PAIR_CHEM: Record<Locale, { same: string; diff: string }> = {
+  ko: { same: '🗣️ 같은 말을 쓰는 둘', diff: '🔁 서로 통역이 필요한 둘' },
+  en: { same: '🗣️ Speaking the same language', diff: '🔁 Two people who need a translator' },
+  ja: { same: '🗣️ 同じ言葉を話すふたり', diff: '🔁 通訳が必要なふたり' },
+  zh: { same: '🗣️ 说同一种语言的两人', diff: '🔁 需要互相翻译的两人' },
+  fr: { same: '🗣️ Vous parlez la même langue', diff: '🔁 Deux personnes qui ont besoin d’un traducteur' },
+  es: { same: '🗣️ Habláis el mismo idioma', diff: '🔁 Dos personas que necesitan traductor' },
+}
+
 const PAIR_COPY: Record<Locale, { same: (x: string) => string; diff: (a: string, b: string) => string; tryThis: string }> = {
   ko: { same: (x) => `둘 다 '${x}'을(를) 가장 반겨요. 같은 방식으로 주고받으면 마음이 잘 전해져요.`, diff: (a, b) => `나는 '${a}', 상대는 '${b}'을(를) 가장 반겨요. 상대에게는 '${b}' 쪽으로 한 번 더 표현해 보세요.`, tryThis: '상대에게 해 볼 것' },
   en: { same: (x) => `You both welcome “${x}” most. Giving it the same way tends to land well.`, diff: (a, b) => `You welcome “${a}” most; they welcome “${b}”. Try expressing it their way once more.`, tryThis: 'Something to try for them' },
@@ -787,6 +797,7 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
             const theirName = lb.types[them]
             return (
               <div className="space-y-2 text-sm leading-6 text-foreground">
+                <p className="animate-fadeInUp text-center text-xl font-black">{them === result.primary ? PAIR_CHEM[locale].same : PAIR_CHEM[locale].diff}</p>
                 <p>{them === result.primary ? PAIR_COPY[locale].same(mine) : PAIR_COPY[locale].diff(mine, theirName)}</p>
                 <p className="text-muted-foreground">{PAIR_COPY[locale].tryThis}: {RESULTS[them][locale].examples[0]}</p>
               </div>

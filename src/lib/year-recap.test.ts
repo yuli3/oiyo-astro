@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { buildYearRecap, recapKeywordIndex } from './year-recap';
+import { buildYearRecap, recapKeywordIndex, recapTitleTier } from './year-recap';
 import type { StoredTestResult } from './user/test-results';
 
 const r = (testId: string, label: string, createdAt: string): StoredTestResult => ({
@@ -33,5 +33,11 @@ describe('year recap', () => {
     expect(recapKeywordIndex(a, 12)).toBe(recapKeywordIndex([...a].reverse(), 12));
     expect(recapKeywordIndex(a, 12)).toBeGreaterThanOrEqual(0);
     expect(recapKeywordIndex(a, 12)).toBeLessThan(12);
+  });
+});
+
+describe('recapTitleTier', () => {
+  it('steps up at 3, 5 and 8 distinct tests', () => {
+    expect([2, 3, 4, 5, 7, 8, 20].map(recapTitleTier)).toEqual([0, 1, 1, 2, 2, 3, 3]);
   });
 });
