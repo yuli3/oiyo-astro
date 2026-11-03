@@ -1,9 +1,9 @@
 // 2026-11-03: procedural 3D backdrops for the sanctuary (CHOSEUN: "산사, 물멍, 불멍, 불꽃놀이, 코스모스 3D로 확장").
 // Everything is drawn from code (no downloaded models or textures), so it stays light and rights-clean.
 // The canvas is decorative: pointer events pass through to the page and it is aria-hidden by the parent.
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState, type RefObject } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Sparkles, Stars } from '@react-three/drei';
+import { AdaptiveDpr, PerformanceMonitor, Sparkles, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 
 export type Scene3D = 'temple' | 'fire' | 'water' | 'fireworks' | 'cosmos';
@@ -463,17 +463,38 @@ function Cosmos() {
   </>;
 }
 
+/** Stop drawing while the tab is hidden or the backdrop is scrolled out of view (saves battery on phones). */
+function useVisible(ref: RefObject<HTMLDivElement | null>) {
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    let onScreen = true;
+    const update = () => setVisible(onScreen && document.visibilityState === 'visible');
+    const io = new IntersectionObserver(([e]) => { onScreen = !!e?.isIntersecting; update(); });
+    if (ref.current) io.observe(ref.current);
+    document.addEventListener('visibilitychange', update);
+    return () => { io.disconnect(); document.removeEventListener('visibilitychange', update); };
+  }, [ref]);
+  return visible;
+}
+
 export default function SanctuaryScene3D({ scene }: { scene: Scene3D }) {
-  return <Canvas
-    dpr={[1, 1.5]}
+  const wrap = useRef<HTMLDivElement>(null);
+  const visible = useVisible(wrap);
+  // Start at up to 1.5x pixel ratio; drop to 1x if the device can't hold its frame rate, and back up when it recovers.
+  const [dpr, setDpr] = useState(1.5);
+  return <div ref={wrap} className="absolute inset-0 pointer-events-none"><Canvas
+    dpr={[1, dpr]}
+    frameloop={visible ? 'always' : 'never'}
     camera={{ position: [0, 2, 8], fov: 50, near: 0.1, far: 200 }}
     gl={{ antialias: true, powerPreference: 'low-power' }}
     className="absolute! inset-0 pointer-events-none"
   >
+    <PerformanceMonitor onDecline={() => setDpr(1)} onIncline={() => setDpr(1.5)} />
+    <AdaptiveDpr pixelated={false} />
     {scene === 'temple' && <Temple />}
     {scene === 'fire' && <Fire />}
     {scene === 'water' && <Water />}
     {scene === 'fireworks' && <FireworksScene />}
     {scene === 'cosmos' && <Cosmos />}
-  </Canvas>;
+  </Canvas></div>;
 }
