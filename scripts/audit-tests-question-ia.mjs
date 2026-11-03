@@ -13,7 +13,11 @@ import { SEARCH_ONLY_PATHS } from "../src/data/test-question-lanes.ts";
 
 const PAGE = "src/pages/[locale]/tests/index.astro";
 const LANES = "src/data/test-question-lanes.ts";
+// 2026-11-03: 대표 검사 목록(categories)은 검사 페이지 하단 링크와 같이 쓰려고
+// src/data/test-hub-directory.ts 로 옮겼다. 경로 대조는 그 파일을 읽는다.
+const DIRECTORY = "src/data/test-hub-directory.ts";
 const page = readFileSync(PAGE, "utf8");
+const directory = readFileSync(DIRECTORY, "utf8");
 const lanes = readFileSync(LANES, "utf8");
 
 const failures = [];
@@ -70,7 +74,7 @@ if (!/MOOD_BOUNDARY\[locale\]/.test(page)) fail("'지금 마음' 묶음의 비�
 // 추가 항목이 분류나 검색 양쪽에서 빠지는 조용한 손실을 막는다.
 const mappedPaths = new Set(mapped.map(({ path }) => path));
 if (mappedPaths.size !== mapped.length) fail("중복 lane 경로가 있다");
-const corePaths = new Set([...page.matchAll(/href: localePath\(locale, '([^']+)'\)/g)].map((m) => m[1]));
+const corePaths = new Set([...directory.matchAll(/href: localePath\(locale, '([^']+)'\)/g)].map((m) => m[1]));
 const extraPaths = new Set(TEST_DIRECTORY_EXTRA.map((entry) => `/${entry.slug}`));
 for (const path of corePaths) {
   if (!FORTUNE.some((prefix) => path.startsWith(prefix)) && !mappedPaths.has(path)) fail(`대표 목록의 분류 누락: ${path}`);
