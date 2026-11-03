@@ -12,10 +12,11 @@ import {
   type Robe,
   type Vector,
 } from "../../../data/past-life-1426";
-import { drawProvince, nearest, oneIn, parseRank, postShare, provinceShare, robeFor, seededRandom, tabletFor, weightedPick } from "../../../lib/past-life-1426";
+import { birthdayRandom, compareRank, drawProvince, nearest, oneIn, parseRank, postShare, provinceShare, robeFor, seededRandom, tabletFor, weightedPick } from "../../../lib/past-life-1426";
 import generated from "../../../data/past-life-1426-generated.json";
 import { Button } from "../../ui/button";
-import { CopyLink, ModeTabs, Panel, Sources, TraitPicker, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L } from "./shared";
+import { CopyLink, Panel, Sources, TraitPicker, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L } from "./shared";
+import { BirthdayPicker, FriendBanner, FriendCompare, ModeTabs3, RarityBadge, SaveCard, SeriesNext, TimeWarp, isOwn, rarityLabel, rememberOwn, stampEpisode, useWarp, type Mode } from "./timeslip";
 
 interface JoseonLife {
   post: JoseonPost;
@@ -48,6 +49,10 @@ const C = {
   cloth: { ko: "베", en: "hemp cloth", ja: "布", zh: "布", fr: "toile", es: "tela" },
   seok: { ko: "석", en: "seok", ja: "石", zh: "石", fr: "seok", es: "seok" },
   pil: { ko: "필", en: "bolts", ja: "疋", zh: "匹", fr: "pièces", es: "piezas" },
+  cardKicker: { ko: "1426년 · 세종 8년 · 나의 호패", en: "1426 · Joseon · My hopae", ja: "1426年・世宗8年・わたしの号牌", zh: "1426年·世宗八年·我的号牌", fr: "1426 · Joseon · Mon hopae", es: "1426 · Joseon · Mi hopae" },
+  boss: { ko: "당신이 상관이에요!", en: "You outrank your friend!", ja: "あなたが上官です！", zh: "你是上司！", fr: "Vous êtes son supérieur !", es: "¡Eres su superior!" },
+  junior: { ko: "친구가 상관이에요. 예를 갖추세요.", en: "Your friend outranks you. Bow politely.", ja: "友だちが上官です。礼を尽くして。", zh: "朋友是你的上司，记得行礼。", fr: "Votre ami vous est supérieur. Saluez-le.", es: "Tu amigo es tu superior. Haz una reverencia." },
+  peer: { ko: "같은 품계, 동료예요.", en: "Same rank: colleagues.", ja: "同じ品階、同僚です。", zh: "同品阶，是同僚。", fr: "Même rang : collègues.", es: "Mismo rango: colegas." },
   registerNote: { ko: "지리지의 口는 세금·군역 대상 위주라 실제 인구보다 훨씬 적어요. 그래서 '장부에 적힌 사람 중 어디 출신인가'로 뽑아요.", en: "The gazetteer counted mostly people liable for tax and service, far fewer than the real population, so this draws from people on the register.", ja: "地理志の口は課税・軍役対象が中心で実人口よりずっと少ないため、「帳簿に載った人」から引きます。", zh: "地理志的口数以纳税服役者为主，远少于实际人口，所以按“登记在册的人”抽取。", fr: "Le registre comptait surtout les assujettis à l'impôt, bien moins que la population réelle : le tirage porte sur les inscrits.", es: "El registro contaba sobre todo a quienes pagaban tributo, muchos menos que la población real: el sorteo es entre los inscritos." },
 } as const;
 
@@ -78,8 +83,8 @@ function parse(search: string): JoseonLife | null {
   return post && province ? { post, province } : null;
 }
 
-function drawRandom(): JoseonLife {
-  return { post: weightedPick(JOSEON_POSTS, (p) => p.seats), province: drawProvince() };
+function drawRandom(random: () => number = Math.random): JoseonLife {
+  return { post: weightedPick(JOSEON_POSTS, (p) => p.seats, random), province: drawProvince(random) };
 }
 function drawMatched(v: Vector, source: string): JoseonLife {
   const random = seededRandom(`joseon|${source}|${v.principle},${v.tradition},${v.action}`);
@@ -147,43 +152,72 @@ function RobeFigure({ robe, tablet }: { robe: Robe; tablet: "ivory" | "wood" | n
 export default function JoseonPastLife({ locale }: { locale: Locale }) {
   const l = toL(locale);
   const fmt = numberFormat(l);
-  const [mode, setMode] = useState<"random" | "trait">("random");
+  const [mode, setMode] = useState<Mode>("random");
   const [life, setLife] = useState<JoseonLife | null>(null);
+  const [friend, setFriend] = useState<JoseonLife | null>(null);
   const [round, setRound] = useState(0);
   const funnel = useFunnel("joseon-1426");
+  const warp = useWarp();
 
   useEffect(() => {
     const shared = parse(window.location.search);
-    if (shared) setLife(shared);
+    if (shared) {
+      setLife(shared);
+      if (!isOwn("joseon-1426", format(shared))) setFriend(shared);
+    }
   }, []);
 
   function show(next: JoseonLife, how: string) {
     funnel(how);
-    setLife(next);
-    setRound((r) => r + 1);
-    setShareQuery(format(next));
+    warp.start(() => {
+      setLife(next);
+      setRound((r) => r + 1);
+      setShareQuery(format(next));
+      rememberOwn("joseon-1426", format(next));
+      stampEpisode("joseon-1426");
+    });
   }
+  const postName = (p: JoseonPost) => (l === "ko" ? p.ko : l === "ja" || l === "zh" ? p.hanja : p.en);
+  const provinceName = (p: JoseonProvince) => (l === "ko" ? p.ko : l === "ja" || l === "zh" ? p.hanja : p.en);
+  const verdictText = (v: "me" | "friend" | "same" | null) =>
+    v === "me" ? pick(C.boss, l) : v === "friend" ? pick(C.junior, l) : v === "same" ? pick(C.peer, l) : null;
 
   const robe = life ? robeFor(life.post.rank) : null;
   const tablet = life ? tabletFor(life.post.rank) : null;
 
   return (
     <div className="space-y-6">
-      <ModeTabs mode={mode} onMode={setMode} l={l} />
+      {warp.warping && <TimeWarp from={2026} to={1426} l={l} onDone={warp.finish} />}
+      <ModeTabs3 mode={mode} onMode={setMode} l={l} />
       {mode === "random" ? (
         <Button size="lg" className="w-full" onClick={() => show(drawRandom(), "random")}>
-          {life ? pick(C.again, l) : pick(C.draw, l)}
+          {life && life !== friend ? pick(C.again, l) : pick(C.draw, l)}
         </Button>
+      ) : mode === "birthday" ? (
+        <BirthdayPicker l={l} onSubmit={(b) => show(drawRandom(birthdayRandom("joseon-1426", b)), "birthday")} />
       ) : (
         <TraitPicker l={l} onSubmit={(v, source) => show(drawMatched(v, source), `trait-${source}`)} />
       )}
 
+      {life && friend && life === friend && <FriendBanner l={l} />}
+
       {life && (
         <div key={round} className="animate-fadeInUp space-y-4" aria-live="polite">
+          {friend && life !== friend && (
+            <FriendCompare
+              l={l}
+              fmt={fmt}
+              testId="joseon-1426"
+              mine={{ label: postName(life.post), n: oneIn(postShare(life.post)) }}
+              friend={{ label: postName(friend.post), n: oneIn(postShare(friend.post)) }}
+              verdict={verdictText(compareRank(life.post.rank, friend.post.rank))}
+            />
+          )}
           <div className="flex items-end justify-center gap-4 rounded-3xl border border-border bg-muted p-6">
             <Hopae life={life} />
             {robe && <RobeFigure robe={robe} tablet={tablet} />}
           </div>
+          <RarityBadge n={oneIn(postShare(life.post))} l={l} fmt={fmt} />
           <p className="text-center text-xs text-muted-foreground">{pick(C.hopaeCaption, l)}</p>
 
           <Panel label={pick(C.office, l)}>
@@ -243,7 +277,22 @@ export default function JoseonPastLife({ locale }: { locale: Locale }) {
             <Sources l={l} items={PROVINCE_SOURCES} />
           </Panel>
 
+          <SaveCard
+            l={l}
+            testId="joseon-1426"
+            filename={`oiyo-joseon-1426-${life.post.id}`}
+            spec={{
+              kicker: pick(C.cardKicker, l),
+              title: postName(life.post),
+              subtitle: `${life.post.hanja} · ${l === "ko" ? life.post.rank : life.post.rankEn}`,
+              badge: `★ ${rarityLabel(oneIn(postShare(life.post)), l)} · ${oneInText(oneIn(postShare(life.post)), l, fmt)}`,
+              lines: [`${pick(C.home, l)}: ${provinceName(life.province)}`, ...(robe ? [`${pick(C.robe, l)}: ${ROBE[robe].name[l]}`] : [])],
+              footer: "oiyo.net · 600",
+              accent: "#8c2f2b",
+            }}
+          />
           <CopyLink l={l} testId="joseon-1426" />
+          <SeriesNext l={l} locale={locale} current="joseon-1426" round={round} />
         </div>
       )}
     </div>
