@@ -243,6 +243,32 @@ const joseon1426Manifest: FeatureManifest = {
   description: { zh: "按经国大典编制和世宗实录地理志人口抽取官职、故乡、官服与俸禄。", en: "Your 1426 office, province, robe and stipend from Gyeongguk daejeon seats and the Sejong Sillok gazetteer.", es: "Tu cargo, provincia, túnica y estipendio en 1426 según fuentes de Joseon.", fr: "Votre charge, province, robe et traitement en 1426 d'après les sources de Joseon.", ja: "経国大典の定員と世宗実録地理志で1426年の官職・故郷・官服・禄俸を引きます。", ko: "경국대전 정원과 세종실록지리지로 1426년 내 관직·고향·관복·녹봉을 뽑아요." },
 };
 
+const sillaGolpumManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#6b3d8f",
+  domain: "ontology",
+  icon: "Landmark",
+  id: "silla-golpum",
+  path: "/silla-golpum",
+  status: "production",
+  name: { zh: "1300年前新罗的我", en: "You in Silla: bone rank", es: "Tú en Silla: rango de hueso", fr: "Vous à Silla : rang d'os", ja: "1300年前の新羅のわたし", ko: "1300년 전 신라의 나" },
+  description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
+};
+
+const france1789Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f3f8f",
+  domain: "ontology",
+  icon: "Flag",
+  id: "france-1789",
+  path: "/france-1789",
+  status: "production",
+  name: { zh: "1789年法国的我", en: "You in France, 1789", es: "Tú en Francia, 1789", fr: "Qui étiez-vous en 1789 ?", ja: "1789年フランスのわたし", ko: "1789년 프랑스의 나" },
+  description: { zh: "按勒费弗尔的等级人口估计抽取身份，并看你是否当选三级会议代表。", en: "Clergy, nobility or Third Estate by Lefebvre's estimates, and whether you sat in the Estates-General.", es: "Clero, nobleza o tercer estado según Lefebvre, y si fuiste diputado.", fr: "Clergé, noblesse ou tiers état selon Lefebvre, et votre place aux États généraux.", ja: "ルフェーヴルの推計で身分を引き、三部会の代表になれたかを見せます。", ko: "르페브르 추정 인구로 신분을 뽑고, 삼부회 대표가 됐는지 보여줘요." },
+};
+
 const europe1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -405,8 +431,10 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   countryMatchManifest,
   reincarnationCountryManifest,
   pastLife1426Manifest,
+  sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  france1789Manifest,
   usBirthStateManifest,
   balanceWheelManifest,
   cashflowManifest,

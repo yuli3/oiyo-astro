@@ -495,6 +495,16 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "1426년 실제 30개 왕좌 중 하나와 동갑 유명인.", "en": "One of 30 real thrones of 1426 and famous people your age.", "ja": "1426年の実在30の玉座と同い年の有名人。", "zh": "1426年30个真实王座之一与同龄名人。", "fr": "L'un des 30 vrais trônes de 1426 et vos contemporains.", "es": "Uno de los 30 tronos reales de 1426 y famosos de tu edad."},
   },
   {
+    slug: "silla-golpum",
+    title: {"ko": "1300년 전 신라의 나 — 골품과 17관등", "en": "You in Silla — bone rank and 17 court ranks", "ja": "1300年前の新羅のわたし", "zh": "1300年前新罗的我", "fr": "Vous à Silla — rang d'os", "es": "Tú en Silla — rango de hueso"},
+    description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
+  },
+  {
+    slug: "france-1789",
+    title: {"ko": "1789년 프랑스의 나 — 성직자·귀족·제3신분", "en": "You in France, 1789 — clergy, nobility or Third Estate", "ja": "1789年フランスのわたし", "zh": "1789年法国的我", "fr": "Qui étiez-vous en 1789 ?", "es": "Tú en Francia, 1789"},
+    description: {"ko": "르페브르 추정 인구로 신분을 뽑고 삼부회 대표가 될지 봐요.", "en": "An estate by Lefebvre's estimates, and your chance at the Estates-General.", "ja": "ルフェーヴルの推計で身分を引き、三部会の代表になれたかを見ます。", "zh": "按勒费弗尔估计抽取等级，看你能否当选三级会议代表。", "fr": "Votre ordre selon Lefebvre et vos chances aux États généraux.", "es": "Tu estado según Lefebvre y tu opción en los Estados Generales."},
+  },
+  {
     slug: "us-birth-state",
     title: {"ko": "미국에서 태어났다면 어느 주?", "en": "Born in the US: which state?", "ja": "米国で生まれたら何州？", "zh": "如果生在美国会是哪个州？", "fr": "Né aux États-Unis : quel État ?", "es": "Nacido en EE. UU.: ¿qué estado?"},
     description: {"ko": "2024년 주별 출생과 SSA 아기 이름 통계로 만든 출생증명서.", "en": "A birth certificate from 2024 births by state and SSA baby names.", "ja": "2024年の州別出生とSSAの名前統計で作る出生証明書。", "zh": "依据2024年各州出生与SSA名字统计的出生证明。", "fr": "Un acte de naissance d'après les naissances 2024 et la SSA.", "es": "Un acta de nacimiento según los nacimientos de 2024 y la SSA."},

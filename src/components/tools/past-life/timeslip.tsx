@@ -74,7 +74,7 @@ const T = {
   series: { ko: "타임슬립 시리즈 도장판", en: "Time-slip series stamps", ja: "タイムスリップ・シリーズのスタンプ", zh: "时空穿越系列印章", fr: "Tampons de la série", es: "Sellos de la serie" },
   done: { ko: "도장 받음", en: "Stamped", ja: "スタンプ済み", zh: "已盖章", fr: "Tamponné", es: "Sellado" },
   next: { ko: "다음 여행", en: "Next trip", ja: "次の旅", zh: "下一站", fr: "Prochain voyage", es: "Próximo viaje" },
-  allDone: { ko: "세 시대를 모두 다녀왔어요. 시간여행자 인증!", en: "All three eras visited. Certified time traveller!", ja: "3つの時代をすべて巡りました。時間旅行者に認定！", zh: "三个时代都去过了。认证时间旅行者！", fr: "Les trois époques visitées. Voyageur du temps certifié !", es: "Las tres épocas visitadas. ¡Viajero del tiempo certificado!" },
+  allDone: { ko: "모든 시대를 다녀왔어요. 시간여행자 인증!", en: "Every era visited. Certified time traveller!", ja: "すべての時代を巡りました。時間旅行者に認定！", zh: "所有时代都去过了。认证时间旅行者！", fr: "Toutes les époques visitées. Voyageur du temps certifié !", es: "Todas las épocas visitadas. ¡Viajero del tiempo certificado!" },
   reincarnation: { ko: "다음 생엔 어느 나라에서 태어날까?", en: "Where will you be born next life?", ja: "来世はどの国に生まれる？", zh: "下辈子会出生在哪个国家？", fr: "Où renaîtrez-vous ?", es: "¿Dónde nacerás en tu próxima vida?" },
 } satisfies Record<string, Six>;
 
@@ -88,6 +88,8 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+  "silla-golpum": { icon: "🏛️", label: { ko: "1300년 전 신라의 나 (골품)", en: "You in Silla: bone rank", ja: "新羅のわたし（骨品）", zh: "新罗的我（骨品）", fr: "Vous à Silla : rang d'os", es: "Tú en Silla: rango de hueso" } },
+  "france-1789": { icon: "🇫🇷", label: { ko: "1789년 프랑스의 나", en: "You in France, 1789", ja: "1789年フランスのわたし", zh: "1789年法国的我", fr: "Vous en 1789", es: "Tú en Francia, 1789" } },
   "joseon-1426": { icon: "🏯", label: { ko: "600년 전 조선의 나", en: "You in Joseon, 1426", ja: "1426年朝鮮のわたし", zh: "1426年朝鲜的我", fr: "Vous à Joseon, 1426", es: "Tú en Joseon, 1426" } },
   "europe-1426": { icon: "👑", label: { ko: "600년 전 유럽의 왕좌", en: "Your throne in 1426 Europe", ja: "1426年欧州の玉座", zh: "1426年欧洲王座", fr: "Votre trône en 1426", es: "Tu trono en 1426" } },
   "us-birth-state": { icon: "🇺🇸", label: { ko: "지금 미국에서 태어난다면", en: "Born in the US today", ja: "いまアメリカで生まれたら", zh: "如果今天出生在美国", fr: "Né aux États-Unis aujourd'hui", es: "Nacer hoy en EE. UU." } },
@@ -95,11 +97,11 @@ const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
 
 // ── Mode tabs + birthday ─────────────────────────────────────────────────────
 
-export function ModeTabs3({ mode, onMode, l }: { mode: Mode; onMode: (m: Mode) => void; l: L }) {
+export function ModeTabs3({ mode, onMode, l, modes = ["random", "birthday", "trait"] }: { mode: Mode; onMode: (m: Mode) => void; l: L; modes?: readonly Mode[] }) {
   return (
     <div className="space-y-2">
-      <div className="grid grid-cols-3 gap-2" role="tablist">
-        {(["random", "birthday", "trait"] as const).map((m) => (
+      <div className={modes.length === 3 ? "grid grid-cols-3 gap-2" : "grid grid-cols-2 gap-2"} role="tablist">
+        {modes.map((m) => (
           <Button key={m} role="tab" aria-selected={mode === m} variant={mode === m ? "default" : "outline"} onClick={() => onMode(m)}>
             {pick(T[m], l)}
           </Button>
