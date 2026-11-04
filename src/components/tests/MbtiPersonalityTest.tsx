@@ -15,6 +15,9 @@ import { interpretMBTIDeep } from '@/lib/engines/interpretation/engines/mbti-dee
 import { MBTI_DEEP_DATA } from '@/lib/engines/interpretation/shards/mbti-deep-shards';
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol';
+import { PairArrivedNote, PairResultPanel } from '../shared/PairResult';
+import MbtiPairCompare from './pair/MbtiPairCompare';
+import { isMbtiCode } from '@/lib/pair-result';
 
 export type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -442,6 +445,16 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           onShareClick={() => gaEvent('share_click', { test_id: 'mbti' })}
         />
         <CopyResultLink locale={l} onCopyClick={() => gaEvent('share_click', { test_id: 'mbti' })} />
+        {/* 둘이 하는 결과 링크: 직접 끝낸 결과에만 단다. 남의 공유 링크(?type=)로 본 결과로 초대하면 내 것이 아니게 된다. */}
+        {isComplete && (
+          <PairResultPanel
+            locale={l}
+            testId="mbti"
+            myCode={mbtiType}
+            isValid={isMbtiCode}
+            renderCompare={(theirs) => <MbtiPairCompare locale={l} mine={mbtiType} theirs={theirs} />}
+          />
+        )}
         <a
           href={`/${l}/mbti/${mbtiType.toLowerCase()}`}
           className="mt-6 flex min-h-12 w-full items-center justify-between rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
@@ -469,6 +482,8 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
 
   const question = questions[current]
   return (
+    <>
+    <PairArrivedNote locale={l} testId="mbti" isValid={isMbtiCode} />
     <Questionnaire<DimValue>
       title={labels.title}
       subtitle={labels.subtitle}
@@ -481,5 +496,6 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
       onPrevious={current > 0 ? previous : undefined}
       onSelect={pick}
     />
+    </>
   )
 }
