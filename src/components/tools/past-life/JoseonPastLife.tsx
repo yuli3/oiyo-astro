@@ -14,6 +14,7 @@ import {
 } from "../../../data/past-life-1426";
 import { birthdayRandom, compareRank, drawProvince, nearest, oneIn, parseRank, postShare, provinceShare, robeFor, seededRandom, tabletFor, weightedPick } from "../../../lib/past-life-1426";
 import generated from "../../../data/past-life-1426-generated.json";
+import { ArtifactImage, ArtifactNote, HopaeArtifact } from "./TimeslipArtifacts";
 import SceneArtwork from "./SceneArtwork";
 import { Button } from "../../ui/button";
 import { CopyLink, Panel, Sources, TraitPicker, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L } from "./shared";
@@ -93,42 +94,9 @@ function drawMatched(v: Vector, source: string): JoseonLife {
   return { post: weightedPick(JOSEON_POSTS.filter((p) => p.group === group), (p) => p.seats, random), province: drawProvince(random) };
 }
 
-function VerticalText({ x, y, text, size, fill }: { x: number; y: number; text: string; size: number; fill: string }) {
-  return (
-    <text x={x} y={y} fontSize={size} fill={fill} textAnchor="middle" fontFamily="'Gowun Batang', serif" fontWeight={700}>
-      {[...text].map((ch, i) => (
-        <tspan key={i} x={x} dy={i === 0 ? 0 : size * 1.08}>
-          {ch}
-        </tspan>
-      ))}
-    </text>
-  );
-}
-
 function Hopae({ life }: { life: JoseonLife }) {
-  const office = life.post.hanja.length > 5 ? life.post.hanja.slice(0, 5) : life.post.hanja;
-  return (
-    <svg viewBox="0 0 160 360" className="h-80 w-auto drop-shadow-xl" role="img" aria-label={`${life.province.hanja} ${life.post.hanja} ${rankHanja(life.post.rank)}`}>
-      <defs>
-        <linearGradient id="hopae-wood" x1="0" x2="1">
-          <stop offset="0" stopColor="var(--color-joseon-wood-1)" />
-          <stop offset="0.5" stopColor="var(--color-joseon-wood-2)" />
-          <stop offset="1" stopColor="var(--color-joseon-wood-3)" />
-        </linearGradient>
-      </defs>
-      <path d="M80 4 C70 30 60 30 52 40" stroke="var(--color-joseon-red)" strokeWidth="4" fill="none" />
-      <path d="M80 4 C90 30 100 30 108 40" stroke="var(--color-joseon-red)" strokeWidth="4" fill="none" />
-      <rect x="20" y="36" width="120" height="316" rx="18" fill="url(#hopae-wood)" stroke="var(--color-joseon-rim)" strokeWidth="3" />
-      <circle cx="80" cy="58" r="7" fill="var(--color-joseon-ink)" />
-      <path d="M30 90 Q80 82 130 90 M30 300 Q80 310 130 300" stroke="var(--color-joseon-rim)" strokeWidth="1.5" fill="none" opacity="0.6" />
-      <VerticalText x={112} y={102} text={office} size={30} fill="var(--color-joseon-ink)" />
-      <VerticalText x={74} y={102} text={rankHanja(life.post.rank)} size={22} fill="var(--color-joseon-ink)" />
-      <VerticalText x={44} y={102} text={life.province.hanja} size={18} fill="var(--color-joseon-ink)" />
-      <text x="80" y="334" fontSize="13" fill="var(--color-joseon-ink)" textAnchor="middle" fontFamily="'Gowun Batang', serif">宣德元年</text>
-      <rect x="96" y="262" width="34" height="34" rx="4" fill="none" stroke="var(--color-joseon-red)" strokeWidth="2.5" />
-      <text x="113" y="285" fontSize="14" fill="var(--color-joseon-red)" textAnchor="middle" fontFamily="'Gowun Batang', serif">印</text>
-    </svg>
-  );
+  return <HopaeArtifact office={life.post.hanja} rank={rankHanja(life.post.rank)} province={life.province.hanja}
+    label={`${life.province.hanja} ${life.post.hanja} ${rankHanja(life.post.rank)}`} />;
 }
 
 export default function JoseonPastLife({ locale }: { locale: Locale }) {
@@ -201,6 +169,7 @@ export default function JoseonPastLife({ locale }: { locale: Locale }) {
           <div className="flex items-end justify-center gap-4 rounded-3xl border border-border bg-muted p-6">
             <Hopae life={life} />
           </div>
+          <ArtifactNote l={l} />
           <RarityBadge n={oneIn(postShare(life.post))} l={l} fmt={fmt} />
           <p className="text-center text-xs text-muted-foreground">{pick(C.hopaeCaption, l)}</p>
 
@@ -236,6 +205,11 @@ export default function JoseonPastLife({ locale }: { locale: Locale }) {
 
           {robe && (
             <Panel label={pick(C.robe, l)}>
+              <div className="flex items-center justify-center gap-2">
+                <ArtifactImage file={`robes/joseon-${robe}.webp`} alt={ROBE[robe].name[l]} />
+                {tablet && <ArtifactImage file={`tablets/${tablet}.webp`} className="h-40 w-auto" alt={TABLET[tablet][l]} />}
+              </div>
+              <ArtifactNote l={l} />
               <p className="text-lg font-bold">
                 {ROBE[robe].name[l]}
                 {tablet ? ` · ${TABLET[tablet][l]}` : ""}

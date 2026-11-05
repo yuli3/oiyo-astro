@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "sourceManifestRows": 18,
+  "files": [
+    {
+      "file": "hopae/wood-blank.webp",
+      "source": "hopae/wood-blank.jpg",
+      "sourceSha256": "d72a11f66507178c5bfb280a1fe7343ccb7bccb57b59974a0b5d53b904b2bddf",
+      "width": 640,
+      "height": 1138,
+      "alpha": true,
+      "derivation": "chroma-cyan-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "hopae/cord-red.webp",
+      "source": "hopae/cord-red.jpg",
+      "sourceSha256": "d80cdd6e3307d42fcf8a262801cd4f91d0859844032b05d0a1982aff1b7a990a",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "derivation": "chroma-cyan-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "decor/wax-seal-blank.webp",
+      "source": "decor/wax-seal-blank.jpg",
+      "sourceSha256": "75151ee001b13d4b07b614d2b8cf8f5c4ed12896544410a6aadf7955db76fa83",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "tablets/ivory.webp",
+      "source": "tablets/ivory.jpg",
+      "sourceSha256": "28663854a891ebf65a704b9568128bbee28cb9d8a7d96e71c772e7884aa45b60",
+      "width": 640,
+      "height": 1138,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "tablets/wood.webp",
+      "source": "tablets/wood.jpg",
+      "sourceSha256": "d0edc57f8b6228490315ecaaaed4fb73fa3233dca0053b6f5aa051ad841f1841",
+      "width": 640,
+      "height": 1138,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "robes/joseon-red.webp",
+      "source": "robes/joseon-red.jpg",
+      "sourceSha256": "2291478b5d74ac8ab493e5afe0d46fbf16cb173f891ff63e698d00538ed8452c",
+      "width": 640,
+      "height": 853,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "robes/joseon-blue.webp",
+      "source": "robes/joseon-blue.jpg",
+      "sourceSha256": "d64e2fc7878e54aa21bc653aed19231b7eae24fbba5dc6e67797598254bb4aa5",
+      "width": 640,
+      "height": 853,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "robes/joseon-green.webp",
+      "source": "robes/joseon-green.jpg",
+      "sourceSha256": "090cf4c6912ccd053f5099e954929b8a5b1241a387dd9582fbb70603f974b4f1",
+      "width": 640,
+      "height": 853,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "robes/silla-purple.webp",
+      "source": "robes/silla-purple.jpg",
+      "sourceSha256": "a82c2eaca285ef962324ff623a1e7a0ed7e4ffa72f9175c9d6d7f64190f16511",
+      "width": 640,
+      "height": 853,
+      "alpha": true,
+      "derivation": "chroma-green-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "robes/silla-crimson.webp",
+      "source": "robes/silla-crimson.jpg",
+      "sourceSha256": "4c342ccafc9b924b31f26ba857b39cf113c2467eaac3b5cdb5274cacff28b84d",
+      "width": 640,
+      "height": 853,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "robes/silla-blue.webp",
+      "source": "robes/silla-blue.jpg",
+      "sourceSha256": "9d39b644106b49cddc66d1d289f2d2f7aa2394a755f9e9cdefa9826ac15d58dc",
+      "width": 640,
+      "height": 853,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "robes/silla-yellow.webp",
+      "source": "robes/silla-yellow.jpg",
+      "sourceSha256": "f5ba23d1e3b73ebf0b052e1adbf481d9adeb7e6ef823845e9a39eab42c04e8b7",
+      "width": 640,
+      "height": 853,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "cards/joseon-blank.webp",
+      "source": "cards/joseon-blank.jpg",
+      "sourceSha256": "df295d5b8f850f320bd061ebad44e224c9f42a4b4220e9b2a8c0c4ce9758a499",
+      "width": 720,
+      "height": 960,
+      "alpha": false,
+      "derivation": "resize-webp",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "cards/silla-blank.webp",
+      "source": "cards/silla-blank.jpg",
+      "sourceSha256": "0f42c6e1d11ef37073facdd60cf8eceee7985abe63fcdaa707e2d592f714d82a",
+      "width": 720,
+      "height": 960,
+      "alpha": false,
+      "derivation": "resize-webp",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "cards/france-blank.webp",
+      "source": "cards/france-blank.jpg",
+      "sourceSha256": "e69fb802eded8a2d322f6f16c547ff372cbd534bbc87dd65dfadccf6dd4e7b2f",
+      "width": 720,
+      "height": 960,
+      "alpha": false,
+      "derivation": "resize-webp",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "cards/europe-blank.webp",
+      "source": "cards/europe-blank.jpg",
+      "sourceSha256": "e8df90628b729f6fa050ed1b84df973878434b8d87727cc1ecd924188bfd84d7",
+      "width": 720,
+      "height": 960,
+      "alpha": false,
+      "derivation": "resize-webp",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "cards/us-blank.webp",
+      "source": "cards/us-blank.jpg",
+      "sourceSha256": "20acb96bee75cbfbd4ce34288cc3d939f377635597fd2d708cb7d325d687bd3f",
+      "width": 720,
+      "height": 960,
+      "alpha": false,
+      "derivation": "resize-webp",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "cards/florence-blank.webp",
+      "source": "cards/florence-blank.jpg",
+      "sourceSha256": "8a91a63360fe2356295c402482c0b7ae914152e6373ff128bd4e082d927effcc",
+      "width": 720,
+      "height": 960,
+      "alpha": false,
+      "derivation": "resize-webp",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    }
+  ]
+}

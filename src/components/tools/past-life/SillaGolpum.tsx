@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { Locale } from "../../../i18n";
 import { birthdayRandom } from "../../../lib/past-life-1426";
 import { GOLPUM_CAP, SILLA_RANKS, compareSilla, drawSilla, formatSilla, parseSilla, sillaOneIn, sillaRobe, type Golpum, type SillaLife, type SillaRobe } from "../../../lib/past-life-eras";
+import { ArtifactImage, ArtifactNote } from "./TimeslipArtifacts";
 import { Button } from "../../ui/button";
 import { CopyLink, Panel, Sources, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L, type Six } from "./shared";
 import { BirthdayPicker, FriendBanner, FriendCompare, ModeTabs3, RarityBadge, SaveCard, SeriesNext, TimeWarp, isOwn, rarityLabel, rememberOwn, stampEpisode, useWarp, type Mode } from "./timeslip";
@@ -70,19 +71,6 @@ function wallText(life: SillaLife, l: L): string {
     fr: `Votre talent valait ${d}, mais en ${g} vous vous arrêtez à ${c} : ${life.wall} rangs bloqués.`,
     es: `Tu talento valía ${d}, pero como ${g} te detuviste en ${c}: ${life.wall} rangos bloqueados.`,
   }[l];
-}
-
-function Robe({ robe }: { robe: SillaRobe }) {
-  return (
-    <svg viewBox="0 0 160 200" className="h-48 w-auto" role="img" aria-hidden="true">
-      <path d="M58 22 Q80 4 102 22 L98 36 L62 36 Z" className="fill-foreground" />
-      <circle cx="80" cy="50" r="15" className="fill-joseon-skin" />
-      <path d="M40 200 L48 92 Q80 64 112 92 L120 200 Z" className={ROBE[robe].cls} />
-      <path d="M48 92 L20 160 Q36 168 52 150 Z M112 92 L140 160 Q124 168 108 150 Z" className={ROBE[robe].cls} opacity="0.9" />
-      <path d="M66 74 L80 104 L94 74" stroke="var(--color-joseon-ivory)" strokeWidth="5" fill="none" />
-      <rect x="44" y="138" width="72" height="7" rx="3" className="fill-foreground" />
-    </svg>
-  );
 }
 
 function Ladder({ life, l }: { life: SillaLife; l: L }) {
@@ -166,7 +154,7 @@ export default function SillaGolpum({ locale }: { locale: Locale }) {
             />
           )}
           <section className="flex flex-col items-center gap-4 rounded-3xl border border-border bg-muted p-6 sm:flex-row sm:items-end sm:justify-center">
-            {robe && <Robe robe={robe} />}
+            {robe && <ArtifactImage file={`robes/silla-${robe}.webp`} alt={ROBE[robe].name[l]} />}
             <div className="text-center sm:text-left">
               <p className="text-sm font-bold text-muted-foreground">{pick(C.you, l)}</p>
               <p className="mt-1 text-xl font-bold text-foreground">{pick(GOLPUM[life.golpum], l)}</p>
@@ -174,6 +162,7 @@ export default function SillaGolpum({ locale }: { locale: Locale }) {
               {robe && <p className="mt-1 text-sm text-muted-foreground">{ROBE[robe].name[l]}</p>}
             </div>
           </section>
+          {robe && <ArtifactNote l={l} />}
           <RarityBadge n={sillaOneIn(life)} l={l} fmt={fmt} />
 
           <Panel label={pick(C.wallTitle, l)}>
