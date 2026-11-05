@@ -14,6 +14,7 @@ import {
 } from "../../../data/past-life-1426";
 import { birthdayRandom, compareRank, drawProvince, nearest, oneIn, parseRank, postShare, provinceShare, robeFor, seededRandom, tabletFor, weightedPick } from "../../../lib/past-life-1426";
 import generated from "../../../data/past-life-1426-generated.json";
+import SceneArtwork from "./SceneArtwork";
 import { Button } from "../../ui/button";
 import { CopyLink, Panel, Sources, TraitPicker, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L } from "./shared";
 import { BirthdayPicker, FriendBanner, FriendCompare, ModeTabs3, RarityBadge, SaveCard, SeriesNext, TimeWarp, isOwn, rarityLabel, rememberOwn, stampEpisode, useWarp, type Mode } from "./timeslip";
@@ -130,25 +131,6 @@ function Hopae({ life }: { life: JoseonLife }) {
   );
 }
 
-function RobeFigure({ robe, tablet }: { robe: Robe; tablet: "ivory" | "wood" | null }) {
-  const hex = ROBE[robe].hex;
-  return (
-    <svg viewBox="0 0 160 200" className="h-48 w-auto" role="img" aria-hidden="true">
-      <ellipse cx="80" cy="30" rx="22" ry="16" fill="var(--color-joseon-hat)" />
-      <rect x="62" y="16" width="36" height="20" rx="8" fill="var(--color-joseon-hat)" />
-      <ellipse cx="38" cy="26" rx="18" ry="5" fill="var(--color-joseon-hat)" />
-      <ellipse cx="122" cy="26" rx="18" ry="5" fill="var(--color-joseon-hat)" />
-      <circle cx="80" cy="50" r="15" fill="var(--color-joseon-skin)" />
-      <path d="M40 200 L48 92 Q80 64 112 92 L120 200 Z" fill={hex} />
-      <path d="M48 92 L20 160 Q36 168 52 150 Z M112 92 L140 160 Q124 168 108 150 Z" fill={hex} opacity="0.92" />
-      <path d="M66 74 Q80 92 94 74" stroke="var(--color-joseon-ivory)" strokeWidth="5" fill="none" />
-      {/* No rank badge (흉배): it was adopted in 1454, after 1426. */}
-      <rect x="44" y="140" width="72" height="7" rx="3" fill="var(--color-joseon-ink)" />
-      {tablet && <rect x="74" y="122" width="12" height="44" rx="5" fill={tablet === "ivory" ? "var(--color-joseon-ivory)" : "var(--color-joseon-rim)"} stroke="var(--color-joseon-rim)" strokeWidth="1" />}
-    </svg>
-  );
-}
-
 export default function JoseonPastLife({ locale }: { locale: Locale }) {
   const l = toL(locale);
   const fmt = numberFormat(l);
@@ -199,6 +181,8 @@ export default function JoseonPastLife({ locale }: { locale: Locale }) {
         <TraitPicker l={l} onSubmit={(v, source) => show(drawMatched(v, source), `trait-${source}`)} />
       )}
 
+      {!life && <SceneArtwork scene="joseonArrival" locale={locale} />}
+
       {life && friend && life === friend && <FriendBanner l={l} />}
 
       {life && (
@@ -213,9 +197,9 @@ export default function JoseonPastLife({ locale }: { locale: Locale }) {
               verdict={verdictText(compareRank(life.post.rank, friend.post.rank))}
             />
           )}
+          <SceneArtwork scene="joseonArrival" locale={locale} />
           <div className="flex items-end justify-center gap-4 rounded-3xl border border-border bg-muted p-6">
             <Hopae life={life} />
-            {robe && <RobeFigure robe={robe} tablet={tablet} />}
           </div>
           <RarityBadge n={oneIn(postShare(life.post))} l={l} fmt={fmt} />
           <p className="text-center text-xs text-muted-foreground">{pick(C.hopaeCaption, l)}</p>
