@@ -83,7 +83,8 @@ describe("actual result and broken-image boundaries", () => {
     expect(container.textContent).toContain(post.ko);
     expect(container.textContent).toContain("홍포");
     expect(container.textContent).toContain("상아 홀");
-    expect(container.querySelector('svg[viewBox="0 0 160 360"]')).not.toBeNull();
+    expect(container.querySelector('img[src$="hopae/wood-blank.webp"]')).not.toBeNull();
+    expect(container.querySelector('svg[viewBox="0 0 160 360"]')).toBeNull();
     expect(container.querySelector('svg[viewBox="0 0 160 200"]')).toBeNull();
   });
 
