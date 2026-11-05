@@ -162,40 +162,14 @@ def _load_sitemap_xml(url: str, dist_dir: Optional[Path]) -> bytes:
 
 
 def parse_sitemap(url: str, dist_dir: Optional[Path] = None, visited: set | None = None) -> list[str]:
-    """
-    Recursively parse a sitemap or sitemap index, returning all <loc> URLs.
-    Handles both <sitemapindex> and <urlset> formats.
-    """
-    if visited is None:
-        visited = set()
-    if url in visited:
-        return []
-    visited.add(url)
-
-    urls: list[str] = []
-    try:
-        root = ET.fromstring(_load_sitemap_xml(url, dist_dir))
-    except Exception as exc:
-        log(f"Cannot load {url}: {exc}", "WARN")
-        return urls
-
-    ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
-    tag = root.tag.split("}")[-1] if "}" in root.tag else root.tag
-
-    if tag == "sitemapindex":
-        # Recurse into child sitemaps
-        for sitemap in root.findall(f"{{{ns}}}sitemap"):
-            loc = sitemap.findtext(f"{{{ns}}}loc")
-            if loc:
-                urls.extend(parse_sitemap(loc.strip(), dist_dir, visited))
-    else:
-        # Regular urlset — collect <loc> entries
-        for url_elem in root.findall(f"{{{ns}}}url"):
-            loc = url_elem.findtext(f"{{{ns}}}loc")
-            if loc:
-                urls.append(loc.strip())
-
-    return urls
+    # WHY 2026-11-05: keep transport, logging and auth local; share XML traversal only.
+    from sitemap_xml import collect_sitemap_urls
+    return collect_sitemap_urls(
+        url,
+        lambda target: _load_sitemap_xml(target, dist_dir),
+        lambda target, exc: log(f"Cannot load {target}: {exc}", "WARN"),
+        visited,
+    )
 
 
 # ─────────────────────────────────────────────────────────────────────────────
