@@ -7,6 +7,7 @@
 //
 // 긴 해설(explainers)은 있으면 아래에 덧붙는다. 없으면 사전 항목만 보인다.
 import Layout from '../../../layouts/Layout.astro';
+import { DREAM_ART } from '../../../data/generated-art';
 // 2026-10-13: this route renders Markdown without the ExplainerArticle wrapper;
 // import its shared typography so tables and headings are styled here too.
 import '../../../styles/explainer-prose.css';
@@ -73,7 +74,7 @@ const related = sym.related.map((id) => DREAM_SYMBOL_BY_ID[id]).filter(Boolean);
 const title = article?.data.title ?? r.name;
 const description = article?.data.description ?? `${r.name} — ${r.traditional}`;
 ---
-<Layout title={title} description={description} locale={locale}>
+<Layout title={title} description={description} locale={locale} ogImage={DREAM_ART[symbol]}>
   <div class="mx-auto max-w-2xl px-4 py-10">
     <a class="text-sm text-muted-foreground hover:text-primary" href={`/${locale}/dream/`}>&larr; {t.back}</a>
 
@@ -88,6 +89,8 @@ const description = article?.data.description ?? `${r.name} — ${r.traditional}
         <li class="rounded-full border border-border bg-surface-subtle px-3 py-1 text-xs text-muted-foreground">{k}</li>
       ))}
     </ul>
+
+    {DREAM_ART[symbol] && <img src={DREAM_ART[symbol]} alt="" width="960" height="640" loading="lazy" decoding="async" class="mt-6 w-full rounded-xl object-cover" />}
 
     <section class="mt-8">
       <h2 class="text-sm font-bold text-primary-strong">{t.trad}</h2>

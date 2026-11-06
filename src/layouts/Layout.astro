@@ -13,6 +13,7 @@ import { getTestSourceNote } from '../data/test-source-notes';
 import TestPlayBeacon from '../components/shared/TestPlayBeacon';
 import BirthSavedToast from '../components/shared/BirthSavedToast.astro';
 import ManualAds from '../components/ads/ManualAds.astro';
+import { GENERATED_OG } from '../data/generated-art';
 
 interface Props {
   title: string;
@@ -64,7 +65,8 @@ const testSourceNote = getTestSourceNote(routeWithoutLocale);
 const laneRoute = routeWithoutLocale.replace(/\/+$/, '') || '/';
 const hasLane = laneRoute in LANE_BY_PATH;
 // 2026-09-30 B6 #1 (세운 결정: 타로·사주·검사 3종 먼저): 링크 미리보기 카드를 카테고리별로 둔다.
-// 페이지가 ogImage 를 직접 넘기면 그것이 이긴다. 결과 화면의 공유 이미지(ResultShareImage)는
+// 2026-11-06: explicit generated-route art replaces generic previews; other pages retain their override.
+// 결과 화면의 공유 이미지(ResultShareImage)는
 // 내려받기용이라 이것과 겹치지 않는다. 검사 판별은 getTestSourceNote 와 같은 경로 규칙(/test, -test).
 const ogCategory = (() => {
   const parts = routeWithoutLocale.split('/').filter(Boolean);
@@ -73,7 +75,9 @@ const ogCategory = (() => {
   if (parts[0] === 'tests' || parts.at(-1) === 'test' || parts.at(-1)?.endsWith('-test')) return 'tests';
   return null;
 })();
-const resolvedOgImage = ogImage
+const generatedOgPath = GENERATED_OG[routeWithoutLocale.replace(/\/$/, "")];
+const resolvedOgImage = (generatedOgPath ? new URL(generatedOgPath, Astro.site).toString() : undefined)
+  ?? ogImage
   ?? (ogCategory ? new URL(`/og/${ogCategory}-${locale}.jpg`, Astro.site).toString() : defaultOgImage);
 // Deindexed locales are dropped from the hreflang cluster: Google discards
 // hreflang annotations pointing at noindex URLs.

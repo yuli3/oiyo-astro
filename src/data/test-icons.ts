@@ -1,10 +1,11 @@
+import { GENERATED_ICONS } from './generated-art';
 /**
  * Test-card artwork registry.
  *
  * Keys are locale-free canonical paths. Result families reuse their existing
  * artwork; assessment-specific artwork lives in /images/test-icons.
  */
-export const TEST_ICON_BY_PATH: Readonly<Record<string, string>> = {
+const EXISTING_TEST_ICONS: Readonly<Record<string, string>> = {
   '/mbti/test': '/images/result-symbols/mbti.webp',
   '/mbti/career': '/images/result-symbols/mbti.webp',
   '/enneagram/test': '/images/result-symbols/enneagram.webp',
@@ -127,6 +128,9 @@ export const TEST_ICON_BY_PATH: Readonly<Record<string, string>> = {
   '/stress-type-test': '/images/test-icons/stress-type.webp',
   '/stress-events/test': '/images/test-icons/stress-events.webp',
 };
+
+// 2026-11-06: generated icons replace only explicit canonical slots.
+export const TEST_ICON_BY_PATH: Readonly<Record<string, string>> = { ...EXISTING_TEST_ICONS, ...GENERATED_ICONS };
 
 export function testIconSrc(localizedHref: string): string | undefined {
   const href = localizedHref.replace(/\/$/, '');
