@@ -17,7 +17,7 @@ describe('burnout topic reading navigation', () => {
   });
 
   it.each(locales)('does not manufacture a missing localized guide: %s', (locale) => {
-    expect(burnoutTopicReading('burnout', locale, ['magazine-burnout-psychology'])).toBeUndefined();
+    expect(burnoutTopicReading('burnout', locale, ['magazine-burnout-unrelated-missing'])).toBeUndefined();
     expect(burnoutTopicReading('burnout', locale, [])).toBeUndefined();
   });
 

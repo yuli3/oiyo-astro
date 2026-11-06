@@ -719,9 +719,24 @@
 # 2026-09-30 O14: 수비학 가이드가 두 편이라 하나로 합친다(중복 금지). 2026 혈액형 운세는 근거 없는 연운이라 혈액형 심리학 글로 넘긴다.
 /:lang/fortune-numerology-complete-guide  /:lang/numerology-complete-guide/  301
 /:lang/fortune-numerology-complete-guide/  /:lang/numerology-complete-guide/  301
-/:lang/fortune-2026-blood-type-annual  /:lang/fortune-blood-type-psychology/  301
-/:lang/fortune-2026-blood-type-annual/  /:lang/fortune-blood-type-psychology/  301
+/:lang/fortune-2026-blood-type-annual  /:lang/blood-type-personality-complete/  301
+/:lang/fortune-2026-blood-type-annual/  /:lang/blood-type-personality-complete/  301
 
 # 2026-10-05: 출퇴근 멘탈 검사는 dbc62586 에서 대체 검사 없이 내려갔는데 ahoxy.com 이
 # 아직 이 주소로 보낸다. 주제가 같은 검사가 없어 검사 목록으로 보낸다.
 /:lang/commute-mental/test /:lang/tests/ 301
+
+
+# ── 2026-11-06: duplicate 10-pair consolidation (keep more inbound links; GSC 28d impressions 0) ──
+# Static budget is near the Pages 2000 cap, so these use :lang + splat dynamic rules (no kept-slug prefix collisions).
+/:lang/fortune-blood-type-psychology*  /:lang/blood-type-personality-complete/  301
+/:lang/chinese-zodiac-compatibility-matrix*  /:lang/chinese-zodiac-compatibility-complete-guide/  301
+/:lang/magazine-burnout-guide*  /:lang/magazine-burnout-recovery-guide/  301
+/:lang/magazine-burnout-psychology*  /:lang/magazine-burnout-recovery-guide/  301
+/:lang/academy-saju-basics-ch6*  /:lang/saju-daewoon-seyun-guide/  301
+/:lang/zodiac-love-compatibility-detailed*  /:lang/zodiac-compatibility-complete-guide/  301
+/:lang/neuroplasticity-habit-formation*  /:lang/neuroplasticity-habits/  301
+/:lang/fortune-tarot-78-cards-guide*  /:lang/tarot-beginners-complete-guide/  301
+/:lang/growth-mindset-fixed-mindset-guide*  /:lang/magazine-growth-mindset-psychology/  301
+/:lang/mbti-cognitive-functions-complete*  /:lang/8-cognitive-functions-deep-dive/  301
+/:lang/magazine-resilience-psychology*  /:lang/resilience-science/  301
