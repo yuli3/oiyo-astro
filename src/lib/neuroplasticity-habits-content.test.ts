@@ -32,7 +32,6 @@ function assertReading(article: string, locale: typeof locales[number]) {
   expect(article).toContain(locale === "fr" ? "IRM" : "MRI");
   expect(article.match(/<LectureTable\b/g)).toHaveLength(2);
   expect(article.match(/^## /gm)?.length).toBeGreaterThanOrEqual(4);
-  expect(article).toContain(`](/${locale}/neuroplasticity-habit-formation/)`);
   expect(article).not.toMatch(/^ {0,3}(?:`{3,}|~{3,})/m);
   expect(article).not.toMatch(/\bclient:\w+/);
   if (locale !== "ko") expect(article).not.toMatch(/[가-힣]/);

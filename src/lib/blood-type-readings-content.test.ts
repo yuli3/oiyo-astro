@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
-const readings = ["blood-type-personality-complete", "fortune-blood-type-psychology"];
+const readings = ["blood-type-personality-complete"];
 const locales = ["ko", "en", "ja", "zh", "fr", "es"];
 // Only phrases read in saved drafts belong here; add other locales after review.
 const reviewedScope = {
@@ -55,9 +55,8 @@ describe("Blood type readings respect the studies they cite", () => {
     it(`keeps evidence boundaries for ${locale}/${slug}`, () => {
       const article = readCurrentArticle();
       assertEvidence(article, locale);
-      const other = readings.find((reading) => reading !== slug);
-      expect(article).toContain(`](/${locale}/${other}/)`);
-      expect(article).toContain(slug === "blood-type-personality-complete" ? "2026-06-01" : "2025-05-23");
+      // Sibling fortune-blood-type-psychology was 301'd into this article (2026-11-06).
+      expect(article).toContain("2026-06-01");
     });
     it(`rejects removed original source links for ${locale}/${slug}`, () => {
       const article = readCurrentArticle();

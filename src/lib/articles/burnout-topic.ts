@@ -1,6 +1,6 @@
 import type { Locale } from '../../i18n';
 
-export const BURNOUT_GUIDE_SLUG = 'magazine-burnout-guide';
+export const BURNOUT_GUIDE_SLUG = 'magazine-burnout-recovery-guide';
 export const BURNOUT_WHO_SOURCE = 'https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work';
 
 interface BurnoutReading {
