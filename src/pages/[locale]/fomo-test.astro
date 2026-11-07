@@ -12,27 +12,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "FOMO 척도 테스트 — 나의 소외 불안 지수는?",
-    description: "프시빌스키 FoMO 척도 기반 — 14문항으로 소외 불안과 연결 강박을 측정해 나의 FOMO 지수를 확인하세요.",
+    description: "프시빌스키(Przybylski) FoMO 척도 기반 14문항 자가진단. 타인과의 비교, 소외 불안, 상시 연결 강박을 입체 측정하여 나의 FOMO 지수와 디지털 자율성 회복 솔루션을 즉시 무료로 확인하세요.",
   },
   en: {
     title: "FOMO Scale Test — How Strong Is Your Fear of Missing Out?",
-    description: "Based on Przybylski's FoMO Scale — measure fear of exclusion and the compulsion to connect with 14 questions to find your FOMO score.",
+    description: "Based on Przybylski's FoMO Scale — measure social exclusion anxiety and digital connection compulsion with 14 questions. Get your personalized FOMO score and digital autonomy guide instantly for free.",
   },
   ja: {
     title: "FOMO尺度テスト — あなたの取り残される不安は？",
-    description: "PrzybylskiのFoMO尺度に基づく — 14の設問で疎外不安と接続強迫を測定し、FOMO度を確認しましょう。",
+    description: "PrzybylskiのFoMO尺度に基づく14問の自己診断。他者との比較、疎外不安、常時接続への強迫感を立体測定し、あなたのFOMO指数とデジタル自律性回復のヒントを今すぐ無料で確認しましょう。",
   },
   fr: {
     title: "Test FOMO — Quelle est votre peur de manquer quelque chose ?",
-    description: "Basé sur l'échelle FoMO de Przybylski — mesurez la peur de l'exclusion et la compulsion à se connecter en 14 questions.",
+    description: "Basé sur l'échelle FoMO de Przybylski — mesurez l'anxiété d'exclusion et la compulsion de connexion en 14 questions. Obtenez votre score FOMO et vos conseils d'autonomie digitale gratuitement.",
   },
   es: {
     title: "Test de FOMO — ¿Cuán fuerte es tu miedo a perderte algo?",
-    description: "Basado en la escala FoMO de Przybylski — mide el miedo a la exclusión y la compulsión por conectarte con 14 preguntas.",
+    description: "Basado en la escala FoMO de Przybylski — mide la ansiedad de exclusión y la compulsión por conectarte con 14 preguntas. Obtén tu puntuación FOMO y consejos de autonomía digital al instante y gratis.",
   },
   zh: {
     title: "FOMO量表测试 — 你的错失恐惧有多强？",
-    description: "基于Przybylski的FoMO量表 — 用14个问题测量被排斥的恐惧与连接强迫，了解你的FOMO指数。",
+    description: "基于Przybylski的FoMO量表 — 通过14个问题全面测评同伴比较、排斥焦虑与持续在线强迫。立即免费测算你的错失恐惧指数，获取专属数字生活自主权调节指南。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
