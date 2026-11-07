@@ -14,27 +14,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "가면 증후군 테스트 — 나는 얼마나 사기꾼처럼 느끼나?",
-    description: "15가지 문항으로 나의 가면 증후군 수준을 확인하고 현실적인 대처 전략을 알아보세요.",
+    description: "클랜스 가면 증후군 척도(CIPS) 기반 15문항 자가진단. 성공 불안, 가면 공포, 능력 불신 3대 요인을 정밀 측정하여 정상·경미·중등도·심각 4단계 수준을 확인하고, 건강한 자기 효능감을 되찾는 심리 처방을 무료로 확인하세요.",
   },
   en: {
     title: "Imposter Syndrome Test — How Much Do You Feel Like a Fraud?",
-    description: "15 questions to measure your imposter syndrome level and discover practical coping strategies.",
+    description: "Assess imposter feelings with the 15-question Clance (CIPS) scale. Measure self-doubt and fear of exposure to uncover your score and restore genuine confidence.",
   },
   ja: {
     title: "インポスター症候群テスト — 詐欺師のように感じますか？",
-    description: "15の質問でインポスター症候群のレベルを確認し、実践的な対処法を見つけましょう。",
+    description: "クランス・インポスター現象尺度（CIPS）に基づく15問の自己診断。成功への不安、仮面恐怖、能力への過小評価を精密測定し、正常・軽度・中度・重度の4段階評価と健全な自己肯定感を取り戻す処方箋を確認しましょう。",
   },
   fr: {
     title: "Test du Syndrome de l'Imposteur — Vous sentez-vous frauduleux?",
-    description: "15 questions pour mesurer votre niveau du syndrome de l'imposteur et découvrir des stratégies d'adaptation.",
+    description: "Évaluez le syndrome de l'imposteur avec l'échelle CIPS en 15 questions. Mesurez le doute de soi et la peur de l'échec pour retrouver une confiance sereine.",
   },
   es: {
     title: "Test del Síndrome del Impostor — ¿Te sientes un fraude?",
-    description: "15 preguntas para medir tu nivel de síndrome del impostor y descubrir estrategias de afrontamiento prácticas.",
+    description: "Evalúa el síndrome del impostor con la escala CIPS en 15 preguntas. Mide la duda personal y el miedo a fallar para recuperar una autovaloración sana y real.",
   },
   zh: {
     title: "冒名顶替症候群测试 — 您有多常感觉自己是骗子？",
-    description: "通过15道题评估您的冒名顶替症候群程度，并发现实用的应对策略。",
+    description: "基于克兰斯冒名顶替现象量表（CIPS）的15题专业心理自测。深度评估成功焦虑、伪装恐惧与能力自我贬损3大核心维度，精确诊断您的冒充者综合征水平，即刻获取重建真实自信的心理支持方案。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
