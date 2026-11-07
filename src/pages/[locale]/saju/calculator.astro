@@ -9,6 +9,7 @@ import NewYearBanner from '../../../components/tools/NewYearBanner.astro';
 import CelestialClock from '../../../components/ui/CelestialClock';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
 import PrintReportButton from '../../../components/shared/PrintReportButton.astro';
+import RelatedArticles from '../../../components/shared/RelatedArticles.astro';
 import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
@@ -307,6 +308,7 @@ const usageClip = usageClipCopy[locale] ?? usageClipCopy.en;
       replay={usageClip.replay}
     />
     <RelatedTools locale={locale} tools={['sajuPeriodic', 'natal', 'zodiac', 'numerology']} current="saju" />
+    <RelatedArticles locale={locale} topic="saju" currentSlug="" limit={4} />
     <NewYearBanner locale={locale} />
 
     {/* tools.oiyo.net 2026 공휴일 및 영업일 조회기 연결 */}

@@ -4,6 +4,7 @@ import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import StressResponseTest from '../../components/tests/StressResponseTest';
 import RelatedTools from '../../components/shared/RelatedTools.astro';
+import RelatedArticles from '../../components/shared/RelatedArticles.astro';
 import TestSourceNote from '../../components/shared/TestSourceNote.astro';
 import { TEST_SOURCE_NOTES } from '../../data/test-source-notes';
 
@@ -46,5 +47,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
     <StressResponseTest locale={locale as any} client:load />
     <RelatedTools locale={locale} tools={['stressType', 'stressEvents', 'burnout', 'anxiety']} current="stressResponse" />
     <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['stress-response']} />
+    <RelatedArticles locale={locale} topic="emotion" currentSlug="" limit={4} />
   </div>
 </Layout>

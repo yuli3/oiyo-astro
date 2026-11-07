@@ -5,6 +5,7 @@ import type { Locale } from '../../i18n';
 import TestExplainer from '../../components/shared/TestExplainer.astro';
 import { TEST_EXPLAINERS } from '../../data/test-explainers';
 import GrowthMindsetTest from '../../components/tests/GrowthMindsetTest';
+import RelatedArticles from '../../components/shared/RelatedArticles.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -26,5 +27,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <GrowthMindsetTest locale={locale as any} client:load />
     <TestExplainer content={TEST_EXPLAINERS['growth-mindset']} locale={locale} />
+    <RelatedArticles locale={locale} topic="learning" currentSlug="" limit={4} />
   </div>
 </Layout>
