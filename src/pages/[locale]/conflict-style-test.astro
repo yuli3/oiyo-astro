@@ -12,27 +12,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "갈등 해결 스타일 테스트 — 나는 어떻게 갈등을 다루나요?",
-    description: "10가지 상황 선택 질문으로 나의 갈등 해결 방식을 알아보세요. 경쟁형, 협력형, 타협형, 회피형, 양보형 중 어떤 유형인지 분석합니다.",
+    description: "토마스-킬만(TKI) 갈등 관리 모델 기반 10가지 상황 진단. 경쟁형·협력형·타협형·회피형·수용형 5대 갈등 해결 스타일을 정밀 분석하고, 대인관계와 직장에서의 소통 마찰을 줄이는 맞춤형 솔루션을 무료로 확인하세요.",
   },
   en: {
     title: "Conflict Style Test — How Do You Handle Conflict?",
-    description: "Discover your conflict resolution style through 10 situational questions. Find out if you're a Competitor, Collaborator, Compromiser, Avoider, or Accommodator.",
+    description: "Assess your conflict style based on the Thomas-Kilmann (TKI) model. Evaluate 10 scenarios across 5 styles to improve your workplace and personal communication.",
   },
   ja: {
     title: "葛藤解決スタイルテスト — あなたはどう葛藤を解決しますか？",
-    description: "10の状況質問で葛藤解決スタイルを診断。競争型・協力型・妥協型・回避型・従順型のどれかを分析します。",
+    description: "トーマス・キルマン（TKI）葛藤モデルに基づく10の状況診断。競争・協力・妥協・回避・受容の5大解決スタイルを精密分析し、人間関係や職場での対立を円滑にする対話戦略と成長アドバイスを確認しましょう。",
   },
   fr: {
     title: "Test de Style de Gestion des Conflits — Comment gérez-vous les conflits?",
-    description: "Découvrez votre style de résolution de conflits à travers 10 questions situationnelles.",
+    description: "Évaluez votre gestion des conflits avec le modèle Thomas-Kilmann (TKI). Analysez 10 scénarios en 5 styles pour désamorcer les tensions relationnelles.",
   },
   es: {
     title: "Test de Estilo de Resolución de Conflictos — ¿Cómo manejas los conflictos?",
-    description: "Descubre tu estilo de resolución de conflictos con 10 preguntas situacionales.",
+    description: "Evalúa tu estilo de gestión de conflictos con el modelo Thomas-Kilmann (TKI). Analiza 10 escenarios en 5 estilos para reducir tensiones y comunicarte mejor.",
   },
   zh: {
     title: "冲突解决风格测试 — 你如何处理冲突？",
-    description: "通过10个情境问题了解您的冲突解决风格。竞争型、合作型、妥协型、回避型还是顺从型？",
+    description: "基于托马斯-基尔曼（TKI）冲突管理模型的10个典型情境自测。深入分析竞争、合作、妥协、回避与顺从5大冲突应对风格，精准评估您的沟通倾向，即刻获取化解职场与人际沟通摩擦的实用建议。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
