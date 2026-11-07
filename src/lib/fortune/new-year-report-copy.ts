@@ -56,7 +56,7 @@ export interface NewYearReportCopy {
 const ko: NewYearReportCopy = {
   page: {
     title: "2027 신년운세 무료 미리보기 | 정미년 사주로 보는 한 해 | OIYO",
-    description: "생년월일만 넣으면 2027년 정미년이 내 일간에 어떤 해인지, 12달 주제와 1월 운세를 무료로 미리 볼 수 있어요.",
+    description: "생년월일만 입력하면 2027년 정미년(丁未年) 붉은 양의 해가 내 일간에 어떤 해인지, 12달 핵심 테마 지도와 1월 월별 운세를 즉시 무료로 미리 볼 수 있습니다. 대운의 흐름과 일간 궁합 조언을 지금 확인하세요.",
     eyebrow: "2027 정미년 신년운세",
     h1: "2027 신년운세 미리보기",
     sub: "생년월일만 넣으면 2027년이 나에게 어떤 해인지 바로 보여 드려요. 시각은 몰라도 괜찮아요.",
@@ -105,7 +105,7 @@ const ko: NewYearReportCopy = {
 const en: NewYearReportCopy = {
   page: {
     title: "2027 Year Ahead Saju Reading, Free Preview | Year of the Fire Goat | OIYO",
-    description: "Enter your birth date to see what 2027, the Ding-Wei (Fire Goat) year, means for your day master, with a 12-month theme map and a free January reading.",
+    description: "Enter your birth date to see what 2027, the Ding-Wei (Fire Goat) year, means for your day master. Explore your 12-month theme map, January horoscope, and personal energy flow online instantly for free.",
     eyebrow: "2027 Fire Goat year reading",
     h1: "2027 Year Ahead Reading, Preview",
     sub: "Enter your birth date and see what kind of year 2027 is for you. You don't need your birth time.",

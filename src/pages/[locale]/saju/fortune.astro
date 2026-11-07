@@ -16,27 +16,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<Locale, { title: string; description: string }> = {
   ko: {
     title: '사주 오늘의 운세 — 생년으로 보는 오행 기반 오늘 운세',
-    description: '태어난 해를 입력하면 오행(목화토금수)에 기반한 오늘의 사주 운세를 확인할 수 있습니다. 전체운·애정운·재물운·건강운을 매일 새롭게 제공합니다.',
+    description: '태어난 해를 입력하면 오행(목화토금수) 상생상극에 기반한 오늘의 사주 운세를 실시간 분석합니다. 전체 종합운·애정운·재물운·직업운·건강운 5대 영역별 맞춤 일일 운세와 행운의 조언을 매일 아침 무료로 확인하세요.',
   },
   en: {
     title: 'Saju Daily Fortune — Free Korean Horoscope by Birth Year',
-    description: 'Free daily Korean horoscope. Enter your birth year to discover today\'s Saju fortune based on the Five Elements (오행) — overall, love, money, and health readings updated every day.',
+    description: "Free daily Korean horoscope based on the Five Elements. Enter your birth year to discover today's Saju fortune across overall luck, love, wealth, career, and wellness. Daily astrological insights updated online instantly for free.",
   },
   ja: {
     title: '四柱今日の運勢 — 生まれ年の五行で見る今日の運勢',
-    description: '生まれ年を入力すると五行（木火土金水）に基づく今日の運勢がわかります。全体運・恋愛運・金運・健康運を毎日更新。',
+    description: '生まれ年を入力すると五行（木火土金水）の巡りに基づく今日の運勢をリアルタイム診断。全体運・恋愛運・金運・仕事運・健康運の5大運勢と、開運アクションのヒントを毎朝無料で確認しましょう。',
   },
   zh: {
     title: '四柱今日运势 — 根据出生年份五行推算运势',
-    description: '输入出生年份，即可获取基于五行（木火土金水）的今日运势。综合运势、爱情运、财运、健康运每天更新。',
+    description: '输入出生年份，即时获取基于五行（金木水火土）生克关系的今日运势精算。全面解析综合运、爱情运、财富运、事业运与健康运五大领域，每日清晨免费查看专属开运指南。',
   },
   fr: {
     title: 'Saju Fortune du Jour — Fortune des Cinq Éléments par Année de Naissance',
-    description: 'Entrez votre année de naissance pour découvrir votre fortune Saju quotidienne selon les Cinq Éléments. Général, amour, argent et santé mis à jour chaque jour.',
+    description: 'Horoscope coréen quotidien gratuit selon les Cinq Éléments. Découvrez votre fortune Saju du jour (chance générale, amour, travail, finances, santé) mise à jour chaque jour gratuitement.',
   },
   es: {
     title: 'Fortuna Saju del Día — Fortuna de los Cinco Elementos por Año de Nacimiento',
-    description: 'Ingresa tu año de nacimiento para descubrir tu fortuna Saju diaria según los Cinco Elementos. Suerte general, amor, dinero y salud actualizados cada día.',
+    description: 'Horóscopo coreano diario gratuito según los Cinco Elementos. Descubre tu fortuna Saju del día (suerte general, amor, dinero, trabajo y salud) actualizada diariamente al instante y gratis.',
   },
 };
 

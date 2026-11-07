@@ -72,7 +72,21 @@ const L: Record<Locale, {
 const t = L[locale] ?? L.en;
 const related = sym.related.map((id) => DREAM_SYMBOL_BY_ID[id]).filter(Boolean);
 const title = article?.data.title ?? r.name;
-const description = article?.data.description ?? `${r.name} — ${r.traditional}`;
+const sceneSummary = r.scenes ? r.scenes.map((s) => s.when).slice(0, 3).join(', ') : '';
+const sceneLabels: Record<string, string> = {
+  ko: '주요 장면',
+  en: 'Key scenes',
+  ja: '主な場面',
+  zh: '常见场景',
+  fr: 'Scènes clés',
+  es: 'Escenas clave',
+};
+const sceneLabel = sceneLabels[locale] ?? sceneLabels.en;
+const description = article?.data.description ?? (
+  sceneSummary
+    ? `${r.name} — ${r.traditional} ${sceneLabel}: ${sceneSummary}.`
+    : `${r.name} — ${r.traditional}`
+);
 ---
 <Layout title={title} description={description} locale={locale} ogImage={DREAM_ART[symbol]}>
   <div class="mx-auto max-w-2xl px-4 py-10">
