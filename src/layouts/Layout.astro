@@ -14,6 +14,7 @@ import TestPlayBeacon from '../components/shared/TestPlayBeacon';
 import BirthSavedToast from '../components/shared/BirthSavedToast.astro';
 import ManualAds from '../components/ads/ManualAds.astro';
 import { GENERATED_OG } from '../data/generated-art';
+import { buildMetaDescription } from '../lib/seo/meta-description';
 
 interface Props {
   title: string;
@@ -49,7 +50,6 @@ const { title, locale, noindex = false, canonicalPath, ogImage, heading, intro, 
 // the hreflang cluster together.
 const DEINDEXED_LOCALES = new Set<string>(deindexedLocales);
 const isNoindex = noindex || DEINDEXED_LOCALES.has(locale);
-const description = Astro.props.description ?? descriptionDefaults[locale] ?? descriptionDefaults['en'];
 const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
 const isCjk = ['ko', 'ja', 'zh'].includes(locale);
 const defaultOgImage = new URL('/og-image.png', Astro.site).toString();
@@ -61,6 +61,14 @@ const alternateRouteWithoutLocale = canonicalPath
   ? canonicalPath.replace(/^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/, '') || '/'
   : routeWithoutLocale;
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
+// 2026-11-07: SEO(Google·Bing) 및 AIEO 골든 레인지(110~140자) 메타 설명 빌더 (Phase A: 19자 기본값 중복 원천 차단)
+const description = buildMetaDescription({
+  title,
+  description: Astro.props.description,
+  locale,
+  pathname: Astro.url.pathname,
+  basis: testSourceNote?.basis,
+});
 // 2026-11-03: 같은 질문 묶음의 다음 검사는 페이지가 아니라 Layout 이 경로로 그린다.
 const laneRoute = routeWithoutLocale.replace(/\/+$/, '') || '/';
 const hasLane = laneRoute in LANE_BY_PATH;
