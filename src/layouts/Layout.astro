@@ -8,6 +8,8 @@ import { routeTransitionName } from '../lib/system/view-transition-name';
 import Footer from '../components/Footer.astro';
 import TestSourceNote from '../components/shared/TestSourceNote.astro';
 import TestLaneLink from '../components/shared/TestLaneLink.astro';
+import TestAnswerBlock from '../components/shared/TestAnswerBlock.astro';
+import { getAnswerBlock } from '../data/test-answer-blocks';
 import { LANE_BY_PATH } from '../data/test-question-lanes';
 import { getTestSourceNote } from '../data/test-source-notes';
 import TestPlayBeacon from '../components/shared/TestPlayBeacon';
@@ -64,12 +66,16 @@ const alternateRouteWithoutLocale = canonicalPath
   : routeWithoutLocale;
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
 // 2026-11-08: AIEO & SEO 학술 근거 기반 FAQPage 구조화 데이터 동적 생성 (Perplexity·Google SGE 인용 타겟)
+// 2026-11-08: 답변 블록(test-answer-blocks.ts)이 있는 검사는 화면에 보이는 그 문답으로 FAQPage 를 낸다.
+// 근거 표기에서 자동으로 만든 문답은 화면에 보이지 않아(구글 FAQ 지침: 보이는 내용과 같아야 함)
+// 끈다. 자체 FAQPage 가 있는 약 40쪽에서 FAQPage 가 두 개가 되던 문제도 함께 없어진다.
+// 되살리려면 testSourceNote 를 다시 넘기면 된다(빌더는 그대로).
+const answerBlock = getAnswerBlock(routeWithoutLocale.replace(/\/+$/, '') || '/', locale);
 const faqJsonLd = buildFaqJsonLd({
   title,
   locale,
   pathname: Astro.url.pathname,
-  testSourceNote,
-  customFaq: faq,
+  customFaq: answerBlock ? answerBlock.faqs : faq,
 });
 // 2026-11-07: SEO(Google·Bing) 및 AIEO 골든 레인지(110~140자) 메타 설명 빌더 (Phase A: 19자 기본값 중복 원천 차단)
 const description = buildMetaDescription({
@@ -276,6 +282,15 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
         </div>
       )}
       <slot />
+      {answerBlock && (
+        <TestAnswerBlock
+          locale={locale}
+          block={answerBlock}
+          url={canonicalUrl.toString()}
+          name={title}
+          inLanguage={BCP47[locale] ?? locale}
+        />
+      )}
       {hasLane && <TestLaneLink locale={locale} path={laneRoute} />}
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
       <ManualAds locale={locale} noindex={noindex} />
