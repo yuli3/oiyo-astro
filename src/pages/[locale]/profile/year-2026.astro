@@ -1,0 +1,37 @@
+---
+/**
+ * 나의 2026 결산 — 이 브라우저에 남은 검사 결과를 카드 한 장으로 묶는다.
+ *
+ * 브라우저 저장소를 읽는 개인 화면이라 색인하지 않는다(config/noindex-routes.js
+ * 에도 같은 경로가 있다). 2026-11-03 세운 결재, company-brain
+ * think-tank/2026-11-03-oiyo-series-more-content.md 3번.
+ */
+import Layout from '../../../layouts/Layout.astro';
+import YearRecap from '../../../components/profile/YearRecap';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '나의 2026 결산 카드', description: '올해 OIYO에서 한 검사 결과를 카드 한 장으로 모아 보고 이미지로 저장해요.' },
+  en: { title: 'My 2026 recap card', description: 'Gather this year’s OIYO test results into one card and save it as an image.' },
+  ja: { title: 'わたしの2026年まとめカード', description: '今年OIYOで受けたテスト結果を一枚のカードにまとめ、画像で保存します。' },
+  zh: { title: '我的2026年总结卡', description: '把今年在 OIYO 完成的测验结果汇成一张卡片，并保存为图片。' },
+  fr: { title: 'Ma carte bilan 2026', description: 'Rassemblez vos résultats de tests OIYO de l’année sur une carte et enregistrez-la en image.' },
+  es: { title: 'Mi tarjeta resumen 2026', description: 'Reúne en una tarjeta los resultados de tus tests de OIYO de este año y guárdala como imagen.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale} noindex={true}>
+  <div class="mx-auto max-w-2xl px-4 py-8 sm:py-12">
+    <h1 class="text-2xl font-black text-foreground">{m.title}</h1>
+    <p class="mt-2 text-sm leading-6 text-muted-foreground">{m.description}</p>
+    <div class="mt-6">
+      <YearRecap client:load locale={locale} />
+    </div>
+  </div>
+</Layout>

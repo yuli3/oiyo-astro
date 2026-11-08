@@ -2,6 +2,7 @@
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
+import { GENERATED_OG } from '../../../data/generated-art';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -61,6 +62,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 <!doctype html>
 <html lang={locale}>
   <head>
+    <meta property="og:image" content={new URL(GENERATED_OG["/perfectionism/test"], Astro.site).toString()} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{m.title} | OIYO</title>

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import type { Locale } from "../../../i18n";
 import { birthdayRandom, oneIn } from "../../../lib/past-life-1426";
 import { FR_DEPUTIES, FR_PEOPLE, compareFrance, deputyChance, drawFrance, formatFrance, frEstate, frOneIn, parseFrance, type FrGroup, type FrLife } from "../../../lib/past-life-eras";
+import SceneArtwork from "./SceneArtwork";
+import { franceArtFor } from "../../../data/past-life-art";
 import { Button } from "../../ui/button";
 import { CopyLink, Panel, Sources, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L, type Six } from "./shared";
 import { BirthdayPicker, FriendBanner, FriendCompare, ModeTabs3, RarityBadge, SaveCard, SeriesNext, TimeWarp, isOwn, rarityLabel, rememberOwn, stampEpisode, useWarp, type Mode } from "./timeslip";
@@ -105,6 +107,8 @@ export default function France1789({ locale }: { locale: Locale }) {
         </Button>
       )}
 
+      {!life && <SceneArtwork scene="franceArrival" locale={locale} />}
+
       {life && friend && life === friend && <FriendBanner l={l} />}
 
       {life && (
@@ -119,6 +123,7 @@ export default function France1789({ locale }: { locale: Locale }) {
               verdict={verdict(compareFrance(life, friend))}
             />
           )}
+          <SceneArtwork scene={franceArtFor(life.group)} locale={locale} />
           <section className="overflow-hidden rounded-3xl border border-border bg-card shadow-md">
             <div className="flex h-3" aria-hidden="true">
               <span className="flex-1 bg-fr-blue" />

@@ -1,6 +1,8 @@
 // Time-slip series quick wins (2026-11-03): birthday seed, rarity badge, time-warp intro,
 // saved ID card image, friend comparison and the series stamp board.
 // Design: company-brain projects/oiyo-ecosystem/past-life-series-design-2026-11-03.md
+import { TIMESLIP_CARD_ART, TIMESLIP_UI_ROOT, TIMESLIP_ART_NOTE } from "../../../data/timeslip-ui-art";
+import { layoutCard } from "../../../lib/timeslip-card-layout";
 import { useEffect, useRef, useState } from "react";
 import { localePath, type Locale } from "../../../i18n";
 import { gaEvent } from "../../../lib/analytics/ga-event";
@@ -224,89 +226,65 @@ export interface CardSpec {
   accent: string;
 }
 
-function wrap(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
-  const words = text.includes(" ") ? text.split(" ") : [...text];
-  const joiner = text.includes(" ") ? " " : "";
-  const out: string[] = [];
-  let line = "";
-  for (const w of words) {
-    const next = line ? line + joiner + w : w;
-    if (ctx.measureText(next).width > maxWidth && line) {
-      out.push(line);
-      line = w;
-    } else line = next;
-  }
-  if (line) out.push(line);
-  return out;
-}
-
-export function renderCard(spec: CardSpec): HTMLCanvasElement {
-  const W = 1080;
-  const H = 1350;
+export function renderCard(spec: CardSpec, paper?: HTMLImageElement): HTMLCanvasElement {
   const canvas = document.createElement("canvas");
-  canvas.width = W;
-  canvas.height = H;
+  canvas.width = 720;
+  canvas.height = 960;
   const ctx = canvas.getContext("2d");
-  if (!ctx) return canvas;
+  if (!ctx) throw new Error("Canvas unavailable");
   const serif = "'Gowun Batang', 'Noto Serif KR', Georgia, serif";
-  // Parchment card colours are fixed (not theme tokens) so the saved image looks the same in dark mode.
+  // 2026-11-06: fixed parchment colours keep exported results independent of theme.
   ctx.fillStyle = "#efe4cc";
-  ctx.fillRect(0, 0, W, H);
-  ctx.strokeStyle = spec.accent;
-  ctx.lineWidth = 14;
-  ctx.strokeRect(40, 40, W - 80, H - 80);
-  ctx.lineWidth = 3;
-  ctx.strokeRect(70, 70, W - 140, H - 140);
+  ctx.fillRect(0, 0, 720, 960);
+  if (paper) ctx.drawImage(paper, 0, 0, 720, 960);
+  else {
+    ctx.strokeStyle = spec.accent;
+    ctx.lineWidth = 3;
+    ctx.strokeRect(40, 40, 640, 880);
+  }
+  const lines = layoutCard(spec, (text, size, bold) => {
+    ctx.font = `${bold ? 700 : 400} ${size}px ${serif}`;
+    return ctx.measureText(text).width;
+  });
   ctx.textAlign = "center";
-  ctx.fillStyle = "#5b4a35";
-  ctx.font = `700 40px ${serif}`;
-  ctx.fillText(spec.kicker, W / 2, 190);
-  ctx.fillStyle = "#1f1a14";
-  ctx.font = `900 104px ${serif}`;
-  let y = 340;
-  for (const line of wrap(ctx, spec.title, W - 220).slice(0, 2)) {
-    ctx.fillText(line, W / 2, y);
-    y += 120;
+  for (const line of lines) {
+    ctx.font = `${line.bold ? 700 : 400} ${line.size}px ${serif}`;
+    ctx.fillStyle = line.accent ? spec.accent : "#2b1708";
+    ctx.fillText(line.text, line.x, line.y);
   }
-  if (spec.subtitle) {
-    ctx.fillStyle = "#5b4a35";
-    ctx.font = `700 46px ${serif}`;
-    ctx.fillText(spec.subtitle, W / 2, y);
-    y += 70;
-  }
-  ctx.fillStyle = spec.accent;
-  ctx.font = `900 54px ${serif}`;
-  const badgeW = ctx.measureText(spec.badge).width + 80;
-  ctx.globalAlpha = 0.12;
-  ctx.fillRect(W / 2 - badgeW / 2, y + 10, badgeW, 84);
-  ctx.globalAlpha = 1;
-  ctx.fillText(spec.badge, W / 2, y + 72);
-  y += 170;
-  ctx.fillStyle = "#1f1a14";
-  ctx.font = `400 44px ${serif}`;
-  for (const raw of spec.lines) {
-    for (const line of wrap(ctx, raw, W - 240)) {
-      if (y > H - 200) break;
-      ctx.fillText(line, W / 2, y);
-      y += 62;
-    }
-    y += 14;
-  }
-  ctx.fillStyle = "#5b4a35";
-  ctx.font = `700 36px ${serif}`;
-  ctx.fillText(spec.footer, W / 2, H - 120);
   return canvas;
 }
 
 export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeId; spec: CardSpec; filename: string }) {
   const [saved, setSaved] = useState(false);
+  const [failedPaper, setFailedPaper] = useState(false);
+  const paper = TIMESLIP_CARD_ART[testId];
+  const paperRef = useRef<HTMLImageElement>(null);
   return (
+    <div className="space-y-3">
+      {paper && <figure className="space-y-2" data-timeslip-card={testId}>
+        <div className="timeslip-card-preview">
+          {!failedPaper && <img ref={paperRef} src={TIMESLIP_UI_ROOT + paper} alt="" width={720} height={960}
+            loading="lazy" decoding="async" className="timeslip-card-paper" onError={() => setFailedPaper(true)} />}
+          <div className="timeslip-card-copy">
+            <p>{spec.kicker}</p><strong>{spec.title}</strong>
+            {spec.subtitle && <p>{spec.subtitle}</p>}
+            <p>{spec.badge}</p>
+            {spec.lines.map((line, i) => <p key={i}>{line}</p>)}
+            <small>{spec.footer}</small>
+          </div>
+        </div>
+        <figcaption className="text-center text-xs text-muted-foreground">{TIMESLIP_ART_NOTE[l]}</figcaption>
+      </figure>}
     <Button
       variant="outline"
       className="w-full"
       onClick={async () => {
         if (document.fonts?.ready) await document.fonts.ready;
-        const canvas = renderCard(spec);
+        // Reuse the displayed same-origin image; awaiting a new fetch here can
+        // expire mobile Web Share activation (2026-11-06). A failed image falls back.
+        const paperImage = paperRef.current;
+        const canvas = renderCard(spec, paperImage?.complete && paperImage.naturalWidth > 0 ? paperImage : undefined);
         const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png"));
         if (!blob) return;
         const file = new File([blob], `${filename}.png`, { type: "image/png" });
@@ -331,6 +309,7 @@ export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeI
     >
       {pick(saved ? T.saved : T.save, l)}
     </Button>
+    </div>
   );
 }
 

@@ -12,27 +12,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "감정적 식사 테스트 — 나는 감정 때문에 먹나?",
-    description: "15가지 문항으로 나의 감정적 식사 경향을 파악하고 음식과 감정의 관계를 이해하세요.",
+    description: "네덜란드 식행동 척도(DEBQ) 기반 감정적 식사 15문항 자가진단. 스트레스, 분노, 외로움 등 부정적 감정 유발 섭식 충동을 정밀 분석하고, 가짜 배고픔을 구별하여 마음챙김 식습관을 되찾는 심리 솔루션을 무료로 확인하세요.",
   },
   en: {
     title: "Emotional Eating Test — Do You Eat Your Feelings?",
-    description: "15 questions to understand your emotional eating patterns and discover healthier coping strategies.",
+    description: "Assess your emotional eating with a 15-question DEBQ test. Distinguish cravings from true hunger to build mindful eating habits and emotional balance.",
   },
   ja: {
     title: "感情的食事テスト — 感情で食べていますか？",
-    description: "15の質問で感情的な食事パターンを把握し、より健康的な対処法を見つけましょう。",
+    description: "オランダ食行動質問票（DEBQ）に基づく15問の感情的食事診断。ストレスや孤独感による摂食衝動を精密分析し、偽りの空腹を見極めてマインドフルな食習慣を取り戻すアドバイスを無料で確認しましょう。",
   },
   fr: {
     title: "Test de Manger Émotionnel — Mangez-vous vos émotions ?",
-    description: "15 questions pour comprendre vos habitudes alimentaires émotionnelles et découvrir des stratégies d'adaptation plus saines.",
+    description: "Évaluez votre alimentation émotionnelle avec le test DEBQ en 15 questions. Différenciez fringales et faim réelle pour retrouver un équilibre bienveillant.",
   },
   es: {
     title: "Test de Alimentación Emocional — ¿Comes tus emociones?",
-    description: "15 preguntas para entender tus patrones de alimentación emocional y descubrir estrategias más saludables.",
+    description: "Evalúa tu alimentación emocional con el test DEBQ en 15 preguntas. Diferencia el hambre emocional de la física y recupera una relación sana y consciente.",
   },
   zh: {
     title: "情绪性饮食测试 — 你是因为情绪而进食吗？",
-    description: "通过15个问题了解您的情绪性饮食模式，并发现更健康的应对策略。",
+    description: "基于荷兰饮食行为问卷（DEBQ）的15题情绪性进食专业自测。深度分析面对压力、焦虑与孤独时的情绪化进食冲动，科学辨别心理假饥饿与生理真饥饿，即刻获取专属的正念饮食与身心平衡调节指南。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
