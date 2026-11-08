@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState, type RefObject } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { AdaptiveDpr, PerformanceMonitor, Sparkles, Stars } from '@react-three/drei';
 import * as THREE from 'three';
+import Temple from './TempleScene';
 
 export type Scene3D = 'temple' | 'fire' | 'water' | 'fireworks' | 'cosmos';
 
@@ -118,51 +119,7 @@ function Drift({ target, radius, height, speed = 0.04 }: { target: [number, numb
   return null;
 }
 
-/* ---------- 산사 (temple at night) ---------- */
-
-function Temple() {
-  const lanterns: [number, number, number][] = [[-2.6, 0, 1.6], [2.6, 0, 1.6]];
-  const pines = useMemo(() => Array.from({ length: 22 }, (_, i) => {
-    const side = i % 2 ? 1 : -1;
-    return { x: side * rand(4, 11), z: rand(-9, 1), h: rand(1.8, 3.6) };
-  }), []);
-  return <>
-    <color attach="background" args={[C.c0d1d1a]} />
-    <fog attach="fog" args={[C.c14302a, 8, 30]} />
-    <ambientLight intensity={0.35} color={C.c9fb7c9} />
-    <directionalLight position={[-6, 9, 4]} intensity={0.45} color={C.cc9d8ff} />
-    <Stars radius={60} depth={20} count={1500} factor={3} fade speed={0.3} />
-    {/* moon */}
-    <mesh position={[7, 9, -22]}><sphereGeometry args={[1.2, 32, 32]} /><meshBasicMaterial color={C.cf4ecd2} fog={false} /></mesh>
-    {/* mountains */}
-    {[[-10, -24, 9, 9], [0, -28, 13, 11], [11, -25, 10, 8], [-18, -20, 7, 6]].map(([x, z, r, h], i) =>
-      <mesh key={i} position={[x, h / 2 - 0.2, z]}><coneGeometry args={[r, h, 5]} /><meshStandardMaterial color={i % 2 ? C.c1c3a32 : C.c17322b} flatShading /></mesh>)}
-    {/* ground and stone path */}
-    <mesh rotation-x={-Math.PI / 2}><planeGeometry args={[80, 80]} /><meshStandardMaterial color={C.c1d3328} /></mesh>
-    <mesh rotation-x={-Math.PI / 2} position={[0, 0.01, 2.8]}><planeGeometry args={[1.4, 6]} /><meshStandardMaterial color={C.c5a5a4f} /></mesh>
-    {/* hall: stone base, pillars, walls, hipped roof */}
-    <group position={[0, 0, -1.5]}>
-      <mesh position={[0, 0.25, 0]}><boxGeometry args={[5.2, 0.5, 3.2]} /><meshStandardMaterial color={C.c6d6a5e} /></mesh>
-      <mesh position={[0, 1.3, 0]}><boxGeometry args={[4, 1.6, 2.2]} /><meshStandardMaterial color={C.c6b2a22} /></mesh>
-      {[-1.9, -0.65, 0.65, 1.9].map((x) => <mesh key={x} position={[x, 1.3, 1.15]}><cylinderGeometry args={[0.09, 0.1, 1.6, 10]} /><meshStandardMaterial color={C.c8a3a2c} /></mesh>)}
-      <mesh position={[0, 1.15, 1.12]}><planeGeometry args={[1, 1.1]} /><meshStandardMaterial color={C.cffcf7a} emissive={C.cffb347} emissiveIntensity={0.9} /></mesh>
-      <mesh position={[0, 2.25, 1.13]}><boxGeometry args={[4.3, 0.22, 0.05]} /><meshStandardMaterial color={C.c2f6b5a} /></mesh>
-      <mesh position={[0, 2.75, 0]} rotation-y={Math.PI / 4} scale={[1.45, 1, 0.95]}><coneGeometry args={[3.1, 1.2, 4]} /><meshStandardMaterial color={C.c2a2f33} flatShading /></mesh>
-    </group>
-    {/* stone lanterns */}
-    {lanterns.map((p, i) => <group key={i} position={p}>
-      <mesh position={[0, 0.45, 0]}><cylinderGeometry args={[0.12, 0.16, 0.9, 8]} /><meshStandardMaterial color={C.c77756a} /></mesh>
-      <mesh position={[0, 1.05, 0]}><boxGeometry args={[0.42, 0.34, 0.42]} /><meshStandardMaterial color={C.cffd38a} emissive={C.cffa940} emissiveIntensity={1.2} /></mesh>
-      <mesh position={[0, 1.38, 0]} rotation-y={Math.PI / 4}><coneGeometry args={[0.42, 0.3, 4]} /><meshStandardMaterial color={C.c6a685d} flatShading /></mesh>
-      <pointLight position={[0, 1.1, 0.2]} intensity={2.2} distance={6} color={C.cffb357} />
-    </group>)}
-    {pines.map((p, i) => <mesh key={i} position={[p.x, p.h / 2, p.z]}><coneGeometry args={[p.h * 0.32, p.h, 7]} /><meshStandardMaterial color={C.c173a2c} flatShading /></mesh>)}
-    {/* fireflies and drifting petals */}
-    <Sparkles count={60} scale={[14, 4, 10]} position={[0, 2, 0]} size={3} speed={0.25} color={C.cffe9a8} />
-    <Sparkles count={30} scale={[10, 6, 8]} position={[0, 3, 1]} size={4} speed={0.15} color={C.cf6c1d2} />
-    <Drift target={[0, 1.4, -1]} radius={8} height={2.6} />
-  </>;
-}
+/* ---------- 산사 (temple at night): see TempleScene.tsx ---------- */
 
 /* ---------- 불멍 (campfire) ---------- */
 
@@ -463,6 +420,19 @@ function Cosmos() {
   </>;
 }
 
+/** Dev-only renderer counts for the canvas inspector (threejs-aaa-graphics-builder budgets). */
+function Diagnostics() {
+  const { gl } = useThree();
+  useFrame(({ clock }) => {
+    if (!import.meta.env.DEV || Math.floor(clock.elapsedTime * 2) % 2) return;
+    const i = gl.info;
+    (window as unknown as Record<string, unknown>).__THREE_GAME_DIAGNOSTICS__ = {
+      renderer: { calls: i.render.calls, triangles: i.render.triangles, geometries: i.memory.geometries, textures: i.memory.textures, dpr: gl.getPixelRatio() },
+    };
+  });
+  return null;
+}
+
 /** Stop drawing while the tab is hidden or the backdrop is scrolled out of view (saves battery on phones). */
 function useVisible(ref: RefObject<HTMLDivElement | null>) {
   const [visible, setVisible] = useState(true);
@@ -491,6 +461,7 @@ export default function SanctuaryScene3D({ scene }: { scene: Scene3D }) {
   >
     <PerformanceMonitor onDecline={() => setDpr(1)} onIncline={() => setDpr(1.5)} />
     <AdaptiveDpr pixelated={false} />
+    <Diagnostics />
     {scene === 'temple' && <Temple />}
     {scene === 'fire' && <Fire />}
     {scene === 'water' && <Water />}
