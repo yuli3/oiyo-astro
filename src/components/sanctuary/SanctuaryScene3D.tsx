@@ -447,7 +447,7 @@ function useVisible(ref: RefObject<HTMLDivElement | null>) {
   return visible;
 }
 
-export default function SanctuaryScene3D({ scene }: { scene: Scene3D }) {
+export default function SanctuaryScene3D({ scene, lanterns, ring }: { scene: Scene3D; lanterns?: number[]; ring?: number }) {
   const wrap = useRef<HTMLDivElement>(null);
   const visible = useVisible(wrap);
   // Start at up to 1.5x pixel ratio; drop to 1x if the device can't hold its frame rate, and back up when it recovers.
@@ -462,7 +462,7 @@ export default function SanctuaryScene3D({ scene }: { scene: Scene3D }) {
     <PerformanceMonitor onDecline={() => setDpr(1)} onIncline={() => setDpr(1.5)} />
     <AdaptiveDpr pixelated={false} />
     <Diagnostics />
-    {scene === 'temple' && <Temple />}
+    {scene === 'temple' && <Temple lanterns={lanterns} ring={ring} />}
     {scene === 'fire' && <Fire />}
     {scene === 'water' && <Water />}
     {scene === 'fireworks' && <FireworksScene />}

@@ -3,6 +3,16 @@ import type { Locale } from '../../i18n';
 import { sanctuaryCopy } from './copy';
 import '../../styles/sanctuary.css';
 import { canUseWebGL } from './webgl';
+import { LANTERN_COLORS, MAX_LANTERNS } from './TempleRituals';
+
+const LANTERN_KEY = 'oiyo-sanctuary-lanterns';
+function loadLanterns(): number[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(LANTERN_KEY) || '[]');
+    return Array.isArray(v) ? v.filter((n): n is number => Number.isInteger(n) && n >= 0 && n < LANTERN_COLORS.length).slice(-MAX_LANTERNS) : [];
+  } catch { return []; }
+}
+function saveLanterns(v: number[]) { try { localStorage.setItem(LANTERN_KEY, JSON.stringify(v)); } catch { /* private mode: keep in memory only */ } }
 
 const Scene3D = lazy(() => import('./SanctuaryScene3D'));
 
@@ -30,6 +40,10 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   // 3D is on by default when WebGL works; reduced-motion and data-saver visitors start with the still illustration.
   const [view3d,setView3d] = useState(false);
   const [can3d,setCan3d] = useState(false);
+  // 2026-11-09: device-only rituals in the temple scene.
+  const [lanterns,setLanterns] = useState<number[]>([]);
+  const [ring,setRing] = useState(0);
+  useEffect(()=>{setLanterns(loadLanterns());},[]);
   const socket = useRef<WebSocket|null>(null);
   const audio = useRef<AudioContext|null>(null);
   const recent = useRef(new Set<string>());
@@ -127,10 +141,28 @@ export default function Sanctuary({locale}:{locale:Locale}) {
       osc.connect(gain);gain.connect(ctx.destination);osc.start(now);osc.stop(now+0.46);
     }
   }
+  function hang(color:number){
+    setLanterns(prev=>{const next=[...prev,color].slice(-MAX_LANTERNS);saveLanterns(next);return next;});
+  }
+  function strike(){
+    setRing(n=>n+1);
+    const ctx=audio.current;
+    if(!sound || !ctx || ctx.state!=='running')return;
+    // Synthesized bronze bell: inharmonic partials, a slightly detuned pair for the slow beating (맥놀이), long decay.
+    // Delayed to land when the wooden striker meets the bell in the 3D scene.
+    const now=ctx.currentTime+0.55;
+    const master=ctx.createGain();master.gain.value=0.9;master.connect(ctx.destination);
+    for(const [frequency,level,decay] of [[98,0.09,9],[98.7,0.07,9],[196.5,0.035,6],[270,0.03,4.5],[530,0.018,2.5],[880,0.01,1.2]] as const){
+      const osc=ctx.createOscillator(),gain=ctx.createGain();
+      osc.type='sine';osc.frequency.value=frequency;
+      gain.gain.setValueAtTime(0.0001,now);gain.gain.exponentialRampToValueAtTime(level,now+0.01);gain.gain.exponentialRampToValueAtTime(0.0001,now+decay);
+      osc.connect(gain);gain.connect(master);osc.start(now);osc.stop(now+decay+0.05);
+    }
+  }
   const visible=hidden?members.filter(m=>m.id===self):members;
   const desc={fire:t.firedesc,water:t.waterdesc,fireworks:t.fireworksdesc,cosmos:t.cosmosdesc,temple:''}[scene];
   return <div data-sanctuary="" data-scene={scene} data-3d={view3d}>
-    <div data-part="landscape" aria-hidden="true">{view3d&&<Suspense fallback={null}><Scene3D scene={scene} /></Suspense>}</div>
+    <div data-part="landscape" aria-hidden="true">{view3d&&<Suspense fallback={null}><Scene3D scene={scene} lanterns={lanterns} ring={ring} /></Suspense>}</div>
     <div data-part="veil" aria-hidden="true" />
     <main data-part="shell">
       <header data-part="heading">
@@ -145,6 +177,13 @@ export default function Sanctuary({locale}:{locale:Locale}) {
         {!view3d&&scene==='fire'&&<div data-part="fire" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>}
         {!view3d&&scene==='water'&&<div data-part="ripples" aria-hidden="true">◯<span>◯</span></div>}
         <p data-part="scene-note">{desc}</p>
+        {view3d&&scene==='temple'&&<div data-part="rituals" aria-label={t.rituals}>
+          <p data-part="ritual-title">{t.lantern} <small>{t.lanternCount} {lanterns.length}/{MAX_LANTERNS}</small></p>
+          <div data-part="swatches">{LANTERN_COLORS.map((color,i)=><button key={color} type="button" aria-label={`${t.lantern}: ${t.lanternColors[i]}`} data-swatch={i} onClick={()=>hang(i)}><span aria-hidden="true" /></button>)}
+            <button type="button" data-part="bell" onClick={strike}>🔔 {t.bell}</button>
+            {lanterns.length>0&&<button type="button" data-part="clear" onClick={()=>{setLanterns([]);saveLanterns([]);}}>{t.lanternClear}</button>}</div>
+          <small>{t.lanternHint}</small>
+        </div>}
         <div data-part="seats" aria-label={t.seat}>
           {Array.from({length:12},(_,seat)=>{
             const member=visible.find(m=>m.seat===seat);
@@ -173,7 +212,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
         <p>{t.help}</p><p role="status">{message}</p>
         <div data-part="sound"><button type="button" aria-pressed={sound} onClick={()=>void toggleSound()}>{sound?t.soundOff:t.soundOn}</button><button type="button" disabled={!sound} onClick={tap}>{t.tap}</button><small>{t.soundNote}</small></div>
       </section>
-      <footer data-part="footnote"><p>{t.notice}</p><p>{t.privacy}</p><p>{view3d?t.art3d:t.art}</p></footer>
+      <footer data-part="footnote"><p>{t.notice}</p>{view3d&&scene==='temple'&&<p>{t.bellNote}</p>}<p>{t.privacy}</p><p>{view3d?t.art3d:t.art}</p></footer>
     </main>
   </div>;
 }

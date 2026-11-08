@@ -7,6 +7,7 @@ import { useFrame, useThree } from '@react-three/fiber';
 import { Sparkles, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
+import { BELL_POS, BellPavilion, MyLanterns, useBellFocus } from './TempleRituals';
 
 /** Scene palette (three.js material colours, not CSS theme colours). */
 const P = {
@@ -593,15 +594,19 @@ function Ground() {
 }
 
 /** Camera: slow breathing drift; pulls back on portrait screens so the whole hall stays in frame. */
-function TempleCamera() {
+function TempleCamera({ ring }: { ring: number }) {
   const { camera, size } = useThree();
   const look = useMemo(() => new THREE.Vector3(0, 2.1, -1.2), []);
+  const focus = useBellFocus(ring);
   useFrame(({ clock }) => {
     const portrait = size.width / size.height < 0.9;
     const dist = portrait ? 15.5 : 10.5;
     const t = clock.elapsedTime * 0.04;
-    camera.position.set(Math.sin(t) * 1.6, (portrait ? 2.6 : 2.3) + Math.sin(t * 1.7) * 0.12, look.z + dist + Math.cos(t * 0.6) * 0.3);
-    camera.lookAt(look.x, look.y + (portrait ? 0.4 : 0), look.z);
+    // After a bell strike, lean toward the pavilion (it sits off-frame on phones) and ease back.
+    const f = focus(clock.elapsedTime) * (portrait ? 0.95 : 0.6);
+    const fx = BELL_POS[0] * f;
+    camera.position.set(Math.sin(t) * 1.6 * (1 - f) + fx, (portrait ? 2.6 : 2.3) + Math.sin(t * 1.7) * 0.12, look.z + dist + Math.cos(t * 0.6) * 0.3 - f * (portrait ? 4 : 1.5));
+    camera.lookAt(look.x + fx, look.y + (portrait ? 0.4 : 0) - f * (portrait ? 1.7 : 1.1), look.z + f * 2.2);
   });
   return null;
 }
@@ -612,7 +617,7 @@ function Exposure() {
   return null;
 }
 
-export default function Temple() {
+export default function Temple({ lanterns = [], ring = 0 }: { lanterns?: number[]; ring?: number }) {
   const pines = useMemo(() => [
     { x: 6.2, z: 0.8, s: 1.2, lean: -0.9, seed: 3 },
     { x: -7.6, z: -1.5, s: 1.1, lean: 0.6, seed: 9 },
@@ -644,6 +649,8 @@ export default function Temple() {
     <Pines trees={pines} />
     <LanternStrings />
     <Sparkles count={36} scale={[14, 3, 10]} position={[0, 1.6, 1]} size={2.6} speed={0.25} color={P.cffe9a8} />
-    <TempleCamera />
+    <MyLanterns colors={lanterns} />
+    <BellPavilion ring={ring} />
+    <TempleCamera ring={ring} />
   </>;
 }
