@@ -67,12 +67,14 @@ const alternateRouteWithoutLocale = canonicalPath
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
 // 2026-11-08: AIEO & SEO 학술 근거 기반 FAQPage 구조화 데이터 동적 생성 (Perplexity·Google SGE 인용 타겟)
 // 2026-11-08: 답변 블록(test-answer-blocks.ts)이 있는 검사는 화면에 보이는 그 문답으로 FAQPage 를 낸다.
+// 근거 표기에서 자동으로 만든 문답은 화면에 보이지 않아(구글 FAQ 지침: 보이는 내용과 같아야 함)
+// 끈다. 자체 FAQPage 가 있는 약 40쪽에서 FAQPage 가 두 개가 되던 문제도 함께 없어진다.
+// 되살리려면 testSourceNote 를 다시 넘기면 된다(빌더는 그대로).
 const answerBlock = getAnswerBlock(routeWithoutLocale.replace(/\/+$/, '') || '/', locale);
 const faqJsonLd = buildFaqJsonLd({
   title,
   locale,
   pathname: Astro.url.pathname,
-  testSourceNote,
   customFaq: answerBlock ? answerBlock.faqs : faq,
 });
 // 2026-11-07: SEO(Google·Bing) 및 AIEO 골든 레인지(110~140자) 메타 설명 빌더 (Phase A: 19자 기본값 중복 원천 차단)
