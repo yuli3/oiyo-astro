@@ -719,9 +719,22 @@
 # 2026-09-30 O14: 수비학 가이드가 두 편이라 하나로 합친다(중복 금지). 2026 혈액형 운세는 근거 없는 연운이라 혈액형 심리학 글로 넘긴다.
 /:lang/fortune-numerology-complete-guide  /:lang/numerology-complete-guide/  301
 /:lang/fortune-numerology-complete-guide/  /:lang/numerology-complete-guide/  301
-/:lang/fortune-2026-blood-type-annual  /:lang/fortune-blood-type-psychology/  301
-/:lang/fortune-2026-blood-type-annual/  /:lang/fortune-blood-type-psychology/  301
+/:lang/fortune-2026-blood-type-annual  /:lang/blood-type-personality-complete/  301
+/:lang/fortune-2026-blood-type-annual/  /:lang/blood-type-personality-complete/  301
 
 # 2026-10-05: 출퇴근 멘탈 검사는 dbc62586 에서 대체 검사 없이 내려갔는데 ahoxy.com 이
 # 아직 이 주소로 보낸다. 주제가 같은 검사가 없어 검사 목록으로 보낸다.
 /:lang/commute-mental/test /:lang/tests/ 301
+
+# 2026-11-09 중복 글 10쌍(company-brain operations/oiyo-duplicates-top10-2026-10-19.md, 세운 카드 "10쌍 합치기"): 고유 절을 남길 글로 옮기고 6개 언어 모두 301. 11/4 GSC 28일 노출 0. 4번(사주 아카데미 6장)은 장 구조라 합치지 않음.
+# 정적 규칙 예산(2,000)이 81개만 남아 쌍마다 동적 규칙 한 줄(끝의 * 로 슬래시 유무를 함께 받음)로 둔다. 이 슬러그로 시작하는 다른 글은 없다.
+/:lang/fortune-blood-type-psychology*  /:lang/blood-type-personality-complete/  301
+/:lang/chinese-zodiac-compatibility-matrix*  /:lang/chinese-zodiac-compatibility-complete-guide/  301
+/:lang/magazine-burnout-recovery-guide*  /:lang/magazine-burnout-guide/  301
+/:lang/magazine-burnout-psychology*  /:lang/magazine-burnout-guide/  301
+/:lang/zodiac-love-compatibility-detailed*  /:lang/zodiac-compatibility-complete-guide/  301
+/:lang/neuroplasticity-habit-formation*  /:lang/neuroplasticity-habits/  301
+/:lang/fortune-tarot-78-cards-guide*  /:lang/tarot-beginners-complete-guide/  301
+/:lang/growth-mindset-fixed-mindset-guide*  /:lang/magazine-growth-mindset-psychology/  301
+/:lang/mbti-cognitive-functions-complete*  /:lang/8-cognitive-functions-deep-dive/  301
+/:lang/magazine-resilience-psychology*  /:lang/resilience-science/  301

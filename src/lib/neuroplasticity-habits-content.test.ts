@@ -7,6 +7,8 @@ const sources = [
   "https://dbm.neuro.uni-jena.de/pdf-files/Draganski-Nature.pdf",
   "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674",
   "https://repositorio.ispa.pt/bitstream/10400.12/3364/1/IJSP_998-1009.pdf",
+  // 2026-11-09: the anxiety article (neuroplasticity-habit-formation) was merged in; keep its clinical source.
+  "https://www.nimh.nih.gov/health/publications/generalized-anxiety-disorder-gad",
 ];
 
 // These reviewed caveats distinguish model estimates from observed clinical outcomes.
@@ -24,15 +26,16 @@ function assertReading(article: string, locale: typeof locales[number]) {
   expect(article).toContain(`locale: ${locale}`);
   expect(article).toContain("topic: self");
   expect(article).toMatch(/^pubDate: ['"]?2025-01-16['"]?$/m);
-  expect(article).toMatch(/^updatedDate: ['"]?2026-10-09['"]?$/m);
+  expect(article).toMatch(/^updatedDate: ['"]?2026-11-09['"]?$/m);
   for (const source of sources) expect(article).toContain(source);
   expect(article).toContain("Draganski");
   expect(article).toContain("Lally");
   // French uses the standard localized abbreviation IRM, not English MRI.
   expect(article).toContain(locale === "fr" ? "IRM" : "MRI");
-  expect(article.match(/<LectureTable\b/g)).toHaveLength(2);
+  expect(article.match(/<LectureTable\b/g)?.length).toBeGreaterThanOrEqual(2);
   expect(article.match(/^## /gm)?.length).toBeGreaterThanOrEqual(4);
-  expect(article).toContain(`](/${locale}/neuroplasticity-habit-formation/)`);
+  expect(article).toContain("NIMH");
+  expect(article).not.toContain(`](/${locale}/neuroplasticity-habit-formation/)`);
   expect(article).not.toMatch(/^ {0,3}(?:`{3,}|~{3,})/m);
   expect(article).not.toMatch(/\bclient:\w+/);
   if (locale !== "ko") expect(article).not.toMatch(/[가-힣]/);
