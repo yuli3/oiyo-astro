@@ -136,7 +136,7 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
           <input id="test-search-input" type="search" autocomplete="off" class="w-full min-h-11 rounded-md border border-input bg-background px-3 py-2 text-base text-foreground placeholder:text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring" />
           <p data-search-status role="status" class="pt-3 text-sm text-muted-foreground" data-empty={searchText.empty} data-count={searchText.count}></p>
         </div>
-        <ul data-search-results class="divide-y divide-primary/10">
+        <ul data-search-results data-search-idle class="divide-y divide-primary/10">
           {searchableTests.map((test) => (
             <li data-search-entry data-search-text={`${test.title[locale]} ${test.desc[locale]}`}>
               <a href={test.href} class="flex min-h-11 items-center gap-3 rounded-md px-3 py-3 text-sm leading-relaxed text-foreground hover:bg-primary/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
@@ -232,6 +232,13 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
   </section>
 </Layout>
 
+<style is:global>
+  /* 검색이 기본으로 열려 있어도, JS가 켜진 브라우저에서는 첫 화면에 전체 목록을 그렸다 숨기지 않는다. */
+  @media (scripting: enabled) {
+    #test-search [data-search-results][data-search-idle] { display: none; }
+  }
+</style>
+
 <script>
   function initTestSearch() {
     const root = document.querySelector<HTMLDetailsElement>('#test-search');
@@ -254,6 +261,7 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
         if (match) count++;
       }
       results.hidden = !terms.length;
+      results.removeAttribute('data-search-idle');
       status.textContent = !terms.length ? '' : count
         ? status.dataset.count!.replace('{count}', String(count)) : status.dataset.empty!;
     };
