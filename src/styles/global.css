@@ -345,3 +345,8 @@ main .grid > :has(.google-auto-placed) { min-width: 0; }
 .timeslip-card-copy > p { font-size: clamp(.625rem, 2.5vw, .875rem); line-height: 1.4; }
 .timeslip-card-copy > strong { font-size: clamp(1rem, 4vw, 1.5rem); line-height: 1.2; }
 .timeslip-card-copy > small { font-size: .625rem; }
+
+/* 검사 모음 검색: 기본 열림이어도 JS가 켜진 브라우저에선 검색어 전까지 전체 목록을 그렸다 숨기지 않는다(CLS·LCP). */
+@media (scripting: enabled) {
+  #test-search [data-search-results][data-search-idle] { display: none; }
+}

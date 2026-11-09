@@ -232,13 +232,6 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
   </section>
 </Layout>
 
-<style is:global>
-  /* 검색이 기본으로 열려 있어도, JS가 켜진 브라우저에서는 첫 화면에 전체 목록을 그렸다 숨기지 않는다. */
-  @media (scripting: enabled) {
-    #test-search [data-search-results][data-search-idle] { display: none; }
-  }
-</style>
-
 <script>
   function initTestSearch() {
     const root = document.querySelector<HTMLDetailsElement>('#test-search');
