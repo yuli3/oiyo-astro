@@ -102,7 +102,7 @@ const copy: Record<Locale, Copy> = {
 const c = copy[locale] ?? copy.en;
 ---
 
-<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/past-life-1426/")}>
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/past-life-1426/")} ogImage="/images/past-life-1426/og/joseon.webp">
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <h1 class="text-4xl font-black tracking-tight text-foreground">{c.heading}</h1>
     <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>

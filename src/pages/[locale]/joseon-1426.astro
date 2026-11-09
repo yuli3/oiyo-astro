@@ -122,7 +122,7 @@ const c = copy[locale] ?? copy.en;
 const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
 ---
 
-<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/joseon-1426/")}>
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/joseon-1426/")} ogImage="/images/past-life-1426/og/joseon.webp">
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "600년 전 나는?", en: "Who were you 600 years ago?", ja: "600年前のわたしは？", zh: "600年前的我是谁？", fr: "Qui étiez-vous il y a 600 ans ?", es: "¿Quién eras hace 600 años?" } as Record<string, string>)[locale] ?? "1426"}</a></p>

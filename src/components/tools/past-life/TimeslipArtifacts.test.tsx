@@ -23,13 +23,13 @@ for (const locale of locales) {
       expect(el.querySelector('svg[viewBox="0 0 160 360"]')).toBeNull();
       act(() => root.unmount());
     });
-    it('uses the correct Silla robe for each rank and none for a commoner', () => {
-      for (const [query, colour] of [['g=jingol&d=1','purple'],['g=jingol&d=7','crimson'],['g=jingol&d=10','blue'],['g=sa&d=17','yellow'],['g=pyeongmin&d=1',null]]) {
+    it('uses the correct Silla robe for each rank and commoner clothes for a commoner', () => {
+      for (const [query, colour] of [['g=jingol&d=1','purple'],['g=jingol&d=7','crimson'],['g=jingol&d=10','blue'],['g=sa&d=17','yellow'],['g=pyeongmin&d=1','commoner']]) {
         window.history.replaceState(null, '', '/?' + query);
         const el = document.createElement('div'); const root = createRoot(el);
         act(() => root.render(createElement(SillaGolpum, { locale })));
         expect(el.querySelector('img[src*="robes/silla-"]')?.getAttribute('src') ?? null)
-          .toBe(colour ? `/images/timeslip-ui-v2/robes/silla-${colour}.webp` : null);
+          .toBe(`/images/timeslip-ui-v2/robes/silla-${colour}.webp`);
         act(() => root.unmount());
       }
     });

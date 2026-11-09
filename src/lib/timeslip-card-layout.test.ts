@@ -14,4 +14,11 @@ describe('card text export boundary', () => {
       expect(lines.map(x => x.text).join('').replace(/\s/g, '')).toContain(text.replace(/\s/g, ''));
     }
   });
+
+  it('lays out text below art area when hasArt is true', () => {
+    const input = { ...spec, hasArt: true };
+    const lines = layoutCard(input, measure);
+    expect(lines[0].y).toBeGreaterThan(470);
+    expect(lines.at(-1)!.y).toBeLessThan(920);
+  });
 });

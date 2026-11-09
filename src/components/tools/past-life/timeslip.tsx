@@ -224,9 +224,10 @@ export interface CardSpec {
   badge: string;
   footer: string;
   accent: string;
+  art?: string;
 }
 
-export function renderCard(spec: CardSpec, paper?: HTMLImageElement): HTMLCanvasElement {
+export function renderCard(spec: CardSpec, paper?: HTMLImageElement, artImage?: HTMLImageElement): HTMLCanvasElement {
   const canvas = document.createElement("canvas");
   canvas.width = 720;
   canvas.height = 960;
@@ -242,7 +243,28 @@ export function renderCard(spec: CardSpec, paper?: HTMLImageElement): HTMLCanvas
     ctx.lineWidth = 3;
     ctx.strokeRect(40, 40, 640, 880);
   }
-  const lines = layoutCard(spec, (text, size, bold) => {
+
+  const hasArt = Boolean(artImage && artImage.naturalWidth > 0 && artImage.naturalHeight > 0);
+  if (hasArt && artImage) {
+    const boxX = 120, boxY = 90, boxW = 480, boxH = 380;
+    const imgRatio = artImage.naturalWidth / artImage.naturalHeight;
+    const boxRatio = boxW / boxH;
+    let dw = boxW, dh = boxH;
+    if (imgRatio > boxRatio) {
+      dh = boxW / imgRatio;
+    } else {
+      dw = boxH * imgRatio;
+    }
+    const dx = boxX + (boxW - dw) / 2;
+    const dy = boxY + (boxH - dh) / 2;
+    try {
+      ctx.drawImage(artImage, dx, dy, dw, dh);
+    } catch {
+      /* crossOrigin fallback */
+    }
+  }
+
+  const lines = layoutCard({ ...spec, hasArt }, (text, size, bold) => {
     ctx.font = `${bold ? 700 : 400} ${size}px ${serif}`;
     return ctx.measureText(text).width;
   });
@@ -258,15 +280,22 @@ export function renderCard(spec: CardSpec, paper?: HTMLImageElement): HTMLCanvas
 export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeId; spec: CardSpec; filename: string }) {
   const [saved, setSaved] = useState(false);
   const [failedPaper, setFailedPaper] = useState(false);
+  const [failedArt, setFailedArt] = useState(false);
   const paper = TIMESLIP_CARD_ART[testId];
   const paperRef = useRef<HTMLImageElement>(null);
+  const artRef = useRef<HTMLImageElement>(null);
+  const artSrc = spec.art ? (spec.art.startsWith("/") ? spec.art : TIMESLIP_UI_ROOT + spec.art) : undefined;
+  const hasArt = Boolean(artSrc && !failedArt);
+
   return (
     <div className="space-y-3">
       {paper && <figure className="space-y-2" data-timeslip-card={testId}>
         <div className="timeslip-card-preview">
           {!failedPaper && <img ref={paperRef} src={TIMESLIP_UI_ROOT + paper} alt="" width={720} height={960}
             loading="lazy" decoding="async" className="timeslip-card-paper" onError={() => setFailedPaper(true)} />}
-          <div className="timeslip-card-copy">
+          {hasArt && <img ref={artRef} src={artSrc} alt="" width={480} height={380}
+            loading="lazy" decoding="async" className="timeslip-card-art" onError={() => setFailedArt(true)} />}
+          <div className={`timeslip-card-copy ${hasArt ? "has-art" : ""}`}>
             <p>{spec.kicker}</p><strong>{spec.title}</strong>
             {spec.subtitle && <p>{spec.subtitle}</p>}
             <p>{spec.badge}</p>
@@ -284,7 +313,13 @@ export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeI
         // Reuse the displayed same-origin image; awaiting a new fetch here can
         // expire mobile Web Share activation (2026-11-06). A failed image falls back.
         const paperImage = paperRef.current;
-        const canvas = renderCard(spec, paperImage?.complete && paperImage.naturalWidth > 0 ? paperImage : undefined);
+        const artImage = artRef.current;
+        const validArt = artImage?.complete && artImage.naturalWidth > 0 ? artImage : undefined;
+        const canvas = renderCard(
+          spec,
+          paperImage?.complete && paperImage.naturalWidth > 0 ? paperImage : undefined,
+          validArt
+        );
         const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png"));
         if (!blob) return;
         const file = new File([blob], `${filename}.png`, { type: "image/png" });

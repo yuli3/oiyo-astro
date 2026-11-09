@@ -341,9 +341,12 @@ main .grid > :has(.google-auto-placed) { min-width: 0; }
 .timeslip-hopae-year { position: absolute; bottom: 3rem; width: 100%; text-align: center; color: var(--color-joseon-ink); font: .625rem 'Gowun Batang', serif; }
 .timeslip-card-preview { position: relative; width: 100%; max-width: 24rem; aspect-ratio: 3 / 4; margin-inline: auto; isolation: isolate; background: var(--color-joseon-ivory); color: var(--color-joseon-ink); }
 .timeslip-card-paper { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; z-index: -1; }
+.timeslip-card-art { position: absolute; top: 9.375%; left: 16.667%; width: 66.667%; height: 39.583%; object-fit: contain; }
 .timeslip-card-copy { position: absolute; inset: 15% 16%; display: flex; flex-direction: column; justify-content: center; text-align: center; gap: .6rem; font-family: 'Gowun Batang', serif; overflow-wrap: anywhere; }
+.timeslip-card-copy.has-art { top: 50%; bottom: 6%; justify-content: flex-start; gap: .35rem; }
 .timeslip-card-copy > p { font-size: clamp(.625rem, 2.5vw, .875rem); line-height: 1.4; }
 .timeslip-card-copy > strong { font-size: clamp(1rem, 4vw, 1.5rem); line-height: 1.2; }
+.timeslip-card-copy.has-art > strong { font-size: clamp(1.4rem, 5.6vw, 2.1rem); line-height: 1.2; }
 .timeslip-card-copy > small { font-size: .625rem; }
 
 /* 검사 모음 검색: 기본 열림이어도 JS가 켜진 브라우저에선 검색어 전까지 전체 목록을 그렸다 숨기지 않는다(CLS·LCP). */

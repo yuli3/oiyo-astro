@@ -3,7 +3,7 @@ import type { Locale } from "../../../i18n";
 import { birthdayRandom, oneIn } from "../../../lib/past-life-1426";
 import { FR_DEPUTIES, FR_PEOPLE, compareFrance, deputyChance, drawFrance, formatFrance, frEstate, frOneIn, parseFrance, type FrGroup, type FrLife } from "../../../lib/past-life-eras";
 import SceneArtwork from "./SceneArtwork";
-import { franceArtFor } from "../../../data/past-life-art";
+import { franceArtFor, PAST_LIFE_ART } from "../../../data/past-life-art";
 import { Button } from "../../ui/button";
 import { CopyLink, Panel, Sources, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L, type Six } from "./shared";
 import { BirthdayPicker, FriendBanner, FriendCompare, ModeTabs3, RarityBadge, SaveCard, SeriesNext, TimeWarp, isOwn, rarityLabel, rememberOwn, stampEpisode, useWarp, type Mode } from "./timeslip";
@@ -172,6 +172,7 @@ export default function France1789({ locale }: { locale: Locale }) {
               lines: [pick(life.deputy ? C.deputyYes : C.deputyNo, l)],
               footer: "oiyo.net · 1789",
               accent: "#1f3f8f",
+              art: `/images/past-life-1426/${PAST_LIFE_ART[franceArtFor(life.group)].file}`,
             }}
           />
           <CopyLink l={l} testId={EP} />

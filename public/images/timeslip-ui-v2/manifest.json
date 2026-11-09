@@ -181,6 +181,16 @@
       "alpha": false,
       "derivation": "resize-webp",
       "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
+    },
+    {
+      "file": "robes/silla-commoner.webp",
+      "source": "robes/silla-commoner.jpg",
+      "sourceSha256": "75e266b85a04e803df7049e56e7cf822fa7c44f941804a4d35cfd345b817b279",
+      "width": 640,
+      "height": 853,
+      "alpha": true,
+      "derivation": "chroma-magenta-v1",
+      "illustration": "AI-created fictional interpretation; not a clothing reconstruction"
     }
   ]
 }
