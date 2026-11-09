@@ -110,7 +110,7 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
 
 <Layout title={title[locale]} description={description[locale]} locale={locale}>
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 to-white pt-16 pb-10 px-4">
+  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 to-white pt-8 pb-6 px-4">
     <AmbientParticles density={0.7} />
     <div class="relative max-w-2xl mx-auto text-center">
       <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3 leading-tight">
@@ -127,16 +127,8 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
     </div>
   </section>
 
-  <nav aria-label={heading[locale]} class="max-w-5xl mx-auto px-4 pt-6 flex flex-wrap gap-2">
-    {visibleLanes.map((lane) => (
-      <a href={`#${lane.id}`} class="min-h-11 inline-flex items-center rounded-full border border-primary/20 px-4 text-sm font-medium text-primary hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
-        {lane.label[locale]}
-      </a>
-    ))}
-  </nav>
-
   <section class="max-w-5xl mx-auto px-4 pt-5">
-    <details id="test-search" class="rounded-xl border border-primary/15 bg-card px-4">
+    <details open id="test-search" class="rounded-xl border border-primary/15 bg-card px-4">
       <summary class="min-h-11 cursor-pointer py-3 text-sm font-semibold text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">{searchText.label}</summary>
       <div class="pb-4">
         <div data-search-control hidden>
@@ -161,6 +153,14 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
       </div>
     </details>
   </section>
+
+  <nav aria-label={heading[locale]} class="max-w-5xl mx-auto px-4 pt-6 flex flex-wrap gap-2">
+    {visibleLanes.map((lane) => (
+      <a href={`#${lane.id}`} class="min-h-11 inline-flex items-center rounded-full border border-primary/20 px-4 text-sm font-medium text-primary hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+        {lane.label[locale]}
+      </a>
+    ))}
+  </nav>
 
   <!-- 질문별 대표 3개, 나머지는 네이티브 details로 탐색한다. JS 없이도 링크가 남는다. -->
   <section class="max-w-5xl mx-auto px-4 py-10 grid gap-6 lg:grid-cols-2 lg:items-start">

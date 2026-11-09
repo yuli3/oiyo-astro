@@ -38,6 +38,7 @@ const LABEL: Record<string, string> = {
 const payload = JSON.stringify({
   client,
   slot,
+  articleMidSlot: "7654190271",
   label: LABEL[locale] ?? LABEL.en,
 });
 ---
@@ -67,16 +68,38 @@ const payload = JSON.stringify({
       if(ins.getAttribute("data-ad-status")==="unfilled")wrap.hidden=true;
     }).observe(ins,{attributes:true,attributeFilter:["data-ad-status"]});
   }
-  function fill(){try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}wrap.setAttribute("data-manual-ad-requested","1")}
-  if(!("IntersectionObserver" in window)){fill();return}
+  var units=[wrap];
+  // 2026-11-06: additional inventory belongs only inside long static reading.
+  // Never place it among questionnaire inputs, result islands or nested charts.
+  var prose=document.querySelector("#main-content .prose");
+  if(prose&&!prose.querySelector("astro-island,form,input,textarea,select")&&prose.textContent.trim().length>=4000){
+    var headings=Array.from(prose.querySelectorAll(":scope > h2"));
+    if(headings.length>=5){
+      var anchor=headings[Math.floor(headings.length/2)];
+      var rect=prose.getBoundingClientRect();
+      var y=anchor.getBoundingClientRect().top;
+      if(y-rect.top>=600&&rect.bottom-y>=600&&!anchor.previousElementSibling?.querySelector(".adsbygoogle")){
+        var mid=wrap.cloneNode(true);
+        mid.setAttribute("data-manual-ad","oiyo-article-mid");
+        var midIns=mid.querySelector("ins.adsbygoogle");
+        midIns.setAttribute("data-ad-slot",cfg.articleMidSlot);
+        anchor.parentNode.insertBefore(mid,anchor);
+        units.push(mid);
+        if("MutationObserver" in window)new MutationObserver(function(){if(midIns.getAttribute("data-ad-status")==="unfilled")mid.hidden=true}).observe(midIns,{attributes:true,attributeFilter:["data-ad-status"]});
+      }
+    }
+  }
+  function fill(el){try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}el.setAttribute("data-manual-ad-requested","1")}
+  if(!("IntersectionObserver" in window)){units.forEach(fill);return}
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(!e.isIntersecting)return;
-      if(wrap.getAttribute("data-manual-ad-requested"))return;
-      fill();
-      io.unobserve(wrap);
+      var el=e.target;
+      if(el.getAttribute("data-manual-ad-requested"))return;
+      fill(el);
+      io.unobserve(el);
     });
   },{rootMargin:"300px 0px"});
-  io.observe(wrap);
+  units.forEach(function(unit){io.observe(unit)});
 })()`} />
 )}
