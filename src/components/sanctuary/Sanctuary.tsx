@@ -52,7 +52,10 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   useEffect(()=>{
     setMembers([]);setSelf('');setReaction(null);setMessage('');recent.current.clear();
     if (!together) {setStatus('solo');return;}
-    const endpoint = import.meta.env.PUBLIC_SANCTUARY_ENDPOINT || (['localhost','127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8791' : '');
+    // 2026-11-09: production shares oiyo.net's origin under /sanctuary-api; previews and other hosts stay solo.
+    const endpoint = import.meta.env.PUBLIC_SANCTUARY_ENDPOINT
+      || (location.hostname === 'oiyo.net' ? `${location.origin}/sanctuary-api`
+      : ['localhost','127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8791' : '');
     if (!endpoint) {setStatus('unavailable');return;}
     let disposed=false;
     let timer:ReturnType<typeof setTimeout>|undefined;
@@ -62,13 +65,13 @@ export default function Sanctuary({locale}:{locale:Locale}) {
       if(disposed)return;
       setStatus('connecting');setMembers([]);setSelf('');
       try {
-        const session = new URL('/session',endpoint);
+        const session = new URL(`${endpoint.replace(/\/$/,'')}/session`);
         session.searchParams.set('scene',scene);session.searchParams.set('room',String(room));
         const result = await fetch(session,{method:'POST',credentials:'omit',signal:AbortSignal.any([abort.signal, AbortSignal.timeout(8000)])});
         if(!result.ok) throw new Error('session');
         const data = await result.json();
         if(disposed)return;
-        const url = new URL('/connect',endpoint);url.protocol=url.protocol==='https:'?'wss:':'ws:';
+        const url = new URL(`${endpoint.replace(/\/$/,'')}/connect`);url.protocol=url.protocol==='https:'?'wss:':'ws:';
         const ws = new WebSocket(url,[PROTOCOL,`ticket.${data.ticket}`]);
         socket.current=ws;
         ws.onmessage = event=>{

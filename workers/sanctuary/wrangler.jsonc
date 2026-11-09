@@ -4,8 +4,19 @@
   "compatibility_date": "2026-11-02",
   "workers_dev": false,
   "preview_urls": false,
+  "routes": [{"pattern": "oiyo.net/sanctuary-api/*", "zone_name": "oiyo.net"}],
   "vars": {
-    "ALLOWED_ORIGINS": "http://127.0.0.1:4329,http://localhost:4329"
+    "ALLOWED_ORIGINS": "https://oiyo.net",
+    "SHARED_ENABLED": "true"
+  },
+  // 2026-11-09: join tickets per client IP, 10 per minute. Not an auth or cost cap.
+  "ratelimits": [{"name": "JOIN_LIMITER", "namespace_id": "1109", "simple": {"limit": 10, "period": 60}}],
+  "env": {
+    "dev": {
+      "vars": {"ALLOWED_ORIGINS": "http://127.0.0.1:4329,http://localhost:4329", "SHARED_ENABLED": "true", "DEV_MODE": "true"},
+      "routes": [],
+      "durable_objects": {"bindings": [{"name": "ROOMS", "class_name": "SanctuaryRoom"}]}
+    }
   },
   "durable_objects": {"bindings": [{"name": "ROOMS", "class_name": "SanctuaryRoom"}]},
   "migrations": [{"tag": "v1", "new_sqlite_classes": ["SanctuaryRoom"]}]

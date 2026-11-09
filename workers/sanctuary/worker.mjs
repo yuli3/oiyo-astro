@@ -1,6 +1,14 @@
 import { DurableObject } from 'cloudflare:workers';
 import { CAPACITY, PROTOCOL, validRoom, chooseSeat, parseAction, applyAction, publicMembers } from './protocol.mjs';
 
+// 2026-11-09 conservative release (세운 '보수적으로 공개'): served on oiyo.net/sanctuary-api/* only,
+// sessions end after 30 minutes or 10 idle minutes, consumed ticket IDs are swept by an alarm,
+// and SHARED_ENABLED="false" turns the shared room off while solo mode keeps working.
+const API_PREFIX = '/sanctuary-api';
+const SESSION_MAX_MS = 30 * 60 * 1000;
+const IDLE_MAX_MS = 10 * 60 * 1000;
+const SWEEP_MS = 60 * 1000;
+
 const encode = bytes => btoa(String.fromCharCode(...bytes)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
 function decode(value) {
   return Uint8Array.from(atob(value.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
@@ -27,6 +35,7 @@ function response(status, data, origin) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const path = url.pathname.startsWith(API_PREFIX) ? url.pathname.slice(API_PREFIX.length) || '/' : url.pathname;
     const origin = request.headers.get('Origin');
     const allowed = (env.ALLOWED_ORIGINS || '').split(',');
     if (!origin || !allowed.includes(origin)) return response(403, {error:'origin'});
@@ -35,7 +44,8 @@ export default {
     const local = ['127.0.0.1', 'localhost'].includes(url.hostname) && env.DEV_MODE === 'true';
     const secret = env.ROOM_SECRET || (local ? 'public-local-development-only' : null);
     if (!secret) return response(503, {error:'not_configured'}, origin);
-    if (url.pathname === '/session' && request.method === 'POST') {
+    if (env.SHARED_ENABLED === 'false') return response(503, {error:'paused'}, origin);
+    if (path === '/session' && request.method === 'POST') {
       const scene = url.searchParams.get('scene');
       const room = url.searchParams.get('room');
       if (!validRoom(scene, room)) return response(400, {error:'room'}, origin);
@@ -53,7 +63,7 @@ export default {
       const payload = {id:crypto.randomUUID(), scene, room, exp:Date.now()+60000};
       return response(200, {ticket:await ticket(secret, payload)}, origin);
     }
-    if (url.pathname === '/connect' && request.method === 'GET') {
+    if (path === '/connect' && request.method === 'GET') {
       if (request.headers.get('Upgrade')?.toLowerCase() !== 'websocket') return response(426, {error:'websocket'}, origin);
       const protocols = (request.headers.get('Sec-WebSocket-Protocol') || '').split(',').map(x=>x.trim());
       const p = protocols.includes(PROTOCOL) ? await verify(secret, protocols.find(x=>x.startsWith('ticket.'))?.slice(7)) : null;
@@ -90,10 +100,12 @@ export class SanctuaryRoom extends DurableObject {
     const seat = chooseSeat(this.members());
     if (seat < 0) return new Response('Room full', {status:409});
     this.ctx.storage.sql.exec('INSERT INTO tickets (id, expiry) VALUES (?, ?)', id, expiry);
+    await this.scheduleSweep();
     const [client, server] = Object.values(new WebSocketPair());
     this.ctx.acceptWebSocket(server);
     // Attachments survive hibernation; in-memory membership would disappear on wake.
-    server.serializeAttachment({id, seat, lastAction:0, recent:[]});
+    const now = Date.now();
+    server.serializeAttachment({id, seat, lastAction:0, recent:[], joinedAt:now, lastSeen:now});
     this.send(server, {v:1,type:'welcome',self:id,capacity:CAPACITY});
     this.broadcast(null);
     return new Response(null, {status:101,webSocket:client,headers:{'Sec-WebSocket-Protocol':PROTOCOL}});
@@ -110,9 +122,25 @@ export class SanctuaryRoom extends DurableObject {
       if (violations >= 3) socket.close(1008, 'rate_limit');
       return;
     }
-    socket.serializeAttachment({...result.member, violations:0});
+    socket.serializeAttachment({...result.member, violations:0, lastSeen:Date.now()});
     const action = parseAction(raw);
     this.broadcast(action.type === 'gesture' ? {member:member.id,gesture:action.gesture,id:action.id} : null);
+  }
+  async scheduleSweep() {
+    if ((await this.ctx.storage.getAlarm()) === null) await this.ctx.storage.setAlarm(Date.now() + SWEEP_MS);
+  }
+  // Ends long or idle sessions and deletes expired ticket IDs; reschedules only while something remains.
+  async alarm() {
+    const now = Date.now();
+    for (const socket of this.ctx.getWebSockets()) {
+      const m = socket.deserializeAttachment() || {};
+      if (now - (m.joinedAt || 0) > SESSION_MAX_MS) { try { socket.close(1000, 'session_limit'); } catch {} }
+      else if (now - (m.lastSeen || m.joinedAt || 0) > IDLE_MAX_MS) { try { socket.close(1000, 'idle'); } catch {} }
+    }
+    this.ctx.storage.sql.exec('DELETE FROM tickets WHERE expiry < ?', now);
+    const left = [...this.ctx.storage.sql.exec('SELECT COUNT(*) AS n FROM tickets')][0]?.n || 0;
+    if (left > 0 || this.ctx.getWebSockets().length > 0) await this.ctx.storage.setAlarm(now + SWEEP_MS);
+    else this.broadcast(null);
   }
   webSocketClose(socket, code) { try { socket.close(code===1000?1000:1001, 'left'); } catch {} this.broadcast(null); }
   webSocketError(socket) { try { socket.close(1011, 'connection_error'); } catch {} this.broadcast(null); }

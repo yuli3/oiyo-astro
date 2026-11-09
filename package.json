@@ -79,7 +79,7 @@
     "audit:ontology-concepts": "node scripts/audit-ontology-concepts.mjs",
     "audit:headers-collision": "node scripts/audit-headers-collision.mjs",
     "audit:saju-longitude": "node scripts/audit-saju-longitude-explicit.mjs",
-    "sanctuary:server": "wrangler dev --config workers/sanctuary/wrangler.jsonc --compatibility-date 2026-08-06 --ip 127.0.0.1 --port 8791 --inspector-port 9236 --var DEV_MODE:true",
+    "sanctuary:server": "wrangler dev --config workers/sanctuary/wrangler.jsonc --env dev --compatibility-date 2026-08-06 --ip 127.0.0.1 --port 8791 --inspector-port 9236 --var DEV_MODE:true",
     "sanctuary:smoke": "node workers/sanctuary/smoke.mjs"
   },
   "dependencies": {
