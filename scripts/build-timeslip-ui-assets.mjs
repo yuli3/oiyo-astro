@@ -13,6 +13,7 @@ const files = [
   'hopae/wood-blank', 'hopae/cord-red', 'decor/wax-seal-blank', 'tablets/ivory', 'tablets/wood',
   ...['red', 'blue', 'green'].map(c => `robes/joseon-${c}`),
   ...['purple', 'crimson', 'blue', 'yellow'].map(c => `robes/silla-${c}`),
+  'robes/silla-commoner',
   ...['joseon', 'silla', 'france', 'europe', 'us', 'florence'].map(c => `cards/${c}-blank`),
 ];
 const records = [];

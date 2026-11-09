@@ -247,6 +247,7 @@ export default function JoseonPastLife({ locale }: { locale: Locale }) {
               lines: [`${pick(C.home, l)}: ${provinceName(life.province)}`, ...(robe ? [`${pick(C.robe, l)}: ${ROBE[robe].name[l]}`] : [])],
               footer: "oiyo.net · 600",
               accent: "#8c2f2b",
+              art: robe ? `robes/joseon-${robe}.webp` : undefined,
             }}
           />
           <CopyLink l={l} testId="joseon-1426" />

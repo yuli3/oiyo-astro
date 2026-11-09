@@ -115,7 +115,7 @@ const copy: Record<Locale, Copy> = {
 const c = copy[locale] ?? copy.en;
 const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
 ---
-<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/silla-golpum/")}>
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/silla-golpum/")} ogImage="/images/past-life-1426/og/silla.webp">
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>

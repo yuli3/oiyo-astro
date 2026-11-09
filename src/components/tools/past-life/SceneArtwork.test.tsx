@@ -39,10 +39,10 @@ describe("released time-slip artwork", () => {
       expect(bytes.subarray(0, 4).toString()).toBe("RIFF");
       expect(bytes.subarray(8, 12).toString()).toBe("WEBP");
       expect(bytes.length).toBeLessThan(240_000);
-      expect(asset.file).not.toMatch(/first-estate|silla|us\/|florence|official|clerk/);
+      expect(asset.file).not.toMatch(/silla|us\/|florence|official|clerk/);
     }
-    expect(franceArtFor("clergy")).toBe("franceArrival");
-    expect(franceArtFor("bourgeoisie")).toBe("franceArrival");
+    expect(franceArtFor("clergy")).toBe("franceClergy");
+    expect(franceArtFor("bourgeoisie")).toBe("franceBourgeois");
     expect(franceArtFor("nobility")).toBe("franceNoble");
     expect(franceArtFor("peasants")).toBe("francePeasant");
     expect(franceArtFor("urban")).toBe("franceWorkers");

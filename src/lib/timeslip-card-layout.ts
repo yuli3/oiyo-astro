@@ -1,12 +1,27 @@
-export interface CardText { kicker: string; title: string; subtitle?: string; lines: string[]; badge: string; footer: string; accent: string }
+export interface CardText {
+  kicker: string;
+  title: string;
+  subtitle?: string;
+  lines: string[];
+  badge: string;
+  footer: string;
+  accent: string;
+  hasArt?: boolean;
+}
 export interface CardLine { text: string; x: number; y: number; size: number; bold: boolean; accent: boolean }
 
 // 2026-11-06: wrap by Unicode code point, including unspaced CJK and long words.
 // All fields share one fitted layout so long translations cannot clip silently.
+// 2026-11-09: optional art in upper card area (y 90..470); lower area (y 480..900) fits text.
 export function layoutCard(spec: CardText, measure: (text: string, size: number, bold: boolean) => number): CardLine[] {
+  const hasArt = Boolean(spec.hasArt);
+  const titleSize = hasArt ? Math.round(54 * 1.4) : 54;
+  const maxAreaHeight = hasArt ? 420 : 640;
+  const startYBase = hasArt ? 480 : 160;
+
   const fields = [
     { text: spec.kicker, size: 26, bold: true },
-    { text: spec.title, size: 54, bold: true },
+    { text: spec.title, size: titleSize, bold: true },
     ...(spec.subtitle ? [{ text: spec.subtitle, size: 28, bold: true }] : []),
     { text: spec.badge, size: 30, bold: true, accent: true },
     ...spec.lines.map(text => ({ text, size: 28, bold: false })),
@@ -36,8 +51,8 @@ export function layoutCard(spec: CardText, measure: (text: string, size: number,
       // Store the field gap in the final line's line advance below.
       if (lines.length) lines[lines.length - 1] = { ...lines[lines.length - 1], gap: 12 * scale };
     }
-    if (total <= 640) {
-      let y = 160 + (640 - total) / 2;
+    if (total <= maxAreaHeight) {
+      let y = startYBase + (maxAreaHeight - total) / 2;
       return lines.map(line => {
         const entry = { ...line, x: 360, y: y + line.size };
         y += line.size * 1.35 + ('gap' in line ? Number(line.gap) : 0);

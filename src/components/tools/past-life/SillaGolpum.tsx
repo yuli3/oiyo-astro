@@ -30,6 +30,15 @@ const ROBE: Record<SillaRobe, { cls: string; name: Six }> = {
 };
 const STRIPE: Record<SillaRobe, string> = { purple: "bg-silla-purple", crimson: "bg-silla-crimson", blue: "bg-silla-blue", yellow: "bg-silla-yellow" };
 
+const COMMONER_CLOTHES: Six = {
+  ko: "평민의 삼베옷",
+  en: "A commoner's hemp clothes",
+  ja: "平民の麻の服",
+  zh: "平民的麻布衣",
+  fr: "Vêtements de chanvre d'un roturier",
+  es: "Ropa de cáñamo de un plebeyo",
+};
+
 const C = {
   draw: { ko: "골품 받기", en: "Receive my bone rank", ja: "骨品を受け取る", zh: "领取骨品", fr: "Recevoir mon rang", es: "Recibir mi rango" },
   again: { ko: "다시 태어나기", en: "Be born again", ja: "もう一度生まれる", zh: "再投胎一次", fr: "Renaître", es: "Renacer" },
@@ -154,15 +163,19 @@ export default function SillaGolpum({ locale }: { locale: Locale }) {
             />
           )}
           <section className="flex flex-col items-center gap-4 rounded-3xl border border-border bg-muted p-6 sm:flex-row sm:items-end sm:justify-center">
-            {robe && <ArtifactImage file={`robes/silla-${robe}.webp`} alt={ROBE[robe].name[l]} />}
+            {robe ? (
+              <ArtifactImage file={`robes/silla-${robe}.webp`} alt={ROBE[robe].name[l]} />
+            ) : (
+              <ArtifactImage file="robes/silla-commoner.webp" alt={pick(COMMONER_CLOTHES, l)} />
+            )}
             <div className="text-center sm:text-left">
               <p className="text-sm font-bold text-muted-foreground">{pick(C.you, l)}</p>
               <p className="mt-1 text-xl font-bold text-foreground">{pick(GOLPUM[life.golpum], l)}</p>
               <p className="font-serif text-4xl font-black text-foreground">{title(life)}</p>
-              {robe && <p className="mt-1 text-sm text-muted-foreground">{ROBE[robe].name[l]}</p>}
+              <p className="mt-1 text-sm text-muted-foreground">{robe ? ROBE[robe].name[l] : pick(COMMONER_CLOTHES, l)}</p>
             </div>
           </section>
-          {robe && <ArtifactNote l={l} />}
+          {(robe || life.rank === null) && <ArtifactNote l={l} />}
           <RarityBadge n={sillaOneIn(life)} l={l} fmt={fmt} />
 
           <Panel label={pick(C.wallTitle, l)}>
@@ -196,9 +209,10 @@ export default function SillaGolpum({ locale }: { locale: Locale }) {
               title: title(life),
               subtitle: pick(GOLPUM[life.golpum], l),
               badge: `★ ${rarityLabel(sillaOneIn(life), l)} · ${oneInText(sillaOneIn(life), l, fmt)}`,
-              lines: [life.rank === null ? pick(C.noRank, l) : life.wall > 0 ? wallText(life, l) : pick(C.noWall, l), ...(robe ? [ROBE[robe].name[l]] : [])],
+              lines: [life.rank === null ? pick(C.noRank, l) : life.wall > 0 ? wallText(life, l) : pick(C.noWall, l), ...(robe ? [ROBE[robe].name[l]] : [pick(COMMONER_CLOTHES, l)])],
               footer: "oiyo.net · 1300",
               accent: "#6b3d8f",
+              art: robe ? `robes/silla-${robe}.webp` : "robes/silla-commoner.webp",
             }}
           />
           <CopyLink l={l} testId={EP} />
