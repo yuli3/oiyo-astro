@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import TestLaneLink from '../../components/shared/TestLaneLink.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import { introvertResultCopy } from "../../lib/introvert-result-copy";
@@ -26,5 +25,4 @@ const m = { ...meta[locale], description: introvertResultCopy[locale].metaDescri
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <IntroExtroTest locale={locale} client:load />
   </div>
-  <TestLaneLink locale={locale as Locale} path="/introvert-extrovert-test" />
 </Layout>

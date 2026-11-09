@@ -1,0 +1,79 @@
+---
+/**
+ * 검사 페이지의 정적 답변 블록 — 한 줄 답, 결과 유형 표, 문답 3개.
+ *
+ * 2026-11-04 (UI·UX·SEO·AIEO 계획 3·5번): 결과 해설이 클라이언트에만 있어 검색·AI 답변이
+ * 인용할 문장이 HTML에 없었다. 페이지마다 넣지 않고 Layout 이 경로로 그린다
+ * (데이터: src/data/test-answer-blocks.ts). 구조화 데이터는 여기 보이는 글에서만 만든다 —
+ * 본문 없이 스키마만 늘리지 않는다(계획 4장). FAQPage 는 Layout 이 같은 문답으로 내고
+ * (페이지당 하나), 여기서는 문항 수·결과 유형 표로 Quiz 만 낸다.
+ */
+import type { Locale } from '../../i18n';
+import type { ResolvedAnswerBlock } from '../../data/test-answer-blocks';
+import { buildQuizJsonLd } from '../../lib/seo/quiz-json-ld';
+
+interface Props {
+  locale: Locale;
+  block: ResolvedAnswerBlock;
+  /** 정규 URL — Quiz.url */
+  url: string;
+  /** 검사 이름 — Quiz.name */
+  name: string;
+  inLanguage: string;
+}
+
+const { locale, block, url, name, inLanguage } = Astro.props;
+
+const T: Record<Locale, { eyebrow: string; type: string; summary: string; faq: string }> = {
+  ko: { eyebrow: '한눈에 보기', type: '유형', summary: '어떤 결과인가요', faq: '자주 묻는 질문' },
+  en: { eyebrow: 'At a glance', type: 'Type', summary: 'What it means', faq: 'Common questions' },
+  ja: { eyebrow: 'ひと目でわかる', type: 'タイプ', summary: 'どんな結果か', faq: 'よくある質問' },
+  zh: { eyebrow: '一眼看懂', type: '类型', summary: '结果含义', faq: '常见问题' },
+  fr: { eyebrow: 'En bref', type: 'Type', summary: 'Ce que cela signifie', faq: 'Questions fréquentes' },
+  es: { eyebrow: 'De un vistazo', type: 'Tipo', summary: 'Qué significa', faq: 'Preguntas frecuentes' },
+};
+const copy = T[locale] ?? T.en;
+
+const quizJsonLd = !block.questionCount ? null : buildQuizJsonLd({
+  name,
+  description: block.answer,
+  url,
+  inLanguage,
+  questionCount: block.questionCount,
+  questions: [],
+  outcomeNames: block.types.map((type) => type.name),
+});
+---
+{quizJsonLd && <script type="application/ld+json" set:html={JSON.stringify(quizJsonLd)} />}
+<section class="mx-auto mt-8 max-w-2xl px-4" aria-labelledby="answer-block-title" data-answer-block>
+  <h2 id="answer-block-title" class="text-xs font-black uppercase tracking-widest text-primary">{copy.eyebrow}</h2>
+  <p class="mt-2 text-base leading-7 text-foreground">{block.answer}</p>
+  <div class="mt-4 overflow-x-auto rounded-xl border border-border bg-card">
+    <table class="w-full text-left text-sm">
+      <caption class="px-4 pt-3 text-left text-sm font-bold text-foreground">{block.typesTitle}</caption>
+      <thead>
+        <tr class="border-b border-border text-xs text-muted-foreground">
+          <th scope="col" class="px-4 py-2 font-semibold">{copy.type}</th>
+          <th scope="col" class="px-4 py-2 font-semibold">{copy.summary}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {block.types.map((type) => (
+          <tr class="border-b border-border last:border-0 align-top">
+            <th scope="row" class="whitespace-nowrap px-4 py-3 font-bold text-foreground">{type.name}</th>
+            <td class="px-4 py-3 leading-6 text-muted-foreground">{type.summary}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <h3 class="mt-6 text-sm font-bold text-foreground">{copy.faq}</h3>
+  <div class="mt-2 divide-y divide-border rounded-xl border border-border bg-card">
+    {block.faqs.map((faq) => (
+      <details class="group p-4">
+        <summary class="flex min-h-11 cursor-pointer list-none items-center font-semibold text-foreground">{faq.question}</summary>
+        <p class="mt-2 text-sm leading-6 text-muted-foreground">{faq.answer}</p>
+      </details>
+    ))}
+  </div>
+</section>

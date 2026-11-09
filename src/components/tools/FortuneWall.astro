@@ -37,8 +37,6 @@ const detailHref = `/${locale}/fortune/today/`;
 ---
 
 <div class="max-w-4xl mx-auto px-4">
-  <p class="mb-3 text-center text-[11px] font-semibold text-green-600">{UI.scale}</p>
-
   {sections.map((s, i) => (
     <details class="mb-4 rounded-2xl border border-border bg-card" open={i === 0}>
       <summary class="cursor-pointer select-none px-5 py-4 text-lg font-black text-foreground">
@@ -57,7 +55,7 @@ const detailHref = `/${locale}/fortune/today/`;
                   <div class="flex items-baseline gap-2">
                     <span class="flex min-w-0 flex-1 items-center gap-1.5 truncate text-sm font-black text-foreground"><img src={c.image} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 shrink-0 rounded-full object-cover" />{c.name}</span>
                     <span
-                      class="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-black tabular-nums"
+                      class="shrink-0 rounded-full px-2 py-0.5 text-xs font-black tabular-nums"
                       style={`background:${GRADE_COLORS[c.grade]}1a;color:${GRADE_COLORS[c.grade]}`}
                     >{c.rank}{UI.rank}</span>
                     <span class="shrink-0 text-sm font-black tabular-nums" style={`color:${GRADE_COLORS[c.grade]}`}>{c.score}</span>
@@ -67,7 +65,7 @@ const detailHref = `/${locale}/fortune/today/`;
                     <span class="block h-full rounded-full" style={`width:${c.score}%;background:${GRADE_COLORS[c.grade]}`}></span>
                   </div>
 
-                  <p class="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-bold">
+                  <p class="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-bold">
                     <span style={`color:${GRADE_COLORS[c.grade]}`}>{g[c.grade]}</span>
                     <span class="text-primary">#{c.keyword}</span>
                     {c.delta !== 0 && (
@@ -82,10 +80,12 @@ const detailHref = `/${locale}/fortune/today/`;
                   </p>
 
                   <p class="mt-1.5 text-xs leading-5 text-green-900">{c.opening}</p>
-                  <p class="mt-1 text-[11px] font-semibold text-green-600">{c.advice}</p>
-                  <p class="mt-1 text-[11px] leading-5 text-primary/80">{c.caution}</p>
+                  <p class="mt-1 text-xs font-semibold text-green-600">{c.advice}</p>
+                  <p class="mt-1 text-xs leading-5 text-primary/80">{c.caution}</p>
                   {c.years && c.years.length > 0 && (
-                    <ul class="mt-2 space-y-1 border-t border-border pt-2" aria-label={UI.byYear}>
+                    <details class="mt-2 border-t border-border pt-2">
+                    <summary class="cursor-pointer select-none text-xs font-bold text-primary">{UI.byYear}</summary>
+                    <ul class="mt-1 space-y-1" aria-label={UI.byYear}>
                       {c.years.map((y) => (
                         <li class="flex items-baseline gap-2 text-xs leading-5 text-foreground">
                           <span class="shrink-0 font-black tabular-nums text-primary">{y.label}</span>
@@ -94,6 +94,7 @@ const detailHref = `/${locale}/fortune/today/`;
                         </li>
                       ))}
                     </ul>
+                    </details>
                   )}
                 </li>
               ))}
@@ -108,4 +109,5 @@ const detailHref = `/${locale}/fortune/today/`;
       </div>
     </details>
   ))}
+  <p class="mt-2 text-center text-xs font-semibold text-green-600">{UI.scale}</p>
 </div>

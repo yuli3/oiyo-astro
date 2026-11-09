@@ -69,6 +69,11 @@ const faqJsonLd = {
       <a href={localePath(locale, '/saju/calculator')} class="rounded-xl border bg-card p-4 transition hover:border-primary">
         <span class="text-sm font-black">🀄 {locale === 'ko' ? '사주 계산기' : locale === 'ja' ? '四柱推命計算機' : locale === 'zh' ? '八字计算器' : locale === 'fr' ? 'Calculateur Saju' : locale === 'es' ? 'Calculadora Saju' : 'Saju calculator'}</span>
       </a>
+      {locale === 'ko' && (
+        <a href={localePath(locale, '/tojeong-2027')} class="rounded-xl border bg-card p-4 transition hover:border-primary">
+          <span class="text-sm font-black">📜 2027 토정비결</span>
+        </a>
+      )}
       <a href={localePath(locale, '/saju/yearly')} class="rounded-xl border bg-card p-4 transition hover:border-primary">
         <span class="text-sm font-black">📅 {locale === 'ko' ? '올해의 사주 운세' : locale === 'ja' ? '今年の四柱推命運勢' : locale === 'zh' ? '今年八字运势' : locale === 'fr' ? 'Saju de l’année' : locale === 'es' ? 'Saju del año' : 'Saju fortune this year'}</span>
       </a>

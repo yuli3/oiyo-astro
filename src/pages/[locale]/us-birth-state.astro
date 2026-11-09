@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import UsBirthState from "../../components/tools/past-life/UsBirthState";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "미국에서 태어났다면 어느 주? 2024년 주별 출생으로 뽑는 출생증명서",
+    description: "지금 미국에서 태어난다면 어느 주일까요? CDC 2024년 주별 출생 수로 주를 뽑고, 그 주에서 가장 많이 지은 아기 이름(SSA 2025)도 붙여 출생증명서로 보여줘요.",
+    heading: "미국에서 태어났다면",
+    sub: "어느 주에서, 어떤 이름으로",
+    intro: "1426년엔 미국이 없었으니 이건 '지금' 버전이에요. 미국 아기 약 363만 명이 실제로 태어난 비중대로 주를 뽑아요.",
+    howTitle: "어떤 자료로 뽑나요",
+    how: [
+      "주: CDC 국립보건통계센터의 2024년 주별 출생 수(거주지 기준)로 가중해요. 캘리포니아·텍사스가 자주 나오고 버몬트는 드물어요.",
+      "이름: 사회보장국(SSA)이 공개한 2025년 주별 아기 이름 상위 10개 안에서, 실제로 그 이름을 받은 아기 수만큼 확률을 줘요.",
+      "깃발·주도·별명·주 새: 위키미디어 공용(퍼블릭 도메인)과 위키데이터, 영어 위키백과 목록에서 가져왔어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "왜 이름이 상위 10개 안에서만 나오나요?", a: "주마다 공개된 전체 목록이 매우 길어서, 가장 흔한 10개 안에서 실제 비중대로 뽑았어요. 실제로는 이 밖의 이름을 받는 아기가 훨씬 많아요." },
+      { q: "출생 수와 이름 연도가 왜 다른가요?", a: "주별 출생 확정치는 2024년이 최신이고, 이름 자료는 2025년이 최신이라 각각 가장 최근 값을 썼어요." },
+    ],
+  },
+  en: {
+    title: "Born in the US: which state? A birth certificate drawn from 2024 births",
+    description: "Which state would you be born in today? Drawn by CDC 2024 births per state, with a name from that state's most common baby names (SSA 2025), shown as a birth certificate.",
+    heading: "Born in the US",
+    sub: "In which state, and with which name",
+    intro: "There was no US in 1426, so this is the today version. States are drawn by the share of about 3.63 million real US births.",
+    howTitle: "What the draw uses",
+    how: [
+      "State: CDC NCHS 2024 births by state of residence.",
+      "Name: from the state's top 10 SSA baby names for 2025, weighted by how many babies got each.",
+      "Flag, capital, nickname, state bird: Wikimedia Commons (public domain), Wikidata and an English Wikipedia list.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Why only top-10 names?", a: "The full lists are long, so the name is drawn from the ten most common by real share. Most babies actually get names outside the top 10." },
+      { q: "Why do the years differ?", a: "2024 is the latest final births data and 2025 the latest names data; each uses its newest year." },
+    ],
+  },
+  ja: {
+    title: "米国で生まれたら何州？ 2024年の州別出生で引く出生証明書",
+    description: "いま米国で生まれるなら何州か。CDC 2024年の州別出生数で州を、SSA 2025年の人気の名前から名前を引き、出生証明書で見せます。",
+    heading: "米国で生まれたら",
+    sub: "どの州で、どんな名前で",
+    intro: "1426年に米国はなかったので、これは「いま」版です。実際の米国の出生約363万人の比率で州を引きます。",
+    howTitle: "使うデータ",
+    how: [
+      "州：CDC国立保健統計センターの2024年州別出生数（居住地基準）。",
+      "名前：SSAの2025年州別上位10名から、実際の件数の比率で引きます。",
+      "旗・州都・愛称・州の鳥：ウィキメディア・コモンズ（パブリックドメイン）、ウィキデータ、英語版ウィキペディア。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [{ q: "なぜ上位10名だけ？", a: "全リストは長いため、最も多い10名から実際の比率で引いています。" }],
+  },
+  zh: {
+    title: "如果生在美国会是哪个州？按2024年各州出生抽取的出生证明",
+    description: "今天在美国出生会是哪个州？按CDC 2024年各州出生数抽州，再从SSA 2025年该州最常见的婴儿名字中抽名字，以出生证明展示。",
+    heading: "如果生在美国",
+    sub: "在哪个州，叫什么名字",
+    intro: "1426年还没有美国，所以这是“现在”版。按约363万名美国新生儿的实际比重抽州。",
+    howTitle: "使用的资料",
+    how: [
+      "州：CDC国家卫生统计中心2024年各州出生数（按居住地）。",
+      "名字：SSA 2025年该州前10名婴儿名字，按实际人数比例抽取。",
+      "州旗、首府、别称、州鸟：维基共享资源（公有领域）、维基数据和英文维基百科列表。",
+    ],
+    faqTitle: "常见问题",
+    faq: [{ q: "为什么只从前10名里抽？", a: "完整名单很长，所以从最常见的10个名字中按实际比例抽取。" }],
+  },
+  fr: {
+    title: "Né aux États-Unis : quel État ? Un acte de naissance tiré des naissances 2024",
+    description: "Dans quel État naîtriez-vous aujourd'hui ? Tirage selon les naissances CDC 2024 par État, avec un prénom parmi les plus donnés (SSA 2025).",
+    heading: "Né aux États-Unis",
+    sub: "Dans quel État, et sous quel prénom",
+    intro: "Les États-Unis n'existaient pas en 1426 : voici la version d'aujourd'hui, selon environ 3,63 millions de naissances réelles.",
+    howTitle: "Les données utilisées",
+    how: [
+      "État : naissances 2024 par État de résidence (CDC NCHS).",
+      "Prénom : top 10 SSA 2025 de l'État, selon le nombre de bébés.",
+      "Drapeau, capitale, surnom, oiseau : Wikimedia Commons (domaine public), Wikidata, Wikipédia en anglais.",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Pourquoi seulement le top 10 ?", a: "Les listes complètes sont longues ; le prénom est tiré parmi les dix plus fréquents selon leur part réelle." }],
+  },
+  es: {
+    title: "Nacido en EE. UU.: ¿qué estado? Un acta de nacimiento según los nacimientos de 2024",
+    description: "¿En qué estado nacerías hoy? Sorteo según los nacimientos CDC 2024 por estado, con un nombre entre los más comunes allí (SSA 2025).",
+    heading: "Nacido en EE. UU.",
+    sub: "En qué estado y con qué nombre",
+    intro: "EE. UU. no existía en 1426: esta es la versión de hoy, según unos 3,63 millones de nacimientos reales.",
+    howTitle: "Datos usados",
+    how: [
+      "Estado: nacimientos 2024 por estado de residencia (CDC NCHS).",
+      "Nombre: top 10 SSA 2025 del estado, según cuántos bebés lo recibieron.",
+      "Bandera, capital, apodo, ave: Wikimedia Commons (dominio público), Wikidata y Wikipedia en inglés.",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Por qué solo el top 10?", a: "Las listas completas son largas; el nombre sale de los diez más comunes según su peso real." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/us-birth-state/")}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "600년 전 나는?", en: "Who were you 600 years ago?", ja: "600年前のわたしは？", zh: "600年前的我是谁？", fr: "Qui étiez-vous il y a 600 ans ?", es: "¿Quién eras hace 600 años?" } as Record<string, string>)[locale] ?? "1426"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><UsBirthState locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["reincarnation", "joseon1426", "europe1426"]} current="usBirthState" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

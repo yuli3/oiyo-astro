@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* static: SVG fills read these as var(), which Tailwind cannot see as utility usage. */
+@theme static {
+  /* Joseon 1426 illustration palette (hopae wood, robes) — /joseon-1426/, 2026-11-02 */
+  --color-joseon-wood-1: #c89b62;
+  --color-joseon-wood-2: #dcb57e;
+  --color-joseon-wood-3: #b8864d;
+  --color-joseon-ink: #2b1708;
+  --color-joseon-rim: #8a5a2b;
+  --color-joseon-red: #a8322d;
+  --color-joseon-blue: #24508f;
+  --color-joseon-green: #2f6b45;
+  --color-joseon-hat: #1c1c1c;
+  --color-joseon-skin: #f1d3b3;
+  --color-joseon-ivory: #f3ead2;
+  /* Silla court-robe colours (자·비·청·황) — /silla-golpum/, 2026-11-03 */
+  --color-silla-purple: #6b3d8f;
+  --color-silla-crimson: #b0283c;
+  --color-silla-blue: #2b5a9a;
+  --color-silla-yellow: #c99a1e;
+  /* France 1789 tricolour accents — /france-1789/, 2026-11-03 */
+  --color-fr-blue: #1f3f8f;
+  --color-fr-red: #c0312b;
+}
+
 @theme inline {
   --shadow-sm: none;
   --shadow: none;
@@ -304,4 +328,25 @@ main .grid > :has(.google-auto-placed) { min-width: 0; }
 
 @utility adsbygoogle {
   display: block;
+}
+
+/* 2026-11-06: raster artwork keeps text selectable and result logic independent.
+   Positions match the source board, including its enclosed top hole. */
+.timeslip-hopae { position: relative; width: 12rem; height: 24rem; flex-shrink: 0; }
+.timeslip-hopae-board { position: absolute; inset: 3rem 0 0; width: 100%; height: 21rem; object-fit: fill; }
+.timeslip-hopae-cord { position: absolute; top: 0; left: 25%; width: 50%; height: 6rem; object-fit: contain; }
+.timeslip-hopae-text { position: absolute; top: 8rem; left: 29%; width: 42%; display: flex; justify-content: space-between; color: var(--color-joseon-ink); font-family: 'Gowun Batang', serif; }
+.timeslip-hopae-text > * { writing-mode: vertical-rl; letter-spacing: .18em; font-size: .875rem; }
+.timeslip-hopae-text > strong { font-size: 1.125rem; }
+.timeslip-hopae-year { position: absolute; bottom: 3rem; width: 100%; text-align: center; color: var(--color-joseon-ink); font: .625rem 'Gowun Batang', serif; }
+.timeslip-card-preview { position: relative; width: 100%; max-width: 24rem; aspect-ratio: 3 / 4; margin-inline: auto; isolation: isolate; background: var(--color-joseon-ivory); color: var(--color-joseon-ink); }
+.timeslip-card-paper { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; z-index: -1; }
+.timeslip-card-copy { position: absolute; inset: 15% 16%; display: flex; flex-direction: column; justify-content: center; text-align: center; gap: .6rem; font-family: 'Gowun Batang', serif; overflow-wrap: anywhere; }
+.timeslip-card-copy > p { font-size: clamp(.625rem, 2.5vw, .875rem); line-height: 1.4; }
+.timeslip-card-copy > strong { font-size: clamp(1rem, 4vw, 1.5rem); line-height: 1.2; }
+.timeslip-card-copy > small { font-size: .625rem; }
+
+/* 검사 모음 검색: 기본 열림이어도 JS가 켜진 브라우저에선 검색어 전까지 전체 목록을 그렸다 숨기지 않는다(CLS·LCP). */
+@media (scripting: enabled) {
+  #test-search [data-search-results][data-search-idle] { display: none; }
 }

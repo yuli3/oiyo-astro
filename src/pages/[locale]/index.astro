@@ -8,7 +8,7 @@ import type { Locale } from '../../i18n';
 // four unrelated emoji vocabularies (doors/tests/map/value-props each used
 // their own set). lucide-react is already a project dependency; these are
 // static SVGs, no client directive needed.
-import { Wand2, Sun, ClipboardCheck, FlaskConical, Lock, Globe2, ArrowRight } from 'lucide-react';
+import { Wand2, Sun, ClipboardCheck, FlaskConical, Lock, Globe2, Hourglass, ArrowRight } from 'lucide-react';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -72,30 +72,47 @@ const pageRole = txt({
 })
 
 const heroSubDisplay = txt({
-  ko: '사주·별자리·심리검사로 오늘의 당신을 읽고, 내일의 방향을 함께 그려요. 아래에서 오늘·이번 주·이번 달·올해의 운세를 바로 확인하세요.',
-  en: 'We read who you are today through Saju, zodiac, and psychology tests, and help shape where you go next. See today, this week, this month, and this year’s fortune below.',
-  ja: '四柱推命・星座・心理テストで今日のあなたを読み解き、明日の方向を共に描きます。下で今日・今週・今月・今年の運勢をすぐ確認できます。',
-  zh: '通过四柱推命、星座与心理测试解读今天的你，一起描绘明天的方向。请在下方查看今日、本周、本月与今年的运势。',
-  fr: 'Nous lisons qui vous êtes aujourd’hui grâce au Saju, au zodiaque et aux tests de psychologie, et dessinons ensemble votre prochaine direction. Découvrez ci-dessous la fortune du jour, de la semaine, du mois et de l’année.',
-  es: 'Leemos quién eres hoy a través del Saju, el zodiaco y los tests de psicología, y trazamos juntos tu próxima dirección. Descubre abajo la fortuna de hoy, esta semana, este mes y este año.',
+  ko: '사주·별자리·심리검사로 오늘의 나를 읽고, 내일의 방향을 함께 그려요.',
+  en: 'Read who you are today through Saju, zodiac and psychology tests, and plan where you go next.',
+  ja: '四柱推命・星座・心理テストで今日の自分を読み解き、明日の方向を一緒に描きます。',
+  zh: '通过四柱推命、星座与心理测试读懂今天的你，一起描绘明天的方向。',
+  fr: 'Lisez qui vous êtes aujourd’hui grâce au Saju, au zodiaque et aux tests, et tracez la suite.',
+  es: 'Descubre quién eres hoy con el Saju, el zodiaco y los tests, y traza tu próximo paso.',
 })
 
 const ctaStartTest = txt({ ko: '검사 시작하기', en: 'Start a Test', ja: '検査を始める', zh: '开始测试', fr: 'Commencer un test', es: 'Empezar un test' })
 const ctaSeeMap = txt({ ko: '나의 지도 보기', en: 'See My Map', ja: '私の地図を見る', zh: '查看我的地图', fr: 'Voir ma carte', es: 'Ver mi mapa' })
 
-const reincarnationEntry = {
-  title: txt({ ko: '환생 — 다시 태어난다면 어느 나라?', en: 'Reincarnation — born again, in which country?', ja: '転生 — 生まれ変わるとしたらどの国？', zh: '投胎 — 如果再出生会在哪个国家？', fr: 'Réincarnation — si vous renaissiez, dans quel pays ?', es: 'Reencarnación — si nacieras de nuevo, ¿en qué país?' }),
-  description: txt({ ko: '출생 수나 인구 비중으로 나라를 뽑아봐요. 운세 예측이 아닌 가중 추첨이에요.', en: 'Draw a country using birth or population shares. A weighted draw, not a prediction.', ja: '出生数や人口の割合で国を引いてみましょう。運勢の予測ではなく、重み付き抽選です。', zh: '按出生数或人口比重抽取国家。这是加权抽取，不是命运预测。', fr: 'Tirez un pays selon les naissances ou la population. Un tirage pondéré, pas une prédiction.', es: 'Sortea un país según los nacimientos o la población. Es un sorteo ponderado, no una predicción.' }),
-  action: txt({ ko: '다시 태어나 보기', en: 'Try a new life', ja: '生まれ変わってみる', zh: '试试重新出生', fr: 'Essayer une nouvelle vie', es: 'Probar una nueva vida' }),
-}
+// 2026-11-02 (세운 "랜딩 정리"): 뽑기 입구를 하나짜리 큰 카드에서 두 칸짜리
+// 줄로 바꿨다. 환생 나라 + 600년 전 나는? 두 개를 같은 무게로 보여준다.
+const drawsTitle = txt({ ko: '재미로 뽑아보기', en: 'Just for fun', ja: '気軽に引いてみる', zh: '随手抽一抽', fr: 'Pour s’amuser', es: 'Solo por diversión' })
+const draws = [
+  {
+    href: localePath(locale, '/reincarnation-country'),
+    icon: Globe2,
+    entry: 'reincarnation',
+    title: txt({ ko: '다시 태어난다면 어느 나라?', en: 'Born again, in which country?', ja: '生まれ変わるならどの国？', zh: '再出生会在哪个国家？', fr: 'Si vous renaissiez, quel pays ?', es: 'Si nacieras de nuevo, ¿qué país?' }),
+    description: txt({ ko: '실제 출생 수 비중으로 나라를 뽑아요.', en: 'A country drawn by real birth shares.', ja: '実際の出生数の割合で国を引きます。', zh: '按真实出生比重抽国家。', fr: 'Un pays tiré selon les naissances réelles.', es: 'Un país sorteado según nacimientos reales.' }),
+  },
+  {
+    href: localePath(locale, '/past-life-1426/'),
+    icon: Hourglass,
+    entry: 'past-life-1426',
+    title: txt({ ko: '600년 전 나는?', en: 'Who were you 600 years ago?', ja: '600年前のわたしは？', zh: '600年前的我是谁？', fr: 'Qui étiez-vous il y a 600 ans ?', es: '¿Quién eras hace 600 años?' }),
+    description: txt({ ko: '조선 관직·유럽 왕좌·미국 출생 주를 역사 자료로 뽑아요.', en: 'A Joseon office, a European throne or a US birth state, from historical data.', ja: '朝鮮の官職・欧州の玉座・米国の出生州を史料で引きます。', zh: '用史料抽朝鲜官职、欧洲王座或美国出生州。', fr: 'Une charge à Joseon, un trône européen ou un État américain, selon les archives.', es: 'Un cargo en Joseon, un trono europeo o un estado de EE. UU., con datos históricos.' }),
+  },
+]
 
 const tarotCard = {
   title: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロットリーディング', zh: '塔罗牌解读', fr: 'Tirage de Tarot', es: 'Lectura de Tarot' }),
   href: localePath(locale, '/tarot/reading'),
+  description: txt({ ko: '카드 세 장으로 지금의 흐름 읽기', en: 'Three cards on where things stand', ja: '3枚のカードで今の流れを読む', zh: '三张牌读懂当下', fr: 'Trois cartes sur le moment présent', es: 'Tres cartas sobre tu momento' }),
 }
 
 const moreSectionTitle = txt({ ko: '더 보기', en: 'More', ja: 'もっと見る', zh: '更多', fr: 'Voir plus', es: 'Ver más' })
 const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テスト', zh: '所有测试', fr: 'Tous les Tests', es: 'Todos los Tests' })
+const allTestsDescription = txt({ ko: '성격·관계·진로 검사 한눈에 보기', en: 'Personality, relationship and career tests', ja: '性格・関係・進路の検査を一覧で', zh: '性格、关系、职业测试一览', fr: 'Tests de personnalité, relations et carrière', es: 'Tests de personalidad, relaciones y carrera' })
+const fortuneHeading = txt({ ko: '12지신·별자리 운세', en: 'Chinese zodiac & star sign fortunes', ja: '十二支・星座の運勢', zh: '十二生肖·星座运势', fr: 'Horoscopes chinois et occidental', es: 'Horóscopo chino y occidental' })
 
 ---
 
@@ -105,7 +122,7 @@ const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テス�
   locale={locale}
 >
   <!-- 1. 한 문장 역할 + CTA -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 to-white pt-16 pb-12 px-4">
+  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 to-white pt-12 pb-10 px-4">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-green-200 rounded-full blur-3xl opacity-20" />
     </div>
@@ -118,22 +135,6 @@ const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テス�
       <p class="text-primary font-medium text-sm md:text-base max-w-lg mx-auto leading-relaxed">
         {heroSubDisplay}
       </p>
-      <!-- WHY (2026-10-14): the draw entry precedes secondary home actions so
-           its full prompt remains visible in narrow, long-copy locales. -->
-      <a
-        href={localePath(locale, '/reincarnation-country')}
-        data-reincarnation-entry
-        class="mt-8 flex items-start gap-4 rounded-2xl border border-border bg-surface-subtle p-5 text-left text-foreground transition-colors hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-      >
-        <Globe2 size={28} strokeWidth={1.75} className="mt-1 shrink-0 text-primary" aria-hidden="true" />
-        <div class="min-w-0">
-          <h2 class="text-lg font-bold leading-snug">{reincarnationEntry.title}</h2>
-          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{reincarnationEntry.description}</p>
-          <span class="mt-3 inline-flex items-center gap-2 text-sm font-bold text-primary">
-            {reincarnationEntry.action}<ArrowRight size={16} className="shrink-0" aria-hidden="true" />
-          </span>
-        </div>
-      </a>
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
         <a
           href={localePath(locale, '/tests')}
@@ -148,47 +149,61 @@ const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テス�
           {ctaSeeMap}
         </a>
       </div>
+      <h2 class="mt-8 text-left text-xs font-bold uppercase tracking-widest text-green-600">{drawsTitle}</h2>
+      <div class="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {draws.map((d) => (
+          <a
+            href={d.href}
+            data-draw-entry={d.entry}
+            class="flex items-start gap-3 rounded-2xl border border-border bg-surface-subtle p-4 text-left text-foreground transition-colors hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+          >
+            <d.icon size={24} strokeWidth={1.75} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+            <span class="min-w-0">
+              <span class="block font-bold leading-snug">{d.title}</span>
+              <span class="mt-1 block text-xs leading-relaxed text-muted-foreground">{d.description}</span>
+            </span>
+            <ArrowRight size={16} className="ml-auto mt-1 shrink-0 text-primary" aria-hidden="true" />
+          </a>
+        ))}
+      </div>
     </div>
   </section>
-
   <!-- 2. 운세 도배: 생년월일 없이 12지신·별자리 × 오늘/이번주/이번달/올해 전체 -->
   <section class="pt-10 pb-4">
-    <h2 class="sr-only">{pageRole}</h2>
+    <h2 class="sr-only">{fortuneHeading}</h2>
     <FortuneWall locale={locale} />
   </section>
 
   <!-- 3. 기타 내용들 (타로, 전체 검사) — 세운 지시: 이미지(타로카드/전체검사) 붙일
        예정이라 작은 필로 두지 않고 큰 카드로 중앙정렬. 이미지 준비되면 아래
        아이콘 원(rounded-full) 을 <img> 로 교체. -->
-  <section class="max-w-2xl mx-auto px-4 pt-14 pb-14">
+  <section class="max-w-2xl mx-auto px-4 pt-8 pb-12">
     <h2 class="sr-only">{moreSectionTitle}</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-      <a
-        href={tarotCard.href}
-        class="group flex flex-col items-center gap-3 rounded-3xl border border-border bg-card px-6 py-10 text-center shadow-sm transition-all hover:border-green-300 hover:shadow-md"
-      >
-        <span class="flex h-20 w-20 items-center justify-center rounded-full bg-surface-subtle text-primary transition-colors group-hover:bg-green-100">
-          <Wand2 size={36} strokeWidth={1.75} aria-hidden="true" />
-        </span>
-        <span class="text-base font-bold text-foreground">{tarotCard.title}</span>
-        <span class="text-sm font-semibold text-primary">→</span>
-      </a>
-      <a
-        href={localePath(locale, '/tests')}
-        class="group flex flex-col items-center gap-3 rounded-3xl border border-border bg-card px-6 py-10 text-center shadow-sm transition-all hover:border-green-300 hover:shadow-md"
-      >
-        <span class="flex h-20 w-20 items-center justify-center rounded-full bg-surface-subtle text-primary transition-colors group-hover:bg-green-100">
-          <ClipboardCheck size={36} strokeWidth={1.75} aria-hidden="true" />
-        </span>
-        <span class="text-base font-bold text-foreground">{ctaAllTests}</span>
-        <span class="text-sm font-semibold text-primary">→</span>
-      </a>
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+      {[
+        { href: tarotCard.href, icon: Wand2, title: tarotCard.title, description: tarotCard.description },
+        { href: localePath(locale, '/tests'), icon: ClipboardCheck, title: ctaAllTests, description: allTestsDescription },
+      ].map((card) => (
+        <a
+          href={card.href}
+          class="group flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-sm transition-all hover:border-green-300 hover:shadow-md"
+        >
+          <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-surface-subtle text-primary transition-colors group-hover:bg-green-100">
+            <card.icon size={28} strokeWidth={1.75} aria-hidden="true" />
+          </span>
+          <span class="min-w-0 flex-1">
+            <span class="block font-bold text-foreground">{card.title}</span>
+            <span class="mt-0.5 block text-xs text-muted-foreground">{card.description}</span>
+          </span>
+          <ArrowRight size={16} className="shrink-0 text-primary" aria-hidden="true" />
+        </a>
+      ))}
     </div>
   </section>
 
   <!-- Value props strip -->
-  <section class="bg-gradient-to-b from-green-50/50 to-white py-12 px-4 border-t border-green-50">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+  <section class="bg-gradient-to-b from-green-50/50 to-white py-8 px-4 border-t border-green-50">
+    <div class="max-w-4xl mx-auto grid grid-cols-3 gap-3 sm:gap-6 text-center">
       {[
         {
           icon: FlaskConical,
@@ -206,10 +221,10 @@ const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テス�
           desc: txt({ ko: '결과는 기기에만 저장. 서버 전송 없음', en: 'Results stay on your device. No server uploads.', ja: '結果はデバイスのみに保存。サーバー送信なし', zh: '结果仅保存在您的设备上。不上传至服务器', fr: 'Les résultats restent sur votre appareil. Pas d\'envoi serveur.', es: 'Los resultados permanecen en tu dispositivo. Sin envíos al servidor.' }),
         },
       ].map(v => (
-        <div class="flex flex-col items-center gap-3">
-          <v.icon size={28} strokeWidth={1.75} className="text-primary" aria-hidden="true" />
-          <h3 class="font-bold text-foreground">{v.title}</h3>
-          <p class="text-sm text-primary leading-relaxed">{v.desc}</p>
+        <div class="flex flex-col items-center gap-2">
+          <v.icon size={24} strokeWidth={1.75} className="text-primary" aria-hidden="true" />
+          <h3 class="text-sm font-bold text-foreground sm:text-base">{v.title}</h3>
+          <p class="text-xs text-primary leading-relaxed sm:text-sm">{v.desc}</p>
         </div>
       ))}
     </div>

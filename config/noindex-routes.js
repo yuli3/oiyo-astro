@@ -14,6 +14,7 @@ const NOINDEX_PATTERNS = [
   /^\/[a-z]{2}\/labs\//,
   /^\/[a-z]{2}\/profile\/relationship-comparison\/?$/,
   /^\/[a-z]{2}\/circle\/pair\/?$/,        // 두 사람 보기 — 이 브라우저의 원을 읽는 개인 화면
+  /^\/[a-z]{2}\/profile\/year-2026\/?$/,  // 2026 결산 — 이 브라우저의 검사 기록을 읽는 개인 화면
 ];
 
 export function isNoindexRoute(pathname) {
