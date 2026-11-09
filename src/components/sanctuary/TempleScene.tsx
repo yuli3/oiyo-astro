@@ -1,13 +1,15 @@
 // 2026-11-09: premium procedural pass for the 산사 backdrop (threejs-aaa-graphics-builder: authored forms →
-// materials → lighting → effects). Everything is still drawn from code: no downloaded models or textures.
+// materials → lighting → effects). 11-09 photoreal pass: the hall, pagoda and courtyard here are now the
+// fallback; scanned heritage buildings from HeritageModels.tsx replace them once they load.
 // Layout: hall at z≈-1.5, courtyard in front, pagoda left, old pine right, lotus-lantern strings overhead,
 // layered ridgelines behind. Camera framing widens on narrow (phone) screens.
-import { useEffect, useMemo, useRef, type ReactNode } from 'react';
+import { Suspense, useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Sparkles, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
-import { BELL_POS, BellPavilion, MyLanterns, useBellFocus } from './TempleRituals';
+import { BELL_POS, BellPavilion, ConeRoof, MyLanterns, useBellFocus } from './TempleRituals';
+import HeritageTemple, { HeritageBoundary, ScannedBellRoof } from './HeritageModels';
 
 /** Scene palette (three.js material colours, not CSS theme colours). */
 const P = {
@@ -255,10 +257,12 @@ function ridgeGeometry(width: number, base: number, amp: number, seed: number) {
   const r = seeded(seed);
   const ph = [r() * 6, r() * 6, r() * 6];
   const v: number[] = [];
-  const steps = 90;
+  const steps = 320;
   for (let i = 0; i < steps; i++) {
     const x0 = -width / 2 + (i / steps) * width, x1 = -width / 2 + ((i + 1) / steps) * width;
-    const y = (x: number) => base + amp * (0.55 * Math.sin(x * 0.09 + ph[0]) + 0.3 * Math.sin(x * 0.23 + ph[1]) + 0.15 * Math.sin(x * 0.61 + ph[2]) + 0.6);
+    // Broad ridges plus finer octaves so the skyline reads as forested slopes, not paper cut-outs.
+    const y = (x: number) => base + amp * (0.55 * Math.sin(x * 0.09 + ph[0]) + 0.3 * Math.sin(x * 0.23 + ph[1]) + 0.15 * Math.sin(x * 0.61 + ph[2]) + 0.6
+      + 0.05 * Math.sin(x * 1.7 + ph[0] * 3) + 0.025 * Math.sin(x * 3.9 + ph[1] * 5) + 0.012 * Math.sin(x * 8.3 + ph[2] * 7));
     v.push(x0, -4, 0, x1, -4, 0, x1, y(x1), 0, x0, -4, 0, x1, y(x1), 0, x0, y(x0), 0);
   }
   const g = new THREE.BufferGeometry();
@@ -482,22 +486,34 @@ function Pines({ trees }: { trees: { x: number; z: number; s: number; lean: numb
         const sc = (0.38 + r() * 0.3) * t.s * (1.2 - k * 0.4);
         padMats.push({
           m: new THREE.Matrix4().compose(new THREE.Vector3(at.x + Math.cos(ang) * out, at.y + r() * 0.2, at.z + Math.sin(ang) * out * 0.6), new THREE.Quaternion().setFromEuler(new THREE.Euler(0, r() * 3, (r() - 0.5) * 0.2)), new THREE.Vector3(sc * 1.25, sc * 0.32, sc)),
-          c: new THREE.Color().setHSL(0.33 + r() * 0.05, 0.4, 0.07 + r() * 0.04),
+          c: new THREE.Color().setHSL(0.3 + r() * 0.06, 0.28, 0.035 + r() * 0.025),
         });
       }
     }
     return { trunk: mergeGeometries(trunks), pads: padMats };
   }, [trees]);
   const padRef = useRef<THREE.InstancedMesh>(null);
-  const padGeo = useMemo(() => new THREE.IcosahedronGeometry(1, 1), []);
+  const padGeo = useMemo(() => {
+    // Lumpy needle clusters: a subdivided ball pushed in and out so the silhouette is ragged, not a disc.
+    const g = new THREE.IcosahedronGeometry(1, 3);
+    const p = g.attributes.position as THREE.BufferAttribute;
+    const v = new THREE.Vector3();
+    for (let i = 0; i < p.count; i++) {
+      v.fromBufferAttribute(p, i);
+      const k = 1 + 0.18 * Math.sin(v.x * 9.1 + v.z * 4.3) * Math.cos(v.z * 7.7 - v.y * 3.1) + 0.1 * Math.sin(v.x * 23 + v.y * 17);
+      p.setXYZ(i, v.x * k, v.y * k, v.z * k);
+    }
+    g.computeVertexNormals();
+    return g;
+  }, []);
   useEffect(() => {
     const m = padRef.current; if (!m) return;
     pads.forEach((p, i) => { m.setMatrixAt(i, p.m); m.setColorAt(i, p.c); });
     m.instanceMatrix.needsUpdate = true; if (m.instanceColor) m.instanceColor.needsUpdate = true;
   }, [pads]);
   return <>
-    <mesh geometry={trunk}><meshStandardMaterial color={P.c4a3426} roughness={0.95} /></mesh>
-    <instancedMesh ref={padRef} args={[padGeo, undefined, pads.length]}><meshStandardMaterial flatShading roughness={0.95} /></instancedMesh>
+    <mesh geometry={trunk}><meshStandardMaterial color={P.c2a2a2a} roughness={0.95} /></mesh>
+    <instancedMesh ref={padRef} args={[padGeo, undefined, pads.length]}><meshStandardMaterial roughness={0.95} /></instancedMesh>
   </>;
 }
 
@@ -562,11 +578,24 @@ function Mountains() {
     { z: -36, base: 2, amp: 8, color: '#1d3445', seed: 2 },
     { z: -27, base: 0.5, amp: 6.5, color: '#14262f', seed: 3 },
     { z: -19, base: -0.3, amp: 4, color: '#0e1b1d', seed: 4 },
-  ].map((l) => ({ ...l, geo: ridgeGeometry(160, l.base, l.amp, l.seed) })), []);
+  ].map((l) => {
+    // Vertical gradient: moonlit crests fading into mist at the foot of each ridge.
+    const geo = ridgeGeometry(160, l.base, l.amp, l.seed);
+    const pos = geo.attributes.position as THREE.BufferAttribute;
+    const col = new Float32Array(pos.count * 3);
+    const crest = new THREE.Color(l.color).multiplyScalar(1.35), foot = new THREE.Color(l.color).lerp(new THREE.Color(P.c9fb7c9), 0.18);
+    const c = new THREE.Color();
+    for (let i = 0; i < pos.count; i++) {
+      const k = THREE.MathUtils.smoothstep(pos.getY(i), -4, l.base + l.amp * 1.2);
+      c.copy(foot).lerp(crest, k).toArray(col, i * 3);
+    }
+    geo.setAttribute('color', new THREE.BufferAttribute(col, 3));
+    return { ...l, geo };
+  }), []);
   const mist = useRef<THREE.Group>(null);
   useFrame(({ clock }) => { if (mist.current) mist.current.children.forEach((c, i) => { c.position.x = Math.sin(clock.elapsedTime * 0.03 + i * 2) * 6; }); });
   return <>
-    {layers.map((l) => <mesh key={l.seed} geometry={l.geo} position={[0, 0, l.z]}><meshBasicMaterial color={l.color} fog={false} /></mesh>)}
+    {layers.map((l) => <mesh key={l.seed} geometry={l.geo} position={[0, 0, l.z]}><meshBasicMaterial vertexColors fog={false} /></mesh>)}
     <group ref={mist}>
       {[{ z: -40, y: 5, o: 0.16 }, { z: -31, y: 3, o: 0.14 }, { z: -22, y: 1.2, o: 0.12 }].map((m, i) =>
         <mesh key={i} position={[0, m.y, m.z]}><planeGeometry args={[120, 8]} /><meshBasicMaterial map={blobTexture()} color={P.c9fb7c9} transparent opacity={m.o} depthWrite={false} fog={false} /></mesh>)}
@@ -606,7 +635,7 @@ function TempleCamera({ ring }: { ring: number }) {
     const f = focus(clock.elapsedTime) * (portrait ? 0.95 : 0.6);
     const fx = BELL_POS[0] * f;
     camera.position.set(Math.sin(t) * 1.6 * (1 - f) + fx, (portrait ? 2.6 : 2.3) + Math.sin(t * 1.7) * 0.12, look.z + dist + Math.cos(t * 0.6) * 0.3 - f * (portrait ? 4 : 1.5));
-    camera.lookAt(look.x + fx, look.y + (portrait ? 0.4 : 0) - f * (portrait ? 1.7 : 1.1), look.z + f * 2.2);
+    camera.lookAt(look.x + fx, look.y + (portrait ? -0.25 : 0) - f * (portrait ? 1.7 : 1.1), look.z + f * 2.2);
   });
   return null;
 }
@@ -617,12 +646,14 @@ function Exposure() {
   return null;
 }
 
+/** The hand-built hall, pagoda and courtyard, shown while the scans load or if they fail. */
+function HandBuilt() {
+  return <><Ground /><Hall /><Pagoda position={[-4.5, 0, 0.7]} /></>;
+}
+
 export default function Temple({ lanterns = [], ring = 0 }: { lanterns?: number[]; ring?: number }) {
   const pines = useMemo(() => [
     { x: 6.2, z: 0.8, s: 1.2, lean: -0.9, seed: 3 },
-    { x: -7.6, z: -1.5, s: 1.1, lean: 0.6, seed: 9 },
-    { x: 7.9, z: -3.2, s: 1.0, lean: -0.3, seed: 14 },
-    { x: -9.8, z: 2.2, s: 1.3, lean: 0.8, seed: 17 },
     { x: 10.5, z: 3.8, s: 1.2, lean: -0.7, seed: 23 },
     { x: -4.6, z: -6.5, s: 1.15, lean: 0.2, seed: 31 },
     { x: 4.2, z: -7.2, s: 1.25, lean: -0.2, seed: 37 },
@@ -642,15 +673,18 @@ export default function Temple({ lanterns = [], ring = 0 }: { lanterns?: number[
     <directionalLight position={[-10, 12, -8]} intensity={1.4} color={P.cb8c8ff} />
     <directionalLight position={[6, 5, 10]} intensity={0.35} color={P.c7f8fb8} />
     <pointLight position={[0, 1.6, 1.4]} intensity={6} distance={9} decay={1.5} color={P.cffb35c} />
-    <Ground />
-    <Hall />
+    {/* Scanned heritage buildings stream in; the hand-built hall stands in until they arrive. */}
+    <HeritageBoundary fallback={<HandBuilt />}>
+      <Suspense fallback={<HandBuilt />}>
+        <HeritageTemple />
+      </Suspense>
+    </HeritageBoundary>
     <StoneLantern position={[0, 0, 2.2]} />
-    <Pagoda position={[-4.5, 0, 0.7]} />
     <Pines trees={pines} />
     <LanternStrings />
     <Sparkles count={36} scale={[14, 3, 10]} position={[0, 1.6, 1]} size={2.6} speed={0.25} color={P.cffe9a8} />
     <MyLanterns colors={lanterns} />
-    <BellPavilion ring={ring} />
+    <BellPavilion ring={ring} roof={<HeritageBoundary fallback={<ConeRoof />}><Suspense fallback={<ConeRoof />}><ScannedBellRoof width={2.5} /></Suspense></HeritageBoundary>} />
     <TempleCamera ring={ring} />
   </>;
 }
