@@ -10,7 +10,7 @@ import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import { BELL_POS, BellPavilion, ConeRoof, MyLanterns, useBellFocus } from './TempleRituals';
 import HeritageTemple, { HeritageBoundary, ScannedBellRoof } from './HeritageModels';
-import BuddhaHall from './BuddhaHall';
+import BuddhaHall, { preloadBuddha } from './BuddhaHall';
 import { WalkingChestnut } from './Chestnut';
 import { chestnut, type Spot } from './walk';
 
@@ -660,6 +660,7 @@ function HandBuilt() {
 type TempleProps = { lanterns?: number[]; ring?: number; spot?: Spot; inside?: boolean; bows?: number; onArrive?: (spot: Spot) => void };
 
 export default function Temple(props: TempleProps) {
+  useEffect(() => { if (props.spot === 'hall' || props.inside) preloadBuddha(); }, [props.spot, props.inside]);
   // Inside the hall the whole courtyard is swapped for the interior (only one is drawn at a time).
   if (props.inside) return <><Exposure /><BuddhaHall bows={props.bows ?? 0} /></>;
   return <Courtyard {...props} />;

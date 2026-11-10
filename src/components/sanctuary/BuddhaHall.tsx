@@ -1,13 +1,22 @@
 // 2026-11-10: inside the main hall (법당 안), CHOSEUN: "불당도 구현하면 좋겠어요".
 // Shown only when the visitor walks their 밤톨 into the hall, so the Buddha is never in the default view
-// (plan 2026-11-03: keep the default scene a non-religious "rest"). Everything here is drawn from code and
-// does not copy a specific temple or statue. A gilded seated Buddha in meditation (선정인) on a lotus
-// pedestal, a flame mandorla, two candles and incense on the altar, and rows of lotus lanterns overhead.
-import { useEffect, useMemo, useRef } from 'react';
-import { useFrame, useThree } from '@react-three/fiber';
+// (plan 2026-11-03: keep the default scene a non-religious "rest"). The room is drawn from code and does not
+// copy a specific temple. The statue is 국가유산청's 3D model of a Silla stone seated Vairocana Buddha
+// (석조비로자나불좌상, KOGL Type 1, see public/models/sanctuary/SOURCES.md), with pedestal and halo.
+// While it loads, or if it fails, a gilded Buddha drawn from code (lotus pedestal, flame mandorla) stands in.
+import { Suspense, useEffect, useMemo, useRef } from 'react';
+import { useFrame, useLoader, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import { ChestnutFigure } from './Chestnut';
+import { HeritageBoundary } from './HeritageModels';
+
+const BUDDHA_URL = '/models/sanctuary/buddha.glb';
+const withMeshopt = (loader: GLTFLoader) => { loader.setMeshoptDecoder(MeshoptDecoder); };
+/** Start downloading the statue (about 2 MB) once the visitor heads for the hall, not on every page view. */
+export function preloadBuddha() { useLoader.preload(GLTFLoader, BUDDHA_URL, withMeshopt); }
 
 const P = {
   bg: '#0d0806', ceilingTint: '#7a7470', gold: '#d1a04a', goldDeep: '#8a6224', hair: '#22305a', urna: '#f3e6c0', feature: '#6b4518',
@@ -294,7 +303,7 @@ function HallCamera() {
     const t = clock.elapsedTime * 0.05;
     // Phones: the statue sits lower in frame so it shows between the scene buttons and the ritual panel.
     camera.position.set(Math.sin(t) * 0.35, portrait ? 1.7 : 1.55, portrait ? 7.2 : 4.7);
-    camera.lookAt(0, portrait ? 2.45 : 1.65, -2.3);
+    camera.lookAt(0, portrait ? 2.2 : 1.65, -2.3);
   });
   return null;
 }
@@ -314,6 +323,33 @@ function BowingChestnut({ bows }: { bows: number }) {
   return <group position={[0, 0.09, 0.6]} rotation-y={Math.PI} scale={1.1}>
     <group ref={fig}><ChestnutFigure /></group>
   </group>;
+}
+
+/** The 국가유산청 model: 2.92 m tall with pedestal and halo, face toward +Z, base at y=0. */
+function ScannedBuddha() {
+  const gltf = useLoader(GLTFLoader, BUDDHA_URL, withMeshopt);
+  const statue = useMemo(() => {
+    const root = gltf.scene.clone(true);
+    root.traverse((o) => {
+      const m = o as THREE.Mesh;
+      if (!m.isMesh) return;
+      const mat = m.material as THREE.MeshStandardMaterial;
+      if (mat.map) mat.map.anisotropy = 4;
+      mat.envMapIntensity = 0.6;
+    });
+    return root;
+  }, [gltf]);
+  // 0.9 keeps the halo clear of the ceiling lanterns and the face in frame on phones.
+  return <primitive object={statue} scale={0.9} />;
+}
+
+/** Stand-in drawn from code, shown while the scan loads or if it cannot be fetched. */
+function DrawnBuddha({ mandorla }: { mandorla: THREE.Texture }) {
+  return <>
+    <group scale={0.9}><LotusPedestal /></group>
+    <group position={[0, 0.5, 0]} scale={1.3}><SeatedBuddha /></group>
+    <mesh position={[0, 1.85, -0.55]} scale={1.22}><planeGeometry args={[2.3, 3.2]} /><meshStandardMaterial map={mandorla} transparent alphaTest={0.5} metalness={0.3} roughness={0.6} emissive={P.taenghwaGold} emissiveIntensity={0.04} emissiveMap={mandorla} side={THREE.DoubleSide} /></mesh>
+  </>;
 }
 
 export default function BuddhaHall({ bows }: { bows: number }) {
@@ -343,9 +379,9 @@ export default function BuddhaHall({ bows }: { bows: number }) {
     <mesh position={[0, ALTAR_TOP / 2, ALTAR_Z]}><boxGeometry args={[3, ALTAR_TOP, 1.4]} /><meshStandardMaterial color={P.altar} roughness={0.7} /></mesh>
     <mesh position={[0, ALTAR_TOP * 0.55, ALTAR_Z + 0.705]}><planeGeometry args={[2.9, 0.42]} /><meshStandardMaterial map={band} roughness={0.75} /></mesh>
     <group position={[0, ALTAR_TOP, ALTAR_Z - 0.15]}>
-      <group scale={0.9}><LotusPedestal /></group>
-      <group position={[0, 0.5, 0]} scale={1.3}><SeatedBuddha /></group>
-      <mesh position={[0, 1.85, -0.55]} scale={1.22}><planeGeometry args={[2.3, 3.2]} /><meshStandardMaterial map={mandorla} transparent alphaTest={0.5} metalness={0.3} roughness={0.6} emissive={P.taenghwaGold} emissiveIntensity={0.04} emissiveMap={mandorla} side={THREE.DoubleSide} /></mesh>
+      <HeritageBoundary fallback={<DrawnBuddha mandorla={mandorla} />}>
+        <Suspense fallback={<DrawnBuddha mandorla={mandorla} />}><ScannedBuddha /></Suspense>
+      </HeritageBoundary>
     </group>
     {/* offerings on the front of the altar */}
     <group position={[0, ALTAR_TOP, ALTAR_Z + 0.5]}>
