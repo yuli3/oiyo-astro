@@ -1,6 +1,6 @@
 // 2026-11-09: small rituals in the temple scene (CHOSEUN picked "연등 달기·범종 상호작용").
 // Both run on the device only: the lantern colours live in localStorage, nothing is sent anywhere.
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
@@ -114,7 +114,15 @@ function bellGeometry() {
 
 const STRIKE_AT = 0.55; // seconds from the tap until the log meets the bell
 
-export function BellPavilion({ ring }: { ring: number }) {
+/** Plain hipped roof used until (or instead of) the scanned roof. */
+export function ConeRoof() {
+  return <>
+    <mesh position={[0, 0.07, 0]}><boxGeometry args={[1.7, 0.1, 1.7]} /><meshStandardMaterial color={P.post} roughness={0.8} /></mesh>
+    <mesh position={[0, 0.37, 0]} rotation-y={Math.PI / 4}><coneGeometry args={[1.55, 0.55, 4, 1]} /><meshStandardMaterial color={P.tile} roughness={0.8} flatShading /></mesh>
+  </>;
+}
+
+export function BellPavilion({ ring, roof }: { ring: number; roof?: ReactNode }) {
   const { clock } = useThree();
   const start = useRef(-100);
   const mounted = useRef(false);
@@ -147,8 +155,7 @@ export function BellPavilion({ ring }: { ring: number }) {
   return <group position={BELL_POS}>
     <mesh position={[0, 0.1, 0]}><boxGeometry args={[2, 0.2, 2]} /><meshStandardMaterial color={P.stone} roughness={1} /></mesh>
     {posts.map(([x, z], i) => <mesh key={i} position={[x, 1.15, z]}><cylinderGeometry args={[0.07, 0.08, 1.9, 8]} /><meshStandardMaterial color={P.post} roughness={0.8} /></mesh>)}
-    <mesh position={[0, 2.12, 0]}><boxGeometry args={[1.7, 0.1, 1.7]} /><meshStandardMaterial color={P.post} roughness={0.8} /></mesh>
-    <mesh position={[0, 2.42, 0]} rotation-y={Math.PI / 4}><coneGeometry args={[1.55, 0.55, 4, 1]} /><meshStandardMaterial color={P.tile} roughness={0.8} flatShading /></mesh>
+    <group position={[0, 2.05, 0]}>{roof ?? <ConeRoof />}</group>
     <mesh position={[0, 1.98, 0]}><boxGeometry args={[1.5, 0.08, 0.1]} /><meshStandardMaterial color={P.post} /></mesh>
     <group ref={bell} position={[0, 1.95, 0]}>
       <mesh position={[0, -0.05, 0]}><torusGeometry args={[0.06, 0.02, 6, 12]} /><meshStandardMaterial color={P.bronze} metalness={0.8} roughness={0.45} /></mesh>

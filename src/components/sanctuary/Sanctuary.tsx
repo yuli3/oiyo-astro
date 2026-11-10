@@ -215,7 +215,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
         <p>{t.help}</p><p role="status">{message}</p>
         <div data-part="sound"><button type="button" aria-pressed={sound} onClick={()=>void toggleSound()}>{sound?t.soundOff:t.soundOn}</button><button type="button" disabled={!sound} onClick={tap}>{t.tap}</button><small>{t.soundNote}</small></div>
       </section>
-      <footer data-part="footnote"><p>{t.notice}</p>{view3d&&scene==='temple'&&<p>{t.bellNote}</p>}<p>{t.privacy}</p><p>{view3d?t.art3d:t.art}</p></footer>
+      <footer data-part="footnote"><p>{t.notice}</p>{view3d&&scene==='temple'&&<><p>{t.bellNote}</p><p>{t.heritage}</p></>}<p>{t.privacy}</p><p>{view3d?t.art3d:t.art}</p></footer>
     </main>
   </div>;
 }
