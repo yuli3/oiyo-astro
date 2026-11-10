@@ -128,7 +128,9 @@ export const GENERATED_OG: Readonly<Record<string,string>> = {
   "/value-compass-test": "/images/grok-20261106/oiyo-og-test-value-compass.webp",
   "/work-life-balance-test": "/images/grok-20261106/oiyo-og-test-work-life-balance.webp",
   "/work-style-test": "/images/grok-20261106/oiyo-og-test-work-style.webp",
-  "/workaholic-test": "/images/grok-20261106/oiyo-og-test-workaholic.webp"
+  "/workaholic-test": "/images/grok-20261106/oiyo-og-test-workaholic.webp",
+  "/profile/year-2026": "/images/grok-20261106/oiyo-og-year-recap-2026-share-recap-2026.webp",
+  "/tojeong-2027": "/images/grok-20261106/oiyo-og-tojeong-2027-share-tojeong.webp"
 };
 export const DREAM_ART: Readonly<Record<string,string>> = {
   "baby": "/images/grok-20261106/oiyo-illustration-dream-baby.webp",
@@ -158,7 +160,19 @@ export const DREAM_ART: Readonly<Record<string,string>> = {
   "stranger": "/images/grok-20261106/oiyo-illustration-dream-stranger.webp",
   "teeth": "/images/grok-20261106/oiyo-illustration-dream-teeth.webp",
   "tiger": "/images/grok-20261106/oiyo-illustration-dream-tiger.webp",
-  "water": "/images/grok-20261106/oiyo-illustration-dream-water.webp"
+  "water": "/images/grok-20261106/oiyo-illustration-dream-water.webp",
+  "cat": "/images/grok-20261106/oiyo-illustration-dream-cat.webp",
+  "cow": "/images/grok-20261106/oiyo-illustration-dream-cow.webp",
+  "dog": "/images/grok-20261106/oiyo-illustration-dream-dog.webp",
+  "flower": "/images/grok-20261106/oiyo-illustration-dream-flower.webp",
+  "hair": "/images/grok-20261106/oiyo-illustration-dream-hair.webp",
+  "pregnancy": "/images/grok-20261106/oiyo-illustration-dream-pregnancy.webp",
+  "rain": "/images/grok-20261106/oiyo-illustration-dream-rain.webp",
+  "poop": "/images/grok-20261106/oiyo-illustration-dream-poop.webp",
+  "snow": "/images/grok-20261106/oiyo-illustration-dream-snow.webp",
+  "spider": "/images/grok-20261106/oiyo-illustration-dream-spider.webp",
+  "toilet": "/images/grok-20261106/oiyo-illustration-dream-toilet.webp",
+  "wedding": "/images/grok-20261106/oiyo-illustration-dream-wedding.webp"
 };
 export const GENERATED_ICONS: Readonly<Record<string,string>> = {
   "/chimp-test": "/images/grok-20261106/oiyo-icon-test-chimp.webp",

@@ -358,7 +358,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
     return (
       <div className="space-y-5">
         <div className="text-center">
-          <ResultSymbol id="hexaco" fallback="🧭" className="mx-auto mb-3 h-24 w-24" />
+          <ResultSymbol id="hexaco" variant={[...DIM_ORDER].sort((a, b) => scores[b] - scores[a])[0]} fallback="🧭" className="mx-auto mb-3 h-24 w-24" />
           <h1 className="text-2xl font-bold text-foreground">{t.yourProfile}</h1>
           <p className="text-muted-foreground mt-1">{t.title}</p>
         </div>

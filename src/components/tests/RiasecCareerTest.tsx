@@ -5,6 +5,7 @@ import { recordTestResult } from '@/lib/user/test-results'
 import { gaEvent } from '@/lib/analytics/ga-event'
 import { buildRiasecProfile, type RiasecType } from '../../lib/riasec-profile'
 import RiasecHexagonChart from '../shared/RiasecHexagonChart'
+import ResultSymbol from '../shared/ResultSymbol'
 import type { CareerExample } from '@/lib/career-exploration'
 import { orderCareerExamples } from '@/lib/career-exploration-order'
 import CareerComparison, { CAREER_COMPARISON_COPY } from '../career/CareerComparison'
@@ -522,6 +523,7 @@ export default function RiasecCareerTest({ locale: lp = 'ko', careerExamples = [
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
+        {!resultProfile.isMixed && !resultProfile.isLowFlat && <ResultSymbol id="riasec" variant={resultProfile.ranked[0].type} className="mx-auto h-24 w-24" />}
         <p className="text-sm text-muted-foreground">{resultProfile.isMixed ? lb.mixedTitle : lb.yourCode}</p>
         {!resultProfile.isMixed && <div className="text-4xl font-bold tracking-widest">{topCode.split('').map(c => (
           <span key={c} style={{ color: RIASEC_COLORS[c as RiasecType] }}>{c}</span>

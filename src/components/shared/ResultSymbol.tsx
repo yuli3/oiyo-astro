@@ -17,6 +17,10 @@ export type ResultSymbolId =
   | 'akashic-records'
   | 'disc'
   | 'love-language'
+  | 'riasec'
+  | 'chronotypes'
+  | 'jeolgi'
+  | 'ten-stems'
 
 const CHINESE_ZODIAC_FILES: Record<string, string> = {
   boar: 'boar', dog: 'dog', dragon: 'dragon', goat: 'goat', horse: 'horse',
@@ -43,7 +47,18 @@ const FIVE_ELEMENT_FILES = new Set(['wood', 'fire', 'earth', 'metal', 'water'])
 const DISC_FILES = new Set(['d', 'i', 's', 'c'])
 const LOVE_LANGUAGE_FILES = new Set(['words', 'acts', 'gifts', 'time', 'touch'])
 
+// 2026-11-11: 결과 요인별 상징(Grok Build 생성). 요인 코드 → 파일 이름.
+const FACTOR_FILES: Partial<Record<ResultSymbolId, Record<string, string>>> = {
+  'big-five': { O: 'openness', C: 'conscientiousness', E: 'extraversion', A: 'agreeableness', N: 'neuroticism' },
+  hexaco: { H: 'honesty-humility', E: 'emotionality', X: 'extraversion', A: 'agreeableness', C: 'conscientiousness', O: 'openness' },
+  tci: { HA: 'harm-avoidance', NS: 'novelty-seeking', RD: 'reward-dependence', P: 'persistence', SD: 'self-directedness', C: 'cooperativeness', ST: 'self-transcendence' },
+  riasec: { R: 'realistic', I: 'investigative', A: 'artistic', S: 'social', E: 'enterprising', C: 'conventional' },
+  chronotypes: { lion: 'lion', bear: 'bear', wolf: 'wolf', dolphin: 'dolphin' },
+}
+
 export function resultSymbolSrc(id: ResultSymbolId, variant?: string): string {
+  const factor = variant ? FACTOR_FILES[id]?.[variant] : undefined
+  if (factor) return `/images/result-symbols/${id}/${factor}.webp`
   if (id === 'disc' && variant) {
     const file = variant.toLowerCase()
     if (DISC_FILES.has(file)) return `/images/result-symbols/disc/${file}.webp`

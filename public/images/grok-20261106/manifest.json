@@ -1711,6 +1711,356 @@
       "bytes": 6642,
       "type": "og",
       "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-year-recap-2026-title-0-sprout",
+      "source": "oiyo-icon-year-recap-2026-title-0-sprout.png",
+      "sourceSha256": "50c56f729b3bde8f6486817e6476c18c2262dd5faa51d3a02d2db269c493d432",
+      "path": "/images/grok-20261106/oiyo-icon-year-recap-2026-title-0-sprout.webp",
+      "sha256": "8e31db669af18829fc643aedea211c0d1aaa16b7eef7b0a2ee2e587b365b73fc",
+      "bytes": 8236,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-pair-chemistry-mbti-3-twins",
+      "source": "oiyo-icon-pair-chemistry-mbti-3-twins.png",
+      "sourceSha256": "6cef1afc5d1261ad4a87e7fbf55d6e3b3a736b584c55e7ff3145268636c28504",
+      "path": "/images/grok-20261106/oiyo-icon-pair-chemistry-mbti-3-twins.webp",
+      "sha256": "6246dc9f83bea78771c6d5d522df232df39d9f78c146bb5d855cef373fa4d97c",
+      "bytes": 7482,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-pair-chemistry-mbti-0-puzzle",
+      "source": "oiyo-icon-pair-chemistry-mbti-0-puzzle.png",
+      "sourceSha256": "820914611b9cc72984b88318e97eec72ee6c1e25b668a0ab8103bac00d6eed29",
+      "path": "/images/grok-20261106/oiyo-icon-pair-chemistry-mbti-0-puzzle.webp",
+      "sha256": "1ec6cc8cd11b9826c72718b52f87625f753ac1c4a95e86dd2114fc88305639fa",
+      "bytes": 4732,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-og-year-recap-2026-share-recap-2026",
+      "source": "oiyo-og-year-recap-2026-share-recap-2026.png",
+      "sourceSha256": "1576f7810f19cb0abb86e4c760fcc28a28e20bf48e933ccadb8cdd0d53796c87",
+      "path": "/images/grok-20261106/oiyo-og-year-recap-2026-share-recap-2026.webp",
+      "sha256": "294d4f6a54b94e33a64a4952e3ddfc2a41231e0c9941b7b817a209adc6167ad0",
+      "bytes": 89910,
+      "type": "og",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-og-tojeong-2027-share-tojeong",
+      "source": "oiyo-og-tojeong-2027-share-tojeong.png",
+      "sourceSha256": "3c1d011dee6507d2a857bc2e0088f114752015962725b6432ec0df5c5eb7a4c7",
+      "path": "/images/grok-20261106/oiyo-og-tojeong-2027-share-tojeong.webp",
+      "sha256": "44f085aee654607a98685b28fc10653665957c3f203f4ed50967385bc92baea0",
+      "bytes": 158208,
+      "type": "og",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-upper-1-thaw",
+      "source": "oiyo-illustration-tojeong-2027-upper-1-thaw.png",
+      "sourceSha256": "2580eaf22df0de69dae9b8d1f8a6bf11ce9f5b64913add51452cf7109f4968ba",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-1-thaw.webp",
+      "sha256": "18122ed7c28d15a8e9803191b79ac648e2ecb4574d2ef54da83048bfd491a87b",
+      "bytes": 219188,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-pair-chemistry-love-diff",
+      "source": "oiyo-icon-pair-chemistry-love-diff.png",
+      "sourceSha256": "e7c90e1c0b4ff5ca03ea016cdaf6ad7b5d860e60a82cee5ba45c076d7cfcb0b1",
+      "path": "/images/grok-20261106/oiyo-icon-pair-chemistry-love-diff.webp",
+      "sha256": "6ab2e9caecf7317d988388314823ec42ce3bdc1c87caeafee82d9913c1f1051e",
+      "bytes": 6806,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-pair-chemistry-love-same",
+      "source": "oiyo-icon-pair-chemistry-love-same.png",
+      "sourceSha256": "6e9c0e837686ba67719f71cd3761d268e67f3b57d1d9c0c5df1848c97ad639a3",
+      "path": "/images/grok-20261106/oiyo-icon-pair-chemistry-love-same.webp",
+      "sha256": "5c3db8039bea22890499c12f9b4d7538a0d758de2b850c0df5ea4212377d4786",
+      "bytes": 7250,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-pair-chemistry-mbti-1-moon",
+      "source": "oiyo-icon-pair-chemistry-mbti-1-moon.png",
+      "sourceSha256": "9035507bb1368963d45b73c83d77aa2953ae700c54f2b8b35ef93f44e2ac1b23",
+      "path": "/images/grok-20261106/oiyo-icon-pair-chemistry-mbti-1-moon.webp",
+      "sha256": "fc94c64680d4636199a0a07eebf67107bbd1d18f58d24769716d15c1d377bf5a",
+      "bytes": 4510,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-pair-chemistry-mbti-2-scale",
+      "source": "oiyo-icon-pair-chemistry-mbti-2-scale.png",
+      "sourceSha256": "ca425e0263a81c9ddc46ab8873b8a84b58ce7760e1a2ebfcdd63e4ade969c4e2",
+      "path": "/images/grok-20261106/oiyo-icon-pair-chemistry-mbti-2-scale.webp",
+      "sha256": "093553c26cd0c7e5d634d6a87849a3c6af9d4b8549fd01d53dce6a82c4b80e46",
+      "bytes": 7480,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-pair-chemistry-mbti-4-mirror",
+      "source": "oiyo-icon-pair-chemistry-mbti-4-mirror.png",
+      "sourceSha256": "a06265e4bb36a7cdcd0b277854f1488c9dcd980066cc2d73dd68616a338f908c",
+      "path": "/images/grok-20261106/oiyo-icon-pair-chemistry-mbti-4-mirror.webp",
+      "sha256": "db8a1bf3c0707763ac79a7f89c8c77a65c8dbdf25ece7cc4f01518aeab07dfc3",
+      "bytes": 8146,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-year-recap-2026-title-1-compass",
+      "source": "oiyo-icon-year-recap-2026-title-1-compass.png",
+      "sourceSha256": "e45a8bb0e183a5dcac693de2ccb8b84c5b18ee285407bd396c1b7b4fcc7a60e9",
+      "path": "/images/grok-20261106/oiyo-icon-year-recap-2026-title-1-compass.webp",
+      "sha256": "232d7afded8f6c3133890d3846545199fec4ea236361351cc6e9bb0505c803d9",
+      "bytes": 6510,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-year-recap-2026-title-2-books",
+      "source": "oiyo-icon-year-recap-2026-title-2-books.png",
+      "sourceSha256": "6c3c0fb0d8592a803f72c972cf289fdb66c8971b93650d7cc90fc3da94617560",
+      "path": "/images/grok-20261106/oiyo-icon-year-recap-2026-title-2-books.webp",
+      "sha256": "104b5e91a3705d77bfa398a4f272f723a5107a0015e21315623069bf37460119",
+      "bytes": 8384,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-icon-year-recap-2026-title-3-trophy",
+      "source": "oiyo-icon-year-recap-2026-title-3-trophy.png",
+      "sourceSha256": "094c17ab6fec0c8c1a56574db2fcf6bd7c09352f257524919c929bb53d76a279",
+      "path": "/images/grok-20261106/oiyo-icon-year-recap-2026-title-3-trophy.webp",
+      "sha256": "4a42fa79b4bd9d88f8ab02cd259e08b1a6df37ff3556a6bac8d03f1a6ac7c771",
+      "bytes": 9074,
+      "type": "icon",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-cat",
+      "source": "oiyo-illustration-dream-cat.png",
+      "sourceSha256": "66cc4aa7117671fd0dd48a917869a1817c6fdfc91cdbf5337ae4a97696a568bb",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-cat.webp",
+      "sha256": "fe51c5627bd2b883f2f7c5e4ce28344c4accfa5c49709c5d07934103d2157889",
+      "bytes": 58856,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-cow",
+      "source": "oiyo-illustration-dream-cow.png",
+      "sourceSha256": "b7ee8065e57697e9af1ed0eb84a930f8675c2935de683d3ba843a81b718cc931",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-cow.webp",
+      "sha256": "4c8ab82ef1dfb11ddb56fa14d6debf6daf8bc81535993681f88f35828c2d6b21",
+      "bytes": 141060,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-dog",
+      "source": "oiyo-illustration-dream-dog.png",
+      "sourceSha256": "2b868595b2e438848e99c520bebba89444c3fdff5b26f8ea7e51b623042f11c1",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-dog.webp",
+      "sha256": "f0b4e28f14f191532700f4dbd3dd196575b0d391450247e1d3c7e80dbb508f1d",
+      "bytes": 17560,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-flower",
+      "source": "oiyo-illustration-dream-flower.png",
+      "sourceSha256": "0c21d77b570f2274f82c8f5d71faf6123ba5e75d3ba683cc540e27c8754f43ae",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-flower.webp",
+      "sha256": "3fee30f9165b53c61b954d0978a41790a1246c2dbb4c6a6229c5e3216bbf8e3b",
+      "bytes": 129000,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-hair",
+      "source": "oiyo-illustration-dream-hair.png",
+      "sourceSha256": "76349061d5b4fe85ab6a9d7f4e5b1975e3e8eb4ed82d75392566b047312c505d",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-hair.webp",
+      "sha256": "f704bc928c0293d5655c5b7639f9320fe85bbdf379ce17f57da61e5cd30d4957",
+      "bytes": 54138,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-pregnancy",
+      "source": "oiyo-illustration-dream-pregnancy.png",
+      "sourceSha256": "6b928d28ac3ed631f892e78b162d700c54fc6981356e2d10bc7a2b48cb2630af",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-pregnancy.webp",
+      "sha256": "d904a7163b237373c0210c2128f7f6bfb76569a851657e7a32f798375b862bad",
+      "bytes": 58264,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-rain",
+      "source": "oiyo-illustration-dream-rain.png",
+      "sourceSha256": "cb8ebcb6b672b7fb284688c466f191a451d21d33e0aa6d976f17c7ecb0df13c1",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-rain.webp",
+      "sha256": "447789b175c5252f10dd7dbacd1ce34636a9054f263791823f2b69257e03706c",
+      "bytes": 113062,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-poop",
+      "source": "oiyo-illustration-dream-poop.png",
+      "sourceSha256": "241c92effc487adf5d3694c9bb9630373d3e307b27605fe14668803480d89e27",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-poop.webp",
+      "sha256": "894d7451bd1a96d79ab82db1aaac7327c81a7dc6df16ebde7ebc95a48192fe3f",
+      "bytes": 61122,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-snow",
+      "source": "oiyo-illustration-dream-snow.png",
+      "sourceSha256": "b607b8e80c55b836dd5b94998acc6c1c5616ab61ff5a63bc1515cf3c79065416",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-snow.webp",
+      "sha256": "df5ac3641559ef2ef5874f95f42937a56e119da451393b103b102f916e5afae8",
+      "bytes": 133812,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-spider",
+      "source": "oiyo-illustration-dream-spider.png",
+      "sourceSha256": "0b1a4f417960ba59a5f142ddefb9b8141c7180bcf3049c1f2e8b3ab08b83d645",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-spider.webp",
+      "sha256": "a741cbc7552ccdbd9c6c165808fe3f0b2854460c5525d987197832bad2cda4b3",
+      "bytes": 16064,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-toilet",
+      "source": "oiyo-illustration-dream-toilet.png",
+      "sourceSha256": "e56647cbcee3f7a4f8d9980f9d8c632a70702b0afcdffeb7b854d647c6ff1a4e",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-toilet.webp",
+      "sha256": "6cdf33921193bf38373f012aac29a0629d1a50b31bae05014b45fedea41e2fe8",
+      "bytes": 34962,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-dream-wedding",
+      "source": "oiyo-illustration-dream-wedding.png",
+      "sourceSha256": "7ef79d1c51d2007d523c615e6be0a86bc1ebe573593ee2cf1e1a358ca488d083",
+      "path": "/images/grok-20261106/oiyo-illustration-dream-wedding.webp",
+      "sha256": "8ac0956e4b4fc6c036265e4e1bda53e0b7a3a310caf1464f65eb0b24a87f13fd",
+      "bytes": 131360,
+      "type": "illustration",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-family-board",
+      "source": "oiyo-illustration-tojeong-2027-family-board.png",
+      "sourceSha256": "0791842a359a873e24ffba18727b137a3d024bdafcdc598add41d835e299addf",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-family-board.webp",
+      "sha256": "541e79ddc66d285e0a25be9daec55d41059c937b8c87af0d32c268d5018d90cc",
+      "bytes": 166510,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-upper-2-lamp",
+      "source": "oiyo-illustration-tojeong-2027-upper-2-lamp.png",
+      "sourceSha256": "8ce3780bdaea0df759d3a88dcc696ebca7af344600af0cd5e0781cf9a9c2e621",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-2-lamp.webp",
+      "sha256": "5c861afe33392ded09146c4722356d49503ca50b933083527ca14ef2317a7387",
+      "bytes": 179426,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-upper-3-sail",
+      "source": "oiyo-illustration-tojeong-2027-upper-3-sail.png",
+      "sourceSha256": "dca1760fb54cba8acc97c5cf2574c75486a31ed43f46b48448ca9535f8265503",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-3-sail.webp",
+      "sha256": "0cbd8c346ba39c3d26d69ff30bdc6092bd2e112ffce5151b56685db7e99af3ba",
+      "bytes": 176626,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-lucky-card-bg",
+      "source": "oiyo-illustration-tojeong-2027-lucky-card-bg.png",
+      "sourceSha256": "42873de6a090e9fea47dda11963c6b27eab88b69c3b67ea725a467f5a9244c2b",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-lucky-card-bg.webp",
+      "sha256": "041dc74be2e3c6935b091719d3f4bc919c4cc44706df8df49f847013ac98a6cc",
+      "bytes": 145494,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-upper-4-well",
+      "source": "oiyo-illustration-tojeong-2027-upper-4-well.png",
+      "sourceSha256": "e2fc994dadc190ceffa88ad7bf85313d8aebec6158b7d53d9c059e2a71b72d04",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-4-well.webp",
+      "sha256": "5891fd91ca226b237c2c25a725c3d6ebf12d8b286f69f0000b8f2632a3d50a80",
+      "bytes": 216910,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-upper-5-mountain",
+      "source": "oiyo-illustration-tojeong-2027-upper-5-mountain.png",
+      "sourceSha256": "96208540771ef5c62f86c936d6b89ac2c2a165d97684b494c44de462a867e1b4",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-5-mountain.webp",
+      "sha256": "24c872f7f2da4d3267d9914657b13b212e8a1ed1aa35f467177ca96da09d81ec",
+      "bytes": 171412,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-upper-6-ox",
+      "source": "oiyo-illustration-tojeong-2027-upper-6-ox.png",
+      "sourceSha256": "702b3995c879aa0a7eebaf73eaa1f96f6047f25f2f8eb9f962969dd29d74fbe5",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-6-ox.webp",
+      "sha256": "8090c94e1ec85705d7758443f7e00d45f690691633c489990ffc7dbb4e7528d8",
+      "bytes": 236156,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-upper-7-house",
+      "source": "oiyo-illustration-tojeong-2027-upper-7-house.png",
+      "sourceSha256": "17d61176d1970c19b97de5f743d5d93fa0ac26a0d8a05fcf63700191e255da52",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-7-house.webp",
+      "sha256": "e7d0c986361e133dfb1564692fdf496ea76bee164ad8b43d2747801beee79889",
+      "bytes": 228204,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
+    },
+    {
+      "id": "oiyo-illustration-tojeong-2027-upper-8-view",
+      "source": "oiyo-illustration-tojeong-2027-upper-8-view.png",
+      "sourceSha256": "8cc84f7deed1045d14ba94dfc8fbfff9a869cae79237e5500cc5a80a12b18ec0",
+      "path": "/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-8-view.webp",
+      "sha256": "54856c92e075974f58d935687843be70230d848f1a724d161cd6350e30555524",
+      "bytes": 160274,
+      "type": "scene",
+      "review": "contact-sheet-reviewed-not-independent"
     }
   ]
 }
