@@ -11,6 +11,9 @@ describe('sanctuary six-language surface',()=>{
       for(const key of ['privacy','soundNote','art','art3d','heritage','help','fireworksdesc','cosmosdesc'] as const)expect(t[key].length).toBeGreaterThan(10);
     }
   });
+  it('names all four walking spots and explains the hall interior in every language',()=>{
+    for(const locale of LOCALES){expect(sanctuaryCopy[locale].spots).toHaveLength(4);expect(sanctuaryCopy[locale].hallNote.length).toBeGreaterThan(10);}
+  });
   it('credits the Korea Heritage Service scans (KOGL Type 1) in every language',()=>{
     for(const locale of LOCALES)expect(sanctuaryCopy[locale].heritage).toMatch(/KOGL|공공누리|公共ヌリ|公共Nuri/);
   });

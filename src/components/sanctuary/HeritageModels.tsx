@@ -3,7 +3,8 @@
 // Poly Haven CC0 ground and stone textures. Sources and conversion notes: public/models/sanctuary/SOURCES.md.
 // Each scan is a diorama: the building on a block of ground with black "skirt" walls down to y=0.
 // At load we turn those skirts into granite retaining walls and, for the pagoda, crop the oversized slab.
-import { Component, useMemo, type ReactNode } from 'react';
+import { Component, useEffect, useMemo, type ReactNode } from 'react';
+import { addWalkable } from './walk';
 import { useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -173,6 +174,8 @@ export default function HeritageTemple() {
   const hall = useDiorama('hall.glb', { tint: TINT }, wall);
   const pagoda = useDiorama('pagoda.glb', { tint: TINT, crop: HERITAGE_LAYOUT.pagoda.crop }, wall);
   const pavilion = useDiorama('pavilion.glb', { tint: TINT }, wall);
+  // The 밤톨 walks on the scanned courtyards (hall terrace, pagoda yard); the flat ground is y=0.
+  useEffect(() => { const a = addWalkable(hall), b = addWalkable(pagoda); return () => { a(); b(); }; }, [hall, pagoda]);
   const s = HERITAGE_SCALE;
   const place = (k: keyof typeof HERITAGE_LAYOUT) => {
     const l = HERITAGE_LAYOUT[k];

@@ -14,3 +14,8 @@
 [data-part="space"] [data-part="rituals"]{border:1px solid var(--sanctuary-line);border-radius:16px;background:rgba(15,33,26,.62);backdrop-filter:blur(10px);padding:10px 12px;margin:0 auto 10px;max-width:720px;width:100%}
 [data-part="space"] [data-part="rituals"]{gap:6px;padding:8px 10px}[data-sanctuary] [data-part="rituals"] [data-part="clear"],[data-sanctuary] [data-part="rituals"] [data-part="bell"]{font-size:.85rem}
 @media (min-width:760px){[data-part="space"] [data-part="rituals"]{max-width:540px;margin-left:max(0px,calc((100% - 720px)/2))}}
+
+/* 2026-11-10: walking the 밤톨 and stepping inside the hall. */
+[data-part="walk"]{display:flex;gap:6px;flex-wrap:wrap}[data-sanctuary] [data-part="walk"] button{font-size:.85rem}
+[data-part="fade"]{position:absolute;inset:0;background:#000;opacity:0;transition:opacity .6s ease;pointer-events:none}[data-part="fade"][data-on="true"]{opacity:1}
+@media (prefers-reduced-motion:reduce){[data-part="fade"]{transition:none}}
