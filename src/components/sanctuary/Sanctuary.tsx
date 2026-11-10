@@ -4,6 +4,7 @@ import { sanctuaryCopy } from './copy';
 import '../../styles/sanctuary.css';
 import { canUseWebGL } from './webgl';
 import { LANTERN_COLORS, MAX_LANTERNS } from './TempleRituals';
+import { SPOTS, type Spot } from './walk';
 
 const LANTERN_KEY = 'oiyo-sanctuary-lanterns';
 function loadLanterns(): number[] {
@@ -44,6 +45,14 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   const [lanterns,setLanterns] = useState<number[]>([]);
   const [ring,setRing] = useState(0);
   useEffect(()=>{setLanterns(loadLanterns());},[]);
+  // 2026-11-10: the visitor's 밤톨 walks between spots; walking into the hall fades to the interior.
+  const [spot,setSpot] = useState<Spot>('yard');
+  const [inside,setInside] = useState(false);
+  const [bows,setBows] = useState(0);
+  const [fading,setFading] = useState(false);
+  const fadeTimer = useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
+  useEffect(()=>()=>clearTimeout(fadeTimer.current),[]);
+  useEffect(()=>{ if(scene!=='temple'||!view3d){clearTimeout(fadeTimer.current);setFading(false);setInside(false);setSpot('yard');} },[scene,view3d]);
   const socket = useRef<WebSocket|null>(null);
   const audio = useRef<AudioContext|null>(null);
   const recent = useRef(new Set<string>());
@@ -162,10 +171,18 @@ export default function Sanctuary({locale}:{locale:Locale}) {
       osc.connect(gain);gain.connect(master);osc.start(now);osc.stop(now+decay+0.05);
     }
   }
+  function fadeThen(next:()=>void){
+    clearTimeout(fadeTimer.current);
+    setFading(true);
+    fadeTimer.current=setTimeout(()=>{next();fadeTimer.current=setTimeout(()=>setFading(false),80);},600);
+  }
+  function arrive(at:Spot){ if(at==='hall'&&!inside)fadeThen(()=>setInside(true)); }
+  function leaveHall(){ fadeThen(()=>{setInside(false);setSpot('yard');}); }
+  function bowOnce(){ setBows(n=>n+1); tap(); }
   const visible=hidden?members.filter(m=>m.id===self):members;
   const desc={fire:t.firedesc,water:t.waterdesc,fireworks:t.fireworksdesc,cosmos:t.cosmosdesc,temple:''}[scene];
   return <div data-sanctuary="" data-scene={scene} data-3d={view3d}>
-    <div data-part="landscape" aria-hidden="true">{view3d&&<Suspense fallback={null}><Scene3D scene={scene} lanterns={lanterns} ring={ring} /></Suspense>}</div>
+    <div data-part="landscape" aria-hidden="true">{view3d&&<Suspense fallback={null}><Scene3D scene={scene} lanterns={lanterns} ring={ring} spot={spot} inside={inside} bows={bows} onArrive={arrive} /></Suspense>}<div data-part="fade" data-on={fading} /></div>
     <div data-part="veil" aria-hidden="true" />
     <main data-part="shell">
       <header data-part="heading">
@@ -180,7 +197,14 @@ export default function Sanctuary({locale}:{locale:Locale}) {
         {!view3d&&scene==='fire'&&<div data-part="fire" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>}
         {!view3d&&scene==='water'&&<div data-part="ripples" aria-hidden="true">◯<span>◯</span></div>}
         <p data-part="scene-note">{desc}</p>
-        {view3d&&scene==='temple'&&<div data-part="rituals" aria-label={t.rituals}>
+        {view3d&&scene==='temple'&&inside&&<div data-part="rituals" aria-label={t.hallTitle}>
+          <p data-part="ritual-title">{t.hallTitle}</p>
+          <div data-part="walk"><button type="button" onClick={bowOnce}>🙏 {t.bowOnce}</button><button type="button" onClick={leaveHall}>{t.leave}</button></div>
+          <small>{t.hallHint}</small>
+        </div>}
+        {view3d&&scene==='temple'&&!inside&&<div data-part="rituals" aria-label={t.rituals}>
+          <p data-part="ritual-title">{t.walk}</p>
+          <div data-part="walk">{SPOTS.map((value,i)=><button key={value} type="button" aria-pressed={spot===value} disabled={fading} onClick={()=>setSpot(value)}>{t.spots[i]}</button>)}</div>
           <p data-part="ritual-title">{t.lantern} <small>{t.lanternCount} {lanterns.length}/{MAX_LANTERNS}</small></p>
           <div data-part="swatches">{LANTERN_COLORS.map((color,i)=><button key={color} type="button" aria-label={`${t.lantern}: ${t.lanternColors[i]}`} data-swatch={i} onClick={()=>hang(i)}><span aria-hidden="true" /></button>)}
             <button type="button" data-part="bell" onClick={strike}>🔔 {t.bell}</button>
@@ -215,7 +239,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
         <p>{t.help}</p><p role="status">{message}</p>
         <div data-part="sound"><button type="button" aria-pressed={sound} onClick={()=>void toggleSound()}>{sound?t.soundOff:t.soundOn}</button><button type="button" disabled={!sound} onClick={tap}>{t.tap}</button><small>{t.soundNote}</small></div>
       </section>
-      <footer data-part="footnote"><p>{t.notice}</p>{view3d&&scene==='temple'&&<><p>{t.bellNote}</p><p>{t.heritage}</p></>}<p>{t.privacy}</p><p>{view3d?t.art3d:t.art}</p></footer>
+      <footer data-part="footnote"><p>{t.notice}</p>{view3d&&scene==='temple'&&<><p>{t.bellNote}</p><p>{t.heritage}</p>{inside&&<p>{t.hallNote}</p>}</>}<p>{t.privacy}</p><p>{view3d?t.art3d:t.art}</p></footer>
     </main>
   </div>;
 }

@@ -10,6 +10,9 @@ import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import { BELL_POS, BellPavilion, ConeRoof, MyLanterns, useBellFocus } from './TempleRituals';
 import HeritageTemple, { HeritageBoundary, ScannedBellRoof } from './HeritageModels';
+import BuddhaHall, { preloadBuddha } from './BuddhaHall';
+import { WalkingChestnut } from './Chestnut';
+import { chestnut, type Spot } from './walk';
 
 /** Scene palette (three.js material colours, not CSS theme colours). */
 const P = {
@@ -627,13 +630,16 @@ function TempleCamera({ ring }: { ring: number }) {
   const { camera, size } = useThree();
   const look = useMemo(() => new THREE.Vector3(0, 2.1, -1.2), []);
   const focus = useBellFocus(ring);
-  useFrame(({ clock }) => {
+  const follow = useRef(0);
+  useFrame(({ clock }, dt) => {
     const portrait = size.width / size.height < 0.9;
     const dist = portrait ? 15.5 : 10.5;
     const t = clock.elapsedTime * 0.04;
     // After a bell strike, lean toward the pavilion (it sits off-frame on phones) and ease back.
     const f = focus(clock.elapsedTime) * (portrait ? 0.95 : 0.6);
-    const fx = BELL_POS[0] * f;
+    // Drift after the visitor's 밤톨 so it stays in frame when it walks to the pagoda or the bell.
+    follow.current += (THREE.MathUtils.clamp(chestnut.x, -6.5, 5) * (portrait ? 0.62 : 0.32) - follow.current) * Math.min(1, dt * 1.5);
+    const fx = BELL_POS[0] * f + follow.current * (1 - f);
     camera.position.set(Math.sin(t) * 1.6 * (1 - f) + fx, (portrait ? 2.6 : 2.3) + Math.sin(t * 1.7) * 0.12, look.z + dist + Math.cos(t * 0.6) * 0.3 - f * (portrait ? 4 : 1.5));
     camera.lookAt(look.x + fx, look.y + (portrait ? -0.25 : 0) - f * (portrait ? 1.7 : 1.1), look.z + f * 2.2);
   });
@@ -651,7 +657,16 @@ function HandBuilt() {
   return <><Ground /><Hall /><Pagoda position={[-4.5, 0, 0.7]} /></>;
 }
 
-export default function Temple({ lanterns = [], ring = 0 }: { lanterns?: number[]; ring?: number }) {
+type TempleProps = { lanterns?: number[]; ring?: number; spot?: Spot; inside?: boolean; bows?: number; onArrive?: (spot: Spot) => void };
+
+export default function Temple(props: TempleProps) {
+  useEffect(() => { if (props.spot === 'hall' || props.inside) preloadBuddha(); }, [props.spot, props.inside]);
+  // Inside the hall the whole courtyard is swapped for the interior (only one is drawn at a time).
+  if (props.inside) return <><Exposure /><BuddhaHall bows={props.bows ?? 0} /></>;
+  return <Courtyard {...props} />;
+}
+
+function Courtyard({ lanterns = [], ring = 0, spot = 'yard', onArrive }: TempleProps) {
   const pines = useMemo(() => [
     { x: 6.2, z: 0.8, s: 1.2, lean: -0.9, seed: 3 },
     { x: 10.5, z: 3.8, s: 1.2, lean: -0.7, seed: 23 },
@@ -685,6 +700,7 @@ export default function Temple({ lanterns = [], ring = 0 }: { lanterns?: number[
     <Sparkles count={36} scale={[14, 3, 10]} position={[0, 1.6, 1]} size={2.6} speed={0.25} color={P.cffe9a8} />
     <MyLanterns colors={lanterns} />
     <BellPavilion ring={ring} roof={<HeritageBoundary fallback={<ConeRoof />}><Suspense fallback={<ConeRoof />}><ScannedBellRoof width={2.5} /></Suspense></HeritageBoundary>} />
+    <WalkingChestnut spot={spot} onArrive={onArrive} />
     <TempleCamera ring={ring} />
   </>;
 }

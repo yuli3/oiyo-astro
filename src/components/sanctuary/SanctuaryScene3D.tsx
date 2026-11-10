@@ -6,6 +6,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { AdaptiveDpr, PerformanceMonitor, Sparkles, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 import Temple from './TempleScene';
+import type { Spot } from './walk';
 
 export type Scene3D = 'temple' | 'fire' | 'water' | 'fireworks' | 'cosmos';
 
@@ -447,7 +448,7 @@ function useVisible(ref: RefObject<HTMLDivElement | null>) {
   return visible;
 }
 
-export default function SanctuaryScene3D({ scene, lanterns, ring }: { scene: Scene3D; lanterns?: number[]; ring?: number }) {
+export default function SanctuaryScene3D({ scene, lanterns, ring, spot, inside, bows, onArrive }: { scene: Scene3D; lanterns?: number[]; ring?: number; spot?: Spot; inside?: boolean; bows?: number; onArrive?: (spot: Spot) => void }) {
   const wrap = useRef<HTMLDivElement>(null);
   const visible = useVisible(wrap);
   // Start at up to 1.5x pixel ratio; drop to 1x if the device can't hold its frame rate, and back up when it recovers.
@@ -462,7 +463,7 @@ export default function SanctuaryScene3D({ scene, lanterns, ring }: { scene: Sce
     <PerformanceMonitor onDecline={() => setDpr(1)} onIncline={() => setDpr(1.5)} />
     <AdaptiveDpr pixelated={false} />
     <Diagnostics />
-    {scene === 'temple' && <Temple lanterns={lanterns} ring={ring} />}
+    {scene === 'temple' && <Temple lanterns={lanterns} ring={ring} spot={spot} inside={inside} bows={bows} onArrive={onArrive} />}
     {scene === 'fire' && <Fire />}
     {scene === 'water' && <Water />}
     {scene === 'fireworks' && <FireworksScene />}

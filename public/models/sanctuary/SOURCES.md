@@ -76,6 +76,74 @@ Map conventions: `diff` = sRGB albedo; `nor_gl` = OpenGL (+Y) tangent-space norm
 
 Alternative HDRI considered: `clarens_night_02` (mountain horizon, but reads as daylight at default exposure).
 
+## Buddha statue — `buddha.glb` (added 2026-11-10)
+
+Replaces the procedural Buddha in the Buddha hall. Same attribution line as the other models:
+**출처: 국가유산청, 공공누리 제1유형**.
+
+| Field | Value |
+| --- | --- |
+| Asset | 석조비로자나불좌상 (stone seated Vairocana Buddha, Unified Silla, provenance unknown, Gyeongsang region presumed; 지권인 mudra) |
+| Owner / provider | 국가유산청 (Korea Heritage Service) |
+| Source | 국가유산 디지털 서비스 › 3D 에셋 › 천년 신라 왕경 — https://digital.khs.go.kr/heritage/catalogDetail.do?order=4&index=1&id=13984209407124256885&type=4 (data page: https://digital.khs.go.kr/record/recordDetail3D.do?ichDataUid=13984209407124256885&type=4) |
+| Project | 서라벌 천년 시간여행 (2024). Described on the page as a 재현·복원 3D model built from 국가유산청 3D scan data (not a raw scan) |
+| License | 공공누리 제1유형 : 출처 표시 (KOGL Type 1 — attribution required, commercial use and modification allowed) |
+| Original download | `서라벌_천년왕경_석조비로자나불좌상.zip` 800,807,067 B (downloaded by the owner after sign-in): `SM_24RE0056_high.fbx` 637 MB, `SM_24RE0056_high.obj` 805 MB (no UVs, unused), `T_24RE0056_{C,N,P}.png` 4096² |
+| Documented size | 높이 278.8 cm, 불신 높이 116.3 cm |
+| Output | `buddha.glb` 2,011,552 B |
+| Triangles (orig → out) | 24,591,360 → **295,083** |
+| Size (W×H×D m) | 1.24 × 2.92 × 1.24 (pedestal and halo included) |
+| Orientation | **Y-up, metres, face looks toward +Z**; halo behind at −Z. Origin centred on X/Z, base at Y=0 |
+
+Pipeline (script `coding/_downloads/sanctuary-photoreal/tools/buddha.mjs`; raw zip not committed):
+
+1. FBX → GLB with assimp 6.0 (`assimp export … -fglb2`): one mesh with NORMAL, POSITION, TEXCOORD_0; source units cm.
+2. Material rebuilt (the FBX material only wired two maps): `C` → baseColor, `N` → normal (DirectX → OpenGL,
+   green channel flipped), `P` → packed ORM (R AO, G roughness, B metallic = 0) used for both
+   `occlusionTexture` and `metallicRoughnessTexture`. All resized to 1024².
+3. Root scale ×0.01 (cm → m) → `weld` → meshoptimizer `simplify` ratio 0.012 → `prune` → `dedup` →
+   WebP q80 1024² → `reorder` → `quantize` → `EXT_meshopt_compression` (filter).
+4. Visual check in three.js r170 (GLTFLoader + MeshoptDecoder): front (+Z) and side (+X) views and a normal-map
+   on/off close-up; silhouette, face, hands and pedestal carvings hold. A lighter 147,532-triangle build
+   (1,285,740 B, ratio 0.006) was also made and can replace this file if the hall needs a lighter mesh.
+
+### buddha.glb
+
+**OVERVIEW**
+
+| key                | value                                                                                                          |
+| ---                | ---                                                                                                            |
+| version            | 2.0                                                                                                            |
+| generator          | glTF-Transform v4.5.1                                                                                          |
+| extensionsUsed     | EXT_meshopt_compression, EXT_texture_webp, KHR_materials_specular, KHR_materials_volume, KHR_mesh_quantization |
+| extensionsRequired | EXT_meshopt_compression, EXT_texture_webp, KHR_mesh_quantization                                               |
+
+**SCENES**
+
+| #   | name | rootName | bboxMin                    | bboxMax                   | renderVertexCount¹ | uploadVertexCount | uploadNaiveVertexCount |
+| --- | ---  | ---      | ---                        | ---                       | ---                | ---               | ---                    |
+| 0   |      | RootNode | -0.6198, -0.00039, -0.6198 | 0.61993, 2.91682, 0.61993 | 885,249            | 149,552           | 149,552                |
+
+**MESHES**
+
+| #   | name             | mode      | meshPrimitives | glPrimitives | vertices | indices | attributes                                             | instances | size¹   |
+| --- | ---              | ---       | ---            | ---          | ---      | ---     | ---                                                    | ---       | ---     |
+| 0   | SM_24RE0056_high | TRIANGLES | 1              | 295,083      | 149,552  | u32     | NORMAL:i8_norm, POSITION:i16_norm, TEXCOORD_0:u16_norm | 1         | 5.49 MB |
+
+**MATERIALS**
+
+| #   | name            | instances | textures                                                                    | alphaMode | doubleSided |
+| --- | ---             | ---       | ---                                                                         | ---       | ---         |
+| 0   | stone_vairocana | 1         | baseColorTexture, normalTexture, occlusionTexture, metallicRoughnessTexture | OPAQUE    |             |
+
+**TEXTURES**
+
+| #   | name      | uri | slots                                      | instances | mimeType   | compression | resolution | size      | gpuSize⁵ |
+| --- | ---       | --- | ---                                        | ---       | ---        | ---         | ---        | ---       | ---      |
+| 0   | basecolor |     | baseColorTexture                           | 1         | image/webp |             | 1024x1024  | 64.63 KB  | 5.59 MB  |
+| 1   | normal    |     | normalTexture                              | 1         | image/webp |             | 1024x1024  | 275.8 KB  | 5.59 MB  |
+| 2   | orm       |     | occlusionTexture, metallicRoughnessTexture | 1         | image/webp |             | 1024x1024  | 133.99 KB | 5.59 MB  |
+
 ## `gltf-transform inspect` output
 
 
