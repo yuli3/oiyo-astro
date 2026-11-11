@@ -25,5 +25,5 @@ for(const asset of manifest.assets){
   }
  }
 }
-assert.equal(manifest.assets.length,171);
-console.log(`PASS: 171 hashes; ${pages} generated HTML references; no local paths in public manifest`);
+assert.equal(manifest.assets.length,206);
+console.log(`PASS: 206 hashes; ${pages} generated HTML references; no local paths in public manifest`);

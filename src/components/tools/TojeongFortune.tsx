@@ -40,6 +40,8 @@ interface FamilyEntry {
 }
 
 const STEPS = ['상괘', '중괘', '하괘'] as const;
+// 2026-11-11: 상괘 1~8 장면 그림(Grok Build).
+const UPPER_SCENES = ['thaw', 'lamp', 'sail', 'well', 'mountain', 'ox', 'house', 'view'] as const;
 
 const selectClass = 'min-h-11 w-full rounded-xl border border-border bg-background px-3 text-base text-foreground';
 
@@ -186,6 +188,7 @@ export default function TojeongFortune() {
           </ol>
 
           <div className="animate-fadeInUp rounded-2xl border border-border bg-card p-6 text-center">
+            <img src={`/images/grok-20261106/oiyo-illustration-tojeong-2027-upper-${result.upper.value}-${UPPER_SCENES[result.upper.value - 1]}.webp`} alt="" width="1200" height="800" loading="lazy" decoding="async" className="mb-4 w-full rounded-xl object-cover" />
             <p className="text-xs font-bold tracking-widest text-primary">{TOJEONG_YEAR} 정미년 · 상괘 {result.upper.value}</p>
             <h2 className="mt-3 text-2xl font-black text-foreground">{upper.phrase}</h2>
             <p className="mt-1 text-sm text-muted-foreground">{upper.gloss}</p>

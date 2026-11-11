@@ -797,6 +797,7 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
             const theirName = lb.types[them]
             return (
               <div className="space-y-2 text-sm leading-6 text-foreground">
+                <img src={`/images/grok-20261106/oiyo-icon-pair-chemistry-love-${them === result.primary ? 'same' : 'diff'}.webp`} alt="" width="72" height="72" decoding="async" className="mx-auto h-16 w-16" />
                 <p className="animate-fadeInUp text-center text-xl font-black">{them === result.primary ? PAIR_CHEM[locale].same : PAIR_CHEM[locale].diff}</p>
                 <p>{them === result.primary ? PAIR_COPY[locale].same(mine) : PAIR_COPY[locale].diff(mine, theirName)}</p>
                 <p className="text-muted-foreground">{PAIR_COPY[locale].tryThis}: {RESULTS[them][locale].examples[0]}</p>
