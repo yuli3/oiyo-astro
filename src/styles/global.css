@@ -200,6 +200,19 @@
   }
   .animate-fadeInUp { animation: fadeInUp 0.5s ease-out; }
 
+  /* 수호신 결과 공개: 카드가 세워지며 돌아 나온다 (2026-11-11). reduced-motion 은 전역 규칙이 끈다. */
+  @keyframes guardianReveal {
+    0% { opacity: 0; transform: perspective(800px) rotateY(80deg) scale(0.92); }
+    60% { opacity: 1; transform: perspective(800px) rotateY(-6deg) scale(1.01); }
+    100% { opacity: 1; transform: perspective(800px) rotateY(0) scale(1); }
+  }
+  .animate-guardianReveal { animation: guardianReveal 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  @keyframes sealGlow {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-sealGlow { animation: sealGlow 0.6s ease-out 0.5s both; }
+
   /* ── Text streaming animations (from Text Streaming design) ── */
 
   /* word-fade: opacity reveal per word */

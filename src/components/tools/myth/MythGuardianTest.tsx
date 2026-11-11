@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import ExplainLab from '../../shared/ExplainLab';
 import ShareResultButton from '../../shared/ShareResultButton';
 import { gaEvent } from '@/lib/analytics/ga-event';
 import { ARCHETYPES, GUARDIANS, PANTHEONS, castGuardian, type Archetype, type Pantheon } from '@/lib/myth-guardian';
@@ -14,6 +15,7 @@ export interface Figure { name: string; description: string }
 interface Copy {
   start: string; progress: (n: number, total: number) => string; back: string; restart: string;
   resultEyebrow: string; read: string; others: string; shareHeading: string; limit: string;
+  why: { title: string; intro: string; points: (n: number) => string; picked: (a: string, p: string, f: string) => string; ifTop: (a: string, f: string) => string; tie: string };
   questions: { q: string; options: [string, string, string, string, string] }[];
   scenery: { q: string; options: [string, string, string, string] };
   archetype: Record<Archetype, { name: string; line: string }>;
@@ -24,6 +26,14 @@ const C: Record<Locale, Copy> = {
   ko: {
     start: '수호신 찾기 시작', progress: (n, t) => `${n} / ${t}`, back: '이전', restart: '다시 하기',
     resultEyebrow: '나의 수호신', read: '이 신 이야기 읽기', others: '다른 신화 속 나', shareHeading: '나의 수호신',
+    why: {
+      title: '왜 이 수호신일까',
+      intro: '앞의 여섯 문항은 다섯 성향 중 하나에 1점씩 줬어요. 가장 높은 성향과 마지막에 고른 풍경(신화)이 만나는 자리의 인물이 수호신이에요. 막대를 눌러 보세요.',
+      points: (n) => `${n}점`,
+      picked: (a, p, f) => `가장 높은 성향은 "${a}", 고른 풍경은 ${p}. 그래서 ${f}예요.`,
+      ifTop: (a, f) => `"${a}" 점수가 가장 높았다면 같은 신화에서 ${f}가 나왔을 거예요.`,
+      tie: '점수가 같으면 막대 순서상 위에 있는 성향을 골라요.',
+    },
     limit: '신화 속 인물에 나를 비춰 보는 놀이예요. 성격 검사가 아니고, 종교적 의미도 담지 않아요.',
     questions: [
       { q: '친구들 사이에서 나는?', options: ['다들 무사한지 챙기는 사람', '고민을 들으면 답을 정리해 주는 사람', '새 계획을 먼저 꺼내는 사람', '힘든 사람 곁에 먼저 가는 사람', '분위기를 확 바꾸는 사람'] },
@@ -46,6 +56,14 @@ const C: Record<Locale, Copy> = {
   en: {
     start: 'Find my guardian', progress: (n, t) => `${n} / ${t}`, back: 'Back', restart: 'Start again',
     resultEyebrow: 'Your guardian deity', read: 'Read this figure’s story', others: 'You in other mythologies', shareHeading: 'My guardian deity',
+    why: {
+      title: 'Why this guardian?',
+      intro: 'Each of the first six questions gave one point to one of five types. The figure where your top type meets the scenery (mythology) you picked last is your guardian. Tap a bar.',
+      points: (n) => `${n} pt`,
+      picked: (a, p, f) => `Your top type is “${a}” and you picked ${p}. That gives ${f}.`,
+      ifTop: (a, f) => `If “${a}” had scored highest, the same mythology would have given ${f}.`,
+      tie: 'On a tie, the type higher in the list wins.',
+    },
     limit: 'A game of seeing yourself in mythic figures. It is not a personality test and carries no religious meaning.',
     questions: [
       { q: 'Among your friends, you are the one who…', options: ['checks everyone got home safe', 'sorts out the answer when someone’s stuck', 'brings up the next plan first', 'goes to whoever is struggling', 'changes the mood in a second'] },
@@ -68,6 +86,14 @@ const C: Record<Locale, Copy> = {
   ja: {
     start: '守護神を探す', progress: (n, t) => `${n} / ${t}`, back: '戻る', restart: 'もう一度',
     resultEyebrow: 'わたしの守護神', read: 'この神の物語を読む', others: 'ほかの神話のわたし', shareHeading: 'わたしの守護神',
+    why: {
+      title: 'なぜこの守護神？',
+      intro: '最初の6問は5つのタイプのどれかに1点ずつ入りました。いちばん高いタイプと、最後に選んだ風景（神話）が交わる人物が守護神です。バーを押してみてください。',
+      points: (n) => `${n}点`,
+      picked: (a, p, f) => `いちばん高いタイプは「${a}」、選んだ風景は${p}。だから${f}です。`,
+      ifTop: (a, f) => `「${a}」がいちばん高ければ、同じ神話から${f}が出ていました。`,
+      tie: '同点のときは、リストで上にあるタイプを選びます。',
+    },
     limit: '神話の人物に自分を映してみる遊びです。性格診断ではなく、宗教的な意味もありません。',
     questions: [
       { q: '友だちの中でのわたしは？', options: ['みんな無事か気にかける人', '悩みを聞いて答えを整理する人', '次の計画を先に出す人', 'つらい人のそばに先に行く人', '空気をがらっと変える人'] },
@@ -90,6 +116,14 @@ const C: Record<Locale, Copy> = {
   zh: {
     start: '寻找我的守护神', progress: (n, t) => `${n} / ${t}`, back: '上一题', restart: '重新测试',
     resultEyebrow: '我的守护神', read: '阅读这位神的故事', others: '其他神话里的我', shareHeading: '我的守护神',
+    why: {
+      title: '为什么是这位守护神？',
+      intro: '前6题每题给五种类型之一加1分。得分最高的类型与最后选的风景（神话）交汇处的人物就是守护神。点一下柱条看看。',
+      points: (n) => `${n}分`,
+      picked: (a, p, f) => `最高的类型是「${a}」，选的风景是${p}，所以是${f}。`,
+      ifTop: (a, f) => `如果「${a}」得分最高，同一神话会给出${f}。`,
+      tie: '同分时，取列表中靠上的类型。',
+    },
     limit: '这是把自己映照在神话人物身上的小游戏，不是性格测验，也不带宗教含义。',
     questions: [
       { q: '在朋友中，我是那个……', options: ['确认大家都平安的人', '听完烦恼帮忙理清答案的人', '先提出新计划的人', '先走到难过的人身边的人', '一下子改变气氛的人'] },
@@ -112,6 +146,14 @@ const C: Record<Locale, Copy> = {
   fr: {
     start: 'Trouver ma divinité', progress: (n, t) => `${n} / ${t}`, back: 'Retour', restart: 'Recommencer',
     resultEyebrow: 'Votre divinité gardienne', read: 'Lire son histoire', others: 'Vous dans d’autres mythologies', shareHeading: 'Ma divinité gardienne',
+    why: {
+      title: 'Pourquoi ce gardien ?',
+      intro: 'Chacune des six premières questions donnait un point à l’un des cinq types. La figure au croisement de votre type dominant et du paysage (mythologie) choisi en dernier est votre gardien. Touchez une barre.',
+      points: (n) => `${n} pt`,
+      picked: (a, p, f) => `Votre type dominant est « ${a} » et vous avez choisi : ${p}. D’où ${f}.`,
+      ifTop: (a, f) => `Si « ${a} » avait dominé, la même mythologie aurait donné ${f}.`,
+      tie: 'En cas d’égalité, le type le plus haut dans la liste l’emporte.',
+    },
     limit: 'Un jeu pour se voir dans des figures mythiques. Ce n’est pas un test de personnalité et il n’a aucun sens religieux.',
     questions: [
       { q: 'Entre amis, vous êtes celui ou celle qui…', options: ['vérifie que tout le monde est bien rentré', 'met de l’ordre dans le problème d’un ami', 'propose le prochain plan', 'va d’abord vers celui qui souffre', 'change l’ambiance en une seconde'] },
@@ -134,6 +176,14 @@ const C: Record<Locale, Copy> = {
   es: {
     start: 'Encontrar mi deidad', progress: (n, t) => `${n} / ${t}`, back: 'Atrás', restart: 'Empezar de nuevo',
     resultEyebrow: 'Tu deidad guardiana', read: 'Leer su historia', others: 'Tú en otras mitologías', shareHeading: 'Mi deidad guardiana',
+    why: {
+      title: '¿Por qué este guardián?',
+      intro: 'Cada una de las seis primeras preguntas dio un punto a uno de cinco tipos. La figura donde se cruzan tu tipo más alto y el paisaje (mitología) que elegiste al final es tu guardián. Toca una barra.',
+      points: (n) => `${n} pt`,
+      picked: (a, p, f) => `Tu tipo más alto es «${a}» y elegiste ${p}. Por eso sale ${f}.`,
+      ifTop: (a, f) => `Si «${a}» hubiera sido el más alto, la misma mitología habría dado ${f}.`,
+      tie: 'En caso de empate, gana el tipo que está más arriba en la lista.',
+    },
     limit: 'Un juego para verte en figuras míticas. No es un test de personalidad ni tiene sentido religioso.',
     questions: [
       { q: 'Entre tus amigos, eres quien…', options: ['comprueba que todos llegaron bien', 'ordena la respuesta cuando alguien se atasca', 'propone el siguiente plan', 'va primero hacia quien lo pasa mal', 'cambia el ambiente en un segundo'] },
@@ -156,6 +206,60 @@ const C: Record<Locale, Copy> = {
 };
 
 /** 보기 순서가 매 문항 같으면 패턴이 보이니, 문항마다 한 칸씩 돌려 보여 준다. */
+/** 도감 허브 표에서 쓰는 원형·신화 이름. */
+export function guardianLabels(locale: string) {
+  const c = C[(locale in C ? locale : 'en') as Locale];
+  return { archetype: c.archetype, pantheon: c.pantheon };
+}
+
+const PANTHEON_SEAL: Record<Pantheon, string> = { greek: '🏛️', norse: 'ᚱ', egyptian: '𓂀', korean: '☯' };
+
+function GuardianWhy({ c, l, result, figures }: { c: Copy; l: Locale; result: ReturnType<typeof castGuardian>; figures: Record<string, Figure> }) {
+  const [focus, setFocus] = useState<Archetype>(result.archetype);
+  const max = Math.max(1, ...result.scores);
+  const nameOf = (id: string) => figures[id]?.name ?? id;
+  return (
+    <ExplainLab
+      locale={l}
+      title={c.why.title}
+      intro={c.why.intro}
+      note={c.why.tie}
+      conclusion={
+        <>
+          <p className="font-bold">{c.why.picked(c.archetype[result.archetype].name, c.pantheon[result.pantheon], nameOf(result.id))}</p>
+          {focus !== result.archetype && (
+            <p className="mt-1">{c.why.ifTop(c.archetype[focus].name, nameOf(GUARDIANS[focus][result.pantheon]))}</p>
+          )}
+        </>
+      }
+    >
+      <ul className="space-y-2">
+        {ARCHETYPES.map((a, i) => {
+          const score = result.scores[i];
+          const on = a === focus;
+          return (
+            <li key={a}>
+              <button
+                type="button"
+                onClick={() => { setFocus(a); gaEvent('explain_lab', { lab: 'myth-guardian-why', archetype: a }); }}
+                aria-pressed={on}
+                className={`flex min-h-11 w-full items-center gap-3 rounded-lg border px-3 text-left text-sm ${on ? 'border-primary' : 'border-border'}`}
+              >
+                <span className="w-28 shrink-0 font-bold text-foreground">{c.archetype[a].name}</span>
+                <svg viewBox="0 0 100 10" className="h-3 min-w-0 flex-1" aria-hidden="true" preserveAspectRatio="none">
+                  <rect x="0" y="0" width="100" height="10" rx="5" className="fill-muted" />
+                  <rect x="0" y="0" width={(score / max) * 100} height="10" rx="5" className={a === result.archetype ? 'fill-primary' : 'fill-chart-4'} />
+                </svg>
+                <span className="w-10 shrink-0 text-right text-muted-foreground">{c.why.points(score)}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </ExplainLab>
+  );
+}
+
 function displayOrder(q: number): number[] {
   return ARCHETYPES.map((_, i) => (i + q * 2) % ARCHETYPES.length);
 }
@@ -202,14 +306,16 @@ export default function MythGuardianTest({ locale, figures }: { locale: string; 
     const others = PANTHEONS.filter((p) => p !== result.pantheon).map((p) => ({ p, id: GUARDIANS[result.archetype][p] }));
     return (
       <section className="space-y-4" aria-live="polite">
-        <div className="animate-fadeInUp rounded-2xl border border-border bg-card p-6 text-center">
-          <p className="text-xs font-bold tracking-widest text-primary">{c.resultEyebrow} · {c.pantheon[result.pantheon]}</p>
+        <div className="animate-guardianReveal rounded-2xl border border-border bg-card p-6 text-center">
+          <div className="animate-sealGlow mx-auto flex size-16 items-center justify-center rounded-full border-2 border-primary text-3xl" aria-hidden="true">{PANTHEON_SEAL[result.pantheon]}</div>
+          <p className="mt-3 text-xs font-bold tracking-widest text-primary">{c.resultEyebrow} · {c.pantheon[result.pantheon]}</p>
           <h2 className="mt-3 text-3xl font-black text-foreground">{fig?.name ?? result.id}</h2>
           <p className="mt-2 text-base font-bold text-foreground">{c.archetype[result.archetype].name}</p>
           <p className="mt-3 text-left text-base leading-7 text-foreground">{c.archetype[result.archetype].line}</p>
           {fig && <p className="mt-3 text-left text-sm leading-6 text-muted-foreground">{fig.description}</p>}
           <a href={`/${l}/meaning-of-myth-${result.id}/`} className="mt-4 flex min-h-12 items-center justify-center rounded-xl bg-primary px-5 text-base font-bold text-primary-foreground">{c.read}</a>
         </div>
+        <GuardianWhy c={c} l={l} result={result} figures={figures} />
         <div className="rounded-2xl border border-border bg-card p-5">
           <h3 className="text-lg font-bold text-foreground">{c.others}</h3>
           <ul className="mt-3 divide-y divide-border">

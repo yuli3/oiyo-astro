@@ -6,6 +6,7 @@
  */
 import Layout from '../../layouts/Layout.astro';
 import NewYear2027Hub from '../../components/tools/new-year/NewYear2027Hub';
+import ZodiacRelationWheel from '../../components/tools/zodiac/ZodiacRelationWheel';
 import { LOCALES, type Locale } from '../../i18n';
 import { ANIMAL_IMAGE, ANIMAL_NAMES } from '../../lib/fortune/zodiac-names';
 import { relationTo2027 } from '../../lib/new-year-2027';
@@ -239,6 +240,10 @@ const animals = ANIMAL_SLUG.map((slug, i) => {
 
     <div class="mt-8">
       <NewYear2027Hub client:load locale={locale} />
+    </div>
+
+    <div class="mt-10">
+      <ZodiacRelationWheel client:visible locale={locale} />
     </div>
 
     <section class="mt-10">

@@ -1,4 +1,5 @@
 ---
+import BiorhythmLab from '../../../components/tools/explain/BiorhythmLab';
 import Layout from '../../../layouts/Layout.astro';
 import { withTrailingSlash, LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
@@ -278,6 +279,7 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <BiorhythmCalculator locale={locale} client:load />
+    <div class="mt-8"><BiorhythmLab client:visible locale={locale} /></div>
 
     <section class="mt-10 border-t border-border pt-8">
       <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>

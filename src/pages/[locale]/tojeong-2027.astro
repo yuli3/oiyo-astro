@@ -6,6 +6,7 @@
  */
 import Layout from '../../layouts/Layout.astro';
 import TojeongFortune from '../../components/tools/TojeongFortune';
+import TojeongRemainderLab from '../../components/tools/explain/TojeongRemainderLab';
 import { localePath, type Locale } from '../../i18n';
 import { TOJEONG_LIMIT } from '../../data/tojeong-readings';
 
@@ -39,6 +40,10 @@ const faqJsonLd = {
 
     <div class="mt-8">
       <TojeongFortune client:load />
+    </div>
+
+    <div class="mt-8">
+      <TojeongRemainderLab client:visible />
     </div>
 
     <section class="mt-12 space-y-3">
