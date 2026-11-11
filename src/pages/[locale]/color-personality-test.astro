@@ -1,9 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import TestLaneLink from '../../components/shared/TestLaneLink.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import ColorPersonalityTest from '../../components/tests/ColorPersonalityTest';
+import RelatedArticles from '../../components/shared/RelatedArticles.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -13,27 +13,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "컬러 성격 테스트 — 나를 대표하는 색깔은?",
-    description: "15가지 질문으로 당신의 성격을 5가지 색깔(레드·블루·옐로우·그린·퍼플) 중 하나로 알아보세요. 강점, 성장 포인트, 잘 맞는 색깔 유형도 함께 확인합니다.",
+    description: "색채 심리학 기반 15가지 질문 컬러 성격 테스트. 레드(열정·행동)·블루(신중·논리)·옐로우(창의·소통)·그린(평화·배려)·퍼플(직관·통찰) 5대 상징 색상으로 나의 강점, 보완점, 잘 맞는 궁합 컬러를 무료로 분석해 보세요.",
   },
   en: {
     title: "Color Personality Test — What Color Are You?",
-    description: "Discover which of 5 color personalities (Red, Blue, Yellow, Green, Purple) represents you through 15 questions. Includes strengths, growth areas, and compatible color types.",
+    description: "Discover your color personality through 15 questions. Unpack Red, Blue, Yellow, Green, or Purple traits to reveal your strengths, blind spots, and ideal matches.",
   },
   ja: {
     title: "カラー性格テスト — 私を表す色は何？",
-    description: "15の質問で5つのカラー性格（レッド・ブルー・イエロー・グリーン・パープル）のどれがあなたを表すか発見しましょう。強み、成長ポイント、相性の良いカラータイプも確認できます。",
+    description: "色彩心理学に基づく15問のカラー性格テスト。レッド（情熱）・ブルー（論理）・イエロー（創造）・グリーン（調和）・パープル（直感）の5大カラーから、あなたの強み、成長課題、相性の良い相手タイプを無料で分析しましょう。",
   },
   fr: {
     title: "Test de Personnalité par Couleur — Quelle est votre couleur?",
-    description: "Découvrez laquelle des 5 personnalités colorées vous représente à travers 15 questions. Inclut forces, axes de croissance et types compatibles.",
+    description: "Test des couleurs en 15 questions. Révélez vos traits parmi Rouge, Bleu, Jaune, Vert ou Violet pour découvrir vos forces et compatibilités relationnelles.",
   },
   es: {
     title: "Test de Personalidad por Color — ¿Qué Color Eres?",
-    description: "Descubre cuál de las 5 personalidades de color te representa con 15 preguntas. Incluye fortalezas, áreas de crecimiento y tipos compatibles.",
+    description: "Test de personalidad por color en 15 preguntas. Descubre si eres Rojo, Azul, Amarillo, Verde o Morado para conocer tus mayores fortalezas y compatibilidades.",
   },
   zh: {
     title: "颜色性格测试 — 哪种颜色代表您？",
-    description: "通过15个问题发现5种颜色性格（红、蓝、黄、绿、紫）中哪种代表您。包括优势、成长领域和相容的颜色类型。",
+    description: "基于色彩心理学的15题颜色性格测试。深度解析红（热情行动）、蓝（审慎逻辑）、黄（创意沟通）、绿（温和包容）、紫（直觉敏锐）5大特质，即刻测出您的专属代表色、核心优势与最佳人际相合颜色。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
@@ -42,6 +42,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <ColorPersonalityTest locale={locale as any} client:load />
+    <RelatedArticles locale={locale} topic="personal-color" currentSlug="" limit={4} />
   </div>
-  <TestLaneLink locale={locale as Locale} path="/color-personality-test" />
 </Layout>

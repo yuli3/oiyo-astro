@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import TestLaneLink from '../../components/shared/TestLaneLink.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import SelfEfficacyTest from '../../components/tests/SelfEfficacyTest';
@@ -13,27 +12,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "자기효능감 테스트 — 나는 나를 얼마나 믿는가?",
-    description: "일반적 자기효능감 척도(GSE) 기반 — 14문항으로 도전 대처와 목표 달성에 대한 믿음을 측정하세요.",
+    description: "반두라(Bandura) 이론 기반 일반적 자기효능감 척도(GSE) 14문항 자가진단. 새로운 도전 대처력, 목표 달성 신념, 난관 극복 끈기 3대 핵심 요인을 정밀 측정하고, 자신감을 단계별로 높이는 심리 실행 가이드를 무료로 확인하세요.",
   },
   en: {
     title: "Self-Efficacy Test — How Much Do You Believe in Yourself?",
-    description: "Based on the General Self-Efficacy Scale (GSE) — measure your belief in coping with challenges and attaining goals with 14 questions.",
+    description: "Assess your self-efficacy based on the 14-question GSE scale. Measure your confidence in handling setbacks and reaching goals to unlock personal growth steps.",
   },
   ja: {
     title: "自己効力感テスト — 自分をどれくらい信じているか？",
-    description: "一般性セルフ・エフィカシー尺度（GSE）に基づく — 14の設問で挑戦への対処と目標達成への信頼を測定しましょう。",
+    description: "アルバート・バンデューラ理論に基づく一般性自己効力感尺度（GSE）14問の自己診断。未知の課題への対処力、目標達成への信念、困難を乗り越える粘り強さを測定し、揺るぎない自信を育むガイドを無料で確認しましょう。",
   },
   fr: {
     title: "Test d'Auto-Efficacité — À quel point croyez-vous en vous ?",
-    description: "Basé sur l'échelle d'auto-efficacité générale (GSE) — mesurez votre confiance à relever les défis et atteindre vos objectifs en 14 questions.",
+    description: "Test d'auto-efficacité basé sur l'échelle GSE en 14 questions. Mesurez votre confiance face aux défis et adoptez des clés concrètes pour réussir vos objectifs.",
   },
   es: {
     title: "Test de Autoeficacia — ¿Cuánto crees en ti mismo?",
-    description: "Basado en la Escala de Autoeficacia General (GSE) — mide tu confianza para afrontar desafíos y alcanzar metas con 14 preguntas.",
+    description: "Test de autoeficacia basado en la escala GSE en 14 preguntas. Mide tu confianza ante desafíos y descubre claves prácticas para alcanzar tus metas con éxito.",
   },
   zh: {
     title: "自我效能感测试 — 你有多相信自己？",
-    description: "基于一般自我效能感量表（GSE）— 用14个问题测量你应对挑战和达成目标的信念。",
+    description: "基于阿尔伯特·班杜拉（Albert Bandura）理论的一般自我效能感量表（GSE）14题专业自测。深度评估应对新挑战的自信度、目标达成信念与逆境坚持力，即刻获取专属的自我赋能指引。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
@@ -43,5 +42,4 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <SelfEfficacyTest locale={locale as any} client:load />
   </div>
-  <TestLaneLink locale={locale as Locale} path="/self-efficacy-test" />
 </Layout>

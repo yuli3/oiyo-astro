@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { shareResultImage, type ShareCardPayload } from '../../lib/share-result-image';
-import { gaEvent } from '@/lib/analytics/ga-event';
+import { gaEvent, gaEventOnce } from '@/lib/analytics/ga-event';
 
 type Locale = 'en' | 'ko' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -31,6 +31,19 @@ const LABELS: Record<Locale, { share: string; working: string; downloaded: strin
 export default function ShareResultButton({ locale, heading, resultTitle, emoji, description, symbolSrc, visual, analyticsId, onShareClick }: Props) {
   const t = LABELS[(locale as Locale)] ?? LABELS.en;
   const [state, setState] = useState<'idle' | 'working' | 'done' | 'error'>('idle');
+
+  // 2026-11-03: this button only renders once a result is on screen, in ~114
+  // test components. Its mount is the page-level test_completed fallback for
+  // the components that never fire their own (see ga-event.ts gaEventOnce).
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      // Path-derived on purpose: TestPlayBeacon's test_started fallback uses the
+      // same id, so the two fallback events pair up in GA4.
+      const testId = location.pathname.replace(/^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/, '').replace(/^\/+|\/+$/g, '');
+      if (testId) gaEventOnce('test_completed', { test_id: testId, funnel_source: 'page' });
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   const onShare = async () => {
     if (state === 'working') return;

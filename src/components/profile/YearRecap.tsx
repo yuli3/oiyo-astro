@@ -22,6 +22,9 @@ const KEYWORDS: Record<Locale, string[]> = {
 };
 
 // 재미 요소(2026-11-03): 해 본 검사 가짓수에 따른 올해의 칭호와, 키워드를 봉투처럼 열어 보는 단계.
+// 2026-11-11: 칭호 단계 그림(Grok Build). 순서는 TITLES와 같다.
+const RECAP_TITLE_ICONS = ['sprout', 'compass', 'books', 'trophy'].map((name, i) => `/images/grok-20261106/oiyo-icon-year-recap-2026-title-${i}-${name}.webp`);
+
 const TITLES: Record<Locale, { name: string; emoji: string }[]> = {
   ko: [{ emoji: '🌱', name: '첫 발자국' }, { emoji: '🧭', name: '호기심 탐험가' }, { emoji: '📚', name: '자기 탐구 수집가' }, { emoji: '🏆', name: 'OIYO 마스터' }],
   en: [{ emoji: '🌱', name: 'First Steps' }, { emoji: '🧭', name: 'Curious Explorer' }, { emoji: '📚', name: 'Self-Discovery Collector' }, { emoji: '🏆', name: 'OIYO Master' }],
@@ -191,7 +194,7 @@ export default function YearRecap({ locale }: { locale: string }) {
         <h2 className="mt-2 text-3xl font-black text-foreground">{t.title}</h2>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">{t.stats(recap.totalRuns, recap.distinctTests)}</p>
         <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-sm font-bold text-foreground">
-          <span aria-hidden="true">{title.emoji}</span>
+          <img src={RECAP_TITLE_ICONS[recapTitleTier(recap.distinctTests)]} alt="" width="28" height="28" decoding="async" className="h-7 w-7" />
           <span>{fun.titleLabel} · {title.name}</span>
         </p>
         <ul className="mt-5 space-y-2">

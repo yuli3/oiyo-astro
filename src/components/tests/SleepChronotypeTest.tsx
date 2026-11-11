@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
+import ResultSymbol from '../shared/ResultSymbol'
 import ResultNextSteps from '../shared/ResultNextSteps'
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
@@ -1286,6 +1287,7 @@ export default function SleepChronotypeTest({ locale: lp = 'ko', showHeading = t
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
+        <ResultSymbol id="chronotypes" variant={result} className="mx-auto h-24 w-24" />
         <p className="text-sm text-muted-foreground">{lb.yourType}</p>
         <div
           className="inline-block rounded-full px-5 py-2 text-xl font-bold text-white"

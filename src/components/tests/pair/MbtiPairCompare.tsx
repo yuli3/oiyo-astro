@@ -101,6 +101,9 @@ const CHEMISTRY: Record<Locale, { emoji: string; name: string; line: string }[]>
   ],
 };
 
+// 2026-11-11: 같은 글자 수(0~4)별 그림(Grok Build).
+const PAIR_ICONS = ['0-puzzle', '1-moon', '2-scale', '3-twins', '4-mirror'].map((n) => `/images/grok-20261106/oiyo-icon-pair-chemistry-mbti-${n}.webp`);
+
 export function mbtiChemistry(locale: string, mine: string, theirs: string) {
   const l = (locale in CHEMISTRY ? locale : 'en') as Locale;
   const same = compareMbti(mine, theirs).filter((r) => r.same).length;
@@ -115,7 +118,7 @@ export default function MbtiPairCompare({ locale, mine, theirs }: { locale: stri
   return (
     <div className="space-y-3">
       <div className="animate-fadeInUp rounded-2xl border border-primary/40 bg-primary/5 p-4 text-center">
-        <p className="text-4xl" aria-hidden="true">{chem.emoji}</p>
+        <img src={PAIR_ICONS[compareMbti(mine, theirs).filter((r) => r.same).length]} alt="" width="72" height="72" decoding="async" className="mx-auto h-16 w-16" />
         <p className="mt-1 text-xl font-black text-foreground">{chem.name}</p>
         <p className="mt-1 text-sm leading-6 text-muted-foreground">{chem.line}</p>
       </div>

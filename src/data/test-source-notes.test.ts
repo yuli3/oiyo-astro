@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { getCautionText, getLocalizedBasis, getTestSourceNote, TEST_SOURCE_NOTES } from './test-source-notes';
+import { BASIS_BY_LOCALE, getCautionText, getLocalizedBasis, getTestSourceNote, TEST_SOURCE_NOTES } from './test-source-notes';
 import { BASIS_KO } from './test-source-notes-basis-ko';
 
 describe('typing measurement source note', () => {
@@ -34,4 +34,17 @@ describe('Korean source-note basis', () => {
     expect(getLocalizedBasis(note, 'ko')[0]).toContain('커피');
     expect(getLocalizedBasis(note, 'en')[0]).toContain('coffee');
   });
+});
+
+describe('non-Korean source-note basis', () => {
+  // 2026-11-03: ja·zh·fr·es 도 영어 근거 문장이 그대로 보이던 누출을 막는다.
+  for (const locale of ['ja', 'zh', 'fr', 'es'] as const) {
+    it(`${locale} covers every English basis line and has no orphan keys`, () => {
+      const table = BASIS_BY_LOCALE[locale]!;
+      const used = new Set(Object.values(TEST_SOURCE_NOTES).filter((n) => !n.basisByLocale).flatMap((n) => n.basis));
+      expect([...used].filter((item) => !(item in table))).toEqual([]);
+      expect(Object.keys(table).filter((key) => !used.has(key))).toEqual([]);
+      expect(getLocalizedBasis(getTestSourceNote('/coffee-personality-test/')!, locale)[0]).not.toContain('for fun');
+    });
+  }
 });

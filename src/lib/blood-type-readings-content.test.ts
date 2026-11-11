@@ -1,7 +1,8 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
-const readings = ["blood-type-personality-complete", "fortune-blood-type-psychology"];
+// 2026-11-09: fortune-blood-type-psychology was merged into this article (301).
+const readings = ["blood-type-personality-complete"];
 const locales = ["ko", "en", "ja", "zh", "fr", "es"];
 // Only phrases read in saved drafts belong here; add other locales after review.
 const reviewedScope = {
@@ -32,8 +33,8 @@ const sources = [
 function assertEvidence(article: string, locale: string) {
   expect(article).toContain(`locale: ${locale}`);
   expect(article).toMatch(/^topic: blood-type$/m);
-  expect(article).toMatch(/^updatedDate: 2026-10-09$/m);
-  expect(article.match(/<LectureTable\b/g)).toHaveLength(2);
+  expect(article).toMatch(/^updatedDate: 2026-11-09$/m);
+  expect(article.match(/<LectureTable\b/g)?.length).toBeGreaterThanOrEqual(2);
   for (const source of sources) expect(article).toContain(source);
   expect(article).toContain("1,427");
   expect(article).toContain("Persistence");
@@ -55,9 +56,8 @@ describe("Blood type readings respect the studies they cite", () => {
     it(`keeps evidence boundaries for ${locale}/${slug}`, () => {
       const article = readCurrentArticle();
       assertEvidence(article, locale);
-      const other = readings.find((reading) => reading !== slug);
-      expect(article).toContain(`](/${locale}/${other}/)`);
-      expect(article).toContain(slug === "blood-type-personality-complete" ? "2026-06-01" : "2025-05-23");
+      expect(article).not.toContain(`](/${locale}/fortune-blood-type-psychology/)`);
+      expect(article).toContain("2026-06-01");
     });
     it(`rejects removed original source links for ${locale}/${slug}`, () => {
       const article = readCurrentArticle();

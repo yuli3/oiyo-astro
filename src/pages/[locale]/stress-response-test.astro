@@ -4,6 +4,7 @@ import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import StressResponseTest from '../../components/tests/StressResponseTest';
 import RelatedTools from '../../components/shared/RelatedTools.astro';
+import RelatedArticles from '../../components/shared/RelatedArticles.astro';
 import TestSourceNote from '../../components/shared/TestSourceNote.astro';
 import { TEST_SOURCE_NOTES } from '../../data/test-source-notes';
 
@@ -15,27 +16,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "스트레스 반응 유형 — 나는 싸우나, 도망치나, 얼어붙나, 순응하나?",
-    description: "16가지 시나리오로 나의 스트레스 반응 유형을 알아보세요. 투쟁, 도피, 경직, 순응 — 4가지 반응 패턴 중 나는 어떤 유형인가?",
+    description: "16가지 일상 시나리오 기반 4F 스트레스 반응 유형 진단. 위기 상황에서 나타나는 투쟁(Fight)·도피(Flight)·경직(Freeze)·순응(Fawn) 4대 무의식 방어 패턴을 분석하고, 신경계 안정화 및 맞춤형 대처 전략을 무료로 확인하세요.",
   },
   en: {
     title: "Stress Response Type — Do I Fight, Flee, Freeze, or Fawn?",
-    description: "Discover your stress response type through 16 scenarios. Fight, Flight, Freeze, or Fawn — which of the 4 response patterns is yours?",
+    description: "Discover your 4F stress response across 16 scenarios. Analyze Fight, Flight, Freeze, and Fawn patterns to unlock personalized emotional coping strategies.",
   },
   ja: {
     title: "ストレス反応タイプ — 私は戦う？逃げる？固まる？従う？",
-    description: "16のシナリオで自分のストレス反応タイプを調べましょう。闘争、逃走、凍結、服従 — 4つの反応パターンのうち私はどのタイプ？",
+    description: "16の日常シナリオに基づく4Fストレス反応タイプ診断。危機時に現れる闘争（Fight）・逃走（Flight）・凍結（Freeze）・迎合（Fawn）の4大無意識防衛パターンを分析し、神経系の安定と対処法を確認しましょう。",
   },
   fr: {
     title: "Type de réponse au stress — Est-ce que je combats, fuis, me fige ou m'assujettis ?",
-    description: "Découvrez votre type de réponse au stress à travers 16 scénarios. Combat, Fuite, Gel ou Soumission — quel est votre modèle ?",
+    description: "Identifiez votre profil de stress 4F en 16 scénarios. Analysez les réactions Combat, Fuite, Gel ou Soumission pour débloquer vos stratégies d'apaisement.",
   },
   es: {
     title: "Tipo de respuesta al estrés — ¿Lucho, huyo, me paralizo o me someto?",
-    description: "Descubra su tipo de respuesta al estrés a través de 16 escenarios. Lucha, Huida, Congelamiento o Sumisión — ¿cuál es su patrón?",
+    description: "Descubre tu perfil de estrés 4F en 16 escenarios. Analiza tus patrones de Lucha, Huida, Parálisis o Sumisión y desbloquea estrategias personalizadas de calma.",
   },
   zh: {
     title: "压力反应类型 — 我是战斗、逃跑、冻结还是讨好？",
-    description: "通过16个情境了解您的压力反应类型。战斗、逃跑、冻结、讨好 — 4种反应模式中您属于哪种？",
+    description: "基于16个日常情境的4F压力反应类型专业自测。深度分析面对危机时的战斗（Fight）、逃跑（Flight）、冻结（Freeze）与讨好（Fawn）4大潜意识防卫模式，即刻获取适合您的神经系统调节与情绪应对策略。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
@@ -46,5 +47,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
     <StressResponseTest locale={locale as any} client:load />
     <RelatedTools locale={locale} tools={['stressType', 'stressEvents', 'burnout', 'anxiety']} current="stressResponse" />
     <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['stress-response']} />
+    <RelatedArticles locale={locale} topic="emotion" currentSlug="" limit={4} />
   </div>
 </Layout>

@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import SillaGolpum from "../../components/tools/past-life/SillaGolpum";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1300년 전 신라의 나 — 골품과 17관등, 나는 어디까지 오를까",
+    description: "신라 골품제로 내 신분과 관등을 뽑아요. 진골·6두품·5두품·4두품의 승진 상한과 관등별 공복 색은 실제 제도 그대로, 타고난 그릇이 골품의 벽에 막히는지 보여줘요.",
+    heading: "1300년 전 신라의 나",
+    sub: "8세기 서라벌. 골품이 정한 나의 천장",
+    intro: "신라에서는 태어난 골품이 오를 수 있는 관등의 끝을 정했어요. 6두품은 아무리 뛰어나도 6등 아찬까지였죠. 내 그릇과 내 골품을 함께 뽑아요.",
+    howTitle: "어떤 규칙으로 뽑나요",
+    how: [
+      "관등: 경위 17관등(1 이벌찬 ~ 17 조위). 골품별 상한은 진골 이벌찬, 6두품 아찬, 5두품 대나마, 4두품 대사예요(한국민족문화대백과사전 「골품제도」).",
+      "공복: 대아찬 이상 자색, 급찬 이상 비색, 나마 이상 청색, 조위 이상 황색. 색의 경계가 골품 상한과 맞물려요.",
+      "골품 비율: 골품별 인구 기록이 남아 있지 않아 OIYO가 정한 놀이용 비율(진골 5 · 6두품 10 · 5두품 15 · 4두품 20 · 평민 30)로 뽑아요.",
+      "타고난 그릇: 17관등 중 하나를 고르게 뽑고, 골품 상한보다 높으면 상한에서 멈춰요. 그 차이가 '골품의 벽'이에요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "6두품은 어디까지 오를 수 있었나요?", a: "6등 아찬까지예요. 통일 뒤 중위제로 중아찬~4중아찬까지 세분됐지만 아찬 위로는 못 갔어요." },
+      { q: "성골은 왜 안 나오나요?", a: "성골은 진덕여왕(재위 647~654) 뒤로 왕위를 이을 사람이 없어 사라졌어요. 이 페이지는 8세기 통일신라를 배경으로 해요." },
+      { q: "평민은 관등을 받을 수 없었나요?", a: "골품제 안의 평민(3~1두품)은 경위 관등을 받지 못했어요. 관등은 4두품부터였어요." },
+    ],
+  },
+  en: {
+    title: "You in Silla, 1,300 years ago — bone rank and the 17 court ranks",
+    description: "Draw your bone rank and court rank in Silla. Each class's ceiling and the robe colours follow the real system; see whether your talent hits the bone-rank wall.",
+    heading: "You in Silla, 1,300 years ago",
+    sub: "8th-century Gyeongju: the ceiling your birth set",
+    intro: "In Silla, the bone rank you were born into capped how high you could rise. Head rank 6 stopped at rank 6, however able. We draw your talent and your birth together.",
+    howTitle: "How the draw works",
+    how: [
+      "Ranks: the 17 capital ranks, from ibeolchan (1) to jowi (17). Ceilings: true bone 1, head rank 6 → 6, head rank 5 → 10, head rank 4 → 12 (Encyclopedia of Korean Culture).",
+      "Robes: purple to rank 5, crimson to 9, blue to 11, yellow to 17.",
+      "Bone-rank odds: no population counts survive, so OIYO uses play weights (5 · 10 · 15 · 20 · 30).",
+      "Talent: any of the 17 ranks with equal odds, stopped at your ceiling. The gap is the bone-rank wall.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "How high could head rank 6 go?", a: "To rank 6, achan. After unification sub-steps were added within achan, but never above it." },
+      { q: "Why no sacred bone?", a: "The sacred bone line ended with Queen Jindeok (r. 647–654). The page is set in 8th-century unified Silla." },
+    ],
+  },
+  ja: {
+    title: "1300年前の新羅のわたし — 骨品と17官位",
+    description: "新羅の骨品制で身分と官位を引きます。骨品ごとの上限と公服の色は実際の制度どおり。",
+    heading: "1300年前の新羅のわたし",
+    sub: "8世紀の徐羅伐。骨品が決めた天井",
+    intro: "新羅では生まれた骨品が昇れる官位の上限を決めました。器と骨品を一緒に引きます。",
+    howTitle: "引き方",
+    how: [
+      "官位：京位17等。上限は真骨が伊伐飡、六頭品が阿飡、五頭品が大奈麻、四頭品が大舎。",
+      "公服：大阿飡以上は紫、級飡以上は緋、奈麻以上は青、造位以上は黄。",
+      "骨品の比率は記録がないため、OIYOの遊び用比率（5・10・15・20・30）で引きます。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [{ q: "六頭品はどこまで？", a: "六等の阿飡までです。統一後に重位制ができても阿飡の上には行けませんでした。" }],
+  },
+  zh: {
+    title: "1300年前新罗的我 — 骨品与十七官等",
+    description: "按新罗骨品制抽取身份与官等。各骨品的上限与公服颜色依真实制度。",
+    heading: "1300年前新罗的我",
+    sub: "8世纪徐罗伐：骨品定下的天花板",
+    intro: "在新罗，出身的骨品决定能升到的最高官等。一起抽取你的才干和骨品。",
+    howTitle: "抽取规则",
+    how: [
+      "官等：京位十七等。上限：真骨伊伐飡，六头品阿飡，五头品大奈麻，四头品大舍。",
+      "公服：大阿飡以上紫，级飡以上绯，奈麻以上青，造位以上黄。",
+      "骨品比例没有记录，按OIYO设定的游戏比例（5·10·15·20·30）抽取。",
+    ],
+    faqTitle: "常见问题",
+    faq: [{ q: "六头品能升到哪里？", a: "到第六等阿飡。统一后有重位制，但始终超不过阿飡。" }],
+  },
+  fr: {
+    title: "Vous à Silla il y a 1 300 ans — rang d'os et 17 rangs de cour",
+    description: "Tirez votre rang d'os et votre rang de cour dans le royaume de Silla. Plafonds et couleurs de robe suivent le vrai système.",
+    heading: "Vous à Silla il y a 1 300 ans",
+    sub: "Gyeongju, VIIIe siècle : le plafond fixé par la naissance",
+    intro: "À Silla, le rang d'os de naissance fixait jusqu'où l'on pouvait monter. Nous tirons votre talent et votre naissance.",
+    howTitle: "Les règles",
+    how: [
+      "17 rangs de la capitale ; plafonds : os véritable 1, rang 6 → 6, rang 5 → 10, rang 4 → 12.",
+      "Robes : pourpre jusqu'au 5e, cramoisi au 9e, bleu au 11e, jaune au 17e.",
+      "Aucun chiffre de population : poids de jeu OIYO (5 · 10 · 15 · 20 · 30).",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Jusqu'où montait le rang 6 ?", a: "Jusqu'au 6e rang, achan, jamais au-dessus." }],
+  },
+  es: {
+    title: "Tú en Silla hace 1300 años — rango de hueso y 17 rangos de corte",
+    description: "Sortea tu rango de hueso y de corte en Silla. Techos y colores de túnica siguen el sistema real.",
+    heading: "Tú en Silla hace 1300 años",
+    sub: "Gyeongju, siglo VIII: el techo que fijó tu nacimiento",
+    intro: "En Silla, el rango de hueso de nacimiento fijaba hasta dónde se podía subir. Sorteamos tu talento y tu nacimiento.",
+    howTitle: "Reglas",
+    how: [
+      "17 rangos de la capital; techos: hueso verdadero 1, rango 6 → 6, rango 5 → 10, rango 4 → 12.",
+      "Túnicas: púrpura hasta el 5.º, carmesí al 9.º, azul al 11.º, amarilla al 17.º.",
+      "No hay cifras de población: pesos de juego de OIYO (5 · 10 · 15 · 20 · 30).",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Hasta dónde subía el rango 6?", a: "Hasta el 6.º rango, achan, nunca más arriba." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/silla-golpum/")} ogImage="/images/past-life-1426/og/silla.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><SillaGolpum locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["joseon1426", "france1789", "joseon"]} current="sillaGolpum" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

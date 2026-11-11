@@ -1,6 +1,8 @@
 // Time-slip series quick wins (2026-11-03): birthday seed, rarity badge, time-warp intro,
 // saved ID card image, friend comparison and the series stamp board.
 // Design: company-brain projects/oiyo-ecosystem/past-life-series-design-2026-11-03.md
+import { TIMESLIP_CARD_ART, TIMESLIP_UI_ROOT, TIMESLIP_ART_NOTE } from "../../../data/timeslip-ui-art";
+import { layoutCard } from "../../../lib/timeslip-card-layout";
 import { useEffect, useRef, useState } from "react";
 import { localePath, type Locale } from "../../../i18n";
 import { gaEvent } from "../../../lib/analytics/ga-event";
@@ -74,7 +76,7 @@ const T = {
   series: { ko: "타임슬립 시리즈 도장판", en: "Time-slip series stamps", ja: "タイムスリップ・シリーズのスタンプ", zh: "时空穿越系列印章", fr: "Tampons de la série", es: "Sellos de la serie" },
   done: { ko: "도장 받음", en: "Stamped", ja: "スタンプ済み", zh: "已盖章", fr: "Tamponné", es: "Sellado" },
   next: { ko: "다음 여행", en: "Next trip", ja: "次の旅", zh: "下一站", fr: "Prochain voyage", es: "Próximo viaje" },
-  allDone: { ko: "세 시대를 모두 다녀왔어요. 시간여행자 인증!", en: "All three eras visited. Certified time traveller!", ja: "3つの時代をすべて巡りました。時間旅行者に認定！", zh: "三个时代都去过了。认证时间旅行者！", fr: "Les trois époques visitées. Voyageur du temps certifié !", es: "Las tres épocas visitadas. ¡Viajero del tiempo certificado!" },
+  allDone: { ko: "모든 시대를 다녀왔어요. 시간여행자 인증!", en: "Every era visited. Certified time traveller!", ja: "すべての時代を巡りました。時間旅行者に認定！", zh: "所有时代都去过了。认证时间旅行者！", fr: "Toutes les époques visitées. Voyageur du temps certifié !", es: "Todas las épocas visitadas. ¡Viajero del tiempo certificado!" },
   reincarnation: { ko: "다음 생엔 어느 나라에서 태어날까?", en: "Where will you be born next life?", ja: "来世はどの国に生まれる？", zh: "下辈子会出生在哪个国家？", fr: "Où renaîtrez-vous ?", es: "¿Dónde nacerás en tu próxima vida?" },
 } satisfies Record<string, Six>;
 
@@ -88,6 +90,8 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+  "silla-golpum": { icon: "🏛️", label: { ko: "1300년 전 신라의 나 (골품)", en: "You in Silla: bone rank", ja: "新羅のわたし（骨品）", zh: "新罗的我（骨品）", fr: "Vous à Silla : rang d'os", es: "Tú en Silla: rango de hueso" } },
+  "france-1789": { icon: "🇫🇷", label: { ko: "1789년 프랑스의 나", en: "You in France, 1789", ja: "1789年フランスのわたし", zh: "1789年法国的我", fr: "Vous en 1789", es: "Tú en Francia, 1789" } },
   "joseon-1426": { icon: "🏯", label: { ko: "600년 전 조선의 나", en: "You in Joseon, 1426", ja: "1426年朝鮮のわたし", zh: "1426年朝鲜的我", fr: "Vous à Joseon, 1426", es: "Tú en Joseon, 1426" } },
   "europe-1426": { icon: "👑", label: { ko: "600년 전 유럽의 왕좌", en: "Your throne in 1426 Europe", ja: "1426年欧州の玉座", zh: "1426年欧洲王座", fr: "Votre trône en 1426", es: "Tu trono en 1426" } },
   "us-birth-state": { icon: "🇺🇸", label: { ko: "지금 미국에서 태어난다면", en: "Born in the US today", ja: "いまアメリカで生まれたら", zh: "如果今天出生在美国", fr: "Né aux États-Unis aujourd'hui", es: "Nacer hoy en EE. UU." } },
@@ -95,11 +99,11 @@ const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
 
 // ── Mode tabs + birthday ─────────────────────────────────────────────────────
 
-export function ModeTabs3({ mode, onMode, l }: { mode: Mode; onMode: (m: Mode) => void; l: L }) {
+export function ModeTabs3({ mode, onMode, l, modes = ["random", "birthday", "trait"] }: { mode: Mode; onMode: (m: Mode) => void; l: L; modes?: readonly Mode[] }) {
   return (
     <div className="space-y-2">
-      <div className="grid grid-cols-3 gap-2" role="tablist">
-        {(["random", "birthday", "trait"] as const).map((m) => (
+      <div className={modes.length === 3 ? "grid grid-cols-3 gap-2" : "grid grid-cols-2 gap-2"} role="tablist">
+        {modes.map((m) => (
           <Button key={m} role="tab" aria-selected={mode === m} variant={mode === m ? "default" : "outline"} onClick={() => onMode(m)}>
             {pick(T[m], l)}
           </Button>
@@ -220,91 +224,102 @@ export interface CardSpec {
   badge: string;
   footer: string;
   accent: string;
+  art?: string;
 }
 
-function wrap(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
-  const words = text.includes(" ") ? text.split(" ") : [...text];
-  const joiner = text.includes(" ") ? " " : "";
-  const out: string[] = [];
-  let line = "";
-  for (const w of words) {
-    const next = line ? line + joiner + w : w;
-    if (ctx.measureText(next).width > maxWidth && line) {
-      out.push(line);
-      line = w;
-    } else line = next;
-  }
-  if (line) out.push(line);
-  return out;
-}
-
-export function renderCard(spec: CardSpec): HTMLCanvasElement {
-  const W = 1080;
-  const H = 1350;
+export function renderCard(spec: CardSpec, paper?: HTMLImageElement, artImage?: HTMLImageElement): HTMLCanvasElement {
   const canvas = document.createElement("canvas");
-  canvas.width = W;
-  canvas.height = H;
+  canvas.width = 720;
+  canvas.height = 960;
   const ctx = canvas.getContext("2d");
-  if (!ctx) return canvas;
+  if (!ctx) throw new Error("Canvas unavailable");
   const serif = "'Gowun Batang', 'Noto Serif KR', Georgia, serif";
-  // Parchment card colours are fixed (not theme tokens) so the saved image looks the same in dark mode.
+  // 2026-11-06: fixed parchment colours keep exported results independent of theme.
   ctx.fillStyle = "#efe4cc";
-  ctx.fillRect(0, 0, W, H);
-  ctx.strokeStyle = spec.accent;
-  ctx.lineWidth = 14;
-  ctx.strokeRect(40, 40, W - 80, H - 80);
-  ctx.lineWidth = 3;
-  ctx.strokeRect(70, 70, W - 140, H - 140);
-  ctx.textAlign = "center";
-  ctx.fillStyle = "#5b4a35";
-  ctx.font = `700 40px ${serif}`;
-  ctx.fillText(spec.kicker, W / 2, 190);
-  ctx.fillStyle = "#1f1a14";
-  ctx.font = `900 104px ${serif}`;
-  let y = 340;
-  for (const line of wrap(ctx, spec.title, W - 220).slice(0, 2)) {
-    ctx.fillText(line, W / 2, y);
-    y += 120;
+  ctx.fillRect(0, 0, 720, 960);
+  if (paper) ctx.drawImage(paper, 0, 0, 720, 960);
+  else {
+    ctx.strokeStyle = spec.accent;
+    ctx.lineWidth = 3;
+    ctx.strokeRect(40, 40, 640, 880);
   }
-  if (spec.subtitle) {
-    ctx.fillStyle = "#5b4a35";
-    ctx.font = `700 46px ${serif}`;
-    ctx.fillText(spec.subtitle, W / 2, y);
-    y += 70;
-  }
-  ctx.fillStyle = spec.accent;
-  ctx.font = `900 54px ${serif}`;
-  const badgeW = ctx.measureText(spec.badge).width + 80;
-  ctx.globalAlpha = 0.12;
-  ctx.fillRect(W / 2 - badgeW / 2, y + 10, badgeW, 84);
-  ctx.globalAlpha = 1;
-  ctx.fillText(spec.badge, W / 2, y + 72);
-  y += 170;
-  ctx.fillStyle = "#1f1a14";
-  ctx.font = `400 44px ${serif}`;
-  for (const raw of spec.lines) {
-    for (const line of wrap(ctx, raw, W - 240)) {
-      if (y > H - 200) break;
-      ctx.fillText(line, W / 2, y);
-      y += 62;
+
+  const hasArt = Boolean(artImage && artImage.naturalWidth > 0 && artImage.naturalHeight > 0);
+  if (hasArt && artImage) {
+    const boxX = 120, boxY = 90, boxW = 480, boxH = 380;
+    const imgRatio = artImage.naturalWidth / artImage.naturalHeight;
+    const boxRatio = boxW / boxH;
+    let dw = boxW, dh = boxH;
+    if (imgRatio > boxRatio) {
+      dh = boxW / imgRatio;
+    } else {
+      dw = boxH * imgRatio;
     }
-    y += 14;
+    const dx = boxX + (boxW - dw) / 2;
+    const dy = boxY + (boxH - dh) / 2;
+    try {
+      ctx.drawImage(artImage, dx, dy, dw, dh);
+    } catch {
+      /* crossOrigin fallback */
+    }
   }
-  ctx.fillStyle = "#5b4a35";
-  ctx.font = `700 36px ${serif}`;
-  ctx.fillText(spec.footer, W / 2, H - 120);
+
+  const lines = layoutCard({ ...spec, hasArt }, (text, size, bold) => {
+    ctx.font = `${bold ? 700 : 400} ${size}px ${serif}`;
+    return ctx.measureText(text).width;
+  });
+  ctx.textAlign = "center";
+  for (const line of lines) {
+    ctx.font = `${line.bold ? 700 : 400} ${line.size}px ${serif}`;
+    ctx.fillStyle = line.accent ? spec.accent : "#2b1708";
+    ctx.fillText(line.text, line.x, line.y);
+  }
   return canvas;
 }
 
 export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeId; spec: CardSpec; filename: string }) {
   const [saved, setSaved] = useState(false);
+  const [failedPaper, setFailedPaper] = useState(false);
+  const [failedArt, setFailedArt] = useState(false);
+  const paper = TIMESLIP_CARD_ART[testId];
+  const paperRef = useRef<HTMLImageElement>(null);
+  const artRef = useRef<HTMLImageElement>(null);
+  const artSrc = spec.art ? (spec.art.startsWith("/") ? spec.art : TIMESLIP_UI_ROOT + spec.art) : undefined;
+  const hasArt = Boolean(artSrc && !failedArt);
+
   return (
+    <div className="space-y-3">
+      {paper && <figure className="space-y-2" data-timeslip-card={testId}>
+        <div className="timeslip-card-preview">
+          {!failedPaper && <img ref={paperRef} src={TIMESLIP_UI_ROOT + paper} alt="" width={720} height={960}
+            loading="lazy" decoding="async" className="timeslip-card-paper" onError={() => setFailedPaper(true)} />}
+          {hasArt && <img ref={artRef} src={artSrc} alt="" width={480} height={380}
+            loading="lazy" decoding="async" className="timeslip-card-art" onError={() => setFailedArt(true)} />}
+          <div className={`timeslip-card-copy ${hasArt ? "has-art" : ""}`}>
+            <p>{spec.kicker}</p><strong>{spec.title}</strong>
+            {spec.subtitle && <p>{spec.subtitle}</p>}
+            <p>{spec.badge}</p>
+            {spec.lines.map((line, i) => <p key={i}>{line}</p>)}
+            <small>{spec.footer}</small>
+          </div>
+        </div>
+        <figcaption className="text-center text-xs text-muted-foreground">{TIMESLIP_ART_NOTE[l]}</figcaption>
+      </figure>}
     <Button
       variant="outline"
       className="w-full"
       onClick={async () => {
         if (document.fonts?.ready) await document.fonts.ready;
-        const canvas = renderCard(spec);
+        // Reuse the displayed same-origin image; awaiting a new fetch here can
+        // expire mobile Web Share activation (2026-11-06). A failed image falls back.
+        const paperImage = paperRef.current;
+        const artImage = artRef.current;
+        const validArt = artImage?.complete && artImage.naturalWidth > 0 ? artImage : undefined;
+        const canvas = renderCard(
+          spec,
+          paperImage?.complete && paperImage.naturalWidth > 0 ? paperImage : undefined,
+          validArt
+        );
         const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png"));
         if (!blob) return;
         const file = new File([blob], `${filename}.png`, { type: "image/png" });
@@ -329,6 +344,7 @@ export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeI
     >
       {pick(saved ? T.saved : T.save, l)}
     </Button>
+    </div>
   );
 }
 

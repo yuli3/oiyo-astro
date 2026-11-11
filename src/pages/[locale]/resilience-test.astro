@@ -14,27 +14,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "회복탄력성 자가 진단 — 나는 역경에서 얼마나 잘 회복하나요?",
-    description: "10가지 질문으로 나의 회복탄력성 수준을 진단해보세요. 역경 후 회복 능력과 강화 전략을 알아봅니다.",
+    description: "코너-데이비슨 회복탄력성 척도(CD-RISC) 기반 10문항 자가진단. 역경 극복력, 스트레스 회복 속도, 정서적 유연성을 다각도로 측정하여 나의 회복탄력성 점수와 멘탈 강화 실천 가이드를 무료로 확인하세요.",
   },
   en: {
     title: "Resilience Self-Assessment — How Well Do You Bounce Back?",
-    description: "Assess your resilience level with 10 questions. Discover your recovery ability and strategies to strengthen it.",
+    description: "Assess your mental resilience with this 10-question CD-RISC test. Measure adversity bounce-back and emotional flexibility to get your personal strength guide.",
   },
   ja: {
     title: "回復力自己診断 — 逆境からどれくらいうまく立ち直れますか？",
-    description: "10の質問で自分の回復力レベルを診断。逆境からの回復能力と強化戦略を発見しましょう。",
+    description: "コナー・デイビッドソン回復力尺度（CD-RISC）に基づく10問の自己診断。逆境からの回復スピード、ストレス対処力、感情の柔軟性を多角的に測定し、折れない心とメンタル強化ガイドを無料で確認しましょう。",
   },
   fr: {
     title: "Auto-évaluation de la Résilience — Comment rebondissez-vous?",
-    description: "Évaluez votre niveau de résilience avec 10 questions.",
+    description: "Évaluez votre résilience psychologique avec le test CD-RISC en 10 questions. Mesurez votre force face aux difficultés et renforcez votre bien-être mental.",
   },
   es: {
     title: "Autoevaluación de Resiliencia — ¿Qué tan bien te recuperas?",
-    description: "Evalúa tu nivel de resiliencia con 10 preguntas.",
+    description: "Evalúa tu resiliencia psicológica con el test CD-RISC en 10 preguntas. Mide tu capacidad de recuperación ante la adversidad y fortalece tu bienestar mental.",
   },
   zh: {
     title: "心理韧性自我评估 — 你从逆境中恢复得多好？",
-    description: "通过10个问题评估你的心理韧性水平。",
+    description: "基于康纳-戴维森韧性量表（CD-RISC）的10题心理韧性专业评估。全方位测试面对逆境时的应对力、抗压恢复速度与情绪弹性，精准诊断您的心理抗挫力得分，并获取专属的心态强化训练策略。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
