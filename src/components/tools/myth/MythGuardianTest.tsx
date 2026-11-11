@@ -212,7 +212,7 @@ export function guardianLabels(locale: string) {
   return { archetype: c.archetype, pantheon: c.pantheon };
 }
 
-const PANTHEON_SEAL: Record<Pantheon, string> = { greek: '🏛️', norse: 'ᚱ', egyptian: '𓂀', korean: '☯' };
+const PANTHEON_SEAL: Record<Pantheon, string> = { greek: '🏛️', norse: '❄️', egyptian: '☀️', korean: '🌙' };
 
 function GuardianWhy({ c, l, result, figures }: { c: Copy; l: Locale; result: ReturnType<typeof castGuardian>; figures: Record<string, Figure> }) {
   const [focus, setFocus] = useState<Archetype>(result.archetype);
