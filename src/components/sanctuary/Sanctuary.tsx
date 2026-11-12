@@ -5,6 +5,8 @@ import '../../styles/sanctuary.css';
 import { canUseWebGL } from './webgl';
 import { LANTERN_COLORS, MAX_LANTERNS } from './TempleRituals';
 import { SPOTS, type Spot } from './walk';
+import { SanctuarySound } from './sounds';
+import { prefersReducedMotion } from '@/hooks/useMotion';
 
 const LANTERN_KEY = 'oiyo-sanctuary-lanterns';
 function loadLanterns(): number[] {
@@ -55,6 +57,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   useEffect(()=>{ if(scene!=='temple'||!view3d){clearTimeout(fadeTimer.current);setFading(false);setInside(false);setSpot('yard');} },[scene,view3d]);
   const socket = useRef<WebSocket|null>(null);
   const audio = useRef<AudioContext|null>(null);
+  const sounds = useRef<SanctuarySound|null>(null);
   const recent = useRef(new Set<string>());
   const lastAction = useRef(0);
 
@@ -123,7 +126,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   useEffect(()=>{
     const ok=canUseWebGL();
     setCan3d(ok);
-    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduce=prefersReducedMotion();
     const saveData=(navigator as Navigator & {connection?:{saveData?:boolean}}).connection?.saveData===true;
     setView3d(ok && !reduce && !saveData);
   },[]);
@@ -139,12 +142,15 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   }
   async function toggleSound() {
     if(sound){setSound(false);await audio.current?.suspend();return;}
-    try {audio.current??=new AudioContext();await audio.current.resume();setSound(true);} catch {setSound(false);}
+    try {audio.current??=new AudioContext();sounds.current??=new SanctuarySound(audio.current);await audio.current.resume();setSound(true);} catch {setSound(false);}
   }
-  function tap() {
+  // 2026-11-12: ambient loops follow the scene while sound is on. Slots without a file are skipped (see sounds.ts).
+  useEffect(()=>{ if(sound)void sounds.current?.setScene(scene); },[sound,scene]);
+  async function tap() {
     const ctx=audio.current;
     if(!sound || !ctx || ctx.state!=='running')return;
-    // 2026-11-02: a local synthesis preview; no claim that this is an authentic moktak recording.
+    if(await sounds.current?.hit('moktak'))return;
+    // 2026-11-02: a local synthesis preview; no claim that this is an authentic moktak recording. Fallback when the moktak slot has no file.
     const now=ctx.currentTime;
     for(const [frequency,level] of [[510,0.05],[980,0.025]]){
       const osc=ctx.createOscillator(),gain=ctx.createGain();
@@ -156,10 +162,12 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   function hang(color:number){
     setLanterns(prev=>{const next=[...prev,color].slice(-MAX_LANTERNS);saveLanterns(next);return next;});
   }
-  function strike(){
+  async function strike(){
     setRing(n=>n+1);
     const ctx=audio.current;
     if(!sound || !ctx || ctx.state!=='running')return;
+    // A recorded bell, once the bell slot is filled; until then the synthesized one below.
+    if(await sounds.current?.hit('bell',0.55))return;
     // Synthesized bronze bell: inharmonic partials, a slightly detuned pair for the slow beating (맥놀이), long decay.
     // Delayed to land when the wooden striker meets the bell in the 3D scene.
     const now=ctx.currentTime+0.55;
@@ -207,7 +215,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
           <div data-part="walk">{SPOTS.map((value,i)=><button key={value} type="button" aria-pressed={spot===value} disabled={fading} onClick={()=>setSpot(value)}>{t.spots[i]}</button>)}</div>
           <p data-part="ritual-title">{t.lantern} <small>{t.lanternCount} {lanterns.length}/{MAX_LANTERNS}</small></p>
           <div data-part="swatches">{LANTERN_COLORS.map((color,i)=><button key={color} type="button" aria-label={`${t.lantern}: ${t.lanternColors[i]}`} data-swatch={i} onClick={()=>hang(i)}><span aria-hidden="true" /></button>)}
-            <button type="button" data-part="bell" onClick={strike}>🔔 {t.bell}</button>
+            <button type="button" data-part="bell" onClick={()=>void strike()}>🔔 {t.bell}</button>
             {lanterns.length>0&&<button type="button" data-part="clear" onClick={()=>{setLanterns([]);saveLanterns([]);}}>{t.lanternClear}</button>}</div>
           <small>{t.lanternHint}</small>
         </div>}
@@ -237,7 +245,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
           {together&&<button type="button" aria-pressed={hidden} onClick={()=>setHidden(!hidden)}>{hidden?t.show:t.hide}</button>}
         </div>
         <p>{t.help}</p><p role="status">{message}</p>
-        <div data-part="sound"><button type="button" aria-pressed={sound} onClick={()=>void toggleSound()}>{sound?t.soundOff:t.soundOn}</button><button type="button" disabled={!sound} onClick={tap}>{t.tap}</button><small>{t.soundNote}</small></div>
+        <div data-part="sound"><button type="button" aria-pressed={sound} onClick={()=>void toggleSound()}>{sound?t.soundOff:t.soundOn}</button><button type="button" disabled={!sound} onClick={()=>void tap()}>{t.tap}</button><small>{t.soundNote}</small></div>
       </section>
       <footer data-part="footnote"><p>{t.notice}</p>{view3d&&scene==='temple'&&<><p>{t.bellNote}</p><p>{t.heritage}</p>{inside&&<p>{t.hallNote}</p>}</>}<p>{t.privacy}</p><p>{view3d?t.art3d:t.art}</p></footer>
     </main>
