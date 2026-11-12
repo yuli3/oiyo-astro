@@ -20,6 +20,7 @@
     "lint:shadcn:prune": "eslint --prune-suppressions src",
     "type-check:active": "astro check --tsconfig tsconfig.active.json --minimumSeverity error",
     "test": "vitest",
+    "audit:knowledge-catalog": "node scripts/audit-knowledge-catalog.mjs",
     "audit:page-structure": "node scripts/audit-page-structure.mjs",
     "audit:bar-chart-html": "node --test scripts/audit-bar-chart-html.mjs",
     "audit:bar-chart-fixtures": "node scripts/audit-bar-chart-fixtures.mjs",
