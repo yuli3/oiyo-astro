@@ -7,10 +7,18 @@ export const TIMESLIP_CARD_ART: Partial<Record<EpisodeId, string>> = {
   "joseon-1426": "cards/joseon-blank.webp",
   "silla-golpum": "cards/silla-blank.webp",
   "europe-1426": "cards/europe-blank.webp",
-  "joseon-1789": "cards/joseon-blank.webp",
+  // 2026-11-14: code-rendered hanji register sheet (no AI art), replaces the borrowed 1426 paper.
+  "joseon-1789": "cards/joseon1789-blank.webp",
   "france-1789": "cards/france-blank.webp",
   "us-birth-state": "cards/us-blank.webp",
 };
+/**
+ * /joseon-1789/ result scenes by status and sex, relative to TIMESLIP_UI_ROOT.
+ * Empty until the AI scenes from company-brain image-goals (goal "/joseon-1789" scene slots) are
+ * generated; the installer only adds a line here. A missing sex falls back to the other one.
+ */
+export const JOSEON1789_SCENES: Partial<Record<"yangban" | "sangmin" | "nobi", Partial<Record<"f" | "m", string>>>> = {};
+
 export const TIMESLIP_ART_NOTE = {
   ko: "AI 창작 삽화 · 복식의 정확한 복원도나 실제 증명서가 아닙니다.",
   en: "AI-created illustration · not an exact costume reconstruction or a real certificate.",

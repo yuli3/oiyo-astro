@@ -5,7 +5,9 @@ import {
   HEIGHT_CM, SURNAMES, YANGBAN_TREND, ageFromBirthday, compare1789, draw1789, format1789, isChild, isWidowJob, jobOf,
   oneIn1789, parse1789, registerLine, registerName, type Life1789, type Sex, type Status,
 } from "../../../lib/joseon-1789";
+import { JOSEON1789_SCENES } from "../../../data/timeslip-ui-art";
 import { Button } from "../../ui/button";
+import { ArtifactImage, ArtifactNote } from "./TimeslipArtifacts";
 import { CopyLink, Panel, Sources, numberFormat, oneInText, pick, setShareQuery, toL, useFunnel, type L, type Six } from "./shared";
 import { BirthdayPicker, FriendBanner, FriendCompare, ModeTabs3, RarityBadge, SaveCard, SeriesNext, TimeWarp, isOwn, rarityLabel, rememberOwn, stampEpisode, useWarp, type Mode } from "./timeslip";
 
@@ -201,6 +203,11 @@ function jobShown(life: Life1789, l: L) {
   return pick(JOB_NAME[life.job]!, l);
 }
 
+function sceneFor(life: Life1789): string | undefined {
+  const s = JOSEON1789_SCENES[life.status];
+  return s?.[life.sex] ?? s?.[life.sex === "f" ? "m" : "f"];
+}
+
 function Row({ k, v }: { k: string; v: string }) {
   return (
     <div className="grid grid-cols-3 gap-3 border-b border-border py-2 last:border-b-0">
@@ -292,6 +299,12 @@ export default function Joseon1789({ locale }: { locale: Locale }) {
             />
           )}
 
+          {sceneFor(life) && (
+            <>
+              <ArtifactImage file={sceneFor(life)!} className="h-auto w-full rounded-3xl" alt={`${pick(STATUS[life.status], l)} · 1789`} />
+              <ArtifactNote l={l} />
+            </>
+          )}
           <section className="rounded-3xl border border-border bg-muted p-6 text-center">
             <p className="text-sm font-bold text-muted-foreground">{pick(C.you, l)}</p>
             <p className="mt-1 text-xl font-bold text-foreground">{pick(STATUS[life.status], l)}</p>
@@ -368,6 +381,7 @@ export default function Joseon1789({ locale }: { locale: Locale }) {
               lines: [registerLine(life), familyText(life, l)],
               footer: "oiyo.net · 1789",
               accent: "#7a4a1f",
+              art: sceneFor(life),
             }}
           />
           <CopyLink l={l} testId={EP} />
