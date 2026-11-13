@@ -6,6 +6,7 @@
  */
 import Layout from '../../layouts/Layout.astro';
 import TojeongFortune from '../../components/tools/TojeongFortune';
+import TojeongRemainderLab from '../../components/tools/explain/TojeongRemainderLab';
 import { localePath, type Locale } from '../../i18n';
 import { TOJEONG_LIMIT } from '../../data/tojeong-readings';
 
@@ -41,6 +42,10 @@ const faqJsonLd = {
       <TojeongFortune client:load />
     </div>
 
+    <div class="mt-8">
+      <TojeongRemainderLab client:visible />
+    </div>
+
     <section class="mt-12 space-y-3">
       <h2 class="text-2xl font-black">토정비결을 읽는 법</h2>
       <p class="leading-relaxed text-muted-foreground">토정비결은 사주처럼 태어난 시를 쓰지 않고, 나이와 음력 생월·생일만으로 괘를 정해요. 그래서 같은 해에 같은 날 태어난 사람은 같은 괘를 받아요. 한 사람의 운명을 가르기보다 새해를 맞아 마음을 다잡던 풍속에 가까워요.</p>
@@ -62,6 +67,7 @@ const faqJsonLd = {
     <p class="mt-8 text-xs leading-5 text-muted-foreground">{TOJEONG_LIMIT} 계산식 출처: <a class="underline" href="https://encykorea.aks.ac.kr/Article/E0059207" rel="noopener">한국민족문화대백과사전 「토정비결」</a>.</p>
 
     <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="함께 보기">
+      <a href={localePath(locale, '/new-year-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🐑 2027 신년운세 모음</a>
       <a href={localePath(locale, '/saju/new-year-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🀄 2027 사주 신년 운세</a>
       <a href={localePath(locale, '/chinese-zodiac/year')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🐑 2027 띠별 운세</a>
     </nav>

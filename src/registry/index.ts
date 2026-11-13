@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const joseon1789Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7a4a1f",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "joseon-1789",
+  path: "/joseon-1789",
+  status: "production",
+  name: { zh: "1789年户籍里的我", en: "You in Joseon's 1789 register", es: "Tú en el registro de Joseon de 1789", fr: "Vous au registre de Joseon en 1789", ja: "1789年戸籍の中のわたし", ko: "1789년 호적 속 나" },
+  description: { zh: "按大邱户籍的身份比例抽取1789年的身份、职役、名字与一天，写成户籍上的一行。", en: "Your 1789 status, register title, name, family and day, written as a line of a Joseon household register.", es: "Tu estatus, título, nombre, familia y día en 1789, como una línea del registro de Joseon.", fr: "Votre statut, titre, nom, famille et journée en 1789, écrits comme une ligne du registre de Joseon.", ja: "大邱戸籍の身分比率で1789年の身分・職役・名前・一日を引き、戸籍の一行にします。", ko: "대구 호적의 신분 비율로 1789년 내 신분·직역·이름·가족·하루를 뽑아 호적 한 줄로 보여줘요." },
+};
+
 const france1789Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -434,6 +447,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  joseon1789Manifest,
   france1789Manifest,
   usBirthStateManifest,
   balanceWheelManifest,

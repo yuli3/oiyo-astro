@@ -1,0 +1,152 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Joseon1789 from "../../components/tools/past-life/Joseon1789";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1789년 호적 속 나 — 조선 후기 내 신분·직업·이름·하루",
+    description: "정조 13년 조선 호적에 내가 올랐다면? 대구 호적 연구의 신분 비율로 양반·상민·노비를 뽑고, 직역·이름·본관·가족·하루를 실제 호적 형식의 한 줄로 보여줘요.",
+    heading: "1789년 호적 속 나",
+    sub: "정조 13년, 호적 한 줄에 적힌 나의 모든 것",
+    intro: "조선 후기 호적은 한 사람마다 직역, 이름, 나이, 본관을 한 줄로 적었어요. 내 성별과 나이 그대로 1789년으로 가서, 그 한 줄에 내가 어떻게 적혔을지 펼쳐 봐요.",
+    howTitle: "어떤 규칙으로 뽑나요",
+    how: [
+      "신분: 대구 호적 연구에서 양반은 1690년 9.2%, 1783년 37.5%, 1858년 70.3%였고, 노비는 1789년 15.9%였어요. 그래서 양반 38 · 상민 46 · 노비 16으로 뽑아요. 한 고을의 기록이라 전국 평균은 아니에요.",
+      "성별과 나이: 고른 성별과 생일에서 계산한 지금 나이를 그대로 써요. 랜덤이면 나이는 16~60살 중에서 뽑아요. 생일은 이 브라우저에만 저장하고 공유 링크에 넣지 않아요.",
+      "이름: 양반 여성은 \"김씨\"처럼 성과 氏만, 중간층 여성은 姓이나 召史만 호적에 올랐고, 노비 여성은 이름만 올랐어요(「17~19세기 호적대장의 女性主戶」). 남성 이름과 본관, 직역 안의 비율, 가족 구성은 OIYO가 정한 놀이용 값이에요.",
+      "키: 서울대 의대 연구팀이 15~19세기 유골 116구로 추정한 평균, 남 161.1cm · 여 148.9cm예요. 군포: 1750년 균역법으로 양인 장정의 군포가 1필로 줄었어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "조선 후기에 양반은 얼마나 됐나요?", a: "대구 호적 연구에서 양반은 1690년 9.2%에서 1783년 37.5%, 1858년 70.3%로 늘었어요. 실제 사람이 바뀌기보다 족보와 직역을 사고 고쳐 호적 속 신분이 올라간 경우가 많았어요." },
+      { q: "조선 여성의 이름은 호적에 왜 없나요?", a: "호적은 양반 여성을 \"김씨\"처럼 성과 氏로만, 중간층 여성은 姓이나 召史로만 적었어요. 이름이 그대로 적힌 여성은 오히려 여종(婢)이었어요." },
+      { q: "유학(幼學)은 무슨 뜻인가요?", a: "벼슬 없이 학문을 닦는 양반을 가리키는 직역이에요. 조선 후기 호적에서 가장 흔한 양반 직역이었어요." },
+      { q: "이 결과가 내 조상의 실제 기록인가요?", a: "아니에요. 실제 호적의 형식과 비율을 빌린 놀이예요. 실제 인물이나 가문의 기록을 보여주지 않아요." },
+    ],
+  },
+  en: {
+    title: "You in Joseon's 1789 household register — status, title, name, a day",
+    description: "If you were in a 1789 Joseon household register: yangban, commoner or slave by the Daegu register shares, with your title, name, clan seat, family and day written as one register line.",
+    heading: "You in the 1789 register",
+    sub: "King Jeongjo's 13th year: your whole life in one register line",
+    intro: "Late-Joseon household registers wrote each person in one line: title, name, age and clan seat. Go back to 1789 as your own sex and age and see how that line would read.",
+    howTitle: "How the draw works",
+    how: [
+      "Status: in the Daegu registers yangban were 9.2% in 1690, 37.5% in 1783 and 70.3% in 1858; slaves were 15.9% in 1789. So we draw yangban 38 · commoner 46 · slave 16. One county, not a national average.",
+      "Sex and age: the sex you pick and your age today from your birthday. Random mode draws an age from 16 to 60. Your birthday stays in this browser and never goes in the link.",
+      "Names: yangban women were recorded only as surname + 氏, middle-status women as surname + 姓 or 召史, and slave women by their own names. Men's names, clan seats, title odds and family are OIYO play values.",
+      "Height: 161.1 cm for men and 148.9 cm for women, estimated from 116 Joseon skeletons (Seoul National University). Cloth tax: cut to one bolt a year by the 1750 reform.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "How many yangban were there in late Joseon?", a: "In the Daegu registers, 9.2% in 1690, 37.5% in 1783 and 70.3% in 1858, mostly through bought or rewritten titles and genealogies." },
+      { q: "Why are women's names missing from the registers?", a: "Yangban women were written only as surname + ssi, middle-status women as surname + 姓 or 召史. The women recorded by name were slaves." },
+      { q: "Is this my ancestor's real record?", a: "No. It borrows the form and shares of real registers; it never shows a real person's record." },
+    ],
+  },
+  ja: {
+    title: "1789年戸籍の中のわたし — 朝鮮後期の身分・職役・名前・一日",
+    description: "正祖13年の朝鮮の戸籍に載っていたら？大邱戸籍の身分比率で両班・常民・奴婢を引き、職役・名前・本貫・家族・一日を戸籍の一行で見せます。",
+    heading: "1789年戸籍の中のわたし",
+    sub: "正祖13年、戸籍の一行に書かれたわたしのすべて",
+    intro: "朝鮮後期の戸籍は一人ずつ職役・名前・年齢・本貫を一行で書きました。自分の性別と年齢のまま1789年へ行き、その一行を開いてみます。",
+    howTitle: "引き方",
+    how: [
+      "身分：大邱戸籍で両班は1690年9.2%、1783年37.5%、1858年70.3%、奴婢は1789年15.9%。そこで両班38・常民46・奴婢16で引きます。一つの郡の記録です。",
+      "性別と年齢：選んだ性別と誕生日から計算した今の年齢を使います。誕生日はこのブラウザにだけ保存します。",
+      "名前：両班の女性は姓＋氏、中間層の女性は姓＋姓または召史だけ、奴婢の女性は名前で載りました。男性の名前・本貫・家族はOIYOの遊び用の値です。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [
+      { q: "朝鮮後期の両班はどれくらい？", a: "大邱戸籍では1690年9.2%、1783年37.5%、1858年70.3%に増えました。" },
+      { q: "これは先祖の実際の記録？", a: "いいえ。実際の戸籍の形式と比率を借りた遊びです。" },
+    ],
+  },
+  zh: {
+    title: "1789年户籍里的我 — 朝鲜后期的身份、职役、名字与一天",
+    description: "如果你被记在正祖十三年的朝鲜户籍上？按大邱户籍的身份比例抽取两班、常民或奴婢，并把职役、名字、本贯、家人和一天写成户籍里的一行。",
+    heading: "1789年户籍里的我",
+    sub: "正祖十三年，户籍一行里的我的一切",
+    intro: "朝鲜后期户籍把每个人的职役、名字、年龄、本贯写成一行。带着你自己的性别和年龄回到1789年，看看那一行会怎么写。",
+    howTitle: "抽取规则",
+    how: [
+      "身份：大邱户籍中两班1690年为9.2%，1783年为37.5%，1858年为70.3%；奴婢1789年为15.9%。因此按两班38·常民46·奴婢16抽取。这是一个郡的记录。",
+      "性别与年龄：使用你选的性别和由生日算出的现在年龄。生日只保存在此浏览器。",
+      "名字：两班女性只记姓加氏，中间阶层女性只记姓加姓或召史，婢女则记名字。男性名字、本贯、家人为OIYO的游戏数值。",
+    ],
+    faqTitle: "常见问题",
+    faq: [
+      { q: "朝鲜后期两班有多少？", a: "大邱户籍中从1690年的9.2%增至1783年的37.5%、1858年的70.3%。" },
+      { q: "这是我祖先的真实记录吗？", a: "不是。只是借用真实户籍的格式与比例的游戏。" },
+    ],
+  },
+  fr: {
+    title: "Vous au registre de Joseon en 1789 — statut, titre, nom, une journée",
+    description: "Et si vous figuriez dans un registre de foyers de Joseon en 1789 ? Yangban, roturier ou esclave selon les registres de Daegu, avec titre, nom, clan, famille et journée en une ligne.",
+    heading: "Vous au registre de 1789",
+    sub: "13e année du roi Jeongjo : toute une vie en une ligne",
+    intro: "Les registres de la fin de Joseon inscrivaient chacun en une ligne : titre, nom, âge, clan. Retournez en 1789 avec votre sexe et votre âge et lisez cette ligne.",
+    howTitle: "Les règles",
+    how: [
+      "Statut : à Daegu, 9,2 % de yangban en 1690, 37,5 % en 1783, 70,3 % en 1858 ; 15,9 % d'esclaves en 1789. D'où yangban 38 · roturier 46 · esclave 16. Un seul district.",
+      "Sexe et âge : ceux que vous donnez. La date de naissance reste dans ce navigateur.",
+      "Noms : les femmes yangban n'étaient inscrites que par nom + 氏, les femmes de rang moyen par nom + 姓 ou 召史, les esclaves par leur prénom. Le reste est valeur de jeu OIYO.",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [
+      { q: "Combien de yangban à la fin de Joseon ?", a: "À Daegu, 9,2 % en 1690, 37,5 % en 1783, 70,3 % en 1858." },
+      { q: "Est-ce le vrai registre de mes ancêtres ?", a: "Non : un jeu qui emprunte la forme et les proportions de vrais registres." },
+    ],
+  },
+  es: {
+    title: "Tú en el registro de Joseon de 1789 — estatus, título, nombre, un día",
+    description: "¿Y si aparecieras en un registro de hogares de Joseon en 1789? Yangban, plebeyo o esclavo según los registros de Daegu, con título, nombre, clan, familia y un día en una línea.",
+    heading: "Tú en el registro de 1789",
+    sub: "Año 13 del rey Jeongjo: toda una vida en una línea",
+    intro: "Los registros de finales de Joseon anotaban a cada persona en una línea: título, nombre, edad y clan. Vuelve a 1789 con tu sexo y tu edad y lee esa línea.",
+    howTitle: "Reglas",
+    how: [
+      "Estatus: en Daegu, 9,2 % de yangban en 1690, 37,5 % en 1783 y 70,3 % en 1858; 15,9 % de esclavos en 1789. Por eso yangban 38 · plebeyo 46 · esclavo 16. Un solo distrito.",
+      "Sexo y edad: los que tú das. La fecha de nacimiento se queda en este navegador.",
+      "Nombres: las mujeres yangban solo con apellido + 氏, las de rango medio con apellido + 姓 o 召史, las esclavas con su nombre. El resto son valores de juego de OIYO.",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [
+      { q: "¿Cuántos yangban había a finales de Joseon?", a: "En Daegu, 9,2 % en 1690, 37,5 % en 1783 y 70,3 % en 1858." },
+      { q: "¿Es el registro real de mis antepasados?", a: "No: es un juego que toma la forma y las proporciones de registros reales." },
+    ],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/joseon-1789/")} ogImage="/images/past-life-1426/og/joseon.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Joseon1789 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["joseon1426", "france1789", "sillaGolpum"]} current="joseon1789" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { birthdayNumberOf, lifePathOf, personalYearOf } from "@/lib/symbolic-tradition/numerology";
+import { PERSONAL_YEAR } from "@/lib/symbolic-tradition/numerology-copy";
 import type { Locale } from "../../i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 import { BirthDateField, ProfileNameField } from "../shared/BirthDateField";
@@ -678,80 +679,6 @@ const MEANINGS: Record<number, NumberMeaning> = {
  * 개인년 1~9. 생명수의 뜻(타고난 결)과 다른 축이다 — 올해 어느 계절에
  * 서 있는지를 말한다. 아홉 해가 한 바퀴이고, 해가 바뀌면 값이 바뀐다.
  */
-const PERSONAL_YEAR: Record<number, Record<Locale, string>> = {
-  1: {
-    ko: "새로 시작하는 해예요. 씨앗을 고르고 첫걸음을 떼기 좋아요.",
-    en: "A year of beginnings. Choose the seed and take the first step.",
-    ja: "始まりの年です。種を選び、最初の一歩を踏み出すのに向きます。",
-    fr: "Une année de commencements : choisissez la graine et faites le premier pas.",
-    es: "Un año de comienzos: elige la semilla y da el primer paso.",
-    zh: "开始之年。选定种子，踏出第一步。",
-  },
-  2: {
-    ko: "기다리고 맞추는 해예요. 혼자 밀기보다 곁의 사람과 보폭을 맞춰요.",
-    en: "A year of pacing and partnering. Match steps with others instead of pushing alone.",
-    ja: "待って合わせる年です。ひとりで押すより、隣の人と歩幅を合わせて。",
-    fr: "Une année d’ajustement : accordez votre pas à celui des autres plutôt que de forcer seul.",
-    es: "Un año de ajuste: acompasa tu ritmo con otros en vez de empujar en solitario.",
-    zh: "等待与协调之年。与其独自推进，不如与身边的人同步。",
-  },
-  3: {
-    ko: "표현하는 해예요. 말과 작품으로 밖에 내보일 때 힘이 붙어요.",
-    en: "A year of expression. Things gather force when you put them out in words or work.",
-    ja: "表現する年です。言葉や作品として外に出すと力がつきます。",
-    fr: "Une année d’expression : ce que vous sortez en mots ou en œuvres prend de la force.",
-    es: "Un año de expresión: lo que sacas en palabras u obras cobra fuerza.",
-    zh: "表达之年。以言语或作品示人，力量才会聚起来。",
-  },
-  4: {
-    ko: "다지는 해예요. 재미는 적어도 틀과 습관을 세우면 뒤가 편해져요.",
-    en: "A year of groundwork. Less fun, but the structures and habits you set now carry you later.",
-    ja: "固める年です。派手さはなくても、仕組みと習慣を作ると後が楽になります。",
-    fr: "Une année de fondations : peu spectaculaire, mais les cadres posés maintenant vous porteront.",
-    es: "Un año de cimientos: poco vistoso, pero las estructuras que fijes ahora te sostendrán.",
-    zh: "扎根之年。虽不热闹，但此时建立的架构与习惯会撑住往后。",
-  },
-  5: {
-    ko: "바뀌는 해예요. 자리·일·관계가 움직이니 너무 꽉 쥐지 않는 게 좋아요.",
-    en: "A year of change. Places, work and ties shift — hold them loosely.",
-    ja: "変わる年です。場所も仕事も関係も動くので、握りしめすぎないこと。",
-    fr: "Une année de changement : lieux, travail et liens bougent — ne serrez pas trop fort.",
-    es: "Un año de cambio: lugares, trabajo y vínculos se mueven; no aprietes demasiado.",
-    zh: "变动之年。位置、工作与关系都在移动，别抓得太紧。",
-  },
-  6: {
-    ko: "책임의 해예요. 집과 사람을 돌보는 일이 늘고, 그만큼 기대도 받아요.",
-    en: "A year of responsibility. Home and people ask more of you, and more is expected in return.",
-    ja: "責任の年です。家や人を世話することが増え、その分期待も受けます。",
-    fr: "Une année de responsabilité : le foyer et les proches demandent davantage, et l’on attend autant de vous.",
-    es: "Un año de responsabilidad: la casa y la gente piden más, y también se espera más de ti.",
-    zh: "承担之年。照顾家与人的事变多，别人对你的期待也变多。",
-  },
-  7: {
-    ko: "안으로 들어가는 해예요. 배우고 정리하고 혼자 생각할 시간이 필요해요.",
-    en: "A year of turning inward. You need time to study, sort things out and think alone.",
-    ja: "内に向かう年です。学び、整理し、ひとりで考える時間が要ります。",
-    fr: "Une année tournée vers l’intérieur : il faut du temps pour apprendre, trier et penser seul.",
-    es: "Un año hacia dentro: hace falta tiempo para estudiar, ordenar y pensar a solas.",
-    zh: "向内之年。需要时间学习、整理，并独自思考。",
-  },
-  8: {
-    ko: "거두는 해예요. 쌓아 온 것이 성과와 돈으로 드러나요.",
-    en: "A year of harvest. What you have built shows up as results and money.",
-    ja: "収穫の年です。積み上げてきたものが成果やお金として表れます。",
-    fr: "Une année de récolte : ce que vous avez bâti se traduit en résultats et en argent.",
-    es: "Un año de cosecha: lo construido aparece como resultados y dinero.",
-    zh: "收成之年。累积下来的东西会化为成果与金钱。",
-  },
-  9: {
-    ko: "마무리하는 해예요. 끝낼 것을 끝내야 다음 한 바퀴가 가볍게 시작돼요.",
-    en: "A year of closing. Finish what should end, and the next cycle starts light.",
-    ja: "締めくくる年です。終えるべきものを終えると、次の巡りが軽く始まります。",
-    fr: "Une année de clôture : achevez ce qui doit finir, et le cycle suivant commencera léger.",
-    es: "Un año de cierre: termina lo que debe acabar y el siguiente ciclo empezará ligero.",
-    zh: "收尾之年。该结束的结束了，下一轮才会轻松开始。",
-  },
-};
 
 // ─── Sub-component ────────────────────────────────────────────────────────────
 
