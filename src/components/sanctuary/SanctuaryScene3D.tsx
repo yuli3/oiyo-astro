@@ -7,8 +7,11 @@ import { AdaptiveDpr, PerformanceMonitor, Sparkles, Stars } from '@react-three/d
 import * as THREE from 'three';
 import Temple from './TempleScene';
 import type { Spot } from './walk';
+import type { SanctuaryScene } from './sounds';
+import { Drift, dot, rand } from './scene-kit';
+import { DawnSea, FireflyPond, MoonPond, RainPond, SnowNight } from './PondScenes';
 
-export type Scene3D = 'temple' | 'fire' | 'water' | 'fireworks' | 'cosmos';
+export type Scene3D = SanctuaryScene;
 
 /** Scene palette (three.js material colours, not CSS theme colours). */
 const C = {
@@ -89,36 +92,6 @@ const C = {
   cffffff: '#ffffff',
 } as const;
 
-let dotTexture: THREE.Texture | null = null;
-/** Soft round sprite so points read as glows, not squares. */
-function dot() {
-  if (dotTexture) return dotTexture;
-  const c = document.createElement('canvas');
-  c.width = c.height = 64;
-  const g = c.getContext('2d')!;
-  const grad = g.createRadialGradient(32, 32, 0, 32, 32, 32);
-  grad.addColorStop(0, 'rgba(255,255,255,1)');
-  grad.addColorStop(0.35, 'rgba(255,255,255,.55)');
-  grad.addColorStop(1, 'rgba(255,255,255,0)');
-  g.fillStyle = grad;
-  g.fillRect(0, 0, 64, 64);
-  dotTexture = new THREE.CanvasTexture(c);
-  return dotTexture;
-}
-
-const rand = (a: number, b: number) => a + Math.random() * (b - a);
-
-/** Slow breathing drift of the camera around a target. */
-function Drift({ target, radius, height, speed = 0.04 }: { target: [number, number, number]; radius: number; height: number; speed?: number }) {
-  const { camera } = useThree();
-  const look = useMemo(() => new THREE.Vector3(...target), [target]);
-  useFrame(({ clock }) => {
-    const t = clock.elapsedTime * speed;
-    camera.position.set(look.x + Math.sin(t) * radius * 0.25, height + Math.sin(t * 1.7) * 0.15, look.z + radius * Math.cos(t * 0.6) * 0.1 + radius);
-    camera.lookAt(look);
-  });
-  return null;
-}
 
 /* ---------- 산사 (temple at night): see TempleScene.tsx ---------- */
 
@@ -204,56 +177,7 @@ function Fire() {
   </>;
 }
 
-/* ---------- 물멍 (water) ---------- */
-
-function Waves() {
-  const geom = useMemo(() => {
-    const g = new THREE.PlaneGeometry(60, 60, 90, 90);
-    g.rotateX(-Math.PI / 2);
-    return g;
-  }, []);
-  const base = useMemo(() => Float32Array.from(geom.attributes.position.array), [geom]);
-  useFrame(({ clock }) => {
-    const t = clock.elapsedTime;
-    const p = geom.attributes.position.array as Float32Array;
-    for (let i = 0; i < p.length; i += 3) {
-      const x = base[i], z = base[i + 2];
-      p[i + 1] = Math.sin(x * 0.35 + t * 0.6) * 0.12 + Math.sin(z * 0.5 + t * 0.9) * 0.08 + Math.sin((x + z) * 0.9 + t * 1.4) * 0.03;
-    }
-    geom.attributes.position.needsUpdate = true;
-  });
-  return <mesh geometry={geom}><meshStandardMaterial color={C.c123f4a} metalness={0.25} roughness={0.65} flatShading /></mesh>;
-}
-
-function FloatingLanterns() {
-  const ref = useRef<THREE.Group>(null);
-  const items = useMemo(() => Array.from({ length: 9 }, () => ({ x: rand(-6, 6), z: rand(-12, 2), p: Math.random() * 6 })), []);
-  useFrame(({ clock }) => {
-    const t = clock.elapsedTime;
-    ref.current?.children.forEach((c, i) => {
-      const it = items[i];
-      c.position.set(it.x + Math.sin(t * 0.1 + it.p) * 0.4, 0.12 + Math.sin(t * 0.8 + it.p) * 0.06, it.z + ((t * 0.08 + it.p) % 4) - 2);
-    });
-  });
-  return <group ref={ref}>{items.map((_, i) => <mesh key={i}><sphereGeometry args={[0.14, 12, 12]} /><meshStandardMaterial color={C.cffd9a0} emissive={C.cffb35c} emissiveIntensity={1.6} /></mesh>)}</group>;
-}
-
-function Water() {
-  return <>
-    <color attach="background" args={[C.c0b1a24]} />
-    <fog attach="fog" args={[C.c102633, 10, 40]} />
-    <ambientLight intensity={0.25} color={C.ca9c6d8} />
-    <directionalLight position={[0, 6, -20]} intensity={0.4} color={C.cf1e7cc} />
-    <Stars radius={70} depth={20} count={1800} factor={3} fade speed={0.2} />
-    <mesh position={[0, 7, -30]}><sphereGeometry args={[1.8, 32, 32]} /><meshBasicMaterial color={C.cf6efd8} fog={false} /></mesh>
-    {/* moon path on the water */}
-    <mesh position={[0, 0.2, -12]} rotation-x={-Math.PI / 2}><planeGeometry args={[1.6, 34]} /><meshBasicMaterial color={C.cf3e6be} transparent opacity={0.07} blending={THREE.AdditiveBlending} depthWrite={false} /></mesh>
-    {[[-14, -26, 10, 5], [12, -28, 12, 6]].map(([x, z, r, h], i) => <mesh key={i} position={[x, h / 2 - 0.3, z]}><coneGeometry args={[r, h, 5]} /><meshStandardMaterial color={C.c0f2229} flatShading /></mesh>)}
-    <Waves />
-    <FloatingLanterns />
-    <Drift target={[0, 0.4, -6]} radius={7} height={1.6} speed={0.03} />
-  </>;
-}
+/* ---------- 물멍·비멍·눈멍·반딧불·해돋이: see PondScenes.tsx ---------- */
 
 /* ---------- 불꽃놀이 (fireworks) ---------- */
 
@@ -465,7 +389,11 @@ export default function SanctuaryScene3D({ scene, lanterns, ring, spot, inside, 
     <Diagnostics />
     {scene === 'temple' && <Temple lanterns={lanterns} ring={ring} spot={spot} inside={inside} bows={bows} onArrive={onArrive} />}
     {scene === 'fire' && <Fire />}
-    {scene === 'water' && <Water />}
+    {scene === 'water' && <MoonPond />}
+    {scene === 'rain' && <RainPond />}
+    {scene === 'snow' && <SnowNight />}
+    {scene === 'fireflies' && <FireflyPond />}
+    {scene === 'dawn' && <DawnSea />}
     {scene === 'fireworks' && <FireworksScene />}
     {scene === 'cosmos' && <Cosmos />}
   </Canvas></div>;

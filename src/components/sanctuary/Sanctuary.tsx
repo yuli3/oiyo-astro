@@ -5,6 +5,8 @@ import '../../styles/sanctuary.css';
 import { canUseWebGL } from './webgl';
 import { LANTERN_COLORS, MAX_LANTERNS } from './TempleRituals';
 import { SPOTS, type Spot } from './walk';
+import { SanctuarySound, type SanctuaryScene } from './sounds';
+import { prefersReducedMotion } from '@/hooks/useMotion';
 
 const LANTERN_KEY = 'oiyo-sanctuary-lanterns';
 function loadLanterns(): number[] {
@@ -17,11 +19,14 @@ function saveLanterns(v: number[]) { try { localStorage.setItem(LANTERN_KEY, JSO
 
 const Scene3D = lazy(() => import('./SanctuaryScene3D'));
 
-type Scene = 'temple' | 'fire' | 'water' | 'fireworks' | 'cosmos';
+type Scene = SanctuaryScene;
 type Status = 'solo' | 'connecting' | 'connected' | 'offline' | 'unavailable';
 type Member = {id:string;seat:number};
 type Gesture = 'greet' | 'bow' | 'petal';
-const SCENES: Scene[] = ['temple','fire','water','fireworks','cosmos'];
+const SCENES: Scene[] = ['temple','fire','water','rain','snow','fireflies','dawn','fireworks','cosmos'];
+// 2026-11-13: the deployed room server only knows the first five scenes (workers/sanctuary/protocol.mjs SCENES).
+// Newer themes share a room with an older one, so resting together works without redeploying the worker.
+const ROOM_SCENE: Partial<Record<Scene,Scene>> = {rain:'water',fireflies:'water',snow:'temple',dawn:'cosmos'};
 const SYMBOLS = {greet:'👋',bow:'🙏',petal:'🌸'};
 const PROTOCOL = 'oiyo-sanctuary-v1';
 
@@ -37,10 +42,11 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   const [reaction,setReaction] = useState<{member:string;gesture:Gesture;id:string}|null>(null);
   const [message,setMessage] = useState('');
   const [retry,setRetry] = useState(0);
+  const roomScene = ROOM_SCENE[scene] ?? scene;
   const [sound,setSound] = useState(false);
-  // 3D is on by default when WebGL works; reduced-motion and data-saver visitors start with the still illustration.
+  // 3D whenever WebGL works; reduced-motion and data-saver visitors get the still illustration.
+  // 2026-11-13: the manual "view illustration" switch was removed (CHOSEUN: "그림으로 보기는 빼도 될 것 같아요"); the choice is automatic.
   const [view3d,setView3d] = useState(false);
-  const [can3d,setCan3d] = useState(false);
   // 2026-11-09: device-only rituals in the temple scene.
   const [lanterns,setLanterns] = useState<number[]>([]);
   const [ring,setRing] = useState(0);
@@ -55,6 +61,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   useEffect(()=>{ if(scene!=='temple'||!view3d){clearTimeout(fadeTimer.current);setFading(false);setInside(false);setSpot('yard');} },[scene,view3d]);
   const socket = useRef<WebSocket|null>(null);
   const audio = useRef<AudioContext|null>(null);
+  const sounds = useRef<SanctuarySound|null>(null);
   const recent = useRef(new Set<string>());
   const lastAction = useRef(0);
 
@@ -75,7 +82,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
       setStatus('connecting');setMembers([]);setSelf('');
       try {
         const session = new URL(`${endpoint.replace(/\/$/,'')}/session`);
-        session.searchParams.set('scene',scene);session.searchParams.set('room',String(room));
+        session.searchParams.set('scene',roomScene);session.searchParams.set('room',String(room));
         const result = await fetch(session,{method:'POST',credentials:'omit',signal:AbortSignal.any([abort.signal, AbortSignal.timeout(8000)])});
         if(!result.ok) throw new Error('session');
         const data = await result.json();
@@ -112,7 +119,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
     }
     void connect();
     return ()=>{disposed=true;abort.abort();if(timer)clearTimeout(timer);socket.current?.close(1000,'leaving');socket.current=null;};
-  },[together,scene,room,retry,t]);
+  },[together,roomScene,room,retry,t]);
 
   useEffect(()=>{
     if(!reaction)return;
@@ -122,8 +129,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   useEffect(()=>()=>{void audio.current?.close();},[]);
   useEffect(()=>{
     const ok=canUseWebGL();
-    setCan3d(ok);
-    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduce=prefersReducedMotion();
     const saveData=(navigator as Navigator & {connection?:{saveData?:boolean}}).connection?.saveData===true;
     setView3d(ok && !reduce && !saveData);
   },[]);
@@ -139,12 +145,15 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   }
   async function toggleSound() {
     if(sound){setSound(false);await audio.current?.suspend();return;}
-    try {audio.current??=new AudioContext();await audio.current.resume();setSound(true);} catch {setSound(false);}
+    try {audio.current??=new AudioContext();sounds.current??=new SanctuarySound(audio.current);await audio.current.resume();setSound(true);} catch {setSound(false);}
   }
-  function tap() {
+  // 2026-11-12: ambient loops follow the scene while sound is on. Slots without a file are skipped (see sounds.ts).
+  useEffect(()=>{ if(sound)void sounds.current?.setScene(scene); },[sound,scene]);
+  async function tap() {
     const ctx=audio.current;
     if(!sound || !ctx || ctx.state!=='running')return;
-    // 2026-11-02: a local synthesis preview; no claim that this is an authentic moktak recording.
+    if(await sounds.current?.hit('moktak'))return;
+    // 2026-11-02: a local synthesis preview; no claim that this is an authentic moktak recording. Fallback when the moktak slot has no file.
     const now=ctx.currentTime;
     for(const [frequency,level] of [[510,0.05],[980,0.025]]){
       const osc=ctx.createOscillator(),gain=ctx.createGain();
@@ -156,10 +165,12 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   function hang(color:number){
     setLanterns(prev=>{const next=[...prev,color].slice(-MAX_LANTERNS);saveLanterns(next);return next;});
   }
-  function strike(){
+  async function strike(){
     setRing(n=>n+1);
     const ctx=audio.current;
     if(!sound || !ctx || ctx.state!=='running')return;
+    // A recorded bell, once the bell slot is filled; until then the synthesized one below.
+    if(await sounds.current?.hit('bell',0.55))return;
     // Synthesized bronze bell: inharmonic partials, a slightly detuned pair for the slow beating (맥놀이), long decay.
     // Delayed to land when the wooden striker meets the bell in the 3D scene.
     const now=ctx.currentTime+0.55;
@@ -180,7 +191,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   function leaveHall(){ fadeThen(()=>{setInside(false);setSpot('yard');}); }
   function bowOnce(){ setBows(n=>n+1); tap(); }
   const visible=hidden?members.filter(m=>m.id===self):members;
-  const desc={fire:t.firedesc,water:t.waterdesc,fireworks:t.fireworksdesc,cosmos:t.cosmosdesc,temple:''}[scene];
+  const desc={fire:t.firedesc,water:t.waterdesc,rain:t.raindesc,snow:t.snowdesc,fireflies:t.firefliesdesc,dawn:t.dawndesc,fireworks:t.fireworksdesc,cosmos:t.cosmosdesc,temple:''}[scene];
   return <div data-sanctuary="" data-scene={scene} data-3d={view3d}>
     <div data-part="landscape" aria-hidden="true">{view3d&&<Suspense fallback={null}><Scene3D scene={scene} lanterns={lanterns} ring={ring} spot={spot} inside={inside} bows={bows} onArrive={arrive} /></Suspense>}<div data-part="fade" data-on={fading} /></div>
     <div data-part="veil" aria-hidden="true" />
@@ -191,7 +202,6 @@ export default function Sanctuary({locale}:{locale:Locale}) {
       </header>
       <nav data-part="switch" aria-label={t.eyebrow}>
         {SCENES.map((value,i)=><button key={value} type="button" aria-pressed={scene===value} onClick={()=>setScene(value)}>{t.scenes[i]}</button>)}
-        {can3d&&<button type="button" data-part="view-toggle" aria-pressed={view3d} onClick={()=>setView3d(v=>!v)}>{view3d?t.view2d:t.view3d}</button>}
       </nav>
       <section data-part="space" aria-label={t.scenes[SCENES.indexOf(scene)]}>
         {!view3d&&scene==='fire'&&<div data-part="fire" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>}
@@ -207,7 +217,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
           <div data-part="walk">{SPOTS.map((value,i)=><button key={value} type="button" aria-pressed={spot===value} disabled={fading} onClick={()=>setSpot(value)}>{t.spots[i]}</button>)}</div>
           <p data-part="ritual-title">{t.lantern} <small>{t.lanternCount} {lanterns.length}/{MAX_LANTERNS}</small></p>
           <div data-part="swatches">{LANTERN_COLORS.map((color,i)=><button key={color} type="button" aria-label={`${t.lantern}: ${t.lanternColors[i]}`} data-swatch={i} onClick={()=>hang(i)}><span aria-hidden="true" /></button>)}
-            <button type="button" data-part="bell" onClick={strike}>🔔 {t.bell}</button>
+            <button type="button" data-part="bell" onClick={()=>void strike()}>🔔 {t.bell}</button>
             {lanterns.length>0&&<button type="button" data-part="clear" onClick={()=>{setLanterns([]);saveLanterns([]);}}>{t.lanternClear}</button>}</div>
           <small>{t.lanternHint}</small>
         </div>}
@@ -237,7 +247,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
           {together&&<button type="button" aria-pressed={hidden} onClick={()=>setHidden(!hidden)}>{hidden?t.show:t.hide}</button>}
         </div>
         <p>{t.help}</p><p role="status">{message}</p>
-        <div data-part="sound"><button type="button" aria-pressed={sound} onClick={()=>void toggleSound()}>{sound?t.soundOff:t.soundOn}</button><button type="button" disabled={!sound} onClick={tap}>{t.tap}</button><small>{t.soundNote}</small></div>
+        <div data-part="sound"><button type="button" aria-pressed={sound} onClick={()=>void toggleSound()}>{sound?t.soundOff:t.soundOn}</button><button type="button" disabled={!sound} onClick={()=>void tap()}>{t.tap}</button><small>{t.soundNote}</small></div>
       </section>
       <footer data-part="footnote"><p>{t.notice}</p>{view3d&&scene==='temple'&&<><p>{t.bellNote}</p><p>{t.heritage}</p>{inside&&<p>{t.hallNote}</p>}</>}<p>{t.privacy}</p><p>{view3d?t.art3d:t.art}</p></footer>
     </main>

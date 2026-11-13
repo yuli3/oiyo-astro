@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { LOCALES, localePath } from "../../i18n";
 import type { Locale } from "../../i18n";
 import RelatedTools from "../../components/shared/RelatedTools.astro";
+import "../../styles/timeslip-film.css";
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -12,6 +13,8 @@ const { locale } = Astro.params as { locale: Locale };
 
 type Card = { href: string; emoji: string; title: string; body: string; cta: string };
 type Copy = { title: string; description: string; heading: string; intro: string; cards: Card[]; note: string };
+// Scroll-film copy (2026-11-11). Chapter order follows `cards`: silla, joseon, europe, france, us.
+type Film = { lines: [string, string]; tagA: string; tagB: string; cue: string; eras: string[]; outro: string; listHeading: string };
 
 const copy: Record<Locale, Copy> = {
   ko: {
@@ -106,11 +109,58 @@ const copy: Record<Locale, Copy> = {
   },
 };
 const c = copy[locale] ?? copy.en;
+const film: Record<Locale, Film> = {
+  ko: { lines: ["600년 전", "나는?"], tagA: "다섯 시대.", tagB: "다섯 명의 나.", cue: "스크롤", eras: ["8세기 · 서라벌", "1426 · 한양", "1426 · 유럽", "1789 · 파리", "지금 · 미국"], outro: "어느 시대부터 가 볼까요?", listHeading: "다섯 시대 한눈에" },
+  en: { lines: ["Who were you", "600 years ago?"], tagA: "Five eras.", tagB: "Five versions of you.", cue: "Scroll", eras: ["8th century · Gyeongju", "1426 · Hanyang", "1426 · Europe", "1789 · Paris", "Today · USA"], outro: "Which era first?", listHeading: "All five eras" },
+  ja: { lines: ["600年前の", "わたしは？"], tagA: "5つの時代。", tagB: "5人のわたし。", cue: "スクロール", eras: ["8世紀・徐羅伐", "1426・漢陽", "1426・ヨーロッパ", "1789・パリ", "いま・アメリカ"], outro: "どの時代から行きますか？", listHeading: "5つの時代を一覧で" },
+  zh: { lines: ["600年前的", "我是谁？"], tagA: "五个时代。", tagB: "五个我。", cue: "向下滑动", eras: ["8世纪·徐罗伐", "1426·汉阳", "1426·欧洲", "1789·巴黎", "今天·美国"], outro: "先去哪个时代？", listHeading: "五个时代一览" },
+  fr: { lines: ["Qui étiez-vous", "il y a 600 ans ?"], tagA: "Cinq époques.", tagB: "Cinq destins.", cue: "Défiler", eras: ["VIIIe siècle · Gyeongju", "1426 · Hanyang", "1426 · Europe", "1789 · Paris", "Aujourd'hui · États-Unis"], outro: "Par quelle époque commencer ?", listHeading: "Les cinq époques" },
+  es: { lines: ["¿Quién eras", "hace 600 años?"], tagA: "Cinco épocas.", tagB: "Cinco versiones de ti.", cue: "Desliza", eras: ["Siglo VIII · Gyeongju", "1426 · Hanyang", "1426 · Europa", "1789 · París", "Hoy · EE. UU."], outro: "¿Por qué época empiezas?", listHeading: "Las cinco épocas" },
+};
+const f = film[locale] ?? film.en;
+// Big numerals: the century for Silla, the year for the rest, the build year for "today".
+const years = ["VIII", "1426", "1426", "1789", String(new Date().getFullYear())];
+const shots = ["silla", "joseon", "europe", "france", "us"].map((k) => `/images/past-life-1426/og/${k}.webp`);
 ---
 
 <Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/past-life-1426/")} ogImage="/images/past-life-1426/og/joseon.webp">
+  <section data-film>
+    <div data-film-intro>
+      <div data-film-intro-inner>
+        <p data-film-eyebrow>OIYO Timeslip</p>
+        <h1 data-route-title>
+          <span data-film-line><span>{f.lines[0]}</span></span>
+          <span data-film-line><span>{f.lines[1]}</span></span>
+        </h1>
+        <p data-film-tagline>{f.tagA} <b>{f.tagB}</b></p>
+        <span data-film-cue aria-hidden="true">{f.cue}<i></i></span>
+      </div>
+    </div>
+    <div data-film-track>
+      <div data-film-stage>
+        {c.cards.map((card, i) => (
+          <article data-film-chapter>
+            <div data-film-media>
+              <img src={shots[i]} alt="" width="1200" height="630" loading={i === 0 ? "eager" : "lazy"} decoding="async" />
+            </div>
+            <div data-film-caption>
+              <p data-film-era>{f.eras[i]}</p>
+              <span data-film-year aria-hidden="true">{years[i]}</span>
+              <h2>{card.title}</h2>
+              <p data-film-body>{card.body}</p>
+              <a data-film-cta href={localePath(locale, card.href)}>{card.cta} <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        ))}
+        <ol data-film-ticks aria-hidden="true">
+          {c.cards.map(() => <li data-film-tick></li>)}
+        </ol>
+      </div>
+    </div>
+    <div data-film-outro><p>{f.outro}</p></div>
+  </section>
   <div class="container mx-auto max-w-3xl px-4 py-8">
-    <h1 class="text-4xl font-black tracking-tight text-foreground">{c.heading}</h1>
+    <h2 class="text-2xl font-black tracking-tight text-foreground">{f.listHeading}</h2>
     <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
     <div class="mt-6 grid gap-4">
       {c.cards.map((card) => (
@@ -128,3 +178,8 @@ const c = copy[locale] ?? copy.en;
     <RelatedTools locale={locale} tools={["reincarnation", "joseon"]} current="pastLife1426" />
   </div>
 </Layout>
+
+<script>
+  import { mountScrollFilm } from "@/lib/motion/scroll-film";
+  document.querySelectorAll<HTMLElement>("[data-film]").forEach(mountScrollFilm);
+</script>
