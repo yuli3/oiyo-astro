@@ -241,6 +241,7 @@ export const SEARCH_ONLY_PATHS: Record<string, string> = {
   "/us-birth-state": "출생 통계 가중 추첨",
   "/silla-golpum": "역사 제도 상한 추첨(골품 비율은 놀이용)",
   "/france-1789": "역사 인구 추정 가중 추첨",
+  "/joseon-1789": "역사 호적 신분 비율 가중 추첨(직역·이름은 놀이용)",
   "/color-aura-test": "상징 해석",
   "/hormones-test": "생물학적 성격 해석",
   "/leftbrain-test": "좌뇌·우뇌 유형 해석",

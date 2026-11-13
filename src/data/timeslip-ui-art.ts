@@ -7,6 +7,7 @@ export const TIMESLIP_CARD_ART: Partial<Record<EpisodeId, string>> = {
   "joseon-1426": "cards/joseon-blank.webp",
   "silla-golpum": "cards/silla-blank.webp",
   "europe-1426": "cards/europe-blank.webp",
+  "joseon-1789": "cards/joseon-blank.webp",
   "france-1789": "cards/france-blank.webp",
   "us-birth-state": "cards/us-blank.webp",
 };
