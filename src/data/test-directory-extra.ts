@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "joseon-1789",
+    title: {"ko": "1789년 호적 속 나 — 신분·직역·이름·하루", "en": "You in Joseon's 1789 register", "ja": "1789年戸籍の中のわたし", "zh": "1789年户籍里的我", "fr": "Vous au registre de Joseon, 1789", "es": "Tú en el registro de Joseon, 1789"},
+    description: {"ko": "대구 호적의 신분 비율로 내 신분·직역·이름·가족을 뽑아 호적 한 줄로 보여줘요.", "en": "Status, title, name and family drawn from Daegu register shares, written as a register line.", "ja": "大邱戸籍の身分比率で身分・職役・名前・家族を引き、戸籍の一行にします。", "zh": "按大邱户籍的身份比例抽取身份、职役、名字与家人，写成户籍一行。", "fr": "Statut, titre, nom et famille d'après les registres de Daegu, en une ligne de registre.", "es": "Estatus, título, nombre y familia según los registros de Daegu, en una línea de registro."},
+  },
+  {
     slug: "france-1789",
     title: {"ko": "1789년 프랑스의 나 — 성직자·귀족·제3신분", "en": "You in France, 1789 — clergy, nobility or Third Estate", "ja": "1789年フランスのわたし", "zh": "1789年法国的我", "fr": "Qui étiez-vous en 1789 ?", "es": "Tú en Francia, 1789"},
     description: {"ko": "르페브르 추정 인구로 신분을 뽑고 삼부회 대표가 될지 봐요.", "en": "An estate by Lefebvre's estimates, and your chance at the Estates-General.", "ja": "ルフェーヴルの推計で身分を引き、三部会の代表になれたかを見ます。", "zh": "按勒费弗尔估计抽取等级，看你能否当选三级会议代表。", "fr": "Votre ordre selon Lefebvre et vos chances aux États généraux.", "es": "Tu estado según Lefebvre y tu opción en los Estados Generales."},

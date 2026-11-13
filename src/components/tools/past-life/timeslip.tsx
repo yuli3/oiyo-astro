@@ -91,6 +91,7 @@ export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
   "silla-golpum": { icon: "🏛️", label: { ko: "1300년 전 신라의 나 (골품)", en: "You in Silla: bone rank", ja: "新羅のわたし（骨品）", zh: "新罗的我（骨品）", fr: "Vous à Silla : rang d'os", es: "Tú en Silla: rango de hueso" } },
+  "joseon-1789": { icon: "📜", label: { ko: "1789년 호적 속 나", en: "You in Joseon's 1789 register", ja: "1789年戸籍の中のわたし", zh: "1789年户籍里的我", fr: "Vous au registre de 1789", es: "Tú en el registro de 1789" } },
   "france-1789": { icon: "🇫🇷", label: { ko: "1789년 프랑스의 나", en: "You in France, 1789", ja: "1789年フランスのわたし", zh: "1789年法国的我", fr: "Vous en 1789", es: "Tú en Francia, 1789" } },
   "joseon-1426": { icon: "🏯", label: { ko: "600년 전 조선의 나", en: "You in Joseon, 1426", ja: "1426年朝鮮のわたし", zh: "1426年朝鲜的我", fr: "Vous à Joseon, 1426", es: "Tú en Joseon, 1426" } },
   "europe-1426": { icon: "👑", label: { ko: "600년 전 유럽의 왕좌", en: "Your throne in 1426 Europe", ja: "1426年欧州の玉座", zh: "1426年欧洲王座", fr: "Votre trône en 1426", es: "Tu trono en 1426" } },
