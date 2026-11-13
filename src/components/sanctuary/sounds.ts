@@ -4,7 +4,7 @@
 // slot is skipped (ambient) or falls back to the built-in synthesized sound (hit).
 // To fill a slot later: drop the file in public/sounds/sanctuary/, record its source
 // and licence in manifest.json there, and set `file` below. Nothing else changes.
-export type SanctuaryScene = 'temple' | 'fire' | 'water' | 'fireworks' | 'cosmos';
+export type SanctuaryScene = 'temple' | 'fire' | 'water' | 'rain' | 'snow' | 'fireflies' | 'dawn' | 'fireworks' | 'cosmos';
 
 export type AmbientSlot = {
   kind: 'ambient';
@@ -23,7 +23,7 @@ const dir = '/sounds/sanctuary/';
 
 export const SOUND_SLOTS = {
   // Filled 2026-11-12 from recordings CHOSEUN downloaded (Pixabay Content License).
-  stream: { kind: 'ambient', file: `${dir}stream.mp3`, scenes: ['temple', 'water'], gain: 0.5 },
+  stream: { kind: 'ambient', file: `${dir}stream.mp3`, scenes: ['temple', 'water', 'fireflies'], gain: 0.5 },
   firewood: { kind: 'ambient', file: `${dir}firewood.mp3`, scenes: ['fire'], gain: 0.8 },
   // Buddhist-style singing standing in for a real 반야심경 chanting recording.
   chant: { kind: 'ambient', file: `${dir}chant-placeholder.mp3`, scenes: ['temple'], gain: 0.16, far: true, placeholder: true },
@@ -31,10 +31,11 @@ export const SOUND_SLOTS = {
   moktak: { kind: 'hit', file: `${dir}moktak-synth.mp3`, gain: 0.7 },
   // Empty slots: skipped until a file is supplied.
   bell: { kind: 'hit', file: null, gain: 0.8 }, // 범종; falls back to the synthesized bell
-  windChime: { kind: 'ambient', file: null, scenes: ['temple', 'cosmos'], gain: 0.25 }, // 풍경
-  birds: { kind: 'ambient', file: null, scenes: ['temple', 'cosmos'], gain: 0.3 },
-  rain: { kind: 'ambient', file: null, scenes: ['water'], gain: 0.4 },
-  night: { kind: 'ambient', file: null, scenes: ['fireworks', 'cosmos'], gain: 0.3 }, // 풀벌레
+  windChime: { kind: 'ambient', file: null, scenes: ['temple', 'cosmos', 'snow'], gain: 0.25 }, // 풍경
+  birds: { kind: 'ambient', file: null, scenes: ['temple', 'cosmos', 'dawn'], gain: 0.3 },
+  rain: { kind: 'ambient', file: null, scenes: ['rain'], gain: 0.4 }, // 비멍 is silent until this is filled
+  waves: { kind: 'ambient', file: null, scenes: ['dawn'], gain: 0.4 }, // 파도
+  night: { kind: 'ambient', file: null, scenes: ['fireworks', 'cosmos', 'fireflies'], gain: 0.3 }, // 풀벌레
 } as const satisfies Record<string, AmbientSlot | HitSlot>;
 
 export type SoundSlotId = keyof typeof SOUND_SLOTS;

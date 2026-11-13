@@ -5,7 +5,7 @@ import '../../styles/sanctuary.css';
 import { canUseWebGL } from './webgl';
 import { LANTERN_COLORS, MAX_LANTERNS } from './TempleRituals';
 import { SPOTS, type Spot } from './walk';
-import { SanctuarySound } from './sounds';
+import { SanctuarySound, type SanctuaryScene } from './sounds';
 import { prefersReducedMotion } from '@/hooks/useMotion';
 
 const LANTERN_KEY = 'oiyo-sanctuary-lanterns';
@@ -19,11 +19,14 @@ function saveLanterns(v: number[]) { try { localStorage.setItem(LANTERN_KEY, JSO
 
 const Scene3D = lazy(() => import('./SanctuaryScene3D'));
 
-type Scene = 'temple' | 'fire' | 'water' | 'fireworks' | 'cosmos';
+type Scene = SanctuaryScene;
 type Status = 'solo' | 'connecting' | 'connected' | 'offline' | 'unavailable';
 type Member = {id:string;seat:number};
 type Gesture = 'greet' | 'bow' | 'petal';
-const SCENES: Scene[] = ['temple','fire','water','fireworks','cosmos'];
+const SCENES: Scene[] = ['temple','fire','water','rain','snow','fireflies','dawn','fireworks','cosmos'];
+// 2026-11-13: the deployed room server only knows the first five scenes (workers/sanctuary/protocol.mjs SCENES).
+// Newer themes share a room with an older one, so resting together works without redeploying the worker.
+const ROOM_SCENE: Partial<Record<Scene,Scene>> = {rain:'water',fireflies:'water',snow:'temple',dawn:'cosmos'};
 const SYMBOLS = {greet:'👋',bow:'🙏',petal:'🌸'};
 const PROTOCOL = 'oiyo-sanctuary-v1';
 
@@ -39,10 +42,11 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   const [reaction,setReaction] = useState<{member:string;gesture:Gesture;id:string}|null>(null);
   const [message,setMessage] = useState('');
   const [retry,setRetry] = useState(0);
+  const roomScene = ROOM_SCENE[scene] ?? scene;
   const [sound,setSound] = useState(false);
-  // 3D is on by default when WebGL works; reduced-motion and data-saver visitors start with the still illustration.
+  // 3D whenever WebGL works; reduced-motion and data-saver visitors get the still illustration.
+  // 2026-11-13: the manual "view illustration" switch was removed (CHOSEUN: "그림으로 보기는 빼도 될 것 같아요"); the choice is automatic.
   const [view3d,setView3d] = useState(false);
-  const [can3d,setCan3d] = useState(false);
   // 2026-11-09: device-only rituals in the temple scene.
   const [lanterns,setLanterns] = useState<number[]>([]);
   const [ring,setRing] = useState(0);
@@ -78,7 +82,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
       setStatus('connecting');setMembers([]);setSelf('');
       try {
         const session = new URL(`${endpoint.replace(/\/$/,'')}/session`);
-        session.searchParams.set('scene',scene);session.searchParams.set('room',String(room));
+        session.searchParams.set('scene',roomScene);session.searchParams.set('room',String(room));
         const result = await fetch(session,{method:'POST',credentials:'omit',signal:AbortSignal.any([abort.signal, AbortSignal.timeout(8000)])});
         if(!result.ok) throw new Error('session');
         const data = await result.json();
@@ -115,7 +119,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
     }
     void connect();
     return ()=>{disposed=true;abort.abort();if(timer)clearTimeout(timer);socket.current?.close(1000,'leaving');socket.current=null;};
-  },[together,scene,room,retry,t]);
+  },[together,roomScene,room,retry,t]);
 
   useEffect(()=>{
     if(!reaction)return;
@@ -125,7 +129,6 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   useEffect(()=>()=>{void audio.current?.close();},[]);
   useEffect(()=>{
     const ok=canUseWebGL();
-    setCan3d(ok);
     const reduce=prefersReducedMotion();
     const saveData=(navigator as Navigator & {connection?:{saveData?:boolean}}).connection?.saveData===true;
     setView3d(ok && !reduce && !saveData);
@@ -188,7 +191,7 @@ export default function Sanctuary({locale}:{locale:Locale}) {
   function leaveHall(){ fadeThen(()=>{setInside(false);setSpot('yard');}); }
   function bowOnce(){ setBows(n=>n+1); tap(); }
   const visible=hidden?members.filter(m=>m.id===self):members;
-  const desc={fire:t.firedesc,water:t.waterdesc,fireworks:t.fireworksdesc,cosmos:t.cosmosdesc,temple:''}[scene];
+  const desc={fire:t.firedesc,water:t.waterdesc,rain:t.raindesc,snow:t.snowdesc,fireflies:t.firefliesdesc,dawn:t.dawndesc,fireworks:t.fireworksdesc,cosmos:t.cosmosdesc,temple:''}[scene];
   return <div data-sanctuary="" data-scene={scene} data-3d={view3d}>
     <div data-part="landscape" aria-hidden="true">{view3d&&<Suspense fallback={null}><Scene3D scene={scene} lanterns={lanterns} ring={ring} spot={spot} inside={inside} bows={bows} onArrive={arrive} /></Suspense>}<div data-part="fade" data-on={fading} /></div>
     <div data-part="veil" aria-hidden="true" />
@@ -199,7 +202,6 @@ export default function Sanctuary({locale}:{locale:Locale}) {
       </header>
       <nav data-part="switch" aria-label={t.eyebrow}>
         {SCENES.map((value,i)=><button key={value} type="button" aria-pressed={scene===value} onClick={()=>setScene(value)}>{t.scenes[i]}</button>)}
-        {can3d&&<button type="button" data-part="view-toggle" aria-pressed={view3d} onClick={()=>setView3d(v=>!v)}>{view3d?t.view2d:t.view3d}</button>}
       </nav>
       <section data-part="space" aria-label={t.scenes[SCENES.indexOf(scene)]}>
         {!view3d&&scene==='fire'&&<div data-part="fire" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>}

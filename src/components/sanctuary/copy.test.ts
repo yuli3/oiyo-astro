@@ -7,8 +7,8 @@ describe('sanctuary six-language surface',()=>{
       const t=sanctuaryCopy[locale];
       expect(Object.keys(t).sort()).toEqual(Object.keys(sanctuaryCopy.en).sort());
       expect(Object.keys(t.statuses).sort()).toEqual(Object.keys(sanctuaryCopy.en.statuses).sort());
-      expect(t.scenes).toHaveLength(5);
-      for(const key of ['privacy','soundNote','art','art3d','heritage','help','fireworksdesc','cosmosdesc'] as const)expect(t[key].length).toBeGreaterThan(10);
+      expect(t.scenes).toHaveLength(9);
+      for(const key of ['privacy','soundNote','art','art3d','heritage','help','fireworksdesc','cosmosdesc','raindesc','snowdesc','firefliesdesc','dawndesc'] as const)expect(t[key].length).toBeGreaterThan(10);
     }
   });
   it('names all four walking spots and explains the hall interior in every language',()=>{

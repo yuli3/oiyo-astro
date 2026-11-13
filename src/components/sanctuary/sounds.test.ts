@@ -16,6 +16,8 @@ describe('sanctuary sound slots', () => {
     expect(ambientFor('temple')).toEqual(['stream', 'chant']);
     expect(ambientFor('fire')).toEqual(['firewood']);
     expect(ambientFor('water')).toEqual(['stream']);
+    expect(ambientFor('fireflies')).toEqual(['stream']);
+    expect(ambientFor('rain')).toEqual([]);
     expect(ambientFor('fireworks')).toEqual([]);
   });
 });
