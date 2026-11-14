@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import RetirementPensionDbDcCalculator from "../../components/tools/RetirementPensionDbDcCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "퇴직연금 DB형 vs DC형 수익률 분기점 & 임금피크제 비교 계산기 | OIYO Tools",
+    description: "근로자퇴직급여보장법 제13조·제19조 기준, 임금상승률과 개인 투자수익률 및 임금피크제에 따른 DB형·DC형 실수령액과 손익분기 수익률을 1초 만에 비교 산출합니다.",
+  },
+  en: {
+    title: "Korea Retirement Pension DB vs DC Calculator (Breakeven Return) | OIYO Tools",
+    description: "Compare Defined Benefit (DB) vs Defined Contribution (DC) retirement pension payouts and find your breakeven investment return considering wage growth and salary peak.",
+  },
+  ja: {
+    title: "韓国 退職年金 DB型 vs DC型 損益分岐点・賃金ピーク制比較計算機 | OIYO Tools",
+    description: "確定給付型(DB)と確定拠出型(DC)の退職金を賃金上昇率・個人投資収益率・賃金ピーク制に合わせて比較計算し、損益分岐収益率を瞬時に算出。",
+  },
+  zh: {
+    title: "韩国 退休年金 DB型 vs DC型 收益率平衡点与工资峰值比较计算器 | OIYO Tools",
+    description: "根据韩国职工退休福利保障法，综合工资涨幅、个人投资回报率及工资峰值制度，快速测算DB与DC两种年金方案的最终领现差异与平衡点。",
+  },
+  fr: {
+    title: "Calculateur de pension de retraite en Corée : DB vs DC | OIYO Tools",
+    description: "Comparez les régimes de retraite à prestations déterminées (DB) et à cotisations déterminées (DC) en tenant compte de la hausse salariale et du seuil de rentabilité.",
+  },
+  es: {
+    title: "Calculadora de pensión de jubilación en Corea: DB vs DC | OIYO Tools",
+    description: "Compare los regímenes de beneficios definidos (DB) y contribuciones definidas (DC) considerando el crecimiento salarial y el retorno de equilibrio.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">퇴직연금 DB형 vs DC형 비교 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        임금상승률 vs 개인 투자수익률 손익분기점 산출 및 임금피크제 진입 전 전환 시점 완벽 가이드
+      </p>
+    </div>
+
+    <RetirementPensionDbDcCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">퇴직연금 DB형과 DC형 선택 핵심 가이드</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">🏛️ 확정급여형(DB형)이 절대적으로 유리한 경우</h3>
+          <p>
+            승진 기회가 많고 호봉제 등으로 매년 <strong>임금상승률(3~5% 이상)</strong>이 꾸준한 직장, 공기업, 금융권, 대기업의 경우 이전 모든 근속기간에 대해 퇴직 시점의 높은 월급이 소급 적용되므로 원금 손실 없는 DB형이 매우 유리합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">📈 확정기여형(DC형)으로 전환해야 하는 필수 순간</h3>
+          <p>
+            <strong>임금피크제</strong>로 월급이 삭감되기 직전 해에는 반드시 DC형으로 전환하여 최고 임금 시점의 퇴직금을 본인 계좌로 확정 수령해야 합니다. 또한 이직이 잦거나 개인 투자 운용 능력이 뛰어나 손익분기 수익률 이상의 성과를 낼 수 있다면 DC형이 유리합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

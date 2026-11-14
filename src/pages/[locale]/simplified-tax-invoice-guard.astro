@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import SimplifiedTaxInvoiceGuard from "../../components/tools/SimplifiedTaxInvoiceGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "간이과세자 세금계산서 발급 의무 & 거래처 매입세액공제 판정기 | OIYO Tools",
+    description: "2024~2026 개정세법(1억 400만원 상향) 기준 4,800만~1억 400만원 간이과세자의 세금계산서 발급 의무, 상대방 매입세액공제 가능 여부 및 가산세(1%)를 즉시 진단합니다.",
+  },
+  en: {
+    title: "Korea Simplified Taxpayer Tax Invoice Guard (48M~104M KRW) | OIYO Tools",
+    description: "Evaluate tax invoice issuance obligations and buyer input VAT deduction eligibility for simplified taxpayers under Korea's 104M KRW revised threshold.",
+  },
+  ja: {
+    title: "韓国 簡易課税者 税金計算書発行義務＆取引先仕入税額控除判定機 | OIYO Tools",
+    description: "2024年改正（基準1億400万ウォン引上げ）に基づく4,800万〜1億400万ウォン簡易課税者の税金計算書発行義務および取引先仕入控除の可否を判定。",
+  },
+  zh: {
+    title: "韩国 简易课税者 税务发票开具义务与进项税额抵扣判定器 | OIYO Tools",
+    description: "根据2024~2026年修订税法（上限调至1.04亿韩元），快速判定4800万~1.04亿韩元简易课税者的发票开具义务、交易方进项抵扣资格及附加税风险。",
+  },
+  fr: {
+    title: "Vérificateur de facture fiscale pour micro-entreprises en Corée | OIYO Tools",
+    description: "Vérifiez les obligations de facturation fiscale et la déductibilité de la TVA pour les contribuables simplifiés (seuil de 104 millions KRW).",
+  },
+  es: {
+    title: "Guardián de facturación fiscal para contribuyentes simplificados en Corea | OIYO Tools",
+    description: "Evalúe la obligación de emitir facturas fiscales y la deducción del IVA para compradores bajo el umbral revisado de 104M KRW.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">간이과세자 세금계산서 발급 판정기</h1>
+      <p class="text-muted-foreground text-sm">
+        4,800만~1억 400만원 구간 간이과세자 발급 의무 및 거래처 매입세액공제 100% 인정 여부 확인
+      </p>
+    </div>
+
+    <SimplifiedTaxInvoiceGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">간이과세자 세금계산서 발급 핵심 실무 요약</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 4,800만원 이상 간이과세자는 세금계산서 발급 가능</h3>
+          <p>
+            과거에는 모든 간이과세자가 세금계산서를 발급할 수 없었으나, 현행법상 <strong>연 매출 4,800만원 이상 ~ 1억 400만원 미만</strong> 간이과세자는 원칙적으로 세금계산서 발급 대상자입니다. 거래처 기업도 이 세금계산서로 <strong>매입세액공제를 전액 환급</strong>받을 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚠️ 미발급 시 1% 가산세 주의</h3>
+          <p>
+            B2B 거래나 사업자등록증을 제시한 거래처가 세금계산서 발급을 요구했을 때 이를 거부하거나 누락하면 <strong>공급대가의 1% 가산세</strong>가 부과됩니다. 단, 연 4,800만원 미만 사업자는 세금계산서 발급이 금지되며 영수증만 교부해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
