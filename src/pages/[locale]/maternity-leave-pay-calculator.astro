@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import MaternityLeavePayCalculator from "../../components/tools/MaternityLeavePayCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "출산전후휴가 90일 급여 & 회사 차액·정부지원금 계산기 | OIYO Tools",
+    description: "근로기준법 제74조 기준 출산휴가 90일간 통상임금 100% 보장, 고용보험 정부지원금(월 최대 210만원) 및 중소기업/대기업별 회사 차액 지급액을 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Maternity Leave 90-Day Pay & Employer Top-Up Calculator | OIYO Tools",
+    description: "Calculate 90-day 100% ordinary wage maternity leave pay, employment insurance subsidies (up to 2.1M KRW/mo), and employer top-ups in Korea.",
+  },
+  ja: {
+    title: "韓国 産前産後休業 90日給与＆会社差額・政府支援金計算機 | OIYO Tools",
+    description: "勤労基準法第74条に基づく産休90日間の通常賃金100%保障、雇用保険政府支援金（月最大210万ウォン）および企業規模別会社差額支給額を計算。",
+  },
+  zh: {
+    title: "韩国 产前产后产假 90天工资与企业差额补足·政府津贴测算器 | OIYO Tools",
+    description: "依据韩国劳动基准法第74条，测算产假90天全额通常薪资保障、雇佣保险月度补贴（最高210万韩元）及中小企业/大企业差额补齐金额。",
+  },
+  fr: {
+    title: "Calculateur d'indemnités de congé maternité de 90 jours en Corée | OIYO Tools",
+    description: "Calculez l'indemnité de congé maternité de 90 jours à 100% du salaire ordinaire, l'aide gouvernementale et le complément employeur en Corée.",
+  },
+  es: {
+    title: "Calculadora de subsidio por maternidad de 90 días en Corea | OIYO Tools",
+    description: "Calcule el pago del 100% del salario ordinario durante los 90 días de baja por maternidad, los subsidios estatales y el complemento de la empresa.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">출산전후휴가 90일 급여 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        근로기준법 제74조 통상임금 100% 보장 원칙, 고용보험 정부지원금(월 최대 210만) 및 회사 차액 지급액 월별 스케줄
+      </p>
+    </div>
+
+    <MaternityLeavePayCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">출산휴가 모성보호 3대 핵심 수칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 출산 전후 90일의 배치 원칙</h3>
+          <p>
+            출산전후휴가 90일(다태아 120일)은 임신 중 분할 사용할 수 있지만, 산모의 산후 회복을 위해 반드시 <strong>출산일 이후에 45일(다태아 60일) 이상이 확보</strong>되어야 법적 효력이 발생합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 중소기업 60일간의 회사 차액 청구권</h3>
+          <p>
+            우선지원대상기업(중소기업)이라 하더라도 월 통상임금이 고용보험 월 상한액(210만원)보다 크다면, <strong>최초 60일 동안 발생한 차액은 회사가 반드시 급여로 지급</strong>해야 하며 미지급 시 임금체불에 해당합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
