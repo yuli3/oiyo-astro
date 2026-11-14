@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { ComprehensiveWageOvertimeCalculator } from "../../components/tools/ComprehensiveWageOvertimeCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "포괄임금제 고정연장수당 역산 및 초과수당 체불 계산기 | OIYO Tools",
+    description: "대한민국 근로기준법 제56조 및 대법원 판례 기준, 포괄임금제 계약에서 기본급·고정OT를 역산 분해하고 실근무에 따른 초과 야근 체불수당을 계산합니다.",
+  },
+  en: {
+    title: "Comprehensive Wage Overtime Deconstruction Calculator | OIYO Tools",
+    description: "Deconstruct fixed overtime under Korean comprehensive wage contracts and audit unpaid overtime liabilities for excess hours.",
+  },
+  ja: {
+    title: "包括賃金制 固定残業代逆算＆超過手当未払い計算機 | OIYO Tools",
+    description: "韓国勤労基準法第56条および大法院判例基準、包括賃金契約の基本給・固定残業代を逆算分解し、実勤務による未払い手当を計算。",
+  },
+  zh: {
+    title: "包薪制 固定加班费反向拆解及超额欠薪计算器 | OIYO Tools",
+    description: "依据韩国劳动基准法第56条和大法院判例，反向拆解包薪制合同中的基本工资与固定加班费，核算超出工时欠薪。",
+  },
+  fr: {
+    title: "Calculateur de décomposition du salaire forfaitaire et heures sup | OIYO Tools",
+    description: "Décomposez les salaires forfaitaires sous le droit coréen et calculez les indemnités d'heures supplémentaires impayées.",
+  },
+  es: {
+    title: "Calculadora de horas extras en salario integral | OIYO Tools",
+    description: "Desglose las horas extras fijas en contratos de salario global y calcule las remuneraciones impagas por exceso de jornada.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">포괄임금제 고정연장수당 역산 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        월 급여에서 기본급과 고정OT수당을 분해하고 통상시급 산출 및 계약 초과 야근 체불수당 진단
+      </p>
+    </div>
+
+    <ComprehensiveWageOvertimeCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">포괄임금제 법리 2대 핵심 진단 포인트</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚖️ 대법원 2010다23282 판례</h3>
+          <p>
+            포괄임금제 계약을 체결했더라도, <strong>약정된 고정OT 시간을 초과하여 일한 근로시간</strong>에 대해서는 회사가 반드시 통상시급의 1.5배 가산수당을 추가 지급해야 합니다. "포괄임금이라 야근수당 없다"는 주장은 위법입니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">🚨 최저임금법 위반 여부</h3>
+          <p>
+            월 총급여를 기본급과 수당으로 분해했을 때, 산출된 <strong>통상시급이 법정 최저시급(2026년 10,030원) 미만</strong>이면 해당 근로계약은 최저임금법 제6조 위반으로 원천 무효이며 최저임금 기준 차액 청구가 가능합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
