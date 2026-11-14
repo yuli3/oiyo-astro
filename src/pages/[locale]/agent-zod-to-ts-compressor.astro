@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AgentZodToTsCompressor } from "../../components/tools/AgentZodToTsCompressor";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "Zod to TypeScript 스키마 토큰 압축기 | OIYO Tools",
+    description: "거대한 Zod 스키마를 경량 TypeScript 인터페이스로 변환하여 LLM 프롬프트 토큰을 40% 절감하고 의존성 없는 순수 검사기를 생성합니다.",
+  },
+  en: {
+    title: "Zod to TypeScript Schema Token Compressor | OIYO Tools",
+    description: "Compress heavy Zod schemas into clean TypeScript interfaces, saving 40%+ LLM prompt tokens and generating zero-dependency guards.",
+  },
+  ja: {
+    title: "Zod to TypeScriptスキーマトークン圧縮機 | OIYO Tools",
+    description: "重いZodスキーマを軽量TypeScriptインターフェースに変換し、LLMプロンプトトークンを40%削減、依存なしバリデータを生成。",
+  },
+  zh: {
+    title: "Zod转TypeScript模式Token压缩器 | OIYO Tools",
+    description: "将庞大的Zod模式转换为紧凑的TypeScript接口，节省40%以上大模型提示词Token，并生成零依赖类型守卫函数。",
+  },
+  fr: {
+    title: "Compresseur de schéma Zod vers TypeScript | OIYO Tools",
+    description: "Compressez les schémas Zod volumineux en interfaces TypeScript légères, réduisant de 40% les jetons de prompt LLM.",
+  },
+  es: {
+    title: "Compresor de esquemas Zod a TypeScript | OIYO Tools",
+    description: "Comprima esquemas pesados de Zod en interfaces TypeScript limpias, ahorrando más del 40% de tokens de prompt para LLMs.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">Zod to TypeScript 스키마 압축기</h1>
+      <p class="text-muted-foreground text-sm">
+        Zod 스키마 정의를 간결한 TS 인터페이스로 변환하여 LLM 프롬프트 토큰 40% 절감 및 순수 함수 가드 생성
+      </p>
+    </div>
+
+    <AgentZodToTsCompressor client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">AI 에이전트 스키마 토큰 최적화 2대 원칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 시스템 프롬프트 캐싱 극대화</h3>
+          <p>
+            수십 개의 도구 정의나 복잡한 입력 스키마를 <code>z.object</code> 형태로 프롬프트에 넣으면 불필요한 체이닝 키워드로 인해 <strong>수천 토큰의 낭비</strong>가 발생합니다. TypeScript 인터페이스는 토큰 밀도가 훨씬 높아 프롬프트 캐시 효율을 2배 높입니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">🚀 Edge Worker 번들 크기 경량화</h3>
+          <p>
+            Cloudflare Workers나 Vercel Edge 환경에서는 번들 크기 1MB 한도가 엄격합니다. 50KB에 달하는 Zod 패키지 대신 <strong>순수 JavaScript 타입가드 함수</strong>를 사용하면 번들 로딩 시간과 콜드 스타트 지연을 획기적으로 줄일 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
