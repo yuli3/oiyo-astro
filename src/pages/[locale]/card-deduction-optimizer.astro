@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import CardDeductionOptimizer from '../../components/tools/CardDeductionOptimizer';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "신용카드 vs 체크카드 소득공제 계산기 — 연말정산 황금비율 및 세금 환급액",
+    description: "총급여의 25% 문턱까지는 혜택 좋은 신용카드를 쓰고, 초과분부터는 공제율 2배인 체크카드(30%)를 사용하는 연말정산 절세 황금비율과 통장 환급액을 계산합니다.",
+  },
+  en: {
+    title: "Korea Credit vs Debit Card Tax Deduction Optimizer — Year-End Tax Refund",
+    description: "Calculate optimal credit (15%) vs debit card (30%) spending ratios beyond the 25% salary threshold to maximize year-end tax refunds in Korea.",
+  },
+  ja: {
+    title: "韓国 クレジットカード vs デビットカード 所得控除計算機 — 年末調整 還付金シミュレーター",
+    description: "韓国の年末調整で総給与25％基準を超えた後のクレジットカード（15％）とデビットカード（30％）の最適利用比率と税金還付額を計算します。",
+  },
+  zh: {
+    title: "韩国信用卡对比借记卡所得税抵扣计算器 — 年终结算黄金比例与退税测算",
+    description: "测算超过总年薪25%门槛后使用信用卡（15%）与借记卡（30%）的最佳消费组合，最大化韩国年终清算退税金额。",
+  },
+  fr: {
+    title: "Simulateur de Déduction Fiscale par Carte en Corée — Carte de Crédit vs Débit",
+    description: "Optimisez la répartition de vos dépenses par carte de crédit (15%) et débit (30%) au-delà du seuil de 25% pour vos impôts en Corée.",
+  },
+  es: {
+    title: "Calculadora de Deducción Fiscal de Tarjetas en Corea — Crédito vs Débito",
+    description: "Calcula la proporción óptima de uso entre tarjeta de crédito (15%) y débito (30%) para maximizar la devolución de impuestos en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <CardDeductionOptimizer client:load locale={locale} />
+  </main>
+</Layout>

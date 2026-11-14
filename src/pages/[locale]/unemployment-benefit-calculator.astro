@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import UnemploymentBenefitCalculator from '../../components/tools/UnemploymentBenefitCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "실업급여 수급자격 판정 & 모의계산기 — 180일 요건 및 2026 일일 상·하한액 계산",
+    description: "2026년 최저임금 기준 실업급여(구직급여) 1일 하한액(64,192원)과 상한액(66,000원), 180일 피보험단위기간 및 퇴사 사유별 수급 자격과 총 수령액을 계산합니다.",
+  },
+  en: {
+    title: "Korea Unemployment Benefit Eligibility & Payout Calculator — 2026 Daily Caps",
+    description: "Calculate statutory unemployment insurance benefits in Korea under 180-day criteria and 2026 daily minimum/maximum benefit caps.",
+  },
+  ja: {
+    title: "韓国 失業給付 受給資格判定＆模擬計算機 — 180日要件・日額上限＆下限額",
+    description: "韓国の雇用保険における失業手当の受給資格（180日以上の加入）、2026年の日額上限・下限、退職事由別の受取総額を計算します。",
+  },
+  zh: {
+    title: "韩国失业金领取资格测算与模拟计算器 — 180天保险条件及2026日标准额度",
+    description: "精准计算韩国就业保险失业给付领取资格（180天基准）、2026年每日上限及下限额度与离职原因判定。",
+  },
+  fr: {
+    title: "Calculateur d'Allocations Chômage en Corée — Éligibilité et Montant Quotidien",
+    description: "Estimez votre éligibilité et le montant total des allocations chômage selon la durée d'assurance et les plafonds journaliers en Corée.",
+  },
+  es: {
+    title: "Calculadora de Subsidio por Desempleo en Corea — Elegibilidad y Monto Diario",
+    description: "Calcula los beneficios del seguro de desempleo en Corea según el requisito de 180 días y los límites diarios de 2026.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <UnemploymentBenefitCalculator client:load locale={locale} />
+  </main>
+</Layout>
