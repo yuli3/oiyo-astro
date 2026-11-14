@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AgentCorsHeaderGuard } from "../../components/tools/AgentCorsHeaderGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 CORS 헤더 취약점 검사 & 화이트리스트 변환기 | OIYO Tools",
+    description: "AI가 생성한 백엔드 API의 와일드카드(*)와 credentials 모순, 위험한 Origin 반사(Reflection) 취약점을 0.1ms 만에 감지하고 Express·Hono·Next.js용 안전한 화이트리스트 코드로 자동 변환합니다.",
+  },
+  en: {
+    title: "AI Agent CORS Header Guard & Whitelist Generator | OIYO Tools",
+    description: "Detect dangerous CORS misconfigurations and origin reflection flaws in AI-generated code and convert to secure whitelist handlers for Express, Hono, and Next.js.",
+  },
+  ja: {
+    title: "AIエージェント CORSヘッダー脆弱性監査＆ホワイトリスト変換機 | OIYO Tools",
+    description: "AIが生成したCORS設定のワイルドカード矛盾やオリジン反射脆弱性を検出し、安全なホワイトリスト方式コードに自動変換。",
+  },
+  zh: {
+    title: "AI Agent CORS 跨域安全审计与白名单转换器 | OIYO Tools",
+    description: "亚毫秒级检测AI生成的API跨域CORS漏洞（通配符与凭证冲突、Origin全量反射），一键生成Express与Hono安全白名单防护代码。",
+  },
+  fr: {
+    title: "Auditeur de configuration CORS pour IA & Générateur de liste blanche | OIYO Tools",
+    description: "Détectez les erreurs de configuration CORS dans le code généré par IA et générez des filtres d'origine sécurisés.",
+  },
+  es: {
+    title: "Auditor de cabeceras CORS para IA y generador de lista blanca | OIYO Tools",
+    description: "Audite configuraciones CORS inseguras en código generado por IA y conviértalas en manejadores seguros con lista blanca.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 CORS 헤더 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        와일드카드(*) & credentials 모순 및 무제한 Origin 반사 취약점 감지 및 안전한 화이트리스트 자동 변환
+      </p>
+    </div>
+
+    <AgentCorsHeaderGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">API CORS 보안 3대 핵심 수칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 origin: '*'와 credentials: true 동시 사용 금지</h3>
+          <p>
+            브라우저는 보안 스펙상 <strong>와일드카드 오리진과 쿠키/인증 헤더 전달을 동시에 허용하지 않습니다</strong>. AI 모델이 브라우저 에러를 피하려고 임의로 두 옵션을 켜두면 실제 브라우저에서 요청이 거부되거나 보안 감사에서 차단됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 동적 Origin 반사(Reflection) 차단</h3>
+          <p>
+            <code>req.headers.origin</code>을 그대로 허용 목록으로 응답하는 것은 모든 악성 사이트에 사용자 세션을 열어주는 것과 같습니다. 반드시 <strong>사전에 정의된 화이트리스트 배열</strong>에 포함된 오리진만 검증하여 응답해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

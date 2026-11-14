@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AgentJwtSecurityGuard } from "../../components/tools/AgentJwtSecurityGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 JWT 인증 취약점 진단 & 보안 패치 생성기 | OIYO Tools",
+    description: "AI가 생성한 백엔드 JWT 인증 코드의 하드코딩된 취약한 시크릿, alg: none 서명 우회 결함, 만료 시간(expiresIn) 누락을 0.1ms 만에 정적 감지하고 RFC 7519 보안 패치 코드를 생성합니다.",
+  },
+  en: {
+    title: "AI Agent JWT Security Guard & RFC 7519 Hardener | OIYO Tools",
+    description: "Detect weak secrets, alg: none bypass vulnerabilities, and missing expiration claims in AI-generated JWT authentication code with sub-millisecond static analysis.",
+  },
+  ja: {
+    title: "AIエージェント JWT認証セキュリティ診断＆パッチ生成機 | OIYO Tools",
+    description: "AI生成のJWTコードに潜むハードコード秘密鍵やalg:none署名回避脆弱性、有効期限漏れをサブミリ秒で監査しセキュアなコードに変換。",
+  },
+  zh: {
+    title: "AI Agent JWT 身份验证漏洞检测与安全补丁生成器 | OIYO Tools",
+    description: "亚毫秒级静态审计AI生成的JWT逻辑（弱密钥、alg: none签名绕过、缺少过期时间），一键生成符合RFC 7519标准的防御补丁代码。",
+  },
+  fr: {
+    title: "Auditeur de sécurité JWT pour IA & Correcteur RFC 7519 | OIYO Tools",
+    description: "Détectez les secrets faibles, le contournement alg: none et l'absence d'expiration dans le code JWT généré par IA.",
+  },
+  es: {
+    title: "Auditor de seguridad JWT para IA y endurecedor RFC 7519 | OIYO Tools",
+    description: "Audite secretos débiles, vulnerabilidades alg: none y expiraciones ausentes en código JWT generado por IA en sub-milisegundos.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 JWT 인증 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        하드코딩 시크릿, alg: none 서명 우회 결함, 만료 시간 누락 정적 감지 및 RFC 7519 보안 패치 자동 생성
+      </p>
+    </div>
+
+    <AgentJwtSecurityGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">JWT 토큰 인증 3대 보안 수칙 (RFC 7519)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 알고리즘 명시적 고정 (alg: none 공격 방어)</h3>
+          <p>
+            <code>jwt.verify(token, secret)</code> 호출 시 <code>{`{ algorithms: ['HS256'] }`}</code> 옵션을 반드시 지정해야 합니다. 옵션이 누락되면 공격자가 JWT 헤더의 알고리즘을 <code>none</code>으로 조작하여 서명 검증을 통과할 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 최소 256비트(32바이트) 환경변수 시크릿 키</h3>
+          <p>
+            코드 내에 <code>'secret'</code>이나 <code>'my-key'</code>처럼 짧은 문자열을 하드코딩하면 안 됩니다. <code>crypto.randomBytes(32).toString('hex')</code>로 생성된 강력한 랜덤 키를 환경변수로 관리해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
