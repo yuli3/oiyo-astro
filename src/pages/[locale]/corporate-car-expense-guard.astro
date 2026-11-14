@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import CorporateCarExpenseGuard from "../../components/tools/CorporateCarExpenseGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "업무용 승용차 비용처리(1,500만원 한도) & 연두색 번호판 가드 | OIYO Tools",
+    description: "법인 및 개인사업자 업무용 승용차 연간 1,500만원 한도(감가상각 800만원), 운행기록부 유무별 손금 인정액 및 8,000만원 이상 법인차 연두색 번호판 의무를 1초 만에 판정합니다.",
+  },
+  en: {
+    title: "Korea Corporate Vehicle Expense Deduction & Green Plate Guard | OIYO Tools",
+    description: "Calculate Korea corporate car tax expense deduction limits (15M KRW without logbook, 8M depreciation limit) and 80M KRW green plate compliance.",
+  },
+  ja: {
+    title: "韓国 社用車 経費処理（年間1,500万ウォン限度）＆黄緑色ナンバープレート判定機 | OIYO Tools",
+    description: "韓国法人・個人事業主の社用車減価償却費（年800万ウォン限度）および運行記録簿の有無別損金算入額、8,000万ウォン以上の専用プレート義務を判定します。",
+  },
+  zh: {
+    title: "韩国 公务用车 费用化抵税（年限额1500万韩元）与浅绿色车牌合规判定器 | OIYO Tools",
+    description: "测算韩国企业公车折旧费限额（800万/年）与行车记录簿抵扣额，判定8000万韩元以上法人豪车浅绿色车牌达标要求。",
+  },
+  fr: {
+    title: "Simulateur de déduction fiscale pour véhicules d'entreprise en Corée | OIYO Tools",
+    description: "Calculez les plafonds de déduction fiscale pour véhicules de société en Corée (15M KRW, amortissement 8M) et la conformité de la plaque verte.",
+  },
+  es: {
+    title: "Calculadora de deducción de gastos de vehículos de empresa en Corea | OIYO Tools",
+    description: "Calcule los límites de deducción fiscal para vehículos de empresa en Corea (15M KRW, depreciación 8M) y el cumplimiento de la placa verde de 80M.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">업무용 승용차 비용처리 & 연두색 번호판 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        연간 1,500만원(감가 800만+유지비 700만) 손금 한도, 운행기록부 작성 유불리 및 8,000만원 이상 법인 고가차 연두색 번호판 세무 진단 엔진
+      </p>
+    </div>
+
+    <CorporateCarExpenseGuard client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">업무용 승용차 세무조사 대비 3대 핵심 수칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 8,000만원 이상 연두색 번호판 필수</h3>
+          <p>
+            2024년 1월부터 법인이 취득(리스, 렌트 포함)하는 출고가 8,000만원 이상 승용차는 국토부 연두색 번호판을 부착하지 않으면 법인세법상 관련 비용(유류비, 보험료, 감가상각비)이 <strong>전액 0원(100% 손금불산입)</strong> 처리됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 800만원 초과 감가상각비 이월 제도</h3>
+          <p>
+            운행기록부를 작성하여 업무사용비율이 인정되면, 연간 감가상각 한도 800만원을 초과한 금액은 소멸되지 않고 <strong>다음 사업연도로 이월</strong>되어 5년 이후에도 계속해서 비용으로 인정받을 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import EstateSpouseDeductionCalculator from "../../components/tools/EstateSpouseDeductionCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "상속세 배우자 상속공제(5억~30억) & 금융공제 계산기 | OIYO Tools",
+    description: "상속세 및 증여세법 기준 일괄공제 5억, 배우자 상속공제(최소 5억~최대 30억) 및 금융재산 상속공제(최대 2억)를 반영하여 상속세 면세점과 세액을 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Inheritance Tax Spouse Deduction (0.5B-3B KRW) & Financial Asset Calculator | OIYO Tools",
+    description: "Calculate Korea inheritance tax deductions: 0.5B lump-sum, 0.5B-3B spouse deduction, and up to 200M financial asset deduction to determine exact tax liability.",
+  },
+  ja: {
+    title: "韓国 相続税 配偶者控除（5億〜最大30億ウォン）＆金融資産控除 計算機 | OIYO Tools",
+    description: "韓国の相続税一括控除（5億）、配偶者相続控除（最小5億〜最大30億ウォン）および純金融財産控除（最大2億ウォン）を即座にシミュレーションします。",
+  },
+  zh: {
+    title: "韩国 遗产税 配偶继承扣除（5亿至30亿韩元）与金融资产扣除计算器 | OIYO Tools",
+    description: "根据韩国继承税及赠与税法，模拟一揽子扣除5亿、配偶扣除（5亿至最高30亿）及金融财产扣除（最高2亿），精准测算应缴遗产税。",
+  },
+  fr: {
+    title: "Simulateur de droits de succession en Corée : Abattement pour conjoint | OIYO Tools",
+    description: "Calculez les droits de succession en Corée avec l'abattement forfaitaire (500M KRW), l'abattement pour conjoint (jusqu'à 3Mds KRW) et les avoirs financiers.",
+  },
+  es: {
+    title: "Calculadora del impuesto de sucesiones en Corea: Deducción para cónyuge | OIYO Tools",
+    description: "Calcule las deducciones del impuesto sobre sucesiones en Corea: deducción global de 500M, deducción para cónyuge (hasta 3.000M) y activos financieros.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">상속세 배우자 및 금융공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        일괄공제 5억원 + 배우자 실제 상속액 기준 공제(최소 5억~최대 30억원) + 순금융재산 20%(최대 2억원) 절세 시뮬레이터
+      </p>
+    </div>
+
+    <EstateSpouseDeductionCalculator client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">상속세 면세점과 배우자 공제 황금 팁</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 10억원 이하 상속세 0원 공식</h3>
+          <p>
+            배우자와 자녀가 있는 경우, 배우자가 실제 1원도 상속받지 않더라도 법정 기본 일괄공제 5억원에 배우자 기본공제 5억원이 무조건 더해져 <strong>총 10억원까지는 상속세가 0원</strong>입니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 실제 상속 등기를 해야 최대 30억 인정</h3>
+          <p>
+            배우자 공제를 5억원 초과하여 법정 지분(최대 30억원)까지 받으려면 상속세 과세표준 신고기한(사망일이 속한 달의 말일부터 9개월)까지 배우자의 실제 상속재산 분할 협의 및 등기 등록을 완료해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
