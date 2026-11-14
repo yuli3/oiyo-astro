@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Locale } from "../../i18n";
 import {
   ACCOUNT_ITEMS,
@@ -40,7 +40,10 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function IncomeStatementGame({ locale }: { locale: Locale }) {
-  const [order] = useState(() => shuffle(ACCOUNT_ITEMS).map((i) => i.id));
+  // 2026-10-09: a random SSR/client first account causes hydration recovery.
+  // Preserve readable static content and shuffle only once hydration completes.
+  const [order, setOrder] = useState(() => ACCOUNT_ITEMS.map((i) => i.id));
+  useEffect(() => { setOrder(shuffle(ACCOUNT_ITEMS).map((i) => i.id)); }, []);
   const [placed, setPlaced] = useState<Set<string>>(new Set());
   const [firstTry, setFirstTry] = useState(0);
   const [tried, setTried] = useState<Set<string>>(new Set()); // items with a wrong attempt

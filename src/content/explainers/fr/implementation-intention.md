@@ -1,72 +1,61 @@
 ---
 topic: implementation-intention
 locale: fr
-title: "Intentions de mise en œuvre : une conditionnelle au lieu de la volonté"
-description: "Une intention de mise en œuvre est un plan « si X, alors Y » qui lie à l'avance une situation à une action. Les travaux d'origine de Gollwitzer, la taille d'effet d'une méta-analyse de 94 études, et les cas où cela ne marche pas."
-definition: "Une intention de mise en œuvre est un plan de la forme « si la situation X se présente, je fais Y ». À la différence d'une intention-but, elle rattache le quand, le où et le comment à un indice situationnel."
-updated: 2026-09-03
+title: "Intentions de mise en œuvre : relier une situation à une action"
+description: "Distinguez objectif et plan si-alors, interprétez la méta-analyse de 2006 et examinez des exemples concrets ainsi que les obstacles à l'action."
+definition: "Une intention de mise en œuvre relie le moment, le lieu ou la manière d'agir pour un objectif à un indice situationnel précis."
+updated: 2026-10-14
 ---
 
-« Il faudrait que je fasse du sport » et « en rentrant, avant d'accrocher mon manteau, je mets mes baskets » ne sont pas la même résolution. La première est une **intention-but**, la seconde une **intention de mise en œuvre**. La distinction n'est pas un jeu de mots : c'est l'un des résultats les mieux répliqués de la recherche sur l'autorégulation depuis les années 1990.
+« Je devrais étudier davantage » exprime un objectif. « Après le déjeuner, quand je m'assieds au bureau, je lis le premier exercice » relie une situation à une réponse. Écrire la seconde phrase ne termine pas vos études, mais précise quand commencer.
 
-## 1. Le format est fixe
+## 1. Distinguer objectif et exécution
 
-Peter Gollwitzer n'en propose qu'une forme :
+[L'article de Gollwitzer de 1999](https://bpb-us-e1.wpmucdn.com/wp.nyu.edu/dist/c/6235/files/2019/02/gollwitzer-1999-implementation-intentions.pdf) distingue le choix d'un objectif des conditions permettant d'agir pour l'atteindre. Une forme habituelle est « Si la situation X se présente, alors je fais Y ».
 
-> **Si la situation X se présente, alors je fais Y.**
+| Résultat souhaité | Indice repérable | Action prévue |
+| --- | --- | --- |
+| Commencer à étudier | S'asseoir au bureau après le déjeuner | Lire la première phrase d'un exercice préparé |
+| Se préparer à faire du sport | Rentrer du travail | Mettre ses chaussures de sport |
+| Réduire l'usage du téléphone | Se préparer au coucher | Poser le téléphone au lieu de recharge choisi |
 
-X doit être un **indice situationnel repérable**, et Y une **action que l'on peut engager immédiatement**. Si l'un des deux est flou, l'effet baisse.
+Ce sont des exemples éditoriaux, pas des effets mesurés expérimentalement pour ces actions précises. Mettre ses chaussures diffère aussi de réaliser la quantité d'exercice nécessaire. Vérifiez que l'indice se présente et que la réponse sert votre objectif.
 
-| Intention-but | Intention de mise en œuvre |
-| --- | --- |
-| Faire plus de sport | En rentrant, avant d'accrocher mon manteau, je mets mes baskets |
-| Travailler | Après le déjeuner, en m'asseyant, je fais le premier exercice |
-| Moins utiliser mon téléphone | En me couchant, je pose le téléphone sur le bureau |
-| Me mettre moins en colère | Quand ma voix commence à monter, je bois une gorgée d'eau |
+## 2. d = 0,65 ne signifie pas 65 % de réussite
 
-Ce que la colonne de droite a en commun : **il ne reste rien à décider**. Quand la situation arrive, la suite est déjà réglée.
+[La méta-analyse de Gollwitzer et Sheeran de 2006](https://doi.org/10.1016/S0065-2601%2806%2938002-1) rapporte une taille d'effet moyenne d = 0,65 sur l'atteinte des objectifs dans 94 tests indépendants. Cela ne signifie pas 94 articles distincts.
 
-## 2. Quelle est l'ampleur de l'effet
+| Chiffre de recherche | Signification | Ce qu'il ne signifie pas |
+| --- | --- | --- |
+| 94 tests indépendants | Nombre de comparaisons indépendantes incluses | 94 réplications donnant le même résultat dans toute situation |
+| d = 0,65 | Différence standardisée entre groupes comparés | 65 % de réussite ou 65 % de performance supplémentaire |
+| Effet moyen | Synthèse des recherches incluses | Réussite garantie pour un lecteur particulier |
 
-Gollwitzer et Sheeran ont regroupé 94 études. Comparé au seul fait de se fixer un but, former une intention de mise en œuvre produisait une taille d'effet de **d ≈ 0,65** — moyenne à forte selon les usages des sciences du comportement, et remarquablement peu coûteuse puisque l'intervention consiste à écrire une phrase.
+Lisez ensemble conditions de comparaison, tâches, participants et mesures. Cette estimation historique ne valide pas toutes les applications actuelles ni l'outil de planification OIYO. Elle ne démontre pas non plus le même rapport coût-efficacité pour toute activité consistant à écrire une phrase.
 
-Une réserve l'accompagne. **Les intentions de mise en œuvre ne créent pas le but.** Accoler une conditionnelle à ce qu'on n'a pas envie de faire ne le fera pas faire. Ce que la stratégie comble, c'est **l'écart entre l'intention et le comportement**, non la place d'une intention absente.
+## 3. Pourquoi relier l'indice et la réponse à l'avance ?
 
-## 3. Pourquoi cela marche — l'automaticité, pas la volonté
+Les recherches examinent le repérage des occasions spécifiées et le déclenchement de réponses orientées vers le but. Il ne s'agit pas d'agir sans jugement dans tous les états. Fatigue, ressources insuffisantes, obligations concurrentes ou danger peuvent nécessiter de revoir le plan.
 
-Le mécanisme n'est pas « décider plus fermement ».
+Planifier la poursuite d'un objectif diffère du choix de cet objectif. Si vous ne le souhaitez pas ou manquez de moyens, examinez l'objectif et les conditions plutôt que de modifier seulement une phrase.
 
-Lier à l'avance un indice à une action fait que rencontrer l'indice déclenche l'action **avec moins de délibération consciente**. On ne rejoue pas « est-ce que je m'y mets, là ? » à chaque fois, donc on dépense moins à décider.
+## 4. Que vérifier lorsque l'action bloque ?
 
-D'où deux cas où la stratégie est particulièrement utile :
+Si vous avez écrit « quand j'aurai le temps », précisez une occasion repérable. Si plusieurs actions partagent une situation, envisagez un ordre ou une priorité. C'est une suggestion de planification, pas une loi selon laquelle des indices communs feraient échouer tous les plans.
 
-- **Les actions à forte résistance de départ** : l'étape de décision disparaît, le premier geste s'allège.
-- **La fin de journée, épuisée** : le jugement n'est plus là, le lien indice-action l'est encore.
+Si vous avez seulement noté une conduite à éviter, envisagez une autre action réellement possible. N'en déduisez pas que les plans d'inhibition sont toujours inefficaces ou que les conduites de remplacement sont supérieures pour toute habitude.
 
-## 4. Quand cela ne marche pas
+## 5. Revoir un plan avec une petite tâche
 
-Bien connaître une stratégie, c'est aussi connaître ses limites.
+Choisissez une tâche que vous comptez réellement faire cette semaine et écrivez l'indice et l'action en une phrase. Une heure précise ou un événement après une autre routine peuvent convenir selon la situation. Ce guide ne juge pas l'un universellement supérieur.
 
-- **Quand l'indice est vague.** « Quand j'aurai le temps » n'est pas un indice : rien ne permet de repérer ce moment.
-- **Quand l'action est grande.** « Je fais du sport » vaut moins que « je mets mes baskets ». Plus le premier geste est petit, plus il accroche.
-- **Quand les indices se télescopent.** Plusieurs conditionnelles suspendues à la même situation, et aucune ne se déclenche d'elle-même.
-- **Quand on n'en a pas envie.** Comme dit plus haut : elle ne fabrique pas un motif absent.
+Vous pouvez commencer par une action abordable et distinguer ensuite la rencontre de l'indice de l'exécution de la réponse. « Un geste de moins d'une minute » est un exemple éditorial pour préciser le départ, pas un seuil temporel validé. Examinez aussi la part de l'objectif accomplie après avoir commencé.
 
-Un point encore. Pour **supprimer** une habitude, « si X, alors je ne fais pas Y » marche moins bien que **« si X, alors je fais Z à la place »**. Ne pas faire n'est pas une action : cela ne se rattache pas à un indice.
+Utilisez l'activité pour réfléchir à vos plans. Elle ne justifie ni l'omission de vérifications médicales, juridiques ou de sécurité nécessaires, ni un jugement sur la volonté ou le caractère d'une personne qui peine à agir.
 
-## 5. Écrivez une phrase maintenant
+## Sources et périmètre de vérification
 
-- Choisissez une chose que vous vouliez faire cette semaine.
-- Décidez **où et juste après quoi** vous la ferez. Une action précédente accroche mieux qu'une heure (« quand j'ouvre la porte en rentrant du travail »).
-- Réduisez l'action à **un premier geste de moins d'une minute**.
-- Écrivez-la en une phrase. L'écrire fait partie de la stratégie.
+- [Gollwitzer (1999), texte public du laboratoire de l'auteur](https://bpb-us-e1.wpmucdn.com/wp.nyu.edu/dist/c/6235/files/2019/02/gollwitzer-1999-implementation-intentions.pdf)
+- [Gollwitzer et Sheeran (2006), chapitre chez l'éditeur original](https://doi.org/10.1016/S0065-2601%2806%2938002-1)
 
-## Références
-
-> **Peter M. Gollwitzer** (1999) *Implementation intentions: Strong effects of simple plans*, American Psychologist 54(7) — le concept et le format si-alors.
-
-> **Peter M. Gollwitzer & Paschal Sheeran** (2006) *Implementation intentions and goal achievement: A meta-analysis of effects and processes*, Advances in Experimental Social Psychology 38 — 94 études, d ≈ 0,65.
-
-> **Paschal Sheeran & Thomas L. Webb** (2016) *The intention–behavior gap*, Social and Personality Psychology Compass 10(9) — le problème auquel la stratégie répond.
-
-> **Thomas L. Webb & Paschal Sheeran** (2006) *Does changing behavioral intentions engender behavior change?*, Psychological Bulletin 132(2) — changer les intentions seules déplace étonnamment peu le comportement.
+La vérification couvre les définitions et passages sur l'automaticité du texte public de 1999, ainsi que le résumé de l'éditeur original de 2006 retourné par la recherche. Les restrictions d'accès ont empêché la lecture du texte intégral de 2006 chez l'éditeur. Elle ne réanalyse pas toutes les données brutes des études incluses et ne constitue pas une revue exhaustive de la littérature récente. Les exemples quotidiens sont distingués des données de recherche.

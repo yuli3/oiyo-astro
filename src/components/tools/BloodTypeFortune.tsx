@@ -777,8 +777,8 @@ function CategoryCard({ emoji, label, score, text }: { emoji: string; label: str
     score >= 4
       ? "from-amber-50 to-yellow-50 border-amber-200"
       : score >= 3
-      ? "from-green-50 to-green-50 border-green-200"
-      : "from-gray-50 to-slate-50 border-gray-200";
+      ? "from-green-50 to-green-50 border-border"
+      : "from-gray-50 to-slate-50 border-border";
 
   return (
     <div className={`rounded-2xl border bg-gradient-to-br p-4 ${bg}`}>
@@ -827,13 +827,13 @@ export default function BloodTypeFortune({ locale }: Props) {
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{ui.title}</h1>
-        <p className="mt-1 text-gray-500">{ui.subtitle}</p>
+        <h1 className="text-2xl font-bold text-foreground">{ui.title}</h1>
+        <p className="mt-1 text-muted-foreground">{ui.subtitle}</p>
       </div>
 
       {/* Blood type selector */}
       {!result ? (
-        <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-4">
+        <div className="rounded-2xl border border-border bg-card p-5 space-y-4">
           <p className="text-sm font-medium text-gray-700">{ui.selectLabel}</p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {BLOOD_TYPES.map((bt) => (
@@ -843,7 +843,7 @@ export default function BloodTypeFortune({ locale }: Props) {
                 className={`flex flex-col items-center rounded-xl border py-4 px-3 transition-all hover:border-red-400 hover:bg-red-50 ${
                   selected === bt
                     ? "border-red-500 bg-red-50"
-                    : "border-gray-200 bg-card"
+                    : "border-border bg-card"
                 }`}
               >
                 <span className="text-3xl">{BLOOD_TYPE_EMOJI[bt]}</span>
@@ -859,13 +859,13 @@ export default function BloodTypeFortune({ locale }: Props) {
             <div className="flex items-center gap-3">
               <span className="text-4xl">{BLOOD_TYPE_EMOJI[result.bloodType]}</span>
               <div>
-                <p className="text-lg font-bold text-gray-900">{names[result.bloodType]}</p>
+                <p className="text-lg font-bold text-foreground">{names[result.bloodType]}</p>
                 <p className="text-xs text-gray-400">{result.date} · {ui.resultDate}</p>
               </div>
             </div>
             <button
               onClick={handleReset}
-              className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors"
+              className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-card transition-colors"
             >
               {ui.resetBtn}
             </button>

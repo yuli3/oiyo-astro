@@ -420,7 +420,7 @@ export default function BreathingTimer({ locale }: Props) {
 
         {/* Pattern Selector */}
         <div className="bg-white/70 backdrop-blur rounded-2xl p-4 mb-6 shadow-sm">
-          <p className="text-sm font-medium text-slate-500 mb-3">
+          <p className="text-sm font-medium text-muted-foreground mb-3">
             {t(UI_LABELS.pattern, locale)}
           </p>
           <div className="grid grid-cols-1 gap-2">
@@ -431,7 +431,7 @@ export default function BreathingTimer({ locale }: Props) {
                 className={`text-left px-4 py-2.5 rounded-xl transition-all text-sm ${
                   selectedPattern === i
                     ? 'bg-teal-500 text-white shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-teal-100'
+                    : 'bg-surface-subtle text-slate-700 hover:bg-teal-100'
                 }`}
               >
                 <span className="font-semibold">{t(p.name, locale)}</span>
@@ -480,7 +480,7 @@ export default function BreathingTimer({ locale }: Props) {
 
         {/* Cycle Counter */}
         <div className="text-center mb-6">
-          <span className="text-slate-500 text-sm">
+          <span className="text-muted-foreground text-sm">
             {t(UI_LABELS.cycles, locale)}: <span className="font-bold text-teal-600 text-lg">{cycles}</span>
           </span>
           <p className="mt-2 text-xs leading-5 text-slate-600">
@@ -520,7 +520,7 @@ export default function BreathingTimer({ locale }: Props) {
             ))}
           </div>
         </div>
-        <p className="mt-4 text-center text-xs leading-5 text-slate-500">
+        <p className="mt-4 text-center text-xs leading-5 text-muted-foreground">
           {t(UI_LABELS.practiceNote, locale)}
         </p>
       </div>

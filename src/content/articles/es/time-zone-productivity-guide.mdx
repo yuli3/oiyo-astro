@@ -1,0 +1,79 @@
+---
+title: "Husos horarios: cómo acordar reuniones con supuestos claros"
+description: "Distinga el desfase UTC del huso local, calcule el horario laboral compartido y defina qué reloj rige una reunión periódica."
+pubDate: 2026-04-15
+updatedDate: 2026-10-11
+tags:
+  - TimeZone
+  - Productivity
+  - RemoteWork
+  - GlobalWork
+  - Lifestyle
+locale: es
+author: Oiyo
+topic: self
+---
+
+## 1. Un desfase no es un huso horario
+
+El desfase UTC indica cuánto difiere una hora local de UTC en un instante. Un huso asociado a un lugar aporta las reglas para determinar ese desfase según la fecha. Dividir la Tierra en 24 franjas iguales es una imagen introductoria, no una descripción exacta de la hora civil. Las fronteras y los cambios de reloj responden a decisiones políticas.
+
+La base IANA recoge la historia y las reglas locales. Para Nueva York, utilice un identificador como `America/New_York` en lugar de suponer UTC−5 durante todo el año. Abreviaturas como CST pueden tener distintos significados según la región.
+
+| Información | Qué establece | Qué no establece por sí sola |
+|---|---|---|
+| Instante UTC | Un punto en una línea temporal común | La fecha local |
+| Desfase, como UTC−5 | La diferencia en ese instante | Futuras reglas del horario de verano |
+| Huso asociado a un lugar | Reglas para convertir hora local y UTC | Horario laboral de una persona |
+
+GMT y UTC suelen mostrar la misma hora de desfase cero en la organización cotidiana. Sin embargo, Londres no utiliza GMT todo el año: durante su horario de verano utiliza BST. Indique la fecha completa y el huso local, no solo una abreviatura.
+
+## 2. Compruebe el cambio de hora de cada ciudad
+
+Según las reglas comprobadas el 11 de octubre de 2026, Nueva York aplica el horario de verano estadounidense desde el segundo domingo de marzo hasta el primero de noviembre. Londres cambia el último domingo de marzo y de octubre. Normalmente hay cinco horas de diferencia cuando ambas ciudades usan hora estándar o ambas usan horario de verano; durante los intervalos en que las transiciones no coinciden, hay cuatro. No son cuatro horas durante todo el verano.
+
+NIST explica las reglas estadounidenses y sus excepciones; el Gobierno británico publica las fechas del Reino Unido. No todas las regiones cambian de hora. Actualice los datos de husos del sistema y del calendario. Durante una transición, una hora local puede omitirse o repetirse: «01:30», sin fecha, huso y comprobación de ambigüedad, puede no identificar un instante único.
+
+## 3. Calcule el horario laboral realmente compartido
+
+Estos ejemplos suponen que todos trabajan de 09:00 a 18:00 en su ciudad, sin pausa de comida, festivos ni restricciones personales. Se usan desfases de hora estándar: Seúl UTC+9, Pekín UTC+8, Londres UTC+0, Nueva York UTC−5 y Los Ángeles UTC−8. No es un horario válido para todo el año.
+
+| Participantes | Franja común, hora de Seúl | Explicación |
+|---|---|---|
+| Seúl, Tokio y Pekín | 10:00–18:00 | Las 09:00 de Pekín son las 10:00 de Seúl |
+| Seúl y Londres | Solo el límite de las 18:00 | Londres empieza cuando Seúl termina; no hay un intervalo de duración positiva |
+| Seúl y Nueva York | Ninguna | Nueva York empieza a las 23:00 de Seúl |
+| Seúl y Los Ángeles | Ninguna | Los Ángeles empieza a las 02:00 del día siguiente en Seúl |
+
+Aceptar una llamada fuera del horario laboral es un acuerdo excepcional, no un solapamiento de jornadas. Convierta cada inicio y final, con su fecha, a una línea temporal común. Tome el inicio más tardío y el final más temprano. Si el final no es posterior al inicio, no hay intervalo utilizable. Después excluya descansos y otras indisponibilidades.
+
+## 4. Decida qué conserva una reunión periódica
+
+| Intención | Referencia | Qué puede cambiar |
+|---|---|---|
+| Reunión diaria a las 09:00 en Nueva York | Hora local de Nueva York | Hora de asistencia en otras ciudades |
+| Acción informática a una hora UTC fija | UTC | Hora que muestran los relojes locales |
+| Repartir los horarios incómodos | Rotación acordada expresamente | Revise la carga real de cada persona |
+
+Si cambian los desfases, un evento no puede conservar a la vez una hora UTC fija y la misma hora local en todas las ciudades. Para un plazo único, indique fecha, huso e instante convertido. Para una reunión periódica, acuerde qué ciudad rige la repetición y revise las próximas fechas alrededor de las transiciones.
+
+<details>
+<summary>Antes de enviar una invitación entre varias ciudades</summary>
+
+Compruebe las fechas locales, los husos asociados a lugares, los horarios individuales y si el evento se repite. Pida que cada participante confirme la hora local mostrada por su calendario. Evite las horas repetidas u omitidas, o confirme expresamente el desfase deseado.
+
+</details>
+
+## 5. Reduzca la asistencia simultánea innecesaria
+
+Una decisión escrita puede incluir responsable, contexto, acción solicitada y plazo de respuesta. Reserve las reuniones para lo que requiera conversación. No existe un umbral universal de dos horas compartidas ni un número semanal ideal de reuniones: considere el trabajo, la urgencia, la accesibilidad y las restricciones personales. Rote las llamadas muy tempranas o tardías inevitables.
+
+Para los mercados financieros, una conversión horaria no equivale a un calendario de negociación. Compruebe por separado las sesiones oficiales actuales, festivos, cierres anticipados, descansos y sesiones admitidas por el intermediario. La negociación previa a la apertura no es negociación de futuros. Este artículo no recomienda una franja rentable.
+
+## Fuentes y límites
+
+IANA respalda la distinción entre reglas locales y desfases fijos; NIST y GOV.UK respaldan la comparación de transiciones. Las tablas son ejemplos aritméticos bajo supuestos explícitos, no mediciones de productividad. Las reglas se comprobaron el 11 de octubre de 2026 y pueden cambiar.
+
+- [IANA Time Zone Database](https://www.iana.org/time-zones)
+- [NIST: Daylight Saving Time Rules](https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst)
+- [GOV.UK: When do the clocks change?](https://www.gov.uk/when-do-the-clocks-change)

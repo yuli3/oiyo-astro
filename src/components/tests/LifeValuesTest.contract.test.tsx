@@ -49,7 +49,7 @@ describe("LifeValuesTest interaction contract", () => {
     const source = compact(SOURCE);
 
     expect(source).toContain(
-      '<button type="button" onClick={() => setStage("sort")} className="rounded-xl border border-slate-200 px-5 py-3 font-semibold text-slate-700">{EXTRA_COPY[locale].editCandidates}</button>',
+      '<button type="button" onClick={() => setStage("sort")} className="rounded-xl border border-border px-5 py-3 font-semibold text-slate-700">{EXTRA_COPY[locale].editCandidates}</button>',
     );
   });
 

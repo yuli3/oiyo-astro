@@ -1,0 +1,1530 @@
+{
+ "source": "Our World in Data grapher: life expectancy (UN WPP 2024, HMD), under-5 mortality (UN IGME 2025), average years of schooling ages 15–64 (Barro & Lee 2015; Lee & Lee 2016), median daily income or consumption in 2021 PPP $ (World Bank PIP), internet users (ITU via World Bank).",
+ "asOf": "latest year with data, up to 2025",
+ "years": {
+  "lifeExpectancy": "2023–2023",
+  "childMortality": "2024–2024",
+  "schooling": "2020–2020",
+  "dailyIncome": "2010–2025",
+  "internet": "2015–2025"
+ },
+ "countries": {
+  "ABW": {
+   "lifeExpectancy": 76.4,
+   "internet": 97.2
+  },
+  "AFG": {
+   "lifeExpectancy": 66,
+   "childMortality": 5.3,
+   "schooling": 5.7,
+   "internet": 16.1
+  },
+  "AGO": {
+   "lifeExpectancy": 64.6,
+   "childMortality": 4.9,
+   "dailyIncome": 3.88,
+   "dailyIncomeYear": 2018,
+   "internet": 40.7
+  },
+  "ALB": {
+   "lifeExpectancy": 79.6,
+   "childMortality": 0.92,
+   "schooling": 10.3,
+   "dailyIncome": 12.84,
+   "dailyIncomeYear": 2020,
+   "internet": 85.9
+  },
+  "AND": {
+   "lifeExpectancy": 84,
+   "childMortality": 0.25,
+   "internet": 94.4
+  },
+  "ARE": {
+   "lifeExpectancy": 82.9,
+   "childMortality": 0.48,
+   "schooling": 9.6,
+   "dailyIncome": 76.52,
+   "dailyIncomeYear": 2018,
+   "internet": 100
+  },
+  "ARG": {
+   "lifeExpectancy": 77.4,
+   "childMortality": 0.95,
+   "schooling": 9.9,
+   "internet": 89.7
+  },
+  "ARM": {
+   "lifeExpectancy": 75.7,
+   "childMortality": 0.96,
+   "schooling": 10.5,
+   "dailyIncome": 8.55,
+   "dailyIncomeYear": 2024,
+   "internet": 81.3
+  },
+  "ASM": {
+   "lifeExpectancy": 72.9
+  },
+  "ATG": {
+   "lifeExpectancy": 77.6,
+   "childMortality": 0.91,
+   "internet": 72.7
+  },
+  "AUS": {
+   "lifeExpectancy": 83.9,
+   "childMortality": 0.36,
+   "schooling": 12.9,
+   "dailyIncome": 59.71,
+   "dailyIncomeYear": 2020,
+   "internet": 96.1
+  },
+  "AUT": {
+   "lifeExpectancy": 82,
+   "childMortality": 0.33,
+   "schooling": 10.4,
+   "dailyIncome": 71.44,
+   "dailyIncomeYear": 2023,
+   "internet": 91.9
+  },
+  "AZE": {
+   "lifeExpectancy": 74.4,
+   "childMortality": 1.79,
+   "internet": 90.8
+  },
+  "BDI": {
+   "lifeExpectancy": 63.7,
+   "childMortality": 4.71,
+   "schooling": 5,
+   "dailyIncome": 2.01,
+   "dailyIncomeYear": 2020,
+   "internet": 8.6
+  },
+  "BEL": {
+   "lifeExpectancy": 82.1,
+   "childMortality": 0.37,
+   "schooling": 11.6,
+   "dailyIncome": 62.89,
+   "dailyIncomeYear": 2023,
+   "internet": 95.8
+  },
+  "BEN": {
+   "lifeExpectancy": 60.8,
+   "childMortality": 7.47,
+   "schooling": 6.3,
+   "dailyIncome": 4.2,
+   "dailyIncomeYear": 2021,
+   "internet": 34
+  },
+  "BFA": {
+   "lifeExpectancy": 61.1,
+   "childMortality": 7.49,
+   "dailyIncome": 3.37,
+   "dailyIncomeYear": 2021,
+   "internet": 28.3
+  },
+  "BGD": {
+   "lifeExpectancy": 74.7,
+   "childMortality": 3.05,
+   "schooling": 7.2,
+   "dailyIncome": 6.17,
+   "dailyIncomeYear": 2022,
+   "internet": 53.4
+  },
+  "BGR": {
+   "lifeExpectancy": 75.6,
+   "childMortality": 0.57,
+   "schooling": 10.8,
+   "dailyIncome": 30.18,
+   "dailyIncomeYear": 2023,
+   "internet": 82.4
+  },
+  "BHR": {
+   "lifeExpectancy": 81.3,
+   "childMortality": 0.88,
+   "schooling": 8.2,
+   "internet": 100
+  },
+  "BHS": {
+   "lifeExpectancy": 74.6,
+   "childMortality": 1.24,
+   "internet": 92.5
+  },
+  "BIH": {
+   "lifeExpectancy": 77.9,
+   "childMortality": 0.69,
+   "dailyIncome": 15.79,
+   "dailyIncomeYear": 2021,
+   "internet": 86.1
+  },
+  "BLR": {
+   "lifeExpectancy": 74.4,
+   "childMortality": 0.23,
+   "dailyIncome": 18.39,
+   "dailyIncomeYear": 2020,
+   "internet": 94.3
+  },
+  "BLZ": {
+   "lifeExpectancy": 73.6,
+   "childMortality": 1.27,
+   "schooling": 10.7,
+   "dailyIncome": 14.94,
+   "dailyIncomeYear": 2018,
+   "internet": 80
+  },
+  "BMU": {
+   "lifeExpectancy": 82.3,
+   "internet": 98.4
+  },
+  "BOL": {
+   "lifeExpectancy": 68.6,
+   "childMortality": 1.57,
+   "schooling": 9.1,
+   "dailyIncome": 16.82,
+   "dailyIncomeYear": 2024,
+   "internet": 79.7
+  },
+  "BRA": {
+   "lifeExpectancy": 75.8,
+   "childMortality": 1.42,
+   "schooling": 8,
+   "dailyIncome": 16.91,
+   "dailyIncomeYear": 2024,
+   "internet": 84.5
+  },
+  "BRB": {
+   "lifeExpectancy": 76.2,
+   "childMortality": 0.98,
+   "schooling": 9.7,
+   "dailyIncome": 15.49,
+   "dailyIncomeYear": 2016,
+   "internet": 70.4
+  },
+  "BRN": {
+   "lifeExpectancy": 75.3,
+   "childMortality": 0.99,
+   "schooling": 9.3,
+   "internet": 96.3
+  },
+  "BTN": {
+   "lifeExpectancy": 73,
+   "childMortality": 1.72,
+   "dailyIncome": 16.49,
+   "dailyIncomeYear": 2022,
+   "internet": 91.3
+  },
+  "BWA": {
+   "lifeExpectancy": 69.2,
+   "childMortality": 3.33,
+   "schooling": 10.6,
+   "dailyIncome": 5.83,
+   "dailyIncomeYear": 2015,
+   "internet": 57.5
+  },
+  "CAF": {
+   "lifeExpectancy": 57.4,
+   "childMortality": 8.97,
+   "schooling": 4.6,
+   "dailyIncome": 1.92,
+   "dailyIncomeYear": 2021,
+   "internet": 13.8
+  },
+  "CAN": {
+   "lifeExpectancy": 82.6,
+   "childMortality": 0.54,
+   "schooling": 12.9,
+   "dailyIncome": 64.72,
+   "dailyIncomeYear": 2022,
+   "internet": 94.4
+  },
+  "CHE": {
+   "lifeExpectancy": 84,
+   "childMortality": 0.39,
+   "schooling": 13,
+   "dailyIncome": 71.81,
+   "dailyIncomeYear": 2023,
+   "internet": 97.3
+  },
+  "CHL": {
+   "lifeExpectancy": 81.2,
+   "childMortality": 0.68,
+   "schooling": 10.7,
+   "dailyIncome": 24.57,
+   "dailyIncomeYear": 2024,
+   "internet": 95.6
+  },
+  "CHN": {
+   "lifeExpectancy": 78,
+   "childMortality": 0.57,
+   "schooling": 9,
+   "dailyIncome": 13.45,
+   "dailyIncomeYear": 2022,
+   "internet": 91.6
+  },
+  "CIV": {
+   "lifeExpectancy": 61.9,
+   "childMortality": 6.45,
+   "schooling": 6,
+   "dailyIncome": 4.76,
+   "dailyIncomeYear": 2021,
+   "internet": 41.4
+  },
+  "CMR": {
+   "lifeExpectancy": 63.7,
+   "childMortality": 6.48,
+   "schooling": 7.4,
+   "dailyIncome": 4.99,
+   "dailyIncomeYear": 2021,
+   "internet": 46.3
+  },
+  "COD": {
+   "lifeExpectancy": 61.9,
+   "childMortality": 8.97,
+   "schooling": 4.8,
+   "dailyIncome": 1.32,
+   "dailyIncomeYear": 2020,
+   "internet": 19.7
+  },
+  "COG": {
+   "lifeExpectancy": 65.8,
+   "childMortality": 3.91,
+   "schooling": 6.7,
+   "dailyIncome": 3.76,
+   "dailyIncomeYear": 2011,
+   "internet": 47.3
+  },
+  "COL": {
+   "lifeExpectancy": 77.7,
+   "childMortality": 1.15,
+   "schooling": 10.2,
+   "dailyIncome": 11.28,
+   "dailyIncomeYear": 2024,
+   "internet": 79.3
+  },
+  "COM": {
+   "lifeExpectancy": 66.8,
+   "childMortality": 3.9,
+   "dailyIncome": 6.48,
+   "dailyIncomeYear": 2024,
+   "internet": 32.5
+  },
+  "CPV": {
+   "lifeExpectancy": 76.1,
+   "childMortality": 1.11,
+   "dailyIncome": 6.18,
+   "dailyIncomeYear": 2015,
+   "internet": 74.7
+  },
+  "CRI": {
+   "lifeExpectancy": 80.8,
+   "childMortality": 1.04,
+   "schooling": 9.1,
+   "dailyIncome": 23.39,
+   "dailyIncomeYear": 2025,
+   "internet": 87.2
+  },
+  "CUB": {
+   "lifeExpectancy": 78.1,
+   "childMortality": 0.86,
+   "schooling": 11.6,
+   "internet": 70.5
+  },
+  "CUW": {
+   "lifeExpectancy": 76.8,
+   "internet": 68.1
+  },
+  "CYM": {
+   "lifeExpectancy": 80.4,
+   "internet": 81.1
+  },
+  "CYP": {
+   "lifeExpectancy": 81.6,
+   "childMortality": 0.5,
+   "schooling": 12.4,
+   "dailyIncome": 52.14,
+   "dailyIncomeYear": 2023,
+   "internet": 89.6
+  },
+  "CZE": {
+   "lifeExpectancy": 79.8,
+   "childMortality": 0.26,
+   "schooling": 12.9,
+   "dailyIncome": 39.07,
+   "dailyIncomeYear": 2023,
+   "internet": 87.7
+  },
+  "DEU": {
+   "lifeExpectancy": 81.4,
+   "childMortality": 0.37,
+   "schooling": 13.1,
+   "dailyIncome": 64.18,
+   "dailyIncomeYear": 2022,
+   "internet": 93.5
+  },
+  "DJI": {
+   "lifeExpectancy": 66,
+   "childMortality": 4.89,
+   "dailyIncome": 4.7,
+   "dailyIncomeYear": 2017,
+   "internet": 65.3
+  },
+  "DMA": {
+   "lifeExpectancy": 71.1,
+   "childMortality": 3.57,
+   "internet": 82
+  },
+  "DNK": {
+   "lifeExpectancy": 81.9,
+   "childMortality": 0.4,
+   "schooling": 11.7,
+   "dailyIncome": 60.72,
+   "dailyIncomeYear": 2023,
+   "internet": 99.8
+  },
+  "DOM": {
+   "lifeExpectancy": 73.7,
+   "childMortality": 3.06,
+   "schooling": 9,
+   "dailyIncome": 17.48,
+   "dailyIncomeYear": 2024,
+   "internet": 91
+  },
+  "DZA": {
+   "lifeExpectancy": 76.3,
+   "childMortality": 2.16,
+   "schooling": 8.2,
+   "dailyIncome": 9.11,
+   "dailyIncomeYear": 2011,
+   "internet": 77.4
+  },
+  "ECU": {
+   "lifeExpectancy": 77.4,
+   "childMortality": 1.29,
+   "schooling": 9.1,
+   "dailyIncome": 12.7,
+   "dailyIncomeYear": 2025,
+   "internet": 77.2
+  },
+  "EGY": {
+   "lifeExpectancy": 71.6,
+   "childMortality": 2.24,
+   "schooling": 8,
+   "dailyIncome": 7.61,
+   "dailyIncomeYear": 2021,
+   "internet": 74.6
+  },
+  "ERI": {
+   "lifeExpectancy": 68.6,
+   "childMortality": 3.43,
+   "internet": 14.3
+  },
+  "ESP": {
+   "lifeExpectancy": 83.7,
+   "childMortality": 0.32,
+   "schooling": 11.5,
+   "dailyIncome": 47.3,
+   "dailyIncomeYear": 2023,
+   "internet": 95.8
+  },
+  "EST": {
+   "lifeExpectancy": 79.2,
+   "childMortality": 0.2,
+   "schooling": 12.3,
+   "dailyIncome": 36.52,
+   "dailyIncomeYear": 2023,
+   "internet": 92.2
+  },
+  "ETH": {
+   "lifeExpectancy": 67.3,
+   "childMortality": 4.45,
+   "dailyIncome": 3.49,
+   "dailyIncomeYear": 2021,
+   "internet": 21.9
+  },
+  "FIN": {
+   "lifeExpectancy": 81.9,
+   "childMortality": 0.24,
+   "schooling": 11.1,
+   "dailyIncome": 56.48,
+   "dailyIncomeYear": 2023,
+   "internet": 93.7
+  },
+  "FJI": {
+   "lifeExpectancy": 67.3,
+   "childMortality": 2.91,
+   "schooling": 11.5,
+   "dailyIncome": 7.16,
+   "dailyIncomeYear": 2019,
+   "internet": 74.7
+  },
+  "FRA": {
+   "lifeExpectancy": 83.3,
+   "childMortality": 0.43,
+   "schooling": 11.9,
+   "dailyIncome": 57.21,
+   "dailyIncomeYear": 2023,
+   "internet": 88.7
+  },
+  "FRO": {
+   "lifeExpectancy": 80.2,
+   "internet": 97.6
+  },
+  "FSM": {
+   "lifeExpectancy": 67.2,
+   "childMortality": 2.24,
+   "dailyIncome": 4.66,
+   "dailyIncomeYear": 2013,
+   "internet": 39.5
+  },
+  "GAB": {
+   "lifeExpectancy": 68.3,
+   "childMortality": 3.26,
+   "schooling": 10.2,
+   "dailyIncome": 11.31,
+   "dailyIncomeYear": 2017,
+   "internet": 68.7
+  },
+  "GBR": {
+   "lifeExpectancy": 81.3,
+   "childMortality": 0.47,
+   "schooling": 12.9,
+   "dailyIncome": 54.55,
+   "dailyIncomeYear": 2021,
+   "internet": 95.5
+  },
+  "GEO": {
+   "lifeExpectancy": 74.5,
+   "childMortality": 0.86,
+   "dailyIncome": 8.77,
+   "dailyIncomeYear": 2024,
+   "internet": 83.8
+  },
+  "GHA": {
+   "lifeExpectancy": 65.5,
+   "childMortality": 3.59,
+   "schooling": 8.4,
+   "dailyIncome": 3.72,
+   "dailyIncomeYear": 2016,
+   "internet": 72.2
+  },
+  "GIB": {
+   "lifeExpectancy": 83.6,
+   "internet": 94.4
+  },
+  "GIN": {
+   "lifeExpectancy": 60.7,
+   "childMortality": 9.21,
+   "dailyIncome": 5.65,
+   "dailyIncomeYear": 2018,
+   "internet": 33.3
+  },
+  "GMB": {
+   "lifeExpectancy": 65.9,
+   "childMortality": 4.24,
+   "schooling": 4.9,
+   "dailyIncome": 4.86,
+   "dailyIncomeYear": 2020,
+   "internet": 49.5
+  },
+  "GNB": {
+   "lifeExpectancy": 64.1,
+   "childMortality": 6.73,
+   "dailyIncome": 3.45,
+   "dailyIncomeYear": 2021,
+   "internet": 29.8
+  },
+  "GNQ": {
+   "lifeExpectancy": 63.7,
+   "childMortality": 6.8,
+   "dailyIncome": 7.13,
+   "dailyIncomeYear": 2022,
+   "internet": 63.3
+  },
+  "GRC": {
+   "lifeExpectancy": 81.9,
+   "childMortality": 0.38,
+   "schooling": 11.9,
+   "dailyIncome": 28.91,
+   "dailyIncomeYear": 2023,
+   "internet": 86.3
+  },
+  "GRD": {
+   "lifeExpectancy": 75.2,
+   "childMortality": 1.8,
+   "dailyIncome": 13.92,
+   "dailyIncomeYear": 2018,
+   "internet": 70.2
+  },
+  "GRL": {
+   "lifeExpectancy": 70.1,
+   "internet": 69.5
+  },
+  "GTM": {
+   "lifeExpectancy": 72.6,
+   "childMortality": 2.05,
+   "schooling": 6.3,
+   "dailyIncome": 8.73,
+   "dailyIncomeYear": 2023,
+   "internet": 60.2
+  },
+  "GUM": {
+   "lifeExpectancy": 77.2,
+   "internet": 80.5
+  },
+  "GUY": {
+   "lifeExpectancy": 70.2,
+   "childMortality": 2.52,
+   "schooling": 8.5,
+   "internet": 83
+  },
+  "HKG": {
+   "lifeExpectancy": 85.5,
+   "schooling": 12.8,
+   "internet": 95.8
+  },
+  "HND": {
+   "lifeExpectancy": 72.9,
+   "childMortality": 1.5,
+   "schooling": 7.5,
+   "dailyIncome": 8.35,
+   "dailyIncomeYear": 2024,
+   "internet": 58.6
+  },
+  "HRV": {
+   "lifeExpectancy": 78.6,
+   "childMortality": 0.56,
+   "schooling": 12,
+   "dailyIncome": 36.73,
+   "dailyIncomeYear": 2023,
+   "internet": 83.6
+  },
+  "HTI": {
+   "lifeExpectancy": 64.9,
+   "childMortality": 5.28,
+   "schooling": 6,
+   "dailyIncome": 1.92,
+   "dailyIncomeYear": 2012,
+   "internet": 47.9
+  },
+  "HUN": {
+   "lifeExpectancy": 77,
+   "childMortality": 0.37,
+   "schooling": 12,
+   "dailyIncome": 22.14,
+   "dailyIncomeYear": 2017,
+   "internet": 93.8
+  },
+  "IDN": {
+   "lifeExpectancy": 71.1,
+   "childMortality": 1.77,
+   "schooling": 9.1,
+   "dailyIncome": 6.77,
+   "dailyIncomeYear": 2025,
+   "internet": 72.8
+  },
+  "IMN": {
+   "lifeExpectancy": 81
+  },
+  "IND": {
+   "lifeExpectancy": 72,
+   "childMortality": 2.66,
+   "schooling": 7.8,
+   "dailyIncome": 5.94,
+   "dailyIncomeYear": 2023,
+   "internet": 70
+  },
+  "IRL": {
+   "lifeExpectancy": 82.4,
+   "childMortality": 0.39,
+   "schooling": 13.7,
+   "dailyIncome": 50.49,
+   "dailyIncomeYear": 2023,
+   "internet": 97.2
+  },
+  "IRN": {
+   "lifeExpectancy": 77.7,
+   "childMortality": 1.13,
+   "schooling": 9.8,
+   "dailyIncome": 10.19,
+   "dailyIncomeYear": 2023,
+   "internet": 85.3
+  },
+  "IRQ": {
+   "lifeExpectancy": 72.3,
+   "childMortality": 2.18,
+   "schooling": 8.3,
+   "dailyIncome": 10.89,
+   "dailyIncomeYear": 2023,
+   "internet": 81.5
+  },
+  "ISL": {
+   "lifeExpectancy": 82.7,
+   "childMortality": 0.28,
+   "schooling": 13.5,
+   "dailyIncome": 60.63,
+   "dailyIncomeYear": 2019,
+   "internet": 98.2
+  },
+  "ISR": {
+   "lifeExpectancy": 82.4,
+   "childMortality": 0.33,
+   "schooling": 12,
+   "dailyIncome": 37.48,
+   "dailyIncomeYear": 2022,
+   "internet": 88.2
+  },
+  "ITA": {
+   "lifeExpectancy": 83.7,
+   "childMortality": 0.27,
+   "schooling": 11.5,
+   "dailyIncome": 48.79,
+   "dailyIncomeYear": 2023,
+   "internet": 89.2
+  },
+  "JAM": {
+   "lifeExpectancy": 71.5,
+   "childMortality": 1.78,
+   "schooling": 10.1,
+   "dailyIncome": 14.29,
+   "dailyIncomeYear": 2021,
+   "internet": 90.1
+  },
+  "JOR": {
+   "lifeExpectancy": 77.8,
+   "childMortality": 1.29,
+   "schooling": 10.8,
+   "dailyIncome": 13.71,
+   "dailyIncomeYear": 2010,
+   "internet": 95.6
+  },
+  "JPN": {
+   "lifeExpectancy": 84.7,
+   "childMortality": 0.24,
+   "schooling": 12.8,
+   "dailyIncome": 42.17,
+   "dailyIncomeYear": 2020,
+   "internet": 85.5
+  },
+  "KAZ": {
+   "lifeExpectancy": 74.4,
+   "childMortality": 0.94,
+   "schooling": 11.8,
+   "dailyIncome": 12.24,
+   "dailyIncomeYear": 2021,
+   "internet": 93.4
+  },
+  "KEN": {
+   "lifeExpectancy": 63.6,
+   "childMortality": 3.88,
+   "schooling": 6.7,
+   "dailyIncome": 3.21,
+   "dailyIncomeYear": 2022,
+   "internet": 35
+  },
+  "KGZ": {
+   "lifeExpectancy": 71.7,
+   "childMortality": 1.68,
+   "schooling": 11.2,
+   "dailyIncome": 6.86,
+   "dailyIncomeYear": 2024,
+   "internet": 92
+  },
+  "KHM": {
+   "lifeExpectancy": 70.7,
+   "childMortality": 1.84,
+   "schooling": 5.8,
+   "internet": 68.5
+  },
+  "KIR": {
+   "lifeExpectancy": 66.5,
+   "childMortality": 5.31,
+   "dailyIncome": 8.05,
+   "dailyIncomeYear": 2023,
+   "internet": 89.4
+  },
+  "KNA": {
+   "lifeExpectancy": 72.1,
+   "childMortality": 1.59,
+   "internet": 76.9
+  },
+  "KOR": {
+   "lifeExpectancy": 84.3,
+   "childMortality": 0.28,
+   "schooling": 13.7,
+   "dailyIncome": 54.25,
+   "dailyIncomeYear": 2021,
+   "internet": 97.9
+  },
+  "KWT": {
+   "lifeExpectancy": 80.4,
+   "childMortality": 0.81,
+   "schooling": 6.6,
+   "internet": 100
+  },
+  "LAO": {
+   "lifeExpectancy": 69,
+   "childMortality": 2.94,
+   "schooling": 6,
+   "dailyIncome": 6.17,
+   "dailyIncomeYear": 2024,
+   "internet": 65.6
+  },
+  "LBN": {
+   "lifeExpectancy": 77.8,
+   "childMortality": 1.76,
+   "dailyIncome": 8.19,
+   "dailyIncomeYear": 2022,
+   "internet": 80.6
+  },
+  "LBR": {
+   "lifeExpectancy": 62.2,
+   "childMortality": 8.64,
+   "schooling": 5.8,
+   "dailyIncome": 3.87,
+   "dailyIncomeYear": 2016,
+   "internet": 32.2
+  },
+  "LBY": {
+   "lifeExpectancy": 69.3,
+   "childMortality": 0.98,
+   "schooling": 9.6,
+   "internet": 82
+  },
+  "LCA": {
+   "lifeExpectancy": 72.7,
+   "childMortality": 1.72,
+   "dailyIncome": 16.99,
+   "dailyIncomeYear": 2015,
+   "internet": 68.2
+  },
+  "LIE": {
+   "lifeExpectancy": 83.6,
+   "internet": 98.3
+  },
+  "LKA": {
+   "lifeExpectancy": 77.5,
+   "childMortality": 0.59,
+   "schooling": 10.3,
+   "dailyIncome": 7.91,
+   "dailyIncomeYear": 2019,
+   "internet": 54.6
+  },
+  "LSO": {
+   "lifeExpectancy": 57.4,
+   "childMortality": 6,
+   "schooling": 6.9,
+   "dailyIncome": 3.58,
+   "dailyIncomeYear": 2017,
+   "internet": 51.8
+  },
+  "LTU": {
+   "lifeExpectancy": 76,
+   "childMortality": 0.34,
+   "schooling": 12.5,
+   "dailyIncome": 37.6,
+   "dailyIncomeYear": 2023,
+   "internet": 89.2
+  },
+  "LUX": {
+   "lifeExpectancy": 82.2,
+   "childMortality": 0.22,
+   "schooling": 11.5,
+   "dailyIncome": 89.49,
+   "dailyIncomeYear": 2023,
+   "internet": 99.1
+  },
+  "LVA": {
+   "lifeExpectancy": 76.2,
+   "childMortality": 0.25,
+   "schooling": 12,
+   "dailyIncome": 32.95,
+   "dailyIncomeYear": 2023,
+   "internet": 92.7
+  },
+  "MAC": {
+   "lifeExpectancy": 83.1,
+   "schooling": 11,
+   "internet": 89.8
+  },
+  "MAF": {
+   "lifeExpectancy": 80.2
+  },
+  "MAR": {
+   "lifeExpectancy": 75.3,
+   "childMortality": 1.57,
+   "schooling": 6.8,
+   "dailyIncome": 8.43,
+   "dailyIncomeYear": 2013,
+   "internet": 91.2
+  },
+  "MCO": {
+   "lifeExpectancy": 86.4,
+   "childMortality": 0.27,
+   "internet": 99
+  },
+  "MDA": {
+   "lifeExpectancy": 71.2,
+   "childMortality": 1.65,
+   "schooling": 10.8,
+   "dailyIncome": 11.64,
+   "dailyIncomeYear": 2024,
+   "internet": 77.4
+  },
+  "MDG": {
+   "lifeExpectancy": 63.6,
+   "childMortality": 6.24,
+   "dailyIncome": 2.24,
+   "dailyIncomeYear": 2021,
+   "internet": 18.7
+  },
+  "MDV": {
+   "lifeExpectancy": 81,
+   "childMortality": 0.54,
+   "schooling": 8.1,
+   "dailyIncome": 15.01,
+   "dailyIncomeYear": 2019,
+   "internet": 85.2
+  },
+  "MEX": {
+   "lifeExpectancy": 75.1,
+   "childMortality": 1.31,
+   "schooling": 10.2,
+   "dailyIncome": 14.29,
+   "dailyIncomeYear": 2024,
+   "internet": 83.1
+  },
+  "MHL": {
+   "lifeExpectancy": 66.9,
+   "childMortality": 2.67,
+   "dailyIncome": 10.16,
+   "dailyIncomeYear": 2019,
+   "internet": 65.9
+  },
+  "MKD": {
+   "lifeExpectancy": 77.4,
+   "childMortality": 0.28,
+   "dailyIncome": 15.52,
+   "dailyIncomeYear": 2019,
+   "internet": 93.1
+  },
+  "MLI": {
+   "lifeExpectancy": 60.4,
+   "childMortality": 7.3,
+   "schooling": 3.5,
+   "dailyIncome": 3.67,
+   "dailyIncomeYear": 2021,
+   "internet": 36.8
+  },
+  "MLT": {
+   "lifeExpectancy": 83.3,
+   "childMortality": 0.53,
+   "schooling": 12.1,
+   "dailyIncome": 56.03,
+   "dailyIncomeYear": 2023,
+   "internet": 93.9
+  },
+  "MMR": {
+   "lifeExpectancy": 66.9,
+   "childMortality": 3.69,
+   "schooling": 6.5,
+   "dailyIncome": 5.44,
+   "dailyIncomeYear": 2017,
+   "internet": 45.4
+  },
+  "MNE": {
+   "lifeExpectancy": 77.1,
+   "childMortality": 0.24,
+   "dailyIncome": 17.78,
+   "dailyIncomeYear": 2021,
+   "internet": 88.9
+  },
+  "MNG": {
+   "lifeExpectancy": 71.7,
+   "childMortality": 1.34,
+   "schooling": 10,
+   "dailyIncome": 12.03,
+   "dailyIncomeYear": 2022,
+   "internet": 85.1
+  },
+  "MNP": {
+   "lifeExpectancy": 78.8
+  },
+  "MOZ": {
+   "lifeExpectancy": 63.6,
+   "childMortality": 5.94,
+   "schooling": 4.2,
+   "dailyIncome": 1.48,
+   "dailyIncomeYear": 2022,
+   "internet": 20.5
+  },
+  "MRT": {
+   "lifeExpectancy": 68.5,
+   "childMortality": 3.69,
+   "schooling": 5.5,
+   "dailyIncome": 6.06,
+   "dailyIncomeYear": 2019,
+   "internet": 45.8
+  },
+  "MUS": {
+   "lifeExpectancy": 74.9,
+   "childMortality": 1.54,
+   "schooling": 10.4,
+   "dailyIncome": 13.51,
+   "dailyIncomeYear": 2017,
+   "internet": 73.3
+  },
+  "MWI": {
+   "lifeExpectancy": 67.4,
+   "childMortality": 4.88,
+   "schooling": 5.4,
+   "dailyIncome": 1.92,
+   "dailyIncomeYear": 2019,
+   "internet": 19
+  },
+  "MYS": {
+   "lifeExpectancy": 76.7,
+   "childMortality": 0.83,
+   "schooling": 12,
+   "dailyIncome": 29.55,
+   "dailyIncomeYear": 2021,
+   "internet": 98
+  },
+  "NAM": {
+   "lifeExpectancy": 67.4,
+   "childMortality": 3.95,
+   "schooling": 6.9,
+   "dailyIncome": 6.21,
+   "dailyIncomeYear": 2015,
+   "internet": 64.9
+  },
+  "NCL": {
+   "lifeExpectancy": 78.8,
+   "internet": 82
+  },
+  "NER": {
+   "lifeExpectancy": 61.2,
+   "childMortality": 11.07,
+   "schooling": 3,
+   "dailyIncome": 2.66,
+   "dailyIncomeYear": 2021,
+   "internet": 15.6
+  },
+  "NGA": {
+   "lifeExpectancy": 54.5,
+   "childMortality": 11.56,
+   "dailyIncome": 3.39,
+   "dailyIncomeYear": 2022,
+   "internet": 41.2
+  },
+  "NIC": {
+   "lifeExpectancy": 74.9,
+   "childMortality": 1.12,
+   "schooling": 7.8,
+   "dailyIncome": 8.9,
+   "dailyIncomeYear": 2014,
+   "internet": 61.4
+  },
+  "NLD": {
+   "lifeExpectancy": 82.2,
+   "childMortality": 0.39,
+   "schooling": 11.8,
+   "dailyIncome": 69.09,
+   "dailyIncomeYear": 2021,
+   "internet": 97
+  },
+  "NOR": {
+   "lifeExpectancy": 83.3,
+   "childMortality": 0.25,
+   "schooling": 12.1,
+   "dailyIncome": 77.76,
+   "dailyIncomeYear": 2023,
+   "internet": 99
+  },
+  "NPL": {
+   "lifeExpectancy": 70.4,
+   "childMortality": 2.51,
+   "schooling": 6.2,
+   "dailyIncome": 8.03,
+   "dailyIncomeYear": 2022,
+   "internet": 46.3
+  },
+  "NRU": {
+   "lifeExpectancy": 62.1,
+   "childMortality": 0.83,
+   "dailyIncome": 6.27,
+   "dailyIncomeYear": 2012,
+   "internet": 83
+  },
+  "NZL": {
+   "lifeExpectancy": 82.1,
+   "childMortality": 0.47,
+   "schooling": 10.8,
+   "internet": 93.5
+  },
+  "OMN": {
+   "lifeExpectancy": 80,
+   "childMortality": 1.03,
+   "internet": 95.3
+  },
+  "PAK": {
+   "lifeExpectancy": 67.6,
+   "childMortality": 5.6,
+   "schooling": 6.4,
+   "dailyIncome": 4.32,
+   "dailyIncomeYear": 2024,
+   "internet": 57.3
+  },
+  "PAN": {
+   "lifeExpectancy": 79.6,
+   "childMortality": 1.53,
+   "schooling": 10.4,
+   "dailyIncome": 18.58,
+   "dailyIncomeYear": 2024,
+   "internet": 72.8
+  },
+  "PER": {
+   "lifeExpectancy": 77.7,
+   "childMortality": 1.29,
+   "schooling": 10,
+   "dailyIncome": 10.67,
+   "dailyIncomeYear": 2024,
+   "internet": 82
+  },
+  "PHL": {
+   "lifeExpectancy": 69.8,
+   "childMortality": 2.65,
+   "schooling": 9.4,
+   "dailyIncome": 5.67,
+   "dailyIncomeYear": 2023,
+   "internet": 67.3
+  },
+  "PLW": {
+   "lifeExpectancy": 69.3,
+   "childMortality": 2.14,
+   "internet": 83.9
+  },
+  "PNG": {
+   "lifeExpectancy": 66.1,
+   "childMortality": 3.94,
+   "schooling": 4.8,
+   "internet": 18.8
+  },
+  "POL": {
+   "lifeExpectancy": 78.6,
+   "childMortality": 0.42,
+   "schooling": 12,
+   "dailyIncome": 38.84,
+   "dailyIncomeYear": 2023,
+   "internet": 88.6
+  },
+  "PRI": {
+   "lifeExpectancy": 81.7,
+   "internet": 87.3
+  },
+  "PRK": {
+   "lifeExpectancy": 73.6,
+   "childMortality": 1.67
+  },
+  "PRT": {
+   "lifeExpectancy": 82.4,
+   "childMortality": 0.32,
+   "schooling": 9.6,
+   "dailyIncome": 33.68,
+   "dailyIncomeYear": 2023,
+   "internet": 88.5
+  },
+  "PRY": {
+   "lifeExpectancy": 73.8,
+   "childMortality": 1.63,
+   "schooling": 8.8,
+   "dailyIncome": 14.92,
+   "dailyIncomeYear": 2024,
+   "internet": 81.6
+  },
+  "PSE": {
+   "lifeExpectancy": 65.2,
+   "childMortality": 3.79,
+   "dailyIncome": 12.05,
+   "dailyIncomeYear": 2023,
+   "internet": 86.6
+  },
+  "PYF": {
+   "lifeExpectancy": 84.1,
+   "internet": 72.7
+  },
+  "QAT": {
+   "lifeExpectancy": 82.4,
+   "childMortality": 0.59,
+   "schooling": 8.5,
+   "dailyIncome": 73.36,
+   "dailyIncomeYear": 2017,
+   "internet": 98.1
+  },
+  "ROU": {
+   "lifeExpectancy": 75.9,
+   "childMortality": 0.73,
+   "schooling": 11.3,
+   "dailyIncome": 29.85,
+   "dailyIncomeYear": 2023,
+   "internet": 91.3
+  },
+  "RUS": {
+   "lifeExpectancy": 73.2,
+   "childMortality": 0.52,
+   "schooling": 11.6,
+   "dailyIncome": 20.29,
+   "dailyIncomeYear": 2020,
+   "internet": 94.4
+  },
+  "RWA": {
+   "lifeExpectancy": 67.8,
+   "childMortality": 3.77,
+   "schooling": 5.2,
+   "dailyIncome": 3.51,
+   "dailyIncomeYear": 2023,
+   "internet": 31.7
+  },
+  "SAU": {
+   "lifeExpectancy": 78.7,
+   "childMortality": 0.6,
+   "schooling": 9.9,
+   "internet": 100
+  },
+  "SDN": {
+   "lifeExpectancy": 66.3,
+   "childMortality": 6.16,
+   "schooling": 4.4,
+   "dailyIncome": 5.92,
+   "dailyIncomeYear": 2014,
+   "internet": 18.6
+  },
+  "SEN": {
+   "lifeExpectancy": 68.7,
+   "childMortality": 3.65,
+   "schooling": 4.4,
+   "dailyIncome": 5.04,
+   "dailyIncomeYear": 2021,
+   "internet": 60.1
+  },
+  "SGP": {
+   "lifeExpectancy": 83.7,
+   "childMortality": 0.27,
+   "schooling": 13.1,
+   "internet": 94.4
+  },
+  "SLB": {
+   "lifeExpectancy": 70.5,
+   "childMortality": 2,
+   "dailyIncome": 3.43,
+   "dailyIncomeYear": 2012,
+   "internet": 29
+  },
+  "SLE": {
+   "lifeExpectancy": 61.8,
+   "childMortality": 9.05,
+   "schooling": 5,
+   "dailyIncome": 3.36,
+   "dailyIncomeYear": 2018,
+   "internet": 25.1
+  },
+  "SLV": {
+   "lifeExpectancy": 72.1,
+   "childMortality": 1,
+   "schooling": 8.1,
+   "dailyIncome": 11.88,
+   "dailyIncomeYear": 2023,
+   "internet": 66.5
+  },
+  "SMR": {
+   "lifeExpectancy": 85.7,
+   "childMortality": 0.13,
+   "internet": 97.4
+  },
+  "SOM": {
+   "lifeExpectancy": 58.8,
+   "childMortality": 10.11,
+   "internet": 27.9
+  },
+  "SRB": {
+   "lifeExpectancy": 76.8,
+   "childMortality": 0.54,
+   "schooling": 11.7,
+   "dailyIncome": 21.06,
+   "dailyIncomeYear": 2023,
+   "internet": 87.7
+  },
+  "SSD": {
+   "lifeExpectancy": 57.6,
+   "childMortality": 9.67,
+   "dailyIncome": 1.65,
+   "dailyIncomeYear": 2016,
+   "internet": 6.7
+  },
+  "STP": {
+   "lifeExpectancy": 69.7,
+   "childMortality": 1.36,
+   "dailyIncome": 5.97,
+   "dailyIncomeYear": 2017,
+   "internet": 59.1
+  },
+  "SUR": {
+   "lifeExpectancy": 73.6,
+   "childMortality": 1.58,
+   "dailyIncome": 14.44,
+   "dailyIncomeYear": 2022,
+   "internet": 87.4
+  },
+  "SVK": {
+   "lifeExpectancy": 78.3,
+   "childMortality": 0.63,
+   "schooling": 13.1,
+   "dailyIncome": 24.46,
+   "dailyIncomeYear": 2023,
+   "internet": 89.8
+  },
+  "SVN": {
+   "lifeExpectancy": 81.6,
+   "childMortality": 0.23,
+   "schooling": 12.1,
+   "dailyIncome": 49.24,
+   "dailyIncomeYear": 2023,
+   "internet": 90.8
+  },
+  "SWE": {
+   "lifeExpectancy": 83.3,
+   "childMortality": 0.24,
+   "schooling": 11.9,
+   "dailyIncome": 55.6,
+   "dailyIncomeYear": 2023,
+   "internet": 95.8
+  },
+  "SWZ": {
+   "lifeExpectancy": 64.1,
+   "childMortality": 4.51,
+   "schooling": 6.5,
+   "dailyIncome": 3.38,
+   "dailyIncomeYear": 2016,
+   "internet": 63.4
+  },
+  "SXM": {
+   "lifeExpectancy": 76.4
+  },
+  "SYC": {
+   "lifeExpectancy": 72.9,
+   "childMortality": 1.4,
+   "dailyIncome": 21,
+   "dailyIncomeYear": 2018,
+   "internet": 87.8
+  },
+  "SYR": {
+   "lifeExpectancy": 72.1,
+   "childMortality": 1.84,
+   "schooling": 7.9,
+   "dailyIncome": 4.61,
+   "dailyIncomeYear": 2022,
+   "internet": 33.8
+  },
+  "TCA": {
+   "lifeExpectancy": 78,
+   "childMortality": 0.47
+  },
+  "TCD": {
+   "lifeExpectancy": 55.1,
+   "childMortality": 9.73,
+   "dailyIncome": 3.66,
+   "dailyIncomeYear": 2022,
+   "internet": 12.6
+  },
+  "TGO": {
+   "lifeExpectancy": 62.7,
+   "childMortality": 5.61,
+   "schooling": 7.7,
+   "dailyIncome": 3.85,
+   "dailyIncomeYear": 2021,
+   "internet": 39.5
+  },
+  "THA": {
+   "lifeExpectancy": 76.4,
+   "childMortality": 0.9,
+   "schooling": 9.3,
+   "dailyIncome": 15.72,
+   "dailyIncomeYear": 2024,
+   "internet": 90.9
+  },
+  "TJK": {
+   "lifeExpectancy": 71.8,
+   "childMortality": 2.81,
+   "schooling": 10.1,
+   "dailyIncome": 7.61,
+   "dailyIncomeYear": 2024,
+   "internet": 55.8
+  },
+  "TKM": {
+   "lifeExpectancy": 70.1,
+   "childMortality": 3.9,
+   "internet": 18
+  },
+  "TLS": {
+   "lifeExpectancy": 67.7,
+   "childMortality": 4.76,
+   "dailyIncome": 3.21,
+   "dailyIncomeYear": 2014,
+   "internet": 35
+  },
+  "TON": {
+   "lifeExpectancy": 72.9,
+   "childMortality": 0.95,
+   "schooling": 11.4,
+   "dailyIncome": 11,
+   "dailyIncomeYear": 2021,
+   "internet": 67.4
+  },
+  "TTO": {
+   "lifeExpectancy": 73.5,
+   "childMortality": 1.88,
+   "schooling": 11.3,
+   "internet": 82.2
+  },
+  "TUN": {
+   "lifeExpectancy": 76.5,
+   "childMortality": 1.21,
+   "schooling": 9.3,
+   "dailyIncome": 13.04,
+   "dailyIncomeYear": 2021,
+   "internet": 76.5
+  },
+  "TUR": {
+   "lifeExpectancy": 77.2,
+   "childMortality": 0.96,
+   "schooling": 8.5,
+   "dailyIncome": 27.75,
+   "dailyIncomeYear": 2023,
+   "internet": 89.8
+  },
+  "TUV": {
+   "lifeExpectancy": 67.1,
+   "childMortality": 1.92,
+   "dailyIncome": 6.94,
+   "dailyIncomeYear": 2010,
+   "internet": 35.2
+  },
+  "TZA": {
+   "lifeExpectancy": 67,
+   "childMortality": 3.7,
+   "schooling": 6.9,
+   "dailyIncome": 2.96,
+   "dailyIncomeYear": 2018,
+   "internet": 31.2
+  },
+  "UGA": {
+   "lifeExpectancy": 68.3,
+   "childMortality": 4.87,
+   "schooling": 6.7,
+   "dailyIncome": 2.8,
+   "dailyIncomeYear": 2023,
+   "internet": 8.9
+  },
+  "UKR": {
+   "lifeExpectancy": 73.4,
+   "childMortality": 0.79,
+   "schooling": 10.8,
+   "dailyIncome": 13.7,
+   "dailyIncomeYear": 2020,
+   "internet": 82.5
+  },
+  "URY": {
+   "lifeExpectancy": 78.1,
+   "childMortality": 0.74,
+   "schooling": 8.8,
+   "dailyIncome": 26.84,
+   "dailyIncomeYear": 2024,
+   "internet": 92
+  },
+  "USA": {
+   "lifeExpectancy": 79.3,
+   "childMortality": 0.65,
+   "schooling": 13.3,
+   "dailyIncome": 72.07,
+   "dailyIncomeYear": 2024,
+   "internet": 94.7
+  },
+  "UZB": {
+   "lifeExpectancy": 72.4,
+   "childMortality": 1.34,
+   "dailyIncome": 16.54,
+   "dailyIncomeYear": 2025,
+   "internet": 89.5
+  },
+  "VCT": {
+   "lifeExpectancy": 71.2,
+   "childMortality": 1.13,
+   "internet": 76.2
+  },
+  "VEN": {
+   "lifeExpectancy": 72.5,
+   "childMortality": 2.42,
+   "schooling": 9.3,
+   "internet": 76.7
+  },
+  "VGB": {
+   "lifeExpectancy": 77.3,
+   "childMortality": 1.24,
+   "internet": 77.7
+  },
+  "VIR": {
+   "lifeExpectancy": 75.5,
+   "internet": 64.4
+  },
+  "VNM": {
+   "lifeExpectancy": 74.6,
+   "childMortality": 1.73,
+   "schooling": 8.3,
+   "dailyIncome": 13.32,
+   "dailyIncomeYear": 2022,
+   "internet": 84.2
+  },
+  "VUT": {
+   "lifeExpectancy": 71.5,
+   "childMortality": 1.71,
+   "dailyIncome": 5.17,
+   "dailyIncomeYear": 2019,
+   "internet": 22.4
+  },
+  "WSM": {
+   "lifeExpectancy": 71.7,
+   "childMortality": 1.49,
+   "dailyIncome": 8.38,
+   "dailyIncomeYear": 2013
+  },
+  "YEM": {
+   "lifeExpectancy": 69.3,
+   "childMortality": 3.81,
+   "schooling": 5.6,
+   "dailyIncome": 3.8,
+   "dailyIncomeYear": 2014,
+   "internet": 17.5
+  },
+  "ZAF": {
+   "lifeExpectancy": 66.1,
+   "childMortality": 3.51,
+   "schooling": 10.5,
+   "dailyIncome": 6.56,
+   "dailyIncomeYear": 2022,
+   "internet": 78.4
+  },
+  "ZMB": {
+   "lifeExpectancy": 66.3,
+   "childMortality": 4.84,
+   "schooling": 8.4,
+   "dailyIncome": 1.68,
+   "dailyIncomeYear": 2022,
+   "internet": 17.1
+  },
+  "ZWE": {
+   "lifeExpectancy": 62.8,
+   "childMortality": 6.47,
+   "schooling": 8.3,
+   "dailyIncome": 3.05,
+   "dailyIncomeYear": 2019,
+   "internet": 41.6
+  }
+ }
+}

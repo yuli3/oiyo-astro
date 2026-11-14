@@ -509,14 +509,14 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
       <div className="flex items-start gap-3">
         <Heart className="mt-1 h-6 w-6 shrink-0 text-rose-700" aria-hidden="true" />
         <div>
-          <h2 id="relationship-comparison-title" className="text-xl font-black text-slate-950">{t.title}</h2>
+          <h2 id="relationship-comparison-title" className="text-xl font-black text-foreground">{t.title}</h2>
           <p className="mt-2 text-sm leading-6 text-slate-700">{t.description}</p>
           <p className="mt-1 text-xs leading-5 text-rose-800">{t.boundary}</p>
         </div>
       </div>
 
       <div className="mt-4 rounded-xl border border-rose-100 bg-card p-4">
-        <h3 className="flex items-center gap-2 text-sm font-bold text-slate-950"><ShieldCheck className="h-4 w-4 text-rose-700" aria-hidden="true" />{t.guardrailsTitle}</h3>
+        <h3 className="flex items-center gap-2 text-sm font-bold text-foreground"><ShieldCheck className="h-4 w-4 text-rose-700" aria-hidden="true" />{t.guardrailsTitle}</h3>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-5 text-slate-700">
           {t.guardrails.map((item) => <li key={item}>{item}</li>)}
         </ul>
@@ -525,7 +525,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
       {step === "consent" && (
         <div className="mt-4 space-y-4">
           <div>
-            <p className="text-sm font-bold text-slate-900">{t.contextLabel}</p>
+            <p className="text-sm font-bold text-foreground">{t.contextLabel}</p>
             <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={t.contextLabel}>
               {(Object.keys(t.contexts) as RelationshipContext[]).map((key) => (
                 <button key={key} type="button" onClick={() => setContext(key)} aria-pressed={context === key}
@@ -553,7 +553,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
       {step === "codes" && (
         <div className="mt-4 space-y-6">
           <div className="rounded-xl border border-rose-100 bg-card p-4">
-            <h3 className="text-sm font-bold text-slate-950">{t.myCodeTitle}</h3>
+            <h3 className="text-sm font-bold text-foreground">{t.myCodeTitle}</h3>
             <p className="mt-1 text-xs text-slate-600" aria-live="polite">{evidenceCount ? t.evidenceReady(evidenceCount) : t.evidenceEmpty}</p>
             {!myCodeString ? (
               <button type="button" disabled={evidenceCount === 0} onClick={generateMyCode}
@@ -562,7 +562,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
               </button>
             ) : (
               <div className="mt-3">
-                <p className="break-all rounded-lg bg-slate-100 p-3 font-mono text-xs text-slate-800">{myCodeString}</p>
+                <p className="break-all rounded-lg bg-surface-subtle p-3 font-mono text-xs text-slate-800">{myCodeString}</p>
                 <p className="mt-2 text-xs text-slate-600">{myCode && t.myCodeExpiry(formatDate(myCode.expiresAt, locale))}</p>
                 <button type="button" onClick={copyMyCode} className="mt-2 min-h-11 rounded-lg border border-rose-300 bg-card px-4 py-2 text-sm font-bold text-rose-800">
                   {t.copyButton}
@@ -574,7 +574,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
 
           {myCodeString && (
             <div className="rounded-xl border border-rose-100 bg-card p-4">
-              <h3 className="text-sm font-bold text-slate-950">{t.partnerCodeTitle}</h3>
+              <h3 className="text-sm font-bold text-foreground">{t.partnerCodeTitle}</h3>
               <textarea value={partnerInput} onChange={(event) => setPartnerInput(event.target.value)} placeholder={t.partnerCodePlaceholder}
                 rows={3} className="mt-2 w-full rounded-lg border border-rose-200 p-2 font-mono text-xs" />
               <label className="mt-3 flex min-h-11 items-center gap-2 text-sm text-slate-800">
@@ -593,7 +593,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
       {step === "report" && report && (
         <div className="mt-4 space-y-6">
           <section>
-            <h3 className="text-sm font-bold text-slate-950">{t.sharedTitle}</h3>
+            <h3 className="text-sm font-bold text-foreground">{t.sharedTitle}</h3>
             {report.shared.length === 0 ? <p className="mt-1 text-xs text-slate-600">{t.emptySection}</p> : (
               <ul className="mt-2 space-y-1">
                 {report.shared.map((item) => (
@@ -605,7 +605,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
             )}
           </section>
           <section>
-            <h3 className="text-sm font-bold text-slate-950">{t.differencesTitle}</h3>
+            <h3 className="text-sm font-bold text-foreground">{t.differencesTitle}</h3>
             {report.differences.length === 0 ? <p className="mt-1 text-xs text-slate-600">{t.emptySection}</p> : (
               <ul className="mt-2 space-y-1">
                 {report.differences.map((item) => (
@@ -617,13 +617,13 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
             )}
           </section>
           <section>
-            <h3 className="text-sm font-bold text-slate-950">{t.unmatchedTitle}</h3>
+            <h3 className="text-sm font-bold text-foreground">{t.unmatchedTitle}</h3>
             {report.unmatched.A.length === 0 && report.unmatched.B.length === 0 ? <p className="mt-1 text-xs text-slate-600">{t.emptySection}</p> : (
               <p className="mt-1 text-xs text-slate-600">A: {report.unmatched.A.map(constructLabel).join(", ") || "-"} / B: {report.unmatched.B.map(constructLabel).join(", ") || "-"}</p>
             )}
           </section>
           <section>
-            <h3 className="text-sm font-bold text-slate-950">{t.questionsTitle}</h3>
+            <h3 className="text-sm font-bold text-foreground">{t.questionsTitle}</h3>
             <ul className="mt-2 space-y-2">
               {[...new Set(report.questions.map((q) => q.lane))].map((lane) => (
                 <li key={lane} className="rounded-lg bg-card px-3 py-2 text-xs leading-5 text-slate-800">

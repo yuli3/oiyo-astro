@@ -1,9 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import TestLaneLink from '../../components/shared/TestLaneLink.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import DopamineDependencyTest from '../../components/tests/DopamineDependencyTest';
+import RelatedArticles from '../../components/shared/RelatedArticles.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -13,27 +13,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "도파민 의존도 자가 진단 — 나는 디지털 자극에 얼마나 의존할까?",
-    description: "10가지 질문으로 스마트폰·SNS·숏폼에 대한 도파민 의존도를 확인하세요. 균형 회복을 위한 맞춤 전략을 제공합니다.",
+    description: "스마트폰·SNS·숏폼 자극에 대한 10문항 도파민 의존도 자가진단. 뇌의 각성 내성과 즉각적 보상 추구 성향을 정밀 분석하고, 도파민 디톡스 실천법과 주의력 회복 가이드를 즉시 무료로 확인하세요.",
   },
   en: {
     title: "Dopamine Dependency Self-Check — How Dependent Are You on Instant Gratification?",
-    description: "Check your dopamine dependency on smartphones, social media, and short videos with 10 questions. Get personalized balance recovery strategies.",
+    description: "Assess your dopamine dependency on smartphones, social media, and short-form videos with 10 questions. Analyze your stimulus tolerance and get actionable dopamine detox strategies instantly for free.",
   },
   ja: {
     title: "ドーパミン依存度自己診断 — スマホ・SNSにどれくらい依存している？",
-    description: "10の質問でスマートフォン・SNS・ショート動画へのドーパミン依存度を確認。バランス回復のための戦略を提供します。",
+    description: "スマートフォン・SNS・ショート動画の刺激に対する10問のドーパミン依存度診断。脳の刺激耐性と即時報酬への偏りを精密測定し、集中力回復のためのドーパミンデトックス指針を今すぐ無料で確認しましょう。",
   },
   fr: {
     title: "Auto-diagnostic de Dépendance à la Dopamine — Êtes-vous Dépendant?",
-    description: "Vérifiez votre dépendance à la dopamine via smartphones et réseaux sociaux avec 10 questions.",
+    description: "Évaluez votre dépendance à la dopamine (smartphones, réseaux sociaux, vidéos courtes) en 10 questions. Analysez votre tolérance aux stimuli et obtenez vos conseils de détox digitale gratuitement.",
   },
   es: {
     title: "Autodiagnóstico de Dependencia a la Dopamina — ¿Qué tan dependiente eres?",
-    description: "Verifica tu dependencia a la dopamina en smartphones y redes sociales con 10 preguntas.",
+    description: "Evalúa tu dependencia a la dopamina frente a smartphones y redes sociales con 10 preguntas. Mide tu tolerancia a estímulos y obtén estrategias de desintoxicación digital al instante y gratis.",
   },
   zh: {
     title: "多巴胺依赖自我诊断 — 你对即时刺激依赖多少？",
-    description: "通过10个问题检查您对智能手机、社交媒体和短视频的多巴胺依赖程度。",
+    description: "通过10个针对智能手机、社交媒体与短视频刺激的问题自测多巴胺依赖度。精准评估大脑即时满足偏好与注意耐受性，立即免费获取专属多巴胺排毒与专注力恢复指南。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
@@ -42,6 +42,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <DopamineDependencyTest locale={locale as any} client:load />
+    <RelatedArticles locale={locale} topic="addiction" currentSlug="" limit={4} />
   </div>
-  <TestLaneLink locale={locale as Locale} path="/dopamine-dependency-test" />
 </Layout>

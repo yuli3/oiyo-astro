@@ -1,0 +1,122 @@
+---
+locale: fr
+title: "La loi des grands nombres — le taux de ruine compté sur 2 000 simulations"
+series: "L'architecture du jeu d'argent"
+chapter: 3
+author: OIYO Research Team
+tags:
+  - prévention du jeu
+  - loi des grands nombres
+  - simulation
+  - probabilités
+  - prévention des addictions
+description: "Une simulation de Monte-Carlo pour voir comment la « moyenne » de l'espérance se concrétise vraiment. 71 % des joueurs étaient ruinés après 10 000 mains, 100 % après 100 000."
+pubDate: '2026-07-29'
+topic: addiction
+---
+
+Au chapitre 2, nous avons calculé l'espérance. Mais l'espérance n'est qu'une **moyenne**. Même si cette moyenne est négative, un joueur chanceux ne pourrait-il pas quand même gagner ?
+
+Ce chapitre répond à cette question par une **simulation** : pas un calcul, mais une expérience réellement lancée.
+
+## Le protocole
+
+Nous avons écrit un programme qui répète des mises sur la Banque au baccara, dans les conditions suivantes :
+
+- Capital de départ : **1 000 $**
+- Mise par main : **10 $**
+- Probabilité de gain **45,86 %**, avec une commission de 5 % sur les gains
+- Égalités (environ **9,52 %**) : la mise est rendue
+- Si le capital tombe sous le montant de la mise, la partie est **comptée comme une ruine et s'arrête**
+- Chaque condition est simulée pour **2 000 joueurs indépendants**
+
+Autrement dit, on mesure ceci : « Si 2 000 personnes partent avec la même somme et jouent au même jeu, combien s'en sortent ? »
+
+## Résultats
+
+| Mains jouées | Taux de ruine | Solde moyen restant |
+|---:|---:|---:|
+| 100 | **0,0 %** | 990,21 $ |
+| 1 000 | **0,1 %** | 893,45 $ |
+| 10 000 | **70,7 %** | 264,02 $ |
+| 100 000 | **100,0 %** | 5,19 $ |
+
+<HighlightBox>
+**Sur les 2 000 joueurs, pas un seul n'a tenu 100 000 mains.** Ni le chanceux, ni celui qui avait du flair, ni celui qui était en forme ce jour-là. Tous ont été ruinés.
+</HighlightBox>
+
+## La ligne la plus importante du tableau
+
+**C'est la ligne des 100 mains. Taux de ruine : 0 %.**
+
+Personne n'a été ruiné après 100 mains. En moyenne, les joueurs ont perdu environ 10 $, et pourtant 45 % des 2 000 étaient même en gain. À ce stade, le jeu **ressemble à une partie qui vaut la peine d'être jouée.**
+
+C'est précisément là que se trouve le piège. **Vos 100 premières mains ne vous disent rien de ce qui vous attend.** Elles installent même la conviction inverse.
+
+## Qu'est-ce que la loi des grands nombres ?
+
+La **loi des grands nombres** énonce que, plus le nombre d'essais augmente, **plus les résultats réels se rapprochent de l'espérance.**
+
+- Lancez une pièce 10 fois : vous pouvez obtenir 7 fois pile (70 %).
+- Lancez-la 10 000 fois : la proportion de pile sera presque à coup sûr proche de 50 %.
+
+Appliqué au jeu, cela signifie :
+
+<FormulaBox>
+Peu de mains = la chance domine · Beaucoup de mains = l'avantage de la maison domine
+</FormulaBox>
+
+La chance ne disparaît pas. Mais **à mesure que les mains s'accumulent, son influence relative diminue**, et il ne reste que ces 1,06 % qui s'écoulent régulièrement à chaque main.
+
+## L'asymétrie des moyens — là où la partie se décide vraiment
+
+Une deuxième pièce de la structure vient s'ajouter : **l'opérateur et le joueur ne disposent pas des mêmes sommes.**
+
+- Le capital de l'opérateur est pratiquement illimité.
+- Celui d'un joueur a une fin.
+
+Même dans un **jeu parfaitement équitable, à espérance exactement nulle**, c'est le camp qui a le moins d'argent qui atteint zéro le premier. C'est ce qu'on appelle le problème de la **ruine du joueur** (Gambler's Ruin).
+
+<Callout>
+Même dans un jeu équitable, le joueur au plus petit capital finit par être ruiné. Ajoutez par-dessus un avantage de la maison, comme dans les vrais jeux d'argent, et **« si je joue assez longtemps, je finirai par me refaire » ne peut tout simplement pas tenir.** Plus vous jouez longtemps, plus la probabilité de ruine se rapproche de 100 %.
+</Callout>
+
+## « Il suffit d'arrêter quand on est en gain »
+
+En théorie, c'est vrai. En pratique, cela n'arrive presque jamais, pour deux raisons.
+
+**D'abord, il est impossible de savoir quand vous êtes au sommet.** Arrêter en gain suppose de savoir que « c'est le point le plus haut » — et cette information n'existe pas.
+
+**Ensuite, gagner ne pousse pas à arrêter, mais à continuer.** Cela tient au circuit de la récompense dans le cerveau, abordé au chapitre 6. Les personnes qui ont déjà gagné ont tendance à jouer plus longtemps et à miser plus gros.
+
+Regardez à nouveau le solde moyen à 10 000 mains : 264,02 $. **C'est une perte moyenne de plus de 70 %, et 7 joueurs sur 10 sont ruinés.** Beaucoup d'entre eux ont sans doute été en gain à un moment ou à un autre.
+
+<Quiz>
+**À vous de réfléchir**
+
+Si vous vous êtes dit « qui joue vraiment 10 000 mains ? », faisons le calcul.
+
+Si une partie en ligne dure 30 secondes, 10 000 mains représentent environ **83 heures**. À raison de 3 heures par jour, cela fait **moins d'un mois.**
+
+100 000 mains représentent environ **833 heures**, soit **environ 9 mois** à 3 heures par jour. Pour une habitude qui dure des mois, voire des années, ce chiffre n'a rien de lointain.
+</Quiz>
+
+## En résumé
+
+1. À 100 mains, **personne n'est ruiné**, et près de la moitié des joueurs sont en gain. C'est pour cela qu'on commence.
+2. À 1 000 mains, les ruines restent rares, mais **le solde moyen a déjà fondu de plus de 10 %.** À ce stade, il est déjà difficile de s'arrêter.
+3. À 10 000 mains, **71 % sont ruinés.**
+4. À 100 000 mains, **100 % sont ruinés.** Aucune exception dans cette simulation.
+5. Le camp dont le capital est limité finit ruiné, **même dans un jeu parfaitement équitable.**
+
+Au prochain chapitre, nous examinerons la tentative de renverser cette conclusion — les **stratégies de mise** — et pourquoi elles accélèrent la ruine au lieu de l'empêcher.
+
+---
+
+## Sources
+
+- Les chiffres de ce chapitre proviennent d'une simulation de Monte-Carlo à graine fixe (2 000 essais indépendants par condition).
+- La probabilité de gain et la commission suivent les règles standard du baccara ; les résultats réels varient selon les règles de la maison et la façon de miser.
+- Vérifié le : 2026-07-29 (recalculé le 2026-10-12 en traitant les égalités comme mise rendue)
+
+**Si le jeu vous pose problème — en Corée, appelez la ligne d'aide pour les problèmes de jeu au 1336 (sans indicatif, 24 h/24, 7 j/7, gratuit).** Si vous vivez hors de Corée, recherchez la ligne d'aide nationale pour les problèmes de jeu de votre pays.

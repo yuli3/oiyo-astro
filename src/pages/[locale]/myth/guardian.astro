@@ -1,0 +1,152 @@
+---
+/**
+ * 나의 수호신 찾기. 2026-11-09 세운 결재(발굴 1번), company-brain
+ * think-tank/2026-11-09-oiyo-content-discovery.md. 신화 인물 글 100편이 가장 넓은
+ * 노출 묶음이라, 검사 결과가 그 글로 이어지게 만든다. 결과 설명은 글 요약을 그대로 쓴다.
+ */
+import Layout from '../../../layouts/Layout.astro';
+import MythGuardianTest from '../../../components/tools/myth/MythGuardianTest';
+import { getCollection } from 'astro:content';
+import { LOCALES, type Locale } from '../../../i18n';
+import { GUARDIAN_IDS, mythNameFromTitle } from '../../../lib/myth-guardian';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const entries = await getCollection('articles', (e) => e.data.locale === locale);
+const figures: Record<string, { name: string; description: string }> = {};
+for (const e of entries) {
+  const slug = e.id.split('/').pop()!.replace(/\.mdx$/, '');
+  const id = slug.replace(/^meaning-of-myth-/, '');
+  if (slug.startsWith('meaning-of-myth-') && GUARDIAN_IDS.includes(id)) {
+    figures[id] = { name: mythNameFromTitle(e.data.title), description: e.data.description };
+  }
+}
+
+interface Copy { title: string; description: string; eyebrow: string; h1: string; lead: string; hub: string; faqHeading: string; faqs: { q: string; a: string }[] }
+
+const C: Record<Locale, Copy> = {
+  ko: {
+    title: '나의 수호신 찾기 — 그리스·북유럽·이집트·한국 신화 속 나',
+    description: '질문 7개로 그리스·북유럽·이집트·한국 신화 20명 가운데 나와 닮은 수호신을 찾아요. 결과는 그 신의 이야기로 이어져요.',
+    eyebrow: '신화 테스트 · 7문항',
+    h1: '나의 수호신 찾기',
+    lead: '평소의 나를 고르다 보면 지키는 자, 지혜로운 자, 개척자, 치유자, 장난꾸러기 중 하나가 나와요. 마지막으로 끌리는 풍경을 고르면 그 신화 속 수호신이 정해져요.',
+    hub: '신화 도감 전체 보기',
+    faqHeading: '자주 묻는 질문',
+    faqs: [
+      { q: '어떻게 수호신이 정해지나요?', a: '앞의 6문항은 다섯 성향 중 하나에 점수를 주고, 마지막 문항이 그리스·북유럽·이집트·한국 신화 중 하나를 골라요. 성향과 신화가 만나는 자리의 인물이 수호신이에요.' },
+      { q: '성격 검사인가요?', a: '아니에요. 신화 인물에 나를 비춰 보는 놀이예요. 결과에 종교적 의미도 담지 않아요.' },
+      { q: '다른 신화의 나는 누구인가요?', a: '결과 아래 "다른 신화 속 나"에서 같은 성향의 다른 신화 인물 세 명을 볼 수 있어요.' },
+    ],
+  },
+  en: {
+    title: 'Find Your Guardian Deity — Greek, Norse, Egyptian & Korean Myth Quiz',
+    description: 'Seven questions match you with one of 20 figures from Greek, Norse, Egyptian and Korean myth. Your result links to that figure’s story.',
+    eyebrow: 'Myth quiz · 7 questions',
+    h1: 'Find Your Guardian Deity',
+    lead: 'Pick how you usually are and you land on one of five types: guardian, sage, pioneer, healer or trickster. Then pick the scenery that pulls you, and that mythology names your guardian.',
+    hub: 'Browse the whole myth guide',
+    faqHeading: 'FAQ',
+    faqs: [
+      { q: 'How is my guardian chosen?', a: 'The first six questions score one of five types. The last picks Greek, Norse, Egyptian or Korean myth. The figure where your type meets that mythology is your guardian.' },
+      { q: 'Is this a personality test?', a: 'No. It is a playful way to see yourself in myth, with no religious meaning.' },
+      { q: 'Who am I in other myths?', a: 'Under your result, “You in other myths” shows the three figures of the same type from the other mythologies.' },
+    ],
+  },
+  ja: {
+    title: 'あなたの守護神診断 — ギリシャ・北欧・エジプト・韓国神話',
+    description: '7つの質問で、ギリシャ・北欧・エジプト・韓国神話の20人からあなたに似た守護神を見つけます。結果はその神の物語につながります。',
+    eyebrow: '神話診断 · 7問',
+    h1: 'あなたの守護神診断',
+    lead: 'ふだんの自分を選んでいくと、守る者・賢者・開拓者・癒やし手・トリックスターのどれかに決まります。最後に惹かれる風景を選ぶと、その神話の守護神がわかります。',
+    hub: '神話図鑑をすべて見る',
+    faqHeading: 'よくある質問',
+    faqs: [
+      { q: '守護神はどう決まりますか？', a: '最初の6問で5つのタイプに点が入り、最後の1問でギリシャ・北欧・エジプト・韓国神話のどれかを選びます。タイプと神話が交わる人物が守護神です。' },
+      { q: '性格診断ですか？', a: 'いいえ。神話の人物に自分を重ねる遊びです。宗教的な意味はありません。' },
+      { q: 'ほかの神話の私は？', a: '結果の下の「ほかの神話のあなた」で、同じタイプの3人を見られます。' },
+    ],
+  },
+  zh: {
+    title: '寻找你的守护神 — 希腊、北欧、埃及与韩国神话测验',
+    description: '7道题，从希腊、北欧、埃及、韩国神话的20位人物中找出与你相似的守护神。结果会连到该人物的故事。',
+    eyebrow: '神话测验 · 7题',
+    h1: '寻找你的守护神',
+    lead: '选出平时的自己，就会落在守护者、智者、开拓者、疗愈者、捣蛋鬼五种类型之一。最后选一个吸引你的风景，那个神话里的守护神就出现了。',
+    hub: '浏览全部神话图鉴',
+    faqHeading: '常见问题',
+    faqs: [
+      { q: '守护神怎么决定？', a: '前6题为五种类型之一计分，最后一题选择希腊、北欧、埃及或韩国神话。类型与神话交汇处的人物就是你的守护神。' },
+      { q: '这是性格测验吗？', a: '不是。这是把自己映照在神话人物上的小游戏，不带宗教含义。' },
+      { q: '在其他神话里我是谁？', a: '结果下方的“其他神话里的你”会显示同类型的另外三位人物。' },
+    ],
+  },
+  fr: {
+    title: 'Trouvez votre divinité gardienne — quiz mythes grecs, nordiques, égyptiens et coréens',
+    description: 'Sept questions vous associent à l’une des 20 figures des mythes grecs, nordiques, égyptiens et coréens. Le résultat mène à son histoire.',
+    eyebrow: 'Quiz mythologique · 7 questions',
+    h1: 'Trouvez votre divinité gardienne',
+    lead: 'Choisissez ce qui vous ressemble et vous tombez sur un des cinq types : gardien, sage, pionnier, guérisseur ou farceur. Choisissez ensuite le paysage qui vous attire : cette mythologie nomme votre gardien.',
+    hub: 'Voir tout le guide des mythes',
+    faqHeading: 'Questions fréquentes',
+    faqs: [
+      { q: 'Comment mon gardien est-il choisi ?', a: 'Les six premières questions notent un des cinq types. La dernière choisit le mythe grec, nordique, égyptien ou coréen. La figure à leur croisement est votre gardien.' },
+      { q: 'Est-ce un test de personnalité ?', a: 'Non. C’est un jeu pour se voir dans les mythes, sans portée religieuse.' },
+      { q: 'Qui suis-je dans les autres mythes ?', a: 'Sous le résultat, « Vous dans les autres mythes » montre les trois figures du même type.' },
+    ],
+  },
+  es: {
+    title: 'Descubre tu deidad guardiana — test de mitos griegos, nórdicos, egipcios y coreanos',
+    description: 'Siete preguntas te emparejan con una de 20 figuras de los mitos griegos, nórdicos, egipcios y coreanos. El resultado enlaza con su historia.',
+    eyebrow: 'Test de mitología · 7 preguntas',
+    h1: 'Descubre tu deidad guardiana',
+    lead: 'Elige cómo sueles ser y caerás en uno de cinco tipos: guardián, sabio, pionero, sanador o embaucador. Luego elige el paisaje que te atrae y esa mitología nombra a tu guardián.',
+    hub: 'Ver toda la guía de mitos',
+    faqHeading: 'Preguntas frecuentes',
+    faqs: [
+      { q: '¿Cómo se elige mi guardián?', a: 'Las seis primeras preguntas puntúan uno de cinco tipos. La última elige el mito griego, nórdico, egipcio o coreano. La figura donde se cruzan es tu guardián.' },
+      { q: '¿Es un test de personalidad?', a: 'No. Es un juego para verte en los mitos, sin sentido religioso.' },
+      { q: '¿Quién soy en otros mitos?', a: 'Bajo el resultado, «Tú en otros mitos» muestra las tres figuras del mismo tipo.' },
+    ],
+  },
+};
+
+const c = C[locale];
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout title={c.title} description={c.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">{c.eyebrow}</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">{c.h1}</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">{c.lead}</p>
+
+    <div class="mt-8">
+      <MythGuardianTest client:load locale={locale} figures={figures} />
+    </div>
+
+    <p class="mt-8">
+      <a href={`/${locale}/myth/`} class="inline-flex min-h-11 items-center rounded-xl border border-border bg-card px-4 font-bold hover:border-primary/50">📚 {c.hub}</a>
+    </p>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{c.faqHeading}</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {c.faqs.map((f) => (
+          <details class="p-4">
+            <summary class="cursor-pointer font-semibold">{f.q}</summary>
+            <p class="mt-2 text-sm leading-6 text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </section>
+</Layout>

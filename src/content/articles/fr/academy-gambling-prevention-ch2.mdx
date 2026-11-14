@@ -1,0 +1,120 @@
+---
+locale: fr
+title: "L'espérance de gain — le moment où une mise perdue devient une perte certaine"
+series: L'architecture du jeu d'argent
+chapter: 2
+author: OIYO Research Team
+tags:
+  - prévention du jeu
+  - espérance de gain
+  - probabilités
+  - mathématiques
+  - prévention des addictions
+description: "Comment un avantage de la maison de seulement 1,06 % devient, coup après coup, une perte certaine. Nous calculons combien de coups à 10 $ il faut pour faire passer 1 000 $ à 0 $."
+pubDate: '2026-07-29'
+topic: addiction
+---
+
+Au chapitre 1, nous avons vu que l'avantage de la maison sur la mise « banque » au baccara est d'**environ 1,06 %**. Un dollar sur cent. Cela semble négligeable.
+
+Dans ce chapitre, nous calculons comment ce dollar finit par devenir toute votre mise de départ.
+
+## Qu'est-ce que l'espérance de gain ?
+
+L'**espérance de gain (Expected Value)** est le montant que l'on gagne ou que l'on perd en moyenne sur une seule mise. Le calcul est simple.
+
+<FormulaBox>
+Espérance = (probabilité de gagner × somme gagnée) − (probabilité de perdre × somme perdue)
+</FormulaBox>
+
+Vérifions-le avec un pile ou face. Face, vous gagnez 10 $ ; pile, vous perdez 10 $. L'espérance vaut :
+
+(0,5 × 10 $) − (0,5 × 10 $) = **0 $**
+
+Un jeu dont l'espérance est nulle s'appelle un **jeu équitable (fair game)**. Même en y jouant longtemps, vous restez en moyenne à l'équilibre.
+
+**Or, dans la réalité, aucun jeu d'argent n'est équitable.**
+
+## L'espérance réelle de la mise « banque » au baccara
+
+Vous misez 100 $ sur la banque :
+
+- environ 45,86 % de chances de gagner → vous touchez 95 $ après une commission de 5 %
+- environ 44,62 % de chances de perdre → vous perdez 100 $
+- environ 9,52 % d'égalité → votre mise vous est rendue
+
+Le calcul donne une espérance d'environ **−1,06 $**. Autrement dit, **chaque fois que vous misez 100 $, 1,06 $ disparaît en moyenne.**
+
+<HighlightBox>
+L'essentiel, c'est que ces 1,06 $ **ne sont pas « l'argent que l'on perd quand on n'a pas de chance »**. C'est **l'argent que l'on perd, en moyenne, à coup sûr**. Coup par coup, on gagne parfois et on perd parfois, mais à mesure que les coups s'accumulent, le résultat réel est attiré vers cette moyenne.
+</HighlightBox>
+
+## En combien de coups 1 000 $ disparaissent-ils ?
+
+Si vous misez 10 $ par coup, environ 0,106 $ (10,6 cents) s'évapore en moyenne à chaque coup. Pour qu'une mise de départ de 1 000 $ tombe à zéro :
+
+<FormulaBox>
+1 000 ÷ 0,106 ≈ 9 434 coups
+</FormulaBox>
+
+**Environ 9 400 coups.** Cela vous paraît beaucoup ? En ligne, un coup prend **moins de 30 secondes**. À raison d'un coup toutes les 30 secondes sans s'arrêter, tout est englouti, en théorie, en 79 heures environ — à peine plus de trois jours.
+
+Voici le solde attendu selon le nombre de coups :
+
+| Coups joués | Solde attendu |
+|---:|---:|
+| 0 | 1 000 $ |
+| 100 | 989,40 $ |
+| 500 | 947,00 $ |
+| 1 000 | 894,00 $ |
+| 2 000 | 788,00 $ |
+| 5 000 | 470,00 $ |
+| 9 434 | **0 $** |
+
+<LineChart
+  title="Solde attendu selon le nombre de coups (baccara, mise banque · 10 $ par coup · 1 000 $ au départ)"
+  xLabel="Coups cumulés (0 → 9 434)"
+  yLabel="Solde restant (0 → 1 000 $)"
+  lines={[
+    { label: "Ce qui se passe vraiment (fixé par les mathématiques)", color: "#dc2626", points: [{x:0,y:100},{x:5,y:94.7},{x:10,y:89.4},{x:21,y:78.8},{x:53,y:47},{x:100,y:0}] },
+    { label: "Ce que le joueur espère (rester à l'équilibre)", color: "#94a3b8", dashed: true, points: [{x:0,y:100},{x:100,y:100}] }
+  ]}
+/>
+
+La ligne grise en pointillés, c'est l'espoir de « au moins rentrer dans ses frais ». La ligne rouge, c'est la réalité. **Les deux ne se croisent jamais, et l'écart ne fait que se creuser.**
+
+## Pourquoi on ne le ressent pas
+
+Si l'espérance est aussi claire, pourquoi continue-t-on à jouer ? Parce que **sur une courte période, cette ligne est invisible.**
+
+Après 100 coups, la perte attendue n'est que d'environ 10,60 $ — une somme **totalement noyée dans les aléas de la chance**. Sur 100 coups, il y a des jours où l'on gagne gros et d'autres où l'on perd. Le jeu ressemble alors à « un jeu que l'on peut gagner ».
+
+Mais plus les coups s'accumulent, plus les aléas de la chance deviennent relativement faibles, et **seul l'avantage de la maison subsiste.** C'est la **loi des grands nombres**, que nous verrons au prochain chapitre.
+
+<Quiz>
+**À vous de réfléchir**
+
+Un ami vous dit : « Hier, j'ai gagné 500 $ au baccara. »
+
+Est-ce la preuve que l'avantage de la maison est faux ?
+
+Réponse : **non.** L'avantage de la maison ne prédit pas le résultat d'un coup, ni même d'une journée. Il indique seulement vers où convergent les résultats une fois que suffisamment de coups ont été joués. Les 500 $ gagnés hier fonctionnent comme **le mécanisme même qui pousse votre ami à continuer** — et tant qu'il continue, ses résultats suivent la courbe ci-dessus.
+</Quiz>
+
+## En résumé
+
+1. L'espérance de gain n'est pas « la perte d'un mauvais jour » : c'est une **perte certaine en moyenne**.
+2. Sur la mise « banque » au baccara, c'est 1,06 $ pour 100 $ misés. À 10 $ le coup, 1 000 $ sont **épuisés, en théorie, en 9 400 coups environ**.
+3. En jouant peu, on ne le voit pas ; en jouant longtemps, on finit toujours par le voir. **Vous faire jouer le plus de coups possible, c'est tout le modèle économique de l'opérateur.**
+
+Au prochain chapitre, nous mesurerons à quel point « en moyenne » est impitoyable, en comptant directement les taux de ruine grâce à une simulation.
+
+---
+
+## Sources
+
+- Les valeurs d'avantage de la maison sont les calculs publics établis selon les règles standard (commission de 5 % sur la banque).
+- Par souci de simplicité, les calculs de ce chapitre supposent une mise identique à chaque coup.
+- Vérifié le : 2026-07-29
+
+**Si le jeu vous pose problème — en Corée, appelez la ligne d'aide aux problèmes de jeu au 1336 (gratuit, 24 h/24, 7 j/7).** Si vous vivez hors de Corée, recherchez la ligne d'aide nationale de votre pays consacrée aux problèmes de jeu.

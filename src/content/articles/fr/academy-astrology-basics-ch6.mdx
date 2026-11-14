@@ -1,0 +1,123 @@
+---
+locale: fr
+title: "Lire un thème natal : trois cas reproductibles et leurs limites"
+series: Les bases de l’astrologie
+chapter: 6
+author: Rédaction OIYO
+tags:
+  - astrologie
+  - thème natal
+  - aspects
+  - maisons entières
+description: "Comparez les positions, maisons entières et aspects de 2000, 2010 et 2020 avec les mêmes réglages, en séparant sorties du moteur et interprétation symbolique."
+pubDate: '2026-06-01'
+topic: astrology
+---
+
+import Callout from "@/components/mdx/Callout.astro"
+
+## Fixer les conditions avant la lecture
+
+Nous ne classons pas des personnes comme leaders ou artistes. Trois thèmes calculés dans les mêmes conditions permettent de séparer **entrée → position → maison → angle → interprétation symbolique**. Les dates sont choisies par la rédaction, pas tirées de dossiers de naissance de participants.
+
+| Condition | Réglages communs |
+|---|---|
+| Lieu | Séoul : latitude 37,5665° nord, longitude 126,978° est |
+| Instant | 1er janvier à 12:00 UTC de chaque année, soit 21:00 en Corée |
+| Zodiaque | Tropical, douze secteurs de 30° à partir de 0° |
+| Positions | Algorithmes approchés computeNatalChart d’OIYO |
+| Maisons | Maisons entières, calculées séparément pour ce chapitre |
+| Orbes majeurs | Conjonction, carré, trigone, opposition : 8° ; sextile : 4° |
+| Affichage | Trois décimales, sans garantie d’exactitude |
+
+Ces nombres reproduisent une sortie du moteur. Ils ne résultent pas d’une comparaison indépendante avec des éphémérides et ne constituent pas une borne d’erreur vérifiée. La première maison entière commence à 0° du signe contenant l’Ascendant, pas à son degré exact. Ne supposez pas que tous les écrans d’un outil utilisent ce système.
+
+Pour le numéro de maison entière, soustrayez l’indice du signe ascendant de celui de l’astre, ramenez le résultat dans 0 à 11, puis ajoutez un. Avec le Lion ascendant, le Lion est I, la Vierge II et le Capricorne VI.
+
+La [documentation des maisons de Swiss Ephemeris](https://www.astro.com/swisseph/swisseph.htm) explique la différence entre maisons entières et maisons égales depuis l’Ascendant. Les nombres ci-dessous ne sont pas calculés avec Swiss Ephemeris.
+
+## Cas 1 : 2000, un même signe ne suffit pas pour une conjonction
+
+| Astre ou point | Longitude / signe | Maison entière |
+|---|---|---:|
+| Soleil | 280,373° / Capricorne | 6 |
+| Lune | 223,318° / Scorpion | 4 |
+| Ascendant | 145,435° / Lion | 1 |
+| Mercure | 271,907° / Capricorne | 6 |
+| Vénus | 241,579° / Sagittaire | 5 |
+| Mars | 327,976° / Verseau | 7 |
+| Jupiter | 25,273° / Bélier | 9 |
+| Saturne | 40,376° / Taureau | 10 |
+| Uranus | 314,816° / Verseau | 7 |
+| Neptune | 303,191° / Verseau | 7 |
+| Pluton | 251,458° / Sagittaire | 5 |
+
+Le Soleil et Mercure sont en Capricorne, mais leur séparation vaut 8,466°. Elle dépasse notre orbe de 8° : la conjonction est exclue. Arrondir d’abord à 8° changerait la décision à la limite.
+
+La Lune à 223,318° et Saturne à 40,376° diffèrent de 182,942°. Le plus petit angle vaut 177,058°, à 2,942° de l’opposition exacte. La paire entre dans l’orbe de 8°. Vérifiez les degrés, pas seulement les noms de signes.
+
+On peut associer symboliquement l’expression de soi du Soleil au travail quotidien de VI. Cela n’établit ni compétence au travail ni problème de santé. Formulez des questions sur l’expérience au lieu de laisser le thème fournir les réponses.
+
+## Cas 2 : 2010, Soleil similaire et Lune différente
+
+| Astre ou point | Longitude / signe | Maison entière |
+|---|---|---:|
+| Soleil | 280,964° / Capricorne | 6 |
+| Lune | 110,752° / Cancer | 12 |
+| Ascendant | 145,893° / Lion | 1 |
+| Mercure | 288,467° / Capricorne | 6 |
+| Vénus | 278,487° / Capricorne | 6 |
+| Mars | 138,740° / Lion | 1 |
+| Jupiter | 326,459° / Verseau | 7 |
+| Saturne | 184,506° / Balance | 3 |
+| Uranus | 353,109° / Poissons | 8 |
+| Neptune | 324,602° / Verseau | 7 |
+| Pluton | 273,317° / Capricorne | 6 |
+
+Le Soleil partage Capricorne et VI avec le premier cas, mais la Lune est en Cancer et XII. Le même signe solaire ne rend pas la configuration identique. Des Lunes différentes ne prouvent pas davantage une différence réelle de personnalité.
+
+Soleil 280,964° et Vénus 278,487° donnent 2,477°, donc une conjonction. La séparation Lune-Soleil vaut 170,212°, à 9,788° de l’opposition : elle est exclue avec notre règle de 8°. Une impression visuelle de positions presque opposées ne suffit pas.
+
+Une lecture peut rapprocher expression de soi et relations dans le contexte du travail quotidien. Elle n’établit pas un talent artistique ou de la chance relationnelle. Les aptitudes se vérifient dans le travail et l’expérience ; les relations dans les paroles et actes de l’autre.
+
+## Cas 3 : 2020, un groupe n’est pas une conjonction de toutes les paires
+
+| Astre ou point | Longitude / signe | Maison entière |
+|---|---|---:|
+| Soleil | 280,519° / Capricorne | 6 |
+| Lune | 352,075° / Poissons | 8 |
+| Ascendant | 145,558° / Lion | 1 |
+| Mercure | 275,188° / Capricorne | 6 |
+| Vénus | 315,034° / Verseau | 7 |
+| Mars | 238,736° / Scorpion | 4 |
+| Jupiter | 276,805° / Capricorne | 6 |
+| Saturne | 291,451° / Capricorne | 6 |
+| Uranus | 32,716° / Taureau | 10 |
+| Neptune | 346,299° / Poissons | 8 |
+| Pluton | 292,408° / Capricorne | 6 |
+
+Soleil, Mercure, Jupiter, Saturne et Pluton se regroupent en Capricorne et VI. Partager un signe est différent d’être tous en conjonction deux à deux.
+
+Soleil-Mercure vaut 5,331° et Soleil-Jupiter 3,714° : les deux entrent dans l’orbe. Soleil-Saturne vaut 10,932° et Soleil-Pluton 11,889° : les deux sont exclus. Saturne-Pluton vaut 0,957° et entre dans l’orbe. Dire que tout se combine fortement, sans nommer les paires vérifiées, masque ces différences.
+
+Lune-Neptune vaut 5,776°, dans l’orbe de conjonction. Cela ne mesure ni empathie, ni spiritualité, ni capacité à soigner. Un récit associant quotidien, responsabilité et concentration ne détermine pas un métier ou une réussite future.
+
+## Vérifier un thème réel
+
+1. Consignez date locale, heure, fuseau, heure d’été et coordonnées. Midi local n’est pas automatiquement midi UTC.
+2. Vérifiez zodiaque tropical ou sidéral, système de maisons, astres inclus et algorithme.
+3. Près d’une limite de signe, tenez compte des erreurs d’entrée et de calcul. Sans heure connue, n’affirmez pas l’Ascendant ou les maisons.
+4. Appliquez le plus petit angle et les orbes du chapitre 5 à chaque paire. La couleur des lignes varie selon le logiciel.
+5. Séparez les résultats numériques des significations traditionnelles. Ne forcez pas une expérience à correspondre à la lecture.
+
+Saisir midi pour une heure inconnue est une hypothèse de calcul, pas une heure retrouvée. Ne publiez ni ne partagez la date, le lieu et l’heure de naissance d’autrui sans son consentement, même pour calculer son thème avec davantage de précision.
+
+## Ce que termine cette série
+
+Vous avez appliqué les distinctions entre histoire, signes, astres, maisons et aspects à des exemples numériques reproductibles. Précision du calcul, interprétation symbolique et connaissance validée des personnes sont des niveaux différents. Finir cet exercice ne certifie pas une capacité à prédire l’avenir.
+
+<Callout type="tip">**Précédent** : [Ch5. Les aspects](/fr/academy-astrology-basics-ch5/) · **Outil de calcul** : [Calculateur de thème natal](/fr/natal/chart/)</Callout>
+
+## Sources et limites
+
+Les positions proviennent du moteur approché d’OIYO et peuvent différer d’autres éphémérides ou corrections de coordonnées. Consultez [Swiss Ephemeris](https://www.astro.com/swisseph/swisseph.htm) pour comparer les systèmes de maisons. Cette documentation ne valide ni notre moteur ni ses lectures de personnalité. Les décisions de carrière, de relation ou de santé exigent des preuves réelles.

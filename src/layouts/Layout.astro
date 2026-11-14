@@ -7,9 +7,17 @@ import Header from '../components/Header.astro';
 import { routeTransitionName } from '../lib/system/view-transition-name';
 import Footer from '../components/Footer.astro';
 import TestSourceNote from '../components/shared/TestSourceNote.astro';
+import TestLaneLink from '../components/shared/TestLaneLink.astro';
+import TestAnswerBlock from '../components/shared/TestAnswerBlock.astro';
+import { getAnswerBlock } from '../data/test-answer-blocks';
+import { LANE_BY_PATH } from '../data/test-question-lanes';
 import { getTestSourceNote } from '../data/test-source-notes';
 import TestPlayBeacon from '../components/shared/TestPlayBeacon';
 import BirthSavedToast from '../components/shared/BirthSavedToast.astro';
+import ManualAds from '../components/ads/ManualAds.astro';
+import { GENERATED_OG } from '../data/generated-art';
+import { buildMetaDescription } from '../lib/seo/meta-description';
+import { buildFaqJsonLd, type FaqItem } from '../lib/seo/faq-builder';
 
 interface Props {
   title: string;
@@ -24,6 +32,7 @@ interface Props {
   // Opt-in because pages whose island renders its own h1 would end up with two.
   heading?: string;
   intro?: string;
+  faq?: FaqItem[];
 }
 
 const BCP47: Record<string, string> = {
@@ -38,14 +47,13 @@ const descriptionDefaults: Record<string, string> = {
   es: 'OIYO — Explora tu personalidad y tu destino',
   zh: 'OIYO — 探索你的个性与命运',
 };
-const { title, locale, noindex = false, canonicalPath, ogImage, heading, intro, availableLocales } = Astro.props;
+const { title, locale, noindex = false, canonicalPath, ogImage, heading, intro, availableLocales, faq } = Astro.props;
 
 // Locale deindex list — see astro.config.mjs. Empty since 2026-09-24 (all six
 // locales indexable); a listed locale would leave the index, the sitemap, and
 // the hreflang cluster together.
 const DEINDEXED_LOCALES = new Set<string>(deindexedLocales);
 const isNoindex = noindex || DEINDEXED_LOCALES.has(locale);
-const description = Astro.props.description ?? descriptionDefaults[locale] ?? descriptionDefaults['en'];
 const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
 const isCjk = ['ko', 'ja', 'zh'].includes(locale);
 const defaultOgImage = new URL('/og-image.png', Astro.site).toString();
@@ -57,8 +65,32 @@ const alternateRouteWithoutLocale = canonicalPath
   ? canonicalPath.replace(/^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/, '') || '/'
   : routeWithoutLocale;
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
+// 2026-11-08: AIEO & SEO 학술 근거 기반 FAQPage 구조화 데이터 동적 생성 (Perplexity·Google SGE 인용 타겟)
+// 2026-11-08: 답변 블록(test-answer-blocks.ts)이 있는 검사는 화면에 보이는 그 문답으로 FAQPage 를 낸다.
+// 근거 표기에서 자동으로 만든 문답은 화면에 보이지 않아(구글 FAQ 지침: 보이는 내용과 같아야 함)
+// 끈다. 자체 FAQPage 가 있는 약 40쪽에서 FAQPage 가 두 개가 되던 문제도 함께 없어진다.
+// 되살리려면 testSourceNote 를 다시 넘기면 된다(빌더는 그대로).
+const answerBlock = getAnswerBlock(routeWithoutLocale.replace(/\/+$/, '') || '/', locale);
+const faqJsonLd = buildFaqJsonLd({
+  title,
+  locale,
+  pathname: Astro.url.pathname,
+  customFaq: answerBlock ? answerBlock.faqs : faq,
+});
+// 2026-11-07: SEO(Google·Bing) 및 AIEO 골든 레인지(110~140자) 메타 설명 빌더 (Phase A: 19자 기본값 중복 원천 차단)
+const description = buildMetaDescription({
+  title,
+  description: Astro.props.description,
+  locale,
+  pathname: Astro.url.pathname,
+  basis: testSourceNote?.basis,
+});
+// 2026-11-03: 같은 질문 묶음의 다음 검사는 페이지가 아니라 Layout 이 경로로 그린다.
+const laneRoute = routeWithoutLocale.replace(/\/+$/, '') || '/';
+const hasLane = laneRoute in LANE_BY_PATH;
 // 2026-09-30 B6 #1 (세운 결정: 타로·사주·검사 3종 먼저): 링크 미리보기 카드를 카테고리별로 둔다.
-// 페이지가 ogImage 를 직접 넘기면 그것이 이긴다. 결과 화면의 공유 이미지(ResultShareImage)는
+// 2026-11-06: explicit generated-route art replaces generic previews; other pages retain their override.
+// 결과 화면의 공유 이미지(ResultShareImage)는
 // 내려받기용이라 이것과 겹치지 않는다. 검사 판별은 getTestSourceNote 와 같은 경로 규칙(/test, -test).
 const ogCategory = (() => {
   const parts = routeWithoutLocale.split('/').filter(Boolean);
@@ -67,7 +99,9 @@ const ogCategory = (() => {
   if (parts[0] === 'tests' || parts.at(-1) === 'test' || parts.at(-1)?.endsWith('-test')) return 'tests';
   return null;
 })();
-const resolvedOgImage = ogImage
+const generatedOgPath = GENERATED_OG[routeWithoutLocale.replace(/\/$/, "")];
+const resolvedOgImage = (generatedOgPath ? new URL(generatedOgPath, Astro.site).toString() : undefined)
+  ?? ogImage
   ?? (ogCategory ? new URL(`/og/${ogCategory}-${locale}.jpg`, Astro.site).toString() : defaultOgImage);
 // Deindexed locales are dropped from the hreflang cluster: Google discards
 // hreflang annotations pointing at noindex URLs.
@@ -175,6 +209,11 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       })(),
     })} />
 
+    <!-- JSON-LD: FAQPage for AIEO (Google AI Overviews / Perplexity / Bing Copilot citations) -->
+    {faqJsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+    )}
+
     <title>{title} | OIYO</title>
 
     <!-- GA4 — same family property as blog/wiki (G-915L6V38X6), split by hostname -->
@@ -197,10 +236,17 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       }
     </script>
 
-    <!-- Google AdSense Auto Ads — same publisher as blog/wiki (ca-pub-9541920090543312) -->
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-    <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
-    <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9541920090543312" crossorigin="anonymous"></script>
+    <!-- Google AdSense Auto Ads — same publisher as blog/wiki (ca-pub-9541920090543312).
+         Pages the author explicitly keeps out of the index (draft tests, gated results,
+         private pair pages, prototypes) carry no ads, as on blog/game/wiki/news. Gated on
+         the explicit prop only: deindexed locales are real content and keep earning. -->
+    {!noindex && (
+      <>
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+        <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9541920090543312" crossorigin="anonymous"></script>
+      </>
+    )}
   </head>
   <body>
     <a
@@ -228,14 +274,26 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       {/* intro 를 heading 에서 분리한다. 공용 questionnaire UI 가 이미 h1 을 내는
           페이지에서는 heading 을 넘기지 않아 H1 중복을 피하는데, 예전 구조에서는
           그때 intro 도 함께 사라져 visible prose 가 없어졌다. */}
-      {(heading || intro) && (
+      {/* AIEO: Answer-First 리드 단락. 페이지에서 intro를 넘기지 않았더라도 테스트 페이지의 경우 SSR 본문으로 120자 핵심 정의 렌더링 */}
+      {(heading || intro || (looksLikeTest && description)) && (
         <div class="mx-auto max-w-3xl px-4 pt-8">
           {heading && <h1 data-route-title class="text-2xl font-black tracking-tight text-foreground">{heading}</h1>}
-          {intro && <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{intro}</p>}
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{intro ?? description}</p>
         </div>
       )}
       <slot />
+      {answerBlock && (
+        <TestAnswerBlock
+          locale={locale}
+          block={answerBlock}
+          url={canonicalUrl.toString()}
+          name={title}
+          inLanguage={BCP47[locale] ?? locale}
+        />
+      )}
+      {hasLane && <TestLaneLink locale={locale} path={laneRoute} />}
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
+      <ManualAds locale={locale} noindex={noindex} />
     </main>
     <Footer locale={locale} />
     <BirthSavedToast locale={locale} />

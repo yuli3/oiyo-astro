@@ -1,0 +1,67 @@
+---
+locale: es
+title: La prueba social (Social Proof)
+author: Antigravity
+tags:
+  - psychology
+  - influence
+  - marketing
+  - behavior
+description: "Distinga las influencias informativa y normativa e interprete las condiciones y los datos de los experimentos de conformidad y reutilización de toallas."
+pubDate: '2024-12-21'
+topic: social
+---
+
+import ExperimentComparison from '../../../components/mdx/ExperimentComparison.astro';
+
+## Los experimentos de conformidad de Asch (Asch Conformity Experiments)
+
+En 1951, Solomon Asch llevó a cabo una serie de experimentos que revelaron el inquietante poder de la conformidad. Mostraba a los participantes una línea y les pedía que eligieran, entre tres líneas de referencia, la de igual longitud. La respuesta correcta era evidente.
+Sin embargo, cada participante estaba en una sala con 7 cómplices que habían acordado de antemano dar una respuesta *incorrecta*.
+
+
+Que aproximadamente el 75% siguiera al menos una vez la respuesta incorrecta de la mayoría no significa que el 75% de todas las respuestas fueran erróneas. Los motivos variaban, incluida la duda sobre el propio juicio. No se puede afirmar que todos respondieran mal a sabiendas para evitar la exclusión.
+
+[Asch (1955), PDF](https://pdodds.w3.uvm.edu/files/papers/others/1955/asch1955a.pdf)
+
+## Influencia informativa frente a influencia normativa
+
+La prueba social funciona por dos vías cognitivas bien diferenciadas.
+
+1.  **Influencia social informativa (Informational Social Influence)**: «Seguro que saben algo que yo no sé». Aparece en situaciones ambiguas (por ejemplo, al elegir restaurante en una ciudad desconocida). Si el restaurante A está lleno y el B vacío, suponemos que A es mejor. Es un atajo mental para dar con la respuesta correcta.
+2.  **Influencia social normativa (Normative Social Influence)**: «Quiero caer bien, quiero que me acepten». Se da incluso cuando la situación es clara, como en el experimento de Asch. Nos conformamos para evitar la burla o la exclusión.
+
+## Toallas de hotel: distinguir mensajes y resultados
+
+Goldstein, Cialdini y Griskevicius (2008) compararon mensajes de reutilización de toallas en un hotel. El 75% anunciado en el cartel era información normativa presentada a los huéspedes, no la tasa observada en ese experimento.
+
+| Experimento | Condición del mensaje | Reutilización observada |
+| --- | --- | --- |
+| 1 | Mensaje ambiental | 35,1% |
+| 1 | Norma de huéspedes en general | 44,1% |
+| 2 | Mensaje ambiental | 37,2% |
+| 2 | Norma de huéspedes de la misma habitación | 49,3% |
+
+La diferencia del experimento 1 fue de 9,0 puntos porcentuales. No compare directamente la condición de la misma habitación del experimento 2 con la ambiental del experimento 1. Se observó si los huéspedes de al menos dos noches colgaban una toalla o más en el lugar indicado el primer día en que podían participar, no durante toda la estancia. Los resultados no garantizan el mismo efecto en todos los hoteles o conductas.
+
+<ExperimentComparison locale="es" title="Compare dentro de cada experimento" note="Despliegue cada experimento para comparar. Todas las escalas van de 0 a 100 %. Las condiciones difieren: no mezcle las referencias entre experimentos." experiments={[
+  { label: "Experimento 1", baseline: 35.1, outcome: 44.1, baselineLabel: "Mensaje ambiental", outcomeLabel: "Norma de los huéspedes en general", differenceLabel: "Diferencia (puntos porcentuales)" },
+  { label: "Experimento 2", baseline: 37.2, outcome: 49.3, baselineLabel: "Mensaje ambiental", outcomeLabel: "Norma de huéspedes de la misma habitación", differenceLabel: "Diferencia (puntos porcentuales)" }
+]} />
+
+[Goldstein et al. (2008), PDF](https://www.influenceatwork.com/wp-content/uploads/2012/08/article08222012.pdf)
+
+## El efecto Werther (The Werther Effect)
+
+La Organización Mundial de la Salud (OMS) explica que la forma en que se informa sobre el suicidio, así como su repetición y grado de exposición, puede influir en el riesgo de las personas vulnerables. Es lo que se conoce como contagio suicida (suicide contagion) o efecto Werther. Aun así, la conducta individual no puede explicarse solo por la prueba social: lo esencial de las recomendaciones de salud pública es que la cobertura sensacionalista o repetitiva, la descripción detallada de métodos y la glorificación pueden aumentar el riesgo. Por el contrario, una comunicación responsable que muestre que la recuperación y la petición de ayuda son posibles puede tener un efecto protector.
+
+> **Si necesitas ayuda:** si piensas en hacerte daño o en el suicidio, no lo afrontes en soledad. En España puedes llamar al **024** (línea de atención a la conducta suicida, 24 horas); en otros países, contacta con los servicios locales de emergencia o de atención en crisis.
+
+> **Lección clave:** las personas obtienen pistas para juzgar a partir de la conducta ajena, pero los medios y los creadores de contenido deben tener en cuenta esa influencia al tratar temas de riesgo. La influencia social no es una orden que nos determine por completo, sino una pista del entorno que podemos examinar conscientemente.
+
+## Fuentes principales
+
+- Solomon E. Asch. [Studies of Independence and Conformity](https://doi.org/10.1037/h0093718) (1956).
+- Goldstein, Cialdini, and Griskevicius. [A Room with a Viewpoint](https://doi.org/10.1086/586910) (2008).
+- World Health Organization. [Preventing suicide: a resource for media professionals, update 2023](https://www.who.int/publications/i/item/9789240076846).
+- U.S. Centers for Disease Control and Prevention. [Recommendations for Reporting on Suicide](https://stacks.cdc.gov/view/cdc/22163).

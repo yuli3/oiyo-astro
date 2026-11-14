@@ -1,0 +1,2636 @@
+{
+  "src/components/EncyclopediaIsland.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-restyle": {
+      "count": 2
+    }
+  },
+  "src/components/Footer.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/Header.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    }
+  },
+  "src/components/labs/CardOrbitDemo.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    }
+  },
+  "src/components/labs/CosmicIntroExperience.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/labs/scenes/BlackHole.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/labs/scenes/DnaHelix.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/mdx/ArticleBodyH1.astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/BarChart.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/CompareTable.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 13
+    }
+  },
+  "src/components/mdx/FiveElementsWheel.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 7
+    }
+  },
+  "src/components/mdx/FormulaBox.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 4
+    }
+  },
+  "src/components/mdx/HighlightBox.astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/LectureVisuals.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 3
+    }
+  },
+  "src/components/mdx/LineChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 6
+    }
+  },
+  "src/components/mdx/LuckTimeline.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 3
+    }
+  },
+  "src/components/mdx/Quiz.astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/RadarChart.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 6
+    }
+  },
+  "src/components/mdx/SajuPillarCards.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 6
+    }
+  },
+  "src/components/mdx/StatCards.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 9
+    }
+  },
+  "src/components/mdx/StepFlow.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 5
+    }
+  },
+  "src/components/mdx/TestCTA.astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/mdx/Timeline.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 9
+    }
+  },
+  "src/components/mdx/ToolCTA.astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/ontology/AkashicSymbolicProfile.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 11
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 4
+    }
+  },
+  "src/components/ontology/AssessmentSignalSummary.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 19
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/ontology/AssessmentWeave.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    }
+  },
+  "src/components/ontology/ExplorationRecommenderPrototype.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/ontology/JourneyLanding.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 11
+    }
+  },
+  "src/components/ontology/MindmapMotes.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    }
+  },
+  "src/components/ontology/OntologyBirthInput.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/ontology/OntologyExportPopover.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 11
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    },
+    "shadcn/no-restyle": {
+      "count": 5
+    }
+  },
+  "src/components/ontology/OntologyOrbitScene.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/ontology/OntologyPlatformReadOnlyPilot.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/ontology/OntologyRelationOrbit.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-inline-styles": {
+      "count": 4
+    }
+  },
+  "src/components/ontology/OntologySharedProfileBanner.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/components/ontology/OntologyTemplateShowcase.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 53
+    }
+  },
+  "src/components/ontology/PersonalProfileHistoryPreview.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 15
+    }
+  },
+  "src/components/ontology/ProfileMindmap.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 6
+    }
+  },
+  "src/components/ontology/RecommendationCards.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    }
+  },
+  "src/components/ontology/RoleVisualSystemPrototype.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 13
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 15
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 2
+    }
+  },
+  "src/components/ontology/encyclopedia/EncyclopediaClient.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 15
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    },
+    "shadcn/no-restyle": {
+      "count": 18
+    }
+  },
+  "src/components/profile/AstroLayer.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 10
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    }
+  },
+  "src/components/profile/BinaryStar.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    }
+  },
+  "src/components/profile/CircleGathering.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/profile/CircleSynthesis.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 12
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/profile/CircleToday.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 14
+    },
+    "shadcn/no-inline-styles": {
+      "count": 6
+    }
+  },
+  "src/components/profile/ConstellationLines.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/profile/ElementRings.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/profile/FlowPentagon.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    }
+  },
+  "src/components/profile/GatheringScene.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/components/profile/PairReadingView.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 11
+    },
+    "shadcn/no-inline-styles": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/profile/PersonalProfileExportV2Panel.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/profile/PulseField.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/profile/RelationshipComparisonPanel.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 40
+    }
+  },
+  "src/components/profile/SignatureCard.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/components/profile/pixi/usePixiStage.ts": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    }
+  },
+  "src/components/shared/ArticleBody.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 3
+    }
+  },
+  "src/components/shared/AttachmentAxesChart.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/shared/BirthDateField.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/shared/CityField.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/shared/CopyResultLink.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/shared/ExplainerArticle.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/shared/InterpretationDisclaimer.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/shared/JourneyCourse.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/shared/MentalBoost.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    }
+  },
+  "src/components/shared/PrintReportButton.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/shared/ProfileInputDialog.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-restyle": {
+      "count": 5
+    }
+  },
+  "src/components/shared/ProfileMarkdownExport.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/shared/RelatedArticles.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/shared/RelatedTools.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/shared/ResultNextSteps.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-restyle": {
+      "count": 1
+    }
+  },
+  "src/components/shared/ResultSymbol.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/shared/RiasecHexagonChart.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/shared/ShareResultButton.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/shared/TestAchievements.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/shared/TestContentBridge.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/shared/TestExplainer.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/shared/TestLaneLink.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/shared/TestSourceNote.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/shared/_oiyo-shared/KnowledgeNetworkMap.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/tests/AdhdScreeningTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/AngerStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/AnimalPersonalityTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/AnxietyScreeningTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/AssertivenessTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/AttachmentStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 13
+    }
+  },
+  "src/components/tests/AuthoritarianScaleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/components/tests/BigFivePersonalityTest.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tests/BiologicalAgeTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/tests/BoundaryStyleTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tests/BreakupRecoveryTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tests/BurnoutTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/BusinessTypeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tests/CareerValuesTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/tests/ChimpTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 3
+    }
+  },
+  "src/components/tests/CodependencyTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/CoffeePersonalityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    }
+  },
+  "src/components/tests/CognitiveBiasTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    }
+  },
+  "src/components/tests/CollabRiskTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/ColorAuraTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 9
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tests/ColorMemoryTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/ColorPersonalityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tests/ColorRecognitionTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/CommunicationStyleTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tests/CompatibilityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    }
+  },
+  "src/components/tests/ConflictStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tests/CopingStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/CreativityTypeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/tests/CritiQuestTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 2
+    }
+  },
+  "src/components/tests/CrossroadsInvestorTest.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/CuriosityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/DecisionMakingTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tests/DepressionScreeningTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/tests/DigitalBalanceTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 6
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 2
+    }
+  },
+  "src/components/tests/DigitalWellnessTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 6
+    }
+  },
+  "src/components/tests/DiscPersonalityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tests/EconomicsSchoolTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tests/EgogramTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/components/tests/EmotionRegulationTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/EmotionalEatingTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 8
+    }
+  },
+  "src/components/tests/EmotionalExpressivenessTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/EmotionalIntelligenceTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tests/EmotionalLaborTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/EmotionalMindTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/EmpathyTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 21
+    }
+  },
+  "src/components/tests/EnglishLevelTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tests/EnneagramTest.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 6
+    }
+  },
+  "src/components/tests/EntrepreneurialAptitudeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/FearTypeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 9
+    }
+  },
+  "src/components/tests/FiveStyleTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tests/FocusBlockerTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 16
+    }
+  },
+  "src/components/tests/FomoTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/GratitudeStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 26
+    }
+  },
+  "src/components/tests/GritScaleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/GrowthMindsetTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 9
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/tests/HappinessMeterTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tests/HexacoPersonalityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/HolmesRaheTest.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/HormonesTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/HspTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/HumorStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/ImposterSyndromeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    }
+  },
+  "src/components/tests/InnerChildTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/InnerStrengthTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 13
+    }
+  },
+  "src/components/tests/IntroExtroTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tests/JealousyTypeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/LeadershipStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/LearningStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    }
+  },
+  "src/components/tests/LeftBrainTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/LethargyRecoveryTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tests/LifeValuesTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 15
+    }
+  },
+  "src/components/tests/LocusOfControlTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/LonelinessTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    }
+  },
+  "src/components/tests/LoveLanguageTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    }
+  },
+  "src/components/tests/LoveProfileTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 17
+    }
+  },
+  "src/components/tests/MbtiCareerTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tests/MbtiLoveTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tests/MbtiPersonalityTest.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 18
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/MindClearTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/MindEaseTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/MindfulnessTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 22
+    }
+  },
+  "src/components/tests/MoneyAnxietyTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/MoneyPersonalityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/MotivationTypeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/NarcissismTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/OptimismTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/ParentingStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/PerfumePersonalityTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/PersonalBoundariesTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    }
+  },
+  "src/components/tests/PersonalColorTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tests/PlayfulnessTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/PoliticalCompassTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-raw-colors": {
+      "count": 27
+    }
+  },
+  "src/components/tests/ProblemSolverTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/ProcrastinationTypeTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/ProductivityStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tests/RelationshipBoredomTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/ResilienceTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/components/tests/RiasecCareerTest.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    }
+  },
+  "src/components/tests/RiasecQuickTest.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    }
+  },
+  "src/components/tests/RiskToleranceTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    }
+  },
+  "src/components/tests/SelfCompassionTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/SelfConceptClarityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/SelfControlTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/SelfEfficacyTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/SelfEsteemTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 4
+    }
+  },
+  "src/components/tests/SensoryProcessingTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 9
+    }
+  },
+  "src/components/tests/ShadowSelfTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/SleepChronotypeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    }
+  },
+  "src/components/tests/SocialAnxietyTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/SocialComparisonTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 10
+    }
+  },
+  "src/components/tests/SocialMediaPersonalityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    }
+  },
+  "src/components/tests/SpatialIQTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tests/SpendingHabitsTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/StrengthSageTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/StressResponseTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 8
+    }
+  },
+  "src/components/tests/StressTypeTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tests/TciPersonalityTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tests/ThinkingPatternsTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tests/ToneAnalysisTest.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 5
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/ToxicRelationshipTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 24
+    }
+  },
+  "src/components/tests/TrustStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 21
+    }
+  },
+  "src/components/tests/TypingSpeedTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tests/TypingTest.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tests/WorkLifeBalanceTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 8
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tests/WorkStyleTest.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tests/WorkaholicTest.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 10
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tools/AdventurerGuild.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tools/AstroCartoGlobe.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tools/AstroCartoMap.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 11
+    }
+  },
+  "src/components/tools/BalanceWheel.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tools/BiorhythmCalculator.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 48
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tools/BloodTypeCompatibility.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 27
+    }
+  },
+  "src/components/tools/BloodTypeFortune.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 26
+    }
+  },
+  "src/components/tools/BloodTypePersonality.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tools/BreathingTimer.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 20
+    }
+  },
+  "src/components/tools/CashflowExplorer.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/components/tools/ChineseZodiac.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 27
+    }
+  },
+  "src/components/tools/ChineseZodiacCompatibility.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 18
+    }
+  },
+  "src/components/tools/CognitiveDissonanceLab.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tools/CountryMatch.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/DailyHoroscope.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 18
+    }
+  },
+  "src/components/tools/DailyUniverse.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 11
+    },
+    "shadcn/no-restyle": {
+      "count": 2
+    }
+  },
+  "src/components/tools/DreamReading.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tools/ElementalRemedyTool.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-inline-styles": {
+      "count": 5
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tools/EmotionDiary.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    }
+  },
+  "src/components/tools/ForeignAccountReportChecker.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tools/FortuneWall.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 5
+    },
+    "shadcn/no-inline-styles": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/GenerationCompare.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tools/HabitFormationAssistant.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tools/IncomeTaxFlowCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/tools/JournalingTool.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/JyotishReading.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 11
+    }
+  },
+  "src/components/tools/LottoWinSimulator.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/MayanReading.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tools/MenuRoulette.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/MoneyParkingGuide.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tools/NameEnergyReading.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 12
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/tools/NatalChartCalculator.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 18
+    }
+  },
+  "src/components/tools/NatalSkyScene.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/tools/NumerologyCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 10
+    },
+    "shadcn/no-restyle": {
+      "count": 2
+    },
+    "shadcn/require-static-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tools/PalmistryExplorer.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/components/tools/PeriodicFortune.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 8
+    },
+    "shadcn/no-inline-styles": {
+      "count": 14
+    }
+  },
+  "src/components/tools/PranayamaGuide.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/components/tools/ReincarnationCountry.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 35
+    }
+  },
+  "src/components/tools/ReincarnationGlobe.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 11
+    }
+  },
+  "src/components/tools/ReincarnationParticles.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/RoutineChecklist.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 7
+    }
+  },
+  "src/components/tools/SajuCalculator.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-arbitrary-values": {
+      "count": 12
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 46
+    },
+    "shadcn/no-restyle": {
+      "count": 18
+    }
+  },
+  "src/components/tools/SajuFortune.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/components/tools/SleepScheduleCalculator.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/TalismanTool.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tools/TarotCardFace.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-inline-styles": {
+      "count": 6
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tools/TarotReading.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "shadcn/no-arbitrary-values": {
+      "count": 9
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tools/TaxCalendar.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 9
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/tools/TodayWeather.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/ZiweiReading.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/components/tools/ZodiacCompatibilityCalculator.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 19
+    }
+  },
+  "src/components/tools/ZodiacPersonality.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/components/tools/ZodiacYearFinder.tsx": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/components/tools/celtic/CelticWheel.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/components/tools/celtic/CelticWheelScene.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/tools/numerology/NumerologyOrbit.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tools/numerology/NumerologyOrbitScene.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tools/palmistry/PalmLines3D.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tools/palmistry/PalmLinesScene.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tools/saju/FiveElementsOrbit.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tools/saju/FiveElementsOrbitScene.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/tools/saju/LifeCategoriesSection.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 11
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tools/saju/YongsinSection.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 4
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 14
+    }
+  },
+  "src/components/tools/tarot/TarotShuffleTable.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tools/tarot/TarotSpread.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/components/tools/tarot/TarotSpreadScene.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/components/tools/ziwei/ZiWeiWheel.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 3
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/components/tools/ziwei/ZiWeiWheelScene.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/components/ui/CelestialClock.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 117
+    },
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/components/ui/button.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/components/ui/dialog.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 6
+    },
+    "shadcn/no-unknown-classes": {
+      "count": 14
+    }
+  },
+  "src/components/ui/item.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/components/ui/progress.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 2
+    }
+  },
+  "src/components/ui/questionnaire-matrix.tsx": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/components/visual/CardOrbit.tsx": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/components/visual/CardOrbitScene.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/components/visual/PhysicsJar.tsx": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/layouts/Layout.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/pages/404.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/about.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/pages/[locale]/adhd/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/anger-style/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/anxiety/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/articles/index.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/pages/[locale]/attachment-style/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/authoritarian/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 11
+    }
+  },
+  "src/pages/[locale]/big5/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/biorhythm/calculator.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/blood-type/compatibility.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/blood-type/fortune.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/blood-type/index.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/breathing/timer.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/burnout/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/career-values-test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/celtic/reading.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/chinese-zodiac/[animal].astro": {
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/pages/[locale]/chinese-zodiac/compatibility.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/chinese-zodiac/index.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/chinese-zodiac/year.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/pages/[locale]/circle.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/circle/pair.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/depression/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/dream/[symbol].astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/dream/index.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/economics-school-test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/emotion/release.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/empathy/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/enneagram/hobbies.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 13
+    }
+  },
+  "src/pages/[locale]/enneagram/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/eq/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/fortune/[period].astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/pages/[locale]/friendship-style-test.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/guild.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/habit-builder/30-days.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/pages/[locale]/habit-builder/guide.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/pages/[locale]/index.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    }
+  },
+  "src/pages/[locale]/information-hygiene.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/pages/[locale]/inner-strength/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/interval/timer.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/investment-type/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/joseon-faction-test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/journal/today.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/jyotish/reading.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 16
+    }
+  },
+  "src/pages/[locale]/labs/card-orbit.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/labs/cosmic-intro.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/lazy-perfectionist/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/legal/terms.astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 2
+    }
+  },
+  "src/pages/[locale]/lethargy/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/life-values-test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/lotto/simulator.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/love-language/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/mayan/reading.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 16
+    }
+  },
+  "src/pages/[locale]/mbti/[type].astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/pages/[locale]/mbti/career.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/pages/[locale]/mbti/habits.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 12
+    }
+  },
+  "src/pages/[locale]/mbti/hobbies.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 11
+    }
+  },
+  "src/pages/[locale]/mbti/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/menu/roulette.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/methodology.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/music-taste-test.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/narcissism/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/numerology/calculator.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/onomancy/index.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 2
+    },
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/pages/[locale]/ontology/index.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 7
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/ontology/template/deep.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 2
+    }
+  },
+  "src/pages/[locale]/palmistry/explore.astro": {
+    "shadcn/no-arbitrary-values": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/perfectionism/test.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/personal-color/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 21
+    }
+  },
+  "src/pages/[locale]/political/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 6
+    }
+  },
+  "src/pages/[locale]/pranayama.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/profile/export.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/pages/[locale]/reincarnation-country/index.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/reincarnation-country/weights.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/pages/[locale]/routine/builder.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/pages/[locale]/routine/time-maker.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 10
+    }
+  },
+  "src/pages/[locale]/saju/[period].astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/saju/calculator.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/saju/fortune.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/self-esteem/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/sleep-type/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/social-anxiety/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/strengths/keywords.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/stress-events/test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/tarot/reading.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/tax-calendar.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 5
+    }
+  },
+  "src/pages/[locale]/tests/index.astro": {
+    "shadcn/no-inline-styles": {
+      "count": 1
+    },
+    "shadcn/no-restyle": {
+      "count": 21
+    },
+    "shadcn/require-static-classes": {
+      "count": 1
+    }
+  },
+  "src/pages/[locale]/today.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/topic/[topic]/index.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 8
+    }
+  },
+  "src/pages/[locale]/value-compass-test.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 9
+    }
+  },
+  "src/pages/[locale]/ziwei/reading.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 16
+    }
+  },
+  "src/pages/[locale]/zodiac/[period].astro": {
+    "shadcn/no-unknown-classes": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/zodiac/compatibility.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  },
+  "src/pages/[locale]/zodiac/fortune.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 4
+    }
+  },
+  "src/pages/[locale]/zodiac/personality.astro": {
+    "shadcn/no-raw-colors": {
+      "count": 3
+    }
+  }
+}

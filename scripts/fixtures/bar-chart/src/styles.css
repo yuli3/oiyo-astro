@@ -1,0 +1,3 @@
+@import "../../../../src/styles/global.css";
+/* The real component is outside this fixture root; include its utilities explicitly. */
+@source "../../../../src/components/mdx/BarChart.astro";

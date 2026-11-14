@@ -161,7 +161,7 @@ export function AssessmentWeave({ signals, lang }: { signals: OntologySignal[]; 
   const shown = readings[0]?.layers.length === 3 ? readings.filter((row) => row.layers.length === 3).slice(0, 2) : readings.slice(0, 1);
   if (shown.length === 0) return null;
   return (
-    <div className="mt-4 rounded-2xl border border-green-200 bg-card p-4" data-testid="assessment-weave">
+    <div className="mt-4 rounded-2xl border border-border bg-card p-4" data-testid="assessment-weave">
       <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.heading}</p>
       {shown.map((reading) => {
         const theme = t.theme[reading.theme];
@@ -171,7 +171,7 @@ export function AssessmentWeave({ signals, lang }: { signals: OntologySignal[]; 
           .replace("{layers}", joinLayers(reading.layers.map((layer) => t.layer[layer]), lang, t.and));
         return (
           <div key={reading.theme} className="mt-2">
-            <p className="text-sm font-bold leading-6 text-slate-900">{sentence}</p>
+            <p className="text-sm font-bold leading-6 text-foreground">{sentence}</p>
             <ul className="mt-2 space-y-1">
               {reading.evidence.map((row, index) => (
                 <li key={index} className="text-[11px] font-bold text-green-800">· {evidenceLine(row, t)}</li>
@@ -180,7 +180,7 @@ export function AssessmentWeave({ signals, lang }: { signals: OntologySignal[]; 
           </div>
         );
       })}
-      <p className="mt-3 text-[11px] leading-5 text-slate-500">{t.caveat}</p>
+      <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.caveat}</p>
     </div>
   );
 }

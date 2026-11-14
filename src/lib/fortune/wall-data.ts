@@ -1,7 +1,41 @@
 // 홈 랜딩의 "운세 도배" 섹션 전용. 생년월일 없이, 12지신·별자리 각각을
 // reading() 엔진에 직접 색인으로 넣어 전체 케이스(기간×띠×별자리)를 만든다.
-import { civilDay, reading, type Period, type Locale as FortuneLocale } from './periodic';
+import { ANIMAL_EMOJI, ANIMAL_IMAGE, ANIMAL_NAMES, SIGN_IMAGE, SIGN_NAMES, SIGN_SYMBOL } from './zodiac-names';
+import { animalOf, civilDay, elementOf, reading, type Period, type Locale as FortuneLocale } from './periodic';
 import { animalRanking, signRanking, scores, delta, grade, lucky, type Grade } from './score';
+
+/** 띠 카드 안의 출생 연도별 한 줄 (2026-10-08 세운: "호랑이띠라도 74·86·98년생으로 나누면 좋겠다"). */
+export interface WallBirthYear {
+  year: number;
+  /** "74년생" / "1974" — 로케일별 표기. */
+  label: string;
+  /** 그 해 천간의 오행으로 뽑은 한 줄. 같은 띠라도 해마다 천간이 달라 문장이 갈린다. */
+  line: string;
+  score: number;
+  grade: Grade;
+}
+
+// 지면 신문의 띠별 운세가 다루는 폭과 비슷하게, 만 14~78세가 되는 출생 연도만 낸다.
+// 12년 주기라 띠마다 5~6개다. 연도는 양력 기준이고 설·입춘 전 출생은 앞 해의 띠다.
+const YOUNGEST_AGE = 14;
+const OLDEST_AGE = 78;
+
+export function birthYearsOf(animalIdx: number, at: Date): number[] {
+  const thisYear = at.getUTCFullYear();
+  const years: number[] = [];
+  for (let year = thisYear - OLDEST_AGE; year <= thisYear - YOUNGEST_AGE; year += 1) {
+    if (animalOf(year) === animalIdx) years.push(year);
+  }
+  return years;
+}
+
+function birthYearLabel(year: number, lang: string): string {
+  if (lang === 'ko') return `${String(year % 100).padStart(2, '0')}년생`;
+  if (lang === 'ja') return `${year}年生まれ`;
+  if (lang === 'zh') return `${year}年生`;
+  return String(year);
+}
+
 
 type Lang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -23,28 +57,7 @@ export const SECTION_LABELS: Record<Lang, { animals: string; signs: string; fort
   es: { animals: 'Zodiaco Chino', signs: 'Signos', fortuneSuffix: '' },
 };
 
-const ANIMAL_NAMES: Record<Lang, string[]> = {
-  ko: ['쥐띠', '소띠', '호랑이띠', '토끼띠', '용띠', '뱀띠', '말띠', '양띠', '원숭이띠', '닭띠', '개띠', '돼지띠'],
-  en: ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'],
-  ja: ['子（ねずみ）', '丑（うし）', '寅（とら）', '卯（うさぎ）', '辰（たつ）', '巳（へび）', '午（うま）', '未（ひつじ）', '申（さる）', '酉（とり）', '戌（いぬ）', '亥（いのしし）'],
-  zh: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'],
-  fr: ['Rat', 'Bœuf', 'Tigre', 'Lapin', 'Dragon', 'Serpent', 'Cheval', 'Chèvre', 'Singe', 'Coq', 'Chien', 'Cochon'],
-  es: ['Rata', 'Buey', 'Tigre', 'Conejo', 'Dragón', 'Serpiente', 'Caballo', 'Cabra', 'Mono', 'Gallo', 'Perro', 'Cerdo'],
-};
-const ANIMAL_EMOJI = ['🐭', '🐮', '🐯', '🐰', '🐉', '🐍', '🐎', '🐑', '🐒', '🐓', '🐕', '🐷'];
-
-const SIGN_NAMES: Record<Lang, string[]> = {
-  ko: ['양자리', '황소자리', '쌍둥이자리', '게자리', '사자자리', '처녀자리', '천칭자리', '전갈자리', '궁수자리', '염소자리', '물병자리', '물고기자리'],
-  en: ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'],
-  ja: ['牡羊座', '牡牛座', '双子座', '蟹座', '獅子座', '乙女座', '天秤座', '蠍座', '射手座', '山羊座', '水瓶座', '魚座'],
-  zh: ['白羊座', '金牛座', '双子座', '巨蟹座', '狮子座', '处女座', '天秤座', '天蝎座', '射手座', '摩羯座', '水瓶座', '双鱼座'],
-  fr: ['Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire', 'Capricorne', 'Verseau', 'Poissons'],
-  es: ['Aries', 'Tauro', 'Géminis', 'Cáncer', 'Leo', 'Virgo', 'Libra', 'Escorpio', 'Sagitario', 'Capricornio', 'Acuario', 'Piscis'],
-};
-const SIGN_SYMBOL = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
-// 2026-09-28 O4: 카드 머리의 이모지 대신 이미 만들어 둔 결과 심볼 이미지를 쓴다. 순서는 이름 배열과 같다.
-const ANIMAL_IMAGE = ['rat', 'ox', 'tiger', 'rabbit', 'dragon', 'snake', 'horse', 'goat', 'monkey', 'rooster', 'dog', 'boar'].map((f) => `/images/result-symbols/chinese-zodiac/${f}.webp`);
-const SIGN_IMAGE = ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'].map((f) => `/images/result-symbols/western-zodiac/${f}.webp`);
+// 띠·별자리 이름과 그림은 zodiac-names.ts 한곳에 둔다(2026-11-11, 신년운세 모음과 같이 쓴다).
 
 export interface WallCard {
   name: string;
@@ -64,6 +77,8 @@ export interface WallCard {
   caution: string;
   luckyColorHex: string;
   luckyNumber: number;
+  /** 띠 카드에만 있다. 별자리는 출생 연도로 갈리지 않는다. */
+  years?: WallBirthYear[];
 }
 
 export interface WallSection {
@@ -104,6 +119,7 @@ function rankedCards(
   fortuneLocale: FortuneLocale,
   elementOfIndex: (i: number) => number,
   used: { opening: Set<string>; advice: Set<string> },
+  lang: string,
 ): WallCard[] {
   const byIndex = [...rows].sort((a, b) => a.idx - b.idx);
   return byIndex.map((row) => {
@@ -112,7 +128,8 @@ function rankedCards(
     // 한 화면에 24장이 함께 놓이므로, 같은 문장이 두 카드에 동시에 뜨면
     // 코퍼스가 얕아 보인다. 겹치면 소금을 쳐서 다시 뽑는다.
     let r = reading(elementOfIndex(row.idx), period, base, fortuneLocale, at, g);
-    for (let salt = 1; salt < 12 && (used.opening.has(r.opening) || used.advice.has(r.advice)); salt++) {
+    // 출생 연도 줄까지 한 섹션에 조언이 89개 놓이고 풀은 96개라, 넉넉히 다시 뽑아야 겹치지 않는다.
+    for (let salt = 1; salt < 64 && (used.opening.has(r.opening) || used.advice.has(r.advice)); salt++) {
       r = reading(elementOfIndex(row.idx), period, `${base}~${salt}`, fortuneLocale, at, g);
     }
     used.opening.add(r.opening);
@@ -131,7 +148,34 @@ function rankedCards(
       delta: delta(base, period, at),
       luckyColorHex: lucky(base, period, fortuneLocale, at).colorHex,
       luckyNumber: lucky(base, period, fortuneLocale, at).number,
+      ...(prefix === 'animal' ? { years: birthYearLines(row.idx, period, at, fortuneLocale, used, lang) } : {}),
     };
+  });
+}
+
+function birthYearLines(
+  animalIdx: number,
+  period: Period,
+  at: Date,
+  fortuneLocale: FortuneLocale,
+  used: { opening: Set<string>; advice: Set<string> },
+  lang: string,
+): WallBirthYear[] {
+  return birthYearsOf(animalIdx, at).map((year) => {
+    const base = `animal-${animalIdx}-y${year}`;
+    const score = scores(base, period, at).overall;
+    const g = grade(score);
+    // 띠 카드의 조언과도, 다른 해의 줄과도 겹치지 않게 뽑는다.
+    let r = reading(elementOf(year), period, base, fortuneLocale, at, g);
+    for (let salt = 1; salt < 64 && used.advice.has(r.advice); salt++) {
+      r = reading(elementOf(year), period, `${base}~${salt}`, fortuneLocale, at, g);
+    }
+    used.advice.add(r.advice);
+    // 코퍼스의 조언은 "조언: …" 꼴이다. 연도 옆에서는 머리말이 군더더기라 떼어 낸다.
+    const bare = r.advice.replace(/^[^:：]{1,14}[:：]\s*/, '');
+    // 머리말을 떼면 영어·프랑스어·스페인어는 소문자로 시작하므로 첫 글자를 올린다.
+    const line = bare.charAt(0).toLocaleUpperCase(lang) + bare.slice(1);
+    return { year, label: birthYearLabel(year, lang), line, score, grade: g };
   });
 }
 
@@ -146,7 +190,7 @@ export function buildFortuneWall(locale: string, at = civilDay()): WallSection[]
     periodLabel: PERIOD_LABELS[lang][key],
     // 순위가 높은 순으로 낸다. 12개를 무순으로 늘어놓는 것보다 "오늘 1위는
     // 누구인가"가 훨씬 강한 훅이고, 매일 순위가 바뀌므로 재방문 이유가 된다.
-    animals: rankedCards(animalRanking(key, at), key, at, 'animal', ANIMAL_NAMES[lang], ANIMAL_EMOJI, ANIMAL_IMAGE, fortuneLocale, (i) => (i * 2 + 1) % 5, seen[key]),
-    signs: rankedCards(signRanking(key, at), key, at, 'sign', SIGN_NAMES[lang], SIGN_SYMBOL, SIGN_IMAGE, fortuneLocale, (i) => (i + 2) % 5, seen[key]),
+    animals: rankedCards(animalRanking(key, at), key, at, 'animal', ANIMAL_NAMES[lang], ANIMAL_EMOJI, ANIMAL_IMAGE, fortuneLocale, (i) => (i * 2 + 1) % 5, seen[key], lang),
+    signs: rankedCards(signRanking(key, at), key, at, 'sign', SIGN_NAMES[lang], SIGN_SYMBOL, SIGN_IMAGE, fortuneLocale, (i) => (i + 2) % 5, seen[key], lang),
   }));
 }

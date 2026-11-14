@@ -1,0 +1,302 @@
+---
+/**
+ * 2027 신년운세 모음. 2026-11-09 세운 결재(발굴 2번), company-brain
+ * think-tank/2026-11-09-oiyo-content-discovery.md. 신년운세 검색 피크 12/20 전에 연다.
+ * 나라마다 새해를 맞는 날과 쓰는 말이 달라서 언어별로 안내와 모음 목록을 따로 둔다.
+ */
+import Layout from '../../layouts/Layout.astro';
+import NewYear2027Hub from '../../components/tools/new-year/NewYear2027Hub';
+import ZodiacRelationWheel from '../../components/tools/zodiac/ZodiacRelationWheel';
+import { LOCALES, type Locale } from '../../i18n';
+import { ANIMAL_IMAGE, ANIMAL_NAMES } from '../../lib/fortune/zodiac-names';
+import { relationTo2027 } from '../../lib/new-year-2027';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const ANIMAL_SLUG = ['rat', 'ox', 'tiger', 'rabbit', 'dragon', 'snake', 'horse', 'goat', 'monkey', 'rooster', 'dog', 'pig'];
+
+interface Copy {
+  title: string;
+  description: string;
+  eyebrow: string;
+  h1: string;
+  lead: string;
+  factsHeading: string;
+  facts: string[];
+  factsSource?: { label: string; href: string };
+  collectionHeading: string;
+  links: { href: string; label: string; note: string }[];
+  animalsHeading: string;
+  relationTag: Record<'same' | 'clash' | 'harm' | 'punish' | 'harmony', string>;
+  faqHeading: string;
+  faqs: { q: string; a: string }[];
+}
+
+const C: Record<Locale, Copy> = {
+  ko: {
+    title: '2027 신년운세 모음 — 정미년 띠·토정비결·신년 사주 한곳에',
+    description: '2027 정미년(붉은 양의 해) 신년운세를 한곳에 모았어요. 생일 하나로 띠·별자리·개인년을 보고, 토정비결·신년 사주·띠별 운세로 이어 가요.',
+    eyebrow: '2027 정미년 · 붉은 양의 해',
+    h1: '2027 신년운세 모음',
+    lead: '토정비결, 신년 사주, 띠별 운세, 별자리, 타로를 한 페이지에 모았어요. 먼저 생일 하나로 내 2027을 훑어보고, 궁금한 것부터 열어 보세요.',
+    factsHeading: '2027년 새해 달력',
+    facts: [
+      '2027년은 정미년(丁未年)이에요. 丁은 불(火), 未는 양이라 "붉은 양의 해"라고 불러요.',
+      '설날은 2027년 2월 7일(일)이에요. 연휴는 2월 6일~8일이고 2월 9일(화)이 대체공휴일이에요.',
+      '정월대보름은 2월 21일(일)이에요.',
+      '띠는 설을 기준으로 바뀌어요. 1~2월 초에 태어났다면 앞 해 띠일 수 있어요.',
+    ],
+    factsSource: { label: '한국천문연구원 2027 월력 자료', href: 'https://astro.kasi.re.kr/kor/life/post/calendarData?year=2027' },
+    collectionHeading: '2027 운세 모음',
+    links: [
+      { href: '/ko/tojeong-2027/', label: '📜 2027 토정비결', note: '음력 생일로 세 괘를 뽑아 한 해를 읽어요' },
+      { href: '/ko/saju/new-year-2027/', label: '🧧 2027 신년 사주 리포트', note: '내 일간과 정미년의 관계를 봐요' },
+      { href: '/ko/chinese-zodiac/goat/', label: '🐑 양띠와 2027', note: '본명년을 맞는 양띠 이야기' },
+      { href: '/ko/zodiac/yearly/', label: '♈ 별자리 연간 운세', note: '12별자리 한 해 흐름' },
+      { href: '/ko/tarot/2027/', label: '🃏 2027 신년 타로', note: '상반기·하반기·한 해 조언 세 장' },
+      { href: '/ko/profile/year-2026/', label: '🗓️ 나의 2026 결산 카드', note: '올해 해 본 검사로 한 장 정리' },
+    ],
+    animalsHeading: '띠별 2027 운세',
+    relationTag: { same: '본명년', clash: '충', harm: '원진·해', punish: '형·파', harmony: '합' },
+    faqHeading: '자주 묻는 질문',
+    faqs: [
+      { q: '2027년은 무슨 띠의 해인가요?', a: '정미년(丁未年), 붉은 양의 해예요. 띠는 설날(2027년 2월 7일)부터 바뀌어요.' },
+      { q: '2027년 설날은 언제인가요?', a: '2월 7일(일)이에요. 2월 6일~8일이 설 연휴이고, 연휴가 일요일과 겹쳐 2월 9일(화)이 대체공휴일이에요. 한국천문연구원 2027 월력 자료 기준이에요.' },
+      { q: '양띠에게 2027년은 어떤 해인가요?', a: '자기 띠의 해(본명년)라 전통적으로 나를 더 돌보라는 해로 봐요. 소띠는 충, 쥐띠는 원진·해, 개띠는 형·파 관계로 읽고, 말·토끼·돼지띠는 합이 맞는 띠로 봐요. 모두 전통 해석이고 앞일을 정하지 않아요.' },
+    ],
+  },
+  en: {
+    title: '2027 Horoscope Hub — Year of the Fire Goat, Signs and Numbers',
+    description: 'Everything for 2027 in one place: your Chinese zodiac animal in the Year of the Fire Goat, your sun sign and your 2027 personal year number from one birthday.',
+    eyebrow: '2027 · Year of the Fire Goat',
+    h1: '2027 Horoscope Hub',
+    lead: 'Your Chinese zodiac animal, sun sign, numerology and tarot for 2027 in one place. Start with your birthday, then open what you are curious about.',
+    factsHeading: 'How 2027 begins',
+    facts: [
+      '2027 is a Ding-Wei (丁未) year: Ding is yin fire and Wei is the Goat, so it is called the Year of the Fire Goat.',
+      'Lunar New Year falls on Saturday 6 February 2027 in the Chinese calendar. Your animal changes on that day, so people born in January or early February may belong to the previous animal.',
+      'Your numerology personal year changes on 1 January.',
+    ],
+    collectionHeading: 'Your 2027 collection',
+    links: [
+      { href: '/en/saju/new-year-2027/', label: '🧧 2027 Four Pillars preview', note: 'How the Fire Goat meets your day master' },
+      { href: '/en/chinese-zodiac/goat/', label: '🐑 The Goat and 2027', note: 'Your own animal’s year' },
+      { href: '/en/zodiac/yearly/', label: '♈ Yearly horoscope', note: 'The year ahead for all 12 signs' },
+      { href: '/en/numerology/calculator/', label: '🔢 Numerology calculator', note: 'Life path and personal year' },
+      { href: '/en/tarot/2027/', label: '🃏 2027 New Year tarot', note: 'First half, second half, advice: three cards' },
+      { href: '/en/profile/year-2026/', label: '🗓️ My 2026 recap card', note: 'Your year in tests on one card' },
+    ],
+    animalsHeading: 'The 12 animals in 2027',
+    relationTag: { same: 'Own year', clash: 'Clash', harm: 'Harm', punish: 'Punishment', harmony: 'Harmony' },
+    faqHeading: 'FAQ',
+    faqs: [
+      { q: 'What Chinese zodiac year is 2027?', a: 'The Year of the Fire Goat (丁未), starting on Lunar New Year, Saturday 6 February 2027.' },
+      { q: 'Which animals clash with the Goat in 2027?', a: 'Traditionally the Ox clashes with the Goat, the Rat is a “harm” pair and the Dog a “punishment” pair, while the Horse, Rabbit and Pig are in harmony. These are traditional readings and do not decide what happens.' },
+      { q: 'What is a personal year number?', a: 'In numerology, add the digits of your birth month, birth day and the year, and reduce to one digit. It runs in a nine-year cycle and changes every January.' },
+    ],
+  },
+  ja: {
+    title: '2027年の運勢まとめ — 丁未（ひのとひつじ）の干支・星座・数秘',
+    description: '2027年は丁未（ひのとひつじ）。生年月日ひとつで干支と年の相性・星座・パーソナルイヤーを見て、四柱推命や星座の年間運勢へ進めます。',
+    eyebrow: '2027年 · 丁未（ひのとひつじ）',
+    h1: '2027年の運勢まとめ',
+    lead: '干支、星座、数秘術、タロットの2027年をひとまとめにしました。まず生年月日でわたしの2027年を見てから、気になるものを開いてください。',
+    factsHeading: '2027年の始まり',
+    facts: [
+      '2027年の干支は丁未（ひのとひつじ）です。丁は火の陰、未はひつじです。',
+      '日本では年の干支は1月1日から数えるのが一般的ですが、占いでは立春（2月4日ごろ）を年の境目とする流派もあります。中国の旧正月は2月6日です。',
+      '節分は2月3日です。',
+    ],
+    collectionHeading: '2027年の運勢まとめ',
+    links: [
+      { href: '/ja/saju/new-year-2027/', label: '🧧 2027年 四柱推命プレビュー', note: '丁未とわたしの日干の関係' },
+      { href: '/ja/chinese-zodiac/goat/', label: '🐑 未年生まれと2027年', note: '年男・年女の一年' },
+      { href: '/ja/zodiac/yearly/', label: '♈ 星座の年間運勢', note: '12星座の一年の流れ' },
+      { href: '/ja/numerology/calculator/', label: '🔢 数秘術', note: 'ライフパスとパーソナルイヤー' },
+      { href: '/ja/tarot/2027/', label: '🃏 2027年 新年タロット', note: '上半期・下半期・アドバイスの3枚' },
+      { href: '/ja/profile/year-2026/', label: '🗓️ わたしの2026年まとめカード', note: '今年受けた診断を1枚に' },
+    ],
+    animalsHeading: '干支別の2027年',
+    relationTag: { same: '年男・年女', clash: '冲', harm: '害', punish: '刑・破', harmony: '合' },
+    faqHeading: 'よくある質問',
+    faqs: [
+      { q: '2027年の干支は？', a: '丁未（ひのとひつじ）です。日本では1月1日から数えるのが一般的で、占いの流派によっては立春（2月4日ごろ）を境にします。' },
+      { q: '2027年に未年と相性が気になる干支は？', a: '伝統的には丑が「冲」、子が「害」、戌が「刑・破」、午・卯・亥が「合」とされます。伝統的な読み方で、先のことを決めるものではありません。' },
+      { q: 'パーソナルイヤーとは？', a: '数秘術で、誕生月・誕生日・その年の数字を足して1桁にした数です。9年でひと回りし、1月に切り替わります。' },
+    ],
+  },
+  zh: {
+    title: '2027年运势大全 — 丁未羊年生肖、太岁、星座与个人年',
+    description: '2027年是丁未羊年。输入生日即可查看生肖与太岁关系、星座和个人年数字，并继续看四柱八字与星座年运。',
+    eyebrow: '2027 丁未羊年',
+    h1: '2027年运势大全',
+    lead: '把2027年的生肖、犯太岁、星座、数字命理和塔罗放在一页。先用生日看看我的2027，再打开感兴趣的部分。',
+    factsHeading: '2027年怎么开始',
+    facts: [
+      '2027年是丁未年：丁属阴火，未为羊，俗称“火羊年”。',
+      '春节是2027年2月6日（星期六）。生肖以春节为界，1月或2月初出生的人可能属上一年的生肖；命理上也有以立春（2月4日前后）为界的说法。',
+      '传统上2027年犯太岁的生肖是羊（值太岁）、牛（冲太岁）、鼠（害太岁）、狗（刑太岁）。',
+    ],
+    collectionHeading: '2027运势合集',
+    links: [
+      { href: '/zh/saju/new-year-2027/', label: '🧧 2027 八字新年预览', note: '丁未年与我的日主' },
+      { href: '/zh/chinese-zodiac/goat/', label: '🐑 属羊的2027', note: '本命年怎么过' },
+      { href: '/zh/zodiac/yearly/', label: '♈ 星座年运', note: '十二星座的一年' },
+      { href: '/zh/numerology/calculator/', label: '🔢 数字命理', note: '生命灵数与个人年' },
+      { href: '/zh/tarot/2027/', label: '🃏 2027新年塔罗', note: '上半年·下半年·全年建议三张牌' },
+      { href: '/zh/profile/year-2026/', label: '🗓️ 我的2026年度卡', note: '把今年做过的测验汇成一张' },
+    ],
+    animalsHeading: '十二生肖2027',
+    relationTag: { same: '值太岁', clash: '冲太岁', harm: '害太岁', punish: '刑太岁', harmony: '相合' },
+    faqHeading: '常见问题',
+    faqs: [
+      { q: '2027年是什么年？', a: '丁未羊年，春节为2027年2月6日。' },
+      { q: '2027年哪些生肖犯太岁？', a: '传统说法是羊值太岁、牛冲太岁、鼠害太岁、狗刑太岁；马、兔、猪与羊相合。这些都是传统说法，并不决定未来。' },
+      { q: '个人年数字是什么？', a: '数字命理中，把出生月、出生日和当年年份的数字相加并化为一位数。九年一循环，每年1月更换。' },
+    ],
+  },
+  fr: {
+    title: 'Horoscope 2027 — Année de la Chèvre de Feu, signe et année personnelle',
+    description: 'Tout 2027 au même endroit : votre animal chinois face à la Chèvre de Feu, votre signe solaire et votre année personnelle à partir d’une seule date de naissance.',
+    eyebrow: '2027 · Année de la Chèvre de Feu',
+    h1: 'Horoscope 2027 : tout en un',
+    lead: 'Animal chinois, signe solaire, numérologie et tarot pour 2027 sur une seule page. Commencez par votre date de naissance.',
+    factsHeading: 'Le début de 2027',
+    facts: [
+      '2027 est une année Ding-Wei (丁未) : Ding est le feu yin, Wei la Chèvre. On parle de Chèvre de Feu.',
+      'Le Nouvel An chinois tombe le samedi 6 février 2027. Si vous êtes né en janvier ou début février, vous pouvez appartenir à l’animal précédent.',
+      'Votre année personnelle en numérologie change le 1er janvier.',
+    ],
+    collectionHeading: 'Votre collection 2027',
+    links: [
+      { href: '/fr/saju/new-year-2027/', label: '🧧 Aperçu Quatre Piliers 2027', note: 'La Chèvre de Feu et votre maître du jour' },
+      { href: '/fr/chinese-zodiac/goat/', label: '🐑 La Chèvre et 2027', note: 'L’année de votre propre animal' },
+      { href: '/fr/zodiac/yearly/', label: '♈ Horoscope annuel', note: 'L’année des 12 signes' },
+      { href: '/fr/numerology/calculator/', label: '🔢 Numérologie', note: 'Chemin de vie et année personnelle' },
+      { href: '/fr/tarot/2027/', label: '🃏 Tarot 2027', note: 'Deux semestres et un conseil : trois cartes' },
+      { href: '/fr/profile/year-2026/', label: '🗓️ Mon bilan 2026', note: 'Votre année de tests sur une carte' },
+    ],
+    animalsHeading: 'Les 12 animaux en 2027',
+    relationTag: { same: 'Son année', clash: 'Opposition', harm: 'Nuisance', punish: 'Punition', harmony: 'Harmonie' },
+    faqHeading: 'Questions fréquentes',
+    faqs: [
+      { q: 'Quelle est l’année chinoise 2027 ?', a: 'L’année de la Chèvre de Feu (丁未), à partir du Nouvel An chinois, le samedi 6 février 2027.' },
+      { q: 'Quels animaux s’opposent à la Chèvre ?', a: 'Traditionnellement le Bœuf s’oppose à la Chèvre, le Rat forme une paire « nuisible » et le Chien une paire « punition » ; le Cheval, le Lapin et le Cochon sont en harmonie. Ce sont des lectures traditionnelles.' },
+      { q: 'Qu’est-ce que l’année personnelle ?', a: 'En numérologie, on additionne les chiffres du mois et du jour de naissance et de l’année, puis on réduit à un chiffre. Le cycle dure neuf ans.' },
+    ],
+  },
+  es: {
+    title: 'Horóscopo 2027 — Año de la Cabra de Fuego, signo y año personal',
+    description: 'Todo 2027 en un lugar: tu animal chino ante la Cabra de Fuego, tu signo solar y tu año personal a partir de una sola fecha de nacimiento.',
+    eyebrow: '2027 · Año de la Cabra de Fuego',
+    h1: 'Horóscopo 2027: todo en uno',
+    lead: 'Animal chino, signo solar, numerología y tarot de 2027 en una página. Empieza por tu fecha de nacimiento.',
+    factsHeading: 'Cómo empieza 2027',
+    facts: [
+      '2027 es un año Ding-Wei (丁未): Ding es fuego yin y Wei la Cabra. Se le llama Cabra de Fuego.',
+      'El Año Nuevo chino cae el sábado 6 de febrero de 2027. Si naciste en enero o a principios de febrero, puede que tengas el animal anterior.',
+      'Tu año personal en numerología cambia el 1 de enero.',
+    ],
+    collectionHeading: 'Tu colección 2027',
+    links: [
+      { href: '/es/saju/new-year-2027/', label: '🧧 Avance de los Cuatro Pilares 2027', note: 'La Cabra de Fuego y tu maestro del día' },
+      { href: '/es/chinese-zodiac/goat/', label: '🐑 La Cabra y 2027', note: 'El año de tu propio animal' },
+      { href: '/es/zodiac/yearly/', label: '♈ Horóscopo anual', note: 'El año de los 12 signos' },
+      { href: '/es/numerology/calculator/', label: '🔢 Numerología', note: 'Camino de vida y año personal' },
+      { href: '/es/tarot/2027/', label: '🃏 Tarot 2027', note: 'Dos semestres y un consejo: tres cartas' },
+      { href: '/es/profile/year-2026/', label: '🗓️ Mi resumen 2026', note: 'Tu año de tests en una tarjeta' },
+    ],
+    animalsHeading: 'Los 12 animales en 2027',
+    relationTag: { same: 'Su año', clash: 'Choque', harm: 'Daño', punish: 'Castigo', harmony: 'Armonía' },
+    faqHeading: 'Preguntas frecuentes',
+    faqs: [
+      { q: '¿Qué año chino es 2027?', a: 'El año de la Cabra de Fuego (丁未), desde el Año Nuevo chino, el sábado 6 de febrero de 2027.' },
+      { q: '¿Qué animales chocan con la Cabra?', a: 'Tradicionalmente el Buey choca con la Cabra, la Rata forma una pareja «dañina» y el Perro una de «castigo»; el Caballo, el Conejo y el Cerdo están en armonía. Son lecturas tradicionales.' },
+      { q: '¿Qué es el año personal?', a: 'En numerología se suman las cifras del mes y el día de nacimiento y del año, y se reduce a una cifra. El ciclo dura nueve años.' },
+    ],
+  },
+};
+
+const c = C[locale] ?? C.en;
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const animals = ANIMAL_SLUG.map((slug, i) => {
+  const rel = relationTo2027(i);
+  return { slug, i, name: ANIMAL_NAMES[locale][i], img: ANIMAL_IMAGE[i], tag: rel === 'none' ? null : c.relationTag[rel] };
+});
+---
+<Layout title={c.title} description={c.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">{c.eyebrow}</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">{c.h1}</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">{c.lead}</p>
+
+    <div class="mt-8">
+      <NewYear2027Hub client:load locale={locale} />
+    </div>
+
+    <div class="mt-10">
+      <ZodiacRelationWheel client:visible locale={locale} />
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{c.collectionHeading}</h2>
+      <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+        {c.links.map((link) => (
+          <li>
+            <a href={link.href} class="flex min-h-16 flex-col justify-center rounded-xl border border-border bg-card px-4 py-3 hover:border-primary/50">
+              <span class="font-bold text-foreground">{link.label}</span>
+              <span class="mt-1 text-xs leading-5 text-muted-foreground">{link.note}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{c.animalsHeading}</h2>
+      <ul class="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-4">
+        {animals.map((a) => (
+          <li>
+            <a href={`/${locale}/chinese-zodiac/${a.slug}/`} class="flex flex-col items-center gap-1 rounded-xl border border-border bg-card p-3 text-center hover:border-primary/50">
+              <img src={a.img} alt="" width="48" height="48" class="size-12 rounded-lg" loading="lazy" />
+              <span class="text-sm font-bold text-foreground">{a.name}</span>
+              {a.tag && <span class="rounded-full border border-border px-2 text-xs text-muted-foreground">{a.tag}</span>}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-10 rounded-2xl border border-border bg-surface-subtle p-5">
+      <h2 class="text-lg font-black">{c.factsHeading}</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-foreground">
+        {c.facts.map((f) => <li>{f}</li>)}
+      </ul>
+      {c.factsSource && (
+        <p class="mt-3 text-xs text-muted-foreground">
+          <a class="underline underline-offset-4" href={c.factsSource.href} rel="noopener" target="_blank">{c.factsSource.label}</a>
+        </p>
+      )}
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{c.faqHeading}</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {c.faqs.map((f) => (
+          <details class="p-4">
+            <summary class="cursor-pointer font-semibold">{f.q}</summary>
+            <p class="mt-2 text-sm leading-6 text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </section>
+</Layout>

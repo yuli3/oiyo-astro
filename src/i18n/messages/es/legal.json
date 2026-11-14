@@ -87,7 +87,9 @@
         "body": [
           "Cuando utilizas OIYO, podemos recopilar datos de uso —páginas visitadas, tiempo de permanencia, tipo de navegador, tipo de dispositivo y URL de procedencia— automáticamente mediante Google Analytics 4.",
           "Si nos escribes a support@oiyo.net, recibimos tu dirección de correo y el contenido de tu mensaje.",
-          "Los datos de nacimiento, las respuestas y otras entradas que introduces en una prueba o herramienta se procesan en tu navegador para generar un resultado. Salvo que elijas guardar o compartir ese resultado, no se nos envían.",
+          "La fecha y hora de nacimiento, la ciudad de nacimiento, las respuestas y otras entradas que introduces en una prueba o herramienta se procesan en tu navegador para generar un resultado. Salvo que elijas crear un enlace para compartir, no se envían a nuestros servidores.",
+          "Las funciones que guardan en este navegador, como el historial de pruebas o un borrador de círculo, conservan esos datos solo en el almacenamiento del navegador de tu dispositivo; no se nos envían.",
+          "Cuando creas un enlace para compartir, el resultado que contiene (que puede incluir tu fecha y hora de nacimiento y tu ciudad de nacimiento) se cifra primero en tu navegador, y solo los datos cifrados se guardan en nuestro servidor (Cloudflare). La clave de descifrado está únicamente en la parte del enlace posterior al #, que nunca se envía al servidor, por lo que no podemos leer el contenido. Cualquier persona que tenga el enlace puede abrirlo hasta que caduque, así que compártelo solo con personas de confianza.",
           "No recopilamos nombres, contraseñas ni datos de pago, y usar el sitio no requiere una cuenta."
         ]
       },
@@ -109,7 +111,9 @@
       {
         "heading": "4. Conservación de datos",
         "body": [
-          "Los datos analíticos se conservan según la configuración de conservación de Google (14 meses de forma predeterminada). Los mensajes que nos envías se conservan solo el tiempo necesario para responderlos."
+          "Los datos analíticos se conservan según la configuración de conservación de Google (14 meses de forma predeterminada). Los mensajes que nos envías se conservan solo el tiempo necesario para responderlos.",
+          "Los datos cifrados guardados para un enlace compartido se eliminan automáticamente 7 días después de crear el enlace; después, el enlace ya no se abre. Si quieres que se elimine antes, envía el enlace a support@oiyo.net.",
+          "Un borrador de círculo guardado en tu navegador caduca a los 30 días y se elimina la próxima vez que se abre. Otros datos guardados en este navegador, como el historial de pruebas, permanecen en tu dispositivo hasta que borres los datos del sitio en tu navegador; nosotros no podemos verlos."
         ]
       },
       {
@@ -155,7 +159,7 @@
     "title": "Política de privacidad",
     "description": "Cómo recopilamos, usamos y protegemos tu información.",
     "keywords": "privacidad, seguridad, protección de datos",
-    "lastUpdated": "7 de septiembre de 2026",
+    "lastUpdated": "6 de octubre de 2026",
     "lastUpdatedLabel": "Última actualización",
     "seeLabel": "Consulta:",
     "badge": "Aviso legal"

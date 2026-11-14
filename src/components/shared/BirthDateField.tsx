@@ -24,7 +24,7 @@ import { useUserStore } from "@/lib/user/store/user-store";
  */
 
 const FIELD_CLASS =
-  "h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none transition focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400";
+  "h-12 w-full rounded-2xl border border-border bg-card px-4 text-base font-black text-foreground outline-none transition focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10 disabled:cursor-not-allowed disabled:bg-surface-subtle disabled:text-slate-400";
 
 interface BirthDateFieldProps {
   id: string;
@@ -98,7 +98,7 @@ export function BirthDateField(props: BirthDateFieldProps) {
         <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{label}</span>
       )}
       {profileDate ? (
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-surface-subtle px-4 py-3">
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-surface-subtle px-4 py-3">
           <span className="min-w-0 text-sm font-black text-green-900">
             <span className="text-green-600">{c.using}</span>
             <span className="mx-2 text-green-300">·</span>
@@ -107,15 +107,15 @@ export function BirthDateField(props: BirthDateFieldProps) {
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
-            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
           >
             <Pencil className="h-3.5 w-3.5" />
             {c.edit}
           </button>
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-green-200 bg-card px-4 py-4 text-center">
-          <p className="text-sm font-bold text-slate-500">{c.missing}</p>
+        <div className="rounded-2xl border border-dashed border-border bg-card px-4 py-4 text-center">
+          <p className="text-sm font-bold text-muted-foreground">{c.missing}</p>
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
@@ -178,7 +178,7 @@ export function ProfileNameField({ className, label, locale, onChange, value, wa
         <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{label}</span>
       )}
       {name ? (
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-surface-subtle px-4 py-3">
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-surface-subtle px-4 py-3">
           <span className="min-w-0 truncate text-sm font-black text-green-900">
             <span className="text-green-600">{c.using}</span>
             <span className="mx-2 text-green-300">·</span>
@@ -187,15 +187,15 @@ export function ProfileNameField({ className, label, locale, onChange, value, wa
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
-            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
           >
             <Pencil className="h-3.5 w-3.5" />
             {c.edit}
           </button>
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-green-200 bg-card px-4 py-4 text-center">
-          <p className="text-sm font-bold text-slate-500">{c.missing}</p>
+        <div className="rounded-2xl border border-dashed border-border bg-card px-4 py-4 text-center">
+          <p className="text-sm font-bold text-muted-foreground">{c.missing}</p>
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
@@ -274,7 +274,7 @@ function ProfileChip({
         <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{label}</span>
       )}
       {present ? (
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-surface-subtle px-4 py-3">
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-surface-subtle px-4 py-3">
           <span className="min-w-0 truncate text-sm font-black text-green-900">
             <span className="text-green-600">{c.using}</span>
             <span className="mx-2 text-green-300">·</span>
@@ -283,15 +283,15 @@ function ProfileChip({
           <button
             type="button"
             onClick={() => setDialogOpen(true)}
-            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
           >
             <Pencil className="h-3.5 w-3.5" />
             {c.edit}
           </button>
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-green-200 bg-card px-4 py-4 text-center">
-          <p className="text-sm font-bold text-slate-500">{missing}</p>
+        <div className="rounded-2xl border border-dashed border-border bg-card px-4 py-4 text-center">
+          <p className="text-sm font-bold text-muted-foreground">{missing}</p>
           {unlock && <p className="mt-1 text-xs leading-5 text-slate-400">{unlock}</p>}
           <button
             type="button"

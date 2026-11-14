@@ -6,6 +6,11 @@ import type { Locale } from '../../../i18n';
 import { ZODIACS, ZODIAC_ORDER, type ZodiacAnimal } from '../../../components/tools/ChineseZodiac';
 // 2026-09-28 O4: 띠 칩의 이모지 대신 결과 심볼 이미지를 쓴다.
 import { resultSymbolSrc } from '../../../components/shared/ResultSymbol';
+// 2026-10-19: 한국어 띠 페이지에 2027 운세 칸을 넣고 신년운세 미리보기로 잇는다. 원고는 쇼츠와 같이 쓴다.
+import { YEAR as YEAR_2027, ZODIAC_2027 } from '../../../lib/fortune/zodiac-2027-copy.mjs';
+// 2026-11-11: 12띠 관계 원(만지면서 이해하기)과 다른 언어의 2027 칸, ko 2027 쇼츠 영상을 붙인다.
+import ZodiacRelationWheel from '../../../components/tools/zodiac/ZodiacRelationWheel';
+import { relationTo2027 } from '../../../lib/new-year-2027';
 
 export async function getStaticPaths() {
   const animals = Object.keys(ZODIACS) as ZodiacAnimal[];
@@ -21,6 +26,79 @@ export async function getStaticPaths() {
 const { locale, animal } = Astro.props as { locale: Locale; animal: ZodiacAnimal };
 const z = ZODIACS[animal];
 const name = z.name[locale] ?? z.name.en;
+const y2027 = locale === 'ko' ? ZODIAC_2027.find((e) => e.id === animal) : undefined;
+const animalIndex = ZODIAC_ORDER.indexOf(animal);
+const rel2027 = relationTo2027(animalIndex);
+// ko 밖 언어의 2027 칸. 관계 하나에 한 문단, 띠 이름만 바꿔 끼운다(원문 ko 원고는 띠마다 따로 썼다).
+const Y27: Record<Exclude<Locale, 'ko'>, { eyebrow: string; title: (n: string) => string; rel: Record<string, string>; cta: string }> = {
+  en: {
+    eyebrow: '2027 · Year of the Fire Goat (from Feb 6)',
+    title: (n) => `The ${n} in 2027`,
+    rel: {
+      same: 'It is your own animal’s year. Tradition treats it as a year to slow down, look after health and keep promises small and sure.',
+      clash: 'The Ox sits straight across from the Goat on the wheel. Expect movement: a new desk, a new home or a new role. Choosing the change yourself makes it smoother.',
+      harm: 'The Rat and the Goat are a “harm” pairing: no ill will, but small words can sting. Put important agreements in writing.',
+      punish: 'The Dog and the Goat form a “tension” pairing. Rules and duties pile up; clear them one at a time.',
+      harmony: 'Your animal teams up with the Goat. Offers to work together are worth saying yes to this year.',
+      none: 'Your animal has no special tie with the Goat, so outside pressure stays low. A good year to follow your own plan.',
+    },
+    cta: 'See your 2027 by birthday →',
+  },
+  ja: {
+    eyebrow: '2027年 · 丁未（ひのとひつじ）',
+    title: (n) => `${n}の2027年`,
+    rel: {
+      same: '自分の干支の年（年女・年男）です。体調を整え、無理のない約束を守る年とされます。',
+      clash: '丑は未と真正面で向き合う「冲」です。引っ越し・異動など動きが出やすい年。変えることを自分で選ぶと揺れが小さくなります。',
+      harm: '子と未は「害」の関係。悪気はなくても言葉の端で傷つきやすい年です。大事な約束は文字で残しましょう。',
+      punish: '戌と未は「刑」の関係。決まりごとや役目が重なりやすいので、一つずつ片づけましょう。',
+      harmony: 'あなたの干支は未と手を組む関係です。一緒にやろうという誘いに乗ると広がる年です。',
+      none: 'あなたの干支は未と特に結びつきません。周りに振り回されず、自分の計画どおり進めやすい年です。',
+    },
+    cta: '生年月日で2027年を見る →',
+  },
+  zh: {
+    eyebrow: '2027 丁未年 · 火羊年（2月6日起）',
+    title: (n) => `属${n}的2027年`,
+    rel: {
+      same: '这是你的本命年。传统上宜放慢脚步、照顾身体，许下的承诺要小而确实。',
+      clash: '牛与羊正面相冲。容易有搬家、换岗等变动，自己先选好要改变的事，会少些动荡。',
+      harm: '鼠与羊相害。彼此并无恶意，却容易因一句话生隙。重要约定请写下来。',
+      punish: '狗与羊相刑。规矩和责任容易叠加，一件一件处理就好。',
+      harmony: '你的生肖与羊相合。今年别急着拒绝合作的邀请。',
+      none: '你的生肖与羊没有特别关系，外界干扰小，适合按自己的计划推进。',
+    },
+    cta: '用生日看看你的2027 →',
+  },
+  fr: {
+    eyebrow: '2027 · Année de la Chèvre de feu (dès le 6 février)',
+    title: (n) => `Le ${n} en 2027`,
+    rel: {
+      same: 'C’est l’année de votre propre animal. La tradition y voit une année pour ralentir, prendre soin de sa santé et tenir de petites promesses.',
+      clash: 'Le Bœuf fait face à la Chèvre sur la roue. Attendez-vous à du mouvement : déménagement, nouveau poste. Choisir soi-même le changement aide.',
+      harm: 'Le Rat et la Chèvre forment un « froissement » : pas de mauvaise intention, mais un mot peut blesser. Mettez les accords importants par écrit.',
+      punish: 'Le Chien et la Chèvre forment une « tension » : règles et devoirs s’accumulent. Réglez-les un par un.',
+      harmony: 'Votre animal fait équipe avec la Chèvre. Dites oui aux propositions de travailler ensemble.',
+      none: 'Votre animal n’a pas de lien particulier avec la Chèvre : peu de pression extérieure, une bonne année pour suivre votre plan.',
+    },
+    cta: 'Voir votre 2027 avec votre date de naissance →',
+  },
+  es: {
+    eyebrow: '2027 · Año de la Cabra de fuego (desde el 6 de febrero)',
+    title: (n) => `El ${n} en 2027`,
+    rel: {
+      same: 'Es el año de tu propio animal. La tradición lo ve como un año para bajar el ritmo, cuidar la salud y cumplir promesas pequeñas y seguras.',
+      clash: 'El Buey está justo enfrente de la Cabra en la rueda. Habrá movimiento: mudanza, nuevo puesto. Elegir tú el cambio lo hace más suave.',
+      harm: 'La Rata y la Cabra forman un «roce»: sin mala intención, pero una palabra puede doler. Deja por escrito los acuerdos importantes.',
+      punish: 'El Perro y la Cabra forman una «tensión»: normas y deberes se acumulan. Resuélvelos de uno en uno.',
+      harmony: 'Tu animal hace equipo con la Cabra. Este año conviene decir sí a las propuestas de trabajar juntos.',
+      none: 'Tu animal no tiene un vínculo especial con la Cabra: poca presión externa, buen año para seguir tu propio plan.',
+    },
+    cta: 'Mira tu 2027 con tu fecha de nacimiento →',
+  },
+};
+const y27 = locale === 'ko' ? undefined : Y27[locale];
+const short2027 = locale === 'ko' ? `/media/shorts/zodiac-2027/${animal}-2027.mp4` : undefined;
 
 const L: Record<Locale, {
   traitsTitle: string;
@@ -125,7 +203,7 @@ function localePath(path: string) {
 }
 
 const metaTitle: Record<Locale, string> = {
-  ko: `${name}띠 성격·궁합·운세 완전 해설 — ${z.chineseChar}`,
+  ko: `${name}띠 2027 운세·성격·궁합 완전 해설 — ${z.chineseChar}`,
   en: `${name} Chinese Zodiac Sign — Personality, Compatibility & Fortune`,
   ja: `${name}年生まれ（${z.chineseChar}）完全解説 — 性格・相性・運勢`,
   zh: `${name}年生肖完整解析（${z.chineseChar}）— 性格·配对·运势`,
@@ -133,7 +211,7 @@ const metaTitle: Record<Locale, string> = {
   es: `Signo de ${name} — Personalidad, compatibilidad y fortuna`,
 };
 const metaDescription: Record<Locale, string> = {
-  ko: `${name}띠(${z.chineseChar})의 성격 특성, 강점과 약점, 궁합이 좋은 띠, 행운의 숫자·색, 어울리는 직업을 정리했습니다.`,
+  ko: `${name}띠(${z.chineseChar})의 성격 특성, 강점과 약점, 궁합이 좋은 띠, 행운의 숫자·색, 어울리는 직업과 2027 정미년 운세를 정리했습니다.`,
   en: `A complete guide to the ${name} sign of the Chinese zodiac: personality traits, strengths, weaknesses, best compatibility, lucky numbers and colors, and career fit.`,
   ja: `${name}年（${z.chineseChar}）生まれの性格特性、強みと弱み、相性の良い干支、ラッキーナンバー・カラー、適職をまとめました。`,
   zh: `完整解析生肖${name}（${z.chineseChar}）：性格特征、优势与弱点、最佳配对、幸运数字与颜色、适合职业。`,
@@ -167,16 +245,54 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
   <div class="mx-auto max-w-2xl px-4 py-10">
 
-    <section class="mt-2 flex flex-wrap gap-2 text-xs font-bold text-green-700">
+    <section class="mt-2 flex flex-wrap gap-2 text-xs font-bold text-primary">
       <span class="rounded-full bg-green-100 px-3 py-1">{c.elementLabel[z.element]}</span>
       <span class="rounded-full bg-green-100 px-3 py-1">{z.yin ? c.yinLabel : c.yangLabel}</span>
     </section>
+
+    {y2027 && (
+      <section class="mt-6 rounded-2xl border border-border bg-card p-5 shadow-sm" aria-labelledby="y2027-title">
+        <p class="text-xs font-bold text-primary">{YEAR_2027.label}({YEAR_2027.hanja}) · {YEAR_2027.animal}의 해</p>
+        <h2 id="y2027-title" class="mt-1.5 text-xl font-bold text-foreground">{name}띠 2027 운세: {y2027.hook}</h2>
+        <span class="mt-3 inline-block rounded-full border border-border bg-muted px-2.5 py-0.5 text-xs font-bold text-foreground">{y2027.tag}</span>
+        {y2027.body.map((b) => <p class="mt-3 leading-7 text-green-800">{b}</p>)}
+        <p class="mt-4 text-sm font-semibold text-foreground">올해 한 줄: {y2027.tip}</p>
+        {short2027 && (
+          <video class="mx-auto mt-4 block h-auto w-full max-w-60 rounded-xl border border-border bg-muted" width="240" height="426" src={short2027} controls playsinline preload="none" aria-label={`${name}띠 2027 운세 쇼츠`}></video>
+        )}
+        <p class="mt-3 text-xs leading-5 text-muted-foreground">띠만 보는 전통 상징 해석이에요. 1~2월생은 입춘(2월 4일 무렵) 전에 태어났다면 앞 띠로 봐요.</p>
+        <a
+          href={localePath('/saju/new-year-2027/')}
+          class="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground hover:bg-primary/90"
+        >
+          생년월일로 보는 2027 신년운세 미리보기 →
+        </a>
+      </section>
+    )}
+
+    {y27 && (
+      <section class="mt-6 rounded-2xl border border-border bg-card p-5 shadow-sm" aria-labelledby="y2027-title">
+        <p class="text-xs font-bold text-primary">{y27.eyebrow}</p>
+        <h2 id="y2027-title" class="mt-1.5 text-xl font-bold text-foreground">{y27.title(name)}</h2>
+        <p class="mt-3 leading-7 text-foreground">{y27.rel[rel2027]}</p>
+        <a
+          href={localePath('/new-year-2027/')}
+          class="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground hover:bg-primary/90"
+        >
+          {y27.cta}
+        </a>
+      </section>
+    )}
+
+    <div class="mt-6">
+      <ZodiacRelationWheel client:visible locale={locale} initial={animalIndex} />
+    </div>
 
     <section class="mt-6">
       <h2 class="text-xl font-bold text-foreground">{c.traitsTitle}</h2>
       <div class="mt-3 flex flex-wrap gap-2">
         {(z.traits[locale] ?? z.traits.en).map((t) => (
-          <span class="rounded-full border border-green-200 bg-card px-3 py-1.5 text-sm font-semibold text-green-800">{t}</span>
+          <span class="rounded-full border border-border bg-card px-3 py-1.5 text-sm font-semibold text-green-800">{t}</span>
         ))}
       </div>
     </section>
@@ -207,8 +323,8 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
     <section class="mt-10">
       <h2 class="text-xl font-bold text-foreground">{c.matchTitle}</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
-        <div class="rounded-xl border border-green-200 bg-surface-subtle p-4">
-          <p class="text-xs font-bold uppercase tracking-widest text-green-700">{c.bestMatch}</p>
+        <div class="rounded-xl border border-border bg-surface-subtle p-4">
+          <p class="text-xs font-bold uppercase tracking-widest text-primary">{c.bestMatch}</p>
           <p class="mt-2 flex flex-wrap gap-2">
             {z.bestMatch.map((a) => (
               <a href={localePath(`/chinese-zodiac/${a}`)} class="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-sm font-semibold text-green-800 hover:bg-green-100">
@@ -257,7 +373,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
 
     <section class="mt-6">
       <h2 class="text-sm font-bold text-foreground">{c.yearsTitle}</h2>
-      <p class="mt-2 text-sm text-green-700">{z.years.join(', ')}</p>
+      <p class="mt-2 text-sm text-primary">{z.years.join(', ')}</p>
     </section>
 
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
@@ -271,13 +387,13 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
       </a>
     </div>
 
-    <section class="mt-10 border-t border-green-100 pt-8">
+    <section class="mt-10 border-t border-border pt-8">
       <h2 class="text-lg font-bold text-foreground">{c.otherAnimalsTitle}</h2>
       <div class="mt-4 grid grid-cols-4 gap-2">
         {otherAnimals.map((a) => (
           <a
             href={localePath(`/chinese-zodiac/${a}`)}
-            class="flex flex-col items-center gap-1 rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
+            class="flex flex-col items-center gap-1 rounded-lg border border-border bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
           >
             <img src={resultSymbolSrc("chinese-zodiac", a)} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-7 w-7 rounded-full object-cover" />
             {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}

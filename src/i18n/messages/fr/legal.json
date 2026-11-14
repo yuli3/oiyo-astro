@@ -87,7 +87,9 @@
         "body": [
           "Lorsque vous utilisez OIYO, nous pouvons collecter des données d'utilisation — pages consultées, temps passé, type de navigateur, type d'appareil et URL de provenance — automatiquement via Google Analytics 4.",
           "Si vous nous écrivez à support@oiyo.net, nous recevons votre adresse e-mail et le contenu de votre message.",
-          "Les informations de naissance, réponses et autres saisies que vous entrez dans un test ou un outil sont traitées dans votre navigateur pour produire un résultat. Sauf si vous choisissez d'enregistrer ou de partager ce résultat, elles ne nous sont pas transmises.",
+          "La date et l'heure de naissance, la ville de naissance, les réponses et autres saisies que vous entrez dans un test ou un outil sont traitées dans votre navigateur pour produire un résultat. Sauf si vous choisissez de créer un lien de partage, elles ne sont pas transmises à nos serveurs.",
+          "Les fonctions qui enregistrent dans ce navigateur, comme l'historique des tests ou un brouillon de cercle, conservent ces données uniquement dans le stockage du navigateur de votre appareil ; elles ne nous sont pas transmises.",
+          "Lorsque vous créez un lien de partage, le résultat qu'il contient (qui peut inclure votre date et heure de naissance et votre ville de naissance) est d'abord chiffré dans votre navigateur, et seules les données chiffrées sont stockées sur notre serveur (Cloudflare). La clé de déchiffrement se trouve uniquement dans la partie du lien après le #, qui n'est jamais envoyée au serveur : nous ne pouvons donc pas lire le contenu. Toute personne disposant du lien peut l'ouvrir jusqu'à son expiration ; ne le partagez qu'avec des personnes de confiance.",
           "Nous ne collectons ni nom, ni mot de passe, ni informations de paiement, et l'utilisation du site ne nécessite pas de compte."
         ]
       },
@@ -109,7 +111,9 @@
       {
         "heading": "4. Conservation des données",
         "body": [
-          "Les données d'analyse sont conservées conformément aux paramètres de conservation de Google (14 mois par défaut). Les messages que vous nous envoyez ne sont conservés que le temps nécessaire pour y répondre."
+          "Les données d'analyse sont conservées conformément aux paramètres de conservation de Google (14 mois par défaut). Les messages que vous nous envoyez ne sont conservés que le temps nécessaire pour y répondre.",
+          "Les données chiffrées stockées pour un lien de partage sont supprimées automatiquement 7 jours après la création du lien ; ensuite, le lien ne s'ouvre plus. Pour une suppression plus rapide, envoyez le lien à support@oiyo.net.",
+          "Un brouillon de cercle enregistré dans votre navigateur expire après 30 jours et est supprimé à la prochaine ouverture. Les autres données enregistrées dans ce navigateur, comme l'historique des tests, restent sur votre appareil jusqu'à ce que vous effaciez les données du site dans votre navigateur ; nous ne pouvons pas les voir."
         ]
       },
       {
@@ -155,7 +159,7 @@
     "title": "Politique de confidentialité",
     "description": "Comment nous collectons, utilisons et protégeons vos informations.",
     "keywords": "confidentialité, sécurité, protection des données",
-    "lastUpdated": "7 septembre 2026",
+    "lastUpdated": "6 octobre 2026",
     "lastUpdatedLabel": "Dernière mise à jour",
     "seeLabel": "Voir :",
     "badge": "Mentions légales"

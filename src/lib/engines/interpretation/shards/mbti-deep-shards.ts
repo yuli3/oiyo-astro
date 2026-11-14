@@ -164,6 +164,9 @@ export const MBTI_DEEP_DATA: Record<
     strengths: SixLangString[];
     typeNarrative: SixLangString;
     worldview: SixLangString;
+    // 2026-10-09: reviewed type-specific prose must not alter other types' readings.
+    // MBTI theory describes preferences, not measured brain mechanisms.
+    cognitiveReadings?: Partial<Record<string, SixLangString>>;
   }
 > = {
   ENFP: {
@@ -448,99 +451,135 @@ export const MBTI_DEEP_DATA: Record<
       zh: "你认为现实可以通过系统性思考来改进。低效让你沮丧，优雅的解决方案让你欣喜。你相信能力应该得到回报，真理比情感更重要。",
     },
   },
+  // 2026-10-09: official preference definitions do not establish ability or duty.
+  // Evidence: company-brain/projects/oiyo-ecosystem/reports/2026-10-08-isfj-preflight.md.
   ISFJ: {
-    challenges: [
+    "challenges": [
       {
-        en: "Difficulty saying no, leading to burnout",
-        es: "Dificultad para decir que no, lo que lleva al agotamiento",
-        fr: "Difficulté à dire non, menant à l'épuisement",
-        ja: "「いいえ」と言うのが難しく、燃え尽き症候群につながる",
-        ko: "'아니오'라고 말하기 어려움, 번아웃으로 이어짐",
-        zh: "难以拒绝，导致倦怠",
+        "ko": "부탁을 받을 때 현재 업무량과 거절할 여지를 확인해 보세요.",
+        "en": "When receiving a request, check your workload and whether you can decline.",
+        "ja": "頼まれたときは、現在の負担と断れる余地を確認してください。",
+        "zh": "收到请求时，请核对当前工作量以及能否拒绝。",
+        "fr": "Lors d’une demande, vérifiez votre charge et votre possibilité de refuser.",
+        "es": "Ante una petición, comprueba tu carga y si puedes rechazarla."
       },
       {
-        en: "May suppress own needs to care for others",
-        es: "Puede suprimir sus propias necesidades para cuidar a los demás",
-        fr: "Peut supprimer ses propres besoins pour prendre soin des autres",
-        ja: "他者の世話をするために自分のニーズを抑えることがある",
-        ko: "다른 사람을 돌보기 위해 자신의 필요를 억제할 수 있음",
-        zh: "可能为了照顾他人而压抑自己的需求",
+        "ko": "변화가 어렵다면 유형보다 정보·연습·지원의 부족을 살펴보세요.",
+        "en": "If change is difficult, examine information, practice and support rather than blaming a type.",
+        "ja": "変化が難しい場合は、タイプより情報・練習・支援の不足を見直してください。",
+        "zh": "如果改变很困难，请检查信息、练习与支持，而不是归因于类型。",
+        "fr": "Si le changement est difficile, examinez l’information, la pratique et le soutien plutôt que le type.",
+        "es": "Si cambiar resulta difícil, revisa la información, la práctica y el apoyo, no solo el tipo."
       },
       {
-        en: "Resistant to change even when necessary",
-        es: "Resistente al cambio incluso cuando es necesario",
-        fr: "Résistant au changement même lorsque nécessaire",
-        ja: "必要なときでも変化に抵抗する",
-        ko: "필요할 때도 변화에 저항적",
-        zh: "即使必要也抵制改变",
-      },
+        "ko": "피로·불안을 인지기능이나 유형으로 진단하지 마세요.",
+        "en": "Do not diagnose fatigue or anxiety through a type or cognitive function.",
+        "ja": "疲労や不安を、タイプや認知機能で診断しないでください。",
+        "zh": "不要用类型或认知功能诊断疲劳、焦虑。",
+        "fr": "Ne diagnostiquez pas fatigue ou anxiété à partir d’un type ou d’une fonction cognitive.",
+        "es": "No diagnostiques cansancio ni ansiedad por un tipo o una función cognitiva."
+      }
     ],
-    growthPath: {
-      en: "Develop your Ne (openness to new possibilities) and Ti (independent judgment). Practice saying no, try new experiences, and remember that taking care of yourself enables you to care for others.",
-      es: "Desarrolla tu Ne (apertura a nuevas posibilidades) y Ti (juicio independiente). Practica decir que no, intenta nuevas experiencias y recuerda que cuidarte a ti mismo te permite cuidar a los demás.",
-      fr: "Développez votre Ne (ouverture aux nouvelles possibilités) et Ti (jugement indépendant). Pratiquez le fait de dire non, essayez de nouvelles expériences et rappelez-vous que prendre soin de vous vous permet de prendre soin des autres.",
-      ja: "Ne（新しい可能性への開放性）とTi（独立した判断）を開発してください。「いいえ」と言う練習をし、新しい経験を試み、自分自身のケアをすることが他者のケアにつながることを忘れないでください。",
-      ko: "Ne(새로운 가능성에 대한 열린 마음)와 Ti(독립적 판단)를 개발하세요. '아니오'라고 말하는 연습, 새로운 경험 시도, 자신을 돌보는 것이 다른 사람을 돌볼 수 있게 한다는 것을 기억하세요.",
-      zh: "发展你的Ne（对新可能性的开放性）和Ti（独立判断）。练习拒绝，尝试新体验，并记住照顾好自己才能照顾他人。",
+    "growthPath": {
+      "ko": "편집부의 자기점검 예시예요. 원하는 지원, 할 수 있는 범위와 실제 경험을 기록해 보세요. 기능을 개발하면 건강·관계가 좋아진다는 검증된 처방은 아니에요.",
+      "en": "These are editorial self-reflection ideas. Record the support you want, your available capacity and actual experience. Developing functions is not a validated prescription for health or relationships.",
+      "ja": "編集部の自己確認の例です。必要な支援、引き受けられる範囲、実際の経験を記録してください。機能の発達で健康や関係が改善するという検証済みの処方ではありません。",
+      "zh": "这些是编辑部的自我核对示例。可以记录需要的支持、能承担的范围与实际经历，不是发展功能即可改善健康或关系的有效处方。",
+      "fr": "Ce sont des idées éditoriales d’auto-observation. Notez le soutien souhaité, votre capacité et vos expériences. Développer des fonctions n’est pas une prescription validée pour la santé ou les relations.",
+      "es": "Son ideas editoriales de autoobservación. Anota el apoyo que quieres, lo que puedes asumir y tus experiencias. Desarrollar funciones no es una receta validada para la salud ni las relaciones."
     },
-    lifeImplications: {
-      en: "You are the reliable foundation others depend on. Relationships are nurturing and stable. Career should involve helping others in practical ways. Your attention to detail and memory for what matters to people makes you invaluable.",
-      es: "Eres la base confiable en la que otros dependen. Las relaciones son enriquecedoras y estables. La carrera debe implicar ayudar a los demás de manera práctica. Tu atención al detalle y memoria para lo que importa a las personas te hace invaluable.",
-      fr: "Vous êtes la fondation fiable sur laquelle les autres comptent. Les relations sont nourrissantes et stables. La carrière doit impliquer d'aider les autres de manière pratique. Votre attention aux détails et votre mémoire pour ce qui compte pour les gens vous rendent inestimable.",
-      ja: "あなたは他者が頼りにする信頼できる基盤です。人間関係は育成重視で安定しています。キャリアは実用的な方法で他者を助けることを伴うべきです。細部への注意と、人々にとって重要なことへの記憶は、あなたをかけがえのない存在にします。",
-      ko: "다른 사람들이 의지하는 신뢰할 수 있는 기반입니다. 관계는 양육적이고 안정적입니다. 직업은 실용적인 방식으로 다른 사람을 돕는 것을 포함해야 합니다. 세부 사항에 대한 주의와 사람들에게 중요한 것에 대한 기억이 당신을 귀중하게 만듭니다.",
-      zh: "你是他人依赖的可靠基础。人际关系滋养且稳定。职业生涯应该涉及以实际方式帮助他人。你对细节的关注和对他人重要事物的记忆使你变得无价。",
+    "lifeImplications": {
+      "ko": "ISFJ는 I·S·F·J 선호를 묶은 모형 설명이에요. 직업은 흥미·역량·업무 조건으로, 관계는 실제 행동·합의로 판단해요. 선호는 채용·궁합 점수가 아니에요.",
+      "en": "ISFJ describes the I, S, F and J preferences within a model. Consider interests, skills and conditions for work, and actual conduct and agreements for relationships. Preferences are not hiring or compatibility scores.",
+      "ja": "ISFJは、モデル内のI・S・F・Jの選好を組み合わせた説明です。仕事は関心・技能・条件、関係は実際の行動と合意から考えます。採用や相性の点数ではありません。",
+      "zh": "ISFJ是在模型中组合I、S、F、J偏好的说明。工作要考虑兴趣、能力与条件，关系要看实际行为与约定；偏好不是招聘或相性的评分。",
+      "fr": "ISFJ décrit les préférences I, S, F et J dans un modèle. Pour le travail, examinez intérêts, compétences et conditions ; pour les relations, actes et accords. Ce ne sont pas des scores de recrutement ou de compatibilité.",
+      "es": "ISFJ describe las preferencias I, S, F y J dentro de un modelo. Para el trabajo, considera intereses, capacidades y condiciones; para las relaciones, conducta y acuerdos. No son puntuaciones de contratación ni compatibilidad."
     },
-    strengths: [
+    "strengths": [
       {
-        en: "Exceptional reliability and follow-through",
-        es: "Fiabilidad excepcional y seguimiento",
-        fr: "Fiabilité exceptionnelle et suivi",
-        ja: "卓越した信頼性とやり抜く力",
-        ko: "뛰어난 신뢰성과 완수",
-        zh: "卓越的可靠性和执行力",
+        "ko": "혼자 생각을 정리하는 방식을 선호하는지 확인해요.",
+        "en": "Check whether you prefer reflecting privately.",
+        "ja": "一人で考えを整理することを好むか確認します。",
+        "zh": "核对您是否偏好独自整理想法。",
+        "fr": "Examinez si vous préférez réfléchir seul.",
+        "es": "Comprueba si prefieres reflexionar a solas."
       },
       {
-        en: "Deep care and practical service to others",
-        es: "Cuidado profundo y servicio práctico a los demás",
-        fr: "Soins profonds et service pratique aux autres",
-        ja: "他者への深い配慮と実用的なサービス",
-        ko: "깊은 돌봄과 다른 사람에 대한 실용적 봉사",
-        zh: "深切的关怀和对他人实际的服务",
+        "ko": "구체적인 사실·경험에 먼저 주목하는지 살펴봐요.",
+        "en": "Notice whether you first attend to concrete facts and experience.",
+        "ja": "具体的な事実や経験に先に注目するか振り返ります。",
+        "zh": "观察您是否先关注具体事实与经验。",
+        "fr": "Observez si vous prêtez d’abord attention aux faits et aux expériences.",
+        "es": "Observa si atiendes primero a hechos y experiencias concretas."
       },
       {
-        en: "Strong memory for personal details",
-        es: "Fuerte memoria para detalles personales",
-        fr: "Forte mémoire pour les détails personnels",
-        ja: "個人的な詳細に対する強い記憶力",
-        ko: "개인적 세부 사항에 대한 강한 기억력",
-        zh: "对个人细节的强大记忆力",
+        "ko": "결정할 때 사람·가치를 어떻게 고려하는지 확인해요.",
+        "en": "Examine how you consider people and values in decisions.",
+        "ja": "決定するときに、人や価値をどう考慮するか確認します。",
+        "zh": "核对您在决策中如何考虑他人与价值。",
+        "fr": "Examinez comment vous considérez les personnes et les valeurs dans vos décisions.",
+        "es": "Revisa cómo consideras a las personas y los valores al decidir."
       },
       {
-        en: "Patient and thorough approach to work",
-        es: "Enfoque paciente y minucioso del trabajo",
-        fr: "Approche patiente et minutieuse du travail",
-        ja: "忍耐強く徹底した仕事へのアプローチ",
-        ko: "일에 대한 인내심 있고 철저한 접근",
-        zh: "耐心且周密的工作方法",
-      },
+        "ko": "일정을 정하고 마무리하는 방식을 선호하는지 살펴봐요.",
+        "en": "Notice whether you prefer planning and reaching closure.",
+        "ja": "予定を決めて区切りをつけることを好むか確認します。",
+        "zh": "观察您是否偏好安排计划并做出决定。",
+        "fr": "Observez si vous préférez planifier et conclure.",
+        "es": "Observa si prefieres planificar y cerrar decisiones."
+      }
     ],
-    typeNarrative: {
-      en: "The Defender (ISFJ): You are the quiet guardian, remembering what matters to the people you care about and working steadily to support them. Your Si-Fe combination creates a powerful memory for personal details combined with genuine warmth.",
-      es: "El Defensor (ISFJ): Eres el guardián silencioso, recuerdas lo que importa a las personas que te importan y trabajas constantemente para apoyarlas. Tu combinación Si-Fe crea una memoria poderosa para los detalles personales combinada con una calidez genuina.",
-      fr: "Le Défenseur (ISFJ): Vous êtes le gardien silencieux, vous souvenant de ce qui compte pour les personnes qui vous sont chères et travaillant régulièrement pour les soutenir. Votre combinaison Si-Fe crée une mémoire puissante pour les détails personnels combinée à une chaleur authentique.",
-      ja: "擁護者 (ISFJ): あなたは静かな守護者であり、大切な人々の重要事項を記憶し、彼らを支えるために着実に活動します。Si-Feの組み合わせは、本物の温かさと共に、個人的な詳細に対する強力な記憶力を作り出します。",
-      ko: "방어자 (ISFJ): 조용한 수호자로, 당신이 돌보는 사람들에게 중요한 것을 기억하고 그들을 지원하기 위해 꾸준히 노력합니다. Si-Fe 조합이 진정한 따뜻함과 결합된 개인적 세부 사항에 대한 강력한 기억을 만듭니다.",
-      zh: "守护者 (ISFJ)：你是一位宁静的守护者，铭记对你在乎的人重要的事情，并稳步工作以支持他们。你的Si-Fe组合创造了对个人细节的强大记忆，并结合了真挚的温暖。",
+    "typeNarrative": {
+      "ko": "ISFJ는 내향·감각·감정·판단 선호의 조합을 설명해요. 돌봄 의무·뛰어난 기억력·타고난 성격을 뜻하지 않아요. 실제 사례와 반례로 자신에게 맞는지 살펴보세요.",
+      "en": "ISFJ describes introversion, sensing, feeling and judging preferences. It does not establish a duty to care, exceptional memory or an inborn character. Compare the description with examples and counterexamples.",
+      "ja": "ISFJは内向・感覚・感情・判断の選好を説明します。世話の義務、優れた記憶力、生来の性格を意味しません。具体例と反例で自分に合うか確かめてください。",
+      "zh": "ISFJ描述内向、实感、情感与判断偏好，不代表照顾他人的义务、出众记忆力或天生性格。请结合具体例子与反例核对。",
+      "fr": "ISFJ décrit les préférences d’introversion, sensation, sentiment et jugement. Il n’établit ni devoir de prendre soin, ni mémoire exceptionnelle, ni caractère inné. Comparez avec des exemples et contre-exemples.",
+      "es": "ISFJ describe preferencias de introversión, sensación, sentimiento y juicio. No establece una obligación de cuidar, memoria excepcional ni carácter innato. Contrasta la descripción con ejemplos y contraejemplos."
     },
-    worldview: {
-      en: "The world works best when people fulfill their responsibilities to each other. You value tradition, stability, and practical care. Service is love made visible - you show you care through action.",
-      es: "El mundo funciona mejor cuando las personas cumplen sus responsabilidades entre sí. Valoras la tradición, la estabilidad y el cuidado práctico. El servicio es el amor hecho visible: muestras que te importa a través de la acción.",
-      fr: "Le monde fonctionne mieux lorsque les gens remplissent leurs responsabilités les uns envers les autres. Vous appréciez la tradition, la stabilité et les soins pratiques. Le service est l'amour rendu visible - vous montrez que vous vous souciez par l'action.",
-      ja: "世界は人々が互いの責任を果たすときに最もよく機能します。あなたは伝統、安定、そして実用的な配慮を尊重します。奉仕は目に見える愛の形です。あなたは行動を通して配慮を示します。",
-      ko: "사람들이 서로에 대한 책임을 다할 때 세상이 가장 잘 작동합니다. 전통, 안정, 실용적 돌봄을 중시합니다. 봉사는 보이게 된 사랑입니다 - 행동을 통해 돌봄을 보여줍니다.",
-      zh: "当人们履行对他人的责任时，世界运作得最好。你重视传统、稳定和务实的照顾。服务是可见的爱——你通过行动表达关怀。",
+    "worldview": {
+      "ko": "이 모형은 사실·경험과 사람·가치를 고려하는 선호를 설명해요. 전통을 지켜야 한다거나 누구보다 따뜻하다는 평가는 아니에요. 누구나 다른 선호도 사용할 수 있어요.",
+      "en": "This model describes preferences for attending to facts, experience, people and values. It does not require loyalty to tradition or establish greater warmth. Everyone can use other preferences too.",
+      "ja": "このモデルは事実・経験、人・価値を考慮する選好を説明します。伝統を守る義務や、他人より温かいという評価ではありません。誰でも他の選好も使えます。",
+      "zh": "这个模型说明对事实、经验、他人与价值的偏好，不要求维护传统，也不能判断谁更温暖。每个人也能运用其他偏好。",
+      "fr": "Ce modèle décrit des préférences pour les faits, les expériences, les personnes et les valeurs. Il n’impose pas de suivre la tradition et ne mesure pas la chaleur humaine. Chacun peut aussi utiliser les autres préférences.",
+      "es": "Este modelo describe preferencias por hechos, experiencias, personas y valores. No exige seguir la tradición ni mide la calidez. Todos pueden usar también otras preferencias."
     },
+    "cognitiveReadings": {
+      "Si": {
+        "ko": "모형에서는 구체적 사실을 과거 경험과 비교하는 과정으로 설명해요. 기억력 검사나 뇌 측정 결과가 아니에요.",
+        "en": "Within the theory, Si describes comparing concrete information with past experience. It is not a memory test or brain measurement.",
+        "ja": "理論では、具体的な情報を過去の経験と比べる過程として説明します。記憶力検査や脳の測定結果ではありません。",
+        "zh": "理论中，Si说明将具体信息与过去经验对照的过程，不是记忆测试或脑测量结果。",
+        "fr": "Dans la théorie, Si décrit la comparaison d’informations concrètes avec l’expérience passée. Ce n’est ni un test de mémoire ni une mesure cérébrale.",
+        "es": "En la teoría, Si describe comparar información concreta con experiencias previas. No es una prueba de memoria ni una medición cerebral."
+      },
+      "Fe": {
+        "ko": "모형에서는 결정을 내릴 때 사람·공유된 가치를 고려하는 과정으로 설명해요. 공감 능력이나 감정 안정성을 측정하지 않아요.",
+        "en": "Within the theory, Fe describes considering people and shared values in decisions. It does not measure empathy or emotional stability.",
+        "ja": "理論では、決定の際に人や共有する価値を考慮する過程として説明します。共感力や情緒の安定を測るものではありません。",
+        "zh": "理论中，Fe说明决策时考虑他人与共同价值的过程，不测量共情能力或情绪稳定性。",
+        "fr": "Dans la théorie, Fe décrit la prise en compte des personnes et des valeurs partagées. Cela ne mesure ni empathie ni stabilité émotionnelle.",
+        "es": "En la teoría, Fe describe considerar personas y valores compartidos al decidir. No mide empatía ni estabilidad emocional."
+      },
+      "Ti": {
+        "ko": "여기서는 한 기능 모형의 Ti 표기를 사용해요. 공식 자료도 3차 기능의 내향·외향 방향에 논쟁이 있다고 밝혀요. 확정된 뇌 기전은 아니에요.",
+        "en": "This page uses Ti in one function model. Official material notes disagreement about the tertiary function's inward or outward orientation. It is not an established brain mechanism.",
+        "ja": "ここでは一つの機能モデルのTi表記を使います。公式資料も第三機能の内向・外向の方向には議論があると説明しています。確定した脳の仕組みではありません。",
+        "zh": "本页采用一种功能模型中的Ti标记。官方资料也指出第三功能的内向或外向方向存在争议，不是已确定的脑机制。",
+        "fr": "Cette page emploie Ti dans un modèle de fonctions. Le document officiel signale un débat sur l’orientation introvertie ou extravertie de la fonction tertiaire. Ce n’est pas un mécanisme cérébral établi.",
+        "es": "Esta página usa Ti en un modelo de funciones. El material oficial señala debate sobre la orientación introvertida o extravertida de la función terciaria. No es un mecanismo cerebral establecido."
+      },
+      "Ne": {
+        "ko": "모형에서는 새로운 가능성을 살펴보는 과정으로 설명해요. 피로·불안을 Ne grip으로 진단하거나 휴식을 치료법으로 보장하지 않아요.",
+        "en": "Within the theory, Ne describes exploring possibilities. Do not diagnose fatigue or anxiety as a Ne grip, or treat rest as a guaranteed remedy.",
+        "ja": "理論では新しい可能性を探る過程として説明します。疲労や不安をNe gripと診断したり、休息を確実な治療法としたりしません。",
+        "zh": "理论中，Ne说明探索新可能的过程。不要把疲劳或焦虑诊断为Ne grip，也不要把休息当作保证有效的疗法。",
+        "fr": "Dans la théorie, Ne décrit l’exploration de possibilités. Ne diagnostiquez pas fatigue ou anxiété comme un Ne grip et ne présentez pas le repos comme un remède garanti.",
+        "es": "En la teoría, Ne describe explorar posibilidades. No diagnostiques cansancio o ansiedad como Ne grip ni presentes el descanso como remedio garantizado."
+      }
+    }
   },
   ISTJ: {
     challenges: [
@@ -1200,99 +1239,134 @@ export const MBTI_DEEP_DATA: Record<
       es: "Crees que cada persona y cada situación encierra un significado que vale la pena comprender, y que la autenticidad importa más que encajar. Los ideales merecen conservarse incluso cuando el mundo no está a su altura.",
     },
   },
+  // 2026-10-09: ENFJ descriptions are reflection prompts, not ability or health predictions.
   ENFJ: {
-    challenges: [
+    "challenges": [
       {
-        ko: "다른 사람을 돌보느라 자신을 과도하게 소진할 수 있음",
-        en: "Can overextend themselves caring for others",
-        ja: "他者の世話に力を注ぎすぎて疲弊することがある",
-        zh: "可能因照顾他人而透支自己",
-        fr: "Peut s'épuiser à force de prendre soin des autres",
-        es: "Puede agotarse por cuidar demasiado a los demás",
+        "ko": "조언 전에 상대가 원하는 도움을 확인했나요?",
+        "en": "Have you checked what help the other person wants before advising?",
+        "ja": "助言の前に相手が望む支援を確かめていますか？",
+        "zh": "建议之前，是否确认了对方想要的帮助？",
+        "fr": "Avez-vous vérifié l'aide souhaitée avant de conseiller ?",
+        "es": "¿Has comprobado qué ayuda desea la otra persona antes de aconsejar?"
       },
       {
-        ko: "집단의 화합을 위해 자신의 필요를 억누를 수 있음",
-        en: "May suppress own needs for group harmony",
-        ja: "集団の調和のために自分のニーズを抑えることがある",
-        zh: "可能为了群体和谐而压抑自己的需求",
-        fr: "Peut réprimer ses propres besoins pour l'harmonie du groupe",
-        es: "Puede reprimir sus propias necesidades por la armonía del grupo",
+        "ko": "협력을 위해 내 필요를 숨기고 있지는 않나요?",
+        "en": "Are you hiding your needs to maintain cooperation?",
+        "ja": "協力するために自分の希望を隠していませんか？",
+        "zh": "是否为了合作而隐藏自己的需求？",
+        "fr": "Cachez-vous vos besoins pour préserver la coopération ?",
+        "es": "¿Ocultas tus necesidades para mantener la cooperación?"
       },
       {
-        ko: "갈등이나 인정받지 못하는 상황에 민감함",
-        en: "Sensitive to conflict or disapproval",
-        ja: "対立や否定的な反応に敏感",
-        zh: "对冲突或不认可十分敏感",
-        fr: "Sensible aux conflits ou à la désapprobation",
-        es: "Sensible al conflicto o la desaprobación",
-      },
+        "ko": "갈등의 사실과 내가 추측한 감정을 구분했나요?",
+        "en": "Have you separated the facts of a disagreement from assumed feelings?",
+        "ja": "対立の事実と推測した感情を区別していますか？",
+        "zh": "是否区分了冲突的事实与自己推测的感受？",
+        "fr": "Distinguez-vous les faits du désaccord des émotions supposées ?",
+        "es": "¿Distingues los hechos del desacuerdo de las emociones que supones?"
+      }
     ],
-    growthPath: {
-      ko: "Se(항상 미리 계획하기보다 지금에 머물기)와 Ti(집단의 화합뿐 아니라 자신의 독립적 논리로 평가하기)를 개발하세요. 자신에게 도움이 되지 않을 때는 거절하는 연습을 하고, 합의뿐 아니라 스스로의 분석도 신뢰하세요.",
-      en: "Develop your Se (staying present instead of always planning ahead) and Ti (evaluating with your own independent logic, not just group harmony). Practice saying no when something doesn't serve you, and trust your own analysis, not only consensus.",
-      ja: "Se（常に先を計画するのではなく今に留まる力）とTi（集団の調和だけでなく自らの独立した論理で評価する力）を開発してください。自分のためにならないときは断る練習をし、合意だけでなく自分自身の分析も信頼しましょう。",
-      zh: "发展你的Se（活在当下，而非总在规划未来）和Ti（用自己独立的逻辑而非仅凭群体和谐来判断）。在不利于自己时练习说不，并信任自己的分析，而不只是共识。",
-      fr: "Développez votre Se (rester présent plutôt que toujours planifier) et Ti (évaluer avec votre propre logique indépendante, pas seulement l'harmonie du groupe). Apprenez à dire non quand quelque chose ne vous sert pas, et faites confiance à votre propre analyse, pas seulement au consensus.",
-      es: "Desarrolla tu Se (estar presente en vez de planificar siempre) y Ti (evaluar con tu propia lógica independiente, no solo la armonía grupal). Practica decir que no cuando algo no te conviene, y confía en tu propio análisis, no solo en el consenso.",
-    },
-    lifeImplications: {
-      ko: "다른 사람이 될 수 있는 최선의 모습을 이끌어내는 드문 재능이 있습니다. 관계에서는 관대하게 베풀지만, 모두의 필요뿐 아니라 자신의 필요를 위한 공간도 지켜야 합니다. 직업은 사람을 성장시키거나 이끄는 일을 중심으로 두어야 합니다.",
-      en: "You have a rare gift for helping others become who they're capable of being. In relationships you give generously but need to protect space for your own needs, not just everyone else's. Career should center on developing or guiding people.",
-      ja: "他者がなり得る最良の姿を引き出す稀な才能があります。人間関係では惜しみなく与えますが、誰かのためだけでなく自分自身の必要のための余地も守る必要があります。キャリアは人を育てる、あるいは導くことを中心にすべきです。",
-      zh: "你拥有帮助他人成为更好自己的稀有天赋。在关系中，你慷慨付出，但也需要为自己的需求留出空间，而不只是照顾所有人。职业生涯应以培养或引导他人为核心。",
-      fr: "Vous avez un don rare pour aider les autres à devenir ce qu'ils sont capables d'être. Dans les relations, vous donnez généreusement mais devez préserver un espace pour vos propres besoins, pas seulement ceux des autres. Votre carrière devrait se centrer sur le développement ou l'accompagnement des personnes.",
-      es: "Tienes un don raro para ayudar a otros a llegar a ser quienes pueden ser. En las relaciones das con generosidad, pero necesitas proteger espacio para tus propias necesidades, no solo las de los demás. La carrera debe centrarse en desarrollar o guiar personas.",
-    },
-    strengths: [
+    "strengths": [
       {
-        ko: "영감을 주는 공감적 리더십",
-        en: "Inspiring, empathic leadership",
-        ja: "人を鼓舞する共感的リーダーシップ",
-        zh: "富有感召力的共情型领导力",
-        fr: "Leadership inspirant et empathique",
-        es: "Liderazgo inspirador y empático",
+        "ko": "다른 사람의 목표를 직접 물어보기",
+        "en": "Ask people directly about their goals",
+        "ja": "相手の目標を直接尋ねる",
+        "zh": "直接询问他人的目标",
+        "fr": "Demander directement les objectifs de l'autre",
+        "es": "Preguntar directamente por los objetivos de la otra persona"
       },
       {
-        ko: "집단의 역학과 동기를 읽는 능력",
-        en: "Reads group dynamics and motivation well",
-        ja: "集団の力学と動機を読み取る力",
-        zh: "善于洞察群体动态与动机",
-        fr: "Lit bien la dynamique et les motivations du groupe",
-        es: "Lee bien la dinámica y motivación del grupo",
+        "ko": "도움의 범위와 결정 권한을 합의하기",
+        "en": "Agree on support and decision-making authority",
+        "ja": "支援の範囲と決定権を合意する",
+        "zh": "就帮助范围和决定权达成一致",
+        "fr": "Convenir de l'aide et du pouvoir de décision",
+        "es": "Acordar el alcance de la ayuda y quién decide"
       },
       {
-        ko: "비전과 결합된 진정한 따뜻함",
-        en: "Genuine warmth paired with vision",
-        ja: "ビジョンと結びついた本物の温かさ",
-        zh: "真挚的温暖与远见并存",
-        fr: "Chaleur authentique alliée à une vision",
-        es: "Calidez genuina combinada con visión",
+        "ko": "공동 목표에서 빠진 관점을 확인하기",
+        "en": "Check which perspectives a shared goal leaves out",
+        "ja": "共通の目標から抜けた視点を確かめる",
+        "zh": "检查共同目标中遗漏的视角",
+        "fr": "Repérer les points de vue oubliés dans un objectif commun",
+        "es": "Revisar qué perspectivas faltan en un objetivo común"
       },
       {
-        ko: "다른 사람의 잠재력을 이끌어내는 능력",
-        en: "Skilled at bringing out others' potential",
-        ja: "他者の潜在能力を引き出す力",
-        zh: "擅长激发他人的潜力",
-        fr: "Habile à révéler le potentiel des autres",
-        es: "Hábil para sacar a relucir el potencial de otros",
-      },
+        "ko": "받은 피드백으로 내 해석을 다시 살펴보기",
+        "en": "Revisit your interpretation using feedback",
+        "ja": "受けたフィードバックで解釈を見直す",
+        "zh": "根据反馈重新审视自己的理解",
+        "fr": "Revoir son interprétation à partir des retours",
+        "es": "Revisar la interpretación a partir de los comentarios"
+      }
     ],
-    typeNarrative: {
-      ko: "주인공 (ENFJ): 아무도 말하기 전에 집단에 무엇이 필요한지 감지하며, 주변 사람들에게서 최선을 이끌어내는 방식으로 이끕니다. Fe-Ni 조합이 진정한 따뜻함과 사람과 상황이 향하는 방향에 대한 장기적 감각을 함께 줍니다.",
-      en: "The Protagonist (ENFJ): You lead by drawing out the best in the people around you, sensing what a group needs before anyone says it aloud. Your Fe-Ni combination pairs genuine warmth with a long-range sense of where people and situations are headed.",
-      ja: "主人公 (ENFJ): 誰も口にする前に集団に何が必要かを察知し、周囲の人々から最善を引き出すことで導きます。Fe-Niの組み合わせが本物の温かさと、人や状況がどこへ向かうかという長期的な感覚を与えます。",
-      zh: "主人公 (ENFJ)：你在别人开口之前就能感知团队需要什么，通过激发身边人的潜力来领导。你的Fe-Ni组合让真挚的温暖与对人和局势走向的长远洞察并存。",
-      fr: "Le Protagoniste (ENFJ) : Vous dirigez en faisant ressortir le meilleur des personnes autour de vous, sentant ce dont un groupe a besoin avant que quiconque ne le dise. Votre combinaison Fe-Ni allie une chaleur authentique à un sens à long terme de la direction que prennent les gens et les situations.",
-      es: "El Protagonista (ENFJ): Lideras haciendo aflorar lo mejor de quienes te rodean, percibiendo lo que un grupo necesita antes de que nadie lo diga. Tu combinación Fe-Ni une una calidez genuina con un sentido a largo plazo de hacia dónde se dirigen las personas y las situaciones.",
+    "typeNarrative": {
+      "ko": "ENFJ의 유형 설명은 사람의 성장과 공동 목표에 대한 관심을 강조해요. 실제 능력이나 상대의 필요는 행동과 대화로 확인해요.",
+      "en": "The ENFJ description emphasizes interest in people's development and shared goals. Check actual skills and others' needs through behavior and conversation.",
+      "ja": "ENFJのタイプ説明は、人の成長や共通の目標への関心を重視します。実際の能力や相手の希望は、行動と対話で確かめましょう。",
+      "zh": "ENFJ类型描述强调对他人成长和共同目标的关注。实际能力和他人的需求要通过行为与对话确认。",
+      "fr": "La description ENFJ met l'accent sur le développement des personnes et les objectifs communs. Vérifiez les compétences et les besoins par les actes et le dialogue.",
+      "es": "La descripción ENFJ destaca el interés por el desarrollo de las personas y los objetivos comunes. Comprueba capacidades y necesidades mediante acciones y diálogo."
     },
-    worldview: {
-      ko: "사람은 압박보다 격려와 연결을 통해 더 성장하며, 집단의 잠재력은 혼자가 아니라 함께 실현된다고 믿습니다.",
-      en: "You believe people grow more through encouragement and connection than through pressure, and that a group's potential is realized together, not alone.",
-      ja: "人は圧力よりも励ましとつながりを通じてより成長し、集団の可能性は一人ではなく共に実現されると信じています。",
-      zh: "你相信人们通过鼓励与联结比通过施压成长得更多，一个群体的潜力要靠共同实现，而非独自完成。",
-      fr: "Vous croyez que les gens grandissent davantage par l'encouragement et la connexion que par la pression, et que le potentiel d'un groupe se réalise ensemble, pas seul.",
-      es: "Crees que las personas crecen más a través del apoyo y la conexión que de la presión, y que el potencial de un grupo se realiza en conjunto, no en solitario.",
+    "worldview": {
+      "ko": "내가 생각한 지원과 상대가 요청한 지원이 같은지 비교해봐요. 공동 목표를 정할 때 빠진 의견이 없는지도 확인할 수 있어요. 유형이 정해 준 신념이 아니라 편집부의 성찰 질문이에요.",
+      "en": "Compare the support you imagined with the support the person requested. Check whose views a shared goal leaves out. These are editorial prompts, not beliefs determined by type.",
+      "ja": "自分が考えた支援と相手が求めた支援を比べてみましょう。共通の目標に抜けた意見がないかも確かめます。タイプが定めた信念ではなく、編集部の問いです。",
+      "zh": "比较自己设想的帮助与对方请求的帮助，检查共同目标是否遗漏了谁的意见。这是编辑部的反思问题，不是由类型决定的信念。",
+      "fr": "Comparez l'aide imaginée à celle demandée et repérez les avis oubliés dans un objectif commun. Ce sont des pistes éditoriales, pas des convictions déterminées par le type.",
+      "es": "Compara la ayuda que imaginaste con la solicitada y revisa qué opiniones faltan en un objetivo común. Son propuestas editoriales, no creencias determinadas por el tipo."
     },
+    "growthPath": {
+      "ko": "성장을 돕고 싶다면 상대의 목표와 동의를 먼저 확인해요. 이 질문들은 편집부의 성찰 제안이지 ENFJ의 결함 진단이나 특정 기능의 개발 효과를 입증한 절차가 아니에요.",
+      "en": "If you want to support growth, first check the person's goals and consent. These editorial reflection prompts are not an ENFJ diagnosis or a validated function-development procedure.",
+      "ja": "成長を支えたいときは、まず相手の目標と同意を確認しましょう。編集部の振り返りの提案であり、ENFJの欠点の診断や機能開発の効果を検証した手順ではありません。",
+      "zh": "想支持他人成长时，先确认对方的目标和意愿。这些是编辑部的反思建议，不是ENFJ缺陷诊断，也不是经验证的功能发展程序。",
+      "fr": "Pour accompagner une personne, vérifiez d'abord ses objectifs et son accord. Ces pistes éditoriales ne sont ni un diagnostic ENFJ ni une procédure validée de développement des fonctions.",
+      "es": "Para apoyar a alguien, confirma primero sus objetivos y su consentimiento. Estas propuestas editoriales no son un diagnóstico ENFJ ni un procedimiento validado de desarrollo de funciones."
+    },
+    "lifeImplications": {
+      "ko": "교육·협업에 관심이 있다면 실제 과제와 피드백으로 탐색해요. 유형은 능력, 천직, 궁합이나 건강을 판정하지 않으며 분석적 업무를 배제할 이유도 아니에요.",
+      "en": "If education or collaboration interests you, explore real tasks and feedback. Type does not determine ability, an ideal career, compatibility or health, and does not justify excluding analytical work.",
+      "ja": "教育や協働に関心があれば、実際の課題とフィードバックで探ってみましょう。タイプで能力、天職、相性、健康は判断できず、分析的な仕事を避ける理由にもなりません。",
+      "zh": "若对教育或合作感兴趣，可以通过实际任务与反馈探索。类型不能判定能力、天职、配对或健康，也不能成为排除分析工作的理由。",
+      "fr": "Si l'éducation ou la coopération vous intéresse, explorez des tâches réelles et recueillez des retours. Le type ne détermine ni aptitudes, ni métier idéal, ni compatibilité, ni santé, et n'exclut pas le travail analytique.",
+      "es": "Si te interesa la educación o la colaboración, explora tareas reales y recoge comentarios. El tipo no determina capacidad, profesión ideal, compatibilidad ni salud, ni justifica excluir el trabajo analítico."
+    },
+    "cognitiveReadings": {
+      "Fe": {
+        "ko": "Fe는 유형 이론에서 가치와 사람에게 미칠 영향을 밖으로 살피는 설명이에요. 타인의 감정을 정확히 읽는 능력이나 뇌기전의 증거는 아니에요.",
+        "en": "In type theory, Fe describes attending outwardly to values and effects on people. It is not evidence of accurate emotion reading or a brain mechanism.",
+        "ja": "Feはタイプ理論で価値や他者への影響を外に向けて考える説明です。感情を正確に読み取る能力や脳の仕組みを証明するものではありません。",
+        "zh": "在类型理论中，Fe描述向外关注价值及对他人的影响，不是准确读懂情绪或脑机制的证据。",
+        "fr": "Dans la théorie, Fe décrit l'attention portée aux valeurs et aux effets sur autrui. Ce n'est pas une preuve de lecture exacte des émotions ni de mécanisme cérébral.",
+        "es": "En la teoría, Fe describe la atención hacia los valores y los efectos en otras personas. No demuestra una lectura exacta de emociones ni un mecanismo cerebral."
+      },
+      "Ni": {
+        "ko": "Ni는 유형 이론에서 내적으로 의미와 연결을 살피는 용어예요. 미래나 상대의 생각을 정확히 예측한다는 뜻은 아니에요.",
+        "en": "Ni is a theoretical term for internally considering meanings and connections, not proof of predicting the future or another person's thoughts.",
+        "ja": "Niは内面で意味やつながりを考える理論上の用語です。未来や相手の考えを正確に予測できる意味ではありません。",
+        "zh": "Ni是从内在考虑意义与联系的理论术语，并不证明能准确预测未来或他人的想法。",
+        "fr": "Ni désigne théoriquement l'examen intérieur des significations et des liens, sans prouver une capacité à prédire l'avenir ou les pensées d'autrui.",
+        "es": "Ni es un término teórico sobre examinar internamente significados y conexiones; no demuestra que puedas predecir el futuro o los pensamientos ajenos."
+      },
+      "Se": {
+        "ko": "일부 기능 배열은 3차 감각을 Se로 표기해요. 재단도 3차 기능의 내향·외향 방향에 논쟁이 있다고 설명하므로 확정된 능력 순위로 읽지 않아요.",
+        "en": "Some function arrangements label tertiary Sensing as Se. The Foundation notes debate about its inward or outward orientation, so this is not a settled ranking of abilities.",
+        "ja": "一部の配列では第三の感覚をSeと表記します。財団も第三機能の内向・外向には議論があると説明しており、確定した能力順位ではありません。",
+        "zh": "部分功能排列把第三感知功能标为Se。基金会也指出第三功能的内外倾方向存在争论，不能将其视为确定的能力排名。",
+        "fr": "Certains agencements notent la sensation tertiaire Se. La Fondation signale un débat sur son orientation ; ce n'est pas un classement établi des aptitudes.",
+        "es": "Algunas secuencias llaman Se a la sensación terciaria. La Fundación reconoce debate sobre su orientación; no es una clasificación definitiva de capacidades."
+      },
+      "Ti": {
+        "ko": "Ti는 유형 이론에서 내적인 논리 검토를 설명하는 용어예요. ‘열등’은 이론적 역할명이며 지능 평가나 스트레스 진단·회복 기전은 아니에요.",
+        "en": "Ti describes internal logical examination within type theory. 'Inferior' names a theoretical role, not intelligence, a stress diagnosis or a recovery mechanism.",
+        "ja": "Tiはタイプ理論で内面の論理的検討を説明する用語です。「劣等」は理論上の役割名で、知能評価、ストレス診断、回復の仕組みではありません。",
+        "zh": "Ti在类型理论中描述内部逻辑检视。“劣势”是理论角色名称，不是智力评价、压力诊断或恢复机制。",
+        "fr": "Ti décrit l'examen logique intérieur dans la théorie. « Inférieure » nomme un rôle théorique, non l'intelligence, un diagnostic de stress ou un mécanisme de récupération.",
+        "es": "Ti describe el examen lógico interno en la teoría. «Inferior» es un papel teórico, no una medida de inteligencia, un diagnóstico de estrés ni un mecanismo de recuperación."
+      }
+    }
   },
   ESTJ: {
     challenges: [

@@ -85,8 +85,9 @@ export function RecommendationCards({ locale }: { locale: string }) {
 
   // Resolve every i18n key this render needs (UI chrome + card copy + node
   // labels for signal values) in one batch, same pattern as
-  // OntologyRelationOrbit's ring-label resolution. A raw-key flash before
-  // this resolves is expected and harmless.
+  // OntologyRelationOrbit's ring-label resolution. Do not paint the key
+  // while that lookup is empty: a missing `recommendations.json` left the
+  // raw key on screen. 2026-09-29.
   useEffect(() => {
     const keys = new Set<string>([
       "recommendations.cards.sectionTitle",
@@ -125,7 +126,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
     };
   }, [cards, lang]);
 
-  const tt = (key: string) => texts[key] ?? key;
+  const tt = (key: string) => texts[key] ?? "";
 
   const reasonFor = useMemo(
     () => (entry: CardEntry) => {
@@ -157,11 +158,15 @@ export function RecommendationCards({ locale }: { locale: string }) {
   // legitimately empty — show guidance instead of fabricating a match.
   if (hydrated && cards.length === 0) {
     return (
-      <div className="rounded-[28px] border border-green-100 bg-card p-5 text-center shadow-sm">
+      <div className="rounded-[28px] border border-border bg-card p-5 text-center shadow-sm">
         <p className="text-sm font-black text-green-900">{texts["recommendations.cards.emptyTitle"] ?? EMPTY_COPY[lang].title}</p>
         <p className="mt-1 text-xs text-green-600">{texts["recommendations.cards.emptyDescription"] ?? EMPTY_COPY[lang].description}</p>
       </div>
     );
+  }
+
+  if (!texts["recommendations.cards.matchLabel"]) {
+    return <div className="h-24 rounded-[28px] border border-border bg-card" aria-busy="true" />;
   }
 
   return (
@@ -170,7 +175,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
         const { rec } = entry;
         const isOpen = !!openWhy[rec.id];
         return (
-          <div key={rec.id} className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+          <div key={rec.id} className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-[10px] font-black uppercase tracking-wider text-green-500">
@@ -185,14 +190,14 @@ export function RecommendationCards({ locale }: { locale: string }) {
 
             <details className="mt-2" open={isOpen} onToggle={(e) => setOpenWhy((prev) => ({ ...prev, [rec.id]: e.currentTarget.open }))}>
               <summary className="cursor-pointer text-xs font-bold text-green-600">{tt("recommendations.cards.why")}</summary>
-              <p className="mt-1 text-xs leading-5 text-green-700">{reasonFor(entry)}</p>
+              <p className="mt-1 text-xs leading-5 text-primary">{reasonFor(entry)}</p>
             </details>
 
             {entry.exploreNodeId ? (
               <button
                 type="button"
                 onClick={() => explore(entry.exploreNodeId)}
-                className="mt-3 inline-flex items-center gap-1 text-xs font-black text-green-700 hover:text-green-900"
+                className="mt-3 inline-flex items-center gap-1 text-xs font-black text-primary hover:text-green-900"
               >
                 {tt("recommendations.cards.explore")} →
               </button>

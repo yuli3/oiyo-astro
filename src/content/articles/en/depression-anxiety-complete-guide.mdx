@@ -1,6 +1,6 @@
 ---
 locale: en
-title: "The Complete Guide to Depression and Anxiety: Causes, Symptoms, Recovery, Treatment, and Self-Care"
+title: "Depression and Anxiety: How They Differ, When to Get Help, and Everyday Care"
 author: OIYO Editorial
 tags:
   - Depression
@@ -8,8 +8,10 @@ tags:
   - MentalHealth
   - CBT
   - Psychology
-description: "The difference between low mood and clinical depression, DSM-5 criteria for major depressive disorder and generalized anxiety disorder, brain science mechanisms, cognitive behavioral therapy (CBT), mindfulness, the effect of exercise, psychotherapy vs. medication, and evidence-based self-care."
-pubDate: '2026-04-14'
+description: >-
+  How low mood and anxiety differ, signs that it is time to ask for help, what counseling and medication can and cannot do, and everyday care. This is not a diagnosis or a treatment plan.
+pubDate: 2026-04-14
+updatedDate: 2026-10-06
 topic: emotion
 ---
 
@@ -18,157 +20,149 @@ import CompareTable from "@/components/mdx/CompareTable.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
-## The Difference Between Low Mood and Depression
+This page explains ideas. It does not diagnose an illness, and it does not tell you to start or stop a medicine. If symptoms block daily life, please talk with a mental health professional.
 
-**Low mood** is a normal human emotion. Feeling sad and unmotivated in the face of job loss, a breakup, or grief is a natural response to difficult circumstances.
+## Low Mood and Major Depression
 
-**Major Depressive Disorder** is a medical condition that persists without obvious cause, or that seriously disrupts daily functioning. The WHO estimates that approximately **280 million people** worldwide live with depression. Globally, around 5% of adults experience a depressive episode in any given year.
+**Low mood** is a feeling many people have. Sadness and low motivation after a job loss, a breakup, or a bereavement can be a natural response.
 
-<Callout type="warning" title="Signs That Professional Help Is Needed">
-If any of the following symptoms persist for **two weeks or more**, please consult a mental health professional:
-- Feeling sad or empty most of the time
-- Loss of interest or pleasure in almost all activities
-- Significant unexplained weight change (more than 5%)
-- Insomnia or sleeping too much
+**Major depressive disorder** is a diagnosis clinicians consider when that low mood lasts most of the day, nearly every day, or when it seriously disrupts daily functioning. A clear external cause is not always present.
+
+The WHO fact sheet (updated 11 September 2026; estimates for 2023) puts depression at about **322 million** people, roughly **4%** of the world's population. Among adults the estimate is **5.2%** (6.2% of women, 4.1% of men). In South Korea, the 2021 national mental health survey reported a lifetime prevalence of **7.7%** for major depressive disorder.
+
+<Callout type="warning" title="Signs that professional help is needed">
+The list below is not a full diagnostic checklist. If some of these last **more than two weeks** and get in the way of daily life, please talk with a mental health professional. Two weeks is the window often used for a major depressive episode. Generalized anxiety is usually described as excessive worry lasting many months.
+
+- Sadness or emptiness most of the time
+- Much less interest or pleasure in almost all activities
+- Unintended weight change of more than 5% of body weight in a month
+- Trouble sleeping, or sleeping far more than usual
 - Difficulty concentrating or making decisions
-- Recurring thoughts of death or suicide
+- Repeated thoughts of death
 
-**Crisis**: If you are experiencing suicidal thoughts, please contact a crisis helpline in your country or go to the nearest emergency room immediately.
+**Crisis**: If you may act on thoughts of suicide, contact a local crisis line now or go to an emergency room.
+
+**United States** (24 hours): call or text **988**; text HOME to **741741**; SAMHSA **1-800-662-4357**.
+**Korea** (24 hours): suicide prevention **109**, mental health crisis **1577-0199**. Emergency **119**.
 </Callout>
 
 ---
 
-## 1. Key Mental Health Statistics
+## 1. Figures that have a source
 
 <StatCards
-  title="Depression and Anxiety: Global and Regional Figures"
+  title="Depression and anxiety figures with a source"
   cols={3}
   items={[
-    { label: "Global Depression Population", value: "280 million", description: "WHO 2023 estimate (3.8% of the global population)" },
-    { label: "Lifetime Depression Risk", value: "~15–17%", description: "Approximately 1 in 6 adults will experience major depression at some point in their life" },
-    { label: "Anxiety Disorder Prevalence", value: "~7–18%", description: "12-month prevalence varies by country and disorder type" },
-    { label: "Rate Receiving Treatment", value: "12.1%", description: "Lifetime use of mental health services among Koreans with a mental disorder (2021 national survey)" },
-    { label: "Exercise as Antidepressant", value: "Mild-to-moderate level", description: "30 minutes of aerobic exercise 3× per week = effect comparable to mild antidepressants" }
+    { label: "Depression worldwide", value: "About 322 million", description: "2023 estimate. About 4% of the population. WHO fact sheet updated September 2026" },
+    { label: "Adult prevalence", value: "5.2%", description: "2023 adult estimate (WHO). 6.2% of women, 4.1% of men" },
+    { label: "Lifetime MDD, Korea", value: "7.7%", description: "2021 Korea national survey. One-year depressive disorder was 1.7%" },
+    { label: "Lifetime anxiety disorders, Korea", value: "9.3%", description: "Same survey, broad group including specific phobia. One-year 3.1%. Lifetime GAD alone was 1.7%" },
+    { label: "Service use, Korea", value: "12.1%", description: "Lifetime mental health service use among people diagnosed with a mental disorder. Not a share of the whole population" }
   ]}
 />
+
+The same WHO fact sheet says that in high-income countries only about one third of people with depression receive mental health treatment. The share differs by country.
 
 ---
 
-## 2. Depression vs. Anxiety Disorder: Differences and Co-occurrence
+## 2. How depression and anxiety tend to differ
 
 <CompareTable
-  title="Major Depressive Disorder vs. Anxiety Disorder"
-  leftLabel="Depression (Major Depressive Disorder)"
-  rightLabel="Anxiety (Generalized Anxiety Disorder)"
+  title="Patterns that often differ"
+  leftLabel="When low mood leads"
+  rightLabel="When anxiety leads"
   rows={[
-    { left: "Past and present focus — 'Nothing works,' 'It's all pointless'", right: "Future focus — 'What if something goes wrong?'" },
-    { left: "Energy depletion, emotional numbness, loss of interest, sadness", right: "Excessive worry, tension, unease, difficulty concentrating" },
-    { left: "Behavioral withdrawal → isolation → deepening depression: a vicious cycle", right: "Avoidance → temporary relief → long-term worsening" },
-    { left: "Primary mechanism: dysregulation of serotonin and dopamine", right: "Amygdala hyperactivation, norepinephrine imbalance" },
-    { left: "Antidepressants (SSRIs/SNRIs) are effective", right: "Anti-anxiety agents and antidepressants both used (SSRIs preferred)" }
+    { left: "Thoughts often stay on what already happened and on the present", right: "Thoughts often jump ahead to what might go wrong" },
+    { left: "Energy drops, interest shrinks, and sadness grows", right: "Worry, tension, and scattered attention grow" },
+    { left: "Doing less can make the mood sink further", right: "Avoidance can ease the moment and enlarge the worry later" },
+    { left: "Chemical hypotheses are candidates, not the whole cause", right: "A more sensitive alarm system is one account. One brain region does not explain it all" }
   ]}
 />
 
-<Callout type="info" title="Comorbidity">
-Depression and anxiety disorders **co-occur more than 50% of the time**. Unresolved anxiety can lead to depression, and deepening depression worsens anxiety — a mutually reinforcing pattern. This is why treatment must address both simultaneously.
+<Callout type="info" title="When both are present">
+In the WHO World Mental Health Surveys, **45.7%** of people with lifetime major depressive disorder also had one or more lifetime anxiety disorders (Kessler et al., 2015). Surveys differ, so this page does not round that up to "more than half." If both block daily life, ask a clinician to look at them together.
 </Callout>
 
 ---
 
-## 3. Depression and Anxiety Through the Lens of Neuroscience
+## 3. Read the brain story as a hypothesis
 
-### Key Brain Structures and Their Roles
+Researchers connect the amygdala, prefrontal cortex, hippocampus, serotonin signaling, and the stress-hormone axis with depression and anxiety. Some studies report a more reactive amygdala or weaker prefrontal regulation. The idea that low serotonin is the cause of depression is a long-used hypothesis, not a settled single cause.
 
-| Brain Structure | Role | Changes in Depression/Anxiety |
-|----------------|------|-------------------------------|
-| Amygdala | Emotional response, fear processing | Hyperactivation → excessive anxiety and vigilance |
-| Prefrontal Cortex (PFC) | Rational judgment, emotion regulation | Reduced activity → difficulty managing negative thoughts |
-| Hippocampus | Memory, contextual processing | May shrink under chronic stress hormone exposure |
-| Serotonin System | Mood, sleep, appetite | Reduced activity in depression |
-| HPA Axis | Cortisol regulation | Chronic overactivation under sustained stress |
+Medicines are not chosen from that hypothesis alone. Benefits and side effects differ from person to person. Please decide starts and stops with the clinician who prescribed them.
 
 ---
 
-## 4. Cognitive Behavioral Therapy (CBT): The Best-Evidenced Treatment
+## 4. Practices often used in cognitive behavioral therapy
 
-CBT identifies and reshapes the **Thought → Emotion → Behavior** chain.
+Cognitive behavioral therapy (CBT) looks at how thoughts, feelings, and actions pull on each other. It is not the first choice for every person.
 
-### Core Techniques
+**Looking again at a thought**
+1. Write the sentence that arrived on its own. For example: "I always fail."
+2. List what fits that sentence and what does not.
+3. Try a less lopsided sentence. For example: "I have failed at things, and I have also finished things."
 
-**Cognitive Restructuring**:
-1. Catch the automatic negative thought: "I always fail"
-2. Examine the evidence: "What supports or contradicts this thought?"
-3. Replace with a balanced thought: "I sometimes fail, but I also have a history of succeeding"
+**Doing a little more**
+Stopping activity when you feel low can sink the mood further. Therapists often suggest starting with something small, such as a 15-minute walk, even when motivation is missing.
 
-**Behavioral Activation**:
-- Reducing activity when depressed → more depression: a vicious cycle
-- Even without motivation, **starting a small activity (15-minute walk) first** → experiencing a mood lift that creates momentum
-
-**Exposure Therapy (for anxiety disorders)**:
-- Avoidance strengthens anxiety, so the person is exposed to feared situations **safely and gradually**
+**Approaching what anxiety makes you avoid**
+Avoidance can feel better in the moment and give the worry more room later. Exposure is not a test of endurance you do alone. Keep it safe and gradual, with a professional when you can.
 
 ---
 
-## 5. Comparing Treatment Options
+## 5. Counseling and medication
 
 <CompareTable
-  title="Psychotherapy vs. Medication"
-  leftLabel="Psychotherapy (CBT-focused)"
-  rightLabel="Medication (SSRI-focused)"
+  title="Points clinicians often compare"
+  leftLabel="Psychotherapy (CBT as the example)"
+  rightLabel="Medication (antidepressants as the example)"
   rows={[
-    { left: "Onset: 4–12 weeks (gradual)", right: "Onset: 2–6 weeks (some faster)" },
-    { left: "Superior long-term outcomes — more effective at preventing relapse", right: "Relapse risk after stopping medication" },
-    { left: "Builds skills → available for life", right: "Directly regulates brain chemistry" },
-    { left: "Access barriers — requires a specialist, higher cost", right: "Accessible — prescribable in primary care" },
-    { left: "Can be the first-line choice alone for mild-to-moderate depression/anxiety", right: "Medication required for moderate-to-severe cases" },
-    { left: "Combining CBT + medication maximizes outcomes", right: "Combining CBT + medication maximizes outcomes" }
+    { left: "Change often takes several weeks", right: "Some people notice a change in a few weeks, and some need longer" },
+    { left: "Skills practiced in sessions can remain after the sessions end", right: "Symptoms sometimes return after a medicine is stopped. Do not stop it on your own" },
+    { left: "Finding a therapist and paying for care can be a barrier", right: "In some places a primary-care clinician can prescribe" },
+    { left: "For milder symptoms, some people start with counseling alone", right: "For severe symptoms, medication is often considered as well. It is not automatically required" }
   ]}
 />
 
----
-
-## 6. Evidence-Based Self-Care for Daily Life
-
-### Exercise (The Most Powerful Non-Pharmacological Intervention)
-- Aerobic exercise 3–5 times per week, 30+ minutes per session
-- Increases BDNF (brain-derived neurotrophic factor) → promotes neural cell growth and repair
-- Natural release of endorphins and serotonin
-
-### Sleep Hygiene
-- Consistent bedtime and wake time
-- No screens in the hour before bed
-- Bed is for sleeping only (no worrying or phone scrolling in bed)
-
-### Mindfulness
-- 10 minutes of breathing meditation per day
-- Non-judgmental attention to the present moment
-- Apps: Calm, Headspace, Insight Timer, and others
-
-### Social Connection
-- Isolation is the single strongest factor that worsens depression and anxiety
-- At least one meaningful conversation per week (phone call or in person)
-- Participating in hobby groups or volunteer activities
-
-### Nutrition
-- Omega-3 fatty acids (sardines, salmon, mackerel): evidence-backed antidepressant effect
-- Mediterranean-style diet: protective effect on mental health
-- Excess sugar and processed foods → inflammation → worsened mood
+Some studies find that combining counseling and medication helps more. That is not true for everyone. The mix depends on severity, pregnancy, other illnesses, and what has already been tried.
 
 ---
 
-## 7. Take a Mental Health Self-Assessment
+## 6. Everyday care you can try
 
-<ToolCTA tool="depression-test" />
+None of this replaces treatment. If pain is new, or if sleep or appetite keeps falling apart, see a clinician first.
+
+**Moving**
+Studies look at activity hard enough to raise your breathing, several times a week. A rise in BDNF is a proposed pathway, not a promise. This page does not say that exercise replaces medicine for mild depression.
+
+**Sleep**
+Keep wake time and bedtime roughly steady. Cut screens in the hour before sleep. Worrying or watching videos in bed can teach the bed to be a place of alertness.
+
+**Attention**
+Ten minutes a day of noticing the breath is often offered as a starting practice. That duration is not a treatment dose. An app is a support, not care by itself.
+
+**People**
+Isolation can make a low mood heavier. It is not established as the single strongest cause. One meaningful conversation in a week is a reasonable place to start.
+
+**Food**
+Omega-3 fats and eating patterns rich in vegetables, fish, and olive oil have been studied alongside mood. Food alone is not a treatment for depression. This page does not claim that sugar passes through inflammation and then worsens mood in a straight line.
+
+---
+
+## 7. Questions for looking at your mood
+
+<ToolCTA tool="depression-test" locale="en" title="A look at low mood" description="Questions about how you have been feeling. Not a diagnosis or a medical test." />
 
 ---
 
 ## References
 
-The concepts and studies mentioned above draw on the sources below.
+The figures and treatment names above stay inside these sources. If you may harm yourself, contact a local crisis line. In the United States call or text 988. In Korea call 109 or 1577-0199 (24 hours).
 
-- World Health Organization. (2023). *Depressive disorder (depression)* [Fact sheet]. https://www.who.int/news-room/fact-sheets/detail/depression
-- 보건복지부·국립정신건강센터 (2022). 『2021년 정신건강실태조사』.
+- World Health Organization. (2026, September 11). *Depressive disorder (depression)* [Fact sheet]. Estimates for 2023. https://www.who.int/news-room/fact-sheets/detail/depression
+- Korea Ministry of Health and Welfare and National Center for Mental Health. 2021 national mental health survey. Lifetime major depressive disorder 7.7%, lifetime anxiety disorders 9.3%, lifetime service use 12.1% among people diagnosed with a mental disorder.
 - American Psychiatric Association. (2013). *Diagnostic and Statistical Manual of Mental Disorders* (5th ed.). American Psychiatric Publishing.
 - Beck, A. T., Rush, A. J., Shaw, B. F., & Emery, G. (1979). *Cognitive Therapy of Depression*. Guilford.
-- Kessler, R. C., Berglund, P., Demler, O., Jin, R., Merikangas, K. R., & Walters, E. E. (2005). Lifetime prevalence and age-of-onset distributions of DSM-IV disorders in the National Comorbidity Survey Replication. *Archives of General Psychiatry*, 62(6), 593–602.
+- Kessler, R. C., Sampson, N. A., Berglund, P., Gruber, M. J., et al. (2015). Anxious and non-anxious major depressive disorder in the World Health Organization World Mental Health Surveys. *Epidemiology and Psychiatric Sciences*. https://doi.org/10.1017/S2045796015000189
 - Hofmann, S. G., Asnaani, A., Vonk, I. J. J., Sawyer, A. T., & Fang, A. (2012). The efficacy of cognitive behavioral therapy: A review of meta-analyses. *Cognitive Therapy and Research*, 36(5), 427–440.

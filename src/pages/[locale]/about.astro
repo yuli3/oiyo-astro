@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import HeroArt from '../../components/shared/HeroArt.astro';
+import UsageClip from '../../components/shared/UsageClip.astro';
 import { LOCALES, getTranslations } from '../../i18n';
 import type { Locale } from '../../i18n';
 
@@ -10,6 +11,28 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
+
+// 2026-10-07 소개 영상. 화면 속 글자는 ko 판과 en 판 두 벌이고, 문장은 여기 HTML 이 맡는다.
+const introCopy: Record<string, { label: string; caption: string }> = {
+  ko: { label: "OIYO 소개 영상", caption: "나를 이해하는 지도, OIYO를 10초로 봐요. 재생하면 소리가 나요." },
+  en: { label: "OIYO intro video", caption: "OIYO in ten seconds: a map for understanding yourself. Plays with sound." },
+  ja: { label: "OIYO紹介動画", caption: "自分を理解するための地図、OIYOを10秒で。再生すると音が出ます。" },
+  zh: { label: "OIYO 介绍视频", caption: "十秒看懂 OIYO：一张理解自己的地图。播放时有声音。" },
+  fr: { label: "Vidéo de présentation d’OIYO", caption: "OIYO en dix secondes : une carte pour mieux se comprendre. La lecture est sonore." },
+  es: { label: "Vídeo de presentación de OIYO", caption: "OIYO en diez segundos: un mapa para entenderte. Se reproduce con sonido." },
+};
+const intro = introCopy[locale] ?? introCopy.en;
+// 브랜드 영상(큰 글자 + 떠 있는 기기 화면). 영상 속 글자가 있어 ko 판과 en 판 두 벌이다.
+const brandCopy: Record<string, { label: string; caption: string }> = {
+  ko: { label: "OIYO 브랜드 영상", caption: "타고난 것, 드러난 것, 고른 것을 하나의 지도로. 재생하면 소리가 나요." },
+  en: { label: "OIYO brand film", caption: "What you’re born with, what you discover and what you choose, on one map. Plays with sound." },
+  ja: { label: "OIYOブランド動画", caption: "生まれ持ったもの、見えてきたもの、選んだものを一枚の地図に。再生すると音が出ます。" },
+  zh: { label: "OIYO 品牌视频", caption: "与生俱来的、测出来的、自己选择的，汇成一张地图。播放时有声音。" },
+  fr: { label: "Film de marque OIYO", caption: "Ce que vous avez reçu, ce que vous découvrez et ce que vous choisissez, sur une seule carte. La lecture est sonore." },
+  es: { label: "Vídeo de marca de OIYO", caption: "Lo que traes de nacimiento, lo que descubres y lo que eliges, en un solo mapa. Se reproduce con sonido." },
+};
+const brand = brandCopy[locale] ?? brandCopy.en;
+const introScreens = locale === "ko" ? "ko" : "en";
 
 const values = [
   { key: 'free', icon: '🌍' },
@@ -44,10 +67,33 @@ const values = [
       <h1 class="text-4xl md:text-5xl font-serif font-black text-foreground mb-4 tracking-tight">
         {t('marketing.about.hero.title')}
       </h1>
-      <p class="text-green-700 text-lg leading-relaxed">
+      <p class="text-primary text-lg leading-relaxed">
         {t('marketing.about.hero.description')}
       </p>
     </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl space-y-8 px-4 pt-10">
+    <UsageClip
+      sound
+      src={`/motion/oiyo-brand-${introScreens}.mp4`}
+      poster={`/motion/oiyo-brand-${introScreens}.jpg`}
+      width={1280}
+      height={720}
+      label={brand.label}
+      caption={brand.caption}
+      replay=""
+    />
+    <UsageClip
+      sound
+      src={`/motion/oiyo-intro-${introScreens}.mp4`}
+      poster={`/motion/oiyo-intro-${introScreens}.jpg`}
+      width={1280}
+      height={720}
+      label={intro.label}
+      caption={intro.caption}
+      replay=""
+    />
   </section>
 
   <!-- Mission -->
@@ -58,7 +104,7 @@ const values = [
       <h2 class="text-2xl font-bold text-foreground mb-3">
         {t('marketing.about.mission.title')}
       </h2>
-      <p class="text-green-700 leading-relaxed">
+      <p class="text-primary leading-relaxed">
         {t('marketing.about.mission.description')}
       </p>
     </div>
@@ -91,7 +137,7 @@ const values = [
     <h2 class="text-2xl font-bold text-foreground mb-3">
       {t('marketing.about.story.title')}
     </h2>
-    <p class="text-green-700 leading-relaxed">
+    <p class="text-primary leading-relaxed">
       {t('marketing.about.story.description')}
     </p>
   </section>

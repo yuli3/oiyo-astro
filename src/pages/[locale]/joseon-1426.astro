@@ -1,0 +1,145 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import JoseonPastLife from "../../components/tools/past-life/JoseonPastLife";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+import { JOSEON_SEAT_TOTAL, PROVINCE_PEOPLE_TOTAL } from "../../lib/past-life-1426";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const seats = JOSEON_SEAT_TOTAL.toLocaleString("en-US");
+const people = PROVINCE_PEOPLE_TOTAL.toLocaleString("en-US");
+
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "600년 전 조선의 나 — 1426년 세종 8년, 내 관직·관복·고향 뽑기",
+    description: "경국대전 관직 정원, 세종실록지리지 8도 인구와 공물, 경국대전 관복 색으로 1426년 조선의 나를 뽑아요. 호패와 관복 그림으로 보여줘요.",
+    heading: "600년 전 조선의 나",
+    sub: "1426년, 세종 8년. 호패에 적힐 당신의 관직과 고향",
+    intro: "집현전이 막 커지던 해예요. 관직은 경국대전 정원만큼, 고향은 세종실록지리지에 적힌 8도 인구만큼 확률을 나눴어요.",
+    howTitle: "어떤 자료로 뽑나요",
+    how: [
+      `관직: 의정부·6조·사헌부·사간원·승정원·지방 수령·지방 무관 ${seats}석을 정원대로 가중해요. 정원은 1485년 경국대전 기준이라 1426년과 조금 다를 수 있어요.`,
+      `고향: 세종실록지리지(1432년 편찬)의 8도 구(口) 합계 ${people}명 비중으로 뽑아요. 한성부는 호만 있고 구가 없어 빠졌어요.`,
+      "관복: 바로 1426년(세종 8) 2월에 정한 공복 규정이 경국대전으로 이어졌어요. 1품~정3품은 홍포, 종3품~6품은 청포, 7~9품은 녹포이고, 4품 이상은 상아 홀, 5품 이하는 나무 홀을 들어요. 가슴의 흉배는 1454년에 생겨서 그리지 않았어요.",
+      "녹봉: 1438년(세종 20) 녹과에 적힌 품계별 1년 지급량이에요. 1426년보다 12년 뒤 규정이에요.",
+      "공물: 지리지가 각 도의 궐공(厥貢)으로 적은 품목 중 세 가지를 보여줘요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "누구나 관직을 받았나요?", a: "아니요. 1426년 조선 사람 대부분은 관직이 없었어요. 이 도구는 '관직을 하나 받는다면'을 정원 비중으로 뽑는 놀이예요." },
+      { q: "영의정은 얼마나 드문가요?", a: `정원 1석이라 ${seats}번에 한 번꼴이에요. 현감은 141석이라 훨씬 자주 나와요.` },
+      { q: "호패 그림은 진짜 모양인가요?", a: "실제 호패의 형식을 참고한 재현이에요. 실물은 신분에 따라 재료와 적는 내용이 달랐어요." },
+    ],
+  },
+  en: {
+    title: "You in Joseon, 600 years ago — your 1426 office, robe and home province",
+    description: "Draw your office, court robe and home province in 1426 Joseon from Gyeongguk daejeon seat counts and the Sejong Sillok gazetteer, shown on a hopae tag.",
+    heading: "You in Joseon, 600 years ago",
+    sub: "1426, year 8 of King Sejong: the office and province on your hopae",
+    intro: "Offices are weighted by their official seat counts and home provinces by the population recorded in the Sejong Sillok gazetteer.",
+    howTitle: "What the draw uses",
+    how: [
+      `Office: ${seats} seats across the State Council, ministries, censorate, royal secretariat, magistrates and provincial commanders, weighted by headcount from the 1485 Gyeongguk daejeon.`,
+      `Home: the eight provinces weighted by the ${people} people recorded in the Sejong Sillok gazetteer (compiled 1432).`,
+      "Robe: the court-robe rule set in February 1426 and carried into the Gyeongguk daejeon: ranks 1 to senior 3 in red, junior 3 to 6 in blue, 7 to 9 in green; ivory tablets to rank 4, wooden below. Rank badges came in 1454, so none is drawn.",
+      "Stipend: the yearly amounts in the 1438 stipend table, 12 years after 1426.",
+      "Tribute: three items the gazetteer lists as each province's tribute.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Did everyone hold office?", a: "No. Most people in 1426 Joseon held none. This draw answers 'if you held one office, which?' by seat share." },
+      { q: "Is the hopae drawing authentic?", a: "It is a reconstruction based on the real tag format; real tags differed in material and wording by status." },
+    ],
+  },
+  ja: {
+    title: "600年前の朝鮮のわたし — 1426年の官職・官服・故郷",
+    description: "経国大典の定員と世宗実録地理志の人口で、1426年朝鮮の官職・官服・故郷を引き、号牌の図で見せます。",
+    heading: "600年前の朝鮮のわたし",
+    sub: "1426年、世宗8年。号牌に書かれる官職と故郷",
+    intro: "官職は経国大典の定員、故郷は世宗実録地理志に記された八道の人口で確率を決めました。",
+    howTitle: "使うデータ",
+    how: [
+      `官職：議政府・六曹・司憲府・司諫院・承政院・地方守令・地方武官の${seats}席を定員で重み付け（1485年の経国大典基準）。`,
+      `故郷：世宗実録地理志（1432年編纂）の八道の口数合計${people}人の比率で引きます。`,
+      "官服：経国大典の公服規定で一品〜正三品は紅袍、従三品〜六品は青袍、七〜九品は緑袍。四品以上は象牙の笏、五品以下は木の笏です。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [{ q: "誰でも官職に就けた？", a: "いいえ。ほとんどの人は官職がありませんでした。これは「官職を一つ得るなら」を定員比で引く遊びです。" }],
+  },
+  zh: {
+    title: "600年前朝鲜的我 — 1426年的官职·官服·故乡",
+    description: "依据经国大典编制和世宗实录地理志人口，抽取1426年朝鲜的官职、官服和故乡，并以号牌图展示。",
+    heading: "600年前朝鲜的我",
+    sub: "1426年，世宗八年。号牌上写着的官职与故乡",
+    intro: "官职按经国大典编制人数，故乡按世宗实录地理志记载的八道人口决定概率。",
+    howTitle: "使用的资料",
+    how: [
+      `官职：议政府、六曹、司宪府、司谏院、承政院、地方守令、地方武官共${seats}个编制，按人数加权（1485年经国大典）。`,
+      `故乡：按世宗实录地理志（1432年编纂）八道登记人口合计${people}人的比重抽取。`,
+      "官服：按经国大典公服规定，一品至正三品穿红袍，从三品至六品穿青袍，七至九品穿绿袍。四品以上执象牙笏，五品以下执木笏。",
+    ],
+    faqTitle: "常见问题",
+    faq: [{ q: "人人都有官职吗？", a: "不是。大多数人没有官职。这里是按编制比重抽取“如果有一个官职会是哪个”。" }],
+  },
+  fr: {
+    title: "Vous à Joseon il y a 600 ans — charge, robe et province en 1426",
+    description: "Tirez votre charge, votre robe de cour et votre province dans la Joseon de 1426 d'après le Gyeongguk daejeon et le registre géographique des Annales de Sejong.",
+    heading: "Vous à Joseon il y a 600 ans",
+    sub: "1426, an 8 du roi Sejong : la charge et la province de votre hopae",
+    intro: "Les charges sont pondérées par leurs effectifs officiels et les provinces par la population inscrite au registre géographique des Annales de Sejong.",
+    howTitle: "Les données utilisées",
+    how: [
+      `Charge : ${seats} postes pondérés par effectif selon le code de 1485.`,
+      `Province : les huit provinces pondérées par les ${people} personnes inscrites (registre compilé en 1432).`,
+      "Robe : rangs 1 à 3 supérieur en rouge, 3 inférieur à 6 en bleu, 7 à 9 en vert ; tablette d'ivoire jusqu'au rang 4, de bois ensuite.",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Tout le monde avait-il une charge ?", a: "Non. Le tirage répond à « si vous aviez une charge, laquelle ? » selon les effectifs." }],
+  },
+  es: {
+    title: "Tú en Joseon hace 600 años — cargo, túnica y provincia en 1426",
+    description: "Sortea tu cargo, tu túnica de corte y tu provincia en la Joseon de 1426 según el Gyeongguk daejeon y el registro geográfico de los Anales de Sejong.",
+    heading: "Tú en Joseon hace 600 años",
+    sub: "1426, año 8 del rey Sejong: el cargo y la provincia de tu hopae",
+    intro: "Los cargos pesan según sus plazas oficiales y las provincias según la población inscrita en el registro geográfico de los Anales de Sejong.",
+    howTitle: "Datos usados",
+    how: [
+      `Cargo: ${seats} plazas ponderadas por número según el código de 1485.`,
+      `Provincia: las ocho provincias según las ${people} personas inscritas (registro de 1432).`,
+      "Túnica: rangos 1 a 3 superior en rojo, 3 inferior a 6 en azul, 7 a 9 en verde; tablilla de marfil hasta el rango 4 y de madera después.",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Todos tenían un cargo?", a: "No. El sorteo responde a «si tuvieras un cargo, ¿cuál?» según las plazas." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/joseon-1426/")} ogImage="/images/past-life-1426/og/joseon.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "600년 전 나는?", en: "Who were you 600 years ago?", ja: "600年前のわたしは？", zh: "600年前的我是谁？", fr: "Qui étiez-vous il y a 600 ans ?", es: "¿Quién eras hace 600 años?" } as Record<string, string>)[locale] ?? "1426"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><JoseonPastLife locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["europe1426", "usBirthState", "joseon"]} current="joseon1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

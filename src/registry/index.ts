@@ -58,30 +58,6 @@ const journalManifest: FeatureManifest = {
   },
 };
 
-// Payday Menu Roulette — random meal picker + small treat idea (G11).
-const menuRouletteManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#16a34a",
-  domain: "ontology",
-  icon: "Utensils",
-  id: "menu-roulette",
-  path: "/menu/roulette",
-  status: "production",
-  name: {
-    zh: "发薪日菜单轮盘", en: "Payday Menu Roulette", es: "Ruleta de menú",
-    fr: "Roulette du menu", ja: "給料日メニュールーレット", ko: "월급날 메뉴 룰렛",
-  },
-  description: {
-    zh: "不知道吃什么？转动轮盘随机推荐一餐。",
-    en: "Can't decide what to eat? Spin for a random meal by cuisine.",
-    es: "¿No sabes qué comer? Gira para una comida aleatoria.",
-    fr: "Indécis sur le repas ? Tournez pour un plat aléatoire.",
-    ja: "何食べるか迷ったら回す。料理別ランダム推薦。",
-    ko: "뭐 먹지 고민될 때 돌리는 메뉴 추천 룰렛(+월급날 작은 사치).",
-  },
-};
-
 // Emotion Release — name → breathe → sage line → release (G20).
 const emotionReleaseManifest: FeatureManifest = {
   badge: "new",
@@ -127,30 +103,6 @@ const intervalTimerManifest: FeatureManifest = {
     fr: "Minuteur d'intervalles personnalisable pour Tabata et HIIT.",
     ja: "運動・休憩・セットを設定できるタバタ／HIIT用タイマー。",
     ko: "운동·휴식·세트 커스텀 인터벌 타이머(타바타·HIIT·홈트).",
-  },
-};
-
-// Lotto Win Simulator — spend a jackpot, see your priorities (G10).
-const lottoSimManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#16a34a",
-  domain: "ontology",
-  icon: "Coins",
-  id: "lotto-simulator",
-  path: "/lotto/simulator",
-  status: "production",
-  name: {
-    zh: "彩票中奖模拟器", en: "Lotto Win Simulator", es: "Simulador de lotería",
-    fr: "Simulateur de gain loto", ja: "宝くじ当選シミュレーター", ko: "로또 당첨 시뮬레이터",
-  },
-  description: {
-    zh: "选择奖金，自由花在房子车旅行上，余额实时变化。",
-    en: "Pick a jackpot and spend it on home/car/travel; balance updates live.",
-    es: "Elige un premio y gástalo; el saldo se actualiza en vivo.",
-    fr: "Choisissez un gain et dépensez-le ; le solde se met à jour.",
-    ja: "当選金を選んで自由に使う。残額がリアルタイム更新。",
-    ko: "당첨금을 골라 집·차·여행에 써보는 시뮬(잔액 실시간).",
   },
 };
 
@@ -226,30 +178,6 @@ const pranayamaManifest: FeatureManifest = {
   },
 };
 
-// 해외금융계좌 신고 자가진단 — Korea overseas financial account reporting checker.
-const foreignAccountManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#16a34a",
-  domain: "ontology",
-  icon: "Landmark",
-  id: "foreign-account",
-  path: "/foreign-account",
-  status: "production",
-  name: {
-    zh: "海外金融账户申报自测", en: "Overseas Account Reporting Checker", es: "Verificador de cuentas en el extranjero",
-    fr: "Vérificateur de comptes étrangers", ja: "海外金融口座申告セルフチェック", ko: "해외금융계좌 신고 자가진단",
-  },
-  description: {
-    zh: "把海外存款、股票（RSU）、基金、保险、虚拟资产折算为韩元，判断月末合计是否超过5亿韩元及申报基准日。",
-    en: "Convert overseas deposit/stock(RSU)/fund/insurance/crypto balances to KRW and check the ₩500M month-end test and basis date.",
-    es: "Convierte saldos de cuentas en el extranjero a KRW y comprueba el umbral de ₩500M a fin de mes.",
-    fr: "Convertit les soldes de comptes étrangers en KRW et vérifie le seuil de 500M₩ en fin de mois.",
-    ja: "海外の預金・株式（RSU）・ファンド・保険・暗号資産を韓国ウォン換算し、月末合計が5億ウォン超か・申告基準日を判定。",
-    ko: "해외 예금·주식(RSU)·펀드·보험·가상자산을 원화로 환산해 매월 말일 5억원 초과 여부와 신고 기준일을 자가진단.",
-  },
-};
-
 // 나에게 맞는 나라 — surfaces the country-archetype ontology engine.
 const countryMatchManifest: FeatureManifest = {
   badge: "new",
@@ -272,6 +200,125 @@ const countryMatchManifest: FeatureManifest = {
     ja: "いくつかのライフスタイルの好みから、あなたに合う国を見つけます。旅行・移住のヒントに。",
     ko: "라이프스타일 취향 몇 가지로 당신과 가장 잘 맞는 나라를 찾아주는 테스트. 여행·이주 영감.",
   },
+};
+
+// 600년 전 나는? — 1426 Joseon office / European throne / US state draw (2026-11-02).
+const pastLife1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7c3aed",
+  domain: "ontology",
+  icon: "Crown",
+  id: "past-life-1426",
+  path: "/past-life-1426",
+  status: "production",
+  name: {
+    zh: "600年前的我 — 朝鲜官职·欧洲王座·美国州",
+    en: "600 years ago — Joseon office, European throne, US state",
+    es: "Hace 600 años — cargo en Joseon, trono europeo, estado de EE. UU.",
+    fr: "Il y a 600 ans — charge à Joseon, trône européen, État américain",
+    ja: "600年前のわたし — 朝鮮の官職・欧州の玉座・米国の州",
+    ko: "600년 전 나는? — 조선 관직·유럽 왕좌·미국 주",
+  },
+  description: {
+    zh: "按经国大典编制、1426年欧洲实际君主、美国2024年各州出生数抽取。也可按性格匹配。",
+    en: "Drawn from Gyeongguk daejeon seat counts, Europe's actual 1426 rulers and 2024 US births by state. Or match by traits.",
+    es: "Sorteo con plazas del Gyeongguk daejeon, los gobernantes reales de 1426 y nacimientos de 2024 por estado.",
+    fr: "Tirage d'après les effectifs du Gyeongguk daejeon, les souverains réels de 1426 et les naissances 2024 par État.",
+    ja: "経国大典の定員、1426年の実在の君主、米国2024年の州別出生で抽選。性格に合わせることも。",
+    ko: "경국대전 관직 정원, 1426년 실제 유럽 군주, 2024년 미국 주별 출생 수로 뽑아요. 성향으로 맞출 수도 있어요.",
+  },
+};
+
+const joseon1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#a8322d",
+  domain: "ontology",
+  icon: "Landmark",
+  id: "joseon-1426",
+  path: "/joseon-1426",
+  status: "production",
+  name: { zh: "600年前朝鲜的我", en: "You in Joseon, 1426", es: "Tú en Joseon, 1426", fr: "Vous à Joseon, 1426", ja: "600年前の朝鮮のわたし", ko: "600년 전 조선의 나" },
+  description: { zh: "按经国大典编制和世宗实录地理志人口抽取官职、故乡、官服与俸禄。", en: "Your 1426 office, province, robe and stipend from Gyeongguk daejeon seats and the Sejong Sillok gazetteer.", es: "Tu cargo, provincia, túnica y estipendio en 1426 según fuentes de Joseon.", fr: "Votre charge, province, robe et traitement en 1426 d'après les sources de Joseon.", ja: "経国大典の定員と世宗実録地理志で1426年の官職・故郷・官服・禄俸を引きます。", ko: "경국대전 정원과 세종실록지리지로 1426년 내 관직·고향·관복·녹봉을 뽑아요." },
+};
+
+const sillaGolpumManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#6b3d8f",
+  domain: "ontology",
+  icon: "Landmark",
+  id: "silla-golpum",
+  path: "/silla-golpum",
+  status: "production",
+  name: { zh: "1300年前新罗的我", en: "You in Silla: bone rank", es: "Tú en Silla: rango de hueso", fr: "Vous à Silla : rang d'os", ja: "1300年前の新羅のわたし", ko: "1300년 전 신라의 나" },
+  description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
+};
+
+const ancestors1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2f5d50",
+  domain: "ontology",
+  icon: "Network",
+  id: "ancestors-1426",
+  path: "/ancestors-1426",
+  status: "production",
+  name: { zh: "600年前我有多少祖先？", en: "How many ancestors in 1426?", es: "¿Cuántos antepasados en 1426?", fr: "Combien d'ancêtres en 1426 ?", ja: "600年前の祖先は何人？", ko: "600년 전 내 조상은 몇 명?" },
+  description: { zh: "家谱格子每代翻倍，而1426年的人数有限：算出不同祖先数与共同祖先的年代。", en: "Your tree doubles each generation but 1426 had only so many people: distinct ancestors, share of everyone then, and when common ancestors appear.", es: "Tu árbol se duplica, pero en 1426 había gente finita: antepasados distintos y cuándo aparecen los comunes.", fr: "Votre arbre double à chaque génération, mais 1426 comptait un nombre fini de gens : ancêtres distincts et ancêtres communs.", ja: "家系図は世代ごとに倍、でも1426年の人数は有限。異なる祖先の数と共通祖先の時代を計算します。", ko: "족보 칸은 세대마다 두 배지만 1426년 사람 수는 정해져 있어요. 서로 다른 조상 수와 공통 조상이 나타나는 때를 계산해요." },
+};
+
+const joseon1789Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7a4a1f",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "joseon-1789",
+  path: "/joseon-1789",
+  status: "production",
+  name: { zh: "1789年户籍里的我", en: "You in Joseon's 1789 register", es: "Tú en el registro de Joseon de 1789", fr: "Vous au registre de Joseon en 1789", ja: "1789年戸籍の中のわたし", ko: "1789년 호적 속 나" },
+  description: { zh: "按大邱户籍的身份比例抽取1789年的身份、职役、名字与一天，写成户籍上的一行。", en: "Your 1789 status, register title, name, family and day, written as a line of a Joseon household register.", es: "Tu estatus, título, nombre, familia y día en 1789, como una línea del registro de Joseon.", fr: "Votre statut, titre, nom, famille et journée en 1789, écrits comme une ligne du registre de Joseon.", ja: "大邱戸籍の身分比率で1789年の身分・職役・名前・一日を引き、戸籍の一行にします。", ko: "대구 호적의 신분 비율로 1789년 내 신분·직역·이름·가족·하루를 뽑아 호적 한 줄로 보여줘요." },
+};
+
+const france1789Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f3f8f",
+  domain: "ontology",
+  icon: "Flag",
+  id: "france-1789",
+  path: "/france-1789",
+  status: "production",
+  name: { zh: "1789年法国的我", en: "You in France, 1789", es: "Tú en Francia, 1789", fr: "Qui étiez-vous en 1789 ?", ja: "1789年フランスのわたし", ko: "1789년 프랑스의 나" },
+  description: { zh: "按勒费弗尔的等级人口估计抽取身份，并看你是否当选三级会议代表。", en: "Clergy, nobility or Third Estate by Lefebvre's estimates, and whether you sat in the Estates-General.", es: "Clero, nobleza o tercer estado según Lefebvre, y si fuiste diputado.", fr: "Clergé, noblesse ou tiers état selon Lefebvre, et votre place aux États généraux.", ja: "ルフェーヴルの推計で身分を引き、三部会の代表になれたかを見せます。", ko: "르페브르 추정 인구로 신분을 뽑고, 삼부회 대표가 됐는지 보여줘요." },
+};
+
+const europe1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7c3aed",
+  domain: "ontology",
+  icon: "Crown",
+  id: "europe-1426",
+  path: "/europe-1426",
+  status: "production",
+  name: { zh: "1426年欧洲王座", en: "Your throne in 1426 Europe", es: "Tu trono en 1426", fr: "Votre trône en 1426", ja: "1426年欧州の玉座", ko: "600년 전 유럽의 왕좌" },
+  description: { zh: "1426年欧洲30个真实王座之一，附君主肖像和同龄名人。", en: "One of 30 real thrones of 1426 Europe, with the ruler's portrait and famous people your age.", es: "Uno de los 30 tronos reales de 1426, con retrato y famosos de tu edad.", fr: "L'un des 30 vrais trônes de 1426, avec portrait et célébrités de votre âge.", ja: "1426年欧州の実在30の玉座から一つ。君主の肖像と同い年の有名人も。", ko: "1426년 유럽에 실제로 있던 30개 왕좌 중 하나. 군주 초상과 동갑 유명인까지." },
+};
+
+const usBirthStateManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2563eb",
+  domain: "ontology",
+  icon: "Baby",
+  id: "us-birth-state",
+  path: "/us-birth-state",
+  status: "production",
+  name: { zh: "如果生在美国", en: "Born in the US", es: "Nacido en EE. UU.", fr: "Né aux États-Unis", ja: "米国で生まれたら", ko: "미국에서 태어났다면" },
+  description: { zh: "按2024年各州出生数抽州，再按SSA名字统计取名。", en: "A state by 2024 births and a name from SSA baby-name data, on a birth certificate.", es: "Un estado según los nacimientos de 2024 y un nombre según la SSA.", fr: "Un État selon les naissances 2024 et un prénom selon la SSA.", ja: "2024年の州別出生で州を、SSAの統計で名前を引きます。", ko: "2024년 주별 출생 수로 주를, SSA 아기 이름 통계로 이름을 뽑아요." },
 };
 
 const reincarnationCountryManifest: FeatureManifest = {
@@ -349,30 +396,6 @@ const cashflowManifest: FeatureManifest = {
   },
 };
 
-// Overseas Stock / RSU capital-gains tax estimator (Korea resident).
-const overseasStockTaxManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#16a34a",
-  domain: "ontology",
-  icon: "Calculator",
-  id: "overseas-stock-tax",
-  path: "/overseas-stock-tax",
-  status: "production",
-  name: {
-    zh: "海外股票·RSU税金计算", en: "Foreign Stock & RSU Tax", es: "Impuesto acciones extranjeras y RSU",
-    fr: "Impôt actions étrangères & RSU", ja: "海外株式・RSU 税金計算", ko: "해외주식·RSU 양도세 계산기",
-  },
-  description: {
-    zh: "估算韩国居民海外股票及美企RSU的资本利得税(年250万韩元扣除·22%)。",
-    en: "Estimate Korean capital-gains tax on foreign stocks and US-company RSUs (₩2.5M deduction, 22%).",
-    es: "Estima el impuesto coreano sobre acciones extranjeras y RSU (deducción ₩2.5M, 22%).",
-    fr: "Estimez l'impôt coréen sur actions étrangères et RSU (déduction ₩2,5M, 22%).",
-    ja: "海外株式・米企業RSUの韓国譲渡所得税を試算(年250万ウォン控除・22%)。",
-    ko: "해외주식 양도차익과 미국 회사 RSU의 양도소득세를 계산(연 250만 공제·22%).",
-  },
-};
-
 // Income Statement Builder game — classify accounts, watch profit layers build.
 const incomeStatementGameManifest: FeatureManifest = {
   badge: "new",
@@ -421,50 +444,30 @@ const incomeTaxFlowManifest: FeatureManifest = {
   },
 };
 
-const taxCalendarManifest: FeatureManifest = {
-  badge: "new",
-  category: ["ontology"],
-  color: "#059669",
-  domain: "ontology",
-  icon: "Timer",
-  id: "tax-calendar",
-  path: "/tax-calendar",
-  status: "production",
-  name: {
-    zh: "韩国报税日历", en: "Korean Tax Calendar", es: "Calendario fiscal coreano",
-    fr: "Calendrier fiscal coréen", ja: "韓国税務カレンダー", ko: "세금 신고 캘린더",
-  },
-  description: {
-    zh: "按纳税人查看韩国国税与地方税的年度申报缴纳日程及下次截止倒计时。",
-    en: "Korea's national & local tax deadlines by taxpayer, with a live D-day to the next filing.",
-    es: "Los plazos fiscales nacionales y locales de Corea por contribuyente, con cuenta atrás.",
-    fr: "Les échéances fiscales coréennes (national et local) par contribuable, avec compte à rebours.",
-    ja: "韓国の国税・地方税の年間申告・納付日程を対象者別に確認、次の締切までのD-day付き。",
-    ko: "부가세·종소세·법인세·재산세 등 국세·지방세 연간 신고·납부 일정을 대상자별로 보고 다음 마감 D-day 확인.",
-  },
-};
-
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
   strengthKeywordsManifest,
   journalManifest,
-  menuRouletteManifest,
   emotionReleaseManifest,
   intervalTimerManifest,
-  lottoSimManifest,
   moneyParkingManifest,
   guildManifest,
   pranayamaManifest,
-  foreignAccountManifest,
   countryMatchManifest,
   reincarnationCountryManifest,
+  pastLife1426Manifest,
+  sillaGolpumManifest,
+  joseon1426Manifest,
+  europe1426Manifest,
+  ancestors1426Manifest,
+  joseon1789Manifest,
+  france1789Manifest,
+  usBirthStateManifest,
   balanceWheelManifest,
   cashflowManifest,
-  overseasStockTaxManifest,
   incomeStatementGameManifest,
   incomeTaxFlowManifest,
-  taxCalendarManifest,
 ];
 
 // Helper to get features easily

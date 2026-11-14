@@ -14,16 +14,13 @@ pubDate: 2026-04-14
 topic: work
 ---
 
-import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
-import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## RIASECとは何か
 
-**RIASEC** は心理学者 **ジョン・L・ホランド（John L. Holland, 1919–2008）** が1959年に発表し、その後数十年かけて改訂した職業興味の理論です。人の職業的な傾向を6タイプに分け、**性格タイプと仕事環境が近いほど満足と成果が上がりやすい**、という前提で使います。診断ではありません。
+**RIASEC**はJohn L. Hollandの職業興味モデルです。6領域から好む活動や仕事環境を考えますが、興味の一致だけで満足度や成果は決まりません。
 
 | タイプ | 記号 | 通称 | 動きやすい対象 |
 |------|--------|----------|-----------|
@@ -38,18 +35,7 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## 1. RIASECの要点
 
-<StatCards
-  title="RIASEC の事実"
-  cols={3}
-  items={[
-    { label: "理論の起点", value: "1959+", description: "Holland, A Theory of Vocational Choice" },
-    { label: "使われる範囲", value: "140+ か国", description: "米国職業データベース O*NET が公式採用" },
-    { label: "多いタイプ", value: "S と C", description: "社会的・慣習的が人口の4割超という報告がある" },
-    { label: "結果の形", value: "3文字コード", description: "主タイプ＋補助2つ（例: ISA, REC）" },
-    { label: "六角形", value: "RIASEC Hexagon", description: "隣は近く、対角は遠い" },
-    { label: "相談での位置", value: "実務標準の一つ", description: "労働省系のキャリア探索でもコード検索ができる" }
-  ]}
-/>
+O*NET Interest Profilerは6領域の職業興味を探るツールです。この記事ではタイプ別の人口比率や職業満足度平均を示しません。[公式説明](https://www.onetcenter.org/IP.html)
 
 ---
 
@@ -127,56 +113,27 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ---
 
-## 3. 6タイプの能力の置き方
+## 3. 興味と能力を分けます
 
-<RadarChart
-  title="RIASEC タイプ：核になる力の比較"
-  axes={["実務", "分析", "創造", "対人", "主導", "精度"]}
-  datasets={[
-    { label: "R（現実的）", color: "#6b7280", values: [95, 55, 40, 40, 50, 65] },
-    { label: "I（研究的）", color: "#3b82f6", values: [60, 98, 70, 40, 45, 75] },
-    { label: "A（芸術的）", color: "#8b5cf6", values: [40, 55, 98, 60, 50, 35] },
-    { label: "S（社会的）", color: "#10b981", values: [50, 50, 60, 98, 65, 50] },
-    { label: "E（企業的）", color: "#f59e0b", values: [65, 55, 65, 75, 98, 45] },
-    { label: "C（慣習的）", color: "#ef4444", values: [70, 80, 30, 45, 40, 98] }
-  ]}
-/>
+タイプ名だけで分析力・創造性・リーダーシップを100点満点で評価できません。興味は好む活動の手がかりであり、能力は課題・経験・フィードバックで別に確かめます。
+
+| 観点 | 確かめ方 |
+| --- | --- |
+| 興味 | 試してみたい仕事の活動 |
+| 能力 | 実際の課題とフィードバック |
+| 条件 | 職場環境・価値観・制約 |
 
 ---
 
-## 4. ホランドの六角形
+## 4. 六角形の限界
 
-6タイプは六角形に並びます。
-
-```
-        R
-    C       I
-    E       A
-        S
-```
-
-- **隣同士**（R-I、I-A など）: 性質が近い。3文字コードに入りやすい。
-- **対角**（R-S、I-E、A-C）: 性質が遠い。内側の引っ張り、あるいは幅の広さとして読む。
-
-<Callout type="info" title="3文字コードの読み方">
-RIASECの結果は、得点の高い3タイプで書くことが多いです（例: ISA = 研究的＋社会的＋芸術的）。先頭が主方向です。個人コードと仕事のコードが3文字のうち2文字以上重なると、仕事の満足が高いという報告があります。ラベルではなく、環境との重なりを見るための記号です。
-</Callout>
+慣例的な順序はR → I → A → S → E → C → Rです。位置と距離は興味の構造を表すモデルで、人同士の相性表ではありません。3文字コードでは検査の種類・点差・同点を確認します。2文字が一致しても満足や成功は保証されません。
 
 ---
 
-## 5. タイプが仕事と重なったときの満足（研究の平均）
+## 5. 満足度の数字より確認する問い
 
-<BarChart
-  title="RIASEC：役割がタイプと重なったときの仕事満足（研究平均）"
-  data={[
-    { label: "R — 役割が重なる", value: 78 },
-    { label: "I — 役割が重なる", value: 82 },
-    { label: "A — 役割が重なる", value: 85 },
-    { label: "S — 役割が重なる", value: 83 },
-    { label: "E — 役割が重なる", value: 80 },
-    { label: "C — 役割が重なる", value: 76 }
-  ]}
-/>
+この記事にはタイプ別満足度を同じ尺度で比べる標本・測定法・出典がありません。そのため割合や研究平均は提示しません。実際の仕事内容、必要能力、労働条件を確認し、面談や短い経験で予想と現実を比べます。
 
 ---
 
@@ -199,7 +156,7 @@ RIASECの結果は、得点の高い3タイプで書くことが多いです（�
 
 ## 7. RIASEC 検査を受ける
 
-<ToolCTA tool="riasec" locale="ja" />
+<ToolCTA tool="riasec" locale="ja" title="仕事の興味を振り返る" description="回答から関心のある活動を整理します。能力・就職・業績を保証する検査ではありません。" />
 
 実行面は oiyo のキャリア検査です。この記事はタイプの説明です。
 

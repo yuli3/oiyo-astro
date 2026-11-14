@@ -1,0 +1,91 @@
+{
+  "cards": {
+    "sectionTitle": "당신을 위한 추천",
+    "sectionSubtitle": "지금까지 모은 신호를 바탕으로 골라봤어요",
+    "matchLabel": "맞음",
+    "why": "왜 이 추천인가요",
+    "explore": "다음 탐색",
+    "emptyTitle": "아직 추천할 게 없어요",
+    "emptyDescription": "생년월일을 저장하거나 테스트를 하나 완료하면 맞춤 추천이 열립니다.",
+    "reasonTemplate": "{signals} 기준으로 골랐어요",
+    "reasonFallback": "관계 지도에서 가까운 것을 골랐어요",
+    "categories": {
+      "career": "직업",
+      "hobby": "취미",
+      "psychology": "심리",
+      "mythology": "신화",
+      "science": "과학",
+      "spirituality": "영성"
+    },
+    "sources": {
+      "big5": "빅파이브",
+      "mbti": "MBTI",
+      "riasec": "흥미",
+      "saju": "사주",
+      "tci": "기질",
+      "zodiac": "별자리"
+    }
+  },
+  "career": {
+    "global_leader": {
+      "title": "사람을 이끄는 일",
+      "description": "여럿과 함께 방향을 정하는 역할이에요.",
+      "reasoning": "사람을 모으고 이끄는 신호와 맞아요."
+    },
+    "strategic_planner": {
+      "title": "전략을 짜는 일",
+      "description": "큰 그림을 보고 단계를 나누는 역할이에요.",
+      "reasoning": "계획하고 넓게 보는 신호와 맞아요."
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "명상",
+      "description": "호흡을 고르며 마음을 가라앉히는 시간이에요.",
+      "reasoning": "흥분을 식히고 마음을 가라앉히는 쪽과 맞아요."
+    },
+    "hiking": {
+      "title": "걷기와 등산",
+      "description": "바깥에서 몸을 움직이며 풍경을 보는 시간이에요.",
+      "reasoning": "바깥과 몸을 쓰는 신호와 맞아요."
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "그림자 작업",
+      "description": "잘 안 보려 한 면을 찬찬히 들여다보는 연습이에요.",
+      "reasoning": "안쪽을 들여다보는 신호와 맞아요."
+    },
+    "inner_child": {
+      "title": "내면 아이",
+      "description": "오래 남은 감정을 다정하게 다시 만나는 시간이에요.",
+      "reasoning": "조심하고 감정을 살피는 신호와 맞아요."
+    }
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "영웅의 여정",
+      "description": "떠나고, 부딪히고, 돌아와 뜻을 찾는 이야기 틀이에요.",
+      "reasoning": "도전하고 뜻을 세우는 신호와 맞아요."
+    },
+    "trickster_archetype": {
+      "title": "트릭스터",
+      "description": "경계를 흔들며 새 길을 여는 이야기 유형이에요.",
+      "reasoning": "경계를 넘고 새로 짜는 신호와 맞아요."
+    }
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "도파민 휴식",
+      "description": "자극을 잠시 줄이고 하던 일에 다시 집중하는 연습이에요.",
+      "reasoning": "새로움을 찾는 신호라 자극을 잠시 비우는 쪽을 골랐어요."
+    }
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "흐름을 따르는 태도",
+      "description": "억지로 밀지 않고 상황의 결을 읽는 연습이에요.",
+      "reasoning": "밀어붙이기보다 흐름을 읽는 신호와 맞아요."
+    }
+  }
+}

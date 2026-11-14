@@ -108,7 +108,7 @@ export default function SpatialIQTest({ locale }: Props) {
         </div>
         <p className="font-semibold text-lg">{l.results(score)}</p>
         <div className="flex gap-1.5 justify-center flex-wrap">
-          {history.map((h, i) => <span key={i} className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${h ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>{i + 1}</span>)}
+          {history.map((h, i) => <span key={i} className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${h ? 'bg-green-100 text-primary' : 'bg-red-100 text-red-700'}`}>{i + 1}</span>)}
         </div>
         <button onClick={start} className="px-8 py-3 border rounded-full text-sm font-medium hover:bg-accent transition-colors">{l.restart}</button>
       </div>
@@ -148,8 +148,8 @@ export default function SpatialIQTest({ locale }: Props) {
         })}
       </div>
       {selected && (
-        <div className={`rounded-xl p-3 text-sm ${isCorrect ? 'bg-surface-subtle border border-green-200' : 'bg-red-50 border border-red-200'}`}>
-          <p className={`font-semibold mb-0.5 ${isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+        <div className={`rounded-xl p-3 text-sm ${isCorrect ? 'bg-surface-subtle border border-border' : 'bg-red-50 border border-red-200'}`}>
+          <p className={`font-semibold mb-0.5 ${isCorrect ? 'text-primary' : 'text-red-700'}`}>
             {isCorrect ? l.correct : `${l.wrong} ${l.correctIs} ${p.grid[8]}`}
           </p>
           <p className="text-muted-foreground text-xs">{p.explanation}</p>

@@ -97,11 +97,11 @@ export default function PersonalProfileExportV2Panel({ locale }: { locale: strin
   }
 
   return (
-    <section className="mx-auto mt-8 max-w-6xl rounded-2xl border border-green-200 bg-green-50/40 p-4 sm:p-6" aria-labelledby="profile-export-v2-title">
+    <section className="mx-auto mt-8 max-w-6xl rounded-2xl border border-border bg-green-50/40 p-4 sm:p-6" aria-labelledby="profile-export-v2-title">
       <div className="flex items-start gap-3">
-        <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-green-700" aria-hidden="true" />
+        <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-primary" aria-hidden="true" />
         <div>
-          <h2 id="profile-export-v2-title" className="text-xl font-black text-slate-950">{t.title}</h2>
+          <h2 id="profile-export-v2-title" className="text-xl font-black text-foreground">{t.title}</h2>
           <p className="mt-2 text-sm leading-6 text-slate-700">{t.description}</p>
           <p className="mt-1 text-xs leading-5 text-green-800">{t.boundary}</p>
         </div>
@@ -110,7 +110,7 @@ export default function PersonalProfileExportV2Panel({ locale }: { locale: strin
       <div className="mt-4 flex flex-wrap gap-2" aria-label={t.title}>
         {FORMATS.map((item) => (
           <button key={item} type="button" onClick={() => setFormat(item)} aria-pressed={format === item}
-            className={`min-h-11 rounded-lg px-3 py-2 text-sm font-bold ${format === item ? "bg-primary text-primary-foreground" : "border border-green-200 bg-card text-green-800"}`}>
+            className={`min-h-11 rounded-lg px-3 py-2 text-sm font-bold ${format === item ? "bg-primary text-primary-foreground" : "border border-border bg-card text-green-800"}`}>
             {item === "obsidian" ? "Obsidian" : item.toUpperCase()}
           </button>
         ))}

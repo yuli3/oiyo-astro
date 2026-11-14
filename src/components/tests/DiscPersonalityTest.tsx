@@ -8,13 +8,13 @@ import ShareResultButton from '../shared/ShareResultButton'
 import ResultSymbol, { resultSymbolSrc } from '../shared/ResultSymbol'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-type DiscType = 'D' | 'I' | 'S' | 'C'
+export type DiscType = 'D' | 'I' | 'S' | 'C'
 type Scores = Record<DiscType, number>
-type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
+export type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 
 interface Option { text: string; disc: DiscType }
 interface Question { id: string; text: string; options: Option[] }
-interface ResultData {
+export interface ResultData {
   title: string
   subtitle: string
   description: string
@@ -26,14 +26,14 @@ interface ResultData {
   tip: string
 }
 
-const DISC_COLORS: Record<DiscType, string> = {
+export const DISC_COLORS: Record<DiscType, string> = {
   D: '#ef4444',
   I: '#f59e0b',
   S: '#22c55e',
   C: '#3b82f6',
 }
 
-const LABELS: Record<Locale, {
+export const LABELS: Record<Locale, {
   title: string
   subtitle: string
   questionOf: (c: number, t: number) => string
@@ -889,7 +889,16 @@ const QUESTIONS: Record<Locale, Question[]> = {
   ],
 }
 
-const RESULTS: Record<DiscType, Record<Locale, ResultData>> = {
+const TYPE_PAGE_CTA: Record<Locale, (t: DiscType) => string> = {
+  ko: (t) => `${t}형 자세히 보기 · 다른 유형과 비교 →`,
+  en: (t) => `Read more about type ${t} · compare types →`,
+  ja: (t) => `${t}型をくわしく見る・他タイプと比べる →`,
+  zh: (t) => `详细了解 ${t} 型 · 对比其他类型 →`,
+  fr: (t) => `En savoir plus sur le type ${t} · comparer →`,
+  es: (t) => `Más sobre el tipo ${t} · comparar tipos →`,
+}
+
+export const RESULTS: Record<DiscType, Record<Locale, ResultData>> = {
   D: {
     ko: {
       title: 'D형 — 주도형',
@@ -1327,6 +1336,12 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
         <h3 className="font-semibold text-sm text-primary">{lb.tip}</h3>
         <p className="text-sm">{r.tip}</p>
       </div>
+
+      {/* 2026-11-14: 결과에서 유형 페이지로 바로 잇는다(발굴 3번). */}
+      <a href={`/${locale}/disc/${result.type.toLowerCase()}/`}
+        className="flex min-h-11 items-center justify-center rounded-xl border bg-card px-4 text-sm font-bold hover:border-primary">
+        {TYPE_PAGE_CTA[locale](result.type)}
+      </a>
 
       <ShareResultButton
         locale={locale}

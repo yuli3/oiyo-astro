@@ -13,27 +13,27 @@ const { locale } = Astro.params as { locale: Locale };
 
 const meta: Record<Locale, { title: string; description: string }> = {
   ko: {
-    title: 'MBTI 직업 적성 테스트 — 나에게 맞는 직업은?',
+    title: 'MBTI® 직업 적성 테스트 — 나에게 맞는 직업은?',
     description: '12가지 업무 상황 질문으로 나의 MBTI 직업 유형을 알아보세요. 추천 직업, 업무 스타일, 이상적인 환경까지 분석해드립니다.',
   },
   en: {
-    title: 'MBTI Career Test — What Career Suits You?',
+    title: 'MBTI® Career Test — What Career Suits You?',
     description: 'Discover your MBTI career type through 12 work scenario questions. Find recommended careers, work style, and ideal environments.',
   },
   ja: {
-    title: 'MBTI 職業適性テスト — あなたに合う職業は？',
+    title: 'MBTI® 職業適性テスト — あなたに合う職業は？',
     description: '12の職場シナリオで自分のMBTI職業タイプを発見。おすすめ職業、仕事スタイル、理想的な環境を分析します。',
   },
   zh: {
-    title: 'MBTI 职业适性测试 — 什么职业适合你？',
+    title: 'MBTI® 职业适性测试 — 什么职业适合你？',
     description: '通过12个工作情境问题发现你的MBTI职业类型。找到推荐职业、工作风格和理想环境。',
   },
   fr: {
-    title: 'Test de Carrière MBTI — Quelle carrière vous convient?',
+    title: 'Test de Carrière MBTI® — Quelle carrière vous convient?',
     description: 'Découvrez votre type de carrière MBTI à travers 12 scénarios de travail.',
   },
   es: {
-    title: 'Test de Carrera MBTI — ¿Qué carrera te conviene?',
+    title: 'Test de Carrera MBTI® — ¿Qué carrera te conviene?',
     description: 'Descubre tu tipo de carrera MBTI con 12 preguntas sobre situaciones de trabajo.',
   },
 };
@@ -79,7 +79,7 @@ const content: Record<Locale, {
     reading: [
       { href: 'https://oiyo.net/ko/mbti/test/', label: 'MBTI 테스트', desc: '기본 유형을 먼저 확인하고 직업 결과와 비교해보세요.' },
       { href: 'https://oiyo.net/ko/mbti/habits/', label: 'MBTI별 습관', desc: '업무 루틴과 에너지 관리 방식까지 함께 봅니다.' },
-      { href: 'https://oiyo.net/ko/mbti/about//', label: 'MBTI 개념', desc: '네 선호 지표가 어떻게 유형을 만드는지 정리합니다.' },
+      { href: `/${locale}/mbti/about/`, label: 'MBTI 개념', desc: '네 선호 지표가 어떻게 유형을 만드는지 정리합니다.' },
     ],
     disclaimer: '이 결과는 커리어 대화를 돕는 엔터테인먼트형 자기 성찰 자료예요.',
   },
@@ -109,7 +109,7 @@ const content: Record<Locale, {
     reading: [
       { href: 'https://oiyo.net/en/mbti/test/', label: 'MBTI test', desc: 'Check your core type before comparing career patterns.' },
       { href: 'https://oiyo.net/en/mbti/habits/', label: 'MBTI habits', desc: 'Connect career fit with routines and energy management.' },
-      { href: 'https://oiyo.net/ko/mbti/about//', label: 'MBTI concept', desc: 'A reference overview of the four MBTI preference pairs.' },
+      { href: `/${locale}/mbti/about/`, label: 'MBTI concept', desc: 'A reference overview of the four MBTI preference pairs.' },
     ],
     disclaimer: 'These results are entertainment-style self-reflection prompts for career conversations.',
   },
@@ -139,7 +139,7 @@ const content: Record<Locale, {
     reading: [
       { href: 'https://oiyo.net/ja/mbti/test/', label: 'MBTIテスト', desc: '基本タイプを確認して職業結果と比べます。' },
       { href: 'https://oiyo.net/ja/mbti/habits/', label: 'MBTI別習慣', desc: '仕事ルーティンとエネルギー管理も見てみましょう。' },
-      { href: 'https://oiyo.net/ko/mbti/about//', label: 'MBTIの概念', desc: '4つの指標とタイプ構造を整理します。' },
+      { href: `/${locale}/mbti/about/`, label: 'MBTIの概念', desc: '4つの指標とタイプ構造を整理します。' },
     ],
     disclaimer: 'この結果はキャリアについて考えるためのエンタメ型自己省察資料です。',
   },
@@ -169,7 +169,7 @@ const content: Record<Locale, {
     reading: [
       { href: 'https://oiyo.net/zh/mbti/test/', label: 'MBTI 测试', desc: '先确认基础类型，再比较职业模式。' },
       { href: 'https://oiyo.net/zh/mbti/habits/', label: 'MBTI 习惯', desc: '把职业适配与日常节奏连接起来。' },
-      { href: 'https://oiyo.net/ko/mbti/about//', label: 'MBTI 概念', desc: '了解四组偏好如何形成类型。' },
+      { href: `/${locale}/mbti/about/`, label: 'MBTI 概念', desc: '了解四组偏好如何形成类型。' },
     ],
     disclaimer: '这些结果是用于职业对话的娱乐型自我反思提示。',
   },
@@ -199,7 +199,7 @@ const content: Record<Locale, {
     reading: [
       { href: 'https://oiyo.net/fr/mbti/test/', label: 'Test MBTI', desc: 'Vérifiez votre type avant de comparer les pistes carrière.' },
       { href: 'https://oiyo.net/fr/mbti/habits/', label: 'Habitudes MBTI', desc: 'Relier carrière, routines et gestion d’énergie.' },
-      { href: 'https://oiyo.net/ko/mbti/about//', label: 'Concept MBTI', desc: 'Vue d’ensemble des quatre paires de préférences.' },
+      { href: `/${locale}/mbti/about/`, label: 'Concept MBTI', desc: 'Vue d’ensemble des quatre paires de préférences.' },
     ],
     disclaimer: 'Ces résultats sont des pistes ludiques de réflexion pour parler de carrière.',
   },
@@ -229,7 +229,7 @@ const content: Record<Locale, {
     reading: [
       { href: 'https://oiyo.net/es/mbti/test/', label: 'Test MBTI', desc: 'Comprueba tu tipo antes de comparar patrones de carrera.' },
       { href: 'https://oiyo.net/es/mbti/habits/', label: 'Hábitos MBTI', desc: 'Conecta carrera con rutinas y energía.' },
-      { href: 'https://oiyo.net/ko/mbti/about//', label: 'Concepto MBTI', desc: 'Vista general de los cuatro pares de preferencias.' },
+      { href: `/${locale}/mbti/about/`, label: 'Concepto MBTI', desc: 'Vista general de los cuatro pares de preferencias.' },
     ],
     disclaimer: 'Estos resultados son pistas lúdicas de auto-reflexión para conversaciones de carrera.',
   },
@@ -257,17 +257,17 @@ const faqJsonLd = {
     <MbtiCareerTest client:load locale={locale} />
     <RelatedTools locale={locale} tools={['mbti', 'big5', 'enneagram', 'attachment']} current="mbti-career" />
 
-    <section class="mt-8 border-t border-green-100 pt-8">
-      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+    <section class="mt-8 border-t border-border pt-8">
+      <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.conceptTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.concepts.map((item) => (
-          <article class="rounded-xl border border-green-100 bg-card p-4">
-            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+          <article class="rounded-xl border border-border bg-card p-4">
+            <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
         ))}
@@ -275,11 +275,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
           <article class="rounded-xl bg-surface-subtle p-4">
-            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
         ))}
@@ -287,11 +287,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
-      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-card">
+      <h2 class="text-xl font-bold text-foreground">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-border bg-card">
         {c.faqs.map((faq) => (
           <details class="group p-4">
-            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <summary class="cursor-pointer list-none font-semibold text-foreground">{faq.question}</summary>
             <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
           </details>
         ))}
@@ -299,11 +299,11 @@ const faqJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
-            <span class="font-semibold text-slate-950">{item.label}</span>
+          <a class="rounded-xl border border-border bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-foreground">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>
         ))}

@@ -288,7 +288,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
     return (
       <div
         aria-busy="true"
-        className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5"
+        className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5"
       >
         <Skeleton className="h-24 rounded-2xl bg-surface-subtle" />
         <div className="mt-3 flex flex-wrap gap-1.5">
@@ -304,11 +304,11 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
   const topRecommendations = [...data.recommendations].sort((a, b) => b.matchScore - a.matchScore).slice(0, 3);
 
   return (
-    <div className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
+    <div className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
       {/* PNG capture target — a compact visual summary, deliberately separate
           from the controls/raw-text preview below so the exported image
           isn't cluttered with buttons. */}
-      <div id="ontology-export-summary-card" className="mt-3 rounded-2xl border border-green-100 bg-gradient-to-b from-green-50 to-white p-4">
+      <div id="ontology-export-summary-card" className="mt-3 rounded-2xl border border-border bg-gradient-to-b from-green-50 to-white p-4">
         <p className="text-[10px] font-black uppercase tracking-wider text-green-500">OIYO · {data.exportedAt.slice(0, 10)}</p>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {data.signals.mbti && <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-black text-primary-foreground">{data.signals.mbti.type}</span>}
@@ -333,18 +333,18 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
       </div>
 
       <div className="mt-3 grid gap-2 sm:grid-cols-2">
-        <button type="button" onClick={handlePdf} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-surface-subtle"><Printer className="h-4 w-4" /> {t.pdf}</button>
-        <button type="button" onClick={handleDownloadPng} disabled={pngState === "busy"} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-surface-subtle disabled:opacity-50"><ImageIcon className="h-4 w-4" /> {pngState === "busy" ? t.pngBusy : t.png}</button>
-        <div className="flex min-h-12 items-center rounded-xl border border-green-200 p-1">
+        <button type="button" onClick={handlePdf} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-border px-3 py-2 text-xs font-bold text-green-800 hover:bg-surface-subtle"><Printer className="h-4 w-4" /> {t.pdf}</button>
+        <button type="button" onClick={handleDownloadPng} disabled={pngState === "busy"} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-border px-3 py-2 text-xs font-bold text-green-800 hover:bg-surface-subtle disabled:opacity-50"><ImageIcon className="h-4 w-4" /> {pngState === "busy" ? t.pngBusy : t.png}</button>
+        <div className="flex min-h-12 items-center rounded-xl border border-border p-1">
           <button type="button" onClick={handleDownload} className="inline-flex flex-1 items-center justify-center gap-1.5 px-2 text-xs font-bold text-green-800"><FileText className="h-4 w-4" /> {t.text}</button>
           <select aria-label={t.text} value={format} onChange={(event) => setFormat(event.target.value as Format)} className="rounded-lg bg-surface-subtle px-2 py-2 text-xs font-black text-green-800 outline-none">
             {FORMATS.map((f) => <option key={f} value={f}>{t.formats[f]}</option>)}
           </select>
         </div>
-        <button type="button" onClick={handleCopy} className="inline-flex items-center gap-1.5 rounded-lg border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-surface-subtle">
+        <button type="button" onClick={handleCopy} className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-2 text-xs font-bold text-green-800 hover:bg-surface-subtle">
           <Copy className="h-3.5 w-3.5" /> {copied ? t.copied : t.copy}
         </button>
-        <button type="button" onClick={handleShare} className="inline-flex items-center gap-1.5 rounded-lg border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-surface-subtle">
+        <button type="button" onClick={handleShare} className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-2 text-xs font-bold text-green-800 hover:bg-surface-subtle">
           <Share2 className="h-3.5 w-3.5" /> {shareState === "copied" ? t.shareCopied : t.share}
         </button>
       </div>

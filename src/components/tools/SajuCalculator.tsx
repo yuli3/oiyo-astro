@@ -2,7 +2,7 @@ import { parseSajuInputState, parseSajuTime, type SajuInputState } from '../../l
 import { calculateBirthSaju } from '../../lib/ontology/saju/birth-contract';
 import { projectSajuCalculator } from '../../lib/ontology/saju/calculator-projection';
 import { resolveJeolgiBadgeAtInstant } from '../../lib/ontology/saju/jeolgi-badge';
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef, lazy, Suspense } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField';
 import CityField from '../shared/CityField';
@@ -19,6 +19,7 @@ import {
 import YongsinSection from './saju/YongsinSection';
 import LifeCategoriesSection from './saju/LifeCategoriesSection';
 import FiveElementsOrbit from './saju/FiveElementsOrbit';
+import SajuElementCube3D from './saju/SajuElementCube3D';
 import { decodeResult } from '../../lib/result-permalink';
 import { createEncryptedResultPermalink, readEncryptedResultPermalink } from '../../lib/encrypted-result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
@@ -26,6 +27,10 @@ import { prefersReducedMotion } from '../../hooks/useMotion';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import ResultSymbol from '../shared/ResultSymbol';
+
+// Off until OpenAI issues the client ID; the chunk is never fetched while off.
+const SIWC_ON = import.meta.env.PUBLIC_SIWC_ENABLED === '1';
+const ChatGptInterpretation = lazy(() => import('./saju/ChatGptInterpretation'));
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
@@ -87,11 +92,11 @@ const ELEMENTS: Record<string, Record<Locale, string>> = {
   Water: { ko: '수(水)', en: 'Water 水', ja: '水', fr: 'Eau 水', es: 'Agua 水', zh: '水' },
 };
 const ELEMENT_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  Wood: { bg: 'bg-surface-subtle', text: 'text-green-700', border: 'border-green-200' },
+  Wood: { bg: 'bg-surface-subtle', text: 'text-primary', border: 'border-border' },
   Fire: { bg: 'bg-red-50', text: 'text-red-700', border: 'border-red-200' },
   Earth: { bg: 'bg-yellow-50', text: 'text-yellow-700', border: 'border-yellow-200' },
-  Metal: { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-300' },
-  Water: { bg: 'bg-surface-subtle', text: 'text-green-700', border: 'border-green-200' },
+  Metal: { bg: 'bg-card', text: 'text-gray-700', border: 'border-gray-300' },
+  Water: { bg: 'bg-surface-subtle', text: 'text-primary', border: 'border-border' },
 };
 const ELEMENT_BAR_COLORS: Record<string, string> = {
   Wood: 'bg-green-500',
@@ -360,6 +365,8 @@ const READING_COPY: Record<Locale, {
   jeolgiSourceKasi: string;
   jeolgiSourceLocal: string;
   jeolgiUnavailable: string;
+  copySummary: string;
+  copiedSummary: string;
 }> = {
   ko: {
     readingMap: '사주 해석 지도',
@@ -387,6 +394,8 @@ const READING_COPY: Record<Locale, {
     controls: '극하는 오행',
     balanceQuestions: '보완 질문',
     balanceQuestionItems: ['강한 오행이 생활에서 과하게 드러나는 장면은?', '부족한 오행을 행동·환경·관계로 보완할 방법은?', '최근 스트레스가 특정 오행의 약점처럼 나타나지는 않는가?'],
+    copySummary: '오행 요약 복사',
+    copiedSummary: '요약 복사 완료!',
   },
   en: {
     readingMap: 'Saju Reading Map',
@@ -414,6 +423,8 @@ const READING_COPY: Record<Locale, {
     controls: 'Controls',
     balanceQuestions: 'Balancing Questions',
     balanceQuestionItems: ['Where does the strong element show up too intensely?', 'How can the weaker element be supported through habits, place, or relationships?', 'Does recent stress resemble the shadow side of one element?'],
+    copySummary: 'Copy Element Summary',
+    copiedSummary: 'Summary copied!',
   },
   ja: {
     readingMap: '四柱の読み方マップ',
@@ -441,6 +452,8 @@ const READING_COPY: Record<Locale, {
     controls: '剋する五行',
     balanceQuestions: 'バランスの問い',
     balanceQuestionItems: ['強い五行が過剰に出る場面は？', '弱い五行を習慣・環境・関係で補う方法は？', '最近のストレスは特定の五行の影として出ていないか？'],
+    copySummary: '五行の要約をコピー',
+    copiedSummary: '要約をコピーしました!',
   },
   fr: {
     readingMap: 'Carte de lecture Saju',
@@ -468,6 +481,8 @@ const READING_COPY: Record<Locale, {
     controls: 'Contrôle',
     balanceQuestions: "Questions d'équilibre",
     balanceQuestionItems: ["Où l'élément fort devient-il excessif ?", "Comment soutenir l'élément faible par les habitudes, le lieu ou les relations ?", 'Le stress récent ressemble-t-il à une ombre élémentaire ?'],
+    copySummary: 'Copier le résumé des 5 éléments',
+    copiedSummary: 'Résumé copié !',
   },
   es: {
     readingMap: 'Mapa de lectura Saju',
@@ -495,6 +510,8 @@ const READING_COPY: Record<Locale, {
     controls: 'Controla',
     balanceQuestions: 'Preguntas de equilibrio',
     balanceQuestionItems: ['¿Dónde aparece demasiado fuerte el elemento dominante?', '¿Cómo apoyar el elemento débil con hábitos, lugar o relaciones?', '¿El estrés reciente se parece al lado difícil de un elemento?'],
+    copySummary: 'Copiar resumen de 5 elementos',
+    copiedSummary: '¡Resumen copiado!',
   },
   zh: {
     readingMap: '四柱解读地图',
@@ -522,6 +539,8 @@ const READING_COPY: Record<Locale, {
     controls: '相克',
     balanceQuestions: '平衡提问',
     balanceQuestionItems: ['较强的五行在哪些生活场景中过度表现？', '较弱的五行能否透过习惯、环境或关系补足？', '最近的压力是否像某个五行的阴影面？'],
+    copySummary: '复制五行分析摘要',
+    copiedSummary: '摘要已复制!',
   },
 };
 
@@ -599,6 +618,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [shareFailed, setShareFailed] = useState(false);
   const [legacyShare, setLegacyShare] = useState<SajuInputState | null>(null);
   const [imageSharing, setImageSharing] = useState(false);
+  const [elementSummaryCopied, setElementSummaryCopied] = useState(false);
   const [selectedCity, setSelectedCity] = useState<City | null>(null);
   const [cityId, setCityId] = useState('');
   const [locationError, setLocationError] = useState('');
@@ -765,6 +785,44 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
   const daysInMonth = new Date(year, month, 0).getDate();
 
+  async function copyElementSummary() {
+    if (!result) return;
+    const total = result.pillars.length * 2;
+    const lines: string[] = [];
+    lines.push(`[OIYO ${t.title} - ${reading.balanceTitle}]`);
+    lines.push(`• ${reading.abundance}: ${ELEMENTS[result.sortedElements[0]][locale]}`);
+    lines.push(`• ${reading.scarcity}: ${ELEMENTS[result.scarceElements[0]][locale]}`);
+    lines.push(`• ${reading.missing}: ${result.missingElements.length > 0 ? result.missingElements.map((el) => ELEMENTS[el][locale]).join(', ') : reading.noMissing}`);
+    lines.push('');
+    lines.push(`${reading.balanceTitle}:`);
+    for (const el of ELEMENT_ORDER) {
+      const count = result.elementCount[el] || 0;
+      const pct = Math.round((count / total) * 100);
+      lines.push(`  ${ELEMENT_EMOJIS[el]} ${ELEMENTS[el][locale]}: ${count} (${pct}%)`);
+    }
+    const text = lines.join('\n');
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.left = '-9999px';
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        area.remove();
+      }
+      setElementSummaryCopied(true);
+      setTimeout(() => setElementSummaryCopied(false), 2500);
+      gaEvent('copy_click', { test_id: 'saju', surface: 'element_summary' });
+    } catch {
+      /* ignore */
+    }
+  }
+
   function handleCalc() {
     const clampedDay = Math.min(day, daysInMonth);
     if (day !== clampedDay) setDay(clampedDay);
@@ -813,11 +871,11 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     const c = ELEMENT_COLORS[elem];
     return (
       <div className={`rounded-xl border p-3 text-center ${c.bg} ${c.border}`}>
-        <p className="text-xs font-semibold text-gray-500 mb-2">{label}</p>
-        <div className="text-2xl font-bold text-gray-900 mb-0.5">{STEMS[stemIdx]}</div>
-        <div className="text-xs text-gray-500 mb-1">{STEM_NAMES[locale][stemIdx]}</div>
-        <div className="text-2xl font-bold text-gray-900 mb-0.5">{BRANCHES[branchIdx]}</div>
-        <div className="text-xs text-gray-500 mb-1">{BRANCH_EMOJIS[branchIdx]} {BRANCH_ANIMALS[locale][branchIdx]}</div>
+        <p className="text-xs font-semibold text-muted-foreground mb-2">{label}</p>
+        <div className="text-2xl font-bold text-foreground mb-0.5">{STEMS[stemIdx]}</div>
+        <div className="text-xs text-muted-foreground mb-1">{STEM_NAMES[locale][stemIdx]}</div>
+        <div className="text-2xl font-bold text-foreground mb-0.5">{BRANCHES[branchIdx]}</div>
+        <div className="text-xs text-muted-foreground mb-1">{BRANCH_EMOJIS[branchIdx]} {BRANCH_ANIMALS[locale][branchIdx]}</div>
         <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${c.text} bg-card bg-opacity-60`}>
           {ELEMENTS[elem][locale]}
         </span>
@@ -923,7 +981,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           >
             <div className="flex items-center gap-3">
               <ResultSymbol id="five-elements" variant={result.sortedElements[0]} fallback="☯️" className="h-16 w-16 shrink-0" />
-              <h2 className="text-base font-bold text-gray-900 sm:text-lg">{reading.quickAnswerTitle}</h2>
+              <h2 className="text-base font-bold text-foreground sm:text-lg">{reading.quickAnswerTitle}</h2>
             </div>
             <p className="mt-1 text-sm font-medium leading-relaxed text-gray-800 sm:text-base">
               {reading.quickAnswerBody.replace('%s', ELEMENTS[result.sortedElements[0]][locale])}
@@ -938,7 +996,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     : (JEOLGI_LABELS[locale]?.[jeolgiBadge.nameKo] ?? jeolgiBadge.nameKo)}
                 </span>
                 {jeolgiBadge.status === 'ok' && jeolgiBadge.onsetDate && (
-                  <span className="text-gray-500">
+                  <span className="text-muted-foreground">
                     {reading.jeolgiOnsetLabel} {jeolgiBadge.onsetDate}
                     {jeolgiBadge.onsetKst ? ` ${jeolgiBadge.onsetKst}` : ''}
                   </span>
@@ -965,9 +1023,17 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             missingElements={result.missingElements}
           />
 
+          <SajuElementCube3D
+            locale={locale}
+            elementCount={result.elementCount}
+            dominantElement={result.sortedElements[0]}
+            missingElements={result.missingElements}
+            dayMaster={result.pillars[2] ? ['갑(木)', '을(木)', '병(火)', '정(火)', '무(土)', '기(土)', '경(金)', '신(金)', '임(水)', '계(水)'][result.pillars[2].stem] : '목(木)'}
+          />
+
           {/* Four Pillars */}
           <div>
-            <h2 className="text-sm font-bold text-green-700 mb-3">{t.fourPillars}</h2>
+            <h2 className="text-sm font-bold text-primary mb-3">{t.fourPillars}</h2>
             {/* 2026-09-01: 연·월주 산식이 역법 기준에서 절기 기준으로 바뀌었다.
                 월주는 사실상 모든 출생에서 값이 달라지므로, 예전 결과를 저장·공유한
                 사람이 어긋난 값을 보게 된다. 조용히 바꾸지 않는다. */}
@@ -995,14 +1061,14 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           )}
 
           {/* Reading map */}
-          <div className="bg-card rounded-2xl border border-gray-200 p-4">
+          <div className="bg-card rounded-2xl border border-border p-4">
             <div className="mb-4">
               <h2 className="text-sm font-semibold text-gray-800">{reading.readingMap}</h2>
-              <p className="mt-1 text-xs leading-relaxed text-gray-500">{reading.readingMapDesc}</p>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{reading.readingMapDesc}</p>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
               {reading.readSteps.map((step, index) => (
-                <div key={step} className="rounded-xl border border-gray-100 bg-gray-50 p-3">
+                <div key={step} className="rounded-xl border border-gray-100 bg-card p-3">
                   <p className="mb-1 text-[11px] font-bold text-green-600">0{index + 1}</p>
                   <p className="text-xs leading-relaxed text-gray-700">{step}</p>
                 </div>
@@ -1011,8 +1077,20 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           </div>
 
           {/* Element balance */}
-          <div className="bg-card rounded-2xl border border-gray-200 p-4">
-            <h2 className="text-sm font-semibold text-gray-700 mb-3">{reading.balanceTitle}</h2>
+          <div className="bg-card rounded-2xl border border-border p-4">
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+              <h2 className="text-sm font-semibold text-gray-700">{reading.balanceTitle}</h2>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={copyElementSummary}
+                aria-label={reading.copySummary}
+              >
+                <span>{elementSummaryCopied ? '✓' : '📋'}</span>
+                <span>{elementSummaryCopied ? reading.copiedSummary : reading.copySummary}</span>
+              </Button>
+            </div>
             <div className="space-y-2">
               {ELEMENT_ORDER.map(el => {
                 const c = ELEMENT_COLORS[el];
@@ -1023,25 +1101,25 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                   <div key={el} className="flex items-center gap-2">
                     <span className="w-5 text-sm">{ELEMENT_EMOJIS[el]}</span>
                     <span className={`text-xs font-medium w-16 ${c.text}`}>{ELEMENTS[el][locale]}</span>
-                    <div className="flex-1 h-2 bg-gray-100 rounded-full">
+                    <div className="flex-1 h-2 bg-surface-subtle rounded-full">
                       <div className={`h-2 rounded-full ${ELEMENT_BAR_COLORS[el]}`} style={{ width: `${pct}%` }} />
                     </div>
-                    <span className="text-xs text-gray-500 w-8 text-right">{count}</span>
+                    <span className="text-xs text-muted-foreground w-8 text-right">{count}</span>
                   </div>
                 );
               })}
             </div>
             <div className="mt-4 grid gap-2 sm:grid-cols-3">
-              <div className="rounded-xl border border-gray-100 bg-gray-50 p-3">
-                <p className="text-[11px] font-semibold text-gray-500">{reading.abundance}</p>
+              <div className="rounded-xl border border-gray-100 bg-card p-3">
+                <p className="text-[11px] font-semibold text-muted-foreground">{reading.abundance}</p>
                 <p className="mt-1 text-sm font-bold text-gray-800">{ELEMENTS[result.sortedElements[0]][locale]}</p>
               </div>
-              <div className="rounded-xl border border-gray-100 bg-gray-50 p-3">
-                <p className="text-[11px] font-semibold text-gray-500">{reading.scarcity}</p>
+              <div className="rounded-xl border border-gray-100 bg-card p-3">
+                <p className="text-[11px] font-semibold text-muted-foreground">{reading.scarcity}</p>
                 <p className="mt-1 text-sm font-bold text-gray-800">{ELEMENTS[result.scarceElements[0]][locale]}</p>
               </div>
-              <div className="rounded-xl border border-gray-100 bg-gray-50 p-3">
-                <p className="text-[11px] font-semibold text-gray-500">{reading.missing}</p>
+              <div className="rounded-xl border border-gray-100 bg-card p-3">
+                <p className="text-[11px] font-semibold text-muted-foreground">{reading.missing}</p>
                 <p className="mt-1 text-sm font-bold text-gray-800">
                   {result.missingElements.length > 0
                     ? result.missingElements.map(el => ELEMENTS[el][locale]).join(', ')
@@ -1059,14 +1137,14 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             const supportColor = ELEMENT_COLORS[support];
             const regulateColor = ELEMENT_COLORS[regulate];
             return (
-              <div className="bg-card rounded-2xl border border-gray-200 p-4">
+              <div className="bg-card rounded-2xl border border-border p-4">
                 <div className="mb-4">
                   <h2 className="text-sm font-semibold text-gray-800">{reading.relationTitle}</h2>
-                  <p className="mt-1 text-xs leading-relaxed text-gray-500">{reading.relationDesc}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{reading.relationDesc}</p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
                   <div className={`rounded-xl border p-4 ${supportColor.bg} ${supportColor.border}`}>
-                    <p className="text-[11px] font-semibold text-gray-500">{reading.generates}</p>
+                    <p className="text-[11px] font-semibold text-muted-foreground">{reading.generates}</p>
                     <div className="mt-2 flex items-center justify-between gap-3">
                       <span className="text-sm font-bold text-gray-800">{ELEMENTS[strong][locale]}</span>
                       <span className="text-xs text-gray-400">→</span>
@@ -1074,7 +1152,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     </div>
                   </div>
                   <div className={`rounded-xl border p-4 ${regulateColor.bg} ${regulateColor.border}`}>
-                    <p className="text-[11px] font-semibold text-gray-500">{reading.controls}</p>
+                    <p className="text-[11px] font-semibold text-muted-foreground">{reading.controls}</p>
                     <div className="mt-2 flex items-center justify-between gap-3">
                       <span className="text-sm font-bold text-gray-800">{ELEMENTS[strong][locale]}</span>
                       <span className="text-xs text-gray-400">↘</span>
@@ -1082,7 +1160,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     </div>
                   </div>
                 </div>
-                <div className="mt-4 rounded-xl border border-gray-100 bg-gray-50 p-4">
+                <div className="mt-4 rounded-xl border border-gray-100 bg-card p-4">
                   <p className="text-xs font-semibold text-gray-700">{reading.balanceQuestions}</p>
                   <ul className="mt-2 space-y-1">
                     {reading.balanceQuestionItems.map((item) => (
@@ -1109,7 +1187,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                   <span className="text-3xl">{ELEMENT_EMOJIS[el]}</span>
                   <div>
                     <h2 className={`font-bold text-lg ${c.text}`}>{ELEMENTS[el][locale]}</h2>
-                    <p className="text-xs text-gray-500">{t.dominantElement}</p>
+                    <p className="text-xs text-muted-foreground">{t.dominantElement}</p>
                   </div>
                 </div>
 
@@ -1149,7 +1227,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                   ].map(item => (
                     <div key={item.label} className="bg-card bg-opacity-60 rounded-lg p-2 text-center">
                       <p className="text-base mb-0.5">{item.icon}</p>
-                      <p className="text-[10px] text-gray-500 mb-0.5">{item.label}</p>
+                      <p className="text-[10px] text-muted-foreground mb-0.5">{item.label}</p>
                       <p className="text-xs font-semibold text-gray-800">{item.value}</p>
                     </div>
                   ))}
@@ -1158,10 +1236,16 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             );
           })()}
 
-          <div className="rounded-2xl border border-green-100 bg-surface-subtle p-4">
+          <div className="rounded-2xl border border-border bg-surface-subtle p-4">
             <h2 className="text-sm font-semibold text-green-800">{reading.profileChanges}</h2>
             <p className="mt-2 text-xs leading-relaxed text-green-900/75">{reading.profileChangesDesc}</p>
           </div>
+
+          {SIWC_ON && projection?.status === 'resolved' && (
+            <Suspense fallback={null}>
+              <ChatGptInterpretation locale={locale} pillars={projection.pillars} />
+            </Suspense>
+          )}
 
           <Card className="border-primary/20 bg-primary/[0.04] shadow-sm">
             <CardHeader className="pb-3 text-center">

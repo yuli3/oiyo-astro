@@ -215,7 +215,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
         year: resolution.standard.year,
       }))
       saveBirthRecord(record)
-      setProfile({ gender })
+      setProfile({ gender, ...(selectedCity ? { birthCityId: selectedCity.id } : {}) })
       setDone(true)
     } catch {
       setInputError(selectedCity || savedLocationRecord ? inputCopy.invalidTime : inputCopy.cityRequired)
@@ -386,7 +386,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
                 ))}
               </ul>
             </div>
-            <p className="text-sm font-medium text-green-700 leading-relaxed">{r.advice}</p>
+            <p className="text-sm font-medium text-primary leading-relaxed">{r.advice}</p>
           </div>
 
           <ShareResultButton

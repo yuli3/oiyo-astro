@@ -1,0 +1,32 @@
+/* 2026-10-13: both explainer renderers need the same Markdown typography.
+   Scope every rule so importing this stylesheet cannot alter other content. */
+.explainer-prose { color: var(--foreground); line-height: 1.9; }
+.explainer-prose > * + * { margin-top: 1.15rem; }
+.explainer-prose h2 {
+  margin-top: 2.75rem; margin-bottom: 0.25rem;
+  font-size: 1.35rem; font-weight: 700; line-height: 1.5;
+  border-top: 1px solid var(--border); padding-top: 1.75rem;
+}
+.explainer-prose h2:first-child { margin-top: 0; border-top: 0; padding-top: 0; }
+.explainer-prose h3 { margin-top: 2rem; font-size: 1.1rem; font-weight: 700; }
+.explainer-prose strong { font-weight: 700; color: var(--primary-strong); }
+.explainer-prose a { color: var(--primary-strong); text-decoration: underline; text-underline-offset: 3px; }
+.explainer-prose ul, .explainer-prose ol { padding-left: 1.35rem; }
+.explainer-prose ul { list-style: disc; }
+.explainer-prose ol { list-style: decimal; }
+.explainer-prose li + li { margin-top: 0.45rem; }
+/* 원문 MDX 의 <Term> 을 옮긴 것. 정의가 달려 있다는 표시가 없으면 아무도 올려 보지 않는다. */
+.explainer-prose abbr[title] {
+  text-decoration: underline dotted var(--primary);
+  text-underline-offset: 3px;
+  cursor: help;
+}
+.explainer-prose blockquote {
+  border-left: 3px solid var(--primary); padding-left: 1rem;
+  color: var(--muted-foreground); font-style: italic;
+}
+/* 표는 좁은 화면에서 페이지를 밀지 않고 스스로 스크롤한다. */
+.explainer-prose table { display: block; overflow-x: auto; width: 100%; border-collapse: collapse; font-size: 0.925rem; }
+.explainer-prose th, .explainer-prose td { border: 1px solid var(--border); padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
+.explainer-prose th { background: var(--muted); font-weight: 700; }
+.explainer-prose hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }

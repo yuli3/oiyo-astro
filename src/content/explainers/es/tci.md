@@ -1,65 +1,72 @@
 ---
 topic: tci
 locale: es
-title: "TCI: separar temperamento y carácter — y los límites de esa separación"
-description: "El TCI mide cuatro dimensiones de temperamento y tres de carácter, según el diseño de Cloninger. También trata lo que la investigación posterior no respaldó bien: la correspondencia inicial entre cada temperamento y un neurotransmisor."
-definition: "El Inventario de Temperamento y Carácter mide la personalidad en cuatro dimensiones de temperamento, consideradas muy heredables, y tres de carácter moldeadas por el desarrollo y la experiencia. Cloninger expuso el modelo en 1993."
-updated: 2026-09-03
+title: "TCI: temperamento, carácter y lo que una puntuación no puede establecer"
+description: "Comprende las cuatro dimensiones de temperamento y las tres de carácter, distingue las primeras hipótesis biológicas del diagnóstico y lee con cautela el resumen OIYO de 35 ítems."
+definition: "El modelo TCI de Cloninger distingue cuatro dimensiones de temperamento y tres de carácter. La puntuación de un cuestionario no mide los niveles de neurotransmisores de una persona."
+updated: 2026-10-14
 ---
 
-Lo que separa al TCI de otros inventarios no es el número de factores, sino **su diseño en dos capas**: medir por separado las tendencias de respuesta innatas y el concepto de sí construido a lo largo de una vida.
+El **Inventario de Temperamento y Carácter (TCI)** distingue temperamento y carácter dentro del modelo de Cloninger. La distinción organiza diferentes formas de describir la personalidad. No divide a una persona en una mitad biológica inmutable y otra que puede mejorarse mediante fuerza de voluntad.
 
-## 1. El diseño en dos capas
+El inventario original y la actividad breve de OIYO no son intercambiables. Estudiar una versión no valida otro conjunto de ítems, traducciones o categorías de puntuación.
 
-Cloninger dividió la personalidad en **temperamento** y **carácter**.
+## 1. La estructura de cuatro más tres
 
-**Cuatro dimensiones de temperamento** — tendencias de respuesta automáticas, que aparecen pronto y se consideran bastante heredables.
+El [registro de la institución de los autores y el resumen del artículo de 1993](https://profiles.wustl.edu/en/publications/a-psychobiological-model-of-temperament-and-character/) describen siete dimensiones en un instrumento de autoinforme. El resumen comunica pruebas obtenidas en una muestra de 300 personas de la población general. Ese resultado se refiere al instrumento y la muestra estudiados, no a la implementación de OIYO.
 
-| Dimensión | Cuando es alta |
-| --- | --- |
-| Búsqueda de novedad (NS) | Atraído por lo nuevo, se aburre pronto |
-| Evitación del daño (HA) | La preocupación llega primero, cauto |
-| Dependencia de recompensa (RD) | Sensible a la aprobación y al afecto |
-| Persistencia (P) | Sigue aunque no haya recompensa |
+| Nivel del modelo | Dimensión | Aspecto descrito |
+| --- | --- | --- |
+| Temperamento | Búsqueda de novedad (NS) | Respuestas a la novedad y la exploración |
+| Temperamento | Evitación del daño (HA) | Cautela y anticipación de posibles daños |
+| Temperamento | Dependencia de la recompensa (RD) | Sensibilidad a la recompensa social y la aprobación |
+| Temperamento | Persistencia (P) | Continuación del esfuerzo pese a la dificultad |
+| Carácter | Autodirección (SD) | Objetivos, responsabilidad y orientación de las propias acciones |
+| Carácter | Cooperación (C) | Forma de relacionarse y trabajar con otras personas |
+| Carácter | Autotrascendencia (ST) | Relación del yo con algo que lo trasciende |
 
-**Tres dimensiones de carácter** — sobre qué te propones y cómo te ves; se consideran desarrollables.
+Son descripciones educativas concisas, no umbrales diagnósticos ni formulaciones aprobadas de ítems. Los nombres de los niveles pertenecen al modelo; no demuestran que una puntuación concreta sea heredada, permanente o moralmente buena. En particular, el valor de respuestas transformado por OIYO no establece la madurez individual, aunque el modelo original trate el desarrollo del carácter.
 
-| Dimensión | Cuando es alta |
-| --- | --- |
-| Autodirección (SD) | Decide y asume la responsabilidad |
-| Cooperación (C) | Acepta a otros y trabaja con ellos |
-| Autotrascendencia (ST) | Se siente parte de algo mayor |
+## 2. Una hipótesis biológica no es una medición cerebral
 
-La utilidad de la división es que **da a la madurez un eje propio**. Autodirección y Cooperación bajas indicaban dificultad de adaptación fuera cual fuera el temperamento, y de ahí el uso clínico del TCI.
+El [resumen en PubMed del artículo de 1987](https://pubmed.ncbi.nlm.nih.gov/3579504/) aborda fundamentos biológicos propuestos para las dimensiones de temperamento. Una propuesta sobre un modelo no es un método para medir la neuroquímica de una persona.
 
-## 2. La parte que no se respaldó bien: los neurotransmisores
+Responder a un cuestionario no revela tus niveles de dopamina, serotonina o noradrenalina. Una puntuación alta en Evitación del daño no demuestra una deficiencia química, un trastorno ni un tratamiento que necesites. Esta guía no pretende resolver toda la investigación biológica posterior; delimita lo que puede respaldar un resultado de cuestionario.
 
-Casi toda presentación del TCI trae el mismo pasaje: Búsqueda de novedad corresponde a la dopamina, Evitación del daño a la serotonina, Dependencia de recompensa a la noradrenalina.
+Del mismo modo, un estudio de heredabilidad del Big Five no establece automáticamente la heredabilidad de las dimensiones TCI. No utilices una estimación genética poblacional para decidir qué parte de una persona es fija o cuánto debería cambiar mediante esfuerzo.
 
-Eso fue **una hipótesis que Cloninger propuso en 1987**, y **la investigación posterior no la respaldó bien**. La evidencia de una correspondencia uno a uno entre una dimensión de temperamento y un sistema concreto de neurotransmisores no se ha acumulado lo suficiente.
+## 3. Qué calcula OIYO actualmente
 
-Esto no significa que el modelo se derrumbara. La utilidad descriptiva de las dimensiones y cómo se implementan biológicamente son cuestiones distintas. Pero **«mi evitación del daño es alta por la serotonina» no es una frase que el resultado del test respalde.**
+La actividad actual de OIYO contiene 35 ítems, cinco por dimensión, con respuestas de 1 a 5. Las respuestas designadas como inversas se puntúan restando de 6 la respuesta elegida. La suma de una dimensión se divide por su máximo posible y después se redondea a un porcentaje.
 
-## 3. «El temperamento no cambia» también es exagerado
+| Después de cualquier puntuación inversa | Suma sobre 25 | Valor mostrado |
+| --- | --- | --- |
+| Cinco respuestas puntuadas con 1 cada una | 5 | 20 % |
+| Cinco respuestas puntuadas con 3 cada una | 15 | 60 % |
+| Cinco respuestas puntuadas con 5 cada una | 25 | 100 % |
 
-La división limpia —temperamento fijo, carácter maleable— es más firme en el relato que en los datos.
+Esto describe el código actual, no un baremo TCI oficial. **60 % no es un percentil poblacional**, una probabilidad de enfermedad ni una medida de cuánto se ha desarrollado tu carácter. Compara las respuestas reales y las circunstancias antes de comparar números.
 
-Las dimensiones de temperamento son moderadamente heredables y **cambian con la edad**. La Búsqueda de novedad tiende a bajar y la Persistencia a subir a lo largo de la adultez. A la inversa, las dimensiones de carácter tampoco crecen solas.
+Aquí no hemos establecido que estos 35 ítems reproduzcan una versión oficial del TCI o TCI-R, que las traducciones sean equivalentes ni que las categorías de resultados tengan pruebas sobre su medición. No utilices el resultado como informe clínico ni como prueba de que alguien es inmaduro, irresponsable o inadecuado para un empleo.
 
-Dicho con precisión, la diferencia entre las capas **no es si cambian, sino de qué son dimensiones**: el temperamento trata de cómo respondes a los estímulos; el carácter, de qué te propones y cómo te consideras.
+## 4. Interpreta una tendencia en su contexto
 
-## 4. Cómo leer un resultado
+Piensa en una persona que comprueba cuidadosamente los riesgos antes de una tarea desconocida. Esa acción puede ser apropiada cuando los errores tienen consecuencias graves. El mismo grado de comprobación podría resultar frustrante en una tarea rutinaria con poco en juego. Un resumen de cuestionario no decide qué interpretación encaja.
 
-- **Las puntuaciones de temperamento no son buenas ni malas.** Una Evitación del daño alta es prudencia y es evitación; una baja es audacia y es temeridad. La puntuación da dirección, no valor.
-- **Donde el esfuerzo tiene agarre es en el carácter.** Antes que intentar bajar la Evitación del daño, decidir qué hacer llevándote contigo a un yo propenso a preocuparse (Autodirección) sí es ejecutable.
-- **Es autoinforme y nació con una finalidad clínica.** No leas un resultado como diagnóstico. El TCI se usa en clínica, pero una puntuación no es un diagnóstico.
+Como ejercicio editorial de reflexión, pregúntate qué imaginabas al responder, qué estaba en juego y si existe un contraejemplo reciente. Después puedes elegir una pequeña acción adecuada a la situación. No es un tratamiento, una intervención validada ni un consejo para cambiar un nivel del modelo en lugar de otro.
 
-## Referencias
+La Autotrascendencia no clasifica el valor espiritual de las personas. La Autodirección no determina por sí sola la responsabilidad personal en un conflicto real. También deben considerarse los recursos, las limitaciones y el comportamiento concreto.
 
-> **C. Robert Cloninger, Dragan M. Svrakic & Thomas R. Przybeck** (1993) *A psychobiological model of temperament and character*, Archives of General Psychiatry 50(12) — la estructura de cuatro más tres.
+## 5. El uso del inventario oficial es una cuestión aparte
 
-> **C. Robert Cloninger** (1987) *A systematic method for clinical description and classification of personality variants*, Archives of General Psychiatry 44(6) — la correspondencia inicial entre temperamento y neurotransmisores.
+La [información de Anthropedia sobre uso en investigación](https://anthropedia.org/tci-research) describe un proceso de solicitud y aprobación para ese uso. El TCI no debe presentarse como un banco público de ítems sin restricciones.
 
-> **Kerry L. Jang et al.** (1996) *Heritability of the big five personality dimensions and their facets*, Journal of Personality 64(3) — el resultado estándar de los estudios de gemelos: heredabilidad moderada.
+Esta explicación no autoriza la reproducción de ítems oficiales. La procedencia y equivalencia de los ítems OIYO, y cualquier permiso necesario, requieren una revisión aparte. Llamar a una actividad «educativa» o «abreviada» no demuestra que sea un instrumento oficial aprobado.
 
-> **Brent W. Roberts, Kate E. Walton & Wolfgang Viechtbauer** (2006) *Patterns of mean-level change in personality traits across the life course*, Psychological Bulletin 132(1) — metaanálisis del cambio sistemático a lo largo de la vida.
+## Fuentes y límites de lectura
+
+- [Cloninger, Svrakic y Przybeck (1993), registro de la institución de los autores](https://profiles.wustl.edu/en/publications/a-psychobiological-model-of-temperament-and-character/): modelo de siete dimensiones y estudio descrito en su resumen.
+- [Cloninger (1987), PubMed](https://pubmed.ncbi.nlm.nih.gov/3579504/): propuesta biológica anterior, no prueba individual de neurotransmisores.
+- [Anthropedia, TCI in Research](https://anthropedia.org/tci-research): información sobre procedimientos de uso en investigación.
+
+Para esta revisión se consultaron los resúmenes y registros de los artículos, no sus textos íntegros. Los ejemplos numéricos describen la implementación de OIYO; no son resultados comunicados en esos artículos.

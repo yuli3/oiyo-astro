@@ -9,6 +9,7 @@ import ArticleBody from '../../components/shared/ArticleBody.astro';
 import RelatedArticles from '../../components/shared/RelatedArticles.astro';
 import { getCollection } from 'astro:content';
 import type { Locale } from '../../i18n';
+import { articleStructuredData, serializeArticleStructuredData } from '../../lib/articles/article-structured-data';
 
 export async function getStaticPaths() {
   const entries = await getCollection('articles');
@@ -19,9 +20,28 @@ export async function getStaticPaths() {
 }
 const { locale, article: currentSlug } = Astro.params as { locale: Locale; article: string };
 const { entry } = Astro.props;
+const articleData = articleStructuredData(entry.data, new URL(Astro.url.pathname, Astro.site));
+// 신화 인물 글에서 수호신 찾기·신화 도감으로 잇는다(2026-11-11, 발굴 1번).
+const isMyth = currentSlug.startsWith('meaning-of-myth-');
+const MYTH_LINKS: Record<string, [string, string]> = {
+  ko: ['🛡️ 나의 수호신 찾기', '📚 신화 도감'],
+  en: ['🛡️ Find your guardian deity', '📚 Myth guide'],
+  ja: ['🛡️ あなたの守護神診断', '📚 神話図鑑'],
+  zh: ['🛡️ 寻找你的守护神', '📚 神话图鉴'],
+  fr: ['🛡️ Votre divinité gardienne', '📚 Guide des mythes'],
+  es: ['🛡️ Tu deidad guardiana', '📚 Guía de mitos'],
+};
+const mythLinks = MYTH_LINKS[locale] ?? MYTH_LINKS.en;
 ---
 <Layout title={entry.data.title} description={entry.data.description} locale={locale}>
+  <script type="application/ld+json" set:html={serializeArticleStructuredData(articleData)} />
   <ArticleBody entry={entry} locale={locale} />
+  {isMyth && (
+    <nav class="mx-auto mt-8 flex w-full max-w-3xl flex-wrap gap-2 px-4" aria-label={mythLinks[1]}>
+      <a href={`/${locale}/myth/guardian/`} class="inline-flex min-h-11 items-center rounded-xl border border-primary/40 bg-card px-4 font-bold hover:border-primary">{mythLinks[0]}</a>
+      <a href={`/${locale}/myth/`} class="inline-flex min-h-11 items-center rounded-xl border border-border bg-card px-4 font-bold hover:border-primary/50">{mythLinks[1]}</a>
+    </nav>
+  )}
   <RelatedArticles
     locale={locale}
     topic={entry.data.topic}

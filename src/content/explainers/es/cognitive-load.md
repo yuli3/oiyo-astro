@@ -1,74 +1,74 @@
 ---
 topic: cognitive-load
 locale: es
-title: "Carga cognitiva: la memoria de trabajo es estrecha, y una explicación tiene que pasar por ahí"
-description: "La teoría de la carga cognitiva trata del punto en que el aprendizaje choca con los límites de la memoria de trabajo. Carga intrínseca y extrínseca, el efecto de reversión por pericia, y por qué no debe confundirse con los estilos de aprendizaje."
-definition: "La carga cognitiva es la demanda que una tarea impone a la memoria de trabajo. La teoría sostiene que el material de aprendizaje debe diseñarse según los límites de esa memoria."
-updated: 2026-09-03
+title: "Carga cognitiva: contenido, conocimientos previos y diseño"
+description: "Compare carga intrínseca y extrínseca, efecto sin meta específica, atención dividida y redundancia. Los métodos dependen de la tarea y de los conocimientos previos."
+definition: "La carga cognitiva es la demanda de memoria de trabajo durante una tarea. Considere las relaciones entre elementos, los conocimientos y la presentación de información y actividades."
+updated: 2026-10-15
 ---
 
-Dos personas oyen la misma explicación; una la entiende y otra no. Suele archivarse bajo **ser listo o no serlo**. La teoría de la carga cognitiva mira a otro sitio: **¿se construyó esa explicación para pasar por la puerta estrecha de la memoria de trabajo?**
+Que una explicación resulte difícil no demuestra falta de capacidad. Puede revisar si exige relacionar varios conceptos nuevos a la vez, si la información necesaria está dispersa o si obliga a comparar explicaciones ya conocidas sin necesidad.
 
-## 1. Hay una puerta estrecha
+## 1. Los conocimientos previos cambian la demanda
 
-La memoria de trabajo sostiene lo que manejas ahora mismo, y es **muy estrecha**: pocos elementos nuevos a la vez, y se desvanecen en segundos.
+La memoria de trabajo mantiene y procesa información temporalmente. Tiene límites de capacidad y duración, especialmente ante información nueva. Esto no significa que todas las personas manejen siempre un número fijo de elementos o que la información desaparezca tras un número exacto de segundos.
 
-La memoria a largo plazo, en cambio, es prácticamente ilimitada. Aprender es, pues, **pasar cosas por una puerta estrecha hacia un almacén enorme.** Ahí se sitúa la teoría de John Sweller.
+La teoría destaca los conocimientos organizados en la memoria a largo plazo. Una persona experimentada puede tratar elementos relacionados como una estructura de conocimiento. Una ecuación compleja para quien comienza puede convertirse en un paso familiar. Se trata de conocimientos de un ámbito, no de una prueba de inteligencia.
 
-Eso explica también la diferencia entre experto y novato. El experto tiene varios elementos atados en **un solo bloque (un esquema)** en memoria a largo plazo, así que cuenta como uno lo que el novato cuenta como cinco. La puerta no se ensanchó: **la carga viene atada en un fardo.**
+## 2. Carga intrínseca y extrínseca
 
-## 2. La carga se divide en dos
+[Sweller, van Merriënboer y Paas (2019)](https://link.springer.com/article/10.1007/s10648-019-09465-5) consideran la interactividad entre elementos junto con los conocimientos del estudiante.
 
-| Tipo | Qué es | Cómo se maneja |
+| Categoría | Con qué se relaciona | Qué revisar |
 | --- | --- | --- |
-| Carga intrínseca | La complejidad del contenido; mayor cuanto más interactúan los elementos | No se elimina. Se trocea el orden en etapas |
-| Carga extrínseca | La demanda que crea **la forma de explicar** | Hay que reducirla. Lo que ahorras va al aprendizaje |
+| Intrínseca | Relaciones entre los elementos y conocimientos previos | ¿Cambiar el alcance o aprender primero los requisitos? |
+| Extrínseca | Presentación y actividades exigidas | ¿Reducir búsqueda, integración o repetición innecesarias? |
 
-El punto es este: **la carga extrínseca la fabrica quien diseña y nada tiene que ver con el contenido**, así que puede quitarse.
+La carga intrínseca no es una propiedad inmutable del contenido. La extrínseca tampoco es totalmente independiente de él, y rediseñar una explicación no garantiza eliminarla por completo.
 
-Formas habituales de crearla:
+Las clasificaciones de la carga germana varían. En esta reformulación se entiende como asignación de recursos al procesamiento relevante para aprender, no como una tercera carga que se suma independientemente. No todas las publicaciones usan la misma clasificación.
 
-- **Atención dividida** — el diagrama y el texto están separados y el ojo debe ir y venir
-- **Redundancia** — el mismo contenido por escrito y en voz a la vez, obligando a comparar
-- **Búsqueda sin meta** — vagar sin saber qué se busca
+## 3. Efectos con condiciones diferentes
 
-*Una tercera categoría, la «carga germana», acompañó largo tiempo a las otras dos, pero la distinción se volvió discutida y el propio Sweller la reformuló. Hoy es más limpio quedarse con intrínseca y extrínseca.*
+| Efecto | Condición y orientación | Evite concluir |
+| --- | --- | --- |
+| Atención dividida | Acercar diagrama y explicación si deben integrarse para comprenderse | Imagen y texto siempre deben combinarse |
+| Redundancia | Repetir innecesariamente información comprensible por separado puede añadir procesamiento | Texto y voz simultáneos siempre perjudican |
+| Modalidad | Un diagrama con una explicación oral necesaria puede ayudar | Diagrama y texto impreso separan canales visual y auditivo |
+| Ejemplos resueltos | Estudiar soluciones puede ayudar con pocos conocimientos y elementos complejos | Quien comienza nunca debe resolver por sí mismo |
 
-## 3. Prescripciones bien replicadas
+La tabla no justifica eliminar subtítulos ni alternativas textuales. Considere el acceso, la posibilidad de repetir el audio y el control del ritmo.
 
-- **Ejemplos resueltos** — para el novato, **mostrar la solución completa** vale más que hacerle resolver. Resolver consume memoria de trabajo en la búsqueda.
-- **Juntar diagrama y texto** — no separarlos.
-- **Una cosa cada vez** — no entregar a la vez elementos que interactúan.
+## 4. Sin meta específica no significa abandono
 
-## 4. El efecto de reversión por pericia
+La «búsqueda sin meta» debe distinguirse del efecto goal-free: comparar continuamente el estado actual con una meta concreta mediante análisis de medios y fines puede exigir muchos recursos. Reducir la especificidad de la meta, por ejemplo buscando varias cantidades relevantes, puede reducir la demanda en algunas tareas.
 
-La parte más práctica de la teoría. **Lo que es buen diseño para un novato resulta dañino para el que ya sabe.**
+No propone abandonar al estudiante ni afirma que fijar objetivos siempre perjudique. Importan la tarea y la búsqueda exigida.
 
-Los ejemplos resueltos ayudan al novato, pero para quien ya tiene el esquema se vuelven **carga redundante: releer lo que ya sabe.** En esa etapa es mejor hacerle resolver.
+## 5. Ajustar la orientación con la experiencia
 
-Así que la pregunta nunca es «¿es buen método?» sino **«¿bueno para quién, en qué etapa?»**
+En la reversión por pericia, una ventaja de la orientación puede disminuir, desaparecer o invertirse al aumentar los conocimientos. No significa que todos los ejemplos perjudiquen a toda persona experimentada.
 
-## 5. No confundir con estilos de aprendizaje
+El artículo también presenta la retirada gradual de ayuda: estudiar soluciones, completar soluciones parciales y resolver por cuenta propia. Ajuste esa progresión al conocimiento de la tarea, no a una regla fija por curso escolar.
 
-La carga cognitiva se mezcla a menudo con las teorías de **«aprendiz visual / auditivo»**. Son cosas distintas.
+<details>
+<summary>Ejemplo ficticio: una ecuación, distintas ayudas</summary>
 
-- La carga cognitiva trata del **diseño del material**; sus prescripciones se han replicado.
-- Los estilos de aprendizaje **clasifican a las personas** y suponen un modo adecuado para cada una. **No se ha encontrado evidencia de que ajustar la enseñanza al estilo preferido mejore el aprendizaje.**
+Quien empieza con ecuaciones puede necesitar las razones de cada transformación. Quien entiende el principio puede intentar una variante. En ambos casos deben poder consultarse las ecuaciones y explicaciones pertinentes. Es un ejemplo editorial de OIYO, no un resultado experimental.
 
-Juntar diagrama y texto suele ser bueno no porque alguien sea «visual», sino porque la memoria de trabajo **reparte hasta cierto punto los canales visual y auditivo**. Es la estructura del procesamiento, no un tipo de persona.
+</details>
 
-## 6. Límites
+## 6. Estilos de aprendizaje y límites de medición
 
-- La carga se mide mal de forma directa; se infiere por autoinforme o tarea secundaria.
-- Muchas prescripciones se validaron en **tareas bien definidas** —matemáticas, física—. Trasladarlas a tareas abiertas exige cautela.
-- Reducir la carga no siempre es bueno: otra línea de investigación, la de la **dificultad deseable**, halla que cierto esfuerzo hace durar la memoria.
+[Pashler y sus colegas (2008)](https://doi.org/10.1111/j.1539-6053.2009.01038.x) concluyen que no hay pruebas suficientes para mejorar el aprendizaje clasificando al estudiante como visual o auditivo y adaptando la enseñanza a esa categoría. Esto no niega las preferencias ni permite ignorar necesidades de accesibilidad.
 
-## Referencias
+Los diagramas y el texto impreso se presentan visualmente. Distíngalos de diagramas con narración, de explicaciones largas que desaparecen y de textos que pueden consultarse otra vez. Añadir imágenes, palabras y sonidos no mejora automáticamente la enseñanza.
 
-> **John Sweller** (1988) *Cognitive load during problem solving: Effects on learning*, Cognitive Science 12(2) — el origen de la teoría.
+Autoinformes y tareas secundarias permiten estimar la carga, con limitaciones. Sentir dificultad no diagnostica su categoría; menos esfuerzo no demuestra más aprendizaje. El artículo de 2019 también examina condiciones relativas a tareas y experiencia.
 
-> **John Sweller, Jeroen J. G. van Merriënboer & Fred Paas** (2019) *Cognitive architecture and instructional design: 20 years later*, Educational Psychology Review 31 — la reformulación y el orden de las categorías de carga.
+## Fuentes y alcance
 
-> **Slava Kalyuga et al.** (2003) *The expertise reversal effect*, Educational Psychologist 38(1) — la reversión de las prescripciones con la pericia.
+- [Sweller, van Merriënboer y Paas (2019), texto abierto del editor](https://link.springer.com/article/10.1007/s10648-019-09465-5)
+- [Pashler, McDaniel, Rohrer y Bjork (2008), editor original](https://doi.org/10.1111/j.1539-6053.2009.01038.x)
 
-> **Harold Pashler et al.** (2008) *Learning styles: Concepts and evidence*, Psychological Science in the Public Interest 9(3) — la síntesis que no halla apoyo a la hipótesis de los estilos.
+Las correcciones se basan en las secciones de clasificación, efectos didácticos y medición de 2019 y en las conclusiones pertinentes de la revisión de 2008. No se revisaron exhaustivamente todos los experimentos originales ni toda la literatura reciente. Las tablas son comparaciones editoriales, no garantías de aprendizaje individual.

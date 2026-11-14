@@ -1,83 +1,76 @@
 ---
 locale: en
-title: "Tojeong-bigyeol: Decoding the Korean Farmer's Almanac"
+title: "Tojeong-bigyeol: attribution and the structure of annual fortune reading"
 author: "OIYO History"
 tags:
   - saju
   - tojeong-bigyeol
   - korean-tradition
   - seasonal-wisdom
-description: >-
-  Lee Ji-ham's Tojeong-bigyeol is not just a fortune-telling book. It's survival
-  wisdom of an agricultural society containing the 60 Jiapja cycle and seasonal
-  flow.
+description: "Distinguish the text’s attribution to Yi Ji-ham, New Year fortune customs, and its 144 combinations from Four Pillars, agricultural calendars, and validated prediction."
 pubDate: '2025-05-01'
+updatedDate: '2026-10-08'
 topic: saju
 ---
 
-## Introduction: The New Year's Ritual
+import { LectureTable } from "@/components/mdx/LectureVisuals";
 
-In Korea, for centuries, the first few days of the Lunar New Year were marked by a ubiquitous ritual: checking the **Tojeong-bigyeol** (Secrets of Tojeong). While standard Saju (Four Pillars) is a complex study requiring years of expertise, Tojeong-bigyeol was designed to be the "Saju of the People"—a simplified, poetic guide to the upcoming year that any scholar could calculate for their neighbors.
+## An annual fortune text, not an agricultural almanac
 
-But behind the predictions of wealth or travel lies a profound philosophy of **Social Harmony** and **Agricultural Wisdom**.
+Tojeong-bigyeol (土亭秘訣) is a Korean text used to consult an individual’s fortunes for the coming year. The [Academy of Korean Studies entry on the text](https://encykorea.aks.ac.kr/Article/E0059207) describes personal annual fortune reading. This is different from an agricultural or weather calendar and from a validated prediction model.
 
----
+This article introduces the history and calculation structure described by institutional sources. It does not compare a complete historical edition or calculate your personal combination. Please do not treat it as evidence of fortune-telling efficacy, prevention of misfortune, or improved health.
 
-## 1. The Author: Lee Ji-ham (The Mud-Hut Scholar)
+## Attribution to Yi Ji-ham is not confirmed authorship
 
-The book is attributed to **Lee Ji-ham** (1517–1578), a brilliant Joseon scholar who lived a legendary and eccentric life. His pen name, "Tojeong," literally means "Mud Hut," referring to the small earth dwelling he lived in to demonstrate his solidarity with the poor.
+The [biographical entry on Yi Ji-ham](https://encykorea.aks.ac.kr/Article/E0046084) identifies him as a Joseon figure, 李之菡, who lived from 1517 to 1578. It connects his pen name Tojeong (土亭) with an earthen-walled dwelling by the river in Mapo. His biography alone cannot establish why this book was written or when it took shape.
 
-Lee Ji-ham was not just a mystic; he was a social reformer and a pioneer of commerce. He saw that the common people were often exploited by predatory fortune-tellers or crushed by the "fatalism" of bad luck. He wrote Tojeong-bigyeol as a way to provide hope and practical "cautionary advice" to help the masses survive the harsh economic and political climate of the 16th century.
+The entry on the book says it is uncertain whether he wrote it himself or whether his name was used as an attribution. It also notes that the text is absent from Tojeong yugo, his collected writings. We therefore do not assert that he personally wrote it in the sixteenth century to protect ordinary people from fraudulent fortune-tellers. A tradition of attribution is not the same as confirmed authorship.
 
----
+The institutional explanations were checked directly; the earliest Joseon edition or an autograph manuscript was not. An exact date of composition remains unverified here.
 
-## 2. Technical Difference: Only Three Pillars
+## New Year personal fortunes are not agricultural divination
 
-The most striking technical feature of Tojeong-bigyeol is that it uses only **Three Pillars** (Year, Month, and Day) instead of the standard Four. It ignores the Hour of birth.
+The [entry on seasonal customs](https://encykorea.aks.ac.kr/Article/E0029819) discusses consulting personal fortunes early in the year. The book entry suggests that this became an established seasonal custom from the time of King Jeongjo onward. That is the entry’s historical estimate, not a verified date of first circulation.
 
-- **Why?**: In the 16th century, most commoners didn't have access to mechanical clocks and didn't know their exact birth hour. By eliminating the hour, Lee Ji-ham made the wisdom of Saju accessible to everyone, regardless of their social standing.
-- **The Numbers**: It uses a mathematical formula to generate a 3-digit number (e.g., 124), which corresponds to one of 144 poetic verses that describe the year's character.
+It does not establish an identical ritual in every household on New Year’s morning, unchanged for centuries. Asking about a person’s fortunes and divining a harvest also concern different subjects.
 
----
+<LectureTable title="Related but distinct concepts" headers={["Concept", "Subject", "Distinction here"]} rows={[
+  ["Tojeong-bigyeol", "An individual’s fortunes for a year", "A traditional fortune text"],
+  ["Four Pillars", "Birth year, month, day, and hour", "Not simply Four Pillars with the hour removed"],
+  ["Agricultural or weather calendar", "Farming schedules or weather information", "Not an established function of this text"]
+]} />
 
-## 3. Metaphorical Survival Guide
+## The three numbers also depend on the year and calendar
 
-Tojeong-bigyeol is written in beautiful, often cryptic, Tang Dynasty-style poetry. To understand it, you must read between the lines.
+The book entry describes selecting a combination through upper, middle, and lower numbers. Not using the birth hour does not mean the birth date alone supplies every input. The year being consulted, age, the length of the birth month in that year, and numbers associated with calendrical stem–branch terms enter the procedure.
 
-- **"Do not plant seeds in January"**: This sounds like a prediction of failure, but it is actually **Farming Wisdom**. It tells the reader to wait for the proper season, advising patience and preparation over hasty action.
-- **"Helpful people will come from the South"**: This encourages the reader to be open to new social connections and to look beyond their local village for opportunities.
-- **"Watch out for Water"**: This might mean avoiding a literal flood, but psychologically, it advises the person to manage their emotions and not be "swept away" by impulsive feelings.
+<LectureTable title="Selection structure described by the AKS entry" headers={["Position", "Information added", "Divisor"]} rows={[
+  ["Upper", "Age + that year’s taese number", "8"],
+  ["Middle", "Length of the birth month that year (29 or 30 days) + wolgeon number", "6"],
+  ["Lower", "Birthday number + iljin number", "3"]
+]} />
 
----
+The entry describes adding the two inputs at each position and taking the remainder after division by the stated number. This table summarizes the institutional explanation; it is not an executable specification. If the three number ranges contain 8, 6, and 3 choices, the arithmetic relationship is 8 × 6 × 3 = 144 combinations.
 
-## 4. The Philosophy of "Caution" (Gyeong-gye)
+The source reviewed here does not settle how zero remainders are replaced by 8, 6, or 3; leap-month handling; a birthday on day 30; the definition of age; or the precise calendrical number tables. A working calculator would first need a stated edition and calendar rules. We do not fill those gaps to produce a personal result.
 
-The ultimate goal of Tojeong-bigyeol is not to predict a static future, but to instill a mindset of **"Gyeong-gye"** (Caution and Vigilance).
+## Keep the text’s phrases separate from modern advice
 
-If the prediction is **Good**, it serves as positive reinforcement to work harder. If the prediction is **Bad**, it serves as a "pre-emptive strike" against disaster. By knowing that June might be a "difficult month," a person becomes more careful with their money and more patient with their family, thereby **preventing** the very misfortune they feared.
+The book entry describes monthly readings as three phrases of four characters each. Quotation marks can imply a historical quotation when its edition, combination, and month have not been checked. We therefore do not present the earlier seed, southern-helper, or water-warning examples as verified original passages.
 
-## Modern Interpretation for the Urban Soul
+A modern reader may use a phrase to reflect on a plan. That does not establish the author’s intention or prove that the reading prevents misfortune. Studies of Western astrology or birth dates and personality also do not directly test Tojeong-bigyeol.
 
-Even in a digital society, the rhythms of the earth still affect us.
+## Read the culture; check decisions against other evidence
 
-- **The Vernal Core**: When Tojeong-bigyeol speaks of "Spring," think of it as the launch phase of your career.
-- **The Winter Storage**: When it speaks of "Storing," think of it as a time for data collection and mental health rest.
+It can help to separate three questions: what wording is transmitted, whether its source and edition are known, and what factual information a current decision requires.
 
-## Wrapping Up: A Compass, Not a Map
+For example, if a reading prompts you to review spending, you can examine your budget and contract terms. This is an everyday editorial example, not a demonstrated effect of the text. Base health, borrowing, investment, and safety decisions on relevant facts and professional help, not on a fortune combination.
 
-Tojeong-bigyeol persists today because it represents the **"Kindness of the Universe."** It reminds us that even if we are facing a lean year, a harvest is always coming if we follow the rhythm. It is a compass that helps you navigate the 12 months, not a map that dictates every step.
+## Sources checked and remaining limits
 
-Next time you look at your Tojeong-bigyeol for the year, don't ask "What will happen to me?" Instead, ask **"How should I move with the seasons?"** By aligning your will with the cosmic climate, you become the master of your own "Bigyeol" (Secret).
+- [AKS: Tojeong-bigyeol](https://encykorea.aks.ac.kr/Article/E0059207): attribution, selection procedure, and New Year custom explanations.
+- [AKS: Yi Ji-ham](https://encykorea.aks.ac.kr/Article/E0046084): name, life dates, and biographical account of the pen name.
+- [AKS: Seasonal customs](https://encykorea.aks.ac.kr/Article/E0029819): the section on early-year personal fortune customs.
 
-## References
-
-The meanings of the stems, branches, five phases, ten gods, and auspicious or inauspicious stars follow the classical Four Pillars texts below. Controlled studies that tested whether birth timing predicts personality or fate (in Western astrology and birth-date research) found no effect.
-
-- 徐升 編. 《淵海子平》 (송대).
-- 萬民英. 《三命通會》 (명대, 16세기).
-- 沈孝瞻. 《子平真詮》 (청대, 18세기).
-- 任鐵樵 注. 《滴天髓闡微》 (청대, 19세기).
-- 한국학중앙연구원. 『한국민족문화대백과사전』 '사주' 항목. https://encykorea.aks.ac.kr/
-- Carlson, S. (1985). A double-blind test of astrology. *Nature*, 318, 419–425.
-- Hartmann, P., Reuter, M., & Nyborg, H. (2006). The relationship between date of birth and individual differences in personality and general intelligence: A large-scale study. *Personality and Individual Differences*, 40(7), 1349–1362.
-- 『토정비결』 (이지함 저로 전함, 조선 후기 유통).
+Checked on 8 October 2026. Institutional commentary is not direct examination of the Joseon primary text. Confirmed authorship, an earliest edition, detailed calendar rules, and validity in predicting personal fortunes are not established here.

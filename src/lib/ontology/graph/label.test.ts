@@ -18,6 +18,28 @@ describe("resolveNodeLabel", () => {
     }
   });
 
+  it("resolves ontology recommendation card copy in every active locale", async () => {
+    expect(await resolveNodeLabel("ko", "recommendations.cards.matchLabel")).toBe("맞음");
+    expect(await resolveNodeLabel("ko", "recommendations.cards.categories.science")).toBe("과학");
+    expect(await resolveNodeLabel("ko", "recommendations.science.dopamine_fast.title")).toBe("도파민 휴식");
+    const keys = [
+      "recommendations.cards.why",
+      "recommendations.cards.explore",
+      "recommendations.cards.reasonTemplate",
+      "recommendations.cards.reasonFallback",
+      "recommendations.cards.categories.career",
+      "recommendations.cards.sources.riasec",
+      "recommendations.science.dopamine_fast.title",
+    ];
+    for (const locale of ["ko", "en", "ja", "zh", "fr", "es"]) {
+      for (const key of keys) {
+        const label = await resolveNodeLabel(locale, key);
+        expect(label, `${locale} ${key}`).toBeTruthy();
+        expect(label, `${locale} ${key}`).not.toContain("recommendations.");
+      }
+    }
+  });
+
   it("returns undefined for an unknown namespace", async () => {
     expect(await resolveNodeLabel("ko", "does-not-exist.foo")).toBeUndefined();
   });

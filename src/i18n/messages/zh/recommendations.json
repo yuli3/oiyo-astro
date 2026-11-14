@@ -1,0 +1,91 @@
+{
+  "cards": {
+    "sectionTitle": "为你挑选",
+    "sectionSubtitle": "根据目前收集的信号选出来的",
+    "matchLabel": "匹配",
+    "why": "为什么是这个",
+    "explore": "接着看",
+    "emptyTitle": "暂时还没有推荐",
+    "emptyDescription": "保存出生日期或完成一项测试后，就会打开个性化推荐。",
+    "reasonTemplate": "根据{signals}选的",
+    "reasonFallback": "从关系图里靠近的一项选的",
+    "categories": {
+      "career": "职业",
+      "hobby": "爱好",
+      "psychology": "心理",
+      "mythology": "神话",
+      "science": "科学",
+      "spirituality": "精神"
+    },
+    "sources": {
+      "big5": "大五人格",
+      "mbti": "MBTI",
+      "riasec": "兴趣",
+      "saju": "四柱",
+      "tci": "气质",
+      "zodiac": "星座"
+    }
+  },
+  "career": {
+    "global_leader": {
+      "title": "带领别人的工作",
+      "description": "和大家一起定方向的角色。",
+      "reasoning": "和聚人、带人的信号相符。"
+    },
+    "strategic_planner": {
+      "title": "制定策略的工作",
+      "description": "看全局、再拆成步骤的角色。",
+      "reasoning": "和计划和视野的信号相符。"
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "冥想",
+      "description": "把呼吸放稳、让心情沉下来的时间。",
+      "reasoning": "和把兴奋冷却下来的信号相符。"
+    },
+    "hiking": {
+      "title": "步行和登山",
+      "description": "在外面活动、看风景的时间。",
+      "reasoning": "和户外、用身体的信号相符。"
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "阴影工作",
+      "description": "把不太想看的那一面慢慢看清楚的练习。",
+      "reasoning": "和向内看的信号相符。"
+    },
+    "inner_child": {
+      "title": "内在小孩",
+      "description": "温和地再遇见留下来的情绪。",
+      "reasoning": "和谨慎、留意情绪的信号相符。"
+    }
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "英雄之旅",
+      "description": "离开、遇到考验、再带着目的回来的故事框架。",
+      "reasoning": "和挑战、立意的信号相符。"
+    },
+    "trickster_archetype": {
+      "title": "捣蛋者",
+      "description": "摇动边界、另开一条路的故事类型。",
+      "reasoning": "和越界、重新编排的信号相符。"
+    }
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "多巴胺休息",
+      "description": "先把刺激调低一会儿，再回到手头事情上的练习。",
+      "reasoning": "寻求新鲜的信号指向先把刺激空一空。"
+    }
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "顺着流走",
+      "description": "不硬推，先读情境纹理的练习。",
+      "reasoning": "和读流向、而不是硬推的信号相符。"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "note": "Sound slots for the online sanctuary. The slot list lives in src/components/sanctuary/sounds.ts; add a file here and set that slot's `file` to fill an empty slot.",
+  "license": "Pixabay Content License: free to use inside the site and videos, no attribution required; do not offer the audio files themselves for download.",
+  "files": [
+    { "file": "stream.mp3", "source": "Pixabay 'water stream' (id 108384)", "edit": "31 s loop cut, crossfaded ends, +10 dB", "added": "2026-11-12" },
+    { "file": "firewood.mp3", "source": "Pixabay 'fireplace loop original noise' (id 178209, king_of_the_christmas)", "edit": "31 s loop cut, crossfaded ends, +5 dB", "added": "2026-11-12" },
+    { "file": "chant-placeholder.mp3", "source": "Pixabay 'buddhist like singing' (id 63340, freesound_community)", "edit": "46 s loop cut, +22 dB; played far away (low-pass + echo) in the browser", "placeholder": "Stand-in until a real Heart Sutra (반야심경) chanting recording is supplied", "added": "2026-11-12" },
+    { "file": "moktak-synth.mp3", "source": "Synthesized by OIYO (numpy), not a recording", "added": "2026-11-12" }
+  ]
+}

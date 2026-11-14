@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import France1789 from "../../components/tools/past-life/France1789";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  fr: {
+    title: "Qui étiez-vous en 1789 ? Clergé, noblesse ou tiers état",
+    description: "Tirez votre place dans la France de 1789 selon les effectifs estimés par Georges Lefebvre : clergé, noblesse, bourgeoisie, paysans ou artisans. Serez-vous député aux États généraux du 5 mai ?",
+    heading: "Qui étiez-vous en 1789 ?",
+    sub: "Royaume de France, à la veille de la Révolution",
+    intro: "Sur environ 27 millions de Français, moins de 100 000 étaient prêtres et environ 400 000 nobles. Le tirage suit ces proportions, puis décide si vous siégez aux États généraux et raconte votre 14 juillet.",
+    howTitle: "Les données utilisées",
+    how: [
+      "Ordres : effectifs de Georges Lefebvre (The Coming of the French Revolution) : clergé ≤ 100 000, noblesse ~400 000, bourgeoisie ~2 millions, paysans ~80 % de la population. Artisans et ouvriers des villes = reste calculé (2,9 millions).",
+      "États généraux : 302 députés du clergé, 289 de la noblesse et 611 du tiers état élus pour l'ouverture du 5 mai 1789 à Versailles. Votre chance d'en être dépend de votre ordre ; le tiers utilise un même taux pour tous ses groupes.",
+      "Le 14 juillet : une courte scène par groupe, fondée sur le déroulé général de la journée (renvoi de Necker le 11, fusils pris aux Invalides, prise de la Bastille), puis la Grande Peur et la nuit du 4 août.",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [
+      { q: "Quelle part de la population était noble en 1789 ?", a: "Environ 400 000 personnes sur 27 millions selon Lefebvre, soit à peu près 1 sur 68." },
+      { q: "Combien de députés aux États généraux ?", a: "1 219 élus : 302 du clergé, 289 de la noblesse et 611 du tiers état ; 1 208 ont effectivement siégé." },
+      { q: "Les chiffres sont-ils exacts ?", a: "Ce sont des estimations d'historiens ; il n'existait pas de recensement national en 1789." },
+    ],
+  },
+  ko: {
+    title: "1789년 프랑스의 나 — 성직자·귀족·제3신분 중 어디?",
+    description: "프랑스 혁명 직전 1789년, Lefebvre가 추정한 신분별 인구로 내 자리를 뽑아요. 5월 5일 베르사유 삼부회 대표가 될지, 7월 14일 하루는 어땠을지.",
+    heading: "1789년 프랑스의 나",
+    sub: "혁명 전야의 프랑스 왕국",
+    intro: "약 2,700만 명 중 성직자는 10만 명이 안 됐고 귀족은 약 40만 명이었어요. 그 비율대로 뽑은 뒤, 삼부회 대표가 됐는지와 7월 14일 하루를 보여줘요.",
+    howTitle: "어떤 자료로 뽑나요",
+    how: [
+      "신분: 역사가 조르주 르페브르의 추정(성직자 10만 이하, 귀족 약 40만, 부르주아 약 200만, 농민 약 80%). 도시 장인·노동자는 남은 수(약 290만)를 계산했어요.",
+      "삼부회: 1789년 5월 5일 베르사유 개회 때 선출 대표는 성직자 302·귀족 289·제3신분 611명이에요.",
+      "7월 14일: 그날의 일반적인 흐름(11일 네케르 해임, 앵발리드 무기 탈취, 바스티유 함락)을 바탕으로 쓴 짧은 장면이에요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "1789년 프랑스에 귀족은 얼마나 있었나요?", a: "르페브르 추정으로 약 40만 명, 전체 2,700만 명 중 약 68명에 1명이에요." },
+      { q: "숫자는 정확한가요?", a: "당시 전국 인구조사가 없어 역사가의 추정치예요." },
+    ],
+  },
+  en: {
+    title: "Who were you in 1789 France? Clergy, nobility or Third Estate",
+    description: "Draw your place in France on the eve of the Revolution from Georges Lefebvre's estimates, see whether you sat in the Estates-General on 5 May, and live your 14 July.",
+    heading: "You in France, 1789",
+    sub: "The kingdom on the eve of the Revolution",
+    intro: "Of about 27 million people, fewer than 100,000 were clergy and about 400,000 nobles. The draw follows those shares, then decides whether you were a deputy and tells your 14 July.",
+    howTitle: "What the draw uses",
+    how: [
+      "Estates: Georges Lefebvre's estimates (clergy ≤100k, nobles ~400k, bourgeois ~2M, peasants ~80%); town artisans and workers are the computed remainder (~2.9M).",
+      "Estates-General: 302 clergy, 289 noble and 611 Third Estate deputies were elected for the opening at Versailles on 5 May 1789.",
+      "14 July: a short scene per group based on the general course of the day.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "How many nobles were there in 1789?", a: "About 400,000 of 27 million by Lefebvre's estimate, roughly 1 in 68." },
+      { q: "Are the numbers exact?", a: "They are historians' estimates; there was no national census in 1789." },
+    ],
+  },
+  ja: {
+    title: "1789年フランスのわたし — 聖職者・貴族・第三身分",
+    description: "革命前夜1789年のフランスで、ルフェーヴルの推計による身分別人口からあなたの立場を引きます。",
+    heading: "1789年フランスのわたし",
+    sub: "革命前夜のフランス王国",
+    intro: "約2,700万人のうち聖職者は10万人未満、貴族は約40万人。その比率で引き、三部会の代表になれたかと7月14日の一日を見せます。",
+    howTitle: "使うデータ",
+    how: [
+      "身分：ルフェーヴルの推計（聖職者10万以下、貴族約40万、ブルジョワ約200万、農民約80%）。都市の職人・労働者は残りの計算値。",
+      "三部会：1789年5月5日開会時の選出代表は聖職者302・貴族289・第三身分611人。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [{ q: "数字は正確？", a: "当時は全国調査がなく、歴史家の推計です。" }],
+  },
+  zh: {
+    title: "1789年法国的我 — 教士、贵族还是第三等级",
+    description: "按勒费弗尔估计的各等级人口，抽取你在大革命前夜法国的身份。",
+    heading: "1789年法国的我",
+    sub: "大革命前夜的法兰西王国",
+    intro: "约2700万人中教士不到10万，贵族约40万。按此比例抽取，再看你是否当选三级会议代表，以及你的7月14日。",
+    howTitle: "使用的资料",
+    how: [
+      "等级：勒费弗尔的估计（教士不超过10万，贵族约40万，资产阶级约200万，农民约80%），城市工匠与工人为剩余计算值。",
+      "三级会议：1789年5月5日开幕时当选代表为教士302、贵族289、第三等级611人。",
+    ],
+    faqTitle: "常见问题",
+    faq: [{ q: "数字准确吗？", a: "当时没有全国人口普查，这是历史学家的估计。" }],
+  },
+  es: {
+    title: "¿Quién eras en la Francia de 1789? Clero, nobleza o tercer estado",
+    description: "Sortea tu lugar en la Francia de vísperas de la Revolución según las estimaciones de Georges Lefebvre.",
+    heading: "Tú en Francia, 1789",
+    sub: "El reino en vísperas de la Revolución",
+    intro: "De unos 27 millones, menos de 100 000 eran clérigos y unos 400 000 nobles. El sorteo sigue esas proporciones y decide si fuiste diputado y cómo fue tu 14 de julio.",
+    howTitle: "Datos usados",
+    how: [
+      "Estados: estimaciones de Lefebvre (clero ≤100 000, nobleza ~400 000, burguesía ~2 M, campesinos ~80 %); los trabajadores urbanos son el resto calculado.",
+      "Estados Generales: 302 diputados del clero, 289 nobles y 611 del tercer estado en la apertura del 5 de mayo de 1789.",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Son exactas las cifras?", a: "Son estimaciones de historiadores; no hubo censo nacional en 1789." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/france-1789/")} ogImage="/images/past-life-1426/og/france.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><France1789 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["europe1426", "sillaGolpum", "usBirthState"]} current="france1789" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

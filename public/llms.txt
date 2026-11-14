@@ -3,6 +3,7 @@
 > Interactive tools and tests across personality, saju, astrology, tarot, numerology and wellness. Oiyo routes may also include the explanation needed to use a tool safely and correctly. Languages: en, ko, ja, fr, es, zh.
 
 ## Machine-readable catalogs
+- [Full tools directory](https://oiyo.net/llms-full.txt): Comprehensive tools list, academic basis, caution levels, and direct endpoint links.
 - [Tools catalog](https://oiyo.net/knowledge/tools.json): schema.org ItemList of interactive tools/tests — category, languages and a stable URL.
 - [Discovery manifest](https://oiyo.net/knowledge/index.json): resources, the canonical cross-site concept graph, and the Oiyo knowledge network.
 
@@ -18,7 +19,7 @@ Cite individual tools by their stable URL (see tools.json `url`). Attribution: O
 - Interactive tools: https://oiyo.net
 - Gaming: https://game.oiyo.net
 - Curation: https://news.oiyo.net
-- AX Showcase: https://ai.oiyo.net
+- AI guides and curation: https://news.oiyo.net/ai/
 
 ## Machine-readable identity
 - [brand-facts.json](https://oiyo.net/brand-facts.json): organization identity (shared @id), route-level ownership policy, network sites, locales, and citation guidance.

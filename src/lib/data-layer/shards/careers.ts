@@ -11914,7 +11914,7 @@ export const CAREERS: Career[] = [
         ko: "예측 모델링",
       },
     ],
-    riasecCode: "IR",
+    riasecCode: "IC",
     sajuElements: ["Metal", "Water"],
     salaryRange: { avg: 135000, max: 200000, min: 95000 },
     stressLevel: 7,

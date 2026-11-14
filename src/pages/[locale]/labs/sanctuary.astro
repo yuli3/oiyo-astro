@@ -1,0 +1,21 @@
+---
+import '../../../styles/global.css';
+import { LOCALES, type Locale } from '../../../i18n';
+import Sanctuary from '../../../components/sanctuary/Sanctuary';
+import { sanctuaryCopy } from '../../../components/sanctuary/copy';
+export function getStaticPaths() { return LOCALES.map(locale=>({params:{locale}})); }
+const {locale}=Astro.params as {locale:Locale};
+const t=sanctuaryCopy[locale];
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content={t.lead} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{t.title} · OIYO</title>
+  </head>
+  <body><Sanctuary locale={locale} client:load /></body>
+</html>

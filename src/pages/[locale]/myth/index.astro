@@ -1,0 +1,175 @@
+---
+/**
+ * 신화 도감 허브. 2026-11-09 세운 결재(발굴 1번). 신화 인물 글 100편은 검색 노출이 가장
+ * 넓은 묶음인데 서로 이어 주는 목록이 사전 글 한 편뿐이었다. 신화별로 묶고 수호신 찾기로 잇는다.
+ * 글을 새로 쓰지 않고 각 글의 제목·요약을 그대로 쓴다.
+ */
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { LOCALES, type Locale } from '../../../i18n';
+import { ARCHETYPES, GUARDIANS, PANTHEONS, mythNameFromTitle } from '../../../lib/myth-guardian';
+import { guardianLabels } from '../../../components/tools/myth/MythGuardianTest';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const TOPICS = ['greek-myth', 'norse-myth', 'egyptian-myth', 'korean-myth'] as const;
+type Topic = (typeof TOPICS)[number];
+
+interface Copy { tableTitle: string; tableLead: string; title: string; description: string; eyebrow: string; h1: string; lead: string; cta: string; ctaNote: string; dictionary: string; topic: Record<Topic, string>; count: (n: number) => string }
+
+const C: Record<Locale, Copy> = {
+  ko: {
+    tableTitle: '다섯 성향 × 네 신화', tableLead: '같은 성향의 신이 신화마다 누구인지 한 표로 봐요. 수호신 찾기의 결과 20명이에요.',
+    title: '신화 도감 — 그리스·북유럽·이집트·한국 신화 인물 100',
+    description: '그리스·북유럽·이집트·한국 신화 인물 100명을 신화별로 모았어요. 상징과 원형을 읽고, 나의 수호신도 찾아보세요.',
+    eyebrow: '신화 도감', h1: '신화 도감',
+    lead: '네 신화에서 25명씩, 100명의 신과 영웅을 모았어요. 이름을 누르면 그 인물의 상징과 이야기를 읽을 수 있어요.',
+    cta: '🛡️ 나의 수호신 찾기', ctaNote: '7문항으로 네 신화 20명 가운데 나와 닮은 신을 찾아요',
+    dictionary: '신화 인물 사전 한 장으로 보기',
+    topic: { 'greek-myth': '그리스 신화', 'norse-myth': '북유럽 신화', 'egyptian-myth': '이집트 신화', 'korean-myth': '한국 신화' },
+    count: (n) => `${n}명`,
+  },
+  en: {
+    tableTitle: 'Five types × four mythologies', tableLead: 'Who plays the same role in each mythology, in one table. These are the 20 results of the guardian quiz.',
+    title: 'Myth Guide — 100 Figures from Greek, Norse, Egyptian & Korean Mythology',
+    description: '100 gods and heroes from Greek, Norse, Egyptian and Korean myth, grouped by mythology. Read their symbols and archetypes, then find your guardian.',
+    eyebrow: 'Myth guide', h1: 'Myth Guide',
+    lead: 'Twenty-five figures from each of four mythologies, 100 in all. Tap a name to read that figure’s symbols and story.',
+    cta: '🛡️ Find your guardian deity', ctaNote: 'Seven questions match you with one of 20 figures',
+    dictionary: 'See the whole dictionary on one page',
+    topic: { 'greek-myth': 'Greek mythology', 'norse-myth': 'Norse mythology', 'egyptian-myth': 'Egyptian mythology', 'korean-myth': 'Korean mythology' },
+    count: (n) => `${n} figures`,
+  },
+  ja: {
+    tableTitle: '5つのタイプ × 4つの神話', tableLead: '同じタイプの神が神話ごとに誰なのかを一つの表で。守護神診断の結果20人です。',
+    title: '神話図鑑 — ギリシャ・北欧・エジプト・韓国神話の人物100',
+    description: 'ギリシャ・北欧・エジプト・韓国神話の神々と英雄100人を神話ごとにまとめました。象徴と元型を読み、あなたの守護神も探してみましょう。',
+    eyebrow: '神話図鑑', h1: '神話図鑑',
+    lead: '4つの神話から25人ずつ、100人の神と英雄を集めました。名前を押すと、その人物の象徴と物語が読めます。',
+    cta: '🛡️ あなたの守護神診断', ctaNote: '7問で20人の中からあなたに似た神を探します',
+    dictionary: '神話人物辞典を1ページで見る',
+    topic: { 'greek-myth': 'ギリシャ神話', 'norse-myth': '北欧神話', 'egyptian-myth': 'エジプト神話', 'korean-myth': '韓国神話' },
+    count: (n) => `${n}人`,
+  },
+  zh: {
+    tableTitle: '五种类型 × 四大神话', tableLead: '同一类型的神在各神话中是谁，一表看清。即守护神测验的20种结果。',
+    title: '神话图鉴 — 希腊、北欧、埃及、韩国神话人物100',
+    description: '按神话整理希腊、北欧、埃及、韩国神话的100位神祇与英雄。阅读他们的象征与原型，也来找找你的守护神。',
+    eyebrow: '神话图鉴', h1: '神话图鉴',
+    lead: '四大神话各25位，共100位神祇与英雄。点名字即可阅读该人物的象征与故事。',
+    cta: '🛡️ 寻找你的守护神', ctaNote: '7道题从20位人物中找出与你相似的神',
+    dictionary: '一页看完神话人物词典',
+    topic: { 'greek-myth': '希腊神话', 'norse-myth': '北欧神话', 'egyptian-myth': '埃及神话', 'korean-myth': '韩国神话' },
+    count: (n) => `${n}位`,
+  },
+  fr: {
+    tableTitle: 'Cinq types × quatre mythologies', tableLead: 'Qui tient le même rôle dans chaque mythologie, en un tableau. Ce sont les 20 résultats du quiz.',
+    title: 'Guide des mythes — 100 figures grecques, nordiques, égyptiennes et coréennes',
+    description: '100 dieux et héros des mythes grecs, nordiques, égyptiens et coréens, classés par mythologie. Lisez leurs symboles et trouvez votre gardien.',
+    eyebrow: 'Guide des mythes', h1: 'Guide des mythes',
+    lead: 'Vingt-cinq figures pour chacune des quatre mythologies, 100 en tout. Touchez un nom pour lire ses symboles et son histoire.',
+    cta: '🛡️ Trouvez votre divinité gardienne', ctaNote: 'Sept questions vous associent à l’une des 20 figures',
+    dictionary: 'Voir tout le dictionnaire sur une page',
+    topic: { 'greek-myth': 'Mythologie grecque', 'norse-myth': 'Mythologie nordique', 'egyptian-myth': 'Mythologie égyptienne', 'korean-myth': 'Mythologie coréenne' },
+    count: (n) => `${n} figures`,
+  },
+  es: {
+    tableTitle: 'Cinco tipos × cuatro mitologías', tableLead: 'Quién ocupa el mismo papel en cada mitología, en una tabla. Son los 20 resultados del test.',
+    title: 'Guía de mitos — 100 figuras griegas, nórdicas, egipcias y coreanas',
+    description: '100 dioses y héroes de los mitos griegos, nórdicos, egipcios y coreanos, agrupados por mitología. Lee sus símbolos y descubre tu guardián.',
+    eyebrow: 'Guía de mitos', h1: 'Guía de mitos',
+    lead: 'Veinticinco figuras de cada una de cuatro mitologías, 100 en total. Toca un nombre para leer sus símbolos y su historia.',
+    cta: '🛡️ Descubre tu deidad guardiana', ctaNote: 'Siete preguntas te emparejan con una de 20 figuras',
+    dictionary: 'Ver todo el diccionario en una página',
+    topic: { 'greek-myth': 'Mitología griega', 'norse-myth': 'Mitología nórdica', 'egyptian-myth': 'Mitología egipcia', 'korean-myth': 'Mitología coreana' },
+    count: (n) => `${n} figuras`,
+  },
+};
+
+const c = C[locale];
+const entries = await getCollection('articles', (e) => e.data.locale === locale);
+const items = entries
+  .map((e) => ({ slug: e.id.split('/').pop()!.replace(/\.mdx$/, ''), data: e.data }))
+  .filter((e) => e.slug.startsWith('meaning-of-myth-'));
+const groups = TOPICS.map((topic) => ({
+  topic,
+  figures: items
+    .filter((e) => e.data.topic === topic)
+    .map((e) => ({ href: `/${locale}/${e.slug}/`, name: mythNameFromTitle(e.data.title), description: e.data.description }))
+    .sort((a, b) => a.name.localeCompare(b.name, locale)),
+})).filter((g) => g.figures.length > 0);
+const labels = guardianLabels(locale);
+const shortName = (id: string) => {
+  const e = items.find((x) => x.slug === `meaning-of-myth-${id}`);
+  return e ? mythNameFromTitle(e.data.title).replace(/\s*\(.*\)$/, '') : id;
+};
+const dictionary = items.find((e) => e.slug === 'meaning-of-myth-dictionary');
+---
+<Layout title={c.title} description={c.description} locale={locale}>
+  <section class="mx-auto max-w-3xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">{c.eyebrow}</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">{c.h1}</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">{c.lead}</p>
+
+    <a href={`/${locale}/myth/guardian/`} class="mt-6 flex min-h-16 flex-col justify-center rounded-2xl border border-primary/40 bg-card px-5 py-4 hover:border-primary">
+      <span class="text-lg font-black text-foreground">{c.cta}</span>
+      <span class="mt-1 text-sm text-muted-foreground">{c.ctaNote}</span>
+    </a>
+
+    <section class="mt-8">
+      <h2 class="text-2xl font-black">{c.tableTitle}</h2>
+      <p class="mt-2 text-sm leading-6 text-muted-foreground">{c.tableLead}</p>
+      <table class="mt-4 w-full table-fixed border-collapse text-xs">
+        <thead>
+          <tr>
+            <th class="w-1/5 p-1"></th>
+            {PANTHEONS.map((p) => <th class="p-1 text-center font-bold text-muted-foreground">{labels.pantheon[p]}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {ARCHETYPES.map((a) => (
+            <tr class="border-t border-border">
+              <th class="p-1 text-left font-bold text-foreground">{labels.archetype[a].name}</th>
+              {PANTHEONS.map((p) => (
+                <td class="p-1 text-center">
+                  <a href={`/${locale}/meaning-of-myth-${GUARDIANS[a][p]}/`} class="flex min-h-11 items-center justify-center rounded-lg bg-surface-subtle px-1 font-semibold text-foreground hover:text-primary">{shortName(GUARDIANS[a][p])}</a>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <nav class="mt-6 flex flex-wrap gap-2" aria-label={c.h1}>
+      {groups.map((g) => (
+        <a href={`#${g.topic}`} class="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-4 text-sm font-bold hover:border-primary/50">{c.topic[g.topic]}</a>
+      ))}
+    </nav>
+
+    {groups.map((g) => (
+      <section id={g.topic} class="mt-10 scroll-mt-20">
+        <h2 class="text-2xl font-black">{c.topic[g.topic]} <span class="text-base font-bold text-muted-foreground">· {c.count(g.figures.length)}</span></h2>
+        <ul class="mt-4 grid gap-2 sm:grid-cols-2">
+          {g.figures.map((f) => (
+            <li>
+              <a href={f.href} class="flex h-full flex-col rounded-xl border border-border bg-card px-4 py-3 hover:border-primary/50">
+                <span class="font-bold text-foreground">{f.name}</span>
+                <span class="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">{f.description}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    {dictionary && (
+      <p class="mt-10">
+        <a href={`/${locale}/meaning-of-myth-dictionary/`} class="inline-flex min-h-11 items-center rounded-xl border border-border bg-card px-4 font-bold hover:border-primary/50">📖 {c.dictionary}</a>
+      </p>
+    )}
+  </section>
+</Layout>

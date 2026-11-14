@@ -537,7 +537,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
     <img
       src={people.length === 0 ? "/images/oiyo-imagegen/hero/invite-empty-orbit.webp" : "/images/oiyo-imagegen/hero/group-circle-orbit.webp"}
       alt="" width={1200} height={675} decoding="async"
-      className="mb-6 block h-auto max-h-56 w-full rounded-2xl border border-green-100 object-cover"
+      className="mb-6 block h-auto max-h-56 w-full rounded-2xl border border-border object-cover"
     />
     <header className="text-center">
       <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">{copy.title}</h1>

@@ -1,0 +1,91 @@
+{
+  "cards": {
+    "sectionTitle": "Para ti",
+    "sectionSubtitle": "Elegido a partir de las señales reunidas hasta ahora",
+    "matchLabel": "Coincidencia",
+    "why": "Por qué esta pista",
+    "explore": "Ver después",
+    "emptyTitle": "Aún no hay recomendaciones",
+    "emptyDescription": "Guarda tu fecha de nacimiento o completa un test para abrir sugerencias.",
+    "reasonTemplate": "Elegido a partir de {signals}",
+    "reasonFallback": "Elegido entre lo que está cerca en el mapa de relaciones",
+    "categories": {
+      "career": "Oficio",
+      "hobby": "Afición",
+      "psychology": "Psicología",
+      "mythology": "Mito",
+      "science": "Ciencia",
+      "spirituality": "Espiritualidad"
+    },
+    "sources": {
+      "big5": "Big Five",
+      "mbti": "MBTI",
+      "riasec": "Intereses",
+      "saju": "Cuatro pilares",
+      "tci": "Temperamento",
+      "zodiac": "Zodiaco"
+    }
+  },
+  "career": {
+    "global_leader": {
+      "title": "Guiar a otras personas",
+      "description": "Un papel que marca la dirección junto con los demás.",
+      "reasoning": "Encaja con señales de reunir y guiar personas."
+    },
+    "strategic_planner": {
+      "title": "Trazar la estrategia",
+      "description": "Un papel que ve el conjunto y lo parte en pasos.",
+      "reasoning": "Encaja con señales de planificación y de mirada amplia."
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "Meditación",
+      "description": "Un rato para acompasar la respiración y asentar la mente.",
+      "reasoning": "Encaja con señales de bajar la excitación."
+    },
+    "hiking": {
+      "title": "Caminar y hacer senderismo",
+      "description": "Tiempo fuera, moviéndose y mirando el paisaje.",
+      "reasoning": "Encaja con señales del exterior y del cuerpo."
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "Trabajo con la sombra",
+      "description": "Un ejercicio para mirar con calma el lado que se suele evitar.",
+      "reasoning": "Encaja con señales de mirar hacia dentro."
+    },
+    "inner_child": {
+      "title": "Niño interior",
+      "description": "Un rato para volver a encontrar, con cuidado, una emoción antigua.",
+      "reasoning": "Encaja con señales de cautela y de atención a las emociones."
+    }
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "El viaje del héroe",
+      "description": "Una forma de relato: salir, encontrarse con una prueba y volver con un propósito.",
+      "reasoning": "Encaja con señales de desafío y de propósito."
+    },
+    "trickster_archetype": {
+      "title": "Trickster",
+      "description": "Un tipo de relato que sacude un límite y abre otro camino.",
+      "reasoning": "Encaja con señales de cruzar líneas y reordenar."
+    }
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "Pausa de dopamina",
+      "description": "Un ejercicio para bajar los estímulos un rato y volver a lo que estabas haciendo.",
+      "reasoning": "La búsqueda de novedad apunta a dejar los estímulos en pausa."
+    }
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "Seguir la corriente",
+      "description": "Un ejercicio para leer el grano de una situación en lugar de forzarla.",
+      "reasoning": "Encaja con señales de leer el flujo en vez de empujar."
+    }
+  }
+}

@@ -1,0 +1,67 @@
+---
+locale: zh
+title: 社会认同（Social Proof）
+author: Antigravity
+tags:
+  - psychology
+  - influence
+  - marketing
+  - behavior
+description: "区分信息性与规范性影响，了解如何解读从众实验和酒店毛巾实验的条件与数据，避免混淆。"
+pubDate: '2024-12-21'
+topic: social
+---
+
+import ExperimentComparison from '../../../components/mdx/ExperimentComparison.astro';
+
+## 阿希从众实验（Asch Conformity Experiments）
+
+1951 年，所罗门·阿希（Solomon Asch）进行了一系列实验，揭示了从众的惊人力量。他让被试看一条线段，然后从三条参照线中选出长度相同的一条。正确答案一目了然。
+然而，被试被安排与 7 名事先约定好要说出*错误*答案的实验助手同处一室。
+
+
+约75%的参与者至少一次跟随多数人的错误答案，不等于所有回答中有75%错误。参与者的动机包括怀疑自己的判断等，不能断言所有人都为避免被排斥而明知故答错。
+
+[Asch (1955), PDF](https://pdodds.w3.uvm.edu/files/papers/others/1955/asch1955a.pdf)
+
+## 信息性影响与规范性影响
+
+社会认同通过两条截然不同的认知路径发挥作用。
+
+1.  **信息性社会影响（Informational Social Influence）**：“他们一定知道我不知道的事。”这发生在情境模糊的时候（例如在陌生城市选餐馆）。如果 A 餐馆坐满了人而 B 空空荡荡，我们就会认为 A 更好。这是一种寻找正确答案的启发式。
+2.  **规范性社会影响（Normative Social Influence）**：“我想被喜欢，想被接纳。”即使情境一目了然，比如阿希实验那样，它也会发生。我们为了避免被嘲笑或被排斥而从众。
+
+## 酒店毛巾实验：区分提示与结果
+
+Goldstein、Cialdini和Griskevicius（2008）在酒店比较了毛巾重复使用提示。提示中的“75%的住客”是提供的规范信息，并不是该实验观察到的重复使用率。
+
+| 实验 | 提示条件 | 观察到的重复使用率 |
+| --- | --- | --- |
+| 1 | 环保提示 | 35.1% |
+| 1 | 一般住客规范 | 44.1% |
+| 2 | 环保提示 | 37.2% |
+| 2 | 同一客房住客规范 | 49.3% |
+
+实验1的差异为9.0个百分点。不能把实验2的同房条件与实验1的环保条件直接比较。研究观察的是至少入住两晚的客人，在首次有机会参与的那天，是否把至少一条毛巾挂在指定位置，而不是整个住宿期间的参与率。结果不保证对所有酒店或行为都有同样效果。
+
+<ExperimentComparison locale="zh" title="分别比较两项实验" note="展开各项即可比较。所有刻度均为0~100%。两项实验条件不同，请勿混用基准值。" experiments={[
+  { label: "实验1", baseline: 35.1, outcome: 44.1, baselineLabel: "环保倡议", outcomeLabel: "一般住客规范", differenceLabel: "差值（百分点）" },
+  { label: "实验2", baseline: 37.2, outcome: 49.3, baselineLabel: "环保倡议", outcomeLabel: "同一房间住客规范", differenceLabel: "差值（百分点）" }
+]} />
+
+[Goldstein et al. (2008), PDF](https://www.influenceatwork.com/wp-content/uploads/2012/08/article08222012.pdf)
+
+## 维特效应（The Werther Effect）
+
+世界卫生组织（WHO）指出，涉及自杀的报道方式及其重复、曝光程度，可能影响脆弱人群的风险。这被称为自杀传染（suicide contagion）或维特效应。不过，个人行为无法仅用社会认同来解释；公共卫生建议的核心在于：煽情或反复的报道、对方法的具体描写以及美化，都可能提高风险。反之，展示康复与求助可能性的负责任传播，则可能起到保护作用。
+
+> **如果你需要帮助：** 如果你有自伤或自杀的念头，请不要独自硬撑，立即联系当地的紧急服务或心理危机援助热线。
+
+> **核心启示：** 人会从他人的行为中获取判断线索，但媒体和内容创作者在处理危险话题时必须考虑其影响。社会影响不是完全决定我们的命令，而是可以有意识地加以审视的环境线索。
+
+## 主要来源
+
+- Solomon E. Asch. [Studies of Independence and Conformity](https://doi.org/10.1037/h0093718) (1956).
+- Goldstein, Cialdini, and Griskevicius. [A Room with a Viewpoint](https://doi.org/10.1086/586910) (2008).
+- World Health Organization. [Preventing suicide: a resource for media professionals, update 2023](https://www.who.int/publications/i/item/9789240076846).
+- U.S. Centers for Disease Control and Prevention. [Recommendations for Reporting on Suicide](https://stacks.cdc.gov/view/cdc/22163).

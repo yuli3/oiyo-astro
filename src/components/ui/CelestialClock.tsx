@@ -5,7 +5,7 @@ import type { Locale } from '../../i18n'
    Computes the subsolar point and related astronomical data
    used in 명리학/사주 as seasonal/qi indicators.              */
 
-function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string; jieqiName: Record<string, string> } {
+export function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string; jieqiName: Record<string, string> } {
   const JD = date.getTime() / 86400000 + 2440587.5
   const T = (JD - 2451545.0) / 36525
   const L0 = (280.46646 + T * (36000.76983 + T * 0.0003032)) % 360
@@ -24,15 +24,13 @@ function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string
   const uth = date.getUTCHours() + date.getUTCMinutes() / 60
   let lon = ((12 - uth) * 15 + 540) % 360 - 180
 
-  // Solar longitude (ecliptic) → 절기 (24 solar terms)
+  // Solar longitude (ecliptic) → 절기 (24 solar terms).
+  // 황경 0°는 춘분이고 15°마다 다음 절기다. 표는 반드시 춘분에서 시작한다.
+  // 2026-10-07 이전에는 표가 소한(285°)에서 시작해 모든 날짜가 105° 어긋났다
+  // (10월 7일에 추분 대신 소서를 표시).
   const solarLon = ((lambda % 360) + 360) % 360
   const jieqiIndex = Math.floor(solarLon / 15) % 24
   const jieqiNames: Record<string, string>[] = [
-    { ko: '소한', en: 'Minor Cold', ja: '小寒', zh: '小寒' },
-    { ko: '대한', en: 'Major Cold', ja: '大寒', zh: '大寒' },
-    { ko: '입춘', en: 'Start of Spring', ja: '立春', zh: '立春' },
-    { ko: '우수', en: 'Rain Water', ja: '雨水', zh: '雨水' },
-    { ko: '경칩', en: 'Awakening of Insects', ja: '啓蟄', zh: '惊蛰' },
     { ko: '춘분', en: 'Spring Equinox', ja: '春分', zh: '春分' },
     { ko: '청명', en: 'Clear and Bright', ja: '清明', zh: '清明' },
     { ko: '곡우', en: 'Grain Rain', ja: '穀雨', zh: '谷雨' },
@@ -52,6 +50,11 @@ function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string
     { ko: '소설', en: 'Minor Snow', ja: '小雪', zh: '小雪' },
     { ko: '대설', en: 'Major Snow', ja: '大雪', zh: '大雪' },
     { ko: '동지', en: 'Winter Solstice', ja: '冬至', zh: '冬至' },
+    { ko: '소한', en: 'Minor Cold', ja: '小寒', zh: '小寒' },
+    { ko: '대한', en: 'Major Cold', ja: '大寒', zh: '大寒' },
+    { ko: '입춘', en: 'Start of Spring', ja: '立春', zh: '立春' },
+    { ko: '우수', en: 'Rain Water', ja: '雨水', zh: '雨水' },
+    { ko: '경칩', en: 'Awakening of Insects', ja: '啓蟄', zh: '惊蛰' },
   ]
 
   return {
@@ -92,9 +95,12 @@ const LABELS: Record<string, Record<string, string>> = {
   subtitle: { ko: '명리학의 근간인 절기와 천체 위치를 실시간으로 확인해요', en: 'Real-time solar term and celestial position — the astronomical foundation of BaZi', ja: '四柱推命の基盤となる節気と天体位置をリアルタイムで確認', zh: '实时查看四柱命理基础的节气与天体位置' },
   solarTerm: { ko: '현재 절기', en: 'Current Solar Term', ja: '現在の節気', zh: '当前节气' },
   lunarPhase: { ko: '달의 위상', en: 'Lunar Phase', ja: '月の位相', zh: '月相' },
-  solarLon: { ko: '태양 황경', en: 'Solar Longitude', ja: '太陽黄経', zh: '太阳黄经' },
+  // 화면에 찍는 값은 황경이 아니라 태양 직하점의 지리 경도다(시각에 따라 하루에 한 바퀴 돈다).
+  // 2026-10-07 이전에는 '태양 황경'이라고 적혀 있었다.
+  solarLon: { ko: '태양 직하점 경도', en: 'Sub-solar Longitude', ja: '太陽直下点経度', zh: '日下点经度' },
   subLat: { ko: '태양 직하점 위도', en: 'Sub-solar Latitude', ja: '太陽直下点緯度', zh: '日下点纬度' },
-  note: { ko: '절기는 사주 해석의 기준이 돼요. 새 절기가 시작되면 연주·월주가 바뀌어요.', en: 'Solar terms are the foundation of BaZi interpretation. A new term shifts the Year and Month Pillars.', ja: '節気は四柱推命の解釈基準です。新しい節気が始まると年柱・月柱が変わります。', zh: '节气是八字解读的基础。每逢节气交替，年柱和月柱随之改变。' },
+  // 24절기마다 기둥이 바뀌는 것이 아니다. 월주는 열두 절(節)에서, 연주는 입춘에서 바뀐다.
+  note: { ko: '절기는 사주 해석의 기준이 돼요. 월주는 입춘·경칩·청명처럼 달을 여는 열두 절에서 바뀌고, 연주는 입춘에 바뀌어요.', en: 'Solar terms are the reference for BaZi. The Month Pillar changes at the twelve terms that open a month, such as Start of Spring and Awakening of Insects, and the Year Pillar changes at Start of Spring.', ja: '節気は四柱推命の基準です。月柱は立春・啓蟄・清明のように月を開く十二の節で変わり、年柱は立春で変わります。', zh: '节气是八字解读的基准。月柱在立春、惊蛰、清明这类开启月份的十二个节交替，年柱在立春交替。' },
   yangPhase: { ko: '양기 고조', en: 'Yang Peak', ja: '陽気最盛', zh: '阳气最盛' },
   yinPhase: { ko: '음기 고조', en: 'Yin Peak', ja: '陰気最盛', zh: '阴气最盛' },
   qiBalance: { ko: '음양 균형', en: 'Yin-Yang Balance', ja: '陰陽バランス', zh: '阴阳平衡' },

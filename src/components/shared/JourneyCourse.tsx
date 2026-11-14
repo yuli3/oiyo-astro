@@ -54,9 +54,9 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
   const pct = steps.length ? Math.round((count / steps.length) * 100) : 0;
 
   return (
-    <div className="mt-6 rounded-2xl border border-green-200 bg-green-50/50 p-5">
+    <div className="mt-6 rounded-2xl border border-border bg-green-50/50 p-5">
       <div className="flex items-center justify-between gap-2">
-        <p className="text-[11px] font-black uppercase tracking-widest text-green-700">{t.heading}</p>
+        <p className="text-[11px] font-black uppercase tracking-widest text-primary">{t.heading}</p>
         <span className="text-xs font-bold text-green-500">{t.progress(count, steps.length)}</span>
       </div>
       <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-green-100" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
@@ -89,7 +89,7 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
         })}
       </ul>
       {loaded && count === steps.length && steps.length > 0 && (
-        <p className="mt-4 text-sm font-bold text-green-700">{t.complete}</p>
+        <p className="mt-4 text-sm font-bold text-primary">{t.complete}</p>
       )}
       {count > 0 && (
         <button

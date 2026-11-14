@@ -39,14 +39,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['전혀 아니다', '거의 아니다', '보통이다', '대체로 그렇다', '매우 그렇다'],
     restart: '다시 하기',
     share: '결과 공유',
-    shareMsg: '나의 호기심 점수는',
-    yourScore: '나의 호기심 점수',
-    overallLabel: '종합 호기심',
-    stretchLabel: '탐색·자극 추구',
+    shareMsg: '호기심 활동의 응답 평균은',
+    yourScore: '이번 응답의 평균',
+    overallLabel: '전체 응답 평균',
+    stretchLabel: '탐색',
     embraceLabel: '불확실성 수용',
     outOf: '/ 5.0',
-    tipsLabel: '성장 팁',
-    note: '카쉬단(Kashdan)의 호기심·탐구 척도(CEI-II) 개념을 바탕으로 한 자가성찰용 테스트예요. 전문적 진단을 대체하지 않아요.',
+    tipsLabel: '원하면 시도해 볼 제안',
+    note: 'OIYO 자체 14문항 자가성찰 활동이에요. 개념을 참고한 CEI-II 원척도는 10문항이며 이 활동과 달라요. 점수·유형은 임상 기준이나 인구 순위가 아니에요. 언어별 타당도는 확인되지 않았고, 아래 제안도 효과가 검증된 훈련은 아니에요. 불편하거나 위험한 경험을 할 필요는 없어요.',
   },
   en: {
     title: 'Curiosity Test',
@@ -55,14 +55,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['Not at all', 'Hardly', 'Neutral', 'Mostly', 'Very much'],
     restart: 'Retake',
     share: 'Share Result',
-    shareMsg: 'My curiosity score is',
-    yourScore: 'Your Curiosity Score',
-    overallLabel: 'Overall Curiosity',
+    shareMsg: 'My response average in the curiosity activity is',
+    yourScore: 'Your response average',
+    overallLabel: 'Overall response average',
     stretchLabel: 'Stretching (seeking)',
     embraceLabel: 'Embracing uncertainty',
     outOf: '/ 5.0',
-    tipsLabel: 'Growth Tips',
-    note: "This self-reflection test is based on Kashdan's Curiosity and Exploration Inventory (CEI-II) concept. It does not replace professional assessment.",
+    tipsLabel: 'Optional things to try',
+    note: 'This is an original OIYO 14-question reflection activity, not the original 10-item CEI-II that inspired it. Scores and types are not clinical thresholds or population rankings. Language-specific validity is unconfirmed, and the suggestions are not validated training. You do not need to seek uncomfortable or unsafe experiences.',
   },
   ja: {
     title: '好奇心テスト',
@@ -71,14 +71,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['全くない', 'ほとんどない', '普通', 'だいたいそう', 'とてもそう'],
     restart: 'もう一度',
     share: '結果を共有',
-    shareMsg: '私の好奇心スコアは',
-    yourScore: 'あなたの好奇心スコア',
-    overallLabel: '総合好奇心',
-    stretchLabel: '探索・刺激追求',
+    shareMsg: '好奇心の活動での回答の平均は',
+    yourScore: '今回の回答の平均',
+    overallLabel: '全回答の平均',
+    stretchLabel: '探索',
     embraceLabel: '不確実性の受容',
     outOf: '/ 5.0',
-    tipsLabel: '成長のヒント',
-    note: 'このテストはKashdanの好奇心・探究尺度（CEI-II）の概念に基づく自己省察用です。専門的な診断の代替ではありません。',
+    tipsLabel: '希望する場合の提案',
+    note: 'OIYO独自の14問による自己省察の活動です。参考にした原尺度CEI-IIは10項目で、この活動とは異なります。得点やタイプは臨床基準や人口内の順位ではありません。言語別の妥当性は未確認で、提案も効果が検証された訓練ではありません。不快な経験や危険な経験をする必要はありません。',
   },
   zh: {
     title: '好奇心测验',
@@ -87,14 +87,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['完全不是', '几乎不是', '一般', '大致是', '非常是'],
     restart: '重新测验',
     share: '分享结果',
-    shareMsg: '我的好奇心分数是',
-    yourScore: '我的好奇心分数',
-    overallLabel: '综合好奇心',
+    shareMsg: '我在好奇心活动中的回答平均分是',
+    yourScore: '本次回答的平均分',
+    overallLabel: '全部回答平均分',
     stretchLabel: '探索与求新',
     embraceLabel: '对不确定的接纳',
     outOf: '/ 5.0',
-    tipsLabel: '成长建议',
-    note: '本测验参考 Kashdan 的好奇与探索量表（CEI-II）概念，用于自我省思，不能替代专业评估。',
+    tipsLabel: '可自由选择的建议',
+    note: '这是OIYO自编的14题反思活动，不是作为概念参考的10题CEI-II原量表。分数与类型不是临床标准或人群排名，各语言版本的效度尚未确认。建议也不是效果已验证的训练，无需尝试令人不适或危险的体验。',
   },
   fr: {
     title: 'Test de curiosité',
@@ -103,14 +103,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['Pas du tout', 'Presque pas', 'Neutre', 'Plutôt oui', 'Tout à fait'],
     restart: 'Recommencer',
     share: 'Partager le résultat',
-    shareMsg: 'Mon score de curiosité',
-    yourScore: 'Votre score de curiosité',
-    overallLabel: 'Curiosité globale',
+    shareMsg: 'La moyenne de mes réponses à l’activité de curiosité',
+    yourScore: 'La moyenne de vos réponses',
+    overallLabel: 'Moyenne de toutes les réponses',
     stretchLabel: 'Exploration et goût du neuf',
-    embraceLabel: 'Tolérance à l’incertitude',
+    embraceLabel: 'Accueil de l’incertitude',
     outOf: '/ 5.0',
-    tipsLabel: 'Piste de progrès',
-    note: 'Ce test reprend les notions de l’échelle de curiosité et d’exploration (CEI-II) de Kashdan, à des fins de réflexion personnelle. Il ne remplace pas une évaluation professionnelle.',
+    tipsLabel: 'Suggestions facultatives',
+    note: 'Cette activité OIYO de réflexion en 14 questions n’est pas le CEI-II original de 10 items qui l’a inspirée. Scores et types ne sont ni des seuils cliniques ni des rangs dans la population. La validité par langue n’est pas confirmée et les suggestions ne constituent pas un entraînement validé. Vous n’avez pas à rechercher des expériences inconfortables ou dangereuses.',
   },
   es: {
     title: 'Test de curiosidad',
@@ -119,14 +119,14 @@ const LABELS: Record<SupportedLang, {
     scaleLabels: ['Nada', 'Casi nada', 'Neutro', 'Más bien sí', 'Totalmente'],
     restart: 'Repetir',
     share: 'Compartir resultado',
-    shareMsg: 'Mi puntuación de curiosidad',
-    yourScore: 'Tu puntuación de curiosidad',
-    overallLabel: 'Curiosidad global',
+    shareMsg: 'La media de mis respuestas en la actividad de curiosidad',
+    yourScore: 'La media de tus respuestas',
+    overallLabel: 'Media de todas las respuestas',
     stretchLabel: 'Exploración y gusto por lo nuevo',
-    embraceLabel: 'Tolerancia a la incertidumbre',
+    embraceLabel: 'Acogida de la incertidumbre',
     outOf: '/ 5.0',
-    tipsLabel: 'Para crecer',
-    note: 'Este test recoge las ideas de la escala de curiosidad y exploración (CEI-II) de Kashdan, para la reflexión personal. No sustituye una evaluación profesional.',
+    tipsLabel: 'Sugerencias opcionales',
+    note: 'Esta actividad OIYO de reflexión de 14 preguntas no es el CEI-II original de 10 ítems que la inspira. Las puntuaciones y los tipos no son umbrales clínicos ni posiciones en la población. La validez por lengua no está confirmada y las sugerencias no son un entrenamiento validado. No necesitas buscar experiencias incómodas o peligrosas.',
   },
 }
 
@@ -135,7 +135,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     ko: {
       icon: '🪴',
       title: '안정 선호형',
-      description: '익숙하고 안정된 것에서 편안함을 느낍니다. 깊이의 강점이 있으며, 작은 새로움을 더하면 일상이 더 풍부해집니다.',
+      description: '이번 응답에서는 새로움과 불확실성 관련 문장에 동의한 정도가 낮았어요. 깊이·능력·성장 가능성을 평가한 결과는 아니에요.',
       tips: [
         '익숙한 길에 작은 변화 하나를 더해 보세요.',
         '관심 가는 주제를 가볍게 5분 검색해 보세요.',
@@ -145,7 +145,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     en: {
       icon: '🪴',
       title: 'Settled',
-      description: 'You feel comfortable with the familiar and stable. You have the strength of depth; adding small novelty enriches daily life.',
+      description: 'In these responses, agreement with statements about novelty and uncertainty was lower. This does not assess depth, ability, or potential for growth.',
       tips: [
         'Add one small change to a familiar routine.',
         'Lightly spend 5 minutes exploring a topic that interests you.',
@@ -155,7 +155,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     ja: {
       icon: '🪴',
       title: '安定志向型',
-      description: '慣れた安定したものに心地よさを感じます。深さの強みがあり、小さな新しさを加えると日常がより豊かになります。',
+      description: '今回の回答では、新しさや不確実さに関する文への同意が低めでした。深さ、能力、成長の可能性を評価した結果ではありません。',
       tips: [
         '慣れた道に小さな変化を一つ加えてみましょう。',
         '気になる話題を軽く5分調べてみましょう。',
@@ -165,7 +165,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     zh: {
       icon: '🪴',
       title: '偏好安稳型',
-      description: '熟悉而安稳的东西让你舒服。你的长处在「深」，稍微加一点新鲜，日子会更有味道。',
+      description: '本次回答对新事物与不确定性相关陈述的认同程度较低。这并不是对深度、能力或成长潜力的评价。',
       tips: [
         '在走惯的路上加一个小变化。',
         '对感兴趣的题目，轻松查个五分钟。',
@@ -175,7 +175,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '🪴',
       title: 'Attaché à la stabilité',
-      description: 'Le familier et le stable vous mettent à l’aise. Votre force est la profondeur ; un peu de nouveauté rendra le quotidien plus riche.',
+      description: 'Dans ces réponses, votre accord avec les affirmations sur la nouveauté et l’incertitude était plus faible. Ce résultat n’évalue ni votre profondeur, ni vos capacités, ni votre potentiel de développement.',
       tips: [
         'Ajoutez un petit changement sur un chemin déjà connu.',
         'Cherchez cinq minutes, sans effort, sur un sujet qui vous attire.',
@@ -185,7 +185,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     es: {
       icon: '🪴',
       title: 'Prefieres lo estable',
-      description: 'Lo conocido y estable te da comodidad. Tu fuerza es la hondura; con un poco de novedad el día a día gana sabor.',
+      description: 'En estas respuestas, tu acuerdo con las afirmaciones sobre novedad e incertidumbre fue menor. No es una evaluación de tu profundidad, capacidad o potencial de desarrollo.',
       tips: [
         'Añade un cambio pequeño a un camino ya conocido.',
         'Busca cinco minutos, sin esfuerzo, sobre un tema que te atraiga.',
@@ -197,7 +197,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     ko: {
       icon: '🌱',
       title: '균형 호기심형',
-      description: '안정과 탐색 사이에서 균형을 이룹니다. 흥미가 생기면 알아보고, 익숙함도 즐기는 건강한 호기심을 지녔습니다.',
+      description: '이번 응답의 전체 평균은 중간 범위였어요. 두 축의 점수는 서로 다를 수 있으니 따로 살펴보세요. 건강이나 성격의 균형을 판정한 결과는 아니에요.',
       tips: [
         '관심이 깊어지는 주제 하나를 정해 꾸준히 파보세요.',
         '낯선 경험을 한 달에 한 번 의도적으로 시도하세요.',
@@ -207,7 +207,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     en: {
       icon: '🌱',
       title: 'Balanced Curiosity',
-      description: 'You balance stability and exploration. You look into things that interest you while also enjoying the familiar—a healthy curiosity.',
+      description: 'Your overall response average fell in the middle range. The two dimensions may differ, so look at them separately. This does not judge health or a balanced personality.',
       tips: [
         'Pick one topic your interest deepens in and dig steadily.',
         'Intentionally try a new experience once a month.',
@@ -217,7 +217,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     ja: {
       icon: '🌱',
       title: 'バランス好奇心型',
-      description: '安定と探索の間でバランスを取ります。興味が湧けば調べ、慣れも楽しむ健康的な好奇心を持っています。',
+      description: '今回の全回答の平均は中間の範囲でした。2つの側面の得点は異なる場合があるため、別々に見てください。健康や性格のバランスを判定した結果ではありません。',
       tips: [
         '関心が深まる話題を一つ決めて着実に掘りましょう。',
         '月に一度、新しい経験を意図的に試しましょう。',
@@ -227,7 +227,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     zh: {
       icon: '🌱',
       title: '均衡好奇型',
-      description: '你在安稳和探索之间拿捏得不错。有兴趣就去了解，也享受熟悉，属于健康的好奇。',
+      description: '本次全部回答的平均分处于中间范围。两个维度可能不同，请分别查看。这不是对健康状况或性格平衡的判定。',
       tips: [
         '挑一个越挖越有意思的题目，持续挖下去。',
         '每个月刻意安排一次陌生的体验。',
@@ -237,7 +237,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '🌱',
       title: 'Curiosité équilibrée',
-      description: 'Vous tenez la balance entre stabilité et exploration. Quand l’intérêt vient, vous creusez ; le familier vous plaît aussi. C’est une curiosité saine.',
+      description: 'La moyenne de vos réponses se situait dans la plage intermédiaire. Les deux dimensions peuvent différer : regardez-les séparément. Ce résultat ne juge ni votre santé ni l’équilibre de votre personnalité.',
       tips: [
         'Choisissez un sujet qui vous prend et creusez-le dans la durée.',
         'Une fois par mois, tentez volontairement une expérience inconnue.',
@@ -247,7 +247,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     es: {
       icon: '🌱',
       title: 'Curiosidad equilibrada',
-      description: 'Mantienes el equilibrio entre estabilidad y exploración. Cuando algo te interesa, lo miras; y también disfrutas lo conocido. Es una curiosidad sana.',
+      description: 'La media de tus respuestas quedó en el intervalo intermedio. Las dos dimensiones pueden diferir: míralas por separado. El resultado no evalúa tu salud ni el equilibrio de tu personalidad.',
       tips: [
         'Elige un tema que te enganche y escárbalo con constancia.',
         'Una vez al mes, prueba a propósito algo desconocido.',
@@ -259,7 +259,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     ko: {
       icon: '🔭',
       title: '호기심 풍부형',
-      description: '새로운 것을 배우고 탐색하는 데서 강한 즐거움을 느낍니다. 풍부한 호기심이 성장과 창의성의 원천이 됩니다.',
+      description: '이번 응답에서는 새로움과 불확실성 관련 문장에 동의한 정도가 높았어요. 성장·창의성·학습 능력을 예측하는 점수는 아니에요.',
       tips: [
         '넓은 관심을 한두 가지 깊은 탐구로 모아 보세요.',
         '배운 것을 기록·공유해 지식을 자산으로 만드세요.',
@@ -269,7 +269,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     en: {
       icon: '🔭',
       title: 'Highly Curious',
-      description: 'You find strong joy in learning and exploring new things. Rich curiosity becomes a source of growth and creativity.',
+      description: 'In these responses, agreement with statements about novelty and uncertainty was higher. The score does not predict growth, creativity, or learning ability.',
       tips: [
         'Channel broad interests into one or two deep inquiries.',
         'Record and share what you learn to turn knowledge into an asset.',
@@ -279,7 +279,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     ja: {
       icon: '🔭',
       title: '好奇心豊富型',
-      description: '新しいことを学び探索することに強い喜びを感じます。豊かな好奇心が成長と創造性の源になります。',
+      description: '今回の回答では、新しさや不確実さに関する文への同意が高めでした。成長、創造性、学習能力を予測する得点ではありません。',
       tips: [
         '広い関心を一つ二つの深い探究にまとめましょう。',
         '学んだことを記録・共有して知識を資産にしましょう。',
@@ -289,7 +289,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     zh: {
       icon: '🔭',
       title: '好奇心丰富型',
-      description: '学新东西、四处探索，会让你真的快乐。这份好奇是成长和创造的源头。',
+      description: '本次回答对新事物与不确定性相关陈述的认同程度较高。分数不能预测成长、创造力或学习能力。',
       tips: [
         '把宽广的兴趣收拢到一两个深的探究上。',
         '把学到的记下来、讲出去，让知识变成资产。',
@@ -299,7 +299,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     fr: {
       icon: '🔭',
       title: 'Curiosité abondante',
-      description: 'Apprendre et explorer vous procure un vrai plaisir. Cette curiosité nourrit la croissance et la création.',
+      description: 'Dans ces réponses, votre accord avec les affirmations sur la nouveauté et l’incertitude était plus élevé. Le score ne prédit ni le développement, ni la créativité, ni les capacités d’apprentissage.',
       tips: [
         'Rassemblez des intérêts larges en une ou deux explorations profondes.',
         'Notez et partagez ce que vous apprenez : le savoir devient un capital.',
@@ -309,7 +309,7 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     es: {
       icon: '🔭',
       title: 'Curiosidad abundante',
-      description: 'Aprender y explorar te da un placer real. Esa curiosidad alimenta el crecimiento y la creación.',
+      description: 'En estas respuestas, tu acuerdo con las afirmaciones sobre novedad e incertidumbre fue mayor. La puntuación no predice el desarrollo, la creatividad ni la capacidad de aprendizaje.',
       tips: [
         'Reúne intereses amplios en una o dos exploraciones hondas.',
         'Anota y comparte lo que aprendes: el saber se vuelve un capital.',
@@ -321,60 +321,60 @@ const LEVEL_DATA: Record<CuriosityLevel, Record<SupportedLang, LevelData>> = {
     ko: {
       icon: '🚀',
       title: '탐험가형',
-      description: '매우 높은 호기심과 탐구심을 지녔습니다. 불확실함을 가능성으로 받아들이며 끊임없이 새로움을 추구합니다.',
+      description: '이번 응답 평균은 자체 분류의 가장 높은 범위였어요. 실제 행동이나 인구 내 순위를 확인한 결과가 아니라 응답을 요약한 이름이에요.',
       tips: [
         '에너지가 분산되지 않게 핵심 탐구 주제를 정하세요.',
-        '시작한 탐구를 끝까지 완수하는 마무리 근육을 키우세요.',
+        '작게 마칠 수 있는 탐구 하나를 정해 보세요.',
         '발견과 통찰을 글·창작으로 세상과 나눠 보세요.',
       ],
     },
     en: {
       icon: '🚀',
       title: 'Explorer',
-      description: 'You possess very high curiosity and a drive to inquire. You embrace uncertainty as possibility and constantly seek novelty.',
+      description: 'Your response average fell in this activity’s highest category. The label summarizes responses; it does not establish actual behavior or your rank in the population.',
       tips: [
         'Choose a core inquiry so your energy is not scattered.',
-        'Build the finishing muscle to complete the inquiries you start.',
+        'Choose one small inquiry you can finish.',
         'Share your discoveries and insights with the world through writing or creating.',
       ],
     },
     ja: {
       icon: '🚀',
       title: '探検家型',
-      description: '非常に高い好奇心と探究心を持っています。不確実さを可能性として受け入れ、絶えず新しさを追求します。',
+      description: '今回の回答の平均は、この活動独自の分類で最も高い範囲でした。実際の行動や人口内の順位ではなく、回答を要約する名称です。',
       tips: [
         'エネルギーが分散しないよう核心の探究テーマを決めましょう。',
-        '始めた探究を最後までやり遂げる仕上げの筋肉を鍛えましょう。',
+        '小さく区切って終えられる探究を一つ選んでみましょう。',
         '発見や洞察を文章や創作で世界と分かち合いましょう。',
       ],
     },
     zh: {
       icon: '🚀',
       title: '探险家型',
-      description: '你的好奇心和求知欲非常高。你把不确定当成可能性，不断去追新的东西。',
+      description: '本次回答平均分处于本活动自定分类的最高范围。类型名称只是回答的摘要，不证明实际行为或在人群中的排名。',
       tips: [
         '定几个核心的探究主题，别让精力散掉。',
-        '把开了头的探究做完，练练收尾的肌肉。',
+        '可以选一个范围小、能完成的探究问题。',
         '把发现和体会写出来、做出来，分享给世界。',
       ],
     },
     fr: {
       icon: '🚀',
       title: 'Explorateur',
-      description: 'Votre curiosité et votre soif de comprendre sont très élevées. Vous accueillez l’incertitude comme une possibilité et cherchez sans cesse du neuf.',
+      description: 'La moyenne de vos réponses se situait dans la catégorie la plus élevée de cette activité. Ce nom résume les réponses, sans établir votre comportement réel ni votre rang dans la population.',
       tips: [
         'Fixez quelques sujets centraux pour ne pas disperser votre énergie.',
-        'Menez à terme ce que vous commencez : entraînez le muscle de la finition.',
+        'Choisissez une petite question que vous pouvez explorer jusqu’au bout.',
         'Partagez vos découvertes par l’écriture ou la création.',
       ],
     },
     es: {
       icon: '🚀',
       title: 'Explorador',
-      description: 'Tu curiosidad y tus ganas de entender son muy altas. Recibes la incertidumbre como posibilidad y buscas lo nuevo sin parar.',
+      description: 'La media de tus respuestas quedó en la categoría más alta de esta actividad. El nombre resume las respuestas, sin demostrar tu conducta real ni tu posición en la población.',
       tips: [
         'Fija unos pocos temas centrales para no dispersar la energía.',
-        'Termina lo que empiezas: entrena el músculo de cerrar.',
+        'Elige una pregunta pequeña que puedas explorar hasta el final.',
         'Comparte tus hallazgos por escrito o creando algo.',
       ],
     },
@@ -480,6 +480,8 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
   ],
 }
 
+// 2026-10-08: preserve the existing editorial cutoffs and saved-result behavior.
+// They summarize this activity's answers, not validated CEI-II norms or diagnoses.
 function calcLevel(score: number): CuriosityLevel {
   if (score <= 2.5) return 'settled'
   if (score <= 3.5) return 'moderate'

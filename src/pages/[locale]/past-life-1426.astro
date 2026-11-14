@@ -1,0 +1,191 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+import "../../styles/timeslip-film.css";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+type Card = { href: string; emoji: string; title: string; body: string; cta: string };
+type Copy = { title: string; description: string; heading: string; intro: string; cards: Card[]; note: string };
+// Scroll-film copy (2026-11-11). Chapter order follows `cards`: silla, joseon, europe, france, us.
+type Film = { lines: [string, string]; tagA: string; tagB: string; cue: string; eras: string[]; outro: string; listHeading: string };
+
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "600년 전 나는? 조선 관직·유럽 왕좌·미국 출생 주 뽑기",
+    description: "1426년 조선의 관직과 고향, 같은 해 유럽의 왕좌, 그리고 지금 미국에서 태어난다면 어느 주인지. 실제 역사·통계 자료로 따로따로 뽑아요.",
+    heading: "600년 전 나는?",
+    intro: "시대마다 실제 자료로 따로 뽑아요. 신라·조선·유럽·프랑스, 그리고 지금의 미국까지.",
+    cards: [
+      { href: "/ancestors-1426/", emoji: "🌳", title: "600년 전 내 조상은 몇 명?", body: "족보 칸은 2의 거듭제곱으로 불어나지만 그때 사람 수는 정해져 있어요. 그때 사람 몇 명 중 1명이 내 조상인지, 세종의 후손일 확률까지 계산해요.", cta: "조상 세러 가기" },
+      { href: "/silla-golpum/", emoji: "🏛️", title: "1300년 전 신라의 나", body: "8세기 서라벌. 골품과 17관등으로 내 자리를 뽑고, 타고난 그릇이 골품의 벽에 막히는지 보여줘요.", cta: "골품 받으러 가기" },
+      { href: "/joseon-1426/", emoji: "🏯", title: "600년 전 조선의 나", body: "1426년 세종 8년. 경국대전 정원으로 관직을, 세종실록지리지 인구로 고향을 뽑아 호패와 관복으로 보여줘요.", cta: "호패 받으러 가기" },
+      { href: "/europe-1426/", emoji: "👑", title: "600년 전 유럽의 왕좌", body: "같은 해 유럽 30개 나라의 실제 군주 자리 중 하나에 앉아요. 군주 초상과 나와 같은 나이였던 유명인까지.", cta: "왕좌에 앉으러 가기" },
+      { href: "/joseon-1789/", emoji: "📜", title: "1789년 호적 속 나", body: "정조 13년. 실제 호적 비율로 신분·직역·이름·가족을 뽑아 호적 한 줄로 보여줘요. 여자라면 이름이 남았을까요?", cta: "호적 펼치러 가기" },
+      { href: "/france-1789/", emoji: "🇫🇷", title: "1789년 프랑스의 나", body: "혁명 전야. 성직자·귀족·제3신분 중 내 자리와 삼부회 대표가 될 확률, 그리고 7월 14일 하루.", cta: "1789년으로 가기" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "미국에서 태어났다면", body: "지금 미국에서 태어난다면 어느 주일까요? 2024년 주별 출생 수로 뽑고, 그 주에서 가장 흔한 아기 이름도 붙여줘요.", cta: "출생 신고하러 가기" },
+    ],
+    note: "점이 아니라 실제 자료의 비중으로 뽑는 놀이예요. 자료와 한계는 각 페이지 아래에 적었어요.",
+  },
+  en: {
+    title: "Who were you 600 years ago? Joseon office, European throne, US birth state",
+    description: "Your office and province in 1426 Joseon, a European throne in the same year, and the US state you would be born in today, each drawn from real historical and statistical data.",
+    heading: "Who were you 600 years ago?",
+    intro: "Each era is drawn separately from real records: Silla, Joseon, Europe, France and today's US.",
+    cards: [
+      { href: "/ancestors-1426/", emoji: "🌳", title: "How many ancestors in 1426?", body: "Your family tree doubles every generation, but the people of 1426 were finite. See what share of them are your ancestors and when everyone shares one.", cta: "Count your ancestors" },
+      { href: "/silla-golpum/", emoji: "🏛️", title: "You in Silla, 1,300 years ago", body: "8th-century Gyeongju. Your bone rank and court rank under the real ceilings: does your talent hit the wall?", cta: "Receive my bone rank" },
+      { href: "/joseon-1426/", emoji: "🏯", title: "You in Joseon, 1426", body: "Year 8 of King Sejong. Your office by official seat counts and your province by the Sejong Sillok gazetteer, shown on a hopae tag and court robe.", cta: "Get my hopae" },
+      { href: "/europe-1426/", emoji: "👑", title: "Your throne in 1426 Europe", body: "Take one of 30 real European thrones of 1426, with the ruler's portrait and famous people your age that year.", cta: "Take a throne" },
+      { href: "/joseon-1789/", emoji: "📜", title: "You in Joseon's 1789 register", body: "King Jeongjo's 13th year. Status, title, name and family from real register shares, written as one register line. Would a woman's name even be recorded?", cta: "Open the register" },
+      { href: "/france-1789/", emoji: "🇫🇷", title: "You in France, 1789", body: "The eve of the Revolution: clergy, nobility or Third Estate, your odds at the Estates-General, and your 14 July.", cta: "Go to 1789" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "Born in the US today", body: "Which state would you be born in? Drawn by 2024 births per state, with that state's most common baby names.", cta: "Register my birth" },
+    ],
+    note: "Not a fortune: each draw is weighted by real data. Sources and limits are listed on each page.",
+  },
+  ja: {
+    title: "600年前のわたしは？ 朝鮮の官職・欧州の玉座・米国の出生州",
+    description: "1426年朝鮮の官職と故郷、同じ年の欧州の玉座、いま米国で生まれるなら何州か。実データで別々に引きます。",
+    heading: "600年前のわたしは？",
+    intro: "時代ごとに実データで別々に引きます。新羅・朝鮮・欧州・フランス、そしていまの米国。",
+    cards: [
+      { href: "/ancestors-1426/", emoji: "🌳", title: "600年前の祖先は何人？", body: "家系図の枠は世代ごとに倍になるのに、当時の人数は限られています。当時の何人に1人があなたの祖先か計算します。", cta: "祖先を数える" },
+      { href: "/silla-golpum/", emoji: "🏛️", title: "1300年前の新羅のわたし", body: "8世紀の徐羅伐。骨品と17官位で、器が骨品の壁に阻まれるかを見せます。", cta: "骨品を受け取る" },
+      { href: "/joseon-1426/", emoji: "🏯", title: "600年前の朝鮮のわたし", body: "世宗8年。経国大典の定員で官職、世宗実録地理志の人口で故郷を引き、号牌と官服で見せます。", cta: "号牌を受け取る" },
+      { href: "/europe-1426/", emoji: "👑", title: "1426年欧州の玉座", body: "同じ年の欧州30か国の実在の玉座に座ります。君主の肖像と同い年の有名人も。", cta: "玉座に座る" },
+      { href: "/joseon-1789/", emoji: "📜", title: "1789年戸籍の中のわたし", body: "正祖13年。実際の戸籍の比率で身分・職役・名前・家族を引き、戸籍の一行にします。女性なら名前は残ったでしょうか。", cta: "戸籍を開く" },
+      { href: "/france-1789/", emoji: "🇫🇷", title: "1789年フランスのわたし", body: "革命前夜。聖職者・貴族・第三身分のどれか、三部会の代表になれたか、そして7月14日。", cta: "1789年へ行く" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "米国で生まれたら", body: "2024年の州別出生数で州を引き、その州で多い赤ちゃんの名前も付けます。", cta: "出生届を出す" },
+    ],
+    note: "占いではなく実データの比率で引く遊びです。",
+  },
+  zh: {
+    title: "600年前的我是谁？朝鲜官职·欧洲王座·美国出生州",
+    description: "1426年朝鲜的官职与故乡、同年欧洲的王座，以及今天在美国出生会是哪个州，分别用真实资料抽取。",
+    heading: "600年前的我是谁？",
+    intro: "每个时代都按真实资料分别抽取：新罗、朝鲜、欧洲、法国，还有今天的美国。",
+    cards: [
+      { href: "/ancestors-1426/", emoji: "🌳", title: "600年前我有多少祖先？", body: "家谱格子每代翻倍，但当时的人数有限。算一算当时每多少人中就有1人是你的祖先。", cta: "数一数祖先" },
+      { href: "/silla-golpum/", emoji: "🏛️", title: "1300年前新罗的我", body: "8世纪徐罗伐。按骨品和十七官等，看才干是否被骨品之墙挡住。", cta: "领取骨品" },
+      { href: "/joseon-1426/", emoji: "🏯", title: "600年前朝鲜的我", body: "世宗八年。按经国大典编制抽官职、按世宗实录地理志人口抽故乡，用号牌和官服展示。", cta: "领取号牌" },
+      { href: "/europe-1426/", emoji: "👑", title: "1426年欧洲王座", body: "坐上同年欧洲30国中的一个真实王座，附君主肖像和同龄名人。", cta: "登上王座" },
+      { href: "/joseon-1789/", emoji: "📜", title: "1789年户籍里的我", body: "正祖十三年。按真实户籍比例抽取身份、职役、名字与家人，写成户籍里的一行。女性的名字会被记下吗？", cta: "翻开户籍" },
+      { href: "/france-1789/", emoji: "🇫🇷", title: "1789年法国的我", body: "大革命前夜：教士、贵族还是第三等级，能否当选三级会议代表，以及你的7月14日。", cta: "前往1789年" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "如果生在美国", body: "按2024年各州出生数抽州，并配上该州最常见的婴儿名字。", cta: "去报出生" },
+    ],
+    note: "不是占卜，而是按真实资料比重抽取的游戏。",
+  },
+  fr: {
+    title: "Qui étiez-vous il y a 600 ans ? Charge à Joseon, trône européen, État de naissance",
+    description: "Votre charge à Joseon en 1426, un trône européen la même année et l'État américain où vous naîtriez aujourd'hui, tirés séparément de données réelles.",
+    heading: "Qui étiez-vous il y a 600 ans ?",
+    intro: "Chaque époque est tirée à part, d'après de vraies sources : Silla, Joseon, l'Europe, la France de 1789 et les États-Unis d'aujourd'hui.",
+    cards: [
+      { href: "/ancestors-1426/", emoji: "🌳", title: "Combien d'ancêtres en 1426 ?", body: "Votre arbre double à chaque génération, mais les gens de 1426 étaient en nombre fini. Quelle part d'entre eux sont vos ancêtres ?", cta: "Compter mes ancêtres" },
+      { href: "/silla-golpum/", emoji: "🏛️", title: "Vous à Silla il y a 1 300 ans", body: "Gyeongju au VIIIe siècle : votre rang d'os et votre rang de cour, sous les vrais plafonds.", cta: "Recevoir mon rang" },
+      { href: "/joseon-1426/", emoji: "🏯", title: "Vous à Joseon, 1426", body: "Charge selon les effectifs officiels, province selon le registre des Annales de Sejong, sur un hopae et une robe de cour.", cta: "Recevoir mon hopae" },
+      { href: "/europe-1426/", emoji: "👑", title: "Votre trône en 1426", body: "L'un des 30 vrais trônes européens de 1426, avec le portrait du souverain et des célébrités de votre âge.", cta: "Monter sur le trône" },
+      { href: "/joseon-1789/", emoji: "📜", title: "Vous au registre de Joseon, 1789", body: "13e année du roi Jeongjo. Statut, titre, nom et famille d'après de vrais registres, en une ligne. Le prénom d'une femme y figurait-il ?", cta: "Ouvrir le registre" },
+      { href: "/france-1789/", emoji: "🇫🇷", title: "Qui étiez-vous en 1789 ?", body: "À la veille de la Révolution : clergé, noblesse ou tiers état, vos chances aux États généraux et votre 14 juillet.", cta: "Partir en 1789" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "Né aux États-Unis", body: "L'État tiré selon les naissances 2024, avec les prénoms les plus courants de cet État.", cta: "Déclarer ma naissance" },
+    ],
+    note: "Pas une voyance : chaque tirage suit des données réelles.",
+  },
+  es: {
+    title: "¿Quién eras hace 600 años? Cargo en Joseon, trono europeo, estado de nacimiento",
+    description: "Tu cargo en la Joseon de 1426, un trono europeo ese mismo año y el estado de EE. UU. donde nacerías hoy, sorteados por separado con datos reales.",
+    heading: "¿Quién eras hace 600 años?",
+    intro: "Cada época se sortea aparte con datos reales: Silla, Joseon, Europa, Francia y los EE. UU. de hoy.",
+    cards: [
+      { href: "/ancestors-1426/", emoji: "🌳", title: "¿Cuántos antepasados en 1426?", body: "Tu árbol se duplica en cada generación, pero la gente de 1426 era finita. ¿Qué parte de ellos son antepasados tuyos?", cta: "Contar antepasados" },
+      { href: "/silla-golpum/", emoji: "🏛️", title: "Tú en Silla hace 1300 años", body: "Gyeongju en el siglo VIII: tu rango de hueso y de corte bajo los techos reales.", cta: "Recibir mi rango" },
+      { href: "/joseon-1426/", emoji: "🏯", title: "Tú en Joseon, 1426", body: "Cargo según las plazas oficiales y provincia según el registro de los Anales de Sejong, en un hopae y una túnica de corte.", cta: "Recibir mi hopae" },
+      { href: "/europe-1426/", emoji: "👑", title: "Tu trono en 1426", body: "Uno de los 30 tronos europeos reales de 1426, con el retrato del soberano y famosos de tu edad.", cta: "Ocupar el trono" },
+      { href: "/joseon-1789/", emoji: "📜", title: "Tú en el registro de Joseon, 1789", body: "Año 13 del rey Jeongjo. Estatus, título, nombre y familia según registros reales, en una sola línea. ¿Se anotaba el nombre de una mujer?", cta: "Abrir el registro" },
+      { href: "/france-1789/", emoji: "🇫🇷", title: "Tú en Francia, 1789", body: "Vísperas de la Revolución: clero, nobleza o tercer estado, tus opciones en los Estados Generales y tu 14 de julio.", cta: "Ir a 1789" },
+      { href: "/us-birth-state/", emoji: "🗽", title: "Nacido en EE. UU.", body: "El estado según los nacimientos de 2024, con los nombres de bebé más comunes allí.", cta: "Registrar mi nacimiento" },
+    ],
+    note: "No es un horóscopo: cada sorteo sigue datos reales.",
+  },
+};
+const c = copy[locale] ?? copy.en;
+const film: Record<Locale, Film> = {
+  ko: { lines: ["600년 전", "나는?"], tagA: "다섯 시대.", tagB: "다섯 명의 나.", cue: "스크롤", eras: ["8세기 · 서라벌", "1426 · 한양", "1426 · 유럽", "1789 · 파리", "지금 · 미국"], outro: "어느 시대부터 가 볼까요?", listHeading: "다섯 시대 한눈에" },
+  en: { lines: ["Who were you", "600 years ago?"], tagA: "Five eras.", tagB: "Five versions of you.", cue: "Scroll", eras: ["8th century · Gyeongju", "1426 · Hanyang", "1426 · Europe", "1789 · Paris", "Today · USA"], outro: "Which era first?", listHeading: "All five eras" },
+  ja: { lines: ["600年前の", "わたしは？"], tagA: "5つの時代。", tagB: "5人のわたし。", cue: "スクロール", eras: ["8世紀・徐羅伐", "1426・漢陽", "1426・ヨーロッパ", "1789・パリ", "いま・アメリカ"], outro: "どの時代から行きますか？", listHeading: "5つの時代を一覧で" },
+  zh: { lines: ["600年前的", "我是谁？"], tagA: "五个时代。", tagB: "五个我。", cue: "向下滑动", eras: ["8世纪·徐罗伐", "1426·汉阳", "1426·欧洲", "1789·巴黎", "今天·美国"], outro: "先去哪个时代？", listHeading: "五个时代一览" },
+  fr: { lines: ["Qui étiez-vous", "il y a 600 ans ?"], tagA: "Cinq époques.", tagB: "Cinq destins.", cue: "Défiler", eras: ["VIIIe siècle · Gyeongju", "1426 · Hanyang", "1426 · Europe", "1789 · Paris", "Aujourd'hui · États-Unis"], outro: "Par quelle époque commencer ?", listHeading: "Les cinq époques" },
+  es: { lines: ["¿Quién eras", "hace 600 años?"], tagA: "Cinco épocas.", tagB: "Cinco versiones de ti.", cue: "Desliza", eras: ["Siglo VIII · Gyeongju", "1426 · Hanyang", "1426 · Europa", "1789 · París", "Hoy · EE. UU."], outro: "¿Por qué época empiezas?", listHeading: "Las cinco épocas" },
+};
+const f = film[locale] ?? film.en;
+// Big numerals: the century for Silla, the year for the rest, the build year for "today".
+const years = ["VIII", "1426", "1426", "1789", String(new Date().getFullYear())];
+const shots = ["silla", "joseon", "europe", "france", "us"].map((k) => `/images/past-life-1426/og/${k}.webp`);
+---
+
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/past-life-1426/")} ogImage="/images/past-life-1426/og/joseon.webp">
+  <section data-film>
+    <div data-film-intro>
+      <div data-film-intro-inner>
+        <p data-film-eyebrow>OIYO Timeslip</p>
+        <h1 data-route-title>
+          <span data-film-line><span>{f.lines[0]}</span></span>
+          <span data-film-line><span>{f.lines[1]}</span></span>
+        </h1>
+        <p data-film-tagline>{f.tagA} <b>{f.tagB}</b></p>
+        <span data-film-cue aria-hidden="true">{f.cue}<i></i></span>
+      </div>
+    </div>
+    <div data-film-track>
+      <div data-film-stage>
+        {c.cards.map((card, i) => (
+          <article data-film-chapter>
+            <div data-film-media>
+              <img src={shots[i]} alt="" width="1200" height="630" loading={i === 0 ? "eager" : "lazy"} decoding="async" />
+            </div>
+            <div data-film-caption>
+              <p data-film-era>{f.eras[i]}</p>
+              <span data-film-year aria-hidden="true">{years[i]}</span>
+              <h2>{card.title}</h2>
+              <p data-film-body>{card.body}</p>
+              <a data-film-cta href={localePath(locale, card.href)}>{card.cta} <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        ))}
+        <ol data-film-ticks aria-hidden="true">
+          {c.cards.map(() => <li data-film-tick></li>)}
+        </ol>
+      </div>
+    </div>
+    <div data-film-outro><p>{f.outro}</p></div>
+  </section>
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <h2 class="text-2xl font-black tracking-tight text-foreground">{f.listHeading}</h2>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6 grid gap-4">
+      {c.cards.map((card) => (
+        <a href={localePath(locale, card.href)} class="group flex gap-4 rounded-3xl border border-border bg-card p-5 shadow-sm transition hover:shadow-md">
+          <span class="text-5xl" aria-hidden="true">{card.emoji}</span>
+          <span class="block">
+            <span class="block text-xl font-black text-foreground">{card.title}</span>
+            <span class="mt-1 block text-sm leading-relaxed text-muted-foreground">{card.body}</span>
+            <span class="mt-3 inline-block text-sm font-bold text-primary group-hover:underline">{card.cta} →</span>
+          </span>
+        </a>
+      ))}
+    </div>
+    <p class="mt-6 text-sm text-muted-foreground">{c.note}</p>
+    <RelatedTools locale={locale} tools={["reincarnation", "joseon"]} current="pastLife1426" />
+  </div>
+</Layout>
+
+<script>
+  import { mountScrollFilm } from "@/lib/motion/scroll-film";
+  document.querySelectorAll<HTMLElement>("[data-film]").forEach(mountScrollFilm);
+</script>

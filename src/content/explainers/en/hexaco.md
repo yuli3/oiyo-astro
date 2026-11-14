@@ -1,67 +1,73 @@
 ---
 topic: hexaco
 locale: en
-title: "HEXACO: not a sixth factor bolted on, but a redrawn map"
-description: "HEXACO is not the Big Five with Honesty-Humility added. Six factors emerged repeatedly from lexical studies across languages, and its Emotionality and Agreeableness are rotated relative to the Big Five."
-definition: "HEXACO describes personality with six factors: Honesty-Humility, Emotionality, eXtraversion, Agreeableness, Conscientiousness and Openness. It did not add one factor to the Big Five; a six-factor solution recurred in lexical studies."
-updated: 2026-09-03
+title: "HEXACO: six dimensions, different content, and limits on interpretation"
+description: "Compare HEXACO with the Big Five, understand Honesty-Humility without moral labels, and separate official HEXACO-PI-R evidence from OIYO's 60-item activity."
+definition: "HEXACO describes six broad personality dimensions. Its Emotionality and Agreeableness are not interchangeable with similarly named Big Five scores."
+updated: 2026-10-14
 ---
 
-HEXACO is often introduced as "the Big Five plus Honesty-Humility". That is half right. **Nothing was bolted on — the axes were redrawn.**
+**HEXACO** describes personality using Honesty-Humility, Emotionality, eXtraversion, Agreeableness, Conscientiousness and Openness to Experience. It is not simply the Big Five with an extra morality score.
 
-## 1. Where it came from — lexical studies across languages
+The model, the official HEXACO-PI-R instrument, and OIYO's current activity are different things. This page explains the vocabulary and the distinction; it does not certify the OIYO items, translations, score bands or interpretations.
 
-Factor models of personality mostly start from the **lexical hypothesis**: the more important a characteristic is for describing people, the more likely a language has a word for it. So adjectives are collected and factor-analysed.
+## 1. Where the six-factor model comes from
 
-The Big Five was settled largely on English-language material. But when Ashton and Lee analysed lexical data from several languages together — Korean, Italian, Hungarian, Polish, Dutch and others — **a six-factor solution recurred**. What separated out as the sixth was Honesty-Humility.
+The developers' [official history](https://hexaco.org/history) describes an inventory intended to measure six dimensions identified through lexical studies across languages. Lexical studies examine words used to describe personality and how ratings of those words cluster.
 
-What that implies matters. H is not "an item added to score morality"; it is **an axis that fell out of the data**.
+A factor solution is a way of organizing observed variation, not a discovery of six separate organs or six fixed human types. The number and content of factors depend on the material and methods. This guide does not claim that HEXACO has replaced every other model or works identically in every culture.
 
-## 2. E and A are not the same axes as in the Big Five
+## 2. Similar letters do not guarantee the same content
 
-This is the most frequently dropped point. Of the six factors, X, C and O correspond broadly to their Big Five counterparts — but **Emotionality and Agreeableness are rotated relative to Big Five Neuroticism and Agreeableness.**
+The [official scale descriptions](https://hexaco.org/scaledescriptions) explain the domains and their facets. Some distinctions are especially important when comparing questionnaires.
 
-| | Big Five | HEXACO |
+| Topic | HEXACO description | Caution when comparing |
 | --- | --- | --- |
-| Anger, temper | Belongs to Neuroticism | Goes to the low end of **Agreeableness** |
-| Sentimentality, attachment | Partly in Agreeableness | Goes to **Emotionality** |
-| Modesty, fairness | Mixed into Agreeableness | Its own **Honesty-Humility** |
+| Honesty-Humility (H) | Sincerity, fairness, greed avoidance and modesty | Not a certificate of moral character |
+| Emotionality (E) | Fearfulness, anxiety, dependence and sentimentality | Not identical to Big Five Neuroticism |
+| Agreeableness (A) | Forgiveness, gentleness, flexibility and patience | Anger-related content differs from common Big Five arrangements |
+| X, C and O | Extraversion, conscientiousness and openness | Broadly similar labels still do not make scores interchangeable |
 
-So "HEXACO = Big Five + 1" is wrong. Because the material of three factors was re-divided, **a HEXACO Agreeableness score and a Big Five Agreeableness score are not measuring the same thing.**
+For example, concern about danger and a sentimental attachment belong to Emotionality's content, while patience and responses to anger belong to Agreeableness. Adding H to an unchanged Big Five profile would miss these differences.
 
-## 3. What Honesty-Humility predicts
+## 3. Honesty-Humility is not a lie detector
 
-H is less "niceness" than **a low disposition to exploit others for personal gain**. Its facets are sincerity, fairness, greed avoidance and modesty.
+The H facets describe tendencies represented by questionnaire items. They cannot establish that someone is honest, manipulative, exploitative or safe to trust. Self-report answers may also reflect how someone understands the question or wishes to present themselves.
 
-What H has repeatedly predicted:
+Research associations require the actual study, sample, measure and analysis to be examined. A relation between variables in a sample cannot justify announcing that an individual will cheat at work. This guide does not claim that high conscientiousness eliminates risk or that a particular combination of H and A determines behavior.
 
-- **Counterproductive work behaviour** — rule-breaking, dishonesty, exploitative acts
-- A strong negative relationship with the **Dark Triad** (Machiavellianism, narcissism, psychopathy); low H has been proposed as the common core of the three
-- That high Conscientiousness does **not** reduce those risks when H is low
+Do not use OIYO scores to diagnose a personality disorder, select employees, or make a definitive judgment about a partner.
 
-That last point has practical weight. **A conscientious person is not therefore an honest one.** They are different axes, and capable-but-exploitative is an available combination.
+## 4. What OIYO currently calculates
 
-## 4. A and H are different kinds of cooperation
+The current OIYO activity has 60 items, ten per dimension, answered from 1 to 5. For designated reverse-keyed items the calculation uses 6 minus the chosen response. It then divides each dimension's sum by the maximum possible sum and rounds to a percentage.
 
-Both relate to getting along, but they point differently.
+| After any reverse scoring | Sum out of 50 | Displayed value |
+| --- | --- | --- |
+| Ten responses each scored 1 | 10 | 20% |
+| Ten responses each scored 3 | 30 | 60% |
+| Ten responses each scored 5 | 50 | 100% |
 
-- **High A**: forgives and puts up with things even at a cost — **reactive** cooperation
-- **High H**: does not cheat even when cheating would pay — **active** fairness
+These are implementation examples, not HEXACO norms. **60% is not the 60th percentile** or a 60% probability of behaving a certain way. The scale starts at 20%, unlike some other rescaling methods. Do not compare these percentages directly with Big Five or TCI values, even on the same site.
 
-So people high in A and low in H exist, as do people low in A and high in H. The first is patient but will take the opportunity; the second is quick to anger but will not deceive you.
+Item equivalence to an official inventory, translation equivalence, reliability, validity and norm-based interpretation have not been established here. A code comment saying “inspired” or “abridged” is not proof that the activity is an authorized or validated official short form.
 
-## 5. Limits
+## 5. Official materials have their own conditions
 
-- **It is self-report.** H in particular is vulnerable to answering in a socially desirable way. Using self-reported H where something is at stake — hiring, for instance — deserves caution.
-- **The number of factors is not settled fact.** Big Five researchers hold that six-factor solutions depend on how the data are handled. HEXACO is a well-supported alternative, not a replacement consensus.
-- **Scores are not types.** The six axes are continuous dimensions, not boxes to sort people into as MBTI does.
+The developers' [materials for researchers](https://hexaco.org/hexaco-inventory) specify conditions for official HEXACO-PI-R materials, including restrictions on use and public survey collection. They are not an unrestricted public-domain item bank like IPIP.
 
-## References
+The presence of 60 items does not establish that a questionnaire is the official 60-item instrument. This page does not grant permission to reuse official items. OIYO's item provenance and any required permissions need separate review; linking the model description does not resolve that issue.
 
-> **Michael C. Ashton & Kibeom Lee** (2007) *Empirical, theoretical, and practical advantages of the HEXACO model of personality structure*, Personality and Social Psychology Review 11(2) — the model's synthesising argument.
+## 6. Turn the result into a question
 
-> **Michael C. Ashton et al.** (2004) *A six-factor structure of personality-descriptive adjectives: Solutions from psycholexical studies in seven languages*, Journal of Personality and Social Psychology 86(2) — the recurrence of six factors across languages.
+If a response summary suggests patience, recall a disagreement where you listened and another where you became angry. What differed: the stakes, fatigue, the other person's actions, or the way the question was worded?
 
-> **Kibeom Lee & Michael C. Ashton** (2004) *Psychometric properties of the HEXACO Personality Inventory*, Multivariate Behavioral Research 39(2) — measurement properties of the HEXACO-PI.
+This is an editorial reflection example, not a validated exercise. You can reject a description that does not fit, avoid recording anything, and keep the result private. A useful interpretation stays close to the answers and the situation rather than assigning a moral identity.
 
-> **Michael C. Ashton, Kibeom Lee & Reinout E. de Vries** (2014) *The HEXACO Honesty-Humility, Agreeableness, and Emotionality factors: A review of research and theory*, Personality and Social Psychology Review 18(2) — the rotational relationship among H, A and E.
+## Sources and scope
+
+- [HEXACO history](https://hexaco.org/history): the developers' account of the model and inventory.
+- [HEXACO scale descriptions](https://hexaco.org/scaledescriptions): domain and facet content, not an individual diagnosis.
+- [Materials for researchers](https://hexaco.org/hexaco-inventory): conditions for official materials, not validation of OIYO.
+
+The numerical examples describe the current OIYO code. They are not population benchmarks or evidence that its questions reproduce an official inventory.

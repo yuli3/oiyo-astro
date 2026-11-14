@@ -208,10 +208,10 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
         <div className="text-center space-y-2">
           <p className="text-sm text-muted-foreground">{labels.result}</p>
           <h1 className="text-3xl font-black text-foreground">{data.title}</h1>
-          <p className="font-medium text-green-700">{data.subtitle}</p>
+          <p className="font-medium text-primary">{data.subtitle}</p>
           <p className="text-sm text-muted-foreground leading-relaxed">{data.description}</p>
         </div>
-        <div className="rounded-xl border border-green-100 bg-surface-subtle p-5">
+        <div className="rounded-xl border border-border bg-surface-subtle p-5">
           <h2 className="text-sm font-bold text-green-800 mb-3">{labels.actions}</h2>
           <ul className="space-y-2">
             {data.actions.map((action) => <li className="text-sm text-green-900" key={action}>- {action}</li>)}

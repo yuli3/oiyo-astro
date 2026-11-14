@@ -113,7 +113,7 @@ export default function CareerValuesTest({ locale: localeProp }: { locale?: stri
         <div className="flex flex-wrap justify-center gap-2">
           {topGroup.map((id) => <span key={id} className="rounded-full px-4 py-2 font-bold text-white" style={{ backgroundColor: COLORS[id] }}>{copy.dimensions[id].name}</span>)}
         </div>
-        <p className="text-xs text-slate-500">{copy.tieNote}</p>
+        <p className="text-xs text-muted-foreground">{copy.tieNote}</p>
       </header>
 
       <section className="space-y-3 rounded-xl border bg-card p-5">

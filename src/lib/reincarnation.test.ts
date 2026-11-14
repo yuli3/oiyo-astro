@@ -6,10 +6,12 @@ import {
   appendHistory,
   byIso2,
   countriesFromIso2,
+  countryNameRank,
   countryRank,
   countryShare,
   defaultHomeIso2,
   displayCountryName,
+  REINCARNATION_COUNTRIES,
   formatShareIso2,
   oneIn,
   parseHistory,
@@ -44,8 +46,27 @@ describe("reincarnation weights", () => {
     expect(pickMany("births", 0)).toHaveLength(1);
   });
 
-  it("names Korea in Korean via DisplayNames", () => {
+  it("names Korea in Korean from the committed table", () => {
     expect(displayCountryName("KR", "ko", "Korea")).toMatch(/한국|대한민국/);
+  });
+
+  // The build and the browser must print the same strings, so nothing may be left to Intl at render time.
+  it("has a name and a picker position for every country in every locale", () => {
+    for (const locale of ["ko", "en", "ja", "zh", "fr", "es"]) {
+      const ranks = new Set<number>();
+      for (const country of REINCARNATION_COUNTRIES) {
+        expect(displayCountryName(country.iso2, locale, "")).not.toBe("");
+        ranks.add(countryNameRank(country.iso2, locale));
+      }
+      expect(ranks.size).toBe(REINCARNATION_COUNTRIES.length);
+      expect(ranks.has(Number.MAX_SAFE_INTEGER)).toBe(false);
+    }
+  });
+
+  it("falls back for an unknown code or locale", () => {
+    expect(displayCountryName("ZZ", "en", "Nowhere")).toBe("Nowhere");
+    expect(displayCountryName("KR", "xx", "Korea")).toBe("Korea");
+    expect(countryNameRank("ZZ", "en")).toBe(Number.MAX_SAFE_INTEGER);
   });
 
   it("hides the far side of the globe", () => {
@@ -153,5 +174,43 @@ describe("reincarnation weights", () => {
     expect(borders.IND?.length).toBeGreaterThan(0);
     expect(borders.RUS?.length).toBeGreaterThan(0);
     expect(borders.AUS?.[0].length).toBeGreaterThan(8);
+  });
+
+  it("instruments GA4 roll and share events without sending country results or personal inputs", () => {
+    const here = dirname(fileURLToPath(import.meta.url));
+    const countrySrc = readFileSync(resolve(here, "../components/tools/ReincarnationCountry.tsx"), "utf8");
+    const lifeSrc = readFileSync(resolve(here, "../components/tools/ReincarnationLife.tsx"), "utf8");
+    const extract = (src: string) =>
+      [...src.matchAll(/gaEvent\(\s*"([^"]+)"\s*,\s*\{([^}]*)\}\s*\)/g)].map(([, event, body]) => ({
+        event,
+        keys: [...body.matchAll(/([a-zA-Z_]+)\s*(?::|,|$)/g)]
+          .map(([, k]) => k)
+          .filter((k) => !["reincarnation", "country", "reroll", "first", "native", "link", "text", "card", "shared", "copied", "downloaded", "String", "isReroll", "outcome"].includes(k)),
+      }));
+
+    const countryPayloads = extract(countrySrc);
+    const lifePayloads = extract(lifeSrc);
+
+    expect(countryPayloads.map((p) => p.event)).toEqual([
+      "test_started",
+      "test_completed",
+      "share_click",
+      "share_completed",
+      "share_click",
+      "share_completed",
+      "share_click",
+      "share_completed",
+    ]);
+    expect(lifePayloads.map((p) => p.event)).toEqual(["share_click", "share_completed"]);
+
+    const allowedKeys = new Set(["test_id", "mode", "draws", "roll_type", "share_surface", "share_outcome"]);
+    for (const payload of [...countryPayloads, ...lifePayloads]) {
+      for (const key of payload.keys) {
+        expect(allowedKeys.has(key)).toBe(true);
+      }
+      expect(payload.keys).not.toEqual(
+        expect.arrayContaining(["iso2", "iso3", "country", "results", "home", "homeIso2", "name"]),
+      );
+    }
   });
 });

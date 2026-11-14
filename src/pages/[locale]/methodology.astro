@@ -97,17 +97,17 @@ const S = {
 <Layout title={meta.title} description={meta.description} locale={locale}>
   <section class="relative bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
     <div class="max-w-2xl mx-auto">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold mb-4">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-100 text-primary text-xs font-bold mb-4">
         {S.heroBadge}
       </div>
       <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3">{meta.title.split('—')[0].trim()}</h1>
-      <p class="text-green-700 leading-relaxed">{S.intro}</p>
+      <p class="text-primary leading-relaxed">{S.intro}</p>
     </div>
   </section>
 
   <section class="max-w-2xl mx-auto px-4 py-10 space-y-6">
     {S.sections.map((sec) => (
-      <div class="rounded-2xl border-2 border-green-100 bg-card p-6">
+      <div class="rounded-2xl border-2 border-border bg-card p-6">
         <h2 class="mb-3 flex items-center gap-2 text-lg font-black text-foreground">
           <span class="text-2xl" aria-hidden="true">{sec.icon}</span>{sec.title}
         </h2>

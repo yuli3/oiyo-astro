@@ -107,10 +107,10 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
   const q = !done ? COUNTRY_QUESTIONS[step] : null;
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-card p-5">
+    <div className="rounded-2xl border border-border bg-card p-5">
       <h1 className="text-2xl font-bold text-foreground">{u("title")}</h1>
       {!done && step === 0 && (
-        <p className="mt-2 leading-7 text-green-700">{u("intro")}</p>
+        <p className="mt-2 leading-7 text-primary">{u("intro")}</p>
       )}
 
       {/* Quiz */}
@@ -137,7 +137,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                 key={opt.id}
                 type="button"
                 onClick={() => pick(q.id, opt.id)}
-                className="flex w-full items-center gap-3 rounded-xl border border-green-100 bg-green-50/40 px-4 py-3 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-surface-subtle"
+                className="flex w-full items-center gap-3 rounded-xl border border-border bg-green-50/40 px-4 py-3 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-surface-subtle"
               >
                 <span className="text-lg">{opt.emoji}</span>
                 <span>{loc(opt.text as LC, locale)}</span>
@@ -150,7 +150,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
       {/* Result */}
       {done && result && (
         <div className="mt-5 space-y-5">
-          <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4">
+          <div className="rounded-2xl border border-border bg-surface-subtle p-4">
             <p className="text-xs font-semibold text-green-600">
               {u("yourType")}
             </p>
@@ -167,7 +167,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
               {result.topCountries.slice(0, 3).map(({ code, data, match }) => (
                 <div
                   key={code}
-                  className="rounded-2xl border border-green-100 bg-card p-4"
+                  className="rounded-2xl border border-border bg-card p-4"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-foreground">
@@ -178,7 +178,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                       {Math.round(match)}% {u("match")}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm leading-6 text-green-700">
+                  <p className="mt-2 text-sm leading-6 text-primary">
                     {loc(data.vibe as LC, locale)}
                   </p>
                   <div className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -215,7 +215,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
           <button
             type="button"
             onClick={restart}
-            className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-green-700 hover:bg-surface-subtle"
+            className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-primary hover:bg-surface-subtle"
           >
             {u("restart")}
           </button>

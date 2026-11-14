@@ -5,6 +5,7 @@ import type { Locale } from '../../i18n';
 import TestExplainer from '../../components/shared/TestExplainer.astro';
 import { TEST_EXPLAINERS } from '../../data/test-explainers';
 import GrowthMindsetTest from '../../components/tests/GrowthMindsetTest';
+import RelatedArticles from '../../components/shared/RelatedArticles.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -12,12 +13,12 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
-  ko: { title: "성장 마인드셋 테스트 — 고정형인가, 성장형인가?", description: "캐럴 드웩의 마인드셋 이론 기반 10가지 질문으로 나의 마인드셋을 진단하고, 더 나은 성장을 위한 방향을 찾아보세요." },
-  en: { title: "Growth Mindset Test — Fixed or Growth?", description: "Diagnose your mindset with 10 questions based on Carol Dweck's theory and find direction for greater growth." },
-  ja: { title: "成長マインドセットテスト — 固定型か成長型か？", description: "キャロル・ドゥエックの理論に基づく10の質問でマインドセットを診断し、より良い成長への方向を見つけましょう。" },
-  fr: { title: "Test de Mentalité de Croissance — Fixe ou de Croissance?", description: "Diagnostiquez votre mentalité avec 10 questions basées sur la théorie de Carol Dweck." },
-  es: { title: "Test de Mentalidad de Crecimiento — ¿Fija o de Crecimiento?", description: "Diagnostica tu mentalidad con 10 preguntas basadas en la teoría de Carol Dweck." },
-  zh: { title: "成长心态测试 — 固定型还是成长型？", description: "通过基于卡罗尔·德韦克理论的10个问题诊断你的心态。" },
+  ko: { title: "성장 마인드셋 테스트 — 고정형인가, 성장형인가?", description: "스탠퍼드대 캐럴 드웩(Carol Dweck) 교수 이론 기반 성장 마인드셋 10문항 진단. 지능과 능력에 대한 고정 마인드셋과 성장 마인드셋 비율을 정밀 분석하고, 실패 두려움을 극복하는 잠재력 확장 가이드를 무료로 확인하세요." },
+  en: { title: "Growth Mindset Test — Fixed or Growth?", description: "Assess your mindset with Carol Dweck's 10-question test. Measure Fixed vs Growth Mindset and unlock actionable strategies to turn setbacks into personal growth." },
+  ja: { title: "成長マインドセットテスト — 固定型か成長型か？", description: "スタンフォード大学キャロル・ドゥエック教授の理論に基づく10問の自己診断。固定マインドセットと成長マインドセットの比率を精密分析し、失敗への恐れを克服して潜在能力を引き出す指针を無料で確認しましょう。" },
+  fr: { title: "Test de Mentalité de Croissance — Fixe ou de Croissance?", description: "Évaluez votre état d'esprit avec le test de Carol Dweck en 10 questions. Mesurez Mentalité Fixe vs Croissance et transformez les obstacles en apprentissages." },
+  es: { title: "Test de Mentalidad de Crecimiento — ¿Fija o de Crecimiento?", description: "Evalúa tu mentalidad con el test de Carol Dweck en 10 preguntas. Mide Mentalidad Fija vs Crecimiento y convierte los obstáculos en aprendizaje y superación." },
+  zh: { title: "成长心态测试 — 固定型还是成长型？", description: "基于斯坦福大学卡罗尔·德韦克（Carol Dweck）教授理论的10题成长心态专业评估。深入分析固定型与成长型心态比重，精准诊断思维模式，即刻获取突破能力瓶颈并将挫折转化为成长动力的实用指南。" },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 ---
@@ -26,5 +27,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <GrowthMindsetTest locale={locale as any} client:load />
     <TestExplainer content={TEST_EXPLAINERS['growth-mindset']} locale={locale} />
+    <RelatedArticles locale={locale} topic="learning" currentSlug="" limit={4} />
   </div>
 </Layout>

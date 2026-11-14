@@ -1,74 +1,74 @@
 ---
 topic: cognitive-load
 locale: fr
-title: "Charge cognitive : la mémoire de travail est étroite, et une explication doit y passer"
-description: "La théorie de la charge cognitive traite du point où l'apprentissage bute sur les limites de la mémoire de travail. Charge intrinsèque et charge extrinsèque, l'effet d'inversion d'expertise, et pourquoi il ne faut pas la confondre avec les styles d'apprentissage."
-definition: "La charge cognitive est la sollicitation qu'une tâche impose à la mémoire de travail. La théorie de la charge cognitive soutient que le matériel d'apprentissage doit être conçu en fonction des limites de cette mémoire."
-updated: 2026-09-03
+title: "Charge cognitive : contenu, connaissances et conception pédagogique"
+description: "Comparez charges intrinsèque et extrinsèque, effet de problèmes sans but spécifié, attention partagée et redondance. Les choix dépendent de la tâche et des connaissances."
+definition: "La charge cognitive est la sollicitation de la mémoire de travail pendant une tâche. Elle s'examine avec les relations entre éléments, les connaissances et la présentation des informations et activités."
+updated: 2026-10-15
 ---
 
-Deux personnes entendent la même explication ; l'une comprend, l'autre non. On range cela sous **l'intelligence**. La théorie de la charge cognitive regarde ailleurs : **cette explication a-t-elle été construite pour passer par la porte étroite de la mémoire de travail ?**
+Comprendre difficilement une explication ne prouve pas un manque de capacité. Regardez si plusieurs notions inconnues doivent être reliées en même temps, si les informations nécessaires sont dispersées ou si des explications déjà connues demandent des comparaisons inutiles.
 
-## 1. Il y a une porte étroite
+## 1. Les connaissances modifient la sollicitation
 
-La mémoire de travail retient ce que l'on manipule à l'instant, et elle est **très étroite** : peu d'éléments nouveaux à la fois, et ils s'effacent en quelques secondes.
+La mémoire de travail maintient et traite temporairement des informations. Sa capacité et sa durée sont limitées, surtout pour les informations nouvelles. Cela ne signifie pas que chacun traite toujours un nombre fixe d'éléments ou que toute information disparaît après un délai précis.
 
-La mémoire à long terme, elle, est quasi illimitée. Apprendre, c'est donc **faire passer des choses par une porte étroite vers un vaste entrepôt.** C'est là que se tient la théorie de John Sweller.
+La théorie souligne le rôle des connaissances organisées en mémoire à long terme. Une personne expérimentée peut traiter des éléments liés comme une structure de connaissances. Une équation complexe pour un débutant peut devenir une étape familière. Il s'agit de connaissances propres à un domaine, pas d'un test d'intelligence.
 
-Cela explique aussi l'écart entre expert et novice. L'expert tient plusieurs éléments liés en **un seul bloc (un schéma)** en mémoire à long terme : il compte pour un ce que le novice compte pour cinq. La porte ne s'est pas élargie — **la charge a été mise en un seul paquet.**
+## 2. Charges intrinsèque et extrinsèque
 
-## 2. La charge se scinde en deux
+[Sweller, van Merriënboer et Paas (2019)](https://link.springer.com/article/10.1007/s10648-019-09465-5) considèrent ensemble l'interactivité des éléments et les connaissances.
 
-| Type | Ce que c'est | Comment la traiter |
+| Catégorie | Ce qu'elle concerne | Question de conception |
 | --- | --- | --- |
-| Charge intrinsèque | La complexité du contenu ; d'autant plus grande que les éléments interagissent | On ne l'enlève pas. On découpe l'ordre en étapes |
-| Charge extrinsèque | La sollicitation créée par **la manière d'expliquer** | À réduire. Ce qu'on gagne va à l'apprentissage |
+| Intrinsèque | Relations entre éléments à apprendre et connaissances préalables | Modifier le contenu ou apprendre d'abord les prérequis ? |
+| Extrinsèque | Présentation et activités demandées | Réduire recherche, intégration ou répétition inutiles ? |
 
-Le point est là : **la charge extrinsèque est fabriquée par le concepteur et n'a rien à voir avec le contenu** ; on peut donc la supprimer.
+La charge intrinsèque n'est pas une propriété immuable du contenu. La charge extrinsèque n'en est pas totalement indépendante et une nouvelle explication ne l'élimine pas nécessairement.
 
-Manières courantes de la créer :
+La classification de la charge dite germane varie. Dans cette reformulation, elle correspond à l'allocation des ressources aux traitements utiles à l'apprentissage plutôt qu'à une troisième charge additionnelle. Toutes les publications n'emploient pas cette classification.
 
-- **Attention partagée** — le schéma et le texte sont séparés, l'œil doit faire l'aller-retour
-- **Redondance** — le même contenu à l'écrit et à l'oral simultanément, obligeant à comparer
-- **Recherche sans but** — errer sans savoir ce qu'on cherche
+## 3. Des effets aux conditions différentes
 
-*Une troisième catégorie, la « charge germane », a longtemps accompagné les deux autres, mais la distinction a été contestée et Sweller l'a lui-même reformulée. S'en tenir à l'intrinsèque et à l'extrinsèque est aujourd'hui plus clair.*
+| Effet | Condition et direction | Éviter de conclure |
+| --- | --- | --- |
+| Attention partagée | Rapprocher schéma et explication lorsqu'ils doivent être intégrés pour être compris | Toujours combiner images et texte |
+| Redondance | Répéter inutilement des informations compréhensibles seules peut ajouter du traitement | Texte et parole simultanés sont toujours nuisibles |
+| Modalité | Un schéma avec une explication orale nécessaire peut aider | Schéma et texte imprimé séparent canaux visuel et auditif |
+| Exemples résolus | Étudier des solutions peut aider avec peu de connaissances et des éléments complexes | Un débutant ne doit jamais résoudre seul |
 
-## 3. Des prescriptions bien répliquées
+Cette comparaison ne justifie pas de supprimer sous-titres ou alternatives textuelles. Considérez l'accès, la possibilité de réécouter et le contrôle du rythme.
 
-- **Les exemples résolus** — pour un novice, **montrer une solution achevée** vaut mieux que le faire chercher. Chercher consomme la mémoire de travail.
-- **Rapprocher le schéma et le texte** — ne pas les séparer.
-- **Une chose à la fois** — ne pas livrer ensemble des éléments qui interagissent.
+## 4. L'effet sans but spécifié n'est pas un abandon
 
-## 4. L'effet d'inversion d'expertise — quand la prescription se retourne
+La « recherche sans but » est à distinguer de l'effet goal-free : comparer sans cesse l'état actuel à une cible précise, par analyse moyens-fins, peut être exigeant. Réduire la spécificité du but, par exemple demander plusieurs grandeurs pertinentes, peut alléger certaines tâches.
 
-La partie la plus utile de la théorie. **Ce qui est bon pour un novice nuit à celui qui maîtrise déjà.**
+Il ne s'agit ni de laisser les apprenants sans aide ni de déclarer tout objectif nuisible. La tâche et la recherche demandée comptent.
 
-Les exemples résolus aident les novices ; pour qui possède déjà le schéma, ils deviennent **une charge redondante : relire ce que l'on sait.** À ce stade, mieux vaut faire chercher.
+## 5. Ajuster l'aide avec l'expertise
 
-La question n'est donc jamais « cette méthode est-elle bonne ? » mais **« bonne pour qui, à quel stade ? »**
+Avec l'inversion liée à l'expertise, un avantage pédagogique peut diminuer, disparaître ou s'inverser lorsque les connaissances progressent. Tous les exemples ne nuisent pas à toutes les personnes expérimentées.
 
-## 5. Ne pas confondre avec les styles d'apprentissage
+L'article présente aussi le retrait progressif de l'aide : étudier une solution, compléter une solution partielle, puis résoudre seul. Ajustez cette progression aux connaissances de la tâche, pas à une règle fixe par année scolaire.
 
-On mêle souvent la charge cognitive aux théories des **« apprenants visuels / auditifs »**. Ce sont deux choses distinctes.
+<details>
+<summary>Exemple fictif : une équation, des aides différentes</summary>
 
-- La charge cognitive porte sur **la conception du matériel** ; ses prescriptions ont été répliquées.
-- Les styles d'apprentissage **classent les personnes** et supposent à chacune un mode adapté. **Aucune preuve n'a été trouvée qu'aligner l'enseignement sur un style préféré améliore l'apprentissage.**
+Un débutant en algèbre peut avoir besoin des raisons de chaque transformation. Une personne qui comprend le principe peut essayer une variante. Dans les deux cas, les équations et explications pertinentes doivent rester accessibles. C'est un exemple éditorial OIYO, pas un résultat expérimental.
 
-Associer schéma et texte est généralement bon non parce qu'on serait « visuel », mais parce que la mémoire de travail **répartit dans une certaine mesure les canaux visuel et auditif**. C'est la structure du traitement de l'information, non un type de personne.
+</details>
 
-## 6. Limites
+## 6. Styles d'apprentissage et limites de mesure
 
-- La charge se mesure mal directement ; on l'infère par auto-évaluation ou tâche secondaire.
-- Beaucoup de prescriptions ont été validées sur des **tâches bien définies** — mathématiques, physique. Les transposer à des tâches ouvertes demande de la prudence.
-- Réduire la charge n'est pas toujours bon : une autre ligne de recherche, sur la **difficulté désirable**, montre qu'un certain effort fait durer la mémoire.
+[Pashler et ses collègues (2008)](https://doi.org/10.1111/j.1539-6053.2009.01038.x) concluent que les preuves sont insuffisantes pour améliorer l'apprentissage en classant les personnes comme visuelles ou auditives et en adaptant l'enseignement à cette catégorie. Cela ne nie ni les préférences ni les besoins d'accessibilité.
 
-## Références
+Schémas et texte imprimé sont présentés visuellement. Distinguez-les d'un schéma accompagné de narration, d'une longue explication qui disparaît et d'un texte consultable à nouveau. Ajouter images, mots et sons n'améliore pas automatiquement l'enseignement.
 
-> **John Sweller** (1988) *Cognitive load during problem solving: Effects on learning*, Cognitive Science 12(2) — l'origine de la théorie.
+Auto-évaluations et tâches secondaires peuvent estimer la charge, avec leurs limites. Un sentiment de difficulté ne diagnostique pas une catégorie de charge ; moins d'effort ne prouve pas davantage d'apprentissage. L'article de 2019 examine aussi les conditions liées aux tâches et à l'expertise.
 
-> **John Sweller, Jeroen J. G. van Merriënboer & Fred Paas** (2019) *Cognitive architecture and instructional design: 20 years later*, Educational Psychology Review 31 — la reformulation et le classement des charges.
+## Sources et portée
 
-> **Slava Kalyuga et al.** (2003) *The expertise reversal effect*, Educational Psychologist 38(1) — le retournement des prescriptions avec l'expertise.
+- [Sweller, van Merriënboer et Paas (2019), texte ouvert de l'éditeur](https://link.springer.com/article/10.1007/s10648-019-09465-5)
+- [Pashler, McDaniel, Rohrer et Bjork (2008), éditeur original](https://doi.org/10.1111/j.1539-6053.2009.01038.x)
 
-> **Harold Pashler et al.** (2008) *Learning styles: Concepts and evidence*, Psychological Science in the Public Interest 9(3) — la synthèse ne trouvant aucun appui à l'hypothèse des styles.
+Les corrections reposent sur les sections de 2019 concernant classification, effets pédagogiques et mesure, ainsi que sur les conclusions pertinentes de la synthèse de 2008. Ce n'est pas une revue exhaustive des expériences originales ou de toute la littérature récente. Les tableaux sont des comparaisons éditoriales, sans garantie de résultats individuels.

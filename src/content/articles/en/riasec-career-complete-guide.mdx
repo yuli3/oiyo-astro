@@ -14,16 +14,13 @@ pubDate: 2026-04-14
 topic: work
 ---
 
-import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
-import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## What Is RIASEC?
 
-**RIASEC** is the vocational interest theory developed by psychologist **John L. Holland (1919–2008)**, first published in 1959 and refined over decades of research. It classifies people's vocational personalities into six types, with the core premise that **career satisfaction and performance are highest when your personality type matches your work environment**.
+**RIASEC** is John L. Holland's model of vocational interests. Its six areas help explore preferred activities and work environments; an interest match alone does not determine job satisfaction or performance.
 
 | Type | Letter | Nickname | Core Drive |
 |------|--------|----------|-----------|
@@ -38,18 +35,7 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## 1. RIASEC at a Glance
 
-<StatCards
-  title="RIASEC Key Facts"
-  cols={3}
-  items={[
-    { label: "Theory Origin", value: "1959+", description: "Holland's 'A Theory of Vocational Choice' first published" },
-    { label: "Global Use", value: "140+ countries", description: "Officially adopted by O*NET, the US occupational database" },
-    { label: "Most Common Types", value: "S & C", description: "Social and Conventional types make up 40%+ of the population" },
-    { label: "Best Match Format", value: "3-Letter Code", description: "Primary type + two secondary types (e.g., ISA, REC)" },
-    { label: "Hexagonal Model", value: "RIASEC Hexagon", description: "Adjacent types share traits; opposite types tend to conflict" },
-    { label: "Career Counseling", value: "Gold Standard", description: "Used in O*NET, US Department of Labor, and career centers worldwide" }
-  ]}
-/>
+The O*NET Interest Profiler explores six occupational interest areas. This article does not establish population shares or average job satisfaction by type. [Official tool description](https://www.onetcenter.org/IP.html)
 
 ---
 
@@ -127,56 +113,27 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ---
 
-## 3. Comparing All Six Types
+## 3. Separate interests from abilities
 
-<RadarChart
-  title="RIASEC Types: Core Competency Comparison"
-  axes={["Practicality", "Analytical Thinking", "Creativity", "Interpersonal Skills", "Leadership", "Precision"]}
-  datasets={[
-    { label: "R (Realistic)", color: "#6b7280", values: [95, 55, 40, 40, 50, 65] },
-    { label: "I (Investigative)", color: "#3b82f6", values: [60, 98, 70, 40, 45, 75] },
-    { label: "A (Artistic)", color: "#8b5cf6", values: [40, 55, 98, 60, 50, 35] },
-    { label: "S (Social)", color: "#10b981", values: [50, 50, 60, 98, 65, 50] },
-    { label: "E (Enterprising)", color: "#f59e0b", values: [65, 55, 65, 75, 98, 45] },
-    { label: "C (Conventional)", color: "#ef4444", values: [70, 80, 30, 45, 40, 98] }
-  ]}
-/>
+A type label cannot assign analytical skill, creativity or leadership a score out of 100. Interests suggest activities you may prefer; assess abilities separately through tasks, experience and feedback.
+
+| Consider | Check through |
+| --- | --- |
+| Interests | Work activities you want to explore |
+| Abilities | Actual tasks and feedback |
+| Conditions | Environment, values and constraints |
 
 ---
 
-## 4. Understanding the Holland Hexagon
+## 4. Limits of the hexagon
 
-The six RIASEC types are arranged in a hexagon:
-
-```
-        R
-    C       I
-    E       A
-        S
-```
-
-- **Adjacent types** (e.g., R-I, I-A): Share similar traits — work well together in a three-letter code
-- **Opposite types** (e.g., R-S, I-E, A-C): Contrasting traits — may indicate internal conflict or broader versatility
-
-<Callout type="info" title="How to Interpret Your Three-Letter Code">
-RIASEC results are typically expressed as the three highest-scoring types (e.g., ISA = Investigative + Social + Artistic). The first letter is your dominant orientation. Research shows that people whose personal three-letter code overlaps with at least two letters of their job's code report significantly higher job satisfaction.
-</Callout>
+The conventional sequence is R → I → A → S → E → C → R. Position and distance describe an interest model, not compatibility between people. When using a three-letter code, check the instrument, score differences and ties. Sharing two letters does not guarantee satisfaction or success.
 
 ---
 
-## 5. Job Satisfaction by Type Match
+## 5. Questions instead of satisfaction percentages
 
-<BarChart
-  title="RIASEC: Job Satisfaction When Type Matches Role (research average)"
-  data={[
-    { label: "R type — matched role", value: 78 },
-    { label: "I type — matched role", value: 82 },
-    { label: "A type — matched role", value: 85 },
-    { label: "S type — matched role", value: 83 },
-    { label: "E type — matched role", value: 80 },
-    { label: "C type — matched role", value: 76 }
-  ]}
-/>
+This article provides no sample, common measure or source supporting satisfaction rates by type. It therefore offers no such percentages or research averages. Examine actual duties, required abilities and working conditions, then compare expectations with interviews or a short relevant experience.
 
 ---
 
@@ -199,7 +156,7 @@ RIASEC results are typically expressed as the three highest-scoring types (e.g.,
 
 ## 7. Take the RIASEC Assessment
 
-<ToolCTA tool="riasec" />
+<ToolCTA tool="riasec" locale="en" title="Explore your work interests" description="Use your answers to reflect on activities you enjoy. This test does not guarantee ability, employment or performance." />
 
 ---
 

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import type { Locale } from "../../i18n";
 import { getDailyPillar } from "../../lib/almanac/saju-math";
 import type { Element } from "../../lib/almanac/saju-math";
+import { getSolarLongitude } from "../../lib/ontology/kernel/astronomy";
+import { toPlacement } from "../../lib/ontology/natal/calculator";
 import { Skeleton } from "../ui/skeleton";
 
 interface Props {
@@ -76,38 +78,38 @@ interface Sign {
   id: string;
   symbol: string;
   el: ZodiacElement;
-  // [startMonth, startDay] — sign runs from this date to next sign's start - 1
-  from: [number, number];
   name: Partial<Record<string, string>>;
 }
 const SIGNS: Sign[] = [
-  { id: "aries", symbol: "♈", el: "fire", from: [3, 21], name: { ko: "양자리", en: "Aries", ja: "牡羊座", zh: "白羊座", fr: "Bélier", es: "Aries" } },
-  { id: "taurus", symbol: "♉", el: "earth", from: [4, 20], name: { ko: "황소자리", en: "Taurus", ja: "牡牛座", zh: "金牛座", fr: "Taureau", es: "Tauro" } },
-  { id: "gemini", symbol: "♊", el: "air", from: [5, 21], name: { ko: "쌍둥이자리", en: "Gemini", ja: "双子座", zh: "双子座", fr: "Gémeaux", es: "Géminis" } },
-  { id: "cancer", symbol: "♋", el: "water", from: [6, 22], name: { ko: "게자리", en: "Cancer", ja: "蟹座", zh: "巨蟹座", fr: "Cancer", es: "Cáncer" } },
-  { id: "leo", symbol: "♌", el: "fire", from: [7, 23], name: { ko: "사자자리", en: "Leo", ja: "獅子座", zh: "狮子座", fr: "Lion", es: "Leo" } },
-  { id: "virgo", symbol: "♍", el: "earth", from: [8, 23], name: { ko: "처녀자리", en: "Virgo", ja: "乙女座", zh: "处女座", fr: "Vierge", es: "Virgo" } },
-  { id: "libra", symbol: "♎", el: "air", from: [9, 23], name: { ko: "천칭자리", en: "Libra", ja: "天秤座", zh: "天秤座", fr: "Balance", es: "Libra" } },
-  { id: "scorpio", symbol: "♏", el: "water", from: [10, 24], name: { ko: "전갈자리", en: "Scorpio", ja: "蠍座", zh: "天蝎座", fr: "Scorpion", es: "Escorpio" } },
-  { id: "sagittarius", symbol: "♐", el: "fire", from: [11, 23], name: { ko: "사수자리", en: "Sagittarius", ja: "射手座", zh: "射手座", fr: "Sagittaire", es: "Sagitario" } },
-  { id: "capricorn", symbol: "♑", el: "earth", from: [12, 22], name: { ko: "염소자리", en: "Capricorn", ja: "山羊座", zh: "摩羯座", fr: "Capricorne", es: "Capricornio" } },
-  { id: "aquarius", symbol: "♒", el: "air", from: [1, 20], name: { ko: "물병자리", en: "Aquarius", ja: "水瓶座", zh: "水瓶座", fr: "Verseau", es: "Acuario" } },
-  { id: "pisces", symbol: "♓", el: "water", from: [2, 19], name: { ko: "물고기자리", en: "Pisces", ja: "魚座", zh: "双鱼座", fr: "Poissons", es: "Piscis" } },
+  { id: "aries", symbol: "♈", el: "fire", name: { ko: "양자리", en: "Aries", ja: "牡羊座", zh: "白羊座", fr: "Bélier", es: "Aries" } },
+  { id: "taurus", symbol: "♉", el: "earth", name: { ko: "황소자리", en: "Taurus", ja: "牡牛座", zh: "金牛座", fr: "Taureau", es: "Tauro" } },
+  { id: "gemini", symbol: "♊", el: "air", name: { ko: "쌍둥이자리", en: "Gemini", ja: "双子座", zh: "双子座", fr: "Gémeaux", es: "Géminis" } },
+  { id: "cancer", symbol: "♋", el: "water", name: { ko: "게자리", en: "Cancer", ja: "蟹座", zh: "巨蟹座", fr: "Cancer", es: "Cáncer" } },
+  { id: "leo", symbol: "♌", el: "fire", name: { ko: "사자자리", en: "Leo", ja: "獅子座", zh: "狮子座", fr: "Lion", es: "Leo" } },
+  { id: "virgo", symbol: "♍", el: "earth", name: { ko: "처녀자리", en: "Virgo", ja: "乙女座", zh: "处女座", fr: "Vierge", es: "Virgo" } },
+  { id: "libra", symbol: "♎", el: "air", name: { ko: "천칭자리", en: "Libra", ja: "天秤座", zh: "天秤座", fr: "Balance", es: "Libra" } },
+  { id: "scorpio", symbol: "♏", el: "water", name: { ko: "전갈자리", en: "Scorpio", ja: "蠍座", zh: "天蝎座", fr: "Scorpion", es: "Escorpio" } },
+  { id: "sagittarius", symbol: "♐", el: "fire", name: { ko: "사수자리", en: "Sagittarius", ja: "射手座", zh: "射手座", fr: "Sagittaire", es: "Sagitario" } },
+  { id: "capricorn", symbol: "♑", el: "earth", name: { ko: "염소자리", en: "Capricorn", ja: "山羊座", zh: "摩羯座", fr: "Capricorne", es: "Capricornio" } },
+  { id: "aquarius", symbol: "♒", el: "air", name: { ko: "물병자리", en: "Aquarius", ja: "水瓶座", zh: "水瓶座", fr: "Verseau", es: "Acuario" } },
+  { id: "pisces", symbol: "♓", el: "water", name: { ko: "물고기자리", en: "Pisces", ja: "魚座", zh: "双鱼座", fr: "Poissons", es: "Piscis" } },
 ];
 
 function currentSign(d: Date): Sign {
-  const m = d.getMonth() + 1;
-  const day = d.getDate();
-  // Find the last sign whose start date is <= today (calendar wrap handled below)
-  let found = SIGNS[SIGNS.length - 3]; // capricorn covers early January before Aquarius
-  for (const s of SIGNS) {
-    const [sm, sd] = s.from;
-    if (m > sm || (m === sm && day >= sd)) found = s;
-  }
-  // January 1-19 falls in Capricorn (which starts Dec 22 of the previous year)
-  if (m === 1 && day < 20) found = SIGNS.find((s) => s.id === "capricorn")!;
-  return found;
+  // 2026-11-05: use the shared apparent longitude, not approximate birthday dates.
+  // Keep display order unchanged because the separate lucky-sign draw depends on it.
+  const key = toPlacement(getSolarLongitude(d)).sign;
+  return SIGNS.find((sign) => sign.id === key)!;
 }
+
+const SUN_METHOD: Record<Locale, string> = {
+  ko: "조회 시점의 태양 황경을 30°씩 나눈 열대황도 근사값입니다. 실제 별자리 영역과 다르며, 경계 시각에는 오차가 있을 수 있습니다.",
+  en: "Approximate tropical sign at page load, using 30° solar-longitude sectors. These differ from constellation boundaries; ingress times may be imprecise.",
+  ja: "閲覧時の太陽黄経を30°ずつ区切ったトロピカル方式の概算です。実際の星座領域とは異なり、境界時刻には誤差があります。",
+  zh: "按页面加载时的太阳黄经每30°划分，估算回归黄道星座。与实际星座区域不同，交界时刻可能有误差。",
+  fr: "Signe tropical approximatif au chargement, par secteurs de longitude solaire de 30°. Ces secteurs diffèrent des constellations ; les heures de transition sont approximatives.",
+  es: "Signo tropical aproximado al cargar la página, por sectores de longitud solar de 30°. Difiere de las constelaciones; las horas de transición son aproximadas.",
+};
 
 const ZODIAC_LINE: Record<ZodiacElement, Partial<Record<string, string>>> = {
   fire: {
@@ -289,6 +291,10 @@ export default function DailyUniverse({ locale }: Props) {
               </div>
             </div>
             <p className="text-sm leading-relaxed text-white/70">{lt(ZODIAC_LINE[sign.el], locale)}</p>
+            <p className="text-xs leading-relaxed text-white/60" data-sun-method="tropical-approximate">
+              {SUN_METHOD[locale]}{" "}
+              <a href="https://aa.usno.navy.mil/faq/asa_glossary" className="underline" target="_blank" rel="noreferrer">USNO</a>
+            </p>
             <div className="mt-auto text-xs text-white/50">
               {ui.luckySign}: <span className="text-amber-300">{luckySign.symbol} {lt(luckySign.name, locale)}</span>
             </div>

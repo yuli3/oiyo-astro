@@ -52,10 +52,10 @@ const LINKS: Record<number, { label: string; href: string }[]> = {
           <div>
             <h2 class="text-lg font-bold text-foreground mb-2">{section.heading}</h2>
             {section.body.map((paragraph) => (
-              <p class="text-sm text-green-700 leading-relaxed mb-2">{paragraph}</p>
+              <p class="text-sm text-primary leading-relaxed mb-2">{paragraph}</p>
             ))}
             {LINKS[index] && (
-              <p class="text-sm text-green-700 leading-relaxed">
+              <p class="text-sm text-primary leading-relaxed">
                 {doc.seeLabel}{' '}
                 {LINKS[index].map((link, i) => (
                   <>

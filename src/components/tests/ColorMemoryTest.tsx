@@ -131,7 +131,7 @@ export default function ColorMemoryTest({ locale }: Props) {
         <p className="font-semibold text-lg">{l.results(score, TOTAL_ROUNDS)}</p>
         <div className="flex gap-1.5 justify-center">
           {Array.from({ length: TOTAL_ROUNDS }).map((_, i) => (
-            <div key={i} className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold ${i < score ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>{i + 1}</div>
+            <div key={i} className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold ${i < score ? 'bg-green-100 text-primary' : 'bg-red-100 text-red-700'}`}>{i + 1}</div>
           ))}
         </div>
         <button onClick={startGame} className="px-8 py-3 border rounded-full text-sm font-medium hover:bg-accent transition-colors">{l.restart}</button>
@@ -159,7 +159,7 @@ export default function ColorMemoryTest({ locale }: Props) {
         <div className="space-y-4">
           <p className="text-center text-sm font-semibold">{l.nowPick}</p>
           {feedback && (
-            <div className={`text-center text-sm font-bold py-2 rounded-xl ${feedback === 'correct' ? 'bg-surface-subtle text-green-700' : 'bg-red-50 text-red-700'}`}>
+            <div className={`text-center text-sm font-bold py-2 rounded-xl ${feedback === 'correct' ? 'bg-surface-subtle text-primary' : 'bg-red-50 text-red-700'}`}>
               {feedback === 'correct' ? l.correct : l.wrong}
             </div>
           )}

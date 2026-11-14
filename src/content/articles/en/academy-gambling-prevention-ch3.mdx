@@ -10,7 +10,7 @@ tags:
   - simulation
   - probability
   - addiction prevention
-description: "We ran a Monte Carlo simulation to see how the 'average' from expected value actually plays out. 62% went broke by 1,000 hands. 100% went broke by 10,000."
+description: "We ran a Monte Carlo simulation to see how the 'average' from expected value actually plays out. 71% went broke by 10,000 hands. 100% went broke by 100,000."
 pubDate: '2026-07-29'
 topic: addiction
 ---
@@ -26,6 +26,7 @@ We built a program that repeats baccarat banker bets under these conditions:
 - Starting bankroll: **$1,000**
 - Bet per hand: **$10**
 - Win probability **45.86%**, with a 5% commission on wins
+- Ties (about **9.52%**) return the stake
 - If the bankroll drops below the bet size, the run is **marked as bust and stopped**
 - Each condition simulated **2,000 independent players**
 
@@ -35,19 +36,20 @@ In other words, this measures: "If 2,000 people start with the same money and pl
 
 | Hands played | Bust rate | Average remaining balance |
 |---:|---:|---:|
-| 100 | **0.0%** | $894.82 |
-| 1,000 | **62.1%** | $98.67 |
-| 10,000 | **100.0%** | $0.00 |
+| 100 | **0.0%** | $990.21 |
+| 1,000 | **0.1%** | $893.45 |
+| 10,000 | **70.7%** | $264.02 |
+| 100,000 | **100.0%** | $5.19 |
 
 <HighlightBox>
-**Not a single one of the 2,000 players survived 10,000 hands.** No lucky player, no player with good instincts, no player having a good day. Everyone went broke.
+**Not a single one of the 2,000 players survived 100,000 hands.** No lucky player, no player with good instincts, no player having a good day. Everyone went broke.
 </HighlightBox>
 
 ## The most important row in this table
 
 **The 100-hand row. 0% bust rate.**
 
-Nobody who played 100 hands went broke. On average they lost about $10, but plenty of them were ahead. At this stage, gambling **looks like a game worth playing.**
+Nobody who played 100 hands went broke. On average they lost about $10, yet 45% of the 2,000 were actually ahead. At this stage, gambling **looks like a game worth playing.**
 
 And that's exactly the trap. **What happens in your first 100 hands tells you nothing about what's coming — if anything, it builds the opposite conviction.**
 
@@ -87,7 +89,7 @@ That's true in theory. In practice, it almost never happens, for two reasons.
 
 **Second, winning doesn't make people quit — it makes them keep going.** This comes down to the brain's reward wiring, covered in Chapter 6. People who have actually won tend to bet longer and bigger, not less.
 
-Look again at the 1,000-hand average balance of $98.67. **That's an average loss of about 90%.** Every one of those players had moments of being ahead along the way.
+Look again at the 10,000-hand average balance of $264.02. **That's an average loss of more than 70%, and 7 in 10 players went broke.** Many of them were probably ahead at some point along the way.
 
 <Quiz>
 **Think about it**
@@ -96,15 +98,16 @@ If you thought "who actually plays 10,000 hands?" — let's do the math.
 
 If one online round takes 30 seconds, 10,000 hands takes about **83 hours.** At 3 hours a day, that's **under a month.**
 
-And people struggling with gambling problems typically play far more than that.
+100,000 hands is about **833 hours** — roughly **9 months** at 3 hours a day. For a habit that lasts months or years, that number isn't far off.
 </Quiz>
 
 ## Summary
 
-1. At 100 hands, **nobody goes broke.** That's why people start.
-2. At 1,000 hands, **62% go broke.** By this point, it's already hard to stop.
-3. At 10,000 hands, **100% go broke.** No exceptions in this simulation.
-4. The side with a finite bankroll goes broke eventually, **even in a perfectly fair game.**
+1. At 100 hands, **nobody goes broke**, and almost half are ahead. That's why people start.
+2. At 1,000 hands, busts are still rare, but **the average balance is already down more than 10%.** By this point, it's already hard to stop.
+3. At 10,000 hands, **71% go broke.**
+4. At 100,000 hands, **100% go broke.** No exceptions in this simulation.
+5. The side with a finite bankroll goes broke eventually, **even in a perfectly fair game.**
 
 Next chapter, we look at the attempt to beat this conclusion — **betting strategies** — and why they actually speed up bankruptcy rather than prevent it.
 
@@ -114,6 +117,6 @@ Next chapter, we look at the attempt to beat this conclusion — **betting strat
 
 - Figures in this chapter come from a seeded Monte Carlo simulation (2,000 independent trials per condition).
 - Win rate and commission follow standard baccarat rules; actual results vary with house rules and betting style.
-- Verified: 2026-07-29
+- Verified: 2026-07-29 (recalculated 2026-10-12 with ties returning the stake)
 
 **If gambling is a problem for you — in Korea, call the Gambling Problem Helpline at 1336, toll-free, 24/7, free of charge.** If you're outside Korea, search for your country's national problem-gambling helpline.

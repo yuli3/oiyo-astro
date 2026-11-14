@@ -121,7 +121,7 @@ export function analyzeLifeCategories(saju: SajuResult): LifeCategories {
       rawRoleCounts.bigyeop += 1;
       return;
     }
-    rawRoleCounts[roleOf(calculateTenGod(saju.dayMaster, v))] += 1;
+    rawRoleCounts[roleOf(calculateTenGod(saju.dayMaster, v, stem ? "stem" : "branch"))] += 1;
   });
 
   // ── 재물 (財) ──

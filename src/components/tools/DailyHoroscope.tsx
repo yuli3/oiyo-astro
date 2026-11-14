@@ -812,7 +812,7 @@ function CategoryCard({ emoji, label, score, text }: { emoji: string; label: str
       ? "from-amber-50 to-yellow-50 border-amber-200"
       : score >= 3
       ? "from-blue-50 to-sky-50 border-blue-200"
-      : "from-gray-50 to-slate-50 border-gray-200";
+      : "from-gray-50 to-slate-50 border-border";
 
   return (
     <div className={`rounded-2xl border bg-gradient-to-br p-4 ${bg}`}>
@@ -859,13 +859,13 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center">
-        <Heading className="text-2xl font-bold text-gray-900">{ui.title}</Heading>
-        <p className="mt-1 text-gray-500">{ui.subtitle}</p>
+        <Heading className="text-2xl font-bold text-foreground">{ui.title}</Heading>
+        <p className="mt-1 text-muted-foreground">{ui.subtitle}</p>
       </div>
 
       {/* Sign selector */}
       {!result ? (
-        <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-4">
+        <div className="rounded-2xl border border-border bg-card p-5 space-y-4">
           <p className="text-sm font-medium text-gray-700">{ui.selectLabel}</p>
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
             {SIGNS.map((s) => (
@@ -875,7 +875,7 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
                 className={`flex flex-col items-center rounded-xl border py-3 px-2 transition-all hover:border-green-400 hover:bg-surface-subtle ${
                   selected === s
                     ? "border-green-500 bg-surface-subtle"
-                    : "border-gray-200 bg-card"
+                    : "border-border bg-card"
                 }`}
               >
                 <span className="text-2xl">{SIGN_EMOJI[s]}</span>
@@ -892,13 +892,13 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
             <div className="flex items-center gap-3">
               <span className="text-4xl">{SIGN_EMOJI[result.sign]}</span>
               <div>
-                <p className="text-lg font-bold text-gray-900">{names[result.sign]}</p>
+                <p className="text-lg font-bold text-foreground">{names[result.sign]}</p>
                 <p className="text-xs text-gray-400">{result.date} · {ui.resultDate}</p>
               </div>
             </div>
             <button
               onClick={handleReset}
-              className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors"
+              className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-card transition-colors"
             >
               {ui.resetBtn}
             </button>
@@ -913,16 +913,16 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
           </div>
 
           {/* Lucky section */}
-          <div className="rounded-2xl border border-green-200 bg-gradient-to-br from-green-50 to-green-50 p-5">
+          <div className="rounded-2xl border border-border bg-gradient-to-br from-green-50 to-green-50 p-5">
             <h3 className="mb-3 text-center font-bold text-green-800">✨ {ui.luckySection}</h3>
             <div className="flex justify-center gap-10">
               <div className="text-center">
                 <p className="text-xs text-green-500 mb-1">{ui.luckyColor}</p>
-                <p className="text-lg font-semibold text-green-700">{result.luckyColor}</p>
+                <p className="text-lg font-semibold text-primary">{result.luckyColor}</p>
               </div>
               <div className="text-center">
                 <p className="text-xs text-green-500 mb-1">{ui.luckyNumber}</p>
-                <p className="text-2xl font-bold text-green-700">{result.luckyNumber}</p>
+                <p className="text-2xl font-bold text-primary">{result.luckyNumber}</p>
               </div>
             </div>
           </div>

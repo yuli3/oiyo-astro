@@ -85,7 +85,10 @@ export default function TypingSpeedTest({ locale }: Props) {
   const l = LABELS[locale] ?? LABELS.en
   const texts = TEXTS[locale] ?? TEXTS.en
 
-  const [targetText] = useState(() => texts[Math.floor(Math.random() * texts.length)])
+  // 2026-10-09: keep SSR/first client text identical, then choose the session's
+  // random passage after hydration instead of triggering React recovery.
+  const [targetText, setTargetText] = useState(texts[0])
+  useEffect(() => { setTargetText(texts[Math.floor(Math.random() * texts.length)]) }, [texts])
   const [typed, setTyped] = useState('')
   const [status, setStatus] = useState<'idle' | 'running' | 'done'>('idle')
   useRecordFinishedTest({ testId: "typing-speed", title: "TypingSpeedTest", finished: status === 'done' });

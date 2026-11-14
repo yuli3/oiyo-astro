@@ -1,6 +1,6 @@
 ---
 import { localePath, type Locale } from '../../i18n';
-import { getCautionText, type TestSourceNote } from '../../data/test-source-notes';
+import { getCautionText, getLocalizedBasis, type TestSourceNote } from '../../data/test-source-notes';
 
 interface Props {
   locale: Locale;
@@ -17,27 +17,37 @@ const T: Record<Locale, { eyebrow: string; title: string; method: string; limit:
   es: { eyebrow: 'Fuentes', title: 'Modelos que referencia este test', method: 'Escalas y teorías', limit: 'Antes de leer', updated: 'Nota de fuentes actualizada', methodology: 'Ver metodología' },
 };
 const copy = T[locale] ?? T.en;
+const performanceLabels: Record<Locale, { title: string; method: string }> = {
+  ko: { title: '측정 방식과 한계', method: '계산 방법' },
+  en: { title: 'Measurement and limits', method: 'How scores are calculated' },
+  ja: { title: '測定方法と限界', method: '計算方法' },
+  zh: { title: '测量方法与局限', method: '计算方法' },
+  fr: { title: 'Mesure et limites', method: 'Calcul des scores' },
+  es: { title: 'Medición y límites', method: 'Cálculo de las puntuaciones' },
+};
+// 2026-10-10: a typing measurement must not claim a referenced personality model.
+const labels = note.caution === 'performance' ? performanceLabels[locale] : copy;
 ---
 
 <section class="mx-auto mt-8 max-w-2xl px-4 pb-2">
-  <div class="rounded-lg border border-green-100 bg-card p-5 shadow-sm">
-    <p class="text-[11px] font-black uppercase tracking-widest text-green-700">{copy.eyebrow}</p>
-    <h2 class="mt-2 text-lg font-black text-foreground">{copy.title}</h2>
+  <div class="rounded-lg border border-border bg-card p-5 shadow-sm">
+    <p class="text-[11px] font-black uppercase tracking-widest text-primary">{copy.eyebrow}</p>
+    <h2 class="mt-2 text-lg font-black text-foreground">{labels.title}</h2>
     <div class="mt-4 grid gap-4 sm:grid-cols-[1fr_1.2fr]">
       <div>
-        <h3 class="text-xs font-bold uppercase tracking-wide text-slate-500">{copy.method}</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wide text-muted-foreground">{labels.method}</h3>
         <ul class="mt-2 space-y-1.5 text-sm leading-6 text-slate-700">
-          {note.basis.map((item) => <li>{item}</li>)}
+          {getLocalizedBasis(note, locale).map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div>
-        <h3 class="text-xs font-bold uppercase tracking-wide text-slate-500">{copy.limit}</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wide text-muted-foreground">{copy.limit}</h3>
         <p class="mt-2 text-sm leading-6 text-slate-700">{getCautionText(note.caution, locale)}</p>
       </div>
     </div>
-    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-3 text-xs text-slate-500">
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-3 text-xs text-muted-foreground">
       <span>{copy.updated}: {note.updated ?? '2026-06-13'}</span>
-      <a href={localePath(locale, '/methodology')} class="font-semibold text-green-700 hover:text-green-900">{copy.methodology}</a>
+      <a href={localePath(locale, '/methodology')} class="font-semibold text-primary hover:text-green-900">{copy.methodology}</a>
     </div>
   </div>
 </section>

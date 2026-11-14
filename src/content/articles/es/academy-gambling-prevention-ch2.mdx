@@ -1,0 +1,120 @@
+---
+locale: es
+title: "Valor esperado: el momento en que una mala apuesta se convierte en una pérdida segura"
+series: La arquitectura del juego de azar
+chapter: 2
+author: OIYO Research Team
+tags:
+  - prevención del juego
+  - valor esperado
+  - probabilidad
+  - matemáticas
+  - prevención de adicciones
+description: "Cómo una ventaja de la casa de solo el 1,06 % se convierte, mano tras mano, en una pérdida segura. Calculamos cuántas manos de 10 $ hacen falta para que 1000 $ lleguen a 0 $."
+pubDate: '2026-07-29'
+topic: addiction
+---
+
+En el capítulo 1 vimos que la ventaja de la casa en la apuesta a la banca del bacará es de **alrededor del 1,06 %**. Un dólar de cada cien. Parece poca cosa.
+
+En este capítulo calculamos cómo ese dólar acaba convirtiéndose en todo su dinero.
+
+## ¿Qué es el valor esperado?
+
+El **valor esperado (Expected Value)** es la cantidad que, en promedio, se gana o se pierde en una sola apuesta. El cálculo es sencillo.
+
+<FormulaBox>
+Valor esperado = (probabilidad de ganar × cantidad ganada) − (probabilidad de perder × cantidad perdida)
+</FormulaBox>
+
+Comprobémoslo con una moneda. Si sale cara, gana 10 $; si sale cruz, pierde 10 $. El valor esperado es:
+
+(0,5 × 10 $) − (0,5 × 10 $) = **0 $**
+
+Un juego cuyo valor esperado es cero se llama **juego justo (fair game)**. Aunque juegue mucho tiempo, en promedio queda en tablas.
+
+**Y en el juego de azar real no existen los juegos justos.**
+
+## El valor esperado real de la apuesta a la banca
+
+Si apuesta 100 $ a la banca:
+
+- probabilidad de ganar de aproximadamente el 45,86 % → cobra 95 $ tras una comisión del 5 %
+- probabilidad de perder de aproximadamente el 44,62 % → pierde 100 $
+- empate en aproximadamente el 9,52 % → se le devuelve la apuesta
+
+Al calcular el valor esperado se obtiene aproximadamente **−1,06 $**. Es decir, **por cada 100 $ que apuesta, desaparecen en promedio 1,06 $.**
+
+<HighlightBox>
+Lo importante es que esos 1,06 $ **no son «dinero que se pierde si se tiene mala suerte»**. Son **dinero que, en promedio, se pierde con toda seguridad**. En cada mano se gana a veces y se pierde otras, pero a medida que las manos se acumulan, el resultado real se ve arrastrado hacia ese promedio.
+</HighlightBox>
+
+## ¿En cuántas manos desaparecen 1000 $?
+
+Si apuesta 10 $ por mano, en promedio se evaporan unos 0,106 $ (10,6 centavos) en cada una. Para que un capital inicial de 1000 $ llegue a cero:
+
+<FormulaBox>
+1000 ÷ 0,106 ≈ 9434 manos
+</FormulaBox>
+
+**Unas 9400 manos.** ¿Le parecen muchas? En el juego en línea, una mano dura **menos de 30 segundos**. Jugando una mano cada 30 segundos sin parar, en teoría todo se agota en unas 79 horas: poco más de tres días.
+
+Este es el saldo esperado según el número de manos:
+
+| Manos jugadas | Saldo esperado |
+|---:|---:|
+| 0 | 1000 $ |
+| 100 | 989,40 $ |
+| 500 | 947,00 $ |
+| 1000 | 894,00 $ |
+| 2000 | 788,00 $ |
+| 5000 | 470,00 $ |
+| 9434 | **0 $** |
+
+<LineChart
+  title="Saldo esperado según las manos jugadas (bacará, apuesta a la banca · 10 $ por mano · 1000 $ iniciales)"
+  xLabel="Manos acumuladas (0 → 9434)"
+  yLabel="Saldo restante (0 → 1000 $)"
+  lines={[
+    { label: "Lo que realmente ocurre (lo deciden las matemáticas)", color: "#dc2626", points: [{x:0,y:100},{x:5,y:94.7},{x:10,y:89.4},{x:21,y:78.8},{x:53,y:47},{x:100,y:0}] },
+    { label: "Lo que espera el jugador (no perder)", color: "#94a3b8", dashed: true, points: [{x:0,y:100},{x:100,y:100}] }
+  ]}
+/>
+
+La línea gris discontinua es la esperanza de «al menos no perder». La línea roja es la realidad. **Las dos nunca se cruzan, y la distancia entre ellas no deja de crecer.**
+
+## Por qué la gente no lo percibe
+
+Si el valor esperado es tan claro, ¿por qué se sigue jugando? Porque **en un tramo corto esa línea no se ve.**
+
+Tras 100 manos, la pérdida esperada es de apenas unos 10,60 $, una cantidad que **queda completamente sepultada bajo los vaivenes de la suerte**. En 100 manos hay días en que se gana mucho y días en que se pierde. Por eso parece «un juego que se puede ganar».
+
+Pero cuantas más manos se juegan, más pequeños resultan los vaivenes de la suerte en relación con el total, y **solo queda la ventaja de la casa.** Es la **ley de los grandes números**, que veremos en el próximo capítulo.
+
+<Quiz>
+**Para pensar**
+
+Un amigo le dice: «Ayer gané 500 $ jugando al bacará».
+
+¿Demuestra eso que la ventaja de la casa es falsa?
+
+Respuesta: **no.** La ventaja de la casa no predice el resultado de una mano ni de un día. Solo indica hacia dónde convergen los resultados cuando se han jugado suficientes manos. Los 500 $ ganados ayer funcionan precisamente como **el mecanismo que hace que su amigo siga jugando**, y mientras siga jugando, sus resultados seguirán la gráfica de arriba.
+</Quiz>
+
+## Resumen
+
+1. El valor esperado no es «la pérdida de un mal día», sino una **pérdida segura en promedio**.
+2. En la apuesta a la banca del bacará son 1,06 $ por cada 100 $ apostados. A 10 $ por mano, 1000 $ **se agotan, en teoría, en unas 9400 manos**.
+3. Si juega poco, no se nota; si juega lo suficiente, siempre se nota. **Conseguir que juegue el mayor número posible de manos es todo el modelo de negocio del operador.**
+
+En el próximo capítulo comprobaremos lo implacable que es en realidad «en promedio», contando directamente la tasa de ruina mediante una simulación.
+
+---
+
+## Fuentes
+
+- Las cifras de ventaja de la casa son cálculos públicos según las reglas estándar (comisión del 5 % sobre la banca).
+- Para simplificar, los cálculos de este capítulo suponen que se apuesta la misma cantidad en cada mano.
+- Verificado: 2026-07-29
+
+**Si el juego le está causando problemas: en Corea, llame a la línea de ayuda para problemas de juego, 1336 (gratuita, las 24 horas, los 365 días).** Si vive fuera de Corea, busque la línea de ayuda nacional de su país para problemas con el juego.

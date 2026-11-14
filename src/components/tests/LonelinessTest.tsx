@@ -455,7 +455,7 @@ export default function LonelinessTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <div className="rounded-2xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-green-700">{lb.tips}</h3>
+        <h3 className="font-bold text-sm text-primary">{lb.tips}</h3>
         <ul className="space-y-1">
           {r.tips.map((tip, i) => (
             <li key={i} className="text-sm text-muted-foreground flex gap-2">
@@ -465,7 +465,7 @@ export default function LonelinessTest({ locale: lp = 'ko' }: Props) {
         </ul>
       </div>
 
-      <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4 space-y-1">
+      <div className="rounded-2xl border border-border bg-surface-subtle p-4 space-y-1">
         <h3 className="font-bold text-sm text-green-800">{lb.affirmation}</h3>
         <p className="text-sm text-green-900 leading-relaxed">"{r.affirmation}"</p>
       </div>

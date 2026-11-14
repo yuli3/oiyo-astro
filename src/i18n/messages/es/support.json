@@ -39,5 +39,11 @@
     "normal": "Normal",
     "high": "Alta",
     "urgent": "Urgente"
+  },
+  "email": {
+    "notice": "Por ahora recibimos las consultas por correo electrónico en lugar de un formulario.",
+    "body": "Escríbenos a la dirección de abajo y te responderemos. Si nos dices en qué página estabas y qué falló, podremos revisarlo antes.",
+    "button": "Enviar un correo",
+    "subject": "[OIYO Soporte]"
   }
 }

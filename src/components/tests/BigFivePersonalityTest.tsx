@@ -629,7 +629,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
   return (
     <div className="space-y-6 animate-fadeInUp">
       <div className="text-center space-y-2">
-        <ResultSymbol id="big-five" fallback="🌊" className="mx-auto h-24 w-24" />
+        <ResultSymbol id="big-five" variant={dominant} fallback="🌊" className="mx-auto h-24 w-24" />
         <p className="text-sm text-muted-foreground">{lb.yourProfile}</p>
         <h1 className="text-2xl font-bold">{lb.title}</h1>
         <p className="mx-auto max-w-2xl text-base leading-7 text-foreground/80">{resultSummary.conclusion}</p>

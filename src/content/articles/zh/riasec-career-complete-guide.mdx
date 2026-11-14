@@ -24,16 +24,13 @@ keywords:
 topic: work
 ---
 
-import StatCards from "@/components/mdx/StatCards.astro";
 import CompareTable from "@/components/mdx/CompareTable.astro";
-import RadarChart from "@/components/mdx/RadarChart.astro";
-import BarChart from "@/components/mdx/BarChart.astro";
 import Callout from "@/components/mdx/Callout.astro";
 import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## 什么是 RIASEC（霍兰德理论）？
 
-**RIASEC** 是由心理学家 **约翰·霍兰德（John L. Holland, 1919~2008）** 于 1959 年提出并经过数十年完善的职业兴趣理论。该理论将人的职业性格与兴趣分为 6 大类型，其核心前提是：**职业环境与个人类型的匹配程度**决定了职业满意度和工作绩效。
+**RIASEC**是John L. Holland的职业兴趣模型。六个领域帮助探索偏好的活动和工作环境，但兴趣匹配本身不决定满意度或绩效。
 
 | 类型 | 英文 | 别名 | 核心驱动力 |
 |-----|-----|-----|---------|
@@ -48,18 +45,7 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ## 1. RIASEC 6 大类型核心指标
 
-<StatCards
-  title="RIASEC 现状"
-  cols={3}
-  items={[
-    { label: "理论发展", value: "1959年至今", description: "霍兰德发表《职业选择理论》" },
-    { label: "全球应用", value: "140+ 国家", description: "O*NET（美国职业数据库）官方采用" },
-    { label: "最常见类型", value: "S型·C型", description: "社会型与传统型占总数 40% 以上" },
-    { label: "最佳匹配", value: "3位代码", description: "主类型 + 2个辅助类型（如：ISA, REC）" },
-    { label: "六边形模型", value: "RIASEC 六边形", description: "相邻类型相似度高，对角类型则相反" },
-    { label: "就业服务", value: "广泛应用", description: "基于职业心理测试系统" }
-  ]}
-/>
+O*NET Interest Profiler用于探索六类职业兴趣。本文不提供各类型人口比例或平均职业满意度。[官方说明](https://www.onetcenter.org/IP.html)
 
 ---
 
@@ -137,56 +123,27 @@ import ToolCTA from "@/components/mdx/ToolCTA.astro";
 
 ---
 
-## 3. RIASEC 6 大类型能力对比
+## 3. 区分兴趣与能力
 
-<RadarChart
-  title="RIASEC 各类型核心能力对比"
-  axes={["实用性", "分析力", "创造力", "人际关系", "领导力", "准确性"]}
-  datasets={[
-    { label: "R (现实型)", color: "#6b7280", values: [95, 55, 40, 40, 50, 65] },
-    { label: "I (研究型)", color: "#3b82f6", values: [60, 98, 70, 40, 45, 75] },
-    { label: "A (艺术型)", color: "#8b5cf6", values: [40, 55, 98, 60, 50, 35] },
-    { label: "S (社会型)", color: "#10b981", values: [50, 50, 60, 98, 65, 50] },
-    { label: "E (企业型)", color: "#f59e0b", values: [65, 55, 65, 75, 98, 45] },
-    { label: "C (传统型)", color: "#ef4444", values: [70, 80, 30, 45, 40, 98] }
-  ]}
-/>
+类型标签不能把分析力、创造力或领导力评为百分制分数。兴趣提示可能偏好的活动；能力要通过实际任务、经验和反馈另行确认。
+
+| 方面 | 如何确认 |
+| --- | --- |
+| 兴趣 | 想尝试的工作活动 |
+| 能力 | 实际任务和反馈 |
+| 条件 | 环境、价值观与限制 |
 
 ---
 
-## 4. 理解霍兰德六边形
+## 4. 六边形的局限
 
-RIASEC 的 6 种类型排列成一个六边形（Hexagon）：
-
-```
-        R
-    C       I
-    E       A
-        S
-```
-
-- **相邻类型**（如：R-I, I-A）：特性相似，适合作为复合类型。
-- **对角类型**（如：R-S, I-E, A-C）：特性相反，可能存在冲突。
-
-<Callout type="info" title="3位代码解读">
-RIASEC 测试结果通常以得分最高的前 3 个类型代码来表示（例如：ISA = 研究型+社会型+艺术型）。第一个类型代表主导倾向。研究表明，在选择职业时，**若个人代码与职业代码在 3 位中至少有 2 位匹配**，通常能获得更高的职业满意度。
-</Callout>
+传统排列顺序为R → I → A → S → E → C → R。位置与距离表达兴趣结构模型，不是人与人的配对表。使用三字母代码时，要查看量表、分差和同分情况。两个字母相同不保证满意或成功。
 
 ---
 
-## 5. 各类型职业满意度
+## 5. 用问题代替满意度百分比
 
-<BarChart
-  title="RIASEC 各类型职业匹配后的满意度（研究平均分）"
-  data={[
-    { label: "R型职业匹配", value: 78 },
-    { label: "I型职业匹配", value: 82 },
-    { label: "A型职业匹配", value: 85 },
-    { label: "S型职业匹配", value: 83 },
-    { label: "E型职业匹配", value: 80 },
-    { label: "C型职业匹配", value: 76 }
-  ]}
-/>
+本文没有支持各类型满意率的样本、统一测量或来源，因此不提供这类百分比或研究平均值。请确认实际工作内容、所需能力与工作条件，再通过访谈或短期相关体验比较预期和现实。
 
 ---
 
@@ -209,7 +166,7 @@ RIASEC 测试结果通常以得分最高的前 3 个类型代码来表示（例�
 
 ## 7. 进行 RIASEC 测试
 
-<ToolCTA tool="riasec" title="开始职业兴趣测试" description="通过科学的 RIASEC 测试，发现最适合你的职业方向。" locale="zh" />
+<ToolCTA tool="riasec" locale="zh" title="探索职业兴趣" description="通过回答整理感兴趣的活动。本测试不保证能力、就业或工作绩效。" />
 
 ---
 

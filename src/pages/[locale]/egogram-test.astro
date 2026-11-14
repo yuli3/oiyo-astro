@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import TestLaneLink from '../../components/shared/TestLaneLink.astro';
 import TestExplainer from '../../components/shared/TestExplainer.astro';
 import { TEST_EXPLAINERS } from '../../data/test-explainers';
 import { LOCALES } from '../../i18n';
@@ -15,27 +14,27 @@ const { locale } = Astro.params as { locale: Locale };
 const meta: Record<string, { title: string; description: string }> = {
   ko: {
     title: "에고그램 자아 상태 테스트 — 나의 다섯 가지 자아는?",
-    description: "교류분석(TA) 기반의 10문항 에고그램 테스트. 비판적 부모, 양육적 부모, 성인, 자유로운 아이, 순응하는 아이 중 내 주된 자아 상태를 알아보세요.",
+    description: "교류분석(TA) 이론 기반 10문항 에고그램 자아 상태 테스트. 비판적 부모(CP), 양육적 부모(NP), 성인(A), 자유로운 아이(FC), 순응하는 아이(AC) 5대 자아 에너지 균형을 분석하고 심리 솔루션을 즉시 무료로 확인하세요.",
   },
   en: {
     title: "Egogram Test — What Are Your Five Ego States?",
-    description: "A 10-question egogram test based on Transactional Analysis. Discover your dominant ego state among Critical Parent, Nurturing Parent, Adult, Free Child, and Adapted Child.",
+    description: "A 10-question egogram self-test based on Transactional Analysis (TA). Analyze your 5 ego states (Critical Parent, Nurturing Parent, Adult, Free Child, Adapted Child) and discover personalized psychological insights instantly for free.",
   },
   ja: {
     title: "エゴグラムテスト — あなたの5つの自我状態は？",
-    description: "交流分析(TA)に基づく10問エゴグラムテスト。批判的親、養育的親、成人、自由な子供、順応した子供の中で、自分の主要な自我状態を発見しましょう。",
+    description: "交流分析(TA)理論に基づく10問のエゴグラムテスト。批判的親(CP)、養育的親(NP)、成人(A)、自由な子供(FC)、順応した子供(AC)の5つの自我状態バランスを精密分析し、心理アドバイスを今すぐ無料で確認しましょう。",
   },
   fr: {
     title: "Test Égodiagramme — Quels sont vos cinq états du moi?",
-    description: "Un test égodiagramme de 10 questions basé sur l'Analyse Transactionnelle. Découvrez votre état du moi dominant.",
+    description: "Test égodiagramme de 10 questions basé sur l'Analyse Transactionnelle (TA). Analysez l'équilibre de vos 5 états du moi (Parent Critique, Parent Nourricier, Adulte, Enfant Libre, Enfant Adapté) et obtenez des conseils gratuits.",
   },
   es: {
     title: "Test de Egograma — ¿Cuáles son tus cinco estados del yo?",
-    description: "Un test de egograma de 10 preguntas basado en el Análisis Transaccional. Descubre tu estado del yo dominante.",
+    description: "Test de egograma de 10 preguntas basado en el Análisis Transaccional (AT). Analiza el equilibrio de tus 5 estados del yo (Padre Crítico, Padre Nutricio, Adulto, Niño Libre, Niño Adaptado) y obtén consejos psicológicos gratis.",
   },
   zh: {
     title: "自我图测试 — 你的五种自我状态是什么？",
-    description: "基于交流分析(TA)的10题自我图测试。了解你的主要自我状态。",
+    description: "基于人际沟通分析(TA)理论的10题自我图测试。全面解析批判性父母(CP)、抚育性父母(NP)、成人(A)、自由儿童(FC)与顺从儿童(AC)五大自我状态平衡，立即免费获取专属心理成长指南。",
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
@@ -46,5 +45,4 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
     <EgogramTest locale={locale as any} client:load />
     <TestExplainer content={TEST_EXPLAINERS['egogram']} locale={locale as Locale} />
   </div>
-  <TestLaneLink locale={locale as Locale} path="/egogram-test" />
 </Layout>

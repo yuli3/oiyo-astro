@@ -17,7 +17,7 @@ const copy: Record<string, { title: string; sub: string; cta: string; empty: str
 const c = copy[locale] ?? copy.en;
 ---
 <section class="mt-10">
-  <div class="rounded-2xl border border-green-200 bg-green-50/50 p-5">
+  <div class="rounded-2xl border border-border bg-green-50/50 p-5">
     <div class="flex flex-wrap items-center justify-between gap-3">
       <div>
         <p class="text-sm font-black text-foreground">{c.title}</p>
@@ -43,7 +43,7 @@ const c = copy[locale] ?? copy.en;
           const href = r && typeof r.sourcePath === 'string' ? r.sourcePath : '';
           const el = document.createElement(href ? 'a' : 'span');
           if (href) el.setAttribute('href', href);
-          el.className = 'inline-flex items-center rounded-full border border-green-200 bg-card px-3 py-1 text-xs font-bold text-green-800 transition hover:border-green-400';
+          el.className = 'inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-bold text-green-800 transition hover:border-green-400';
           const t = r && r.title ? String(r.title) : '';
           const v = r && r.resultLabel ? String(r.resultLabel) : '';
           el.textContent = v ? `${t} · ${v}` : t;

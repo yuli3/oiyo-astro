@@ -484,4 +484,44 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     title: {"ko": "환생 — 다시 태어난다면 어느 나라?", "en": "Reincarnation — if you were born again, which country?", "ja": "転生 — 生まれ変わるとしたらどの国？", "zh": "投胎 — 如果再出生会在哪个国家？", "fr": "Réincarnation — si vous renaissiez, dans quel pays ?", "es": "Reencarnación — si nacieras de nuevo, ¿en qué país?"},
     description: {"ko": "점이 아닙니다. 세계은행 인구와 출생 추정으로 나라를 가중 추첨합니다. 신생아 기준과 인구 기준을 바꿀 수 있고, 여러 번도 가능합니다.", "en": "Not a fortune. A World Bank weighted draw using current births or current population. Multiple independent lives allowed.", "ja": "占いではありません。世界銀行のデータで出生または人口の重み抽選。複数回も独立です。", "zh": "不是占卜。用世界银行数据按新生儿或人口加权抽取，可独立多次。", "fr": "Ce n'est pas une voyance. Tirage pondéré Banque mondiale, naissances ou population.", "es": "No es un horóscopo. Sorteo ponderado del Banco Mundial, nacimientos o población."},
   },
+  {
+    slug: "joseon-1426",
+    title: {"ko": "600년 전 조선의 나 — 1426년 관직·관복·고향", "en": "You in Joseon, 1426 — office, robe and province", "ja": "600年前の朝鮮のわたし", "zh": "600年前朝鲜的我", "fr": "Vous à Joseon, 1426", "es": "Tú en Joseon, 1426"},
+    description: {"ko": "경국대전 정원과 세종실록지리지로 뽑아 호패로 보여줘요.", "en": "Drawn from Gyeongguk daejeon seats and the Sejong Sillok gazetteer, shown on a hopae tag.", "ja": "経国大典と世宗実録地理志で引き、号牌で見せます。", "zh": "依据经国大典与世宗实录地理志抽取，以号牌展示。", "fr": "D'après le Gyeongguk daejeon et le registre de Sejong, sur un hopae.", "es": "Según el Gyeongguk daejeon y el registro de Sejong, en un hopae."},
+  },
+  {
+    slug: "europe-1426",
+    title: {"ko": "600년 전 유럽의 왕좌", "en": "Your throne in 1426 Europe", "ja": "1426年欧州の玉座", "zh": "1426年欧洲王座", "fr": "Votre trône en 1426", "es": "Tu trono en 1426"},
+    description: {"ko": "1426년 실제 30개 왕좌 중 하나와 동갑 유명인.", "en": "One of 30 real thrones of 1426 and famous people your age.", "ja": "1426年の実在30の玉座と同い年の有名人。", "zh": "1426年30个真实王座之一与同龄名人。", "fr": "L'un des 30 vrais trônes de 1426 et vos contemporains.", "es": "Uno de los 30 tronos reales de 1426 y famosos de tu edad."},
+  },
+  {
+    slug: "silla-golpum",
+    title: {"ko": "1300년 전 신라의 나 — 골품과 17관등", "en": "You in Silla — bone rank and 17 court ranks", "ja": "1300年前の新羅のわたし", "zh": "1300年前新罗的我", "fr": "Vous à Silla — rang d'os", "es": "Tú en Silla — rango de hueso"},
+    description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
+  },
+  {
+    slug: "ancestors-1426",
+    title: {"ko": "600년 전 내 조상은 몇 명? — 족보 칸과 실제 조상", "en": "How many ancestors did you have in 1426?", "ja": "600年前の祖先は何人？", "zh": "600年前我有多少祖先？", "fr": "Combien d'ancêtres aviez-vous en 1426 ?", "es": "¿Cuántos antepasados tenías en 1426?"},
+    description: {"ko": "족보 칸 2ⁿ과 그때 인구로 서로 다른 조상 수, 그때 사람 몇 명 중 1명이 내 조상인지 계산해요.", "en": "Tree slots (2ⁿ) against the 1426 population: distinct ancestors and what share of people then are yours.", "ja": "家系図の枠2ⁿと当時の人口から、異なる祖先の数と当時の何人に1人が祖先かを計算します。", "zh": "用家谱格子2ⁿ与当时人口，计算不同祖先数，以及当时每多少人中有1人是你的祖先。", "fr": "Cases de l'arbre (2ⁿ) contre la population de 1426 : ancêtres distincts et part des gens d'alors.", "es": "Casillas del árbol (2ⁿ) frente a la población de 1426: antepasados distintos y qué parte de la gente de entonces."},
+  },
+  {
+    slug: "joseon-1789",
+    title: {"ko": "1789년 호적 속 나 — 신분·직역·이름·하루", "en": "You in Joseon's 1789 register", "ja": "1789年戸籍の中のわたし", "zh": "1789年户籍里的我", "fr": "Vous au registre de Joseon, 1789", "es": "Tú en el registro de Joseon, 1789"},
+    description: {"ko": "대구 호적의 신분 비율로 내 신분·직역·이름·가족을 뽑아 호적 한 줄로 보여줘요.", "en": "Status, title, name and family drawn from Daegu register shares, written as a register line.", "ja": "大邱戸籍の身分比率で身分・職役・名前・家族を引き、戸籍の一行にします。", "zh": "按大邱户籍的身份比例抽取身份、职役、名字与家人，写成户籍一行。", "fr": "Statut, titre, nom et famille d'après les registres de Daegu, en une ligne de registre.", "es": "Estatus, título, nombre y familia según los registros de Daegu, en una línea de registro."},
+  },
+  {
+    slug: "france-1789",
+    title: {"ko": "1789년 프랑스의 나 — 성직자·귀족·제3신분", "en": "You in France, 1789 — clergy, nobility or Third Estate", "ja": "1789年フランスのわたし", "zh": "1789年法国的我", "fr": "Qui étiez-vous en 1789 ?", "es": "Tú en Francia, 1789"},
+    description: {"ko": "르페브르 추정 인구로 신분을 뽑고 삼부회 대표가 될지 봐요.", "en": "An estate by Lefebvre's estimates, and your chance at the Estates-General.", "ja": "ルフェーヴルの推計で身分を引き、三部会の代表になれたかを見ます。", "zh": "按勒费弗尔估计抽取等级，看你能否当选三级会议代表。", "fr": "Votre ordre selon Lefebvre et vos chances aux États généraux.", "es": "Tu estado según Lefebvre y tu opción en los Estados Generales."},
+  },
+  {
+    slug: "us-birth-state",
+    title: {"ko": "미국에서 태어났다면 어느 주?", "en": "Born in the US: which state?", "ja": "米国で生まれたら何州？", "zh": "如果生在美国会是哪个州？", "fr": "Né aux États-Unis : quel État ?", "es": "Nacido en EE. UU.: ¿qué estado?"},
+    description: {"ko": "2024년 주별 출생과 SSA 아기 이름 통계로 만든 출생증명서.", "en": "A birth certificate from 2024 births by state and SSA baby names.", "ja": "2024年の州別出生とSSAの名前統計で作る出生証明書。", "zh": "依据2024年各州出生与SSA名字统计的出生证明。", "fr": "Un acte de naissance d'après les naissances 2024 et la SSA.", "es": "Un acta de nacimiento según los nacimientos de 2024 y la SSA."},
+  },
+  {
+    slug: "past-life-1426",
+    title: {"ko": "600년 전 나는? 조선 관직·유럽 왕좌·미국 주", "en": "600 years ago: your Joseon office, European throne and US state", "ja": "600年前のわたし：朝鮮の官職・欧州の玉座・米国の州", "zh": "600年前的我：朝鲜官职·欧洲王座·美国州", "fr": "Il y a 600 ans : charge à Joseon, trône européen, État américain", "es": "Hace 600 años: cargo en Joseon, trono europeo y estado de EE. UU."},
+    description: {"ko": "경국대전 정원, 1426년 실제 군주, 2024년 미국 출생 통계로 뽑아요. 랜덤 또는 성향 맞춤.", "en": "Drawn from Gyeongguk daejeon seats, the real rulers of 1426 and 2024 US births. Random or matched to your traits.", "ja": "経国大典の定員、1426年の実在の君主、米国2024年の出生統計で抽選。ランダムまたは性格マッチ。", "zh": "依据经国大典编制、1426年真实君主与美国2024年出生统计抽取。随机或按性格匹配。", "fr": "D'après le Gyeongguk daejeon, les vrais souverains de 1426 et les naissances américaines 2024. Au hasard ou selon votre profil.", "es": "Según el Gyeongguk daejeon, los gobernantes reales de 1426 y los nacimientos de EE. UU. de 2024. Al azar o según tu perfil."},
+  },
 ];

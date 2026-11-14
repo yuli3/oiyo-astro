@@ -1,0 +1,76 @@
+---
+/**
+ * A short recorded clip of a tool being used, placed under the tool.
+ * The file is not requested until the clip scrolls into view, so it costs the first paint nothing.
+ * It plays once, muted, and then offers a replay; with Reduce Motion on it never starts by itself.
+ * With `sound` the clip is an ordinary player the visitor starts: browsers do not autoplay sound.
+ * Clips are produced by coding/scripts/motion (2026-10-07).
+ */
+interface Props {
+  src: string;
+  poster: string;
+  width: number;
+  height: number;
+  label: string;
+  caption: string;
+  replay: string;
+  sound?: boolean;
+  class?: string;
+}
+
+const { src, poster, width, height, label, caption, replay, sound = false, class: className = "" } = Astro.props;
+---
+
+<figure class={`mx-auto w-full ${className}`} data-usage-clip={sound ? "sound" : "silent"}>
+  <div class="relative overflow-hidden rounded-2xl border border-border bg-card">
+    {sound ? (
+      <video controls playsinline preload="none" poster={poster} width={width} height={height} aria-label={label} class="block h-auto w-full">
+        <source src={src} type="video/mp4" />
+      </video>
+    ) : (
+      <>
+        <video muted playsinline preload="none" poster={poster} width={width} height={height} aria-label={label} data-src={src} class="block h-auto w-full"></video>
+        <button
+          type="button"
+          data-replay
+          hidden
+          class="absolute bottom-3 right-3 min-h-11 rounded-full border border-border bg-card px-4 text-sm font-bold text-foreground shadow-sm"
+        >
+          {replay}
+        </button>
+      </>
+    )}
+  </div>
+  <figcaption class="mt-2 text-center text-sm leading-relaxed text-muted-foreground">{caption}</figcaption>
+</figure>
+
+<script>
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  for (const figure of document.querySelectorAll<HTMLElement>('[data-usage-clip="silent"]')) {
+    const video = figure.querySelector("video");
+    const button = figure.querySelector<HTMLButtonElement>("[data-replay]");
+    if (!video || !button) continue;
+
+    const start = () => {
+      if (!video.src && video.dataset.src) video.src = video.dataset.src;
+      button.hidden = true;
+      video.currentTime = 0;
+      // A refused play (data saver, low power mode) leaves the poster and the button, which is fine.
+      void video.play().catch(() => { button.hidden = false; });
+    };
+    video.addEventListener("ended", () => { button.hidden = false; });
+    button.addEventListener("click", start);
+
+    if (reduced || !("IntersectionObserver" in window)) {
+      button.hidden = false;
+      continue;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      start();
+    }, { threshold: 0.6 });
+    observer.observe(video);
+  }
+</script>
