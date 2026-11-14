@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import UsStockTaxOptimizer from '../../components/tools/UsStockTaxOptimizer';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "미국주식 양도소득세 & 손실상계 절세 계산기 — 250만원 공제 및 손실매도 시뮬레이터",
+    description: "해외주식 연간 기본공제 250만원과 마이너스 종목 손실상계(Tax-Loss Harvesting)를 통해 5월 양도소득세 22%를 0원으로 만드는 절세 계산기입니다.",
+  },
+  en: {
+    title: "US Stock Capital Gains Tax & Tax-Loss Harvesting Simulator",
+    description: "Calculate capital gains tax on overseas US equities in Korea and optimize tax-loss harvesting to reduce 22% tax down to zero.",
+  },
+  ja: {
+    title: "米国株 譲渡所得税＆損益通算 節税計算機 — 250万ウォン控除＆損切りシミュレーター",
+    description: "海外株式の年間基本控除250万ウォンと損失確定による損益通算を活用して22％の譲渡税を合法的に節税する計算機です。",
+  },
+  zh: {
+    title: "美股资本利得税与亏损对冲节税计算器 — 250万韩元免税额测算器",
+    description: "精准计算韩国海外美股 22% 资本利得税，利用年末亏损股止损对冲（Tax-Loss Harvesting）合法实现零税负。",
+  },
+  fr: {
+    title: "Simulateur d'Impôt sur les Plus-Values Actions US en Corée",
+    description: "Optimisez la compensation des pertes fiscales sur les actions américaines pour réduire l'impôt sur les plus-values de 22% en Corée.",
+  },
+  es: {
+    title: "Calculadora de Impuestos sobre Ganancias de Acciones de EE. UU. en Corea",
+    description: "Aprovecha la deducción anual de 2.5 millones de KRW y la cosecha de pérdidas fiscales para reducir los impuestos en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <UsStockTaxOptimizer client:load locale={locale} />
+  </main>
+</Layout>
