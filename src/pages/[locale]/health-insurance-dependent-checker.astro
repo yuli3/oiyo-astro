@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import HealthInsuranceDependentChecker from '../../components/tools/HealthInsuranceDependentChecker';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "건강보험 피부양자 자격 판정기 — 소득·재산 기준 및 지역가입자 건보료 계산기",
+    description: "국민건강보험공단 최신 기준(연소득 2,000만원, 재산 과표 5.4억/9억원)에 따라 부모님이나 은퇴 가족의 피부양자 자격 유지 여부와 탈락 시 예상 지역보험료를 진단합니다.",
+  },
+  en: {
+    title: "Korea Health Insurance Dependent Eligibility & Premium Simulator",
+    description: "Check eligibility for 0 KRW health insurance dependent status in Korea under strict 20M KRW income and property tax rules.",
+  },
+  ja: {
+    title: "韓国 健康保険 被扶養者 資格判定機 — 所得・財産基準＆地域保険料シミュレーター",
+    description: "韓国の国民健康保険で被扶養者資格（保険料0ウォン）が維持できるかを診断し、脱落時の地域保険料を即座に計算します。",
+  },
+  zh: {
+    title: "韩国国民健康保险被抚养人资格测算器 — 收入与财产标准及地域保费计算器",
+    description: "根据最新规定测算父母及退休家庭成员是否符合韩国健康保险被抚养人免缴资格，以及资格丧失后的月度保费。",
+  },
+  fr: {
+    title: "Simulateur d'Éligibilité d'Ayant Droit à l'Assurance Maladie en Corée",
+    description: "Vérifiez le maintien du statut d'ayant droit gratuit et estimez les cotisations locales en cas de perte d'éligibilité en Corée.",
+  },
+  es: {
+    title: "Calculadora de Elegibilidad de Beneficiario del Seguro de Salud en Corea",
+    description: "Evalúa si puedes mantener el estatus de dependiente sin primas según los límites de ingresos y patrimonio en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <HealthInsuranceDependentChecker client:load locale={locale} />
+  </main>
+</Layout>

@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import StressDsrMortgageCalculator from '../../components/tools/StressDsrMortgageCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "스트레스 DSR 주택담보대출 한도 계산기 — 수도권 1.2%p 및 주기형·변동금리 비교",
+    description: "2024~2026 스트레스 DSR 2단계·3단계 규제에 따른 연봉별 주택담보대출 최대 가능 한도와 주기형(5년 고정) 대출의 한도 우위를 즉시 계산합니다.",
+  },
+  en: {
+    title: "Korea Stress DSR Mortgage Loan Limit Calculator — Rate Structure Comparison",
+    description: "Simulate maximum mortgage loan capacity under Korean Stress DSR Stage 2 & 3 rules across variable, mixed, and periodic interest rate types.",
+  },
+  ja: {
+    title: "韓国 ストレスDSR 住宅ローン 限度額計算機 — 首都圏1.2％p＆変動・周期型比較",
+    description: "韓国のストレスDSR規制下で年収に応じた住宅ローンの最大借入可能額と金利タイプ別の限度額の差をシミュレーションします。",
+  },
+  zh: {
+    title: "韩国压力 DSR 住房抵押贷款额度测算器 — 首都圈加点及浮动周期型对比",
+    description: "精准计算韩国压力 DSR 政策下各收入阶层的最大房贷额度，并实时对比 5 年周期型与浮动利率的额度差异。",
+  },
+  fr: {
+    title: "Calculateur de Capacité d'Emprunt Immobilier Stress DSR en Corée",
+    description: "Estimez votre capacité d'emprunt maximale sous les règles Stress DSR en Corée selon votre revenu et type de taux d'intérêt.",
+  },
+  es: {
+    title: "Calculadora de Límite de Préstamo Hipotecario Stress DSR en Corea",
+    description: "Calcula el límite máximo de hipoteca según las normas Stress DSR en Corea y compara tasas variables frente a periódicas.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <StressDsrMortgageCalculator client:load locale={locale} />
+  </main>
+</Layout>
