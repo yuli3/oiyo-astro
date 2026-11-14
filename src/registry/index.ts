@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const ancestors1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2f5d50",
+  domain: "ontology",
+  icon: "Network",
+  id: "ancestors-1426",
+  path: "/ancestors-1426",
+  status: "production",
+  name: { zh: "600年前我有多少祖先？", en: "How many ancestors in 1426?", es: "¿Cuántos antepasados en 1426?", fr: "Combien d'ancêtres en 1426 ?", ja: "600年前の祖先は何人？", ko: "600년 전 내 조상은 몇 명?" },
+  description: { zh: "家谱格子每代翻倍，而1426年的人数有限：算出不同祖先数与共同祖先的年代。", en: "Your tree doubles each generation but 1426 had only so many people: distinct ancestors, share of everyone then, and when common ancestors appear.", es: "Tu árbol se duplica, pero en 1426 había gente finita: antepasados distintos y cuándo aparecen los comunes.", fr: "Votre arbre double à chaque génération, mais 1426 comptait un nombre fini de gens : ancêtres distincts et ancêtres communs.", ja: "家系図は世代ごとに倍、でも1426年の人数は有限。異なる祖先の数と共通祖先の時代を計算します。", ko: "족보 칸은 세대마다 두 배지만 1426년 사람 수는 정해져 있어요. 서로 다른 조상 수와 공통 조상이 나타나는 때를 계산해요." },
+};
+
 const joseon1789Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -447,6 +460,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  ancestors1426Manifest,
   joseon1789Manifest,
   france1789Manifest,
   usBirthStateManifest,
