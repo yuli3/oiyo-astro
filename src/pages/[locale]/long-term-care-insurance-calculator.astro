@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import LongTermCareInsuranceCalculator from "../../components/tools/LongTermCareInsuranceCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "노인장기요양보험 1~5등급 본인부담금 & 요양원 vs 재가 한도 계산기 | OIYO Tools",
+    description: "2024~2026 보건복지부 고시 기준, 1~5등급별 공단 지원금(80~85%), 본인부담금(재가 15%, 요양원 20%, 감경 6~12%, 수급자 0%), 식대 및 사설 간병 대비 절감액을 1초 만에 확인합니다.",
+  },
+  en: {
+    title: "Korea Long-Term Care Insurance Cost Calculator (Grade 1~5) | OIYO Tools",
+    description: "Calculate National Health Insurance subsidies, out-of-pocket copayments (15% home, 20% nursing home), and family savings for elder care grades 1 to 5.",
+  },
+  ja: {
+    title: "韓国 老人長期療養保険 1〜5等級 自己負担金＆療養院・在宅限度額計算機 | OIYO Tools",
+    description: "等級別公団支援金（80〜85％）、自己負担金（在宅15％、施設20％、減免6〜12％、生活保護0％）および民間介護士対比の節減額を瞬時に算出。",
+  },
+  zh: {
+    title: "韩国 老年长期疗养保险 1~5等级 自付金额与疗养院费用计算器 | OIYO Tools",
+    description: "依据韩国保健福祉部标准，测算1~5等级公团补助金（80~85%）、个人自付比例（居家15%、机构20%、减免6~12%）、伙食费及相较私人护工的节省金额。",
+  },
+  fr: {
+    title: "Calculateur d'assurance dépendance pour personnes âgées en Corée | OIYO Tools",
+    description: "Estimez les subventions publiques, les quotes-parts (15% à domicile, 20% en établissement) et les économies familiales pour les soins de longue durée.",
+  },
+  es: {
+    title: "Calculadora de seguro de cuidados a largo plazo en Corea | OIYO Tools",
+    description: "Calcule los subsidios estatales, copagos (15% en el hogar, 20% en residencias) y ahorros familiares para los grados de atención de personas mayores 1 a 5.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">노인장기요양보험 비용 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        1~5등급 공단 국비 지원금(80~85%), 요양원 vs 방문요양 실부담금 및 사설 간병인 대비 절감액 비교
+      </p>
+    </div>
+
+    <LongTermCareInsuranceCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">노인장기요양보험 이용 핵심 실무 팁</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 재가급여와 시설급여의 차이점</h3>
+          <p>
+            <strong>재가급여</strong>는 어르신이 댁에서 거주하며 요양보호사가 방문하거나(방문요양), 낮 시간 동안 주야간보호센터를 이용하는 서비스(본인부담률 15%)입니다. <strong>시설급여(요양원)</strong>는 시설에 24시간 입소하는 서비스로 본인부담률은 20%이며 식사재료비(월 30~40만 원)는 비급여로 100% 본인이 부담합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 본인부담금 40%~60% 감경 혜택 확인</h3>
+          <p>
+            국민건강보험료 납부액이 하위 20~25%에 해당하는 가구는 지자체와 공단 심사를 통해 본인부담금이 <strong>40% 감경(재가 9%, 시설 12%)</strong> 또는 <strong>60% 감경(재가 6%, 시설 8%)</strong>되어 월 20만~40만원 수준으로 요양원을 이용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

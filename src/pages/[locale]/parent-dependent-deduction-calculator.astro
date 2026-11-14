@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import ParentDependentDeductionCalculator from "../../components/tools/ParentDependentDeductionCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "따로 사는 부모님 연말정산 부양가족 기본공제(150만) & 경로우대(100만) 판정기 | OIYO Tools",
+    description: "소득세법 제50조·제51조 기준 따로 사는 부모님(시부모·장인장모 포함)의 만 60세 나이 요건, 연간 소득 100만원 요건, 경로우대 및 형제간 중복공제 가산세 추징을 1초 만에 진단합니다.",
+  },
+  en: {
+    title: "Korea Year-End Tax Parent Dependent Deduction Calculator (1.5M~2.5M KRW) | OIYO Tools",
+    description: "Evaluate basic deduction eligibility (1.5M KRW) and senior deduction (1M KRW) for parents living separately under Korean Income Tax Law.",
+  },
+  ja: {
+    title: "韓国 別居の親の年末調整扶養控除（150万）＆敬老優遇（100万）判定機 | OIYO Tools",
+    description: "所得税法に基づき、別居中の両親（配偶者の両親含む）の満60歳要件、年間所得100万ウォン要件、兄弟間の重複控除リスクを診断。",
+  },
+  zh: {
+    title: "韩国 分居父母 年末清算赡养亲属基本扣除（150万）与敬老特例判定器 | OIYO Tools",
+    description: "依据韩国所得税法，快速判定分居父母（含配偶父母）满60岁年龄标准、年所得100万韩元标准、兄弟姐妹重复扣除追缴风险及退税金额。",
+  },
+  fr: {
+    title: "Calculateur de déduction fiscale pour parents à charge en Corée | OIYO Tools",
+    description: "Vérifiez l'éligibilité à la déduction fiscale pour parents âgés vivant séparément (déduction de base de 1,5M et majoration pour personnes âgées).",
+  },
+  es: {
+    title: "Calculadora de deducción por padres dependientes en Corea | OIYO Tools",
+    description: "Evalúe la elegibilidad para la deducción básica (1.5M KRW) y el bono para mayores de 70 años para padres que viven por separado.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">따로 사는 부모님 부양가족 공제 판정기</h1>
+      <p class="text-muted-foreground text-sm">
+        시부모·장인·장모 포함 만 60세 연령 및 소득 100만원 요건 진단, 경로우대 추가공제 및 형제 중복공제 방어
+      </p>
+    </div>
+
+    <ParentDependentDeductionCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">부모님 부양가족 공제 필수 3대 원칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 따로 살아도 실제로 부양하면 공제 가능</h3>
+          <p>
+            부모님이 주민등록상 다른 주소지(시골 또는 별도 세대)에 거주하더라도, 주거 형편상 별거로 인정되어 실제로 생활비를 지원하는 자녀가 <strong>기본공제(150만원)</strong>를 받을 수 있습니다. 배우자의 부모님(시부모, 장인·장모)도 동일합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚠️ 형제·자매 중 단 1명만 신청 (중복 공제 추징 주의)</h3>
+          <p>
+            형제 중 여러 명이 동시에 부모님을 기본공제 대상자로 올리면 국세청 전산망에서 100% 교차 검증되어 적발됩니다. 이 경우 공제액이 전액 취소되고 <strong>과소신고가산세(10%)와 납부지연가산세</strong>가 추징되므로 반드시 사전에 형제간 협의 후 <strong>소득세 한계세율이 가장 높은 형제</strong>에게 몰아주는 것이 절세에 가장 유리합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
