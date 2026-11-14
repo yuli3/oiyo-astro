@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import InheritanceGiftTaxPlanner from '../../components/tools/InheritanceGiftTaxPlanner';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "상속세 vs 증여세 비교 계산기 — 10년 합산 면세한도 및 혼인·출산 특례 플래너",
+    description: "부모님의 자산을 사후 일괄 상속받는 것과 10년 단위로 사전 분할 증여(배우자 6억, 성인자녀 5천만, 혼인특례 1.5억)하는 절세 전략을 정밀 비교합니다.",
+  },
+  en: {
+    title: "Korea Inheritance vs Gift Tax Planner — 10-Year Exemption & Marriage Credit",
+    description: "Compare lump-sum inheritance taxes against 10-year lifetime gifting strategies (spouse 600M, child 50M, marriage 150M exemption) in Korea.",
+  },
+  ja: {
+    title: "韓国 相続税 vs 生前贈与税 比較計算機 — 10年合算控除＆結婚・出産特例プランナー",
+    description: "韓国の相続税と生前贈与税を比較し、配偶者控除や10年ごとの贈与税非課税枠を活用した最適な資産移転戦略をシミュレーションします。",
+  },
+  zh: {
+    title: "韩国遗产税对比生前赠与税测算器 — 10年累计免税额与结婚生育特例规划",
+    description: "精准对比韩国一次性继承与分期生前赠与的税负差异，充分利用配偶6亿、成年子女5千万及新婚1.5亿免税优惠。",
+  },
+  fr: {
+    title: "Simulateur de Droits de Succession vs Donation en Corée — Abattements Fiscaux",
+    description: "Comparez les droits de succession et les donations de son vivant avec les abattements décennaux en Corée.",
+  },
+  es: {
+    title: "Calculadora de Impuesto sobre Herencias vs Donaciones en Corea",
+    description: "Compara el impuesto sobre sucesiones frente a donaciones en vida según las exenciones fiscales de 10 años en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <InheritanceGiftTaxPlanner client:load locale={locale} />
+  </main>
+</Layout>

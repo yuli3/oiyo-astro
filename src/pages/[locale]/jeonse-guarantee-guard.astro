@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import JeonseGuaranteeGuard from '../../components/tools/JeonseGuaranteeGuard';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "HUG 전세보증보험 가입 자격 & 깡통전세 계산기 — 공시가격 126% 룰 판정",
+    description: "HUG 주택도시보증공사의 공시가격 126% 룰과 선순위 근저당 비율을 검증하여 전세보증금 반환보증 가입 가능 여부와 깡통전세 보증금 미반환 위험을 진단합니다.",
+  },
+  en: {
+    title: "Korea HUG Jeonse Guarantee & Tin-Can Rental Risk Inspector — 126% Rule",
+    description: "Diagnose whether your Korean rental deposit qualifies for HUG return insurance under the 126% published price rule and evaluate insolvency risks.",
+  },
+  ja: {
+    title: "韓国 チョンセ 保証保険 加入資格＆カン痛チョンセ 危険診断機 — 公示価格126％ルール",
+    description: "韓国住宅都市保証公社（HUG）の公示価格126％基準を検証し、チョンセ保証金の返還保証保険の加入可否と未返還リスクを診断します。",
+  },
+  zh: {
+    title: "韩国全税保证保险加入资格与空壳房风险测算器 — 公示价格126%规则",
+    description: "根据最新HUG公示价格126%规则测算全税押金返还保证保险投保资格，预警高全税率空壳房风险。",
+  },
+  fr: {
+    title: "Vérificateur d'Assurance Garantie Locative en Corée — Règle des 126%",
+    description: "Vérifiez si votre caution locative (Jeonse) est éligible à la garantie de remboursement HUG selon la règle des 126% en Corée.",
+  },
+  es: {
+    title: "Inspector de Seguro de Garantía de Alquiler en Corea — Regla del 126%",
+    description: "Comprueba si tu depósito Jeonse califica para el seguro de devolución estatal bajo la regla del 126% en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <JeonseGuaranteeGuard client:load locale={locale} />
+  </main>
+</Layout>
