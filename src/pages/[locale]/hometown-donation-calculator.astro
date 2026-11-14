@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import HometownDonationCalculator from "../../components/tools/HometownDonationCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "고향사랑기부금 세액공제(10만원 100% 환급) & 답례품 3만원 계산기 | OIYO Tools",
+    description: "조세특례제한법 제58조 기준, 10만원 기부 시 10만원 전액(100%) 세금 환급과 3만원 상당의 지자체 특산물 답례품으로 3만원 순이득을 얻는 필수 절세 혜택을 1초 만에 시뮬레이션합니다.",
+  },
+  en: {
+    title: "Korea Hometown Love Donation Tax Credit Calculator (100% Refund + 30% Gift) | OIYO Tools",
+    description: "Calculate full 100% tax credit up to 100k KRW and 30% regional specialty gift benefits under Korea Tax Reduction Act.",
+  },
+  ja: {
+    title: "韓国 ふるさと納税（故郷愛寄付金）10万ウォン100％控除＆返礼品計算機 | OIYO Tools",
+    description: "租税特例制限法に基づき、10万ウォン寄付時に10万ウォン全額税額控除＋3万ウォン相当の返礼品による実質3万ウォン得する恩恵を計算。",
+  },
+  zh: {
+    title: "韩国 家乡爱心捐款（故乡税）10万韩元100%全额退税与30%礼品计算器 | OIYO Tools",
+    description: "依据韩国租税特例限制法，测算捐款10万韩元全额退税及获赠3万韩元地方特产礼品的全民必备省税方案与超额捐款抵扣率。",
+  },
+  fr: {
+    title: "Calculateur de crédit d'impôt pour don régional en Corée (100% remboursé) | OIYO Tools",
+    description: "Calculez le crédit d'impôt de 100 % jusqu'à 100 000 KRW et la valeur du cadeau régional de 30 % pour les dons communautaires en Corée.",
+  },
+  es: {
+    title: "Calculadora de deducción fiscal por donación regional en Corea | OIYO Tools",
+    description: "Calcule el 100% de crédito fiscal hasta 100k KRW más un 30% de regalo regional para donaciones del amor por la ciudad natal.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">고향사랑기부금 세액공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        10만원 기부 시 10만원 전액 세금 환급 + 3만원 상당의 지자체 답례품으로 실질 3만원 순이득
+      </p>
+    </div>
+
+    <HometownDonationCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">고향사랑기부제 핵심 혜택 및 유의사항</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 10만원 기부 시 확정 +3만원 이득</h3>
+          <p>
+            10만원을 기부하면 <strong>국세 90,909원 + 지방소득세 9,091원 = 100,000원 전액</strong>이 연말정산 시 세액공제로 환급되며, 기부금의 30%인 <strong>30,000원 상당의 한우, 쌀, 과일, 지역화폐</strong>를 답례품으로 돌려받으므로 실부담금 0원에 3만원의 순수 이익이 발생합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 본인 주민등록 주소지에는 기부 불가</h3>
+          <p>
+            고향사랑기부금은 본인의 주민등록등본상 주소지가 속한 지자체에는 기부할 수 없으며, <strong>그 외 전국의 모든 시·군·구 및 광역시·도</strong>에 자유롭게 기부할 수 있습니다. 2025년부터는 연간 기부 한도가 기존 500만원에서 <strong>2,000만원</strong>으로 확대되었습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

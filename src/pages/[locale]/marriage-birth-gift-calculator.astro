@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import MarriageBirthGiftCalculator from "../../components/tools/MarriageBirthGiftCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "혼인·출산 증여재산공제(최대 3억원 비과세) 계산기 | OIYO Tools",
+    description: "상속세및증여세법 제53조의2 기준, 혼인 전후 2년 내 직계존속 증여 시 기본 5천만원 + 혼인 1억원(부부 합산 최대 3억원) 증여세 0원 비과세 혜택과 절세액을 즉시 계산합니다.",
+  },
+  en: {
+    title: "Korea Marriage & Birth Gift Tax Deduction Calculator (Up to 300M KRW) | OIYO Tools",
+    description: "Calculate gift tax exemption up to 300M KRW for newlyweds receiving financial support from parents within 2 years of marriage or childbirth in Korea.",
+  },
+  ja: {
+    title: "韓国 婚姻・出産贈与財産控除（最大3億ウォン非課税）計算機 | OIYO Tools",
+    description: "2024年新設の相続税および贈与税法第53条の2に基づき、婚姻前後2年以内の直系尊属からの贈与に対する最大3億ウォン非課税枠と節税額を計算。",
+  },
+  zh: {
+    title: "韩国 结婚·生育赠与财产扣除（最高3亿韩元免税）计算器 | OIYO Tools",
+    description: "依据韩国相赠税法第53条之2，精准测算新婚夫妇婚前婚后2年内父母赠与最高3亿韩元零税费特例及实际节税金额。",
+  },
+  fr: {
+    title: "Calculateur d'abattement fiscal pour mariage et naissance en Corée | OIYO Tools",
+    description: "Calculez l'exonération fiscale sur les donations parentales jusqu'à 300 millions KRW pour les jeunes mariés en Corée.",
+  },
+  es: {
+    title: "Calculadora de exención de impuesto de donación por matrimonio en Corea | OIYO Tools",
+    description: "Calcule la exención de impuestos de hasta 300M KRW para recién casados que reciben donaciones familiares dentro de los 2 años posteriores al matrimonio.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">혼인·출산 증여공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        기존 5,000만원 + 혼인 특례 1억원 = 부부 합산 최대 3억원까지 증여세 0원 전액 비과세 혜택 계산
+      </p>
+    </div>
+
+    <MarriageBirthGiftCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">혼인·출산 증여공제 3대 필수 요건</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 4년의 골든타임 (혼인신고 전 2년 ~ 후 2년)</h3>
+          <p>
+            혼인공제는 <strong>혼인신고일 이전 2년</strong>부터 <strong>혼인신고일 이후 2년</strong>까지 총 4년의 기간 내에 증여받은 재산에 대해 적용됩니다. 출산의 경우 <strong>자녀 출생일로부터 2년 이내</strong> 증여받아야 합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 부부 합산 3억원 (양가 각 1.5억원)</h3>
+          <p>
+            기존 10년간 직계존속 기본공제(5,000만원)와 별도로 혼인 특례(1억원)가 각각 중복 적용되므로, 신랑 측 부모에게 1.5억원, 신부 측 부모에게 1.5억원을 증여받아 신혼집 전세나 매매 자금으로 활용할 경우 <strong>증여세가 단 1원도 나오지 않습니다</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
