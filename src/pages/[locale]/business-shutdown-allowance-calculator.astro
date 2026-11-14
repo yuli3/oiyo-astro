@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import BusinessShutdownAllowanceCalculator from "../../components/tools/BusinessShutdownAllowanceCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "근로기준법 제46조 휴업수당(평균임금 70% vs 통상임금 한도) 계산기 | OIYO Tools",
+    description: "근로기준법 제46조 기준, 회사 귀책사유로 휴업할 때 법적으로 보장되는 1일 휴업수당(평균임금의 70% 또는 통상임금)과 총 지급액 및 무급휴직 강요 대처법을 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Statutory Business Shutdown Allowance Calculator (70% Average Wage) | OIYO Tools",
+    description: "Calculate mandatory business shutdown allowance (at least 70% of average wage or ordinary wage cap) under Article 46 of Korea Labor Standards Act.",
+  },
+  ja: {
+    title: "韓国 勤労基準法第46条 休業手当（平均賃金70％ vs 通常賃金上限）計算機 | OIYO Tools",
+    description: "使用者側の都合で休業する際に法的に保障される1日休業手当（平均賃金の70％または通常賃金）および無給休業の違法性対策を計算。",
+  },
+  zh: {
+    title: "韩国 劳动基准法第46条 停工津贴（平均工资70%或通常工资限额）计算器 | OIYO Tools",
+    description: "依据韩国劳动基准法第46条，精准测算因雇主原因停工停产期间依法保障的日停工津贴（平均工资70%或以通常工资为限）与累计应领金额。",
+  },
+  fr: {
+    title: "Calculateur d'indemnité d'arrêt d'activité légale en Corée (70% salaire moyen) | OIYO Tools",
+    description: "Calculez l'indemnité légale de chômage technique (au moins 70 % du salaire moyen) en vertu de l'article 46 de la loi sur les normes du travail en Corée.",
+  },
+  es: {
+    title: "Calculadora de subsidio por suspensión temporal de actividades en Corea | OIYO Tools",
+    description: "Calcule el subsidio legal de cierre temporal (al menos 70% del salario promedio) según el artículo 46 de la Ley de Normas Laborales de Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">근로기준법 휴업수당 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        근로기준법 제46조: 회사 사정으로 쉴 때 법적으로 보장되는 평균임금 70% 이상 휴업수당 보장액 계산
+      </p>
+    </div>
+
+    <BusinessShutdownAllowanceCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">근로기준법 제46조 휴업수당 핵심 법률 상식</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 평균임금 70%가 통상임금보다 크면?</h3>
+          <p>
+            근로기준법 제46조 제1항 단서에 따라, <strong>평균임금의 70%가 통상임금을 초과하는 경우</strong>에는 사업주가 <strong>통상임금을 휴업수당으로 지급</strong>할 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚠️ 무급 휴직 강요는 명백한 임금체불</h3>
+          <p>
+            사업주가 경영 악화를 이유로 일방적으로 무급 휴직을 지시하는 것은 근로기준법 위반입니다. 노동위원회의 정식 승인 없이 휴업수당을 1원이라도 덜 지급하면 <strong>3년 이하의 징역 또는 3,000만원 이하의 벌금</strong>에 처해지는 형사처벌 대상입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import HousingSubscriptionDeductionCalculator from "../../components/tools/HousingSubscriptionDeductionCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "주택청약저축 연말정산 소득공제(연 300만원 한도·최대 120만원) 계산기 | OIYO Tools",
+    description: "조세특례제한법 제87조(2024년 300만원 확대 개정) 기준, 총급여 7,000만원 이하 무주택 세대주의 청약통장 납입액 40% 소득공제(최대 120만원) 적격성과 세금 환급액을 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Housing Subscription Year-End Tax Deduction Calculator (Max 1.2M KRW) | OIYO Tools",
+    description: "Calculate 40% income deduction up to 1.2M KRW on housing subscription accounts under revised 3M KRW deposit limits in Korea.",
+  },
+  ja: {
+    title: "韓国 住宅請約総合貯蓄 年末調整所得控除（上限300万・最大120万）計算機 | OIYO Tools",
+    description: "2024年改正（年300万ウォンに拡大）に基づき、総給与7000万ウォン以下の無住宅世帯主の住宅請約口座40％所得控除および還付額を計算。",
+  },
+  zh: {
+    title: "韩国 住宅申购储蓄 年末清算所得扣除（限额300万·最高120万）计算器 | OIYO Tools",
+    description: "依据韩国租税特例限制法（限额调至300万韩元），快速测算总年薪7000万韩元以下无房户主的40%申购储蓄扣除额与实际退税金额。",
+  },
+  fr: {
+    title: "Calculateur de déduction fiscale pour compte épargne logement en Corée | OIYO Tools",
+    description: "Calculez la déduction fiscale de 40 % jusqu'à 1,2 million KRW sur les dépôts d'épargne logement selon le plafond révisé de 3 millions KRW.",
+  },
+  es: {
+    title: "Calculadora de deducción fiscal por cuenta de suscripción de vivienda en Corea | OIYO Tools",
+    description: "Calcule la deducción de ingresos del 40% hasta 1.2M KRW en depósitos de suscripción de vivienda bajo el límite revisado de 3M KRW.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">주택청약 소득공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        2024년 세법 개정 반영: 연 300만원 납입 시 40%인 최대 120만원 소득공제 및 한계세율별 환급액 산출
+      </p>
+    </div>
+
+    <HousingSubscriptionDeductionCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">주택청약 연말정산 소득공제 핵심 체크리스트</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 2024년부터 연간 납입한도 300만원으로 확대</h3>
+          <p>
+            기존에는 연간 240만원 한도로 최대 96만원까지만 소득공제되었으나, 세법 개정으로 <strong>연간 납입한도가 300만원으로 확대</strong>되어 40%인 <strong>최대 120만원까지 소득공제</strong>를 받을 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚠️ 은행 무주택확인서 제출 필수</h3>
+          <p>
+            총급여 7,000만원 이하 무주택 세대주라 하더라도, 청약통장을 개설한 은행 앱이나 지점을 통해 <strong>"무주택확인서"를 다음 해 2월 말까지 제출</strong>해야 국세청 연말정산 간소화 서비스에 소득공제 항목으로 자동 등록됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
