@@ -90,6 +90,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+  "ancestors-1426": { icon: "🌳", label: { ko: "600년 전 내 조상은 몇 명?", en: "How many ancestors in 1426?", ja: "600年前の祖先は何人？", zh: "600年前我有多少祖先？", fr: "Combien d'ancêtres en 1426 ?", es: "¿Cuántos antepasados en 1426?" } },
   "silla-golpum": { icon: "🏛️", label: { ko: "1300년 전 신라의 나 (골품)", en: "You in Silla: bone rank", ja: "新羅のわたし（骨品）", zh: "新罗的我（骨品）", fr: "Vous à Silla : rang d'os", es: "Tú en Silla: rango de hueso" } },
   "joseon-1789": { icon: "📜", label: { ko: "1789년 호적 속 나", en: "You in Joseon's 1789 register", ja: "1789年戸籍の中のわたし", zh: "1789年户籍里的我", fr: "Vous au registre de 1789", es: "Tú en el registro de 1789" } },
   "france-1789": { icon: "🇫🇷", label: { ko: "1789년 프랑스의 나", en: "You in France, 1789", ja: "1789年フランスのわたし", zh: "1789年法国的我", fr: "Vous en 1789", es: "Tú en Francia, 1789" } },
@@ -115,7 +116,7 @@ export function ModeTabs3({ mode, onMode, l, modes = ["random", "birthday", "tra
   );
 }
 
-export function BirthdayPicker({ l, onSubmit }: { l: L; onSubmit: (birthday: string) => void }) {
+export function BirthdayPicker({ l, onSubmit, cta }: { l: L; onSubmit: (birthday: string) => void; cta?: string }) {
   const [value, setValue] = useState("");
   useEffect(() => {
     const saved = readJson<string>(BIRTHDAY_KEY, "");
@@ -144,7 +145,7 @@ export function BirthdayPicker({ l, onSubmit }: { l: L; onSubmit: (birthday: str
           onSubmit(value);
         }}
       >
-        {pick(T.birthGo, l)}
+        {cta ?? pick(T.birthGo, l)}
       </Button>
       <p className="text-xs leading-relaxed text-muted-foreground">{pick(T.birthNote, l)}</p>
     </div>

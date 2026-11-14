@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "ancestors-1426",
+    title: {"ko": "600년 전 내 조상은 몇 명? — 족보 칸과 실제 조상", "en": "How many ancestors did you have in 1426?", "ja": "600年前の祖先は何人？", "zh": "600年前我有多少祖先？", "fr": "Combien d'ancêtres aviez-vous en 1426 ?", "es": "¿Cuántos antepasados tenías en 1426?"},
+    description: {"ko": "족보 칸 2ⁿ과 그때 인구로 서로 다른 조상 수, 그때 사람 몇 명 중 1명이 내 조상인지 계산해요.", "en": "Tree slots (2ⁿ) against the 1426 population: distinct ancestors and what share of people then are yours.", "ja": "家系図の枠2ⁿと当時の人口から、異なる祖先の数と当時の何人に1人が祖先かを計算します。", "zh": "用家谱格子2ⁿ与当时人口，计算不同祖先数，以及当时每多少人中有1人是你的祖先。", "fr": "Cases de l'arbre (2ⁿ) contre la population de 1426 : ancêtres distincts et part des gens d'alors.", "es": "Casillas del árbol (2ⁿ) frente a la población de 1426: antepasados distintos y qué parte de la gente de entonces."},
+  },
+  {
     slug: "joseon-1789",
     title: {"ko": "1789년 호적 속 나 — 신분·직역·이름·하루", "en": "You in Joseon's 1789 register", "ja": "1789年戸籍の中のわたし", "zh": "1789年户籍里的我", "fr": "Vous au registre de Joseon, 1789", "es": "Tú en el registro de Joseon, 1789"},
     description: {"ko": "대구 호적의 신분 비율로 내 신분·직역·이름·가족을 뽑아 호적 한 줄로 보여줘요.", "en": "Status, title, name and family drawn from Daegu register shares, written as a register line.", "ja": "大邱戸籍の身分比率で身分・職役・名前・家族を引き、戸籍の一行にします。", "zh": "按大邱户籍的身份比例抽取身份、职役、名字与家人，写成户籍一行。", "fr": "Statut, titre, nom et famille d'après les registres de Daegu, en une ligne de registre.", "es": "Estatus, título, nombre y familia según los registros de Daegu, en una línea de registro."},
