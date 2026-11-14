@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import AgentDependencyGuard from "../../components/tools/AgentDependencyGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 패키지 번들 가드 & 네이티브 마이그레이터 | OIYO Tools",
+    description: "package.json에서 불필요하게 무거운 레거시 의존성(moment, lodash, axios, uuid, chalk 등)을 감지하고 모던 브라우저 및 Node.js 네이티브 코드로 즉시 교체합니다.",
+  },
+  en: {
+    title: "AI Agent Dependency Guard & Native Migrator | OIYO Tools",
+    description: "Scan package.json for heavy legacy dependencies (moment, lodash, axios, uuid) and generate zero-dependency modern native replacements in sub-milliseconds.",
+  },
+  ja: {
+    title: "AIエージェント パッケージバンドルガード＆ネイティブ移行ツール | OIYO Tools",
+    description: "package.jsonから重いレガシー依存関係（moment、lodash、axiosなど）を検出し、モダンなWeb標準ネイティブコードに置換します。",
+  },
+  zh: {
+    title: "AI Agent 依赖包减肥与原生迁移器 | OIYO Tools",
+    description: "检测package.json中冗余的传统依赖（moment, lodash, axios, uuid），并生成零依赖原生JavaScript替代代码。",
+  },
+  fr: {
+    title: "Gardien des dépendances et migrateur natif pour agents IA | OIYO Tools",
+    description: "Analysez package.json pour détecter les dépendances obsolètes (moment, lodash, axios) et générez du code natif sans dépendance.",
+  },
+  es: {
+    title: "Guardián de dependencias y migrador nativo para agentes de IA | OIYO Tools",
+    description: "Analice package.json para detectar dependencias pesadas (moment, lodash, axios) y genere reemplazos nativos modernos sin dependencias.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 패키지 번들 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        레거시 의존성(moment, lodash, axios, uuid) 다이어트 및 모던 웹 표준 네이티브 대체 코드 자동 생성기
+      </p>
+    </div>
+
+    <AgentDependencyGuard client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">왜 제로 디펜던시 네이티브 API인가요?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 번들 크기와 콜드 스타트 단축</h3>
+          <p>
+            moment나 lodash 같은 레거시 라이브러리는 수백 KB의 번들 크기를 차지하여 Edge 및 Cloudflare Workers의 초기 로딩(Cold Start) 지연을 유발합니다. 내장된 <code>Intl</code> 및 ES2024 배열 메서드를 쓰면 번들 크기가 0KB가 됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 보안 취약점(CVE)과 공급망 공격 원천 차단</h3>
+          <p>
+            외부 패키지를 추가할수록 공급망 공격 위험과 보안 패치 유지보수 부채가 증가합니다. <code>fetch</code>, <code>crypto.randomUUID</code> 같은 런타임 표준 API는 무결성과 지속적 보안 업데이트를 보장합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

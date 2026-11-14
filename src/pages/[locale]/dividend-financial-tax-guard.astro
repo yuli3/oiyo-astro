@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import DividendFinancialTaxGuard from "../../components/tools/DividendFinancialTaxGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "배당소득 금융소득종합과세 & 건강보험 피부양자 계산기 | OIYO Tools",
+    description: "연간 배당·이자소득 2,000만원 초과 금융종합과세 비교과세와 건보료 피부양자 자격 박탈 및 지역건보료 1,000만원 절벽 효과를 1초 만에 시뮬레이션합니다.",
+  },
+  en: {
+    title: "Korea Dividend Financial Composite Tax & Health Insurance Simulator | OIYO Tools",
+    description: "Calculate Korea financial income composite tax exceeding 20M KRW, health insurance dependent disqualification risks, and 10M KRW cliff effects.",
+  },
+  ja: {
+    title: "韓国 配当所得金融総合課税＆健康保険被扶養者シミュレーター | OIYO Tools",
+    description: "年間配当・利子所得が2,000万ウォンを超えた場合の金融所得総合課税および健康保険被扶養者資格喪失リスクを即座に計算します。",
+  },
+  zh: {
+    title: "韩国 股息利息金融所得综合征税与医保被扶养人资格模拟器 | OIYO Tools",
+    description: "模拟年股息利息超过2000万韩元时的综合征税税额、国民健康保险被扶养人丧失风险及地方医保断崖效应。",
+  },
+  fr: {
+    title: "Simulateur de taxe sur dividendes et assurance santé en Corée | OIYO Tools",
+    description: "Calculez l'impôt composé sur les dividendes dépassant 20M KRW et la perte du statut d'ayant droit à l'assurance maladie en Corée.",
+  },
+  es: {
+    title: "Simulador de impuestos sobre dividendos y seguro médico en Corea | OIYO Tools",
+    description: "Calcule el impuesto compuesto sobre dividendos superiores a 20M KRW y el riesgo de descalificación del seguro médico en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">배당소득 금융종합과세 & 건강보험료 시뮬레이터</h1>
+      <p class="text-muted-foreground text-sm">
+        배당·이자소득 2,000만원 초과 시 종합과세 세율 및 건강보험 피부양자 박탈·지역건보료 폭탄 방어 진단
+      </p>
+    </div>
+
+    <DividendFinancialTaxGuard client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">배당 투자자 필수 세금 & 건보료 방어 상식</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 2,000만원 피부양자 탈락의 공포</h3>
+          <p>
+            배당 및 이자소득이 연간 2,000만원을 단 1원이라도 초과하면 국민건강보험 피부양자 자격이 영구 상실되어 지역가입자로 전환됩니다. 이때 보유 중인 주택, 토지 등 모든 재산에 점수가 매겨져 매월 수십만 원의 건보료가 부과됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 지역가입자 1,000만원 건보료 절벽</h3>
+          <p>
+            지역가입자는 금융소득이 1,000만원 이하이면 건보료 부과 대상 소득에서 전액 제외(0원)되지만, 1,000만원을 초과하는 순간 초과분이 아닌 <strong>금융소득 전체</strong>에 대해 연 약 8.01%의 건보료가 부과되는 절벽 효과가 발생합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
