@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import ComprehensiveRealEstateTaxCalculator from "../../components/tools/ComprehensiveRealEstateTaxCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "종합부동산세(종부세) 1세대 1주택 12억 & 80% 세액공제 계산기 | OIYO Tools",
+    description: "2024~2026년 주택분 종합부동산세 기준 1세대 1주택 12억원 기본공제, 공정시장가액비율 60%, 재산세 이중과세 공제 및 고령·장기보유 최대 80% 세액공제를 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Comprehensive Real Estate Holding Tax Calculator (1.2B Deduction & 80% Credit) | OIYO Tools",
+    description: "Calculate Korea comprehensive real estate holding tax reflecting the 1.2B KRW single-home deduction, 60% market ratio, and up to 80% senior/long-term credits.",
+  },
+  ja: {
+    title: "韓国 総合不動産税（保有税）計算機（1世帯1住宅12億控除＆最大80％税額控除） | OIYO Tools",
+    description: "韓国の総合不動産税法に基づく1世帯1住宅12億ウォン基本控除、公正市場価額比率60％、高齢・長期保有最大80％控除をシミュレーションします。",
+  },
+  zh: {
+    title: "韩国 综合不动产税（房产税）计算器（一户一套12亿减免与80%税额抵扣） | OIYO Tools",
+    description: "测算韩国综合不动产税，包含单套住宅12亿韩元起征点、60%市场公允比率及高龄/长期持有最高80%税额抵扣。",
+  },
+  fr: {
+    title: "Simulateur de taxe foncière globale immobilière en Corée | OIYO Tools",
+    description: "Calculez l'impôt sur la détention immobilière globale en Corée avec l'abattement de 1,2 milliard KRW et jusqu'à 80% de crédits d'impôt.",
+  },
+  es: {
+    title: "Calculadora del Impuesto Inmobiliario Integral en Corea | OIYO Tools",
+    description: "Calcule el impuesto sobre bienes inmuebles en Corea con deducción de 1.200M KRW y hasta un 80% de descuento para adultos mayores.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">종합부동산세 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        1세대 1주택 12억원 기본공제, 다주택 9억원, 공정시장가액비율 60% 및 고령·장기보유 합산 최대 80% 세액공제 시뮬레이터
+      </p>
+    </div>
+
+    <ComprehensiveRealEstateTaxCalculator client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">종합부동산세 절세 핵심 수칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 1주택 12억 공제와 부부 공동명의 전략</h3>
+          <p>
+            1세대 1주택 단독명의는 12억원 기본공제와 최대 80%의 고령·장기보유 세액공제를 받을 수 있습니다. 반면 부부 공동명의는 각각 9억원씩 총 18억원의 기본공제를 받으므로 공시가격 18억원 이하 주택은 공동명의가 유리합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 고령자(40%) + 장기보유(50%) 합산 한도 80%</h3>
+          <p>
+            만 70세 이상(40%)이면서 15년 이상 보유(50%)한 경우 두 공제율의 합계는 90%이지만, 세법상 법정 한도인 <strong>최대 80%</strong>까지만 세액공제가 적용됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
