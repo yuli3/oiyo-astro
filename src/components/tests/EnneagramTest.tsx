@@ -971,6 +971,13 @@ const TYPE_RESULTS: Record<EnneaType, Record<SupportedLang, TypeResult>> = {
   },
 }
 
+// 2026-11-14: 결과에서 같은 언어의 유형 가이드 글(6개 언어 모두 있음)로 잇는다(발굴 3번).
+const ENNEAGRAM_TYPE_GUIDE: Record<EnneaType, string> = {
+  '1': 'enneagram-type1-perfectionist-guide', '2': 'enneagram-type2-helper-guide', '3': 'enneagram-type3-achiever-guide',
+  '4': 'enneagram-type4-individualist-guide', '5': 'enneagram-type5-investigator-guide', '6': 'enneagram-type6-loyalist-guide',
+  '7': 'enneagram-type7-enthusiast-guide', '8': 'enneagram-type8-challenger-guide', '9': 'enneagram-type9-peacemaker-complete-guide',
+}
+
 const ENNEAGRAM_COLORS: Record<EnneaType, string> = {
   '1': '#435D31', '2': '#ec4899', '3': '#f59e0b',
   '4': '#A1A578', '5': '#3b82f6', '6': '#14b8a6',
@@ -1182,6 +1189,7 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={lp}
         links={[
+          { href: `/${locale}/${ENNEAGRAM_TYPE_GUIDE[dominant]}/`, label: (({ ko: `📖 ${dominant}번 유형 완전 가이드`, en: `📖 Full guide to Type ${dominant}`, ja: `📖 タイプ${dominant}の完全ガイド`, zh: `📖 ${dominant}号类型完整指南`, fr: `📖 Guide complet du type ${dominant}`, es: `📖 Guía completa del tipo ${dominant}` } as Record<string, string>)[locale] ?? `📖 Full guide to Type ${dominant}`) },
           { href: `/${lp}/enneagram/hobbies/`, label: (({ ko: '✨ 유형별 추천 취미·운동', en: '✨ Hobbies for your type', ja: '✨ タイプ別おすすめ趣味・運動', zh: '✨ 适合你类型的兴趣与运动', fr: '✨ Loisirs et sports pour votre type', es: '✨ Aficiones y deportes para tu tipo' } as Record<string, string>)[lp] ?? '✨ Hobbies for your type') },
           { href: `/${lp}/mbti/test/`, label: (({ ko: '🧭 MBTI 테스트도 해보기', en: '🧭 Try the MBTI test', ja: '🧭 MBTIテストもやってみる', zh: '🧭 也来做 MBTI 测验', fr: '🧭 Faire aussi le test MBTI', es: '🧭 Haz también el test MBTI' } as Record<string, string>)[lp] ?? '🧭 Try the MBTI test') },
         ]}

@@ -1,0 +1,206 @@
+---
+/**
+ * DISC 4유형 페이지 (/[locale]/disc/d|i|s|c/). 2026-11-09 콘텐츠 발굴 3번, 2026-11-14 CHOSEUN "전부 진행".
+ * MBTI 유형 페이지와 같은 자리: 검사 결과에서 바로 이어지고, 검색으로도 들어온다.
+ * 본문은 검사 결과 데이터(DiscPersonalityTest RESULTS, 6개 언어)를 그대로 쓴다. 새 해석을 만들지 않는다.
+ */
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, type Locale } from '../../../i18n';
+import { DISC_COLORS, LABELS, RESULTS, type DiscType } from '../../../components/tests/DiscPersonalityTest';
+
+const TYPES: DiscType[] = ['D', 'I', 'S', 'C'];
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((locale) => (['d', 'i', 's', 'c'] as const).map((type) => ({ params: { locale, type } })));
+}
+
+const { locale, type: slug } = Astro.params as { locale: Locale; type: string };
+const type = slug.toUpperCase() as DiscType;
+const r = RESULTS[type][locale];
+const lb = LABELS[locale];
+const color = DISC_COLORS[type];
+
+interface Copy {
+  title: (t: DiscType, name: string) => string;
+  description: (t: DiscType, sub: string) => string;
+  eyebrow: string;
+  allHeading: string;
+  testCta: string;
+  guide: string;
+  faqHeading: string;
+  faqs: { q: string; a: string }[];
+  note: string;
+}
+
+const C: Record<Locale, Copy> = {
+  ko: {
+    title: (t, n) => `DISC ${t}형(${n.split('—')[1]?.trim() ?? n}) 특징 — 강점·약점·일하는 방식`,
+    description: (t, sub) => `DISC ${t}형은 ${sub}. 강점과 약점, 일하는 방식, 소통 스타일, 성장 팁을 한 페이지에 정리했어요.`,
+    eyebrow: 'DISC 성격 유형',
+    allHeading: 'DISC 네 유형 한눈에',
+    testCta: '내 DISC 유형 알아보기 →',
+    guide: '직장에서 DISC 활용하기',
+    faqHeading: '자주 묻는 질문',
+    faqs: [
+      { q: 'DISC는 어디서 나왔나요?', a: '심리학자 윌리엄 마스턴이 1928년 책 『Emotions of Normal People』에서 사람의 행동을 주도·사교·안정·신중 네 축으로 설명한 데서 시작했어요. 지금 쓰이는 검사들은 이 틀을 바탕으로 여러 회사가 따로 만든 것이에요.' },
+      { q: '한 유형만 나오나요?', a: '대부분의 사람은 두세 유형이 섞여 있어요. 가장 높은 점수의 유형이 평소 행동을 가장 잘 설명할 뿐이고, 상황에 따라 다른 유형이 앞에 나오기도 해요.' },
+      { q: '채용이나 평가에 써도 되나요?', a: '권하지 않아요. DISC는 서로의 소통 방식을 이해하는 데 쓰는 도구예요. 능력이나 적합성을 판정하는 근거로 쓰면 안 돼요.' },
+    ],
+    note: '이 설명은 자기 이해를 돕는 참고 자료예요. 공식 DISC 진단이 아니에요.',
+  },
+  en: {
+    title: (t, n) => `DISC Type ${t} (${n.split('—')[1]?.trim() ?? n}): Traits, Strengths and Work Style`,
+    description: (t, sub) => `DISC type ${t}: ${sub.charAt(0).toLowerCase() + sub.slice(1)}. Strengths, blind spots, work style, communication and a growth tip on one page.`,
+    eyebrow: 'DISC personality types',
+    allHeading: 'All four DISC types',
+    testCta: 'Find your DISC type →',
+    guide: 'Using DISC at work',
+    faqHeading: 'FAQ',
+    faqs: [
+      { q: 'Where does DISC come from?', a: "Psychologist William Moulton Marston described behaviour along four dimensions in his 1928 book Emotions of Normal People. Today's DISC assessments are separate products built on that framework." },
+      { q: 'Do I have only one type?', a: 'Most people are a blend of two or three. Your highest score simply describes your usual behaviour best, and another style can lead in a different situation.' },
+      { q: 'Should DISC be used for hiring?', a: 'We advise against it. DISC is a tool for understanding communication styles, not for judging ability or fit.' },
+    ],
+    note: 'This description is a self-reflection aid, not an official DISC assessment.',
+  },
+  ja: {
+    title: (t, n) => `DISC診断 ${t}型（${n.split('—')[1]?.trim() ?? n}）の特徴 — 強み・弱み・仕事の進め方`,
+    description: (t, sub) => `DISC診断の${t}型は「${sub}」。強みと弱み、仕事の進め方、コミュニケーション、成長のヒントを1ページにまとめました。`,
+    eyebrow: 'DISC診断 · 4タイプ',
+    allHeading: 'DISCの4タイプ早見表',
+    testCta: '自分のDISCタイプを診断する →',
+    guide: '職場でのDISC活用法',
+    faqHeading: 'よくある質問',
+    faqs: [
+      { q: 'DISCはどこから生まれましたか。', a: '心理学者ウィリアム・マーストンが1928年の著書『Emotions of Normal People』で、人の行動を主導・感化・安定・慎重の4つの軸で説明したのが始まりです。現在の診断ツールは、この枠組みをもとに各社が独自に作ったものです。' },
+      { q: 'タイプはひとつだけですか。', a: '多くの人は2〜3タイプが混ざっています。最も高いタイプが普段の行動をよく表しているだけで、場面によって別のタイプが前に出ることもあります。' },
+      { q: '採用選考に使ってもいいですか。', a: 'おすすめしません。DISCはお互いのコミュニケーションの違いを知るための道具で、能力や適性を判定する根拠ではありません。' },
+    ],
+    note: 'この説明は自己理解のための参考資料で、公式のDISC診断ではありません。',
+  },
+  zh: {
+    title: (t, n) => `DISC ${t} 型（${n.split('—')[1]?.trim() ?? n}）性格特点 — 优势、短板与工作方式`,
+    description: (t, sub) => `DISC ${t} 型：${sub}。一页看懂优势与短板、工作方式、沟通风格和成长建议。`,
+    eyebrow: 'DISC 性格类型',
+    allHeading: 'DISC 四种类型一览',
+    testCta: '测一测你的 DISC 类型 →',
+    guide: '在职场中运用 DISC',
+    faqHeading: '常见问题',
+    faqs: [
+      { q: 'DISC 从哪里来？', a: '心理学家威廉·马斯顿在1928年的著作《Emotions of Normal People》中，用支配、影响、稳健、谨慎四个维度描述人的行为。今天的 DISC 测评是各家机构在这一框架上分别开发的。' },
+      { q: '每个人只有一种类型吗？', a: '多数人是两三种类型的组合。得分最高的类型只是最能描述你平时的行为，不同场合下其他类型也可能占上风。' },
+      { q: '可以用于招聘吗？', a: '不建议。DISC 是了解彼此沟通方式的工具，不能作为判断能力或岗位匹配度的依据。' },
+    ],
+    note: '本说明仅供自我了解参考，并非官方 DISC 测评。',
+  },
+  fr: {
+    title: (t, n) => `Profil DISC ${t} (${n.split('—')[1]?.trim() ?? n}) : traits, forces et style de travail`,
+    description: (t, sub) => `Profil DISC ${t} : ${sub.charAt(0).toLowerCase() + sub.slice(1)}. Forces, points de vigilance, style de travail, communication et conseil de progression.`,
+    eyebrow: 'Profils DISC',
+    allHeading: 'Les quatre profils DISC',
+    testCta: 'Découvrir mon profil DISC →',
+    guide: 'Utiliser le DISC au travail',
+    faqHeading: 'Questions fréquentes',
+    faqs: [
+      { q: "D'où vient le DISC ?", a: 'Le psychologue William Moulton Marston a décrit le comportement selon quatre dimensions dans son livre Emotions of Normal People (1928). Les tests DISC actuels sont des outils distincts construits sur ce cadre.' },
+      { q: "N'ai-je qu'un seul profil ?", a: 'La plupart des gens combinent deux ou trois profils. Le plus élevé décrit simplement le mieux votre comportement habituel ; un autre peut dominer selon la situation.' },
+      { q: 'Peut-on utiliser le DISC pour recruter ?', a: "Nous le déconseillons. Le DISC aide à comprendre les styles de communication ; il ne mesure ni les compétences ni l'adéquation à un poste." },
+    ],
+    note: "Cette description est une aide à la réflexion, pas une évaluation DISC officielle.",
+  },
+  es: {
+    title: (t, n) => `Perfil DISC ${t} (${n.split('—')[1]?.trim() ?? n}): rasgos, fortalezas y estilo de trabajo`,
+    description: (t, sub) => `Perfil DISC ${t}: ${sub.charAt(0).toLowerCase() + sub.slice(1)}. Fortalezas, puntos débiles, estilo de trabajo, comunicación y un consejo de crecimiento.`,
+    eyebrow: 'Perfiles DISC',
+    allHeading: 'Los cuatro perfiles DISC',
+    testCta: 'Descubre tu perfil DISC →',
+    guide: 'Cómo usar DISC en el trabajo',
+    faqHeading: 'Preguntas frecuentes',
+    faqs: [
+      { q: '¿De dónde viene DISC?', a: 'El psicólogo William Moulton Marston describió el comportamiento en cuatro dimensiones en su libro Emotions of Normal People (1928). Los tests DISC actuales son herramientas distintas basadas en ese marco.' },
+      { q: '¿Tengo un solo perfil?', a: 'La mayoría combina dos o tres. El más alto solo describe mejor tu conducta habitual; otro puede predominar según la situación.' },
+      { q: '¿Se puede usar DISC para contratar?', a: 'No lo recomendamos. DISC sirve para entender estilos de comunicación, no para juzgar la capacidad o la idoneidad.' },
+    ],
+    note: 'Esta descripción es una ayuda para la reflexión, no una evaluación DISC oficial.',
+  },
+};
+
+const c = C[locale];
+const pageTitle = c.title(type, r.title);
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout title={pageTitle} description={c.description(type, r.subtitle)} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <section class="mx-auto max-w-2xl px-4 py-10" style={{ '--disc': color }}>
+    <p class="text-xs font-black tracking-widest text-primary">{c.eyebrow}</p>
+    <div class="mt-3 flex items-center gap-3">
+      <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-(--disc) text-2xl font-black text-white" aria-hidden="true">{type}</span>
+      <h1 class="text-3xl font-black tracking-tight">{r.title}</h1>
+    </div>
+    <p class="mt-3 text-lg font-semibold">{r.subtitle}</p>
+    <p class="mt-3 leading-relaxed text-muted-foreground">{r.description}</p>
+
+    <ul class="mt-5 flex flex-wrap gap-2" aria-label={lb.keywords}>
+      {r.keywords.map((k) => <li class="rounded-full border border-(--disc) px-3 py-1 text-sm font-semibold">{k}</li>)}
+    </ul>
+
+    <div class="mt-8 grid gap-3 sm:grid-cols-2">
+      <section class="rounded-xl border bg-card p-4">
+        <h2 class="font-black">{lb.strengths}</h2>
+        <ul class="mt-2 space-y-1 text-sm text-muted-foreground">{r.strengths.map((s) => <li>+ {s}</li>)}</ul>
+      </section>
+      <section class="rounded-xl border bg-card p-4">
+        <h2 class="font-black">{lb.weaknesses}</h2>
+        <ul class="mt-2 space-y-1 text-sm text-muted-foreground">{r.weaknesses.map((s) => <li>△ {s}</li>)}</ul>
+      </section>
+    </div>
+
+    <section class="mt-6 space-y-2">
+      <h2 class="text-xl font-black">{lb.workStyle}</h2>
+      <p class="leading-relaxed text-muted-foreground">{r.workStyle}</p>
+    </section>
+    <section class="mt-6 space-y-2">
+      <h2 class="text-xl font-black">{lb.communication}</h2>
+      <p class="leading-relaxed text-muted-foreground">{r.communication}</p>
+    </section>
+    <section class="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4">
+      <h2 class="font-black text-primary">{lb.tip}</h2>
+      <p class="mt-1 leading-relaxed">{r.tip}</p>
+    </section>
+
+    <a href={`/${locale}/disc-personality-test/`} class="mt-8 flex min-h-11 items-center justify-center rounded-xl bg-primary px-4 font-bold text-primary-foreground">{c.testCta}</a>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{c.allHeading}</h2>
+      <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+        {TYPES.map((t) => (
+          <li>
+            <a href={`/${locale}/disc/${t.toLowerCase()}/`} aria-current={t === type ? 'page' : undefined}
+              class:list={['flex h-full min-h-11 items-start gap-3 rounded-xl border bg-card p-4 transition hover:border-primary', t === type && 'border-primary']}>
+              <span class="w-5 shrink-0 text-center font-black text-(--c)" style={{ '--c': DISC_COLORS[t] }}>{t}</span>
+              <span><strong class="block text-sm">{RESULTS[t][locale].title}</strong><span class="text-sm text-muted-foreground">{RESULTS[t][locale].subtitle}</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-4"><a class="text-sm font-semibold underline" href={`/${locale}/disc-personality-workplace-guide/`}>📖 {c.guide}</a></p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{c.faqHeading}</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {c.faqs.map((f) => (
+          <details class="p-4">
+            <summary class="cursor-pointer font-semibold">{f.q}</summary>
+            <p class="mt-2 text-sm leading-6 text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+    <p class="mt-8 text-xs text-muted-foreground">{c.note}</p>
+  </section>
+</Layout>
