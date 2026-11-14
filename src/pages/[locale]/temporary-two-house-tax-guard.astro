@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import TemporaryTwoHouseTaxGuard from "../../components/tools/TemporaryTwoHouseTaxGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "일시적 2주택 취득세 3년 처분기한 & 중과세율(8%) 추징 가드 | OIYO Tools",
+    description: "지방세법 시행령 제28조의5 기준, 신규 주택 취득일로부터 종전 주택 3년 처분 마감일 D-Day를 추적하고 기한 미처분 시 소급 부과되는 중과세율(8%) 및 가산세 추징을 1초 만에 진단합니다.",
+  },
+  en: {
+    title: "Korea Temporary 2-Home Acquisition Tax 3-Year Disposal Deadline Guard | OIYO Tools",
+    description: "Track the 3-year statutory deadline to dispose of previous home and calculate potential 8% heavy tax clawbacks and penalties under Korean Local Tax Law.",
+  },
+  ja: {
+    title: "韓国 一時的2住宅 取得税3年処分期限＆重課税率（8％）追徴ガード | OIYO Tools",
+    description: "地方税法施行令に基づき、新規住宅取得日から従来住宅の3年処分期限D-Dayを追跡し、未処分時の8％重課税率および加산税追徴額を瞬時に診断。",
+  },
+  zh: {
+    title: "韩国 临时两套房购置税 3年处置期限与重课税率（8%）追缴防御器 | OIYO Tools",
+    description: "依据韩国地方税法施行令，跟踪新房购买后原住房3年出售倒计时，测算未按期处置时追缴的8%高额税率与附加税风险。",
+  },
+  fr: {
+    title: "Garde-fou fiscal pour cession temporaire de résidence en Corée (Délai de 3 ans) | OIYO Tools",
+    description: "Suivez le délai légal de 3 ans pour céder votre ancien logement et calculez les redressements fiscaux potentiels de 8 % en Corée.",
+  },
+  es: {
+    title: "Guardián de plazo de 3 años para 2 viviendas temporales en Corea | OIYO Tools",
+    description: "Rastree el plazo legal de 3 años para vender su vivienda anterior y calcule posibles recargos fiscales del 8% bajo la ley tributaria coreana.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">일시적 2주택 취득세 추징 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        신규 주택 취득 후 3년 내 종전 주택 미처분 시 발생하는 2주택 중과세율(8%) 및 가산세 소급 추징 방어
+      </p>
+    </div>
+
+    <TemporaryTwoHouseTaxGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">일시적 2주택 취득세 3년 룰 핵심 정리</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 전국 3년 단일화 개편</h3>
+          <p>
+            과거에는 신규 주택과 종전 주택이 모두 조정대상지역에 있을 경우 1년 또는 2년 이내 처분해야 했으나, 개편 이후 <strong>규제지역 여부와 상관없이 전국 모든 주택에 대해 3년 이내 처분</strong>으로 통일 완화되었습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚠️ 하루만 늦어도 소급 가산세 부과</h3>
+          <p>
+            3년 마감일까지 종전 주택의 매매 잔금을 받지 못하거나 소유권이전등기를 넘기지 못하면, <strong>조정지역 8% 중과세율</strong>이 소급 적용되어 기납부세액과의 차액뿐만 아니라 <strong>과소신고가산세(10%)와 매일 0.022%씩 가산되는 납부지연가산세</strong>까지 함께 추징되므로 반드시 미리 매도를 준비해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

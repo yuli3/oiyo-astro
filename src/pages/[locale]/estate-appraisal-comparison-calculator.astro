@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import EstateAppraisalComparisonCalculator from "../../components/tools/EstateAppraisalComparisonCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "상속주택 감정평가 vs 공시가격 세금 비교 & 양도세 절세 계산기 | OIYO Tools",
+    description: "상증세법 제60조 및 소득세법 제97조 기준, 상속 당시 감정평가로 취득가액을 높이는 전략과 공시가격 신고 시의 상속세 및 미래 양도소득세 총합을 비교하여 최적의 절세 분기점을 도출합니다.",
+  },
+  en: {
+    title: "Korea Inherited Real Estate Appraisal vs Official Assessed Price Calculator | OIYO Tools",
+    description: "Compare total tax liabilities between official assessed value and certified appraisal value to minimize combined inheritance and capital gains taxes in Korea.",
+  },
+  ja: {
+    title: "韓国 相続住宅 鑑定評価 vs 公示価格 税金比較＆譲渡税節税計算機 | OIYO Tools",
+    description: "相続当時の鑑定評価による取得価額引上げ戦略と公示価格申告時の相続税および将来の譲渡所得税総額を比較し、最適な損益分岐点を診断。",
+  },
+  zh: {
+    title: "韩国 继承住宅 评估价格 vs 公示价格 税费比较与转让税省税计算器 | OIYO Tools",
+    description: "依据韩国相赠税法与所得税法，对比官方公示价格与评估报告申报时的继承税及未来卖房转让所得税，找出最优节税平衡点。",
+  },
+  fr: {
+    title: "Calculateur de comparaison d'évaluation immobilière héritée en Corée | OIYO Tools",
+    description: "Comparez la fiscalité entre valeur cadastrale officielle et évaluation certifiée pour optimiser l'impôt sur les successions et les plus-values.",
+  },
+  es: {
+    title: "Calculadora de tasación de inmuebles heredados en Corea: Oficial vs Tasación | OIYO Tools",
+    description: "Compare las cargas fiscales totales entre el valor oficial tasado y la tasación pericial para minimizar los impuestos sobre herencias y plusvalías.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">상속주택 감정평가 세금 비교기</h1>
+      <p class="text-muted-foreground text-sm">
+        상속 시 감정평가액(시가) vs 공시가격(기준시가) 신고에 따른 상속세와 미래 양도소득세 종합 손익분기점 진단
+      </p>
+    </div>
+
+    <EstateAppraisalComparisonCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">상속 부동산 감정평가의 골든 크로스 원리</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 상속공제(10억/5억) 이내라면 무조건 감정평가</h3>
+          <p>
+            배우자가 생존해 있어 상속공제 한도가 10억원 이상인 경우, 상속 부동산의 시가가 10억원 이하라면 감정평가를 받아 9억원으로 신고하더라도 <strong>상속세는 0원</strong>입니다. 대신 취득가액이 6억(공시가)에서 9억(감정가)으로 인정되어, 향후 매도할 때 <strong>양도소득세 수천만~수억 원을 합법적으로 면제</strong>받을 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚠️ 상속세율이 양도세율보다 높은 대자산가의 경우</h3>
+          <p>
+            이미 상속재산이 30억~50억원을 넘어 상속세 최고세율(40~50%) 구간에 진입한 경우에는, 감정평가로 가액을 올리면 현재 당장 내야 하는 상속세 부담이 미래 양도소득세 절감액보다 커질 수 있으므로 <strong>공시가격으로 신고하는 것이 유리</strong>합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
