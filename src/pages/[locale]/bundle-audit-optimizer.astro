@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import BundleAuditOptimizerComponent from '../../components/tools/BundleAuditOptimizer';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 코딩 에이전트 번들 크기 & Tree-shaking 낭비 감지기 — 0-Dep 네이티브 대체재 변환기",
+    description: "moment, lodash, axios, uuid 등 AI 에이전트가 무심코 추가하는 무거운 레거시 패키지와 Tree-shaking 낭비를 감지하고 최신 웹 표준 네이티브 코드로 대체하여 번들과 토큰을 절약합니다.",
+  },
+  en: {
+    title: "AI Agent Bundle Size & Tree-Shaking Waste Detector — Zero-Dependency Native Alternatives",
+    description: "Detect heavy legacy dependencies (moment, lodash, axios, uuid) added by AI coding agents and convert them to zero-dependency native Web APIs to save bundle size and LLM context tokens.",
+  },
+  ja: {
+    title: "AIエージェント バンドルサイズ＆ツリーシェイキング無駄検知器 — 0-Depネイティブ代替コード変換",
+    description: "moment、lodash、axios、uuidなどAIエージェントが追加しがちな重い依存関係を検知し、最新Web標準ネイティブコードに置き換えてバンドル容量とLLMトークンを削減します。",
+  },
+  zh: {
+    title: "AI编程智能体打包体积与Tree-shaking浪费检测器 — 零依赖原生替代代码转换",
+    description: "快速检测moment、lodash、axios、uuid等被AI编程助手引入的冗余老旧依赖，一键转换为ES2024与浏览器原生Web API，大幅压缩打包体积并节省Token上下文。",
+  },
+  fr: {
+    title: "Détecteur de Poids de Bundle et Inefficacités Tree-Shaking pour Agents IA",
+    description: "Détectez les dépendances volumineuses (moment, lodash, axios, uuid) et convertissez-les en APIs natives sans dépendance pour optimiser la taille du bundle.",
+  },
+  es: {
+    title: "Detector de Tamaño de Paquete y Desperdicio de Tree-Shaking para Agentes de IA",
+    description: "Detecta dependencias pesadas (moment, lodash, axios, uuid) introducidas por agentes de IA y sustitúyelas por APIs nativas sin dependencias.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <BundleAuditOptimizerComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import YellowUmbrellaCalculatorComponent from '../../components/tools/YellowUmbrellaCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "소상공인 노란우산공제 계산기 — 최대 500만원 소득공제 및 복리이자·압류방지 시뮬레이터",
+    description: "개인사업자 및 소상공인의 사업소득 구간별 노란우산공제 소득공제 한도(최대 500만원), 종합소득세 절세 환급액, 연 복리이자 적립액 및 법적 압류 방지 혜택을 계산합니다.",
+  },
+  en: {
+    title: "Korea Yellow Umbrella Deductions & Compounding Interest Calculator for Small Businesses",
+    description: "Calculate small business tax deductions (up to 5,000,000 KRW/year), compound interest returns, and asset protection benefits under the Yellow Umbrella Mutual Aid system in Korea.",
+  },
+  ja: {
+    title: "韓国 小規模事業者「黄色い傘共済」控除計算機 — 最大500万ウォン所得控除＆複利計算機",
+    description: "個人事業主や自営業者を対象とした黄色い傘共済の所得控除枠（最大500万ウォン）、総合所得税の節税額、年複利運用および差押禁止の法的保護を計算します。",
+  },
+  zh: {
+    title: "韩国小微个体户「黄色遮阳伞共济」抵税测算器 — 每年最高500万减税与复利",
+    description: "测算韩国个体工商户黄色遮阳伞共济金所得税抵扣（最高500万韩元）、年终综合所得税退税、年复利利息积累及法定防强制执行保障。",
+  },
+  fr: {
+    title: "Simulateur de Déduction Fiscale Yellow Umbrella pour PME et Indépendants en Corée",
+    description: "Calculez les déductions fiscales pour petites entreprises (jusqu'à 5M KRW/an), les intérêts composés et la protection des avoirs en Corée.",
+  },
+  es: {
+    title: "Calculadora de Deducción Fiscal 'Paraguas Amarillo' para Autónomos en Corea",
+    description: "Calcula las deducciones fiscales para autónomos y pymes (hasta 5M KRW/año), intereses compuestos y blindaje legal frente a embargos en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <YellowUmbrellaCalculatorComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>
