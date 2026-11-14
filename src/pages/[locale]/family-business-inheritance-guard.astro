@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import FamilyBusinessInheritanceGuard from "../../components/tools/FamilyBusinessInheritanceGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "가업상속공제(최대 600억원) 적격성 & 5년 사후관리 가드 | OIYO Tools",
+    description: "상속세 및 증여세법 제18조의2 피상속인 경영 기간(10년 300억, 20년 400억, 30년 600억원)별 가업상속공제액 및 5년 사후관리 의무 위반 추징 리스크를 진단합니다.",
+  },
+  en: {
+    title: "Korea Family Business Estate Deduction & 5-Year Compliance Guard | OIYO Tools",
+    description: "Evaluate family business succession tax deduction up to 60B KRW and simulate 5-year post-management compliance requirements in Korea.",
+  },
+  ja: {
+    title: "韓国 家業相続控除（最大600億ウォン）適格性＆5年事後管理ガード | OIYO Tools",
+    description: "相続税および贈与税法第18条の2に基づき、被相続人の経営期間別控除限度（最大600億ウォン）および5年間の事後管理義務追徴リスクを診断。",
+  },
+  zh: {
+    title: "韩国 家族企业继承扣除（最高600亿韩元）合规与5年后续监管守护器 | OIYO Tools",
+    description: "测算企业经营年限对应的遗产税减免额度（最高600亿韩元），评估5年内资产处置、员工留存等违规追缴重税风险。",
+  },
+  fr: {
+    title: "Abattement successoral pour entreprise familiale en Corée (jusqu'à 60 Mrds KRW) | OIYO Tools",
+    description: "Calculez l'exonération fiscale de succession d'entreprise familiale jusqu'à 60 Mrds KRW et gérez les conditions de maintien sur 5 ans.",
+  },
+  es: {
+    title: "Deducción por sucesión de empresa familiar en Corea (hasta 60.000M KRW) | OIYO Tools",
+    description: "Calcule la deducción fiscal para la sucesión de empresas familiares en Corea y audite el cumplimiento de las normas posteriores durante 5 años.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">가업상속공제 & 5년 사후관리 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        상증세법 제18조의2 경영 기간별(300억~600억원) 공제액 산출 및 5년 사후관리(고용·자산 유지) 위반 추징 방어
+      </p>
+    </div>
+
+    <FamilyBusinessInheritanceGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">가업상속공제 신청 시 3대 핵심 주의점</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 30년 이상 경영 시 최대 600억원 공제</h3>
+          <p>
+            부모가 대표이사로 10년 이상 경영한 중소·중견기업은 300억원, 20년 이상은 400억원, <strong>30년 이상 경영 시 최대 600억원까지 상속세 과세가액에서 전액 공제</strong>되어 수백억 원의 상속세를 합법적으로 절세할 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 5년 사후관리 위반 시 이자 폭탄</h3>
+          <p>
+            상속 후 5년 동안 가업용 자산의 40% 이상을 처분하거나, 5년 통산 정규직 고용 인원이 90% 미만으로 떨어지거나, 후계자가 대표이사직에서 물러나면 <strong>공제받았던 상속세 전액에 연 8~9% 수준의 이자상당가산액이 합산되어 추징</strong>됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

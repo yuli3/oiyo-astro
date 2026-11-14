@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import HousingSpecialSupplyAdvisor from "../../components/tools/HousingSpecialSupplyAdvisor";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "2026 청약 특별공급(신생아·신혼부부·다자녀) 최적 유형 판정기 | OIYO Tools",
+    description: "신생아 특공 신설, 신혼부부 맞벌이 소득 200% 완화, 다자녀 2자녀 기준을 반영하여 혼인 기간과 자녀 수에 따른 당첨 확률 최고 청약 유형을 1초 만에 진단합니다.",
+  },
+  en: {
+    title: "2026 Korea Housing Special Supply Advisor (Newborn, Newlywed, Multi-Child) | OIYO Tools",
+    description: "Evaluate your best housing special supply quota: Newborn quota, Newlywed (up to 200% income), and relaxed 2-child multi-child quota in Korea.",
+  },
+  ja: {
+    title: "2026 韓国 アパート分譲特別供給（新生児・新婚夫婦・多子世帯）最適判定機 | OIYO Tools",
+    description: "新生児特別供給新設、新婚夫婦共働き所得200%緩和、多子世帯2子緩和を反映し、当選確率が最も高い特別供給タイプを診断。",
+  },
+  zh: {
+    title: "2026 韩国 住宅申购特别供给（新生儿·新婚夫妇·多子女）最优类型判定器 | OIYO Tools",
+    description: "反映新生儿特别供给设立、新婚双职工所得200%放宽、多子女2孩门槛放宽，精准评估中签率最高的特别供给申请方案。",
+  },
+  fr: {
+    title: "Conseiller en quotas spéciaux de logement en Corée 2026 | OIYO Tools",
+    description: "Évaluez votre éligibilité aux quotas de logement : nouveau-nés, jeunes mariés (revenu jusqu'à 200%) et familles de 2 enfants et plus.",
+  },
+  es: {
+    title: "Asesor de cupos especiales de vivienda en Corea 2026 | OIYO Tools",
+    description: "Calcule su probabilidad de asignación en cupos especiales: recién nacidos, recién casados (hasta 200% de ingresos) y familias de 2+ hijos.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">청약 특별공급 최적 유형 판정기</h1>
+      <p class="text-muted-foreground text-sm">
+        2024~2026 청약 개편 반영: 신생아 특공, 신혼부부 맞벌이 200% 완화 및 다자녀 2자녀 기준 당첨 확률 극대화 진단
+      </p>
+    </div>
+
+    <HousingSpecialSupplyAdvisor client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">2026년 청약 특별공급 3대 핵심 개편사항</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 신생아 특공의 압도적 당첨 확률</h3>
+          <p>
+            2년 이내 출산 자녀가 있다면 신혼부부 특공보다 <strong>신생아 특별공급</strong>을 먼저 노려야 합니다. 청약 신청 풀이 신생아 보유 가구로만 제한되어 경쟁률이 대폭 낮아집니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 부부 중복 청약 전면 허용</h3>
+          <p>
+            과거에는 부부가 같은 단지에 동시에 청약하면 둘 다 부적격 취소되었으나, 개편 후에는 <strong>부부 둘 다 특별공급에 신청</strong>할 수 있으며 둘 다 당첨될 경우 먼저 접수한 청약이 최종 인정됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
