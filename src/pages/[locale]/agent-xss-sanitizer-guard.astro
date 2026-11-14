@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AgentXssSanitizerGuard } from "../../components/tools/AgentXssSanitizerGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 XSS 및 HTML 인젝션 가드 | OIYO Tools",
+    description: "AI 에이전트가 생성한 프론트엔드 코드의 dangerouslySetInnerHTML, v-html 및 DOM innerHTML XSS 취약점을 0.1ms 내에 전수 검사합니다.",
+  },
+  en: {
+    title: "AI Agent XSS & HTML Injection Guard | OIYO Tools",
+    description: "Sub-millisecond static analysis for dangerouslySetInnerHTML, v-html, and DOM-based XSS vulnerabilities in AI coding agent output.",
+  },
+  ja: {
+    title: "AIエージェントXSS＆HTMLインジェクションガード | OIYO Tools",
+    description: "AI生成コードのdangerouslySetInnerHTML、v-html、DOM innerHTMLのXSS脆弱性を0.1msで監査し安全なDOMPurifyラッパーを生成。",
+  },
+  zh: {
+    title: "AI智能体XSS与HTML注入漏洞检测防护 | OIYO Tools",
+    description: "毫秒级静态审查AI生成代码中的dangerouslySetInnerHTML与DOM innerHTML漏洞，自动生成DOMPurify安全组件。",
+  },
+  fr: {
+    title: "Garde XSS et injection HTML pour agents IA | OIYO Tools",
+    description: "Analyse statique ultra-rapide des vulnérabilités dangerouslySetInnerHTML et DOM-based XSS dans le code généré par IA.",
+  },
+  es: {
+    title: "Guardián de XSS e inyección HTML para agentes de IA | OIYO Tools",
+    description: "Auditoría estática sub-milisegundo de vulnerabilidades dangerouslySetInnerHTML y XSS en componentes generados por IA.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 XSS 인젝션 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        dangerouslySetInnerHTML, v-html 및 innerHTML 취약점 탐지 및 DOMPurify 래퍼 자동 생성
+      </p>
+    </div>
+
+    <AgentXssSanitizerGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">프론트엔드 XSS 방어 2대 원칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">🛡️ 브라우저 DOMPurify 정제 필수</h3>
+          <p>
+            React의 <code>dangerouslySetInnerHTML</code>은 이름 그대로 위험합니다. 사용자 입력, 마크다운 렌더링 결과, AI 생성 텍스트를 HTML로 직접 주입할 때는 반드시 <strong>DOMPurify.sanitize()</strong>로 <code>&lt;script&gt;</code> 태그와 <code>onerror</code> 인라인 이벤트 핸들러를 제거해야 합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚡ SSR 및 하이드레이션 호환성</h3>
+          <p>
+            Next.js App Router나 Astro 등 서버 사이드 렌더링(SSR) 환경에서는 브라우저 <code>window</code> 객체가 없으므로, <code>isomorphic-dompurify</code> 라이브러리를 사용하거나 클라이언트 사이드 마운트 후에만 살균 렌더링을 수행해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

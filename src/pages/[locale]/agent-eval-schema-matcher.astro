@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AgentEvalSchemaMatcher } from "../../components/tools/AgentEvalSchemaMatcher";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 JSON 스키마 드리프트 검사기 | OIYO Tools",
+    description: "LLM이 생성한 구조화 출력(JSON)의 필수 키 누락, 타입 불일치 및 환각 필드를 0.1ms 내에 검사하고 자가 치유 JSON을 복구합니다.",
+  },
+  en: {
+    title: "AI Agent JSON Schema Drift Matcher | OIYO Tools",
+    description: "Sub-millisecond schema drift evaluator and self-healing JSON recovery tool for LLM structured outputs.",
+  },
+  ja: {
+    title: "AIエージェントJSONスキーマドリフト検査機 | OIYO Tools",
+    description: "LLM生成JSONの必須キー欠落、型ドリフト、幻覚フィールドを0.1msで監査し自己修復JSONを復元。",
+  },
+  zh: {
+    title: "AI智能体JSON模式漂移检测器 | OIYO Tools",
+    description: "毫秒级检测大模型结构化JSON输出中的字段缺失、类型漂移及幻觉多余字段，自动自愈恢复规范JSON。",
+  },
+  fr: {
+    title: "Vérificateur de dérive de schéma JSON pour agents IA | OIYO Tools",
+    description: "Détection ultra-rapide des dérives de schéma JSON et réparation automatique des sorties LLM structurées.",
+  },
+  es: {
+    title: "Comprobador de desviación de esquema JSON para agentes de IA | OIYO Tools",
+    description: "Evaluación sub-milisegundo de desviaciones de esquema y recuperación auto-reparable de JSON para respuestas de LLM.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 JSON 스키마 드리프트 검사기</h1>
+      <p class="text-muted-foreground text-sm">
+        LLM 구조화 출력(Structured Output)의 누락 키, 타입 드리프트 탐지 및 자가 치유 복구
+      </p>
+    </div>
+
+    <AgentEvalSchemaMatcher client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">LLM JSON 출력 안정화 2대 원칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">🛡️ 자가 치유(Self-Healing) 방어막</h3>
+          <p>
+            LLM이 필수 필드를 빠뜨리거나 <code>tags: null</code>을 반환하여 다운스트림 서비스가 크래시되는 것을 막기 위해, 스키마 기본값(Default values)을 자동 주입하는 <strong>Zero-Exception 정책</strong>을 적용합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚡ 타입 강제 변환(Type Coercion)</h3>
+          <p>
+            LLM이 숫자 <code>42</code> 대신 <code>"42"</code>를 문자열로 출력하는 등의 경미한 타입 드리프트는 에러를 던져 재요청(비용 낭비)하지 않고 <strong>런타임에서 안전하게 즉시 타입 변환</strong>합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
