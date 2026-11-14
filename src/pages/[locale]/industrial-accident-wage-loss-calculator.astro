@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { IndustrialAccidentWageLossCalculator } from "../../components/tools/IndustrialAccidentWageLossCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "산재 휴업급여 및 사업주 손해배상 차액 계산기 | OIYO Tools",
+    description: "대한민국 산업재해보상보험법 제52조 휴업급여(70%)와 사업주 과실에 따른 잔여 일실수입(30%) 및 비급여 치료비 손해배상액을 계산합니다.",
+  },
+  en: {
+    title: "Workers Comp & Employer Liability Calculator | OIYO Tools",
+    description: "Calculate 70% workers compensation wage loss and residual civil tort liability from employer negligence in Korea.",
+  },
+  ja: {
+    title: "労災休業給付＆事業者損害賠償差額計算機 | OIYO Tools",
+    description: "韓国産業災害補償保険法第52条の休業給付（70%）と事業者過失に基づく逸失利益（30%）・自費治療費の損害賠償額を計算。",
+  },
+  zh: {
+    title: "工伤停工留薪期补偿及雇主侵权赔偿差额计算器 | OIYO Tools",
+    description: "测算韩国工伤保险法第52条停工补助（70%）以及雇主过失造成的30%误工损失与自费医疗费索赔额。",
+  },
+  fr: {
+    title: "Calculateur d'indemnités d'accident du travail et responsabilité civile | OIYO Tools",
+    description: "Calculez les 70% d'indemnités journalières d'accident du travail et le solde de responsabilité civile de l'employeur.",
+  },
+  es: {
+    title: "Calculadora de indemnización por accidente laboral y responsabilidad patronal | OIYO Tools",
+    description: "Calcule el subsidio por incapacidad temporal del 70% y las reclamaciones de responsabilidad civil al empleador por negligencia.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">산재 휴업급여 및 손해배상 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        근로복지공단 산재 휴업급여(70%)와 사업주 과실에 따른 잔여 일실수입(30%) 및 비급여 치료비 민사 배상액 산출
+      </p>
+    </div>
+
+    <IndustrialAccidentWageLossCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">산재 보상 vs 민사 배상 2대 핵심 구분</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">🏥 근로복지공단 산재보험의 한계</h3>
+          <p>
+            산재보험은 무과실 책임 원칙에 따라 신속히 지급되지만, <strong>평균임금의 70%만 지급</strong>되며 정신적 고통에 대한 <strong>위자료나 비급여 치료비(도수치료, 비급여 MRI 등)는 일절 지급되지 않습니다</strong>.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚖️ 사업주 안전배려의무 위반 배상</h3>
+          <p>
+            추락 방지망 미설치, 안전교육 미실시 등 사업주의 과실이 있는 경우, 근로자는 산재 휴업급여를 초과하는 <strong>실제 손해액(잔여 30% 일실임금 + 비급여 병원비 + 위자료)</strong>을 민사소송 또는 근재보험 합의로 청구할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
