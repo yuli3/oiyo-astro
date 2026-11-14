@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import StockEtfTaxComparisonCalculator from "../../components/tools/StockEtfTaxComparisonCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "2026 주식 vs 해외ETF 세금 3-Way & ISA·연금저축 비교기 | OIYO Tools",
+    description: "금투세 폐지 확정 반영: 국내주식(비과세), 미국주식 직투(양도세 22%), 국내상장 해외ETF(일반 vs ISA 9.9% 분리과세 vs 연금저축) 실질 세후 수익을 비교합니다.",
+  },
+  en: {
+    title: "2026 Korea Stock vs Overseas ETF Tax 3-Way & Account Comparison | OIYO Tools",
+    description: "Compare post-tax returns across Korean stocks (exempt), US stocks (22%), and overseas ETFs (ISA 9.9% vs pension savings) post financial investment tax abolition.",
+  },
+  ja: {
+    title: "2026 韓国 株式 vs 海外ETF 税金3-Way＆ISA・年金貯蓄 比較機 | OIYO Tools",
+    description: "金投税廃止確定反映：国内株式（非課税）、米国株直接投資（22%）、国内上場海外ETF（一般 vs ISA vs 年金貯蓄）の実質税後収益を比較。",
+  },
+  zh: {
+    title: "2026 韩国 股票 vs 跨境ETF 税费3-Way与ISA·养老储蓄账户对比器 | OIYO Tools",
+    description: "反映金融投资所得税废除决议：测算韩国本土股票（免税）、美股直投（22%）与本土上市跨境ETF在普通账户、ISA及个人养老金账户中的税后净收益。",
+  },
+  fr: {
+    title: "Comparateur fiscal 2026 : Actions coréennes vs ETF internationaux vs Actions US | OIYO Tools",
+    description: "Comparez les rendements après impôt entre actions coréennes (exonérées), actions US (22%) et ETF internationaux dans les comptes ISA et épargne retraite.",
+  },
+  es: {
+    title: "Comparador fiscal 2026: Acciones en Corea vs ETF extranjeros vs Acciones de EE.UU. | OIYO Tools",
+    description: "Compare los rendimientos netos de impuestos entre acciones locales (exentas), acciones de EE.UU. (22%) y ETF extranjeros en cuentas ISA y de pensiones.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">주식 vs 해외ETF 세금 & 절세계좌 비교기</h1>
+      <p class="text-muted-foreground text-sm">
+        금투세 폐지 확정 반영: 국내주식(비과세), 미국직투(22%), 국내상장 해외ETF(일반 vs ISA vs 연금) 세후 실수령액 정밀 비교
+      </p>
+    </div>
+
+    <StockEtfTaxComparisonCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">2026년 투자자가 꼭 알아야 할 3대 절세 법칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 국내상장 해외ETF의 복병 (15.4% 배당소득세)</h3>
+          <p>
+            TIGER 미국S&P500 등 국내 상장 해외지수 ETF를 일반 주식계좌에서 매매하면 차익이 <strong>배당소득(15.4%)</strong>으로 잡혀, 연간 2,000만원을 초과할 경우 금융소득종합과세에 합산되어 근로·사업소득과 함께 높은 누진세율을 맞게 됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 해외 ETF는 무조건 ISA 또는 연금계좌에</h3>
+          <p>
+            ISA 계좌에 담으면 <strong>200만~400만원 비과세 + 초과분 9.9% 분리과세</strong>로 끝나 금융소득종합과세에 절대 합산되지 않으며, 연금저축/IRP에 담으면 55세 이후까지 세금을 1원도 내지 않고 복리로 굴린 후 <strong>3.3~5.5%의 저율 연금소득세</strong>로 인출할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

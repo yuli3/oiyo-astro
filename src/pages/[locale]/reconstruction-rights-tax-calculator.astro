@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import ReconstructionRightsTaxCalculator from "../../components/tools/ReconstructionRightsTaxCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "재건축·재개발 입주권 vs 분양권 양도소득세 & 비과세 가이드 | OIYO Tools",
+    description: "조합원 입주권(기본세율/비과세)과 일반 분양권(단일 60~70%)의 양도소득세 비교 및 1세대 1입주권 12억원 비과세, 대체주택 3년 특례 요건을 1초 만에 진단합니다.",
+  },
+  en: {
+    title: "Korea Reconstruction Rights vs Presale Tax & Exemption Guide | OIYO Tools",
+    description: "Compare capital gains tax on redevelopment tenant rights vs presale contracts and evaluate 1-right tax exemption and alternative housing rules.",
+  },
+  ja: {
+    title: "韓国 再建築・再開発 入居権 vs 分譲権 譲渡所得税＆非課税ガイド | OIYO Tools",
+    description: "組合員入居権（基本税率／非課税）と一般分譲権（単一60〜70%）の譲渡税比較および1世帯1入居権12億ウォン非課税要件を瞬時に診断。",
+  },
+  zh: {
+    title: "韩国 重建·再开发 拆迁安置入户权 vs 预售楼花 转让所得税测算与免税指南 | OIYO Tools",
+    description: "对比拆迁入户权（基础税率/免税）与普通分售权（单利60-70%）的税费差异，测算一户一套入户权12亿韩元免税合规条件。",
+  },
+  fr: {
+    title: "Fiscalité des droits de reconstruction vs prévente en Corée | OIYO Tools",
+    description: "Comparez la taxe sur les plus-values entre les droits de locataires en réaménagement et les contrats de prévente en Corée.",
+  },
+  es: {
+    title: "Guía fiscal de derechos de reconstrucción vs preventa en Corea | OIYO Tools",
+    description: "Compare el impuesto sobre plusvalías entre derechos de cooperativa de reconstrucción y contratos de preventa con exenciones fiscales.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">재건축 입주권 vs 분양권 양도세 가이드</h1>
+      <p class="text-muted-foreground text-sm">
+        조합원 입주권(기본세율·비과세)과 분양권(단일 60~70%) 양도세율 차이 및 1세대 1입주권 비과세 특례 판정 엔진
+      </p>
+    </div>
+
+    <ReconstructionRightsTaxCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">정비사업 권리 매도 시 3대 핵심 주의점</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 입주권과 분양권의 극단적인 세율 차이</h3>
+          <p>
+            일반 분양권은 2년 이상 보유해도 단일 <strong>60%(지방세 포함 66%)</strong>가 적용되지만, 관리처분인가 후 조합원 입주권은 2년 이상 보유 시 <strong>기본세율(6~45%)</strong>이 적용되어 양도세 부담이 대폭 줄어듭니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 1세대 1입주권 12억원 비과세의 조건</h3>
+          <p>
+            관리처분계획 인가일 현재 종전 주택이 2년 이상 보유/거주 요건을 충족해야 하며, 입주권을 양도하는 시점에 다른 주택을 소유하지 않아야 <strong>12억원 한도 내 양도세 전액 비과세</strong>를 적용받을 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
