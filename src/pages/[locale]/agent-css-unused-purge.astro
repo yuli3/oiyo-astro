@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AgentCssPurgeCleaner } from "../../components/tools/AgentCssPurgeCleaner";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 Tailwind 클래스 충돌 & 중복 정리기 | OIYO Tools",
+    description: "AI가 생성한 JSX/HTML 코드에서 상충되는 Tailwind CSS 유틸리티 클래스(p-4 p-2, flex block, text-sm text-lg)와 중복 선언을 0.1ms 만에 감지하고 정격 정리합니다.",
+  },
+  en: {
+    title: "AI Agent Tailwind Class Conflict & Duplicate Purger | OIYO Tools",
+    description: "Instantly detect and resolve conflicting Tailwind CSS utilities (p-4 p-2, flex block) and remove duplicate class declarations in AI-generated code.",
+  },
+  ja: {
+    title: "AIエージェント Tailwindクラス競合＆重複クリーンアップツール | OIYO Tools",
+    description: "AIが生成したコードのTailwind CSSクラス競合（p-4 p-2、flex blockなど）と重複宣言をサブミリ秒で自動解消。",
+  },
+  zh: {
+    title: "AI Agent Tailwind 类名冲突与冗余清理器 | OIYO Tools",
+    description: "亚毫秒级快速检测并消除AI生成的JSX/HTML中的Tailwind样式冲突（如p-4与p-2、flex与block）和重复类名，优化包体积。",
+  },
+  fr: {
+    title: "Nettoyeur de conflits de classes Tailwind pour IA | OIYO Tools",
+    description: "Détectez et résolvez instantanément les classes utilitaires Tailwind conflictuelles et éliminez les doublons dans le code généré par IA.",
+  },
+  es: {
+    title: "Depurador de conflictos de clases Tailwind para IA | OIYO Tools",
+    description: "Detecte y resuelva al instante utilidades en conflicto de Tailwind CSS y elimine duplicados en código generado por IA.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 Tailwind 클래스 정리기</h1>
+      <p class="text-muted-foreground text-sm">
+        상충되는 Tailwind 유틸리티 클래스(p-4 p-2, flex block) 충돌 해결 및 완전 일치 중복 선언 원클릭 제거
+      </p>
+    </div>
+
+    <AgentCssPurgeCleaner client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">Tailwind CSS 클래스 충돌 방지의 중요성</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 동일 축 속성 간섭(p-4 p-2) 방지</h3>
+          <p>
+            AI 모델은 요소를 수정할 때 기존 클래스를 지우지 않고 새 클래스를 덧붙이는 경향이 있습니다. 예를 들어 <code>p-4 p-2</code>가 동시에 존재하면 Tailwind CSS 빌드 순서에 따라 예상치 못한 패딩이 적용되어 레이아웃이 깨질 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 번들 크기 및 가독성 최적화</h3>
+          <p>
+            중복되거나 상충되는 수십 개의 유틸리티 클래스는 코드 가독성을 크게 떨어뜨리고, 컴포넌트 렌더링 시 DOM 클래스 리스트 파싱 비용을 증가시킵니다. 정격 정리를 통해 깔끔하고 유지보수하기 쉬운 마크업을 유지할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

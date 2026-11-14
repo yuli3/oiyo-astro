@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AgentApiMockGenerator } from "../../components/tools/AgentApiMockGenerator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 API 스키마 기반 목 데이터 생성기 | OIYO Tools",
+    description: "Faker.js 등 외부 라이브러리 없이 TypeScript 인터페이스와 JSON 스키마를 정규식으로 분석하여 0.1ms 만에 실감 나는 결정론적 목 데이터 및 테스트 팩토리 코드를 생성합니다.",
+  },
+  en: {
+    title: "AI Agent API Schema to Mock Data Generator | OIYO Tools",
+    description: "Generate realistic deterministic JSON mock data and test factory functions directly from TypeScript interfaces in sub-milliseconds without external dependencies.",
+  },
+  ja: {
+    title: "AIエージェント APIスキーマ基準モックデータ生成機 | OIYO Tools",
+    description: "Faker等の外部ライブラリなしで、TypeScriptインターフェースから決定論的モックデータとテスト用ファクトリー関数をサブミリ秒で自動生成。",
+  },
+  zh: {
+    title: "AI Agent API Schema 快速Mock数据生成器 | OIYO Tools",
+    description: "零依赖、亚毫秒级根据TypeScript接口定义快速生成逼真的确定性JSON模拟数据与自动化测试工厂函数。",
+  },
+  fr: {
+    title: "Générateur de données fictives à partir de schémas d'API pour IA | OIYO Tools",
+    description: "Générez des données de test JSON réalistes directement à partir d'interfaces TypeScript sans dépendances externes.",
+  },
+  es: {
+    title: "Generador de datos mock a partir de esquemas de API para IA | OIYO Tools",
+    description: "Genere datos de prueba deterministas y funciones de fábrica a partir de interfaces TypeScript sin bibliotecas externas.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 API 목 데이터 생성기</h1>
+      <p class="text-muted-foreground text-sm">
+        외부 의존성 제로(Faker-free) TypeScript 인터페이스 기반 결정론적 JSON 목 데이터 & 팩토리 함수 0.1ms 생성
+      </p>
+    </div>
+
+    <AgentApiMockGenerator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">제로 디펜던시 목(Mock) 데이터의 장점</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 패키지 설치 없는 초경량 독립 실행</h3>
+          <p>
+            기존 Faker.js나 Chance.js는 수 메가바이트의 사전 데이터로 인해 번들 크기를 늘리고 설치 시간이 걸립니다. 정규식과 시드 기반 LCG 의사 난수를 사용하면 <strong>추가 패키지 설치 없이 0.1ms</strong> 만에 목킹이 완료됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 단위 테스트(Vitest/Jest) 재현 가능성</h3>
+          <p>
+            완전 랜덤 데이터는 테스트 실행 때마다 결과가 달라져 플레이키(flaky) 테스트를 유발합니다. <strong>결정론적 시드(Seed)</strong>를 기반으로 생성되므로 언제 어디서 실행해도 동일한 테스트 입력값이 보장됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
