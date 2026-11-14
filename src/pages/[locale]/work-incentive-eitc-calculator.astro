@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import WorkIncentiveEitcCalculator from "../../components/tools/WorkIncentiveEitcCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "2026 근로장려금 · 자녀장려금 모의계산기 | OIYO Tools",
+    description: "국세청 2024~2026년 개정 세법 기준 단독 165만·홑벌이 285만·맞벌이 330만원 및 부양자녀 1인당 100만원 장려금 수급 자격과 환급액을 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Earned Income Tax Credit (EITC) & Child Tax Credit (CTC) Calculator | OIYO Tools",
+    description: "Calculate Korea 2026 Earned Income Tax Credit (up to 3.3M KRW) and Child Tax Credit (up to 1M KRW per child) based on income and property criteria.",
+  },
+  ja: {
+    title: "韓国 勤労奨励金・子育て奨励金（EITC/CTC）計算機 | OIYO Tools",
+    description: "韓国国税庁の勤労奨励金（単身165万、共働き最大330万）および子供奨励金（1人あたり100万ウォン）の受給要件と支給額をシミュレーションします。",
+  },
+  zh: {
+    title: "韩国 勤劳奖励金与子女奖励金（EITC/CTC）模拟计算器 | OIYO Tools",
+    description: "模拟韩国国税厅劳动奖励金（单身165万、双职工最高330万）及子女奖励金（每人最高100万韩元）申请资格与退税金额。",
+  },
+  fr: {
+    title: "Simulateur de crédit d'impôt sur le revenu du travail et pour enfants en Corée | OIYO Tools",
+    description: "Calculez le crédit d'impôt pour les travailleurs à revenu modeste et les allocations pour enfants en Corée (EITC & CTC).",
+  },
+  es: {
+    title: "Calculadora del Crédito Tributario por Ingreso del Trabajo (EITC) en Corea | OIYO Tools",
+    description: "Calcule el crédito tributario por ingreso laboral (hasta 3.3M KRW) y el subsidio por hijos en Corea según ingresos y patrimonio.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">2026 근로장려금 · 자녀장려금 모의계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        단독 최대 165만원, 홑벌이 285만원, 맞벌이 330만원 + 부양자녀 1인당 100만원 현금 환급 모의 계산 엔진
+      </p>
+    </div>
+
+    <WorkIncentiveEitcCalculator client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">근로·자녀장려금 핵심 신청 팁</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 2024~2026 맞벌이 가구 소득 완화</h3>
+          <p>
+            결혼 패널티를 해소하기 위해 맞벌이 가구 소득 기준이 종전 3,800만원에서 <strong>4,400만원 미만</strong>으로 대폭 상향되어 더 많은 신혼부부와 맞벌이 가구가 최대 330만원을 수령할 수 있게 되었습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 자녀장려금 소득 7,000만원 대폭 확대</h3>
+          <p>
+            자녀장려금의 소득 요건이 종전 4,000만원에서 <strong>7,000만원 미만</strong>으로 획기적으로 완화되었으며, 지원 단가도 1인당 80만원에서 <strong>100만원</strong>으로 상향되었습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import UnpaidWageReliefGuard from "../../components/tools/UnpaidWageReliefGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "임금체불 간이대지급금(소액체당금 최대 1,000만원) 계산기 | OIYO Tools",
+    description: "임금채권보장법 제7조 기준 체불 임금(최대 700만)과 퇴직금(최대 700만) 합산 최대 1,000만원 한도의 간이대지급금 예상 수령액 및 신청 자격을 1초 만에 모의 진단합니다.",
+  },
+  en: {
+    title: "Korea Unpaid Wage Government Relief Fund Calculator — Up to 10M KRW | OIYO Tools",
+    description: "Calculate Korea unpaid wage government substitute payments (up to 10M KRW: 7M wage + 7M severance) and legal eligibility under the Wage Claim Guarantee Act.",
+  },
+  ja: {
+    title: "韓国 賃金未払い 簡易立替払金（最大1,000万ウォン）計算機 | OIYO Tools",
+    description: "韓国賃金債権保障法に基づき、国が事業主に代わって支払う簡易立替払金（給与最大700万＋退職金最大700万、合計最大1,000万ウォン）を即座に計算します。",
+  },
+  zh: {
+    title: "韩国 拖欠工资政府先行垫付金（小额代付金最高1000万）计算器 | OIYO Tools",
+    description: "根据韩国工资债权保障法，模拟政府代发拖欠工资（最高700万）与退职金（最高700万）合计最高1000万韩元的简易代垫金额。",
+  },
+  fr: {
+    title: "Simulateur d'indemnité de garantie des salaires impayés en Corée | OIYO Tools",
+    description: "Calculez le fonds de garantie des créances salariales en Corée (jusqu'à 10 millions KRW) en cas de non-paiement par l'employeur.",
+  },
+  es: {
+    title: "Calculadora de fondo de garantía salarial por salarios impagados en Corea | OIYO Tools",
+    description: "Calcule los pagos sustitutivos del gobierno por salarios y cesantías impagadas en Corea (hasta 10M KRW) según la Ley de Garantía de Créditos Salariales.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">임금체불 간이대지급금 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        임금 700만원, 퇴직금 700만원, 총합 최대 1,000만원 국가 우선 지급(간이대지급금) 모의 판정 및 4단계 신청 가이드
+      </p>
+    </div>
+
+    <UnpaidWageReliefGuard client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">간이대지급금 신속 수령 4단계 절차</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">1단계: 관할 노동청 진정 제기</h3>
+          <p>
+            고용노동부 노동포털(labor.moel.go.kr)에서 온라인으로 '임금체불 진정서'를 접수합니다. 퇴직일로부터 1년 이내에 반드시 제기해야 합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">2단계: 체불 확인서 발급</h3>
+          <p>
+            근로감독관이 체불 사실을 조사하고 사업주 조사를 마친 뒤 '체불 임금등·사업주 확인서'를 발급합니다 (약 2~4주 소요).
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">3단계: 근로복지공단 청구</h3>
+          <p>
+            발급된 체불확인서와 통장 사본을 근로복지공단 토탈서비스에 제출하여 간이대지급금 지급을 청구합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">4단계: 14일 이내 계좌 입금</h3>
+          <p>
+            공단 심사 후 14일 이내에 본인 명의 계좌로 최대 1,000만원이 입금되며, 국가는 사업주에게 해당 금액을 구상 청구합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
