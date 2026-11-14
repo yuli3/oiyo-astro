@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import YouthRentSubsidyChecker from "../../components/tools/YouthRentSubsidyChecker";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "2026 청년월세 특별지원 자격 및 모의판정기 | OIYO Tools",
+    description: "대한민국 국토교통부 청년월세 특별지원금 월 최대 20만원(최대 480만원) 수급 자격을 소득, 재산, 보증금 및 부모 심사 면제 특례까지 1초 만에 모의 계산해 드립니다.",
+  },
+  en: {
+    title: "Korea Youth Rent Subsidy Eligibility Checker — 200k KRW Monthly | OIYO Tools",
+    description: "Check eligibility for Korea's Ministry of Land Youth Rent Subsidy (up to 200,000 KRW/month) across income, asset, and parental evaluation exemption criteria.",
+  },
+  ja: {
+    title: "韓国 青年家賃特別支援 資格診断シミュレーター | OIYO Tools",
+    description: "韓国国土交通部の青年家賃特別支援（月最大20万ウォン）の受給資格と所得・資産要件を即座にシミュレーションします。",
+  },
+  zh: {
+    title: "韩国 青年房租特别补贴 资格与金额模拟器 | OIYO Tools",
+    description: "实时模拟韩国国土交通部青年月租补贴（每月最高20万韩元）申请资格，包含收入、资产与父母免审特例。",
+  },
+  fr: {
+    title: "Simulateur d'aide au loyer pour les jeunes en Corée | OIYO Tools",
+    description: "Vérifiez l'éligibilité à la subvention de loyer pour jeunes en Corée (jusqu'à 200 000 KRW/mois) selon les critères de revenus et de patrimoine.",
+  },
+  es: {
+    title: "Simulador de subsidio de alquiler para jóvenes en Corea | OIYO Tools",
+    description: "Verifique la elegibilidad para el subsidio de alquiler para jóvenes en Corea (hasta 200.000 KRW/mes) según criterios de ingresos y activos.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">청년월세 특별지원 자격 및 모의판정기</h1>
+      <p class="text-muted-foreground text-sm">
+        보증금 5,000만원 및 월세 70만원 이하 무주택 청년을 위한 월 최대 20만원 주거 복지 지원금 모의 판정 엔진
+      </p>
+    </div>
+
+    <YouthRentSubsidyChecker client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">청년월세 특별지원 필수 안내 및 팁</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 보증금 환산율 5.5% 예외 규정</h3>
+          <p>
+            월세가 70만원을 초과하더라도 보증금의 연 5.5% 환산액(보증금 × 5.5% ÷ 12)과 월세를 합산한 금액이 90만원 이하인 경우 신청 자격이 인정됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 원가구(부모) 심사 제외 특례</h3>
+          <p>
+            만 30세 이상 청년, 혼인(이혼 포함) 청년, 또는 만 19~29세 미혼이라도 기준 중위소득 50% 이상의 독립 생계 능력을 갖춘 경우 부모의 소득 및 자산 유무와 무관하게 청년 본인의 기준만으로 수급 대상에 선정됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

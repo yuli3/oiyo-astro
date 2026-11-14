@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import CapitalGainsTaxHousingGuard from "../../components/tools/CapitalGainsTaxHousingGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "1세대 1주택 · 일시적 2주택 · 상속주택 양도세 비과세 계산기 | OIYO Tools",
+    description: "대한민국 소득세법 시행령 제155조 특례 기준 일시적 1세대 2주택(1-2-3 법칙) 및 상속주택 주택 수 제외 비과세 판정과 12억원 초과 고가주택 양도소득세를 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Real Estate Capital Gains Tax Exemption Guard — Temporary 2-Home & Inherited Home | OIYO Tools",
+    description: "Evaluate 1-household 1-home tax exemption up to 1.2B KRW, temporary 2-house 3-year disposal rules, and inherited house exclusions under Korean tax law.",
+  },
+  ja: {
+    title: "韓国 住宅譲渡所得税 非課税特例計算機（一時的2住宅・相続住宅） | OIYO Tools",
+    description: "韓国の所得税法施行令第155条に基づく一時的1世帯2住宅の3年処分特例および相続住宅非課税判定をシミュレーションします。",
+  },
+  zh: {
+    title: "韩国 房屋转让所得税免税特例计算器（临时双套房·继承住房） | OIYO Tools",
+    description: "根据韩国所得税法实施令，快速模拟临时双套房3年抛售免税、继承房产除外判定及12亿韩元以上高价房税额。",
+  },
+  fr: {
+    title: "Calculateur d'exonération de taxe sur les plus-values immobilières en Corée | OIYO Tools",
+    description: "Simulateur d'exonération de taxe sur les plus-values pour résidence principale, 2 logements temporaires et logements hérités en Corée.",
+  },
+  es: {
+    title: "Calculadora de exención del impuesto sobre plusvalías de vivienda en Corea | OIYO Tools",
+    description: "Calcule la exención del impuesto sobre plusvalías para vivienda habitual, 2 viviendas temporales y viviendas heredadas en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">주택 양도소득세 비과세 특례 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        일시적 2주택 3년 처분 기한, 상속주택 비과세 황금 순서 및 12억원 초과 장특공 최대 80% 모의 시뮬레이터
+      </p>
+    </div>
+
+    <CapitalGainsTaxHousingGuard client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">주택 양도세 비과세 절세 핵심 수칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 일시적 2주택 1-2-3 법칙</h3>
+          <p>
+            1️⃣ 종전 주택 취득 후 최소 1년이 지난 후 신규 주택을 취득해야 하고, 2️⃣ 종전 주택을 최소 2년 이상 보유(조정지역은 2년 거주)해야 하며, 3️⃣ 신규 주택 취득일로부터 3년 이내에 종전 주택을 처분해야 비과세를 받습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 상속주택의 양도 순서 함정</h3>
+          <p>
+            상속주택과 일반주택이 있을 때 <strong>일반주택을 먼저 처분</strong>해야 상속주택이 주택 수에서 제외되어 비과세됩니다. 상속주택을 먼저 처분하면 2주택 일반 과세가 적용되므로 주의가 필요합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
