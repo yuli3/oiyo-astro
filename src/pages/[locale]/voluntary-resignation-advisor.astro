@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import VoluntaryResignationAdvisor from "../../components/tools/VoluntaryResignationAdvisor";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "자진퇴사 실업급여 법정 13대 정당한 이직 사유 판정기 | OIYO Tools",
+    description: "고용보험법 시행규칙 별표2 기준, 자진퇴사라도 통근 왕복 3시간 이상, 임금체불 2개월, 질병·부상, 직장 내 괴롭힘 등 법정 정당한 사유 충족 여부와 고용센터 필수 서류를 1초 만에 판정합니다.",
+  },
+  en: {
+    title: "Korea Voluntary Resignation Unemployment Benefits Advisor (13 Exceptions) | OIYO Tools",
+    description: "Evaluate your eligibility for unemployment benefits after voluntary resignation based on Korea's 13 statutory exceptions (3h commute, wage delay, medical leave, harassment).",
+  },
+  ja: {
+    title: "韓国 自己都合退職 失業給付 法定13大正当離職事由判定機 | OIYO Tools",
+    description: "雇用保険法施行規則に基づき、自己都合退職でも通勤往復3時間以上、賃金未払い2ヶ月、疾病、パワハラなど正当な理由による受給資格を判定。",
+  },
+  zh: {
+    title: "韩国 主动辞职失业金 法定13大正当离职事由判定器 | OIYO Tools",
+    description: "依据韩国雇佣保险法，快速判定主动辞职是否符合通勤3小时、拖欠工资2个月、伤病就医、职场霸凌等法定正当事由并生成证明文件清单。",
+  },
+  fr: {
+    title: "Conseiller en allocations de chômage après démission en Corée | OIYO Tools",
+    description: "Vérifiez votre éligibilité aux allocations chômage après une démission volontaire selon les 13 exceptions légales en Corée.",
+  },
+  es: {
+    title: "Asesor de beneficios de desempleo tras renuncia voluntaria en Corea | OIYO Tools",
+    description: "Evalúe su elegibilidad para beneficios de desempleo después de una renuncia voluntaria bajo las 13 excepciones legales en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">자진퇴사 실업급여 판정기</h1>
+      <p class="text-muted-foreground text-sm">
+        고용보험법상 자진퇴사자 실업급여 수급 인정 13대 법정 사유 진단 및 고용복지센터 필수 서류 안내
+      </p>
+    </div>
+
+    <VoluntaryResignationAdvisor client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">자진퇴사 실업급여 인정 핵심 법정 요건</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 통근 곤란 (대중교통 왕복 3시간 이상)</h3>
+          <p>
+            회사의 사업장 이전, 지방 발령, 또는 결혼이나 부양가족과의 동거로 인해 거소를 이전함으로써 <strong>통상의 대중교통으로 왕복 3시간 이상</strong>이 소요되는 경우, 자진퇴사하더라도 법정 정당한 사유로 인정되어 실업급여를 100% 수급할 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 질병 퇴사의 2대 필수 요건</h3>
+          <p>
+            본인 질병으로 퇴사할 때는 <strong>"향후 2~3개월 이상 치료가 필요하여 현재 업무를 수행할 수 없다"</strong>는 의사 소견서와 함께, <strong>"회사 사정상 병가나 직무전환을 제공할 수 없었다"</strong>는 사업주 확인서를 퇴사 전에 반드시 확보해야 실업급여가 승인됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
