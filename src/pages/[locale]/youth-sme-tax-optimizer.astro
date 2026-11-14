@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import YouthSmeTaxOptimizerComponent from '../../components/tools/YouthSmeTaxOptimizer';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "중소기업 취업 청년 소득세 90% 감면 계산기 — 연 200만원 한도 및 5년 경정청구 환급 플래너",
+    description: "취업 당시 만 15~34세(군 복무 기간 최대 6년 차감 인정) 청년의 중소기업 5년간 근로소득세 90%(연 최대 200만원) 감면 자격 판정 및 과거 5년 미신청분 경정청구 환급액을 계산합니다.",
+  },
+  en: {
+    title: "Korea SME Youth 90% Income Tax Reduction Calculator — 2M KRW Cap & 5-Year Claim",
+    description: "Determine eligibility and calculate 90% income tax deductions (up to 2,000,000 KRW/year for 5 years) for youth employees aged 15-34 at SMEs in Korea.",
+  },
+  ja: {
+    title: "韓国 中小企業就職青年 所得税90%減免計算機 — 年間200万ウォン控除＆5年更正請求プランナー",
+    description: "就職時満15〜34歳（兵役期間最大6年控除）の青年を対象とした中小企業5年間所得税90%（年最大200万ウォン）減免資格および過去5年分の更正請求還付金を計算します。",
+  },
+  zh: {
+    title: "韩国中小企业就业青年所得税减免90%测算器 — 每年200万韩元上限与5年退税申请",
+    description: "测算入职时15至34岁（服兵役最长可扣减6年）青年在中小企业工作5年内所得税减免90%（每年最高200万韩元）的资格与往年退税金额。",
+  },
+  fr: {
+    title: "Simulateur de Réduction d'Impôt 90% Jeunes en PME en Corée — Plafond 2M KRW",
+    description: "Vérifiez l'éligibilité à l'exonération d'impôt sur le revenu de 90% pour les jeunes de 15 à 34 ans employés dans des PME en Corée.",
+  },
+  es: {
+    title: "Calculadora de Reducción del 90% del Impuesto sobre la Renta para Jóvenes en PYMEs de Corea",
+    description: "Determina la elegibilidad para la exención del 90% del IRPF (hasta 2.000.000 KRW/año) para jóvenes trabajadores en PYMEs coreanas.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <YouthSmeTaxOptimizerComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>

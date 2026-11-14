@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import PensionSavingsTaxOptimizerComponent from '../../components/tools/PensionSavingsTaxOptimizer';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "연금저축펀드 vs IRP 세액공제 계산기 — 연 900만원 한도 및 16.5% 연말정산 환급 시뮬레이터",
+    description: "총급여에 따른 세액공제율(16.5% vs 13.2%), 연금저축 600만원 + IRP 300만원 최적 배분, 최대 148.5만원 연말 환급 및 15.4% 배당소득세 과세이연 복리 효과를 계산합니다.",
+  },
+  en: {
+    title: "Korea Pension Savings vs IRP Tax Credit Calculator — Max 9M KRW & 16.5% Refund",
+    description: "Calculate annual tax credits (up to 1,485,000 KRW) across Pension Savings and IRP accounts with dividend tax deferral compounding in Korea.",
+  },
+  ja: {
+    title: "韓国 年金貯蓄ファンド vs IRP 税額控除計算機 — 年900万ウォン枠＆最大16.5%還付シミュレーター",
+    description: "給与に応じた税額控除率（16.5% vs 13.2%）、年金貯蓄600万＋IRP300万の最適配分、最大148.5万ウォンの年末調整還付および課税繰延複利効果を計算します。",
+  },
+  zh: {
+    title: "韩国个人养老储蓄基金 vs IRP 抵税测算器 — 每年900万韩元额度与16.5%退税规划",
+    description: "测算韩国年金储蓄（最高600万）与IRP（合计900万）的年终税收减免退税金额（最高148.5万韩元）及免除15.4%红利税的复利收益。",
+  },
+  fr: {
+    title: "Simulateur de Crédit d'Impôt Épargne Retraite vs IRP en Corée — Plafond 9M KRW",
+    description: "Calculez le crédit d'impôt annuel (jusqu'à 1 485 000 KRW) pour l'épargne retraite et l'IRP en Corée avec capitalisation à imposition différée.",
+  },
+  es: {
+    title: "Calculadora de Crédito Fiscal de Ahorro para la Jubilación vs IRP en Corea",
+    description: "Calcula la deducción fiscal anual (hasta 1.485.000 KRW) para cuentas de ahorro para pensiones e IRP en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <PensionSavingsTaxOptimizerComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>
