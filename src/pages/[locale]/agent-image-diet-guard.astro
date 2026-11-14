@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import AgentImageDietGuard from "../../components/tools/AgentImageDietGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "이미지 다이어트 & AVIF/WebP 압축 대역폭 절감 계산기 | OIYO Tools",
+    description: "PNG, JPEG 이미지를 AVIF 및 WebP 차세대 웹 포맷으로 압축 시 트래픽 절약(최대 85%), CDN Egress 비용 절감 및 모바일 LCP 속도 개선을 즉시 시뮬레이션합니다.",
+  },
+  en: {
+    title: "Image Diet & AVIF/WebP Compression Calculator | OIYO Tools",
+    description: "Calculate bandwidth reduction (up to 85%), CDN egress cost savings, and mobile LCP speedup by compressing images into modern AVIF and WebP.",
+  },
+  ja: {
+    title: "画像ダイエット＆AVIF/WebP圧縮帯域節減計算機 | OIYO Tools",
+    description: "PNG/JPEG画像をAVIF/WebPへ圧縮した際のトラフィック削減率（最大85%）、CDN Egressコスト削減およびモバイルLCP高速化を瞬時にシミュレーション。",
+  },
+  zh: {
+    title: "图片瘦身与 AVIF/WebP 压缩带宽节省测算器 | OIYO Tools",
+    description: "测算将 PNG/JPEG 转换为 AVIF/WebP 时的体积缩减率（最高85%）、CDN 流量出站费用节省与移动端 LCP 速度提升。",
+  },
+  fr: {
+    title: "Régime d'image et calculateur d'économie de bande passante AVIF/WebP | OIYO Tools",
+    description: "Calculez la réduction de charge (jusqu'à 85%), l'économie de coûts CDN egress et le gain de temps LCP en convertissant en AVIF et WebP.",
+  },
+  es: {
+    title: "Dieta de imagen y calculadora de ahorro de ancho de banda AVIF/WebP | OIYO Tools",
+    description: "Calcule la reducción de peso (hasta 85%), ahorro de costes CDN egress y mejora de velocidad LCP móvil al comprimir a AVIF y WebP.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">이미지 다이어트 & AVIF/WebP 압축 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        차세대 이미지 포맷 압축 절감률(최대 85%), CDN Egress 대역폭 비용 절약 및 모바일 LCP 렌더링 지연 단축 시뮬레이터
+      </p>
+    </div>
+
+    <AgentImageDietGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">웹 이미지 최적화 3대 골든 룰</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚡ AVIF 우선 적용과 WebP 폴백</h3>
+          <p>
+            AVIF는 JPEG 대비 최대 85%, WebP 대비 약 20% 추가 압축률을 제공합니다. 최신 브라우저에서는 AVIF를 기본 서빙하고 미지원 구형 브라우저를 위해 WebP/PNG를 &lt;picture&gt; 태그로 폴백하는 것이 표준입니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">⚡ 레이아웃 시프트(CLS) 방지 규격 명시</h3>
+          <p>
+            이미지 태그에 반드시 고유의 <code>width</code>와 <code>height</code> 속성을 지정하여 브라우저가 다운로드 전에 종횡비(aspect-ratio) 영역을 미리 확보하도록 해야 Core Web Vitals의 CLS 점수를 완벽하게 유지할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

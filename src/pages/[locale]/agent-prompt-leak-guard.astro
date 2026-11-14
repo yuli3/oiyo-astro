@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import AgentPromptLeakGuard from "../../components/tools/AgentPromptLeakGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 프롬프트 인젝션 & 누출 방어 가드 | OIYO Tools",
+    description: "시스템 프롬프트 탈취, 역할 탈옥, 시스템 태그 사칭, 은닉 주석 인젝션을 0.1ms 내에 실시간 감지하고 정제하는 AI 에이전트 보안 도구입니다.",
+  },
+  en: {
+    title: "AI Agent Prompt Leak & Injection Guard | OIYO Tools",
+    description: "Zero-dependency sub-millisecond AI agent system prompt leak preventer, jailbreak detector, and prompt sanitization engine.",
+  },
+  ja: {
+    title: "AIエージェント プロンプト漏洩・インジェクション防御ガード | OIYO Tools",
+    description: "システムプロンプト奪取、ジェイルブレイク、システムタグ偽装、隠しコメントをリアルタイムに検知・浄化するAIエージェントセキュリティツール。",
+  },
+  zh: {
+    title: "AI Agent 提示词泄漏与注入防御守卫 | OIYO Tools",
+    description: "零依赖毫秒级 AI Agent 系统提示词防提取、越狱攻击检测与输入中和清洗工具。",
+  },
+  fr: {
+    title: "Garde contre l'injection et la fuite de prompt pour agents IA | OIYO Tools",
+    description: "Outil de sécurité IA sans dépendance pour détecter et neutraliser en temps réel le vol de prompt système et le jailbreak.",
+  },
+  es: {
+    title: "Protección contra inyección y fuga de prompt para agentes IA | OIYO Tools",
+    description: "Herramienta de seguridad para agentes IA sin dependencias: detecta en tiempo real la extracción de prompts del sistema y el jailbreak.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 프롬프트 인젝션 & 누출 방어 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        시스템 프롬프트 탈취, 역할 탈옥(Jailbreak), 시스템 태그 사칭 및 은닉 스크립트 실시간 탐지·정제 엔진
+      </p>
+    </div>
+
+    <AgentPromptLeakGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">프로덕션 LLM 에이전트 보안 3대 원칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">🛡️ 시스템 지시문의 위계 구조 (Instruction Hierarchy)</h3>
+          <p>
+            시스템 프롬프트는 항상 최상위 권한을 가지며, 사용자 컨텍스트 내부의 "이전 지시 무시(Ignore previous instructions)"와 같은 지시문은 데이터로만 취급되어야 합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">🛡️ 입력 이스케이프 및 출력단 2차 검증</h3>
+          <p>
+            &lt;system&gt;, &lt;identity&gt; 등 예약된 태그를 사용자 입력에서 무효화하고, 모델이 생성한 최종 답변에 시스템 프롬프트 핵심 규칙이나 내부 추론 태그(&lt;thought&gt;)가 포함되지 않았는지 사후 필터링합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
