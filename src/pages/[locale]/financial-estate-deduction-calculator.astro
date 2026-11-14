@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import FinancialEstateDeductionCalculator from "../../components/tools/FinancialEstateDeductionCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "상속세 순금융재산 상속공제(최대 2억원) 계산기 | OIYO Tools",
+    description: "상속세 및 증여세법 제22조 예적금, 주식, 보험금 등 순금융재산(금융재산-부채) 20% 공제(최대 2억원) 및 상속세 직접 절세액을 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Financial Asset Estate Tax Deduction Calculator | OIYO Tools",
+    description: "Calculate net financial asset deduction (up to 200M KRW) and direct estate tax savings in Korea under Inheritance Tax Act Art. 22.",
+  },
+  ja: {
+    title: "韓国 相続税 純金融財産相続控除（最大2億ウォン）計算機 | OIYO Tools",
+    description: "相続税および贈与税法第22条に基づき、預貯金・株式・保険金等の純金融財産控除額（最大2億ウォン）および相続税節税額を計算。",
+  },
+  zh: {
+    title: "韩国 遗产税 净金融资产继承减免（最高2亿韩元）测算器 | OIYO Tools",
+    description: "依据韩国相赠税法第22条，测算存款、股票、保险等净金融资产扣除（最高2亿韩元）及直接节省的遗产税现金金额。",
+  },
+  fr: {
+    title: "Calculateur de déduction pour actifs financiers successoraux en Corée | OIYO Tools",
+    description: "Calculez l'abattement successoral sur les actifs financiers nets (jusqu'à 200M KRW) et l'économie directe d'impôt en Corée.",
+  },
+  es: {
+    title: "Calculadora de deducción por activos financieros en sucesiones en Corea | OIYO Tools",
+    description: "Calcule la deducción de activos financieros netos en el impuesto sobre sucesiones (hasta 200M KRW) y el ahorro fiscal directo.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">상속세 순금융재산 상속공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        상증세법 제22조 금융재산 상속공제(최대 2억원) 산출 및 상속세율(10~50%)별 직접 현금 절세액 진단
+      </p>
+    </div>
+
+    <FinancialEstateDeductionCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">금융재산 상속공제 실무 3대 핵심 포인트</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 순금융재산 20% 공제의 강력한 효과</h3>
+          <p>
+            부동산만 물려받는 경우와 달리, 예금·주식·채권·보험금 등 금융자산을 함께 물려받으면 <strong>순금융재산의 20%를 최대 2억원까지 상속세 과세가액에서 추가로 깎아줍니다</strong>.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 금융기관 채무 차감 주의</h3>
+          <p>
+            공제 기준은 총 금융재산이 아니라 <strong>금융기관 부채를 뺀 '순금융재산'</strong>입니다. 대출이 금융재산보다 많으면 공제액이 0원이 되므로, 상속 발생 전 부채 정리 구조를 전략적으로 짜야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

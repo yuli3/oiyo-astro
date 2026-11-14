@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import HealthInsuranceRefundCalculator from "../../components/tools/HealthInsuranceRefundCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "국민건강보험 본인부담상한제 사후환급금 계산기 | OIYO Tools",
+    description: "국민건강보험법 제44조 1년간 지출한 급여 병원비 중 소득분위별(1~10분위, 87만~1,014만원) 상한선 초과액을 건보공단으로부터 전액 현금으로 돌려받는 환급금을 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Health Insurance Out-of-Pocket Cap Refund Calculator | OIYO Tools",
+    description: "Calculate annual medical co-pay refunds exceeding personal income decile caps (870k to 10.14M KRW) from the National Health Insurance Service in Korea.",
+  },
+  ja: {
+    title: "韓国 国民健康保険 本人負担上限額超過払戻金計算機 | OIYO Tools",
+    description: "国民健康保険法第44条に基づき、1年間に支出した給与医療費のうち所得分位別（1〜10分位）上限額超過分の現金払戻金を瞬時に計算。",
+  },
+  zh: {
+    title: "韩国 国民健康保险 自费上限退款计算器 | OIYO Tools",
+    description: "依据韩国健康保险法第44条，测算一年内医保自费诊疗费超出所得分位（1至10分位，87万至1014万韩元）上限的现金全额返还退款。",
+  },
+  fr: {
+    title: "Calculateur de remboursement du plafond des frais de santé en Corée | OIYO Tools",
+    description: "Calculez le remboursement annuel des frais médicaux pris en charge dépassant le plafond de votre décile de revenu auprès de l'Assurance Maladie coréenne.",
+  },
+  es: {
+    title: "Calculadora de reembolso del límite de copago médico en Corea | OIYO Tools",
+    description: "Calcule el reembolso anual de copagos de salud que exceden el límite de su decil de ingresos ante el Servicio Nacional de Salud de Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">건강보험 본인부담상한제 환급금 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        국민건강보험법 제44조 소득분위별(87만~1,014만원) 연간 급여 병원비 상한액 초과금 전액 현금 환급 진단
+      </p>
+    </div>
+
+    <HealthInsuranceRefundCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">본인부담상한제 사후환급금 수령 3대 핵심 상식</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 소득분위별 상한액의 자동 환급 원리</h3>
+          <p>
+            건강보험공단은 전년도 1년간 지출한 건강보험 급여 본인부담금을 합산하여, 가입자의 건강보험료 소득구간에 따른 상한선(1분위 87만원 ~ 10분위 1,014만원)을 초과한 금액을 <strong>매년 8월경 본인 신청 계좌로 전액 현금 환급</strong>해 줍니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 3년 지나면 사라지는 소멸시효</h3>
+          <p>
+            환급금은 공단 통보서를 받지 못했더라도 <strong>3년이 지나면 국고로 환수되어 소멸</strong>됩니다. 따라서 큰 수술이나 장기 입원을 겪은 가족이 있다면 모바일 "The건강보험" 앱에서 최근 3년간의 미환급금을 즉시 조회해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
