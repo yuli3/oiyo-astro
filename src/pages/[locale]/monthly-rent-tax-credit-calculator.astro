@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import MonthlyRentTaxCreditCalculator from "../../components/tools/MonthlyRentTaxCreditCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "연말정산 월세 세액공제(8,000만원 확대) vs 소득공제 비교기 | OIYO Tools",
+    description: "2024~2026년 개정 세법 총급여 8,000만원 상향 및 연 1,000만원 한도(최대 170만원 환급) 월세 세액공제와 현금영수증 소득공제 환급액을 1초 만에 비교합니다.",
+  },
+  en: {
+    title: "Korea Monthly Rent Tax Credit vs Cash Receipt Deduction Calculator | OIYO Tools",
+    description: "Compare Korea year-end tax settlement monthly rent credit (up to 1.7M KRW refund under 80M KRW salary) and cash receipt deductions.",
+  },
+  ja: {
+    title: "韓国 年末調整 家賃税額控除（8,000万ウォン拡大）vs 所得控除 比較機 | OIYO Tools",
+    description: "韓国の年末調整における月家賃税額控除（総給与8,000万ウォン以下・最大170万ウォン還付）と現金領収書所得控除の節税額を比較します。",
+  },
+  zh: {
+    title: "韩国 年终结算 房租税额抵免（提高至8000万韩元）vs 现金发票所得抵扣对比器 | OIYO Tools",
+    description: "对比韩国年终清算月租税额抵扣（最高退税170万韩元）与现金发票所得扣除，找出最划算的省税方案。",
+  },
+  fr: {
+    title: "Simulateur de crédit d'impôt pour loyer mensuel en Corée | OIYO Tools",
+    description: "Comparez le crédit d'impôt pour loyer mensuel (jusqu'à 1,7M KRW de remboursement) et la déduction sur factures en espèces en Corée.",
+  },
+  es: {
+    title: "Calculadora de crédito fiscal por alquiler vs deducción de ingresos en Corea | OIYO Tools",
+    description: "Compare el crédito fiscal por alquiler de vivienda (reembolso de hasta 1,7M KRW) y la deducción por recibos en efectivo en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">연말정산 월세 세액공제 vs 소득공제 비교기</h1>
+      <p class="text-muted-foreground text-sm">
+        총급여 8,000만원 상향 및 연 1,000만원 한도(최대 170만원 환급) 월세 세액공제와 홈택스 현금영수증 30% 소득공제 최적 비교 엔진
+      </p>
+    </div>
+
+    <MonthlyRentTaxCreditCalculator client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">월세 환급받을 때 놓치기 쉬운 3대 주의사항</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 전입신고가 누락된 경우 해결법</h3>
+          <p>
+            월세 세액공제는 주민등록등본상 전입신고일 이후 지급한 월세에 대해서만 공제됩니다. 전입신고를 하지 못했더라도 국세청 홈택스에서 <strong>'주택임차료 현금영수증'</strong>을 신청하면 30% 소득공제를 챙길 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 5년 이내 경정청구로 과거 월세 소급 환급</h3>
+          <p>
+            집주인과의 눈치 때문에 과거에 월세 세액공제를 신청하지 못했더라도 이사 후 <strong>최근 5년 이내</strong> 지급한 월세에 대해 홈택스 경정청구를 통해 전액 소급 환급받을 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

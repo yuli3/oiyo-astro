@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import YouthHousingDreamAdvisor from "../../components/tools/YouthHousingDreamAdvisor";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "2026 청년 주택드림 청약통장(4.5%) & 대출(2.2%) 진단기 | OIYO Tools",
+    description: "국토교통부 연소득 5,000만원 이하 무주택 청년 전용 최고 연 4.5% 비과세 청년 주택드림 청약통장 가입 요건과 최저 2.2% 주택드림 대출(분양가 80%) 연계를 1초 만에 진단합니다.",
+  },
+  en: {
+    title: "Korea Youth Housing Dream Subscription (4.5%) & Mortgage (2.2%) Advisor | OIYO Tools",
+    description: "Check eligibility for Korea's Youth Housing Dream Savings Account (4.5% interest) and linked low-interest mortgage (from 2.2% up to 80% LTV).",
+  },
+  ja: {
+    title: "韓国 青年住宅ドリーム請約貯蓄（4.5％）＆住宅ローン（2.2％）診断機 | OIYO Tools",
+    description: "韓国国土交通部の年収5,000万ウォン以下無住宅青年向け請約貯蓄（最大4.5％非課税）および最低2.2％住宅ドリームローン連動要件を判定します。",
+  },
+  zh: {
+    title: "韩国 青年住宅梦想认购储蓄（4.5%免税）与专用房贷（2.2%）诊断器 | OIYO Tools",
+    description: "根据韩国国土交通部政策，测算年收入5000万以下无房青年住宅认购存折（最高4.5%利息）与低息房贷（最低2.2%）申请资格。",
+  },
+  fr: {
+    title: "Conseiller épargne logement et prêt pour jeunes en Corée (4,5% & 2,2%) | OIYO Tools",
+    description: "Vérifiez l'éligibilité au compte d'épargne logement pour jeunes (4,5%) et au prêt immobilier préférentiel (2,2%) en Corée.",
+  },
+  es: {
+    title: "Asesor de ahorro para vivienda y préstamo para jóvenes en Corea | OIYO Tools",
+    description: "Compruebe los requisitos para la cuenta de ahorro para vivienda de jóvenes (4,5%) y la hipoteca bonificada (2,2%) en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">청년 주택드림 청약통장 & 대출 진단기</h1>
+      <p class="text-muted-foreground text-sm">
+        연소득 5,000만원 이하 무주택 청년 최고 연 4.5% 우대이율 통장 가입과 청약 당첨 시 최저 2.2% 분양가 80% 대출 연계 모의 판정 엔진
+      </p>
+    </div>
+
+    <YouthHousingDreamAdvisor client:load />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">청년 주택드림 통장 전환 및 활용 핵심 팁</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 기존 청약저축 통장 전환 가입</h3>
+          <p>
+            기존 주택청약종합저축이나 청년우대형 청약통장 가입자도 가입 자격(소득 5천만원 이하 무주택자)을 충족하면 은행 창구 및 앱에서 즉시 전환 가능하며, 기존 납입 회차와 가입 기간이 100% 그대로 인정됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 결혼 및 출산 시 추가 우대금리</h3>
+          <p>
+            주택드림 대출 실행 후 결혼 시 0.1%p, 최초 출산 시 0.5%p, 추가 출산 1명당 0.2%p의 우대금리가 누적 적용되어 최저 <strong>연 1.5%</strong>까지 대출 금리를 낮출 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
