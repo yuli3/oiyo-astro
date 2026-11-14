@@ -1,0 +1,12 @@
+{
+  "name": "oiyo-sanctuary",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-02",
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": {
+    "ALLOWED_ORIGINS": "http://127.0.0.1:4329,http://localhost:4329"
+  },
+  "durable_objects": {"bindings": [{"name": "ROOMS", "class_name": "SanctuaryRoom"}]},
+  "migrations": [{"tag": "v1", "new_sqlite_classes": ["SanctuaryRoom"]}]
+}
