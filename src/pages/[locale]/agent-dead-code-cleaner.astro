@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AgentDeadCodeCleaner } from "../../components/tools/AgentDeadCodeCleaner";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 미사용 코드 정리기 & 디버그 로그 제거기 | OIYO Tools",
+    description: "AI 코딩 에이전트가 남겨놓은 미사용 import, 임시 디버깅 console.log, debugger 구문을 0.1ms 만에 정격 감지하고 제거하여 번들 크기와 LLM 컨텍스트 토큰을 절감합니다.",
+  },
+  en: {
+    title: "AI Agent Dead Code Cleaner & Debug Log Stripper | OIYO Tools",
+    description: "Prune unused imports, temporary console.log debugging artifacts, and debugger statements from AI-generated code in sub-milliseconds.",
+  },
+  ja: {
+    title: "AIエージェント 未使用コード整理＆デバッグログ削除ツール | OIYO Tools",
+    description: "AIコーディングエージェントが残した未使用import、console.log、debugger構文をサブミリ秒で自動クリーンアップ。",
+  },
+  zh: {
+    title: "AI Agent 无用代码清理与调试日志精简器 | OIYO Tools",
+    description: "亚毫秒级快速清理AI编码生成的未引用import、console.log调试日志和debugger语句，显著降低打包体积与上下文Token消耗。",
+  },
+  fr: {
+    title: "Nettoyeur de code mort pour IA & Suppression de logs | OIYO Tools",
+    description: "Nettoyez instantanément les imports inutilisés, console.log et déclarations debugger générés par les agents d'IA.",
+  },
+  es: {
+    title: "Limpiador de código muerto para IA y depuración de logs | OIYO Tools",
+    description: "Depure importaciones no utilizadas, console.log y sentencias debugger generadas por agentes de IA en sub-milisegundos.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 미사용 코드 정리기</h1>
+      <p class="text-muted-foreground text-sm">
+        미사용 import 및 임시 디버깅 console.log·debugger 구문 정격 자동 제거
+      </p>
+    </div>
+
+    <AgentDeadCodeCleaner client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">에이전트 코드 정격화가 필수적인 이유</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 LLM 컨텍스트 윈도우 토큰 낭비 방지</h3>
+          <p>
+            AI 모델이 이전 턴에서 불필요하게 추가한 수십 줄의 <code>import</code> 문은 다음 턴의 프롬프트 컨텍스트에 그대로 누적됩니다. 정격 정리를 통해 약 20~40%의 불필요한 토큰 소비를 사전에 방지할 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 프로덕션 콘솔 유출 및 린트 오류 차단</h3>
+          <p>
+            임시 디버깅용 <code>console.log</code>나 <code>debugger</code> 구문이 프로덕션 빌드에 포함되면 민감 데이터 노출 위험과 함께 CI 린트(no-console, no-debugger) 파이프라인이 차단됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

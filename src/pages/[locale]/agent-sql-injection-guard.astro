@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import AgentSqlInjectionGuard from "../../components/tools/AgentSqlInjectionGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 생성 SQL 인젝션 취약점 검사 & 매개변수화 변환기 | OIYO Tools",
+    description: "AI 코딩 에이전트가 작성한 백엔드 코드의 문자열 템플릿 결합(${...}) 및 원시 SQL 인젝션 취약점을 서브밀리초 만에 감지하고, PostgreSQL·MySQL Prepared Statement 매개변수화 쿼리로 1초 만에 자동 변환합니다.",
+  },
+  en: {
+    title: "AI Agent SQL Injection Auditor & Parameterized Query Converter | OIYO Tools",
+    description: "Audit raw SQL string interpolations in AI-generated code and automatically convert to secure PostgreSQL ($1) or MySQL (?) parameterized queries.",
+  },
+  ja: {
+    title: "AIエージェント生成 SQLインジェクション脆弱性監査＆パラメータ化変換機 | OIYO Tools",
+    description: "AIコーディングエージェントが生成したSQLコードの文字列結合脆弱性を検出し、PostgreSQL/MySQL用の安全なパラメータ化クエリに自動変換。",
+  },
+  zh: {
+    title: "AI Agent 生成SQL注入漏洞审计与参数化查询转换器 | OIYO Tools",
+    description: "实时检测AI编码生成的字符串模板拼接SQL注入风险，并一键自动转换为PostgreSQL/MySQL预编译参数化安全查询语句。",
+  },
+  fr: {
+    title: "Auditeur d'injection SQL pour code généré par IA | OIYO Tools",
+    description: "Détectez les vulnérabilités d'injection SQL dans le code généré par IA et convertissez-les en requêtes paramétrées sécurisées.",
+  },
+  es: {
+    title: "Auditor de inyección SQL para código generado por IA | OIYO Tools",
+    description: "Audite interpolaciones de cadenas SQL inseguras en código generado por IA y conviértalas automáticamente en consultas preparadas seguras.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 SQL 인젝션 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        원시 SQL 문자열 결합 취약점 실시간 감지 및 Prepared Statement 매개변수화 쿼리 1초 자동 변환
+      </p>
+    </div>
+
+    <AgentSqlInjectionGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">AI 에이전트 SQL 쿼리 보안 3대 원칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 템플릿 리터럴(`${...}`) 결합 절대 금지</h3>
+          <p>
+            AI 모델은 쿼리를 작성할 때 편의상 `` `SELECT * FROM users WHERE email = '${email}'` ``과 같은 템플릿 결합을 자주 사용합니다. 악의적인 입력값이 주입되면 <strong>전체 데이터베이스 탈취 및 삭제(DROP TABLE)</strong>로 이어질 수 있으므로 반드시 금지해야 합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 Prepared Statement 매개변수 분리</h3>
+          <p>
+            SQL 문장과 사용자 데이터는 데이터베이스 엔진에 반드시 분리되어 전달되어야 합니다. PostgreSQL의 <strong>`$1, $2`</strong> 또는 MySQL의 <strong>`?`</strong> 플레이스홀더를 사용하여 쿼리의 실행 계획을 미리 컴파일하는 것이 가장 안전한 방어법입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
