@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import CarTaxCalculatorComponent from '../../components/tools/CarTaxCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "자동차 취등록세 & 공채매입 할인 및 친환경차 감면 계산기 — 경차·전기차 혜택",
+    description: "지방세법 기준 일반 승용차 7%, 경차 4%(75만원 감면), 전기차(140만원), 하이브리드(40만원), 다자녀 감면 및 지자체 공채 즉시할인 비용을 실시간 산출합니다.",
+  },
+  en: {
+    title: "Korea Automobile Registration Tax & Municipal Bond Discount Calculator — EV & Minicar",
+    description: "Calculate vehicle registration tax (7%, 4% for minicars), EV (1.4M KRW) and Hybrid (400k KRW) tax rebates, and municipal bond instant discount rates in Korea.",
+  },
+  ja: {
+    title: "韓国 自動車取得登録税＆公債買入割引・エコカー減免計算機 — 軽自動車・EV特典",
+    description: "韓国地方税法に基づく一般乗用車7%、軽自動車4%(75万ウォン減免)、電気自動車(140万ウォン)、ハイブリッド(40万ウォン)および公債即時割引費用を即時計算します。",
+  },
+  zh: {
+    title: "韩国汽车购置税与公债即时折扣免税计算器 — 微型车与电动车优惠",
+    description: "测算韩国地方税法普通乘用车7%、微型车4%(减免75万韩元)、电动汽车(减免140万韩元)、混动车(减免40万韩元)及地方债券即时贴现费用。",
+  },
+  fr: {
+    title: "Taxe d'Immatriculation Automobile et Remises Véhicules Écologiques en Corée",
+    description: "Calculez la taxe d'enregistrement des véhicules en Corée (7%, 4% pour mini-voitures), les remises pour véhicules électriques et hybrides et la décote des obligations.",
+  },
+  es: {
+    title: "Impuesto de Matriculación y Descuento de Bonos de Automóviles en Corea",
+    description: "Calcula el impuesto de matriculación de automóviles en Corea (7%, 4% minicoches), las rebajas fiscales para VE e híbridos y el descuento de bonos municipales.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-3">
+        <span>{locale === 'ko' ? '지방세법 2026' : 'Local Tax Act 2026'}</span>
+      </div>
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <CarTaxCalculatorComponent client:load locale={locale} />
+    </div>
+
+    {/* Hub-and-Spoke Context / FAQ */}
+    <section class="max-w-4xl mx-auto mt-8 rounded-xl border border-border bg-card p-6 space-y-4 text-sm text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">
+        {locale === 'ko' ? '자주 묻는 자동차 등록 세무 Q&A' : 'Frequently Asked Questions'}
+      </h2>
+
+      <div class="space-y-3">
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q1. 차량 가격에 부가가치세가 포함되어 있는데 취득세는 어느 금액을 기준으로 계산하나요?' : 'Q1. Is vehicle registration tax calculated on the price including or excluding VAT?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '취득세 과세표준은 부가가치세(10%)를 제외한 "공급가액"을 기준으로 산출합니다. 예를 들어 4,400만원 차량의 공급가액은 4,000만원이며, 일반 승용차 취득세 7%인 280만원이 부과됩니다.'
+              : 'The tax base for vehicle registration tax is the net supply price excluding 10% VAT.'}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q2. 경차는 취득세가 전액 면제 아닌가요? 왜 세금이 나올 수 있나요?' : 'Q2. Why is there tax on minicars when they are supposed to be exempt?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '지방세특례제한법 제67조에 따라 경차(1,000cc 이하)의 취득세 감면 한도는 최대 75만원입니다. 세율 4% 적용 시 공급가액 1,875만원(차량가액 약 2,060만원) 이하인 경차는 산출세액이 75만원 이하이므로 전액 면제(0원)되지만, 출고가가 이를 초과하는 고급 트림 경차는 75만원을 초과한 금액에 대해 취득세가 부과됩니다.'
+              : 'Minicars receive up to 750,000 KRW in tax exemption. Vehicles exceeding approximately 20.6M KRW incur tax on the excess amount over 750k KRW.'}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q3. 공채 할인 비용이란 무엇인가요?' : 'Q3. What is the municipal bond discount fee?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '차량을 등록할 때 지방자치단체 조례에 따라 의무적으로 지역개발채권 또는 도시철도채권을 매입해야 합니다. 이를 만기(5~7년)까지 보유하지 않고 은행 창구에서 즉시 할인하여 매도할 때 발생하는 할인 차액(할인율 약 10% 내외)을 납부하는 것을 공채 즉시할인이라고 합니다. 1,600cc 미만 소형차는 공채 매입이 전액 면제됩니다.'
+              : 'When registering a car, owners must purchase local government bonds. Reselling these bonds immediately to a bank incurs a discount cost (~10%). Cars under 1,600cc are exempt from bond purchases.'}
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
