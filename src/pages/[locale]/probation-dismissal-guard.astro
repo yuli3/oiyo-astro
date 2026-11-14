@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { ProbationDismissalGuard } from "../../components/tools/ProbationDismissalGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "수습·시용근로자 본채용 거부 및 부당해고 적법성 진단기 | OIYO Tools",
+    description: "근로기준법 제23조(해고제한), 제27조(서면통지 의무) 및 대법원 2003두74 판례 기준 수습기간 만료 후 본채용 거절의 정당성과 노동위원회 구제신청 승소 가능성 및 30일분 해고예고수당을 진단합니다.",
+  },
+  en: {
+    title: "Probation Dismissal Legality & Unfair Termination Guard | OIYO Tools",
+    description: "Evaluate unfair dismissal validity for probationary employees under Korean Labor Standards Act (written notice requirement, objective criteria, 30-day notice pay).",
+  },
+  ja: {
+    title: "試用期間 本採用拒否＆不当解雇 適法性診断機 | OIYO Tools",
+    description: "試用期間満了に伴う本採用拒否について、書面通知義務や客観的評価基準の充足度、労働委員会救済申立ての勝訴可能性を診断。",
+  },
+  zh: {
+    title: "试用期 拒绝转正与不当解雇合法性诊断器 | OIYO Tools",
+    description: "依据韩国劳动基准法第23条与第27条（书面通知义务），诊断试用期转正被拒是否属于违法解雇，测算劳动委员会申诉胜率与解雇预告补贴。",
+  },
+  fr: {
+    title: "Légalité rupture de période d'essai & Licenciement abusif | OIYO Tools",
+    description: "Évaluez la légalité du refus d'embauche définitive après période d'essai et l'éligibilité aux indemnités de préavis.",
+  },
+  es: {
+    title: "Validador de despido en período de prueba | OIYO Tools",
+    description: "Evalúe la legalidad de la no confirmación tras el período de prueba y los derechos a indemnización por falta de preaviso.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">수습근로자 본채용 거부 부당해고 진단기</h1>
+      <p class="text-muted-foreground text-sm">
+        서면통지 의무(제27조) 위반 여부, 대법원 객관적 평가 기준, 30일분 해고예고수당 및 노동위원회 구제신청 자격 진단
+      </p>
+    </div>
+
+    <ProbationDismissalGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">수습 본채용 거부 시 근로자가 알아야 할 3대 권리</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 카톡·문자·구두 해고는 100% 무효</h3>
+          <p>
+            근로기준법 제27조에 따라 사용자는 해고 사유와 시기를 반드시 <strong>종이 서면(또는 전자서명된 공식 전자문서)</strong>으로 통지해야 합니다. 카카오톡이나 전화로 "수습 끝나고 안 맞아서 채용 안 하기로 했다"고 통보한 것은 절차상 절대 무효이며 노동위원회에서 부당해고로 직결됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 3개월 이상 근무 시 해고예고수당 보장</h3>
+          <p>
+            수습이라 하더라도 계속 근로기간이 <strong>3개월 이상</strong>인 근로자를 즉시 해고(본채용 거부)할 때는 30일 전에 미리 예고해야 하며, 그렇지 않으면 <strong>30일분의 통상임금(해고예고수당)</strong>을 반드시 즉시 지급해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

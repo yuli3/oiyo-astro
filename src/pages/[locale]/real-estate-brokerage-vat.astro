@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { RealEstateBrokerageVatGuard } from "../../components/tools/RealEstateBrokerageVatGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "부동산 중개보수 부가세 바가지 검증기 (일반 10% vs 간이 0~4%) | OIYO Tools",
+    description: "공인중개사법 및 부가가치세법 기준 공인중개사의 과세유형(일반과세 10%, 간이과세 4%, 영세 간이과세 0%)을 대조하여 10% 부가세 바가지 청구를 즉시 진단하고 현금영수증 의무 발급을 안내합니다.",
+  },
+  en: {
+    title: "Realtor Brokerage VAT Rate Validator (10% vs 0-4%) | OIYO Tools",
+    description: "Verify lawful VAT charged on real estate brokerage commissions based on realtor business tax status (general 10%, simplified 0-4%) and stop illegal markups.",
+  },
+  ja: {
+    title: "不動産仲介手数料 付加価値税（VAT）適正検証機 | OIYO Tools",
+    description: "不動産仲介業者の課税類型（一般10%、簡易0〜4%）に基づき、不当な10%請求を即時判定し適正な最終支払額を算出。",
+  },
+  zh: {
+    title: "房地产中介费 增值税(VAT)合规验证器 | OIYO Tools",
+    description: "根据中介机构纳税人类型（一般10%对比小规模简易0-4%），防止中介多收10%增值税，保护消费者合法权益。",
+  },
+  fr: {
+    title: "Vérificateur de TVA sur frais d'agence immobilière | OIYO Tools",
+    description: "Vérifiez les taux de TVA légaux sur les commissions d'agence immobilière selon le statut fiscal de l'agence.",
+  },
+  es: {
+    title: "Validador de IVA en comisiones inmobiliarias | OIYO Tools",
+    description: "Compruebe las tarifas legítimas de IVA en las comisiones de agentes inmobiliarios y evite cobros indebidos.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">부동산 복비 부가세 과세유형 검증기</h1>
+      <p class="text-muted-foreground text-sm">
+        공인중개사 과세유형(일반 10%, 간이 4%, 영세 0%) 대조 및 10% 부가세 바가지 청구 실시간 차단
+      </p>
+    </div>
+
+    <RealEstateBrokerageVatGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">복비 부가가치세 3대 핵심 팩트 체크</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 간이과세자는 10%를 받을 수 없습니다</h3>
+          <p>
+            부가가치세법상 연 매출 4,800만원 미만의 영세 간이과세자는 세금계산서 발급이 불가능하므로 <strong>부가세를 1원도 별도로 청구할 수 없습니다(0%)</strong>. 연 매출 4,800만~1억 400만원의 간이과세자도 법정 부가가치율을 반영한 <strong>최대 4%</strong>까지만 부가세를 청구할 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 10만원 이상 복비는 현금영수증 의무</h3>
+          <p>
+            공인중개업은 소득세법 제162조의3에 따른 <strong>현금영수증 의무발행 업종</strong>입니다. 소비자가 "영수증 필요 없다"고 하더라도 중개사는 5일 이내에 자진 발급해야 하며, 발급을 거부하면 탈세 제보 시 20%의 포상금이 지급됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
