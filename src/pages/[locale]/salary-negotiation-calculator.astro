@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import SalaryNegotiationAdvisor from '../../components/tools/SalaryNegotiationAdvisor';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "이직자 연봉 실수령액 & 협상 가치 계산기 — 성과급·식대 반영 통장 입금액",
+    description: "이직 시 제안받은 기본급과 성과급, 4대보험, 근로소득세를 반영하여 실제 매월 통장에 꽂히는 실수령액 차이와 협상 인상률을 즉시 계산합니다.",
+  },
+  en: {
+    title: "Salary Negotiation & Take-Home Pay Calculator — Offer Comparison Tool",
+    description: "Compare job offers with actual monthly net take-home pay, 4 major social insurances, and performance bonus structures in Korea.",
+  },
+  ja: {
+    title: "転職者 年収手取り＆交渉価値計算機 — ボーナス・社会保険料 控除後手取り比較",
+    description: "オファーされた基本給、成果給、社会保険料、所得税を反映し、実際の毎月の手取り差額と昇給率をシミュレーションします。",
+  },
+  zh: {
+    title: "跳槽薪资税后到手与谈判估值计算器 — 绩效奖金与四大保险扣除后实发工资测算",
+    description: "实时对比两份工作实际税后到手月薪差异，综合考虑绩效奖金与免税福利，助您掌握薪资谈判主动权。",
+  },
+  fr: {
+    title: "Calculateur de Salaire Net et Négociation d'Emploi — Comparateur d'Offres",
+    description: "Comparez vos offres d'emploi avec le salaire net réel après cotisations sociales et primes en Corée.",
+  },
+  es: {
+    title: "Calculadora de Salario Neto y Negociación de Ofertas — Comparador de Sueldos",
+    description: "Calcula la diferencia de sueldo neto mensual real entre ofertas de trabajo considerando primas e impuestos en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  lang={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title}
+      </h1>
+      <p class="mt-3 text-lg text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <SalaryNegotiationAdvisor client:load />
+  </main>
+</Layout>
