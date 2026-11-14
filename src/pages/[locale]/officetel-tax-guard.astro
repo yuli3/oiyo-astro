@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import OfficetelTaxGuard from "../../components/tools/OfficetelTaxGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "오피스텔 주택수 판정 & 취득세·양도세·부가세 환급 추징 가드 | OIYO Tools",
+    description: "오피스텔 주거용/업무용 세목별 주택수 산입 여부, 취득세 4.6% 단일세율, 기존 아파트 양도세 비과세 박탈 리스크 및 일반사업자 부가세 10% 환급 추징액을 1초 만에 진단합니다.",
+  },
+  en: {
+    title: "Korea Officetel Housing Count & Tax Clawback Guard | OIYO Tools",
+    description: "Check whether officetel is counted in housing count for acquisition, capital gains, and wealth taxes, and simulate 10% VAT refund clawback risk.",
+  },
+  ja: {
+    title: "韓国 オフィステル 住宅数算入判定＆取得税・譲渡税・付加価値税追徴ガード | OIYO Tools",
+    description: "オフィステルの住居用／業務用の税目別住宅数算入判定、取得税4.6%単一税率、既存マンション譲渡所得税非課税喪失リスクおよび付加価値税10%還付追徴額を診断。",
+  },
+  zh: {
+    title: "韩国 商住两用公寓(Officetel) 房屋套数判定与税费追缴守护器 | OIYO Tools",
+    description: "测算商住楼在契税、转让所得税中是否计入房屋套数，评估现有住房免税失效风险及一般纳税人10%增值税退税追缴金。",
+  },
+  fr: {
+    title: "Calculateur de statut fiscal et de rappel de TVA pour Officetel en Corée | OIYO Tools",
+    description: "Vérifiez si l'officetel est comptabilisé comme logement pour l'acquisition et la plus-value, et calculez le risque de rappel de TVA de 10%.",
+  },
+  es: {
+    title: "Evaluador fiscal de officetel en Corea y recuperación de IVA | OIYO Tools",
+    description: "Determine si el officetel computa como vivienda para adquisición y plusvalía, y simule el riesgo de devolución del 10% del IVA.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">오피스텔 주택수 판정 & 세금·부가세 추징 가드</h1>
+      <p class="text-muted-foreground text-sm">
+        취득세(4.6% 단일), 양도세 실질과세 주택수 산입 위험 및 10년 내 주거용 전용 시 부가세 환급액 국세청 추징 진단
+      </p>
+    </div>
+
+    <OfficetelTaxGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">오피스텔 매수·임대 전 필수 세무 상식 3가지</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 취득세와 양도세의 주택수 괴리</h3>
+          <p>
+            오피스텔을 매수할 때는 건축물대장상 업무시설이므로 주택 수와 상관없이 <strong>4.6% 단일세율</strong>이 적용되지만, 이후 실제로 주거용(전입신고)으로 사용하면 양도세 계산 시 <strong>주택 수에 무조건 포함</strong>되어 기존 아파트의 1세대 1주택 비과세를 깨뜨릴 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 부가세 환급 10년 감가 룰</h3>
+          <p>
+            분양 시 일반임대사업자로 환급받은 부가세는 매 6개월마다 5%(연간 10%)씩 감가상각됩니다. 10년이 지나기 전에 세입자가 전입신고를 하거나 주거용으로 전환되면 <strong>남은 미경과 기간만큼의 부가세를 전액 토해내야</strong> 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

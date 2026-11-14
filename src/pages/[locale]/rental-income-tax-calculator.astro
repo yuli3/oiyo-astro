@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import RentalIncomeTaxCalculator from "../../components/tools/RentalIncomeTaxCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "주택임대소득 14% 분리과세 vs 종합과세 비교 & 건강보험료 가드 | OIYO Tools",
+    description: "연 2,000만원 이하 주택임대소득 14% 분리과세와 종합소득세 합산 세액 비교, 등록/미등록 사업자별 절세액 및 건강보험료 피부양자 탈락 위험을 진단합니다.",
+  },
+  en: {
+    title: "Korea Rental Income Tax 14% Separate vs Combined & Health Insurance Guard | OIYO Tools",
+    description: "Compare 14% separate tax vs combined income tax for housing rental income under 20M KRW and evaluate health insurance dependent status risk.",
+  },
+  ja: {
+    title: "韓国 住宅賃貸所得 14%分離課税 vs 総合課税 比較＆健康保険料扶養ガード | OIYO Tools",
+    description: "年間2,000万ウォン以下の住宅賃貸所得の14%分離課税と総合課税の税額比較、事業者登録の有無による節税額および健康保険被扶養者資格喪失リスクを診断。",
+  },
+  zh: {
+    title: "韩国 住房租赁所得 14%分离课税 vs 综合课税 测算与健保扶养守护器 | OIYO Tools",
+    description: "测算年租金收入2000万韩元以下时14%分离课税与综合税额对比，评估是否会丧失国民健康保险被扶养人家属资格。",
+  },
+  fr: {
+    title: "Fiscalité des revenus locatifs en Corée : 14% libératoire vs impôt global | OIYO Tools",
+    description: "Comparez l'imposition forfaitaire à 14% et l'impôt sur le revenu global pour les loyers inférieurs à 20M KRW et surveillez le statut de dépendant d'assurance maladie.",
+  },
+  es: {
+    title: "Impuesto sobre ingresos de alquiler en Corea: 14% separado vs global | OIYO Tools",
+    description: "Compare el impuesto separado del 14% con la tributación combinada para rentas de vivienda inferiores a 20M KRW y vigile el riesgo de pérdida de dependiente médico.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">주택임대소득 14% 분리과세 vs 종합과세 비교기</h1>
+      <p class="text-muted-foreground text-sm">
+        연 2,000만원 이하 주택 임대수입 분리과세 절세액 산출 및 건강보험료 피부양자 자격 박탈 위험 종합 진단
+      </p>
+    </div>
+
+    <RentalIncomeTaxCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">주택임대소득 세무신고 3대 핵심 체크리스트</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 2,000만원 이하 분리과세(14%)의 유리함</h3>
+          <p>
+            임대 외 다른 종합소득(근로, 사업 등)의 과세표준이 1,400만원을 초과하여 15% 이상의 누진세율을 적용받는 사람이라면, 14% 단일세율로 종결되는 분리과세를 선택하는 것이 세금 측면에서 무조건 유리합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 건강보험료 '피부양자 박탈' 역전 현상</h3>
+          <p>
+            직장가입자 가족의 피부양자로 등재되어 건강보험료를 내지 않던 사람이 임대사업자 등록을 하거나 미등록 상태에서 연 소득 500만원을 초과하면 피부양자에서 즉시 박탈되어 매월 20만원 안팎의 지역건보료가 부과되므로 소득세 절세액과의 기회비용을 반드시 계산해야 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
