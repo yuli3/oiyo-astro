@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import HousingSubscriptionScoreComponent from '../../components/tools/HousingSubscriptionScore';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "아파트 청약 가점 계산기 — 84점 만점 가점표 & 2026 배우자 통장 합산(최대 3점) 진단기",
+    description: "주택공급에 관한 규칙 별표 1에 따른 민영주택 청약가점제 84점 만점(무주택 32점+부양가족 35점+가입기간 17점), 배우자 청약통장 50% 합산 특례(최대 3점) 및 서울·수도권 당첨 가능성을 계산합니다.",
+  },
+  en: {
+    title: "Korea Apartment Housing Subscription Score Calculator — 84-Point System & Spouse Bonus",
+    description: "Calculate your apartment subscription score out of 84 points under Korean housing rules, including spouse account 50% credit (up to 3 points) and regional winning probability.",
+  },
+  ja: {
+    title: "韓国 マンション請約加点計算機 — 84点満点基準＆配偶者通帳合算（最大3点）診断",
+    description: "韓国住宅供給規則に基づく民営住宅請約加点制84点満点（無住宅32点＋扶養家族35点＋加入期間17点）、配偶者通帳50%合算特例（最大3点）および当選確率を計算します。",
+  },
+  zh: {
+    title: "韩国公寓申购加分计算器 — 84分满分基准与配偶存折合并（最高加3分）测算",
+    description: "依据韩国住宅供给规则测算民营住宅申购84分满分加分（无房32分+抚养人口35分+开户年限17分），核算配偶存折50%合并加分及首尔首都圈中签概率。",
+  },
+  fr: {
+    title: "Calculateur de Score pour l'Achat de Logement en Corée — Barème sur 84 Points",
+    description: "Calculez votre score d'éligibilité pour les appartements neufs en Corée (sur 84 points) avec le bonus de compte du conjoint.",
+  },
+  es: {
+    title: "Calculadora de Puntuación de Suscripción de Vivienda en Corea — Escala de 84 Puntos",
+    description: "Calcula tu puntuación para la compra de apartamentos sobre 84 puntos en Corea del Sur, incluyendo la bonificación de la cuenta bancaria del cónyuge.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <HousingSubscriptionScoreComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import NationalPensionBreakevenComponent from '../../components/tools/NationalPensionBreakeven';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "국민연금 조기노령 vs 연기연금 손익분기점 계산기 — 사망 연령별 누적 수령액 시뮬레이터",
+    description: "국민연금법 제61조~제62조 조기노령연금(연 6% 감액, 최대 -30%) vs 정상연금 vs 연기연금(연 7.2% 증액, 최대 +36%)의 손익분기 나이(76세/84세)와 건강보험 피부양자 탈락 위험을 시뮬레이션합니다.",
+  },
+  en: {
+    title: "Korea National Pension Breakeven Calculator — Early (-30%) vs Delayed (+36%)",
+    description: "Calculate crossover ages (76 and 84) between Early, Normal, and Delayed National Pension payouts in Korea and assess lifetime cumulative income against health insurance risks.",
+  },
+  ja: {
+    title: "韓国 国民年金 繰上げ受給 vs 繰下げ受給 損益分岐点計算機 — 死亡年齢別累計シミュレーター",
+    description: "韓国国民年金の繰上げ受給（最大30%減額）と繰下げ受給（最大36%増額）の生涯損益分岐年齢（76歳／84歳）および健康保険扶養者資格喪失リスクを比較します。",
+  },
+  zh: {
+    title: "韩国国民年金提前领取 vs 延期领取损益平衡点计算器 — 寿命累计金额模拟",
+    description: "测算韩国国民年金提前领取（最高减30%）与延期领取（最高增36%）的拐点年龄（76岁/84岁）及医保被抚养人资格脱落风险。",
+  },
+  fr: {
+    title: "Simulateur de Rentabilité Retraite en Corée — Anticipée (-30%) vs Ajournée (+36%)",
+    description: "Calculez les âges d'équilibre (76 et 84 ans) entre la retraite anticipée, normale et différée en Corée du Sud.",
+  },
+  es: {
+    title: "Calculadora de Punto de Equilibrio de Pensión Nacional en Corea — Anticipada vs Diferida",
+    description: "Calcula las edades de cruce de ingresos entre la pensión anticipada (-30%), normal y diferida (+36%) en Corea del Sur.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <NationalPensionBreakevenComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>
