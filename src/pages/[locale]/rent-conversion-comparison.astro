@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import RentConversionComparisonComponent from '../../components/tools/RentConversionComparison';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "전월세 전환율 계산기 — 법정 5.0% 상한선 초과 검증 & 전세 대출이자 vs 월세 기회비용 비교",
+    description: "주택임대차보호법 제7조의2 기준금리+2.0%(연 5.0%) 법정 전월세 전환율 상한선 초과 여부와 전세대출 이자 vs 월세(세액공제 최대 17% 반영)의 실질 주거비용을 3-Way 비교합니다.",
+  },
+  en: {
+    title: "Korea Jeonse-to-Rent Conversion Calculator — 5.0% Legal Cap & Cost Comparison",
+    description: "Verify statutory rent conversion rate ceilings (5.0%) under Korean Housing Lease Protection Act and compare net monthly costs between Jeonse loan interest and rent tax credits.",
+  },
+  ja: {
+    title: "韓国 チョンセ・月世（ウォルセ）転換率計算機 — 法定5.0%上限検証＆実質住居費比較",
+    description: "韓国住宅賃貸借保護法に基づく法定転換率（基準金利＋2.0%＝5.0%）上限違反を検知し、チョンセ融資利息とウォルセ税額控除を反映した実質住居コストを比較します。",
+  },
+  zh: {
+    title: "韩国全税转月租折算率计算器 — 法定5.0%上限核查与全税贷款利息对比",
+    description: "核查韩国住宅租赁保护法基准利率加2.0%（年5.0%）全税转月租法定折算率上限，对比全税贷款利息与月租金个税抵扣后的实际居住成本。",
+  },
+  fr: {
+    title: "Simulateur de Conversion Jeonse en Loyer en Corée — Plafond Légal 5.0%",
+    description: "Vérifiez le plafond légal de conversion de loyer (5,0%) et comparez les coûts réels entre les intérêts du prêt Jeonse et les loyers avec déductions fiscales.",
+  },
+  es: {
+    title: "Calculadora de Conversión de Jeonse a Alquiler Mensual en Corea — Tope Legal del 5.0%",
+    description: "Comprueba el límite legal del 5.0% en la tasa de conversión de alquiler y compara los costes netos mensuales entre el préstamo Jeonse y el alquiler.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <RentConversionComparisonComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import WeeklyHolidayPayCalculatorComponent from '../../components/tools/WeeklyHolidayPayCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "주휴수당 계산기 — 2026 최저임금 10,030원 반영(실질시급 12,036원) & 4대보험 가입 진단",
+    description: "근로기준법 제55조에 따른 주 15시간 이상 알바·단시간 근로자 주휴수당 계산, 2026 최저임금 반영 실질 시급(12,036원), 월 환산 급여 및 월 60시간 4대보험 가입 의무를 판정합니다.",
+  },
+  en: {
+    title: "Korea Weekly Holiday Pay Calculator — 2026 Min Wage & 4 Major Insurances",
+    description: "Calculate statutory weekly holiday pay under Korean Labor Standards Act with 2026 minimum wage (10,030 KRW base / 12,036 KRW real) and 4 major social insurance requirements.",
+  },
+  ja: {
+    title: "韓国 週休手当計算機 — 2026年最低賃金反映（実質時給12,036ウォン）＆4大保険診断",
+    description: "韓国勤労基準法に基づく週15時間以上勤務者の週休手当計算、2026年最低賃金（10,030ウォン）反映後の実質時給（12,036ウォン）および4大保険加入義務を判定します。",
+  },
+  zh: {
+    title: "韩国周休津贴计算器 — 2026最低时薪10,030韩元（实际时薪12,036）与四大保险判定",
+    description: "测算韩国劳动基准法每周工作15小时以上兼职与短工的周休津贴、2026年实际时薪（12,036韩元）及月工作60小时四大社保参保资格。",
+  },
+  fr: {
+    title: "Simulateur d'Indemnité de Congé Hebdomadaire en Corée — Salaire Minimum 2026",
+    description: "Calculez l'indemnité légale de congé hebdomadaire en Corée avec le salaire minimum 2026 et les obligations d'assurance sociale.",
+  },
+  es: {
+    title: "Calculadora de Salario de Vacaciones Semanales en Corea — Salario Mínimo 2026",
+    description: "Calcula el pago por descanso semanal remunerado según la Ley de Normas Laborales de Corea y el salario mínimo de 2026.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <WeeklyHolidayPayCalculatorComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>
