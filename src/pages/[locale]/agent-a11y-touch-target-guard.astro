@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import AgentA11yTouchTargetGuard from "../../components/tools/AgentA11yTouchTargetGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "모바일 웹 터치 타겟(최소 48x48px & WCAG 2.2 2.5.8) 접근성 감사기 | OIYO Tools",
+    description: "W3C WCAG 2.2 SC 2.5.8(Level AA) 및 Google Material / Apple HIG 모바일 터치 타겟 규격을 서브밀리초 만에 감사하고, 터치 미스를 방지하는 1초 자동 수정 코드를 생성합니다.",
+  },
+  en: {
+    title: "Mobile Web Touch Target Size Auditor (48x48px & WCAG 2.2 2.5.8) | OIYO Tools",
+    description: "Audit mobile touch targets against WCAG 2.2 SC 2.5.8 (Level AA) and Apple/Google 48x48px guidelines with instant auto-fix Tailwind CSS recommendations.",
+  },
+  ja: {
+    title: "モバイルWeb タッチターゲット（最小48x48px＆WCAG 2.2 2.5.8）アクセシビリティ監査機 | OIYO Tools",
+    description: "W3C WCAG 2.2 SC 2.5.8（Level AA）およびApple/Google基準に基づき、モバイルボタン・リンクのタッチ領域を即座に監査し自動修正コードを生成。",
+  },
+  zh: {
+    title: "移动端Web 触控目标尺寸（最小48x48px & WCAG 2.2 2.5.8）无障碍审计器 | OIYO Tools",
+    description: "依据W3C WCAG 2.2 SC 2.5.8与Google/Apple 48x48px设计规范，快速审计移动端按钮与链接的触控面积并一键生成修复代码。",
+  },
+  fr: {
+    title: "Auditeur d'accessibilité de taille de cible tactile mobile (WCAG 2.2) | OIYO Tools",
+    description: "Vérifiez la taille des cibles tactiles mobiles selon la norme WCAG 2.2 SC 2.5.8 et générez automatiquement des classes CSS de correction.",
+  },
+  es: {
+    title: "Auditor de accesibilidad de tamaño de objetivo táctil móvil (WCAG 2.2) | OIYO Tools",
+    description: "Audite objetivos táctiles móviles contra WCAG 2.2 SC 2.5.8 (Level AA) y genere clases Tailwind de corrección automática instantánea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">모바일 터치 타겟 접근성 감사기</h1>
+      <p class="text-muted-foreground text-sm">
+        W3C WCAG 2.2 2.5.8(최소 24px) 및 Google Material(48px) 규격 진단 및 원클릭 자동 수정
+      </p>
+    </div>
+
+    <AgentA11yTouchTargetGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">모바일 웹 터치 타겟 규격 요약</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 WCAG 2.2 SC 2.5.8 (Level AA 법정 기준)</h3>
+          <p>
+            2023년 10월 발표된 WCAG 2.2 신규 성공 기준(2.5.8)에 따라 모든 웹 인터랙티브 요소는 최소 <strong>24×24 CSS 픽셀</strong> 이상의 유효 터치 면적을 확보해야 합니다. 24px 미만의 아이콘 버튼은 고령자 및 장애인의 터치 미스를 유발하여 웹 접근성 감사에서 감점됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 Google & Apple 모바일 권장 (48×48px / 44×44pt)</h3>
+          <p>
+            성인의 손가락 끝 접촉 면적은 평균 10~14mm(약 44~48px)입니다. 시각적 아이콘 크기가 16~20px로 작더라도, <strong>투명 패딩(`p-3`) 또는 `min-w-12 min-h-12`</strong>를 부여하여 손가락이 닿는 실제 히트박스를 48px 이상으로 넓히는 것이 모바일 UI 최선의 관행입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

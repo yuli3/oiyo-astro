@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import AgentPromptCompressor from "../../components/tools/AgentPromptCompressor";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 시스템 프롬프트 무손실 토큰 압축기 | OIYO Tools",
+    description: "불필요한 예의 문구와 장황한 서술어를 무손실 축약하여 시스템 프롬프트 토큰을 25~45% 줄이고, LLM 컨텍스트 윈도우 여유와 지침 준수율을 극대화합니다.",
+  },
+  en: {
+    title: "AI Agent System Prompt Lossless Token Compressor | OIYO Tools",
+    description: "Losslessly compress AI agent system prompt tokens by 25~45%, optimizing LLM context window efficiency and instruction fidelity without sacrificing meaning.",
+  },
+  ja: {
+    title: "AIエージェント システムプロンプト無損失トークン圧縮機 | OIYO Tools",
+    description: "不要な敬語や冗長な接続詞を無損失で圧縮し、システムプロンプトのトークンを25〜45％削減。LLMのコンテキスト効率と指示遵守率を最大化。",
+  },
+  zh: {
+    title: "AI Agent 系统提示词无损Token压缩器 | OIYO Tools",
+    description: "无损精简冗长客套语与无意义修饰词，将系统提示词Token直接削减25~45%，显著降低API开销并提升大模型的指令遵循准确率。",
+  },
+  fr: {
+    title: "Compresseur de tokens de prompt système pour agents IA | OIYO Tools",
+    description: "Compressez sans perte les invites système de 25 à 45 %, optimisez la fenêtre de contexte LLM et améliorez le respect des instructions.",
+  },
+  es: {
+    title: "Compresor sin pérdidas de tokens para prompts del sistema de IA | OIYO Tools",
+    description: "Comprima sin pérdidas los tokens de prompts del sistema en un 25-45%, mejorando la fidelidad de instrucciones y reduciendo costes de API.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">AI 에이전트 시스템 프롬프트 압축기</h1>
+      <p class="text-muted-foreground text-sm">
+        불필요한 수식어 축약과 공백 정규화로 토큰 25~45% 절감 및 에이전트 지침 준수율 극대화
+      </p>
+    </div>
+
+    <AgentPromptCompressor client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">프롬프트 토큰 압축이 중요한 이유</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 Lost in the Middle 현상 방지</h3>
+          <p>
+            시스템 프롬프트가 수천 토큰을 넘어가면 LLM은 중간에 위치한 중요한 안전 규칙이나 포맷 제약사항을 망각하는 현상이 발생합니다. 의미를 보존하면서 토큰 길이를 짧고 밀도 높게(Dense) 압축할수록 모델의 <strong>지침 준수율(Instruction Following)</strong>이 급격히 상승합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💵 반복 도구 호출(Tool Loop) 비용 절감</h3>
+          <p>
+            에이전트가 20~50회씩 도구를 호출하며 대화를 이어갈 때마다 시스템 프롬프트 토큰은 매 턴 누적 청구됩니다. 프롬프트 100토큰을 줄이면 50회 루프 기준 <strong>5,000토큰 이상의 API 비용이 절약</strong>됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
