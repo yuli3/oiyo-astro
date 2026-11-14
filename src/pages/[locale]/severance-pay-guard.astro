@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import SeverancePayGuardComponent from '../../components/tools/SeverancePayGuard';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "퇴직금 계산기 — 근로기준법 통상임금 최저선 보장 & 법정 6대 중간정산 적격 진단기",
+    description: "근로자퇴직급여 보장법 제8조에 따른 법정 퇴직금 산출, 상여금·연차수당 3/12 일할 산입, 근로기준법 제19조 통상임금 최저선 보장 및 무주택자 주택구입 등 법정 6대 중간정산 자격을 진단합니다.",
+  },
+  en: {
+    title: "Korea Statutory Severance Pay Calculator — Ordinary Wage Floor & 6 Interim Reasons",
+    description: "Calculate legal severance pay under Korean Retirement Benefit Security Act with ordinary wage statutory floor protection and determine eligibility for 6 interim early settlements.",
+  },
+  ja: {
+    title: "韓国 法定退職金計算機 — 通常賃金最低保証＆法定6大中間精算適格診断",
+    description: "韓国勤労者退職給与保障法に基づく法定退職金計算、賞与金・年次手当の3/12日割り算入、通常賃金最低保証および無住宅者の住宅購入等6大中間精算適格を判定します。",
+  },
+  zh: {
+    title: "韩国法定退职金计算器 — 通常工资最低保障与法定六大提前结算资格核查",
+    description: "测算韩国劳动者退职给与保障法法定退职金，年终奖与年假津贴3/12日割计入，通常工资最低标准强制保障及无房职工购房等六大中途结算申请资格。",
+  },
+  fr: {
+    title: "Simulateur d'Indemnité Légale de Licenciement et Retraite en Corée — Plafond Garanti",
+    description: "Calculez l'indemnité légale de départ avec la garantie du salaire ordinaire et vérifiez les 6 motifs légaux de déblocage anticipé en Corée.",
+  },
+  es: {
+    title: "Calculadora de Indemnización por Despido y Jubilación en Corea — Garantía Legal",
+    description: "Calcula la indemnización legal por cese laboral con la garantía del salario ordinario mínimo y comprueba los 6 motivos legales de liquidación intermedia en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <SeverancePayGuardComponent client:load locale={locale} />
+    </div>
+  </main>
+</Layout>
