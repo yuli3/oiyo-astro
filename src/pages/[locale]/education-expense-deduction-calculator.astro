@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import EducationExpenseDeductionCalculator from "../../components/tools/EducationExpenseDeductionCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "연말정산 교육비 세액공제(15%) & 미취학 아동 학원비 계산기 | OIYO Tools",
+    description: "미취학 아동 학원비·유치원비(연 300만원 한도) 인정, 초중고 사설학원비 공제 제외 요건, 교복·체험학습비 및 대학생 등록금 15% 환급액을 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Education Expense Tax Credit & Academy Eligibility Calculator | OIYO Tools",
+    description: "Calculate 15% education tax credit: preschool private academy allowance (3M limit), K-12 private academy exclusion, and college tuition deduction limits.",
+  },
+  ja: {
+    title: "韓国 年末調整 教育費税額控除（15%）＆未就学児塾代判定機 | OIYO Tools",
+    description: "未就学児の塾・幼稚園費用（年300万限度）控除認定、小中高生の私設塾代控除除外要件、制服代および大学生学費15%還付額を瞬時に計算。",
+  },
+  zh: {
+    title: "韩国 年终精算 教育费税额减免（15%）与学龄前补习班判定器 | OIYO Tools",
+    description: "测算学龄前儿童补习班/幼儿园（每年300万限额）认定范围、中小学课外辅导班不可扣除规则以及大学学费15%退税金额。",
+  },
+  fr: {
+    title: "Crédit d'impôt pour frais de scolarité en Corée et éligibilité des cours privés | OIYO Tools",
+    description: "Calculez le crédit d'impôt de 15% pour l'éducation : académies préscolaires (3M KRW), exclusion des cours privés du primaire/secondaire et plafonds.",
+  },
+  es: {
+    title: "Deducción de gastos de educación en Corea y evaluación de academias privadas | OIYO Tools",
+    description: "Calcule la deducción del 15% de gastos educativos: academias preescolares (límite 3M), exclusión de academias escolares y límites universitarios.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">연말정산 교육비 세액공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        미취학 아동 학원비 공제 인정, 초·중·고 사설학원비 공제 제외 판정 및 대상별 15% 환급액 산출 엔진
+      </p>
+    </div>
+
+    <EducationExpenseDeductionCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">교육비 세액공제 3대 필수 상식</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 취학 전 아동만 사설학원비 공제 가능</h3>
+          <p>
+            태권도, 미술, 피아노, 영어학원 등 사설학원비는 <strong>초등학교 입학 전 아동에게만</strong> 1인당 연 300만원 한도로 교육비 공제가 인정됩니다. 초등학교에 입학한 이후(초·중·고) 지출한 학원비는 교육비 공제가 불가능합니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 초등학교 입학 연도 1~2월의 특례</h3>
+          <p>
+            아이가 초등학교에 입학하는 해라도 입학식(3월) 전인 <strong>1월과 2월에 지출한 학원비</strong>는 취학 전 아동 교육비로 분류되어 1인당 300만원 한도 내에서 15% 세액공제를 받을 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

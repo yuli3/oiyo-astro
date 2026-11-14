@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import MedicalExpenseDeductionCalculator from "../../components/tools/MedicalExpenseDeductionCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "연말정산 의료비 세액공제(15%) & 맞벌이 몰아주기 최적화기 | OIYO Tools",
+    description: "총급여 3% 문턱 계산, 실손의료보험금 필수 차감 및 맞벌이 부부 중 환급액을 극대화하는 최적 명의자 배분을 1초 만에 시뮬레이션합니다.",
+  },
+  en: {
+    title: "Korea Medical Expense Tax Credit & Dual-Earner Optimizer | OIYO Tools",
+    description: "Calculate 15% medical expense tax deduction (3% salary threshold), reflect insurance reimbursement clawback, and optimize dual-earner family tax refund.",
+  },
+  ja: {
+    title: "韓国 年末調整 医療費税額控除（15%）＆共働き集中控除最適化機 | OIYO Tools",
+    description: "総給与3%足切り計算、実損医療保険金差引および共働き夫婦のうち還付額を最大化する最適名義人配分を瞬時にシミュレーション。",
+  },
+  zh: {
+    title: "韩国 年终精算 医疗费税额减免（15%）与双职工最优合并测算器 | OIYO Tools",
+    description: "测算总薪资3%门槛起扣线，扣除商业实损医疗保险报销金，计算双职工家庭由谁申报能最大化退税额。",
+  },
+  fr: {
+    title: "Crédit d'impôt pour frais médicaux en Corée et optimisation pour couples actifs | OIYO Tools",
+    description: "Calculez le crédit d'impôt de 15% pour frais médicaux (seuil de 3%), déduisez les remboursements d'assurance et optimisez le remboursement du foyer.",
+  },
+  es: {
+    title: "Deducción de gastos médicos en Corea y optimización para parejas con ingresos | OIYO Tools",
+    description: "Calcule el crédito fiscal del 15% para gastos médicos (umbral del 3%), deduzca el reembolso de seguro y maximice la devolución conjunta.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">연말정산 의료비 세액공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        총급여 3% 문턱 계산, 실손보험금 필수 차감 및 맞벌이 부부 환급액 극대화 몰아주기 진단
+      </p>
+    </div>
+
+    <MedicalExpenseDeductionCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">의료비 세액공제 세무조사 대비 핵심 3가지</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 실손보험금 미차감 국세청 추징 주의</h3>
+          <p>
+            보험사로부터 돌려받은 실손의료보험금은 지출한 의료비에서 반드시 차감해야 합니다. 국세청은 보험사 지급 내역을 전산 수집하여 교차 검증하므로, 차감하지 않고 공제받으면 <strong>과소신고 가산세(10%)와 납부지연 가산세</strong>가 부과됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 맞벌이 부부 '급여 낮은 쪽' 몰아주기 원리</h3>
+          <p>
+            의료비는 총급여의 3%를 넘는 금액부터 공제됩니다. 따라서 <strong>연봉이 적은 배우자</strong>에게 몰아주어야 3% 문턱이 낮아져(예: 연봉 4천만 원은 120만 원 초과분부터 공제 시작) 공제 대상 금액이 훨씬 커집니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
