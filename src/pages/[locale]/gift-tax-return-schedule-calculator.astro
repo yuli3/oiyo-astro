@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { GiftTaxReturnScheduleCalculator } from "../../components/tools/GiftTaxReturnScheduleCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "증여세·상속세 법정 신고기한 D-Day & 3% 공제 계산기 | OIYO Tools",
+    description: "상속세 및 증여세법 제67조·제68조에 따른 말일 기준 3개월·6개월 법정 신고기한을 실시간 D-Day로 계산하고, 제69조 3% 자진신고세액공제와 20% 무신고 가산세 위험을 진단합니다.",
+  },
+  en: {
+    title: "Gift & Inheritance Tax Filing Deadline & 3% Discount Calculator | OIYO Tools",
+    description: "Calculate exact statutory filing deadlines (end of month + 3/6 months), 3% timely filing tax credit, and 20% late filing penalties under Korean inheritance and gift tax acts.",
+  },
+  ja: {
+    title: "贈与税・相続税 法定申告期限D-Day＆3%控除計算機 | OIYO Tools",
+    description: "月末基準3ヶ月・6ヶ月の法定申告期限をD-Dayでリアルタイム算出し、3%自主申告税額控除および無申告加算税（20%）リスクを判定。",
+  },
+  zh: {
+    title: "赠与税与继承税 法定申报截止日倒计时与3%减免计算器 | OIYO Tools",
+    description: "实时计算月末起3个月/6个月法定申报截止日D-Day，测算3%按期自愿申报减免额以及20%未申报滞纳金风险。",
+  },
+  fr: {
+    title: "Échéance déclaration droits de succession & Réduction 3% | OIYO Tools",
+    description: "Calculez les dates limites légales de déclaration de succession et donation, la réduction de 3% et les pénalités de retard.",
+  },
+  es: {
+    title: "Calculadora de plazo límite de sucesiones y donaciones y 3% descuento | OIYO Tools",
+    description: "Calcule los plazos legales de declaración de impuestos sobre sucesiones y donaciones, la deducción del 3% y las sanciones por demora.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">증여세·상속세 신고기한 & 3% 공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        말일 기준 3개월(증여)·6개월(상속) 법정 신고 마감일 D-Day 카운트다운 및 3% 자진신고 공제 혜택 산출
+      </p>
+    </div>
+
+    <GiftTaxReturnScheduleCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">국세청 증여세·상속세 신고 3대 법정 원칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 신고기한 기산점: '해당 월의 말일'</h3>
+          <p>
+            증여일이나 상속일 당일이 아닌, <strong>증여일 또는 상속개시일이 속하는 달의 말일</strong>로부터 3개월(증여) 또는 6개월(상속)이 기산됩니다. 예를 들어 5월 2일 증여라면 5월 31일로부터 3개월 후인 8월 31일이 신고 마감일입니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 자진신고 3% 공제 vs 무신고 20% 가산세</h3>
+          <p>
+            기한 내에 신고서를 홈택스나 세무서에 제출하면 산출세액의 <strong>3%가 즉시 공제</strong>됩니다. 반면 하루라도 기한을 넘기면 3% 공제가 박탈될 뿐만 아니라 납부세액의 <strong>20%에 달하는 일반 무신고 가산세</strong>와 매일 0.022%의 지연이자 가산세가 부과됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

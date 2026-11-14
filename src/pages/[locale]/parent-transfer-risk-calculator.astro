@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { ParentTransferRiskCalculator } from "../../components/tools/ParentTransferRiskCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "부모-자녀 무상임대 & 저가양도 세무 리스크 진단기 | OIYO Tools",
+    description: "상속세 및 증여세법 제41조의4(부동산 무상사용 5년 1천만원 비과세)와 소득세법 제101조(부당행위계산 부인 5%·30% 룰) 기준 부모 자녀 간 무상거주 증여세와 저가 매매 양도세 추징 위험을 진단합니다.",
+  },
+  en: {
+    title: "Parent-Child Rent-Free & Below-Market Sale Tax Guard | OIYO Tools",
+    description: "Evaluate gift tax and capital gains tax clawback risks on parent-child rent-free living and below-market real estate transfers.",
+  },
+  ja: {
+    title: "親子間 不動産無償賃대・低額譲渡 税務リスク診断機 | OIYO Tools",
+    description: "親所有の住宅に子が同居・無償居住する場合の贈与税非課税基準と、親子間売買時の譲渡所得税・贈与税追徴リスクを即時診断。",
+  },
+  zh: {
+    title: "父母子女 房产无偿居住与低价过户税务风险诊断器 | OIYO Tools",
+    description: "实时计算子女免费居住父母房产的赠与税免税额度，以及亲属间低价过户时的资本利得税和赠与税补缴风险。",
+  },
+  fr: {
+    title: "Risque fiscal transfert immobilier parents-enfants | OIYO Tools",
+    description: "Évaluez les risques fiscaux liés à l'hébergement gratuit et à la vente à bas prix d'un bien immobilier entre parents et enfants.",
+  },
+  es: {
+    title: "Calculadora de riesgo fiscal transferencia inmobiliaria padres e hijos | OIYO Tools",
+    description: "Evalúe los riesgos de impuestos sobre donaciones y plusvalías en viviendas gratuitas y ventas por debajo del mercado entre padres e hijos.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">부모-자녀 무상임대 & 저가양도 세무 리스크 진단기</h1>
+      <p class="text-muted-foreground text-sm">
+        부모 집 무상 거주 5년 1,000만원 비과세 기준 판정 및 가족 간 저가 매매 시가 30%·5% 룰 시뮬레이션
+      </p>
+    </div>
+
+    <ParentTransferRiskCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">국세청 가족 간 부동산 거래 3대 핵심 체크포인트</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 부모 주택 무상 거주: 1,000만원 룰</h3>
+          <p>
+            상증세법 제41조의4에 따라 부모 주택에 자녀가 무상으로 거주할 때 <strong>5년간 무상사용이익(시가 x 2% x 3.79078)</strong>이 1,000만원 미만이면 증여세가 전액 면제됩니다. 1천만원을 초과하더라도 성인 자녀 10년 5,000만원 증여공제를 활용할 수 있습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 저가 매매: 시가 5% vs 30% 이중 판정</h3>
+          <p>
+            부모가 자녀에게 시가보다 싸게 집을 팔면, 시가 대비 할인액이 <strong>5% 또는 3억원</strong>을 넘을 때 부모는 시가 기준으로 양도세를 재계산(부당행위 부인)당하며, 할인액이 <strong>30% 또는 3억원</strong>을 넘으면 자녀에게 증여세가 추가 과세됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
