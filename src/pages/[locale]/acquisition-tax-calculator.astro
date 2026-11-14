@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import AcquisitionTaxCalculator from '../../components/tools/AcquisitionTaxCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "주택 취득세 계산기 — 생애최초 200만원 감면 및 다주택자 중과세율 판정",
+    description: "2024~2026 개정 주택 취득세율(1~12%)과 생애최초 주택 구입 시 취득세 200만원 전액 감면 혜택, 지방교육세, 농어촌특별세를 즉시 계산합니다.",
+  },
+  en: {
+    title: "Korea Real Estate Acquisition Tax Calculator — First-Home Exemption & Surcharges",
+    description: "Calculate property acquisition taxes in Korea including 2M KRW first-home exemptions and multi-property surcharges under current tax laws.",
+  },
+  ja: {
+    title: "韓国 不動産 取得税 計算機 — 初めての住宅購入200万ウォン減免＆多住宅重課税率",
+    description: "韓国の住宅取得税（1〜12％）、一生に一度の住宅購入時の200万ウォン税額減免、地方教育税・農特税を即座に計算します。",
+  },
+  zh: {
+    title: "韩国房屋购置税计算器 — 首次购房200万韩元减免与多套房重课税率测算",
+    description: "精准计算韩国最新不动产购置税（1%~12%），包含首套房200万韩元免税优惠及地方教育税明细。",
+  },
+  fr: {
+    title: "Calculateur de Taxe d'Acquisition Immobilière en Corée — Exonération Premier Logement",
+    description: "Estimez les droits de mutation et taxes d'acquisition en Corée avec l'abattement de 2 millions de KRW pour les primo-accédants.",
+  },
+  es: {
+    title: "Calculadora de Impuesto sobre Adquisición de Inmuebles en Corea",
+    description: "Calcula los impuestos sobre la compra de viviendas en Corea, incluyendo la exención de 2 millones de KRW para primeros compradores.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <AcquisitionTaxCalculator client:load locale={locale} />
+  </main>
+</Layout>

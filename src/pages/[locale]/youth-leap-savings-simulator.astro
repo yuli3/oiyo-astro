@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import YouthLeapSavingsSimulator from '../../components/tools/YouthLeapSavingsSimulator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "청년도약계좌 만기 수령액 & 정부기여금 시뮬레이터 — 5,000만원 목돈 만들기 및 비과세 계산기",
+    description: "2024~2026 확대된 정부기여금(월 최대 3.3만원)과 15.4% 비과세 혜택을 반영하여 5년 만기 시 실제 수령액(약 5,000만원)과 일반 적금 환산 금리를 계산합니다.",
+  },
+  en: {
+    title: "Korea Youth Leap Savings & Dream Account Simulator — 5-Year Maturity Payout",
+    description: "Calculate your 5-year 50M KRW maturity lump sum with government matching contributions and 15.4% tax exemption under Korean youth wealth policies.",
+  },
+  ja: {
+    title: "韓国 青年跳躍口座 満期受取額＆政府寄与金シミュレーター — 5,000万ウォン資産形成",
+    description: "韓国の青年跳躍口座で5年間積立時の政府支援金、非課税利息、満期時の受取総額を即座に計算します。",
+  },
+  zh: {
+    title: "韩国青年跳跃储蓄账户期满领取金额与政府补贴测算器 — 5,000万韩元免税资产积累",
+    description: "根据最新政府补贴标准（每月最高3.3万韩元）测算5年期满实际到手金额及免税利息收益。",
+  },
+  fr: {
+    title: "Simulateur d'Épargne Jeunesse et Aide Publique en Corée — Épargne 5 Ans",
+    description: "Estimez le montant final après 5 ans d'épargne avec contribution gouvernementale et exonération fiscale de 15.4% en Corée.",
+  },
+  es: {
+    title: "Simulador de Cuenta de Ahorro para Jóvenes en Corea — Rendimiento a 5 Años",
+    description: "Calcula el monto acumulado a 5 años con subsidios estatales y exención fiscal del 15.4% en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-2 text-base text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <YouthLeapSavingsSimulator client:load locale={locale} />
+  </main>
+</Layout>
