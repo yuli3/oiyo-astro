@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { EstateFuneralDeductionCalculator } from "../../components/tools/EstateFuneralDeductionCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "상속세 장례비용 500만~1500만원 및 봉안시설 추가공제 계산기 | OIYO Tools",
+    description: "상속세 및 증여세법 제14조에 따라 영수증 없이도 기본 500만원, 최대 1,000만원까지 인정되는 일반 장례비용과 봉안당·수목장 추가 500만원(총 최대 1,500만원) 상속공제 및 절세액을 계산합니다.",
+  },
+  en: {
+    title: "Estate Funeral & Columbaria Expense Deduction Calculator | OIYO Tools",
+    description: "Calculate statutory inheritance tax deductions for funeral expenses (minimum 5M, maximum 15M KRW) including columbaria facility allowances under Korean tax law.",
+  },
+  ja: {
+    title: "相続税 葬儀費用500万〜1500万ウォン＆納骨施設追加控除計算機 | OIYO Tools",
+    description: "韓国相殺税法第14条に基づき、領収書なしでも500万ウォン、最大1,500万ウォンまで認められる葬儀費用控除および実際の節税額を算出。",
+  },
+  zh: {
+    title: "遗产税 丧葬费500万至1500万韩元与骨灰堂追加抵扣计算器 | OIYO Tools",
+    description: "依据韩国遗产与赠与税法第14条，无需收据即享500万基础抵扣，测算最高1500万韩元丧葬设施费用税前扣除与节税额。",
+  },
+  fr: {
+    title: "Déduction des frais funéraires pour droits de succession | OIYO Tools",
+    description: "Calculez la déduction légale pour frais funéraires (de 5 à 15 millions KRW) et l'économie d'impôt sur les successions.",
+  },
+  es: {
+    title: "Calculadora de deducción de gastos funerarios en sucesiones | OIYO Tools",
+    description: "Calcule la deducción legal de gastos funerarios (mínimo 5M, máximo 15M KRW) y el ahorro en el impuesto de sucesiones.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">상속세 장례비용 법정 공제 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        증빙 없이 500만원 기본 공제(최대 1,000만원) + 봉안시설 추가 500만원(총 최대 1,500만원) 상속세 절세액 산출
+      </p>
+    </div>
+
+    <EstateFuneralDeductionCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">장례비용 상속공제 3대 절세 핵심</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 증빙 없어도 500만원 무조건 공제</h3>
+          <p>
+            상증세법 제14조에 따라 실제 장례 비용 지출 영수증이 없거나 500만원 미만을 지출했더라도, 국세청은 <strong>기본 500만원을 법정 기본 공제</strong>로 상속재산에서 차감해 줍니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 봉안당·수목장 영수증 챙기면 최대 1,500만원</h3>
+          <p>
+            일반 장례식장 식대 등은 최대 1,000만원까지만 인정되지만, <strong>봉안당(납골당) 분양비나 수목장/자연장지 비용 영수증</strong>을 첨부하면 추가로 500만원이 별도 합산되어 <strong>총 1,500만원</strong>까지 공제 한도가 늘어납니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

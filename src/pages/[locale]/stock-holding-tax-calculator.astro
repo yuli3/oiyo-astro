@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { StockHoldingTaxCalculator } from "../../components/tools/StockHoldingTaxCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "국내주식 대주주 50억 기준 양도소득세 계산기 | OIYO Tools",
+    description: "대한민국 소득세법 제94조·제104조 2024~2026 개정 세법 기준 국내 상장주식 대주주(종목당 50억원 이상) 해당 여부 및 과세표준(20~25%) 양도소득세를 실시간 계산합니다.",
+  },
+  en: {
+    title: "Domestic Stock Major Shareholder 5B KRW Tax Calculator | OIYO Tools",
+    description: "Evaluate 5 Billion KRW major shareholder threshold and calculate capital gains tax (20% to 25%) on Korean listed stocks under current tax law.",
+  },
+  ja: {
+    title: "韓国国内株式 大株主50億ウォン基準 譲渡所得税計算機 | OIYO Tools",
+    description: "韓国所得税法に基づく上場株式の大株主基準（銘柄あたり50億ウォン）の該当有無および累進譲渡所得税（20〜25%）をリアルタイム計算。",
+  },
+  zh: {
+    title: "韩国股票 大股东50亿韩元门槛 资本利得税计算器 | OIYO Tools",
+    description: "根据韩国现行所得税法，测算单只股票持仓50亿韩元以上大股东身份界定，以及20%至25%阶梯资本利得税与免税规划。",
+  },
+  fr: {
+    title: "Calculateur de plus-values boursières pour grands actionnaires (5 Mds KRW) | OIYO Tools",
+    description: "Évaluez le seuil de grand actionnaire (5 milliards KRW) et calculez l'impôt sur les plus-values d'actions cotées en Corée.",
+  },
+  es: {
+    title: "Calculadora de plusvalías bursátiles para grandes accionistas (5 mil millones KRW) | OIYO Tools",
+    description: "Evalúe el umbral de gran accionista y calcule el impuesto sobre las ganancias patrimoniales de acciones cotizadas en Corea.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">국내주식 대주주 50억 양도세 계산기</h1>
+      <p class="text-muted-foreground text-sm">
+        종목당 50억원 기준 대주주 판정, 50억 미만 소액주주 전액 비과세 및 3억 초과 25% 누진세율 시뮬레이션
+      </p>
+    </div>
+
+    <StockHoldingTaxCalculator client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">국내주식 대주주 양도세 핵심 수칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 대주주 기준일: 매년 12월 말일</h3>
+          <p>
+            대주주 여부는 매년 <strong>12월 마지막 영업일(주주명부 폐쇄일)</strong>을 기준으로 판정됩니다. 폐쇄일 시점에 특정 종목 주식 평가액이 50억원 이상이면, 이듬해 해당 종목을 매도할 때 양도소득세 과세 대상이 됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 50억원 미만 일반 투자자는 전액 비과세</h3>
+          <p>
+            종목당 평가액이 50억원 미만인 소액주주는 국내 상장주식 매매차익에 대해 <strong>양도소득세가 1원도 부과되지 않습니다(0%)</strong>. 해외주식 직투(250만원 공제 후 22%)와 달리 국내주식 장내 거래의 가장 큰 절세 이점입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
