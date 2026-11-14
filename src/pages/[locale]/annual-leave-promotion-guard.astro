@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { AnnualLeavePromotionGuard } from "../../components/tools/AnnualLeavePromotionGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "연차유급휴가 사용촉진제 적법성 및 미사용수당 소멸 방어기 | OIYO Tools",
+    description: "근로기준법 제61조(연차유급휴가의 사용촉진)에 따른 1차 서면촉구·2차 시기지정 및 노무수령 거부 절차의 적법성을 검증하여 소멸 위기의 미사용 연차수당 청구권을 방어합니다.",
+  },
+  en: {
+    title: "Annual Leave Promotion Compliance & Unpaid Leave Pay Guard | OIYO Tools",
+    description: "Audit statutory compliance of employer 2-step annual leave promotion procedures under Article 61 of the Labor Standards Act and protect your unpaid leave pay claims.",
+  },
+  ja: {
+    title: "年次有給休暇 取得促進措置の適法性＆未消化手当消滅防御ツール | OIYO Tools",
+    description: "韓国勤労基準法第61条に基づく年次有給休暇取得促進措置の2段階書面通知および労務受領拒否の適法性を検証し、未消化手当請求権を防衛。",
+  },
+  zh: {
+    title: "带薪年假 使用促进制度合规性与未休年假工资保护器 | OIYO Tools",
+    description: "依据韩国劳动基准法第61条，严格审查用人单位两次书面催告与拒绝受领劳务之合法性，保障未休年假津贴追索权。",
+  },
+  fr: {
+    title: "Conformité de la promotion des congés payés & Protection des indemnités | OIYO Tools",
+    description: "Vérifiez la légalité des procédures patronales d'incitation aux congés payés et protégez vos créances d'indemnités de congés non pris.",
+  },
+  es: {
+    title: "Validador de promoción de vacaciones anuales y protección salarial | OIYO Tools",
+    description: "Audite la legalidad de los procedimientos de promoción de vacaciones pagadas del empleador y defienda sus derechos a la compensación por días no disfrutados.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">연차사용촉진제 적법성 및 수당 방어기</h1>
+      <p class="text-muted-foreground text-sm">
+        근로기준법 제61조 법정 2단계(6개월 전 1차 서면촉구, 2개월 전 2차 시기지정) 흠결 검증 및 연차수당 청구권 방어
+      </p>
+    </div>
+
+    <AnnualLeavePromotionGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">회사의 연차촉진이 무효가 되는 3대 법적 결격 사유</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 메신저·이메일 공지는 '서면' 불인정 (대법원 2019다279283)</h3>
+          <p>
+            근로기준법 제61조의 서면 촉구는 근로자 개인별로 <strong>종이 문서로 직접 교부하거나 법정 전자서명된 문서</strong>여야 합니다. 단체 메일이나 슬랙·카카오톡 공지는 법정 요건을 갖추지 못해 촉진 조치 자체가 무효가 됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 지정일 출근 시 '노무수령 거부통지서' 필수</h3>
+          <p>
+            회사가 날짜를 지정했더라도 근로자가 그날 출근해 업무를 보았다면, 회사는 즉시 <strong>노무수령 거부 의사를 서면으로 교부하고 퇴근 조치</strong>해야 합니다. 이를 묵인하고 업무를 시켰다면 연차수당 지급의무가 면책되지 않습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

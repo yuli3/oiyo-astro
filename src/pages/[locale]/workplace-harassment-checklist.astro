@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import { WorkplaceHarassmentChecklist } from "../../components/tools/WorkplaceHarassmentChecklist";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "직장 내 괴롭힘 3대 요건 판정 & 증거 수집 체크리스트 | OIYO Tools",
+    description: "근로기준법 제76조의2(직장 내 괴롭힘 금지) 법정 3대 성립 요건(우위성, 적정범위 초과, 고통·환경악화)을 판정하고, 고용노동부 진정 및 사내 신고를 위한 객관적 증거력 점수와 대응 로드맵을 제공합니다.",
+  },
+  en: {
+    title: "Workplace Harassment Legal Elements & Evidence Checklist | OIYO Tools",
+    description: "Audit statutory legal elements of workplace harassment under Korean labor law and evaluate evidentiary strength (recordings, chats, medical records) for official complaints.",
+  },
+  ja: {
+    title: "職場内ハラスメント 法定3大要件判定＆証拠収集チェックリスト | OIYO Tools",
+    description: "韓国勤労基準法第76条の2に基づくパワハラ3大要件の充足度を診断し、雇用労働部申告に向けた客観的証拠（録音、チャット、診断書）の証明力を評価。",
+  },
+  zh: {
+    title: "职场霸凌 法定三大要件判定与证据收集检查清单 | OIYO Tools",
+    description: "依据韩国劳动基准法第76条之2，严格核定职场霸凌三大构成要件，评估录音、聊天记录与医疗诊断书的证据证明力。",
+  },
+  fr: {
+    title: "Éléments légaux du harcèlement au travail & Preuves | OIYO Tools",
+    description: "Évaluez les éléments légaux du harcèlement moral au travail et la force probante de vos éléments de preuve.",
+  },
+  es: {
+    title: "Lista de verificación de acoso laboral y requisitos legales | OIYO Tools",
+    description: "Audite los elementos legales del acoso en el trabajo y evalúe la solidez probatoria para quejas oficiales ante el Ministerio de Trabajo.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">직장 내 괴롭힘 요건 판정 & 증거 가이드</h1>
+      <p class="text-muted-foreground text-sm">
+        근로기준법 제76조의2 법정 3대 요건(우위성, 적정범위 초과, 고통·환경악화) 판정 및 노동청 진정 대비 증거력 채점
+      </p>
+    </div>
+
+    <WorkplaceHarassmentChecklist client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">괴롭힘 피해 근로자가 반드시 알아야 할 3대 증거 원칙</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 당사자 간 대화 녹음은 100% 합법 증거</h3>
+          <p>
+            통신비밀보호법상 <strong>본인이 대화의 일방 당사자로 참여한 대화나 통화 녹음</strong>은 상대방 동의 없이 녹음하더라도 형사처벌 대상이 아니며, 법원과 노동위원회에서 가장 강력한 증거로 인정됩니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 정신과 진단서로 인과관계 완성</h3>
+          <p>
+            가해자의 행위가 있었더라도 "피해자가 아무런 고통을 겪지 않았다"고 발뺌하는 경우가 많습니다. 괴롭힘 직후 <strong>정신건강의학과에서 직장 스트레스로 인한 적응장애·우울증 진단서</strong>를 발급받으면 인과관계가 확실하게 입증됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
