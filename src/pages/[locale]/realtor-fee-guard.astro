@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import RealtorFeeGuardComponent from '../../components/tools/RealtorFeeGuard';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "부동산 중개수수료(복비) 상한요율 & 부가세 바가지 방어 계산기 — 매매·전월세",
+    description: "공인중개사법 기준 주택 매매(0.4~0.7%), 전월세(0.3~0.6%), 월세 5천만원 미만 70배 룰 및 간이과세자(4%/0%) 부가가치세 과다청구 방어를 실시간 진단합니다.",
+  },
+  en: {
+    title: "Korea Realtor Brokerage Fee & VAT Defense Calculator — Sale & Lease Rate Ceilings",
+    description: "Audit statutory real estate brokerage fee caps under Korean law (0.3~0.7%), 70x conversion multiplier for small deposits, and defend against VAT overcharging.",
+  },
+  ja: {
+    title: "韓国 不動産仲介手数料(福費) 上限料率＆付加価値税ぼったくり防御計算機",
+    description: "韓国公認仲介士法に基づく売買・賃貸借の法定仲介手数料上限、5千万ウォン未満月利70倍ルール、簡易課税者の消費税(4%/0%)過大請求を即時診断します。",
+  },
+  zh: {
+    title: "韩国房地产中介费法定上限与增值税超额收费防护计算器 — 买卖与租赁",
+    description: "核查韩国公认中介士法买卖(0.4~0.7%)与租赁(0.3~0.6%)法定中介费上限标准、月租5000万以下70倍折算规则及简易征税人增值税过度索要防范。",
+  },
+  fr: {
+    title: "Frais d'Agence Immobilière et Plafonds Légaux en Corée — Protection TVA",
+    description: "Calculez les plafonds légaux des commissions d'agence immobilière en Corée et prévenez les surfacturations de TVA chez les auto-entrepreneurs.",
+  },
+  es: {
+    title: "Calculadora de Honorarios de Inmobiliaria y Límite Legal en Corea — Protección IVA",
+    description: "Calcula los límites legales de comisión inmobiliaria en Corea y defiende tus derechos frente a cobros indebidos de IVA por agentes simplificados.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-3">
+        <span>{locale === 'ko' ? '공인중개사법 2026' : 'Real Estate Brokerage Act 2026'}</span>
+      </div>
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <RealtorFeeGuardComponent client:load locale={locale} />
+    </div>
+
+    {/* Hub-and-Spoke Context / FAQ */}
+    <section class="max-w-4xl mx-auto mt-8 rounded-xl border border-border bg-card p-6 space-y-4 text-sm text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">
+        {locale === 'ko' ? '자주 묻는 부동산 중개보수 법률 Q&A' : 'Frequently Asked Questions'}
+      </h2>
+
+      <div class="space-y-3">
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q1. 공인중개사가 법정 상한 요율 최고치를 무조건 요구합니다. 깎을 수 있나요?' : 'Q1. Can I negotiate if the broker demands the maximum rate ceiling?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '네, 가능합니다. 공인중개사법에 규정된 요율은 "상한선"일 뿐이며, 법률상 그 한도 내에서 중개의뢰인과 개업공인중개사가 서로 협의하여 결정하도록 되어 있습니다(법 제32조). 계약서 작성 전 미리 중개보수 요율을 협의하고 확인·설명서에 기재하도록 요구할 권리가 있습니다.'
+              : 'Yes. The statutory rate is a ceiling, not a fixed fee. Article 32 stipulates that the fee must be negotiated between client and agent within statutory limits.'}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q2. 간이과세자 중개업소가 부가세 10%를 요구하는데 정당한가요?' : 'Q2. Is it legal for a simplified taxpayer broker to charge 10% VAT?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '부당합니다. 국세청 기준 간이과세자는 세금계산서 발급 의무가 있는 사업자라 하더라도 부가가치율에 따라 최대 4%까지만 부가세를 수령할 수 있습니다. 연매출 4,800만원 미만인 영세 간이과세자는 부가세를 일체 청구할 수 없습니다(0%). 10%를 요구할 경우 일반과세자 사업자등록증 제시를 요구하세요.'
+              : 'No. Simplified taxpayers may only charge up to 4% VAT, and micro-brokers under 48M KRW revenue cannot charge VAT at all.'}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q3. 월세 5천만원 미만 70배 룰이란 무엇인가요?' : 'Q3. What is the 70x multiplier rule for low rent?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '월세 보증금 + (월세 × 100)으로 계산한 환산금액이 5천만원 미만(예: 보증금 1,000만원, 월세 30만원 = 4,000만원)인 경우, 영세 임차인 보호를 위해 "보증금 + (월세 × 70)"(1,000만 + 2,100만 = 3,100만원)으로 기준금액을 낮추어 중개보수를 경감해 주는 공인중개사법상 필수 규정입니다.'
+              : 'Under Korean law, if Deposit + (Monthly Rent x 100) is under 50M KRW, the formula automatically changes to Deposit + (Monthly Rent x 70) to protect small tenants.'}
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

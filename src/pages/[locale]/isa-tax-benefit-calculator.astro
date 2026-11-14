@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import IsaTaxBenefitCalculatorComponent from '../../components/tools/IsaTaxBenefitCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "ISA 계좌 일반형 vs 서민형 비과세 & 손익통산 세금 절감액 계산기 — 3-Way 비교",
+    description: "조세특례제한법 제91조의18에 따른 개인종합자산관리계좌(ISA) 일반형(200만), 서민형(400만) 비과세, 손익통산 순이익 계산 및 9.9% 분리과세 절세액을 일반 계좌와 실시간 비교합니다.",
+  },
+  en: {
+    title: "Korea ISA Account Tax Shield & Net Profit Offsetting Calculator — Standard vs Low-Income",
+    description: "Compare Korean Individual Savings Account (ISA) tax benefits: 2M/4M KRW exemptions, net capital gains/losses offsetting, and 9.9% separation tax against regular brokerage accounts.",
+  },
+  ja: {
+    title: "韓国 ISA(個人総合資産管理口座) 一般型vs庶民型 非課税＆損益通算 節税計算機",
+    description: "韓国租税特例制限法に基づくISA口座の非課税枠(一般型200万/庶民型400万ウォン)、損益通算および9.9%分離課税による節税額を一般証券口座と即時比較します。",
+  },
+  zh: {
+    title: "韩国 ISA 个人综合资产管理账户免税额度与损益相抵节税计算器 — 3-Way对比",
+    description: "测算韩国租税特例限制法ISA账户普通型(200万)与平民型(400万)免税额度、投资收益与损失相抵及9.9%低税率分离开税节税优势。",
+  },
+  fr: {
+    title: "Simulateur d'Avantages Fiscaux du Compte ISA en Corée — Épargne et Exonération",
+    description: "Calculez l'exonération fiscale du compte ISA coréen (2M ou 4M KRW), la compensation des pertes et le taux réduit de 9,9% par rapport à un compte ordinaire.",
+  },
+  es: {
+    title: "Calculadora de Ventajas Fiscales de Cuenta ISA en Corea — Compensación de Pérdidas",
+    description: "Compara el escudo fiscal de la cuenta ISA en Corea (hasta 4M KRW exentos), compensación de ganancias y pérdidas y tipo reducido del 9.9% frente a cuentas normales.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-3">
+        <span>{locale === 'ko' ? '조세특례제한법 2026' : 'Special Tax Treatment Control Act 2026'}</span>
+      </div>
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <IsaTaxBenefitCalculatorComponent client:load locale={locale} />
+    </div>
+
+    {/* Hub-and-Spoke Context / FAQ */}
+    <section class="max-w-4xl mx-auto mt-8 rounded-xl border border-border bg-card p-6 space-y-4 text-sm text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">
+        {locale === 'ko' ? '자주 묻는 ISA 세무 및 투자 Q&A' : 'Frequently Asked Questions'}
+      </h2>
+
+      <div class="space-y-3">
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q1. 일반 계좌와 ISA 계좌의 가장 결정적인 차이는 무엇인가요?' : 'Q1. What is the single biggest difference between a regular account and ISA?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '가장 큰 차이는 "손익통산"입니다. 일반 증권계좌에서는 A종목에서 500만원을 벌고 B종목에서 500만원을 잃어 순수익이 0원이라도, A종목 배당/과세차익에 대해 15.4% 세금을 무조건 징수합니다. 반면 ISA 계좌는 이익과 손실을 합산하여 순이익에 대해서만 비과세(200만/400만)를 적용하고 초과분도 9.9%로 분리과세합니다.'
+              : 'The key benefit is net profit offsetting. Regular accounts tax gross gains without subtracting losses, whereas ISA taxes only net profits after offsetting losses.'}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q2. 서민형 가입 자격은 어떻게 증명하나요?' : 'Q2. How do I qualify for the 4M KRW low-income exemption?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '직전 연도 총급여 5,000만원 이하 근로자 또는 종합소득금액 3,800만원 이하인 거주자가 대상입니다. 홈택스에서 "소득확인증명서(개인종합자산관리계좌 가입용)"를 발급받아 증권사에 제출하면 일반형에서 서민형으로 즉시 전환됩니다.'
+              : 'Individuals with previous-year earned income of 50M KRW or less (or composite income of 38M KRW or less) qualify by submitting an income verification certificate from Hometax.'}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q3. 3년 의무 가입기간 전에 해지하면 어떻게 되나요?' : 'Q3. What happens if I close the account before 3 years?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '특별한 사유(사망, 해외이주, 천재지변, 파산 등) 없이 3년 이내 중도 해지 시 감면받은 세액이 일반 세율(15.4%)로 추징됩니다. 단, 납입한 원금 범위 내에서는 중도 인출을 하더라도 비과세 혜택이 유지됩니다.'
+              : 'Premature cancellation before 3 years forfeits tax exemptions and re-applies regular 15.4% tax rates, though withdrawing principal within contributions is permitted.'}
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
