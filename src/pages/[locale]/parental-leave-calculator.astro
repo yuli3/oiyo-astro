@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ParentalLeaveCalculator from '../../components/tools/ParentalLeaveCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "2026 육아휴직 급여 계산기 — 상한 250만원 및 6+6 부모휴직 특례 반영",
+    description: "2025~2026년 개정된 고용보험법(월 최대 250만 원 인상, 사후지급금 폐지)을 반영하여 매월 실제 통장에 입금되는 육아휴직 급여를 1초 만에 계산합니다.",
+  },
+  en: {
+    title: "Korea Parental Leave Benefit Calculator 2026 — Maternity & Paternity Allowance",
+    description: "Calculate official parental leave benefits in Korea with updated 2026 ceilings (up to 2.5M KRW/month) and 6+6 co-parenting bonuses.",
+  },
+  ja: {
+    title: "韓国 育児休업給付金 計算機 2026 — 上限250万ウォン・両親特例シミュレーター",
+    description: "韓国の最新雇用保険法（月最大250万ウォン・事後支給金廃止）を反映した育児休業給付金のリアルタイム計算ツールです。",
+  },
+  zh: {
+    title: "韩国育儿休职津贴计算器 2026 — 上限250万韩元与父母同休特例测算",
+    description: "根据韩国2026年最新修订法律（取消事后支付、初期每月最高250万韩元），一键计算育儿假每月实际到账金额。",
+  },
+  fr: {
+    title: "Calculateur d'Indemnités de Congé Parental en Corée 2026 — Simulation en Ligne",
+    description: "Simulez vos allocations mensuelles de congé parental en Corée selon les nouveaux plafonds de 2026.",
+  },
+  es: {
+    title: "Calculadora de Permiso Parental en Corea 2026 — Subsidio por Maternidad y Paternidad",
+    description: "Calcula los pagos mensuales por permiso parental en Corea según los límites actualizados de 2026.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  lang={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title}
+      </h1>
+      <p class="mt-3 text-lg text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <ParentalLeaveCalculator client:load />
+  </main>
+</Layout>

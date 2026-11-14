@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import LlmCostSimulator from '../../components/tools/LlmCostSimulator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "AI 에이전트 LLM 토큰 & API 비용 계산기 — Claude, Gemini, GPT 예상 청구액 시뮬레이터",
+    description: "멀티턴 에이전트 루프와 프롬프트 캐싱을 반영하여 Claude 3.5 Sonnet, Gemini 1.5, GPT-4o, DeepSeek의 실제 월간 API 청구액을 1초 만에 무료로 예측합니다.",
+  },
+  en: {
+    title: "AI Agent LLM Token & API Cost Simulator — Claude, Gemini, GPT Pricing Calculator",
+    description: "Simulate monthly LLM API bills with multi-turn agent iterations and prompt caching. Compare Claude, Gemini, GPT-4o, and DeepSeek pricing in real time.",
+  },
+  ja: {
+    title: "AIエージェント LLMトークン＆API料金シミュレーター — Claude・Gemini・GPT 費用計算",
+    description: "プロンプトキャッシングとマルチターンループを反映したLLM APIの月額請求見積もり計算ツールです。",
+  },
+  zh: {
+    title: "AI 智能体 LLM Token 与 API 成本测算器 — Claude·Gemini·GPT 账单模拟",
+    description: "实时测算多轮 Agent 工具调用与 Prompt 缓存下的月度 LLM API 账单，对比主流大模型性价比。",
+  },
+  fr: {
+    title: "Simulateur de Coût API LLM pour Agents IA — Calculateur de Tokens et Tarifs",
+    description: "Estimez vos factures mensuelles d'API LLM pour Claude, Gemini et GPT avec mise en cache des requêtes et boucles d'agents autonomes.",
+  },
+  es: {
+    title: "Calculadora de Costos de API LLM para Agentes IA — Estimador de Tokens",
+    description: "Calcula los costos mensuales de API para Claude, Gemini y GPT con soporte para bucles de agentes y almacenamiento en caché de prompts.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  lang={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title}
+      </h1>
+      <p class="mt-3 text-lg text-muted-foreground">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <LlmCostSimulator client:load />
+  </main>
+</Layout>
