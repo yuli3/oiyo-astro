@@ -187,8 +187,8 @@ export default function RentConversionComparison({ locale = 'ko' }: { locale?: s
             <div className="flex justify-between text-xs text-muted-foreground">
               <span>2,000만원</span>
               <span className="text-primary font-medium">
-                {calculation.taxCreditRatePercent > 0
-                  ? (isKo ? `월세 ${calculation.taxCreditRatePercent}% 세액공제 대상` : `${calculation.taxCreditRatePercent}% Tax Credit`)
+                {calculation.taxCreditPercent > 0
+                  ? (isKo ? `월세 ${calculation.taxCreditPercent}% 세액공제 대상` : `${calculation.taxCreditPercent}% Tax Credit`)
                   : (isKo ? '세액공제 대상 아님(7천만 초과)' : 'Above 70M')}
               </span>
               <span>9,000만원</span>

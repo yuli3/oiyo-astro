@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import FamilyLoanContractAdvisorComponent from '../../components/tools/FamilyLoanContractAdvisor';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "부모 자녀 차용증 적정 이자율(4.6%) & 증여세 비과세 계산기 — 2.17억 무이자 한도",
+    description: "상속세 및 증여세법 제41조의4 법정 당좌대출이자율(연 4.6%)과 이자 차액 연 1천만원 미만 비과세 한도(최대 2억 1,739만원 무이자) 및 국세청 필수 4대 요건을 진단합니다.",
+  },
+  en: {
+    title: "Korea Family Loan Contract & 4.6% Gift Tax Exemption Calculator — Up to 217M 0% Loan",
+    description: "Audit statutory 4.6% interest rate under Korean Inheritance and Gift Tax Act Art. 41-4, test under-10M KRW annual interest shield (up to 217.39M KRW tax-free), and check National Tax Service loan validation checklist.",
+  },
+  ja: {
+    title: "韓国 親子間金銭借用証書 適正利率(4.6%)＆贈与税非課税計算機 — 2.17億無利子限度",
+    description: "韓国相続税及び贈与税法第41条の4に基づく当座貸付利子率(年4.6%)、年1,000万ウォン未満の利子差額非課税枠(最大2.17億ウォン無利子)および国税庁借用証書4大有効要件を診断します。",
+  },
+  zh: {
+    title: "韩国父母子女借条法定适正利率(4.6%)与赠与税免税计算器 — 2.17亿免息额度",
+    description: "测算韩国继承税与赠与税法第41条之4法定当期贷款利率(年4.6%)、年利息差额未满1000万韩元免税限额(最高2.17亿韩元免息)及韩国国税厅借条合法认定四大要件。",
+  },
+  fr: {
+    title: "Prêt Familial Coréen Taux Légal (4,6%) et Exonération Droits de Donation",
+    description: "Calculez le taux d'intérêt légal de 4,6% pour les prêts familiaux en Corée, l'exonération jusqu'à 217M KRW d'emprunt à 0% et les 4 règles de conformité du fisc coréen.",
+  },
+  es: {
+    title: "Contrato de Préstamo Familiar en Corea (4.6%) y Exención de Impuesto de Donaciones",
+    description: "Calcula el interés legal del 4.6% según la ley fiscal de Corea, el escudo de exención de hasta 217M KRW sin intereses y los 4 requisitos de validez de Hacienda.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout
+  title={currentMeta.title}
+  description={currentMeta.description}
+  locale={locale}
+>
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto mb-8 text-center">
+      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-3">
+        <span>{locale === 'ko' ? '상속세 및 증여세법 2026' : 'Inheritance & Gift Tax Act 2026'}</span>
+      </div>
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
+        {currentMeta.title.split('—')[0]}
+      </h1>
+      <p class="mt-3 text-base text-muted-foreground sm:text-lg">
+        {currentMeta.description}
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <FamilyLoanContractAdvisorComponent client:load locale={locale} />
+    </div>
+
+    {/* Hub-and-Spoke Context / FAQ */}
+    <section class="max-w-4xl mx-auto mt-8 rounded-xl border border-border bg-card p-6 space-y-4 text-sm text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">
+        {locale === 'ko' ? '자주 묻는 부모-자녀 차용증 세무 Q&A' : 'Frequently Asked Questions'}
+      </h2>
+
+      <div class="space-y-3">
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q1. 부모님께 2억원을 빌릴 때 정말 무이자(0%)로 차용증을 써도 증여세가 안 나오나요?' : 'Q1. Can I really borrow 200M KRW from parents interest-free without gift tax?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '네, 합법적으로 비과세입니다. 상속세및증여세법 제41조의4에 따르면 법정 적정 이자(연 4.6%)와 실제 지급한 이자의 차액이 연간 1,000만원 미만인 경우 증여세를 부과하지 않습니다. 2억원의 4.6%는 연 920만원으로 1,000만원 미만이므로 무이자 차용증을 작성해도 증여세가 0원입니다. 단, 등기소 확정일자 날인과 만기 원금 상환 내역은 반드시 갖추어야 합니다.'
+              : 'Yes. Under Article 41-4 of the Korean Inheritance and Gift Tax Act, if the difference between statutory 4.6% interest and actual paid interest is less than 10M KRW per year, no gift tax is levied. For 200M KRW, statutory interest is 9.2M KRW (< 10M KRW), so zero interest is fully tax-exempt.'}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q2. 3억원을 빌리려고 합니다. 무이자로 하면 왜 전액 과세되나요?' : 'Q2. Why is borrowing 300M KRW interest-free fully taxed?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '3억원의 법정 이자는 연 1,380만원(3억 × 4.6%)입니다. 이자 차액이 1,000만원을 초과하게 되면, 1,000만원을 뺀 금액만 과세되는 것이 아니라 차액 전액(1,380만원)이 매년 증여로 간주되어 증여세가 추징됩니다. 따라서 최소 연 380만 1원(연 약 1.27%) 이상의 이자를 매월 부모님 통장으로 계좌이체해야 차액이 1,000만원 미만이 되어 증여세를 한 푼도 내지 않습니다.'
+              : 'The 4.6% statutory interest on 300M KRW is 13.8M KRW. Because the gap exceeds 10M KRW, the entire 13.8M KRW gap is taxed as a deemed gift. To avoid this, you must pay at least 3.8M KRW in annual interest (~1.27%) via verified bank transfers.'}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-foreground">
+            {locale === 'ko' ? 'Q3. 차용증 공증을 꼭 받아야 하나요? 비싼가요?' : 'Q3. Must the loan contract be notarized?'}
+          </h3>
+          <p class="mt-1">
+            {locale === 'ko'
+              ? '반드시 비싼 법률사무소 공증(수수료 약 10만~30만원)을 받을 필요는 없습니다. 가까운 등기소(법원 등기국)에 방문하여 차용증 원본에 "확정일자"(수수료 600원)를 부여받으면 작성 시점에 대한 강력한 법적 증빙 효력이 인정됩니다. 우체국 내용증명 발송 또한 동일한 작성일자 증빙 효력을 갖습니다.'
+              : 'You do not need expensive notarization. Visiting a court registry office and getting a certified date stamp (fixed-date stamp, 600 KRW fee) provides equivalent legal proof of execution timing.'}
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
