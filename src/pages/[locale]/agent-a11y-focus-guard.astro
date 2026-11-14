@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import AgentA11yFocusGuard from "../../components/tools/AgentA11yFocusGuard";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: "웹 모달 포커스 트랩 & WCAG 2.2 접근성 감사기 | OIYO Tools",
+    description: "모달 및 드로어의 키보드 Tab 순환(Focus Trap), aria-modal='true', role='dialog', ESC 탈출 핸들러 등 5대 필수 접근성 기준을 0.1ms 내에 감사합니다.",
+  },
+  en: {
+    title: "Web Modal Focus Trap & WCAG 2.2 a11y Auditor | OIYO Tools",
+    description: "Zero-dependency sub-millisecond keyboard focus trap, aria-modal dialog auditor, and WCAG 2.2 accessibility compliance checker for web modals.",
+  },
+  ja: {
+    title: "Webモーダル フォーカストラップ＆WCAG 2.2 アクセシビリティ監査機 | OIYO Tools",
+    description: "モーダルやドロワーのキーボードTab循環（Focus Trap）、aria-modal='true'、ESC離脱ハンドラなど5大必須アクセシビリティ基準を0.1msで監査。",
+  },
+  zh: {
+    title: "Web 模态框焦点陷阱 (Focus Trap) 与 WCAG 2.2 无障碍合规审计器 | OIYO Tools",
+    description: "零依赖毫秒级模态弹窗与抽屉组件审计工具，检查 Tab 键盘循环陷阱、aria-modal='true'、ESC 退出键与无障碍标签。",
+  },
+  fr: {
+    title: "Auditeur de piège de focus pour fenêtres modales et WCAG 2.2 | OIYO Tools",
+    description: "Vérifiez le piège de focus clavier (Tab), aria-modal='true', role='dialog' et la gestion de la touche Échap pour la conformité WCAG 2.2.",
+  },
+  es: {
+    title: "Auditor de trampa de foco para modales y accesibilidad WCAG 2.2 | OIYO Tools",
+    description: "Compruebe la trampa de foco del teclado (bucle Tab), aria-modal='true' y el manejo de tecla Escape para cumplir con WCAG 2.2.",
+  },
+};
+
+const currentMeta = meta[locale] ?? meta.ko;
+---
+
+<Layout title={currentMeta.title} description={currentMeta.description} locale={locale}>
+  <div class="container mx-auto px-4 py-8 space-y-8">
+    <div class="text-center space-y-2 max-w-2xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">웹 모달 포커스 트랩 & a11y 감사기</h1>
+      <p class="text-muted-foreground text-sm">
+        모달·다이얼로그·드로어의 키보드 Tab 포커스 트랩, aria-modal="true" 및 WCAG 2.2 접근성 5대 규격 실시간 정적 감사
+      </p>
+    </div>
+
+    <AgentA11yFocusGuard client:load locale={locale} />
+
+    <div class="max-w-4xl mx-auto border rounded-xl p-6 bg-card border-border space-y-4">
+      <h2 class="text-lg font-bold">WAI-ARIA 다이얼로그 패턴 3대 황금률</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted-foreground leading-relaxed">
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 포커스 트랩(Focus Trap)의 이유</h3>
+          <p>
+            모달이 열렸을 때 사용자가 <code>Tab</code> 키를 계속 누르더라도 포커스가 모달 바깥의 본문 링크나 헤더 메뉴로 새어나가지 않고, 모달 내부의 마지막 요소에서 다시 첫 번째 요소로 순환되어야 시각장애인 및 키보드 사용자가 길을 잃지 않습니다.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-semibold text-foreground">💡 ESC 키 탈출과 이전 포커스 복원</h3>
+          <p>
+            <code>Escape</code> 키를 누르면 즉시 모달이 닫혀야 하며, 모달이 닫힌 직후에는 모달을 처음 열었던 트리거 버튼으로 키보드 포커스가 자동으로 복귀되어야 완벽한 접근성을 달성할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
