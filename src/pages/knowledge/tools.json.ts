@@ -24,7 +24,10 @@ const humanize = (s: string) =>
 
 export const GET: APIRoute = async () => {
   const base = SITE_CONFIG.url;
-  const modules = import.meta.glob("/src/pages/[locale]/**/*.astro");
+  // 2026-11-12: a literal "[locale]" in the glob is a character class, so it matched
+  // nothing and the live catalog shipped `count: 0`. Escape the brackets.
+  const modules = import.meta.glob("/src/pages/\\[locale\\]/**/*.astro");
+  const LOCALE_PREFIX = "/src/pages/[locale]/";
 
   const seen = new Set<string>();
   const tools: {
@@ -36,9 +39,10 @@ export const GET: APIRoute = async () => {
   }[] = [];
 
   for (const filePath of Object.keys(modules)) {
+    if (!filePath.startsWith(LOCALE_PREFIX)) continue;
     // strip "/src/pages/[locale]/" prefix and ".astro" suffix
     let route = filePath
-      .replace(/^\/src\/pages\/\[locale\]\//, "")
+      .slice(LOCALE_PREFIX.length)
       .replace(/\.astro$/, "");
     // directory index -> directory route
     route = route.replace(/\/index$/, "");

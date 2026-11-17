@@ -1,0 +1,1659 @@
+{
+  "source": {
+    "repo": "https://github.com/Renhuai123/ziwei-doushu",
+    "license": "MIT (code). Dataset and Tian Ji quotations are not used.",
+    "gitSha": "21114e3a669c00c3a159c62e426a525eaa0d7957",
+    "leapMonthPolicy": "split",
+    "lateZishiRule": "next-day",
+    "brightnessSchool": "QS (engine default)",
+    "generatedAt": "2026-11-11T12:25:00+09:00",
+    "notes": [
+      "Engine generateChart() takes a Gregorian date already adjusted for late Zi, plus hour-branch index 0-11.",
+      "Clock-to-branch conversion uses calculateTrueSolarTime + resolveZiweiDayOffset from lib/ziwei/true-solar-time.ts.",
+      "Equation of Time uses the NOAA approximation; OIYO uses a Meeus-style formula. Near a two-hour branch boundary they may disagree by a few minutes.",
+      "Ni Haixia Tian Ji school rules (e.g. 辛-year 天魁/天钺 swap) may differ from Korean/iztro-default placements for auxiliary stars. A mismatch is listed, not automatically a bug."
+    ]
+  },
+  "cases": [
+    {
+      "id": "seoul-1981-03-20-1200",
+      "note": "OIYO existing public example: 음력 1981(辛酉) 2월, 서울 12:00 KST, 午시, 命宮 酉, 火六局",
+      "input": {
+        "utc": "1981-03-20T03:00:00.000Z",
+        "longitude": 126.978,
+        "utcOffsetMinutes": 540,
+        "civilClock": {
+          "year": 1981,
+          "month": 3,
+          "day": 20,
+          "clockHour": 12,
+          "clockMinute": 0
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 11,
+          "minute": 19,
+          "second": 45,
+          "branch": 6,
+          "branchEn": "Wu",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": -8.164094798830481,
+          "longitudeCorrectionMinutes": -32.08800000000002
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 1981,
+          "month": 3,
+          "day": 20
+        },
+        "lunar": {
+          "year": 1981,
+          "month": 2,
+          "day": 15,
+          "isLeapMonth": false,
+          "yearStem": 7,
+          "yearBranch": 9
+        },
+        "lifePalace": {
+          "branchIndex": 9,
+          "branchEn": "You",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 6,
+          "name": "火六局",
+          "element": "Fire"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "田宅",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "父母",
+            "siHua": "Quan"
+          },
+          "武曲": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "天同": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "兄弟",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "天府": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "贪狼": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "巨门": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "子女",
+            "siHua": "Lu"
+          },
+          "天相": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "兄弟",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "官禄",
+            "siHua": null
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "疾厄",
+            "siHua": "Ji"
+          },
+          "文曲": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "父母",
+            "siHua": "Ke"
+          },
+          "左辅": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "命宫",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "utc-2024-06-13-2330",
+      "note": "OIYO late-Zi case: 진태양시 23:30 at longitude 0 (균시차 ≈ 0 in mid-June)",
+      "input": {
+        "utc": "2024-06-13T23:30:00.000Z",
+        "longitude": 0,
+        "utcOffsetMinutes": 0,
+        "civilClock": {
+          "year": 2024,
+          "month": 6,
+          "day": 13,
+          "clockHour": 23,
+          "clockMinute": 30
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 23,
+          "minute": 30,
+          "second": 11,
+          "branch": 0,
+          "branchEn": "Zi",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": 0.1775493466181496,
+          "longitudeCorrectionMinutes": 0
+        },
+        "ziweiDayOffset": 1,
+        "chartSolarDate": {
+          "year": 2024,
+          "month": 6,
+          "day": 14
+        },
+        "lunar": {
+          "year": 2024,
+          "month": 5,
+          "day": 9,
+          "isLeapMonth": false,
+          "yearStem": 0,
+          "yearBranch": 4
+        },
+        "lifePalace": {
+          "branchIndex": 6,
+          "branchEn": "Wu",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 5,
+          "name": "土五局",
+          "element": "Earth"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "仆役",
+            "siHua": "Ji"
+          },
+          "武曲": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "官禄",
+            "siHua": "Ke"
+          },
+          "天同": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "田宅",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "命宫",
+            "siHua": "Lu"
+          },
+          "天府": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "贪狼": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "巨门": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "兄弟",
+            "siHua": null
+          },
+          "天相": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "迁移",
+            "siHua": "Quan"
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "左辅": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "命宫",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "utc-2024-06-14-0030",
+      "note": "OIYO early-Zi next calendar day, longitude 0",
+      "input": {
+        "utc": "2024-06-14T00:30:00.000Z",
+        "longitude": 0,
+        "utcOffsetMinutes": 0,
+        "civilClock": {
+          "year": 2024,
+          "month": 6,
+          "day": 14,
+          "clockHour": 0,
+          "clockMinute": 30
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 0,
+          "minute": 30,
+          "second": 10,
+          "branch": 0,
+          "branchEn": "Zi",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": 0.1688253325598527,
+          "longitudeCorrectionMinutes": 0
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 2024,
+          "month": 6,
+          "day": 14
+        },
+        "lunar": {
+          "year": 2024,
+          "month": 5,
+          "day": 9,
+          "isLeapMonth": false,
+          "yearStem": 0,
+          "yearBranch": 4
+        },
+        "lifePalace": {
+          "branchIndex": 6,
+          "branchEn": "Wu",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 5,
+          "name": "土五局",
+          "element": "Earth"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "仆役",
+            "siHua": "Ji"
+          },
+          "武曲": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "官禄",
+            "siHua": "Ke"
+          },
+          "天同": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "田宅",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "命宫",
+            "siHua": "Lu"
+          },
+          "天府": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "贪狼": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "巨门": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "兄弟",
+            "siHua": null
+          },
+          "天相": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "迁移",
+            "siHua": "Quan"
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "左辅": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "命宫",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "utc-2024-06-13-2230",
+      "note": "OIYO same-day Hai hour (22:30), longitude 0",
+      "input": {
+        "utc": "2024-06-13T22:30:00.000Z",
+        "longitude": 0,
+        "utcOffsetMinutes": 0,
+        "civilClock": {
+          "year": 2024,
+          "month": 6,
+          "day": 13,
+          "clockHour": 22,
+          "clockMinute": 30
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 22,
+          "minute": 30,
+          "second": 11,
+          "branch": 11,
+          "branchEn": "Hai",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": 0.18626888065212718,
+          "longitudeCorrectionMinutes": 0
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 2024,
+          "month": 6,
+          "day": 13
+        },
+        "lunar": {
+          "year": 2024,
+          "month": 5,
+          "day": 8,
+          "isLeapMonth": false,
+          "yearStem": 0,
+          "yearBranch": 4
+        },
+        "lifePalace": {
+          "branchIndex": 7,
+          "branchEn": "Wei",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 5,
+          "name": "土五局",
+          "element": "Earth"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "疾厄",
+            "siHua": "Ji"
+          },
+          "武曲": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "迁移",
+            "siHua": "Ke"
+          },
+          "天同": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "仆役",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "福德",
+            "siHua": "Lu"
+          },
+          "天府": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "仆役",
+            "siHua": null
+          },
+          "贪狼": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "巨门": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "天相": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "福德",
+            "siHua": "Quan"
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "左辅": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "兄弟",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "utc-2023-03-26-1200",
+      "note": "OIYO leap-month early: 2023 윤2월 5일, 12:00 UTC, longitude 0",
+      "input": {
+        "utc": "2023-03-26T12:00:00.000Z",
+        "longitude": 0,
+        "utcOffsetMinutes": 0,
+        "civilClock": {
+          "year": 2023,
+          "month": 3,
+          "day": 26,
+          "clockHour": 12,
+          "clockMinute": 0
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 11,
+          "minute": 53,
+          "second": 43,
+          "branch": 6,
+          "branchEn": "Wu",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": -6.2906506663391415,
+          "longitudeCorrectionMinutes": 0
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 2023,
+          "month": 3,
+          "day": 26
+        },
+        "lunar": {
+          "year": 2023,
+          "month": 2,
+          "day": 5,
+          "isLeapMonth": false,
+          "yearStem": 9,
+          "yearBranch": 3
+        },
+        "lifePalace": {
+          "branchIndex": 9,
+          "branchEn": "You",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 3,
+          "name": "木三局",
+          "element": "Wood"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "仆役",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "武曲": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "天同": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "天府": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "仆役",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "迁移",
+            "siHua": "Ke"
+          },
+          "贪狼": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "疾厄",
+            "siHua": "Ji"
+          },
+          "巨门": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "财帛",
+            "siHua": "Quan"
+          },
+          "天相": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "兄弟",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "田宅",
+            "siHua": "Lu"
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "左辅": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "命宫",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "utc-2023-04-10-1200",
+      "note": "OIYO leap-month late: 2023 윤2월 20일, 12:00 UTC, longitude 0",
+      "input": {
+        "utc": "2023-04-10T12:00:00.000Z",
+        "longitude": 0,
+        "utcOffsetMinutes": 0,
+        "civilClock": {
+          "year": 2023,
+          "month": 4,
+          "day": 10,
+          "clockHour": 12,
+          "clockMinute": 0
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 11,
+          "minute": 58,
+          "second": 22,
+          "branch": 6,
+          "branchEn": "Wu",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": -1.6265201187223854,
+          "longitudeCorrectionMinutes": 0
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 2023,
+          "month": 4,
+          "day": 10
+        },
+        "lunar": {
+          "year": 2023,
+          "month": 3,
+          "day": 20,
+          "isLeapMonth": false,
+          "yearStem": 9,
+          "yearBranch": 3
+        },
+        "lifePalace": {
+          "branchIndex": 10,
+          "branchEn": "Xu",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 2,
+          "name": "水二局",
+          "element": "Water"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "武曲": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "天同": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "仆役",
+            "siHua": null
+          },
+          "天府": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "财帛",
+            "siHua": "Ke"
+          },
+          "贪狼": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "子女",
+            "siHua": "Ji"
+          },
+          "巨门": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "夫妻",
+            "siHua": "Quan"
+          },
+          "天相": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "兄弟",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "仆役",
+            "siHua": "Lu"
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "左辅": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "夫妻",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "cst-2024-02-08-1200",
+      "note": "After 입춘 2024-02-04, before 설 2024-02-10 — lunar year vs solar-term year split",
+      "input": {
+        "utc": "2024-02-08T04:00:00.000Z",
+        "longitude": 116.4,
+        "utcOffsetMinutes": 480,
+        "civilClock": {
+          "year": 2024,
+          "month": 2,
+          "day": 8,
+          "clockHour": 12,
+          "clockMinute": 0
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 11,
+          "minute": 31,
+          "second": 35,
+          "branch": 6,
+          "branchEn": "Wu",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": -14.018418845905236,
+          "longitudeCorrectionMinutes": -14.399999999999977
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 2024,
+          "month": 2,
+          "day": 8
+        },
+        "lunar": {
+          "year": 2023,
+          "month": 12,
+          "day": 29,
+          "isLeapMonth": false,
+          "yearStem": 9,
+          "yearBranch": 3
+        },
+        "lifePalace": {
+          "branchIndex": 7,
+          "branchEn": "Wei",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 6,
+          "name": "火六局",
+          "element": "Fire"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "武曲": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "天同": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "仆役",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "天府": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "仆役",
+            "siHua": "Ke"
+          },
+          "贪狼": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "迁移",
+            "siHua": "Ji"
+          },
+          "巨门": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "疾厄",
+            "siHua": "Quan"
+          },
+          "天相": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "福德",
+            "siHua": "Lu"
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "田宅",
+            "siHua": null
+          },
+          "左辅": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "官禄",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "beijing-1990-06-15-0800",
+      "note": "Mid-year Beijing 08:00 CST, longitude 116.4",
+      "input": {
+        "utc": "1990-06-15T00:00:00.000Z",
+        "longitude": 116.4,
+        "utcOffsetMinutes": 480,
+        "civilClock": {
+          "year": 1990,
+          "month": 6,
+          "day": 15,
+          "clockHour": 8,
+          "clockMinute": 0
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 7,
+          "minute": 45,
+          "second": 36,
+          "branch": 4,
+          "branchEn": "Chen",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": 0.00807743388078451,
+          "longitudeCorrectionMinutes": -14.399999999999977
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 1990,
+          "month": 6,
+          "day": 15
+        },
+        "lunar": {
+          "year": 1990,
+          "month": 5,
+          "day": 23,
+          "isLeapMonth": false,
+          "yearStem": 6,
+          "yearBranch": 6
+        },
+        "lifePalace": {
+          "branchIndex": 2,
+          "branchEn": "Yin",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 5,
+          "name": "土五局",
+          "element": "Earth"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "仆役",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "田宅",
+            "siHua": "Lu"
+          },
+          "武曲": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "福德",
+            "siHua": "Quan"
+          },
+          "天同": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "父母",
+            "siHua": "Ji"
+          },
+          "廉贞": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "天府": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "疾厄",
+            "siHua": "Ke"
+          },
+          "贪狼": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "巨门": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "天相": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "兄弟",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "官禄",
+            "siHua": null
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "左辅": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "官禄",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "seoul-2000-01-01-0030",
+      "note": "New Year early-Zi in Seoul (00:30 KST)",
+      "input": {
+        "utc": "1999-12-31T15:30:00.000Z",
+        "longitude": 126.978,
+        "utcOffsetMinutes": 540,
+        "civilClock": {
+          "year": 2000,
+          "month": 1,
+          "day": 1,
+          "clockHour": 0,
+          "clockMinute": 30
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 23,
+          "minute": 55,
+          "second": 13,
+          "branch": 0,
+          "branchEn": "Zi",
+          "dayOffset": -1,
+          "equationOfTimeMinutes": -2.6892468597006287,
+          "longitudeCorrectionMinutes": -32.08800000000002
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 2000,
+          "month": 1,
+          "day": 1
+        },
+        "lunar": {
+          "year": 1999,
+          "month": 11,
+          "day": 25,
+          "isLeapMonth": false,
+          "yearStem": 5,
+          "yearBranch": 3
+        },
+        "lifePalace": {
+          "branchIndex": 0,
+          "branchEn": "Zi",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 2,
+          "name": "水二局",
+          "element": "Water"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "武曲": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "子女",
+            "siHua": "Lu"
+          },
+          "天同": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "仆役",
+            "siHua": null
+          },
+          "天府": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "田宅",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "官禄",
+            "siHua": null
+          },
+          "贪狼": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "仆役",
+            "siHua": "Quan"
+          },
+          "巨门": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "迁移",
+            "siHua": null
+          },
+          "天相": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "财帛",
+            "siHua": "Ke"
+          },
+          "七杀": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 1,
+            "branchEn": "Chou",
+            "palaceName": "父母",
+            "siHua": null
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "官禄",
+            "siHua": "Ji"
+          },
+          "左辅": {
+            "branchIndex": 2,
+            "branchEn": "Yin",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 0,
+            "branchEn": "Zi",
+            "palaceName": "命宫",
+            "siHua": null
+          }
+        }
+      }
+    },
+    {
+      "id": "tokyo-1984-02-02-1000",
+      "note": "甲子 year eve: after 입춘 1984-02-04? (before — 2 Feb), Japan 10:00 JST, lon 139.69",
+      "input": {
+        "utc": "1984-02-02T01:00:00.000Z",
+        "longitude": 139.6917,
+        "utcOffsetMinutes": 540,
+        "civilClock": {
+          "year": 1984,
+          "month": 2,
+          "day": 2,
+          "clockHour": 10,
+          "clockMinute": 0
+        }
+      },
+      "engine": {
+        "trueSolar": {
+          "hour": 10,
+          "minute": 5,
+          "second": 28,
+          "branch": 5,
+          "branchEn": "Si",
+          "dayOffset": 0,
+          "equationOfTimeMinutes": -13.304060348401949,
+          "longitudeCorrectionMinutes": 18.76679999999999
+        },
+        "ziweiDayOffset": 0,
+        "chartSolarDate": {
+          "year": 1984,
+          "month": 2,
+          "day": 2
+        },
+        "lunar": {
+          "year": 1984,
+          "month": 1,
+          "day": 1,
+          "isLeapMonth": false,
+          "yearStem": 0,
+          "yearBranch": 0
+        },
+        "lifePalace": {
+          "branchIndex": 9,
+          "branchEn": "You",
+          "palaceName": "命宫"
+        },
+        "bureau": {
+          "number": 4,
+          "name": "金四局",
+          "element": "Metal"
+        },
+        "mainStars": {
+          "紫微": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "天机": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "太阳": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "兄弟",
+            "siHua": "Ji"
+          },
+          "武曲": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "夫妻",
+            "siHua": "Ke"
+          },
+          "天同": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "廉贞": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "迁移",
+            "siHua": "Lu"
+          },
+          "天府": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "太阴": {
+            "branchIndex": 6,
+            "branchEn": "Wu",
+            "palaceName": "子女",
+            "siHua": null
+          },
+          "贪狼": {
+            "branchIndex": 7,
+            "branchEn": "Wei",
+            "palaceName": "夫妻",
+            "siHua": null
+          },
+          "巨门": {
+            "branchIndex": 8,
+            "branchEn": "Shen",
+            "palaceName": "兄弟",
+            "siHua": null
+          },
+          "天相": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "天梁": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "父母",
+            "siHua": null
+          },
+          "七杀": {
+            "branchIndex": 11,
+            "branchEn": "Hai",
+            "palaceName": "福德",
+            "siHua": null
+          },
+          "破军": {
+            "branchIndex": 3,
+            "branchEn": "Mao",
+            "palaceName": "迁移",
+            "siHua": "Quan"
+          }
+        },
+        "auxStars": {
+          "文昌": {
+            "branchIndex": 5,
+            "branchEn": "Si",
+            "palaceName": "财帛",
+            "siHua": null
+          },
+          "文曲": {
+            "branchIndex": 9,
+            "branchEn": "You",
+            "palaceName": "命宫",
+            "siHua": null
+          },
+          "左辅": {
+            "branchIndex": 4,
+            "branchEn": "Chen",
+            "palaceName": "疾厄",
+            "siHua": null
+          },
+          "右弼": {
+            "branchIndex": 10,
+            "branchEn": "Xu",
+            "palaceName": "父母",
+            "siHua": null
+          }
+        }
+      }
+    }
+  ]
+}

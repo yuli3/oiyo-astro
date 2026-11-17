@@ -1,0 +1,158 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Ancestors1426 from "../../components/tools/past-life/Ancestors1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "600년 전 내 조상은 몇 명? — 족보 칸 vs 실제 조상, 세종 후손 확률",
+    description: "1426년까지 거슬러 올라가면 족보 칸은 100만 칸이 넘지만 조선 인구는 약 550만 명이었어요. 내 조상이 그때 사람 몇 명 중 1명인지, 세종의 후손일 확률, 모두의 공통 조상이 언제인지 계산해요.",
+    heading: "600년 전 내 조상은 몇 명?",
+    sub: "족보 칸은 두 배씩, 사람은 겹쳐요",
+    intro: "부모 2명, 조부모 4명, 증조부모 8명. 600년이면 족보 칸이 100만 칸을 넘어요. 그런데 그때 조선에는 그만큼 사람이 다 있지 않았어요. 같은 조상이 여러 칸에 들어가는 '가계 붕괴'를 내 생년으로 계산해 봐요.",
+    howTitle: "어떻게 계산하나요",
+    how: [
+      "세대 수: (생년 − 1426) ÷ 한 세대 길이. 세대 길이는 25·28·31년 중에서 골라요(가정).",
+      "서로 다른 조상: 한 세대 위로 갈 때마다 부모 칸 2배를 그 세대 인구에서 무작위로 채운다고 보고 겹치지 않는 사람 수의 기댓값을 구해요. 지금과 1426년 사이 인구는 고르게 늘었다고 가정해요.",
+      "후손일 확률: 1426년에 자녀 c명을 둔 사람이라면, 다음 세대에서 그 자녀일 확률 c÷인구에서 시작해 한 세대마다 '부모 둘 중 하나라도 후손'일 확률로 넓혀요. 세종은 18남 4녀, 22명으로 계산해요.",
+      "공통 조상: Joseph Chang의 모델에서 가장 가까운 공통 조상은 약 log₂N 세대 전, 모두의 조상이거나 아무의 조상도 아닌 시점은 약 1.77·log₂N 세대 전이에요(N = 그때 인구).",
+      "인구: 조선 건국 초 약 550만 명(김재호). 다른 나라도 반올림한 추정치이고 출처를 결과 아래에 달았어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "600년 전 내 조상은 몇 명인가요?", a: "한 세대를 28년으로 보면 1990년생은 20세대 위로 104만 8,576칸이에요. 무작위 혼인 모델로는 서로 다른 조상이 약 89만 명, 1426년 조선 인구의 16% 정도예요." },
+      { q: "정말 세종의 후손일 수 있나요?", a: "세종처럼 자녀가 많고 후손이 이어진 사람은, 무작위 혼인 모델에서는 600년 뒤 대부분의 사람의 조상이 돼요. 실제로는 지역과 신분으로 덜 섞였으니 모델보다 낮게 봐야 해요. 이 페이지는 실제 족보를 보지 않아요." },
+      { q: "가계 붕괴(pedigree collapse)가 뭔가요?", a: "같은 조상이 족보의 여러 칸에 동시에 들어가는 현상이에요. 먼 친척끼리 결혼하면 생기고, 세대가 쌓일수록 피할 수 없어요." },
+      { q: "모든 사람의 공통 조상은 언제 살았나요?", a: "Rohde·Olson·Chang(2004, Nature)의 시뮬레이션에서는 오늘날 모든 인류의 가장 가까운 공통 조상이 약 3,000년 전 무렵까지 내려올 수 있었어요." },
+    ],
+  },
+  en: {
+    title: "How many ancestors did you have in 1426? Pedigree collapse calculator",
+    description: "Go back to 1426 and your family tree has over a million slots, more than the people alive in many countries then. See how many distinct ancestors you really have, what share of everyone then is yours, and when everyone shares a common ancestor.",
+    heading: "How many ancestors in 1426?",
+    sub: "Your tree doubles; the people repeat",
+    intro: "Two parents, four grandparents, eight great-grandparents. Six centuries up, the tree has over a million slots, and some lands simply did not have that many people. Work out your own pedigree collapse from your birth year.",
+    howTitle: "How it is calculated",
+    how: [
+      "Generations: (birth year − 1426) ÷ generation length, which you choose: 25, 28 or 31 years (an assumption).",
+      "Distinct ancestors: each step up, twice as many parent slots are filled at random from that generation's population; we take the expected number of different people. Population grows smoothly between 1426 and today (assumption).",
+      "Descent odds: a person with c children in 1426 starts at c ÷ population, and each generation a person descends from them if either parent does.",
+      "Common ancestors: in Joseph Chang's model the most recent common ancestor lived about log₂N generations ago and the identical ancestors point about 1.77·log₂N (N = population then).",
+      "Populations are rounded estimates; sources are linked under each result.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "How many ancestors did I have 600 years ago?", a: "At 28 years a generation, someone born in 1990 has 20 generations and 1,048,576 slots back to 1426. In a random-mating model about 711,000 of those are different people in England, about a third of its population then." },
+      { q: "What is pedigree collapse?", a: "The same ancestor filling several places in your family tree, because distant relatives married. Over enough generations it is unavoidable." },
+      { q: "When did everyone's common ancestor live?", a: "Simulations by Rohde, Olson and Chang (Nature, 2004) put the most recent common ancestor of all living humans perhaps as recently as about 3,000 years ago." },
+    ],
+  },
+  ja: {
+    title: "600年前の祖先は何人？ 家系図の枠と実際の祖先",
+    description: "1426年までさかのぼると家系図の枠は100万を超えますが、当時の日本の人口は約1,000万人。当時の何人に1人があなたの祖先か、みんなの共通祖先はいつかを計算します。",
+    heading: "600年前の祖先は何人？",
+    sub: "枠は倍々、人は重なる",
+    intro: "両親2人、祖父母4人、曽祖父母8人。600年で枠は100万を超えます。同じ祖先が何度も現れる「家系崩壊」を生まれた年から計算します。",
+    howTitle: "計算のしかた",
+    how: [
+      "世代数：（生まれ年 − 1426）÷ 一世代の年数（25・28・31年から選ぶ仮定）。",
+      "異なる祖先：一世代上がるごとに倍の枠をその世代の人口から無作為に埋め、重ならない人数の期待値を求めます。",
+      "共通祖先：Changのモデルで最も近い共通祖先は約log₂N世代前、全員の祖先か誰の祖先でもない時点は約1.77·log₂N世代前です。",
+      "人口は丸めた推計値です（日本はFarris 2006の1450年推計9.6〜1,050万人）。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [
+      { q: "家系崩壊とは？", a: "同じ祖先が家系図の複数の枠に入ることです。世代が重なると避けられません。" },
+      { q: "実際の家系図を使っていますか？", a: "いいえ。無作為に結婚する単純なモデルの計算です。" },
+    ],
+  },
+  zh: {
+    title: "600年前我有多少祖先？家谱格子与真实祖先",
+    description: "回到1426年，家谱格子超过100万个，而当时的人数有限。算一算当时每多少人中就有1人是你的祖先，以及所有人的共同祖先生活在何时。",
+    heading: "600年前我有多少祖先？",
+    sub: "格子每代翻倍，人却重叠",
+    intro: "父母2人，祖父母4人，曾祖父母8人。600年后格子超过100万个。用你的出生年份计算“谱系坍缩”。",
+    howTitle: "计算方法",
+    how: [
+      "代数：（出生年 − 1426）÷ 每代年数（25、28或31年，假设）。",
+      "不同祖先：每往上一代，把两倍的父母格子从该代人口中随机填入，取不同人数的期望值。",
+      "共同祖先：在Chang的模型中，最近共同祖先约在log₂N代之前，所有人祖先相同的时点约在1.77·log₂N代之前。",
+      "人口为四舍五入的估计值（明朝取1400年现代估计8,100万）。",
+    ],
+    faqTitle: "常见问题",
+    faq: [
+      { q: "什么是谱系坍缩？", a: "同一位祖先同时出现在家谱的多个格子里。代数一多就无法避免。" },
+      { q: "用的是真实家谱吗？", a: "不是，只是随机婚配的简单模型计算。" },
+    ],
+  },
+  fr: {
+    title: "Combien d'ancêtres aviez-vous en 1426 ? Calculateur d'implexe",
+    description: "En remontant à 1426, votre arbre compte plus d'un million de cases, alors que la France n'avait qu'une dizaine de millions d'habitants. Quelle part des gens d'alors sont vos ancêtres, et quand vit l'ancêtre commun de tous ?",
+    heading: "Combien d'ancêtres en 1426 ?",
+    sub: "L'arbre double, les gens se répètent",
+    intro: "Deux parents, quatre grands-parents, huit arrière-grands-parents. En six siècles, plus d'un million de cases. Calculez votre implexe à partir de votre année de naissance.",
+    howTitle: "Le calcul",
+    how: [
+      "Générations : (année de naissance − 1426) ÷ durée d'une génération (25, 28 ou 31 ans, hypothèse).",
+      "Ancêtres distincts : à chaque génération, deux fois plus de cases remplies au hasard parmi la population d'alors ; on prend le nombre attendu de personnes différentes.",
+      "Ancêtre commun : dans le modèle de Joseph Chang, environ log₂N générations ; point des ancêtres identiques vers 1,77·log₂N.",
+      "Populations arrondies (France : « une dizaine de millions » au milieu du XVe siècle, Larousse).",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [
+      { q: "Qu'est-ce que l'implexe ?", a: "Le fait qu'un même ancêtre occupe plusieurs cases de l'arbre, parce que des cousins se sont mariés. À long terme, c'est inévitable." },
+      { q: "Utilisez-vous une vraie généalogie ?", a: "Non : c'est un modèle simple d'unions au hasard." },
+    ],
+  },
+  es: {
+    title: "¿Cuántos antepasados tenías en 1426? Calculadora de colapso genealógico",
+    description: "Hasta 1426 tu árbol tiene más de un millón de casillas, pero en Castilla y Aragón vivían unos cinco millones de personas. Qué parte de ellas son antepasados tuyos y cuándo vivió el antepasado común de todos.",
+    heading: "¿Cuántos antepasados en 1426?",
+    sub: "El árbol se duplica; las personas se repiten",
+    intro: "Dos padres, cuatro abuelos, ocho bisabuelos. En seis siglos, más de un millón de casillas. Calcula tu colapso genealógico con tu año de nacimiento.",
+    howTitle: "Cómo se calcula",
+    how: [
+      "Generaciones: (año de nacimiento − 1426) ÷ duración de una generación (25, 28 o 31 años, suposición).",
+      "Antepasados distintos: en cada generación, el doble de casillas se llena al azar con la población de entonces; se toma el número esperado de personas distintas.",
+      "Antepasado común: en el modelo de Joseph Chang, unas log₂N generaciones; punto de antepasados idénticos hacia 1,77·log₂N.",
+      "Poblaciones redondeadas (Castilla más de 4 millones y Aragón algo más de 800.000, finales del siglo XV).",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [
+      { q: "¿Qué es el colapso genealógico?", a: "Que un mismo antepasado ocupe varias casillas del árbol porque se casaron parientes lejanos. A la larga es inevitable." },
+      { q: "¿Se usa una genealogía real?", a: "No: es un modelo simple de uniones al azar." },
+    ],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/ancestors-1426/")} ogImage="/images/past-life-1426/og/ancestors-1426.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Ancestors1426 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["joseon1426", "europe1426", "joseon1789"]} current="ancestors1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

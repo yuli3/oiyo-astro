@@ -348,6 +348,20 @@ function cardsFromIds(ids: PermalinkState['drawn'], positionLabels: string[]): D
     .filter((d): d is DrawnCard => d !== null);
 }
 
+// 2026-11-14: 2027 신년 타로 3장(브레인스토밍 6-4). 같은 덱, 자리 이름만 새해용.
+// 공유 링크가 새해 자리 이름으로 열리도록 도구 id 를 따로 둔다.
+export type TarotPreset = 'new-year-2027';
+const PRESET_TOOL_ID: Record<TarotPreset, string> = { 'new-year-2027': 'tarot-2027' };
+const NEW_YEAR_LABELS: Record<Locale, string[]> = {
+  ko: ['상반기 1~6월', '하반기 7~12월', '한 해 조언'],
+  en: ['Jan–Jun', 'Jul–Dec', 'Advice for 2027'],
+  ja: ['上半期 1〜6月', '下半期 7〜12月', '一年への助言'],
+  fr: ['Janv.–juin', 'Juil.–déc.', 'Conseil 2027'],
+  es: ['Ene.–jun.', 'Jul.–dic.', 'Consejo 2027'],
+  cn: ['上半年', '下半年', '全年建議'],
+  zh: ['上半年', '下半年', '全年建议'],
+};
+
 function parsePermalinkState(value: unknown): PermalinkState | null {
   if (!value || typeof value !== 'object') return null;
   const candidate = value as Partial<PermalinkState>;
@@ -356,9 +370,12 @@ function parsePermalinkState(value: unknown): PermalinkState | null {
   return candidate as PermalinkState;
 }
 
-export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
+export default function TarotReading({ locale = 'ko', preset }: { locale?: Locale; preset?: TarotPreset }) {
   const t = L[locale] ?? L.ko;
-  const [spread, setSpread] = useState<Spread>(1);
+  const toolId = preset ? PRESET_TOOL_ID[preset] : PERMALINK_TOOL_ID;
+  const testId = preset ? toolId : 'tarot';
+  const labelsFor = (s: Spread) => (preset && s === 3 ? NEW_YEAR_LABELS[locale] : SPREAD_LABELS[s][locale]);
+  const [spread, setSpread] = useState<Spread>(preset ? 3 : 1);
   const [drawn, setDrawn] = useState<DrawnCard[] | null>(null);
   const [flipped, setFlipped] = useState<Set<number>>(new Set());
   const [shareCopied, setShareCopied] = useState(false);
@@ -370,7 +387,8 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
   function restoreSharedState(value: unknown) {
     const state = parsePermalinkState(value);
     if (!state) return;
-    const labels = SPREAD_LABELS[state.spread]?.[locale] ?? SPREAD_LABELS[1][locale];
+    if (preset && state.spread !== 3) return;
+    const labels = labelsFor(state.spread);
     const cards = cardsFromIds(state.drawn, labels);
     if (cards.length !== state.spread) return;
     setSpread(state.spread);
@@ -383,11 +401,11 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       const id = new URL(window.location.href).searchParams.get('result');
       if (id) {
         const encrypted = await readEncryptedResultPermalink(id, window.location.hash);
-        if (encrypted.ok && encrypted.result.toolId === PERMALINK_TOOL_ID) restoreSharedState(encrypted.result.state);
+        if (encrypted.ok && encrypted.result.toolId === toolId) restoreSharedState(encrypted.result.state);
         return;
       }
       const decoded = decodeResult<PermalinkState>(window.location.hash);
-      if (decoded?.toolId !== PERMALINK_TOOL_ID) return;
+      if (decoded?.toolId !== toolId) return;
       const legacy = parsePermalinkState(decoded.state);
       if (legacy) setLegacyShare(legacy);
     };
@@ -396,8 +414,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
   }, []);
 
   function handleDraw() {
-    const labels = SPREAD_LABELS[spread][locale];
-    const next = drawCards(spread, labels);
+    const next = drawCards(spread, labelsFor(spread));
     setDrawn(next);
     setFlipped(new Set());
     // 뽑기는 위에서 끝났다. 테이블은 뽑힌 카드가 떠오르는 모습만 보여 준다.
@@ -407,11 +424,11 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
 
   async function share() {
     if (!drawn) return;
-    gaEvent('share_click', { test_id: 'tarot' });
+    gaEvent('share_click', { test_id: testId });
     const state: PermalinkState = { spread, drawn: drawn.map(d => ({ id: d.card.id, reversed: d.reversed })) };
     setShareFailed(false);
     try {
-      const { url } = await createEncryptedResultPermalink(PERMALINK_TOOL_ID, state, { pageUrl: window.location.href });
+      const { url } = await createEncryptedResultPermalink(toolId, state, { pageUrl: window.location.href });
       if (navigator.share) await navigator.share({ title: t.title, url });
       else {
         await navigator.clipboard.writeText(url);
@@ -428,7 +445,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       const next = new Set(prev);
       next.add(idx);
       if (drawn && next.size === drawn.length && prev.size !== next.size) {
-        gaEvent('test_completed', { test_id: 'tarot' });
+        gaEvent('test_completed', { test_id: testId });
       }
       return next;
     });
@@ -452,13 +469,16 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
           </button>
         </div>
       )}
-      {/* Header */}
+      {/* Header (프리셋 페이지는 자기 h1 을 가진다) */}
+      {!preset && (
       <div className="text-center">
         <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
         <p className="text-muted-foreground mt-1">{t.subtitle}</p>
       </div>
+      )}
 
       {/* Spread selector */}
+      {!preset && (
       <div>
         <p className="text-sm font-medium text-gray-600 mb-2">{t.spreadLabel}</p>
         <div className="flex gap-2 flex-wrap">
@@ -469,6 +489,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
           ))}
         </div>
       </div>
+      )}
 
       {/* Draw button */}
       <button
