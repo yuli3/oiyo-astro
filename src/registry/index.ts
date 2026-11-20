@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const hoebinghwan1789Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2f4a3a",
+  domain: "ontology",
+  icon: "Sparkles",
+  id: "hoebinghwan-1789",
+  path: "/hoebinghwan-1789",
+  status: "production",
+  name: { zh: "穿越模拟器 1789", en: "Isekai simulator: 1789", es: "Simulador isekai: 1789", fr: "Simulateur d'isekai : 1789", ja: "転生シミュレーター 1789", ko: "회빙환 시뮬레이터" },
+  description: { zh: "附身、转生或穿越到1789年的朝鲜，看你的现代技能是否管用。", en: "Possessed, reborn or time-slipped into 1789 Joseon: see which of your modern skills would work.", es: "Poseído, renacido o caído en la Corea de 1789: qué habilidades modernas servirían.", fr: "Possédé, réincarné ou projeté en Corée en 1789 : quels talents modernes serviraient.", ja: "1789年の朝鮮に憑依・転生・タイムスリップ。現代の技術は通じる？", ko: "1789년 조선으로 빙의·환생·타임슬립하면 내 현대 기술이 통할지 실제 역사로 따져 봐요." },
+};
+
 const domesday1086Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -577,6 +590,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  hoebinghwan1789Manifest,
   domesday1086Manifest,
   census1850Manifest,
   ninbetsuEdoManifest,
