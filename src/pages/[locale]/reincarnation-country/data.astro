@@ -1,0 +1,169 @@
+---
+/**
+ * Open data page for the reincarnation-country draw (2026-11-20).
+ *
+ * The English draw is the site's most-completed test (GA4 11-04..11-19), so the
+ * numbers behind it are worth publishing as a citable dataset: a full table, a
+ * CSV and a JSON download, all from lib/reincarnation-dataset.ts. CC BY 4.0 so
+ * blogs and teachers can reuse it with a link back.
+ */
+import Layout from "../../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../../i18n";
+import type { Locale } from "../../../i18n";
+import names from "../../../data/reincarnation-country-names.json";
+import { DATASET_AS_OF, DATASET_CITATION, DATASET_LICENSE, DATASET_SOURCES, datasetRows } from "../../../lib/reincarnation-dataset";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const t = <T,>(map: Record<Locale, T>): T => map[locale] ?? map.en;
+const rows = datasetRows();
+const localNames = (names.names as Record<string, Record<string, string>>)[locale] ?? {};
+const nameOf = (iso2: string, fallback: string) => localNames[iso2] ?? fallback;
+const nf = new Intl.NumberFormat(locale === "zh" ? "zh-CN" : locale);
+const pct = (n: number) => `${n < 0.01 ? n.toFixed(4) : n.toFixed(2)}%`;
+const csvHref = "/api/reincarnation/weights.csv";
+const jsonHref = "/api/reincarnation/weights.json";
+const india = rows[0];
+
+const meta = {
+  title: t({
+    ko: "세계 출생아·인구 국가별 비중 데이터 (217개국, CSV 무료)",
+    en: "Share of World Births and Population by Country — Open Data (217 countries, CSV)",
+    ja: "世界の出生数・人口の国別シェア データ（217か国・CSV）",
+    zh: "各国占全球出生与人口比重 开放数据（217国·CSV）",
+    fr: "Part des naissances et de la population mondiales par pays — données ouvertes (CSV)",
+    es: "Porcentaje de nacimientos y población mundial por país — datos abiertos (CSV)",
+  }),
+  description: t({
+    ko: `지금 태어나는 아기 중 각 나라 비중과 인구 비중을 217개국 표로 공개합니다. 인도는 약 ${india.oneInNBirths}명 중 1명. 유엔 WPP 2024·세계은행 기준, CC BY 4.0으로 자유롭게 인용하세요.`,
+    en: `Each country's share of today's births and of the world population, for 217 countries. India is about 1 in ${india.oneInNBirths} births. UN WPP 2024 and World Bank data, free to reuse under CC BY 4.0.`,
+    ja: `いま生まれる赤ちゃんと世界人口に占める各国のシェアを217か国の表で公開。インドは約${india.oneInNBirths}人に1人。国連WPP 2024・世界銀行、CC BY 4.0。`,
+    zh: `217个国家占当今出生与世界人口的比重。印度约每${india.oneInNBirths}个新生儿中1个。联合国 WPP 2024 与世界银行数据，CC BY 4.0 可自由引用。`,
+    fr: `Part de chaque pays dans les naissances actuelles et la population mondiale, 217 pays. L'Inde ≈ 1 naissance sur ${india.oneInNBirths}. ONU WPP 2024 et Banque mondiale, CC BY 4.0.`,
+    es: `Porcentaje de cada país en los nacimientos actuales y la población mundial, 217 países. India ≈ 1 de cada ${india.oneInNBirths} nacimientos. ONU WPP 2024 y Banco Mundial, CC BY 4.0.`,
+  }),
+};
+
+const c = {
+  kicker: t({ ko: "환생 국가 · 공개 데이터", en: "Reincarnation country · open data", ja: "転生する国・オープンデータ", zh: "投胎国家·开放数据", fr: "Pays de réincarnation · données ouvertes", es: "País de reencarnación · datos abiertos" }),
+  h1: t({ ko: "나라별 출생아·인구 비중 데이터", en: "Share of world births and population, by country", ja: "国別の出生数・人口シェア", zh: "各国出生与人口比重", fr: "Part des naissances et de la population, par pays", es: "Nacimientos y población mundial, por país" }),
+  lead: t({
+    ko: "환생 국가 추첨이 쓰는 숫자를 그대로 공개합니다. 출생 비중은 지금 태어나는 아기 중 그 나라에서 태어나는 비율, 인구 비중은 지금 살아 있는 사람 중 그 나라 사람의 비율이에요. 출처를 밝히면 블로그·수업·기사에 자유롭게 쓸 수 있어요.",
+    en: "These are the exact numbers the reincarnation draw uses. Birth share is the fraction of today's babies born in each country; population share is the fraction of people alive now. Reuse them in a post, a class or an article, with a credit.",
+    ja: "転生抽選が使う数字をそのまま公開します。出生シェアはいま生まれる赤ちゃんのうちその国で生まれる割合、人口シェアはいま生きている人の割合です。出典を示せば自由に使えます。",
+    zh: "这里公开投胎抽签使用的原始数字。出生比重是当今新生儿中在该国出生的比例，人口比重是现存人口中该国人口的比例。注明出处即可自由使用。",
+    fr: "Voici les chiffres exacts du tirage. La part des naissances est la fraction des bébés d'aujourd'hui nés dans chaque pays ; la part de population, celle des personnes vivantes. Réutilisez-les en citant la source.",
+    es: "Son los números exactos que usa el sorteo. La cuota de nacimientos es la fracción de los bebés de hoy nacidos en cada país; la de población, la de las personas vivas. Reutilízalos citando la fuente.",
+  }),
+  csv: t({ ko: "CSV 내려받기", en: "Download CSV", ja: "CSVをダウンロード", zh: "下载 CSV", fr: "Télécharger le CSV", es: "Descargar CSV" }),
+  json: "JSON",
+  draw: t({ ko: "환생하러 가기", en: "Go reincarnate", ja: "転生する", zh: "去投胎", fr: "Réincarner", es: "Reencarnar" }),
+  how: t({ ko: "숫자 설명", en: "How the numbers work", ja: "数字の説明", zh: "数字说明", fr: "Comment lire les chiffres", es: "Cómo leer los números" }),
+  colRank: "#",
+  colCountry: t({ ko: "나라", en: "Country", ja: "国", zh: "国家", fr: "Pays", es: "País" }),
+  colBirths: t({ ko: "연간 출생아", en: "Births / year", ja: "年間出生数", zh: "年出生数", fr: "Naissances / an", es: "Nacimientos / año" }),
+  colBirthShare: t({ ko: "출생 비중", en: "Birth share", ja: "出生シェア", zh: "出生比重", fr: "Part naissances", es: "Cuota nacimientos" }),
+  colOneIn: t({ ko: "몇 명 중 1명", en: "1 in N babies", ja: "何人に1人", zh: "每N人中1人", fr: "1 bébé sur N", es: "1 de cada N" }),
+  colPop: t({ ko: "인구", en: "Population", ja: "人口", zh: "人口", fr: "Population", es: "Población" }),
+  colPopShare: t({ ko: "인구 비중", en: "Population share", ja: "人口シェア", zh: "人口比重", fr: "Part population", es: "Cuota población" }),
+  citeTitle: t({ ko: "인용하는 법", en: "How to cite", ja: "引用のしかた", zh: "如何引用", fr: "Comment citer", es: "Cómo citar" }),
+  citeBody: t({
+    ko: "아래 문장을 그대로 붙여 쓰세요. 이 표는 CC BY 4.0이고, 원자료인 유엔 WPP(CC BY 3.0 IGO)와 세계은행 WDI(CC BY 4.0)도 함께 밝혀 주세요.",
+    en: "Paste the line below. This table is CC BY 4.0; please also credit the upstream sources, UN WPP (CC BY 3.0 IGO) and the World Bank WDI (CC BY 4.0).",
+    ja: "下の文をそのまま使ってください。この表は CC BY 4.0 で、元データの国連WPP（CC BY 3.0 IGO）と世界銀行WDI（CC BY 4.0）も明記してください。",
+    zh: "直接粘贴下面这段。本表为 CC BY 4.0，也请注明原始来源联合国 WPP（CC BY 3.0 IGO）与世界银行 WDI（CC BY 4.0）。",
+    fr: "Collez la ligne ci-dessous. Ce tableau est sous CC BY 4.0 ; citez aussi les sources : ONU WPP (CC BY 3.0 IGO) et Banque mondiale WDI (CC BY 4.0).",
+    es: "Pega la línea de abajo. Esta tabla es CC BY 4.0; cita también las fuentes: ONU WPP (CC BY 3.0 IGO) y Banco Mundial WDI (CC BY 4.0).",
+  }),
+  sourceTitle: t({ ko: "출처와 기준 시점", en: "Sources and dates", ja: "出典と基準時点", zh: "来源与时点", fr: "Sources et dates", es: "Fuentes y fechas" }),
+  note: t({
+    ko: "WPP 출생 자료가 없는 몇몇 지역은 세계은행 인구 × 조출생률로 추정했어요(표의 원자료 열 참고). 비중은 이 217개 나라·지역 합계 기준이라 유엔 세계 합계와 조금 다를 수 있어요.",
+    en: "A few territories without a WPP births series use World Bank population × crude birth rate (see the source column in the CSV). Shares are of the 217 countries and territories listed, so they can differ slightly from UN world totals.",
+    ja: "WPPの出生データがない一部地域は、世界銀行の人口×粗出生率で推計しています。シェアは掲載217か国・地域の合計に対する値です。",
+    zh: "少数缺少 WPP 出生序列的地区，用世界银行人口×粗出生率估算。比重以所列 217 个国家和地区合计为分母。",
+    fr: "Quelques territoires sans série WPP utilisent population × taux brut de natalité (Banque mondiale). Les parts portent sur les 217 pays et territoires listés.",
+    es: "Algunos territorios sin serie WPP usan población × tasa bruta de natalidad (Banco Mundial). Las cuotas son sobre los 217 países y territorios listados.",
+  }),
+};
+
+const pageUrl = `https://oiyo.net${localePath(locale, "/reincarnation-country/data/")}`;
+const datasetJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: meta.title,
+  description: meta.description,
+  url: pageUrl,
+  license: DATASET_LICENSE,
+  creator: { "@type": "Organization", name: "OIYO", url: "https://oiyo.net/" },
+  isBasedOn: [
+    "https://population.un.org/wpp/",
+    "https://data.worldbank.org/indicator/SP.POP.TOTL",
+  ],
+  temporalCoverage: "2024",
+  spatialCoverage: "World",
+  variableMeasured: ["births", "birth share", "population", "population share"],
+  distribution: [
+    { "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: `https://oiyo.net${csvHref}` },
+    { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `https://oiyo.net${jsonHref}` },
+  ],
+};
+---
+
+<Layout title={meta.title} description={meta.description} locale={locale} canonicalPath={localePath(locale, "/reincarnation-country/data/")}>
+  <script type="application/ld+json" set:html={JSON.stringify(datasetJsonLd)} />
+  <div class="container mx-auto max-w-4xl px-4 py-8">
+    <p class="text-xs font-bold uppercase tracking-wide text-primary">{c.kicker}</p>
+    <h1 class="mt-2 text-3xl font-black tracking-tight text-foreground">{c.h1}</h1>
+    <p class="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.lead}</p>
+    <div class="mt-5 flex flex-wrap gap-2">
+      <a class="inline-flex min-h-11 items-center rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground" href={csvHref} download="reincarnation-country-weights.csv">{c.csv}</a>
+      <a class="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-5 text-sm font-bold text-foreground" href={jsonHref}>{c.json}</a>
+      <a class="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-5 text-sm font-bold text-foreground" href={localePath(locale, "/reincarnation-country/")}>{c.draw}</a>
+      <a class="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-5 text-sm font-bold text-foreground" href={localePath(locale, "/reincarnation-country/weights/")}>{c.how}</a>
+    </div>
+
+    <div class="mt-8 overflow-x-auto rounded-xl border border-border bg-card">
+      <table class="w-full min-w-2xl text-left text-sm">
+        <thead>
+          <tr class="border-b border-border text-xs font-semibold text-muted-foreground">
+            <th scope="col" class="px-3 py-2">{c.colRank}</th>
+            <th scope="col" class="px-3 py-2">{c.colCountry}</th>
+            <th scope="col" class="px-3 py-2 text-right">{c.colBirths}</th>
+            <th scope="col" class="px-3 py-2 text-right">{c.colBirthShare}</th>
+            <th scope="col" class="px-3 py-2 text-right">{c.colOneIn}</th>
+            <th scope="col" class="px-3 py-2 text-right">{c.colPop}</th>
+            <th scope="col" class="px-3 py-2 text-right">{c.colPopShare}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-border">
+          {rows.map((r) => (
+            <tr>
+              <td class="px-3 py-1.5 tabular-nums text-muted-foreground">{r.rank}</td>
+              <td class="px-3 py-1.5 font-medium text-foreground">{nameOf(r.iso2, r.name)}</td>
+              <td class="px-3 py-1.5 text-right tabular-nums">{nf.format(r.births)}</td>
+              <td class="px-3 py-1.5 text-right tabular-nums">{pct(r.birthSharePct)}</td>
+              <td class="px-3 py-1.5 text-right tabular-nums">{nf.format(r.oneInNBirths)}</td>
+              <td class="px-3 py-1.5 text-right tabular-nums">{nf.format(r.population)}</td>
+              <td class="px-3 py-1.5 text-right tabular-nums">{pct(r.populationSharePct)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-lg font-bold text-foreground">{c.citeTitle}</h2>
+      <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{c.citeBody}</p>
+      <p class="mt-3 rounded-lg border border-border bg-muted p-3 font-mono text-xs leading-relaxed text-foreground">{DATASET_CITATION}</p>
+    </section>
+    <section class="mt-8 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.sourceTitle}</h2>
+      <p class="mt-2">{DATASET_SOURCES}</p>
+      <p class="mt-2">{DATASET_AS_OF}</p>
+      <p class="mt-2">{c.note}</p>
+    </section>
+  </div>
+</Layout>
