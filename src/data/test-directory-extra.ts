@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "hoebinghwan-1789",
+    title: {"ko": "회빙환 시뮬레이터 — 1789년 정조 시대로 넘어가면 내 기술은 통할까", "en": "Isekai simulator: 1789 Joseon", "ja": "転生シミュレーター 1789", "zh": "穿越模拟器 1789", "fr": "Simulateur d'isekai : 1789", "es": "Simulador isekai: 1789"},
+    description: {"ko": "빙의·환생·타임슬립으로 1789년 조선에 가서, 가져간 현대 기술(한글·영어·요리·코딩…)이 통하는지 실제 역사로 판정해요.", "en": "Cross into 1789 Joseon and see which modern skills would work, judged on dated facts.", "ja": "1789年の朝鮮へ渡り、現代の技術が通じるかを史実で判定します。", "zh": "穿越到1789年的朝鲜，按史实判定你的现代技能是否管用。", "fr": "Passez en 1789 et voyez quels talents modernes serviraient.", "es": "Cruza a 1789 y mira qué habilidades modernas servirían."},
+  },
+  {
     slug: "domesday-1086",
     title: {"ko": "1086 둠즈데이 북 속 나 — 정복왕 윌리엄의 잉글랜드 대조사", "en": "You in Domesday Book, 1086", "ja": "1086年ドゥームズデイ・ブックの中の私", "zh": "1086年末日审判书中的我", "fr": "Vous dans le Domesday Book (1086)", "es": "Tú en el Domesday Book (1086)"},
     description: {"ko": "기록된 26만 8,984명의 신분 비율(빌런 40.6%, 보더 30.4%, 노예 10.5% 등)로 나를 뽑고, 내 장원의 기록을 보여줘요.", "en": "Your class among the 268,984 people recorded in 1086, and the entry for your manor.", "ja": "1086年に記録された26万8984人の身分割合で自分を引き、荘園の記録を見せます。", "zh": "按1086年记录的268,984人的阶层比例抽出你，并展示你的庄园条目。", "fr": "Votre condition parmi les 268 984 recensés de 1086 et l'article de votre manoir.", "es": "Tu clase entre las 268.984 personas registradas en 1086 y la entrada de tu feudo."},

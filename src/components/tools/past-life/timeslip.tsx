@@ -90,6 +90,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+  "hoebinghwan-1789": { icon: "🌀", label: { ko: "회빙환 시뮬레이터", en: "Isekai simulator: 1789", ja: "転生シミュレーター 1789", zh: "穿越模拟器 1789", fr: "Simulateur d'isekai : 1789", es: "Simulador isekai: 1789" } },
   "domesday-1086": { icon: "📖", label: { ko: "1086 둠즈데이 북 속 나", en: "You in Domesday Book, 1086", ja: "1086年ドゥームズデイ・ブックの中の私", zh: "1086年末日审判书中的我", fr: "Vous dans le Domesday Book (1086)", es: "Tú en el Domesday Book (1086)" } },
   "census-1850": { icon: "🗽", label: { ko: "1850 미국 센서스 속 나", en: "You in the 1850 U.S. census", ja: "1850年アメリカ国勢調査の中の私", zh: "1850年美国普查中的我", fr: "Vous dans le recensement américain de 1850", es: "Tú en el censo de EE. UU. de 1850" } },
   "ninbetsu-edo": { icon: "🏯", label: { ko: "에도 인별장 속 나", en: "You in an Edo temple register", ja: "江戸の人別帳の中の私", zh: "江户人别帐中的我", fr: "Vous dans un registre d'Edo", es: "Tú en un registro de Edo" } },
