@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "census-1850",
+    title: {"ko": "1850 미국 센서스 속 나 — 처음으로 한 사람씩 이름을 적은 조사", "en": "You in the 1850 U.S. census", "ja": "1850年アメリカ国勢調査の中の私", "zh": "1850年美国普查中的我", "fr": "Vous dans le recensement américain de 1850", "es": "Tú en el censo de EE. UU. de 1850"},
+    description: {"ko": "1850년 미국 2,319만 명의 실제 구성(노예 320만, 아일랜드 이민 100만 등)으로 나를 뽑고, 조사표에 적힌 한 줄을 보여줘요.", "en": "Who you were among 23.2 million Americans in 1850, and your line on the census form.", "ja": "1850年アメリカ2319万人の構成で自分を引き、調査票の一行を見せます。", "zh": "按1850年美国2319万人的构成抽出你，并展示普查表上的一行。", "fr": "Qui vous étiez parmi 23,2 millions d'Américains, et votre ligne au recensement.", "es": "Quién eras entre 23,2 millones de estadounidenses, y tu línea en el censo."},
+  },
+  {
     slug: "ninbetsu-edo",
     title: {"ko": "에도 인별장 속 나 — 종문인별개장과 에도 시대 신분", "en": "You in an Edo-period temple register", "ja": "江戸の人別帳の中の私 — 宗門人別改帳と身分", "zh": "江户人别帐中的我", "fr": "Vous dans un registre de l'époque d'Edo", "es": "Tú en un registro del período Edo"},
     description: {"ko": "에도 시대 신분 비율(백성 82.5%, 상인 6%, 무사 5.5% 등)로 내 신분을 뽑고, 종문인별개장 한 줄로 보여줘요.", "en": "Your Edo-period status by real population shares, written as a line in the temple register.", "ja": "江戸時代の身分構成（百姓82.5%、商人6%、武士5.5%など）で身分を引き、人別帳の一行で見せます。", "zh": "按江户时代身份比例抽出身份，以人别帐的一行呈现。", "fr": "Votre statut à Edo selon les vraies proportions, sous forme de ligne de registre.", "es": "Tu estatus en Edo según las proporciones reales, como línea de registro."},
