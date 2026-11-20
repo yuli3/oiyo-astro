@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "sillok-1426",
+    title: {"ko": "내 생일의 실록 — 세종 8년 그날의 기록", "en": "Your birthday in the 1426 Sejong annals", "ja": "誕生日の実録 — 世宗8年のその日", "zh": "我生日那天的实录", "fr": "Votre anniversaire dans les annales de 1426", "es": "Tu cumpleaños en los anales de 1426"},
+    description: {"ko": "양력·음력 생일을 세종 8년 날짜로 바꿔 그날 실록 기사를 원문과 쉬운 풀이로 보여줘요.", "en": "Your birthday converted to Sejong's 8th year, with that day's annals entry and a plain summary.", "ja": "誕生日を世宗8年の日付に換算し、その日の実録を原文と要約で。", "zh": "把生日换算成世宗八年的日期，展示当天实录原文与摘要。", "fr": "Votre date convertie en l'an 8 de Sejong, avec l'entrée des annales du jour.", "es": "Tu fecha convertida al año 8 de Sejong, con la entrada de los anales de ese día."},
+  },
+  {
     slug: "hometown-1426",
     title: {"ko": "내 동네는 600년 전 어느 고을? — 세종실록 지리지 호구·토산", "en": "Your Korean town in 1432 — Sejong Sillok gazetteer", "ja": "600年前、わが町はどの郡県？", "zh": "600年前我家乡是哪个郡县？", "fr": "Votre ville coréenne en 1432", "es": "Tu ciudad coreana en 1432"},
     description: {"ko": "지금 사는 시·군을 세종실록 지리지 337개 고을에 맞춰 호·구, 고을 순위, 토산을 보여줘요.", "en": "Match your city to one of 337 counties in the gazetteer: households, head count, rank and local products.", "ja": "市・郡を地理志の337郡県に対応させ、戸口・順位・土産を見せます。", "zh": "把你的市郡对应到地理志337个郡县，显示户口、排名与土产。", "fr": "Votre ville parmi les 337 districts du registre : foyers, inscrits, rang et produits.", "es": "Tu ciudad entre los 337 distritos del registro: hogares, personas, puesto y productos."},

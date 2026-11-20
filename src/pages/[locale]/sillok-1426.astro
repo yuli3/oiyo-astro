@@ -1,0 +1,122 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Sillok1426 from "../../components/tools/past-life/Sillok1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "내 생일의 실록 — 세종 8년(1426) 내 생일 그날의 조선왕조실록",
+    description: "양력이나 음력 생일을 넣으면 세종 8년의 같은 날로 바꿔, 그날 『세종실록』에 적힌 기사를 원문과 쉬운 풀이로 보여줘요. 경복궁 광화문 이름이 붙은 날, 한양 대화재, 사가독서의 시작까지.",
+    heading: "내 생일의 실록",
+    sub: "세종 8년, 내 생일 그날의 기록",
+    intro: "1426년은 세종이 왕이 된 지 8년째 되는 해예요. 봄에는 한양에 큰불이 났고, 여름엔 가뭄이 이어졌고, 가을엔 광화문이 이름을 얻었어요. 내 생일 그날 실록에는 무엇이 적혔는지 펼쳐 봐요.",
+    howTitle: "어떻게 날짜를 맞추나요",
+    how: [
+      "자료: 『세종실록』 권31~34(세종 8년, 1월~12월) 원문 1,149건. 위키문헌 전사본(oldid 2122908)에서 옮겼고, 354일 가운데 341일에 기사가 있어요.",
+      "양력 생일: 1426년의 같은 양력 날짜(지금 달력을 그때로 늘린 날짜)를 율리우스 적일로 바꾼 뒤, 실록에 적힌 각 달 초하루(朔)의 간지로 음력 날짜를 맞춰요. 음력 새해(1426년 양력 2월 17일) 전 날짜는 이듬해 1~2월로 맞춰요. 341일 모두 실록의 일진과 계산이 맞는지 확인했어요.",
+      "음력 생일: 같은 음력 날짜에 그대로 맞춰요. 이 해에는 윤달이 없어요.",
+      "기사가 없는 날은 가장 가까운 날의 기사를 보여주고 그렇다고 알려 줘요.",
+      "날마다 기사 하나를 골라 쉽게 풀었어요. 풀이는 번역이 아니라 요약이에요. 정확한 번역은 국사편찬위원회 조선왕조실록 사이트에서 볼 수 있어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "세종 8년(1426)에는 어떤 일이 있었나요?", a: "음력 2월 15일 한양에 큰불이 나 2천 채 넘는 집이 탔고, 봄부터 여름까지 가뭄이 심했어요. 10월 26일에는 집현전이 경복궁 문 이름(광화문 등)을 지었고, 12월 11일에는 젊은 학자들에게 집에서 책만 읽게 하는 사가독서가 시작됐어요." },
+      { q: "양력 생일과 음력 생일 중 무엇으로 찾아야 하나요?", a: "둘 다 돼요. 양력은 계절이 같은 날, 음력은 그때 사람들이 쓰던 날짜가 같은 날이에요. 둘의 결과가 다를 수 있어요." },
+      { q: "왜 어떤 생일은 '가장 가까운 날'이 나오나요?", a: "실록은 매일 적지 않았어요. 세종 8년은 354일 중 13일이 비어 있어요. 또 음력 한 해가 양력보다 11일 짧아서 일부 양력 날짜는 세종 8년 바깥에 떨어져요." },
+    ],
+  },
+  en: {
+    title: "Your birthday in the 1426 Sejong annals — what happened that day",
+    description: "Enter your birthday and see what the Annals of King Sejong recorded on the same day in 1426, with the original text and a plain summary.",
+    heading: "Your birthday in the 1426 annals",
+    sub: "Sejong's 8th year, day by day",
+    intro: "1426 was King Sejong's eighth year on the throne: a great fire swept Hanseong in spring, drought followed, and in autumn Gwanghwamun got its name. See what the court historians wrote on your birthday.",
+    howTitle: "How dates are matched",
+    how: [
+      "Source: Sejong Sillok vols. 31–34, all 1,149 entries of year 8, from the Wikisource transcription (oldid 2122908). 341 of 354 days have entries.",
+      "Solar birthdays: the same date in 1426 (proleptic Gregorian) is converted to a Julian Day Number and matched to the lunar calendar using each month's first-day cycle sign given in the annals. All 341 recorded days check out.",
+      "Lunar birthdays go to the same lunar date; there was no leap month that year. Empty days show the closest entry.",
+      "Summaries are plain paraphrases, not translations.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "What happened in 1426 in Korea?", a: "A great fire burned over 2,000 homes in the capital, a long drought followed, Gyeongbokgung's gates were named, and Sejong sent young scholars home on paid reading leave." },
+    ],
+  },
+  ja: {
+    title: "誕生日の実録 — 世宗8年（1426）その日の朝鮮王朝実録",
+    description: "誕生日を世宗8年の日付に換算し、その日の『世宗実録』の記事を原文とやさしい要約で見せます。",
+    heading: "誕生日の実録",
+    sub: "世宗8年、誕生日のその日",
+    intro: "1426年は世宗の即位8年目。春には漢城の大火、夏は日照り、秋には光化門が名を得ました。あなたの誕生日に実録は何を記したでしょう。",
+    howTitle: "日付の合わせ方",
+    how: ["資料：『世宗実録』巻31〜34（世宗8年）原文1,149件（ウィキソース）。", "新暦の誕生日はユリウス通日と各月朔の干支で旧暦に換算。341日すべて実録の日辰と一致を確認。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "記事のない日は？", a: "最も近い日の記事を示し、その旨を表示します。" }],
+  },
+  zh: {
+    title: "我生日那天的实录 — 世宗八年（1426）朝鲜王朝实录",
+    description: "把你的生日换算成世宗八年的日期，展示当天《世宗实录》的原文与白话摘要。",
+    heading: "我生日那天的实录",
+    sub: "世宗八年，你生日的那一天",
+    intro: "1426年是世宗即位第八年：春有汉城大火，夏有大旱，秋天光化门得名。看看你生日那天史官写了什么。",
+    howTitle: "日期如何对应",
+    how: ["资料：《世宗实录》卷31–34（世宗八年）原文1,149条（维基文库）。", "阳历生日按儒略日与实录所载各月朔日干支换算成农历，341天全部与实录日辰吻合。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "没有记载的日子怎么办？", a: "显示最接近那天的记载，并加以说明。" }],
+  },
+  fr: {
+    title: "Votre anniversaire dans les annales de 1426 (Corée de Sejong)",
+    description: "Ce que les Annales du roi Sejong ont noté le jour de votre anniversaire en 1426 : texte original et résumé simple.",
+    heading: "Votre anniversaire en 1426",
+    sub: "L'an 8 du roi Sejong, jour par jour",
+    intro: "En 1426, huitième année du règne de Sejong : grand incendie de la capitale, sécheresse, et la porte Gwanghwamun reçoit son nom. Voyez ce qu'ont écrit les historiens le jour de votre anniversaire.",
+    howTitle: "Méthode",
+    how: ["Source : Annales de Sejong, vol. 31–34, 1 149 entrées (Wikisource).", "La date est convertie par jour julien et le cycle sexagésimal des débuts de mois ; 341 jours vérifiés."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Et les jours sans entrée ?", a: "On affiche l'entrée la plus proche, en le signalant." }],
+  },
+  es: {
+    title: "Tu cumpleaños en los anales de 1426 (Corea de Sejong)",
+    description: "Qué anotaron los Anales del rey Sejong el día de tu cumpleaños en 1426: texto original y resumen sencillo.",
+    heading: "Tu cumpleaños en 1426",
+    sub: "El año 8 del rey Sejong, día a día",
+    intro: "En 1426, octavo año de Sejong: gran incendio en la capital, sequía, y la puerta Gwanghwamun recibe su nombre. Mira qué escribieron los cronistas el día de tu cumpleaños.",
+    howTitle: "Método",
+    how: ["Fuente: Anales de Sejong, vols. 31–34, 1.149 entradas (Wikisource).", "La fecha se convierte por día juliano y el ciclo sexagenario de cada inicio de mes; 341 días verificados."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Y los días sin entrada?", a: "Se muestra la entrada más cercana, avisándolo." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/sillok-1426/")} ogImage="/images/past-life-1426/og/sillok-1426.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Sillok1426 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["hometown1426", "joseon1426", "ancestors1426"]} current="sillok1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>
