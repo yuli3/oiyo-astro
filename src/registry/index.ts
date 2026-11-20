@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const tongsinsa1763Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f4e6b",
+  domain: "ontology",
+  icon: "Ship",
+  id: "tongsinsa-1763",
+  path: "/tongsinsa-1763",
+  status: "production",
+  name: { zh: "朝鲜通信使团中的我", en: "You in the 1763 embassy to Japan", es: "Tú en la embajada coreana de 1763", fr: "Vous dans l'ambassade coréenne de 1763", ja: "朝鮮通信使一行の中の私", ko: "조선통신사 일행 속 나" },
+  description: { zh: "1763年癸未通信使477人中，你是三使、译官、制述官、画员还是格军？", en: "Among the 477 of the 1763 Joseon embassy to Edo, are you an envoy, interpreter, poet, painter or oarsman?", es: "Entre los 477 de la embajada de 1763 a Edo, ¿qué papel tienes?", fr: "Parmi les 477 de l'ambassade de 1763 à Edo, quel est votre rôle ?", ja: "1763年癸未通信使477人のうち、あなたは三使・訳官・製述官・画員・格軍のどれ？", ko: "1763년 계미통신사 477명 가운데 나는 삼사·역관·제술관·화원·격군 중 누구일까요?" },
+};
+
 const banchado1795Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -525,6 +538,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  tongsinsa1763Manifest,
   banchado1795Manifest,
   gwageo1426Manifest,
   lunch1426Manifest,

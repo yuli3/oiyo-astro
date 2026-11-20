@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "tongsinsa-1763",
+    title: {"ko": "조선통신사 일행 속 나 — 1763년 계미통신사 477명", "en": "You in the 1763 Joseon embassy to Japan", "ja": "朝鮮通信使一行の中の私", "zh": "朝鲜通信使团中的我", "fr": "Vous dans l'ambassade coréenne de 1763", "es": "Tú en la embajada coreana de 1763"},
+    description: {"ko": "1763년 통신사 477명(격군 228명 포함) 가운데 내 역할과 332일 여정, 실제 사건을 보여줘요.", "en": "Your role among the 477 of the 1763 embassy, its 332-day journey and what really happened.", "ja": "1763年通信使477人の中の役割と332日の旅。", "zh": "1763年通信使477人中你的角色与332天的旅程。", "fr": "Votre rôle parmi les 477 et le voyage de 332 jours.", "es": "Tu papel entre los 477 y el viaje de 332 días."},
+  },
+  {
     slug: "banchado-1795",
     title: {"ko": "1795 화성 행차 반차도 속 나 — 정조 행렬 1,779명 중 내 자리", "en": "You in King Jeongjo's 1795 procession", "ja": "1795年 華城行幸の班次図の中の私", "zh": "1795华城行幸班次图中的我", "fr": "Vous dans le cortège royal de 1795", "es": "Tú en el cortejo real de 1795"},
     description: {"ko": "원행을묘정리의궤 반차도에 그려진 1,779명·말 779필 가운데 내 역할을 뽑고, 7박 8일 여정과 배다리 이야기를 보여줘요.", "en": "Your role among the 1,779 people and 779 horses of the 1795 procession painting, with the eight-day journey.", "ja": "班次図の1,779人・馬779頭の中の役割と、7泊8日の旅程。", "zh": "班次图1,779人、779匹马中你的角色，以及七夜八天的行程。", "fr": "Votre rôle parmi les 1 779 personnages et 779 chevaux, et le voyage de huit jours.", "es": "Tu papel entre las 1.779 personas y 779 caballos, y el viaje de ocho días."},
