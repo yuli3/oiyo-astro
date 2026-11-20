@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "lunch-1426",
+    title: {"ko": "오늘 점심을 600년 전으로 — 1426년 조선 밥상 재료 생존율", "en": "Your lunch in 1426 Korea — which ingredients survive?", "ja": "今日のランチを600年前へ", "zh": "把今天的午餐带回600年前", "fr": "Votre déjeuner dans la Corée de 1426", "es": "Tu almuerzo en la Corea de 1426"},
+    description: {"ko": "김치찌개·짜장면·피자 등 25가지 메뉴의 재료가 1426년에 있었는지, 고추·감자·설탕의 전래 시기와 함께 보여줘요.", "en": "25 dishes checked ingredient by ingredient against what Korea had in 1426, with arrival dates for chili, potato and sugar.", "ja": "25のメニューの食材が1426年にあったかを、唐辛子・じゃがいも・砂糖の伝来とともに。", "zh": "逐一核对25道菜的食材在1426年是否存在，附辣椒、土豆、糖的传入时间。", "fr": "25 plats vérifiés ingrédient par ingrédient pour la Corée de 1426.", "es": "25 platos revisados ingrediente por ingrediente para la Corea de 1426."},
+  },
+  {
     slug: "sillok-1426",
     title: {"ko": "내 생일의 실록 — 세종 8년 그날의 기록", "en": "Your birthday in the 1426 Sejong annals", "ja": "誕生日の実録 — 世宗8年のその日", "zh": "我生日那天的实录", "fr": "Votre anniversaire dans les annales de 1426", "es": "Tu cumpleaños en los anales de 1426"},
     description: {"ko": "양력·음력 생일을 세종 8년 날짜로 바꿔 그날 실록 기사를 원문과 쉬운 풀이로 보여줘요.", "en": "Your birthday converted to Sejong's 8th year, with that day's annals entry and a plain summary.", "ja": "誕生日を世宗8年の日付に換算し、その日の実録を原文と要約で。", "zh": "把生日换算成世宗八年的日期，展示当天实录原文与摘要。", "fr": "Votre date convertie en l'an 8 de Sejong, avec l'entrée des annales du jour.", "es": "Tu fecha convertida al año 8 de Sejong, con la entrada de los anales de ese día."},

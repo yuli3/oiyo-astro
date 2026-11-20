@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const lunch1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#8a5a2b",
+  domain: "ontology",
+  icon: "UtensilsCrossed",
+  id: "lunch-1426",
+  path: "/lunch-1426",
+  status: "production",
+  name: { zh: "把今天的午餐带回600年前", en: "Your lunch, 600 years ago", es: "Tu almuerzo, hace 600 años", fr: "Votre déjeuner, il y a 600 ans", ja: "今日のランチを600年前へ", ko: "오늘 점심을 600년 전으로" },
+  description: { zh: "把今天的午餐带回1426年的朝鲜：辣椒、土豆、洋葱都还没来，哪些食材能留下？", en: "Take today's lunch back to 1426 Korea: no chili, potato or onion yet. See which ingredients survive.", es: "Lleva tu almuerzo a la Corea de 1426: sin chile, papa ni cebolla. ¿Qué ingredientes sobreviven?", fr: "Ramenez votre déjeuner dans la Corée de 1426 : ni piment, ni pomme de terre, ni oignon. Que reste-t-il ?", ja: "今日のランチを1426年の朝鮮へ。唐辛子もじゃがいもも玉ねぎもまだない。何が残る？", ko: "오늘 점심을 1426년 조선으로 가져가요. 고추도 감자도 양파도 없던 때, 어떤 재료가 살아남을까요?" },
+};
+
 const sillok1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -486,6 +499,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  lunch1426Manifest,
   sillok1426Manifest,
   hometown1426Manifest,
   ancestors1426Manifest,
