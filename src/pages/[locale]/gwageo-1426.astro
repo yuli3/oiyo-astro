@@ -1,0 +1,120 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Gwageo1426 from "../../components/tools/past-life/Gwageo1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "과거시험 보러 가기 — 1426년 세종 병오 식년 문과 체험",
+    description: "세종 8년(1426) 식년 문과에 응시해 봐요. 경서 강경, 부 운 맞추기, 세종이 실제로 낸 책문(경원 문제)을 풀고, 그해 실제 급제자 34명 명단 속 내 자리를 확인해요.",
+    heading: "과거시험 보러 가기",
+    sub: "1426년, 세종 앞에서 치르는 문과",
+    intro: "1426년 병오년은 3년마다 열리는 식년시가 있던 해예요. 초시를 통과한 240명 중 33명만 붙는 회시를 거쳐, 4월 11일 근정전에서 세종이 직접 책문을 냈어요. 그 시험장에 들어가 봐요.",
+    howTitle: "어떻게 만들었나요",
+    how: [
+      "초장은 경서 구절의 출전을 맞히는 문제, 중장은 부(賦)의 운자를 고르는 문제예요(평수운 기준). 실제 회시는 사서삼경 강경과 부·표 짓기, 대책으로 치렀어요.",
+      "종장 책문은 『세종실록』 8년 4월 11일에 실린 실제 문제예요. 함길도 경원을 지킬지, 경성으로 물릴지, 태종의 법대로 둘지 세 주장을 놓고 물었어요.",
+      "초장·중장 6문제 중 4개 이상 맞히면 회시 합격이에요. 전시는 떨어뜨리지 않고 등수만 매기므로, 세종이 실제로 택한 길과 같은 답에 1점을 더해 등수를 정해요.",
+      "급제자 명단은 문과 급제자 데이터베이스의 1426년 식년시 기록(을과 3·병과 7·동진사 24, 모두 34명)이에요. 4월 13일 방방과 첫 벼슬, 부정행위 처벌도 『세종실록』 기록 그대로예요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "1426년 과거 장원은 누구였나요?", a: "문과 장원은 황보량(皇甫良)으로, 4월 13일 방방 뒤 광흥창 부사가 됐어요. 무과 장원은 이종번(李宗蕃)이었고 무과 급제자는 28명이었어요." },
+      { q: "왜 갑과가 없나요?", a: "이해 급제자 기록은 을과 3명, 병과 7명, 동진사 24명으로 나뉘어 있어요. 갑과·을과·병과로 나누는 방식은 뒤에 굳어졌어요." },
+      { q: "그해에도 부정행위가 있었나요?", a: "있었어요. 이군거는 회시 답안지를 바꿔 써서 장 80대를 맞았고, 어변미는 대독관에게 운 틀린 글자를 고쳐 달라고 했다가 장 60대·도형 1년(두 등급 감형)을 받았어요." },
+    ],
+  },
+  en: {
+    title: "Sit the 1426 Joseon civil exam — King Sejong's real question",
+    description: "Take the 1426 Joseon civil service exam: identify classics, pick rhymes, answer King Sejong's real policy question, and find your place on the real pass list of 34.",
+    heading: "Sit the 1426 civil exam",
+    sub: "Joseon's triennial exam, before King Sejong",
+    intro: "1426 was a triennial exam year. Of 240 first-round passers only 33 would get through, and on the 11th day of the 4th month Sejong set the final question himself in Geunjeongjeon Hall.",
+    howTitle: "How it works",
+    how: [
+      "Round 1 asks which classic a line comes from; round 2 asks for the rhyming character. Four of six correct gets you through.",
+      "The final question is the real one from the Sejong Sillok (year 8, 4th month, 11th day): hold, pull back or keep Gyeongwon on the northern frontier. The palace exam failed nobody; it only ranked, so matching Sejong's own choice adds a point.",
+      "The pass list (34 names) comes from the civil exam passers database; results day, first posts and cheating penalties are from the annals.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Who came top in 1426?", a: "Hwangbo Ryang topped the civil exam and became deputy of the Gwangheung granary; Yi Jong-beon topped the 28-man military exam." },
+    ],
+  },
+  ja: {
+    title: "科挙を受けに行く — 1426年 世宗の式年文科",
+    description: "世宗8年（1426）の式年文科を体験。講経・賦の韻字・世宗の実際の策問に答え、実際の合格者34人の名簿での位置を確かめます。",
+    heading: "科挙を受けに行く",
+    sub: "1426年、世宗の前で受ける文科",
+    intro: "1426年は3年ごとの式年試の年。初試合格者240人のうち33人だけが会試を通り、4月11日に勤政殿で世宗自ら策問を出しました。",
+    howTitle: "仕組み",
+    how: ["初場は経書の出典、中場は賦の韻字。6問中4問以上で会試合格。", "終場の策問は『世宗実録』8年4月11日の実際の問題です。殿試は順位付けのみで、世宗の実際の選択と同じ答えに1点加算。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "1426年の状元は？", a: "文科は皇甫良、武科は李宗蕃（武科合格28人）でした。" }],
+  },
+  zh: {
+    title: "去考科举 — 1426年世宗式年文科",
+    description: "体验世宗八年（1426）式年文科：讲经、作赋押韵、回答世宗真实策问，看你在34名真实及第者中的位置。",
+    heading: "去考科举",
+    sub: "1426年，在世宗面前应考",
+    intro: "1426年是三年一次的式年试之年。初试通过的240人中只有33人能过会试，四月十一日世宗在勤政殿亲自出策问。",
+    howTitle: "玩法说明",
+    how: ["初场考经书出处，中场考赋的韵字，6题答对4题以上即通过会试。", "终场策问取自《世宗实录》八年四月十一日。殿试只排名次，与世宗实际选择相同者加1分。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "1426年的状元是谁？", a: "文科状元皇甫良，武科状元李宗蕃（武科及第28人）。" }],
+  },
+  fr: {
+    title: "Passer l'examen civil coréen de 1426 — la vraie question du roi Sejong",
+    description: "Passez l'examen civil de 1426 : classiques, rimes et la vraie question du roi Sejong, puis votre place parmi les 34 reçus.",
+    heading: "Passer l'examen de 1426",
+    sub: "L'examen triennal de Joseon, devant le roi Sejong",
+    intro: "En 1426, sur 240 candidats du premier tour, 33 seulement passaient. Le roi Sejong posa lui-même la question finale.",
+    howTitle: "Méthode",
+    how: ["Tour 1 : de quel classique vient le passage ? Tour 2 : quel caractère rime ? Quatre bonnes réponses sur six pour passer.", "La question finale est la vraie, tirée des Annales de Sejong ; l'examen du palais ne fait que classer."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Qui fut premier en 1426 ?", a: "Hwangbo Ryang à l'examen civil, Yi Jong-beon à l'examen militaire." }],
+  },
+  es: {
+    title: "Presentar el examen civil coreano de 1426 — la pregunta real del rey Sejong",
+    description: "Presenta el examen civil de 1426: clásicos, rimas y la pregunta real del rey Sejong, y tu lugar entre los 34 aprobados.",
+    heading: "Presentar el examen de 1426",
+    sub: "El examen trienal de Joseon, ante el rey Sejong",
+    intro: "En 1426, de 240 candidatos de la primera ronda solo pasaban 33. El rey Sejong redactó él mismo la pregunta final.",
+    howTitle: "Método",
+    how: ["Ronda 1: ¿de qué clásico es el pasaje? Ronda 2: ¿qué carácter rima? Cuatro aciertos de seis para pasar.", "La pregunta final es la real, de los Anales de Sejong; el examen de palacio solo ordena."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Quién quedó primero en 1426?", a: "Hwangbo Ryang en el examen civil y Yi Jong-beon en el militar." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/gwageo-1426/")} ogImage="/images/past-life-1426/og/gwageo-1426.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Gwageo1426 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["sillok1426", "joseon1426", "lunch1426"]} current="gwageo1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>
