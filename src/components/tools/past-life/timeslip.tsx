@@ -90,6 +90,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+  "domesday-1086": { icon: "📖", label: { ko: "1086 둠즈데이 북 속 나", en: "You in Domesday Book, 1086", ja: "1086年ドゥームズデイ・ブックの中の私", zh: "1086年末日审判书中的我", fr: "Vous dans le Domesday Book (1086)", es: "Tú en el Domesday Book (1086)" } },
   "census-1850": { icon: "🗽", label: { ko: "1850 미국 센서스 속 나", en: "You in the 1850 U.S. census", ja: "1850年アメリカ国勢調査の中の私", zh: "1850年美国普查中的我", fr: "Vous dans le recensement américain de 1850", es: "Tú en el censo de EE. UU. de 1850" } },
   "ninbetsu-edo": { icon: "🏯", label: { ko: "에도 인별장 속 나", en: "You in an Edo temple register", ja: "江戸の人別帳の中の私", zh: "江户人别帐中的我", fr: "Vous dans un registre d'Edo", es: "Tú en un registro de Edo" } },
   "tongsinsa-1763": { icon: "⛵", label: { ko: "조선통신사 일행 속 나", en: "You in the 1763 embassy to Japan", ja: "朝鮮通信使一行の中の私", zh: "朝鲜通信使团中的我", fr: "Vous dans l'ambassade de 1763", es: "Tú en la embajada de 1763" } },

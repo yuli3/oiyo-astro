@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Domesday1086 from "../../components/tools/past-life/Domesday1086";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1086 둠즈데이 북 속 나 — 정복왕 윌리엄의 잉글랜드 대조사",
+    description: "1086년 둠즈데이 북에 기록된 26만 8,984명의 실제 신분 비율(빌런 40.6%, 보더 30.4%, 노예 10.5%, 소크맨 8.7%, 자유인 5%)로 내가 누구였는지 뽑고, 내가 사는 장원의 기록을 읽어 봐요.",
+    heading: "1086 둠즈데이 북 속 나",
+    sub: "소 한 마리까지 센 장부, 그 안의 나",
+    intro: "노르만 정복 20년 뒤, 정복왕 윌리엄은 잉글랜드의 모든 땅과 사람과 가축을 세게 했어요. 그 장부에 나는 이름 없이 숫자 하나로 들어 있어요. 어떤 숫자였을까요?",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "역사지리학자 H. C. 다비가 집계한 1086년 기록 인구의 신분 비율로 뽑아요. 빌런 40.6%, 보더 30.4%, 노예 10.5%, 소크맨 8.7%, 자유인 5.0%, 코터 1.9%, 사제·도시민 등 2.9%예요.",
+      "생일로 뽑으면 같은 생일은 언제나 같은 결과가 나와요.",
+      "장원 이름·땅 크기·사람 수·값은 놀이용으로 지어낸 예시예요. 문장 형식은 현대 영어 번역본의 말투를 따랐고, 소크맨과 자유인은 실제로 많았던 동부 고을에, 노예는 비율이 높았던 서부 고을에 배치했어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "둠즈데이 북에는 몇 명이 적혀 있나요?", a: "가구의 가장 26만 8,984명이에요. 그래서 실제 잉글랜드 인구는 120만~160만 명쯤으로 봐요. 마을 1만 3,418곳과 방앗간 5,624개도 적혀 있어요." },
+      { q: "농민의 이름도 적혔나요?", a: "아니요. 농민은 '빌런 8명, 보더 5명, 노예 2명'처럼 숫자로만 셌어요. 이름이 남은 사람은 땅을 가진 영주들이에요." },
+      { q: "왜 '둠즈데이'라고 부르나요?", a: "12세기 기록에 따르면 사람들이 이 장부를 '최후의 심판의 날'에 빗대 불렀어요. 한번 적힌 내용은 뒤집을 수 없다는 뜻이에요." },
+    ],
+  },
+  en: {
+    title: "You in Domesday Book, 1086: villager, smallholder, free man or slave?",
+    description: "Draw your place among the 268,984 people recorded in Domesday Book by Darby's real shares (villans 40.6%, bordars 30.4%, slaves 10.5%, sokemen 8.7%, free men 5%) and read the entry for your manor.",
+    heading: "You in Domesday Book, 1086",
+    sub: "The survey that counted every ox, and you in it",
+    intro: "Twenty years after the Conquest, William I had every holding, person and beast in England counted. You are in there, not by name but as a number. Which number?",
+    howTitle: "How it works",
+    how: [
+      "You are drawn by H. C. Darby's shares of the recorded population: villans 40.6%, bordars 30.4%, slaves 10.5%, sokemen 8.7%, free men 5.0%, cottars 1.9%, priests, burgesses and others 2.9%.",
+      "With your birthday, the same birthday always gives the same result.",
+      "The manor, its hides, people and values are invented, written in the style of the Phillimore translation. Sokemen and free men are placed in the eastern counties where they really clustered, slaves in the west where their share was highest.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "How many people does Domesday record?", a: "268,984 heads of household, so England probably held 1.2 to 1.6 million people. It also names 13,418 places and 5,624 mills." },
+      { q: "Were peasants named?", a: "No. They were counted, as in \"8 villagers, 5 smallholders and 2 slaves\". The landholders are the ones with names." },
+      { q: "Why \"Domesday\"?", a: "By the 12th century people called it after the day of judgement, because there was no appeal against what it said." },
+    ],
+  },
+  ja: {
+    title: "1086年ドゥームズデイ・ブックの中の私 — 征服王ウィリアムの大調査",
+    description: "ドゥームズデイ・ブックに記録された26万8984人の身分割合（ヴィラン40.6%、ボーダー30.4%、奴隷10.5%など）で自分を引き、荘園の記録を読みます。",
+    heading: "1086年ドゥームズデイ・ブックの中の私",
+    sub: "牛一頭まで数えた帳簿と、その中の私",
+    intro: "ノルマン征服から20年後、ウィリアム1世はイングランドの土地・人・家畜をすべて数えさせました。あなたはその中に、名前ではなく数として載っています。",
+    howTitle: "仕組み",
+    how: ["H・C・ダービーが集計した1086年の記録人口の身分割合で引きます。", "荘園名・広さ・人数・価値は架空の例で、文の形は現代英訳にならいました。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "農民の名前は記された？", a: "いいえ。「ヴィラン8人、ボーダー5人、奴隷2人」のように数だけです。名が残るのは土地を持つ領主です。" }],
+  },
+  zh: {
+    title: "1086年末日审判书中的我 — 征服者威廉的英格兰大调查",
+    description: "按末日审判书记录的268,984人的阶层比例（维兰40.6%、小农30.4%、奴隶10.5%等）抽出你，并阅读你所在庄园的条目。",
+    heading: "1086年末日审判书中的我",
+    sub: "连一头牛都要清点的账册，和其中的我",
+    intro: "诺曼征服二十年后，威廉一世下令清点英格兰所有的土地、人口和牲畜。你在其中，不是名字，而是一个数字。",
+    howTitle: "怎么抽",
+    how: ["按H. C. 达比统计的1086年记录人口阶层比例抽取。", "庄园名称、面积、人数和价值为虚构，句式仿照现代英译本。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "农民的名字被记下了吗？", a: "没有。只记“维兰8人、小农5人、奴隶2人”这样的数字。留下名字的是领主。" }],
+  },
+  fr: {
+    title: "Vous dans le Domesday Book (1086)",
+    description: "Votre condition parmi les 268 984 personnes recensées en 1086 (vilains 40,6 %, bordiers 30,4 %, esclaves 10,5 %…) et l'article de votre manoir.",
+    heading: "Vous dans le Domesday Book",
+    sub: "L'inventaire qui comptait chaque bœuf, et vous dedans",
+    intro: "Vingt ans après la Conquête, Guillaume Ier fait compter terres, gens et bêtes d'Angleterre. Vous y êtes, non par votre nom, mais comme un nombre.",
+    howTitle: "Comment ça marche",
+    how: ["Tirage selon les proportions de H. C. Darby pour la population recensée en 1086.", "Manoir, surfaces, effectifs et valeurs sont inventés, dans le style de la traduction Phillimore."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Les paysans étaient-ils nommés ?", a: "Non : on écrivait « 8 vilains, 5 bordiers et 2 esclaves ». Seuls les seigneurs ont un nom." }],
+  },
+  es: {
+    title: "Tú en el Domesday Book (1086)",
+    description: "Tu clase entre las 268.984 personas registradas en 1086 (villanos 40,6 %, borderos 30,4 %, esclavos 10,5 %…) y la entrada de tu feudo.",
+    heading: "Tú en el Domesday Book",
+    sub: "El censo que contó cada buey, y tú dentro",
+    intro: "Veinte años después de la Conquista, Guillermo I mandó contar tierras, gentes y animales de Inglaterra. Estás ahí, no con tu nombre, sino como un número.",
+    howTitle: "Cómo funciona",
+    how: ["Sorteo según las proporciones de H. C. Darby para la población registrada en 1086.", "Feudo, superficies, personas y valores son inventados, al estilo de la traducción Phillimore."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Se nombraba a los campesinos?", a: "No: se escribía «8 aldeanos, 5 borderos y 2 esclavos». Solo los señores tienen nombre." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/domesday-1086/")} ogImage="/images/past-life-1426/og/domesday-1086.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Domesday1086 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["census1850", "europe1426", "ninbetsuEdo"]} current="domesday1086" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

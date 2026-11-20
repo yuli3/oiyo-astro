@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const domesday1086Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#6b2a2a",
+  domain: "ontology",
+  icon: "BookOpen",
+  id: "domesday-1086",
+  path: "/domesday-1086",
+  status: "production",
+  name: { zh: "1086年末日审判书中的我", en: "You in Domesday Book, 1086", es: "Tú en el Domesday Book (1086)", fr: "Vous dans le Domesday Book (1086)", ja: "1086年ドゥームズデイ・ブックの中の私", ko: "1086 둠즈데이 북 속 나" },
+  description: { zh: "按1086年记录人口的阶层比例抽出你，并读你所在庄园的条目。", en: "Draw your class by the 1086 recorded population (villans, bordars, slaves, sokemen…) and read the entry for your manor.", es: "Tu clase según la población registrada en 1086 y la entrada de tu feudo.", fr: "Votre condition selon la population recensée en 1086 et l'article de votre manoir.", ja: "1086年に記録された人々の身分割合で自分を引き、荘園の記録を読みます。", ko: "1086년 기록된 사람들의 신분 비율로 나를 뽑고, 내가 사는 장원의 기록을 보여줘요." },
+};
+
 const census1850Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -564,6 +577,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  domesday1086Manifest,
   census1850Manifest,
   ninbetsuEdoManifest,
   tongsinsa1763Manifest,

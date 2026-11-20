@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "domesday-1086",
+    title: {"ko": "1086 둠즈데이 북 속 나 — 정복왕 윌리엄의 잉글랜드 대조사", "en": "You in Domesday Book, 1086", "ja": "1086年ドゥームズデイ・ブックの中の私", "zh": "1086年末日审判书中的我", "fr": "Vous dans le Domesday Book (1086)", "es": "Tú en el Domesday Book (1086)"},
+    description: {"ko": "기록된 26만 8,984명의 신분 비율(빌런 40.6%, 보더 30.4%, 노예 10.5% 등)로 나를 뽑고, 내 장원의 기록을 보여줘요.", "en": "Your class among the 268,984 people recorded in 1086, and the entry for your manor.", "ja": "1086年に記録された26万8984人の身分割合で自分を引き、荘園の記録を見せます。", "zh": "按1086年记录的268,984人的阶层比例抽出你，并展示你的庄园条目。", "fr": "Votre condition parmi les 268 984 recensés de 1086 et l'article de votre manoir.", "es": "Tu clase entre las 268.984 personas registradas en 1086 y la entrada de tu feudo."},
+  },
+  {
     slug: "census-1850",
     title: {"ko": "1850 미국 센서스 속 나 — 처음으로 한 사람씩 이름을 적은 조사", "en": "You in the 1850 U.S. census", "ja": "1850年アメリカ国勢調査の中の私", "zh": "1850年美国普查中的我", "fr": "Vous dans le recensement américain de 1850", "es": "Tú en el censo de EE. UU. de 1850"},
     description: {"ko": "1850년 미국 2,319만 명의 실제 구성(노예 320만, 아일랜드 이민 100만 등)으로 나를 뽑고, 조사표에 적힌 한 줄을 보여줘요.", "en": "Who you were among 23.2 million Americans in 1850, and your line on the census form.", "ja": "1850年アメリカ2319万人の構成で自分を引き、調査票の一行を見せます。", "zh": "按1850年美国2319万人的构成抽出你，并展示普查表上的一行。", "fr": "Qui vous étiez parmi 23,2 millions d'Américains, et votre ligne au recensement.", "es": "Quién eras entre 23,2 millones de estadounidenses, y tu línea en el censo."},
