@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const ninbetsuEdoManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#5a3a6b",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "ninbetsu-edo",
+  path: "/ninbetsu-edo",
+  status: "production",
+  name: { zh: "江户人别帐中的我", en: "You in an Edo-period temple register", es: "Tú en un registro del período Edo", fr: "Vous dans un registre de l'époque d'Edo", ja: "江戸の人別帳の中の私", ko: "에도 인별장 속 나" },
+  description: { zh: "按江户时代身份比例抽出你的身份，并写出你在宗门人别改帐上的一行。", en: "Draw your status by Edo-period population shares and see your line in a shūmon ninbetsu aratamechō.", es: "Tu estatus según las proporciones del período Edo y tu línea en el registro de templos.", fr: "Votre statut selon les proportions de l'époque d'Edo et votre ligne au registre des temples.", ja: "江戸時代の身分構成の割合であなたの身分を引き、宗門人別改帳のあなたの一行を書き出します。", ko: "에도 시대 신분 비율로 내 신분을 뽑고, 종문인별개장에 적힌 내 한 줄을 보여줘요." },
+};
+
 const tongsinsa1763Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -538,6 +551,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  ninbetsuEdoManifest,
   tongsinsa1763Manifest,
   banchado1795Manifest,
   gwageo1426Manifest,

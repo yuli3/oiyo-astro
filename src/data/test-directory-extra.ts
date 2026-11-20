@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "ninbetsu-edo",
+    title: {"ko": "에도 인별장 속 나 — 종문인별개장과 에도 시대 신분", "en": "You in an Edo-period temple register", "ja": "江戸の人別帳の中の私 — 宗門人別改帳と身分", "zh": "江户人别帐中的我", "fr": "Vous dans un registre de l'époque d'Edo", "es": "Tú en un registro del período Edo"},
+    description: {"ko": "에도 시대 신분 비율(백성 82.5%, 상인 6%, 무사 5.5% 등)로 내 신분을 뽑고, 종문인별개장 한 줄로 보여줘요.", "en": "Your Edo-period status by real population shares, written as a line in the temple register.", "ja": "江戸時代の身分構成（百姓82.5%、商人6%、武士5.5%など）で身分を引き、人別帳の一行で見せます。", "zh": "按江户时代身份比例抽出身份，以人别帐的一行呈现。", "fr": "Votre statut à Edo selon les vraies proportions, sous forme de ligne de registre.", "es": "Tu estatus en Edo según las proporciones reales, como línea de registro."},
+  },
+  {
     slug: "tongsinsa-1763",
     title: {"ko": "조선통신사 일행 속 나 — 1763년 계미통신사 477명", "en": "You in the 1763 Joseon embassy to Japan", "ja": "朝鮮通信使一行の中の私", "zh": "朝鲜通信使团中的我", "fr": "Vous dans l'ambassade coréenne de 1763", "es": "Tú en la embajada coreana de 1763"},
     description: {"ko": "1763년 통신사 477명(격군 228명 포함) 가운데 내 역할과 332일 여정, 실제 사건을 보여줘요.", "en": "Your role among the 477 of the 1763 embassy, its 332-day journey and what really happened.", "ja": "1763年通信使477人の中の役割と332日の旅。", "zh": "1763年通信使477人中你的角色与332天的旅程。", "fr": "Votre rôle parmi les 477 et le voyage de 332 jours.", "es": "Tu papel entre los 477 y el viaje de 332 días."},

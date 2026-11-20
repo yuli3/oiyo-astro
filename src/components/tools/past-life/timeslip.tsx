@@ -90,6 +90,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+  "ninbetsu-edo": { icon: "🏯", label: { ko: "에도 인별장 속 나", en: "You in an Edo temple register", ja: "江戸の人別帳の中の私", zh: "江户人别帐中的我", fr: "Vous dans un registre d'Edo", es: "Tú en un registro de Edo" } },
   "tongsinsa-1763": { icon: "⛵", label: { ko: "조선통신사 일행 속 나", en: "You in the 1763 embassy to Japan", ja: "朝鮮通信使一行の中の私", zh: "朝鲜通信使团中的我", fr: "Vous dans l'ambassade de 1763", es: "Tú en la embajada de 1763" } },
   "banchado-1795": { icon: "🐎", label: { ko: "1795 화성 행차 반차도 속 나", en: "You in the 1795 royal procession", ja: "1795年 華城行幸の班次図の中の私", zh: "1795华城行幸班次图中的我", fr: "Vous dans le cortège royal de 1795", es: "Tú en el cortejo real de 1795" } },
   "gwageo-1426": { icon: "📜", label: { ko: "과거시험 보러 가기", en: "Sit the 1426 civil exam", ja: "科挙を受けに行く", zh: "去考科举", fr: "Passer l'examen de 1426", es: "Presentar el examen de 1426" } },
