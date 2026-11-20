@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const census1850Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f3a5f",
+  domain: "ontology",
+  icon: "ClipboardList",
+  id: "census-1850",
+  path: "/census-1850",
+  status: "production",
+  name: { zh: "1850年美国普查中的我", en: "You in the 1850 U.S. census", es: "Tú en el censo de EE. UU. de 1850", fr: "Vous dans le recensement américain de 1850", ja: "1850年アメリカ国勢調査の中の私", ko: "1850 미국 센서스 속 나" },
+  description: { zh: "按1850年美国人口构成抽出你是谁，并写出普查员记下的你的一行。", en: "Draw who you were by the real 1850 population and see the line a census marshal would have written, or why there was none.", es: "Quién eras según la población real de 1850 y la línea que habría escrito el empadronador.", fr: "Qui vous étiez selon la population réelle de 1850 et la ligne qu'aurait écrite l'agent recenseur.", ja: "1850年アメリカの人口構成で自分を引き、調査員が書いた一行を見せます。", ko: "1850년 미국 인구 구성으로 내가 누구였는지 뽑고, 조사원이 적었을 내 한 줄을 보여줘요." },
+};
+
 const ninbetsuEdoManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -551,6 +564,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  census1850Manifest,
   ninbetsuEdoManifest,
   tongsinsa1763Manifest,
   banchado1795Manifest,

@@ -1,0 +1,128 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Census1850 from "../../components/tools/past-life/Census1850";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1850 미국 센서스 속 나 — 처음으로 한 사람씩 이름을 적은 인구조사",
+    description: "1850년 미국 인구 2,319만 명의 실제 구성(미국 태생 백인, 노예 320만 명, 아일랜드·독일 이민자, 자유인 흑인)으로 내가 누구였는지 뽑고, 조사원이 적었을 내 한 줄을 보여줘요.",
+    heading: "1850 미국 센서스 속 나",
+    sub: "처음으로 한 사람씩 이름을 적은 조사, 그 안의 내 한 줄",
+    intro: "1850년 미국 센서스는 처음으로 자유인 한 사람 한 사람의 이름·나이·직업·태어난 곳을 적었어요. 하지만 노예 320만 명은 이름 없이 숫자로만 남았어요. 그해 6월 1일, 나는 어떻게 적혔을까요?",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "1850년 실제 인구 구성을 천 명 단위로 나눠 뽑아요. 총인구 23,191,876명 가운데 노예 3,204,313명, 자유인 흑인 약 43만 명, 외국 태생 약 220만 명(아일랜드 100만·독일 60만·영국 39만), 나머지는 미국 태생 백인이에요.",
+      "생일로 뽑으면 나이는 지금 내 나이 그대로, 같은 생일은 언제나 같은 결과가 나와요.",
+      "한 줄의 이름·태어난 곳·직업·금액은 놀이용으로 지어낸 예시예요. 칸의 구성(15세 넘는 남자에게만 직업을 묻는 것 등)과 노예 명부의 형식은 실제 1850년 조사표를 따랐어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "1850년 센서스가 왜 특별한가요?", a: "그 전까지는 집주인 이름만 적고 나머지 식구는 머릿수로 셌어요. 1850년에 처음으로 자유인 모두의 이름을 적고 태어난 곳을 물었어요. 그래서 족보 찾기에서 가장 많이 쓰이는 기록 가운데 하나예요." },
+      { q: "노예였던 사람들은 어떻게 기록됐나요?", a: "따로 만든 노예 명부(제2표)에 주인의 이름 아래 나이·성별·피부색만 적혔고 이름은 적히지 않았어요. 해방 뒤인 1870년 센서스에서야 이름으로 기록됐어요." },
+      { q: "조사는 어떻게 했나요?", a: "1850년 6월 1일을 기준으로 조사원 3,231명이 집집마다 다니며 13개 항목을 적었어요. 그해 가장 큰 도시 뉴욕은 515,547명이었어요." },
+    ],
+  },
+  en: {
+    title: "You in the 1850 U.S. census: the first to name every free person",
+    description: "Draw who you were among 23.2 million Americans in 1850 (U.S.-born, Irish or German immigrant, free Black, or one of 3.2 million enslaved) and see the line a census marshal would have written.",
+    heading: "You in the 1850 U.S. census",
+    sub: "The first census to name every free person, and your line in it",
+    intro: "On June 1, 1850, for the first time, the census listed every free person by name, age, occupation and birthplace. The 3.2 million enslaved were counted only as numbers under their owners' names. How would you have been written down?",
+    howTitle: "How it works",
+    how: [
+      "You are drawn by the real 1850 make-up, in thousands: 23,191,876 people, of whom 3,204,313 enslaved, about 434,000 free Black Americans, about 2.2 million foreign-born (Ireland 1.0m, Germany 0.6m, Britain 0.39m), and the rest U.S.-born white.",
+      "With your birthday, your age is your real age today and the same birthday always gives the same result.",
+      "The name, birthplace, trade and dollar value are invented. The columns (occupation asked only of males over 15, for example) and the slave schedule follow the real 1850 forms.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Why is the 1850 census special?", a: "Earlier censuses named only the head of household. 1850 was the first to list every free person by name and to ask where they were born, which is why genealogists rely on it." },
+      { q: "How were enslaved people recorded?", a: "On a separate slave schedule: the owner's name, then each person's age, sex and colour, with no name. They first appear by name in the 1870 census, after emancipation." },
+      { q: "How was it taken?", a: "3,231 enumerators went door to door with 13 questions, counting everyone as of June 1, 1850. New York, the biggest city, had 515,547 people." },
+    ],
+  },
+  ja: {
+    title: "1850年アメリカ国勢調査の中の私 — 初めて一人ひとりの名を記した調査",
+    description: "1850年アメリカ2319万人の実際の構成（アメリカ生まれ、アイルランド・ドイツ移民、自由黒人、奴隷320万人）で自分を引き、調査員が書いた一行を見せます。",
+    heading: "1850年アメリカ国勢調査の中の私",
+    sub: "初めて一人ひとりの名を記した調査と、私の一行",
+    intro: "1850年6月1日、国勢調査は初めて自由人一人ひとりの名前・年齢・職業・出生地を記しました。けれど奴隷320万人は所有者の名の下に数字としてだけ残りました。あなたはどう書かれたでしょう。",
+    howTitle: "仕組み",
+    how: [
+      "1850年の実際の人口構成（総人口23,191,876人、奴隷3,204,313人、自由黒人約43万人、外国生まれ約220万人）を千人単位で引きます。",
+      "生年月日で引くと年齢はいまの年齢のまま、同じ誕生日はいつも同じ結果になります。",
+      "名前・出生地・職業・金額は架空の例です。欄の構成と奴隷台帳の形式は実際の1850年の調査票にならいました。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [
+      { q: "1850年の調査は何が特別？", a: "それまでは戸主の名だけでした。1850年に初めて自由人全員の名を記し、出生地を尋ねました。" },
+      { q: "奴隷はどう記録された？", a: "別の奴隷台帳に所有者の名と年齢・性別・肌の色だけが書かれ、名前はありませんでした。名前で載るのは解放後の1870年です。" },
+    ],
+  },
+  zh: {
+    title: "1850年美国普查中的我 — 首次逐一写下姓名的普查",
+    description: "按1850年美国2319万人的真实构成（美国出生白人、爱尔兰和德国移民、自由黑人、320万奴隶）抽出你是谁，并看普查员会写下的一行。",
+    heading: "1850年美国普查中的我",
+    sub: "首次逐一写下自由人姓名的普查，和其中的我",
+    intro: "1850年6月1日，美国普查首次逐一记录每个自由人的姓名、年龄、职业和出生地。但320万奴隶只以数字记在奴隶主名下。你会被怎样写下？",
+    howTitle: "怎么抽",
+    how: ["按1850年真实人口构成（总人口23,191,876，奴隶3,204,313，自由黑人约43万，外国出生约220万）以千人为单位抽取。", "姓名、出生地、职业和金额为虚构，栏目与奴隶表格式依照1850年真实表格。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "奴隶如何被记录？", a: "在单独的奴隶表上只写奴隶主姓名和每人的年龄、性别、肤色，没有名字。直到解放后的1870年普查才以名字记录。" }],
+  },
+  fr: {
+    title: "Vous dans le recensement américain de 1850",
+    description: "Qui étiez-vous parmi 23,2 millions d'Américains en 1850 (né sur place, immigré irlandais ou allemand, Noir libre, ou l'un des 3,2 millions d'esclaves) ? Votre ligne au recensement.",
+    heading: "Vous dans le recensement de 1850",
+    sub: "Le premier recensement à nommer chaque personne libre",
+    intro: "Le 1er juin 1850, le recensement nomme pour la première fois chaque personne libre, avec âge, métier et lieu de naissance. Les 3,2 millions d'esclaves ne sont que des chiffres sous le nom de leur propriétaire.",
+    howTitle: "Comment ça marche",
+    how: ["Tirage selon la population réelle de 1850, par milliers (23 191 876 habitants, dont 3 204 313 esclaves, environ 434 000 Noirs libres, 2,2 millions de nés à l'étranger).", "Nom, lieu de naissance, métier et montant sont inventés ; les colonnes suivent les vrais formulaires de 1850."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Comment les esclaves étaient-ils recensés ?", a: "Sur un registre à part : le nom du propriétaire, puis l'âge, le sexe et la couleur de chacun, sans nom. Ils apparaissent nommément pour la première fois en 1870." }],
+  },
+  es: {
+    title: "Tú en el censo de EE. UU. de 1850",
+    description: "Quién eras entre 23,2 millones de estadounidenses en 1850 (nacido allí, inmigrante irlandés o alemán, negro libre o uno de 3,2 millones de esclavizados) y tu línea en el censo.",
+    heading: "Tú en el censo de 1850",
+    sub: "El primer censo que nombró a cada persona libre",
+    intro: "El 1 de junio de 1850 el censo nombró por primera vez a cada persona libre, con edad, oficio y lugar de nacimiento. Los 3,2 millones de esclavizados quedaron solo como números bajo el nombre de su dueño.",
+    howTitle: "Cómo funciona",
+    how: ["Sorteo según la población real de 1850, por miles (23.191.876 personas, 3.204.313 esclavizadas, unos 434.000 negros libres, 2,2 millones nacidos fuera).", "Nombre, lugar de nacimiento, oficio y valor son inventados; las columnas siguen los formularios reales de 1850."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Cómo se registraba a los esclavizados?", a: "En un registro aparte: el nombre del dueño y la edad, sexo y color de cada persona, sin nombre. Aparecen con su nombre por primera vez en el censo de 1870." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/census-1850/")} ogImage="/images/past-life-1426/og/census-1850.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Census1850 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["ninbetsuEdo", "europe1426", "joseon1789"]} current="census1850" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>
