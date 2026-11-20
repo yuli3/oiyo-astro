@@ -1,0 +1,123 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import NinbetsuEdo from "../../components/tools/past-life/NinbetsuEdo";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "에도 인별장 속 나 — 에도 시대 일본의 신분과 종문인별개장",
+    description: "에도 시대 일본 사람은 모두 절의 장부(종문인별개장)에 올라 있었어요. 백성 82.5%, 상인 6%, 무사 5.5% 같은 실제 신분 비율로 내 신분을 뽑고, 장부에 적힌 내 한 줄을 보여줘요.",
+    heading: "에도 인별장 속 나",
+    sub: "에도 시대 일본, 절의 장부에 적힌 내 한 줄",
+    intro: "에도 시대 일본에서는 기독교를 막으려고 모든 사람을 어느 절의 신도로 장부에 올렸어요. 이 종문인별개장은 사실상 그 시대의 호적이자 인구조사였어요. 그 장부에 나는 어떻게 적혀 있을까요?",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "일본대백과전서가 제시한 에도 시대 신분 구성(무사 5~6%, 농민 80~85%, 장인 3% 안팎, 상인 6% 안팎, 차별받던 신분 1.7% 안팎, 신관·승려 1% 안팎)의 가운데 값으로 뽑아요.",
+      "생일로 뽑으면 나이는 지금 내 나이 그대로, 같은 생일은 언제나 같은 결과가 나와요.",
+      "장부 한 줄의 이름·절·소출(持高)은 놀이용으로 지어낸 예시예요. 실제 장부의 형식(집주인부터, 단나데라의 도장, 나이 표기)만 따랐어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "종문인별개장은 언제부터 있었나요?", a: "1634년 히라도의 장부가 가장 이르고, 1671년 막부가 모든 번에 작성을 명령해 원칙적으로 해마다 만들었어요. 1871년 호적법과 1872년 임신호적으로 이어졌어요." },
+      { q: "에도 시대에 무사는 얼마나 됐나요?", a: "가족을 포함해도 인구의 5~6% 정도였어요. 열 명 중 여덟 명은 농민이었어요." },
+      { q: "에도는 얼마나 큰 도시였나요?", a: "1723년 에도의 조닌(상인·장인)만 52만 6천 명이었고, 무사까지 합치면 약 100만 명이 살았어요." },
+    ],
+  },
+  en: {
+    title: "You in an Edo-period temple register (shūmon ninbetsu aratamechō)",
+    description: "Everyone in Edo-period Japan was listed in a temple register. Draw your status by real shares (farmers 82.5%, merchants 6%, samurai 5.5%) and see your line in the register.",
+    heading: "You in an Edo temple register",
+    sub: "Your line in the book every Japanese person was in",
+    intro: "To stamp out Christianity, Edo Japan registered every person with a Buddhist temple. These registers became the census of the age. How would you appear in one?",
+    howTitle: "How it works",
+    how: [
+      "Statuses are drawn by the midpoints of the encyclopedia ranges: samurai 5–6%, farmers 80–85%, artisans ~3%, merchants ~6%, outcast status ~1.7%, priests ~1%.",
+      "The name, temple and holding on your line are invented; only the format follows real registers.",
+    ],
+    faqTitle: "FAQ",
+    faq: [{ q: "When did these registers start?", a: "The earliest is from 1634 in Hirado; in 1671 the shogunate ordered every domain to keep one. They gave way to the 1871–72 family registers." }],
+  },
+  ja: {
+    title: "江戸の人別帳の中の私 — 宗門人別改帳と江戸時代の身分構成",
+    description: "江戸時代の人はみな寺の帳面（宗門人別改帳）に載っていました。百姓82.5%、商人6%、武士5.5%などの身分構成の割合であなたの身分を引き、人別帳の一行を書き出します。",
+    heading: "江戸の人別帳の中の私",
+    sub: "寺の帳面に記された、私の一行",
+    intro: "江戸時代、キリシタン禁制のためにすべての人がいずれかの寺の檀家として帳面に載せられました。宗門人別改帳は事実上の戸籍であり人口調査でした。その帳面に、あなたはどう書かれていたでしょう。",
+    howTitle: "仕組み",
+    how: [
+      "日本大百科全書の示す身分構成（士5～6%、農80～85%、工3%前後、商6%前後、被差別身分1.7%前後、神官僧尼1%前後）の中間値で引きます。",
+      "生年月日で引くと年齢はいまの年齢のまま、同じ誕生日はいつも同じ結果になります。",
+      "一行の名前・寺・持高は遊びのための架空の例で、形式だけを実際の帳面にならいました。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [
+      { q: "宗門人別改帳はいつから？", a: "1634年の平戸の帳面が最も早く、1671年（寛文11）に幕府が諸藩に作成を命じ、原則として毎年作られました。1871年の戸籍法、1872年の壬申戸籍に引き継がれました。" },
+      { q: "武士はどれくらいいた？", a: "家族を含めても人口の5～6%ほど。十人に八人は百姓でした。" },
+    ],
+  },
+  zh: {
+    title: "江户人别帐中的我 — 宗门人别改帐与江户时代的身份",
+    description: "江户时代每个日本人都登记在寺院帐册上。按百姓82.5%、商人6%、武士5.5%等真实比例抽出你的身份，并写出帐册上的一行。",
+    heading: "江户人别帐中的我",
+    sub: "寺院帐册上属于我的一行",
+    intro: "江户时代为禁止基督教，所有人都须登记为某寺院的檀家。宗门人别改帐实际上就是当时的户籍与人口调查。",
+    howTitle: "玩法说明",
+    how: ["按日本大百科全书给出的身份构成区间中值抽取。", "帐上的名字、寺院与持高为游戏虚构，仅格式仿照真实帐册。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "宗门人别改帐始于何时？", a: "最早见于1634年平户，1671年幕府命各藩编制，1871年户籍法后由近代户籍取代。" }],
+  },
+  fr: {
+    title: "Vous dans un registre de l'époque d'Edo (shūmon ninbetsu)",
+    description: "À l'époque d'Edo, chacun figurait au registre d'un temple. Tirez votre statut selon les vraies proportions et voyez votre ligne.",
+    heading: "Vous dans un registre d'Edo",
+    sub: "Votre ligne au registre des temples",
+    intro: "Pour interdire le christianisme, le Japon d'Edo inscrivait chacun auprès d'un temple bouddhiste. Ces registres servirent de recensement.",
+    howTitle: "Méthode",
+    how: ["Tirage selon les valeurs médianes de l'encyclopédie (samouraïs 5–6 %, paysans 80–85 %…).", "Nom, temple et récolte sont inventés ; seul le format suit les vrais registres."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Depuis quand ?", a: "Le plus ancien date de 1634 ; dès 1671 tous les domaines devaient en tenir un, jusqu'en 1871–1872." }],
+  },
+  es: {
+    title: "Tú en un registro del período Edo (shūmon ninbetsu)",
+    description: "En el período Edo todos figuraban en el registro de un templo. Saca tu estatus según las proporciones reales y mira tu línea.",
+    heading: "Tú en un registro de Edo",
+    sub: "Tu línea en el registro de templos",
+    intro: "Para prohibir el cristianismo, el Japón de Edo inscribía a cada persona en un templo budista. Estos registros fueron el censo de la época.",
+    howTitle: "Método",
+    how: ["Sorteo según los valores medios de la enciclopedia (samuráis 5–6 %, campesinos 80–85 %…).", "Nombre, templo y cosecha son inventados; solo el formato sigue los registros reales."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Desde cuándo?", a: "El más antiguo es de 1634; desde 1671 todos los dominios debían llevarlo, hasta 1871–1872." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/ninbetsu-edo/")} ogImage="/images/past-life-1426/og/ninbetsu-edo.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><NinbetsuEdo locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["tongsinsa1763", "joseon1789", "europe1426"]} current="ninbetsuEdo" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>
