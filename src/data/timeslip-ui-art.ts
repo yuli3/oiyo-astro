@@ -5,6 +5,7 @@ export const TIMESLIP_UI_ROOT = "/images/timeslip-ui-v2/";
 // Florence and wax are reserved; neither implies a shipped episode or seal.
 export const TIMESLIP_CARD_ART: Partial<Record<EpisodeId, string>> = {
   // 2026-11-20: code-rendered annals page (no AI art).
+  "banchado-1795": "cards/banchado-blank.webp",
   "gwageo-1426": "cards/gwageo-blank.webp",
   "lunch-1426": "cards/lunch-blank.webp",
   "sillok-1426": "cards/sillok-blank.webp",

@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const banchado1795Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2f5d50",
+  domain: "ontology",
+  icon: "Flag",
+  id: "banchado-1795",
+  path: "/banchado-1795",
+  status: "production",
+  name: { zh: "1795华城行幸班次图中的我", en: "You in the 1795 royal procession", es: "Tú en el cortejo real de 1795", fr: "Vous dans le cortège royal de 1795", ja: "1795年 華城行幸の班次図の中の私", ko: "1795 화성 행차 반차도 속 나" },
+  description: { zh: "在正祖1795年华城行幸班次图所画的1,779人中，抽出你的位置：擎旗兵、骑马乐手、宫女、轿夫或官员。", en: "Find your place among the 1,779 people drawn in King Jeongjo's 1795 procession to Hwaseong: flag bearer, mounted band, court lady, palanquin crew or official.", es: "Tu lugar entre las 1.779 personas del cortejo de 1795 del rey Jeongjo.", fr: "Votre place parmi les 1 779 personnages du cortège royal de 1795.", ja: "正祖の1795年華城行幸を描いた班次図の1,779人の中から、あなたの位置を引きます。", ko: "정조의 1795년 화성 행차를 그린 반차도 속 1,779명 가운데 내 자리를 뽑아요. 깃발수·말 탄 악대·나인·가마 수행원·관원." },
+};
+
 const gwageo1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -512,6 +525,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  banchado1795Manifest,
   gwageo1426Manifest,
   lunch1426Manifest,
   sillok1426Manifest,
