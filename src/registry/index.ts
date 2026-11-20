@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const hometown1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#5b4a2f",
+  domain: "ontology",
+  icon: "MapPin",
+  id: "hometown-1426",
+  path: "/hometown-1426",
+  status: "production",
+  name: { zh: "600年前我家乡是哪个郡县？", en: "Your town in 1432 Joseon", es: "Tu ciudad en la Corea de 1432", fr: "Votre ville dans la Corée de 1432", ja: "600年前、わが町はどの郡県？", ko: "내 동네는 600년 전 어느 고을?" },
+  description: { zh: "按《世宗实录·地理志》找出你住的地方当年是哪个郡县：户口、排名与土产。", en: "Find the county your Korean town belonged to in the Sejong Sillok gazetteer: households, head count, rank and local specialties.", es: "El distrito al que pertenecía tu ciudad coreana en el registro de Sejong: hogares, personas, puesto y productos.", fr: "Le district de votre ville coréenne dans le registre de Sejong : foyers, inscrits, rang et spécialités.", ja: "世宗実録地理志で、いまの町が当時どの郡県だったか。戸口・順位・土産まで。", ko: "세종실록 지리지로 지금 사는 곳이 그때 어느 고을이었는지 찾아요. 호구·순위·토산까지." },
+};
+
 const ancestors1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -460,6 +473,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  hometown1426Manifest,
   ancestors1426Manifest,
   joseon1789Manifest,
   france1789Manifest,
