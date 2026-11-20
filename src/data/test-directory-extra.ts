@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "gwageo-1426",
+    title: {"ko": "과거시험 보러 가기 — 1426년 세종 식년 문과", "en": "Sit the 1426 Joseon civil exam", "ja": "科挙を受けに行く — 1426年の式年文科", "zh": "去考科举 — 1426年式年文科", "fr": "Passer l'examen civil de 1426", "es": "Presentar el examen civil de 1426"},
+    description: {"ko": "경서 강경·부 운 맞추기·세종의 실제 책문(경원 문제)을 풀고, 1426년 실제 급제자 34명 명단 속 내 자리를 확인해요.", "en": "Classics, rhymes and Sejong's real question on the northern frontier, then your place among the 34 real passers.", "ja": "講経・賦・世宗の実際の策問を解き、実際の合格者34人の中の順位を見ます。", "zh": "讲经、作赋、回答世宗真实策问，看你在34名真实及第者中的位置。", "fr": "Classiques, rimes et la vraie question de Sejong, puis votre place parmi les 34 reçus.", "es": "Clásicos, rimas y la pregunta real de Sejong, y tu lugar entre los 34 aprobados."},
+  },
+  {
     slug: "lunch-1426",
     title: {"ko": "오늘 점심을 600년 전으로 — 1426년 조선 밥상 재료 생존율", "en": "Your lunch in 1426 Korea — which ingredients survive?", "ja": "今日のランチを600年前へ", "zh": "把今天的午餐带回600年前", "fr": "Votre déjeuner dans la Corée de 1426", "es": "Tu almuerzo en la Corea de 1426"},
     description: {"ko": "김치찌개·짜장면·피자 등 25가지 메뉴의 재료가 1426년에 있었는지, 고추·감자·설탕의 전래 시기와 함께 보여줘요.", "en": "25 dishes checked ingredient by ingredient against what Korea had in 1426, with arrival dates for chili, potato and sugar.", "ja": "25のメニューの食材が1426年にあったかを、唐辛子・じゃがいも・砂糖の伝来とともに。", "zh": "逐一核对25道菜的食材在1426年是否存在，附辣椒、土豆、糖的传入时间。", "fr": "25 plats vérifiés ingrédient par ingrédient pour la Corée de 1426.", "es": "25 platos revisados ingrediente por ingrediente para la Corea de 1426."},

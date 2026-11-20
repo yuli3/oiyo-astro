@@ -90,6 +90,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+  "gwageo-1426": { icon: "📜", label: { ko: "과거시험 보러 가기", en: "Sit the 1426 civil exam", ja: "科挙を受けに行く", zh: "去考科举", fr: "Passer l'examen de 1426", es: "Presentar el examen de 1426" } },
   "lunch-1426": { icon: "🍚", label: { ko: "오늘 점심을 600년 전으로", en: "Your lunch in 1426", ja: "今日のランチを600年前へ", zh: "把午餐带回600年前", fr: "Votre déjeuner en 1426", es: "Tu almuerzo en 1426" } },
   "sillok-1426": { icon: "📖", label: { ko: "내 생일의 실록", en: "Your birthday in the 1426 annals", ja: "誕生日の実録", zh: "我生日那天的实录", fr: "Votre anniversaire en 1426", es: "Tu cumpleaños en 1426" } },
   "hometown-1426": { icon: "🗺️", label: { ko: "내 동네는 600년 전 어느 고을?", en: "Your town in 1432 Joseon", ja: "600年前、わが町はどの郡県？", zh: "600年前我家乡是哪个郡县？", fr: "Votre ville dans la Corée de 1432", es: "Tu ciudad en la Corea de 1432" } },

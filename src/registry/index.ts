@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const gwageo1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7a2e2e",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "gwageo-1426",
+  path: "/gwageo-1426",
+  status: "production",
+  name: { zh: "去考1426年的科举", en: "Sit the 1426 civil exam", es: "Presenta el examen civil de 1426", fr: "Passez l'examen civil de 1426", ja: "1426年の科挙を受けに行く", ko: "과거시험 보러 가기" },
+  description: { zh: "参加世宗八年丙午式年文科：讲经、作赋、回答世宗真实的策问，看你在真实及第名单中排第几。", en: "Sit Sejong's 1426 civil exam: classics, rhymes and the king's real policy question, then find your place on the real pass list.", es: "Presenta el examen de 1426: clásicos, rimas y la pregunta real del rey Sejong.", fr: "Passez l'examen de 1426 : classiques, rimes et la vraie question du roi Sejong.", ja: "世宗8年丙午の式年文科へ。講経・賦・世宗の実際の策問に答え、実際の合格者名簿での順位を見ます。", ko: "세종 8년 병오 식년 문과에 응시해요. 경서 강경, 부 운 맞추기, 세종의 실제 책문을 거쳐 그해 진짜 급제자 명단 속 내 자리를 보여줘요." },
+};
+
 const lunch1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -499,6 +512,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  gwageo1426Manifest,
   lunch1426Manifest,
   sillok1426Manifest,
   hometown1426Manifest,
