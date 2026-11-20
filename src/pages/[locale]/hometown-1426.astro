@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Hometown1426 from "../../components/tools/past-life/Hometown1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "내 동네는 600년 전 어느 고을? — 세종실록 지리지 호구·토산 찾기",
+    description: "지금 사는 시·군이 세종 때 어느 고을이었는지 찾아요. 세종실록 지리지 337개 고을의 호(戶)·구(口), 전국 순위, 그 고을의 토산까지 원문 그대로 보여줘요.",
+    heading: "내 동네는 600년 전 어느 고을?",
+    sub: "세종실록 지리지로 찾는 우리 고을",
+    intro: "1432년 무렵 세종은 전국 고을의 집 수, 사람 수, 특산물을 조사해 지리지로 묶었어요. 지금 사는 곳 이름을 넣으면 그때 어느 도의 어느 고을이었는지, 몇 집 몇 명이 살았고 무엇이 났는지 원문 숫자로 보여줘요.",
+    howTitle: "어떻게 찾나요",
+    how: [
+      "자료: 『세종실록』 지리지(148~155권, 1454년 실록에 실림, 1432년 무렵 조사). 한성·개성을 포함한 337개 고을의 호·구·토산을 위키문헌 원문에서 옮겼어요.",
+      "호(戶)·구(口): 고을 본읍과 그 아래 속현·향·부곡 숫자를 더했어요. 이렇게 더해야 도 합계와 맞아요. 숫자 꼴이 깨진 3곳(한성 口, 안협, 나주 口)은 '판독 불가'로 두었어요.",
+      "지명 대응: 지금 이름이 고을 이름과 같으면 바로 찾고(수원·안동·전주…), 이름이 바뀐 곳(서울→한성, 부산→동래, 성남→광주, 포항→영일·흥해·장기·청하…)은 대응표로 찾아요. 경계가 달라 대략이에요.",
+      "순위와 비율: 구(口)가 읽히는 334개 고을을 사람 수로 줄 세우고, 지리지 전체 口 74만 5,140명 대비 비율을 구해요.",
+      "실제 인구 짐작: 같은 때 조선 인구 추정 약 550만 명(김재호)을 지리지 口 합계로 나눈 비율을 고을 口에 곱한 아주 거친 값이에요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "세종실록 지리지에는 무엇이 적혀 있나요?", a: "도와 고을마다 연혁, 경계, 호(戶)·구(口) 수, 성씨, 땅의 성질, 토공(나라에 바친 물건), 토산(귀한 특산물), 성곽과 봉수 같은 것이 적혀 있어요. 이 페이지는 호·구와 토산만 보여줘요." },
+      { q: "구(口)가 왜 이렇게 적나요?", a: "지리지 口를 다 더하면 약 74만 명인데, 그때 조선 인구는 약 550만 명으로 추정돼요. 군역을 질 남자 위주로 적어서 여자·아이·노비가 많이 빠졌기 때문이에요." },
+      { q: "서울은 어느 고을이었나요?", a: "한성부예요. 지리지에는 다섯 부(五部)의 호 17,015호만 적혀 있고 구(口)는 없어요." },
+      { q: "지금 동네와 고을 경계가 정확히 같나요?", a: "아니요. 지금 시·군은 여러 고을이 합쳐지거나 나뉜 결과라서, 대응은 중심지 기준의 대략이에요." },
+    ],
+  },
+  en: {
+    title: "Your Korean town in 1432 — Sejong Sillok gazetteer lookup",
+    description: "Find which Joseon county your Korean city belonged to around 1432, with the gazetteer's own household and head counts, its rank among 337 counties and its local specialties.",
+    heading: "Your town in 1432 Joseon",
+    sub: "Look it up in King Sejong's gazetteer",
+    intro: "Around 1432 King Sejong had every county surveyed for households, people and notable products, later printed in his annals. Type a Korean city and see which county it was, how many lived there and what it was known for.",
+    howTitle: "How it works",
+    how: [
+      "Source: the geography section of the Sejong Sillok (vols. 148–155, printed 1454), 337 counties including Hanseong and Gaeseong, transcribed from the Wikisource text.",
+      "Households and people: the county seat plus its subordinate districts, which is what matches the provincial totals. Three garbled numbers are shown as unreadable.",
+      "Place matching: same-name places match directly; renamed ones use a lookup table (Seoul → Hanseong, Busan → Dongnae, Pohang → Yeongil and neighbours). Borders differ, so it is approximate.",
+      "The 'real population' line scales the head count by Joseon's estimated 5.5 million people over the gazetteer total: a very rough guess.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Why are the head counts so low?", a: "The gazetteer totals about 745,000 people while Joseon had an estimated 5.5 million. Registers focused on men liable for service." },
+      { q: "Do modern borders match?", a: "No. Modern cities merge or split old counties, so the match is approximate." },
+    ],
+  },
+  ja: {
+    title: "600年前、わが町はどの郡県？ 世宗実録地理志で探す",
+    description: "韓国のいまの市・郡が世宗の時代にどの郡県だったか。地理志337郡県の戸・口、順位、土産を原文の数字で見せます。",
+    heading: "600年前、わが町はどの郡県？",
+    sub: "世宗実録地理志で探す",
+    intro: "1432年ごろ、世宗は全国の郡県の戸数・人数・特産を調べさせました。韓国の地名を入れると、当時どの郡県だったかがわかります。",
+    howTitle: "探し方",
+    how: [
+      "資料：『世宗実録』地理志（148〜155巻）。漢城・開城を含む337郡県の戸・口・土産をウィキソースの原文から写しました。",
+      "地名の対応：同じ名前はそのまま、名前が変わった所は対応表で探します。境界が違うので目安です。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [{ q: "口が少ないのはなぜ？", a: "地理志の口の合計は約74万人ですが、当時の人口は約550万人と推定されます。軍役を負う男子中心に記したためです。" }],
+  },
+  zh: {
+    title: "600年前我家乡是哪个郡县？用《世宗实录·地理志》查找",
+    description: "找出韩国今天的市郡在世宗时代属于哪个郡县，并查看地理志337个郡县的户口、排名与土产原文数字。",
+    heading: "600年前我家乡是哪个郡县？",
+    sub: "用《世宗实录·地理志》查找",
+    intro: "约1432年，世宗下令调查全国郡县的户数、人口与特产。输入韩国地名，即可看到当年属于哪个郡县。",
+    howTitle: "查找方法",
+    how: [
+      "资料：《世宗实录·地理志》（卷148–155），含汉城、开城在内的337个郡县，户口与土产据维基文库原文转录。",
+      "地名对应：同名直接匹配，改名的地方用对照表。边界不同，仅为大致对应。",
+    ],
+    faqTitle: "常见问题",
+    faq: [{ q: "为什么口数这么少？", a: "地理志口数合计约74万，而当时朝鲜人口估计约550万。登记以服役男子为主。" }],
+  },
+  fr: {
+    title: "Votre ville coréenne en 1432 — le registre géographique de Sejong",
+    description: "Le district de Joseon auquel appartenait votre ville coréenne vers 1432 : foyers et inscrits d'après le registre, rang parmi 337 districts et spécialités locales.",
+    heading: "Votre ville en 1432",
+    sub: "D'après le registre du roi Sejong",
+    intro: "Vers 1432, le roi Sejong fit recenser foyers, habitants et produits de chaque district. Saisissez une ville coréenne pour retrouver son district d'alors.",
+    howTitle: "Méthode",
+    how: [
+      "Source : section géographique des Annales de Sejong (vol. 148–155), 337 districts, d'après le texte de Wikisource.",
+      "Correspondance : noms identiques en direct, noms changés via une table. Les limites diffèrent : c'est approximatif.",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Pourquoi si peu d'inscrits ?", a: "Le registre totalise environ 745 000 personnes pour une population estimée à 5,5 millions : il visait surtout les hommes astreints au service." }],
+  },
+  es: {
+    title: "Tu ciudad coreana en 1432 — el registro geográfico de Sejong",
+    description: "El distrito de Joseon al que pertenecía tu ciudad coreana hacia 1432: hogares y personas según el registro, puesto entre 337 distritos y productos locales.",
+    heading: "Tu ciudad en 1432",
+    sub: "Según el registro del rey Sejong",
+    intro: "Hacia 1432, el rey Sejong hizo contar hogares, personas y productos de cada distrito. Escribe una ciudad coreana y verás su distrito de entonces.",
+    howTitle: "Cómo funciona",
+    how: [
+      "Fuente: sección geográfica de los Anales de Sejong (vols. 148–155), 337 distritos, según el texto de Wikisource.",
+      "Correspondencia: nombres iguales directamente; los que cambiaron, con una tabla. Los límites difieren: es aproximado.",
+    ],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Por qué tan pocas personas?", a: "El registro suma unas 745.000 personas frente a unos 5,5 millones estimados: se anotaba sobre todo a los hombres sujetos a servicio." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/hometown-1426/")} ogImage="/images/past-life-1426/og/hometown-1426.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Hometown1426 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["joseon1426", "ancestors1426", "joseon1789"]} current="hometown1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

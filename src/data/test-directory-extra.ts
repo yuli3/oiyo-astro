@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "hometown-1426",
+    title: {"ko": "내 동네는 600년 전 어느 고을? — 세종실록 지리지 호구·토산", "en": "Your Korean town in 1432 — Sejong Sillok gazetteer", "ja": "600年前、わが町はどの郡県？", "zh": "600年前我家乡是哪个郡县？", "fr": "Votre ville coréenne en 1432", "es": "Tu ciudad coreana en 1432"},
+    description: {"ko": "지금 사는 시·군을 세종실록 지리지 337개 고을에 맞춰 호·구, 고을 순위, 토산을 보여줘요.", "en": "Match your city to one of 337 counties in the gazetteer: households, head count, rank and local products.", "ja": "市・郡を地理志の337郡県に対応させ、戸口・順位・土産を見せます。", "zh": "把你的市郡对应到地理志337个郡县，显示户口、排名与土产。", "fr": "Votre ville parmi les 337 districts du registre : foyers, inscrits, rang et produits.", "es": "Tu ciudad entre los 337 distritos del registro: hogares, personas, puesto y productos."},
+  },
+  {
     slug: "ancestors-1426",
     title: {"ko": "600년 전 내 조상은 몇 명? — 족보 칸과 실제 조상", "en": "How many ancestors did you have in 1426?", "ja": "600年前の祖先は何人？", "zh": "600年前我有多少祖先？", "fr": "Combien d'ancêtres aviez-vous en 1426 ?", "es": "¿Cuántos antepasados tenías en 1426?"},
     description: {"ko": "족보 칸 2ⁿ과 그때 인구로 서로 다른 조상 수, 그때 사람 몇 명 중 1명이 내 조상인지 계산해요.", "en": "Tree slots (2ⁿ) against the 1426 population: distinct ancestors and what share of people then are yours.", "ja": "家系図の枠2ⁿと当時の人口から、異なる祖先の数と当時の何人に1人が祖先かを計算します。", "zh": "用家谱格子2ⁿ与当时人口，计算不同祖先数，以及当时每多少人中有1人是你的祖先。", "fr": "Cases de l'arbre (2ⁿ) contre la population de 1426 : ancêtres distincts et part des gens d'alors.", "es": "Casillas del árbol (2ⁿ) frente a la población de 1426: antepasados distintos y qué parte de la gente de entonces."},

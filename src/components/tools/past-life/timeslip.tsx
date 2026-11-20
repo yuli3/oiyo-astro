@@ -90,6 +90,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+  "hometown-1426": { icon: "🗺️", label: { ko: "내 동네는 600년 전 어느 고을?", en: "Your town in 1432 Joseon", ja: "600年前、わが町はどの郡県？", zh: "600年前我家乡是哪个郡县？", fr: "Votre ville dans la Corée de 1432", es: "Tu ciudad en la Corea de 1432" } },
   "ancestors-1426": { icon: "🌳", label: { ko: "600년 전 내 조상은 몇 명?", en: "How many ancestors in 1426?", ja: "600年前の祖先は何人？", zh: "600年前我有多少祖先？", fr: "Combien d'ancêtres en 1426 ?", es: "¿Cuántos antepasados en 1426?" } },
   "silla-golpum": { icon: "🏛️", label: { ko: "1300년 전 신라의 나 (골품)", en: "You in Silla: bone rank", ja: "新羅のわたし（骨品）", zh: "新罗的我（骨品）", fr: "Vous à Silla : rang d'os", es: "Tú en Silla: rango de hueso" } },
   "joseon-1789": { icon: "📜", label: { ko: "1789년 호적 속 나", en: "You in Joseon's 1789 register", ja: "1789年戸籍の中のわたし", zh: "1789年户籍里的我", fr: "Vous au registre de 1789", es: "Tú en el registro de 1789" } },
