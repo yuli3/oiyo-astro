@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const sillok1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#3d4f6b",
+  domain: "ontology",
+  icon: "BookOpen",
+  id: "sillok-1426",
+  path: "/sillok-1426",
+  status: "production",
+  name: { zh: "我生日那天的实录", en: "Your birthday in the 1426 annals", es: "Tu cumpleaños en los anales de 1426", fr: "Votre anniversaire dans les annales de 1426", ja: "誕生日の実録", ko: "내 생일의 실록" },
+  description: { zh: "世宗八年（1426）你生日那天，《世宗实录》记了什么：原文与白话摘要。", en: "What the Sejong Sillok recorded on your birthday in 1426: the original entry with a plain summary.", es: "Qué anotaron los Anales de Sejong el día de tu cumpleaños en 1426.", fr: "Ce que notent les Annales de Sejong le jour de votre anniversaire en 1426.", ja: "世宗8年（1426）、あなたの誕生日に実録は何を記したか。原文とやさしい要約。", ko: "세종 8년(1426) 내 생일에 실록에는 무슨 일이 적혔을까요? 원문과 쉬운 풀이로 보여줘요." },
+};
+
 const hometown1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -473,6 +486,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  sillok1426Manifest,
   hometown1426Manifest,
   ancestors1426Manifest,
   joseon1789Manifest,
