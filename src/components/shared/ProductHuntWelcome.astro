@@ -1,0 +1,59 @@
+---
+// 2026-11-21 Product Hunt 출시(00:01 PT = 17:01 KST)용 환영 띠.
+// PH는 링크에 ?ref=producthunt 를 붙인다. 그 방문자에게만 보이고(정적 HTML에는
+// hidden), 세션 안에서는 다른 페이지로 옮겨도 유지, 닫으면 세션 동안 다시 안 뜬다.
+// GA4 이벤트 producthunt_landing 으로 유입을 따로 센다(utm 없이 들어와도 집계).
+// 출시 주가 지나면 지워도 된다: 다른 곳에서 이 컴포넌트에 의존하지 않는다.
+---
+<div
+  id="ph-welcome"
+  hidden
+  role="region"
+  aria-label="Welcome from Product Hunt"
+  class="border-b border-border bg-muted text-foreground"
+>
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3 text-sm">
+    <p class="min-w-0 flex-1">
+      <b>Hi Product Hunt!</b> Start with
+      <a class="font-semibold text-primary underline underline-offset-2" href="/en/reincarnation-country/">Reborn Today</a>
+      (where would you be born today?), or plug our free tools into your AI via
+      <a class="font-semibold text-primary underline underline-offset-2" href="https://api.oiyo.net/">MCP at api.oiyo.net</a>.
+    </p>
+    <button
+      type="button"
+      id="ph-welcome-close"
+      class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-muted-foreground hover:text-foreground"
+      aria-label="Close"
+    >
+      ✕
+    </button>
+  </div>
+</div>
+<script>
+  import { gaEvent } from '../../lib/analytics/ga-event';
+  const KEY = 'oiyo-ph-welcome';
+  const box = document.getElementById('ph-welcome');
+  const read = (): string | null => {
+    try { return sessionStorage.getItem(KEY); } catch { return null; }
+  };
+  const write = (v: string) => {
+    try { sessionStorage.setItem(KEY, v); } catch { /* private mode: show once per page */ }
+  };
+  const params = new URLSearchParams(location.search);
+  const fromPh =
+    params.get('ref') === 'producthunt' ||
+    params.get('utm_source') === 'producthunt' ||
+    /(^|\.)producthunt\.com$/.test((() => { try { return new URL(document.referrer).hostname; } catch { return ''; } })());
+  const state = read();
+  if (fromPh && state === null) {
+    write('shown');
+    gaEvent('producthunt_landing', { page_path: location.pathname });
+  }
+  if (box && (fromPh || state === 'shown') && state !== 'closed') {
+    box.hidden = false;
+    document.getElementById('ph-welcome-close')?.addEventListener('click', () => {
+      box.hidden = true;
+      write('closed');
+    });
+  }
+</script>
