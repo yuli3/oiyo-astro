@@ -122,9 +122,12 @@ export default function NinbetsuEdo({ locale }: { locale: Locale }) {
           <section className="rounded-3xl border border-border bg-card p-6 text-center shadow-md">
             <p className="text-sm font-bold text-muted-foreground">{pick(C.heroKicker, l)}</p>
             <p className="mt-3 text-3xl font-black text-primary">{pick(status.name, l)}</p>
-            <div className="mt-3">
-              <RarityBadge n={oneIn(status)} l={l} fmt={fmt} />
-            </div>
+            {/* No rarity badge for the discriminated status: a "how rare" score would make a game of it. */}
+            {status.id !== "senmin" && (
+              <div className="mt-3">
+                <RarityBadge n={oneIn(status)} l={l} fmt={fmt} />
+              </div>
+            )}
             <p className="mt-4 text-base leading-relaxed text-foreground">{pick(status.life, l)}</p>
           </section>
 
