@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Tongsinsa1763 from "../../components/tools/past-life/Tongsinsa1763";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "조선통신사 일행 속 나 — 1763년 계미통신사 477명 중 내 역할",
+    description: "1763년 에도로 떠난 계미통신사 477명. 삼사·역관·제술관·의원·화원·격군 가운데 내 역할을 뽑고, 332일 여정과 실제로 있었던 일을 보여줘요.",
+    heading: "조선통신사 일행 속 나",
+    sub: "1763년 계미통신사, 477명 중 한 사람",
+    intro: "조선은 1607년부터 1811년까지 12번 일본에 통신사를 보냈어요. 1763년 열한 번째 사행은 정사 조엄을 비롯해 477명이 배 여섯 척에 나눠 타고 에도까지 갔어요. 그 가운데 나는 누구였을까요?",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "1763년 사행 477명을 역할별로 나눠 인원 비율대로 뽑아요. 노 젓는 격군 228명은 1763년의 실제 수예요.",
+      "나머지 직책은 통신사의 일반적인 구성(역관 20, 군관 17, 제술관·서기 4, 의원 3, 화원·사자관 4, 자제군관 5, 노자 50, 삼사 3)을 따르고, 남은 143명을 악대·의장대·소동·마상재 등으로 묶었어요.",
+      "생일로 뽑으면 같은 생일은 언제나 같은 역할이 나와요.",
+      "날짜는 음력이에요. 출발부터 복명까지 332일, 왕복 11,470리였어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "통신사는 왜 일본에 갔나요?", a: "주로 새 쇼군이 오를 때 축하하고 국서를 주고받기 위해서였어요. 조선 후기 열두 번 가운데 마지막(1811)은 쓰시마에서 국서를 교환했어요." },
+      { q: "1763년 통신사와 고구마는 무슨 관계인가요?", a: "정사 조엄이 돌아오는 길에 고구마 종자와 기르는 법, 저장하는 법을 배워 왔어요. 조선에 고구마가 퍼지는 계기 가운데 하나가 됐어요." },
+      { q: "모든 사람이 에도까지 갔나요?", a: "아니에요. 배와 일부 인원은 오사카에 남았어요. 1764년에는 106명이 오사카에 남고 나머지가 교토를 거쳐 에도로 갔어요." },
+    ],
+  },
+  en: {
+    title: "You in the 1763 Joseon embassy to Japan (Tongsinsa)",
+    description: "Find your role among the 477 people of the 1763 Korean embassy to Edo: envoy, interpreter, poet, physician, painter or oarsman, with its 332-day journey.",
+    heading: "You in the 1763 embassy to Japan",
+    sub: "One of 477 sailing for Edo",
+    intro: "Joseon sent twelve embassies to Japan between 1607 and 1811. The eleventh, in 1763, carried 477 people in six ships all the way to the shogun in Edo. Which one are you?",
+    howTitle: "How it works",
+    how: [
+      "Roles are drawn in proportion to the 477. The 228 oarsmen are the real 1763 figure; other roles follow the usual make-up of these embassies.",
+      "Birthday mode always gives the same birthday the same role. Dates are lunar; the trip took 332 days.",
+    ],
+    faqTitle: "FAQ",
+    faq: [{ q: "Did everyone reach Edo?", a: "No. The ships and 106 people stayed in Osaka while the rest went on via Kyoto." }],
+  },
+  ja: {
+    title: "朝鮮通信使一行の中の私 — 1763年 癸未通信使477人",
+    description: "1763年に江戸へ向かった癸未通信使477人。三使・訳官・製述官・医員・画員・格軍のうち、あなたの役割を引きます。",
+    heading: "朝鮮通信使一行の中の私",
+    sub: "1763年 癸未通信使、477人のひとり",
+    intro: "朝鮮は1607年から1811年まで12回、日本に通信使を送りました。1763年の第11次は正使・趙曮ら477人が6隻の船で江戸まで旅しました。",
+    howTitle: "仕組み",
+    how: ["477人を役割ごとに人数比で引きます。格軍228人は1763年の実数、他は通信使の一般的な構成によります。", "日付は旧暦。出発から復命まで332日でした。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "全員が江戸まで行った？", a: "いいえ。船と一部の人員（1764年は106人）は大坂に残りました。" }],
+  },
+  zh: {
+    title: "朝鲜通信使团中的我 — 1763年癸未通信使477人",
+    description: "1763年前往江户的癸未通信使477人，抽出你是三使、译官、制述官、医员、画员还是格军。",
+    heading: "朝鲜通信使团中的我",
+    sub: "1763年癸未通信使，477人之一",
+    intro: "朝鲜在1607至1811年间12次向日本派遣通信使。1763年第十一次由正使赵曮率477人分乘六艘船前往江户。",
+    howTitle: "玩法说明",
+    how: ["按477人的职务比例抽取。格军228人为1763年实数，其他按通信使一般构成。", "日期为农历，全程332天。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "所有人都到了江户吗？", a: "没有。船只和部分人员（1764年为106人）留在大坂。" }],
+  },
+  fr: {
+    title: "Vous dans l'ambassade coréenne de 1763 au Japon",
+    description: "Votre rôle parmi les 477 membres de l'ambassade coréenne de 1763 à Edo : envoyé, interprète, poète, médecin, peintre ou rameur.",
+    heading: "Vous dans l'ambassade de 1763",
+    sub: "Un des 477 en route vers Edo",
+    intro: "Joseon envoya douze ambassades au Japon entre 1607 et 1811. Celle de 1763 compta 477 personnes sur six navires.",
+    howTitle: "Méthode",
+    how: ["Tirage proportionnel aux 477 ; les 228 rameurs sont le chiffre réel de 1763.", "Le voyage dura 332 jours."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Tous sont-ils allés à Edo ?", a: "Non : les navires et 106 personnes restèrent à Osaka." }],
+  },
+  es: {
+    title: "Tú en la embajada coreana de 1763 a Japón",
+    description: "Tu papel entre los 477 miembros de la embajada coreana de 1763 a Edo: enviado, intérprete, poeta, médico, pintor o remero.",
+    heading: "Tú en la embajada de 1763",
+    sub: "Uno de los 477 rumbo a Edo",
+    intro: "Joseon envió doce embajadas a Japón entre 1607 y 1811. La de 1763 llevó 477 personas en seis barcos.",
+    howTitle: "Método",
+    how: ["Sorteo proporcional a los 477; los 228 remeros son la cifra real de 1763.", "El viaje duró 332 días."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Llegaron todos a Edo?", a: "No: los barcos y 106 personas se quedaron en Osaka." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/tongsinsa-1763/")} ogImage="/images/past-life-1426/og/tongsinsa-1763.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Tongsinsa1763 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["banchado1795", "lunch1426", "joseon1789"]} current="tongsinsa1763" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>
