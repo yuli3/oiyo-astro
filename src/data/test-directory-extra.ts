@@ -500,6 +500,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "banchado-1795",
+    title: {"ko": "1795 화성 행차 반차도 속 나 — 정조 행렬 1,779명 중 내 자리", "en": "You in King Jeongjo's 1795 procession", "ja": "1795年 華城行幸の班次図の中の私", "zh": "1795华城行幸班次图中的我", "fr": "Vous dans le cortège royal de 1795", "es": "Tú en el cortejo real de 1795"},
+    description: {"ko": "원행을묘정리의궤 반차도에 그려진 1,779명·말 779필 가운데 내 역할을 뽑고, 7박 8일 여정과 배다리 이야기를 보여줘요.", "en": "Your role among the 1,779 people and 779 horses of the 1795 procession painting, with the eight-day journey.", "ja": "班次図の1,779人・馬779頭の中の役割と、7泊8日の旅程。", "zh": "班次图1,779人、779匹马中你的角色，以及七夜八天的行程。", "fr": "Votre rôle parmi les 1 779 personnages et 779 chevaux, et le voyage de huit jours.", "es": "Tu papel entre las 1.779 personas y 779 caballos, y el viaje de ocho días."},
+  },
+  {
     slug: "gwageo-1426",
     title: {"ko": "과거시험 보러 가기 — 1426년 세종 식년 문과", "en": "Sit the 1426 Joseon civil exam", "ja": "科挙を受けに行く — 1426年の式年文科", "zh": "去考科举 — 1426年式年文科", "fr": "Passer l'examen civil de 1426", "es": "Presentar el examen civil de 1426"},
     description: {"ko": "경서 강경·부 운 맞추기·세종의 실제 책문(경원 문제)을 풀고, 1426년 실제 급제자 34명 명단 속 내 자리를 확인해요.", "en": "Classics, rhymes and Sejong's real question on the northern frontier, then your place among the 34 real passers.", "ja": "講経・賦・世宗の実際の策問を解き、実際の合格者34人の中の順位を見ます。", "zh": "讲经、作赋、回答世宗真实策问，看你在34名真实及第者中的位置。", "fr": "Classiques, rimes et la vraie question de Sejong, puis votre place parmi les 34 reçus.", "es": "Clásicos, rimas y la pregunta real de Sejong, y tu lugar entre los 34 aprobados."},
