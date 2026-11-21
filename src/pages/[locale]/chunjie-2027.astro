@@ -1,0 +1,53 @@
+---
+/**
+ * 2027 春节 — 只做中国春节（各国特化，2026-10-19 世运），zh 一个语言。
+ * 2026-11-21 运营 20 选 #9。日期由 solarlunar（中国农历）核对；放假安排未公布前不写具体调休。
+ */
+import Layout from '../../layouts/Layout.astro';
+import NewYear2027Card from '../../components/tools/seasonal/NewYear2027Card';
+import { sameSignYears } from '../../lib/new-year-zodiac';
+import type { Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'zh' } }];
+}
+const { locale } = Astro.params as { locale: Locale };
+const title = '2027 春节是几月几号？羊年（丁未）日历与本命年查询';
+const description = '2027 年春节是 2 月 6 日（星期六），除夕是 2 月 5 日（腊月廿九，没有年三十）。查看元宵节等日期，输入生日查生肖、虚岁和是否本命年。';
+const days = [
+  ['2 月 5 日（周五）', '除夕', '2027 年腊月只有 29 天，除夕是腊月廿九，没有“年三十”。'],
+  ['2 月 6 日（周六）', '春节 · 正月初一', '丁未羊年开始。拜年、发红包。'],
+  ['2 月 10 日（周三）', '正月初五 · 破五', '迎财神，不少商家开市。'],
+  ['2 月 20 日（周六）', '元宵节 · 正月十五', '吃元宵（汤圆）、赏灯、猜灯谜。'],
+  ['3 月 9 日（周二）', '二月二 · 龙抬头', '理发“剃龙头”的习俗。'],
+];
+const faqs = [
+  { q: '2027 年春节是哪天？', a: '2027 年 2 月 6 日，星期六。除夕是 2 月 5 日（星期五）。' },
+  { q: '2027 年为什么没有年三十？', a: '农历月份有大月（30 天）和小月（29 天）。2026 年的腊月是小月，只有 29 天，所以除夕是腊月廿九。' },
+  { q: '2027 年本命年是哪些人？', a: `属羊的人。按 2027 年会达到的周岁算是 ${sameSignYears(2027).slice(0, 8).map((s) => s.age + ' 岁').join('、')}（${sameSignYears(2027).slice(0, 8).map((s) => s.year).join('、')} 年春节后出生）。春节前出生的人属上一年的生肖。` },
+  { q: '2027 年春节放假几天？', a: '放假和调休安排以国务院办公厅每年发布的《部分节假日安排的通知》为准，通常在前一年年底公布。' },
+];
+const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['zh']}>
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">春节 · 2027 丁未羊年</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">2027 春节日历</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">2027 年春节在 2 月 6 日（星期六），比 2026 年（2 月 17 日）早 11 天。先看日期，再输入生日查生肖和本命年。</p>
+    <div class="mt-8"><NewYear2027Card client:load lang="zh" /></div>
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">春节前后的日子</h2>
+      <ol class="mt-4 divide-y rounded-xl border bg-card">
+        {days.map(([d, n, p]) => <li class="p-4"><p class="text-sm font-black">{d} · {n}</p><p class="mt-1 text-sm text-muted-foreground">{p}</p></li>)}
+      </ol>
+    </section>
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">常见问题</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {faqs.map((f) => <details class="p-4"><summary class="cursor-pointer text-sm font-black">{f.q}</summary><p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p></details>)}
+      </div>
+    </section>
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">农历日期按中国农历计算。放假安排以国务院办公厅公布为准。</p>
+  </section>
+</Layout>
