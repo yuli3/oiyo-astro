@@ -1,0 +1,96 @@
+---
+/**
+ * 2027 정월대보름 부럼·달 소원 — 한국 세시풍속이라 ko 한 로케일만 낸다(나라별 특화 원칙,
+ * 2026-10-19 세운). 세시풍속 시리즈(company-brain think-tank/2026-11-03-oiyo-other-series-brainstorm.md 2번).
+ * 2027-02-21 전 1월 중순까지 색인되도록 2026-11-21에 미리 연다.
+ */
+import Layout from '../../layouts/Layout.astro';
+import DaeboreumMoon from '../../components/tools/seasonal/DaeboreumMoon';
+import { localePath, type Locale } from '../../i18n';
+import { DAEBOREUM_LIMIT } from '../../lib/daeboreum';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ko' } }];
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const title = '2027 정월대보름 날짜와 부럼 — 2월 21일(일), 부럼 깨고 달에 소원 빌기';
+const description = '2027년 정월대보름은 2월 21일(일), 음력 1월 15일이에요. 부럼·오곡밥·귀밝이술·더위팔기 풍습을 정리하고, 부럼 하나와 소원 하나로 보름달 카드를 만들어 봐요.';
+
+const faqs = [
+  { q: '2027년 정월대보름은 언제인가요?', a: '2월 21일(일)이에요. 음력 1월 15일로, 설날(2월 7일)에서 14일 뒤예요. 공휴일은 아니에요.' },
+  { q: '부럼은 언제 깨나요?', a: '대보름날 아침 일찍 깨물어요. 호두·땅콩·밤·잣·은행 같은 껍질 단단한 견과를 깨물며 한 해 부스럼이 나지 않고 이가 튼튼하기를 빌었어요.' },
+  { q: '귀밝이술은 무엇인가요?', a: '대보름 아침에 데우지 않은 청주를 한 잔 마시면 귀가 밝아지고 한 해 좋은 소식을 듣는다는 풍습이에요. 아이들은 입술에 대기만 했어요.' },
+  { q: '더위팔기는 어떻게 하나요?', a: '대보름 아침 해 뜨기 전에 친구 이름을 불러 대답하면 "내 더위 사 가라"라고 외쳐요. 그해 여름 더위를 그 사람에게 판다는 놀이예요. 이름을 불려도 대답 대신 "먼저 더위!"라고 받아치면 피할 수 있었다고 해요.' },
+  { q: '오곡밥과 나물은 왜 먹나요?', a: '찹쌀·조·수수·팥·콩 같은 다섯 곡식으로 지은 밥과, 지난가을에 말려 둔 묵은 나물을 먹으면 한 해 더위를 타지 않고 건강하다고 여겼어요.' },
+];
+
+const customs = [
+  { h: '🌰 부럼 깨기', p: '아침에 견과를 깨물어 소리를 내며 부스럼을 막고 이를 튼튼히 해 달라고 빌어요.' },
+  { h: '🍚 오곡밥·묵은 나물', p: '다섯 곡식으로 지은 밥과 말려 둔 나물을 먹고, 여러 집 밥을 나눠 먹으면 좋다고 했어요.' },
+  { h: '🍶 귀밝이술', p: '찬 술 한 잔으로 귀가 밝아지고 좋은 소식만 듣기를 빌어요.' },
+  { h: '🥵 더위팔기', p: '해 뜨기 전 친구를 불러 대답하면 "내 더위 사 가라!" 하고 더위를 팔아요.' },
+  { h: '🌕 달맞이·달집태우기', p: '저녁에 높은 곳에 올라 보름달을 먼저 보는 사람이 소원을 이룬다고 했고, 짚과 솔가지로 쌓은 달집을 태우며 액을 쫓았어요.' },
+  { h: '🔥 쥐불놀이', p: '논두렁 마른 풀을 태워 해충을 없애고 한 해 풍년을 빌었어요. 요즘은 산불 위험 때문에 정해진 행사장에서만 해요.' },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['ko']}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">세시풍속 · 2027년 2월 21일(일)</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">2027 정월대보름 부럼과 달 소원</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">새해 첫 보름달이 뜨는 날, 부럼 하나를 깨물고 소원 하나를 빌어 카드로 남겨요. 고른 것은 이 브라우저 밖으로 보내지 않아요.</p>
+
+    <div class="mt-6 rounded-2xl border bg-card p-5">
+      <h2 class="text-lg font-black">2027년 정월대보름 한눈에</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
+        <li><strong class="text-foreground">날짜:</strong> 2027년 2월 21일(일), 음력 1월 15일</li>
+        <li><strong class="text-foreground">설날과의 간격:</strong> 설날(2월 7일)에서 14일 뒤</li>
+        <li><strong class="text-foreground">공휴일:</strong> 아니에요. 마침 일요일이라 가족과 오곡밥 먹기 좋은 날이에요.</li>
+      </ul>
+    </div>
+
+    <div class="mt-8">
+      <DaeboreumMoon client:load />
+    </div>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">정월대보름에 하던 일</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        {customs.map((c) => (
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="text-base font-black">{c.h}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{c.p}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">자주 묻는 질문</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {faqs.map((f) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer text-sm font-black">{f.q}</summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">{DAEBOREUM_LIMIT} 날짜 출처: <a class="underline" href="https://astro.kasi.re.kr/kor/life/post/calendarData?year=2027" rel="noopener">한국천문연구원 2027 월력 자료</a>.</p>
+
+    <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="함께 보기">
+      <a href={localePath(locale, '/tojeong-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">📜 2027 토정비결</a>
+      <a href={localePath(locale, '/new-year-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🐑 2027 신년운세 모음</a>
+      <a href={localePath(locale, '/dongji-2026')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🥣 2026 동지 팥죽 한 해 정리</a>
+      <a href={localePath(locale, '/dream')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🌙 꿈해몽 사전</a>
+    </nav>
+  </section>
+</Layout>

@@ -1,0 +1,116 @@
+---
+/**
+ * 2027 節分 — 日本の行事なので ja ひとつだけ出す(国別特化の原則, 2026-10-19 세운).
+ * 나라별 명절 판 3번안(company-brain think-tank/2026-11-03-oiyo-other-series-brainstorm.md 3번). 2026-11-21.
+ */
+import Layout from '../../layouts/Layout.astro';
+import SetsubunOni from '../../components/tools/seasonal/SetsubunOni';
+import { localePath, type Locale } from '../../i18n';
+import { ehouFor, SETSUBUN_LIMIT } from '../../lib/setsubun';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ja' } }];
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const ehou = ehouFor(2027);
+const title = '2027年の節分は2月3日(水)|恵方は北北西、豆の数と追い出す鬼カード';
+const description = '2027年の節分は2月3日(水)、恵方巻の方角は北北西(やや北)です。生年月日から食べる豆の数を数え、今年追い出したい鬼を選んで節分カードを作れます。';
+
+const faqs = [
+  { q: '2027年の節分はいつですか?', a: '2月3日(水)です。節分は立春の前日で、2027年の立春は2月4日です。立春の日付は年によってずれるため、2021年のように2月2日になる年もあります。' },
+  { q: '2027年の恵方はどの方角ですか?', a: `${ehou.name}(やや北、方位でいうと約${ehou.degree}度)です。恵方はその年の十干で決まり、2027年は「${ehou.stem}」の年なので北北西になります。` },
+  { q: '豆はいくつ食べればいいですか?', a: '自分の年の数だけ、または年の数より1つ多く食べるとされています。このページでは節分の日の満年齢に1を足して数えています。' },
+  { q: '恵方巻はどうやって食べますか?', a: 'その年の恵方を向き、願い事を思い浮かべながら黙って1本を食べきるのが習わしとされています。大阪から広まった風習で、全国に知られるようになったのは2000年代以降です。' },
+];
+
+const customs = [
+  { h: '🫘 豆まき', p: '炒った大豆を「鬼は外、福は内」と唱えながらまき、家から邪気を追い出します。まいた後は年の数だけ豆を食べます。' },
+  { h: '🍣 恵方巻', p: 'その年の恵方を向いて、太巻きを黙って丸かぶりします。' },
+  { h: '🐟 柊鰯', p: '柊の枝に焼いたイワシの頭を刺して玄関に飾り、鬼が入ってこないようにする地域もあります。' },
+  { h: '🌸 立春の前日', p: '節分はもともと季節の分かれ目のこと。いまは立春の前日だけを指し、翌日から暦の上では春です。' },
+];
+
+const ehouYears = [2026, 2027, 2028, 2029, 2030].map((y) => ({ y, ...ehouFor(y) }));
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['ja']}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">年中行事 · 2027年2月3日(水)</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">2027年 節分カード</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">生年月日から食べる豆の数を数え、今年追い出したい鬼を選んでカードにします。入力した内容はこのブラウザの外に送りません。</p>
+
+    <div class="mt-6 rounded-2xl border bg-card p-5">
+      <h2 class="text-lg font-black">2027年の節分 早わかり</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
+        <li><strong class="text-foreground">日付:</strong> 2027年2月3日(水)。翌2月4日が立春です。</li>
+        <li><strong class="text-foreground">恵方:</strong> {ehou.name}(やや北、約{ehou.degree}度)</li>
+        <li><strong class="text-foreground">豆の数:</strong> 年の数、または年の数+1</li>
+      </ul>
+    </div>
+
+    <div class="mt-8">
+      <SetsubunOni client:load />
+    </div>
+
+    <section class="mt-12 space-y-3">
+      <h2 class="text-2xl font-black">五色の鬼とは</h2>
+      <p class="leading-relaxed text-muted-foreground">赤・青・黄・緑・黒の五色の鬼は、仏教で心を覆う五つの煩悩「五蓋」に当てて説明されることがあります。赤鬼は欲ばり、青鬼は怒り、黄鬼は後悔や落ち着きのなさ、緑鬼は怠け、黒鬼は疑いやぐち。自分の中から追い出したい鬼を選んで豆をまく、という楽しみ方が広まっています。</p>
+    </section>
+
+    <section class="mt-10 space-y-3">
+      <h2 class="text-2xl font-black">年別の恵方</h2>
+      <div class="overflow-x-auto rounded-xl border">
+        <table class="w-full text-sm">
+          <caption class="sr-only">年別の恵方</caption>
+          <thead class="bg-muted text-left">
+            <tr><th class="p-3" scope="col">年</th><th class="p-3" scope="col">十干</th><th class="p-3" scope="col">恵方</th></tr>
+          </thead>
+          <tbody class="divide-y">
+            {ehouYears.map((e) => (
+              <tr><td class="p-3 font-bold">{e.y}年</td><td class="p-3">{e.stem}</td><td class="p-3">{e.name}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs leading-5 text-muted-foreground">恵方は十干で決まり、甲・己の年は東北東、乙・庚は西南西、丙・辛・戊・癸は南南東、丁・壬は北北西の4方位をめぐります。</p>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">節分にすること</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        {customs.map((c) => (
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="text-base font-black">{c.h}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{c.p}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">よくある質問</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {faqs.map((f) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer text-sm font-black">{f.q}</summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">{SETSUBUN_LIMIT} 立春の日付: <a class="underline" href="https://eco.mtk.nao.ac.jp/koyomi/yoko/" rel="noopener">国立天文台 暦要項</a>。</p>
+
+    <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="関連ページ">
+      <a href={localePath(locale, '/new-year-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🐑 2027年 運勢まとめ</a>
+      <a href={localePath(locale, '/dream')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🌙 夢占い辞典</a>
+    </nav>
+  </section>
+</Layout>
