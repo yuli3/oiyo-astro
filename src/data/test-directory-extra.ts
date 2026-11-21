@@ -75,6 +75,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "15가지 Likert 문항으로 나의 공동의존 성향을 진단해보세요. 독립형부터 강한 공동의존까지 4단계 분석과 회복 가이드를 제공합니다.", "en": "Assess your codependency tendencies with 15 Likert questions. Get a 4-level analysis from independent to strong codependency, with recovery guidance.", "ja": "15のリカート問題で共依存傾向を診断しましょう。自立型から強い共依存まで4段階の分析と回復ガイドを提供します。", "zh": "通过15道李克特量表题诊断你的共依存倾向，从独立型到强共依存，4段分析及恢复指南。", "fr": "Évaluez vos tendances codépendantes avec 15 questions. Analyse en 4 niveaux avec des conseils de rétablissement.", "es": "Evalúa tus tendencias de codependencia con 15 preguntas. Análisis de 4 niveles con guía de recuperación."},
   },
   {
+    slug: "christmas-personality-test",
+    title: {"ko": "크리스마스 성격 테스트 — 나는 산타형? 눈사람형?", "en": "Christmas Personality Test — Are You a Santa or a Snowman?", "ja": "クリスマス性格テスト — あなたはサンタ？雪だるま？", "zh": "圣诞性格测试 — 你是圣诞老人还是雪人？", "fr": "Test de personnalité de Noël — Père Noël ou Bonhomme de neige ?", "es": "Test de personalidad navideña — ¿Papá Noel o Muñeco de nieve?"},
+    description: {"ko": "8개 질문으로 알아보는 나의 크리스마스 유형. 산타·순록·눈사람·생강쿠키·트리 중 나는?", "en": "Eight quick questions: are you a Santa, Reindeer, Snowman, Gingerbread or Tree?", "ja": "8つの質問でわかるあなたのクリスマスタイプ。サンタ・トナカイ・雪だるま・ジンジャーブレッド・ツリー。", "zh": "8 道题找出你的圣诞类型：圣诞老人、驯鹿、雪人、姜饼人还是圣诞树？", "fr": "Huit questions : Père Noël, Renne, Bonhomme de neige, Pain d’épice ou Sapin ?", "es": "Ocho preguntas: ¿Papá Noel, Reno, Muñeco de nieve, Galleta de jengibre o Árbol?"},
+  },
+  {
     slug: "coffee-personality-test",
     title: {"ko": "커피 성격 테스트 — 나는 어떤 커피 타입?", "en": "Coffee Personality Test — Which Coffee Are You?", "ja": "コーヒー性格テスト — あなたはどのコーヒータイプ？", "zh": "咖啡性格测验 — 你是哪种咖啡类型？", "fr": "Test de personnalité café — Quel café êtes-vous ?", "es": "Test de personalidad del café — ¿Qué café eres tú?"},
     description: {"ko": "에스프레소, 라떼, 콜드브루, 카푸치노, 아메리카노 — 8가지 질문으로 나의 커피 성격을 발견하세요!", "en": "Espresso, Latte, Cold Brew, Cappuccino, or Americano? Find your coffee personality with 8 fun questions.", "ja": "エスプレッソ、ラテ、コールドブリュー、カプチーノ、アメリカーノ。8つの質問であなたのコーヒー性格を発見。", "zh": "义式浓缩、拿铁、冷萃、卡布奇诺还是美式咖啡？透过8个问题发现你的咖啡性格。", "fr": "Espresso, Latte, Cold Brew, Cappuccino ou Americano ? Découvrez votre personnalité café en 8 questions.", "es": "Espresso, Latte, Cold Brew, Cappuccino o Americano. Descubre tu personalidad cafetera con 8 preguntas."},

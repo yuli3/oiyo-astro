@@ -1,0 +1,48 @@
+---
+// 크리스마스 성격 테스트 (2026-11-21). 12월 선물·연말 공유 수요. 6개 언어. 재미용, 진단 아님.
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ChristmasPersonalityTest from '../../components/tests/ChristmasPersonalityTest';
+import { XMAS_RESULTS, XMAS_TYPES, type XmasLang } from '../../data/christmas-personality';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const l = (['ko', 'en', 'ja', 'zh', 'fr', 'es'].includes(locale) ? locale : 'en') as XmasLang;
+const meta: Record<XmasLang, { title: string; description: string; typesTitle: string; faqTitle: string; faqs: [string, string][] }> = {
+  ko: { title: '크리스마스 성격 테스트 — 나는 산타형? 눈사람형?', description: '8개 질문으로 알아보는 나의 크리스마스 유형. 산타·순록·눈사람·생강쿠키·트리 중 나는 누구일까요? 올해의 추천과 잘 맞는 짝까지 알려 줘요.', typesTitle: '다섯 가지 크리스마스 유형', faqTitle: '자주 묻는 질문', faqs: [['결과는 어떻게 정해지나요?', '8개 질문에서 가장 많이 고른 유형이 결과예요. 같으면 마지막에 가까운 답을 따라요.'], ['심리 검사인가요?', '아니요. 연말을 즐겁게 보내기 위한 재미용 테스트예요. 성격을 진단하지 않아요.'], ['친구와 비교할 수 있나요?', '결과를 공유해 친구 유형과 "잘 맞는 짝"이 맞는지 확인해 보세요.']] },
+  en: { title: 'Christmas Personality Test — Are You a Santa or a Snowman?', description: 'Eight quick questions to find your Christmas type: Santa, Reindeer, Snowman, Gingerbread or Tree. Get this year’s tip and your best match.', typesTitle: 'The five Christmas types', faqTitle: 'Common questions', faqs: [['How is the result decided?', 'The type you choose most across 8 questions wins. Ties go to your most recent answer.'], ['Is this a psychological test?', 'No. It’s a just-for-fun holiday quiz and does not diagnose personality.'], ['Can I compare with friends?', 'Share your result and see whether your friend is your best match.']] },
+  ja: { title: 'クリスマス性格テスト — あなたはサンタ？雪だるま？', description: '8つの質問でわかるあなたのクリスマスタイプ。サンタ・トナカイ・雪だるま・ジンジャーブレッド・ツリーのどれ？今年のおすすめと相性のいい相手も。', typesTitle: '5つのクリスマスタイプ', faqTitle: 'よくある質問', faqs: [['結果はどう決まりますか？', '8問でいちばん多く選んだタイプが結果です。同数なら最後に近い回答を優先します。'], ['心理検査ですか？', 'いいえ。年末を楽しむためのテストで、性格を診断するものではありません。'], ['友だちと比べられますか？', '結果をシェアして、相性のいい相手かどうか確かめてみてください。']] },
+  zh: { title: '圣诞性格测试 — 你是圣诞老人还是雪人？', description: '8 道题找出你的圣诞类型：圣诞老人、驯鹿、雪人、姜饼人还是圣诞树？附今年的建议和最合拍的搭档。', typesTitle: '五种圣诞类型', faqTitle: '常见问题', faqs: [['结果怎么决定？', '8 道题中选得最多的类型就是结果，票数相同时以较后的回答为准。'], ['这是心理测试吗？', '不是。这是为节日准备的娱乐测试，不做性格诊断。'], ['能和朋友比较吗？', '分享结果，看看朋友是不是你最合拍的搭档。']] },
+  fr: { title: 'Test de personnalité de Noël — Père Noël ou Bonhomme de neige ?', description: 'Huit questions pour découvrir votre type de Noël : Père Noël, Renne, Bonhomme de neige, Pain d’épice ou Sapin. Avec le conseil de l’année et votre meilleur duo.', typesTitle: 'Les cinq types de Noël', faqTitle: 'Questions fréquentes', faqs: [['Comment le résultat est-il choisi ?', 'Le type le plus choisi sur 8 questions l’emporte. En cas d’égalité, votre réponse la plus récente compte.'], ['Est-ce un test psychologique ?', 'Non. C’est un quiz de fêtes pour s’amuser, sans diagnostic de personnalité.'], ['Puis-je comparer avec mes amis ?', 'Partagez votre résultat et voyez si votre ami est votre meilleur duo.']] },
+  es: { title: 'Test de personalidad navideña — ¿Papá Noel o Muñeco de nieve?', description: 'Ocho preguntas para descubrir tu tipo navideño: Papá Noel, Reno, Muñeco de nieve, Galleta de jengibre o Árbol. Con el consejo del año y tu mejor pareja.', typesTitle: 'Los cinco tipos navideños', faqTitle: 'Preguntas frecuentes', faqs: [['¿Cómo se decide el resultado?', 'Gana el tipo que más elijas en 8 preguntas. Si hay empate, cuenta tu respuesta más reciente.'], ['¿Es un test psicológico?', 'No. Es un quiz navideño para divertirse y no diagnostica la personalidad.'], ['¿Puedo compararme con amigos?', 'Comparte tu resultado y mira si tu amigo es tu mejor pareja.']] },
+};
+const m = meta[l];
+const url = `https://oiyo.net/${locale}/christmas-personality-test/`;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: m.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+};
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="container mx-auto max-w-3xl space-y-10 px-4 py-8">
+    <ChristmasPersonalityTest locale={locale} client:load />
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold">{m.typesTitle}</h2>
+      <ul class="grid gap-3 sm:grid-cols-2">
+        {XMAS_TYPES.map((k) => {
+          const r = XMAS_RESULTS[k][l];
+          return <li class="rounded-xl border border-border bg-card p-4"><p class="font-bold">{r.emoji} {r.title}</p><p class="mt-1 text-sm text-muted-foreground">{r.tagline}</p></li>;
+        })}
+      </ul>
+    </section>
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold">{m.faqTitle}</h2>
+      {m.faqs.map(([q, a]) => <details class="rounded-lg border border-border p-3"><summary class="cursor-pointer font-semibold">{q}</summary><p class="mt-2 text-sm text-muted-foreground">{a}</p></details>)}
+    </section>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+</Layout>
