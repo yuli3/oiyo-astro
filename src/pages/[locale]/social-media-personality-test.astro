@@ -5,6 +5,8 @@ import { TEST_EXPLAINERS } from '../../data/test-explainers';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import SocialMediaPersonalityTest from '../../components/tests/SocialMediaPersonalityTest';
+import { TEST_DIRECTORY_EXTRA } from '../../data/test-directory-extra';
+import { localePath } from '../../i18n';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -44,11 +46,55 @@ const meta: Record<string, { title: string; description: string }> = {
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+
+// 2026-11-21: 프랑스어판이 완료 수 2위(GA4 11-04~, 24건)라 다음 검사로 이어지는 길을 붙였다.
+// 디지털 습관·소통 계열만 고른다(같은 관심사로 넘어가는 사람이 많을 것).
+const RELATED = ['digital-wellness-test', 'digital-balance-test', 'dopamine-dependency-test', 'focus-blocker-test', 'communication-style-test'];
+const related = RELATED.map((slug) => TEST_DIRECTORY_EXTRA.find((t) => t.slug === slug)).filter((t) => t !== undefined);
+const relatedHeading: Record<Locale, string> = {
+  ko: '이어서 해 볼 검사',
+  en: 'Try next',
+  ja: '次に試すテスト',
+  zh: '接着试试',
+  fr: 'Tests à faire ensuite',
+  es: 'Prueba después',
+};
+// FAQ는 수요가 보이는 프랑스어판에만 둔다.
+const frFaqs = [
+  { q: 'Combien de temps dure le test ?', a: "Environ deux minutes : 10 questions sur votre façon de publier, de réagir et de faire défiler. Aucune inscription, et vos réponses restent dans ce navigateur." },
+  { q: 'Que veulent dire les quatre types ?', a: "Le Créateur publie ses propres contenus, le Performeur cherche la réaction du public, l'Observateur lit beaucoup sans publier, et le Connecteur utilise les réseaux pour entretenir ses relations. La plupart des gens mélangent deux types." },
+  { q: 'Est-ce un test scientifique ?', a: "Non. C'est un outil de réflexion sur vos habitudes, pas un diagnostic. Si votre usage des réseaux vous pèse, le test de bien-être numérique ci-dessous peut vous aider à faire le point." },
+];
+const faqJsonLd = locale === 'fr'
+  ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: frFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }
+  : null;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <SocialMediaPersonalityTest locale={locale as any} client:load />
     <TestExplainer content={TEST_EXPLAINERS['social-media-personality']} locale={locale as Locale} />
+    {faqJsonLd && (
+      <section class="mt-10">
+        <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+        <h2 class="text-2xl font-black">Questions fréquentes</h2>
+        <div class="mt-4 divide-y rounded-xl border bg-card">
+          {frFaqs.map((f) => (
+            <details class="group p-4">
+              <summary class="cursor-pointer text-sm font-black">{f.q}</summary>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
+    <nav class="mt-10" aria-label={relatedHeading[locale]}>
+      <h2 class="text-xl font-black">{relatedHeading[locale]}</h2>
+      <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+        {related.map((t) => (
+          <li><a href={localePath(locale, `/${t.slug}`)} class="block rounded-xl border bg-card p-4 text-sm font-bold transition hover:border-primary">{t.title[locale] ?? t.title.en}</a></li>
+        ))}
+      </ul>
+    </nav>
   </div>
 </Layout>

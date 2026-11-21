@@ -72,7 +72,9 @@ const rootJsonLd = {
         ];
         const locale = candidates
           .map(normalize)
-          .find((candidate) => supported.includes(candidate)) || 'ko';
+          .find((candidate) => supported.includes(candidate))
+          // 2026-11-21: 지원하지 않는 언어(예: 튀르키예어)는 영어로. 언어 정보가 없을 때만 한국어.
+          || (candidates.some(Boolean) ? 'en' : 'ko');
 
         window.location.replace(`/${locale}/`);
       })();

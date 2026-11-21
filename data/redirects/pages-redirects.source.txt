@@ -1,4 +1,3 @@
-/  /ko/  301
 /ko/tarot/daily /ko/tarot/reading/ 301
 /ko/tarot/daily/ /ko/tarot/reading/ 301
 /en/tarot/daily /en/tarot/reading/ 301
