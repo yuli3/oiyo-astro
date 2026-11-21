@@ -137,6 +137,7 @@ export const LANE_BY_PATH: Record<string, LaneId> = {
   // 추가 디렉터리도 같은 질문 분류를 따른다. 대표 목록 뒤에 펼쳐 본다.
   "/animal-personality-test": "self",
   "/coffee-personality-test": "self",
+  "/christmas-personality-test": "self",
   "/cognitive-bias-test": "self",
   "/color-personality-test": "self",
   "/creativity-type-test": "self",
