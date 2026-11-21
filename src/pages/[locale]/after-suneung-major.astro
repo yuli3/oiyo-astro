@@ -1,0 +1,71 @@
+---
+/**
+ * 수능 끝난 수험생: 전공·계열 고르기 전에 해 볼 검사 순서 (2026-11-21, 운영자 20종 #8).
+ * 한국 입시 맥락이라 ko만 낸다(나라별 특화). 흥미→가치→계열 순으로 기존 검사(RIASEC·직업 가치)로 보낸다.
+ * 입시 일정 숫자는 쓰지 않고 공식 포털(어디가)로 보낸다 — 해마다 바뀌고 틀리면 피해가 크다.
+ */
+import Layout from '../../layouts/Layout.astro';
+import SuneungMajorPicker from '../../components/tools/seasonal/SuneungMajorPicker';
+import { localePath, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ko' } }];
+}
+const { locale } = Astro.params as { locale: Locale };
+const title = '수능 끝, 나에게 맞는 전공 찾기 — 흥미 코드로 계열 고르기';
+const description = '수능이 끝났다면 원서 쓰기 전에 내 흥미부터 확인해요. 끌리는 활동 두 개를 고르면 어울리는 계열·학과를 보여 주고, RIASEC 흥미 검사와 직업 가치 검사로 이어 줘요.';
+const steps = [
+  { h: '1. 흥미: 무엇을 할 때 시간이 빨리 가나요', p: '아래에서 두 개를 고르거나, 3분짜리 RIASEC 빠른 검사로 흥미 코드를 확인해요.', href: '/riasec-quick', cta: 'RIASEC 빠른 검사 (18문항)' },
+  { h: '2. 가치: 일에서 무엇이 가장 중요한가요', p: '안정, 보수, 성취, 사람, 자율 중 무엇을 먼저 두는지에 따라 같은 계열에서도 고를 학과가 달라져요.', href: '/career-values-test', cta: '직업 가치 검사' },
+  { h: '3. 확인: 정식 흥미 검사로 다시 보기', p: '빠른 결과가 애매하면 문항이 더 많은 검사로 1·2순위를 다시 확인해요.', href: '/riasec-career-test', cta: 'RIASEC 직업 흥미 검사' },
+];
+const faqs = [
+  { q: '흥미 검사 결과대로 학과를 정해야 하나요?', a: '아니요. 흥미는 출발점일 뿐이에요. 성적, 가치, 진로 정보, 학과 교육과정을 함께 보고 정해요. 이 페이지의 학과 예시는 흔히 쓰이는 연결이지 정답이 아니에요.' },
+  { q: '정시 원서 일정은 어디서 보나요?', a: '대학별 모집 요강과 일정은 해마다 바뀌어요. 한국대학교육협의회 대입정보포털 "어디가"(adiga.kr)와 각 대학 입학처 공지를 확인하세요.' },
+  { q: '흥미 코드 두 개가 정반대예요', a: '예를 들어 예술형+관습형처럼 멀리 떨어진 조합은 드물지 않아요. 두 흥미를 함께 쓰는 분야(예: 디자인 회사의 프로젝트 관리)를 찾아보거나, 전공 하나와 복수전공·부전공으로 나눠 보는 방법도 있어요.' },
+  { q: '검사 결과는 저장되나요?', a: '고른 내용은 이 브라우저에서만 계산해요. 사이트는 방문 통계와 광고를 사용해요.' },
+];
+const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['ko']}>
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">수능 다음 날부터 · 진로</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">수능 끝, 나에게 맞는 전공 찾기</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">점수가 나오기 전, 원서를 쓰기 전에 할 수 있는 일이 있어요. 내가 무엇에 끌리는지 먼저 알면 학과 목록이 훨씬 짧아져요.</p>
+
+    <div class="mt-8">
+      <SuneungMajorPicker client:load fullTestHref={localePath(locale, '/riasec-career-test')} />
+    </div>
+
+    <section class="mt-12 space-y-4">
+      <h2 class="text-2xl font-black">전공 고르기 3단계</h2>
+      {steps.map((s) => (
+        <div class="rounded-xl border bg-card p-4">
+          <h3 class="text-base font-black">{s.h}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{s.p}</p>
+          <a class="mt-3 inline-flex min-h-11 items-center text-sm font-black text-primary underline" href={localePath(locale, s.href)}>{s.cta} →</a>
+        </div>
+      ))}
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">홀랜드 흥미 유형(RIASEC)이란</h2>
+      <p class="mt-3 text-sm leading-relaxed text-muted-foreground">미국 심리학자 존 홀랜드가 제안한 분류로, 사람의 직업 흥미를 현실형(R)·탐구형(I)·예술형(A)·사회형(S)·진취형(E)·관습형(C) 여섯 가지로 나눠요. 보통 점수가 높은 두세 글자를 묶어 "IC형", "SA형"처럼 불러요. 국내 진로 상담에서도 널리 쓰는 틀이에요.</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">자주 묻는 질문</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {faqs.map((f) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer text-sm font-black">{f.q}</summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">진로 참고용이며 심리 진단이 아니에요. 입시 일정·전형은 <a class="underline" href="https://www.adiga.kr/" rel="noopener">대입정보포털 어디가</a>와 대학 입학처에서 확인하세요.</p>
+  </section>
+</Layout>
