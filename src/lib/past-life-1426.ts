@@ -169,9 +169,46 @@ export function tabletFor(rank: string): "ivory" | "wood" | null {
 
 // ── Time-slip series quick wins (2026-11-03, company-brain past-life-series-design-2026-11-03.md) ──
 
-export type EpisodeId = "ancestors-1426" | "silla-golpum" | "joseon-1426" | "europe-1426" | "joseon-1789" | "france-1789" | "us-birth-state";
+export type EpisodeId = "sejong-birthdays" | "hanyang-fire-1426" | "cotton-1426" | "sillok-name-hanja" | "night-sky-1426" | "gyeonggongjang" | "joseon-time" | "future-2626" | "joseon-names" | "jinshin-1872" | "huangce-1391" | "census-1911" | "ellis-1907" | "birthday-calendars" | "hoebinghwan-1789" | "domesday-1086" | "census-1850" | "ninbetsu-edo" | "tongsinsa-1763" | "banchado-1795" | "gwageo-1426" | "lunch-1426" | "sillok-1426" | "hometown-1426" | "ancestors-1426" | "silla-golpum" | "joseon-1426" | "europe-1426" | "joseon-1789" | "france-1789" | "us-birth-state";
 /** Series order on the stamp board: oldest era first, "born today" last. */
-export const EPISODES: readonly EpisodeId[] = ["ancestors-1426", "silla-golpum", "joseon-1426", "europe-1426", "joseon-1789", "france-1789", "us-birth-state"];
+export const EPISODES: readonly EpisodeId[] = ["sejong-birthdays", "hanyang-fire-1426", "cotton-1426", "sillok-name-hanja", "night-sky-1426", "gyeonggongjang", "joseon-time", "future-2626", "joseon-names", "jinshin-1872", "huangce-1391", "census-1911", "ellis-1907", "birthday-calendars", "hoebinghwan-1789", "domesday-1086", "census-1850", "ninbetsu-edo", "tongsinsa-1763", "banchado-1795", "gwageo-1426", "lunch-1426", "sillok-1426", "hometown-1426", "ancestors-1426", "silla-golpum", "joseon-1426", "europe-1426", "joseon-1789", "france-1789", "us-birth-state"];
+
+export type EpisodeGroup = "sillok" | "korea" | "world" | "more";
+export const GROUP_ORDER: readonly EpisodeGroup[] = ["sillok", "korea", "world", "more"];
+/** Hub sections and "next trip" picks share this grouping. */
+export const EPISODE_GROUP: Record<EpisodeId, EpisodeGroup> = {
+  "sillok-1426": "sillok", "sejong-birthdays": "sillok", "sillok-name-hanja": "sillok", "night-sky-1426": "sillok", "hanyang-fire-1426": "sillok", "cotton-1426": "sillok", "joseon-time": "sillok", "lunch-1426": "sillok", "gwageo-1426": "sillok", "hometown-1426": "sillok", "ancestors-1426": "sillok", "joseon-1426": "sillok",
+  "silla-golpum": "korea", "joseon-1789": "korea", "banchado-1795": "korea", "tongsinsa-1763": "korea", "gyeonggongjang": "korea", "joseon-names": "korea", "hoebinghwan-1789": "korea",
+  "europe-1426": "world", "france-1789": "world", "domesday-1086": "world", "census-1850": "world", "census-1911": "world", "ellis-1907": "world", "ninbetsu-edo": "world", "jinshin-1872": "world", "huangce-1391": "world", "us-birth-state": "world",
+  "future-2626": "more", "birthday-calendars": "more",
+};
+export const GROUP_LABEL: Record<EpisodeGroup, Record<"ko" | "en" | "ja" | "zh" | "fr" | "es", string>> = {
+  sillok: { ko: "1426 한양 · 세종실록", en: "1426 Hanyang · Sejong's Annals", ja: "1426漢陽・世宗実録", zh: "1426汉阳·世宗实录", fr: "Hanyang 1426 · Annales de Sejong", es: "Hanyang 1426 · Anales de Sejong" },
+  korea: { ko: "신라부터 정조까지", en: "Korea through the ages", ja: "新羅から正祖まで", zh: "从新罗到正祖", fr: "La Corée à travers les âges", es: "Corea a través de los siglos" },
+  world: { ko: "세계의 옛 장부", en: "Old registers of the world", ja: "世界の古い帳簿", zh: "世界的旧账簿", fr: "Vieux registres du monde", es: "Viejos registros del mundo" },
+  more: { ko: "달력 · 미래 · 내 기록", en: "Calendars, future and my record", ja: "暦・未来・わたしの記録", zh: "历法·未来·我的记录", fr: "Calendriers, futur et mon parcours", es: "Calendarios, futuro y mi registro" },
+};
+
+/**
+ * "Next trip" picks after an episode: unvisited episodes in the same group first (in series
+ * order, starting after the current one), then one from each other group, then anything left.
+ */
+export function nextEpisodes(current: EpisodeId, stamps: readonly string[], n = 3): EpisodeId[] {
+  const at = EPISODES.indexOf(current);
+  const ring = [...EPISODES.slice(at + 1), ...EPISODES.slice(0, Math.max(at, 0))].filter((e) => e !== current);
+  const fresh = ring.filter((e) => !stamps.includes(e));
+  const g = EPISODE_GROUP[current];
+  const same = fresh.filter((e) => EPISODE_GROUP[e] === g);
+  const others = GROUP_ORDER.filter((k) => k !== g)
+    .map((k) => fresh.find((e) => EPISODE_GROUP[e] === k))
+    .filter((e): e is EpisodeId => !!e);
+  const out: EpisodeId[] = [];
+  for (const e of [...same.slice(0, n - Math.min(others.length, 1)), ...others, ...same, ...fresh, ...ring]) {
+    if (!out.includes(e)) out.push(e);
+    if (out.length === n) break;
+  }
+  return out;
+}
 
 export type Rarity = "legendary" | "rare" | "uncommon" | "common";
 /**

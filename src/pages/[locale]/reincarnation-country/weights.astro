@@ -103,6 +103,7 @@ const drawHref = localePath(locale, "/reincarnation-country/");
     <h1 class="mt-2 text-3xl font-black tracking-tight text-foreground">{copy.heading}</h1>
     <p class="mt-4">
       <a class="inline-flex min-h-11 items-center rounded-full bg-emerald-600 px-5 text-sm font-bold text-white hover:bg-emerald-700" href={drawHref}>{copy.cta}</a>
+      <a class="ml-2 inline-flex min-h-11 items-center rounded-full border border-border bg-card px-5 text-sm font-bold text-foreground" href={localePath(locale, "/reincarnation-country/data/")}>{t({ ko: "전체 데이터·CSV", en: "Full data & CSV", ja: "全データ・CSV", zh: "完整数据·CSV", fr: "Données complètes & CSV", es: "Datos completos y CSV" })}</a>
     </p>
     <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-600">{copy.p1}</p>
     <h2 class="mt-10 text-lg font-bold text-foreground">{copy.h2a}</h2>

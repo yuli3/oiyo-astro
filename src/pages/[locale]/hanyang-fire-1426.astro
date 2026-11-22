@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import HanyangFire1426 from "../../components/tools/past-life/HanyangFire1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1426 한양 대화재로 회귀했다 — 불 대책 5가지, 세종 조정과 맞춰 보기",
+    description: "1426년(세종 8) 2월 15일 한양 대화재 한낮으로 돌아가 불 대책 5가지를 골라 보세요. 『세종실록』에 남은 실제 대책(방화벽·우물·금화도감·종루 경종)과 날짜까지 맞춰 봐요.",
+    heading: "1426 한양 대화재로 회귀했다",
+    sub: "세종 8년 2월 15일 · 서북풍 · 2,170호",
+    intro: "1426년 2월 15일 한낮, 서북풍을 타고 번진 불로 한양 집 2,170호가 탔어요. 지금 아는 것을 들고 그날로 돌아갔다면 어떤 대책을 올리겠어요? 고른 대책이 세종 조정이 실제로 정한 것과 같은지, 며칠 만에 정해졌는지 실록으로 맞춰 봐요.",
+    howTitle: "어떻게 맞추나요",
+    how: [
+      "『세종실록』 8년 2월 15일부터 3월 3일까지 기사에서 불 대책을 모았어요.",
+      "실록에 '그렇게 하라'고 나온 것은 실제 대책, 올라왔지만 미룬 것은 미룬 대책, 실록에 없는 것은 그때 없던 생각으로 셌어요.",
+      "목숨을 잃은 분들의 기록은 점수에 넣지 않고 그대로 적었어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "금화도감이 뭐예요?", a: "1426년 2월 26일에 생긴, 불을 막는 일만 맡은 관청이에요. 우리나라 소방 관청의 시작으로 자주 소개돼요." },
+      { q: "종루 종은 언제부터 불을 알렸나요?", a: "3월 3일 금화도감이 청해, 의금부가 종루에서 밤낮으로 망보다 관청 건물에 불이 나면 종을 치게 했어요." },
+    ],
+  },
+  en: {
+    title: "Back to the great Hanyang fire of 1426: pick 5 fire measures",
+    description: "Return to noon on lunar 2/15, 1426, as fire sweeps Hanyang. Pick 5 measures and see whether Sejong's court really adopted them, and when.",
+    heading: "Back to the great fire of 1426",
+    sub: "Lunar 2/15, Sejong year 8 · north-west wind · 2,170 homes",
+    intro: "At noon on lunar 2/15, 1426, a wind-driven fire burned 2,170 homes in Hanyang. If you went back with what you know now, what would you propose?",
+    howTitle: "How it works",
+    how: ["Measures come from the Sejong Sillok, 2/15 to 3/3, 1426.", "The lives lost are recorded as history and never scored."],
+    faqTitle: "FAQ",
+    faq: [{ q: "What was the Fire Bureau?", a: "The Geumhwa Dogam, set up on lunar 2/26, 1426: an office just for fire prevention." }],
+  },
+  ja: {
+    title: "1426漢陽大火へ回帰 — 防火策5つを世宗の朝廷と照合",
+    description: "1426年2月15日の漢陽大火に戻り、防火策を5つ選びます。『世宗実録』の実際の対策と日付で照合します。",
+    heading: "1426漢陽大火へ回帰",
+    sub: "世宗8年2月15日・北西風・2,170戸",
+    intro: "1426年2月15日の昼、風にあおられた火で漢陽の家2,170戸が焼けました。",
+    howTitle: "仕組み",
+    how: ["『世宗実録』8年2月15日〜3月3日の記事から対策を集めました。", "犠牲者の記録は点数にしません。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "禁火都監とは？", a: "1426年2月26日に置かれた、火災だけを担う役所です。" }],
+  },
+  zh: {
+    title: "回到1426汉阳大火 — 选5条防火对策，对照世宗朝廷",
+    description: "回到1426年二月十五日的汉阳大火，选5条防火对策，用《世宗实录》对照实际对策和日期。",
+    heading: "回到1426汉阳大火",
+    sub: "世宗八年二月十五日·西北风·2,170户",
+    intro: "1426年二月十五日正午，大风助火，汉阳2,170户民宅被烧。",
+    howTitle: "怎么对照",
+    how: ["对策取自《世宗实录》八年二月十五日至三月三日。", "罹难者的记录不计分。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "禁火都监是什么？", a: "1426年二月二十六日设立、专管防火的官署。" }],
+  },
+  fr: {
+    title: "Retour au grand incendie de Hanyang (1426) : 5 mesures anti-feu",
+    description: "Revenez au 15e jour du 2e mois de 1426, choisissez 5 mesures et comparez-les aux décisions réelles de la cour de Sejong.",
+    heading: "Retour au grand incendie de 1426",
+    sub: "15/2 lunaire, an 8 de Sejong · vent du nord-ouest · 2 170 maisons",
+    intro: "À midi, un incendie attisé par le vent a détruit 2 170 maisons à Hanyang.",
+    howTitle: "Comment ça marche",
+    how: ["Les mesures viennent des Annales, du 15/2 au 3/3 de 1426.", "Les vies perdues ne sont jamais notées."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Qu’était le Bureau du feu ?", a: "Le Geumhwa Dogam, créé le 26/2 lunaire 1426." }],
+  },
+  es: {
+    title: "Regreso al gran incendio de Hanyang (1426): 5 medidas contra el fuego",
+    description: "Vuelve al día 15 del mes 2 de 1426, elige 5 medidas y compáralas con lo que decidió de verdad la corte de Sejong.",
+    heading: "Regreso al gran incendio de 1426",
+    sub: "15/2 lunar, año 8 de Sejong · viento del noroeste · 2.170 casas",
+    intro: "A mediodía, un incendio avivado por el viento destruyó 2.170 casas en Hanyang.",
+    howTitle: "Cómo funciona",
+    how: ["Las medidas salen de los Anales, del 15/2 al 3/3 de 1426.", "Las vidas perdidas nunca se puntúan."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Qué era la Oficina del Fuego?", a: "El Geumhwa Dogam, creado el 26/2 lunar de 1426." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/hanyang-fire-1426/")} ogImage="/images/past-life-1426/og/hanyang-fire-1426.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><HanyangFire1426 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["sillok1426", "joseonTime", "cotton1426"]} current="hanyangFire1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

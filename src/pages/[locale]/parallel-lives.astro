@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import ParallelLives from "../../components/tools/past-life/ParallelLives";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "나의 평행 인생 연표 — 신라부터 오늘까지, 타임슬립 시리즈 속 나를 한 장에",
+    description: "신라 골품, 1086 둠즈데이 북, 1426 조선, 1789 프랑스, 1850 미국 센서스… 타임슬립 시리즈에서 뽑은 나의 결과를 시대순 연표 한 장으로 모아 이미지로 저장해요.",
+    heading: "나의 평행 인생 연표",
+    sub: "1,300년에 걸친 나의 삶들",
+    intro: "타임슬립 시리즈에서 뽑은 결과가 시대순으로 쌓여요. 신라의 나, 둠즈데이 북의 나, 1789년 조선의 나까지. 다 모으면 한 장짜리 연표로 저장해 친구에게 보여줄 수 있어요.",
+    howTitle: "어떻게 쌓이나요",
+    how: [
+      "각 회차에서 결과를 뽑으면 그 결과가 이 브라우저에 저장되고, 회차의 배경 연도에 맞춰 연표에 놓여요. 같은 회차를 다시 하면 가장 최근 결과로 바뀌어요.",
+      "친구가 보낸 링크로 본 결과는 연표에 넣지 않아요. 서버로 보내지 않고, '연표 지우기'로 언제든 비울 수 있어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "다른 기기에서도 보이나요?", a: "아니요. 연표는 지금 쓰는 브라우저에만 저장돼요. 다른 기기에서는 회차를 다시 해야 해요." },
+      { q: "연도는 어떻게 정했나요?", a: "회차의 배경 연도예요. 신라 회차는 '1300년 전'이라 726년으로, 에도 인별장은 에도 인구를 센 1723년으로, 지금의 미국 회차는 오늘로 놓았어요." },
+    ],
+  },
+  en: {
+    title: "My parallel lives: every time-slip result on one timeline",
+    description: "Silla, Domesday Book 1086, Joseon 1426, France 1789, the 1850 U.S. census… collect your results from the time-slip series on one timeline and save it as an image.",
+    heading: "My parallel lives",
+    sub: "1,300 years of you",
+    intro: "Every result you draw in the time-slip series lands here in date order: you in Silla, in Domesday Book, in 1789 Korea. Collect them and save the whole timeline as one image.",
+    howTitle: "How it fills up",
+    how: [
+      "When you draw a result in an episode, it is saved in this browser and placed at that episode's year. Playing again replaces it with your latest result.",
+      "Results you only viewed from a friend's link are not added. Nothing is sent to a server, and you can clear the timeline at any time.",
+    ],
+    faqTitle: "FAQ",
+    faq: [{ q: "Will it show on my other devices?", a: "No. The timeline lives in this browser only." }],
+  },
+  ja: {
+    title: "わたしの並行人生年表 — タイムスリップ・シリーズの結果を一枚に",
+    description: "新羅、1086年ドゥームズデイ・ブック、1426年朝鮮、1789年フランス…シリーズで引いた結果を時代順の年表にまとめ、画像で保存します。",
+    heading: "わたしの並行人生年表",
+    sub: "1300年にわたるわたしの人生",
+    intro: "タイムスリップ・シリーズで引いた結果が時代順に積み上がります。集めたら一枚の年表画像にして保存できます。",
+    howTitle: "仕組み",
+    how: ["各話で結果を引くとこのブラウザに保存され、その話の年代に並びます。友だちのリンクで見た結果は入りません。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "他の端末でも見られる？", a: "いいえ。年表はこのブラウザにだけ保存されます。" }],
+  },
+  zh: {
+    title: "我的平行人生年表 — 把时空穿越系列的结果汇成一张",
+    description: "新罗、1086年末日审判书、1426年朝鲜、1789年法国……把系列中抽到的结果按时代排成年表，并保存为图片。",
+    heading: "我的平行人生年表",
+    sub: "跨越1300年的我",
+    intro: "在时空穿越系列中抽到的结果会按时代顺序累积在这里。集齐后可以保存为一张年表图片。",
+    howTitle: "怎么累积",
+    how: ["每集抽到结果后会保存在此浏览器，并按该集的年代排列。通过朋友链接看到的结果不会加入。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "其他设备能看到吗？", a: "不能。年表只保存在此浏览器。" }],
+  },
+  fr: {
+    title: "Mes vies parallèles : tous vos résultats de la série sur une frise",
+    description: "Silla, Domesday Book 1086, Joseon 1426, France 1789, recensement américain de 1850… réunissez vos résultats sur une frise et enregistrez-la en image.",
+    heading: "Mes vies parallèles",
+    sub: "1 300 ans de vous",
+    intro: "Chaque résultat tiré dans la série s'ajoute ici par ordre chronologique. Réunissez-les et enregistrez la frise en une image.",
+    howTitle: "Comment elle se remplit",
+    how: ["Chaque tirage est enregistré dans ce navigateur, à l'année de son épisode. Les résultats vus via le lien d'un ami ne sont pas ajoutés."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Est-elle visible sur mes autres appareils ?", a: "Non, la frise reste dans ce navigateur." }],
+  },
+  es: {
+    title: "Mis vidas paralelas: todos tus resultados de la serie en una línea de tiempo",
+    description: "Silla, Domesday Book 1086, Joseon 1426, Francia 1789, censo de EE. UU. de 1850… reúne tus resultados en una línea de tiempo y guárdala como imagen.",
+    heading: "Mis vidas paralelas",
+    sub: "1.300 años de ti",
+    intro: "Cada resultado que sacas en la serie se suma aquí por orden cronológico. Reúnelos y guarda la línea como una imagen.",
+    howTitle: "Cómo se llena",
+    how: ["Cada resultado se guarda en este navegador, en el año de su episodio. Los resultados vistos desde el enlace de un amigo no se añaden."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Se ve en mis otros dispositivos?", a: "No, la línea se queda en este navegador." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/parallel-lives/")} ogImage="/images/past-life-1426/og/parallel-lives.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><ParallelLives locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["birthdayCalendars", "domesday1086", "hoebinghwan1789"]} current="parallelLives" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

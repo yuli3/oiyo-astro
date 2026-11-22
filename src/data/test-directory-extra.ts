@@ -75,6 +75,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "15가지 Likert 문항으로 나의 공동의존 성향을 진단해보세요. 독립형부터 강한 공동의존까지 4단계 분석과 회복 가이드를 제공합니다.", "en": "Assess your codependency tendencies with 15 Likert questions. Get a 4-level analysis from independent to strong codependency, with recovery guidance.", "ja": "15のリカート問題で共依存傾向を診断しましょう。自立型から強い共依存まで4段階の分析と回復ガイドを提供します。", "zh": "通过15道李克特量表题诊断你的共依存倾向，从独立型到强共依存，4段分析及恢复指南。", "fr": "Évaluez vos tendances codépendantes avec 15 questions. Analyse en 4 niveaux avec des conseils de rétablissement.", "es": "Evalúa tus tendencias de codependencia con 15 preguntas. Análisis de 4 niveles con guía de recuperación."},
   },
   {
+    slug: "christmas-personality-test",
+    title: {"ko": "크리스마스 성격 테스트 — 나는 산타형? 눈사람형?", "en": "Christmas Personality Test — Are You a Santa or a Snowman?", "ja": "クリスマス性格テスト — あなたはサンタ？雪だるま？", "zh": "圣诞性格测试 — 你是圣诞老人还是雪人？", "fr": "Test de personnalité de Noël — Père Noël ou Bonhomme de neige ?", "es": "Test de personalidad navideña — ¿Papá Noel o Muñeco de nieve?"},
+    description: {"ko": "8개 질문으로 알아보는 나의 크리스마스 유형. 산타·순록·눈사람·생강쿠키·트리 중 나는?", "en": "Eight quick questions: are you a Santa, Reindeer, Snowman, Gingerbread or Tree?", "ja": "8つの質問でわかるあなたのクリスマスタイプ。サンタ・トナカイ・雪だるま・ジンジャーブレッド・ツリー。", "zh": "8 道题找出你的圣诞类型：圣诞老人、驯鹿、雪人、姜饼人还是圣诞树？", "fr": "Huit questions : Père Noël, Renne, Bonhomme de neige, Pain d’épice ou Sapin ?", "es": "Ocho preguntas: ¿Papá Noel, Reno, Muñeco de nieve, Galleta de jengibre o Árbol?"},
+  },
+  {
     slug: "coffee-personality-test",
     title: {"ko": "커피 성격 테스트 — 나는 어떤 커피 타입?", "en": "Coffee Personality Test — Which Coffee Are You?", "ja": "コーヒー性格テスト — あなたはどのコーヒータイプ？", "zh": "咖啡性格测验 — 你是哪种咖啡类型？", "fr": "Test de personnalité café — Quel café êtes-vous ?", "es": "Test de personalidad del café — ¿Qué café eres tú?"},
     description: {"ko": "에스프레소, 라떼, 콜드브루, 카푸치노, 아메리카노 — 8가지 질문으로 나의 커피 성격을 발견하세요!", "en": "Espresso, Latte, Cold Brew, Cappuccino, or Americano? Find your coffee personality with 8 fun questions.", "ja": "エスプレッソ、ラテ、コールドブリュー、カプチーノ、アメリカーノ。8つの質問であなたのコーヒー性格を発見。", "zh": "义式浓缩、拿铁、冷萃、卡布奇诺还是美式咖啡？透过8个问题发现你的咖啡性格。", "fr": "Espresso, Latte, Cold Brew, Cappuccino ou Americano ? Découvrez votre personnalité café en 8 questions.", "es": "Espresso, Latte, Cold Brew, Cappuccino o Americano. Descubre tu personalidad cafetera con 8 preguntas."},
@@ -498,6 +503,131 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     slug: "silla-golpum",
     title: {"ko": "1300년 전 신라의 나 — 골품과 17관등", "en": "You in Silla — bone rank and 17 court ranks", "ja": "1300年前の新羅のわたし", "zh": "1300年前新罗的我", "fr": "Vous à Silla — rang d'os", "es": "Tú en Silla — rango de hueso"},
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
+  },
+  {
+    slug: "sejong-birthdays",
+    title: {"ko": "다른 해의 내 생일 실록 — 세종 32년", "en": "My birthday across Sejong's reign", "ja": "別の年の誕生日の実録", "zh": "其他年份的生日实录", "fr": "Mon anniversaire sous Sejong", "es": "Mi cumpleaños bajo Sejong"},
+    description: {"ko": "1419~1450년 해마다 내 생일의 실록 기사.", "en": "Your birthday in the Annals, 1419–1450.", "ja": "1419〜1450年の毎年の誕生日の記事。", "zh": "1419–1450年每年生日的记事。", "fr": "Votre anniversaire dans les Annales, 1419–1450.", "es": "Tu cumpleaños en los Anales, 1419–1450."},
+  },
+  {
+    slug: "hanyang-fire-1426",
+    title: {"ko": "1426 한양 대화재로 회귀 — 불 대책 5가지", "en": "Back to the 1426 Hanyang fire", "ja": "1426漢陽大火へ回帰", "zh": "回到1426汉阳大火", "fr": "Retour au grand incendie de 1426", "es": "Regreso al gran incendio de 1426"},
+    description: {"ko": "대화재 날로 돌아가 불 대책을 골라 실록과 맞춰요.", "en": "Pick fire measures and check them against the Annals.", "ja": "防火策を選んで実録と照合。", "zh": "选防火对策，与实录对照。", "fr": "Choisissez des mesures et comparez aux Annales.", "es": "Elige medidas y compáralas con los Anales."},
+  },
+  {
+    slug: "cotton-1426",
+    title: {"ko": "면포 환율 계산기 — 1426 내 월급은 면포 몇 필", "en": "Cotton exchange 1426", "ja": "綿布レート計算機1426", "zh": "棉布汇率计算器1426", "fr": "Change en coton 1426", "es": "Cambio en algodón 1426"},
+    description: {"ko": "월급을 1426년 면포·쌀·저화·동전으로 바꿔요.", "en": "Convert your pay into 1426 cotton, rice, notes and coins.", "ja": "月給を1426年の綿布・米・楮貨・銅銭に換算。", "zh": "把月薪换算成1426年的棉布、米、楮货、铜钱。", "fr": "Convertissez votre salaire en monnaies de 1426.", "es": "Convierte tu sueldo en monedas de 1426."},
+  },
+  {
+    slug: "sillok-name-hanja",
+    title: {"ko": "실록 속 내 이름 한자 — 세종실록 1426 한자 검색", "en": "My name in the 1426 Annals", "ja": "実録の中の私の名前の漢字", "zh": "实录里我名字的汉字", "fr": "Mon nom dans les Annales de 1426", "es": "Mi nombre en los Anales de 1426"},
+    description: {"ko": "이름 한자가 1426년 실록에 몇 번, 어디서 처음 나오는지 찾아요.", "en": "Count your name's characters in the 1426 Annals.", "ja": "名前の漢字が1426年の実録に何回出るか。", "zh": "查名字汉字在1426年实录中的次数。", "fr": "Comptez les caractères de votre nom dans les Annales.", "es": "Cuenta los caracteres de tu nombre en los Anales."},
+  },
+  {
+    slug: "night-sky-1426",
+    title: {"ko": "내 생일 밤 1426 하늘 — 실록 달력과 오성 위치", "en": "The 1426 sky on my birthday", "ja": "誕生日の夜の1426年の空", "zh": "生日那晚的1426年星空", "fr": "Le ciel de 1426 à mon anniversaire", "es": "El cielo de 1426 en mi cumpleaños"},
+    description: {"ko": "1426년 생일 밤 한양의 달 모양과 다섯 행성 위치를 계산해요.", "en": "Moon phase and the five planets over Hanyang on your birthday in 1426.", "ja": "1426年の誕生日の夜の月と五星。", "zh": "1426年生日夜的月相和五星。", "fr": "Phase de la Lune et cinq planètes en 1426.", "es": "Fase lunar y cinco planetas en 1426."},
+  },
+  {
+    slug: "gyeonggongjang",
+    title: {"ko": "경공장 장적 속 나 — 경국대전 장인 뽑기", "en": "Me in the royal artisan register", "ja": "京工匠の匠籍の中の私", "zh": "京工匠匠籍里的我", "fr": "Moi, artisan royal de Joseon", "es": "Yo, artesano real de Joseon"},
+    description: {"ko": "경국대전 경공장 인원 비율로 내 직종과 관청을 뽑아요.", "en": "Draw your trade and office by the 1485 artisan headcounts.", "ja": "経国大典の人数比で職種と官庁を引きます。", "zh": "按经国大典人数比例抽行当和官署。", "fr": "Tirez votre métier et votre office selon les effectifs de 1485.", "es": "Sortea tu oficio y oficina según las cifras de 1485."},
+  },
+  {
+    slug: "joseon-time",
+    title: {"ko": "지금 시각을 조선 시각으로 — 12시·각·경점 변환", "en": "Now, in Joseon time", "ja": "今を朝鮮の時刻で", "zh": "此刻的朝鲜时刻", "fr": "Maintenant, à l'heure de Joseon", "es": "Ahora, en hora de Joseon"},
+    description: {"ko": "지금 시각을 12시·각·경점과 인정·파루로 바꿔요.", "en": "Convert the time to Joseon double hours, kak and night watches.", "ja": "今の時刻を十二時・刻・更点に。", "zh": "把现在的时间换成时辰、刻和更点。", "fr": "Convertit l'heure en heures doubles, kak et veilles.", "es": "Convierte la hora en horas dobles, kak y vigilias."},
+  },
+  {
+    slug: "future-2626",
+    title: {"ko": "2626 미래 박물관 속 내 물건 — 거꾸로 타임슬립", "en": "Your things in a museum, 2626", "ja": "2626年の博物館の私の物", "zh": "2626年博物馆里的我的东西", "fr": "Vos affaires au musée en 2626", "es": "Tus cosas en un museo en 2626"},
+    description: {"ko": "지금 내 물건 세 가지가 600년 뒤 박물관 유물 설명으로 바뀌어요.", "en": "Three of your things as museum labels 600 years from now.", "ja": "私の物3つが600年後の博物館ラベルに。", "zh": "你的三件东西变成六百年后的文物说明。", "fr": "Trois de vos objets en étiquettes de musée.", "es": "Tres de tus objetos como etiquetas de museo."},
+  },
+  {
+    slug: "joseon-names",
+    title: {"ko": "조선 시대 내 이름 짓기 — 아명·관명·자·호", "en": "My names in Joseon Korea", "ja": "朝鮮時代の私の名前", "zh": "我在朝鲜时代的名字", "fr": "Mes noms dans la Corée de Joseon", "es": "Mis nombres en la Corea de Joseon"},
+    description: {"ko": "아명부터 항렬자가 든 관명, 자, 호까지 조선 시대 평생의 이름을 받아요.", "en": "Childhood name, formal name, courtesy name and pen name.", "ja": "幼名・冠名・字・号をもらいます。", "zh": "乳名、冠名、字和号。", "fr": "Nom d'enfance, officiel, de courtoisie et de plume.", "es": "Nombre de infancia, oficial, de cortesía y seudónimo."},
+  },
+  {
+    slug: "jinshin-1872",
+    title: {"ko": "1872 임신호적 속 우리 집 — 평민·사족·화족, 봉인된 호적", "en": "Your household in Japan's 1872 Jinshin koseki", "ja": "壬申戸籍の中のわが家", "zh": "1872年壬申户籍里的我家", "fr": "Votre foyer au koseki Jinshin de 1872", "es": "Tu hogar en el koseki Jinshin de 1872"},
+    description: {"ko": "1872년 실제 족칭 집계로 우리 집을 뽑고, 주소·족칭·직업·절·수호신이 적힌 호적을 재구성해요.", "en": "Your household drawn by the real 1872 status totals, in a reconstructed koseki.", "ja": "明治5年の族籍集計で、わが家の戸籍を再構成。", "zh": "按1872年族称统计，重构我家的户籍。", "fr": "Votre foyer selon les totaux de 1872, dans un koseki reconstitué.", "es": "Tu hogar según los totales de 1872, en un koseki reconstruido."},
+  },
+  {
+    slug: "huangce-1391",
+    title: {"ko": "1391 명나라 황책 속 우리 집 — 민호·군호·장호, 이장일까 갑수일까", "en": "Your household in the 1391 Ming Yellow Register", "ja": "1391年明の黄冊の中のわが家", "zh": "1391年明代黄册里的我家", "fr": "Votre foyer au registre jaune Ming de 1391", "es": "Tu hogar en el registro amarillo Ming de 1391"},
+    description: {"ko": "명 초 호적 비율로 우리 집을 뽑고, 황책의 구관·신수·개제·실재 칸에 식구와 재산을 적어요.", "en": "Your household drawn by early Ming categories, written in the four columns of the register.", "ja": "明初の戸籍比率で、黄冊の四柱にわが家を。", "zh": "按明初户籍比例，在黄册四柱上写下我家。", "fr": "Votre foyer selon les catégories Ming, en quatre colonnes.", "es": "Tu hogar según las categorías Ming, en cuatro columnas."},
+  },
+  {
+    slug: "census-1911",
+    title: {"ko": "1911 영국 센서스 속 나 — 하녀·광부·방직공, 그리고 조사 거부", "en": "You in the 1911 census of England and Wales", "ja": "1911年英国国勢調査の中の私", "zh": "1911年英国人口普查中的我", "fr": "Vous au recensement anglais de 1911", "es": "Tú en el censo inglés de 1911"},
+    description: {"ko": "1911년 실제 남녀별 직업 비율로 나를 뽑고, 가구 조사표 칸(관계·결혼 햇수·자녀·직업·출생지)에 내 한 줄을 적어요.", "en": "Your line on the 1911 household schedule, drawn by the real occupations by sex.", "ja": "1911年の実際の男女別職業比率で、世帯調査票に私の一行を。", "zh": "按1911年真实男女职业比例，在住户普查表上写下我的一行。", "fr": "Votre ligne sur le bulletin de 1911, selon les vrais métiers par sexe.", "es": "Tu línea en la hoja de 1911, según las ocupaciones reales por sexo."},
+  },
+  {
+    slug: "ellis-1907",
+    title: {"ko": "1907 엘리스섬 승객 명부 속 나 — 이민 최고 기록의 해", "en": "You on a 1907 Ellis Island passenger manifest", "ja": "1907年エリス島の乗客名簿の中の私", "zh": "1907年埃利斯岛乘客名单中的我", "fr": "Vous à Ellis Island en 1907", "es": "Tú en Ellis Island en 1907"},
+    description: {"ko": "1907년 실제 출신국 비율로 나를 뽑고, 승객 명부 칸(나이·직업·가진 돈·목적지·마중 나온 사람)에 내 한 줄을 적어요.", "en": "Your line on a 1907 manifest, drawn by the real countries of origin.", "ja": "1907年の実際の出身国比率で、乗客名簿に私の一行を。", "zh": "按1907年真实来源国比例，在乘客名单上写下我的一行。", "fr": "Votre ligne sur une liste de 1907, selon les vrais pays d'origine.", "es": "Tu línea en una lista de 1907, según los países de origen reales."},
+  },
+  {
+    slug: "parallel-lives",
+    title: {"ko": "나의 평행 인생 연표 — 타임슬립 시리즈 속 나를 한 장에", "en": "My parallel lives — every time-slip result on one timeline", "ja": "わたしの並行人生年表", "zh": "我的平行人生年表", "fr": "Mes vies parallèles", "es": "Mis vidas paralelas"},
+    description: {"ko": "신라부터 오늘까지, 타임슬립 시리즈에서 뽑은 나를 시대순 연표로 모아 이미지로 저장해요.", "en": "Your time-slip results from Silla to today, in date order, saved as one image.", "ja": "新羅から今日まで、引いた結果を年表にして画像で保存。", "zh": "从新罗到今天，把抽到的结果排成年表并保存为图片。", "fr": "Vos résultats, de Silla à aujourd'hui, sur une frise à enregistrer.", "es": "Tus resultados, de Silla a hoy, en una línea para guardar."},
+  },
+  {
+    slug: "birthday-calendars",
+    title: {"ko": "내 생일, 옛 달력 7개로 — 프랑스 혁명력 '당근의 날'부터 마야력까지", "en": "My birthday in 7 old calendars", "ja": "誕生日を7つの暦で", "zh": "我的生日，7种历法", "fr": "Mon anniversaire en 7 calendriers", "es": "Mi cumpleaños en 7 calendarios"},
+    description: {"ko": "생일을 프랑스 혁명력(그날의 식물·동물 이름), 60갑자, 마야 장주기력, 율리우스력, 이슬람력, 히브리력, 일본 연호로 한 번에 바꿔요.", "en": "French Republican day name, sexagenary cycle, Maya Long Count, Julian, Islamic, Hebrew and Japanese era dates for your birthday.", "ja": "革命暦の日の名前、干支、マヤ長期暦、ユリウス暦、イスラム暦、ヘブライ暦、元号に一度に変換。", "zh": "一次换算成法国共和历日名、干支、玛雅长纪历、儒略历、伊斯兰历、希伯来历和日本年号。", "fr": "Le nom de votre jour dans le calendrier républicain, et six autres calendriers.", "es": "El nombre de tu día en el calendario republicano y seis calendarios más."},
+  },
+  {
+    slug: "hoebinghwan-1789",
+    title: {"ko": "회빙환 시뮬레이터 — 1789년 정조 시대로 넘어가면 내 기술은 통할까", "en": "Isekai simulator: 1789 Joseon", "ja": "転生シミュレーター 1789", "zh": "穿越模拟器 1789", "fr": "Simulateur d'isekai : 1789", "es": "Simulador isekai: 1789"},
+    description: {"ko": "빙의·환생·타임슬립으로 1789년 조선에 가서, 가져간 현대 기술(한글·영어·요리·코딩…)이 통하는지 실제 역사로 판정해요.", "en": "Cross into 1789 Joseon and see which modern skills would work, judged on dated facts.", "ja": "1789年の朝鮮へ渡り、現代の技術が通じるかを史実で判定します。", "zh": "穿越到1789年的朝鲜，按史实判定你的现代技能是否管用。", "fr": "Passez en 1789 et voyez quels talents modernes serviraient.", "es": "Cruza a 1789 y mira qué habilidades modernas servirían."},
+  },
+  {
+    slug: "domesday-1086",
+    title: {"ko": "1086 둠즈데이 북 속 나 — 정복왕 윌리엄의 잉글랜드 대조사", "en": "You in Domesday Book, 1086", "ja": "1086年ドゥームズデイ・ブックの中の私", "zh": "1086年末日审判书中的我", "fr": "Vous dans le Domesday Book (1086)", "es": "Tú en el Domesday Book (1086)"},
+    description: {"ko": "기록된 26만 8,984명의 신분 비율(빌런 40.6%, 보더 30.4%, 노예 10.5% 등)로 나를 뽑고, 내 장원의 기록을 보여줘요.", "en": "Your class among the 268,984 people recorded in 1086, and the entry for your manor.", "ja": "1086年に記録された26万8984人の身分割合で自分を引き、荘園の記録を見せます。", "zh": "按1086年记录的268,984人的阶层比例抽出你，并展示你的庄园条目。", "fr": "Votre condition parmi les 268 984 recensés de 1086 et l'article de votre manoir.", "es": "Tu clase entre las 268.984 personas registradas en 1086 y la entrada de tu feudo."},
+  },
+  {
+    slug: "census-1850",
+    title: {"ko": "1850 미국 센서스 속 나 — 처음으로 한 사람씩 이름을 적은 조사", "en": "You in the 1850 U.S. census", "ja": "1850年アメリカ国勢調査の中の私", "zh": "1850年美国普查中的我", "fr": "Vous dans le recensement américain de 1850", "es": "Tú en el censo de EE. UU. de 1850"},
+    description: {"ko": "1850년 미국 2,319만 명의 실제 구성(노예 320만, 아일랜드 이민 100만 등)으로 나를 뽑고, 조사표에 적힌 한 줄을 보여줘요.", "en": "Who you were among 23.2 million Americans in 1850, and your line on the census form.", "ja": "1850年アメリカ2319万人の構成で自分を引き、調査票の一行を見せます。", "zh": "按1850年美国2319万人的构成抽出你，并展示普查表上的一行。", "fr": "Qui vous étiez parmi 23,2 millions d'Américains, et votre ligne au recensement.", "es": "Quién eras entre 23,2 millones de estadounidenses, y tu línea en el censo."},
+  },
+  {
+    slug: "ninbetsu-edo",
+    title: {"ko": "에도 인별장 속 나 — 종문인별개장과 에도 시대 신분", "en": "You in an Edo-period temple register", "ja": "江戸の人別帳の中の私 — 宗門人別改帳と身分", "zh": "江户人别帐中的我", "fr": "Vous dans un registre de l'époque d'Edo", "es": "Tú en un registro del período Edo"},
+    description: {"ko": "에도 시대 신분 비율(백성 82.5%, 상인 6%, 무사 5.5% 등)로 내 신분을 뽑고, 종문인별개장 한 줄로 보여줘요.", "en": "Your Edo-period status by real population shares, written as a line in the temple register.", "ja": "江戸時代の身分構成（百姓82.5%、商人6%、武士5.5%など）で身分を引き、人別帳の一行で見せます。", "zh": "按江户时代身份比例抽出身份，以人别帐的一行呈现。", "fr": "Votre statut à Edo selon les vraies proportions, sous forme de ligne de registre.", "es": "Tu estatus en Edo según las proporciones reales, como línea de registro."},
+  },
+  {
+    slug: "tongsinsa-1763",
+    title: {"ko": "조선통신사 일행 속 나 — 1763년 계미통신사 477명", "en": "You in the 1763 Joseon embassy to Japan", "ja": "朝鮮通信使一行の中の私", "zh": "朝鲜通信使团中的我", "fr": "Vous dans l'ambassade coréenne de 1763", "es": "Tú en la embajada coreana de 1763"},
+    description: {"ko": "1763년 통신사 477명(격군 228명 포함) 가운데 내 역할과 332일 여정, 실제 사건을 보여줘요.", "en": "Your role among the 477 of the 1763 embassy, its 332-day journey and what really happened.", "ja": "1763年通信使477人の中の役割と332日の旅。", "zh": "1763年通信使477人中你的角色与332天的旅程。", "fr": "Votre rôle parmi les 477 et le voyage de 332 jours.", "es": "Tu papel entre los 477 y el viaje de 332 días."},
+  },
+  {
+    slug: "banchado-1795",
+    title: {"ko": "1795 화성 행차 반차도 속 나 — 정조 행렬 1,779명 중 내 자리", "en": "You in King Jeongjo's 1795 procession", "ja": "1795年 華城行幸の班次図の中の私", "zh": "1795华城行幸班次图中的我", "fr": "Vous dans le cortège royal de 1795", "es": "Tú en el cortejo real de 1795"},
+    description: {"ko": "원행을묘정리의궤 반차도에 그려진 1,779명·말 779필 가운데 내 역할을 뽑고, 7박 8일 여정과 배다리 이야기를 보여줘요.", "en": "Your role among the 1,779 people and 779 horses of the 1795 procession painting, with the eight-day journey.", "ja": "班次図の1,779人・馬779頭の中の役割と、7泊8日の旅程。", "zh": "班次图1,779人、779匹马中你的角色，以及七夜八天的行程。", "fr": "Votre rôle parmi les 1 779 personnages et 779 chevaux, et le voyage de huit jours.", "es": "Tu papel entre las 1.779 personas y 779 caballos, y el viaje de ocho días."},
+  },
+  {
+    slug: "gwageo-1426",
+    title: {"ko": "과거시험 보러 가기 — 1426년 세종 식년 문과", "en": "Sit the 1426 Joseon civil exam", "ja": "科挙を受けに行く — 1426年の式年文科", "zh": "去考科举 — 1426年式年文科", "fr": "Passer l'examen civil de 1426", "es": "Presentar el examen civil de 1426"},
+    description: {"ko": "경서 강경·부 운 맞추기·세종의 실제 책문(경원 문제)을 풀고, 1426년 실제 급제자 34명 명단 속 내 자리를 확인해요.", "en": "Classics, rhymes and Sejong's real question on the northern frontier, then your place among the 34 real passers.", "ja": "講経・賦・世宗の実際の策問を解き、実際の合格者34人の中の順位を見ます。", "zh": "讲经、作赋、回答世宗真实策问，看你在34名真实及第者中的位置。", "fr": "Classiques, rimes et la vraie question de Sejong, puis votre place parmi les 34 reçus.", "es": "Clásicos, rimas y la pregunta real de Sejong, y tu lugar entre los 34 aprobados."},
+  },
+  {
+    slug: "lunch-1426",
+    title: {"ko": "오늘 점심을 600년 전으로 — 1426년 조선 밥상 재료 생존율", "en": "Your lunch in 1426 Korea — which ingredients survive?", "ja": "今日のランチを600年前へ", "zh": "把今天的午餐带回600年前", "fr": "Votre déjeuner dans la Corée de 1426", "es": "Tu almuerzo en la Corea de 1426"},
+    description: {"ko": "김치찌개·짜장면·피자 등 25가지 메뉴의 재료가 1426년에 있었는지, 고추·감자·설탕의 전래 시기와 함께 보여줘요.", "en": "25 dishes checked ingredient by ingredient against what Korea had in 1426, with arrival dates for chili, potato and sugar.", "ja": "25のメニューの食材が1426年にあったかを、唐辛子・じゃがいも・砂糖の伝来とともに。", "zh": "逐一核对25道菜的食材在1426年是否存在，附辣椒、土豆、糖的传入时间。", "fr": "25 plats vérifiés ingrédient par ingrédient pour la Corée de 1426.", "es": "25 platos revisados ingrediente por ingrediente para la Corea de 1426."},
+  },
+  {
+    slug: "sillok-1426",
+    title: {"ko": "내 생일의 실록 — 세종 8년 그날의 기록", "en": "Your birthday in the 1426 Sejong annals", "ja": "誕生日の実録 — 世宗8年のその日", "zh": "我生日那天的实录", "fr": "Votre anniversaire dans les annales de 1426", "es": "Tu cumpleaños en los anales de 1426"},
+    description: {"ko": "양력·음력 생일을 세종 8년 날짜로 바꿔 그날 실록 기사를 원문과 쉬운 풀이로 보여줘요.", "en": "Your birthday converted to Sejong's 8th year, with that day's annals entry and a plain summary.", "ja": "誕生日を世宗8年の日付に換算し、その日の実録を原文と要約で。", "zh": "把生日换算成世宗八年的日期，展示当天实录原文与摘要。", "fr": "Votre date convertie en l'an 8 de Sejong, avec l'entrée des annales du jour.", "es": "Tu fecha convertida al año 8 de Sejong, con la entrada de los anales de ese día."},
+  },
+  {
+    slug: "hometown-1426",
+    title: {"ko": "내 동네는 600년 전 어느 고을? — 세종실록 지리지 호구·토산", "en": "Your Korean town in 1432 — Sejong Sillok gazetteer", "ja": "600年前、わが町はどの郡県？", "zh": "600年前我家乡是哪个郡县？", "fr": "Votre ville coréenne en 1432", "es": "Tu ciudad coreana en 1432"},
+    description: {"ko": "지금 사는 시·군을 세종실록 지리지 337개 고을에 맞춰 호·구, 고을 순위, 토산을 보여줘요.", "en": "Match your city to one of 337 counties in the gazetteer: households, head count, rank and local products.", "ja": "市・郡を地理志の337郡県に対応させ、戸口・順位・土産を見せます。", "zh": "把你的市郡对应到地理志337个郡县，显示户口、排名与土产。", "fr": "Votre ville parmi les 337 districts du registre : foyers, inscrits, rang et produits.", "es": "Tu ciudad entre los 337 distritos del registro: hogares, personas, puesto y productos."},
   },
   {
     slug: "ancestors-1426",

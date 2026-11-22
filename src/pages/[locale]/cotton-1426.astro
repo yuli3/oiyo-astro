@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Cotton1426 from "../../components/tools/past-life/Cotton1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "면포 환율 계산기 — 1426년 한양이라면 내 월급은 면포 몇 필?",
+    description: "내 월급을 1426년(세종 8) 면포·쌀·저화·동전으로 바꿔 보고, 『세종실록』 속 말값·포상금과 견줘 봐요. 나라가 정한 값과 시장 값을 함께 보여 줘요.",
+    heading: "면포 환율 계산기",
+    sub: "1426 세종 8년 · 면포·쌀·저화·동전",
+    intro: "세종 때는 무명(면포)과 삼베가 돈 노릇을 했어요. 1426년 실록에는 '저화 1장 = 쌀 1두 = 동전 40문'이라는 나라의 환산 비율이 나와요. 요즘 쌀값을 넣으면 내 월급이 그때 면포 몇 필인지, 실록 속 말 한 마리 값은 내 월급 몇 달 치인지 계산해 드려요.",
+    howTitle: "어떻게 계산하나요",
+    how: [
+      "월급을 요즘 쌀값으로 쌀 양으로 바꾸고, 면포 1필 = 쌀 5두(1450년 이전 서울·경기 시세)로 다시 바꿔요.",
+      "저화와 동전은 나라가 정한 값과 실제로 시장에서 통하던 값의 차이가 커서 둘 다 보여 드려요.",
+      "월급은 이 기기에서만 계산하고 링크에 넣지 않아요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "1426년 정확한 물가인가요?", a: "아니에요. 면포 1필 = 쌀 5두는 1450년 이전을 묶은 시세이고, 쌀 무게와 요즘 쌀값은 가정이에요. 그 시대 감을 잡는 놀이로 봐 주세요." },
+      { q: "왜 저화는 그렇게 쌌나요?", a: "나라는 저화 1장을 쌀 1두로 정했지만 사람들이 잘 믿지 않아 시장에서는 동전 1문 정도로 바뀌었어요. 1425년 무렵 쌀 1되가 동전 3문이었어요." },
+    ],
+  },
+  en: {
+    title: "Cotton exchange 1426: my monthly pay in bolts of cotton",
+    description: "Convert your pay into 1426 Joseon cotton, rice, paper notes and coins, and compare it with horse prices and rewards in the Sejong Sillok.",
+    heading: "Cotton exchange 1426",
+    sub: "Joseon, Sejong year 8 · cotton, rice, notes, coins",
+    intro: "In Sejong's Joseon, cloth was money. The 1426 Annals set 1 paper note = 1 du of rice = 40 copper coins. Enter today's rice price to see your pay in bolts of cotton.",
+    howTitle: "How it works",
+    how: ["Pay → rice at today's price → cotton at 5 du per bolt (pre-1450 Seoul rate).", "Your pay stays on this device and never goes into the link."],
+    faqTitle: "FAQ",
+    faq: [{ q: "Is this the exact 1426 price?", a: "No. The cotton rate covers the years before 1450, and rice weight and price are assumptions." }],
+  },
+  ja: {
+    title: "綿布レート計算機 1426 — 私の月給は綿布何匹？",
+    description: "月給を1426年朝鮮の綿布・米・楮貨・銅銭に換算し、『世宗実録』の馬の値や褒賞と比べます。",
+    heading: "綿布レート計算機 1426",
+    sub: "世宗8年・綿布・米・楮貨・銅銭",
+    intro: "世宗の時代は布がお金でした。1426年の実録は楮貨1枚＝米1斗＝銅銭40文と定めています。",
+    howTitle: "仕組み",
+    how: ["月給→米（いまの米価）→綿布（1匹＝米5斗、1450年以前）の順に換算します。", "月給はこの端末内だけで計算し、リンクに入れません。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "1426年の正確な物価ですか？", a: "いいえ。目安として楽しんでください。" }],
+  },
+  zh: {
+    title: "棉布汇率计算器1426 — 我的月薪值几匹棉布？",
+    description: "把月薪换算成1426年朝鲜的棉布、大米、楮货和铜钱，并与《世宗实录》里的马价、赏格比较。",
+    heading: "棉布汇率计算器1426",
+    sub: "世宗八年·棉布、米、楮货、铜钱",
+    intro: "世宗时代布就是钱。1426年实录定下楮货1张=米1斗=铜钱40文。",
+    howTitle: "怎么算",
+    how: ["月薪→大米（今天米价）→棉布（1匹=米5斗，1450年以前）。", "月薪只在本机计算，不放进链接。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "这是1426年的准确物价吗？", a: "不是，只是帮你感受那个时代的估算。" }],
+  },
+  fr: {
+    title: "Change en coton 1426 : mon salaire en pièces de coton",
+    description: "Convertissez votre salaire en coton, riz, billets et pièces du Joseon de 1426, et comparez avec les prix des chevaux et les primes des Annales.",
+    heading: "Change en coton 1426",
+    sub: "Joseon, an 8 de Sejong · coton, riz, billets, pièces",
+    intro: "Sous Sejong, le tissu servait de monnaie. Les Annales de 1426 fixent 1 billet = 1 du de riz = 40 sapèques.",
+    howTitle: "Comment ça marche",
+    how: ["Salaire → riz au prix actuel → coton à 5 du la pièce (taux d’avant 1450).", "Votre salaire reste sur cet appareil."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Est-ce le prix exact de 1426 ?", a: "Non, c’est un ordre de grandeur." }],
+  },
+  es: {
+    title: "Cambio en algodón 1426: mi sueldo en piezas de algodón",
+    description: "Convierte tu sueldo en algodón, arroz, billetes y monedas del Joseon de 1426 y compáralo con precios de caballos y premios de los Anales.",
+    heading: "Cambio en algodón 1426",
+    sub: "Joseon, año 8 de Sejong · algodón, arroz, billetes, monedas",
+    intro: "Con Sejong, la tela era dinero. Los Anales de 1426 fijan 1 billete = 1 du de arroz = 40 monedas.",
+    howTitle: "Cómo funciona",
+    how: ["Sueldo → arroz al precio actual → algodón a 5 du por pieza (tasa anterior a 1450).", "Tu sueldo se queda en este dispositivo."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Es el precio exacto de 1426?", a: "No, es una aproximación." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/cotton-1426/")} ogImage="/images/past-life-1426/og/cotton-1426.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Cotton1426 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["sillok1426", "gyeonggongjang", "sillokNameHanja"]} current="cotton1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,54 @@
+---
+/**
+ * 2027 お正月 — 日本の年末年始だけを扱うので ja のみ（国別特化、2026-10-19 世運）。
+ * 2026-11-21 運営20選 #9。年賀状シーズン（12月）前に索引させる。
+ */
+import Layout from '../../layouts/Layout.astro';
+import NewYear2027Card from '../../components/tools/seasonal/NewYear2027Card';
+import { sameSignYears } from '../../lib/new-year-zodiac';
+import type { Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ja' } }];
+}
+const { locale } = Astro.params as { locale: Locale };
+const title = '2027年お正月カレンダー — 丁未（ひつじ年）の年男・年女と厄年早見';
+const description = '2027年の元日は金曜日。三が日、七草、鏡開き、成人の日（1月11日）の日付と、ひつじ年の年男・年女、数え年で見る厄年を生まれ年から確認できます。';
+const days = [
+  ['12月31日（木）', '大晦日', '年越しそば、除夜の鐘。2026年の締めくくり。'],
+  ['1月1日（金）', '元日', '初日の出、初詣、おせち。2027年は丁未（ひのとひつじ）。'],
+  ['1月1日〜3日', '三が日', '金・土・日と重なり、多くの職場では4日（月）が仕事始め。'],
+  ['1月7日（木）', '人日・七草', '七草がゆで一年の無病息災を願う。関東ではこの日までが松の内。'],
+  ['1月11日（月・祝）', '成人の日・鏡開き', '1月第2月曜日が成人の日。鏡開きは11日が多く、地域により15日・20日。'],
+  ['1月15日（金）', '小正月', 'どんど焼き（左義長）で正月飾りを焚く地域も。関西ではこの日までを松の内とすることが多い。'],
+];
+const faqs = [
+  { q: '2027年は何年（干支）ですか？', a: '丁未（ひのとひつじ）、ひつじ年です。年賀状の図柄もひつじになります。' },
+  { q: '2027年の年男・年女は何歳？', a: `ひつじ年生まれの人です。2027年中に迎える満年齢で ${sameSignYears(2027).slice(0, 8).map((s) => s.age + '歳').join('・')}（${sameSignYears(2027).slice(0, 8).map((s) => s.year).join('・')}年生まれ）。` },
+  { q: '年賀状はいつまでに出せば元日に届きますか？', a: '例年、日本郵便は12月15日から年賀状の引き受けを始め、12月25日ごろまでの投函を元日配達の目安として案内しています。その年の案内を日本郵便のサイトで確認してください。' },
+  { q: '厄年は満年齢ですか？', a: '一般に数え年（生まれた年を1歳とし、元日ごとに1つ加える）で数えます。男性25・42・61歳、女性19・33・37・61歳が本厄とされることが多く、男性42歳・女性33歳は大厄です。' },
+];
+const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['ja']}>
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">年末年始 · 2027 丁未</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">2027年 お正月カレンダー</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">2027年の元日は金曜日。三が日が週末と重なるので、仕事始めは1月4日（月）のところが多くなりそうです。日付と、ひつじ年の自分の年齢・厄年をまとめて確認しましょう。</p>
+    <div class="mt-8"><NewYear2027Card client:load lang="ja" /></div>
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">年末年始の日付</h2>
+      <ol class="mt-4 divide-y rounded-xl border bg-card">
+        {days.map(([d, n, p]) => <li class="p-4"><p class="text-sm font-black">{d} · {n}</p><p class="mt-1 text-sm text-muted-foreground">{p}</p></li>)}
+      </ol>
+    </section>
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">よくある質問</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {faqs.map((f) => <details class="p-4"><summary class="cursor-pointer text-sm font-black">{f.q}</summary><p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p></details>)}
+      </div>
+    </section>
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">祝日は内閣府「国民の祝日」による。年賀状の受付期間は<a class="underline" href="https://www.post.japanpost.jp/" rel="noopener">日本郵便</a>の当年の案内を確認してください。</p>
+  </section>
+</Layout>

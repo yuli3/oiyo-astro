@@ -1,0 +1,120 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Hoebinghwan1789 from "../../components/tools/past-life/Hoebinghwan1789";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "회빙환 시뮬레이터 — 1789년 정조 시대로 빙의·환생·타임슬립하면?",
+    description: "웹소설 회빙환처럼 1789년 조선으로 넘어가 봐요. 빙의할 몸의 신분은 실제 1789년 호적 비율로 뽑고, 가져간 현대 기술(한글·영어·요리·코딩…)이 그 시대에 통하는지 실제 역사로 따져 봐요.",
+    heading: "회빙환 시뮬레이터",
+    sub: "1789년 정조 시대, 내 현대 기술은 통할까",
+    intro: "회귀·빙의·환생. 웹소설 주인공은 늘 현대 지식으로 과거를 뒤집지만, 실제로는 어떨까요? 1789년 조선으로 넘어가서 가져간 기술이 통하는지 하나씩 따져 봐요.",
+    howTitle: "어떻게 하나요",
+    how: [
+      "넘어가는 방법(빙의·환생·타임슬립)과 가져갈 현대 기술을 최대 3개 고르세요.",
+      "빙의·환생할 몸의 신분은 1789년 대구 호적의 비율(양반 38%·상민 46%·노비 16%)로 뽑아요. 이름과 호적 한 줄은 '1789 호적 속 나'와 같은 규칙으로 만들어요.",
+      "기술마다 그 시대에 통하는지는 실제 사실로 판정해요. 한글은 1446년 반포, 고구마는 1763년 통신사가 들여옴, 감자는 1824년 무렵 전래, 신해통공은 1791년이에요. 생존 점수와 결말은 재미용이에요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "1789년 조선에서 영어는 정말 쓸모없나요?", a: "통역관을 기르던 사역원은 중국어·몽골어·일본어·여진어(청나라말)만 가르쳤어요. 영어로 말할 상대가 사실상 없었어요." },
+      { q: "감자볶음은 왜 못 만드나요?", a: "감자는 1824년 무렵에야 한반도에 들어왔어요. 1789년엔 고추와, 막 퍼지기 시작한 고구마는 있었어요." },
+      { q: "타임슬립하면 왜 불리한가요?", a: "조선의 열여섯 살 넘은 남자는 신분을 적은 호패를 차야 했어요. 호적에도 없고 호패도 없는 사람은 먼저 의심을 받아요." },
+    ],
+  },
+  en: {
+    title: "Isekai simulator: possessed, reborn or time-slipped into 1789 Korea",
+    description: "Cross over to Joseon in 1789, King Jeongjo's 13th year. Your body's status is drawn from real 1789 registers, and each modern skill you bring (Hangul, English, cooking, coding…) is judged against the history.",
+    heading: "Isekai simulator: 1789",
+    sub: "Possession, rebirth or time slip: would your modern skills work?",
+    intro: "Korean web novels love heroes who wake up in the past and win with modern know-how. How would yours fare in 1789 Joseon? Pick a way in and up to three skills.",
+    howTitle: "How it works",
+    how: [
+      "Pick how you cross over (possession, rebirth, time slip) and up to three modern skills.",
+      "The body's status follows the 1789 Daegu registers: yangban 38%, commoners 46%, nobi 16%.",
+      "Each skill is judged on dated facts (Hangul 1446, sweet potato 1763, potato about 1824, the 1791 market reform). The survival score and ending are for fun.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Is English really useless in 1789 Korea?", a: "The interpreters' office taught Chinese, Mongolian, Japanese and Jurchen (Manchu) only. There was practically nobody to speak English with." },
+      { q: "Why is time slip the hardest?", a: "Every man over sixteen had to carry a hopae ID tag. With no register entry and no tag, you are a suspect first." },
+    ],
+  },
+  ja: {
+    title: "転生シミュレーター — 1789年の朝鮮に憑依・転生・タイムスリップしたら？",
+    description: "1789年の朝鮮へ。憑依する体の身分は実際の1789年戸籍の割合で引き、持っていった現代の技術が通じるかを歴史で判定します。",
+    heading: "転生シミュレーター 1789",
+    sub: "正祖の時代、現代の技術は通じる？",
+    intro: "韓国のウェブ小説で人気の「回帰・憑依・転生」。1789年の朝鮮に渡ったら、現代の知識はどこまで通じるでしょう。",
+    howTitle: "仕組み",
+    how: ["渡り方と現代の技術（最大3つ）を選びます。", "体の身分は1789年大邱戸籍の割合で引き、技術の可否は年代のはっきりした事実で判定します。スコアと結末は遊びです。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "なぜジャガイモ料理は作れない？", a: "ジャガイモが朝鮮半島に入ったのは1824年ごろだからです。" }],
+  },
+  zh: {
+    title: "穿越模拟器 — 附身、转生或穿越到1789年的朝鲜",
+    description: "穿越到1789年的朝鲜。附身的身份按1789年真实户籍比例抽取，带去的现代技能是否管用按史实判定。",
+    heading: "穿越模拟器 1789",
+    sub: "正祖时代，你的现代技能管用吗",
+    intro: "韩国网文最爱“回归、附身、转生”。穿越到1789年的朝鲜，你的现代知识能用多少？",
+    howTitle: "怎么玩",
+    how: ["选择穿越方式和最多3项现代技能。", "身体的身份按1789年大邱户籍比例抽取，技能按有年代的史实判定。分数和结局仅供娱乐。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "为什么做不了土豆菜？", a: "土豆大约在1824年才传入朝鲜半岛。" }],
+  },
+  fr: {
+    title: "Simulateur d'isekai : possédé, réincarné ou projeté en 1789 en Corée",
+    description: "Passez en 1789 sous Jeongjo. Votre rang suit les vrais registres de 1789 et chaque talent moderne est jugé à l'aune de l'histoire.",
+    heading: "Simulateur d'isekai : 1789",
+    sub: "Vos talents modernes serviraient-ils ?",
+    intro: "Les romans coréens en ligne adorent les héros qui renaissent dans le passé. Et vous, en 1789 ?",
+    howTitle: "Comment ça marche",
+    how: ["Choisissez votre passage et jusqu'à trois talents.", "Le rang suit les registres de Daegu (1789) ; chaque talent est jugé sur des faits datés. Le score est un jeu."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Pourquoi pas de pommes de terre ?", a: "Elles n'arrivent en Corée que vers 1824." }],
+  },
+  es: {
+    title: "Simulador isekai: poseído, renacido o caído en la Corea de 1789",
+    description: "Cruza a 1789, en tiempos de Jeongjo. Tu rango sigue los registros reales de 1789 y cada habilidad moderna se juzga con la historia.",
+    heading: "Simulador isekai: 1789",
+    sub: "¿Servirían tus habilidades modernas?",
+    intro: "Las novelas web coreanas adoran a los héroes que renacen en el pasado. ¿Y tú, en 1789?",
+    howTitle: "Cómo funciona",
+    how: ["Elige cómo cruzas y hasta tres habilidades.", "El rango sigue los registros de Daegu (1789); cada habilidad se juzga con hechos fechados. La puntuación es un juego."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Por qué no hay papas?", a: "No llegaron a Corea hasta hacia 1824." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/hoebinghwan-1789/")} ogImage="/images/past-life-1426/og/hoebinghwan-1789.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Hoebinghwan1789 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["joseon1789", "tongsinsa1763", "lunch1426"]} current="hoebinghwan1789" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

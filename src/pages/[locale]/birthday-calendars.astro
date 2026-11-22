@@ -1,0 +1,127 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import BirthdayCalendars from "../../components/tools/past-life/BirthdayCalendars";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "내 생일, 옛 달력 7개로 — 프랑스 혁명력 '당근의 날'부터 마야력·60갑자까지",
+    description: "생일을 넣으면 프랑스 혁명력 날짜와 그날의 이름(당근의 날, 고양이의 날…), 60갑자 년·일, 마야 장주기력, 율리우스력, 이슬람력, 히브리력, 일본 연호를 한 번에 보여줘요.",
+    heading: "내 생일, 옛 달력 7개로",
+    sub: "1793년 프랑스에서 내 생일은 '무슨 날'이었을까",
+    intro: "프랑스 혁명정부는 성인의 축일을 지우고 365일마다 당근·고양이·쟁기 같은 이름을 붙였어요. 내 생일은 무슨 날일까요? 같은 날을 마야인, 조선 사람, 일본 관청은 어떻게 적었을지도 함께 봐요.",
+    howTitle: "어떻게 계산하나요",
+    how: [
+      "모든 날짜는 천문학의 율리우스일(날짜 번호)로 바꾼 다음 각 달력의 규칙으로 계산해요. 히브리력·이슬람력·마야력·율리우스력은 공개 변환 라이브러리(convertdate) 결과와 맞춰 검사했어요.",
+      "프랑스 혁명력은 롬(Romme)의 윤년 규칙(4년마다 윤년, 100년은 빼고 400년은 넣기)으로 계산해요. 춘분으로 새해를 정하는 방식과는 하루 다를 수 있어요.",
+      "60갑자 해는 입춘 기준이고, 설날 기준과 다르면 따로 알려줘요. 일진은 2000년 1월 1일이 무오일인 것을 기준으로 세요. 이슬람력은 계산식 날짜라 실제 달 관측과 하루 이틀 다를 수 있어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "프랑스 혁명력은 언제 썼나요?", a: "1793년 말부터 1805년 말까지 약 12년 썼어요. 나폴레옹이 1806년 1월 1일부터 원래 달력으로 되돌렸어요. 1871년 파리 코뮌 때 잠깐 다시 쓰이기도 했어요." },
+      { q: "날마다 이름이 다 달라요?", a: "네. 열흘 주의 5일째는 동물, 10일째는 농기구, 나머지는 농작물과 꽃·나무 이름이에요. 겨울 달인 니보즈만 광물 이름을 썼어요. 한 해 끝 5~6일은 미덕·재능·노동 같은 축제일이에요." },
+      { q: "마야력 13.0.0.0.0이 종말이었나요?", a: "아니요. 2012년 12월 21일은 장주기력의 큰 단위(박툰) 13개가 다 찬 날일 뿐이고, 달력은 그다음 날 13.0.0.0.1로 계속 이어져요." },
+    ],
+  },
+  en: {
+    title: "My birthday in 7 old calendars: French Republican day name, Maya, Hebrew, Hijri and more",
+    description: "Enter your birthday to see its French Republican date and day name (the day of the carrot, the cat…), the sexagenary year and day, the Maya Long Count, and Julian, Islamic, Hebrew and Japanese era dates.",
+    heading: "My birthday in 7 old calendars",
+    sub: "What was your birthday called in revolutionary France?",
+    intro: "The French Republic abolished saints' days and gave each of the 365 days a name: a carrot, a cat, a plough. Which one is yours? And how would a Maya scribe, a Joseon clerk or a Japanese town hall write the same day?",
+    howTitle: "How it works",
+    how: [
+      "Every date is turned into an astronomical Julian Day Number, then into each calendar by its own rules. Hebrew, Islamic, Maya and Julian results are tested against the open-source convertdate library.",
+      "French Republican dates use Romme's leap-year rule (every 4 years, skipping centuries except every 400th), which can differ by a day from the original equinox rule.",
+      "The sexagenary year starts at the beginning of spring (lichun), with a note when lunar new year disagrees. Islamic dates are arithmetic and may differ by a day or two from moon sighting.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "When was the French Republican calendar used?", a: "From late 1793 to the end of 1805. Napoleon restored the Gregorian calendar on 1 January 1806; the Paris Commune briefly revived it in 1871." },
+      { q: "Does every day really have a name?", a: "Yes. Days 5, 15 and 25 are animals, days 10, 20 and 30 are tools, the rest are crops, flowers and trees, except Nivôse, which names minerals. The 5 or 6 days at the end of the year are festivals." },
+      { q: "Did the Maya calendar end in 2012?", a: "No. On 21 December 2012 the Long Count reached 13.0.0.0.0, and the next day was 13.0.0.0.1." },
+    ],
+  },
+  ja: {
+    title: "誕生日を7つの暦で — フランス革命暦の「にんじんの日」からマヤ暦・干支まで",
+    description: "誕生日を入れると、フランス革命暦の日付とその日の名前、干支の年と日、マヤ長期暦、ユリウス暦、イスラム暦、ヘブライ暦、元号を一度に表示します。",
+    heading: "誕生日を7つの暦で",
+    sub: "革命期のフランスで、あなたの誕生日は何の日？",
+    intro: "フランス革命政府は聖人の祝日をやめ、365日それぞれに「にんじん」「猫」「犂」などの名を付けました。あなたの誕生日は何の日？同じ日をマヤや日本の役所はどう書いたかも見てみましょう。",
+    howTitle: "計算のしかた",
+    how: ["すべての日付を天文学のユリウス日に直し、各暦の規則で計算します。ヘブライ暦・イスラム暦・マヤ暦・ユリウス暦はconvertdateの結果と照合しています。", "革命暦はロンムの閏年規則で計算し、秋分基準と1日ずれることがあります。干支の年は立春基準です。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "フランス革命暦はいつ使われた？", a: "1793年末から1805年末まで約12年。ナポレオンが1806年1月1日にグレゴリオ暦へ戻しました。" }],
+  },
+  zh: {
+    title: "我的生日，7种历法 — 从法国共和历的“胡萝卜日”到玛雅历、干支",
+    description: "输入生日，一次看到法国共和历日期与当天的名字、干支年与日、玛雅长纪历、儒略历、伊斯兰历、希伯来历和日本年号。",
+    heading: "我的生日，7种历法",
+    sub: "在大革命时期的法国，你的生日叫什么？",
+    intro: "法兰西共和国废除了圣人节日，给一年365天各起一个名字：胡萝卜、猫、犁……你的生日是哪一个？再看看玛雅人和日本官府会怎样写同一天。",
+    howTitle: "怎么计算",
+    how: ["所有日期先换算成天文学儒略日，再按各历法规则计算。希伯来历、伊斯兰历、玛雅历和儒略历已与convertdate核对。", "共和历按罗姆闰年规则计算，与秋分规则可能差一天。干支年以立春为界。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "法国共和历用了多久？", a: "从1793年底到1805年底，约12年。拿破仑在1806年1月1日恢复了格里历。" }],
+  },
+  fr: {
+    title: "Mon anniversaire dans le calendrier républicain : le nom de votre jour (et 6 autres calendriers)",
+    description: "Entrez votre date de naissance : votre date républicaine et le nom de votre jour (Carotte, Chat, Charrue…), puis le cycle sexagésimal, le compte long maya, et les calendriers julien, hégirien, hébraïque et japonais.",
+    heading: "Votre anniversaire dans le calendrier républicain",
+    sub: "Quel est le nom de votre jour ? Et six autres calendriers",
+    intro: "En 1793, Fabre d'Églantine remplace les saints par les fruits de la terre : chaque jour porte le nom d'une plante, d'un animal ou d'un outil. Êtes-vous né le jour de la Carotte, du Chat ou de la Charrue ? Et comment un scribe maya ou une mairie japonaise écriraient-ils ce même jour ?",
+    howTitle: "Comment c'est calculé",
+    how: [
+      "Chaque date passe par le jour julien des astronomes, puis par les règles de chaque calendrier. Les résultats hébraïques, hégiriens, mayas et juliens sont vérifiés avec la bibliothèque libre convertdate.",
+      "Les dates républicaines suivent la règle de Romme (bissextile tous les 4 ans, sauf les siècles non divisibles par 400) et peuvent différer d'un jour de la règle de l'équinoxe.",
+    ],
+    faqTitle: "Questions fréquentes",
+    faq: [
+      { q: "Combien de temps a-t-il servi ?", a: "De fin 1793 à fin 1805. Napoléon rétablit le calendrier grégorien le 1er janvier 1806 ; la Commune de Paris le reprit brièvement en 1871." },
+      { q: "Chaque jour a-t-il vraiment un nom ?", a: "Oui : les jours en 5 sont des animaux, les jours en 0 des outils, les autres des plantes, sauf en Nivôse, qui nomme des minéraux. Les sansculottides terminent l'année." },
+    ],
+  },
+  es: {
+    title: "Mi cumpleaños en 7 calendarios antiguos: el nombre de mi día en la Revolución francesa",
+    description: "Tu fecha republicana francesa y el nombre de tu día (zanahoria, gato, arado…), más el ciclo sexagenario, la cuenta larga maya y los calendarios juliano, islámico, hebreo y japonés.",
+    heading: "Mi cumpleaños en 7 calendarios",
+    sub: "¿Cómo se llamaba tu cumpleaños en la Francia revolucionaria?",
+    intro: "La República francesa cambió los santos por plantas, animales y herramientas: cada día tenía nombre. ¿Cuál es el tuyo? ¿Y cómo escribirían ese día un escriba maya o un ayuntamiento japonés?",
+    howTitle: "Cómo se calcula",
+    how: ["Cada fecha pasa por el día juliano astronómico y luego por las reglas de cada calendario, verificadas con la biblioteca libre convertdate.", "Las fechas republicanas siguen la regla de Romme y pueden diferir un día de la regla del equinoccio."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Cuánto se usó el calendario republicano?", a: "De finales de 1793 a finales de 1805. Napoleón restableció el gregoriano el 1 de enero de 1806." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/birthday-calendars/")} ogImage="/images/past-life-1426/og/birthday-calendars.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><BirthdayCalendars locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["france1789", "sillok1426", "hoebinghwan1789"]} current="birthdayCalendars" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

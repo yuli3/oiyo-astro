@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import NightSky1426 from "../../components/tools/past-life/NightSky1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "내 생일 밤 1426 하늘 — 세종 때 한양의 달과 오성",
+    description: "1426년(세종 8) 내 생일 밤, 한양 하늘에는 어떤 달이 떠 있었고 금성·목성 같은 행성은 어디 있었을까? 실록 달력과 천문 계산으로 인정·파루 무렵 하늘을 그려요.",
+    heading: "내 생일 밤 1426 하늘",
+    sub: "세종 때 한양의 달과 오성",
+    intro: "600년 전 내 생일 밤, 한양 사람들이 올려다본 하늘을 다시 그려요. 달 모양은 『세종실록』의 날짜가 그대로 알려 주고, 다섯 행성의 위치는 천문 계산으로 구해요.",
+    howTitle: "어떻게 그리나요",
+    how: [
+      "실록 기사로 확인한 세종 8년 각 달의 초하루로 음력 날짜와 달 모양을 정해요.",
+      "NASA JPL의 근사 궤도 요소로 행성 위치를, Meeus의 식으로 달 위치를 계산해 한양에서 본 방위와 고도로 바꿔요.",
+      "생일로 보면 같은 날은 언제나 같은 하늘이 나와요. 링크에는 월·일만 들어가요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "얼마나 정확한가요?", a: "600년 전이라 행성과 달의 위치가 1~2°쯤 어긋날 수 있어요. 달의 초하루가 실록 달력과 맞는지는 시험으로 확인했어요." },
+      { q: "왜 그레고리력 날짜를 쓰나요?", a: "1426년 사람들은 음력을 썼고, 서양에서도 당시엔 율리우스력을 썼어요. 여기서는 내 생일과 계절이 같은 날이 되도록 그레고리력을 거꾸로 늘려 썼어요." },
+    ],
+  },
+  en: {
+    title: "The 1426 sky on my birthday: moon and planets over Hanyang",
+    description: "On your birthday night in 1426, which moon and planets hung over Hanyang? Drawn from the Sejong Sillok calendar and orbital calculation.",
+    heading: "The 1426 sky on my birthday",
+    sub: "Moon and five planets over Hanyang under King Sejong",
+    intro: "Redraw the sky Hanyang looked up at on your birthday 600 years ago. The Annals give the moon's age; the planets come from orbital calculation.",
+    howTitle: "How it works",
+    how: ["Lunar dates from the Sillok calendar; planets from NASA JPL approximate elements, the Moon from Meeus; converted to the view from Hanyang."],
+    faqTitle: "FAQ",
+    faq: [{ q: "How accurate is it?", a: "Six centuries back, positions may be 1–2° off. New moons match the Sillok calendar." }],
+  },
+  ja: {
+    title: "誕生日の夜の1426年の空 — 世宗の頃の漢陽の月と五星",
+    description: "1426年の誕生日の夜、漢陽の空にはどんな月と惑星が？実録の暦と天文計算で描きます。",
+    heading: "誕生日の夜の1426年の空",
+    sub: "世宗の頃の漢陽の月と五星",
+    intro: "600年前の誕生日の夜の漢陽の空を描き直します。",
+    howTitle: "仕組み",
+    how: ["実録の暦で旧暦日と月相、NASA JPLの近似要素で惑星の位置を求めます。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "どのくらい正確？", a: "600年前なので1〜2°ずれることがあります。" }],
+  },
+  zh: {
+    title: "生日那晚的1426年星空 — 世宗时汉阳的月亮与五星",
+    description: "1426年你生日那晚，汉阳上空有怎样的月亮和行星？用实录历法和天文计算画出来。",
+    heading: "生日那晚的1426年星空",
+    sub: "世宗时汉阳的月亮与五星",
+    intro: "重绘六百年前你生日那晚汉阳的天空。",
+    howTitle: "怎么画",
+    how: ["用实录历法定农历日期和月相，用NASA JPL近似根数算行星位置。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "有多准？", a: "六百年前的位置可能差1到2度。" }],
+  },
+  fr: {
+    title: "Le ciel de 1426 à mon anniversaire : Lune et planètes sur Hanyang",
+    description: "Le soir de votre anniversaire en 1426, quelle lune et quelles planètes au-dessus de Hanyang ? Calendrier des Annales et calcul orbital.",
+    heading: "Le ciel de 1426 à mon anniversaire",
+    sub: "Lune et cinq planètes sur Hanyang",
+    intro: "Redessinez le ciel de Hanyang le soir de votre anniversaire, il y a 600 ans.",
+    howTitle: "Comment ça marche",
+    how: ["Dates lunaires des Annales ; planètes selon les éléments approchés du JPL ; Lune selon Meeus."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Quelle précision ?", a: "Six siècles en arrière, l'écart peut atteindre 1–2°." }],
+  },
+  es: {
+    title: "El cielo de 1426 en mi cumpleaños: Luna y planetas sobre Hanyang",
+    description: "La noche de tu cumpleaños en 1426, ¿qué luna y planetas había sobre Hanyang? Calendario de los Anales y cálculo orbital.",
+    heading: "El cielo de 1426 en mi cumpleaños",
+    sub: "Luna y cinco planetas sobre Hanyang",
+    intro: "Redibuja el cielo de Hanyang la noche de tu cumpleaños hace 600 años.",
+    howTitle: "Cómo funciona",
+    how: ["Fechas lunares de los Anales; planetas con elementos aproximados del JPL; Luna según Meeus."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Qué precisión tiene?", a: "Seis siglos atrás, el error puede ser de 1–2°." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/night-sky-1426/")} ogImage="/images/past-life-1426/og/night-sky-1426.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><NightSky1426 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["sillok1426", "joseonTime", "birthdayCalendars"]} current="nightSky1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

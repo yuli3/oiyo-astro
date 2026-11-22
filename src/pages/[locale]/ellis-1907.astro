@@ -1,0 +1,119 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Ellis1907 from "../../components/tools/past-life/Ellis1907";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1907 엘리스섬 승객 명부 속 나 — 이민이 가장 많았던 해, 나는 어디서 왔을까",
+    description: "1907년 미국 입국자의 실제 출신국 비율(오스트리아-헝가리 35만, 러시아 26만, 이탈리아 25만…)로 나를 뽑고, 그해 승객 명부 양식의 칸(나이·직업·가진 돈·목적지·마중 나온 사람)에 내 한 줄을 적어 봐요.",
+    heading: "1907 엘리스섬 승객 명부 속 나",
+    sub: "100만 명이 지나간 섬, 그 명부의 한 줄",
+    intro: "1907년은 미국 이민 역사에서 엘리스섬이 가장 붐빈 해예요. 배에 오르기 전 선박회사 직원이 명부에 질문을 적었고, 섬에 내리면 검사관이 같은 질문을 다시 했어요. 그 명부에 나는 어떤 한 줄로 남았을까요?",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "1907 회계연도 이민국장 보고서의 출신국별 입국자 수로 출신국을 뽑아요. 오스트리아-헝가리 355,452명, 러시아 258,943명, 이탈리아 253,751명, 잉글랜드 56,637명 등이에요. 주로 뉴욕으로 들어오지 않은 일본·중국·캐나다·서인도제도는 뺐어요.",
+      "가진 돈은 그해 실제로 50달러 이상을 보인 사람의 비율(약 16%)에 맞춰 뽑아요. 이름·나이·성별·직업·고향 마을·목적지·읽고 쓰기는 그 나라에서 흔했던 예를 놀이용으로 고른 거예요.",
+      "생일로 뽑으면 같은 생일은 언제나 같은 결과가 나와요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "1907년에 엘리스섬에 몇 명이 왔나요?", a: "1,004,756명으로 엘리스섬 역사상 가장 많았어요. 4월 17일 하루에 11,747명이 들어온 기록도 이 해에 나왔어요." },
+      { q: "돌려보내진 사람은 얼마나 됐나요?", a: "1907 회계연도에 입국을 신청한 1,295,413명 가운데 13,064명(약 1%)이 돌려보내졌어요. 병, '나라의 짐이 될 우려', 미리 맺은 노동 계약이 주된 이유였어요." },
+      { q: "명부에는 어떤 칸이 있었나요?", a: "1907년 양식은 29칸이었어요. 이름·나이·성별·결혼·직업·읽고 쓰기·국적·인종 또는 민족·마지막 거주지·최종 목적지·뱃삯을 낸 사람·가진 돈·만나러 가는 사람·건강 상태·키·머리와 눈 색·출생지 등이에요." },
+    ],
+  },
+  en: {
+    title: "You on a 1907 Ellis Island passenger manifest: where did you come from?",
+    description: "Drawn by the real FY1907 countries of origin (Austria-Hungary 355,452, Russia 258,943, Italy 253,751…), with your line in the 1907 manifest's columns: age, calling, money, destination and who you were going to join.",
+    heading: "You on a 1907 Ellis Island manifest",
+    sub: "A million people through one island, and your line",
+    intro: "1907 was Ellis Island's busiest year. Shipping clerks wrote each passenger's answers on the manifest before sailing, and inspectors asked the same questions again on the island. What did your line say?",
+    howTitle: "How it works",
+    how: [
+      "Your country is drawn from the FY1907 Commissioner-General of Immigration figures: Austria-Hungary 355,452, Russia 258,943, Italy 253,751, England 56,637 and so on. Japan, China, Canada and the West Indies, who mostly did not land at New York, are left out.",
+      "Money follows the real 1907 share who showed $50 or more (about 16%). Names, ages, sex, callings, home towns, destinations and literacy are typical examples invented for the game.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "How many people came through Ellis Island in 1907?", a: "1,004,756, the most in its history, including a record 11,747 on 17 April." },
+      { q: "How many were turned away?", a: "In FY1907, 13,064 of 1,295,413 applicants (about 1%) were sent back, mostly for disease, likelihood of becoming a public charge, or contract labour." },
+    ],
+  },
+  ja: {
+    title: "1907年エリス島の乗客名簿の中の私",
+    description: "1907会計年度の実際の出身国比率（オーストリア＝ハンガリー35万、ロシア26万、イタリア25万…）で引き、1907年の乗客名簿の欄にあなたの一行を書きます。",
+    heading: "1907年エリス島の乗客名簿の中の私",
+    sub: "100万人が通った島と、名簿の一行",
+    intro: "1907年はエリス島がいちばん混んだ年。乗船前に船会社が名簿に答えを書き、島では検査官が同じ質問を繰り返しました。",
+    howTitle: "仕組み",
+    how: ["1907会計年度の移民局長報告の出身国別人数で出身国を引きます。名前・年齢・職業などは遊び用の例です。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "1907年にエリス島を通ったのは何人？", a: "1,004,756人で史上最多。4月17日には1日11,747人の記録が出ました。" }],
+  },
+  zh: {
+    title: "1907年埃利斯岛乘客名单中的我",
+    description: "按1907财年真实来源国比例（奥匈帝国35.5万、俄罗斯25.9万、意大利25.4万……）抽出你，并按1907年乘客名单的栏目写下你的一行。",
+    heading: "1907年埃利斯岛乘客名单中的我",
+    sub: "百万人经过的小岛，和名单上的一行",
+    intro: "1907年是埃利斯岛最繁忙的一年。登船前船公司把答案写在名单上，上岛后检查员再问一遍。",
+    howTitle: "怎么抽",
+    how: ["按1907财年移民局长报告中各国入境人数抽取来源国。姓名、年龄、职业等为虚构示例。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "1907年有多少人经过埃利斯岛？", a: "1,004,756人，为历史最高；4月17日单日11,747人。" }],
+  },
+  fr: {
+    title: "Vous à Ellis Island en 1907 : votre ligne sur la liste des passagers",
+    description: "Tiré selon les vrais pays d'origine de 1907 (Autriche-Hongrie 355 452, Russie 258 943, Italie 253 751…), avec votre ligne dans les colonnes de la liste de 1907.",
+    heading: "Vous à Ellis Island en 1907",
+    sub: "Un million de passages, et votre ligne",
+    intro: "1907 fut l'année record d'Ellis Island. Les compagnies notaient les réponses avant le départ, et les inspecteurs reposaient les mêmes questions sur l'île.",
+    howTitle: "Comment ça marche",
+    how: ["Pays tiré selon les chiffres de l'exercice 1907 ; noms, âges et métiers sont des exemples inventés."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Combien de personnes en 1907 ?", a: "1 004 756, un record, dont 11 747 le seul 17 avril." }],
+  },
+  es: {
+    title: "Tú en Ellis Island en 1907: tu línea en la lista de pasajeros",
+    description: "Sorteado según los países de origen reales de 1907 (Austria-Hungría 355.452, Rusia 258.943, Italia 253.751…), con tu línea en las columnas de la lista de 1907.",
+    heading: "Tú en Ellis Island en 1907",
+    sub: "Un millón de personas, y tu línea",
+    intro: "1907 fue el año récord de Ellis Island. Las navieras anotaban las respuestas antes de zarpar y los inspectores repetían las preguntas en la isla.",
+    howTitle: "Cómo funciona",
+    how: ["País sorteado según las cifras del año fiscal 1907; nombres, edades y oficios son ejemplos inventados."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Cuántas personas pasaron en 1907?", a: "1.004.756, un récord, con 11.747 solo el 17 de abril." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/ellis-1907/")} ogImage="/images/past-life-1426/og/ellis-1907.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Ellis1907 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["census1850", "usBirthState", "parallelLives"]} current="ellis1907" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

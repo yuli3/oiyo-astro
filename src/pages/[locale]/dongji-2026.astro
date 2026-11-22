@@ -1,0 +1,122 @@
+---
+/**
+ * 2026 동지 팥죽 한 해 정리 — 한국 세시풍속이라 ko 한 로케일만 낸다(나라별 특화 원칙,
+ * 2026-10-19 세운). 세시풍속 시리즈(company-brain think-tank/2026-11-03-oiyo-other-series-brainstorm.md 2번).
+ * 동지(12/22) 한 달 전에 열어 색인을 기다린다. 2026-11-21.
+ */
+import Layout from '../../layouts/Layout.astro';
+import DongjiPatjuk from '../../components/tools/seasonal/DongjiPatjuk';
+import { localePath, type Locale } from '../../i18n';
+import { DONGJI_KIND_LABEL, DONGJI_LIMIT, DONGJI_YEARS, dongjiKind } from '../../lib/dongji';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ko' } }];
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const title = '2026 동지 날짜와 팥죽 — 12월 22일 중동지, 팥죽 한 그릇으로 한 해 정리';
+const description = '2026년 동지는 12월 22일(화), 음력 11월 14일이라 중동지예요. 애동지·중동지·노동지 구분, 팥죽과 새알심, 동지 책력 풍습을 정리하고 팥죽 한 그릇으로 올해를 보내 봐요.';
+
+const faqs = [
+  { q: '2026년 동지는 언제인가요?', a: '12월 22일(화)이에요. 태양이 동지점을 지나는 시각은 오전 5시 50분 무렵이에요. 한 해 가운데 밤이 가장 길고, 이날부터 낮이 다시 길어져요.' },
+  { q: '2026년은 애동지인가요?', a: '아니에요. 2026년 동지는 음력 11월 14일이라 중동지예요. 음력 11월 초순(1~10일)에 드는 해를 애동지라 하는데, 2025년(음력 11월 2일)이 애동지였어요.' },
+  { q: '애동지에는 왜 팥죽을 쑤지 않나요?', a: '애동지에 팥죽을 쑤면 집안 아이들에게 좋지 않다는 속설이 있어서, 그해에는 팥죽 대신 팥시루떡을 해 먹었다고 전해요. 중동지와 노동지에는 팥죽을 쒀요.' },
+  { q: '동지에 왜 팥죽을 먹나요?', a: '붉은 팥이 나쁜 기운을 물리친다고 믿었기 때문이에요. 조선 후기 『동국세시기』에도 동지에 팥죽을 쑤어 먹고, 대문이나 벽에 뿌려 액을 막았다는 기록이 있어요.' },
+  { q: '새알심은 몇 개 먹나요?', a: '나이만큼 먹는다고 전해요. 동지를 "작은설"이라 부르며 동지 팥죽을 먹어야 한 살 더 먹는다고 했어요. 이 페이지에서는 2027년 세는 나이로 세어 드려요.' },
+];
+
+const customs = [
+  { h: '팥죽과 새알심', p: '찹쌀가루로 새알 모양 경단을 빚어 팥죽에 넣어요. 먼저 사당에 올리고, 방과 장독, 헛간에 한 그릇씩 놓은 뒤 식구가 나눠 먹었어요.' },
+  { h: '팥죽 뿌리기', p: '팥죽을 대문이나 벽에 뿌려 잡귀를 막았어요. 붉은색이 어둠과 나쁜 기운을 쫓는다는 믿음에서 나왔어요.' },
+  { h: '동지 책력', p: '조선의 관상감은 동지 무렵 새해 달력(책력)을 만들어 올렸고, 임금은 이를 신하들에게 나눠 주었어요. 여름 단오에 부채를, 겨울 동지에 달력을 주고받는다고 해서 "하선동력(夏扇冬曆)"이라 했어요.' },
+  { h: '작은설', p: '해가 다시 길어지기 시작하는 날이라 새해의 시작으로 여겼어요. 그래서 동지 팥죽을 먹어야 한 살을 더 먹는다고 했어요.' },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['ko']}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">세시풍속 · 2026년 12월 22일(화)</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">2026 동지 팥죽 한 해 정리</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">한 해 가운데 밤이 가장 긴 날, 붉은 팥죽에 올해 보낼 것을 실어 보내고 2027년에 들일 것을 하나 골라요. 고른 것은 이 브라우저 밖으로 보내지 않아요.</p>
+
+    <div class="mt-6 rounded-2xl border bg-card p-5">
+      <h2 class="text-lg font-black">2026년 동지 한눈에</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
+        <li><strong class="text-foreground">날짜:</strong> 2026년 12월 22일(화), 동지점 통과 오전 5시 50분 무렵</li>
+        <li><strong class="text-foreground">음력:</strong> 11월 14일, 초순이 아니라 <strong class="text-foreground">중동지</strong>예요. 팥죽을 쑤는 해예요.</li>
+        <li><strong class="text-foreground">낮 길이:</strong> 이날 낮이 가장 짧고, 다음 날부터 조금씩 길어져요.</li>
+      </ul>
+    </div>
+
+    <div class="mt-8">
+      <DongjiPatjuk client:load />
+    </div>
+
+    <section class="mt-12 space-y-3">
+      <h2 class="text-2xl font-black">애동지·중동지·노동지</h2>
+      <p class="leading-relaxed text-muted-foreground">동지는 양력으로는 해마다 12월 21일이나 22일이지만, 음력 날짜는 해마다 달라요. 음력 11월 초순(1~10일)에 들면 애동지, 중순(11~20일)이면 중동지, 하순이면 노동지라 불러요. 애동지에는 팥죽 대신 팥시루떡을 먹었다고 전해요.</p>
+      <div class="overflow-x-auto rounded-xl border">
+        <table class="w-full text-sm">
+          <caption class="sr-only">연도별 동지 날짜와 구분</caption>
+          <thead class="bg-muted text-left">
+            <tr><th class="p-3" scope="col">해</th><th class="p-3" scope="col">동지 (양력)</th><th class="p-3" scope="col">음력</th><th class="p-3" scope="col">구분</th></tr>
+          </thead>
+          <tbody class="divide-y">
+            {DONGJI_YEARS.map((y) => {
+              const k = DONGJI_KIND_LABEL[dongjiKind(y.lunarDay)];
+              return (
+                <tr>
+                  <td class="p-3 font-bold">{y.year}</td>
+                  <td class="p-3">12월 {y.day}일({y.weekday})</td>
+                  <td class="p-3">11월 {y.lunarDay}일</td>
+                  <td class="p-3">{k.name} · {k.food}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs leading-5 text-muted-foreground">음력 날짜는 천문 계산값이에요. 2027년 이후는 그해 <a class="underline" href="https://astro.kasi.re.kr/kor/life/post/calendarData?year=2027" rel="noopener">한국천문연구원 월력 자료</a>로 한 번 더 확인하세요.</p>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">동지에 하던 일</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        {customs.map((c) => (
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="text-base font-black">{c.h}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{c.p}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">자주 묻는 질문</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {faqs.map((f) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer text-sm font-black">{f.q}</summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">{DONGJI_LIMIT} 날짜 출처: <a class="underline" href="https://astro.kasi.re.kr/kor/life/post/calendarData?year=2026" rel="noopener">한국천문연구원 2026 월력 자료</a>.</p>
+
+    <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="함께 보기">
+      <a href={localePath(locale, '/new-year-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🐑 2027 신년운세 모음</a>
+      <a href={localePath(locale, '/tojeong-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">📜 2027 토정비결</a>
+      <a href={localePath(locale, '/profile/year-2026')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🗓️ 나의 2026 결산 카드</a>
+      <a href={localePath(locale, '/tarot/2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🃏 2027 신년 타로</a>
+      <a href={localePath(locale, '/daeboreum-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🌕 2027 정월대보름 부럼 카드</a>
+    </nav>
+  </section>
+</Layout>

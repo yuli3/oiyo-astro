@@ -256,6 +256,331 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const sejongBirthdaysManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1e3a5f",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "sejong-birthdays",
+  path: "/sejong-birthdays",
+  status: "production",
+  name: { ko: "다른 해의 내 생일 실록", en: "My birthday across Sejong's reign", ja: "別の年の誕生日の実録", zh: "其他年份的生日实录", fr: "Mon anniversaire sous Sejong", es: "Mi cumpleaños bajo Sejong" },
+  description: { ko: "세종 재위 32년 동안 해마다 내 생일에 실록에 적힌 일을 연표로 펼쳐요.", en: "What the Annals recorded on your birthday in each of Sejong's 32 years.", ja: "世宗在位32年、毎年の誕生日の実録を年表で。", zh: "世宗在位32年里，每年生日那天的实录。", fr: "Votre anniversaire dans les Annales, chaque année du règne de Sejong.", es: "Tu cumpleaños en los Anales, cada año del reinado de Sejong." },
+};
+
+const hanyangFire1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#9a3412",
+  domain: "ontology",
+  icon: "Flame",
+  id: "hanyang-fire-1426",
+  path: "/hanyang-fire-1426",
+  status: "production",
+  name: { ko: "1426 한양 대화재로 회귀", en: "Back to the 1426 Hanyang fire", ja: "1426漢陽大火へ回帰", zh: "回到1426汉阳大火", fr: "Retour au grand incendie de 1426", es: "Regreso al gran incendio de 1426" },
+  description: { ko: "1426년 2월 15일 한양 대화재로 돌아가 불 대책 5가지를 올려요. 세종 조정이 실제로 정한 대책과 날짜를 실록으로 맞춰 봐요.", en: "Go back to the great fire of lunar 2/15, 1426, propose 5 fire measures, and check them against what Sejong's court decided.", ja: "1426年2月15日の漢陽大火に戻り、防火策5つを実録と照合。", zh: "回到1426年二月十五日的汉阳大火，选5条对策，与实录对照。", fr: "Revenez au grand incendie de 1426 et proposez 5 mesures.", es: "Vuelve al gran incendio de 1426 y propone 5 medidas." },
+};
+
+const cotton1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#5b4a2e",
+  domain: "ontology",
+  icon: "Coins",
+  id: "cotton-1426",
+  path: "/cotton-1426",
+  status: "production",
+  name: { ko: "면포 환율 계산기", en: "Cotton exchange 1426", ja: "綿布レート計算機", zh: "棉布汇率计算器", fr: "Change en coton 1426", es: "Cambio en algodón 1426" },
+  description: { ko: "1426년 한양이라면 내 월급은 면포 몇 필? 쌀·저화·동전으로도 바꾸고, 실록 속 말값·포상금과 견줘 봐요.", en: "Your monthly pay in 1426 bolts of cotton, rice, paper notes and coins, next to horse prices and rewards in the Annals.", ja: "1426年の漢陽なら月給は綿布何匹？米・楮貨・銅銭にも換算。", zh: "在1426年的汉阳，你的月薪值几匹棉布？也可换成米、楮货、铜钱。", fr: "Votre salaire en pièces de coton de 1426, en riz, billets et pièces.", es: "Tu sueldo en piezas de algodón de 1426, en arroz, billetes y monedas." },
+};
+
+const sillokNameHanjaManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7a2e2e",
+  domain: "ontology",
+  icon: "PenLine",
+  id: "sillok-name-hanja",
+  path: "/sillok-name-hanja",
+  status: "production",
+  name: { ko: "실록 속 내 이름 한자", en: "My name in the 1426 Annals", ja: "実録の中の私の名前の漢字", zh: "实录里我名字的汉字", fr: "Mon nom dans les Annales de 1426", es: "Mi nombre en los Anales de 1426" },
+  description: { ko: "내 이름 한자가 1426년 『세종실록』에 몇 번 나올까? 기사 1,149건, 한자 8만 8천 자에서 찾아 처음 나온 기사까지 보여 줘요.", en: "How often do your name's characters appear in the 1426 Sejong Sillok? Searched across 1,149 entries and 88,000 characters.", ja: "私の名前の漢字は1426年の『世宗実録』に何回？1,149件、8万8千字から探します。", zh: "你名字的汉字在1426年《世宗实录》里出现几次？在1,149条、8.8万字中查找。", fr: "Combien de fois les caractères de votre nom apparaissent-ils dans les Annales de 1426 ?", es: "¿Cuántas veces aparecen los caracteres de tu nombre en los Anales de 1426?" },
+};
+
+const nightSky1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#24345e",
+  domain: "ontology",
+  icon: "Moon",
+  id: "night-sky-1426",
+  path: "/night-sky-1426",
+  status: "production",
+  name: { ko: "내 생일 밤 1426 하늘", en: "The 1426 sky on my birthday", ja: "誕生日の夜の1426年の空", zh: "生日那晚的1426年星空", fr: "Le ciel de 1426 à mon anniversaire", es: "El cielo de 1426 en mi cumpleaños" },
+  description: { ko: "1426년 내 생일 밤, 한양 하늘엔 어떤 달과 행성이 떠 있었을까? 실록 달력과 천문 계산으로 인정·파루 무렵 하늘을 그려요.", en: "What moon and planets hung over Hanyang on your birthday night in 1426? Drawn from the Annals calendar and orbital calculation.", ja: "1426年の誕生日の夜、漢陽の空にはどんな月と惑星が？実録の暦と天文計算で描きます。", zh: "1426年你生日那晚，汉阳上空有怎样的月亮和行星？用实录历法和天文计算画出来。", fr: "Quelle lune et quelles planètes au-dessus de Hanyang le soir de votre anniversaire en 1426 ?", es: "¿Qué luna y planetas había sobre Hanyang la noche de tu cumpleaños en 1426?" },
+};
+
+const gyeonggongjangManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#6b4a2b",
+  domain: "ontology",
+  icon: "Hammer",
+  id: "gyeonggongjang",
+  path: "/gyeonggongjang",
+  status: "production",
+  name: { ko: "경공장 장적 속 나", en: "Me in the royal artisan register", ja: "京工匠の匠籍の中の私", zh: "京工匠匠籍里的我", fr: "Moi, artisan royal de Joseon", es: "Yo, artesano real de Joseon" },
+  description: { ko: "『경국대전』 서울 관청의 장인 2,800여 명. 나는 사옹원 사기장일까, 군기시 화살장일까? 실제 인원 비율로 뽑아요.", en: "Some 2,800 artisans served Seoul's offices in 1485. Porcelain maker or arrow maker? Drawn by real headcounts.", ja: "『経国大典』の京工匠2,800余名。私は沙器匠？矢人？実際の人数比で引きます。", zh: "《经国大典》中的京工匠2,800余人。我是沙器匠还是矢人？按真实人数比例抽。", fr: "Quelque 2 800 artisans servaient les offices de Séoul en 1485. Potier ou flécher ? Tiré selon les vrais effectifs.", es: "Unos 2.800 artesanos servían a las oficinas de Seúl en 1485. ¿Ceramista o flechero? Según cifras reales." },
+};
+
+const joseonTimeManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#8a5a2b",
+  domain: "ontology",
+  icon: "Clock",
+  id: "joseon-time",
+  path: "/joseon-time",
+  status: "production",
+  name: { ko: "지금 시각을 조선 시각으로", en: "Now, in Joseon time", ja: "今を朝鮮の時刻で", zh: "此刻的朝鲜时刻", fr: "Maintenant, à l'heure de Joseon", es: "Ahora, en hora de Joseon" },
+  description: { ko: "지금 몇 시예요? 한양 해시계로는 '신시 정이각'. 자격루 종·북·징, 인정·파루 통금까지 바꿔 봐요.", en: "What time is it on the Hanyang sundial? Double hours, kak, night watches and the curfew bells.", ja: "今は漢陽の日時計で何時？十二時・刻・更点・人定と罷漏まで。", zh: "汉阳日晷上现在几点？时辰、刻、更点和宵禁钟声。", fr: "Quelle heure au cadran solaire de Hanyang ? Heures doubles, kak, veilles et couvre-feu.", es: "¿Qué hora marca el reloj de sol de Hanyang? Horas dobles, kak, vigilias y toque de queda." },
+};
+
+const future2626Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2d4a6b",
+  domain: "ontology",
+  icon: "Landmark",
+  id: "future-2626",
+  path: "/future-2626",
+  status: "production",
+  name: { ko: "2626 미래 박물관 속 내 물건", en: "Your things in a museum, 2626", ja: "2626年の博物館の私の物", zh: "2626年博物馆里的我的东西", fr: "Vos affaires au musée en 2626", es: "Tus cosas en un museo en 2626" },
+  description: { ko: "거꾸로 타임슬립. 내 스마트폰·이어폰·텀블러가 600년 뒤 박물관 유물이 된다면, 학자들은 뭐라고 설명할까요?", en: "Time-slip in reverse: how would a museum in 2626 label your phone, earbuds and tumbler?", ja: "逆さまのタイムスリップ。私のスマホやイヤホンが600年後の博物館でどう説明される？", zh: "反向穿越：六百年后的博物馆会怎样介绍你的手机、耳机和保温杯？", fr: "Voyage à l'envers : comment un musée de 2626 décrirait-il votre téléphone ?", es: "Viaje al revés: ¿cómo describiría un museo de 2626 tu móvil?" },
+};
+
+const joseonNamesManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2f4a3a",
+  domain: "ontology",
+  icon: "PenTool",
+  id: "joseon-names",
+  path: "/joseon-names",
+  status: "production",
+  name: { ko: "조선 시대 내 이름 짓기", en: "My names in Joseon Korea", ja: "朝鮮時代の私の名前", zh: "我在朝鲜时代的名字", fr: "Mes noms dans la Corée de Joseon", es: "Mis nombres en la Corea de Joseon" },
+  description: { ko: "아명(개똥이·바우…) → 항렬자가 든 관명 → 관례 때 받는 자 → 스스로 짓는 호까지, 조선 시대 평생 불린 내 이름들을 받아 봐요.", en: "From a lowly childhood name to a formal name with a generation character, a courtesy name and a pen name: your names through a Joseon life.", ja: "幼名から行列字の入った冠名、冠礼の字、号まで、朝鮮時代に一生呼ばれた名前をもらいます。", zh: "从乳名到带行辈字的冠名、冠礼时的字和自取的号，领取你在朝鲜时代一生的名字。", fr: "Du nom d'enfance au nom officiel avec caractère de génération, nom de courtoisie et nom de plume.", es: "Del nombre de infancia al nombre oficial con carácter generacional, nombre de cortesía y seudónimo." },
+};
+
+const jinshin1872Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7a2e2e",
+  domain: "ontology",
+  icon: "BookOpen",
+  id: "jinshin-1872",
+  path: "/jinshin-1872",
+  status: "production",
+  name: { ko: "1872 임신호적 속 우리 집", en: "Your household in the 1872 Jinshin koseki", ja: "壬申戸籍の中のわが家", zh: "1872年壬申户籍里的我家", fr: "Votre foyer au koseki Jinshin de 1872", es: "Tu hogar en el koseki Jinshin de 1872" },
+  description: { ko: "1872년 일본 첫 전국 호적의 실제 족칭 집계(평민 3,084만·사족 128만·화족 2,666명…)로 우리 집을 뽑고, 호적 한 장을 재구성해 봐요.", en: "Drawn by the real 1872 status totals (30.8M commoners, 1.28M shizoku, 2,666 kazoku…), with a reconstructed koseki entry.", ja: "明治5年の初の全国戸籍の族籍集計（平民3,084万・士族128万・華族2,666人…）で引き、戸籍一枚を再構成します。", zh: "按1872年日本首次全国户籍的族称统计（平民3084万、士族128万、华族2666人……）抽取，并重构一页户籍。", fr: "Tiré selon les vrais totaux de 1872 (30,8 M roturiers, 1,28 M shizoku, 2 666 kazoku…), avec une inscription reconstituée.", es: "Sorteado según los totales reales de 1872 (30,8 M plebeyos, 1,28 M shizoku, 2.666 kazoku…), con una inscripción reconstruida." },
+};
+
+const huangce1391Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#8a6a12",
+  domain: "ontology",
+  icon: "BookOpen",
+  id: "huangce-1391",
+  path: "/huangce-1391",
+  status: "production",
+  name: { ko: "1391 명나라 황책 속 우리 집", en: "Your household in the 1391 Ming Yellow Register", ja: "1391年明の黄冊の中のわが家", zh: "1391年明代黄册里的我家", fr: "Votre foyer au registre jaune Ming de 1391", es: "Tu hogar en el registro amarillo Ming de 1391" },
+  description: { ko: "명 초 실제 호적 비율(민호·군호 약 20%·장호)로 우리 집 호적을 뽑고, 황책의 사주식(구관·신수·개제·실재)으로 우리 집 기록을 적어 봐요.", en: "Drawn by early Ming household categories (civilian, about 20% military, artisan), with your entry in the register's four-column format.", ja: "明初の戸籍比率（民戸・軍戸約20%・匠戸）で引き、黄冊の四柱式でわが家の記録を書きます。", zh: "按明初户籍比例（民户、约20%军户、匠户）抽取，并以黄册四柱式写下我家的登记。", fr: "Tiré selon les catégories de foyers du début des Ming (civil, environ 20 % militaire, artisan), avec votre inscription en quatre colonnes.", es: "Sorteado según las categorías de hogares de inicios Ming (civil, cerca del 20 % militar, artesano), con tu inscripción en cuatro columnas." },
+};
+
+const census1911Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#5a2a3a",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "census-1911",
+  path: "/census-1911",
+  status: "production",
+  name: { ko: "1911 영국 센서스 속 나", en: "You in the 1911 census", ja: "1911年英国国勢調査の中の私", zh: "1911年英国人口普查中的我", fr: "Vous au recensement anglais de 1911", es: "Tú en el censo inglés de 1911" },
+  description: { zh: "按1911年英格兰和威尔士真实职业分布（男女分列）抽出你，并按1911年住户普查表的栏目写下你的一行。", en: "Drawn by the real 1911 England and Wales occupations by sex, with your line in the 1911 household schedule's columns.", es: "Sorteado según las ocupaciones reales de 1911 por sexo, con tu línea en las columnas de la hoja del hogar.", fr: "Tiré selon les vrais métiers de 1911 par sexe, avec votre ligne dans les colonnes du bulletin de ménage.", ja: "1911年イングランド・ウェールズの実際の男女別職業分布で引き、世帯調査票の欄にあなたの一行を書きます。", ko: "1911년 잉글랜드·웨일스의 실제 남녀별 직업 분포로 나를 뽑고, 그해 가구 조사표 칸에 내 한 줄을 적어 봐요." },
+};
+
+const ellis1907Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f4a5a",
+  domain: "ontology",
+  icon: "Ship",
+  id: "ellis-1907",
+  path: "/ellis-1907",
+  status: "production",
+  name: { zh: "1907年埃利斯岛乘客名单中的我", en: "You on a 1907 Ellis Island manifest", es: "Tú en Ellis Island en 1907", fr: "Vous à Ellis Island en 1907", ja: "1907年エリス島の乗客名簿の中の私", ko: "1907 엘리스섬 승객 명부 속 나" },
+  description: { zh: "按1907财年的真实来源国比例抽出你，并在1907年乘客名单格式中写下你的一行。", en: "Drawn by the real FY1907 countries of origin, with your line written in the 1907 manifest's columns.", es: "Sorteado según los países de origen reales de 1907, con tu línea en las columnas de la lista de 1907.", fr: "Tiré selon les vrais pays d'origine de 1907, avec votre ligne dans les colonnes de la liste de 1907.", ja: "1907会計年度の実際の出身国比率で引き、1907年の乗客名簿の欄にあなたの一行を書きます。", ko: "1907년 실제 출신국 비율로 나를 뽑고, 그해 승객 명부 양식의 칸에 내 한 줄을 적어 봐요." },
+};
+
+const parallelLivesManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2b1708",
+  domain: "ontology",
+  icon: "GitCommitVertical",
+  id: "parallel-lives",
+  path: "/parallel-lives",
+  status: "production",
+  name: { zh: "我的平行人生年表", en: "My parallel lives", es: "Mis vidas paralelas", fr: "Mes vies parallèles", ja: "わたしの並行人生年表", ko: "나의 평행 인생 연표" },
+  description: { zh: "把时空穿越系列中抽到的结果按时代排成一张年表，并保存为图片。", en: "Every result you drew in the time-slip series on one timeline, saved as an image.", es: "Todos tus resultados de la serie en una línea de tiempo, guardada como imagen.", fr: "Tous vos résultats de la série sur une frise, à enregistrer en image.", ja: "タイムスリップ・シリーズで引いた結果を時代順の年表にまとめ、画像で保存します。", ko: "타임슬립 시리즈에서 뽑은 나의 결과를 시대순 연표 한 장으로 모아 이미지로 저장해요." },
+};
+
+const birthdayCalendarsManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f3a6b",
+  domain: "ontology",
+  icon: "CalendarDays",
+  id: "birthday-calendars",
+  path: "/birthday-calendars",
+  status: "production",
+  name: { zh: "我的生日，7种历法", en: "My birthday in 7 old calendars", es: "Mi cumpleaños en 7 calendarios", fr: "Mon anniversaire en 7 calendriers", ja: "誕生日を7つの暦で", ko: "내 생일, 옛 달력 7개로" },
+  description: { zh: "把生日换算成法国共和历（当天的植物名）、干支、玛雅长纪历、儒略历、伊斯兰历、希伯来历和日本年号。", en: "Your birthday in the French Republican calendar (with its day name), the sexagenary cycle, the Maya Long Count, Julian, Islamic, Hebrew and Japanese era dates.", es: "Tu cumpleaños en el calendario republicano francés (con el nombre del día), el ciclo sexagenario, la cuenta larga maya y los calendarios juliano, islámico, hebreo y japonés.", fr: "Votre anniversaire dans le calendrier républicain (avec le nom du jour), le cycle sexagésimal, le compte long maya, et les calendriers julien, hégirien, hébraïque et japonais.", ja: "誕生日をフランス革命暦（その日の名前）・干支・マヤ長期暦・ユリウス暦・イスラム暦・ヘブライ暦・元号に変換します。", ko: "내 생일을 프랑스 혁명력(그날의 이름)·60갑자·마야 장주기력·율리우스력·이슬람력·히브리력·일본 연호로 한 번에 바꿔 봐요." },
+};
+
+const hoebinghwan1789Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2f4a3a",
+  domain: "ontology",
+  icon: "Sparkles",
+  id: "hoebinghwan-1789",
+  path: "/hoebinghwan-1789",
+  status: "production",
+  name: { zh: "穿越模拟器 1789", en: "Isekai simulator: 1789", es: "Simulador isekai: 1789", fr: "Simulateur d'isekai : 1789", ja: "転生シミュレーター 1789", ko: "회빙환 시뮬레이터" },
+  description: { zh: "附身、转生或穿越到1789年的朝鲜，看你的现代技能是否管用。", en: "Possessed, reborn or time-slipped into 1789 Joseon: see which of your modern skills would work.", es: "Poseído, renacido o caído en la Corea de 1789: qué habilidades modernas servirían.", fr: "Possédé, réincarné ou projeté en Corée en 1789 : quels talents modernes serviraient.", ja: "1789年の朝鮮に憑依・転生・タイムスリップ。現代の技術は通じる？", ko: "1789년 조선으로 빙의·환생·타임슬립하면 내 현대 기술이 통할지 실제 역사로 따져 봐요." },
+};
+
+const domesday1086Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#6b2a2a",
+  domain: "ontology",
+  icon: "BookOpen",
+  id: "domesday-1086",
+  path: "/domesday-1086",
+  status: "production",
+  name: { zh: "1086年末日审判书中的我", en: "You in Domesday Book, 1086", es: "Tú en el Domesday Book (1086)", fr: "Vous dans le Domesday Book (1086)", ja: "1086年ドゥームズデイ・ブックの中の私", ko: "1086 둠즈데이 북 속 나" },
+  description: { zh: "按1086年记录人口的阶层比例抽出你，并读你所在庄园的条目。", en: "Draw your class by the 1086 recorded population (villans, bordars, slaves, sokemen…) and read the entry for your manor.", es: "Tu clase según la población registrada en 1086 y la entrada de tu feudo.", fr: "Votre condition selon la population recensée en 1086 et l'article de votre manoir.", ja: "1086年に記録された人々の身分割合で自分を引き、荘園の記録を読みます。", ko: "1086년 기록된 사람들의 신분 비율로 나를 뽑고, 내가 사는 장원의 기록을 보여줘요." },
+};
+
+const census1850Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f3a5f",
+  domain: "ontology",
+  icon: "ClipboardList",
+  id: "census-1850",
+  path: "/census-1850",
+  status: "production",
+  name: { zh: "1850年美国普查中的我", en: "You in the 1850 U.S. census", es: "Tú en el censo de EE. UU. de 1850", fr: "Vous dans le recensement américain de 1850", ja: "1850年アメリカ国勢調査の中の私", ko: "1850 미국 센서스 속 나" },
+  description: { zh: "按1850年美国人口构成抽出你是谁，并写出普查员记下的你的一行。", en: "Draw who you were by the real 1850 population and see the line a census marshal would have written, or why there was none.", es: "Quién eras según la población real de 1850 y la línea que habría escrito el empadronador.", fr: "Qui vous étiez selon la population réelle de 1850 et la ligne qu'aurait écrite l'agent recenseur.", ja: "1850年アメリカの人口構成で自分を引き、調査員が書いた一行を見せます。", ko: "1850년 미국 인구 구성으로 내가 누구였는지 뽑고, 조사원이 적었을 내 한 줄을 보여줘요." },
+};
+
+const ninbetsuEdoManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#5a3a6b",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "ninbetsu-edo",
+  path: "/ninbetsu-edo",
+  status: "production",
+  name: { zh: "江户人别帐中的我", en: "You in an Edo-period temple register", es: "Tú en un registro del período Edo", fr: "Vous dans un registre de l'époque d'Edo", ja: "江戸の人別帳の中の私", ko: "에도 인별장 속 나" },
+  description: { zh: "按江户时代身份比例抽出你的身份，并写出你在宗门人别改帐上的一行。", en: "Draw your status by Edo-period population shares and see your line in a shūmon ninbetsu aratamechō.", es: "Tu estatus según las proporciones del período Edo y tu línea en el registro de templos.", fr: "Votre statut selon les proportions de l'époque d'Edo et votre ligne au registre des temples.", ja: "江戸時代の身分構成の割合であなたの身分を引き、宗門人別改帳のあなたの一行を書き出します。", ko: "에도 시대 신분 비율로 내 신분을 뽑고, 종문인별개장에 적힌 내 한 줄을 보여줘요." },
+};
+
+const tongsinsa1763Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f4e6b",
+  domain: "ontology",
+  icon: "Ship",
+  id: "tongsinsa-1763",
+  path: "/tongsinsa-1763",
+  status: "production",
+  name: { zh: "朝鲜通信使团中的我", en: "You in the 1763 embassy to Japan", es: "Tú en la embajada coreana de 1763", fr: "Vous dans l'ambassade coréenne de 1763", ja: "朝鮮通信使一行の中の私", ko: "조선통신사 일행 속 나" },
+  description: { zh: "1763年癸未通信使477人中，你是三使、译官、制述官、画员还是格军？", en: "Among the 477 of the 1763 Joseon embassy to Edo, are you an envoy, interpreter, poet, painter or oarsman?", es: "Entre los 477 de la embajada de 1763 a Edo, ¿qué papel tienes?", fr: "Parmi les 477 de l'ambassade de 1763 à Edo, quel est votre rôle ?", ja: "1763年癸未通信使477人のうち、あなたは三使・訳官・製述官・画員・格軍のどれ？", ko: "1763년 계미통신사 477명 가운데 나는 삼사·역관·제술관·화원·격군 중 누구일까요?" },
+};
+
+const banchado1795Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2f5d50",
+  domain: "ontology",
+  icon: "Flag",
+  id: "banchado-1795",
+  path: "/banchado-1795",
+  status: "production",
+  name: { zh: "1795华城行幸班次图中的我", en: "You in the 1795 royal procession", es: "Tú en el cortejo real de 1795", fr: "Vous dans le cortège royal de 1795", ja: "1795年 華城行幸の班次図の中の私", ko: "1795 화성 행차 반차도 속 나" },
+  description: { zh: "在正祖1795年华城行幸班次图所画的1,779人中，抽出你的位置：擎旗兵、骑马乐手、宫女、轿夫或官员。", en: "Find your place among the 1,779 people drawn in King Jeongjo's 1795 procession to Hwaseong: flag bearer, mounted band, court lady, palanquin crew or official.", es: "Tu lugar entre las 1.779 personas del cortejo de 1795 del rey Jeongjo.", fr: "Votre place parmi les 1 779 personnages du cortège royal de 1795.", ja: "正祖の1795年華城行幸を描いた班次図の1,779人の中から、あなたの位置を引きます。", ko: "정조의 1795년 화성 행차를 그린 반차도 속 1,779명 가운데 내 자리를 뽑아요. 깃발수·말 탄 악대·나인·가마 수행원·관원." },
+};
+
+const gwageo1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7a2e2e",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "gwageo-1426",
+  path: "/gwageo-1426",
+  status: "production",
+  name: { zh: "去考1426年的科举", en: "Sit the 1426 civil exam", es: "Presenta el examen civil de 1426", fr: "Passez l'examen civil de 1426", ja: "1426年の科挙を受けに行く", ko: "과거시험 보러 가기" },
+  description: { zh: "参加世宗八年丙午式年文科：讲经、作赋、回答世宗真实的策问，看你在真实及第名单中排第几。", en: "Sit Sejong's 1426 civil exam: classics, rhymes and the king's real policy question, then find your place on the real pass list.", es: "Presenta el examen de 1426: clásicos, rimas y la pregunta real del rey Sejong.", fr: "Passez l'examen de 1426 : classiques, rimes et la vraie question du roi Sejong.", ja: "世宗8年丙午の式年文科へ。講経・賦・世宗の実際の策問に答え、実際の合格者名簿での順位を見ます。", ko: "세종 8년 병오 식년 문과에 응시해요. 경서 강경, 부 운 맞추기, 세종의 실제 책문을 거쳐 그해 진짜 급제자 명단 속 내 자리를 보여줘요." },
+};
+
+const lunch1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#8a5a2b",
+  domain: "ontology",
+  icon: "UtensilsCrossed",
+  id: "lunch-1426",
+  path: "/lunch-1426",
+  status: "production",
+  name: { zh: "把今天的午餐带回600年前", en: "Your lunch, 600 years ago", es: "Tu almuerzo, hace 600 años", fr: "Votre déjeuner, il y a 600 ans", ja: "今日のランチを600年前へ", ko: "오늘 점심을 600년 전으로" },
+  description: { zh: "把今天的午餐带回1426年的朝鲜：辣椒、土豆、洋葱都还没来，哪些食材能留下？", en: "Take today's lunch back to 1426 Korea: no chili, potato or onion yet. See which ingredients survive.", es: "Lleva tu almuerzo a la Corea de 1426: sin chile, papa ni cebolla. ¿Qué ingredientes sobreviven?", fr: "Ramenez votre déjeuner dans la Corée de 1426 : ni piment, ni pomme de terre, ni oignon. Que reste-t-il ?", ja: "今日のランチを1426年の朝鮮へ。唐辛子もじゃがいもも玉ねぎもまだない。何が残る？", ko: "오늘 점심을 1426년 조선으로 가져가요. 고추도 감자도 양파도 없던 때, 어떤 재료가 살아남을까요?" },
+};
+
+const sillok1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#3d4f6b",
+  domain: "ontology",
+  icon: "BookOpen",
+  id: "sillok-1426",
+  path: "/sillok-1426",
+  status: "production",
+  name: { zh: "我生日那天的实录", en: "Your birthday in the 1426 annals", es: "Tu cumpleaños en los anales de 1426", fr: "Votre anniversaire dans les annales de 1426", ja: "誕生日の実録", ko: "내 생일의 실록" },
+  description: { zh: "世宗八年（1426）你生日那天，《世宗实录》记了什么：原文与白话摘要。", en: "What the Sejong Sillok recorded on your birthday in 1426: the original entry with a plain summary.", es: "Qué anotaron los Anales de Sejong el día de tu cumpleaños en 1426.", fr: "Ce que notent les Annales de Sejong le jour de votre anniversaire en 1426.", ja: "世宗8年（1426）、あなたの誕生日に実録は何を記したか。原文とやさしい要約。", ko: "세종 8년(1426) 내 생일에 실록에는 무슨 일이 적혔을까요? 원문과 쉬운 풀이로 보여줘요." },
+};
+
+const hometown1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#5b4a2f",
+  domain: "ontology",
+  icon: "MapPin",
+  id: "hometown-1426",
+  path: "/hometown-1426",
+  status: "production",
+  name: { zh: "600年前我家乡是哪个郡县？", en: "Your town in 1432 Joseon", es: "Tu ciudad en la Corea de 1432", fr: "Votre ville dans la Corée de 1432", ja: "600年前、わが町はどの郡県？", ko: "내 동네는 600년 전 어느 고을?" },
+  description: { zh: "按《世宗实录·地理志》找出你住的地方当年是哪个郡县：户口、排名与土产。", en: "Find the county your Korean town belonged to in the Sejong Sillok gazetteer: households, head count, rank and local specialties.", es: "El distrito al que pertenecía tu ciudad coreana en el registro de Sejong: hogares, personas, puesto y productos.", fr: "Le district de votre ville coréenne dans le registre de Sejong : foyers, inscrits, rang et spécialités.", ja: "世宗実録地理志で、いまの町が当時どの郡県だったか。戸口・順位・土産まで。", ko: "세종실록 지리지로 지금 사는 곳이 그때 어느 고을이었는지 찾아요. 호구·순위·토산까지." },
+};
+
 const ancestors1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -460,6 +785,31 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  sejongBirthdaysManifest,
+  hanyangFire1426Manifest,
+  cotton1426Manifest,
+  sillokNameHanjaManifest,
+  nightSky1426Manifest,
+  gyeonggongjangManifest,
+  joseonTimeManifest,
+  future2626Manifest,
+  joseonNamesManifest,
+  jinshin1872Manifest,
+  huangce1391Manifest,
+  census1911Manifest,
+  ellis1907Manifest,
+  parallelLivesManifest,
+  birthdayCalendarsManifest,
+  hoebinghwan1789Manifest,
+  domesday1086Manifest,
+  census1850Manifest,
+  ninbetsuEdoManifest,
+  tongsinsa1763Manifest,
+  banchado1795Manifest,
+  gwageo1426Manifest,
+  lunch1426Manifest,
+  sillok1426Manifest,
+  hometown1426Manifest,
   ancestors1426Manifest,
   joseon1789Manifest,
   france1789Manifest,

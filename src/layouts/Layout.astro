@@ -18,6 +18,7 @@ import ManualAds from '../components/ads/ManualAds.astro';
 import { GENERATED_OG } from '../data/generated-art';
 import { buildMetaDescription } from '../lib/seo/meta-description';
 import { buildFaqJsonLd, type FaqItem } from '../lib/seo/faq-builder';
+import ProductHuntWelcome from '../components/shared/ProductHuntWelcome.astro';
 
 interface Props {
   title: string;
@@ -262,6 +263,7 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
         전환 전체를 건너뛴다 — audit:motion-contract 가 빌드 산출물에서 검사한다). */}
     <style is:inline set:html={`h1[data-route-title], #questionnaire-title { view-transition-name: ${routeTransitionName(Astro.url.pathname)}; }`} />
     <Header locale={locale} availableLocales={availableLocales} />
+    <ProductHuntWelcome />
     {!isHomeRoute && (
       <nav aria-label="Breadcrumb" class="mx-auto flex max-w-6xl items-center gap-2 px-4 pt-5 text-xs text-muted-foreground">
         <a href={`/${locale}/`} class="hover:text-primary hover:underline">{homeLabel}</a>

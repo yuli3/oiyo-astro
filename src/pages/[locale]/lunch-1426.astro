@@ -1,0 +1,123 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Lunch1426 from "../../components/tools/past-life/Lunch1426";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "오늘 점심을 600년 전으로 — 1426년 조선 밥상에 있던 재료, 없던 재료",
+    description: "김치찌개·제육볶음·짜장면·피자 등 25가지 점심 메뉴를 1426년 조선으로 가져가요. 고추·감자·고구마·호박·양파·설탕이 언제 들어왔는지, 재료가 몇 퍼센트 살아남는지 보여줘요.",
+    heading: "오늘 점심을 600년 전으로",
+    sub: "1426년 조선 밥상에서 살아남는 재료는?",
+    intro: "세종 8년, 1426년의 조선에는 고추가 없었어요. 감자도, 고구마도, 양파도, 속이 꽉 찬 배추도 없었어요. 오늘 먹은 점심을 그때로 가져가면 무엇이 남고 무엇이 사라질까요?",
+    howTitle: "어떻게 판정하나요",
+    how: [
+      "메뉴마다 대표 재료 5~9가지를 골라, 1426년 조선에 있었는지 세 단계로 나눠요. 있었음(○), 있었지만 귀했음(△), 없었음(✕). 귀했던 재료는 절반만 쳐서 생존율을 계산해요.",
+      "고추·감자·고구마·옥수수·토마토·호박·땅콩·피망은 아메리카 작물이라 1492년 이후에야 세계로 퍼졌어요. 1426년에는 확실히 없었어요.",
+      "고추는 임진왜란 무렵 들어와 1614년 『지봉유설』에 '남만초'로 처음 기록돼요. 고구마는 1763년 통신사 조엄이, 감자는 1824년 무렵 북쪽에서 들어왔다고 해요. 속이 꽉 찬 통배추는 19세기에야 자리 잡았고, 그전 김치의 주인공은 무였어요.",
+      "설탕은 중국에서 들여온 약재라 궁중과 상류층만 썼고, 음식에 흔히 쓰게 된 건 1960년대부터예요. 농사에 쓰는 소를 함부로 잡지 못하게 막던 때라 소고기도 귀했어요.",
+      "양파·양배추·카레·케첩·치즈·커피처럼 한국 전래 연도가 뚜렷하지 않은 재료는 '근대 이후'라고만 적었어요. 1426년에 없었다는 점은 분명해요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "1426년 조선의 김치는 어땠나요?", a: "고춧가루가 없어서 빨갛지 않았어요. 무를 소금에 절인 짠지나 물김치(침채)가 중심이었고, 매운맛은 천초(산초)·생강·겨자로 냈어요." },
+      { q: "고추는 언제 들어왔나요?", a: "임진왜란(1592~1598) 무렵 들어온 것으로 보며, 1614년 이수광의 『지봉유설』에 '남만초'라는 이름으로 처음 나와요. 그보다 이르다는 주장도 있지만 세종 때 고추가 없었다는 점은 같아요." },
+      { q: "그때 그대로 먹을 수 있는 메뉴는?", a: "삼계탕(닭백숙)·초밥·냉면·김밥은 재료 대부분이 이미 있었어요. 반대로 피자·햄버거·카레·부대찌개는 재료가 거의 다 사라져요." },
+    ],
+  },
+  en: {
+    title: "Your lunch in 1426 Korea — which ingredients survive?",
+    description: "Take 25 everyday dishes back to Joseon Korea in 1426 and see which ingredients existed: no chili, potato, sweet potato, squash or onion yet, and sugar was a medicine.",
+    heading: "Your lunch, 600 years ago",
+    sub: "What survives on a 1426 Joseon table?",
+    intro: "In 1426, King Sejong's Korea had no chili peppers, potatoes, sweet potatoes, onions or heading napa cabbage. Carry today's lunch back and see what is left.",
+    howTitle: "How it works",
+    how: [
+      "Each dish has 5–9 key ingredients, each marked as there (○), scarce (△) or absent (✕) in 1426. Scarce ones count as half.",
+      "Chili, potato, sweet potato, corn, tomato, squash, peanut and bell pepper are American crops that only spread after 1492.",
+      "Chili reached Korea around the Imjin War and is first named in 1614; sweet potato came in 1763 and potato around 1824. Radish, not cabbage, was the main kimchi vegetable until late Joseon.",
+      "Sugar was an imported medicine until the 20th century, and beef was scarce because slaughtering plough oxen was restricted.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Was kimchi red in 1426?", a: "No. Without chili, kimchi was salted or water-pickled radish; heat came from sancho pepper, ginger and mustard." },
+      { q: "Which dishes work in 1426?", a: "Ginseng chicken soup, sushi-style vinegared rice with fish, buckwheat cold noodles and rice rolled in laver mostly survive. Pizza, burgers and curry do not." },
+    ],
+  },
+  ja: {
+    title: "今日のランチを600年前へ — 1426年の朝鮮の食卓に残る食材は？",
+    description: "キムチチゲ・チャジャン麺・ピザなど25のメニューを1426年の朝鮮へ。唐辛子・じゃがいも・砂糖の伝来とともに、食材の生存率を見せます。",
+    heading: "今日のランチを600年前へ",
+    sub: "1426年の朝鮮の食卓で残る食材は？",
+    intro: "1426年の朝鮮には唐辛子も、じゃがいもも、さつまいもも、玉ねぎもありませんでした。今日のランチを持ち込むと何が残るでしょう。",
+    howTitle: "判定の方法",
+    how: ["各メニューの主な食材5〜9種を、あった（○）・貴重（△）・なかった（✕）に分けます。貴重な食材は半分で計算。", "唐辛子は文禄・慶長の役の頃に伝わり、1614年の『芝峰類説』に初出。さつまいもは1763年、じゃがいもは1824年頃です。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "1426年のキムチは赤かった？", a: "いいえ。唐辛子がなく、大根の塩漬けや水キムチが中心でした。" }],
+  },
+  zh: {
+    title: "把今天的午餐带回600年前 — 1426年朝鲜餐桌上留下哪些食材？",
+    description: "把泡菜汤、炸酱面、披萨等25道菜带回1426年的朝鲜，看辣椒、土豆、糖何时传入，食材存活几成。",
+    heading: "把午餐带回600年前",
+    sub: "1426年朝鲜餐桌上留下什么？",
+    intro: "1426年的朝鲜还没有辣椒、土豆、红薯和洋葱。把今天的午餐带回去，还剩下什么？",
+    howTitle: "判定方法",
+    how: ["每道菜选5–9种主要食材，分为当时就有（○）、有但珍贵（△）、没有（✕），珍贵的按一半计算。", "辣椒约在壬辰战争时传入，1614年《芝峰类说》首次记载；红薯1763年、土豆约1824年传入。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "1426年的泡菜是红色的吗？", a: "不是。当时没有辣椒，泡菜以盐渍萝卜和水泡菜为主。" }],
+  },
+  fr: {
+    title: "Votre déjeuner dans la Corée de 1426 — que reste-t-il ?",
+    description: "Ramenez 25 plats du quotidien dans la Corée de 1426 : ni piment, ni pomme de terre, ni oignon, et le sucre était un remède.",
+    heading: "Votre déjeuner, il y a 600 ans",
+    sub: "Que reste-t-il sur une table coréenne de 1426 ?",
+    intro: "En 1426, la Corée du roi Sejong ne connaissait ni le piment, ni la pomme de terre, ni l'oignon. Que reste-t-il de votre déjeuner ?",
+    howTitle: "Méthode",
+    how: ["Chaque plat compte 5 à 9 ingrédients clés : présents (○), rares (△) ou absents (✕). Les rares comptent pour moitié.", "Le piment arrive vers la fin du XVIe siècle (cité en 1614) ; la patate douce en 1763, la pomme de terre vers 1824."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Le kimchi était-il rouge en 1426 ?", a: "Non : sans piment, c'était surtout du radis saumuré ou en saumure claire." }],
+  },
+  es: {
+    title: "Tu almuerzo en la Corea de 1426 — ¿qué sobrevive?",
+    description: "Lleva 25 platos cotidianos a la Corea de 1426: sin chile, papa ni cebolla, y el azúcar era una medicina.",
+    heading: "Tu almuerzo, hace 600 años",
+    sub: "¿Qué queda en una mesa coreana de 1426?",
+    intro: "En 1426, la Corea del rey Sejong no tenía chile, papa, batata ni cebolla. ¿Qué queda de tu almuerzo?",
+    howTitle: "Método",
+    how: ["Cada plato tiene de 5 a 9 ingredientes clave: presentes (○), escasos (△) o ausentes (✕). Los escasos cuentan la mitad.", "El chile llegó hacia finales del siglo XVI (citado en 1614); la batata en 1763 y la papa hacia 1824."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿El kimchi era rojo en 1426?", a: "No: sin chile, era sobre todo rábano en salmuera o en caldo claro." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/lunch-1426/")} ogImage="/images/past-life-1426/og/lunch-1426.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Lunch1426 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["sillok1426", "hometown1426", "joseon1426"]} current="lunch1426" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

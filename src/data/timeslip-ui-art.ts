@@ -4,6 +4,32 @@ export const TIMESLIP_UI_ROOT = "/images/timeslip-ui-v2/";
 // 2026-11-06: retain the generated 3:4 card ratio in the preview and export.
 // Florence and wax are reserved; neither implies a shipped episode or seal.
 export const TIMESLIP_CARD_ART: Partial<Record<EpisodeId, string>> = {
+  // 2026-11-20: code-rendered annals page (no AI art).
+  "sejong-birthdays": "cards/sejongbday-blank.webp",
+  "hanyang-fire-1426": "cards/fire-blank.webp",
+  "cotton-1426": "cards/cotton-blank.webp",
+  "sillok-name-hanja": "cards/namehanja-blank.webp",
+  "night-sky-1426": "cards/nightsky-blank.webp",
+  "gyeonggongjang": "cards/gongjang-blank.webp",
+  "joseon-time": "cards/jtime-blank.webp",
+  "future-2626": "cards/future-blank.webp",
+  "joseon-names": "cards/names-blank.webp",
+  "jinshin-1872": "cards/jinshin-blank.webp",
+  "huangce-1391": "cards/huangce-blank.webp",
+  "census-1911": "cards/census1911-blank.webp",
+  "ellis-1907": "cards/ellis-blank.webp",
+  "birthday-calendars": "cards/calendars-blank.webp",
+  "hoebinghwan-1789": "cards/hoebinghwan-blank.webp",
+  "domesday-1086": "cards/domesday-blank.webp",
+  "census-1850": "cards/census-blank.webp",
+  "ninbetsu-edo": "cards/ninbetsu-blank.webp",
+  "tongsinsa-1763": "cards/tongsinsa-blank.webp",
+  "banchado-1795": "cards/banchado-blank.webp",
+  "gwageo-1426": "cards/gwageo-blank.webp",
+  "lunch-1426": "cards/lunch-blank.webp",
+  "sillok-1426": "cards/sillok-blank.webp",
+  // 2026-11-20: code-rendered gazetteer sheet (no AI art).
+  "hometown-1426": "cards/hometown-blank.webp",
   // 2026-11-14: code-rendered family-tree sheet (no AI art).
   "ancestors-1426": "cards/ancestors-blank.webp",
   "joseon-1426": "cards/joseon-blank.webp",

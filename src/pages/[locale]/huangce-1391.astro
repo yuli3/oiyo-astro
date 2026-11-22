@@ -1,0 +1,125 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Huangce1391 from "../../components/tools/past-life/Huangce1391";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1391 명나라 황책 속 우리 집 — 민호·군호·장호, 대물림되는 호적",
+    description: "명 초 실제 호적 비율(군호 약 20%)로 우리 집 호적을 뽑고, 황책의 사주식(구관·신수·개제·실재)과 갖은자(壹·贰·叁)로 식구와 재산을 적어 봐요. 이장일까 갑수일까도 나와요.",
+    heading: "1391 명나라 황책 속 우리 집",
+    sub: "10년마다 다시 쓰는 노란 표지의 호적",
+    intro: "명나라는 1381년부터 10년마다 온 나라 집집의 식구와 땅을 적어 '황책'을 만들었어요. 1391년, 두 번째 황책에 우리 집은 어떻게 적혔을까요? 호적은 대물림이라, 군호로 태어나면 대대로 군인을 내야 했어요.",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "명 초 군호가 전체의 약 20%, 군호와 장호를 합쳐 약 23%였다는 연구를 바탕으로 민호 77·군호 20·장호 3의 비율로 뽑아요.",
+      "110집 가운데 10집이 이장이므로 11분의 1 확률로 이장 집이 돼요. 마을·이름·식구·땅·집·소는 놀이용으로 고른 예시예요.",
+      "생일로 뽑으면 같은 생일은 언제나 같은 결과가 나와요. 생일은 링크에 들어가지 않아요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "황책은 왜 '노란 책'인가요?", a: "중앙의 호부에 올리는 책의 표지가 노란색이었기 때문이에요. 지방에 두는 책은 푸른 표지였어요." },
+      { q: "군호로 태어나면 어떻게 되나요?", a: "집안에서 한 사람이 위소의 군인이 되고, 그가 죽거나 도망치면 다른 남자가 대신 갔어요. 호적은 대물림이고 바꿀 수 없었어요." },
+      { q: "황책은 지금 남아 있나요?", a: "남경 현무호 섬 창고에 170만 권 넘게 쌓였지만 1645년 전란 때 거의 다 사라졌어요. 휘주(지금의 안후이) 지방 문서 등 일부 사본과 초안이 전해져요." },
+    ],
+  },
+  en: {
+    title: "Your household in the 1391 Ming Yellow Register: civilian, military or artisan",
+    description: "Drawn by early Ming household categories (about 20% military), with your family and property written in the register's four columns and formal numerals (壹, 贰, 叁).",
+    heading: "Your household in the 1391 Ming register",
+    sub: "Yellow-covered registers, rewritten every ten years",
+    intro: "From 1381 the Ming wrote down every household's people and land every ten years in the Yellow Registers. How did your household appear in the second register, of 1391? Status was hereditary: born military, your family owed a soldier for good.",
+    howTitle: "How it works",
+    how: [
+      "Military households were about 20% in the early Ming, and military plus artisan about 23%, so the draw is civilian 77, military 20, artisan 3.",
+      "Ten of every 110 households served as li head, so one draw in eleven makes you one. Places, names, family and property are invented examples.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Why 'Yellow' Registers?", a: "The copies sent to the Ministry of Revenue had yellow covers; local copies were blue." },
+      { q: "Do they survive?", a: "More than 1.7 million volumes were stored on islands in Xuanwu Lake, Nanjing; almost all were lost in 1645. Some drafts and copies, notably from Huizhou, survive." },
+    ],
+  },
+  ja: {
+    title: "1391年明の黄冊の中のわが家",
+    description: "明初の戸籍比率（軍戸約20%）で引き、黄冊の四柱式と大字（壹・贰・叁）でわが家の家族と財産を書きます。",
+    heading: "1391年明の黄冊の中のわが家",
+    sub: "10年ごとに書き直す黄色い表紙の戸籍",
+    intro: "明は1381年から10年ごとに全国の家の人と土地を黄冊に記しました。1391年、わが家はどう書かれたでしょう。",
+    howTitle: "仕組み",
+    how: ["民77・軍20・匠3の比率で引きます。名前・村・家族・財産は遊び用の例です。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "なぜ「黄」冊？", a: "戸部に上げる冊の表紙が黄色だったからです。" }],
+  },
+  zh: {
+    title: "1391年明代黄册里的我家：民户、军户还是匠户",
+    description: "按明初户籍比例（军户约20%）抽取，用黄册四柱式（旧管、新收、开除、实在）和大写数字写下我家的人丁与事产，还能看看今年是不是里长。",
+    heading: "1391年明代黄册里的我家",
+    sub: "十年一造的黄皮户籍册",
+    intro: "明朝自1381年起每十年攒造黄册，登记天下每户的人丁和事产。1391年第二次大造，你家是怎样登记的？户籍世袭：生为军户，便世代出丁当兵。",
+    howTitle: "怎么抽",
+    how: [
+      "依明初军户约占20%、军匠合计约23%的研究，按民77、军20、匠3抽取。",
+      "一百一十户中十户为里长，所以有十一分之一的机会当里长。乡里、姓名、人口和产业为虚构示例。",
+    ],
+    faqTitle: "常见问题",
+    faq: [
+      { q: "为什么叫“黄册”？", a: "上呈户部的册子封面用黄纸，地方存留的用青纸。" },
+      { q: "黄册还在吗？", a: "南京后湖册库藏有一百七十多万册，1645年战乱中几乎全毁，只有徽州等地的底籍、抄本留存。" },
+    ],
+  },
+  fr: {
+    title: "Votre foyer au registre jaune Ming de 1391",
+    description: "Tiré selon les catégories de foyers du début des Ming (environ 20 % militaires), avec votre famille et vos biens en quatre colonnes et chiffres formels.",
+    heading: "Votre foyer au registre jaune de 1391",
+    sub: "Des registres à couverture jaune, refaits tous les dix ans",
+    intro: "Dès 1381, les Ming recensaient tous les dix ans les personnes et les terres de chaque foyer. Comment le vôtre apparaissait-il en 1391 ?",
+    howTitle: "Comment ça marche",
+    how: ["Tirage civil 77, militaire 20, artisan 3 ; noms, lieux, famille et biens sont inventés."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Pourquoi « jaune » ?", a: "Les exemplaires envoyés au ministère avaient une couverture jaune." }],
+  },
+  es: {
+    title: "Tu hogar en el registro amarillo Ming de 1391",
+    description: "Sorteado según las categorías de hogares de inicios Ming (cerca del 20 % militares), con tu familia y bienes en cuatro columnas y numerales formales.",
+    heading: "Tu hogar en el registro amarillo de 1391",
+    sub: "Registros de cubierta amarilla, rehechos cada diez años",
+    intro: "Desde 1381 los Ming anotaban cada diez años las personas y tierras de cada hogar. ¿Cómo aparecía el tuyo en 1391?",
+    howTitle: "Cómo funciona",
+    how: ["Sorteo civil 77, militar 20, artesano 3; nombres, lugares, familia y bienes son inventados."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Por qué «amarillo»?", a: "Las copias del ministerio tenían cubierta amarilla." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/huangce-1391/")} ogImage="/images/past-life-1426/og/huangce-1391.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Huangce1391 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["joseon1426", "ninbetsuEdo", "parallelLives"]} current="huangce1391" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Future2626 from "../../components/tools/past-life/Future2626";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "2626 미래 박물관 속 내 물건 — 거꾸로 타임슬립, 600년 뒤 유물 설명",
+    description: "지금 내 스마트폰·무선 이어폰·텀블러·교통카드가 2626년 박물관 유물이 된다면? 미래 학자들이 쓴 엉뚱한 유물 설명 세 장을 받아 봐요.",
+    heading: "2626 미래 박물관 속 내 물건",
+    sub: "거꾸로 타임슬립, 600년 뒤의 유물 설명",
+    intro: "타임슬립 시리즈는 늘 과거로 갔어요. 이번엔 반대로 600년 뒤로 가 봐요. 2626년 박물관에 내 물건이 유물로 전시돼 있다면, 학자들은 그걸 뭐라고 설명할까요?",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "스마트폰·이어폰·텀블러·보조배터리·교통카드·리모컨·운동화·키보드·우산·영수증 가운데 세 가지를 뽑고, 미래 학자의 '엉뚱한 해석'을 하나씩 붙여요.",
+      "출토지와 보존 상태도 함께 뽑아요. 모든 설명은 놀이용으로 지어낸 농담이에요.",
+      "생일로 뽑으면 같은 생일은 언제나 같은 결과가 나와요. 생일은 링크에 들어가지 않아요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "왜 엉뚱하게 해석하나요?", a: "지금 우리도 옛 유물의 쓰임을 다 알지 못해 '제사용일 것'이라 짐작하곤 해요. 600년 뒤 사람들도 우리 물건을 그렇게 볼지 모른다는 상상이에요." },
+      { q: "다른 타임슬립 회차와 무엇이 다른가요?", a: "다른 회차는 실제 기록과 통계로 과거의 나를 뽑지만, 이번 회차는 실제 기록이 없는 미래라 전부 지어낸 이야기예요." },
+    ],
+  },
+  en: {
+    title: "Your things in a museum in 2626: time-slip in reverse",
+    description: "What if your phone, earbuds, tumbler and transit card were museum pieces in 2626? Get three gloriously wrong labels written by future curators.",
+    heading: "Your things in a museum, 2626",
+    sub: "Time-slip in reverse: labels from 600 years on",
+    intro: "The time-slip series always goes back. This time we go 600 years forward. If your things sat in a museum in 2626, what would the labels say?",
+    howTitle: "How it works",
+    how: ["Three of ten everyday objects are drawn, each with a future curator's misreading, plus a find site and condition. Everything is an invented joke."],
+    faqTitle: "FAQ",
+    faq: [{ q: "Why the wrong interpretations?", a: "We still guess at the use of many ancient objects; future people may do the same with ours." }],
+  },
+  ja: {
+    title: "2626年の博物館の私の物 — 逆さまのタイムスリップ",
+    description: "私のスマホやイヤホン、タンブラーが2626年の博物館の遺物になったら？未来の学者のとんちんかんな解説を3枚もらいます。",
+    heading: "2626年の博物館の私の物",
+    sub: "逆さまのタイムスリップ",
+    intro: "今回は600年後へ。博物館に並んだ私の物に、学者はどんな説明を付けるでしょう。",
+    howTitle: "仕組み",
+    how: ["日用品10種から3つを引き、未来の学者の解釈を付けます。すべて作り話です。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "なぜ間違った解釈なの？", a: "私たちも古い遺物の用途を推測するように、未来の人も同じことをするかもしれません。" }],
+  },
+  zh: {
+    title: "2626年博物馆里的我的东西 — 反向穿越",
+    description: "如果你的手机、耳机、保温杯成了2626年的博物馆文物？领取三张未来学者写的离谱说明。",
+    heading: "2626年博物馆里的我的东西",
+    sub: "反向穿越：六百年后的文物说明",
+    intro: "这一次去六百年后。博物馆里展出你的东西，学者会怎么介绍？",
+    howTitle: "怎么抽",
+    how: ["从十种日用品中抽三件，各配一条未来学者的解读，全是编的玩笑。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "为什么解读得这么离谱？", a: "我们至今也常猜测古物的用途，未来的人或许也会这样看我们的东西。" }],
+  },
+  fr: {
+    title: "Vos affaires au musée en 2626 : voyage dans le temps à l'envers",
+    description: "Et si votre téléphone, vos écouteurs et votre gourde étaient exposés en 2626 ? Trois étiquettes délicieusement fausses.",
+    heading: "Vos affaires au musée en 2626",
+    sub: "Voyage dans le temps à l'envers",
+    intro: "Cette fois, 600 ans en avant. Que diraient les étiquettes du musée ?",
+    howTitle: "Comment ça marche",
+    how: ["Trois objets du quotidien tirés au sort, chacun avec une interprétation inventée."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Pourquoi ces erreurs ?", a: "Nous devinons encore l'usage d'objets anciens ; le futur fera de même avec les nôtres." }],
+  },
+  es: {
+    title: "Tus cosas en un museo en 2626: viaje en el tiempo al revés",
+    description: "¿Y si tu móvil, tus auriculares y tu termo estuvieran en un museo en 2626? Tres etiquetas gloriosamente equivocadas.",
+    heading: "Tus cosas en un museo en 2626",
+    sub: "Viaje en el tiempo al revés",
+    intro: "Esta vez, 600 años hacia delante. ¿Qué dirían las etiquetas del museo?",
+    howTitle: "Cómo funciona",
+    how: ["Tres objetos cotidianos al azar, cada uno con una interpretación inventada."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Por qué esos errores?", a: "Aún adivinamos el uso de objetos antiguos; el futuro hará lo mismo con los nuestros." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/future-2626/")} ogImage="/images/past-life-1426/og/future-2626.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Future2626 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["parallelLives", "hoebinghwan1789", "birthdayCalendars"]} current="future2626" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

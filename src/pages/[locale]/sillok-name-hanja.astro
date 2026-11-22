@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import SillokNameHanja from "../../components/tools/past-life/SillokNameHanja";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "실록 속 내 이름 한자 — 1426 세종실록에 내 이름 글자가 몇 번?",
+    description: "내 이름 한자가 1426년(세종 8) 『세종실록』에 몇 번 나오는지, 전체 2,950종 가운데 몇 위인지, 처음 나온 기사는 무엇인지 찾아 드려요.",
+    heading: "실록 속 내 이름 한자",
+    sub: "1426 『세종실록』 한자 8만 8천 자에서 찾기",
+    intro: "세종 8년 한 해의 실록 기사 1,149건을 한 글자씩 셌어요. 내 이름 한자가 임금과 신하의 기록에 얼마나 자주 등장했는지, 처음 나온 기사는 무엇이었는지 확인해 보세요.",
+    howTitle: "어떻게 찾나요",
+    how: [
+      "위키문헌에 실린 세종실록 8년 원문의 한자를 모두 세어 글자마다 등장 횟수와 순위, 처음 나온 기사를 정리했어요.",
+      "이름은 이 기기에서만 찾고 서버나 결과 링크로 보내지 않아요.",
+      "為·爲처럼 모양이 다른 글자는 서로 바꿔서도 찾아봐요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "한글 이름만 알아요.", a: "이 도구는 한자로 찾아요. 휴대폰 키보드의 한자 변환으로 이름 한자를 입력해 보세요." },
+      { q: "가장 많이 나오는 글자는?", a: "之(2,321번), 以, 不, 其, 人 순이에요. 이름에 흔한 民은 287번, 恩은 66번, 賢은 31번, 秀는 8번 나와요." },
+    ],
+  },
+  en: {
+    title: "My name in the 1426 Annals: how often do my characters appear?",
+    description: "Search your name's Chinese characters in the 1426 Sejong Sillok: count, rank among 2,950 characters, and the first entry they appear in.",
+    heading: "My name in the 1426 Annals",
+    sub: "Searching 88,000 characters of the Sejong Sillok",
+    intro: "We counted every character in the 1,149 entries of 1426. See how often your name's characters appear and where they first show up.",
+    howTitle: "How it works",
+    how: ["Your name is searched on this device only and never goes into the link."],
+    faqTitle: "FAQ",
+    faq: [{ q: "Most common character?", a: "之 (2,321 times), then 以, 不, 其, 人." }],
+  },
+  ja: {
+    title: "実録の中の私の名前の漢字 — 1426年世宗実録",
+    description: "名前の漢字が1426年の『世宗実録』に何回出るか、2,950種中何位か、初出の記事を探します。",
+    heading: "実録の中の私の名前の漢字",
+    sub: "『世宗実録』8万8千字から探す",
+    intro: "1426年の実録1,149件を一字ずつ数えました。",
+    howTitle: "仕組み",
+    how: ["名前はこの端末内だけで検索し、リンクにも入りません。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "最も多い字は？", a: "之（2,321回）、以、不、其、人の順です。" }],
+  },
+  zh: {
+    title: "实录里我名字的汉字 — 1426年世宗实录",
+    description: "查你名字的汉字在1426年《世宗实录》中出现几次、在2,950种字中排第几、首次出现在哪条记事。",
+    heading: "实录里我名字的汉字",
+    sub: "在《世宗实录》8.8万字中查找",
+    intro: "逐字统计了1426年实录的1,149条记事。",
+    howTitle: "怎么查",
+    how: ["名字只在本机查找，不会放进链接。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "最常见的字？", a: "之（2,321次），其次是以、不、其、人。" }],
+  },
+  fr: {
+    title: "Mon nom dans les Annales de 1426",
+    description: "Cherchez les caractères de votre nom dans les Annales de Sejong (1426) : fréquence, rang parmi 2 950 caractères, première apparition.",
+    heading: "Mon nom dans les Annales de 1426",
+    sub: "88 000 caractères des Annales de Sejong",
+    intro: "Nous avons compté chaque caractère des 1 149 articles de 1426.",
+    howTitle: "Comment ça marche",
+    how: ["Votre nom est cherché sur cet appareil et n'entre pas dans le lien."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Le caractère le plus fréquent ?", a: "之 (2 321 fois), puis 以, 不, 其, 人." }],
+  },
+  es: {
+    title: "Mi nombre en los Anales de 1426",
+    description: "Busca los caracteres de tu nombre en los Anales de Sejong (1426): frecuencia, puesto entre 2.950 caracteres y primera aparición.",
+    heading: "Mi nombre en los Anales de 1426",
+    sub: "88.000 caracteres de los Anales de Sejong",
+    intro: "Contamos cada carácter de las 1.149 entradas de 1426.",
+    howTitle: "Cómo funciona",
+    how: ["Tu nombre se busca solo en este dispositivo y no va en el enlace."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿El carácter más frecuente?", a: "之 (2.321 veces), luego 以, 不, 其, 人." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/sillok-name-hanja/")} ogImage="/images/past-life-1426/og/sillok-name-hanja.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><SillokNameHanja locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["sillok1426", "joseonNames", "nightSky1426"]} current="sillokNameHanja" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

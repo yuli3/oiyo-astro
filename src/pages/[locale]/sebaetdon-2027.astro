@@ -1,0 +1,94 @@
+---
+/**
+ * 2027 설날 세뱃돈 봉투 계획 — 한국 세시풍속이라 ko 한 로케일만 낸다(나라별 특화 원칙, 2026-10-19 세운).
+ * 계획 20종 #7 (2026-11-21). 설 2027-02-07 전 1월 중순까지 색인되도록 미리 연다.
+ * "적정 금액"은 조사마다 달라 단정하지 않고, 사용자가 고른 금액만 계산한다.
+ */
+import Layout from '../../layouts/Layout.astro';
+import SebaetdonPlanner from '../../components/tools/seasonal/SebaetdonPlanner';
+import { localePath, type Locale } from '../../i18n';
+import { SEBAETDON_LIMIT } from '../../lib/sebaetdon';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ko' } }];
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const title = '2027 설날 세뱃돈 계산 — 누구에게 얼마씩, 신권 몇 장 바꿀지';
+const description = '2027년 설날은 2월 7일(일), 연휴는 2월 6일~9일(대체공휴일 포함)이에요. 조카·자녀·부모님 봉투를 넣으면 세뱃돈 합계와 은행에서 바꿀 신권 장수, 봉투에 쓸 덕담까지 한 번에 정리해요.';
+
+const faqs = [
+  { q: '2027년 설날 연휴는 언제인가요?', a: '설날은 2월 7일(일)이에요. 연휴는 2월 6일(토)~8일(월)이고, 설날이 일요일과 겹쳐 2월 9일(화)이 대체공휴일이에요. 그래서 토요일부터 화요일까지 4일 쉬어요.' },
+  { q: '세뱃돈은 얼마가 적당한가요?', a: '정해진 기준은 없어요. 조사마다 금액이 다르고 집안 형편과 관계에 따라 달라서, 이 계산기는 금액을 권하지 않고 직접 고른 금액으로 합계만 내요. 형제·자매끼리 미리 금액을 맞춰 두면 아이들 사이에 비교가 덜해요.' },
+  { q: '신권은 어디서 바꾸나요?', a: '설 2~3주 전부터 시중 은행 창구에서 바꿔 줘요. 은행·지점마다 1인당 한도와 기간이 다르니 다니는 은행 공지를 확인하세요. 이 계산기의 "바꿀 신권" 장수를 메모해 가면 창구에서 한 번에 말하기 쉬워요.' },
+  { q: '5만 원권 대신 1만 원권으로 주는 게 좋을까요?', a: '어린아이에게는 장수가 많은 1만 원권이 더 반가울 때가 있어요. 계산기에서 "5만 원권 쓰기"를 끄면 모두 1만 원권 이하로 나눠 줘요.' },
+  { q: '부모님 용돈도 넣어도 되나요?', a: '네. "부모님·어른" 줄에 넣으면 같은 합계와 신권 장수에 함께 들어가요. 봉투 덕담도 어른용 문장으로 보여 줘요.' },
+];
+
+const customs = [
+  { h: '🙇 세배', p: '설날 아침 차례를 지낸 뒤 웃어른께 절을 올리고 새해 인사를 드려요. 어른은 덕담과 함께 세뱃돈을 건네요.' },
+  { h: '✉️ 봉투에 덕담', p: '세뱃돈은 맨손보다 봉투에 넣어 주고, 봉투에 한 줄 덕담을 적으면 받는 사람이 오래 간직해요.' },
+  { h: '🍲 떡국', p: '흰 가래떡으로 끓인 떡국을 먹으며 한 살을 더 먹는다고 했어요. 지금은 만 나이를 쓰지만 떡국 풍습은 그대로예요.' },
+  { h: '🐑 붉은 양의 해', p: '2027년은 정미년(丁未年)이에요. 띠는 설을 기준으로 바뀌어서, 2월 7일 전에 태어난 아이는 말띠예요.' },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['ko']}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">세시풍속 · 2027년 2월 7일(일)</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">2027 설날 세뱃돈 봉투 계획</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">조카·자녀·부모님 봉투를 넣으면 합계, 은행에서 바꿀 신권 장수, 봉투에 쓸 덕담이 한 번에 나와요. 입력한 것은 이 브라우저 밖으로 보내지 않아요.</p>
+
+    <div class="mt-6 rounded-2xl border bg-card p-5">
+      <h2 class="text-lg font-black">2027년 설날 한눈에</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
+        <li><strong class="text-foreground">설날:</strong> 2027년 2월 7일(일), 음력 1월 1일</li>
+        <li><strong class="text-foreground">연휴:</strong> 2월 6일(토)~8일(월) + 대체공휴일 2월 9일(화), 모두 4일</li>
+        <li><strong class="text-foreground">띠:</strong> 정미년, 붉은 양의 해</li>
+      </ul>
+    </div>
+
+    <div class="mt-8">
+      <SebaetdonPlanner client:load />
+    </div>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">설날 세배와 세뱃돈</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        {customs.map((c) => (
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="text-base font-black">{c.h}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{c.p}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">자주 묻는 질문</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {faqs.map((f) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer text-sm font-black">{f.q}</summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">{SEBAETDON_LIMIT} 날짜 출처: <a class="underline" href="https://astro.kasi.re.kr/kor/life/post/calendarData?year=2027" rel="noopener">한국천문연구원 2027 월력 자료</a>.</p>
+
+    <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="함께 보기">
+      <a href={localePath(locale, '/new-year-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🐑 2027 신년운세 모음</a>
+      <a href={localePath(locale, '/tojeong-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">📜 2027 토정비결</a>
+      <a href={localePath(locale, '/daeboreum-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🌕 2027 정월대보름 부럼 카드</a>
+      <a href={localePath(locale, '/dongji-2026')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🥣 2026 동지 팥죽 한 해 정리</a>
+    </nav>
+  </section>
+</Layout>
