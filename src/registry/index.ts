@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const jinshin1872Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7a2e2e",
+  domain: "ontology",
+  icon: "BookOpen",
+  id: "jinshin-1872",
+  path: "/jinshin-1872",
+  status: "production",
+  name: { ko: "1872 임신호적 속 우리 집", en: "Your household in the 1872 Jinshin koseki", ja: "壬申戸籍の中のわが家", zh: "1872年壬申户籍里的我家", fr: "Votre foyer au koseki Jinshin de 1872", es: "Tu hogar en el koseki Jinshin de 1872" },
+  description: { ko: "1872년 일본 첫 전국 호적의 실제 족칭 집계(평민 3,084만·사족 128만·화족 2,666명…)로 우리 집을 뽑고, 호적 한 장을 재구성해 봐요.", en: "Drawn by the real 1872 status totals (30.8M commoners, 1.28M shizoku, 2,666 kazoku…), with a reconstructed koseki entry.", ja: "明治5年の初の全国戸籍の族籍集計（平民3,084万・士族128万・華族2,666人…）で引き、戸籍一枚を再構成します。", zh: "按1872年日本首次全国户籍的族称统计（平民3084万、士族128万、华族2666人……）抽取，并重构一页户籍。", fr: "Tiré selon les vrais totaux de 1872 (30,8 M roturiers, 1,28 M shizoku, 2 666 kazoku…), avec une inscription reconstituée.", es: "Sorteado según los totales reales de 1872 (30,8 M plebeyos, 1,28 M shizoku, 2.666 kazoku…), con una inscripción reconstruida." },
+};
+
 const huangce1391Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -655,6 +668,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  jinshin1872Manifest,
   huangce1391Manifest,
   census1911Manifest,
   ellis1907Manifest,

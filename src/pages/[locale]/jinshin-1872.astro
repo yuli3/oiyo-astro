@@ -1,0 +1,125 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Jinshin1872 from "../../components/tools/past-life/Jinshin1872";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1872 임신호적 속 우리 집 — 평민·사족·화족, 그리고 봉인된 호적",
+    description: "1872년 일본 첫 전국 호적의 실제 족칭 집계(평민 3,084만·사족 128만·졸 66만·화족 2,666명…)로 우리 집을 뽑고, 주소·족칭·직업·절·수호신이 적힌 호적 한 장을 재구성해 봐요.",
+    heading: "1872 임신호적 속 우리 집",
+    sub: "일본이 처음 온 나라 사람을 한 장부에 적은 해",
+    intro: "1872년, 일본은 처음으로 온 나라 사람을 한 장부에 적었어요. 임신년에 만들어 '임신호적'이라 불러요. 우리 집은 평민일까, 옛 무사 집안인 사족일까, 1만 2천 명 중 한 명인 화족일까요?",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "1872년 첫 전국 호적 집계(총 33,110,825명)의 족칭별 인원으로 뽑아요. 평민 30,837,271명, 사족 1,282,167명, 졸 659,074명, 승려 211,846명, 신관 102,477명, 화족 2,666명 등이에요.",
+      "황족과 가라후토(사할린) 사람은 뽑지 않아요. 옛 차별 신분도 결과로 나오지 않아요. 이름·마을·나이·직업은 놀이용 예시예요.",
+      "생일로 뽑으면 같은 생일은 언제나 같은 결과가 나와요. 생일은 링크에 들어가지 않아요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "임신호적은 언제 만들었나요?", a: "1871년 4월 호적법이 나오고 1872년(메이지 5년, 임신년) 2월 1일부터 시행됐어요. 첫 집계 인구는 33,110,825명이었어요." },
+      { q: "왜 지금은 볼 수 없나요?", a: "일부 기록에 옛 차별 신분을 짐작하게 하는 표시가 있어 결혼·취직 뒷조사에 쓰였기 때문이에요. 일본 법무성은 1968년 3월 29일 봉인하고 열람을 금지했어요." },
+      { q: "평민도 성이 있었나요?", a: "1870년에 평민도 성을 쓸 수 있게 됐고, 1875년부터는 반드시 성을 쓰게 됐어요." },
+    ],
+  },
+  en: {
+    title: "Your household in Japan's 1872 Jinshin koseki: commoner, samurai or peer",
+    description: "Drawn by the real 1872 status totals (30.8 million commoners, 1.28 million shizoku, 2,666 kazoku…), with a reconstructed entry: address, status, occupation, temple and tutelary shrine.",
+    heading: "Your household in the 1872 Jinshin koseki",
+    sub: "The year Japan first wrote everyone into one register",
+    intro: "In 1872 Japan wrote its whole population into a single register for the first time, named Jinshin after the year in the sexagenary cycle. Were you a commoner, a former samurai, or one of 2,666 peers?",
+    howTitle: "How it works",
+    how: [
+      "Your status is drawn from the first national totals (33,110,825 people): 30,837,271 commoners, 1,282,167 shizoku, 659,074 sotsu, 211,846 monks, 102,477 Shinto priests, 2,666 kazoku and more.",
+      "The imperial family and the people of Karafuto are not drawn, and no former outcast status is ever drawn. Names, places, ages and occupations are invented.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "When was it made?", a: "The Family Register Act of April 1871 took effect on 1 February 1872. The first count was 33,110,825 people." },
+      { q: "Why is it sealed?", a: "Some entries hinted at former outcast status and were used in background checks, so the Ministry of Justice sealed the register on 29 March 1968." },
+    ],
+  },
+  ja: {
+    title: "壬申戸籍の中のわが家 — 平民・士族・華族、そして封印された戸籍",
+    description: "明治5年の初の全国戸籍の族籍集計（平民3,084万・士族128万・卒66万・華族2,666人…）で引き、住所・族称・職業・寺・氏神を記した戸籍一枚を再構成します。",
+    heading: "壬申戸籍の中のわが家",
+    sub: "日本が初めて全国民を一つの帳簿に記した年",
+    intro: "明治5年、日本は初めて全国民を一つの帳簿に記しました。わが家は平民か、士族か、それとも1万2千人に1人の華族でしょうか。",
+    howTitle: "仕組み",
+    how: [
+      "明治5年の全国戸籍集計（総計33,110,825人）の族籍別人数で引きます。平民30,837,271人、士族1,282,167人、卒659,074人、僧211,846人、旧神官102,477人、華族2,666人など。",
+      "皇族と樺太人員は引かず、旧被差別身分も結果に出ません。名前・村・年齢・職業は遊び用の例です。",
+    ],
+    faqTitle: "よくある質問",
+    faq: [
+      { q: "なぜ閲覧できないのですか？", a: "一部に旧身分をうかがわせる記載があり身元調査に使われたため、法務省が1968年3月29日に封印しました。" },
+      { q: "平民に苗字はありましたか？", a: "1870年に平民も苗字を許され、1875年から必ず名乗ることになりました。" },
+    ],
+  },
+  zh: {
+    title: "1872年壬申户籍里的我家",
+    description: "按1872年日本首次全国户籍的族称统计（平民3084万、士族128万、华族2666人……）抽取，并重构一页户籍。",
+    heading: "1872年壬申户籍里的我家",
+    sub: "日本第一次把全国人口写进同一本户籍",
+    intro: "1872年，日本第一次把全国人口登记进同一套户籍。你家是平民、士族，还是一万二千人中一人的华族？",
+    howTitle: "怎么抽",
+    how: ["按首次全国户籍统计（共33,110,825人）的族称人数抽取。姓名、村落、年龄、职业为虚构示例。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "为什么被封存？", a: "部分记载暗示旧贱民身份，被用于背景调查，日本法务省于1968年3月29日封存。" }],
+  },
+  fr: {
+    title: "Votre foyer au koseki Jinshin de 1872",
+    description: "Tiré selon les vrais totaux de 1872 (30,8 millions de roturiers, 1,28 million de shizoku, 2 666 kazoku…), avec une inscription reconstituée.",
+    heading: "Votre foyer au koseki de 1872",
+    sub: "L'année où le Japon inscrivit tout le monde dans un registre",
+    intro: "En 1872, le Japon inscrivit pour la première fois toute sa population dans un seul registre. Roturier, ancien samouraï ou pair ?",
+    howTitle: "Comment ça marche",
+    how: ["Tirage selon les totaux de 1872 (33 110 825 personnes) ; noms, lieux, âges et métiers sont inventés."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Pourquoi est-il scellé ?", a: "Certaines mentions trahissaient un ancien statut de paria ; le registre fut scellé le 29 mars 1968." }],
+  },
+  es: {
+    title: "Tu hogar en el koseki Jinshin de 1872",
+    description: "Sorteado según los totales reales de 1872 (30,8 millones de plebeyos, 1,28 millones de shizoku, 2.666 kazoku…), con una inscripción reconstruida.",
+    heading: "Tu hogar en el koseki de 1872",
+    sub: "El año en que Japón inscribió a todos en un registro",
+    intro: "En 1872 Japón inscribió por primera vez a toda su población en un solo registro. ¿Plebeyo, antiguo samurái o noble?",
+    howTitle: "Cómo funciona",
+    how: ["Sorteo según los totales de 1872 (33.110.825 personas); nombres, lugares, edades y oficios son inventados."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Por qué está sellado?", a: "Algunas inscripciones delataban un antiguo estatus de paria; el registro se selló el 29 de marzo de 1968." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/jinshin-1872/")} ogImage="/images/past-life-1426/og/jinshin-1872.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Jinshin1872 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["ninbetsuEdo", "huangce1391", "parallelLives"]} current="jinshin1872" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>
