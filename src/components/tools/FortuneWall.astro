@@ -25,12 +25,12 @@ const g = GRADE_LABELS[lang];
 const noRepeat = MIN_CYCLE_BEFORE_REPEAT;
 
 const UI = {
-  ko: { byYear: '출생 연도별', rank: '위', top: '1위', deltaUp: '상승', deltaDown: '하락', lucky: '행운의 수', more: '내 생년월일로 자세히 보기', scale: `같은 조언은 ${noRepeat}일 안에 다시 나오지 않아요. 문장 풀을 한 바퀴 다 돈 뒤에야 재등장하거든요.` },
-  en: { byYear: 'By birth year', rank: '', top: 'Top', deltaUp: 'up', deltaDown: 'down', lucky: 'Lucky no.', more: 'See it in detail with your birth date', scale: `No advice repeats within ${noRepeat} days — each line cycles through the whole pool before it can return.` },
-  ja: { byYear: '生まれ年別', rank: '位', top: '1位', deltaUp: '上昇', deltaDown: '下降', lucky: 'ラッキー数', more: '生年月日で詳しく見る', scale: `同じ助言は ${noRepeat} 日以内に再び出ません。文のプールを一巡してから再登場します。` },
-  zh: { byYear: '按出生年份', rank: '名', top: '第一', deltaUp: '上升', deltaDown: '下降', lucky: '幸运数', more: '用出生日期查看详情', scale: `同一条建议 ${noRepeat} 天内不会重复 — 每句都要走完整个池子才会再次出现。` },
-  fr: { byYear: 'Par année de naissance', rank: 'e', top: 'Top', deltaUp: 'hausse', deltaDown: 'baisse', lucky: 'Nombre', more: 'Voir en détail avec votre date de naissance', scale: `Aucun conseil ne se répète avant ${noRepeat} jours : chaque ligne parcourt tout le réservoir avant de revenir.` },
-  es: { byYear: 'Por año de nacimiento', rank: 'º', top: 'Top', deltaUp: 'sube', deltaDown: 'baja', lucky: 'Número', more: 'Verlo en detalle con tu fecha de nacimiento', scale: `Ningún consejo se repite en ${noRepeat} días: cada línea recorre todo el conjunto antes de volver.` },
+  ko: { swipe: '옆으로 넘겨 보기', byYear: '출생 연도별', rank: '위', top: '1위', deltaUp: '상승', deltaDown: '하락', lucky: '행운의 수', more: '내 생년월일로 자세히 보기', scale: `같은 조언은 ${noRepeat}일 안에 다시 나오지 않아요. 문장 풀을 한 바퀴 다 돈 뒤에야 재등장하거든요.` },
+  en: { swipe: 'Swipe for more', byYear: 'By birth year', rank: '', top: 'Top', deltaUp: 'up', deltaDown: 'down', lucky: 'Lucky no.', more: 'See it in detail with your birth date', scale: `No advice repeats within ${noRepeat} days — each line cycles through the whole pool before it can return.` },
+  ja: { swipe: '横にスワイプ', byYear: '生まれ年別', rank: '位', top: '1位', deltaUp: '上昇', deltaDown: '下降', lucky: 'ラッキー数', more: '生年月日で詳しく見る', scale: `同じ助言は ${noRepeat} 日以内に再び出ません。文のプールを一巡してから再登場します。` },
+  zh: { swipe: '左右滑动查看', byYear: '按出生年份', rank: '名', top: '第一', deltaUp: '上升', deltaDown: '下降', lucky: '幸运数', more: '用出生日期查看详情', scale: `同一条建议 ${noRepeat} 天内不会重复 — 每句都要走完整个池子才会再次出现。` },
+  fr: { swipe: 'Faites glisser', byYear: 'Par année de naissance', rank: 'e', top: 'Top', deltaUp: 'hausse', deltaDown: 'baisse', lucky: 'Nombre', more: 'Voir en détail avec votre date de naissance', scale: `Aucun conseil ne se répète avant ${noRepeat} jours : chaque ligne parcourt tout le réservoir avant de revenir.` },
+  es: { swipe: 'Desliza para ver', byYear: 'Por año de nacimiento', rank: 'º', top: 'Top', deltaUp: 'sube', deltaDown: 'baja', lucky: 'Número', more: 'Verlo en detalle con tu fecha de nacimiento', scale: `Ningún consejo se repite en ${noRepeat} días: cada línea recorre todo el conjunto antes de volver.` },
 }[lang];
 
 const detailHref = `/${locale}/fortune/today/`;
@@ -45,11 +45,13 @@ const detailHref = `/${locale}/fortune/today/`;
       <div class="px-5 pb-5">
         {[{ label: t.animals, cards: s.animals }, { label: t.signs, cards: s.signs }].map((group) => (
           <>
-            <p class="mb-2 mt-4 text-xs font-bold uppercase tracking-widest text-green-600 first:mt-0">{group.label}</p>
-            <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
+            <p class="mb-2 mt-4 flex items-baseline justify-between gap-2 text-xs font-bold uppercase tracking-widest text-green-600 first:mt-0">{group.label}<span class="font-semibold normal-case tracking-normal text-muted-foreground sm:hidden" aria-hidden="true">{UI.swipe} →</span></p>
+            {/* 2026-11-22: 모바일에서 카드 24장이 세로로 쌓여 홈이 7,000px 였다. 좁은
+                화면에서만 가로로 넘기는 줄로 바꾼다(순서·내용은 같다). sm 이상은 기존 격자. */}
+            <ul class="-mx-5 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 md:grid-cols-3">
               {group.cards.map((c) => (
                 <li
-                  class="rounded-xl border p-3"
+                  class="w-4/5 shrink-0 snap-start rounded-xl border p-3 sm:w-auto"
                   style={`border-color:${GRADE_COLORS[c.grade]}33; background:${GRADE_COLORS[c.grade]}0d`}
                 >
                   <div class="flex items-baseline gap-2">

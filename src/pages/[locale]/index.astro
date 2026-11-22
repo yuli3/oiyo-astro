@@ -8,7 +8,10 @@ import type { Locale } from '../../i18n';
 // four unrelated emoji vocabularies (doors/tests/map/value-props each used
 // their own set). lucide-react is already a project dependency; these are
 // static SVGs, no client directive needed.
-import { Wand2, Sun, ClipboardCheck, FlaskConical, Lock, Globe2, Hourglass, ArrowRight } from 'lucide-react';
+import { Wand2, Sun, FlaskConical, Lock, Globe2, Hourglass, ArrowRight, MoonStar, CalendarHeart } from 'lucide-react';
+import { exploreLinks, seasonHeading, seasonLinks } from '../../config/explore';
+import { buildTestsByPath } from '../../data/test-hub-directory';
+import { testIconSrc } from '../../data/test-icons';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -103,15 +106,28 @@ const draws = [
   },
 ]
 
-const tarotCard = {
-  title: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロットリーディング', zh: '塔罗牌解读', fr: 'Tirage de Tarot', es: 'Lectura de Tarot' }),
-  href: localePath(locale, '/tarot/reading'),
-  description: txt({ ko: '카드 세 장으로 지금의 흐름 읽기', en: 'Three cards on where things stand', ja: '3枚のカードで今の流れを読む', zh: '三张牌读懂当下', fr: 'Trois cartes sur le moment présent', es: 'Tres cartas sobre tu momento' }),
+// 2026-11-22 UI·UX 대수선: 홈에 "둘러보기" 한 구역을 더했다. 그동안 랜딩에서 갈 수
+// 있는 곳은 검사·지도·뽑기 둘·타로뿐이었고, 가장 많이 하는 검사(MBTI 등)·꿈 해몽·
+// 시즌 페이지는 입구가 없었다. 운세 도배(FortuneWall)는 2026-08-26 결정대로 그대로 두고
+// 그 위에 짧게 얹는다. 대표 검사는 2026-11-09 GA4 조회 상위 검사에서 골랐다.
+const POPULAR_TEST_PATHS = ['/mbti/test', '/enneagram/test', '/big5/test', '/attachment-style/test', '/love-language/test', '/personal-color/test'];
+const testsByPath = buildTestsByPath(locale);
+const popularTests = POPULAR_TEST_PATHS.flatMap((path) => {
+  const href = localePath(locale, path);
+  const test = testsByPath.get(href);
+  return test ? [{ href, title: test.title[locale] ?? test.title.en, icon: testIconSrc(href) }] : [];
+});
+// 뽑기 두 개(환생·600년 전)는 히어로에 이미 있으니 둘러보기에서는 뺀다.
+const drawKeys = new Set(['reincarnation', 'timeslip']);
+const moreExplore = exploreLinks(locale).filter((item) => !drawKeys.has(item.key));
+const exploreIcons: Record<string, typeof Wand2> = { dream: MoonStar, tarot: Wand2 };
+const season = seasonLinks(locale);
+const discoverCopy = {
+  popular: txt({ ko: '많이 하는 검사', en: 'Popular tests', ja: '人気のテスト', zh: '热门测试', fr: 'Tests populaires', es: 'Tests populares' }),
+  allTests: txt({ ko: '전체 검사 보기', en: 'All tests', ja: 'すべてのテスト', zh: '全部测试', fr: 'Tous les tests', es: 'Todos los tests' }),
+  season: txt(seasonHeading),
 }
 
-const moreSectionTitle = txt({ ko: '더 보기', en: 'More', ja: 'もっと見る', zh: '更多', fr: 'Voir plus', es: 'Ver más' })
-const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テスト', zh: '所有测试', fr: 'Tous les Tests', es: 'Todos los Tests' })
-const allTestsDescription = txt({ ko: '성격·관계·진로 검사 한눈에 보기', en: 'Personality, relationship and career tests', ja: '性格・関係・進路の検査を一覧で', zh: '性格、关系、职业测试一览', fr: 'Tests de personnalité, relations et carrière', es: 'Tests de personalidad, relaciones y carrera' })
 const fortuneHeading = txt({ ko: '12지신·별자리 운세', en: 'Chinese zodiac & star sign fortunes', ja: '十二支・星座の運勢', zh: '十二生肖·星座运势', fr: 'Horoscopes chinois et occidental', es: 'Horóscopo chino y occidental' })
 
 ---
@@ -129,7 +145,7 @@ const fortuneHeading = txt({ ko: '12지신·별자리 운세', en: 'Chinese zodi
     <AmbientParticles />
 
     <div class="relative z-10 max-w-2xl mx-auto text-center animate-fadeInUp">
-      <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3 tracking-tight leading-tight">
+      <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3 tracking-tight leading-tight text-balance">
         {pageRole}
       </h1>
       <p class="text-primary font-medium text-sm md:text-base max-w-lg mx-auto leading-relaxed">
@@ -168,37 +184,65 @@ const fortuneHeading = txt({ ko: '12지신·별자리 운세', en: 'Chinese zodi
       </div>
     </div>
   </section>
+  <!-- 1.5 둘러보기: 많이 하는 검사 + 꿈·타로 + 시즌 (2026-11-22) -->
+  <section aria-labelledby="home-popular" class="mx-auto max-w-4xl px-4 pt-10">
+    <div class="flex items-baseline justify-between gap-3">
+      <h2 id="home-popular" class="text-lg font-black text-foreground">{discoverCopy.popular}</h2>
+      <a href={localePath(locale, '/tests')} class="inline-flex min-h-11 items-center gap-1 text-sm font-bold text-primary hover:underline">
+        {discoverCopy.allTests}<ArrowRight size={14} aria-hidden="true" />
+      </a>
+    </div>
+    <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
+      {popularTests.map((test) => (
+        <li>
+          <a href={test.href} class="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-card p-3 text-sm font-bold text-foreground transition-colors hover:border-primary hover:bg-surface-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+            {test.icon
+              ? <img src={test.icon} alt="" width="36" height="36" loading="lazy" decoding="async" class="h-9 w-9 shrink-0 rounded-xl object-cover" />
+              : <span class="h-9 w-9 shrink-0 rounded-xl bg-surface-subtle" aria-hidden="true"></span>}
+            <span class="min-w-0 leading-snug">{test.title}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="mt-6 grid gap-3 sm:grid-cols-2">
+      {moreExplore.map((item) => {
+        const Icon = exploreIcons[item.key] ?? Sun;
+        return (
+          <a href={item.href} class="group flex items-center gap-4 rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary hover:bg-surface-subtle">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-subtle text-primary">
+              <Icon size={24} strokeWidth={1.75} aria-hidden="true" />
+            </span>
+            <span class="min-w-0 flex-1">
+              <span class="block font-bold text-foreground">{item.title}</span>
+              <span class="mt-0.5 block text-xs text-muted-foreground">{item.description}</span>
+            </span>
+            <ArrowRight size={16} className="shrink-0 text-primary" aria-hidden="true" />
+          </a>
+        );
+      })}
+    </div>
+
+    {season.length > 0 && (
+      <div class="mt-6 rounded-2xl border border-border bg-surface-subtle p-4">
+        <h2 class="flex items-center gap-2 text-sm font-black text-foreground">
+          <CalendarHeart size={18} strokeWidth={1.75} className="text-primary" aria-hidden="true" />{discoverCopy.season}
+        </h2>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          {season.map((item) => (
+            <li>
+              <a href={item.href} class="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-4 text-sm font-bold text-foreground transition-colors hover:border-primary hover:text-primary">{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </section>
+
   <!-- 2. 운세 도배: 생년월일 없이 12지신·별자리 × 오늘/이번주/이번달/올해 전체 -->
   <section class="pt-10 pb-4">
     <h2 class="sr-only">{fortuneHeading}</h2>
     <FortuneWall locale={locale} />
-  </section>
-
-  <!-- 3. 기타 내용들 (타로, 전체 검사) — 세운 지시: 이미지(타로카드/전체검사) 붙일
-       예정이라 작은 필로 두지 않고 큰 카드로 중앙정렬. 이미지 준비되면 아래
-       아이콘 원(rounded-full) 을 <img> 로 교체. -->
-  <section class="max-w-2xl mx-auto px-4 pt-8 pb-12">
-    <h2 class="sr-only">{moreSectionTitle}</h2>
-    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
-      {[
-        { href: tarotCard.href, icon: Wand2, title: tarotCard.title, description: tarotCard.description },
-        { href: localePath(locale, '/tests'), icon: ClipboardCheck, title: ctaAllTests, description: allTestsDescription },
-      ].map((card) => (
-        <a
-          href={card.href}
-          class="group flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-sm transition-all hover:border-green-300 hover:shadow-md"
-        >
-          <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-surface-subtle text-primary transition-colors group-hover:bg-green-100">
-            <card.icon size={28} strokeWidth={1.75} aria-hidden="true" />
-          </span>
-          <span class="min-w-0 flex-1">
-            <span class="block font-bold text-foreground">{card.title}</span>
-            <span class="mt-0.5 block text-xs text-muted-foreground">{card.description}</span>
-          </span>
-          <ArrowRight size={16} className="shrink-0 text-primary" aria-hidden="true" />
-        </a>
-      ))}
-    </div>
   </section>
 
   <!-- Value props strip -->
