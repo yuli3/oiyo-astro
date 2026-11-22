@@ -22,6 +22,7 @@ export const EPISODE_YEAR: Record<EpisodeId, number> = {
   "hoebinghwan-1789": 1789,
   "birthday-calendars": 1793,
   "banchado-1795": 1795,
+  "ellis-1907": 1907,
   "census-1850": 1850,
   "us-birth-state": 2026, // "born today"
 };

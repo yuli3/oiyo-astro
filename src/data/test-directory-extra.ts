@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "ellis-1907",
+    title: {"ko": "1907 엘리스섬 승객 명부 속 나 — 이민 최고 기록의 해", "en": "You on a 1907 Ellis Island passenger manifest", "ja": "1907年エリス島の乗客名簿の中の私", "zh": "1907年埃利斯岛乘客名单中的我", "fr": "Vous à Ellis Island en 1907", "es": "Tú en Ellis Island en 1907"},
+    description: {"ko": "1907년 실제 출신국 비율로 나를 뽑고, 승객 명부 칸(나이·직업·가진 돈·목적지·마중 나온 사람)에 내 한 줄을 적어요.", "en": "Your line on a 1907 manifest, drawn by the real countries of origin.", "ja": "1907年の実際の出身国比率で、乗客名簿に私の一行を。", "zh": "按1907年真实来源国比例，在乘客名单上写下我的一行。", "fr": "Votre ligne sur une liste de 1907, selon les vrais pays d'origine.", "es": "Tu línea en una lista de 1907, según los países de origen reales."},
+  },
+  {
     slug: "parallel-lives",
     title: {"ko": "나의 평행 인생 연표 — 타임슬립 시리즈 속 나를 한 장에", "en": "My parallel lives — every time-slip result on one timeline", "ja": "わたしの並行人生年表", "zh": "我的平行人生年表", "fr": "Mes vies parallèles", "es": "Mis vidas paralelas"},
     description: {"ko": "신라부터 오늘까지, 타임슬립 시리즈에서 뽑은 나를 시대순 연표로 모아 이미지로 저장해요.", "en": "Your time-slip results from Silla to today, in date order, saved as one image.", "ja": "新羅から今日まで、引いた結果を年表にして画像で保存。", "zh": "从新罗到今天，把抽到的结果排成年表并保存为图片。", "fr": "Vos résultats, de Silla à aujourd'hui, sur une frise à enregistrer.", "es": "Tus resultados, de Silla a hoy, en una línea para guardar."},

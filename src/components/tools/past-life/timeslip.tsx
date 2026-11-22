@@ -92,6 +92,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 export const EPISODE_LABELS: Record<EpisodeId, { icon: string; label: Six }> = {
+  "ellis-1907": { icon: "🚢", label: { ko: "1907 엘리스섬 승객 명부 속 나", en: "You on a 1907 Ellis Island manifest", ja: "1907年エリス島の乗客名簿の中の私", zh: "1907年埃利斯岛乘客名单中的我", fr: "Vous à Ellis Island en 1907", es: "Tú en Ellis Island en 1907" } },
   "birthday-calendars": { icon: "📅", label: { ko: "내 생일, 옛 달력 7개로", en: "My birthday in 7 old calendars", ja: "誕生日を7つの暦で", zh: "我的生日，7种历法", fr: "Mon anniversaire en 7 calendriers", es: "Mi cumpleaños en 7 calendarios" } },
   "hoebinghwan-1789": { icon: "🌀", label: { ko: "회빙환 시뮬레이터", en: "Isekai simulator: 1789", ja: "転生シミュレーター 1789", zh: "穿越模拟器 1789", fr: "Simulateur d'isekai : 1789", es: "Simulador isekai: 1789" } },
   "domesday-1086": { icon: "📖", label: { ko: "1086 둠즈데이 북 속 나", en: "You in Domesday Book, 1086", ja: "1086年ドゥームズデイ・ブックの中の私", zh: "1086年末日审判书中的我", fr: "Vous dans le Domesday Book (1086)", es: "Tú en el Domesday Book (1086)" } },
