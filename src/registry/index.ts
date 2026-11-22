@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const ellis1907Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f4a5a",
+  domain: "ontology",
+  icon: "Ship",
+  id: "ellis-1907",
+  path: "/ellis-1907",
+  status: "production",
+  name: { zh: "1907年埃利斯岛乘客名单中的我", en: "You on a 1907 Ellis Island manifest", es: "Tú en Ellis Island en 1907", fr: "Vous à Ellis Island en 1907", ja: "1907年エリス島の乗客名簿の中の私", ko: "1907 엘리스섬 승객 명부 속 나" },
+  description: { zh: "按1907财年的真实来源国比例抽出你，并在1907年乘客名单格式中写下你的一行。", en: "Drawn by the real FY1907 countries of origin, with your line written in the 1907 manifest's columns.", es: "Sorteado según los países de origen reales de 1907, con tu línea en las columnas de la lista de 1907.", fr: "Tiré selon les vrais pays d'origine de 1907, avec votre ligne dans les colonnes de la liste de 1907.", ja: "1907会計年度の実際の出身国比率で引き、1907年の乗客名簿の欄にあなたの一行を書きます。", ko: "1907년 실제 출신국 비율로 나를 뽑고, 그해 승객 명부 양식의 칸에 내 한 줄을 적어 봐요." },
+};
+
 const parallelLivesManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -616,6 +629,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  ellis1907Manifest,
   parallelLivesManifest,
   birthdayCalendarsManifest,
   hoebinghwan1789Manifest,
