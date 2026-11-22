@@ -1167,7 +1167,7 @@ export default function PersonalColorTest({ locale }: Props) {
       </div>
 
       {/* Disclaimer */}
-      <p className="text-center text-xs text-gray-400">{ui.disclaimer}</p>
+      <p className="text-center text-xs text-gray-600">{ui.disclaimer}</p>
       <ShareResultButton
         locale={locale}
         heading={ui.title}

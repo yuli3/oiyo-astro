@@ -169,13 +169,13 @@ export function OntologyBirthInput({
               className="h-12 w-full rounded-2xl border border-border bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
           <div>
-            <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-time">{c.time} <span className="font-medium text-slate-400 normal-case">· {c.timeHint}</span></label>
+            <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-time">{c.time} <span className="font-medium text-slate-600 normal-case">· {c.timeHint}</span></label>
             <input id="ob-time" type="time" value={time}
               onInput={(e) => setTime(e.currentTarget.value)} onChange={(e) => setTime(e.target.value)}
               className="h-12 w-full rounded-2xl border border-border bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
           </div>
           <div>
-            <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-name">{c.name} <span className="font-medium text-slate-400 normal-case">· {c.nameHint}</span></label>
+            <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-name">{c.name} <span className="font-medium text-slate-600 normal-case">· {c.nameHint}</span></label>
             <input id="ob-name" type="text" maxLength={40} autoComplete="off"
               value={name} onChange={(e) => setName(e.target.value)}
               className="h-12 w-full rounded-2xl border border-border bg-card px-4 text-base font-black text-foreground outline-none focus:border-green-500 focus:bg-card focus:ring-4 focus:ring-green-500/10" />
@@ -203,7 +203,7 @@ export function OntologyBirthInput({
               ))}
             </div>
           </div>
-          <p className="text-[11px] leading-5 text-slate-400">{c.opens}</p>
+          <p className="text-[11px] leading-5 text-slate-600">{c.opens}</p>
           <p className="text-[11px] leading-5 text-amber-700">{c.precision}</p>
           {locationError && <p role="alert" className="text-sm font-semibold text-red-700">{locationError}</p>}
           <div className="flex items-center gap-2">

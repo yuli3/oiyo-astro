@@ -36,7 +36,7 @@ const LINKS: Record<number, { label: string; href: string }[]> = {
   <section class="bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
     <div class="max-w-2xl mx-auto animate-fadeInUp">
       <h1 class="text-4xl font-serif font-black text-foreground mb-2">{doc.title}</h1>
-      <p class="text-xs text-green-500">{doc.lastUpdatedLabel}: {doc.lastUpdated}</p>
+      <p class="text-xs text-green-700">{doc.lastUpdatedLabel}: {doc.lastUpdated}</p>
     </div>
   </section>
 
@@ -73,7 +73,7 @@ const LINKS: Record<number, { label: string; href: string }[]> = {
             </div>
           ))
         }
-        <p class="text-xs text-green-500">{doc.description}</p>
+        <p class="text-xs text-green-700">{doc.description}</p>
       </div>
       <div class="mt-6">
         <TrademarkNotice locale={locale} />

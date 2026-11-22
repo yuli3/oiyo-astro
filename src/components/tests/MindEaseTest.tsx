@@ -210,7 +210,7 @@ export default function MindEaseTest({ locale: localeProp }: Props) {
     const barPct = Math.round(pct * 100);
     return (
       <div className="not-prose my-10 p-8 bg-card border border-border rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
-        <p className="text-xs font-bold text-green-500 uppercase tracking-widest">{t.resultLabel}</p>
+        <p className="text-xs font-bold text-green-700 uppercase tracking-widest">{t.resultLabel}</p>
         <div className="text-6xl">{r.emoji}</div>
         <h3 className="text-3xl font-black text-foreground">{r.title}</h3>
         <div className="space-y-2">
@@ -225,7 +225,7 @@ export default function MindEaseTest({ locale: localeProp }: Props) {
         <div className="p-6 bg-surface-subtle rounded-2xl border border-border">
           <p className="text-slate-700 text-base leading-relaxed">{r.desc}</p>
         </div>
-        <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-400 text-sm hover:underline">{t.retake}</button>
+        <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-600 text-sm hover:underline">{t.retake}</button>
         <ShareResultButton locale={lang} heading={t.title} resultTitle={r.title} emoji={r.emoji} />
       </div>
     );

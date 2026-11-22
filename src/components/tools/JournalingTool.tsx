@@ -189,7 +189,7 @@ export default function JournalingTool({ locale }: Props) {
                   <button
                     type="button"
                     onClick={() => remove(i)}
-                    className="text-xs text-green-500 hover:text-red-500"
+                    className="text-xs text-green-700 hover:text-red-500"
                   >
                     {t.delete}
                   </button>

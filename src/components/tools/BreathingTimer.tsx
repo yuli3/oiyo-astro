@@ -435,7 +435,7 @@ export default function BreathingTimer({ locale }: Props) {
                 }`}
               >
                 <span className="font-semibold">{t(p.name, locale)}</span>
-                <span className={`ml-2 text-xs ${selectedPattern === i ? 'text-teal-100' : 'text-slate-400'}`}>
+                <span className={`ml-2 text-xs ${selectedPattern === i ? 'text-teal-100' : 'text-slate-600'}`}>
                   {t(p.desc, locale)}
                 </span>
               </button>

@@ -161,7 +161,7 @@ const COPY: Record<Lang, {
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <li className="grid grid-cols-[8rem_1fr] gap-3 border-b border-violet-100 py-2.5 text-sm last:border-b-0 sm:grid-cols-[11rem_1fr]">
-      <span className="font-bold text-violet-500">{label}</span>
+      <span className="font-bold text-violet-600">{label}</span>
       <span className="text-violet-900">{children}</span>
     </li>
   );
@@ -212,7 +212,7 @@ export default function JyotishReading({ locale = "ko" }: { locale?: string }) {
       <ul className="m-0 list-none p-0">
         <Row label={t.nakshatra}>
           <span className="font-black">{nak}</span>
-          {coordinates.pada !== null && <span className="text-violet-500"> · {t.pada} {coordinates.pada}/4</span>}
+          {coordinates.pada !== null && <span className="text-violet-600"> · {t.pada} {coordinates.pada}/4</span>}
         </Row>
         <Row label={t.lord}>{lords}</Row>
         <Row label={t.moonRashi}>{moon}</Row>
@@ -224,7 +224,7 @@ export default function JyotishReading({ locale = "ko" }: { locale?: string }) {
       </ul>
       {civilTime === null && <p className="mt-4 rounded-xl bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-800">{t.needTime}</p>}
       {civilTime !== null && coordinates.lagna === null && <p className="mt-4 rounded-xl bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-800">{t.needCity}</p>}
-      <p className="mt-4 text-xs leading-6 text-violet-500">
+      <p className="mt-4 text-xs leading-6 text-violet-600">
         {t.ayanamsa} <span className="whitespace-nowrap">({NAKSHATRA_SPAN.toFixed(2)}° = 1 nakshatra)</span>
       </p>
     </div>

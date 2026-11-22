@@ -347,10 +347,10 @@ export default function AngerStyleTest({ locale: localeProp }: Props) {
           </div>
           <div className="text-center py-3 rounded-lg" style={{ backgroundColor: d.color + "18" }}>
             <p className="text-sm italic" style={{ color: d.color }}>"{d.affirmation[locale]}"</p>
-            <p className="text-xs text-gray-400 mt-1">{t.affirmation}</p>
+            <p className="text-xs text-gray-600 mt-1">{t.affirmation}</p>
           </div>
         </div>
-        <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <p className="text-xs text-gray-600 text-center">{t.note}</p>
         <ShareResultButton
           locale={locale}
           heading={t.title}

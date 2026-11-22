@@ -213,7 +213,7 @@ export default function HappinessMeterTest({ locale: localeProp }: Props) {
           <div className="space-y-2">
             {tips[locale].map((tip, i) => (
               <div key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                <span className="text-green-500 font-bold flex-shrink-0">✓</span>
+                <span className="text-green-700 font-bold flex-shrink-0">✓</span>
                 <span>{tip}</span>
               </div>
             ))}

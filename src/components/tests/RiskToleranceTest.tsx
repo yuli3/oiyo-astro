@@ -603,7 +603,7 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
         <ul className="space-y-1">
           {r.investmentAdvice.map(a => (
             <li key={a} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-green-500">→</span>{a}
+              <span className="text-green-700">→</span>{a}
             </li>
           ))}
         </ul>
@@ -614,7 +614,7 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
         <ul className="space-y-1">
           {r.lifeAdvice.map(a => (
             <li key={a} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-green-500">→</span>{a}
+              <span className="text-green-700">→</span>{a}
             </li>
           ))}
         </ul>

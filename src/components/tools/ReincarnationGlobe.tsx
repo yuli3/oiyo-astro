@@ -389,7 +389,7 @@ export default function ReincarnationGlobe({
           <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.6} />
         </Canvas>
       </div>
-      <p className="mt-2 text-[11px] leading-5 text-slate-400">
+      <p className="mt-2 text-[11px] leading-5 text-slate-600">
         <a
           className="underline decoration-slate-300 underline-offset-2 hover:text-slate-600"
           href="https://visibleearth.nasa.gov/images/57752/blue-marble-land-surface-shallow-water-and-shaded-topography"

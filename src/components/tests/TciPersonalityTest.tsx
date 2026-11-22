@@ -354,7 +354,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
               </div>
             </div>
           </div>
-          <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
+          <p className="text-xs text-gray-600 text-center">{t.disclaimer}</p>
         </div>
         <button onClick={() => setStarted(true)}
           className="px-8 py-3 bg-primary hover:bg-primary-strong text-primary-foreground font-semibold rounded-xl transition-colors">
@@ -394,7 +394,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.lifeIntegration)}</p>
         </div>
 
-        <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
+        <p className="text-xs text-gray-600 text-center">{t.disclaimer}</p>
 
         <ShareResultButton
           locale={locale}

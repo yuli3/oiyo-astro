@@ -243,10 +243,10 @@ export default function MotivationTypeTest({ locale: localeProp }: Props) {
           </div>
           <div className="text-center py-3 rounded-lg" style={{ backgroundColor: d.color + "18" }}>
             <p className="text-sm italic" style={{ color: d.color }}>"{d.affirmation[locale]}"</p>
-            <p className="text-xs text-gray-400 mt-1">{t.affirmation}</p>
+            <p className="text-xs text-gray-600 mt-1">{t.affirmation}</p>
           </div>
         </div>
-        <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <p className="text-xs text-gray-600 text-center">{t.note}</p>
         <div className="flex gap-3 justify-center">
           <button onClick={restart} className="px-5 py-2 bg-surface-subtle hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
           <button onClick={share} className="px-5 py-2 text-white rounded-full font-medium text-sm" style={{ backgroundColor: d.color }}>{copied ? t.copied : t.share}</button>

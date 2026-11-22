@@ -172,7 +172,7 @@ export default function RoutineChecklist({ locale }: Props) {
           <span className="text-xs font-bold text-primary">{t.progress(doneCount, items.length)}</span>
         )}
       </div>
-      <p className="mt-1 text-xs text-slate-400">{t.sub}</p>
+      <p className="mt-1 text-xs text-slate-600">{t.sub}</p>
 
       <div className="mt-4 flex flex-wrap gap-2">
         <button type="button" onClick={() => addTemplate(t.morningItems)}
@@ -186,7 +186,7 @@ export default function RoutineChecklist({ locale }: Props) {
       </div>
 
       {items.length === 0 ? (
-        <p className="mt-4 text-sm text-slate-400">{t.empty}</p>
+        <p className="mt-4 text-sm text-slate-600">{t.empty}</p>
       ) : (
         <ul className="mt-4 space-y-2">
           {items.map((i) => {
@@ -199,9 +199,9 @@ export default function RoutineChecklist({ locale }: Props) {
                   }`}>
                   ✓
                 </button>
-                <span className={`flex-1 text-sm ${isDone ? 'text-slate-300 line-through' : 'text-slate-700'}`}>{i.label}</span>
+                <span className={`flex-1 text-sm ${isDone ? 'text-slate-600 line-through' : 'text-slate-700'}`}>{i.label}</span>
                 <button type="button" onClick={() => removeItem(i.id)} aria-label={`${t.remove}: ${i.label}`}
-                  className="text-xs text-slate-300 transition-colors hover:text-red-400">
+                  className="text-xs text-slate-600 transition-colors hover:text-red-400">
                   ✕
                 </button>
               </li>

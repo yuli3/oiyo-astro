@@ -344,7 +344,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
               );
             })}
           </div>
-          <p className="text-xs text-gray-400 text-center mt-4">{t.disclaimer}</p>
+          <p className="text-xs text-gray-600 text-center mt-4">{t.disclaimer}</p>
         </div>
         <button onClick={() => setStarted(true)}
           className="px-8 py-3 bg-primary hover:bg-primary-strong text-primary-foreground font-semibold rounded-xl transition-colors">
@@ -369,7 +369,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
           <h2 className="text-sm font-bold text-gray-800">{t.synthesisTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.synthesis)}</p>
         </div>
-        <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
+        <p className="text-xs text-gray-600 text-center">{t.disclaimer}</p>
         <ShareResultButton
           locale={locale}
           heading={t.title}

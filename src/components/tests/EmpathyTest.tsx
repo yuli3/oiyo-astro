@@ -513,7 +513,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         </div>
         )}
 
-        <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <p className="text-xs text-gray-600 text-center">{t.note}</p>
         <ShareResultButton
           locale={locale}
           heading={t.title}

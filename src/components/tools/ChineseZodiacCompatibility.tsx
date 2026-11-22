@@ -332,7 +332,7 @@ function getScoreColor(score: number): string {
   if (score >= 85) return "text-pink-600";
   if (score >= 70) return "text-blue-600";
   if (score >= 55) return "text-green-600";
-  return "text-orange-600";
+  return "text-orange-700";
 }
 
 const RELATION_COLORS: Record<RelationType, string> = {
@@ -680,7 +680,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
               {animal1 && (
                 <div className="mt-2 text-center">
                   <span className="text-3xl">{ANIMAL_EMOJI[animal1]}</span>
-                  <p className="text-sm font-semibold text-red-500 mt-1">{ui.animals[animal1]}</p>
+                  <p className="text-sm font-semibold text-red-600 mt-1">{ui.animals[animal1]}</p>
                 </div>
               )}
             </div>
@@ -703,7 +703,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
               {animal2 && (
                 <div className="mt-2 text-center">
                   <span className="text-3xl">{ANIMAL_EMOJI[animal2]}</span>
-                  <p className="text-sm font-semibold text-green-500 mt-1">{ui.animals[animal2]}</p>
+                  <p className="text-sm font-semibold text-green-700 mt-1">{ui.animals[animal2]}</p>
                 </div>
               )}
             </div>
@@ -713,7 +713,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
           {(animal1 || animal2) && (
             <div className="flex items-center justify-center gap-4 mb-4 py-3 bg-card rounded-xl">
               <span className="text-4xl">{animal1 ? ANIMAL_EMOJI[animal1] : "❓"}</span>
-              <span className="text-gray-400">✦</span>
+              <span className="text-gray-600">✦</span>
               <span className="text-4xl">{animal2 ? ANIMAL_EMOJI[animal2] : "❓"}</span>
             </div>
           )}
@@ -733,24 +733,24 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
             <div className="flex items-center justify-center gap-6 mb-4">
               <div>
                 <span className="text-5xl">{ANIMAL_EMOJI[result.animal1]}</span>
-                <p className="text-sm font-bold text-red-500 mt-1">
+                <p className="text-sm font-bold text-red-600 mt-1">
                   {ui.animals[result.animal1]}
-                  <span className="text-gray-400 font-normal ml-1">({year1})</span>
+                  <span className="text-gray-600 font-normal ml-1">({year1})</span>
                 </p>
               </div>
               <span className="text-2xl text-gray-300">✦</span>
               <div>
                 <span className="text-5xl">{ANIMAL_EMOJI[result.animal2]}</span>
-                <p className="text-sm font-bold text-green-500 mt-1">
+                <p className="text-sm font-bold text-green-700 mt-1">
                   {ui.animals[result.animal2]}
-                  <span className="text-gray-400 font-normal ml-1">({year2})</span>
+                  <span className="text-gray-600 font-normal ml-1">({year2})</span>
                 </p>
               </div>
             </div>
 
             <div className={`text-6xl font-black mb-2 ${getScoreColor(result.score)}`}>
               {result.score}
-              <span className="text-2xl text-gray-400">/ 100</span>
+              <span className="text-2xl text-gray-600">/ 100</span>
             </div>
 
             <div className="mt-1">
@@ -787,7 +787,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
             <ul className="space-y-2">
               {result.desc.map((line, i) => (
                 <li key={i} className="flex gap-2 text-sm text-gray-600">
-                  <span className="text-gray-400 mt-0.5">•</span>
+                  <span className="text-gray-600 mt-0.5">•</span>
                   <span>{line}</span>
                 </li>
               ))}

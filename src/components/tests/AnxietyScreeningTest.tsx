@@ -494,7 +494,7 @@ export default function AnxietyScreeningTest({ locale: lp = 'ko' }: Props) {
         <ul className="space-y-1">
           {r.tips.map(tip => (
             <li key={tip} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-green-500 flex-none">→</span>{tip}
+              <span className="text-green-700 flex-none">→</span>{tip}
             </li>
           ))}
         </ul>

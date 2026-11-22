@@ -1957,15 +1957,15 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
             <h3 className="font-bold text-xs uppercase tracking-wider text-green-600">{t.strengths}</h3>
             <ul className="space-y-1">
               {data.strengths.map((s, i) => (
-                <li key={i} className="text-xs flex gap-1.5"><span className="text-green-500 mt-0.5">✓</span>{s}</li>
+                <li key={i} className="text-xs flex gap-1.5"><span className="text-green-700 mt-0.5">✓</span>{s}</li>
               ))}
             </ul>
           </div>
           <div className="bg-card border rounded-xl p-4 space-y-2">
-            <h3 className="font-bold text-xs uppercase tracking-wider text-amber-600">{t.weaknesses}</h3>
+            <h3 className="font-bold text-xs uppercase tracking-wider text-amber-700">{t.weaknesses}</h3>
             <ul className="space-y-1">
               {data.weaknesses.map((w, i) => (
-                <li key={i} className="text-xs flex gap-1.5"><span className="text-amber-500 mt-0.5">△</span>{w}</li>
+                <li key={i} className="text-xs flex gap-1.5"><span className="text-amber-700 mt-0.5">△</span>{w}</li>
               ))}
             </ul>
           </div>

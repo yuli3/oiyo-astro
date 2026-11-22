@@ -274,7 +274,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
                       <div className="text-xs text-muted-foreground">{dim.desc[L]}</div>
                     </div>
                   </div>
-                  <div className="text-2xl font-black text-slate-700">{score}<span className="text-sm font-normal text-slate-400">/10</span></div>
+                  <div className="text-2xl font-black text-slate-700">{score}<span className="text-sm font-normal text-slate-600">/10</span></div>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-2 mb-3">
                   <div className={`h-2 rounded-full transition-all ${isStrength ? 'bg-green-500' : isGrowth ? 'bg-orange-400' : 'bg-green-500'}`} style={{ width: `${score * 10}%` }} />
@@ -303,7 +303,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
           </div>
         )}
 
-        <p className="text-center text-xs text-slate-400 px-4">{lb.note}</p>
+        <p className="text-center text-xs text-slate-600 px-4">{lb.note}</p>
         <ShareResultButton
           locale={locale}
           heading={lb.title}

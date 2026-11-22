@@ -694,7 +694,7 @@ export default function BusinessTypeTest({ locale: lp = 'ko' }: Props) {
         </div>
 
         <div className="rounded-xl border bg-card p-4 space-y-2">
-          <h3 className="font-semibold text-sm text-amber-600">{lb.challenges}</h3>
+          <h3 className="font-semibold text-sm text-amber-700">{lb.challenges}</h3>
           <ul className="space-y-1">
             {t.challenges.map(c => (
               <li key={c} className="text-sm text-muted-foreground flex gap-2">

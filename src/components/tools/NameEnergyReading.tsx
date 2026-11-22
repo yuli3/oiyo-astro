@@ -204,12 +204,12 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
 
             <p className="mt-4 text-[11px] font-black uppercase tracking-wider text-green-600">{ui.carries}</p>
             <div className="mt-2 flex flex-wrap gap-2">
-              {present.length > 0 ? present.map(chip) : <span className="text-sm text-slate-400">{ui.none}</span>}
+              {present.length > 0 ? present.map(chip) : <span className="text-sm text-slate-600">{ui.none}</span>}
             </div>
 
-            <p className="mt-4 text-[11px] font-black uppercase tracking-wider text-slate-400">{ui.absent}</p>
+            <p className="mt-4 text-[11px] font-black uppercase tracking-wider text-slate-600">{ui.absent}</p>
             <div className="mt-2 flex flex-wrap gap-2">
-              {absent.length > 0 ? absent.map(chip) : <span className="text-sm text-slate-400">{ui.none}</span>}
+              {absent.length > 0 ? absent.map(chip) : <span className="text-sm text-slate-600">{ui.none}</span>}
             </div>
           </section>
 

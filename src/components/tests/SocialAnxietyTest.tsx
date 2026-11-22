@@ -456,7 +456,7 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
                 style={{ width: `${pct}%`, backgroundColor: lv.color }}
               />
             </div>
-            <div className="mt-1 flex justify-between text-xs text-gray-400">
+            <div className="mt-1 flex justify-between text-xs text-gray-600">
               <span>{LEVELS.minimal[locale].title.split(" ")[0]}</span>
               <span>{LEVELS.severe[locale].title.split(" ")[0]}</span>
             </div>
@@ -478,7 +478,7 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <p className="text-center text-xs text-gray-400">{tx.disclaimer}</p>
+        <p className="text-center text-xs text-gray-600">{tx.disclaimer}</p>
         <ShareResultButton
           locale={locale}
           heading={tx.title}

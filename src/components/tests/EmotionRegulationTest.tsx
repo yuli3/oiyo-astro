@@ -527,7 +527,7 @@ export default function EmotionRegulationTest({ locale: localeProp }: Props) {
             <p className="mt-1 text-sm text-gray-600">{rd.pro}</p>
           </div>
           <div>
-            <h3 className="font-semibold text-orange-600">⚠️ {tx.con}</h3>
+            <h3 className="font-semibold text-orange-700">⚠️ {tx.con}</h3>
             <p className="mt-1 text-sm text-gray-600">{rd.con}</p>
           </div>
           <div className="rounded-lg p-4" style={{ background: `${r.color}10` }}>

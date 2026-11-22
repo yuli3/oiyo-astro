@@ -350,7 +350,7 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
           <p className="text-sm text-amber-700">{info.caution[L]}</p>
         </div>
 
-        <p className="text-center text-xs text-slate-400">{lb.note}</p>
+        <p className="text-center text-xs text-slate-600">{lb.note}</p>
         <ShareResultButton
           locale={locale}
           heading={lb.title}

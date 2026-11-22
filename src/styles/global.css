@@ -142,7 +142,7 @@
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.926 0.020 125.8);
-  --muted-foreground: oklch(0.52 0.028 132.3);
+  --muted-foreground: oklch(0.47 0.028 132.3);
   --accent: oklch(0.915 0.038 125.2);
   /* card 와 background 사이. 안내 상자·호버 면처럼 "살짝 띄우는" 자리.
      기존 `bg-green-50`(#f4f8e7)을 대체한다 — 밝기는 거의 그대로 두고 색상만

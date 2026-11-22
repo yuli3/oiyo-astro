@@ -178,7 +178,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
           <div key={rec.id} className="rounded-[28px] border border-border bg-card p-4 shadow-sm sm:p-5">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-[10px] font-black uppercase tracking-wider text-green-500">
+                <p className="text-[10px] font-black uppercase tracking-wider text-green-700">
                   {tt(`recommendations.cards.categories.${rec.category}`)}
                 </p>
                 <p className="mt-0.5 truncate text-sm font-black text-foreground">{tt(rec.title)}</p>

@@ -511,7 +511,7 @@ export default function SelfEsteemTest({ locale: lp = 'ko' }: Props) {
       <div className="rounded-xl border bg-card p-4 space-y-2">
         <h3 className="font-semibold text-sm text-green-600">{lb.growth}</h3>
         <ul className="space-y-1">
-          {r.growth.map(g => <li key={g} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-500">→</span>{g}</li>)}
+          {r.growth.map(g => <li key={g} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-700">→</span>{g}</li>)}
         </ul>
       </div>
 

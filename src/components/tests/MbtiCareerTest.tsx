@@ -2164,17 +2164,17 @@ export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
           <ul className="space-y-1">
             {r.workStrengths.map((s) => (
               <li key={s} className="text-xs text-muted-foreground flex items-start gap-1">
-                <span className="text-green-500 mt-0.5">+</span>{s}
+                <span className="text-green-700 mt-0.5">+</span>{s}
               </li>
             ))}
           </ul>
         </div>
         <div className="rounded-xl border bg-card p-4 space-y-2">
-          <h3 className="font-semibold text-sm text-amber-600">{lb.workWeaknesses}</h3>
+          <h3 className="font-semibold text-sm text-amber-700">{lb.workWeaknesses}</h3>
           <ul className="space-y-1">
             {r.workWeaknesses.map((w) => (
               <li key={w} className="text-xs text-muted-foreground flex items-start gap-1">
-                <span className="text-amber-500 mt-0.5">△</span>{w}
+                <span className="text-amber-700 mt-0.5">△</span>{w}
               </li>
             ))}
           </ul>

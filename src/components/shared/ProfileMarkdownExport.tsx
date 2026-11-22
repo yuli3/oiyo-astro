@@ -619,7 +619,7 @@ ${listLines(form.nextExperiments)}
                 if (has) return <span key={it.key} className="rounded-md bg-green-100 px-2 py-1 text-[11px] font-semibold text-green-800">✓ {it.label}</span>;
                 return it.href
                   ? <a key={it.key} href={it.href} className="rounded-md border border-green-300 bg-card px-2 py-1 text-[11px] font-semibold text-primary hover:bg-surface-subtle">{it.label} · {m.go} →</a>
-                  : <span key={it.key} className="rounded-md bg-surface-subtle px-2 py-1 text-[11px] font-medium text-slate-400">{it.label}</span>;
+                  : <span key={it.key} className="rounded-md bg-surface-subtle px-2 py-1 text-[11px] font-medium text-slate-600">{it.label}</span>;
               })}
             </div>
             {ontologyItems.length > 0 && (
@@ -696,7 +696,7 @@ ${listLines(form.nextExperiments)}
                 {lbl}
               </button>
             ))}
-            <span className="ml-auto text-[11px] text-slate-400">🔒 {locale === 'ko' ? '로컬에서만 생성 · 서버 전송 없음' : 'generated locally · never uploaded'}</span>
+            <span className="ml-auto text-[11px] text-slate-600">🔒 {locale === 'ko' ? '로컬에서만 생성 · 서버 전송 없음' : 'generated locally · never uploaded'}</span>
           </div>
           <pre className="max-h-[720px] overflow-auto rounded-lg bg-slate-950 p-4 text-xs leading-6 text-slate-100">{active.content}</pre>
         </div>

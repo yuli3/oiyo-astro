@@ -141,7 +141,7 @@ const GRADE_COLORS: Record<GradeKey, string> = {
   soulmate: "text-pink-600",
   good: "text-green-600",
   normal: "text-green-600",
-  challenge: "text-orange-600",
+  challenge: "text-orange-700",
 };
 
 // ─── Compatibility Data (16 combinations) ────────────────────────────────────
@@ -633,7 +633,7 @@ function getScoreColor(score: number): string {
   if (score >= 85) return "text-pink-600";
   if (score >= 75) return "text-green-600";
   if (score >= 65) return "text-green-600";
-  return "text-orange-600";
+  return "text-orange-700";
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -724,11 +724,11 @@ export default function BloodTypeCompatibility({ locale }: Props) {
           {/* Selected display */}
           {(type1 || type2) && (
             <div className="flex items-center justify-center gap-4 mb-4 py-3 bg-card rounded-xl">
-              <span className={`text-2xl font-black ${type1 ? "text-red-500" : "text-gray-300"}`}>
+              <span className={`text-2xl font-black ${type1 ? "text-red-600" : "text-gray-300"}`}>
                 {type1 ? ui.types[type1] : "?"}
               </span>
-              <span className="text-gray-400 text-xl">❤️</span>
-              <span className={`text-2xl font-black ${type2 ? "text-green-500" : "text-gray-300"}`}>
+              <span className="text-gray-600 text-xl">❤️</span>
+              <span className={`text-2xl font-black ${type2 ? "text-green-700" : "text-gray-300"}`}>
                 {type2 ? ui.types[type2] : "?"}
               </span>
             </div>
@@ -747,13 +747,13 @@ export default function BloodTypeCompatibility({ locale }: Props) {
           {/* Score card */}
           <div className="bg-card rounded-2xl shadow-sm border border-gray-100 p-6 text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="text-3xl font-black text-red-500">{ui.types[type1 as BloodType]}</span>
+              <span className="text-3xl font-black text-red-600">{ui.types[type1 as BloodType]}</span>
               <span className="text-2xl">❤️</span>
-              <span className="text-3xl font-black text-green-500">{ui.types[type2 as BloodType]}</span>
+              <span className="text-3xl font-black text-green-700">{ui.types[type2 as BloodType]}</span>
             </div>
             <div className={`text-6xl font-black mb-2 ${getScoreColor(result.score)}`}>
               {result.score}
-              <span className="text-2xl text-gray-400">/ 100</span>
+              <span className="text-2xl text-gray-600">/ 100</span>
             </div>
             <div className={`text-lg font-bold ${GRADE_COLORS[result.grade]}`}>
               {gradeLabels[result.grade]}
@@ -777,7 +777,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
             <ul className="space-y-2">
               {result.desc[locale]?.map((line, i) => (
                 <li key={i} className="flex gap-2 text-sm text-gray-600">
-                  <span className="text-gray-400 mt-0.5">•</span>
+                  <span className="text-gray-600 mt-0.5">•</span>
                   <span>{line}</span>
                 </li>
               ))}
@@ -800,7 +800,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
               <h3 className="font-bold text-orange-700 text-sm mb-2">{ui.cautionsLabel}</h3>
               <ul className="space-y-1">
                 {result.cautions[locale]?.map((c, i) => (
-                  <li key={i} className="text-xs text-orange-600 flex gap-1">
+                  <li key={i} className="text-xs text-orange-700 flex gap-1">
                     <span>⚠</span><span>{c}</span>
                   </li>
                 ))}

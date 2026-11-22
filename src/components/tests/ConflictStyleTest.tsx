@@ -279,11 +279,11 @@ export default function ConflictStyleTest({ locale: lp = 'ko' }: Props) {
       <div className="grid grid-cols-2 gap-3">
         <div className="rounded-xl border bg-card p-4 space-y-2">
           <h3 className="font-semibold text-sm text-green-600">{lb.strengths}</h3>
-          <ul className="space-y-1">{r.strengths.map(s => <li key={s} className="text-xs text-muted-foreground flex gap-1"><span className="text-green-500">+</span>{s}</li>)}</ul>
+          <ul className="space-y-1">{r.strengths.map(s => <li key={s} className="text-xs text-muted-foreground flex gap-1"><span className="text-green-700">+</span>{s}</li>)}</ul>
         </div>
         <div className="rounded-xl border bg-card p-4 space-y-2">
-          <h3 className="font-semibold text-sm text-amber-600">{lb.risks}</h3>
-          <ul className="space-y-1">{r.risks.map(risk => <li key={risk} className="text-xs text-muted-foreground flex gap-1"><span className="text-amber-500">△</span>{risk}</li>)}</ul>
+          <h3 className="font-semibold text-sm text-amber-700">{lb.risks}</h3>
+          <ul className="space-y-1">{r.risks.map(risk => <li key={risk} className="text-xs text-muted-foreground flex gap-1"><span className="text-amber-700">△</span>{risk}</li>)}</ul>
         </div>
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-1">

@@ -328,7 +328,7 @@ export default function PranayamaGuide({ locale }: Props) {
               selected === i ? 'bg-primary text-primary-foreground shadow-sm' : 'bg-card text-green-800 hover:bg-green-100'
             }`}>
             <span className="font-semibold">{tt(tch.name, locale)}</span>
-            <span className={`ml-1 block text-xs ${selected === i ? 'text-green-100' : 'text-green-500'}`}>
+            <span className={`ml-1 block text-xs ${selected === i ? 'text-green-100' : 'text-green-700'}`}>
               {tch.sanskrit} · {tt(tch.level, locale)}
             </span>
           </button>

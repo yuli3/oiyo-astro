@@ -562,7 +562,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
           <div className="space-y-4">
             {/* Result header */}
             <div className="rounded-2xl bg-gradient-to-br from-green-50 to-pink-50 border border-border p-6 text-center">
-              <p className="text-sm font-medium text-green-500 uppercase tracking-wider mb-2">
+              <p className="text-sm font-medium text-green-700 uppercase tracking-wider mb-2">
                 {t.resultTitle}
               </p>
               <div className="text-5xl mb-3">{result.emoji}</div>

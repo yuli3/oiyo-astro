@@ -382,7 +382,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
               <p className="text-[11px] text-muted-foreground mb-2">{t.itemsLabel}</p>
               <ul className="space-y-1">
                 {r.items.map((it) => (
-                  <li key={it} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-500">→</span>{it}</li>
+                  <li key={it} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-700">→</span>{it}</li>
                 ))}
               </ul>
             </div>

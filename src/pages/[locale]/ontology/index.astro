@@ -72,7 +72,7 @@ const ABOUT_LABEL: Record<Locale, string> = {
     <header class="text-center">
       <p class="text-[11px] font-black uppercase tracking-[0.2em] text-green-600">{u.eyebrow}</p>
       <h1 class="mt-2 text-2xl font-black leading-tight text-foreground md:text-3xl">{u.title}</h1>
-      <p class="mx-auto mt-2 max-w-md text-sm leading-6 text-primary/90">{u.sub}</p>
+      <p class="mx-auto mt-2 max-w-md text-sm leading-6 text-primary">{u.sub}</p>
     </header>
 
     <!-- Primary CTA + completion (sticky spirit) -->
@@ -136,7 +136,7 @@ const ABOUT_LABEL: Record<Locale, string> = {
                   <span class="text-xl" aria-hidden="true">{s.emoji}</span>
                   <span class="min-w-0">
                     <span data-title class="block truncate text-sm font-black text-foreground group-hover:text-primary">{s.name[locale]}</span>
-                    <span data-status class="text-[10px] font-black text-green-500">{u.open}</span>
+                    <span data-status class="text-[10px] font-black text-green-700">{u.open}</span>
                   </span>
                 </a>
               ) : (
@@ -144,7 +144,7 @@ const ABOUT_LABEL: Record<Locale, string> = {
                   <span class="text-xl" aria-hidden="true">{s.emoji}</span>
                   <span class="min-w-0">
                     <span data-title class="block truncate text-sm font-black text-foreground">{s.name[locale]}</span>
-                    <span data-status class="text-[10px] font-black text-green-500">{u.planned}</span>
+                    <span data-status class="text-[10px] font-black text-green-700">{u.planned}</span>
                   </span>
                 </span>
               )}
@@ -194,7 +194,7 @@ const ABOUT_LABEL: Record<Locale, string> = {
             <dl class="mt-3 space-y-2 border-t border-green-50 pt-3">
               {(['historical', 'faith', 'modern'] as const).map((layer) => (
                 <div>
-                  <dt class="text-[11px] font-black uppercase tracking-wider text-green-500">{LAYER_LABELS[layer][locale]}</dt>
+                  <dt class="text-[11px] font-black uppercase tracking-wider text-green-700">{LAYER_LABELS[layer][locale]}</dt>
                   <dd class="mt-0.5 text-sm leading-6 text-muted-foreground">{c.layers[layer][locale]}</dd>
                 </div>
               ))}
@@ -301,14 +301,14 @@ const ABOUT_LABEL: Record<Locale, string> = {
           else state = has[req] ? 'recorded' : 'locked';
           card.classList.remove('bg-green-50/60', 'bg-amber-50/40', 'opacity-60');
           if (status) {
-            status.classList.remove('text-green-500', 'text-green-600', 'text-amber-600');
+            status.classList.remove('text-green-700', 'text-green-600', 'text-amber-700');
             if (state === 'recorded') {
               const saved = req === 'testResult' ? latestTests.get(testId) : null;
               const label = saved && typeof saved.resultLabel === 'string' ? saved.resultLabel.trim() : '';
               status.textContent = label && !['done', '-', 'legacy'].includes(label.toLowerCase()) ? label.slice(0, 80) : card.getAttribute('data-recorded');
               status.classList.add('text-green-600'); recorded++; card.classList.add('bg-green-50/60');
             }
-            else if (state === 'locked') { status.textContent = card.getAttribute('data-locked'); status.classList.add('text-amber-600'); card.classList.add('opacity-60'); if (!firstOpen) firstOpen = card; }
+            else if (state === 'locked') { status.textContent = card.getAttribute('data-locked'); status.classList.add('text-amber-700'); card.classList.add('opacity-60'); if (!firstOpen) firstOpen = card; }
             else { status.textContent = card.getAttribute('data-open'); if (!firstOpen) firstOpen = card; }
           }
         });

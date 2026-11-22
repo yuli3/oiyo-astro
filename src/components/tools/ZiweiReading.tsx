@@ -85,7 +85,7 @@ export default function ZiweiReading({ locale = "ko" }: { locale?: string }) {
       <p className="text-sm font-black text-violet-950">{t.bureau} · {bureauLabel(result.bureau.element, result.bureau.number, lang)}</p>
       <p className="mt-2 text-sm text-violet-800">{t.life} ({t.star}) · {branchHan}</p>
       <p className="mt-1 text-sm text-violet-800">
-        {t.auxTitle} · {majors.length ? majors.join(" · ") : <span className="text-violet-500">{t.empty}</span>}
+        {t.auxTitle} · {majors.length ? majors.join(" · ") : <span className="text-violet-600">{t.empty}</span>}
       </p>
       <ZiWeiWheel locale={lang} palaces={result.palaces} lifeKey={result.lifePalace.key} />
     </div>

@@ -441,8 +441,8 @@ const LEVEL_COLORS: Record<CEFRLevel, string> = {
   A1: "text-gray-600",
   A2: "text-blue-600",
   B1: "text-green-600",
-  B2: "text-yellow-600",
-  C1: "text-orange-600",
+  B2: "text-yellow-700",
+  C1: "text-orange-700",
   C2: "text-red-600",
 };
 

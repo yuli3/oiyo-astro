@@ -259,7 +259,7 @@ export default function ThinkingPatternsTest({ locale: localeProp }: Props) {
                   <div className="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
                     <div className="h-full rounded-full transition-all" style={{ width: `${(scores[type] / maxScore) * 100}%`, backgroundColor: results[type].color }} />
                   </div>
-                  <span className="text-xs text-gray-400 w-4">{scores[type]}</span>
+                  <span className="text-xs text-gray-600 w-4">{scores[type]}</span>
                 </div>
               ))}
             </div>

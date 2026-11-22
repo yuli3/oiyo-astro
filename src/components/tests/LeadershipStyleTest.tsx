@@ -587,7 +587,7 @@ export default function LeadershipStyleTest({ locale: localeProp }: Props) {
             <p className="mt-1 text-sm text-gray-600">{rd.strength}</p>
           </div>
           <div>
-            <h3 className="font-semibold text-orange-600">⚠️ {tx.challenge}</h3>
+            <h3 className="font-semibold text-orange-700">⚠️ {tx.challenge}</h3>
             <p className="mt-1 text-sm text-gray-600">{rd.challenge}</p>
           </div>
           <div className="rounded-lg p-4" style={{ background: `${r.color}10` }}>

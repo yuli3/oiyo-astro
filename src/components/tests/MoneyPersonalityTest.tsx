@@ -534,7 +534,7 @@ export default function MoneyPersonalityTest({ locale: lp = 'ko' }: Props) {
         <ul className="space-y-1">
           {r.strengths.map(s => (
             <li key={s} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-green-500">→</span>
+              <span className="text-green-700">→</span>
               {s}
             </li>
           ))}

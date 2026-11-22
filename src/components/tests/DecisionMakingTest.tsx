@@ -564,7 +564,7 @@ export default function DecisionMakingTest({ locale: localeProp }: Props) {
             <p className="mt-1 text-sm text-gray-600">{rd.strength}</p>
           </div>
           <div>
-            <h3 className="font-semibold text-orange-600">⚠️ {tx.weakness}</h3>
+            <h3 className="font-semibold text-orange-700">⚠️ {tx.weakness}</h3>
             <p className="mt-1 text-sm text-gray-600">{rd.weakness}</p>
           </div>
           <div className="rounded-lg bg-surface-subtle p-4">

@@ -1310,13 +1310,13 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
         <div className="rounded-xl border bg-card p-4 space-y-2">
           <h3 className="font-semibold text-sm text-green-600">{lb.strengths}</h3>
           <ul className="space-y-1">
-            {r.strengths.map(s => <li key={s} className="text-xs text-muted-foreground flex gap-1"><span className="text-green-500">+</span>{s}</li>)}
+            {r.strengths.map(s => <li key={s} className="text-xs text-muted-foreground flex gap-1"><span className="text-green-700">+</span>{s}</li>)}
           </ul>
         </div>
         <div className="rounded-xl border bg-card p-4 space-y-2">
-          <h3 className="font-semibold text-sm text-amber-600">{lb.weaknesses}</h3>
+          <h3 className="font-semibold text-sm text-amber-700">{lb.weaknesses}</h3>
           <ul className="space-y-1">
-            {r.weaknesses.map(w => <li key={w} className="text-xs text-muted-foreground flex gap-1"><span className="text-amber-500">△</span>{w}</li>)}
+            {r.weaknesses.map(w => <li key={w} className="text-xs text-muted-foreground flex gap-1"><span className="text-amber-700">△</span>{w}</li>)}
           </ul>
         </div>
       </div>

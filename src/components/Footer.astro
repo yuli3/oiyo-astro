@@ -52,7 +52,7 @@ const copy = {
       <nav aria-label={copy.family} class="grid grid-cols-2 gap-x-5 gap-y-3 sm:grid-cols-3">
         {FAMILY_SITES.map((f) => (
           <a href={familySiteHref(f, locale, 'footer')} class="group min-w-0 text-sm font-semibold text-foreground hover:text-primary">
-            {f.name}<span class="block text-xs font-normal text-muted-foreground group-hover:text-primary/80">{familySiteTag(f, locale)}</span>
+            {f.name}<span class="block text-xs font-normal text-muted-foreground group-hover:text-primary">{familySiteTag(f, locale)}</span>
           </a>
         ))}
       </nav>

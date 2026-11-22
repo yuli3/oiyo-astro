@@ -56,7 +56,7 @@ function Step({ n, label, value, hint, op, emphasize }: { n: number; label: stri
         </div>
         <span className={`tabular-nums font-extrabold ${emphasize ? "text-primary" : "text-foreground"}`}>{value}</span>
       </div>
-      {op && <p className="mt-1 pl-8 text-[11px] font-medium text-primary/70">{op}</p>}
+      {op && <p className="mt-1 pl-8 text-[11px] font-medium text-primary">{op}</p>}
       <p className="mt-1 pl-8 text-xs leading-relaxed text-muted-foreground">{hint}</p>
     </li>
   );

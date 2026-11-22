@@ -303,7 +303,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
         <ul class="mt-3 space-y-2">
           {(z.strengths[locale] ?? z.strengths.en).map((s) => (
             <li class="flex gap-2 text-sm leading-6 text-green-800">
-              <span class="text-green-500" aria-hidden="true">✓</span><span>{s}</span>
+              <span class="text-green-700" aria-hidden="true">✓</span><span>{s}</span>
             </li>
           ))}
         </ul>
@@ -313,7 +313,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
         <ul class="mt-3 space-y-2">
           {(z.weaknesses[locale] ?? z.weaknesses.en).map((s) => (
             <li class="flex gap-2 text-sm leading-6 text-amber-800">
-              <span class="text-amber-500" aria-hidden="true">•</span><span>{s}</span>
+              <span class="text-amber-700" aria-hidden="true">•</span><span>{s}</span>
             </li>
           ))}
         </ul>

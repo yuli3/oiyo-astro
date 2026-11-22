@@ -208,7 +208,7 @@ export default function ColorRecognitionTest({ locale: localeProp }: Props) {
         <div className="p-6 bg-fuchsia-50 rounded-2xl border border-fuchsia-100">
           <p className="text-slate-700 text-base leading-relaxed">{r.desc}</p>
         </div>
-        <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-400 text-sm hover:underline">{t.retake}</button>
+        <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-600 text-sm hover:underline">{t.retake}</button>
         <ShareResultButton locale={lang} heading={t.title} resultTitle={r.title} emoji={r.emoji} />
       </div>
     );
