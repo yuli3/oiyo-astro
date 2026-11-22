@@ -136,6 +136,9 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- 2026-11-22: 패밀리 사이트는 밝은 테마만 있다. 선언이 없으면 OS 다크 모드·크롬 자동 다크가 입력칸·스크롤바만 어둡게 바꿔 글자가 안 보이는 칸이 생긴다. -->
     <meta name="color-scheme" content="light" />
+    <!-- 2026-11-22 감사: 본문 서체(191KB)가 CSS를 다 읽은 뒤에야 요청돼, 제목이 대체 서체로 먼저 그려졌다가
+         서체가 오면 다시 그려진다. 그 다시 그림이 LCP(모바일 6.8~9.6초)였다. 미리 받아 첫 그림에 맞춘다. -->
+    <link rel="preload" href="/fonts/GowunBatang-ks-400.woff2" as="font" type="font/woff2" crossorigin />
     <meta name="description" content={description} />
     {isNoindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonicalUrl} />
