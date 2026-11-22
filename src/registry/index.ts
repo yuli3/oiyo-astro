@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const birthdayCalendarsManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1f3a6b",
+  domain: "ontology",
+  icon: "CalendarDays",
+  id: "birthday-calendars",
+  path: "/birthday-calendars",
+  status: "production",
+  name: { zh: "我的生日，7种历法", en: "My birthday in 7 old calendars", es: "Mi cumpleaños en 7 calendarios", fr: "Mon anniversaire en 7 calendriers", ja: "誕生日を7つの暦で", ko: "내 생일, 옛 달력 7개로" },
+  description: { zh: "把生日换算成法国共和历（当天的植物名）、干支、玛雅长纪历、儒略历、伊斯兰历、希伯来历和日本年号。", en: "Your birthday in the French Republican calendar (with its day name), the sexagenary cycle, the Maya Long Count, Julian, Islamic, Hebrew and Japanese era dates.", es: "Tu cumpleaños en el calendario republicano francés (con el nombre del día), el ciclo sexagenario, la cuenta larga maya y los calendarios juliano, islámico, hebreo y japonés.", fr: "Votre anniversaire dans le calendrier républicain (avec le nom du jour), le cycle sexagésimal, le compte long maya, et les calendriers julien, hégirien, hébraïque et japonais.", ja: "誕生日をフランス革命暦（その日の名前）・干支・マヤ長期暦・ユリウス暦・イスラム暦・ヘブライ暦・元号に変換します。", ko: "내 생일을 프랑스 혁명력(그날의 이름)·60갑자·마야 장주기력·율리우스력·이슬람력·히브리력·일본 연호로 한 번에 바꿔 봐요." },
+};
+
 const hoebinghwan1789Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -590,6 +603,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  birthdayCalendarsManifest,
   hoebinghwan1789Manifest,
   domesday1086Manifest,
   census1850Manifest,
