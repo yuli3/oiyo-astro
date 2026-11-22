@@ -69,6 +69,7 @@ const T = {
     es: "Un amigo te envió este resultado. Saca el tuyo para comparar.",
   },
   compare: { ko: "친구와 비교", en: "You vs your friend", ja: "友だちと比較", zh: "与朋友比较", fr: "Vous et votre ami", es: "Tú y tu amigo" },
+  sameFate: { ko: "둘이 같은 결과예요. 같은 시대, 같은 자리에서 만났겠네요.", en: "You got the same result: you would have met there.", ja: "同じ結果です。同じ時代、同じ場所で会っていたかも。", zh: "你们结果相同，也许曾在同一时代相遇。", fr: "Même résultat : vous vous seriez croisés.", es: "El mismo resultado: os habríais cruzado." },
   you: { ko: "나", en: "You", ja: "わたし", zh: "我", fr: "Vous", es: "Tú" },
   friend: { ko: "친구", en: "Friend", ja: "友だち", zh: "朋友", fr: "Ami", es: "Amigo" },
   rarerMe: { ko: "내 운명이 더 드물어요.", en: "Your fate is the rarer one.", ja: "わたしの運命のほうが珍しい。", zh: "我的命运更稀有。", fr: "Votre destin est le plus rare.", es: "Tu destino es el más raro." },
@@ -299,9 +300,19 @@ export function renderCard(spec: CardSpec, paper?: HTMLImageElement, artImage?: 
 
 export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeId; spec: CardSpec; filename: string }) {
   const [saved, setSaved] = useState(false);
+  const [friendView, setFriendView] = useState<{ friend: CardSpec; mine: boolean } | null>(null);
   useEffect(() => {
     // Only a result the reader drew here goes on their timeline, never a friend's shared link.
-    if (freshDraws.has(testId)) recordLife(testId, spec);
+    const fresh = freshDraws.has(testId);
+    const q = window.location.search;
+    if (fresh) {
+      recordLife(testId, spec);
+      if (q && !LEGACY_COMPARE.has(testId)) rememberOwn(testId, q);
+    } else if (q && !isOwn(testId, q) && !friendSpecs.has(testId)) friendSpecs.set(testId, spec);
+    // Season 3 #8 (2026-11-22): every episode gets a friend comparison. Episodes with their own
+    // rarity-based FriendCompare keep it, so the generic one is skipped there.
+    const friend = LEGACY_COMPARE.has(testId) ? undefined : friendSpecs.get(testId);
+    setFriendView(friend ? { friend, mine: fresh } : null);
   }, [testId, spec.title, spec.subtitle, spec.kicker]);
   const [failedPaper, setFailedPaper] = useState(false);
   const [failedArt, setFailedArt] = useState(false);
@@ -313,6 +324,8 @@ export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeI
 
   return (
     <div className="space-y-3">
+      {friendView && !friendView.mine && <FriendBanner l={l} />}
+      {friendView?.mine && <CardCompare l={l} testId={testId} mine={spec} friend={friendView.friend} />}
       {paper && <figure className="space-y-2" data-timeslip-card={testId}>
         <div className="timeslip-card-preview">
           {!failedPaper && <img ref={paperRef} src={TIMESLIP_UI_ROOT + paper} alt="" width={720} height={960}
@@ -373,6 +386,36 @@ export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeI
 }
 
 // ── Friend comparison ────────────────────────────────────────────────────────
+
+/** A friend's shared result seen in this page session, kept until the reader draws their own. */
+const friendSpecs = new Map<EpisodeId, CardSpec>();
+const LEGACY_COMPARE = new Set<EpisodeId>(["europe-1426", "france-1789", "joseon-1789", "joseon-1426", "silla-golpum", "us-birth-state"]);
+
+export function CardCompare({ l, testId, mine, friend }: { l: L; testId: EpisodeId; mine: CardSpec; friend: CardSpec }) {
+  useEffect(() => {
+    gaEvent("friend_compare_view", { test_id: testId });
+  }, [testId]);
+  const same = mine.title === friend.title && mine.subtitle === friend.subtitle;
+  return (
+    <section className="rounded-2xl border-2 border-primary/40 bg-card p-5 shadow-sm" data-friend-compare={testId}>
+      <h2 className="text-sm font-bold text-muted-foreground">{pick(T.compare, l)}</h2>
+      <div className="mt-3 grid grid-cols-2 gap-3 text-center">
+        {[
+          { who: T.you, side: mine },
+          { who: T.friend, side: friend },
+        ].map(({ who, side }) => (
+          <div key={pick(who, l)} className="space-y-1 rounded-xl bg-muted p-3">
+            <p className="text-xs font-bold text-muted-foreground">{pick(who, l)}</p>
+            <p className="text-lg font-black text-foreground">{side.title}</p>
+            {side.subtitle && <p className="text-xs text-muted-foreground">{side.subtitle}</p>}
+            {side.lines[0] && <p className="text-xs text-muted-foreground">{side.lines[0]}</p>}
+          </div>
+        ))}
+      </div>
+      {same && <p className="mt-3 text-center text-sm font-bold text-foreground">{pick(T.sameFate, l)}</p>}
+    </section>
+  );
+}
 
 /** Remember the query of my own last result so reopening my own link is not treated as a friend's. */
 export function rememberOwn(episode: EpisodeId, query: string) {
