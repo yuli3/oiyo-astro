@@ -77,6 +77,36 @@ export const SHORTS = {
     lines: ["암산·멈추기·점 세기·색 찾기", "같은 판으로 점수 겨루기", "서버·가입 없이 12리그"],
     cta: "10판 하고<br>링크 보내기", foot: "무료 · 단톡방에 던져 보세요", url: "game.oiyo.net/ko/link-duel",
   },
+  "sunrise-2027": {
+    bg: "#1d1f3d", accent: "#e0792b", tag: "OIYO · 2027 첫 해맞이", art: "sunrise-2027",
+    hook: ["2027년 첫 해,", "가장 먼저 보는 곳은", "어디일까?"],
+    lines: ["독도 7시 26분, 육지는 간절곶 7시 31분", "서울 7시 47분, 정동진 7시 39분", "내 위치 일출과 여명 시각까지"],
+    cta: "해맞이 갈 곳<br>시각 확인하기", foot: "1월 1일(금) 해맞이 명소 일출표", url: "oiyo.net/ko/sunrise-2027",
+  },
+  "mandalart-2027": {
+    bg: "#1e2b3a", accent: "#c9a227", tag: "OIYO 도구 · 2027 새해 목표", art: "mandalart-2027",
+    hook: ["2027년 목표,", "81칸 만다라트로", "쪼개 볼까?"],
+    lines: ["가운데 핵심 목표 1개", "세부 목표 8개, 실천 64개", "휴대폰 배경 이미지로 저장"],
+    cta: "새해 목표<br>바로 채워 보기", foot: "인쇄 없이 · 자동 저장 · 가입 없음", url: "oiyo.net/ko/mandalart-2027",
+  },
+  "calendar-2027": {
+    bg: "#2a1d1d", accent: "#b3262d", tag: "OIYO · 2027 달력", art: "calendar-2027",
+    hook: ["2027년 빨간 날,", "대체공휴일까지", "한 번에 볼까?"],
+    lines: ["설 연휴 2월 6~9일", "추석 9월 14~16일", "대체공휴일 6일, 24절기·손 없는 날"],
+    cta: "2027 달력<br>보고 인쇄하기", foot: "월별 음력·절기까지 한 장씩", url: "oiyo.net/ko/calendar-2027",
+  },
+  "snowman-stack": {
+    bg: "#1b2a44", accent: "#5fa8d3", tag: "OIYO 게임 · 겨울 물리 쌓기", art: "snowman-stack",
+    hook: ["썰매에서 눈덩이를 떨궈", "넘어지지 않는", "눈사람을 쌓을 수 있을까?"],
+    lines: ["닿으면 달라붙는 눈덩이", "기울면 와르르, 바람과 얼음 연못", "20단계, 설치 없이 바로"],
+    cta: "눈사람을<br>쌓아 보세요", foot: "무료 · 브라우저에서 바로", url: "game.oiyo.net/ko/snowman-stack",
+  },
+  "yut-nori": {
+    bg: "#3a1f14", accent: "#2f5fb3", tag: "OIYO 게임 · 설날 윷놀이", art: "yut-nori",
+    hook: ["설날 윷놀이,", "전설의 할머니를", "이길 수 있을까?"],
+    lines: ["옆집 꼬마부터 할머니까지 AI 10단계", "한 폰으로 가족과 둘이서", "빽도·업기·잡기·지름길 그대로"],
+    cta: "윷을<br>던져 보세요", foot: "무료 · 설치 없이 바로", url: "game.oiyo.net/ko/yut-nori",
+  },
 };
 
 const W = 1080, H = 1920;
