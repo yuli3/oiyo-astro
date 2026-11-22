@@ -392,3 +392,9 @@ main .grid > :has(.google-auto-placed) { min-width: 0; }
 @media (scripting: enabled) {
   #test-search [data-search-results][data-search-idle] { display: none; }
 }
+
+/* 인쇄용 페이지(2027 달력 등): main 안 [data-print-page]가 있으면 사이트 머리·꼬리·광고를 빼고 인쇄한다. 2026-11-22 */
+@media print {
+  body:has([data-print-page]) > :not(main) { display: none !important; }
+  body:has([data-print-page]) main > :not(:has([data-print-page])):not([data-print-page]) { display: none !important; }
+}

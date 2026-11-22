@@ -1,0 +1,200 @@
+---
+/**
+ * 2027년 달력 — 공휴일·대체공휴일·24절기·음력·손 없는 날, 인쇄용. 한국 공휴일이라 ko만.
+ * 모든 값은 빌드 때 lib/calendar-2027.ts로 계산(클라이언트 JS 없음). 다음 작업 2차 #3 (2026-11-22).
+ */
+import Layout from '../../layouts/Layout.astro';
+import { localePath, type Locale } from '../../i18n';
+import { folkDays, holidays, longWeekends, monthGrid, solarTerms, toLunar } from '../../lib/calendar-2027';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ko' } }];
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const WD = ['일', '월', '화', '수', '목', '금', '토'];
+const hs = holidays();
+const offDays = new Set(hs.map((h) => h.date));
+const weekdayOff = [...offDays].filter((d) => {
+  const w = new Date(`${d}T00:00:00Z`).getUTCDay();
+  return w !== 0 && w !== 6;
+}).length;
+const subs = hs.filter((h) => h.substitute);
+const lw = longWeekends();
+const terms = solarTerms();
+const folk = folkDays();
+const months = Array.from({ length: 12 }, (_, i) => ({ month: i + 1, cells: monthGrid(i + 1) }));
+const md = (d: string) => {
+  const [, m, day] = d.split('-').map(Number);
+  const w = WD[new Date(`${d}T00:00:00Z`).getUTCDay()];
+  return `${m}월 ${day}일(${w})`;
+};
+const lunarLabel = (d: string) => {
+  const l = toLunar(d);
+  return `${l.leap ? '윤' : ''}${l.month}.${l.day}`;
+};
+const sonByMonth = months.map(({ month, cells }) => ({
+  month,
+  days: cells.filter((c) => c && c.son && c.dow !== 0 && c.dow !== 6 && !offDays.has(c.date)).map((c) => c!.day),
+  weekend: cells.filter((c) => c && c.son && (c.dow === 0 || c.dow === 6)).map((c) => c!.day),
+}));
+
+const title = '2027년 달력 — 공휴일·대체공휴일·24절기·음력·손 없는 날 한눈에 (인쇄용)';
+const description = `2027년 공휴일은 모두 ${offDays.size}일, 평일에 쉬는 날은 ${weekdayOff}일이에요. 설 연휴 2월 6~9일, 추석 9월 14~16일, 대체공휴일 ${subs.length}일과 24절기, 음력, 이사 날짜 고를 때 보는 손 없는 날까지 월별 달력으로 정리했어요.`;
+
+const faqs = [
+  { q: '2027년 공휴일은 며칠인가요?', a: `대체공휴일을 포함해 모두 ${offDays.size}일이고, 그중 토·일이 아닌 평일은 ${weekdayOff}일이에요. 2026년부터 노동절(5월 1일)과 제헌절(7월 17일)이 공휴일이 된 것을 반영했어요.` },
+  { q: '2027년 대체공휴일은 언제인가요?', a: `${subs.map((s) => `${md(s.date)} ${s.name.replace(' 대체공휴일', '')}`).join(', ')} 대체공휴일로 모두 ${subs.length}일이에요.` },
+  { q: '2027년 설날과 추석 연휴는요?', a: '설날은 2월 7일(일)이라 연휴가 2월 6일(토)~8일(월)이고, 일요일과 겹쳐 2월 9일(화)이 대체공휴일이라 4일을 쉬어요. 추석은 9월 15일(수)이고 연휴는 9월 14일(화)~16일(목)이에요.' },
+  { q: '손 없는 날은 어떻게 정하나요?', a: '음력 날짜 끝자리가 9나 0인 날(9·10·19·20·29·30일)이에요. 귀신(손)이 하늘로 올라가 사람 일을 방해하지 않는다고 믿어 이사나 혼례 날로 많이 골라요. 수요가 몰려 이삿짐 비용이 오르기도 해요.' },
+  { q: '음력은 어떻게 계산했나요?', a: '천문 계산으로 합삭(초하루)과 중기를 구해 한국천문연구원 역서와 같은 원리로 매겼어요. 설날·부처님오신날·추석 날짜가 정부 발표와 같은지 확인했어요. 중요한 날은 한국천문연구원 월력 자료로 한 번 더 확인하세요.' },
+];
+const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['ko']}>
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <section class="mx-auto max-w-4xl px-4 py-10 print:max-w-none print:p-0" data-print-page>
+    <div class="print:hidden">
+      <p class="text-xs font-black tracking-widest text-primary">2027 정미년 · 달력</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight">2027년 달력</h1>
+      <p class="mt-3 text-base leading-relaxed text-muted-foreground">공휴일과 대체공휴일, 24절기, 음력, 손 없는 날을 한 장에 모았어요. 인쇄 버튼을 누르면 달력만 깔끔하게 나와요.</p>
+
+      <div class="mt-6 grid gap-3 sm:grid-cols-3">
+        <div class="rounded-2xl border bg-card p-4"><p class="text-xs text-muted-foreground">공휴일(대체 포함)</p><p class="mt-1 text-2xl font-black">{offDays.size}일</p></div>
+        <div class="rounded-2xl border bg-card p-4"><p class="text-xs text-muted-foreground">평일에 쉬는 날</p><p class="mt-1 text-2xl font-black">{weekdayOff}일</p></div>
+        <div class="rounded-2xl border bg-card p-4"><p class="text-xs text-muted-foreground">대체공휴일</p><p class="mt-1 text-2xl font-black">{subs.length}일</p></div>
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button type="button" class="min-h-11 rounded-xl bg-primary px-4 text-sm font-black text-primary-foreground" data-print>🖨️ 달력 인쇄하기</button>
+        <p class="text-xs text-muted-foreground"><span class="font-black text-destructive">빨간 날</span> 공휴일 · <span class="font-black text-primary">초록 글씨</span> 절기 · <span class="font-black">손</span> 손 없는 날 · 작은 숫자 음력</p>
+      </div>
+    </div>
+
+    <div class="mt-8 grid gap-6 md:grid-cols-2 print:grid-cols-3 print:gap-3">
+      {months.map(({ month, cells }) => (
+        <section class="rounded-2xl border bg-card p-3 print:break-inside-avoid" aria-label={`2027년 ${month}월`} id={`m${month}`}>
+          <h2 class="px-1 text-lg font-black">{month}월</h2>
+          <table class="mt-2 w-full table-fixed text-center">
+            <caption class="sr-only">{`2027년 ${month}월 달력`}</caption>
+            <thead>
+              <tr>{WD.map((w, i) => <th scope="col" class={`pb-1 text-xs font-bold ${i === 0 ? 'text-destructive' : 'text-muted-foreground'}`}>{w}</th>)}</tr>
+            </thead>
+            <tbody>
+              {Array.from({ length: cells.length / 7 }, (_, r) => (
+                <tr>
+                  {cells.slice(r * 7, r * 7 + 7).map((c) =>
+                    c ? (
+                      <td class="h-14 border-t align-top" title={[c.holiday, c.term, c.son ? '손 없는 날' : null].filter(Boolean).join(' · ') || undefined}>
+                        <div class={`text-sm font-black ${c.holiday || c.dow === 0 ? 'text-destructive' : 'text-foreground'}`}>{c.day}</div>
+                        <div class="text-xs leading-tight text-muted-foreground">
+                          {c.lunar.day === 1 || c.day === 1 ? `${c.lunar.leap ? '윤' : ''}${c.lunar.month}.${c.lunar.day}` : c.lunar.day}
+                          {c.son && <span class="font-black text-foreground"> 손</span>}
+                        </div>
+                        {(c.holiday || c.term) && (
+                          <div class={`truncate text-xs font-bold leading-tight ${c.holiday ? 'text-destructive' : 'text-primary'}`}>
+                            {c.holiday ? (c.holiday.includes('대체공휴일') ? '대체휴일' : c.holiday.replace(' 연휴', '').replace('부처님오신날', '부처님 오신 날').split(' · ')[0]) : c.term}
+                          </div>
+                        )}
+                      </td>
+                    ) : (
+                      <td class="h-14 border-t" />
+                    ),
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      ))}
+    </div>
+
+    <div class="print:hidden">
+      <section class="mt-12">
+        <h2 class="text-2xl font-black">2027년 공휴일 전체</h2>
+        <div class="mt-4 overflow-x-auto rounded-xl border">
+          <table class="w-full text-sm">
+            <caption class="sr-only">2027년 공휴일과 대체공휴일</caption>
+            <thead class="bg-muted text-left"><tr><th class="p-3" scope="col">날짜</th><th class="p-3" scope="col">공휴일</th><th class="p-3" scope="col">음력</th></tr></thead>
+            <tbody class="divide-y">
+              {hs.map((h) => (
+                <tr>
+                  <td class="p-3 font-bold tabular-nums">{md(h.date)}</td>
+                  <td class={`p-3 ${h.substitute ? 'font-black text-destructive' : ''}`}>{h.name}</td>
+                  <td class="p-3 text-muted-foreground tabular-nums">{lunarLabel(h.date)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-black">3일 이상 쉬는 연휴</h2>
+        <ul class="mt-4 space-y-2">
+          {lw.map((s) => (
+            <li class="rounded-xl border bg-card p-3 text-sm"><strong class="text-foreground">{md(s.start)} ~ {md(s.end)}</strong> <span class="text-primary font-black">{s.days}일</span> <span class="text-muted-foreground">· {s.names.join(', ')}</span></li>
+          ))}
+        </ul>
+        <a href="https://tools.oiyo.net/ko/annual-leave-combo-2027/" class="mt-3 inline-block text-sm font-black text-primary underline">연차를 어디에 붙이면 가장 오래 쉬는지 계산하기 →</a>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-black">2027년 24절기</h2>
+        <div class="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+          {terms.map((t) => (
+            <div class="rounded-xl border bg-card p-3 text-sm"><p class="font-black">{t.name}</p><p class="tabular-nums text-muted-foreground">{md(t.date)} {t.time}</p></div>
+          ))}
+        </div>
+        <p class="mt-2 text-xs text-muted-foreground">시각은 태양이 그 절기 황경을 지나는 순간(한국 표준시)이에요.</p>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-black">2027년 손 없는 날 (이사 날짜)</h2>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">평일 손 없는 날은 주말보다 이삿짐 견적이 덜 오르는 편이에요. 공휴일은 뺐어요.</p>
+        <div class="mt-4 overflow-x-auto rounded-xl border">
+          <table class="w-full text-sm">
+            <caption class="sr-only">2027년 월별 손 없는 날</caption>
+            <thead class="bg-muted text-left"><tr><th class="p-3" scope="col">월</th><th class="p-3" scope="col">평일</th><th class="p-3" scope="col">주말</th></tr></thead>
+            <tbody class="divide-y">
+              {sonByMonth.map((s) => (
+                <tr><td class="p-3 font-bold">{s.month}월</td><td class="p-3 tabular-nums">{s.days.map((d) => `${d}일`).join(', ') || '없음'}</td><td class="p-3 tabular-nums text-muted-foreground">{s.weekend.map((d) => `${d}일`).join(', ') || '없음'}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-black">공휴일은 아니지만 챙기는 날</h2>
+        <ul class="mt-4 grid gap-2 sm:grid-cols-2">
+          {folk.map((f) => <li class="rounded-xl border bg-card p-3 text-sm"><strong>{f.name}</strong> <span class="text-muted-foreground">{md(f.date)} · 음력 {lunarLabel(f.date)}</span></li>)}
+          <li class="rounded-xl border bg-card p-3 text-sm"><strong>동지</strong> <span class="text-muted-foreground">{md(terms.find((t) => t.name === '동지')!.date)}</span></li>
+        </ul>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-black">자주 묻는 질문</h2>
+        <div class="mt-4 divide-y rounded-xl border bg-card">
+          {faqs.map((f) => (
+            <details class="group p-4"><summary class="cursor-pointer text-sm font-black">{f.q}</summary><p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p></details>
+          ))}
+        </div>
+      </section>
+
+      <p class="mt-8 text-xs leading-5 text-muted-foreground">공휴일: 「관공서의 공휴일에 관한 규정」(2026년 노동절·제헌절 반영). 음력·절기: 천문 계산값, <a class="underline" href="https://astro.kasi.re.kr/kor/life/post/calendarData?year=2027" rel="noopener">한국천문연구원 2027 월력 자료</a>로 확인하세요. 임시공휴일은 정부 발표 때 따로 더해져요.</p>
+
+      <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="함께 보기">
+        <a href={localePath(locale, '/mandalart-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🎯 2027 만다라트 계획표</a>
+        <a href={localePath(locale, '/sunrise-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">☀️ 2027 새해 첫 일출 시간</a>
+        <a href={localePath(locale, '/new-year-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🐑 2027 신년운세 모음</a>
+        <a href={localePath(locale, '/sebaetdon-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🧧 2027 세뱃돈 계획</a>
+      </nav>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+</script>
+
