@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import JoseonTime from "../../components/tools/past-life/JoseonTime";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "지금 시각을 조선 시각으로 — 12시·각·경점·인정 파루 변환",
+    description: "지금 몇 시인지 한양 해시계(앙부일구) 기준 조선 시각으로 바꿔요. 신시 정이각 같은 12시·96각, 밤의 경점, 자격루 종·북·징, 인정·파루 통금 시각까지.",
+    heading: "지금 시각을 조선 시각으로",
+    sub: "한양 해시계와 자격루로 읽는 지금",
+    intro: "조선 사람은 시계 대신 해시계와 물시계로 시간을 알았어요. 지금 이 순간을 한양의 해를 기준으로 '오시 정이각'처럼 바꾸고, 밤이라면 몇 경 몇 점인지, 통금 종(인정)이 이미 울렸는지도 알려 드려요.",
+    howTitle: "어떻게 바꾸나요",
+    how: [
+      "한국 표준시를 서울 경도와 균시차로 한양 태양시로 바꿔요. 표준시가 서울의 해보다 30분쯤 앞서 있거든요.",
+      "자시(23시)부터 2시간씩 12시로 나누고, 각 시를 초·정과 15분짜리 각으로 나눠요(1654년 시헌력 기준). 세종 때 100각(1각 14.4분)도 함께 보여 줘요.",
+      "밤은 해 진 뒤 2.5각부터 해 뜨기 2.5각 전까지를 5경 25점으로 나누고, 인정(1경 3점)과 파루(5경 3점)를 계산해요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "인정은 밤 10시 아니었나요?", a: "흔히 '밤 10시쯤 종 28번'으로 소개돼요. 다만 1경 3점이라는 규칙으로 계산하면 계절에 따라 달라지고 대개 더 이른 시각이 나와요. 두 설명의 차이는 아직 확인하지 못해 둘 다 적었어요." },
+      { q: "계산이 정확한가요?", a: "해 뜨고 지는 시각은 근사식이라 몇 분쯤 차이가 날 수 있어요. 시헌력 후기의 −18° 규칙 대신 세종 때 규칙을 썼어요." },
+    ],
+  },
+  en: {
+    title: "Now, in Joseon time: double hours, kak and night watches",
+    description: "Convert the current time to Joseon time on the Hanyang sundial: twelve double hours, kak, night watches, water-clock bells and the Injeong and Paru curfew bells.",
+    heading: "Now, in Joseon time",
+    sub: "Reading the moment by the Hanyang sundial and water clock",
+    intro: "Joseon told time by sundial and water clock. See this moment as a double hour and kak by Hanyang's sun, which night watch it is, and whether the curfew bell has rung.",
+    howTitle: "How it works",
+    how: ["Standard time is converted to Hanyang solar time, split into 12 double hours from 23:00, and the night into 5 watches of 5 points."],
+    faqTitle: "FAQ",
+    faq: [{ q: "Wasn't the curfew at 10 p.m.?", a: "It is often described so; computed from the watch rule it shifts with the seasons and is usually earlier. We show both." }],
+  },
+  ja: {
+    title: "今を朝鮮の時刻で — 十二時・刻・更点",
+    description: "今の時刻を漢陽の日時計基準の朝鮮時刻に。十二時・刻、夜の更点、自撃漏、人定と罷漏まで。",
+    heading: "今を朝鮮の時刻で",
+    sub: "漢陽の日時計と自撃漏で読む今",
+    intro: "今この瞬間を漢陽の太陽で「午の刻 正二刻」のように読み替え、夜なら何更何点か、人定の鐘が鳴ったかも示します。",
+    howTitle: "仕組み",
+    how: ["標準時を漢陽の太陽時に直し、23時から2時間ずつ十二時に、夜を5更25点に分けます。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "人定は夜10時では？", a: "よくそう紹介されますが、規則で計算すると季節で変わり、多くはもっと早くなります。両方を示します。" }],
+  },
+  zh: {
+    title: "此刻的朝鲜时刻 — 时辰·刻·更点换算",
+    description: "把现在的时间换成汉阳日晷上的朝鲜时刻：十二时辰、刻、夜间更点、自击漏和宵禁钟声。",
+    heading: "此刻的朝鲜时刻",
+    sub: "用汉阳日晷和自击漏读此刻",
+    intro: "以汉阳的太阳为准，把此刻换成“午时正二刻”这样的说法，夜里还会告诉你是几更几点、宵禁钟是否已响。",
+    howTitle: "怎么换算",
+    how: ["把标准时换成汉阳太阳时，从23点起每两小时为一个时辰，夜晚分为五更二十五点。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "人定不是晚上十点吗？", a: "常这么说；按更点规则计算会随季节变化，通常更早。两种都列出。" }],
+  },
+  fr: {
+    title: "Maintenant, à l'heure de Joseon : heures doubles, kak et veilles",
+    description: "Convertissez l'heure actuelle en heure de Joseon selon le cadran solaire de Hanyang : heures doubles, kak, veilles et cloches du couvre-feu.",
+    heading: "Maintenant, à l'heure de Joseon",
+    sub: "Lire l'instant au cadran solaire de Hanyang",
+    intro: "Joseon lisait l'heure au cadran solaire et à l'horloge à eau. Voici cet instant en heure double et en kak, avec la veille de nuit et le couvre-feu.",
+    howTitle: "Comment ça marche",
+    how: ["L'heure légale est convertie en temps solaire de Hanyang, découpée en 12 heures doubles depuis 23 h, et la nuit en 5 veilles de 5 points."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Le couvre-feu n'était-il pas à 22 h ?", a: "On le dit souvent ; calculé selon la règle des veilles, il varie avec les saisons et tombe souvent plus tôt." }],
+  },
+  es: {
+    title: "Ahora, en hora de Joseon: horas dobles, kak y vigilias",
+    description: "Convierte la hora actual a la hora de Joseon según el reloj de sol de Hanyang: horas dobles, kak, vigilias y campanas del toque de queda.",
+    heading: "Ahora, en hora de Joseon",
+    sub: "Leer el momento con el reloj de sol de Hanyang",
+    intro: "Joseon medía el tiempo con relojes de sol y de agua. Mira este momento como hora doble y kak, con la vigilia nocturna y el toque de queda.",
+    howTitle: "Cómo funciona",
+    how: ["La hora oficial pasa a hora solar de Hanyang, se divide en 12 horas dobles desde las 23 h y la noche en 5 vigilias de 5 puntos."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿El toque de queda no era a las 22 h?", a: "Se suele decir; calculado por la regla de vigilias cambia con las estaciones y suele ser antes." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/joseon-time/")} ogImage="/images/past-life-1426/og/joseon-time.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><JoseonTime locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["joseon1426", "joseonNames", "future2626"]} current="joseonTime" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const joseonTimeManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#8a5a2b",
+  domain: "ontology",
+  icon: "Clock",
+  id: "joseon-time",
+  path: "/joseon-time",
+  status: "production",
+  name: { ko: "지금 시각을 조선 시각으로", en: "Now, in Joseon time", ja: "今を朝鮮の時刻で", zh: "此刻的朝鲜时刻", fr: "Maintenant, à l'heure de Joseon", es: "Ahora, en hora de Joseon" },
+  description: { ko: "지금 몇 시예요? 한양 해시계로는 '신시 정이각'. 자격루 종·북·징, 인정·파루 통금까지 바꿔 봐요.", en: "What time is it on the Hanyang sundial? Double hours, kak, night watches and the curfew bells.", ja: "今は漢陽の日時計で何時？十二時・刻・更点・人定と罷漏まで。", zh: "汉阳日晷上现在几点？时辰、刻、更点和宵禁钟声。", fr: "Quelle heure au cadran solaire de Hanyang ? Heures doubles, kak, veilles et couvre-feu.", es: "¿Qué hora marca el reloj de sol de Hanyang? Horas dobles, kak, vigilias y toque de queda." },
+};
+
 const future2626Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -694,6 +707,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  joseonTimeManifest,
   future2626Manifest,
   joseonNamesManifest,
   jinshin1872Manifest,
