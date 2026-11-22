@@ -122,7 +122,7 @@ export default function HanyangFire1426({ locale }: { locale: Locale }) {
           })}
         </div>
         <p className="text-sm font-bold text-foreground">{fill(pick(C.chosen, l), { k: sel.length, n: PICKS })}</p>
-        <div className="flex gap-2">
+        <div className="flex flex-col gap-2 sm:flex-row">
           <Button type="button" size="lg" className="flex-1" disabled={sel.length !== PICKS} onClick={() => submit(sel, "picked")}>
             {pick(C.submit, l)}
           </Button>

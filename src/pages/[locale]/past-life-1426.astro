@@ -4,6 +4,7 @@ import { LOCALES, localePath } from "../../i18n";
 import type { Locale } from "../../i18n";
 import RelatedTools from "../../components/shared/RelatedTools.astro";
 import "../../styles/timeslip-film.css";
+import { EPISODE_GROUP, GROUP_LABEL, GROUP_ORDER, type EpisodeGroup, type EpisodeId } from "../../lib/past-life-1426";
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -281,22 +282,13 @@ const shots = ["silla", "joseon", "europe", "france", "us"].map((k) => `/images/
 const FEATURED = ["/silla-golpum/", "/joseon-1426/", "/europe-1426/", "/france-1789/", "/us-birth-state/"];
 const featured = FEATURED.map((h) => c.cards.find((card) => card.href === h)).filter((x): x is Card => !!x);
 const total = c.cards.length;
+const episodeCount = Object.keys(EPISODE_GROUP).length;
 const tag = (t: string) => t.replace("{n}", String(total));
 
-type GroupKey = "sillok" | "korea" | "world" | "more";
-const GROUP_OF: Record<string, GroupKey> = {
-  "/sillok-1426/": "sillok", "/sejong-birthdays/": "sillok", "/sillok-name-hanja/": "sillok", "/night-sky-1426/": "sillok", "/hanyang-fire-1426/": "sillok", "/cotton-1426/": "sillok", "/joseon-time/": "sillok", "/lunch-1426/": "sillok", "/gwageo-1426/": "sillok", "/hometown-1426/": "sillok", "/ancestors-1426/": "sillok", "/joseon-1426/": "sillok",
-  "/silla-golpum/": "korea", "/joseon-1789/": "korea", "/banchado-1795/": "korea", "/tongsinsa-1763/": "korea", "/gyeonggongjang/": "korea", "/joseon-names/": "korea", "/hoebinghwan-1789/": "korea",
-  "/europe-1426/": "world", "/france-1789/": "world", "/domesday-1086/": "world", "/census-1850/": "world", "/census-1911/": "world", "/ellis-1907/": "world", "/ninbetsu-edo/": "world", "/jinshin-1872/": "world", "/huangce-1391/": "world", "/us-birth-state/": "world",
-};
-const GROUP_LABEL: Record<GroupKey, Record<Locale, string>> = {
-  sillok: { ko: "1426 한양 · 세종실록", en: "1426 Hanyang · Sejong's Annals", ja: "1426漢陽・世宗実録", zh: "1426汉阳·世宗实录", fr: "Hanyang 1426 · Annales de Sejong", es: "Hanyang 1426 · Anales de Sejong" },
-  korea: { ko: "신라부터 정조까지", en: "Korea through the ages", ja: "新羅から正祖まで", zh: "从新罗到正祖", fr: "La Corée à travers les âges", es: "Corea a través de los siglos" },
-  world: { ko: "세계의 옛 장부", en: "Old registers of the world", ja: "世界の古い帳簿", zh: "世界的旧账簿", fr: "Vieux registres du monde", es: "Viejos registros del mundo" },
-  more: { ko: "달력 · 미래 · 내 기록", en: "Calendars, future and my record", ja: "暦・未来・わたしの記録", zh: "历法·未来·我的记录", fr: "Calendriers, futur et mon parcours", es: "Calendarios, futuro y mi registro" },
-};
-const groups = (["sillok", "korea", "world", "more"] as GroupKey[])
-  .map((k) => ({ key: k, label: GROUP_LABEL[k][locale] ?? GROUP_LABEL[k].en, cards: c.cards.filter((card) => (GROUP_OF[card.href] ?? "more") === k) }))
+type GroupKey = EpisodeGroup;
+const groupOf = (href: string): GroupKey => EPISODE_GROUP[href.replaceAll("/", "") as EpisodeId] ?? "more";
+const groups = GROUP_ORDER
+  .map((k) => ({ key: k, label: GROUP_LABEL[k][locale] ?? GROUP_LABEL[k].en, cards: c.cards.filter((card) => groupOf(card.href) === k) }))
   .filter((g) => g.cards.length);
 const PROGRESS: Record<Locale, string> = { ko: "{k}/{n}회 다녀왔어요", en: "{k} of {n} visited", ja: "{k}/{n}回 訪問済み", zh: "已去过{k}/{n}篇", fr: "{k} sur {n} visités", es: "{k} de {n} visitados" };
 const DONE: Record<Locale, string> = { ko: "다녀옴", en: "Visited", ja: "訪問済み", zh: "已去过", fr: "Visité", es: "Visitado" };
@@ -341,7 +333,7 @@ const DONE: Record<Locale, string> = { ko: "다녀옴", en: "Visited", ja: "訪�
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <h2 class="text-2xl font-black tracking-tight text-foreground">{f.listHeading}</h2>
     <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
-    <p class="mt-3 text-sm font-bold text-foreground" data-ts-progress data-template={PROGRESS[locale] ?? PROGRESS.en} data-total={total} hidden></p>
+    <p class="mt-3 text-sm font-bold text-foreground" data-ts-progress data-template={PROGRESS[locale] ?? PROGRESS.en} data-total={episodeCount} hidden></p>
     <nav class="sticky top-16 z-10 -mx-4 mt-4 flex gap-2 overflow-x-auto bg-background/90 px-4 py-2 backdrop-blur" aria-label={f.listHeading}>
       {groups.map((g) => (
         <a href={`#ts-${g.key}`} class="shrink-0 rounded-full border border-border bg-card px-3 py-2 text-sm font-bold text-foreground hover:bg-muted">
