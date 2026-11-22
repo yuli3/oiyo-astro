@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "joseon-names",
+    title: {"ko": "조선 시대 내 이름 짓기 — 아명·관명·자·호", "en": "My names in Joseon Korea", "ja": "朝鮮時代の私の名前", "zh": "我在朝鲜时代的名字", "fr": "Mes noms dans la Corée de Joseon", "es": "Mis nombres en la Corea de Joseon"},
+    description: {"ko": "아명부터 항렬자가 든 관명, 자, 호까지 조선 시대 평생의 이름을 받아요.", "en": "Childhood name, formal name, courtesy name and pen name.", "ja": "幼名・冠名・字・号をもらいます。", "zh": "乳名、冠名、字和号。", "fr": "Nom d'enfance, officiel, de courtoisie et de plume.", "es": "Nombre de infancia, oficial, de cortesía y seudónimo."},
+  },
+  {
     slug: "jinshin-1872",
     title: {"ko": "1872 임신호적 속 우리 집 — 평민·사족·화족, 봉인된 호적", "en": "Your household in Japan's 1872 Jinshin koseki", "ja": "壬申戸籍の中のわが家", "zh": "1872年壬申户籍里的我家", "fr": "Votre foyer au koseki Jinshin de 1872", "es": "Tu hogar en el koseki Jinshin de 1872"},
     description: {"ko": "1872년 실제 족칭 집계로 우리 집을 뽑고, 주소·족칭·직업·절·수호신이 적힌 호적을 재구성해요.", "en": "Your household drawn by the real 1872 status totals, in a reconstructed koseki.", "ja": "明治5年の族籍集計で、わが家の戸籍を再構成。", "zh": "按1872年族称统计，重构我家的户籍。", "fr": "Votre foyer selon les totaux de 1872, dans un koseki reconstitué.", "es": "Tu hogar según los totales de 1872, en un koseki reconstruido."},

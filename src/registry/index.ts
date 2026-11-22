@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const joseonNamesManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2f4a3a",
+  domain: "ontology",
+  icon: "PenTool",
+  id: "joseon-names",
+  path: "/joseon-names",
+  status: "production",
+  name: { ko: "조선 시대 내 이름 짓기", en: "My names in Joseon Korea", ja: "朝鮮時代の私の名前", zh: "我在朝鲜时代的名字", fr: "Mes noms dans la Corée de Joseon", es: "Mis nombres en la Corea de Joseon" },
+  description: { ko: "아명(개똥이·바우…) → 항렬자가 든 관명 → 관례 때 받는 자 → 스스로 짓는 호까지, 조선 시대 평생 불린 내 이름들을 받아 봐요.", en: "From a lowly childhood name to a formal name with a generation character, a courtesy name and a pen name: your names through a Joseon life.", ja: "幼名から行列字の入った冠名、冠礼の字、号まで、朝鮮時代に一生呼ばれた名前をもらいます。", zh: "从乳名到带行辈字的冠名、冠礼时的字和自取的号，领取你在朝鲜时代一生的名字。", fr: "Du nom d'enfance au nom officiel avec caractère de génération, nom de courtoisie et nom de plume.", es: "Del nombre de infancia al nombre oficial con carácter generacional, nombre de cortesía y seudónimo." },
+};
+
 const jinshin1872Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -668,6 +681,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  joseonNamesManifest,
   jinshin1872Manifest,
   huangce1391Manifest,
   census1911Manifest,

@@ -26,6 +26,7 @@ export const EPISODE_YEAR: Record<EpisodeId, number> = {
   "census-1911": 1911,
   "huangce-1391": 1391,
   "jinshin-1872": 1872,
+  "joseon-names": 1750,
   "census-1850": 1850,
   "us-birth-state": 2026, // "born today"
 };
