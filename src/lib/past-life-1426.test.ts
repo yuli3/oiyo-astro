@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { JOSEON_GROUP_VECTORS, JOSEON_POSTS, REALMS_1426, REALM_KIND_VECTORS, US_REGION_VECTORS, US_STATES } from "../data/past-life-1426";
 import {
+  EPISODE_GROUP,
+  nextEpisodes,
+  EPISODES,
   JOSEON_SEAT_TOTAL,
   US_BIRTH_TOTAL,
   drawPastLife,
@@ -131,5 +134,26 @@ describe("time-slip quick wins", () => {
     expect(compareRank("종3품", "정3품 당상")).toBe("friend");
     expect(compareRank("정5품", "정5품")).toBe("same");
     expect(compareRank("무품", "정5품")).toBeNull();
+  });
+});
+
+describe("episode groups and next trips", () => {
+  it("puts every episode in a group", () => {
+    for (const e of EPISODES) expect(EPISODE_GROUP[e]).toBeTruthy();
+  });
+  it("suggests two from the same group and one from another", () => {
+    const next = nextEpisodes("cotton-1426", []);
+    expect(next).toHaveLength(3);
+    expect(next).not.toContain("cotton-1426");
+    expect(next.slice(0, 2).every((e) => EPISODE_GROUP[e] === "sillok")).toBe(true);
+    expect(EPISODE_GROUP[next[2]]).not.toBe("sillok");
+  });
+  it("skips visited episodes and falls back when everything is visited", () => {
+    const next = nextEpisodes("cotton-1426", ["sillok-name-hanja", "night-sky-1426"]);
+    expect(next).not.toContain("sillok-name-hanja");
+    expect(next).not.toContain("night-sky-1426");
+    const all = nextEpisodes("us-birth-state", [...EPISODES]);
+    expect(all).toHaveLength(3);
+    expect(new Set(all).size).toBe(3);
   });
 });

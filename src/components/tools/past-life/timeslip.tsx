@@ -6,7 +6,7 @@ import { layoutCard } from "../../../lib/timeslip-card-layout";
 import { useEffect, useRef, useState } from "react";
 import { localePath, type Locale } from "../../../i18n";
 import { gaEvent } from "../../../lib/analytics/ga-event";
-import { EPISODES, isValidBirthday, rarityTier, type EpisodeId, type Rarity } from "../../../lib/past-life-1426";
+import { EPISODES, EPISODE_GROUP, GROUP_LABEL, GROUP_ORDER, isValidBirthday, nextEpisodes, rarityTier, type EpisodeId, type Rarity } from "../../../lib/past-life-1426";
 import { LIVES_KEY, cleanLives, type Lives } from "../../../lib/timeslip-lives";
 import { Badge } from "../../ui/badge";
 import { Button } from "../../ui/button";
@@ -77,8 +77,10 @@ const T = {
   rarerSame: { ko: "둘의 확률이 같아요.", en: "Same odds for both of you.", ja: "二人とも同じ確率です。", zh: "两人的概率相同。", fr: "Mêmes chances pour vous deux.", es: "Las mismas probabilidades." },
   series: { ko: "타임슬립 시리즈 도장판", en: "Time-slip series stamps", ja: "タイムスリップ・シリーズのスタンプ", zh: "时空穿越系列印章", fr: "Tampons de la série", es: "Sellos de la serie" },
   done: { ko: "도장 받음", en: "Stamped", ja: "スタンプ済み", zh: "已盖章", fr: "Tamponné", es: "Sellado" },
-  next: { ko: "다음 여행", en: "Next trip", ja: "次の旅", zh: "下一站", fr: "Prochain voyage", es: "Próximo viaje" },
+  next: { ko: "다음 여행 추천", en: "Where to next", ja: "次の旅のおすすめ", zh: "下一站推荐", fr: "Prochain voyage", es: "Próximo viaje" },
   allDone: { ko: "모든 시대를 다녀왔어요. 시간여행자 인증!", en: "Every era visited. Certified time traveller!", ja: "すべての時代を巡りました。時間旅行者に認定！", zh: "所有时代都去过了。认证时间旅行者！", fr: "Toutes les époques visitées. Voyageur du temps certifié !", es: "Todas las épocas visitadas. ¡Viajero del tiempo certificado!" },
+  allEpisodes: { ko: "전체 회차 보기", en: "All episodes", ja: "全エピソード", zh: "全部篇目", fr: "Tous les épisodes", es: "Todos los episodios" },
+  hub: { ko: "타임슬립 시리즈 한눈에 보기", en: "Time-slip series home", ja: "タイムスリップ・シリーズ一覧", zh: "时空穿越系列总览", fr: "Accueil de la série", es: "Inicio de la serie" },
   lives: { ko: "나의 평행 인생 연표 보기", en: "See my parallel-lives timeline", ja: "わたしの並行人生年表を見る", zh: "查看我的平行人生年表", fr: "Voir ma frise des vies parallèles", es: "Ver mi línea de vidas paralelas" },
   reincarnation: { ko: "다음 생엔 어느 나라에서 태어날까?", en: "Where will you be born next life?", ja: "来世はどの国に生まれる？", zh: "下辈子会出生在哪个国家？", fr: "Où renaîtrez-vous ?", es: "¿Dónde nacerás en tu próxima vida?" },
 } satisfies Record<string, Six>;
@@ -506,6 +508,7 @@ export function SeriesNext({ l, locale, current, round }: { l: L; locale: Locale
     setStamps(readJson<string[]>(STAMP_KEY, []));
   }, [current, round]);
   const count = EPISODES.filter((e) => stamps.includes(e)).length;
+  const picks = nextEpisodes(current, stamps);
   return (
     <section className="rounded-2xl border border-border bg-card p-5 shadow-sm">
       <div className="flex items-baseline justify-between">
@@ -514,25 +517,78 @@ export function SeriesNext({ l, locale, current, round }: { l: L; locale: Locale
           {count}/{EPISODES.length}
         </span>
       </div>
-      <ul className="mt-3 space-y-2">
-        {EPISODES.map((e) => {
-          const stamped = stamps.includes(e);
-          const info = EPISODE_LABELS[e];
-          return (
-            <li key={e}>
-              <a
-                href={localePath(locale, `/${e}`)}
-                aria-current={e === current ? "page" : undefined}
-                className="flex min-h-11 items-center justify-between gap-3 rounded-xl border border-border bg-background px-3 py-2 hover:bg-muted"
-              >
-                <span className="font-bold text-foreground">
-                  <span aria-hidden="true">{info.icon}</span> {pick(info.label, l)}
-                </span>
-                <span className="shrink-0 text-xs font-bold text-muted-foreground">{stamped ? `◉ ${pick(T.done, l)}` : e === current ? "" : `${pick(T.next, l)} →`}</span>
-              </a>
-            </li>
-          );
-        })}
+      <progress className="mt-2 block h-2 w-full accent-primary" value={count} max={EPISODES.length} aria-label={pick(T.series, l)} />
+      {count === EPISODES.length ? (
+        <p className="mt-3 text-center text-sm font-black text-foreground">{pick(T.allDone, l)}</p>
+      ) : (
+        <>
+          <h3 className="mt-4 text-base font-black text-foreground">{pick(T.next, l)}</h3>
+          <ul className="mt-2 grid gap-2 sm:grid-cols-3">
+            {picks.map((e) => {
+              const info = EPISODE_LABELS[e];
+              return (
+                <li key={e}>
+                  <a
+                    href={localePath(locale, `/${e}`)}
+                    onClick={() => gaEvent("timeslip_next", { from: current, to: e })}
+                    className="flex h-full min-h-14 items-center gap-3 rounded-xl border border-primary/30 bg-background px-3 py-2 hover:bg-muted sm:flex-col sm:items-start"
+                  >
+                    <span aria-hidden="true" className="text-2xl leading-none">
+                      {info.icon}
+                    </span>
+                    <span className="text-sm font-bold leading-snug text-foreground">{pick(info.label, l)}</span>
+                    <span aria-hidden="true" className="ml-auto text-primary sm:hidden">
+                      →
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      )}
+      <details className="mt-4 rounded-xl border border-border bg-background">
+        <summary className="flex min-h-11 cursor-pointer items-center px-3 text-sm font-bold text-foreground">
+          {pick(T.allEpisodes, l)} ({EPISODES.length})
+        </summary>
+        <div className="space-y-3 px-3 pb-3">
+          {GROUP_ORDER.map((g) => {
+            const eps = EPISODES.filter((e) => EPISODE_GROUP[e] === g);
+            if (!eps.length) return null;
+            return (
+              <div key={g}>
+                <p className="text-xs font-bold text-muted-foreground">{GROUP_LABEL[g][l]}</p>
+                <ul className="mt-1 space-y-1">
+                  {eps.map((e) => {
+                    const stamped = stamps.includes(e);
+                    const info = EPISODE_LABELS[e];
+                    return (
+                      <li key={e}>
+                        <a
+                          href={localePath(locale, `/${e}`)}
+                          aria-current={e === current ? "page" : undefined}
+                          className="flex min-h-11 items-center justify-between gap-3 rounded-lg px-2 py-1 text-sm hover:bg-muted aria-[current=page]:bg-muted"
+                        >
+                          <span className="font-bold text-foreground">
+                            <span aria-hidden="true">{info.icon}</span> {pick(info.label, l)}
+                          </span>
+                          {stamped && <span className="shrink-0 text-xs font-bold text-muted-foreground">◉ {pick(T.done, l)}</span>}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </details>
+      <ul className="mt-2">
+        <li>
+          <a href={localePath(locale, "/past-life-1426")} className="flex min-h-11 items-center gap-2 rounded-xl px-3 py-2 text-sm font-bold text-primary underline">
+            <span aria-hidden="true">🧭</span> {pick(T.hub, l)}
+          </a>
+        </li>
         <li>
           <a href={localePath(locale, "/parallel-lives")} className="flex min-h-11 items-center gap-2 rounded-xl px-3 py-2 text-sm font-bold text-primary underline">
             <span aria-hidden="true">🧬</span> {pick(T.lives, l)}
@@ -544,7 +600,6 @@ export function SeriesNext({ l, locale, current, round }: { l: L; locale: Locale
           </a>
         </li>
       </ul>
-      {count === EPISODES.length && <p className="mt-3 text-center text-sm font-black text-foreground">{pick(T.allDone, l)}</p>}
     </section>
   );
 }

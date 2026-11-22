@@ -130,7 +130,7 @@ export default function Sillok1426({ locale }: { locale: Locale }) {
 
       <section className="space-y-3 rounded-2xl border border-border bg-card p-4">
         <p className="text-sm font-bold text-foreground">{pick(C.kindLabel, l)}</p>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {(["solar", "lunar"] as const).map((k) => (
             <Button key={k} variant={k === kind ? "default" : "outline"} aria-pressed={k === kind} className="min-h-11 flex-1" onClick={() => setKind(k)}>
               {pick(k === "solar" ? C.solar : C.lunar, l)}
