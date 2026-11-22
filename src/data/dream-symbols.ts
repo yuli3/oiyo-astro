@@ -12,6 +12,9 @@
 // 필드로 나눠 두는 것이 이 사전의 핵심이다 — 섞이면 관습이 근거처럼,
 // 연구가 점술처럼 읽힌다.
 import type { Locale } from '../i18n';
+import { DREAM_BATCH3A } from './dream-symbols-batch3a';
+import { DREAM_BATCH3B } from './dream-symbols-batch3b';
+import { DREAM_BATCH3C } from './dream-symbols-batch3c';
 
 // person 은 2026-09-03 에 더했다 — 꿈에 나오는 '사람'은 생물이나 삶의 사건과
 // 성격이 다르다. 전 연인·낯선 사람·유명인·돌아가신 분이 여기 들어간다.
@@ -56,7 +59,7 @@ export const DREAM_CATEGORY_LABELS: Record<DreamCategory, Record<Locale, string>
   person: { ko: '사람', en: 'People', ja: '人', zh: '人物', fr: 'Personnes', es: 'Personas' },
 };
 
-export const DREAM_SYMBOLS: DreamSymbol[] = [
+const DREAM_BASE: DreamSymbol[] = [
   {
     id: 'late', emoji: '⏰', category: 'life', related: ['exam', 'lost', 'chased', 'car'],
     l10n: {
@@ -2087,6 +2090,32 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
     },
   },
 ];
+
+// 3차 배치(2026-11-17)는 파일을 나눠 두고 여기서 합친다. related 는 한쪽에만 적어도
+// 양쪽에 보이도록 맞춘다 — 새 상징이 기존 상징 페이지에서도 이어지게 하려는 것이다.
+function withSymmetricRelated(list: DreamSymbol[]): DreamSymbol[] {
+  const ids = new Set(list.map((s) => s.id));
+  const back = new Map<string, string[]>();
+  for (const s of list) {
+    for (const r of s.related) {
+      if (!ids.has(r)) continue;
+      const arr = back.get(r) ?? [];
+      arr.push(s.id);
+      back.set(r, arr);
+    }
+  }
+  return list.map((s) => {
+    const extra = (back.get(s.id) ?? []).filter((id) => id !== s.id && !s.related.includes(id));
+    return extra.length ? { ...s, related: [...s.related, ...extra] } : s;
+  });
+}
+
+export const DREAM_SYMBOLS: DreamSymbol[] = withSymmetricRelated([
+  ...DREAM_BASE,
+  ...DREAM_BATCH3A,
+  ...DREAM_BATCH3B,
+  ...DREAM_BATCH3C,
+]);
 
 export const DREAM_SYMBOL_BY_ID: Record<string, DreamSymbol> = Object.fromEntries(
   DREAM_SYMBOLS.map((s) => [s.id, s]),
