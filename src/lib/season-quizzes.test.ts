@@ -3,10 +3,10 @@ import { SEASON_QUIZZES } from "@/data/season-quizzes";
 import { majorityType, QUIZ_LANGS } from "@/data/season-quizzes/types";
 
 describe("season type quizzes", () => {
-  it("has six quizzes with unique slugs and ids", () => {
-    expect(SEASON_QUIZZES).toHaveLength(6);
-    expect(new Set(SEASON_QUIZZES.map((q) => q.slug)).size).toBe(6);
-    expect(new Set(SEASON_QUIZZES.map((q) => q.id)).size).toBe(6);
+  it("has twelve quizzes with unique slugs and ids", () => {
+    expect(SEASON_QUIZZES).toHaveLength(12);
+    expect(new Set(SEASON_QUIZZES.map((q) => q.slug)).size).toBe(SEASON_QUIZZES.length);
+    expect(new Set(SEASON_QUIZZES.map((q) => q.id)).size).toBe(SEASON_QUIZZES.length);
   });
 
   for (const q of SEASON_QUIZZES) {

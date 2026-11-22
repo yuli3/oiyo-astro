@@ -1,0 +1,12 @@
+---
+// 겨울 취미 테스트 (2026-11-22, 2차). 6개 언어. 재미용, 진단 아님. 문항·결과: data/season-quizzes/winter-hobby.ts
+import SeasonQuizPage from '../../components/tests/SeasonQuizPage.astro';
+import { LOCALES, type Locale } from '../../i18n';
+import { WINTER_HOBBY } from '../../data/season-quizzes/winter-hobby';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+---
+<SeasonQuizPage quiz={WINTER_HOBBY} locale={locale} />

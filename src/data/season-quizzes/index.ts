@@ -6,6 +6,12 @@ import { WINTER_HIBERNATION } from "./winter-hibernation";
 import { FIRST_SNOW_LOVE } from "./first-snow-love";
 import { GIFT_STYLE } from "./gift-style";
 import { FAMILY_GATHERING } from "./family-gathering";
+import { YEAR_END_REVIEW } from "./year-end-review";
+import { TRAVEL_STYLE } from "./travel-style";
+import { WINTER_HOBBY } from "./winter-hobby";
+import { DECLUTTER_STYLE } from "./declutter-style";
+import { WINTER_BREAK } from "./winter-break";
+import { NEW_YEAR_GREETING } from "./new-year-greeting";
 
 export const SEASON_QUIZZES: SeasonQuiz[] = [
   NEW_YEAR_RESOLUTION,
@@ -14,4 +20,10 @@ export const SEASON_QUIZZES: SeasonQuiz[] = [
   FIRST_SNOW_LOVE,
   WINTER_HIBERNATION,
   FAMILY_GATHERING,
+  YEAR_END_REVIEW,
+  TRAVEL_STYLE,
+  WINTER_HOBBY,
+  DECLUTTER_STYLE,
+  WINTER_BREAK,
+  NEW_YEAR_GREETING,
 ] as SeasonQuiz[];

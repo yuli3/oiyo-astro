@@ -1,0 +1,12 @@
+---
+// 겨울방학 유형 테스트 (2026-11-22, 2차). 6개 언어. 재미용, 진단 아님. 문항·결과: data/season-quizzes/winter-break.ts
+import SeasonQuizPage from '../../components/tests/SeasonQuizPage.astro';
+import { LOCALES, type Locale } from '../../i18n';
+import { WINTER_BREAK } from '../../data/season-quizzes/winter-break';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+---
+<SeasonQuizPage quiz={WINTER_BREAK} locale={locale} />
