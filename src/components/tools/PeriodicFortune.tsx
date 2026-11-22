@@ -106,7 +106,7 @@ const L: Record<Locale, {
 };
 
 const ELEM_COLOR: Record<string, string> = { wood: '#16a34a', fire: '#dc2626', earth: '#ca8a04', metal: '#64748b', water: '#2563eb' };
-const GRADE_COLOR: Record<Grade, string> = { great: '#d97706', good: '#16a34a', normal: '#0891b2', careful: '#7c3aed' };
+const GRADE_COLOR: Record<Grade, string> = { great: '#b45309', good: '#15803d', normal: '#155e75', careful: '#6d28d9' };
 const ANIMAL_EMOJI = ['🐭', '🐮', '🐯', '🐰', '🐉', '🐍', '🐎', '🐑', '🐒', '🐓', '🐕', '🐷'];
 const SIGN_EMOJI = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
 

@@ -48,7 +48,7 @@ const detailHref = `/${locale}/fortune/today/`;
             <p class="mb-2 mt-4 flex items-baseline justify-between gap-2 text-xs font-bold uppercase tracking-widest text-green-600 first:mt-0">{group.label}<span class="font-semibold normal-case tracking-normal text-muted-foreground sm:hidden" aria-hidden="true">{UI.swipe} →</span></p>
             {/* 2026-11-22: 모바일에서 카드 24장이 세로로 쌓여 홈이 7,000px 였다. 좁은
                 화면에서만 가로로 넘기는 줄로 바꾼다(순서·내용은 같다). sm 이상은 기존 격자. */}
-            <ul class="-mx-5 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 md:grid-cols-3">
+            <ul tabindex="0" aria-label={group.label} class="-mx-5 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 md:grid-cols-3">
               {group.cards.map((c) => (
                 <li
                   class="w-4/5 shrink-0 snap-start rounded-xl border p-3 sm:w-auto"
@@ -58,7 +58,7 @@ const detailHref = `/${locale}/fortune/today/`;
                     <span class="flex min-w-0 flex-1 items-center gap-1.5 truncate text-sm font-black text-foreground"><img src={c.image} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 shrink-0 rounded-full object-cover" />{c.name}</span>
                     <span
                       class="shrink-0 rounded-full px-2 py-0.5 text-xs font-black tabular-nums"
-                      style={`background:${GRADE_COLORS[c.grade]}1a;color:${GRADE_COLORS[c.grade]}`}
+                      style={`background:${GRADE_COLORS[c.grade]}12;color:${GRADE_COLORS[c.grade]}`}
                     >{c.rank}{UI.rank}</span>
                     <span class="shrink-0 text-sm font-black tabular-nums" style={`color:${GRADE_COLORS[c.grade]}`}>{c.score}</span>
                   </div>
@@ -71,7 +71,7 @@ const detailHref = `/${locale}/fortune/today/`;
                     <span style={`color:${GRADE_COLORS[c.grade]}`}>{g[c.grade]}</span>
                     <span class="text-primary">#{c.keyword}</span>
                     {c.delta !== 0 && (
-                      <span class={c.delta > 0 ? 'text-emerald-600' : 'text-rose-500'}>
+                      <span class={c.delta > 0 ? 'text-emerald-700' : 'text-rose-700'}>
                         {c.delta > 0 ? '▲' : '▼'}{Math.abs(c.delta)}
                       </span>
                     )}
@@ -83,7 +83,7 @@ const detailHref = `/${locale}/fortune/today/`;
 
                   <p class="mt-1.5 text-xs leading-5 text-green-900">{c.opening}</p>
                   <p class="mt-1 text-xs font-semibold text-green-600">{c.advice}</p>
-                  <p class="mt-1 text-xs leading-5 text-primary/80">{c.caution}</p>
+                  <p class="mt-1 text-xs leading-5 text-muted-foreground">{c.caution}</p>
                   {c.years && c.years.length > 0 && (
                     <details class="mt-2 border-t border-border pt-2">
                     <summary class="cursor-pointer select-none text-xs font-bold text-primary">{UI.byYear}</summary>

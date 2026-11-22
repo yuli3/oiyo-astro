@@ -48,17 +48,6 @@
       "count": 1
     }
   },
-  "src/components/mdx/BarChart.astro": {
-    "shadcn/no-arbitrary-values": {
-      "count": 3
-    },
-    "shadcn/no-inline-styles": {
-      "count": 2
-    },
-    "shadcn/no-unknown-classes": {
-      "count": 1
-    }
-  },
   "src/components/mdx/CompareTable.astro": {
     "shadcn/no-inline-styles": {
       "count": 3
@@ -216,11 +205,6 @@
       "count": 11
     }
   },
-  "src/components/ontology/MindmapMotes.tsx": {
-    "shadcn/no-inline-styles": {
-      "count": 2
-    }
-  },
   "src/components/ontology/OntologyBirthInput.tsx": {
     "shadcn/no-arbitrary-values": {
       "count": 9
@@ -283,14 +267,6 @@
   "src/components/ontology/PersonalProfileHistoryPreview.tsx": {
     "shadcn/no-raw-colors": {
       "count": 15
-    }
-  },
-  "src/components/ontology/ProfileMindmap.tsx": {
-    "shadcn/no-arbitrary-values": {
-      "count": 3
-    },
-    "shadcn/no-inline-styles": {
-      "count": 6
     }
   },
   "src/components/ontology/RecommendationCards.tsx": {
@@ -472,9 +448,6 @@
     }
   },
   "src/components/shared/ExplainerArticle.astro": {
-    "shadcn/no-inline-styles": {
-      "count": 1
-    },
     "shadcn/no-unknown-classes": {
       "count": 1
     }
@@ -519,16 +492,6 @@
     },
     "shadcn/no-raw-colors": {
       "count": 8
-    }
-  },
-  "src/components/shared/RelatedArticles.astro": {
-    "shadcn/no-raw-colors": {
-      "count": 7
-    }
-  },
-  "src/components/shared/RelatedTools.astro": {
-    "shadcn/no-raw-colors": {
-      "count": 2
     }
   },
   "src/components/shared/ResultNextSteps.tsx": {
@@ -1058,14 +1021,6 @@
     },
     "shadcn/no-raw-colors": {
       "count": 13
-    }
-  },
-  "src/components/tests/IntroExtroTest.tsx": {
-    "shadcn/no-inline-styles": {
-      "count": 5
-    },
-    "shadcn/no-raw-colors": {
-      "count": 14
     }
   },
   "src/components/tests/JealousyTypeTest.tsx": {
@@ -1657,15 +1612,7 @@
       "count": 3
     }
   },
-  "src/components/tools/ForeignAccountReportChecker.tsx": {
-    "shadcn/no-raw-colors": {
-      "count": 8
-    }
-  },
   "src/components/tools/FortuneWall.astro": {
-    "shadcn/no-arbitrary-values": {
-      "count": 5
-    },
     "shadcn/no-inline-styles": {
       "count": 6
     },
@@ -1704,22 +1651,9 @@
       "count": 11
     }
   },
-  "src/components/tools/LottoWinSimulator.tsx": {
-    "shadcn/no-inline-styles": {
-      "count": 1
-    },
-    "shadcn/no-raw-colors": {
-      "count": 1
-    }
-  },
   "src/components/tools/MayanReading.tsx": {
     "shadcn/no-raw-colors": {
       "count": 4
-    }
-  },
-  "src/components/tools/MenuRoulette.tsx": {
-    "shadcn/no-raw-colors": {
-      "count": 1
     }
   },
   "src/components/tools/MoneyParkingGuide.tsx": {
@@ -1893,17 +1827,6 @@
       "count": 14
     }
   },
-  "src/components/tools/TaxCalendar.tsx": {
-    "shadcn/no-arbitrary-values": {
-      "count": 3
-    },
-    "shadcn/no-raw-colors": {
-      "count": 9
-    },
-    "shadcn/no-unknown-classes": {
-      "count": 1
-    }
-  },
   "src/components/tools/TodayWeather.tsx": {
     "shadcn/no-arbitrary-values": {
       "count": 2
@@ -1978,14 +1901,6 @@
   "src/components/tools/palmistry/PalmLinesScene.tsx": {
     "shadcn/no-inline-styles": {
       "count": 1
-    }
-  },
-  "src/components/tools/saju/FiveElementsOrbit.tsx": {
-    "shadcn/no-arbitrary-values": {
-      "count": 2
-    },
-    "shadcn/no-raw-colors": {
-      "count": 2
     }
   },
   "src/components/tools/saju/FiveElementsOrbitScene.tsx": {
@@ -2143,11 +2058,6 @@
   "src/pages/[locale]/anxiety/test.astro": {
     "shadcn/no-raw-colors": {
       "count": 3
-    }
-  },
-  "src/pages/[locale]/articles/index.astro": {
-    "shadcn/no-raw-colors": {
-      "count": 6
     }
   },
   "src/pages/[locale]/attachment-style/test.astro": {
@@ -2387,11 +2297,6 @@
       "count": 3
     }
   },
-  "src/pages/[locale]/lotto/simulator.astro": {
-    "shadcn/no-raw-colors": {
-      "count": 3
-    }
-  },
   "src/pages/[locale]/love-language/test.astro": {
     "shadcn/no-raw-colors": {
       "count": 3
@@ -2426,11 +2331,6 @@
     }
   },
   "src/pages/[locale]/mbti/test.astro": {
-    "shadcn/no-raw-colors": {
-      "count": 3
-    }
-  },
-  "src/pages/[locale]/menu/roulette.astro": {
     "shadcn/no-raw-colors": {
       "count": 3
     }
@@ -2577,11 +2477,6 @@
       "count": 3
     }
   },
-  "src/pages/[locale]/tax-calendar.astro": {
-    "shadcn/no-raw-colors": {
-      "count": 5
-    }
-  },
   "src/pages/[locale]/tests/index.astro": {
     "shadcn/no-inline-styles": {
       "count": 1
@@ -2596,11 +2491,6 @@
   "src/pages/[locale]/today.astro": {
     "shadcn/no-raw-colors": {
       "count": 3
-    }
-  },
-  "src/pages/[locale]/topic/[topic]/index.astro": {
-    "shadcn/no-raw-colors": {
-      "count": 8
     }
   },
   "src/pages/[locale]/value-compass-test.astro": {

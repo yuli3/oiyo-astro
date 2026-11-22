@@ -70,32 +70,32 @@ if (topic) {
     <div class="mb-4 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
       <h2
         id="related-articles-heading"
-        class="text-base font-bold tracking-tight text-neutral-900 sm:text-lg"
+        class="text-base font-bold tracking-tight text-foreground sm:text-lg"
       >
         {HEADING[locale] ?? HEADING.en}
       </h2>
       {topic && total > related.length && (
         <a
           href={`/${locale}/topic/${topic}/`}
-          class="text-sm font-semibold text-emerald-700 underline-offset-4 hover:underline"
+          class="text-sm font-semibold text-primary underline-offset-4 hover:underline"
         >
           {ALL[locale] ?? ALL.en} ({total})
         </a>
       )}
     </div>
 
-    <ul class="divide-y divide-neutral-200 rounded-2xl border border-neutral-200 bg-card">
+    <ul class="divide-y divide-border rounded-2xl border border-border bg-card">
       {related.map((a) => (
         <li>
           <a
             href={`/${locale}/${a.slug}/`}
-            class="block px-4 py-3.5 transition-colors hover:bg-neutral-50"
+            class="block px-4 py-3.5 transition-colors hover:bg-surface-subtle"
           >
-            <span class="block text-sm font-semibold leading-snug text-neutral-900">
+            <span class="block text-sm font-semibold leading-snug text-foreground">
               {a.title}
             </span>
             {a.description && (
-              <span class="mt-1 line-clamp-2 block text-xs leading-relaxed text-neutral-500">
+              <span class="mt-1 line-clamp-2 block text-xs leading-relaxed text-muted-foreground">
                 {a.description}
               </span>
             )}
@@ -105,7 +105,7 @@ if (topic) {
     </ul>
 
     {topic && (
-      <p class="mt-3 text-xs text-neutral-500">
+      <p class="mt-3 text-xs text-muted-foreground">
         <a
           href={`/${locale}/articles/`}
           class="underline-offset-4 hover:underline"
