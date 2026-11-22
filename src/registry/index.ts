@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const gyeonggongjangManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#6b4a2b",
+  domain: "ontology",
+  icon: "Hammer",
+  id: "gyeonggongjang",
+  path: "/gyeonggongjang",
+  status: "production",
+  name: { ko: "경공장 장적 속 나", en: "Me in the royal artisan register", ja: "京工匠の匠籍の中の私", zh: "京工匠匠籍里的我", fr: "Moi, artisan royal de Joseon", es: "Yo, artesano real de Joseon" },
+  description: { ko: "『경국대전』 서울 관청의 장인 2,800여 명. 나는 사옹원 사기장일까, 군기시 화살장일까? 실제 인원 비율로 뽑아요.", en: "Some 2,800 artisans served Seoul's offices in 1485. Porcelain maker or arrow maker? Drawn by real headcounts.", ja: "『経国大典』の京工匠2,800余名。私は沙器匠？矢人？実際の人数比で引きます。", zh: "《经国大典》中的京工匠2,800余人。我是沙器匠还是矢人？按真实人数比例抽。", fr: "Quelque 2 800 artisans servaient les offices de Séoul en 1485. Potier ou flécher ? Tiré selon les vrais effectifs.", es: "Unos 2.800 artesanos servían a las oficinas de Seúl en 1485. ¿Ceramista o flechero? Según cifras reales." },
+};
+
 const joseonTimeManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -707,6 +720,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  gyeonggongjangManifest,
   joseonTimeManifest,
   future2626Manifest,
   joseonNamesManifest,

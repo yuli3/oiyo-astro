@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "gyeonggongjang",
+    title: {"ko": "경공장 장적 속 나 — 경국대전 장인 뽑기", "en": "Me in the royal artisan register", "ja": "京工匠の匠籍の中の私", "zh": "京工匠匠籍里的我", "fr": "Moi, artisan royal de Joseon", "es": "Yo, artesano real de Joseon"},
+    description: {"ko": "경국대전 경공장 인원 비율로 내 직종과 관청을 뽑아요.", "en": "Draw your trade and office by the 1485 artisan headcounts.", "ja": "経国大典の人数比で職種と官庁を引きます。", "zh": "按经国大典人数比例抽行当和官署。", "fr": "Tirez votre métier et votre office selon les effectifs de 1485.", "es": "Sortea tu oficio y oficina según las cifras de 1485."},
+  },
+  {
     slug: "joseon-time",
     title: {"ko": "지금 시각을 조선 시각으로 — 12시·각·경점 변환", "en": "Now, in Joseon time", "ja": "今を朝鮮の時刻で", "zh": "此刻的朝鲜时刻", "fr": "Maintenant, à l'heure de Joseon", "es": "Ahora, en hora de Joseon"},
     description: {"ko": "지금 시각을 12시·각·경점과 인정·파루로 바꿔요.", "en": "Convert the time to Joseon double hours, kak and night watches.", "ja": "今の時刻を十二時・刻・更点に。", "zh": "把现在的时间换成时辰、刻和更点。", "fr": "Convertit l'heure en heures doubles, kak et veilles.", "es": "Convierte la hora en horas dobles, kak y vigilias."},
