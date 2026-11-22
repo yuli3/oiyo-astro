@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const census1911Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#5a2a3a",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "census-1911",
+  path: "/census-1911",
+  status: "production",
+  name: { ko: "1911 영국 센서스 속 나", en: "You in the 1911 census", ja: "1911年英国国勢調査の中の私", zh: "1911年英国人口普查中的我", fr: "Vous au recensement anglais de 1911", es: "Tú en el censo inglés de 1911" },
+  description: { zh: "按1911年英格兰和威尔士真实职业分布（男女分列）抽出你，并按1911年住户普查表的栏目写下你的一行。", en: "Drawn by the real 1911 England and Wales occupations by sex, with your line in the 1911 household schedule's columns.", es: "Sorteado según las ocupaciones reales de 1911 por sexo, con tu línea en las columnas de la hoja del hogar.", fr: "Tiré selon les vrais métiers de 1911 par sexe, avec votre ligne dans les colonnes du bulletin de ménage.", ja: "1911年イングランド・ウェールズの実際の男女別職業分布で引き、世帯調査票の欄にあなたの一行を書きます。", ko: "1911년 잉글랜드·웨일스의 실제 남녀별 직업 분포로 나를 뽑고, 그해 가구 조사표 칸에 내 한 줄을 적어 봐요." },
+};
+
 const ellis1907Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -629,6 +642,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  census1911Manifest,
   ellis1907Manifest,
   parallelLivesManifest,
   birthdayCalendarsManifest,
