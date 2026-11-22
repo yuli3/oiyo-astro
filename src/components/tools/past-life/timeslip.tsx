@@ -92,6 +92,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 export const EPISODE_LABELS: Record<EpisodeId, { icon: string; label: Six }> = {
+  "huangce-1391": { icon: "📒", label: { ko: "1391 명나라 황책 속 우리 집", en: "Your household in the 1391 Ming Yellow Register", ja: "1391年明の黄冊の中のわが家", zh: "1391年明代黄册里的我家", fr: "Votre foyer au registre jaune Ming de 1391", es: "Tu hogar en el registro amarillo Ming de 1391" } },
   "census-1911": { icon: "📜", label: { ko: "1911 영국 센서스 속 나", en: "You in the 1911 census", ja: "1911年英国国勢調査の中の私", zh: "1911年英国人口普查中的我", fr: "Vous au recensement anglais de 1911", es: "Tú en el censo inglés de 1911" } },
   "ellis-1907": { icon: "🚢", label: { ko: "1907 엘리스섬 승객 명부 속 나", en: "You on a 1907 Ellis Island manifest", ja: "1907年エリス島の乗客名簿の中の私", zh: "1907年埃利斯岛乘客名单中的我", fr: "Vous à Ellis Island en 1907", es: "Tú en Ellis Island en 1907" } },
   "birthday-calendars": { icon: "📅", label: { ko: "내 생일, 옛 달력 7개로", en: "My birthday in 7 old calendars", ja: "誕生日を7つの暦で", zh: "我的生日，7种历法", fr: "Mon anniversaire en 7 calendriers", es: "Mi cumpleaños en 7 calendarios" } },

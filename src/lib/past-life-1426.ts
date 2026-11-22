@@ -169,9 +169,9 @@ export function tabletFor(rank: string): "ivory" | "wood" | null {
 
 // ── Time-slip series quick wins (2026-11-03, company-brain past-life-series-design-2026-11-03.md) ──
 
-export type EpisodeId = "census-1911" | "ellis-1907" | "birthday-calendars" | "hoebinghwan-1789" | "domesday-1086" | "census-1850" | "ninbetsu-edo" | "tongsinsa-1763" | "banchado-1795" | "gwageo-1426" | "lunch-1426" | "sillok-1426" | "hometown-1426" | "ancestors-1426" | "silla-golpum" | "joseon-1426" | "europe-1426" | "joseon-1789" | "france-1789" | "us-birth-state";
+export type EpisodeId = "huangce-1391" | "census-1911" | "ellis-1907" | "birthday-calendars" | "hoebinghwan-1789" | "domesday-1086" | "census-1850" | "ninbetsu-edo" | "tongsinsa-1763" | "banchado-1795" | "gwageo-1426" | "lunch-1426" | "sillok-1426" | "hometown-1426" | "ancestors-1426" | "silla-golpum" | "joseon-1426" | "europe-1426" | "joseon-1789" | "france-1789" | "us-birth-state";
 /** Series order on the stamp board: oldest era first, "born today" last. */
-export const EPISODES: readonly EpisodeId[] = ["census-1911", "ellis-1907", "birthday-calendars", "hoebinghwan-1789", "domesday-1086", "census-1850", "ninbetsu-edo", "tongsinsa-1763", "banchado-1795", "gwageo-1426", "lunch-1426", "sillok-1426", "hometown-1426", "ancestors-1426", "silla-golpum", "joseon-1426", "europe-1426", "joseon-1789", "france-1789", "us-birth-state"];
+export const EPISODES: readonly EpisodeId[] = ["huangce-1391", "census-1911", "ellis-1907", "birthday-calendars", "hoebinghwan-1789", "domesday-1086", "census-1850", "ninbetsu-edo", "tongsinsa-1763", "banchado-1795", "gwageo-1426", "lunch-1426", "sillok-1426", "hometown-1426", "ancestors-1426", "silla-golpum", "joseon-1426", "europe-1426", "joseon-1789", "france-1789", "us-birth-state"];
 
 export type Rarity = "legendary" | "rare" | "uncommon" | "common";
 /**

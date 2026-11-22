@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const huangce1391Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#8a6a12",
+  domain: "ontology",
+  icon: "BookOpen",
+  id: "huangce-1391",
+  path: "/huangce-1391",
+  status: "production",
+  name: { ko: "1391 명나라 황책 속 우리 집", en: "Your household in the 1391 Ming Yellow Register", ja: "1391年明の黄冊の中のわが家", zh: "1391年明代黄册里的我家", fr: "Votre foyer au registre jaune Ming de 1391", es: "Tu hogar en el registro amarillo Ming de 1391" },
+  description: { ko: "명 초 실제 호적 비율(민호·군호 약 20%·장호)로 우리 집 호적을 뽑고, 황책의 사주식(구관·신수·개제·실재)으로 우리 집 기록을 적어 봐요.", en: "Drawn by early Ming household categories (civilian, about 20% military, artisan), with your entry in the register's four-column format.", ja: "明初の戸籍比率（民戸・軍戸約20%・匠戸）で引き、黄冊の四柱式でわが家の記録を書きます。", zh: "按明初户籍比例（民户、约20%军户、匠户）抽取，并以黄册四柱式写下我家的登记。", fr: "Tiré selon les catégories de foyers du début des Ming (civil, environ 20 % militaire, artisan), avec votre inscription en quatre colonnes.", es: "Sorteado según las categorías de hogares de inicios Ming (civil, cerca del 20 % militar, artesano), con tu inscripción en cuatro columnas." },
+};
+
 const census1911Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -642,6 +655,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  huangce1391Manifest,
   census1911Manifest,
   ellis1907Manifest,
   parallelLivesManifest,
