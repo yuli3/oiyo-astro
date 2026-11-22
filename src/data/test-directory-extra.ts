@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "parallel-lives",
+    title: {"ko": "나의 평행 인생 연표 — 타임슬립 시리즈 속 나를 한 장에", "en": "My parallel lives — every time-slip result on one timeline", "ja": "わたしの並行人生年表", "zh": "我的平行人生年表", "fr": "Mes vies parallèles", "es": "Mis vidas paralelas"},
+    description: {"ko": "신라부터 오늘까지, 타임슬립 시리즈에서 뽑은 나를 시대순 연표로 모아 이미지로 저장해요.", "en": "Your time-slip results from Silla to today, in date order, saved as one image.", "ja": "新羅から今日まで、引いた結果を年表にして画像で保存。", "zh": "从新罗到今天，把抽到的结果排成年表并保存为图片。", "fr": "Vos résultats, de Silla à aujourd'hui, sur une frise à enregistrer.", "es": "Tus resultados, de Silla a hoy, en una línea para guardar."},
+  },
+  {
     slug: "birthday-calendars",
     title: {"ko": "내 생일, 옛 달력 7개로 — 프랑스 혁명력 '당근의 날'부터 마야력까지", "en": "My birthday in 7 old calendars", "ja": "誕生日を7つの暦で", "zh": "我的生日，7种历法", "fr": "Mon anniversaire en 7 calendriers", "es": "Mi cumpleaños en 7 calendarios"},
     description: {"ko": "생일을 프랑스 혁명력(그날의 식물·동물 이름), 60갑자, 마야 장주기력, 율리우스력, 이슬람력, 히브리력, 일본 연호로 한 번에 바꿔요.", "en": "French Republican day name, sexagenary cycle, Maya Long Count, Julian, Islamic, Hebrew and Japanese era dates for your birthday.", "ja": "革命暦の日の名前、干支、マヤ長期暦、ユリウス暦、イスラム暦、ヘブライ暦、元号に一度に変換。", "zh": "一次换算成法国共和历日名、干支、玛雅长纪历、儒略历、伊斯兰历、希伯来历和日本年号。", "fr": "Le nom de votre jour dans le calendrier républicain, et six autres calendriers.", "es": "El nombre de tu día en el calendario republicano y seis calendarios más."},
