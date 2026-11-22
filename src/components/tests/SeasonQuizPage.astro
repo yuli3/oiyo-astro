@@ -1,0 +1,77 @@
+---
+// 시즌 유형 테스트 페이지 공용 틀 (2026-11-22). 각 라우트 파일은 퀴즈 데이터만 넘긴다.
+// 재미용 테스트라 진단 문구를 쓰지 않고, FAQ에 "심리 검사가 아님"을 보이게 둔다.
+import Layout from '../../layouts/Layout.astro';
+import SeasonTypeQuiz from './SeasonTypeQuiz';
+import type { Locale } from '../../i18n';
+import { localePath } from '../../i18n';
+import { toLang, type SeasonQuiz, type QuizLang } from '../../data/season-quizzes/types';
+import { SEASON_QUIZZES } from '../../data/season-quizzes';
+
+interface Props {
+  quiz: SeasonQuiz;
+  locale: Locale;
+  /** 결과 뒤에 붙는 관련 도구 카드(예: 마니또 뽑기). 절대 URL 또는 /로 시작하는 로케일 없는 경로. */
+  extra?: Record<QuizLang, { lead: string; label: string; href: string }>;
+}
+
+const { quiz, locale, extra } = Astro.props;
+const l = toLang(locale);
+const p = quiz.page[l];
+const results = Object.fromEntries(quiz.types.map((t) => [t, quiz.results[t][l]]));
+const MORE: Record<QuizLang, string> = {
+  ko: '연말·새해 테스트 더 하기', en: 'More holiday-season quizzes', ja: '年末年始のテストをもっと',
+  zh: '更多年末新年测试', fr: 'Plus de quiz de fin d’année', es: 'Más tests de fin de año',
+};
+const FAQ_TITLE: Record<QuizLang, string> = { ko: '자주 묻는 질문', en: 'Common questions', ja: 'よくある質問', zh: '常见问题', fr: 'Questions fréquentes', es: 'Preguntas frecuentes' };
+const XMAS: Record<QuizLang, string> = {
+  ko: '크리스마스 성격 테스트', en: 'Christmas Personality Test', ja: 'クリスマス性格テスト',
+  zh: '圣诞性格测试', fr: 'Test de personnalité de Noël', es: 'Test de personalidad navideña',
+};
+const more = [
+  ...SEASON_QUIZZES.filter((q) => q.slug !== quiz.slug).map((q) => ({ href: localePath(locale, `/${q.slug}`), label: q.ui[l].title, emoji: q.results[q.types[0]][l].emoji })),
+  { href: localePath(locale, '/christmas-personality-test'), label: XMAS[l], emoji: '🎄' },
+];
+const extraLink = extra?.[l];
+const extraHref = extraLink ? (extraLink.href.startsWith('/') ? localePath(locale, extraLink.href) : extraLink.href) : undefined;
+---
+<Layout title={p.title} description={p.description} locale={locale} faq={p.faqs.map(([question, answer]) => ({ question, answer }))}>
+  <div class="container mx-auto max-w-3xl space-y-10 px-4 py-8">
+    <SeasonTypeQuiz
+      client:load
+      testId={quiz.id}
+      locale={locale}
+      lang={l}
+      types={quiz.types}
+      ui={quiz.ui[l]}
+      questions={quiz.questions[l]}
+      results={results}
+    />
+    {extraLink && extraHref && (
+      <aside class="rounded-xl border border-border bg-card p-4">
+        <p class="text-sm text-muted-foreground">{extraLink.lead}</p>
+        <a class="mt-1 inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4" href={extraHref}>{extraLink.label}</a>
+      </aside>
+    )}
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold">{p.typesTitle}</h2>
+      <p class="text-sm leading-relaxed text-muted-foreground">{p.intro}</p>
+      <ul class="grid gap-3 sm:grid-cols-2">
+        {quiz.types.map((k) => {
+          const r = quiz.results[k][l];
+          return <li class="rounded-xl border border-border bg-card p-4"><p class="font-bold">{r.emoji} {r.title}</p><p class="mt-1 text-sm text-muted-foreground">{r.tagline}</p></li>;
+        })}
+      </ul>
+    </section>
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold">{MORE[l]}</h2>
+      <ul class="grid gap-2 sm:grid-cols-2">
+        {more.map((m) => <li><a class="flex min-h-11 items-center gap-2 rounded-lg border border-border bg-card px-3 text-sm font-semibold text-foreground hover:bg-accent" href={m.href}><span aria-hidden="true">{m.emoji}</span>{m.label}</a></li>)}
+      </ul>
+    </section>
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold">{FAQ_TITLE[l]}</h2>
+      {p.faqs.map(([q, a]) => <details class="rounded-lg border border-border p-3"><summary class="cursor-pointer font-semibold">{q}</summary><p class="mt-2 text-sm text-muted-foreground">{a}</p></details>)}
+    </section>
+  </div>
+</Layout>
