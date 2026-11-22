@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "joseon-time",
+    title: {"ko": "지금 시각을 조선 시각으로 — 12시·각·경점 변환", "en": "Now, in Joseon time", "ja": "今を朝鮮の時刻で", "zh": "此刻的朝鲜时刻", "fr": "Maintenant, à l'heure de Joseon", "es": "Ahora, en hora de Joseon"},
+    description: {"ko": "지금 시각을 12시·각·경점과 인정·파루로 바꿔요.", "en": "Convert the time to Joseon double hours, kak and night watches.", "ja": "今の時刻を十二時・刻・更点に。", "zh": "把现在的时间换成时辰、刻和更点。", "fr": "Convertit l'heure en heures doubles, kak et veilles.", "es": "Convierte la hora en horas dobles, kak y vigilias."},
+  },
+  {
     slug: "future-2626",
     title: {"ko": "2626 미래 박물관 속 내 물건 — 거꾸로 타임슬립", "en": "Your things in a museum, 2626", "ja": "2626年の博物館の私の物", "zh": "2626年博物馆里的我的东西", "fr": "Vos affaires au musée en 2626", "es": "Tus cosas en un museo en 2626"},
     description: {"ko": "지금 내 물건 세 가지가 600년 뒤 박물관 유물 설명으로 바뀌어요.", "en": "Three of your things as museum labels 600 years from now.", "ja": "私の物3つが600年後の博物館ラベルに。", "zh": "你的三件东西变成六百年后的文物说明。", "fr": "Trois de vos objets en étiquettes de musée.", "es": "Tres de tus objetos como etiquetas de museo."},
