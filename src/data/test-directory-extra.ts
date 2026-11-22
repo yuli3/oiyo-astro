@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "jinshin-1872",
+    title: {"ko": "1872 임신호적 속 우리 집 — 평민·사족·화족, 봉인된 호적", "en": "Your household in Japan's 1872 Jinshin koseki", "ja": "壬申戸籍の中のわが家", "zh": "1872年壬申户籍里的我家", "fr": "Votre foyer au koseki Jinshin de 1872", "es": "Tu hogar en el koseki Jinshin de 1872"},
+    description: {"ko": "1872년 실제 족칭 집계로 우리 집을 뽑고, 주소·족칭·직업·절·수호신이 적힌 호적을 재구성해요.", "en": "Your household drawn by the real 1872 status totals, in a reconstructed koseki.", "ja": "明治5年の族籍集計で、わが家の戸籍を再構成。", "zh": "按1872年族称统计，重构我家的户籍。", "fr": "Votre foyer selon les totaux de 1872, dans un koseki reconstitué.", "es": "Tu hogar según los totales de 1872, en un koseki reconstruido."},
+  },
+  {
     slug: "huangce-1391",
     title: {"ko": "1391 명나라 황책 속 우리 집 — 민호·군호·장호, 이장일까 갑수일까", "en": "Your household in the 1391 Ming Yellow Register", "ja": "1391年明の黄冊の中のわが家", "zh": "1391年明代黄册里的我家", "fr": "Votre foyer au registre jaune Ming de 1391", "es": "Tu hogar en el registro amarillo Ming de 1391"},
     description: {"ko": "명 초 호적 비율로 우리 집을 뽑고, 황책의 구관·신수·개제·실재 칸에 식구와 재산을 적어요.", "en": "Your household drawn by early Ming categories, written in the four columns of the register.", "ja": "明初の戸籍比率で、黄冊の四柱にわが家を。", "zh": "按明初户籍比例，在黄册四柱上写下我家。", "fr": "Votre foyer selon les catégories Ming, en quatre colonnes.", "es": "Tu hogar según las categorías Ming, en cuatro columnas."},
