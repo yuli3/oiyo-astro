@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "future-2626",
+    title: {"ko": "2626 미래 박물관 속 내 물건 — 거꾸로 타임슬립", "en": "Your things in a museum, 2626", "ja": "2626年の博物館の私の物", "zh": "2626年博物馆里的我的东西", "fr": "Vos affaires au musée en 2626", "es": "Tus cosas en un museo en 2626"},
+    description: {"ko": "지금 내 물건 세 가지가 600년 뒤 박물관 유물 설명으로 바뀌어요.", "en": "Three of your things as museum labels 600 years from now.", "ja": "私の物3つが600年後の博物館ラベルに。", "zh": "你的三件东西变成六百年后的文物说明。", "fr": "Trois de vos objets en étiquettes de musée.", "es": "Tres de tus objetos como etiquetas de museo."},
+  },
+  {
     slug: "joseon-names",
     title: {"ko": "조선 시대 내 이름 짓기 — 아명·관명·자·호", "en": "My names in Joseon Korea", "ja": "朝鮮時代の私の名前", "zh": "我在朝鲜时代的名字", "fr": "Mes noms dans la Corée de Joseon", "es": "Mis nombres en la Corea de Joseon"},
     description: {"ko": "아명부터 항렬자가 든 관명, 자, 호까지 조선 시대 평생의 이름을 받아요.", "en": "Childhood name, formal name, courtesy name and pen name.", "ja": "幼名・冠名・字・号をもらいます。", "zh": "乳名、冠名、字和号。", "fr": "Nom d'enfance, officiel, de courtoisie et de plume.", "es": "Nombre de infancia, oficial, de cortesía y seudónimo."},
