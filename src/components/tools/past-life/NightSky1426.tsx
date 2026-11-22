@@ -111,14 +111,14 @@ function SkyChart({ sky, phase, l, title }: { sky: Sky; phase: keyof typeof PHAS
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full rounded-xl" role="img" aria-label={title}>
         <defs>
           <linearGradient id={`sky-${title.length}`} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#0b1430" />
-            <stop offset="1" stopColor="#24345e" />
+            <stop offset="0" stopColor="var(--color-night-top)" />
+            <stop offset="1" stopColor="var(--color-night-bottom)" />
           </linearGradient>
         </defs>
         <rect width={W} height={H} fill={`url(#sky-${title.length})`} />
-        <rect y={H - 20} width={W} height={20} fill="#1a1410" />
+        <rect y={H - 20} width={W} height={20} fill="var(--color-night-ground)" />
         {[0, 90, 180, 270].map((az, i) => (
-          <text key={az} x={Math.min(W - 8, Math.max(8, x(az)))} y={H - 6} fill="#d8c9a8" fontSize="10" textAnchor="middle">
+          <text key={az} x={Math.min(W - 8, Math.max(8, x(az)))} y={H - 6} fill="var(--color-night-label)" fontSize="10" textAnchor="middle">
             {DIRS[l][i * 2]}
           </text>
         ))}
@@ -129,9 +129,9 @@ function SkyChart({ sky, phase, l, title }: { sky: Sky; phase: keyof typeof PHAS
                 {PHASE_EMOJI[phase]}
               </text>
             ) : (
-              <circle cx={x(o.az)} cy={y(o.alt)} r={o.body === "venus" || o.body === "jupiter" ? 3.5 : 2.5} fill={o.body === "mars" ? "#ff9a6b" : "#fff6d8"} />
+              <circle cx={x(o.az)} cy={y(o.alt)} r={o.body === "venus" || o.body === "jupiter" ? 3.5 : 2.5} fill={o.body === "mars" ? "var(--color-night-mars)" : "var(--color-night-star)"} />
             )}
-            <text x={x(o.az)} y={y(o.alt) - 9} fill="#f3e6c4" fontSize="10" textAnchor="middle">
+            <text x={x(o.az)} y={y(o.alt) - 9} fill="var(--color-night-name)" fontSize="10" textAnchor="middle">
               {NAMES[o.body as Exclude<Body, "sun">].hanja}
             </text>
           </g>
@@ -252,7 +252,7 @@ export default function NightSky1426({ locale }: { locale: Locale }) {
               badge: pick(C.badge, l),
               lines: [...planetLines(night.evening.sky), ...planetLines(night.dawn.sky)].slice(0, 3),
               footer: `oiyo.net · 1426 · ${SOLAR_TERMS_HANJA[night.term]}`,
-              accent: "#24345e",
+              accent: "var(--color-night-bottom)",
             }}
           />
           <CopyLink l={l} testId={EP} />

@@ -21,6 +21,15 @@
   --color-silla-yellow: #c99a1e;
   /* France 1789 tricolour accents — /france-1789/, 2026-11-03 */
   --color-fr-blue: #1f3f8f;
+  --color-night-top: #0b1430;
+  --color-night-bottom: #24345e;
+  --color-night-ground: #1a1410;
+  --color-night-label: #d8c9a8;
+  --color-night-name: #f3e6c4;
+  --color-night-star: #fff6d8;
+  --color-night-mars: #ff9a6b;
+  --color-hanja-mark: #fde68a;
+  --color-hanja-mark-dark: #b45309;
   --color-fr-red: #c0312b;
 }
 
