@@ -1,0 +1,12 @@
+---
+// 연말 영화 취향 테스트 (2026-11-22, 3차). 6개 언어. 재미용, 진단 아님. 문항·결과: data/season-quizzes/holiday-movie.ts
+import SeasonQuizPage from '../../components/tests/SeasonQuizPage.astro';
+import { LOCALES, type Locale } from '../../i18n';
+import { HOLIDAY_MOVIE } from '../../data/season-quizzes/holiday-movie';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+---
+<SeasonQuizPage quiz={HOLIDAY_MOVIE} locale={locale} />

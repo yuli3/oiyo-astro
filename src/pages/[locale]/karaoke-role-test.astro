@@ -1,0 +1,12 @@
+---
+// 연말 노래방 역할 테스트 (2026-11-22, 3차). 6개 언어. 재미용, 진단 아님. 문항·결과: data/season-quizzes/karaoke-role.ts
+import SeasonQuizPage from '../../components/tests/SeasonQuizPage.astro';
+import { LOCALES, type Locale } from '../../i18n';
+import { KARAOKE_ROLE } from '../../data/season-quizzes/karaoke-role';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+---
+<SeasonQuizPage quiz={KARAOKE_ROLE} locale={locale} />

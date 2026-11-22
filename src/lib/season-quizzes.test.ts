@@ -3,8 +3,8 @@ import { SEASON_QUIZZES } from "@/data/season-quizzes";
 import { majorityType, QUIZ_LANGS } from "@/data/season-quizzes/types";
 
 describe("season type quizzes", () => {
-  it("has twelve quizzes with unique slugs and ids", () => {
-    expect(SEASON_QUIZZES).toHaveLength(12);
+  it("has eighteen quizzes with unique slugs and ids", () => {
+    expect(SEASON_QUIZZES).toHaveLength(18);
     expect(new Set(SEASON_QUIZZES.map((q) => q.slug)).size).toBe(SEASON_QUIZZES.length);
     expect(new Set(SEASON_QUIZZES.map((q) => q.id)).size).toBe(SEASON_QUIZZES.length);
   });
