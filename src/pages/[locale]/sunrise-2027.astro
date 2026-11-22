@@ -39,6 +39,13 @@ const t = ja
       minePrivacy: '位置情報はこのブラウザの中だけで使い、送信しません。',
       mineFail: '位置情報を取得できませんでした。端末の設定を確認してください。',
       mineResult: '2027年1月1日、現在地の日の出はおよそ',
+      compassH: '初日の出コンパス',
+      compassLead: 'スマホを水平に持つと、矢印が元日の朝に太陽が顔を出す方角を指します。場所取りの前に、どちらを向けばいいか確かめましょう。',
+      compassBtn: 'コンパスをオンにする',
+      compassDir: '日の出の方角',
+      compassNoSensor: 'この端末では方位センサーが使えません。上の方角を地図アプリの北と合わせて確かめてください。',
+      compassCalib: '矢印がぶれるときは、スマホで8の字を描くように動かすと安定します。',
+      compassFallbackPlace: '東京',
       tipsH: '初日の出を見るコツ',
       tips: [
         ['30分前には着く', '日の出の30分ほど前から空が明るくなり始めます（表の「空が白む」）。人気スポットは駐車場がすぐ埋まるので、さらに早めに。'],
@@ -81,6 +88,13 @@ const t = ja
       minePrivacy: '위치는 이 브라우저 안에서만 쓰고 보내지 않아요.',
       mineFail: '위치를 가져오지 못했어요. 기기 위치 권한을 확인해 주세요.',
       mineResult: '2027년 1월 1일, 지금 계신 곳의 일출은 약',
+      compassH: '해맞이 나침반',
+      compassLead: '폰을 바닥과 수평으로 들면 화살표가 새해 아침 해가 고개를 내미는 방향을 가리켜요. 자리 잡기 전에 어느 쪽을 봐야 할지 미리 확인하세요.',
+      compassBtn: '나침반 켜기',
+      compassDir: '해 뜨는 방향',
+      compassNoSensor: '이 기기에서는 방향 센서를 쓸 수 없어요. 위 방향을 지도 앱의 북쪽과 맞춰 확인하세요.',
+      compassCalib: '화살표가 흔들리면 폰으로 8자를 그리듯 움직이면 안정돼요.',
+      compassFallbackPlace: '서울',
       tipsH: '해맞이 잘 보는 법',
       tips: [
         ['30분 먼저 도착', '일출 30분쯤 전부터 하늘이 붉어져요(표의 "여명 시작"). 정동진·간절곶·호미곶은 새벽부터 차가 막히니 더 일찍 나서요.'],
@@ -147,6 +161,33 @@ const ld = [
       <p class="mt-2 text-xs text-muted-foreground">{t.minePrivacy}</p>
     </div>
 
+    <div class="mt-6 rounded-2xl border bg-card p-5" data-sun-compass data-lang={ja ? 'ja' : 'ko'} data-fallback-lat={ja ? '35.6895' : '37.5665'} data-fallback-lon={ja ? '139.6917' : '126.978'} data-fallback-place={t.compassFallbackPlace} data-no-sensor={t.compassNoSensor}>
+      <h2 class="text-lg font-black">🧭 {t.compassH}</h2>
+      <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{t.compassLead}</p>
+      <div class="mt-4 flex justify-center">
+        <svg viewBox="0 0 200 200" width="220" height="220" role="img" aria-labelledby="sun-compass-label" class="text-foreground">
+          <g data-compass-dial>
+            <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-opacity="0.2" stroke-width="2" />
+            <text x="100" y="24" text-anchor="middle" font-size="16" font-weight="900" fill="currentColor">N</text>
+            <text x="180" y="105" text-anchor="middle" font-size="13" fill="currentColor" fill-opacity="0.6">E</text>
+            <text x="100" y="188" text-anchor="middle" font-size="13" fill="currentColor" fill-opacity="0.6">S</text>
+            <text x="20" y="105" text-anchor="middle" font-size="13" fill="currentColor" fill-opacity="0.6">W</text>
+            <g data-compass-sun>
+              <line x1="100" y1="100" x2="100" y2="30" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+              <circle cx="100" cy="30" r="15" class="fill-primary" />
+              <text x="100" y="35" text-anchor="middle" font-size="14">☀️</text>
+            </g>
+          </g>
+          <circle cx="100" cy="100" r="6" fill="currentColor" />
+        </svg>
+      </div>
+      <p id="sun-compass-label" class="mt-2 text-center text-base font-black" aria-live="polite" data-compass-out data-prefix={t.compassDir}></p>
+      <div class="mt-3 flex justify-center">
+        <button type="button" class="min-h-11 rounded-xl bg-primary px-4 text-sm font-black text-primary-foreground" data-compass-btn>{t.compassBtn}</button>
+      </div>
+      <p class="mt-3 text-xs text-muted-foreground" data-compass-note>{t.compassCalib}</p>
+    </div>
+
     <section class="mt-10">
       <h2 class="text-2xl font-black">{t.tableH}</h2>
       <div class="mt-4 overflow-x-auto rounded-xl border">
@@ -205,7 +246,7 @@ const ld = [
 </Layout>
 
 <script>
-  import { sunriseNoaa } from '../../lib/sunrise-noaa';
+  import { compassName, sunriseAzimuth, sunriseNoaa } from '../../lib/sunrise-noaa';
   import { gaEventOnce } from '../../lib/analytics/ga-event';
 
   const box = document.querySelector<HTMLElement>('[data-sunrise-mine]');
@@ -251,4 +292,56 @@ const ld = [
       { enableHighAccuracy: false, timeout: 10_000, maximumAge: 600_000 },
     );
   });
+
+  // ── 해맞이 나침반 (2026-11-22, 창의 제안 #2) ──
+  // 방위각은 위치만 있으면 계산되고, 폰 방향 센서가 있으면 판을 돌려 N이 실제 북쪽을 향하게 한다.
+  const cBox = document.querySelector<HTMLElement>('[data-sun-compass]');
+  if (cBox) {
+    const cLang = cBox.dataset.lang === 'ja' ? 'ja' : 'ko';
+    const dial = cBox.querySelector<SVGGElement>('[data-compass-dial]');
+    const sun = cBox.querySelector<SVGGElement>('[data-compass-sun]');
+    const cOut = cBox.querySelector<HTMLElement>('[data-compass-out]');
+    const cBtn = cBox.querySelector<HTMLButtonElement>('[data-compass-btn]');
+    const note = cBox.querySelector<HTMLElement>('[data-compass-note]');
+    const show = (lat: number, lon: number, place: string) => {
+      const a = sunriseAzimuth(lat, lon, 2027, 1, 1);
+      if (a == null || !cOut) return;
+      sun?.setAttribute('transform', `rotate(${a.toFixed(1)} 100 100)`);
+      const off = Math.round(a - 90);
+      const rel = cLang === 'ja'
+        ? `真東から${off >= 0 ? '南' : '北'}へ${Math.abs(off)}°`
+        : `정동에서 ${off >= 0 ? '남' : '북'}쪽으로 ${Math.abs(off)}°`;
+      cOut.textContent = `${place ? place + ' · ' : ''}${cOut.dataset.prefix}: ${compassName(a, cLang)} (${rel}, ${cLang === 'ja' ? '方位角' : '방위각'} ${Math.round(a)}°)`;
+    };
+    show(Number(cBox.dataset.fallbackLat), Number(cBox.dataset.fallbackLon), cBox.dataset.fallbackPlace ?? '');
+
+    let gotSensor = false;
+    const handler = (e: DeviceOrientationEvent) => {
+      const ios = (e as DeviceOrientationEvent & { webkitCompassHeading?: number }).webkitCompassHeading;
+      const heading = typeof ios === 'number' ? ios : e.absolute && e.alpha != null ? 360 - e.alpha : null;
+      if (heading == null) return;
+      gotSensor = true;
+      dial?.setAttribute('transform', `rotate(${(-heading).toFixed(1)} 100 100)`);
+    };
+
+    cBtn?.addEventListener('click', async () => {
+      cBtn.disabled = true;
+      const DOE = window.DeviceOrientationEvent as unknown as { requestPermission?: () => Promise<string> } | undefined;
+      try {
+        if (DOE?.requestPermission) await DOE.requestPermission();
+      } catch { /* 거부해도 방위 숫자는 보여 준다 */ }
+      window.addEventListener('deviceorientationabsolute', handler as EventListener);
+      window.addEventListener('deviceorientation', handler);
+      navigator.geolocation?.getCurrentPosition(
+        (pos) => show(pos.coords.latitude, pos.coords.longitude, ''),
+        () => {},
+        { enableHighAccuracy: false, timeout: 10_000, maximumAge: 600_000 },
+      );
+      gaEventOnce('tool_used', { tool_id: 'sunrise-compass-2027' });
+      window.setTimeout(() => {
+        cBtn.disabled = false;
+        if (!gotSensor && note) note.textContent = cBox.dataset.noSensor ?? '';
+      }, 3000);
+    });
+  }
 </script>
