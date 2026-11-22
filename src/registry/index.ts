@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const nightSky1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#24345e",
+  domain: "ontology",
+  icon: "Moon",
+  id: "night-sky-1426",
+  path: "/night-sky-1426",
+  status: "production",
+  name: { ko: "내 생일 밤 1426 하늘", en: "The 1426 sky on my birthday", ja: "誕生日の夜の1426年の空", zh: "生日那晚的1426年星空", fr: "Le ciel de 1426 à mon anniversaire", es: "El cielo de 1426 en mi cumpleaños" },
+  description: { ko: "1426년 내 생일 밤, 한양 하늘엔 어떤 달과 행성이 떠 있었을까? 실록 달력과 천문 계산으로 인정·파루 무렵 하늘을 그려요.", en: "What moon and planets hung over Hanyang on your birthday night in 1426? Drawn from the Annals calendar and orbital calculation.", ja: "1426年の誕生日の夜、漢陽の空にはどんな月と惑星が？実録の暦と天文計算で描きます。", zh: "1426年你生日那晚，汉阳上空有怎样的月亮和行星？用实录历法和天文计算画出来。", fr: "Quelle lune et quelles planètes au-dessus de Hanyang le soir de votre anniversaire en 1426 ?", es: "¿Qué luna y planetas había sobre Hanyang la noche de tu cumpleaños en 1426?" },
+};
+
 const gyeonggongjangManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -720,6 +733,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  nightSky1426Manifest,
   gyeonggongjangManifest,
   joseonTimeManifest,
   future2626Manifest,

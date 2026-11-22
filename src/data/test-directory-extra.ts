@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "night-sky-1426",
+    title: {"ko": "내 생일 밤 1426 하늘 — 실록 달력과 오성 위치", "en": "The 1426 sky on my birthday", "ja": "誕生日の夜の1426年の空", "zh": "生日那晚的1426年星空", "fr": "Le ciel de 1426 à mon anniversaire", "es": "El cielo de 1426 en mi cumpleaños"},
+    description: {"ko": "1426년 생일 밤 한양의 달 모양과 다섯 행성 위치를 계산해요.", "en": "Moon phase and the five planets over Hanyang on your birthday in 1426.", "ja": "1426年の誕生日の夜の月と五星。", "zh": "1426年生日夜的月相和五星。", "fr": "Phase de la Lune et cinq planètes en 1426.", "es": "Fase lunar y cinco planetas en 1426."},
+  },
+  {
     slug: "gyeonggongjang",
     title: {"ko": "경공장 장적 속 나 — 경국대전 장인 뽑기", "en": "Me in the royal artisan register", "ja": "京工匠の匠籍の中の私", "zh": "京工匠匠籍里的我", "fr": "Moi, artisan royal de Joseon", "es": "Yo, artesano real de Joseon"},
     description: {"ko": "경국대전 경공장 인원 비율로 내 직종과 관청을 뽑아요.", "en": "Draw your trade and office by the 1485 artisan headcounts.", "ja": "経国大典の人数比で職種と官庁を引きます。", "zh": "按经国大典人数比例抽行当和官署。", "fr": "Tirez votre métier et votre office selon les effectifs de 1485.", "es": "Sortea tu oficio y oficina según las cifras de 1485."},
