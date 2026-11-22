@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { localePath, type Locale } from "../../../i18n";
 import { gaEvent } from "../../../lib/analytics/ga-event";
 import { EPISODES, isValidBirthday, rarityTier, type EpisodeId, type Rarity } from "../../../lib/past-life-1426";
+import { LIVES_KEY, cleanLives, type Lives } from "../../../lib/timeslip-lives";
 import { Badge } from "../../ui/badge";
 import { Button } from "../../ui/button";
 import { oneInText, pick, type L, type Six } from "./shared";
@@ -77,6 +78,7 @@ const T = {
   done: { ko: "도장 받음", en: "Stamped", ja: "スタンプ済み", zh: "已盖章", fr: "Tamponné", es: "Sellado" },
   next: { ko: "다음 여행", en: "Next trip", ja: "次の旅", zh: "下一站", fr: "Prochain voyage", es: "Próximo viaje" },
   allDone: { ko: "모든 시대를 다녀왔어요. 시간여행자 인증!", en: "Every era visited. Certified time traveller!", ja: "すべての時代を巡りました。時間旅行者に認定！", zh: "所有时代都去过了。认证时间旅行者！", fr: "Toutes les époques visitées. Voyageur du temps certifié !", es: "Todas las épocas visitadas. ¡Viajero del tiempo certificado!" },
+  lives: { ko: "나의 평행 인생 연표 보기", en: "See my parallel-lives timeline", ja: "わたしの並行人生年表を見る", zh: "查看我的平行人生年表", fr: "Voir ma frise des vies parallèles", es: "Ver mi línea de vidas paralelas" },
   reincarnation: { ko: "다음 생엔 어느 나라에서 태어날까?", en: "Where will you be born next life?", ja: "来世はどの国に生まれる？", zh: "下辈子会出生在哪个国家？", fr: "Où renaîtrez-vous ?", es: "¿Dónde nacerás en tu próxima vida?" },
 } satisfies Record<string, Six>;
 
@@ -89,7 +91,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
-const EPISODE_INFO: Record<EpisodeId, { icon: string; label: Six }> = {
+export const EPISODE_LABELS: Record<EpisodeId, { icon: string; label: Six }> = {
   "birthday-calendars": { icon: "📅", label: { ko: "내 생일, 옛 달력 7개로", en: "My birthday in 7 old calendars", ja: "誕生日を7つの暦で", zh: "我的生日，7种历法", fr: "Mon anniversaire en 7 calendriers", es: "Mi cumpleaños en 7 calendarios" } },
   "hoebinghwan-1789": { icon: "🌀", label: { ko: "회빙환 시뮬레이터", en: "Isekai simulator: 1789", ja: "転生シミュレーター 1789", zh: "穿越模拟器 1789", fr: "Simulateur d'isekai : 1789", es: "Simulador isekai: 1789" } },
   "domesday-1086": { icon: "📖", label: { ko: "1086 둠즈데이 북 속 나", en: "You in Domesday Book, 1086", ja: "1086年ドゥームズデイ・ブックの中の私", zh: "1086年末日审判书中的我", fr: "Vous dans le Domesday Book (1086)", es: "Tú en el Domesday Book (1086)" } },
@@ -292,6 +294,10 @@ export function renderCard(spec: CardSpec, paper?: HTMLImageElement, artImage?: 
 
 export function SaveCard({ l, testId, spec, filename }: { l: L; testId: EpisodeId; spec: CardSpec; filename: string }) {
   const [saved, setSaved] = useState(false);
+  useEffect(() => {
+    // Only a result the reader drew here goes on their timeline, never a friend's shared link.
+    if (freshDraws.has(testId)) recordLife(testId, spec);
+  }, [testId, spec.title, spec.subtitle, spec.kicker]);
   const [failedPaper, setFailedPaper] = useState(false);
   const [failedArt, setFailedArt] = useState(false);
   const paper = TIMESLIP_CARD_ART[testId];
@@ -421,7 +427,19 @@ export function FriendCompare({
 
 // ── Series stamps + next episode ─────────────────────────────────────────────
 
+const freshDraws = new Set<EpisodeId>();
+
+export function readLives(): Lives {
+  return cleanLives(readJson<unknown>(LIVES_KEY, {}));
+}
+export function recordLife(ep: EpisodeId, spec: CardSpec) {
+  const lives = readLives();
+  lives[ep] = { ep, title: spec.title, subtitle: spec.subtitle, kicker: spec.kicker, query: window.location.search, accent: spec.accent, at: Date.now() };
+  writeJson(LIVES_KEY, lives);
+}
+
 export function stampEpisode(episode: EpisodeId) {
+  freshDraws.add(episode);
   const stamps = readJson<string[]>(STAMP_KEY, []);
   if (!stamps.includes(episode)) writeJson(STAMP_KEY, [...stamps, episode]);
 }
@@ -443,7 +461,7 @@ export function SeriesNext({ l, locale, current, round }: { l: L; locale: Locale
       <ul className="mt-3 space-y-2">
         {EPISODES.map((e) => {
           const stamped = stamps.includes(e);
-          const info = EPISODE_INFO[e];
+          const info = EPISODE_LABELS[e];
           return (
             <li key={e}>
               <a
@@ -459,6 +477,11 @@ export function SeriesNext({ l, locale, current, round }: { l: L; locale: Locale
             </li>
           );
         })}
+        <li>
+          <a href={localePath(locale, "/parallel-lives")} className="flex min-h-11 items-center gap-2 rounded-xl px-3 py-2 text-sm font-bold text-primary underline">
+            <span aria-hidden="true">🧬</span> {pick(T.lives, l)}
+          </a>
+        </li>
         <li>
           <a href={localePath(locale, "/reincarnation-country")} className="flex min-h-11 items-center gap-2 rounded-xl px-3 py-2 text-sm font-bold text-primary underline">
             <span aria-hidden="true">🌍</span> {pick(T.reincarnation, l)}

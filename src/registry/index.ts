@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const parallelLivesManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2b1708",
+  domain: "ontology",
+  icon: "GitCommitVertical",
+  id: "parallel-lives",
+  path: "/parallel-lives",
+  status: "production",
+  name: { zh: "我的平行人生年表", en: "My parallel lives", es: "Mis vidas paralelas", fr: "Mes vies parallèles", ja: "わたしの並行人生年表", ko: "나의 평행 인생 연표" },
+  description: { zh: "把时空穿越系列中抽到的结果按时代排成一张年表，并保存为图片。", en: "Every result you drew in the time-slip series on one timeline, saved as an image.", es: "Todos tus resultados de la serie en una línea de tiempo, guardada como imagen.", fr: "Tous vos résultats de la série sur une frise, à enregistrer en image.", ja: "タイムスリップ・シリーズで引いた結果を時代順の年表にまとめ、画像で保存します。", ko: "타임슬립 시리즈에서 뽑은 나의 결과를 시대순 연표 한 장으로 모아 이미지로 저장해요." },
+};
+
 const birthdayCalendarsManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -603,6 +616,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  parallelLivesManifest,
   birthdayCalendarsManifest,
   hoebinghwan1789Manifest,
   domesday1086Manifest,
