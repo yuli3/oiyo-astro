@@ -1,0 +1,119 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import Census1911 from "../../components/tools/past-life/Census1911";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "1911 영국 센서스 속 나 — 하녀·광부·방직공, 그리고 '투표권 없으면 조사도 없다'",
+    description: "1911년 잉글랜드·웨일스의 실제 남녀별 직업 분포(하녀 173만, 금속·기계 148만, 광부 104만…)로 나를 뽑고, 그해 가구 조사표 칸(관계·결혼 햇수·자녀·직업·출생지)에 내 한 줄을 적어 봐요.",
+    heading: "1911 영국 센서스 속 나",
+    sub: "1911년 4월 2일 일요일 밤, 3,607만 명의 조사표",
+    intro: "1911년 4월 2일 밤, 잉글랜드와 웨일스의 모든 집에서 가구주가 조사표를 직접 채웠어요. 그 조사표가 지금까지 남아 있어요. 나는 어떤 한 줄로 적혔을까요? 여자라면 그날 밤 조사를 거부한 참정권 운동가들처럼 '세어지기를 거부'할 수도 있어요.",
+    howTitle: "어떻게 뽑나요",
+    how: [
+      "Vision of Britain이 정리한 1911년 직업 대분류 표(10세 이상, 남녀별)로 뽑아요. 여자 가사 서비스 173만 명, 남자 금속·기계 148만 명, 운송 140만 명, 광부 104만 명 등이에요. 직업이 없는 여자 약 1,003만 명도 함께 넣었어요.",
+      "직업이 없는 남자(학생·은퇴자)는 표에 수가 없어 뺐어요. 이름·마을·나이·결혼·자녀 수는 놀이용으로 고른 예시예요.",
+      "생일로 뽑으면 같은 생일은 언제나 같은 결과가 나와요. 생일은 링크에 들어가지 않아요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "1911년 센서스는 언제, 몇 명을 셌나요?", a: "1911년 4월 2일 일요일 밤에 그 집에서 잔 모든 사람을 셌어요. 잉글랜드·웨일스 인구는 약 3,607만 명, 스코틀랜드는 약 476만 명이었어요." },
+      { q: "'No vote, no census'는 무엇이었나요?", a: "여성 참정권 운동가들이 투표권이 없으니 조사에도 응하지 않겠다며 벌인 거부 운동이에요. 퍼트니 히스에서 캠핑하거나 앨드위치 스케이트장에서 밤을 새웠고, 에밀리 와일딩 데이비슨은 국회의사당 지하 예배당 벽장에 숨었어요. 벌금을 문 사람은 없었어요." },
+      { q: "1911년 조사표는 무엇이 새로웠나요?", a: "가구주가 직접 쓴 원본이 남아 있는 첫 센서스이고, 결혼한 여성에게 결혼 햇수와 낳은 자녀·살아 있는 자녀·죽은 자녀 수를 처음 물었어요. 업종과 집에서 일하는지도 따로 물었어요." },
+    ],
+  },
+  en: {
+    title: "You in the 1911 census of England and Wales: servant, miner, weaver, or 'No vote, no census'",
+    description: "Drawn by the real 1911 occupations by sex (1.73 million women in domestic service, 1.48 million men in metals, 1.04 million in mines…), with your line in the 1911 household schedule's columns.",
+    heading: "You in the 1911 census",
+    sub: "Census night, Sunday 2 April 1911",
+    intro: "On the night of 2 April 1911 every householder in England and Wales filled in the schedule by hand, and those forms survive. What did your line say? If you are a woman, you can also refuse to be counted, as the suffragettes did that night.",
+    howTitle: "How it works",
+    how: [
+      "You are drawn from the 1911 occupational orders by sex for people aged ten and over (Vision of Britain): 1.73 million women in domestic service, 1.48 million men in metals and machines, 1.40 million in transport, 1.04 million in mines, and about 10 million women with no occupation recorded.",
+      "Men with no occupation are left out because the table gives no count. Names, places, ages, marriages and children are invented examples.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "When was the 1911 census taken?", a: "On the night of Sunday 2 April 1911. England and Wales counted about 36.07 million people, Scotland about 4.76 million." },
+      { q: "What was 'No vote, no census'?", a: "A suffragette boycott: without the vote, women refused to be counted. Some camped on Putney Heath or skated all night at the Aldwych rink; Emily Wilding Davison hid in a cupboard under Parliament. No one was fined." },
+    ],
+  },
+  ja: {
+    title: "1911年英国国勢調査の中の私",
+    description: "1911年イングランド・ウェールズの実際の男女別職業分布（家事使用人の女性173万、金属・機械の男性148万…）で引き、世帯調査票の欄にあなたの一行を書きます。",
+    heading: "1911年英国国勢調査の中の私",
+    sub: "1911年4月2日日曜の夜の調査票",
+    intro: "1911年4月2日の夜、世帯主が自分で調査票を書き、その原本が残っています。女性なら、あの夜の参政権運動家のように調査を拒むこともできます。",
+    howTitle: "仕組み",
+    how: ["1911年の10歳以上男女別職業大分類（Vision of Britain）で引きます。名前・町・年齢・子の数は遊び用の例です。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "「No vote, no census」とは？", a: "投票権がないなら数えられることも拒む、という女性参政権運動の調査拒否です。" }],
+  },
+  zh: {
+    title: "1911年英国人口普查中的我",
+    description: "按1911年英格兰和威尔士真实男女职业分布（女佣173万、金属机械男工148万……）抽出你，并按住户普查表栏目写下你的一行。",
+    heading: "1911年英国人口普查中的我",
+    sub: "1911年4月2日星期日夜的普查表",
+    intro: "1911年4月2日夜，户主亲手填写普查表，原件保存至今。如果你是女性，也可以像那晚的参政运动者一样拒绝被统计。",
+    howTitle: "怎么抽",
+    how: ["按1911年十岁以上男女职业大类（Vision of Britain）抽取。姓名、地点、年龄、子女数为虚构示例。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "“No vote, no census”是什么？", a: "争取选举权的女性发起的拒绝普查运动：没有选票，就拒绝被计数。" }],
+  },
+  fr: {
+    title: "Vous au recensement anglais de 1911",
+    description: "Tiré selon les vrais métiers de 1911 par sexe (1,73 million de domestiques, 1,48 million d'hommes dans les métaux…), avec votre ligne dans les colonnes du bulletin de ménage.",
+    heading: "Vous au recensement de 1911",
+    sub: "Nuit du dimanche 2 avril 1911",
+    intro: "Le 2 avril 1911, chaque chef de ménage remplissait lui-même le bulletin, conservé jusqu'à nous. Femme, vous pouvez aussi refuser d'être comptée, comme les suffragettes.",
+    howTitle: "Comment ça marche",
+    how: ["Tirage selon les grands groupes de métiers de 1911 par sexe (Vision of Britain) ; noms, lieux, âges et enfants sont inventés."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Qu'était « No vote, no census » ?", a: "Un boycott des suffragettes : sans droit de vote, elles refusaient d'être comptées." }],
+  },
+  es: {
+    title: "Tú en el censo inglés de 1911",
+    description: "Sorteado según las ocupaciones reales de 1911 por sexo (1,73 millones de criadas, 1,48 millones de hombres en metales…), con tu línea en las columnas de la hoja del hogar.",
+    heading: "Tú en el censo de 1911",
+    sub: "Noche del domingo 2 de abril de 1911",
+    intro: "El 2 de abril de 1911 cada cabeza de familia rellenó la hoja a mano, y se conservan. Si eres mujer, también puedes negarte a ser contada, como las sufragistas.",
+    howTitle: "Cómo funciona",
+    how: ["Sorteo según los grandes grupos de oficios de 1911 por sexo (Vision of Britain); nombres, lugares, edades e hijos son inventados."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Qué fue «No vote, no census»?", a: "Un boicot sufragista: sin voto, las mujeres se negaron a ser contadas." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/census-1911/")} ogImage="/images/past-life-1426/og/census-1911.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><Census1911 locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["census1850", "domesday1086", "parallelLives"]} current="census1911" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

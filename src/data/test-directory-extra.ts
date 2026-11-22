@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "census-1911",
+    title: {"ko": "1911 영국 센서스 속 나 — 하녀·광부·방직공, 그리고 조사 거부", "en": "You in the 1911 census of England and Wales", "ja": "1911年英国国勢調査の中の私", "zh": "1911年英国人口普查中的我", "fr": "Vous au recensement anglais de 1911", "es": "Tú en el censo inglés de 1911"},
+    description: {"ko": "1911년 실제 남녀별 직업 비율로 나를 뽑고, 가구 조사표 칸(관계·결혼 햇수·자녀·직업·출생지)에 내 한 줄을 적어요.", "en": "Your line on the 1911 household schedule, drawn by the real occupations by sex.", "ja": "1911年の実際の男女別職業比率で、世帯調査票に私の一行を。", "zh": "按1911年真实男女职业比例，在住户普查表上写下我的一行。", "fr": "Votre ligne sur le bulletin de 1911, selon les vrais métiers par sexe.", "es": "Tu línea en la hoja de 1911, según las ocupaciones reales por sexo."},
+  },
+  {
     slug: "ellis-1907",
     title: {"ko": "1907 엘리스섬 승객 명부 속 나 — 이민 최고 기록의 해", "en": "You on a 1907 Ellis Island passenger manifest", "ja": "1907年エリス島の乗客名簿の中の私", "zh": "1907年埃利斯岛乘客名单中的我", "fr": "Vous à Ellis Island en 1907", "es": "Tú en Ellis Island en 1907"},
     description: {"ko": "1907년 실제 출신국 비율로 나를 뽑고, 승객 명부 칸(나이·직업·가진 돈·목적지·마중 나온 사람)에 내 한 줄을 적어요.", "en": "Your line on a 1907 manifest, drawn by the real countries of origin.", "ja": "1907年の実際の出身国比率で、乗客名簿に私の一行を。", "zh": "按1907年真实来源国比例，在乘客名单上写下我的一行。", "fr": "Votre ligne sur une liste de 1907, selon les vrais pays d'origine.", "es": "Tu línea en una lista de 1907, según los países de origen reales."},
