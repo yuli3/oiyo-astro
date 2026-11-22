@@ -1,0 +1,229 @@
+---
+/**
+ * 2027 만다라트 — 81칸 새해 목표 계획표. 6개 언어(목표 세우기는 나라 구분이 없는 도구).
+ * 편집기는 client:visible(첫 화면 아래), 쓴 내용은 localStorage에만. 다음 작업 2차 #2 (2026-11-22).
+ */
+import Layout from '../../layouts/Layout.astro';
+import Mandalart2027 from '../../components/tools/seasonal/Mandalart2027';
+import { LOCALES, localePath, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+type Copy = {
+  title: string; description: string; eyebrow: string; h1: string; lead: string;
+  howH: string; how: [string, string][]; tipsH: string; tips: string[];
+  faqH: string; faqs: { q: string; a: string }[]; links: [string, string][]; linksH: string;
+};
+
+const C: Record<Locale, Copy> = {
+  ko: {
+    title: '2027 만다라트 양식 — 81칸 새해 목표 계획표 바로 쓰고 이미지로 저장',
+    description: '만다라트 양식을 인쇄 없이 바로 채워요. 가운데 핵심 목표, 세부 목표 8개, 실천 64개를 쓰고 휴대폰 배경·인스타에 올릴 이미지로 저장해요. 예시 채우기, 자동 저장, 회원가입 없음.',
+    eyebrow: '새해 계획 · 2027 정미년',
+    h1: '2027 만다라트 81칸 계획표',
+    lead: '목표 하나를 8개로, 8개를 다시 64개 실천으로 쪼개면 "올해는 꼭"이 "오늘 할 일"이 돼요. 칸을 누르고 바로 쓰세요. 쓴 내용은 이 브라우저에만 저장돼요.',
+    howH: '만다라트 쓰는 순서',
+    how: [
+      ['1. 가운데 핵심 목표', '2027년 끝에 "이건 됐다"고 말하고 싶은 것 하나. 너무 크면 1년 안에 끝나는 크기로 줄여요.'],
+      ['2. 세부 목표 8개', '핵심 목표를 이루려면 무엇이 갖춰져야 하는지 8가지. 몸·돈·일·관계처럼 영역으로 나누면 빠져요.'],
+      ['3. 실천 64개', '세부 목표마다 실제로 할 행동 8개. "주 3회", "하루 15분"처럼 숫자를 넣어야 지켰는지 알 수 있어요.'],
+      ['4. 이미지로 저장', '완성한 표를 이미지로 저장해 휴대폰 배경이나 책상 앞에 두면 1년 내내 다시 보게 돼요.'],
+    ],
+    tipsH: '끝까지 지키는 만다라트',
+    tips: ['8칸을 다 못 채워도 괜찮아요. 빈칸은 1월에 채워도 돼요.', '실천은 "~하지 않기"보다 "~하기"로 써야 쉬워요.', '한 달에 한 번 표를 열어 지킨 칸을 확인해요.', '64개를 한꺼번에 하지 말고 분기마다 16개씩 골라요.'],
+    faqH: '자주 묻는 질문',
+    faqs: [
+      { q: '만다라트가 뭔가요?', a: '일본 디자이너 이마이즈미 히로아키가 1987년에 만든 발상법이에요. 3×3 칸 9개를 이어 81칸 표를 만들고, 가운데 목표를 둘레로 펼쳐 가요. 한 고등학생 야구 선수가 이 표로 꿈을 이뤘다는 이야기로 널리 알려졌어요.' },
+      { q: '인쇄용 양식도 되나요?', a: '"이미지로 저장"을 누르면 1080×1350 이미지가 만들어져요. 그대로 인쇄하거나 휴대폰 배경으로 쓸 수 있어요.' },
+      { q: '쓴 내용은 어디에 저장되나요?', a: '이 브라우저(기기)에만 자동 저장돼요. 서버로 보내지 않아서, 다른 기기에서 이어 쓰려면 이미지로 저장해 두세요.' },
+      { q: '칸이 81개인데 왜 73칸이라고 나오나요?', a: '가운데 블록 둘레 8칸과 바깥 블록 가운데 칸은 같은 세부 목표라 한 번만 셉니다. 핵심 1 + 세부 8 + 실천 64 = 73칸이에요.' },
+    ],
+    linksH: '함께 보기',
+    links: [['/new-year-2027', '🐑 2027 신년운세 모음'], ['/sunrise-2027', '☀️ 2027 새해 첫 일출 시간'], ['/tojeong-2027', '📜 2027 토정비결'], ['/tarot/2027', '🃏 2027 신년 타로']],
+  },
+  en: {
+    title: '2027 Mandalart Template — Free 9×9 Goal-Setting Chart, Save as Image',
+    description: 'Fill in a Mandalart chart online: one core goal, 8 sub-goals and 64 actions for 2027. Autosaves in your browser, one-tap example, and saves as an image for your phone wallpaper or Instagram. No sign-up.',
+    eyebrow: 'New Year planning · 2027',
+    h1: '2027 Mandalart goal chart',
+    lead: 'Split one goal into 8, then each of those into 8 actions, and "this year for sure" turns into "today’s to-do". Tap a block and start typing. Everything stays in this browser.',
+    howH: 'How to fill in a Mandalart',
+    how: [
+      ['1. Core goal in the middle', 'One thing you want to say "done" about at the end of 2027. If it is huge, shrink it to a one-year size.'],
+      ['2. Eight sub-goals', 'What has to be in place to reach it. Thinking in areas like body, money, work and people helps.'],
+      ['3. Sixty-four actions', 'Eight concrete actions per sub-goal. Add numbers such as "3× a week" or "15 min a day" so you can tell whether you did them.'],
+      ['4. Save it as an image', 'Use the finished chart as a wallpaper or print it for your desk so you see it all year.'],
+    ],
+    tipsH: 'Making it stick',
+    tips: ['You don’t need all 64 on day one; fill the gaps in January.', 'Write actions as "do" rather than "don’t".', 'Open the chart once a month and check what you kept.', 'Pick 16 actions per quarter instead of all 64 at once.'],
+    faqH: 'FAQ',
+    faqs: [
+      { q: 'What is a Mandalart?', a: 'A brainstorming chart created by Japanese designer Hiroaki Imaizumi in 1987: nine 3×3 grids form a 9×9 chart with the main goal in the center. It became famous when a high-school baseball player used one to plan his path to the pros.' },
+      { q: 'Can I print it?', a: 'Yes. "Save & share as image" makes a 1080×1350 PNG you can print or set as a wallpaper.' },
+      { q: 'Where is my chart stored?', a: 'Only in this browser on this device. Nothing is sent to a server, so save the image if you want it elsewhere.' },
+      { q: 'Why 73 cells instead of 81?', a: 'The 8 sub-goals appear twice (around the center and in the middle of each outer block), so they are counted once: 1 + 8 + 64 = 73.' },
+    ],
+    linksH: 'See also',
+    links: [['/tarot/2027', '🃏 2027 New Year tarot'], ['/zodiac/yearly', '♈ Yearly horoscope']],
+  },
+  ja: {
+    title: '2027年 マンダラチャート — 81マスの目標シートをその場で記入・画像保存',
+    description: 'マンダラチャートを印刷せずにスマホで記入。中心目標、8つの目標、64の行動を書いて、待ち受けやSNS用の画像で保存できます。記入例ボタン、自動保存、登録不要。',
+    eyebrow: '新年の目標 · 2027',
+    h1: '2027年 マンダラチャート',
+    lead: 'ひとつの目標を8つに、さらに64の行動に分けると「今年こそ」が「今日やること」に変わります。ブロックをタップしてすぐ書けます。内容はこのブラウザにだけ保存されます。',
+    howH: '書き方の順番',
+    how: [
+      ['1. 中心に目標', '2027年の終わりに「できた」と言いたいことをひとつ。大きすぎるなら1年で届く大きさに。'],
+      ['2. 8つの目標', '中心目標を実現するために必要なこと。体・お金・仕事・人間関係など分野で考えると埋まりやすいです。'],
+      ['3. 64の行動', '各目標に具体的な行動を8つ。「週3回」「1日15分」など数字を入れると達成が測れます。'],
+      ['4. 画像で保存', '完成したら待ち受けや印刷して机の前へ。1年中目に入るようにします。'],
+    ],
+    tipsH: '続けるコツ',
+    tips: ['最初から全部埋めなくて大丈夫。空欄は1月に。', '「〜しない」より「〜する」で書く。', '月に1回開いて、守れたマスを確認する。', '64個を一度にではなく、四半期ごとに16個選ぶ。'],
+    faqH: 'よくある質問',
+    faqs: [
+      { q: 'マンダラチャートとは？', a: 'デザイナーの今泉浩晃氏が1987年に考案した発想法で、3×3のマスを9つ並べた81マスの中心に目標を置いて広げていきます。高校時代の野球選手が使ったことで広く知られました。' },
+      { q: '印刷できますか？', a: '「画像で保存・共有」で1080×1350の画像を作成します。そのまま印刷や待ち受けに使えます。' },
+      { q: '内容はどこに保存されますか？', a: 'このブラウザ（端末）にだけ自動保存されます。サーバーには送りません。' },
+      { q: 'なぜ73マスなのですか？', a: '8つの目標は中央ブロックと外側ブロックの中心の2か所に出てくるので1回だけ数えます。1＋8＋64＝73マスです。' },
+    ],
+    linksH: 'あわせて見る',
+    links: [['/oshogatsu-2027', '🎍 2027年 お正月カレンダー'], ['/sunrise-2027', '☀️ 2027年 初日の出の時刻']],
+  },
+  zh: {
+    title: '2027 曼陀罗九宫格 — 81 格新年目标计划表，在线填写并保存图片',
+    description: '在线填写曼陀罗思考法九宫格：1 个核心目标、8 个子目标、64 个行动。自动保存、一键示例，可保存为手机壁纸或分享图片，无需注册。',
+    eyebrow: '新年计划 · 2027',
+    h1: '2027 曼陀罗九宫格目标表',
+    lead: '把一个目标拆成 8 个，再拆成 64 个行动，"今年一定要"就变成了"今天要做的事"。点一个区块就能开始写，内容只保存在这个浏览器里。',
+    howH: '填写顺序',
+    how: [
+      ['1. 中间写核心目标', '2027 年底最想说"做到了"的一件事。太大就缩小到一年能完成的程度。'],
+      ['2. 8 个子目标', '实现核心目标需要具备什么。按身体、理财、工作、人际等领域来想更容易。'],
+      ['3. 64 个行动', '每个子目标写 8 个具体行动，加上"每周 3 次""每天 15 分钟"这样的数字。'],
+      ['4. 保存成图片', '做成手机壁纸或打印贴在桌前，一整年都能看到。'],
+    ],
+    tipsH: '坚持下去的方法',
+    tips: ['不用一次填满，空格可以一月再补。', '用"去做"而不是"不做"来写行动。', '每月打开一次，看看完成了哪些格。', '每季度挑 16 个行动，不要同时做 64 个。'],
+    faqH: '常见问题',
+    faqs: [
+      { q: '什么是曼陀罗九宫格？', a: '日本设计师今泉浩晃在 1987 年提出的思考工具：九个 3×3 方格组成 81 格，核心目标放在正中央向外展开。因一位高中棒球选手用它规划职业道路而广为人知。' },
+      { q: '可以打印吗？', a: '点"保存·分享为图片"会生成 1080×1350 的图片，可直接打印或设为壁纸。' },
+      { q: '内容保存在哪里？', a: '只自动保存在这个浏览器（设备）里，不会上传到服务器。' },
+      { q: '为什么显示 73 格？', a: '8 个子目标会在中间区块和外圈区块中心各出现一次，只计一次：1＋8＋64＝73。' },
+    ],
+    linksH: '相关内容',
+    links: [['/tarot/2027', '🃏 2027 新年塔罗'], ['/zodiac/yearly', '♈ 星座年度运势']],
+  },
+  fr: {
+    title: 'Mandalart 2027 — modèle gratuit 9×9 pour vos objectifs, à enregistrer en image',
+    description: 'Remplissez un Mandalart en ligne : 1 objectif central, 8 sous-objectifs et 64 actions pour 2027. Sauvegarde automatique, exemple en un clic, export en image pour fond d’écran ou Instagram. Sans inscription.',
+    eyebrow: 'Résolutions · 2027',
+    h1: 'Mandalart 2027 : votre tableau d’objectifs',
+    lead: 'Découpez un objectif en 8, puis chacun en 8 actions : « cette année, c’est sûr » devient « à faire aujourd’hui ». Touchez un bloc et écrivez. Tout reste dans ce navigateur.',
+    howH: 'Comment le remplir',
+    how: [
+      ['1. L’objectif au centre', 'Une chose dont vous voulez dire « c’est fait » fin 2027. Trop grande ? Ramenez-la à la taille d’une année.'],
+      ['2. Huit sous-objectifs', 'Ce qui doit être en place pour y arriver. Pensez par domaines : corps, argent, travail, relations…'],
+      ['3. Soixante-quatre actions', 'Huit actions concrètes par sous-objectif, avec des chiffres (« 3×/semaine », « 15 min/jour ») pour pouvoir vérifier.'],
+      ['4. Enregistrer l’image', 'En fond d’écran ou imprimée près du bureau, vous la reverrez toute l’année.'],
+    ],
+    tipsH: 'Pour tenir dans la durée',
+    tips: ['Pas besoin de tout remplir le premier jour.', 'Écrivez « faire » plutôt que « ne pas faire ».', 'Rouvrez le tableau une fois par mois.', 'Choisissez 16 actions par trimestre plutôt que 64 d’un coup.'],
+    faqH: 'Questions fréquentes',
+    faqs: [
+      { q: 'Qu’est-ce qu’un Mandalart ?', a: 'Une méthode créée en 1987 par le designer japonais Hiroaki Imaizumi : neuf grilles 3×3 forment un tableau de 81 cases avec l’objectif au centre. Elle est devenue célèbre grâce à un lycéen joueur de baseball qui l’a utilisée pour planifier sa carrière.' },
+      { q: 'Peut-on l’imprimer ?', a: 'Oui : le bouton image crée un PNG de 1080×1350 à imprimer ou à mettre en fond d’écran.' },
+      { q: 'Où sont stockées mes réponses ?', a: 'Uniquement dans ce navigateur. Rien n’est envoyé à un serveur.' },
+      { q: 'Pourquoi 73 cases et pas 81 ?', a: 'Les 8 sous-objectifs apparaissent deux fois ; ils ne comptent qu’une fois : 1 + 8 + 64 = 73.' },
+    ],
+    linksH: 'À voir aussi',
+    links: [['/tarot/2027', '🃏 Tarot 2027'], ['/zodiac/yearly', '♈ Horoscope annuel']],
+  },
+  es: {
+    title: 'Mandalart 2027 — plantilla gratis 9×9 para tus metas, guárdala como imagen',
+    description: 'Rellena un Mandalart en línea: 1 meta central, 8 submetas y 64 acciones para 2027. Guardado automático, ejemplo en un toque y exportación como imagen para fondo de pantalla o Instagram. Sin registro.',
+    eyebrow: 'Propósitos · 2027',
+    h1: 'Mandalart 2027: tu cuadro de metas',
+    lead: 'Divide una meta en 8 y cada una en 8 acciones: «este año sí» se convierte en «lo de hoy». Toca un bloque y escribe. Todo se queda en este navegador.',
+    howH: 'Cómo rellenarlo',
+    how: [
+      ['1. La meta en el centro', 'Algo de lo que quieras decir «hecho» a finales de 2027. Si es enorme, redúcela a un año.'],
+      ['2. Ocho submetas', 'Lo que necesitas para lograrla. Piensa por áreas: cuerpo, dinero, trabajo, personas…'],
+      ['3. Sesenta y cuatro acciones', 'Ocho acciones concretas por submeta, con números («3 veces/semana», «15 min/día») para poder comprobarlas.'],
+      ['4. Guárdalo como imagen', 'Ponlo de fondo de pantalla o imprímelo para verlo todo el año.'],
+    ],
+    tipsH: 'Para cumplirlo',
+    tips: ['No hace falta completarlo el primer día.', 'Escribe «hacer» en lugar de «no hacer».', 'Ábrelo una vez al mes y marca lo cumplido.', 'Elige 16 acciones por trimestre en vez de las 64 a la vez.'],
+    faqH: 'Preguntas frecuentes',
+    faqs: [
+      { q: '¿Qué es un Mandalart?', a: 'Un método creado en 1987 por el diseñador japonés Hiroaki Imaizumi: nueve cuadrículas de 3×3 forman un cuadro de 81 casillas con la meta en el centro. Se hizo famoso porque un jugador de béisbol de instituto lo usó para planificar su carrera.' },
+      { q: '¿Se puede imprimir?', a: 'Sí: el botón de imagen crea un PNG de 1080×1350 para imprimir o usar como fondo.' },
+      { q: '¿Dónde se guarda?', a: 'Solo en este navegador. No se envía nada a ningún servidor.' },
+      { q: '¿Por qué 73 casillas y no 81?', a: 'Las 8 submetas aparecen dos veces y se cuentan una sola: 1 + 8 + 64 = 73.' },
+    ],
+    linksH: 'Ver también',
+    links: [['/tarot/2027', '🃏 Tarot 2027'], ['/zodiac/yearly', '♈ Horóscopo anual']],
+  },
+};
+
+const t = C[locale];
+const ld = [
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: t.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: t.h1, applicationCategory: 'LifestyleApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0' }, description: t.description },
+];
+---
+<Layout title={t.title} description={t.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">{t.eyebrow}</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">{t.h1}</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">{t.lead}</p>
+
+    <div class="mt-6">
+      <Mandalart2027 client:visible locale={locale} />
+    </div>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">{t.howH}</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        {t.how.map(([h, p]) => (
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="text-base font-black">{h}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{p}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{t.tipsH}</h2>
+      <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground">
+        {t.tips.map((tip) => <li>{tip}</li>)}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{t.faqH}</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {t.faqs.map((f) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer text-sm font-black">{f.q}</summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label={t.linksH}>
+      {t.links.map(([href, label]) => (
+        <a href={localePath(locale, href)} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">{label}</a>
+      ))}
+    </nav>
+  </section>
+</Layout>
