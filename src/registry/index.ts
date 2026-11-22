@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const sejongBirthdaysManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#1e3a5f",
+  domain: "ontology",
+  icon: "ScrollText",
+  id: "sejong-birthdays",
+  path: "/sejong-birthdays",
+  status: "production",
+  name: { ko: "다른 해의 내 생일 실록", en: "My birthday across Sejong's reign", ja: "別の年の誕生日の実録", zh: "其他年份的生日实录", fr: "Mon anniversaire sous Sejong", es: "Mi cumpleaños bajo Sejong" },
+  description: { ko: "세종 재위 32년 동안 해마다 내 생일에 실록에 적힌 일을 연표로 펼쳐요.", en: "What the Annals recorded on your birthday in each of Sejong's 32 years.", ja: "世宗在位32年、毎年の誕生日の実録を年表で。", zh: "世宗在位32年里，每年生日那天的实录。", fr: "Votre anniversaire dans les Annales, chaque année du règne de Sejong.", es: "Tu cumpleaños en los Anales, cada año del reinado de Sejong." },
+};
+
 const hanyangFire1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -772,6 +785,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  sejongBirthdaysManifest,
   hanyangFire1426Manifest,
   cotton1426Manifest,
   sillokNameHanjaManifest,

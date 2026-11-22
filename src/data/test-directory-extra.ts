@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "sejong-birthdays",
+    title: {"ko": "다른 해의 내 생일 실록 — 세종 32년", "en": "My birthday across Sejong's reign", "ja": "別の年の誕生日の実録", "zh": "其他年份的生日实录", "fr": "Mon anniversaire sous Sejong", "es": "Mi cumpleaños bajo Sejong"},
+    description: {"ko": "1419~1450년 해마다 내 생일의 실록 기사.", "en": "Your birthday in the Annals, 1419–1450.", "ja": "1419〜1450年の毎年の誕生日の記事。", "zh": "1419–1450年每年生日的记事。", "fr": "Votre anniversaire dans les Annales, 1419–1450.", "es": "Tu cumpleaños en los Anales, 1419–1450."},
+  },
+  {
     slug: "hanyang-fire-1426",
     title: {"ko": "1426 한양 대화재로 회귀 — 불 대책 5가지", "en": "Back to the 1426 Hanyang fire", "ja": "1426漢陽大火へ回帰", "zh": "回到1426汉阳大火", "fr": "Retour au grand incendie de 1426", "es": "Regreso al gran incendio de 1426"},
     description: {"ko": "대화재 날로 돌아가 불 대책을 골라 실록과 맞춰요.", "en": "Pick fire measures and check them against the Annals.", "ja": "防火策を選んで実録と照合。", "zh": "选防火对策，与实录对照。", "fr": "Choisissez des mesures et comparez aux Annales.", "es": "Elige medidas y compáralas con los Anales."},
