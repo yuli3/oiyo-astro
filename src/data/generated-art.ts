@@ -1,5 +1,16 @@
 // 2026-11-06: exact route maps keep unrelated pages on their existing artwork.
 export const GENERATED_OG: Readonly<Record<string,string>> = {
+  // 2026-11-22: Grok Bot last run, seasonal pages that had no share image.
+  "/after-suneung-major": "/images/grok-20261122/oiyo-og-after-suneung-major.webp",
+  "/born-year": "/images/grok-20261122/oiyo-og-born-year.webp",
+  "/christmas-personality-test": "/images/grok-20261122/oiyo-og-christmas-personality-test.webp",
+  "/chunjie-2027": "/images/grok-20261122/oiyo-og-chunjie-2027.webp",
+  "/daeboreum-2027": "/images/grok-20261122/oiyo-og-daeboreum-2027.webp",
+  "/dongji-2026": "/images/grok-20261122/oiyo-og-dongji-2026.webp",
+  "/oshogatsu-2027": "/images/grok-20261122/oiyo-og-oshogatsu-2027.webp",
+  "/reincarnation-country/data": "/images/grok-20261122/oiyo-og-reincarnation-country-data.webp",
+  "/sebaetdon-2027": "/images/grok-20261122/oiyo-og-sebaetdon-2027.webp",
+  "/setsubun-2027": "/images/grok-20261122/oiyo-og-setsubun-2027.webp",
   "/decision-making-test": "/images/grok-20261106/oiyo-og-test-decision-making.webp",
   "/empathy/test": "/images/grok-20261106/oiyo-og-test-empathy.webp",
   "/burnout/test": "/images/grok-20261106/oiyo-og-test-burnout.webp",
