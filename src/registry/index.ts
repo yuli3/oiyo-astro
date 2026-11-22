@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const future2626Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2d4a6b",
+  domain: "ontology",
+  icon: "Landmark",
+  id: "future-2626",
+  path: "/future-2626",
+  status: "production",
+  name: { ko: "2626 미래 박물관 속 내 물건", en: "Your things in a museum, 2626", ja: "2626年の博物館の私の物", zh: "2626年博物馆里的我的东西", fr: "Vos affaires au musée en 2626", es: "Tus cosas en un museo en 2626" },
+  description: { ko: "거꾸로 타임슬립. 내 스마트폰·이어폰·텀블러가 600년 뒤 박물관 유물이 된다면, 학자들은 뭐라고 설명할까요?", en: "Time-slip in reverse: how would a museum in 2626 label your phone, earbuds and tumbler?", ja: "逆さまのタイムスリップ。私のスマホやイヤホンが600年後の博物館でどう説明される？", zh: "反向穿越：六百年后的博物馆会怎样介绍你的手机、耳机和保温杯？", fr: "Voyage à l'envers : comment un musée de 2626 décrirait-il votre téléphone ?", es: "Viaje al revés: ¿cómo describiría un museo de 2626 tu móvil?" },
+};
+
 const joseonNamesManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -681,6 +694,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  future2626Manifest,
   joseonNamesManifest,
   jinshin1872Manifest,
   huangce1391Manifest,

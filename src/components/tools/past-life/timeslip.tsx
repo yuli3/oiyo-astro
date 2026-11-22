@@ -93,6 +93,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 export const EPISODE_LABELS: Record<EpisodeId, { icon: string; label: Six }> = {
+  "future-2626": { icon: "🏛️", label: { ko: "2626 미래 박물관 속 내 물건", en: "Your things in a museum, 2626", ja: "2626年の博物館の私の物", zh: "2626年博物馆里的我的东西", fr: "Vos affaires au musée en 2626", es: "Tus cosas en un museo en 2626" } },
   "joseon-names": { icon: "🖌️", label: { ko: "조선 시대 내 이름 짓기", en: "My names in Joseon Korea", ja: "朝鮮時代の私の名前", zh: "我在朝鲜时代的名字", fr: "Mes noms dans la Corée de Joseon", es: "Mis nombres en la Corea de Joseon" } },
   "jinshin-1872": { icon: "🏮", label: { ko: "1872 임신호적 속 우리 집", en: "Your household in the 1872 Jinshin koseki", ja: "壬申戸籍の中のわが家", zh: "1872年壬申户籍里的我家", fr: "Votre foyer au koseki Jinshin de 1872", es: "Tu hogar en el koseki Jinshin de 1872" } },
   "huangce-1391": { icon: "📒", label: { ko: "1391 명나라 황책 속 우리 집", en: "Your household in the 1391 Ming Yellow Register", ja: "1391年明の黄冊の中のわが家", zh: "1391年明代黄册里的我家", fr: "Votre foyer au registre jaune Ming de 1391", es: "Tu hogar en el registro amarillo Ming de 1391" } },
