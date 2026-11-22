@@ -93,6 +93,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 export const EPISODE_LABELS: Record<EpisodeId, { icon: string; label: Six }> = {
+  "sejong-birthdays": { icon: "📜", label: { ko: "다른 해의 내 생일 실록", en: "My birthday across Sejong's reign", ja: "別の年の誕生日の実録", zh: "其他年份的生日实录", fr: "Mon anniversaire sous Sejong", es: "Mi cumpleaños bajo Sejong" } },
   "hanyang-fire-1426": { icon: "🔥", label: { ko: "1426 한양 대화재로 회귀", en: "Back to the 1426 Hanyang fire", ja: "1426漢陽大火へ回帰", zh: "回到1426汉阳大火", fr: "Retour au grand incendie de 1426", es: "Regreso al gran incendio de 1426" } },
   "cotton-1426": { icon: "🧵", label: { ko: "면포 환율 계산기", en: "Cotton exchange 1426", ja: "綿布レート計算機", zh: "棉布汇率计算器", fr: "Change en coton 1426", es: "Cambio en algodón 1426" } },
   "sillok-name-hanja": { icon: "🖋️", label: { ko: "실록 속 내 이름 한자", en: "My name in the 1426 Annals", ja: "実録の中の私の名前の漢字", zh: "实录里我名字的汉字", fr: "Mon nom dans les Annales de 1426", es: "Mi nombre en los Anales de 1426" } },
