@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "sillok-name-hanja",
+    title: {"ko": "실록 속 내 이름 한자 — 세종실록 1426 한자 검색", "en": "My name in the 1426 Annals", "ja": "実録の中の私の名前の漢字", "zh": "实录里我名字的汉字", "fr": "Mon nom dans les Annales de 1426", "es": "Mi nombre en los Anales de 1426"},
+    description: {"ko": "이름 한자가 1426년 실록에 몇 번, 어디서 처음 나오는지 찾아요.", "en": "Count your name's characters in the 1426 Annals.", "ja": "名前の漢字が1426年の実録に何回出るか。", "zh": "查名字汉字在1426年实录中的次数。", "fr": "Comptez les caractères de votre nom dans les Annales.", "es": "Cuenta los caracteres de tu nombre en los Anales."},
+  },
+  {
     slug: "night-sky-1426",
     title: {"ko": "내 생일 밤 1426 하늘 — 실록 달력과 오성 위치", "en": "The 1426 sky on my birthday", "ja": "誕生日の夜の1426年の空", "zh": "生日那晚的1426年星空", "fr": "Le ciel de 1426 à mon anniversaire", "es": "El cielo de 1426 en mi cumpleaños"},
     description: {"ko": "1426년 생일 밤 한양의 달 모양과 다섯 행성 위치를 계산해요.", "en": "Moon phase and the five planets over Hanyang on your birthday in 1426.", "ja": "1426年の誕生日の夜の月と五星。", "zh": "1426年生日夜的月相和五星。", "fr": "Phase de la Lune et cinq planètes en 1426.", "es": "Fase lunar y cinco planetas en 1426."},

@@ -256,6 +256,19 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const sillokNameHanjaManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#7a2e2e",
+  domain: "ontology",
+  icon: "PenLine",
+  id: "sillok-name-hanja",
+  path: "/sillok-name-hanja",
+  status: "production",
+  name: { ko: "실록 속 내 이름 한자", en: "My name in the 1426 Annals", ja: "実録の中の私の名前の漢字", zh: "实录里我名字的汉字", fr: "Mon nom dans les Annales de 1426", es: "Mi nombre en los Anales de 1426" },
+  description: { ko: "내 이름 한자가 1426년 『세종실록』에 몇 번 나올까? 기사 1,149건, 한자 8만 8천 자에서 찾아 처음 나온 기사까지 보여 줘요.", en: "How often do your name's characters appear in the 1426 Sejong Sillok? Searched across 1,149 entries and 88,000 characters.", ja: "私の名前の漢字は1426年の『世宗実録』に何回？1,149件、8万8千字から探します。", zh: "你名字的汉字在1426年《世宗实录》里出现几次？在1,149条、8.8万字中查找。", fr: "Combien de fois les caractères de votre nom apparaissent-ils dans les Annales de 1426 ?", es: "¿Cuántas veces aparecen los caracteres de tu nombre en los Anales de 1426?" },
+};
+
 const nightSky1426Manifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -733,6 +746,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  sillokNameHanjaManifest,
   nightSky1426Manifest,
   gyeonggongjangManifest,
   joseonTimeManifest,

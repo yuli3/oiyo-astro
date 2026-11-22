@@ -242,6 +242,7 @@ export const SEARCH_ONLY_PATHS: Record<string, string> = {
   "/us-birth-state": "출생 통계 가중 추첨",
   "/silla-golpum": "역사 제도 상한 추첨(골품 비율은 놀이용)",
   "/france-1789": "역사 인구 추정 가중 추첨",
+  "/sillok-name-hanja": "검색(세종실록 8년 원문 한자 빈도)",
   "/night-sky-1426": "계산(JPL 근사 궤도 요소·Meeus 달·실록 달력)",
   "/gyeonggongjang": "추첨(경국대전 경공장 관청·직종별 인원 가중)",
   "/joseon-time": "계산(시태양시·12시·96각/100각·경점)",

@@ -93,6 +93,7 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 export const EPISODE_LABELS: Record<EpisodeId, { icon: string; label: Six }> = {
+  "sillok-name-hanja": { icon: "🖋️", label: { ko: "실록 속 내 이름 한자", en: "My name in the 1426 Annals", ja: "実録の中の私の名前の漢字", zh: "实录里我名字的汉字", fr: "Mon nom dans les Annales de 1426", es: "Mi nombre en los Anales de 1426" } },
   "night-sky-1426": { icon: "🌌", label: { ko: "내 생일 밤 1426 하늘", en: "The 1426 sky on my birthday", ja: "誕生日の夜の1426年の空", zh: "生日那晚的1426年星空", fr: "Le ciel de 1426 à mon anniversaire", es: "El cielo de 1426 en mi cumpleaños" } },
   "gyeonggongjang": { icon: "🔨", label: { ko: "경공장 장적 속 나", en: "Me in the royal artisan register", ja: "京工匠の匠籍の中の私", zh: "京工匠匠籍里的我", fr: "Moi, artisan royal de Joseon", es: "Yo, artesano real de Joseon" } },
   "joseon-time": { icon: "🕰️", label: { ko: "지금 시각을 조선 시각으로", en: "Now, in Joseon time", ja: "今を朝鮮の時刻で", zh: "此刻的朝鲜时刻", fr: "Maintenant, à l'heure de Joseon", es: "Ahora, en hora de Joseon" } },
