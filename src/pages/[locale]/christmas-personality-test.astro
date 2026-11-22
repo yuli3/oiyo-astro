@@ -20,6 +20,16 @@ const meta: Record<XmasLang, { title: string; description: string; typesTitle: s
   es: { title: 'Test de personalidad navideña — ¿Papá Noel o Muñeco de nieve?', description: 'Ocho preguntas para descubrir tu tipo navideño: Papá Noel, Reno, Muñeco de nieve, Galleta de jengibre o Árbol. Con el consejo del año y tu mejor pareja.', typesTitle: 'Los cinco tipos navideños', faqTitle: 'Preguntas frecuentes', faqs: [['¿Cómo se decide el resultado?', 'Gana el tipo que más elijas en 8 preguntas. Si hay empate, cuenta tu respuesta más reciente.'], ['¿Es un test psicológico?', 'No. Es un quiz navideño para divertirse y no diagnostica la personalidad.'], ['¿Puedo compararme con amigos?', 'Comparte tu resultado y mira si tu amigo es tu mejor pareja.']] },
 };
 const m = meta[l];
+// 2026-11-22 think tank: hand holiday traffic to the new gift-exchange draw on tools.
+const santa: Record<XmasLang, [string, string]> = {
+  ko: ['연말 선물 교환 준비 중이라면', '마니또 뽑기 — 결과는 각자 링크로 몰래'],
+  en: ['Planning a gift exchange?', 'Secret Santa generator — private link for each person'],
+  ja: ['プレゼント交換をするなら', 'プレゼント交換くじ引き — 結果は本人だけのリンクで'],
+  zh: ['准备交换礼物？', '圣诞交换礼物抽签 — 结果用专属链接私发'],
+  fr: ['Vous organisez un échange de cadeaux ?', 'Tirage au sort Père Noël secret — un lien privé par personne'],
+  es: ['¿Organizas un intercambio de regalos?', 'Sorteo amigo invisible — un enlace privado para cada uno'],
+};
+const santaURL = `https://tools.oiyo.net/${l}/secret-santa-generator/`;
 const url = `https://oiyo.net/${locale}/christmas-personality-test/`;
 const ld = {
   '@context': 'https://schema.org',
@@ -30,6 +40,10 @@ const ld = {
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto max-w-3xl space-y-10 px-4 py-8">
     <ChristmasPersonalityTest locale={locale} client:load />
+    <aside class="rounded-xl border border-border bg-card p-4">
+      <p class="text-sm text-muted-foreground">{santa[l][0]}</p>
+      <a class="mt-1 inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4" href={santaURL}>🎁 {santa[l][1]}</a>
+    </aside>
     <section class="space-y-3">
       <h2 class="text-xl font-bold">{m.typesTitle}</h2>
       <ul class="grid gap-3 sm:grid-cols-2">
