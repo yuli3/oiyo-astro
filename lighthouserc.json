@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "startServerCommand": "npx --yes http-server dist -p 8080 -s",
+      "startServerCommand": ".github/lhci/node_modules/.bin/http-server dist -p 8080 -s",
       "startServerReadyPattern": "Available on",
       "url": [
         "http://localhost:8080/ko/",
@@ -12,7 +12,7 @@
         "http://localhost:8080/ko/mbti/test/",
         "http://localhost:8080/ko/ontology/"
       ],
-      "numberOfRuns": 1,
+      "numberOfRuns": 3,
       "settings": { "preset": "desktop" }
     },
     "assert": {
