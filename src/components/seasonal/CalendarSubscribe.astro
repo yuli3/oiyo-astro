@@ -1,0 +1,32 @@
+---
+// tools.oiyo.net 구독형 달력(webcal)으로 잇는 카드. 한 번 구독하면 휴대폰 달력에 해마다 자동으로 들어가요.
+interface Props { feeds?: Array<'kr-holidays' | 'kr-solar-terms'> }
+const { feeds = ['kr-holidays', 'kr-solar-terms'] } = Astro.props;
+const NAMES = { 'kr-holidays': '공휴일·대체공휴일', 'kr-solar-terms': '24절기' } as const;
+const webcal = (slug: string) => `webcal://tools.oiyo.net/cal/${slug}.ics`;
+const google = (slug: string) => `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(webcal(slug))}`;
+---
+<section class="mt-10 rounded-2xl border bg-card p-5" aria-labelledby="cal-sub-h">
+  <h2 id="cal-sub-h" class="text-xl font-black">📲 내 휴대폰 달력에 넣기</h2>
+  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">한 번 구독하면 아이폰·갤럭시·구글 캘린더에 날짜가 자동으로 들어가고, 임시공휴일이 생기면 저절로 고쳐져요. 무료이고 개인정보를 받지 않아요.</p>
+  <ul class="mt-4 grid gap-2 sm:grid-cols-2">
+    {feeds.map((f) => (
+      <li class="rounded-xl border p-3 text-sm">
+        <p class="font-black">{NAMES[f]}</p>
+        <p class="mt-2 flex flex-wrap gap-3">
+          <a class="font-bold text-primary underline" href={webcal(f)} data-cal-sub={f}>아이폰·기본 달력</a>
+          <a class="font-bold text-primary underline" href={google(f)} rel="noopener" data-cal-sub={f}>구글 캘린더</a>
+        </p>
+      </li>
+    ))}
+  </ul>
+  <a class="mt-3 inline-block text-sm font-black text-primary underline" href="https://tools.oiyo.net/ko/calendar-subscribe/">세금 마감 달력 등 다른 구독 달력 보기 →</a>
+</section>
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('[data-cal-sub]').forEach((a) =>
+    a.addEventListener('click', () => {
+      const g = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+      g?.('event', 'calendar_subscribe', { feed: a.dataset.calSub, from: location.pathname });
+    }),
+  );
+</script>
