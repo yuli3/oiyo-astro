@@ -505,6 +505,16 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "hanyang-fire-1426",
+    title: {"ko": "1426 한양 대화재로 회귀 — 불 대책 5가지", "en": "Back to the 1426 Hanyang fire", "ja": "1426漢陽大火へ回帰", "zh": "回到1426汉阳大火", "fr": "Retour au grand incendie de 1426", "es": "Regreso al gran incendio de 1426"},
+    description: {"ko": "대화재 날로 돌아가 불 대책을 골라 실록과 맞춰요.", "en": "Pick fire measures and check them against the Annals.", "ja": "防火策を選んで実録と照合。", "zh": "选防火对策，与实录对照。", "fr": "Choisissez des mesures et comparez aux Annales.", "es": "Elige medidas y compáralas con los Anales."},
+  },
+  {
+    slug: "cotton-1426",
+    title: {"ko": "면포 환율 계산기 — 1426 내 월급은 면포 몇 필", "en": "Cotton exchange 1426", "ja": "綿布レート計算機1426", "zh": "棉布汇率计算器1426", "fr": "Change en coton 1426", "es": "Cambio en algodón 1426"},
+    description: {"ko": "월급을 1426년 면포·쌀·저화·동전으로 바꿔요.", "en": "Convert your pay into 1426 cotton, rice, notes and coins.", "ja": "月給を1426年の綿布・米・楮貨・銅銭に換算。", "zh": "把月薪换算成1426年的棉布、米、楮货、铜钱。", "fr": "Convertissez votre salaire en monnaies de 1426.", "es": "Convierte tu sueldo en monedas de 1426."},
+  },
+  {
     slug: "sillok-name-hanja",
     title: {"ko": "실록 속 내 이름 한자 — 세종실록 1426 한자 검색", "en": "My name in the 1426 Annals", "ja": "実録の中の私の名前の漢字", "zh": "实录里我名字的汉字", "fr": "Mon nom dans les Annales de 1426", "es": "Mi nombre en los Anales de 1426"},
     description: {"ko": "이름 한자가 1426년 실록에 몇 번, 어디서 처음 나오는지 찾아요.", "en": "Count your name's characters in the 1426 Annals.", "ja": "名前の漢字が1426年の実録に何回出るか。", "zh": "查名字汉字在1426年实录中的次数。", "fr": "Comptez les caractères de votre nom dans les Annales.", "es": "Cuenta los caracteres de tu nombre en los Anales."},

@@ -256,6 +256,32 @@ const sillaGolpumManifest: FeatureManifest = {
   description: { zh: "按新罗骨品制抽取身份与官等，看才干是否被骨品之墙挡住。", en: "Your Silla bone rank and court rank, with the real ceilings and robe colours.", es: "Tu rango de hueso y de corte en Silla, con los techos reales.", fr: "Votre rang d'os et de cour à Silla, avec les vrais plafonds.", ja: "新羅の骨品と官位を引き、骨品の壁に阻まれるかを見せます。", ko: "골품과 17관등으로 신라의 나를 뽑고, 골품의 벽에 막히는지 보여줘요." },
 };
 
+const hanyangFire1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#9a3412",
+  domain: "ontology",
+  icon: "Flame",
+  id: "hanyang-fire-1426",
+  path: "/hanyang-fire-1426",
+  status: "production",
+  name: { ko: "1426 한양 대화재로 회귀", en: "Back to the 1426 Hanyang fire", ja: "1426漢陽大火へ回帰", zh: "回到1426汉阳大火", fr: "Retour au grand incendie de 1426", es: "Regreso al gran incendio de 1426" },
+  description: { ko: "1426년 2월 15일 한양 대화재로 돌아가 불 대책 5가지를 올려요. 세종 조정이 실제로 정한 대책과 날짜를 실록으로 맞춰 봐요.", en: "Go back to the great fire of lunar 2/15, 1426, propose 5 fire measures, and check them against what Sejong's court decided.", ja: "1426年2月15日の漢陽大火に戻り、防火策5つを実録と照合。", zh: "回到1426年二月十五日的汉阳大火，选5条对策，与实录对照。", fr: "Revenez au grand incendie de 1426 et proposez 5 mesures.", es: "Vuelve al gran incendio de 1426 y propone 5 medidas." },
+};
+
+const cotton1426Manifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#5b4a2e",
+  domain: "ontology",
+  icon: "Coins",
+  id: "cotton-1426",
+  path: "/cotton-1426",
+  status: "production",
+  name: { ko: "면포 환율 계산기", en: "Cotton exchange 1426", ja: "綿布レート計算機", zh: "棉布汇率计算器", fr: "Change en coton 1426", es: "Cambio en algodón 1426" },
+  description: { ko: "1426년 한양이라면 내 월급은 면포 몇 필? 쌀·저화·동전으로도 바꾸고, 실록 속 말값·포상금과 견줘 봐요.", en: "Your monthly pay in 1426 bolts of cotton, rice, paper notes and coins, next to horse prices and rewards in the Annals.", ja: "1426年の漢陽なら月給は綿布何匹？米・楮貨・銅銭にも換算。", zh: "在1426年的汉阳，你的月薪值几匹棉布？也可换成米、楮货、铜钱。", fr: "Votre salaire en pièces de coton de 1426, en riz, billets et pièces.", es: "Tu sueldo en piezas de algodón de 1426, en arroz, billetes y monedas." },
+};
+
 const sillokNameHanjaManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -746,6 +772,8 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   sillaGolpumManifest,
   joseon1426Manifest,
   europe1426Manifest,
+  hanyangFire1426Manifest,
+  cotton1426Manifest,
   sillokNameHanjaManifest,
   nightSky1426Manifest,
   gyeonggongjangManifest,

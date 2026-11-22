@@ -32,6 +32,8 @@ export const EPISODE_YEAR: Record<EpisodeId, number> = {
   "gyeonggongjang": 1485,
   "night-sky-1426": 1426,
   "sillok-name-hanja": 1426,
+  "cotton-1426": 1426,
+  "hanyang-fire-1426": 1426,
   "census-1850": 1850,
   "us-birth-state": 2026, // "born today"
 };
