@@ -1,6 +1,11 @@
 // 2026-11-06: exact route maps keep unrelated pages on their existing artwork.
 export const GENERATED_OG: Readonly<Record<string,string>> = {
   // 2026-11-22: Grok Bot last run, seasonal pages that had no share image.
+  "/sunrise-2027": "/images/shorts/sunrise-2027-keyart.webp",
+  "/calendar-2027": "/images/shorts/calendar-2027-keyart.webp",
+  "/mandalart-2027": "/images/shorts/mandalart-2027-keyart.webp",
+  "/son-eomneun-nal-2027": "/images/shorts/calendar-2027-keyart.webp",
+  "/rokuyo-calendar-2027": "/images/shorts/calendar-2027-keyart.webp",
   "/after-suneung-major": "/images/grok-20261122/oiyo-og-after-suneung-major.webp",
   "/born-year": "/images/grok-20261122/oiyo-og-born-year.webp",
   "/christmas-personality-test": "/images/grok-20261122/oiyo-og-christmas-personality-test.webp",

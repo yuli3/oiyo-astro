@@ -219,3 +219,28 @@ export function folkDays(year = YEAR): { date: string; name: string }[] {
     { date: fromLunar(9, 9, year), name: '중양절' },
   ];
 }
+
+/* ---------------- 손 방향 ---------------- */
+export type SonDir = '동' | '남' | '서' | '북' | null;
+/** 음력 날짜 끝자리로 손(날 따라 도는 귀신)이 있는 방향: 1·2 동, 3·4 남, 5·6 서, 7·8 북, 9·0 없음 */
+export function sonDirection(l: LunarDate): SonDir {
+  const d = l.day % 10;
+  if (d === 1 || d === 2) return '동';
+  if (d === 3 || d === 4) return '남';
+  if (d === 5 || d === 6) return '서';
+  if (d === 7 || d === 8) return '북';
+  return null;
+}
+
+export type SonDay = { date: string; dow: number; lunar: LunarDate; holiday: string | null };
+
+/** 해당 해의 손 없는 날 전체 */
+export function sonEomneunDays(year = YEAR): SonDay[] {
+  const hs = holidays(year);
+  const out: SonDay[] = [];
+  for (let d = iso(year, 1, 1); d <= iso(year, 12, 31); d = addDays(d, 1)) {
+    const lunar = toLunar(d);
+    if (isSonEomneun(lunar)) out.push({ date: d, dow: dow(d), lunar, holiday: hs.filter((h) => h.date === d).map((h) => h.name).join(' · ') || null });
+  }
+  return out;
+}
