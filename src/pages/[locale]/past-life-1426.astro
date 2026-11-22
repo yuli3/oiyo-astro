@@ -291,6 +291,15 @@ const groups = GROUP_ORDER
   .map((k) => ({ key: k, label: GROUP_LABEL[k][locale] ?? GROUP_LABEL[k].en, cards: c.cards.filter((card) => groupOf(card.href) === k) }))
   .filter((g) => g.cards.length);
 const PROGRESS: Record<Locale, string> = { ko: "{k}/{n}회 다녀왔어요", en: "{k} of {n} visited", ja: "{k}/{n}回 訪問済み", zh: "已去过{k}/{n}篇", fr: "{k} sur {n} visités", es: "{k} de {n} visitados" };
+const TODAY: Record<Locale, { kicker: string; date: string; leap: string; count: string; cta: string }> = {
+  ko: { kicker: "오늘, 세종 시대 실록에는", date: "{y}년 · 세종 {r}년 음력 {leap}{m}월 {d}일", leap: "윤", count: "이날 기사 {n}건", cta: "다른 해의 오늘도 보기" },
+  en: { kicker: "On this day in Sejong's Annals", date: "{y} · Sejong year {r}, lunar {leap}{m}/{d}", leap: "leap ", count: "{n} entries that day", cta: "See this date in other years" },
+  ja: { kicker: "今日、世宗実録には", date: "{y}年・世宗{r}年 旧暦{leap}{m}月{d}日", leap: "閏", count: "この日の記事 {n}件", cta: "ほかの年の今日も見る" },
+  zh: { kicker: "今天，世宗实录里写着", date: "{y}年·世宗{r}年 农历{leap}{m}月{d}日", leap: "闰", count: "当日记事{n}条", cta: "看看其他年份的今天" },
+  fr: { kicker: "Ce jour-là dans les Annales de Sejong", date: "{y} · an {r} de Sejong, {d}e jour du {leap}{m}e mois lunaire", leap: "mois intercalaire ", count: "{n} entrées ce jour-là", cta: "Voir cette date les autres années" },
+  es: { kicker: "Este día en los Anales de Sejong", date: "{y} · año {r} de Sejong, día {d} del {leap}mes lunar {m}", leap: "intercalar ", count: "{n} entradas ese día", cta: "Ver esta fecha en otros años" },
+};
+const today = TODAY[locale] ?? TODAY.en;
 const DONE: Record<Locale, string> = { ko: "다녀옴", en: "Visited", ja: "訪問済み", zh: "已去过", fr: "Visité", es: "Visitado" };
 ---
 
@@ -333,6 +342,13 @@ const DONE: Record<Locale, string> = { ko: "다녀옴", en: "Visited", ja: "訪�
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <h2 class="text-2xl font-black tracking-tight text-foreground">{f.listHeading}</h2>
     <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <aside class="mt-5 rounded-2xl border border-border bg-card p-4 shadow-sm" data-today data-date-template={today.date} data-leap={today.leap} data-count-template={today.count} data-href={localePath(locale, "/sejong-birthdays/")} hidden>
+      <p class="text-xs font-bold text-muted-foreground"><span aria-hidden="true">📜</span> {today.kicker}</p>
+      <p class="mt-1 text-base font-black text-foreground" data-today-date></p>
+      <p class="mt-2 text-base leading-relaxed text-foreground" lang="zh-Hant" data-today-snip></p>
+      <p class="mt-1 text-xs text-muted-foreground" data-today-count></p>
+      <a class="mt-3 inline-flex min-h-11 items-center text-sm font-bold text-primary underline" data-today-link href={localePath(locale, "/sejong-birthdays/")}>{today.cta} <span aria-hidden="true">&nbsp;→</span></a>
+    </aside>
     <p class="mt-3 text-sm font-bold text-foreground" data-ts-progress data-template={PROGRESS[locale] ?? PROGRESS.en} data-total={episodeCount} hidden></p>
     <nav class="sticky top-16 z-10 -mx-4 mt-4 flex gap-2 overflow-x-auto bg-background/90 px-4 py-2 backdrop-blur" aria-label={f.listHeading}>
       {groups.map((g) => (
@@ -366,6 +382,32 @@ const DONE: Record<Locale, string> = { ko: "다녀옴", en: "Visited", ja: "訪�
 
 <script>
   import { mountScrollFilm } from "@/lib/motion/scroll-film";
+  import { formatQuery, type BirthdayRow, type MonthFile } from "@/lib/sejong-birthdays";
+  // "On this day" from Sejong's Annals: same pick for everyone all day, a new one tomorrow.
+  async function mountToday(box: HTMLElement) {
+    const now = new Date();
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
+    try {
+      const res = await fetch(`/data/sejong-birthday/${String(month).padStart(2, "0")}.json`);
+      if (!res.ok) return;
+      const rows: BirthdayRow[] = ((await res.json()) as MonthFile)[String(day)] ?? [];
+      if (!rows.length) return;
+      const r = rows[(now.getFullYear() * 7 + month * 31 + day) % rows.length]!;
+      const set = (sel: string, text: string) => {
+        const el = box.querySelector<HTMLElement>(sel);
+        if (el) el.textContent = text;
+      };
+      set("[data-today-date]", (box.dataset.dateTemplate ?? "").replace("{y}", String(r[0])).replace("{r}", String(r[1])).replace("{leap}", r[3] ? box.dataset.leap ?? "" : "").replace("{m}", String(r[2])).replace("{d}", String(r[4])));
+      set("[data-today-snip]", r[6]);
+      set("[data-today-count]", (box.dataset.countTemplate ?? "").replace("{n}", String(r[5])));
+      box.querySelector<HTMLAnchorElement>("[data-today-link]")?.setAttribute("href", `${box.dataset.href}?${formatQuery({ month, day })}`);
+      box.hidden = false;
+    } catch {
+      /* offline or blocked: the panel just stays hidden */
+    }
+  }
+  document.querySelectorAll<HTMLElement>("[data-today]").forEach((b) => void mountToday(b));
   document.querySelectorAll<HTMLElement>("[data-film]").forEach(mountScrollFilm);
   // Mark episodes this browser has already played (stamps written by stampEpisode in timeslip.tsx).
   let stamps: string[] = [];
