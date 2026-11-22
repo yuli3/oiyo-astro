@@ -4,10 +4,10 @@ import { DREAM_SYMBOLS, DREAM_SYMBOL_BY_ID } from './dream-symbols';
 const LOCALES = ['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const;
 
 describe('dream symbols', () => {
-  it('has 70 unique ids', () => {
+  it('has 72 unique ids', () => {
     const ids = DREAM_SYMBOLS.map((s) => s.id);
     expect(new Set(ids).size).toBe(ids.length);
-    expect(ids.length).toBe(70);
+    expect(ids.length).toBe(72);
   });
 
   it('every related id exists and links back', () => {
