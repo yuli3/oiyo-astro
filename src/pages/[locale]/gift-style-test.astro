@@ -1,0 +1,21 @@
+---
+// 선물 스타일 테스트 (2026-11-22). 6개 언어. 재미용, 진단 아님. 문항·결과: data/season-quizzes/gift-style.ts
+import SeasonQuizPage from '../../components/tests/SeasonQuizPage.astro';
+import { LOCALES, type Locale } from '../../i18n';
+import { GIFT_STYLE } from '../../data/season-quizzes/gift-style';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+// 선물 교환을 준비하는 방문자를 tools 마니또 뽑기로 넘긴다(크리스마스 테스트와 같은 연결, 2026-11-22).
+const extra = {
+  ko: { lead: '연말 선물 교환 준비 중이라면', label: '🎁 마니또 뽑기 — 결과는 각자 링크로 몰래', href: 'https://tools.oiyo.net/ko/secret-santa-generator/' },
+  en: { lead: 'Planning a gift exchange?', label: '🎁 Secret Santa generator — private link for each person', href: 'https://tools.oiyo.net/en/secret-santa-generator/' },
+  ja: { lead: 'プレゼント交換をするなら', label: '🎁 プレゼント交換くじ引き — 結果は本人だけのリンクで', href: 'https://tools.oiyo.net/ja/secret-santa-generator/' },
+  zh: { lead: '准备交换礼物？', label: '🎁 圣诞交换礼物抽签 — 结果用专属链接私发', href: 'https://tools.oiyo.net/zh/secret-santa-generator/' },
+  fr: { lead: 'Vous organisez un échange de cadeaux ?', label: '🎁 Tirage au sort Père Noël secret — un lien privé par personne', href: 'https://tools.oiyo.net/fr/secret-santa-generator/' },
+  es: { lead: '¿Organizas un intercambio de regalos?', label: '🎁 Sorteo amigo invisible — un enlace privado para cada uno', href: 'https://tools.oiyo.net/es/secret-santa-generator/' },
+};
+---
+<SeasonQuizPage quiz={GIFT_STYLE} locale={locale} extra={extra} />

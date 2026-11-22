@@ -138,6 +138,13 @@ export const LANE_BY_PATH: Record<string, LaneId> = {
   "/animal-personality-test": "self",
   "/coffee-personality-test": "self",
   "/christmas-personality-test": "self",
+  // 2026-11-22 시즌 유형 테스트: 나 자신에 관한 것은 self, 함께하는 사람과의 장면은 relationships.
+  "/new-year-resolution-test": "self",
+  "/winter-hibernation-test": "self",
+  "/year-end-party-role-test": "relationships",
+  "/first-snow-love-test": "relationships",
+  "/gift-style-test": "relationships",
+  "/family-gathering-test": "relationships",
   "/cognitive-bias-test": "self",
   "/color-personality-test": "self",
   "/creativity-type-test": "self",

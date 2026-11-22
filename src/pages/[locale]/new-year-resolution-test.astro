@@ -1,0 +1,21 @@
+---
+// 2027 새해 다짐 유형 테스트 (2026-11-22). 6개 언어. 재미용, 진단 아님. 문항·결과: data/season-quizzes/new-year-resolution.ts
+import SeasonQuizPage from '../../components/tests/SeasonQuizPage.astro';
+import { LOCALES, type Locale } from '../../i18n';
+import { NEW_YEAR_RESOLUTION } from '../../data/season-quizzes/new-year-resolution';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+// 새해 다짐 → 기존 2027 신년 모음으로 이어 준다.
+const extra = {
+  ko: { lead: '새해 준비를 더 하고 싶다면', label: '🌅 2027 신년 모음 — 띠·운세·새해 인사', href: '/new-year-2027' },
+  en: { lead: 'Getting ready for the new year?', label: '🌅 2027 New Year hub — zodiac, greetings and more', href: '/new-year-2027' },
+  ja: { lead: '新年の準備をもっと', label: '🌅 2027年 新年まとめ — 干支・運勢・あいさつ', href: '/new-year-2027' },
+  zh: { lead: '还想多准备一些新年的事？', label: '🌅 2027 新年合集 — 生肖、运势、祝福', href: '/new-year-2027' },
+  fr: { lead: 'Envie de préparer la nouvelle année ?', label: '🌅 Nouvel An 2027 — zodiaque chinois, vœux et plus', href: '/new-year-2027' },
+  es: { lead: '¿Preparando el año nuevo?', label: '🌅 Año Nuevo 2027 — zodiaco chino, felicitaciones y más', href: '/new-year-2027' },
+};
+---
+<SeasonQuizPage quiz={NEW_YEAR_RESOLUTION} locale={locale} extra={extra} />
