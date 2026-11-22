@@ -1,0 +1,251 @@
+---
+/**
+ * 2027 새해 첫 일출 시각 / 2027年 初日の出 — ko는 한국 해맞이 명소·시도, ja는 일본 명소·도시(나라별 특화,
+ * 2026-10-19 세운). 표는 빌드 때 astronomy-engine으로 계산하고, "내 위치"만 브라우저 근사식으로 계산한다.
+ * 다음 작업 2차 #1 (2026-11-22). 12월 초 색인을 목표로 연다.
+ */
+import Layout from '../../layouts/Layout.astro';
+import { localePath, type Locale } from '../../i18n';
+import { JP_SPOTS, KR_SPOTS, SUNRISE_LIMIT_JA, SUNRISE_LIMIT_KO, sunriseTable } from '../../lib/sunrise-2027';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ko' } }, { params: { locale: 'ja' } }];
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const ja = locale === 'ja';
+const rows = sunriseTable(ja ? JP_SPOTS : KR_SPOTS);
+const sorted = [...rows].sort((a, b) => a.sunriseMs - b.sunriseMs);
+const by = (id: string) => rows.find((r) => r.id === id)!;
+
+const t = ja
+  ? {
+      title: '2027年 初日の出の時刻 — 東京6時51分、全国の名所・主要都市一覧',
+      description: '2027年1月1日（金）の初日の出は東京6時51分、犬吠埼6時46分、札幌7時06分、那覇7時17分。全国の初日の出スポットと主要都市の日の出・夜明け（薄明）の時刻、現在地の日の出を計算できます。',
+      eyebrow: '2027年1月1日（金） · 初日の出',
+      h1: '2027年 初日の出の時刻',
+      lead: '元日の朝、どこで何時に日が昇るか。全国の名所と主要都市の日の出と、空が白み始める時刻（市民薄明）をまとめました。現在地の時刻も計算できます。',
+      glance: '2027年 初日の出 早見',
+      glanceItems: [
+        `日本でいちばん早い：南鳥島 ${by('minamitorishima').sunrise}（一般の人は上陸できません）`,
+        `平地でいちばん早い（離島・山頂を除く）：千葉県 犬吠埼 ${by('inubozaki').sunrise}`,
+        `東京 ${by('tokyo').sunrise}、大阪 ${by('osaka').sunrise}、札幌 ${by('sapporo').sunrise}、那覇 ${by('naha').sunrise}`,
+      ],
+      tableH: '名所・主要都市の初日の出（早い順）',
+      caption: '2027年1月1日の日の出と市民薄明の始まり',
+      cols: ['場所', '地域', '空が白む', '日の出'],
+      mine: '現在地の初日の出',
+      mineBtn: '現在地で計算する',
+      minePrivacy: '位置情報はこのブラウザの中だけで使い、送信しません。',
+      mineFail: '位置情報を取得できませんでした。端末の設定を確認してください。',
+      mineResult: '2027年1月1日、現在地の日の出はおよそ',
+      tipsH: '初日の出を見るコツ',
+      tips: [
+        ['30分前には着く', '日の出の30分ほど前から空が明るくなり始めます（表の「空が白む」）。人気スポットは駐車場がすぐ埋まるので、さらに早めに。'],
+        ['東の水平線が開けた場所', '海沿いや高台など、東側に山や建物がない場所ほど表の時刻どおりに見えます。山の陰では数分〜十数分遅れます。'],
+        ['防寒は一段上を', '元日の明け方は一年で最も冷え込む時間帯のひとつ。手袋・カイロ・温かい飲み物を。'],
+        ['天気は前日に確認', '冬の太平洋側は晴れやすく、日本海側は雲が多くなりがち。前日の天気予報で場所を決めるのも手です。'],
+      ],
+      faqs: [
+        { q: '2027年の初日の出は何時ですか？', a: `東京は${by('tokyo').sunrise}、大阪は${by('osaka').sunrise}、名古屋は${by('nagoya').sunrise}、札幌は${by('sapporo').sunrise}、福岡は${by('fukuoka').sunrise}、那覇は${by('naha').sunrise}ごろです（海抜0mの計算値）。` },
+        { q: '日本で一番早く初日の出が見られる場所は？', a: `南鳥島（${by('minamitorishima').sunrise}ごろ）です。ただし一般の人は行けません。離島と山頂を除く平地では千葉県の犬吠埼（${by('inubozaki').sunrise}ごろ）が最も早いとされます。` },
+        { q: '富士山頂だと何時ですか？', a: '標高が高いと地平線が下がるため、海抜0mより早く昇ります。富士山頂では平地よりおよそ10分早くなりますが、冬季は登山できません。' },
+        { q: '表の時刻はどうやって計算していますか？', a: '天文計算ライブラリで、太陽の上端が水平線に接する瞬間（大気差を含む）を計算しました。国立天文台と同じ定義で、2026年の東京6時51分・犬吠埼6時46分と一致することを確かめています。' },
+      ],
+      sourceH: '出典・確認',
+      source: '国立天文台 暦計算室の「日の出入り」で各地の時刻を確認できます。',
+      sourceUrl: 'https://eco.mtk.nao.ac.jp/koyomi/dni/',
+      limit: SUNRISE_LIMIT_JA,
+      links: [
+        ['/oshogatsu-2027', '🎍 2027年 お正月カレンダー'],
+      ],
+    }
+  : {
+      title: '2027 새해 첫 일출 시간 — 독도 7시 26분, 서울 7시 47분 · 해맞이 명소와 시·도별',
+      description: '2027년 1월 1일(금) 첫 해는 독도에서 7시 26분, 육지에서는 울산 간절곶 7시 31분에 떠요. 서울 7시 47분, 정동진·호미곶·성산일출봉 등 해맞이 명소와 17개 시·도의 일출, 여명 시각, 내 위치 일출을 확인하세요.',
+      eyebrow: '2027년 1월 1일(금) · 해맞이',
+      h1: '2027 새해 첫 일출 시간',
+      lead: '정미년(丁未) 첫 해는 어디서 몇 시에 뜰까요. 해맞이 명소와 시·도청 소재지의 일출 시각, 하늘이 밝아지기 시작하는 시각(시민박명)을 한 표에 모았어요. 내 위치의 일출도 계산해 드려요.',
+      glance: '2027 첫 일출 한눈에',
+      glanceItems: [
+        `가장 먼저: 독도 ${by('dokdo').sunrise}`,
+        `육지에서 가장 먼저: 울산 간절곶 ${by('ganjeolgot').sunrise}, 포항 호미곶 ${by('homigot').sunrise}`,
+        `서울 ${by('seoul').sunrise}, 부산 ${by('busan').sunrise}, 강릉 정동진 ${by('jeongdongjin').sunrise}, 제주 성산일출봉 ${by('seongsan').sunrise}`,
+      ],
+      tableH: '해맞이 명소·시도별 첫 일출 (빠른 순)',
+      caption: '2027년 1월 1일 일출과 시민박명 시작 시각',
+      cols: ['장소', '지역', '여명 시작', '일출'],
+      mine: '내 위치 첫 일출',
+      mineBtn: '내 위치로 계산하기',
+      minePrivacy: '위치는 이 브라우저 안에서만 쓰고 보내지 않아요.',
+      mineFail: '위치를 가져오지 못했어요. 기기 위치 권한을 확인해 주세요.',
+      mineResult: '2027년 1월 1일, 지금 계신 곳의 일출은 약',
+      tipsH: '해맞이 잘 보는 법',
+      tips: [
+        ['30분 먼저 도착', '일출 30분쯤 전부터 하늘이 붉어져요(표의 "여명 시작"). 정동진·간절곶·호미곶은 새벽부터 차가 막히니 더 일찍 나서요.'],
+        ['동쪽이 탁 트인 곳', '바다나 높은 곳처럼 동쪽에 산이나 건물이 없어야 표 시각에 해를 볼 수 있어요. 산 너머로 보면 몇 분에서 십여 분 늦어요.'],
+        ['방한은 한 단계 더', '새해 첫 새벽은 1년 중 가장 추운 시간대예요. 장갑·핫팩·따뜻한 음료를 챙겨요.'],
+        ['해맞이 축제 일정 확인', '지자체 해맞이 행사는 교통 통제가 있어요. 전날 각 시·군 홈페이지에서 셔틀과 주차 안내를 확인하세요.'],
+      ],
+      faqs: [
+        { q: '2027년 첫 일출은 몇 시인가요?', a: `독도 ${by('dokdo').sunrise}, 울산 간절곶 ${by('ganjeolgot').sunrise}, 포항 호미곶 ${by('homigot').sunrise}, 부산 ${by('busan').sunrise}, 서울 ${by('seoul').sunrise}, 인천 ${by('incheon').sunrise}이에요(해발 0m 계산값).` },
+        { q: '해가 가장 먼저 뜨는 곳은 어디인가요?', a: `독도(${by('dokdo').sunrise})예요. 육지에서는 울산 간절곶(${by('ganjeolgot').sunrise})이 가장 빠르고, 포항 호미곶이 1분쯤 뒤예요.` },
+        { q: '정동진 일출은 몇 시인가요?', a: `강릉 정동진은 ${by('jeongdongjin').sunrise}, 경포대는 ${by('gyeongpo').sunrise}, 양양 낙산사는 ${by('naksansa').sunrise}쯤이에요.` },
+        { q: '산 위에서는 더 빨리 보이나요?', a: '네. 높을수록 수평선이 내려가서 해가 조금 일찍 보여요. 해발 1,000m면 5분 안팎 빨라져요. 대신 동쪽에 더 높은 산이 있으면 늦어져요.' },
+        { q: '표 시각은 어떻게 계산했나요?', a: '천문 계산 라이브러리로 해의 윗부분이 수평선에 닿는 순간(대기 굴절 포함)을 계산했어요. 한국천문연구원과 같은 기준이고, 2026년 발표값(서울 7시 47분, 독도 7시 26분, 간절곶 7시 31분)과 같게 나오는 것을 확인했어요.' },
+      ],
+      sourceH: '출처·확인',
+      source: '한국천문연구원 천문우주지식정보 "해/달 출몰시각"에서 원하는 지역을 직접 조회할 수 있어요.',
+      sourceUrl: 'https://astro.kasi.re.kr/life/pageView/9',
+      limit: SUNRISE_LIMIT_KO,
+      links: [
+        ['/new-year-2027', '🐑 2027 신년운세 모음'],
+        ['/tojeong-2027', '📜 2027 토정비결'],
+        ['/sebaetdon-2027', '🧧 2027 세뱃돈 얼마'],
+        ['/dongji-2026', '🥣 2026 동지 팥죽 한 해 정리'],
+      ],
+    };
+
+const ld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: t.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: t.caption,
+    description: t.description,
+    temporalCoverage: '2027-01-01',
+    spatialCoverage: ja ? 'Japan' : 'South Korea',
+    isAccessibleForFree: true,
+  },
+];
+---
+<Layout title={t.title} description={t.description} locale={locale} availableLocales={['ko', 'ja']}>
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <section class="mx-auto max-w-2xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">{t.eyebrow}</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">{t.h1}</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">{t.lead}</p>
+
+    <div class="mt-6 rounded-2xl border bg-card p-5">
+      <h2 class="text-lg font-black">{t.glance}</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
+        {t.glanceItems.map((g) => <li>☀️ {g}</li>)}
+      </ul>
+    </div>
+
+    <div class="mt-6 rounded-2xl border bg-card p-5" data-sunrise-mine data-lang={ja ? 'ja' : 'ko'}>
+      <h2 class="text-lg font-black">{t.mine}</h2>
+      <button type="button" class="mt-3 min-h-11 rounded-xl bg-primary px-4 text-sm font-black text-primary-foreground" data-sunrise-btn>{t.mineBtn}</button>
+      <p class="mt-3 text-base font-black" aria-live="polite" data-sunrise-out data-prefix={t.mineResult} data-fail={t.mineFail}></p>
+      <p class="mt-2 text-xs text-muted-foreground">{t.minePrivacy}</p>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{t.tableH}</h2>
+      <div class="mt-4 overflow-x-auto rounded-xl border">
+        <table class="w-full text-sm">
+          <caption class="sr-only">{t.caption}</caption>
+          <thead class="bg-muted text-left">
+            <tr>{t.cols.map((c) => <th class="p-3" scope="col">{c}</th>)}</tr>
+          </thead>
+          <tbody class="divide-y">
+            {sorted.map((r) => (
+              <tr>
+                <td class="p-3 font-bold">{r.name}{r.note && <span class="mt-0.5 block text-xs font-normal text-muted-foreground">{r.note}</span>}</td>
+                <td class="p-3 text-muted-foreground">{r.region}</td>
+                <td class="p-3 tabular-nums text-muted-foreground">{r.dawn}</td>
+                <td class="p-3 tabular-nums font-black">{r.sunrise}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-2 text-xs leading-5 text-muted-foreground">{t.limit}</p>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-black">{t.tipsH}</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        {t.tips.map(([h, p]) => (
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="text-base font-black">{h}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{p}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{ja ? 'よくある質問' : '자주 묻는 질문'}</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {t.faqs.map((f) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer text-sm font-black">{f.q}</summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">{t.sourceH}: {t.source} <a class="underline" href={t.sourceUrl} rel="noopener">{t.sourceUrl.replace(/^https:\/\//, '')}</a></p>
+
+    <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label={ja ? 'あわせて見る' : '함께 보기'}>
+      {t.links.map(([href, label]) => (
+        <a href={localePath(locale, href)} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">{label}</a>
+      ))}
+    </nav>
+  </section>
+</Layout>
+
+<script>
+  import { sunriseNoaa } from '../../lib/sunrise-noaa';
+  import { gaEventOnce } from '../../lib/analytics/ga-event';
+
+  const box = document.querySelector<HTMLElement>('[data-sunrise-mine]');
+  const btn = box?.querySelector<HTMLButtonElement>('[data-sunrise-btn]');
+  const out = box?.querySelector<HTMLElement>('[data-sunrise-out]');
+  const lang = box?.dataset.lang === 'ja' ? 'ja-JP' : 'ko-KR';
+
+  // 브라우저 시간대에서 2027-01-01에 드는 일출을 고른다(UTC 날짜 전후 하루씩 확인).
+  function localFirstSunrise(lat: number, lon: number): Date | null {
+    for (const [y, m, d] of [[2026, 12, 31], [2027, 1, 1], [2027, 1, 2]] as const) {
+      const min = sunriseNoaa(lat, lon, y, m, d);
+      if (min == null) continue;
+      const at = new Date(Date.UTC(y, m - 1, d) + min * 60_000);
+      if (at.getFullYear() === 2027 && at.getMonth() === 0 && at.getDate() === 1) return at;
+    }
+    return null;
+  }
+
+  btn?.addEventListener('click', () => {
+    if (!out) return;
+    if (!navigator.geolocation) {
+      out.textContent = out.dataset.fail ?? '';
+      return;
+    }
+    btn.disabled = true;
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        btn.disabled = false;
+        const at = localFirstSunrise(pos.coords.latitude, pos.coords.longitude);
+        if (!at) {
+          out.textContent = out.dataset.fail ?? '';
+          return;
+        }
+        // 분 반올림(표와 같은 방식)
+        const time = new Date(at.getTime() + 30_000).toLocaleTimeString(lang, { hour: '2-digit', minute: '2-digit' });
+        out.textContent = `${out.dataset.prefix} ${time}`;
+        gaEventOnce('tool_used', { tool_id: 'sunrise-2027' });
+      },
+      () => {
+        btn.disabled = false;
+        out.textContent = out.dataset.fail ?? '';
+      },
+      { enableHighAccuracy: false, timeout: 10_000, maximumAge: 600_000 },
+    );
+  });
+</script>
