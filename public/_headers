@@ -115,3 +115,9 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Content-Security-Policy: object-src 'none'; base-uri 'self'; upgrade-insecure-requests
+
+# 해맞이 페이지는 "내 위치 일출"과 해맞이 나침반이 위치·방향 센서를 쓴다(2026-11-22).
+# 위 /* 규칙의 geolocation=() 때문에 버튼이 늘 실패했다. 이 경로만 떼어 내고 self로 다시 건다.
+/:locale/sunrise-2027/
+  ! Permissions-Policy
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self), accelerometer=(self), gyroscope=(self), magnetometer=(self)

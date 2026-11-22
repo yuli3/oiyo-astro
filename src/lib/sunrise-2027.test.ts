@@ -46,3 +46,25 @@ describe('sunrise-2027', () => {
     }
   });
 });
+
+describe('해맞이 나침반 방위각', () => {
+  it('astronomy-engine 일출 방위와 0.5° 안', async () => {
+    const A = await import('astronomy-engine');
+    const { sunriseAzimuth } = await import('./sunrise-noaa');
+    for (const s of [...KR_SPOTS, ...JP_SPOTS]) {
+      const { sunrise } = firstSunrise(s);
+      const obs = new A.Observer(s.lat, s.lon, 0);
+      const eq = A.Equator(A.Body.Sun, sunrise, obs, true, true);
+      const hor = A.Horizon(sunrise, obs, eq.ra, eq.dec, 'normal');
+      const az = sunriseAzimuth(s.lat, s.lon, 2027, 1, 1)!;
+      expect(Math.abs(az - hor.azimuth)).toBeLessThan(0.5);
+    }
+  });
+  it('서울 2027-01-01은 동남동(약 119°)', async () => {
+    const { sunriseAzimuth, compassName } = await import('./sunrise-noaa');
+    const az = sunriseAzimuth(37.5665, 126.978, 2027, 1, 1)!;
+    expect(az).toBeGreaterThan(117);
+    expect(az).toBeLessThan(121);
+    expect(compassName(az, 'ko')).toBe('동남동');
+  });
+});
