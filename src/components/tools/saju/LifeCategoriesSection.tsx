@@ -33,9 +33,9 @@ export default function LifeCategoriesSection({
   const Meta = ({ role, level, st }: { role: string; level: string; st: string }) => (
     <div className="mt-1 flex flex-wrap items-center gap-1.5 text-[11px]">
       <span className="rounded bg-white/70 border border-border px-1.5 py-0.5 font-medium text-gray-700">{roleName(role)}</span>
-      <span className="text-gray-400">·</span>
+      <span className="text-gray-600">·</span>
       <span className="text-gray-600">{lvl(level)}</span>
-      <span className="text-gray-400">·</span>
+      <span className="text-gray-600">·</span>
       <span className="font-semibold text-gray-700">{stance(st)}</span>
     </div>
   );
@@ -97,7 +97,7 @@ export default function LifeCategoriesSection({
         </div>
       </div>
 
-      <p className="text-[11px] leading-relaxed text-gray-400">{tt(C.disclaimer, locale)}</p>
+      <p className="text-[11px] leading-relaxed text-gray-600">{tt(C.disclaimer, locale)}</p>
     </div>
   );
 }

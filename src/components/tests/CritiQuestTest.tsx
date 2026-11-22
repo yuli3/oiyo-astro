@@ -504,7 +504,7 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
     const r = t.results[level];
     return (
       <div className="not-prose my-10 p-8 bg-card border border-border rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
-        <p className="text-xs font-bold text-rose-500 uppercase tracking-widest">{t.resultLabel}</p>
+        <p className="text-xs font-bold text-rose-600 uppercase tracking-widest">{t.resultLabel}</p>
         <div className="text-6xl">{r.emoji}</div>
         <h3 className="text-3xl font-black text-foreground">{r.title}</h3>
         <div className="space-y-2">
@@ -519,7 +519,7 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
         <div className="p-6 bg-rose-50 rounded-2xl border border-rose-100">
           <p className="text-slate-700 text-base leading-relaxed">{r.desc}</p>
         </div>
-        <button onClick={() => { setAnswers({}); setRevealed({}); setPhase("quiz"); }} className="text-slate-400 text-sm hover:underline">{t.retake}</button>
+        <button onClick={() => { setAnswers({}); setRevealed({}); setPhase("quiz"); }} className="text-slate-600 text-sm hover:underline">{t.retake}</button>
         <ShareResultButton locale={lang} heading={t.title} resultTitle={r.title} emoji={r.emoji} />
       </div>
     );
@@ -581,7 +581,7 @@ export default function CritiQuestTest({ locale: localeProp }: Props) {
         <button
           disabled={!isComplete}
           onClick={() => setPhase("result")}
-          className={`px-10 py-3 rounded-2xl font-bold text-base transition-all ${isComplete ? "bg-rose-500 text-white hover:bg-rose-600 shadow-lg" : "bg-slate-200 text-slate-400 cursor-not-allowed"}`}
+          className={`px-10 py-3 rounded-2xl font-bold text-base transition-all ${isComplete ? "bg-rose-500 text-white hover:bg-rose-600 shadow-lg" : "bg-slate-200 text-slate-600 cursor-not-allowed"}`}
         >
           {RESULTS_LABEL[lang]}
         </button>

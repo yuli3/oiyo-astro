@@ -116,7 +116,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
       {/* Quiz */}
       {q && (
         <div className="mt-5">
-          <div className="mb-3 flex items-center justify-between text-xs text-green-500">
+          <div className="mb-3 flex items-center justify-between text-xs text-green-700">
             <span>
               {u("question")} {step + 1} / {total}
             </span>
@@ -193,7 +193,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                       </ul>
                     </div>
                     <div>
-                      <p className="text-[11px] font-semibold text-rose-500">
+                      <p className="text-[11px] font-semibold text-rose-600">
                         △ {u("cons")}
                       </p>
                       <ul className="mt-1 space-y-0.5 text-xs text-green-800">
@@ -203,7 +203,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                       </ul>
                     </div>
                   </div>
-                  <p className="mt-2 text-[11px] text-green-400">
+                  <p className="mt-2 text-[11px] text-green-700">
                     {u("metricsLabel")}: {data.metrics.qualityOfLife} /{" "}
                     {data.metrics.safety} / {data.metrics.healthcare}
                   </p>
@@ -219,7 +219,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
           >
             {u("restart")}
           </button>
-          <p className="text-[11px] leading-5 text-green-400">
+          <p className="text-[11px] leading-5 text-green-700">
             {u("disclaimer")}
           </p>
         </div>

@@ -590,7 +590,7 @@ export default function TarotReading({ locale = 'ko', preset }: { locale?: Local
       )}
 
       {drawn && !shuffle && flipped.size < drawn.length && (
-        <p className="text-center text-sm text-gray-400">
+        <p className="text-center text-sm text-gray-600">
           {locale === 'ko' ? '카드를 탭해서 뒤집으세요' :
            locale === 'ja' ? 'カードをタップして裏返しましょう' :
            locale === 'fr' ? 'Tapez sur une carte pour la retourner' :

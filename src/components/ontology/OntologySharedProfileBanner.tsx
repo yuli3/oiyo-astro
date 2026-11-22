@@ -85,7 +85,7 @@ export function OntologySharedProfileBanner({ locale }: { locale: string }) {
 
   return (
     <div className="mb-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-900 shadow-sm">
-      <p className="text-[11px] font-black uppercase tracking-wider text-amber-600">🔗 {t.badge}</p>
+      <p className="text-[11px] font-black uppercase tracking-wider text-amber-700">🔗 {t.badge}</p>
       <p className="mt-1 text-xs leading-5 text-amber-800">{t.body}</p>
       {badges.length > 0 && (
         <div className="mt-2.5 flex flex-wrap gap-1.5">

@@ -262,7 +262,7 @@ export default function AdventurerGuild({ locale }: Props) {
         <div className="mt-2 flex flex-wrap items-baseline gap-x-4 gap-y-1">
           <span className="text-sm font-semibold text-green-800">{tier.title}</span>
           <span className="text-xs text-green-600">{t.level} {tierIdx + 1} · {s.xp} XP</span>
-          <span className="text-xs font-semibold text-orange-600">🔥 {s.streak}{t.streakUnit}</span>
+          <span className="text-xs font-semibold text-orange-700">🔥 {s.streak}{t.streakUnit}</span>
         </div>
         <div className="mt-2 h-2 overflow-hidden rounded-full bg-green-200">
           <div className="h-full bg-primary" style={{ width: `${pct}%` }}></div>
@@ -272,7 +272,7 @@ export default function AdventurerGuild({ locale }: Props) {
 
       {/* Daily */}
       <p className="mt-6 text-sm font-bold uppercase tracking-wider text-green-800">{t.daily}</p>
-      <p className="text-xs text-green-500">{t.honor}</p>
+      <p className="text-xs text-green-700">{t.honor}</p>
       <div className="mt-2 space-y-2">{quests.filter((q) => q.kind === 'daily').map(questRow)}</div>
 
       {/* Weekly */}
@@ -292,8 +292,8 @@ export default function AdventurerGuild({ locale }: Props) {
       )}
 
       <div className="mt-6 flex items-center justify-between">
-        <span className="text-xs text-green-500">{t.privacy}</span>
-        <button type="button" onClick={reset} className="text-xs text-green-400 hover:text-red-500">{t.reset}</button>
+        <span className="text-xs text-green-700">{t.privacy}</span>
+        <button type="button" onClick={reset} className="text-xs text-green-700 hover:text-red-500">{t.reset}</button>
       </div>
     </div>
   );

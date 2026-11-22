@@ -148,11 +148,11 @@ function Sub({ label, value, show, emphasize }: { label: string; value: string; 
   return (
     <div
       className={`flex items-center justify-between rounded-md px-2 py-1.5 transition-colors ${
-        show ? (emphasize ? "bg-accent/20" : "bg-primary/10") : "opacity-40"
+        show ? (emphasize ? "bg-accent/20" : "bg-primary/10") : "bg-muted/40"
       }`}
     >
-      <dt className={`font-bold ${emphasize ? "text-accent-foreground" : "text-primary"}`}>= {label}</dt>
-      <dd className={`font-extrabold tabular-nums ${emphasize ? "text-accent-foreground" : "text-primary"}`}>{show ? value : "—"}</dd>
+      <dt className={`font-bold ${!show ? "text-muted-foreground" : emphasize ? "text-accent-foreground" : "text-primary"}`}>= {label}</dt>
+      <dd className={`font-extrabold tabular-nums ${!show ? "text-muted-foreground" : emphasize ? "text-accent-foreground" : "text-primary"}`}>{show ? value : "—"}</dd>
     </div>
   );
 }

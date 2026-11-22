@@ -544,7 +544,7 @@ export default function CodependencyTest({ locale: lp = 'ko' }: Props) {
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-2">
         <h3 className="font-semibold text-sm text-green-600">{lb.steps}</h3>
-        <ul className="space-y-1">{r.steps.map(s => <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-500">→</span>{s}</li>)}</ul>
+        <ul className="space-y-1">{r.steps.map(s => <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-700">→</span>{s}</li>)}</ul>
       </div>
       <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 space-y-1">
         <h3 className="font-semibold text-sm text-amber-700">{lb.warning}</h3>

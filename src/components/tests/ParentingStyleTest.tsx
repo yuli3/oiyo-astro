@@ -1545,7 +1545,7 @@ export default function ParentingStyleTest({ locale: lp = 'ko' }: Props) {
         <h3 className="font-semibold text-sm text-green-600">{lb.strengthsLabel}</h3>
         <ul className="space-y-1">
           {domResult.strengths.map(s => (
-            <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-500">→</span>{s}</li>
+            <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-700">→</span>{s}</li>
           ))}
         </ul>
       </div>

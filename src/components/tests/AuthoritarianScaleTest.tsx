@@ -245,16 +245,16 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
     return (
       <div className="space-y-6">
         <div className="rounded-2xl border-2 border-border bg-card p-6 text-center">
-          <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">{ui.result}</p>
+          <p className="text-sm font-bold text-slate-600 uppercase tracking-widest mb-2">{ui.result}</p>
           <div className={`inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-base font-black ${level.color}`}>
             {level.label}
           </div>
           <p className="mt-3 text-sm text-slate-600">{level.desc}</p>
-          <div className="mt-3 text-2xl font-black text-slate-800">{overall}<span className="text-sm font-normal text-slate-400"> / 100</span></div>
+          <div className="mt-3 text-2xl font-black text-slate-800">{overall}<span className="text-sm font-normal text-slate-600"> / 100</span></div>
         </div>
 
         <div className="rounded-2xl border-2 border-slate-100 bg-card p-5">
-          <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">{ui.dimScores}</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-slate-600 mb-4">{ui.dimScores}</p>
           <div className="space-y-4">
             {dimScores.map(({ d, score }) => {
               const info = DIMS[d];
@@ -274,7 +274,7 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
           </div>
         </div>
 
-        <p className="text-xs text-slate-400 text-center px-2">{ui.note}</p>
+        <p className="text-xs text-slate-600 text-center px-2">{ui.note}</p>
 
         <ShareResultButton
           locale={locale}

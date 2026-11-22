@@ -118,7 +118,7 @@ export default function PalmistryExplorer({ locale }: Props) {
               );
             })}
           </svg>
-          <p className="mt-2 text-xs text-slate-400">{t.tapHint}</p>
+          <p className="mt-2 text-xs text-slate-600">{t.tapHint}</p>
           <PalmLines3D locale={loc} lines={PALM_LINES} active={active} />
           <div className="mt-3 flex flex-wrap justify-center gap-2">
             {PALM_LINES.map((l) => (
@@ -144,7 +144,7 @@ export default function PalmistryExplorer({ locale }: Props) {
             <h3 className="text-xl font-black text-foreground">{line.name[loc]}</h3>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-slate-700">{line.meaning[loc]}</p>
-          <p className="mt-5 text-xs font-bold uppercase tracking-wider text-slate-400">{t.variationsLabel}</p>
+          <p className="mt-5 text-xs font-bold uppercase tracking-wider text-slate-600">{t.variationsLabel}</p>
           <ul className="mt-2 space-y-2">
             {line.variations[loc].map((v) => (
               <li key={v} className="flex items-start gap-2 text-sm text-slate-700">

@@ -360,11 +360,11 @@ export default function ColorPersonalityTest({ locale: lp = 'ko' }: Props) {
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-2">
         <h3 className="font-bold text-sm text-primary">{lb.strengths}</h3>
-        <ul className="space-y-1">{r.strengths.map(s => <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-500 flex-none">→</span>{s}</li>)}</ul>
+        <ul className="space-y-1">{r.strengths.map(s => <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-700 flex-none">→</span>{s}</li>)}</ul>
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-amber-600">{lb.growth}</h3>
-        <ul className="space-y-1">{r.growth.map(g => <li key={g} className="text-sm text-muted-foreground flex gap-2"><span className="text-amber-500 flex-none">→</span>{g}</li>)}</ul>
+        <h3 className="font-bold text-sm text-amber-700">{lb.growth}</h3>
+        <ul className="space-y-1">{r.growth.map(g => <li key={g} className="text-sm text-muted-foreground flex gap-2"><span className="text-amber-700 flex-none">→</span>{g}</li>)}</ul>
       </div>
       <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 space-y-2">
         <h3 className="font-bold text-sm text-primary">{lb.compatible}</h3>

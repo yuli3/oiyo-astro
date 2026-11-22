@@ -101,7 +101,7 @@ export default function YongsinSection({
           {tt(C.hourCaveat, locale)}
         </p>
       )}
-      <p className="text-[11px] leading-relaxed text-gray-400">{tt(C.disclaimer, locale)}</p>
+      <p className="text-[11px] leading-relaxed text-gray-600">{tt(C.disclaimer, locale)}</p>
     </div>
   );
 }

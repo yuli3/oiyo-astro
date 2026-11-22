@@ -62,34 +62,34 @@ const QUESTIONS: Record<Locale, Question[]> = {
 interface Band { title: string; color: string; desc: string }
 const BANDS: Record<Locale, [Band, Band, Band]> = {
   ko: [
-    { title: "디지털 여유로움", color: "text-emerald-500", desc: "당신은 기술을 도구로 완벽하게 통제하고 있습니다. 현재의 균형을 유지하세요." },
-    { title: "디지털 주의보", color: "text-amber-500", desc: "조금씩 스마트폰에 의존하기 시작했습니다. 의식적인 스크린 타임 관리가 필요합니다." },
-    { title: "디지털 중독 위험", color: "text-rose-500", desc: "스마트폰이 당신의 일상을 지배하고 있을 가능성이 높습니다. '디지털 디톡스'가 절실한 시점입니다." },
+    { title: "디지털 여유로움", color: "text-emerald-700", desc: "당신은 기술을 도구로 완벽하게 통제하고 있습니다. 현재의 균형을 유지하세요." },
+    { title: "디지털 주의보", color: "text-amber-700", desc: "조금씩 스마트폰에 의존하기 시작했습니다. 의식적인 스크린 타임 관리가 필요합니다." },
+    { title: "디지털 중독 위험", color: "text-rose-600", desc: "스마트폰이 당신의 일상을 지배하고 있을 가능성이 높습니다. '디지털 디톡스'가 절실한 시점입니다." },
   ],
   en: [
-    { title: "Digitally Balanced", color: "text-emerald-500", desc: "You control technology as a tool, perfectly. Keep the balance you have." },
-    { title: "Digital Caution", color: "text-amber-500", desc: "You're starting to lean on your phone. Some conscious screen-time management is in order." },
-    { title: "Digital Dependence Risk", color: "text-rose-500", desc: "Your phone may be running your daily life. This is the moment for a real 'digital detox'." },
+    { title: "Digitally Balanced", color: "text-emerald-700", desc: "You control technology as a tool, perfectly. Keep the balance you have." },
+    { title: "Digital Caution", color: "text-amber-700", desc: "You're starting to lean on your phone. Some conscious screen-time management is in order." },
+    { title: "Digital Dependence Risk", color: "text-rose-600", desc: "Your phone may be running your daily life. This is the moment for a real 'digital detox'." },
   ],
   ja: [
-    { title: "デジタルに余裕あり", color: "text-emerald-500", desc: "あなたは技術を道具として完璧に使いこなしています。今のバランスを保ちましょう。" },
-    { title: "デジタル注意報", color: "text-amber-500", desc: "少しずつスマホに依存し始めています。意識的なスクリーンタイム管理が必要です。" },
-    { title: "デジタル依存リスク", color: "text-rose-500", desc: "スマホが日常を支配している可能性が高いです。今こそ『デジタルデトックス』が必要な時です。" },
+    { title: "デジタルに余裕あり", color: "text-emerald-700", desc: "あなたは技術を道具として完璧に使いこなしています。今のバランスを保ちましょう。" },
+    { title: "デジタル注意報", color: "text-amber-700", desc: "少しずつスマホに依存し始めています。意識的なスクリーンタイム管理が必要です。" },
+    { title: "デジタル依存リスク", color: "text-rose-600", desc: "スマホが日常を支配している可能性が高いです。今こそ『デジタルデトックス』が必要な時です。" },
   ],
   zh: [
-    { title: "数字生活从容", color: "text-emerald-500", desc: "你把技术完美地当作工具来掌控。请保持现在的平衡。" },
-    { title: "数字警戒", color: "text-amber-500", desc: "你开始逐渐依赖手机了，需要有意识地管理屏幕时间。" },
-    { title: "数字成瘾风险", color: "text-rose-500", desc: "手机很可能正在主宰你的日常生活。现在正是进行『数字排毒』的时候。" },
+    { title: "数字生活从容", color: "text-emerald-700", desc: "你把技术完美地当作工具来掌控。请保持现在的平衡。" },
+    { title: "数字警戒", color: "text-amber-700", desc: "你开始逐渐依赖手机了，需要有意识地管理屏幕时间。" },
+    { title: "数字成瘾风险", color: "text-rose-600", desc: "手机很可能正在主宰你的日常生活。现在正是进行『数字排毒』的时候。" },
   ],
   fr: [
-    { title: "Équilibre numérique", color: "text-emerald-500", desc: "Vous maîtrisez parfaitement la technologie comme un outil. Gardez cet équilibre." },
-    { title: "Vigilance numérique", color: "text-amber-500", desc: "Vous commencez à dépendre de votre téléphone. Une gestion consciente du temps d'écran s'impose." },
-    { title: "Risque de dépendance", color: "text-rose-500", desc: "Votre téléphone dirige peut-être votre quotidien. C'est le moment d'une vraie « détox numérique »." },
+    { title: "Équilibre numérique", color: "text-emerald-700", desc: "Vous maîtrisez parfaitement la technologie comme un outil. Gardez cet équilibre." },
+    { title: "Vigilance numérique", color: "text-amber-700", desc: "Vous commencez à dépendre de votre téléphone. Une gestion consciente du temps d'écran s'impose." },
+    { title: "Risque de dépendance", color: "text-rose-600", desc: "Votre téléphone dirige peut-être votre quotidien. C'est le moment d'une vraie « détox numérique »." },
   ],
   es: [
-    { title: "Equilibrio digital", color: "text-emerald-500", desc: "Controlas la tecnología como una herramienta, a la perfección. Mantén ese equilibrio." },
-    { title: "Alerta digital", color: "text-amber-500", desc: "Empiezas a depender del móvil. Conviene gestionar el tiempo de pantalla de forma consciente." },
-    { title: "Riesgo de dependencia", color: "text-rose-500", desc: "Puede que el móvil gobierne tu día a día. Es el momento de una auténtica «desintoxicación digital»." },
+    { title: "Equilibrio digital", color: "text-emerald-700", desc: "Controlas la tecnología como una herramienta, a la perfección. Mantén ese equilibrio." },
+    { title: "Alerta digital", color: "text-amber-700", desc: "Empiezas a depender del móvil. Conviene gestionar el tiempo de pantalla de forma consciente." },
+    { title: "Riesgo de dependencia", color: "text-rose-600", desc: "Puede que el móvil gobierne tu día a día. Es el momento de una auténtica «desintoxicación digital»." },
   ],
 };
 
@@ -157,7 +157,7 @@ const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
         <div className="not-prose my-12 p-8 bg-card border border-border rounded-3xl shadow-lg max-w-2xl mx-auto">
                 <div className="text-center space-y-8 py-6 animate-fade-in">
                     <div>
-                        <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">{ui.resultLabel}</span>
+                        <span className="text-sm font-bold text-slate-600 uppercase tracking-widest">{ui.resultLabel}</span>
                         <h3 className={`text-5xl font-black mt-2 ${interpretation.color}`}>{interpretation.title}</h3>
                     </div>
 
@@ -176,7 +176,7 @@ const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
 
                     <button
                         onClick={() => {setAnswers({}); setShowResults(false);}}
-                        className="text-slate-400 text-sm hover:text-foreground transition-colors"
+                        className="text-slate-600 text-sm hover:text-foreground transition-colors"
                     >
                         {ui.retry}
                     </button>

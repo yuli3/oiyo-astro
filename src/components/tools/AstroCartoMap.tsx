@@ -133,7 +133,7 @@ export default function AstroCartoMap({
               type="button"
               onClick={() => setOn((s) => ({ ...s, [l.body]: !s[l.body] }))}
               className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold ${
-                on[l.body] ? 'border-slate-800 text-foreground' : 'border-border text-slate-400'
+                on[l.body] ? 'border-slate-800 text-foreground' : 'border-border text-slate-600'
               }`}
               style={on[l.body] ? { borderColor: meta.color, color: meta.color } : undefined}
             >
@@ -149,7 +149,7 @@ export default function AstroCartoMap({
             type="button"
             onClick={() => setView(v)}
             className={`rounded-full border px-3 py-1 text-[11px] font-semibold ${
-              view === v ? 'border-green-800 bg-primary-strong text-white' : 'border-border text-slate-400'
+              view === v ? 'border-green-800 bg-primary-strong text-white' : 'border-border text-slate-600'
             }`}
           >
             {v === 'flat' ? t.mapView : t.globeView}
@@ -198,7 +198,7 @@ export default function AstroCartoMap({
           <AstroCartoGlobe lines={visible} curves={curves} city={city} colors={colors} />
         </div>
       )}
-      <p className="mt-2 text-center text-[11px] text-slate-400">
+      <p className="mt-2 text-center text-[11px] text-slate-600">
         {t.disclaimer}
         {view === 'globe' && (
           <>

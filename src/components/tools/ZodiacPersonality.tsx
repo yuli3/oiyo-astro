@@ -741,7 +741,7 @@ export default function ZodiacPersonality({ locale }: Props) {
           )}
         </div>
 
-        <p className="text-center text-xs text-gray-400 font-medium uppercase tracking-wide">{ui.selectPrompt}</p>
+        <p className="text-center text-xs text-gray-600 font-medium uppercase tracking-wide">{ui.selectPrompt}</p>
 
         {/* Sign grid */}
         <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">

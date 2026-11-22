@@ -1002,7 +1002,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                   </span>
                 )}
                 {jeolgiBadge.status === 'ok' && (
-                  <span className="text-gray-400">
+                  <span className="text-gray-600">
                     · {jeolgiBadge.source === 'kasi' ? reading.jeolgiSourceKasi : reading.jeolgiSourceLocal}
                   </span>
                 )}
@@ -1147,7 +1147,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     <p className="text-[11px] font-semibold text-muted-foreground">{reading.generates}</p>
                     <div className="mt-2 flex items-center justify-between gap-3">
                       <span className="text-sm font-bold text-gray-800">{ELEMENTS[strong][locale]}</span>
-                      <span className="text-xs text-gray-400">→</span>
+                      <span className="text-xs text-gray-600">→</span>
                       <span className={`text-sm font-bold ${supportColor.text}`}>{ELEMENTS[support][locale]}</span>
                     </div>
                   </div>
@@ -1155,7 +1155,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     <p className="text-[11px] font-semibold text-muted-foreground">{reading.controls}</p>
                     <div className="mt-2 flex items-center justify-between gap-3">
                       <span className="text-sm font-bold text-gray-800">{ELEMENTS[strong][locale]}</span>
-                      <span className="text-xs text-gray-400">↘</span>
+                      <span className="text-xs text-gray-600">↘</span>
                       <span className={`text-sm font-bold ${regulateColor.text}`}>{ELEMENTS[regulate][locale]}</span>
                     </div>
                   </div>
@@ -1197,7 +1197,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     <ul className="space-y-0.5">
                       {traits.strengths.map((s, i) => (
                         <li key={i} className="text-sm text-gray-700 flex gap-1">
-                          <span className="text-gray-400">·</span>{s}
+                          <span className="text-gray-600">·</span>{s}
                         </li>
                       ))}
                     </ul>
@@ -1207,7 +1207,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     <ul className="space-y-0.5">
                       {traits.weaknesses.map((w, i) => (
                         <li key={i} className="text-sm text-gray-700 flex gap-1">
-                          <span className="text-gray-400">·</span>{w}
+                          <span className="text-gray-600">·</span>{w}
                         </li>
                       ))}
                     </ul>

@@ -202,7 +202,7 @@ export function CityField({
         </div>
       ) : (
         <div className="relative">
-          <MapPin className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-300" aria-hidden="true" />
+          <MapPin className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-600" aria-hidden="true" />
           <input
             id={id}
             type="text"
@@ -223,7 +223,7 @@ export function CityField({
         </div>
       )}
 
-      <p className="mt-1 text-[11px] text-slate-400">{c.hint}</p>
+      <p className="mt-1 text-[11px] text-slate-600">{c.hint}</p>
 
       {open && (
         <div
@@ -234,7 +234,7 @@ export function CityField({
           {query.trim().length < 2 && (
             <p className="px-3 pt-2 text-[11px] font-bold uppercase tracking-wider text-green-600">{c.popular}</p>
           )}
-          {busy && <p className="px-3 py-2 text-[11px] text-green-500">…</p>}
+          {busy && <p className="px-3 py-2 text-[11px] text-green-700">…</p>}
           {!busy && options.length === 0 && (
             <p className="px-3 py-3 text-[11px] leading-5 text-muted-foreground">{c.empty}</p>
           )}
@@ -254,9 +254,9 @@ export function CityField({
                   >
                     <span className="min-w-0 flex-1 truncate text-sm font-bold text-foreground">{primary}</span>
                     {o.latin && o.latin !== primary && (
-                      <span className="shrink-0 text-[11px] text-slate-400">{o.latin}</span>
+                      <span className="shrink-0 text-[11px] text-slate-600">{o.latin}</span>
                     )}
-                    {o.countryCode && <span className="shrink-0 text-[11px] font-bold text-green-500">{o.countryCode}</span>}
+                    {o.countryCode && <span className="shrink-0 text-[11px] font-bold text-green-700">{o.countryCode}</span>}
                   </button>
                 </li>
               );

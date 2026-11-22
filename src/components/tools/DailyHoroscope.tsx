@@ -880,7 +880,7 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
               >
                 <span className="text-2xl">{SIGN_EMOJI[s]}</span>
                 <span className="mt-1 text-xs text-gray-700 text-center leading-tight">{names[s]}</span>
-                <span className="text-xs text-gray-400">{SIGN_DATES[s]}</span>
+                <span className="text-xs text-gray-600">{SIGN_DATES[s]}</span>
               </button>
             ))}
           </div>
@@ -893,7 +893,7 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
               <span className="text-4xl">{SIGN_EMOJI[result.sign]}</span>
               <div>
                 <p className="text-lg font-bold text-foreground">{names[result.sign]}</p>
-                <p className="text-xs text-gray-400">{result.date} · {ui.resultDate}</p>
+                <p className="text-xs text-gray-600">{result.date} · {ui.resultDate}</p>
               </div>
             </div>
             <button
@@ -917,11 +917,11 @@ export default function DailyHoroscope({ locale, embedded = false }: Props) {
             <h3 className="mb-3 text-center font-bold text-green-800">✨ {ui.luckySection}</h3>
             <div className="flex justify-center gap-10">
               <div className="text-center">
-                <p className="text-xs text-green-500 mb-1">{ui.luckyColor}</p>
+                <p className="text-xs text-green-700 mb-1">{ui.luckyColor}</p>
                 <p className="text-lg font-semibold text-primary">{result.luckyColor}</p>
               </div>
               <div className="text-center">
-                <p className="text-xs text-green-500 mb-1">{ui.luckyNumber}</p>
+                <p className="text-xs text-green-700 mb-1">{ui.luckyNumber}</p>
                 <p className="text-2xl font-bold text-primary">{result.luckyNumber}</p>
               </div>
             </div>

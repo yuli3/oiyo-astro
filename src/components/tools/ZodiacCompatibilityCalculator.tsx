@@ -277,7 +277,7 @@ const SIGN_DATES: Record<ZodiacSign, string> = {
 };
 
 const ELEMENT_COLOR: Record<Element, string> = {
-  fire:"text-orange-500",earth:"text-emerald-600",air:"text-sky-500",water:"text-green-500",
+  fire:"text-orange-700",earth:"text-emerald-600",air:"text-sky-700",water:"text-green-700",
 };
 
 const ELEMENT_BG: Record<Element, string> = {
@@ -287,7 +287,7 @@ const ELEMENT_BG: Record<Element, string> = {
 
 const COMPAT_COLOR: Record<CompatType, string> = {
   excellent:"text-pink-600",great:"text-green-600",good:"text-blue-600",
-  neutral:"text-muted-foreground",challenging:"text-orange-600",
+  neutral:"text-muted-foreground",challenging:"text-orange-700",
 };
 
 const COMPAT_BG: Record<CompatType, string> = {
@@ -394,7 +394,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
                         <span className={`mt-0.5 leading-tight text-center ${isSelected ? ELEMENT_COLOR[el] : "text-muted-foreground"}`}>
                           {names[s]}
                         </span>
-                        <span className="text-[9px] text-gray-400">{SIGN_DATES[s]}</span>
+                        <span className="text-[9px] text-gray-600">{SIGN_DATES[s]}</span>
                       </button>
                     );
                   })}
@@ -424,7 +424,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
                   <div key={i}>
                     <div className={`text-5xl mb-1 ${ELEMENT_COLOR[el]}`}>{SIGN_EMOJI[s as ZodiacSign]}</div>
                     <p className={`text-sm font-bold ${ELEMENT_COLOR[el]}`}>{names[s as ZodiacSign]}</p>
-                    <p className="text-[10px] text-gray-400">{SIGN_DATES[s as ZodiacSign]}</p>
+                    <p className="text-[10px] text-gray-600">{SIGN_DATES[s as ZodiacSign]}</p>
                   </div>
                 );
               })}
@@ -433,7 +433,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
             {/* Score */}
             <div className={`text-6xl font-black mb-1 ${COMPAT_COLOR[result.type]}`}>
               {result.score}
-              <span className="text-2xl text-gray-400">/ 100</span>
+              <span className="text-2xl text-gray-600">/ 100</span>
             </div>
             <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${COMPAT_BG[result.type]}`}>
               {ui.compatLabel[result.type]}

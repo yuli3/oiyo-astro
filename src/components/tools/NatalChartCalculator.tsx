@@ -511,7 +511,7 @@ export default function NatalChartCalculator({ locale }: Props) {
                     )}
                     <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">{r.label}</p>
-                    <p className="text-[11px] text-slate-400">{r.sub}</p>
+                    <p className="text-[11px] text-slate-600">{r.sub}</p>
                     </div>
                   </div>
                   <span className="text-3xl" aria-hidden="true">{info.emoji}</span>
@@ -553,7 +553,7 @@ export default function NatalChartCalculator({ locale }: Props) {
           }, { pageUrl: window.location.href })).url}
           onCopyClick={() => gaEvent('share_click', { test_id: 'natal' })}
         />
-        <p className="mt-1.5 text-center text-xs text-amber-600">{PRIVACY_NOTE[loc]}</p>
+        <p className="mt-1.5 text-center text-xs text-amber-700">{PRIVACY_NOTE[loc]}</p>
 
         <div className="mt-5 text-center text-sm">
           <a href={`/${loc}/zodiac/personality/`} className="font-semibold text-green-600 hover:underline">{t.zodiacLink}</a>
@@ -622,7 +622,7 @@ export default function NatalChartCalculator({ locale }: Props) {
         </button>
       </div>
 
-      <p className="mt-4 text-center text-xs text-slate-400">{t.disclaimer}</p>
+      <p className="mt-4 text-center text-xs text-slate-600">{t.disclaimer}</p>
     </section>
   );
 }

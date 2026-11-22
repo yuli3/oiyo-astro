@@ -235,14 +235,14 @@ export function EncyclopediaClient() {
               <ItemCard
                 content={
                   <div className="space-y-4 pt-4">
-                    <div className="flex items-center justify-between text-xs text-primary/70 border-b border-border pb-2">
+                    <div className="flex items-center justify-between text-xs text-primary border-b border-border pb-2">
                       <span>{t.time}</span>
                       <span className="font-mono font-medium text-green-900">
                         {data.time}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-green-400">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-green-700">
                         {t.essence}
                       </span>
                       <span className="font-serif italic text-lg text-[#064e3b]">

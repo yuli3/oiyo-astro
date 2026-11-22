@@ -192,7 +192,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           <div className="mt-3 space-y-2">{BIG5.map((dimension) => <Bar key={dimension} label={dimension} value={valueOf(byConstruct(groups.big5, `psychology.big5.${dimension}`)) ?? 0} />)}</div>
           <AssessmentMeta signals={groups.big5} lang={lang} t={t} />
           <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.big5Caveat}</p>
-          <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.big5[0].provenance.instrumentVersion}</p></details>
+          <details className="mt-2 text-[10px] text-slate-600"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.big5[0].provenance.instrumentVersion}</p></details>
         </article>}
 
         {groups.mbti.length === Object.keys(MBTI).length && <article className="rounded-2xl border border-border bg-card p-4">
@@ -205,7 +205,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           })}</div>
           <AssessmentMeta signals={groups.mbti} lang={lang} t={t} />
           <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.mbtiCaveat}</p>
-          <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.mbti[0].provenance.instrumentVersion}</p></details>
+          <details className="mt-2 text-[10px] text-slate-600"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.mbti[0].provenance.instrumentVersion}</p></details>
         </article>}
 
         {groups.riasec.length === RIASEC.length && <article className="rounded-2xl border border-border bg-card p-4">
@@ -214,7 +214,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2">{RIASEC.map((dimension) => <Bar key={dimension} label={dimension} value={valueOf(byConstruct(groups.riasec, `vocation.riasec.${dimension}`)) ?? 0} />)}</div>
           <AssessmentMeta signals={groups.riasec} lang={lang} t={t} />
           <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.riasecCaveat}</p>
-          <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.riasec[0].provenance.instrumentVersion}</p></details>
+          <details className="mt-2 text-[10px] text-slate-600"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.riasec[0].provenance.instrumentVersion}</p></details>
         </article>}
 
         {groups.attachment.length === ATTACHMENT.length && <article className="rounded-2xl border border-border bg-card p-4">
@@ -226,7 +226,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           </div>
           <AssessmentMeta signals={groups.attachment} lang={lang} t={t} />
           <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{ATTACHMENT_DRAFT_CAVEAT[lang]}</p>
-          <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.attachment[0].provenance.instrumentVersion}</p></details>
+          <details className="mt-2 text-[10px] text-slate-600"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.attachment[0].provenance.instrumentVersion}</p></details>
         </article>}
 
         {groups.careerValues.length > 0 && careerScores && <article className="rounded-2xl border border-border bg-card p-4">
@@ -235,7 +235,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           <div className="mt-3 space-y-2">{CAREER_VALUES.map((dimension) => <Bar key={dimension} label={CAREER_VALUE_LABELS[lang][dimension]} value={careerScores[dimension]} />)}</div>
           <AssessmentMeta signals={groups.careerValues} lang={lang} t={t} />
           <p className="mt-3 text-[11px] leading-5 text-muted-foreground">{t.careerValuesCaveat}</p>
-          <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.careerValues[0].provenance.instrumentVersion}</p></details>
+          <details className="mt-2 text-[10px] text-slate-600"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.careerValues[0].provenance.instrumentVersion}</p></details>
         </article>}
       </div>
     </section>

@@ -1044,7 +1044,7 @@ export default function ChineseZodiac({ locale }: Props) {
             {t.findBtn}
           </button>
         </div>
-        {error && <p className="text-sm text-rose-500">{error}</p>}
+        {error && <p className="text-sm text-rose-600">{error}</p>}
       </div>
 
       {/* Browse grid */}
@@ -1135,7 +1135,7 @@ export default function ChineseZodiac({ locale }: Props) {
               </ul>
             </div>
             <div className="bg-card bg-opacity-60 rounded-xl p-3">
-              <p className="text-xs font-semibold text-rose-500 mb-2">⚠️ {t.weaknessesLabel}</p>
+              <p className="text-xs font-semibold text-rose-600 mb-2">⚠️ {t.weaknessesLabel}</p>
               <ul className="space-y-1">
                 {data.weaknesses[locale].map((w) => (
                   <li key={w} className="text-xs text-gray-700">• {w}</li>
@@ -1164,7 +1164,7 @@ export default function ChineseZodiac({ locale }: Props) {
               </div>
             </div>
             <div className="bg-card bg-opacity-60 rounded-xl p-3">
-              <p className="text-xs font-semibold text-rose-500 mb-2">⚡ {t.worstMatchLabel}</p>
+              <p className="text-xs font-semibold text-rose-600 mb-2">⚡ {t.worstMatchLabel}</p>
               <div className="flex flex-wrap gap-1.5">
                 {data.worstMatch.map((m) => {
                   const z = ZODIACS[m];

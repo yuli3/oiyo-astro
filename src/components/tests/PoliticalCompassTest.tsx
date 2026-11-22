@@ -356,11 +356,11 @@ export default function PoliticalCompassTest({ locale }: Props) {
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{ax.name}</p>
               <p className={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-green-800' : 'text-muted-foreground'}`}>{ax.label}</p>
               <div className="mt-2 flex items-center gap-1">
-                <span className="text-xs text-slate-400">{ax.left}</span>
+                <span className="text-xs text-slate-600">{ax.left}</span>
                 <div className="relative mx-1 h-2 flex-1 rounded-full bg-slate-200">
                   <div className={`absolute top-0 h-2 w-2 -translate-x-1/2 rounded-full border-2 border-white shadow ${ax.side === 'left' ? 'left-[20%] bg-amber-500' : ax.side === 'right' ? 'left-[80%] bg-green-500' : 'left-[50%] bg-slate-400'}`} />
                 </div>
-                <span className="text-xs text-slate-400">{ax.right}</span>
+                <span className="text-xs text-slate-600">{ax.right}</span>
               </div>
               {ax.side !== 'neutral' && glossary[i] && (
                 <p className="mt-3 border-t border-slate-200/70 pt-2 text-xs leading-relaxed text-slate-600">

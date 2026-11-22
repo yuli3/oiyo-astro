@@ -483,7 +483,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       )}
 
       <div>
-        <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">{COPY.region[locale]}</p>
+        <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-600">{COPY.region[locale]}</p>
         <div className="flex flex-wrap gap-2">
           {(["all", ...CONTINENTS] as const).map((key) => (
             <button
@@ -554,7 +554,7 @@ export default function ReincarnationCountry({ locale }: Props) {
           </div>
           <dl className="mt-3 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
             <div>
-              <dt className="text-slate-400">{birthChanceLabel(locale, year)}</dt>
+              <dt className="text-slate-600">{birthChanceLabel(locale, year)}</dt>
               <dd className="font-semibold">
                 {formatPct(countryShare(latest, "births", year), locale)} · {COPY.oneIn[locale]}{" "}
                 {formatInt(oneIn(countryShare(latest, "births", year)), locale)} · {COPY.rank[locale]}{" "}
@@ -562,7 +562,7 @@ export default function ReincarnationCountry({ locale }: Props) {
               </dd>
             </div>
             <div>
-              <dt className="text-slate-400">{COPY.popChance[locale]}</dt>
+              <dt className="text-slate-600">{COPY.popChance[locale]}</dt>
               <dd className="font-semibold">
                 {formatPct(countryShare(latest, "population"), locale)} · {COPY.oneIn[locale]}{" "}
                 {formatInt(oneIn(countryShare(latest, "population")), locale)} · {COPY.rank[locale]}{" "}
@@ -570,11 +570,11 @@ export default function ReincarnationCountry({ locale }: Props) {
               </dd>
             </div>
             <div>
-              <dt className="text-slate-400">{COPY.population[locale]}</dt>
+              <dt className="text-slate-600">{COPY.population[locale]}</dt>
               <dd>{formatInt(latest.population, locale)}</dd>
             </div>
             <div>
-              <dt className="text-slate-400">{birthsLabel(locale, year)}</dt>
+              <dt className="text-slate-600">{birthsLabel(locale, year)}</dt>
               <dd>{formatInt(birthsIn(latest, year), locale)}</dd>
             </div>
           </dl>
@@ -611,7 +611,7 @@ export default function ReincarnationCountry({ locale }: Props) {
           <p role="status" aria-live="polite" className="mt-2 text-sm text-muted-foreground">{shareFailed ? COPY.shareFailed[locale] : shared ? (shared === "share" ? COPY.shareDone[locale] : COPY.copied[locale]) : ""}</p>
           {results.length > 0 && !reducedMotion && (
             <div className="mt-4">
-              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">{COPY.jar[locale]}</p>
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-600">{COPY.jar[locale]}</p>
               <PhysicsJar
                 items={results.map((row, index) => ({
                   id: row.iso2,
@@ -674,7 +674,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       )}
 
       <section>
-        <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400">{COPY.top[locale]} · {mode === "births" ? birthsLabel(locale, year) : COPY.population[locale]}</h2>
+        <h2 className="text-sm font-bold uppercase tracking-wide text-slate-600">{COPY.top[locale]} · {mode === "births" ? birthsLabel(locale, year) : COPY.population[locale]}</h2>
         <ol className="mt-2 divide-y divide-slate-100 rounded-2xl border border-border bg-card">
           {top.map((row, i) => (
             <li key={row.iso3}>
@@ -699,7 +699,7 @@ export default function ReincarnationCountry({ locale }: Props) {
 
       <section className="rounded-2xl border border-border bg-card p-4">
         <div className="flex items-center justify-between gap-2">
-          <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400">{COPY.history[locale]}</h2>
+          <h2 className="text-sm font-bold uppercase tracking-wide text-slate-600">{COPY.history[locale]}</h2>
           {history.length > 0 && (
             <button type="button" onClick={clearHistory} className="text-xs font-semibold text-muted-foreground hover:underline">
               {COPY.clearHistory[locale]}
@@ -722,11 +722,11 @@ export default function ReincarnationCountry({ locale }: Props) {
                     <span className="block truncate font-semibold text-slate-800">
                       {rows.map((row) => nameOf(row, locale)).join(", ")}
                     </span>
-                    <span className="text-xs text-slate-400">
+                    <span className="text-xs text-slate-600">
                       {when} · {entry.mode === "births" ? birthsLabel(locale, entry.year ?? CURRENT_BIRTH_YEAR) : COPY.population[locale]} · {rows.length}
                     </span>
                   </button>
-                  <span className="shrink-0 text-[11px] font-bold uppercase tracking-wide text-slate-400">{COPY.restore[locale]}</span>
+                  <span className="shrink-0 text-[11px] font-bold uppercase tracking-wide text-slate-600">{COPY.restore[locale]}</span>
                 </li>
               );
             })}
@@ -739,7 +739,7 @@ export default function ReincarnationCountry({ locale }: Props) {
           {COPY.compare[locale]}
         </a>
       </p>
-      <p className="text-xs leading-relaxed text-slate-400">
+      <p className="text-xs leading-relaxed text-slate-600">
         {COPY.source[locale]}: {REINCARNATION_META.source} ({REINCARNATION_META.asOf})
         {drawYear !== CURRENT_BIRTH_YEAR ? ` · ${BIRTHS_BY_YEAR_SOURCE}` : ""}
       </p>

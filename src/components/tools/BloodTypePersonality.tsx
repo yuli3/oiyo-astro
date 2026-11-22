@@ -364,7 +364,7 @@ export default function BloodTypePersonality({ locale }: Props) {
         </div>
 
         <div className={`rounded-xl border p-4 bg-card border-border`}>
-          <p className="text-xs text-gray-400 text-center leading-relaxed">
+          <p className="text-xs text-gray-600 text-center leading-relaxed">
             {locale === "ko" && "혈액형 성격 이론은 과학적으로 검증되지 않은 대중 문화입니다. 재미로만 참고하세요."}
             {locale === "en" && "Blood type personality theory is popular culture, not scientifically validated. For entertainment only."}
             {locale === "ja" && "血液型性格診断は科学的に検証されていない大衆文化です。楽しみとしてご参考ください。"}

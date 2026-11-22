@@ -309,7 +309,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
           from the controls/raw-text preview below so the exported image
           isn't cluttered with buttons. */}
       <div id="ontology-export-summary-card" className="mt-3 rounded-2xl border border-border bg-gradient-to-b from-green-50 to-white p-4">
-        <p className="text-[10px] font-black uppercase tracking-wider text-green-500">OIYO · {data.exportedAt.slice(0, 10)}</p>
+        <p className="text-[10px] font-black uppercase tracking-wider text-green-700">OIYO · {data.exportedAt.slice(0, 10)}</p>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {data.signals.mbti && <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-black text-primary-foreground">{data.signals.mbti.type}</span>}
           {data.signals.riasec && <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-black text-primary-foreground">{data.signals.riasec.code}</span>}
@@ -317,7 +317,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
           {data.signals.zodiac && <span className="rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-black text-green-800">{data.signals.zodiac}</span>}
           {data.signals.saju && <span className="rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-black text-green-800">{data.signals.saju.element}</span>}
           {!data.signals.mbti && !data.signals.riasec && !data.signals.enneagram && !data.signals.zodiac && !data.signals.saju && (
-            <span className="text-[11px] text-green-500">—</span>
+            <span className="text-[11px] text-green-700">—</span>
           )}
         </div>
         {topRecommendations.length > 0 && (
@@ -348,11 +348,11 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
           <Share2 className="h-3.5 w-3.5" /> {shareState === "copied" ? t.shareCopied : t.share}
         </button>
       </div>
-      <p className="mt-2 text-[10px] text-green-400">{t.localOnly}</p>
+      <p className="mt-2 text-[10px] text-green-700">{t.localOnly}</p>
 
-      {shareState === "unavailable" && <p className="mt-2 text-xs text-amber-600">{t.shareUnavailable}</p>}
-      {pngState === "failed" && <p className="mt-2 text-xs text-amber-600">{t.pngUnavailable}</p>}
-      <p className="mt-2 text-xs text-amber-600">{t.privacyNote}</p>
+      {shareState === "unavailable" && <p className="mt-2 text-xs text-amber-700">{t.shareUnavailable}</p>}
+      {pngState === "failed" && <p className="mt-2 text-xs text-amber-700">{t.pngUnavailable}</p>}
+      <p className="mt-2 text-xs text-amber-700">{t.privacyNote}</p>
 
       <pre className="mt-3 max-h-72 overflow-auto rounded-lg bg-slate-950 p-3 text-[11px] leading-5 text-slate-100">{content}</pre>
     </div>

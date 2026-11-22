@@ -860,7 +860,7 @@ export default function BloodTypeFortune({ locale }: Props) {
               <span className="text-4xl">{BLOOD_TYPE_EMOJI[result.bloodType]}</span>
               <div>
                 <p className="text-lg font-bold text-foreground">{names[result.bloodType]}</p>
-                <p className="text-xs text-gray-400">{result.date} · {ui.resultDate}</p>
+                <p className="text-xs text-gray-600">{result.date} · {ui.resultDate}</p>
               </div>
             </div>
             <button
@@ -884,11 +884,11 @@ export default function BloodTypeFortune({ locale }: Props) {
             <h3 className="mb-3 text-center font-bold text-red-800">✨ {ui.luckySection}</h3>
             <div className="flex justify-center gap-10">
               <div className="text-center">
-                <p className="text-xs text-red-500 mb-1">{ui.luckyColor}</p>
+                <p className="text-xs text-red-600 mb-1">{ui.luckyColor}</p>
                 <p className="text-lg font-semibold text-red-700">{result.luckyColor}</p>
               </div>
               <div className="text-center">
-                <p className="text-xs text-red-500 mb-1">{ui.luckyNumber}</p>
+                <p className="text-xs text-red-600 mb-1">{ui.luckyNumber}</p>
                 <p className="text-2xl font-bold text-red-700">{result.luckyNumber}</p>
               </div>
             </div>

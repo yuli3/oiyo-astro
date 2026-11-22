@@ -38,6 +38,12 @@ const defaultColors = [
   "#8b5cf6",
   "#06b6d4",
 ];
+// 숫자 글자색. 밝은 색(500 계열)은 흰 카드 위에서 큰 글자 기준 3:1에도 못 미쳐 진한 색으로 바꾼다. 상단 띠는 원래 색.
+const TEXT_SAFE: Record<string, string> = {
+  "#10b981": "#047857", "#f59e0b": "#b45309", "#06b6d4": "#0e7490", "#3b82f6": "#2563eb",
+  "#8b5cf6": "#7c3aed", "#ef4444": "#dc2626", "#94a3b8": "#64748b", "#ca8a04": "#a16207",
+  "#22c55e": "#15803d", "#eab308": "#a16207", "#f97316": "#c2410c", "#14b8a6": "#0f766e",
+};
 ---
 
 <div class="edu-statcards">
@@ -49,17 +55,18 @@ const defaultColors = [
     {
       items.map((item, i) => {
         const color = item.color ?? defaultColors[i % defaultColors.length];
+        const textColor = TEXT_SAFE[color.toLowerCase()] ?? color;
         return (
           <div
             class="edu-statcards__card"
             style={`border-top: 4px solid ${color};`}
           >
             {item.icon && (
-              <div class="edu-statcards__icon" style={`color: ${color};`}>
+              <div class="edu-statcards__icon" style={`color: ${textColor};`}>
                 {item.icon}
               </div>
             )}
-            <div class="edu-statcards__value" style={`color: ${color};`}>
+            <div class="edu-statcards__value" style={`color: ${textColor};`}>
               {item.value}
               {item.unit && (
                 <span class="edu-statcards__unit">{item.unit}</span>
@@ -142,7 +149,7 @@ const defaultColors = [
   }
   .edu-statcards__description {
     font-size: 0.8rem;
-    color: #94a3b8;
+    color: #64748b;
     line-height: 1.5;
     border-top: 1px solid #f1f5f9;
     padding-top: 0.5rem;

@@ -140,7 +140,7 @@ export default function TypingSpeedTest({ locale }: Props) {
     return targetText.split('').map((char, i) => {
       let cls = 'text-muted-foreground'
       if (i < typed.length) {
-        cls = typed[i] === char ? 'text-green-600' : 'text-red-500 bg-red-100'
+        cls = typed[i] === char ? 'text-green-600' : 'text-red-600 bg-red-100'
       } else if (i === typed.length) {
         cls = 'text-foreground border-b-2 border-primary'
       }

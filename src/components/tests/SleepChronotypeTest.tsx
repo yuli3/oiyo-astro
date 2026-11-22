@@ -1348,7 +1348,7 @@ export default function SleepChronotypeTest({ locale: lp = 'ko', showHeading = t
         <ul className="space-y-1">
           {r.tips.map(tip => (
             <li key={tip} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-green-500">→</span>{tip}
+              <span className="text-green-700">→</span>{tip}
             </li>
           ))}
         </ul>

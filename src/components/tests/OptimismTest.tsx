@@ -472,7 +472,7 @@ export default function OptimismTest({ locale: localeProp }: Props) {
             <div className="relative h-3 w-full overflow-hidden rounded-full bg-surface-subtle">
               <div className="h-full rounded-full transition-all duration-700" style={{ width: `${pct}%`, backgroundColor: lv.color }} />
             </div>
-            <div className="mt-1 flex justify-between text-xs text-gray-400">
+            <div className="mt-1 flex justify-between text-xs text-gray-600">
               <span>{tx.pessimism}</span>
               <span>{tx.optimism}</span>
             </div>
@@ -487,7 +487,7 @@ export default function OptimismTest({ locale: localeProp }: Props) {
             <p className="mt-1 text-sm text-gray-600">{ld.strength}</p>
           </div>
           <div>
-            <h3 className="font-semibold text-orange-600">⚠️ {tx.watch}</h3>
+            <h3 className="font-semibold text-orange-700">⚠️ {tx.watch}</h3>
             <p className="mt-1 text-sm text-gray-600">{ld.watch}</p>
           </div>
           <div className="rounded-lg p-4" style={{ background: `${lv.color}10` }}>

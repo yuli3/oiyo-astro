@@ -57,7 +57,7 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
     <div className="mt-6 rounded-2xl border border-border bg-green-50/50 p-5">
       <div className="flex items-center justify-between gap-2">
         <p className="text-[11px] font-black uppercase tracking-widest text-primary">{t.heading}</p>
-        <span className="text-xs font-bold text-green-500">{t.progress(count, steps.length)}</span>
+        <span className="text-xs font-bold text-green-700">{t.progress(count, steps.length)}</span>
       </div>
       <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-green-100" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
         <div className="h-2 rounded-full bg-green-500 transition-all" style={{ width: `${pct}%` }} />
@@ -80,7 +80,7 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
               </button>
               <a
                 href={s.href}
-                className={`text-sm font-medium transition-colors ${checked ? 'text-green-400 line-through' : 'text-green-900 hover:text-green-600'}`}
+                className={`text-sm font-medium transition-colors ${checked ? 'text-green-700 line-through' : 'text-green-900 hover:text-green-600'}`}
               >
                 {s.label}
               </a>
@@ -95,7 +95,7 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
         <button
           type="button"
           onClick={() => persist([])}
-          className="mt-3 text-xs text-green-400 underline underline-offset-2 hover:text-green-600"
+          className="mt-3 text-xs text-green-700 underline underline-offset-2 hover:text-green-600"
         >
           {t.reset}
         </button>

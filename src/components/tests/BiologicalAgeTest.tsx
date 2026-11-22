@@ -135,7 +135,7 @@ export default function BiologicalAgeTest({ locale }: Props) {
               return (
                 <div key={f.key} className="flex items-center justify-between text-sm">
                   <span className="text-muted-foreground">{l.categories[f.key]}</span>
-                  <span className={`font-medium ${delta < 0 ? 'text-green-600' : delta > 0 ? 'text-red-500' : 'text-muted-foreground'}`}>
+                  <span className={`font-medium ${delta < 0 ? 'text-green-600' : delta > 0 ? 'text-red-600' : 'text-muted-foreground'}`}>
                     {delta > 0 ? `+${delta}` : delta < 0 ? `${delta}` : '±0'}
                   </span>
                 </div>

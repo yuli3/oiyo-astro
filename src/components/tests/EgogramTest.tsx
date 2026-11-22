@@ -635,11 +635,11 @@ export default function EgogramTest({ locale: localeProp }: Props) {
 
           <div className="bg-surface-subtle rounded-lg p-4 text-center">
             <p className="text-sm text-green-600 italic">"{p.affirmation[locale]}"</p>
-            <p className="text-xs text-green-400 mt-1">{t.affirmation}</p>
+            <p className="text-xs text-green-700 mt-1">{t.affirmation}</p>
           </div>
         </div>
 
-        <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <p className="text-xs text-gray-600 text-center">{t.note}</p>
 
         <ShareResultButton
           locale={locale}

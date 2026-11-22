@@ -338,11 +338,11 @@ export default function EmotionalIntelligenceTest({ locale: localeProp }: Props)
           </div>
           <div className="text-center py-3 rounded-lg" style={{ backgroundColor: ld.color + "15" }}>
             <p className="text-sm italic" style={{ color: ld.color }}>"{ld.affirmation[locale]}"</p>
-            <p className="text-xs text-gray-400 mt-1">{t.affirmation}</p>
+            <p className="text-xs text-gray-600 mt-1">{t.affirmation}</p>
           </div>
         </div>
 
-        <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <p className="text-xs text-gray-600 text-center">{t.note}</p>
         <ShareResultButton
           locale={locale}
           heading={t.title}

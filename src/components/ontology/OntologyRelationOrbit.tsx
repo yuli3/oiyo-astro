@@ -175,7 +175,7 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
         flatStage
       )}
 
-      {showEmpty ? <p className="mt-2 text-center text-xs font-bold text-green-500">{t.empty}</p> : null}
+      {showEmpty ? <p className="mt-2 text-center text-xs font-bold text-green-700">{t.empty}</p> : null}
 
       <nav aria-label="breadcrumb" className="mt-4 flex flex-wrap items-center justify-center gap-1 text-[11px] font-bold text-green-600">
         {breadcrumb.map((id, i) => {

@@ -383,7 +383,7 @@ const faqJsonLd = {
             <ul class="space-y-1">
               {hobbies.map((h) => (
                 <li class="flex items-start gap-2 text-sm text-slate-800">
-                  <span class="mt-0.5 text-slate-400">·</span>
+                  <span class="mt-0.5 text-slate-600">·</span>
                   {h[locale] ?? h.en}
                 </li>
               ))}
@@ -396,7 +396,7 @@ const faqJsonLd = {
           </div>
 
           <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">✕ {labelAvoid}</p>
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">✕ {labelAvoid}</p>
             <p class="text-sm italic text-muted-foreground">{avoid[locale] ?? avoid.en}</p>
           </div>
         </div>

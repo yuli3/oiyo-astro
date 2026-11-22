@@ -46,7 +46,7 @@ export default function CopyResultLink({ locale, getUrl, onCopyClick }: Props) {
         {state === 'done' && <>✅ {t.copied}</>}
         {state === 'error' && t.failed}
       </button>
-      <p className="mt-1.5 text-center text-xs text-slate-400">{t.hint}</p>
+      <p className="mt-1.5 text-center text-xs text-slate-600">{t.hint}</p>
     </div>
   );
 }

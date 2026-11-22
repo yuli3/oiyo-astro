@@ -290,10 +290,10 @@ export default function LoveProfileTest({ locale }: Props) {
 
         {/* Conflict */}
         <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4">
-          <p className="text-xs font-semibold text-amber-600 mb-1">⚡ {ui.conflictLabel}</p>
+          <p className="text-xs font-semibold text-amber-700 mb-1">⚡ {ui.conflictLabel}</p>
           <p className="font-bold text-amber-800 text-lg">{CONF_EMOJI[result.conflict]} {cd.name}</p>
           <p className="text-sm text-amber-700 mt-1">{cd.desc}</p>
-          <p className="text-xs text-amber-600 mt-2 italic">💡 {cd.tip}</p>
+          <p className="text-xs text-amber-700 mt-2 italic">💡 {cd.tip}</p>
         </div>
 
         <button onClick={reset} className="w-full py-3 rounded-xl border border-border text-gray-600 hover:bg-card transition-colors">

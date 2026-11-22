@@ -231,7 +231,7 @@ export function BirthTimeField({ id, label, value, onChange, hint, disabled }: B
       {label && (
         <label htmlFor={id} className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">
           {label}
-          {hint && <span className="font-medium text-slate-400 normal-case"> · {hint}</span>}
+          {hint && <span className="font-medium text-slate-600 normal-case"> · {hint}</span>}
         </label>
       )}
       <input
@@ -292,7 +292,7 @@ function ProfileChip({
       ) : (
         <div className="rounded-2xl border border-dashed border-border bg-card px-4 py-4 text-center">
           <p className="text-sm font-bold text-muted-foreground">{missing}</p>
-          {unlock && <p className="mt-1 text-xs leading-5 text-slate-400">{unlock}</p>}
+          {unlock && <p className="mt-1 text-xs leading-5 text-slate-600">{unlock}</p>}
           <button
             type="button"
             onClick={() => setDialogOpen(true)}

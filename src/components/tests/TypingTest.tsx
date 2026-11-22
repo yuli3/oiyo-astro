@@ -132,7 +132,7 @@ const TypingTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
   // Render passage with character coloring
   const renderPassage = () => {
     return passage.split('').map((char, i) => {
-      let cls = 'text-muted-foreground/50';
+      let cls = 'text-muted-foreground';
       if (i < typed.length) {
         cls = typed[i] === char ? 'text-foreground' : 'bg-destructive/20 text-destructive rounded';
       } else if (i === typed.length) {
