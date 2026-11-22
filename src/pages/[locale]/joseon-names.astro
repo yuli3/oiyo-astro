@@ -1,0 +1,119 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import JoseonNames from "../../components/tools/past-life/JoseonNames";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "조선 시대 내 이름 짓기 — 아명·관명·자·호, 평생 불린 이름들",
+    description: "개똥이·바우 같은 아명부터 오행 항렬자가 든 관명, 관례 때 받는 자, 스스로 짓는 호까지. 조선 시대에 내가 평생 불렸을 이름들을 받아 봐요. 딸로 태어나면 어떻게 불렸는지도 알려 드려요.",
+    heading: "조선 시대 내 이름 짓기",
+    sub: "아명에서 호까지, 평생 바뀌는 이름",
+    intro: "조선 사람은 평생 이름이 여러 번 바뀌었어요. 귀신을 속이려 지은 아명, 족보에 오르는 관명, 어른이 되어 받는 자, 스스로 짓는 호까지요. 아들로 태어났다면, 딸로 태어났다면 나는 어떻게 불렸을까요?",
+    howTitle: "어떻게 짓나요",
+    how: [
+      "아명은 한국민족문화대백과사전에 실린 실제 예(개똥이·쇠똥이·똥개·바우·끝봉이·갑이)에서 골라요.",
+      "관명의 항렬자는 오행상생(木→火→土→金→水) 순서를 따르는 일반 규칙으로 정해요. 글자는 그 기운이 든 예시이고, 실제 본관이나 족보와는 관계없어요.",
+      "생일로 뽑으면 같은 생일은 언제나 같은 결과가 나와요. 생일은 링크에 들어가지 않아요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "왜 아명을 천하게 지었나요?", a: "천한 이름일수록 귀신이 탐내지 않아 오래 산다고 믿었기 때문이에요. 고종의 아명은 명복(命福), 율곡 이이의 아명은 현룡(見龍)이었어요." },
+      { q: "자와 호는 어떻게 달라요?", a: "자는 15~20세 관례 때 받아 친구와 이웃이 본이름 대신 부르는 이름이고, 호는 사는 곳이나 좋아하는 것에서 따와 스스로 짓거나 받는 이름이에요. 이황은 자가 경호(景浩), 호가 퇴계(退溪)예요." },
+      { q: "조선 여성은 이름이 없었나요?", a: "특별한 경우가 아니면 아명 말고는 따로 이름을 받지 못했고, 어른이 되면 성을 따 '○씨 부인'으로 불렸어요. 신사임당처럼 스스로 당호를 지은 여성도 있었어요." },
+    ],
+  },
+  en: {
+    title: "My names in Joseon Korea: childhood name, formal name, courtesy name, pen name",
+    description: "From a deliberately lowly childhood name to a formal name with a Five Phases generation character, a courtesy name at coming of age and a pen name: the names a Joseon life gave you.",
+    heading: "My names in Joseon Korea",
+    sub: "From childhood name to pen name",
+    intro: "A Joseon person's name changed several times: a lowly childhood name to fool spirits, a formal name for the genealogy, a courtesy name at coming of age, and a pen name. What would you have been called as a son, or as a daughter?",
+    howTitle: "How it works",
+    how: [
+      "Childhood names come from real examples in the Encyclopedia of Korean Culture.",
+      "The generation character follows the general Five Phases rule (wood, fire, earth, metal, water). The characters are examples, unrelated to any real clan.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "Why lowly childhood names?", a: "A lowly name was thought to keep spirits away and help the child live long. King Gojong's was Myeongbok (命福)." },
+      { q: "Did Joseon women have names?", a: "Apart from special cases, only a childhood name; as adults they were called by surname. Some, like Sin Saimdang, took a hall name." },
+    ],
+  },
+  ja: {
+    title: "朝鮮時代の私の名前 — 幼名・冠名・字・号",
+    description: "わざと卑しく付けた幼名から、五行の行列字が入った冠名、冠礼の字、号まで。朝鮮時代に一生呼ばれた名前をもらいます。",
+    heading: "朝鮮時代の私の名前",
+    sub: "幼名から号まで、一生で変わる名前",
+    intro: "朝鮮の人は一生に何度も名前が変わりました。息子なら、娘なら、私はどう呼ばれたでしょう。",
+    howTitle: "仕組み",
+    how: ["幼名は韓国民族文化大百科の実例から、行列字は五行相生の一般則から選びます。実在の族譜とは無関係です。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "なぜ幼名を卑しく付けたのですか？", a: "卑しい名ほど鬼神に狙われず長生きすると信じられたからです。" }],
+  },
+  zh: {
+    title: "我在朝鲜时代的名字 — 乳名、冠名、字、号",
+    description: "从故意取得低贱的乳名，到带五行行辈字的冠名、冠礼时的字和自取的号，领取你在朝鲜时代一生的名字。",
+    heading: "我在朝鲜时代的名字",
+    sub: "从乳名到号，一生变换的名字",
+    intro: "朝鲜人一生要换好几次名字。生为儿子或女儿，你会被怎样称呼？",
+    howTitle: "怎么取",
+    how: ["乳名取自《韩国民族文化大百科》的实例，行辈字按五行相生的一般规则；与真实族谱无关。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "为什么乳名要取得低贱？", a: "人们相信名字越低贱越不招鬼神，孩子越能长寿。" }],
+  },
+  fr: {
+    title: "Mes noms dans la Corée de Joseon",
+    description: "Du nom d'enfance volontairement humble au nom officiel, au nom de courtoisie et au nom de plume : les noms d'une vie à Joseon.",
+    heading: "Mes noms dans la Corée de Joseon",
+    sub: "Du nom d'enfance au nom de plume",
+    intro: "À Joseon, on changeait de nom plusieurs fois dans sa vie. Fils ou fille, comment vous aurait-on appelé ?",
+    howTitle: "Comment ça marche",
+    how: ["Noms d'enfance tirés d'exemples réels ; caractère de génération selon la règle générale des cinq phases, sans lien avec un vrai clan."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Pourquoi des noms d'enfance humbles ?", a: "Un nom humble était censé éloigner les esprits et prolonger la vie." }],
+  },
+  es: {
+    title: "Mis nombres en la Corea de Joseon",
+    description: "Del nombre de infancia humilde al nombre oficial, de cortesía y seudónimo: los nombres de una vida en Joseon.",
+    heading: "Mis nombres en la Corea de Joseon",
+    sub: "Del nombre de infancia al seudónimo",
+    intro: "En Joseon el nombre cambiaba varias veces en la vida. Como hijo o como hija, ¿cómo te habrían llamado?",
+    howTitle: "Cómo funciona",
+    how: ["Nombres de infancia de ejemplos reales; carácter generacional según la regla general de las cinco fases, sin relación con ningún clan real."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Por qué nombres de infancia humildes?", a: "Se creía que un nombre humilde alejaba a los espíritus y alargaba la vida." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/joseon-names/")} ogImage="/images/past-life-1426/og/joseon-names.webp">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-sm font-bold text-muted-foreground"><a class="hover:underline" href={localePath(locale, "/past-life-1426/")}>← {({ ko: "타임슬립 시리즈", en: "Time-slip series", ja: "タイムスリップ・シリーズ", zh: "时空穿越系列", fr: "Série voyage dans le temps", es: "Serie viaje en el tiempo" } as Record<string, string>)[locale] ?? "Time-slip"}</a></p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><JoseonNames locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["joseon1426", "ancestors1426", "parallelLives"]} current="joseonNames" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>
