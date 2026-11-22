@@ -2,8 +2,9 @@
 // 2026-09-20: 패밀리 사이트 크로스링크는 푸터에만 둔다(세운 지시). 헤더와
 // 헤더에서 여는 드로어에는 이 도메인 메뉴만 남긴다.
 import type { Locale } from '../i18n';
-import { getTranslations, LOCALES, LOCALE_LABELS, localePath } from '../i18n';
+import { getTranslations, LOCALES, LOCALE_LABELS, localePath, withTrailingSlash } from '../i18n';
 import { localesForPath } from '../lib/article-locales';
+import { exploreLinks, seasonHeading, seasonLinks } from '../config/explore';
 
 interface Props {
   locale: Locale;
@@ -76,6 +77,23 @@ const secondaryNavLinks = [
   { href: localePath(locale, '/about'), label: t('nav.about') },
   { href: localePath(locale, '/faq'), label: 'FAQ' },
 ];
+
+// 2026-11-22 UI·UX 대수선: 지금 있는 구역을 내비에 표시한다(aria-current). 그동안
+// 어느 메뉴에 들어와 있는지 헤더 어디에도 나오지 않았다. /fortune/today 는 다른
+// 기간(/fortune/week 등)도 같은 "오늘" 구역으로 본다.
+const pathname = withTrailingSlash(Astro.url.pathname);
+const isActive = (href: string) => {
+  const section = href.includes('/fortune/') ? href.replace(/[^/]+\/$/, '') : href;
+  return pathname.startsWith(section);
+};
+const drawerCopy = {
+  explore: { ko: '둘러보기', en: 'Explore', ja: '探す', zh: '探索', fr: 'Explorer', es: 'Explorar' }[locale] ?? 'Explore',
+  season: seasonHeading[locale] ?? seasonHeading.en,
+};
+// 서랍의 보조 그룹: 환생은 둘러보기 목록에 들어가므로 중복을 빼고 소개·FAQ 만 남긴다.
+const infoNavLinks = secondaryNavLinks.filter((link) => !link.href.includes('/reincarnation-country'));
+const explore = exploreLinks(locale);
+const season = seasonLinks(locale);
 ---
 
 <header data-site-header class="sticky top-0 z-50 border-b border-border bg-background">
@@ -88,7 +106,7 @@ const secondaryNavLinks = [
     <!-- Primary nav, visible from md up (2026-08-25, oiyo only — see NAV_AT_EVERY_WIDTH) -->
     <nav aria-label="Primary" class="hidden md:flex items-center gap-6 flex-1">
       {primaryNavLinks.map(({ href, label }) => (
-        <a href={href} class="text-sm font-bold text-foreground hover:text-primary transition-colors">{label}</a>
+        <a href={href} aria-current={isActive(href) ? 'page' : undefined} class:list={['border-b-2 py-1 text-sm font-bold transition-colors hover:text-primary', isActive(href) ? 'border-primary text-primary' : 'border-transparent text-foreground']}>{label}</a>
       ))}
     </nav>
 
@@ -123,6 +141,19 @@ const secondaryNavLinks = [
   </div>
 </header>
 
+<!-- 2026-11-22: 모바일에서는 다섯 주요 구역이 서랍 안에만 있어 한 번 더 눌러야 했다.
+     헤더 바로 아래 가로 스크롤 줄로 꺼내 둔다. sticky 가 아니라 스크롤하면 사라지므로
+     읽는 화면을 가리지 않는다. 데스크톱은 헤더 안 링크가 같은 역할을 한다. -->
+<nav aria-label="Sections" class="border-b border-border bg-background md:hidden">
+  <ul class="mx-auto flex max-w-6xl snap-x gap-1 overflow-x-auto px-3 py-1.5">
+    {primaryNavLinks.map(({ href, label }) => (
+      <li class="shrink-0 snap-start">
+        <a href={href} aria-current={isActive(href) ? 'page' : undefined} class:list={['flex min-h-9 items-center rounded-full px-3 text-sm font-bold whitespace-nowrap transition-colors', isActive(href) ? 'bg-primary text-primary-foreground' : 'text-foreground hover:bg-surface-subtle']}>{label}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
 <!-- Overlay + slide-in drawer (blog pattern) -->
 <div
   id="mobile-menu-overlay"
@@ -152,11 +183,23 @@ const secondaryNavLinks = [
 
   <nav aria-label="Mobile navigation" class="flex-1 overflow-y-auto px-6 py-6 space-y-1">
     {primaryNavLinks.map(({ href, label }) => (
-      <a href={href} class="flex items-center h-11 px-2 rounded-lg text-base font-bold text-primary hover:bg-surface-subtle transition-colors">{label}</a>
+      <a href={href} aria-current={isActive(href) ? 'page' : undefined} class:list={['flex items-center h-11 px-2 rounded-lg text-base font-bold transition-colors', isActive(href) ? 'bg-surface-subtle text-primary' : 'text-primary hover:bg-surface-subtle']}>{label}</a>
     ))}
-    <div class="pt-3 mt-1 border-t border-green-50 space-y-1">
-      {secondaryNavLinks.map(({ href, label }) => (
-        <a href={href} class="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm font-semibold text-primary transition-colors hover:bg-surface-subtle">{label}</a>
+    <p class="px-2 pt-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">{drawerCopy.explore}</p>
+    {explore.map(({ href, title }) => (
+      <a href={href} class="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-surface-subtle">{title}</a>
+    ))}
+    {season.length > 0 && (
+      <>
+        <p class="px-2 pt-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">{drawerCopy.season}</p>
+        {season.map(({ href, title }) => (
+          <a href={href} class="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-surface-subtle">{title}</a>
+        ))}
+      </>
+    )}
+    <div class="pt-3 mt-3 border-t border-border space-y-1">
+      {infoNavLinks.map(({ href, label }) => (
+        <a href={href} class="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-surface-subtle hover:text-primary">{label}</a>
       ))}
     </div>
   </nav>

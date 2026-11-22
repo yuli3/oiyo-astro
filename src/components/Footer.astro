@@ -2,6 +2,7 @@
 import { FAMILY_SITES, familySiteHref, familySiteTag } from '../config/navigation';
 import type { Locale } from '../i18n';
 import { getTranslations, localePath } from '../i18n';
+import { exploreLinks } from '../config/explore';
 
 interface Props {
   locale: Locale;
@@ -11,6 +12,7 @@ const { locale } = Astro.props;
 const t = await getTranslations(locale);
 
 const year = new Date().getFullYear();
+const explore = exploreLinks(locale);
 const copy = {
   en: { site: 'Tests', info: 'Information', family: 'OIYO family', knowledge: 'Knowledge index', support: 'Support OIYO', disclaimer: 'All results across OIYO are for entertainment and self-reflection — symbolic tools, not a substitute for career, financial, medical, legal, or relationship decisions.', methodology: 'View methodology', license: 'License' },
   ko: { site: '검사', info: '안내', family: 'OIYO 패밀리', knowledge: '지식 목록', support: 'OIYO 후원', disclaimer: 'OIYO의 모든 결과는 오락과 자기 성찰을 위한 상징 도구이며, 진로·투자·의료·법률·관계 등 중요한 결정을 대신하지 않아요.', methodology: '방법론 보기', license: '라이선스' },
@@ -30,6 +32,7 @@ const copy = {
         <a href={localePath(locale, '/ontology')} class="hover:text-primary">{t('nav.ontology')}</a>
         <a href={localePath(locale, '/about')} class="hover:text-primary">{t('nav.about')}</a>
         <a href="/knowledge/" class="hover:text-primary">{copy.knowledge}</a>
+        {explore.map((item) => <a href={item.href} class="hover:text-primary">{item.title}</a>)}
       </nav>
     </section>
     <section>
