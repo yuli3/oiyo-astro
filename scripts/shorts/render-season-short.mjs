@@ -15,7 +15,7 @@ const { chromium } = createRequire(import.meta.url)("playwright");
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const font = `data:font/woff2;base64,${readFileSync(join(root, "public/fonts/GowunBatang-ks-400.woff2")).toString("base64")}`;
 
-// bg·accent: 장면 색. url: 마지막 카드 주소(https:// 없이).
+// bg·accent: 장면 색. art: public/images/shorts/<art>-keyart.webp 를 둘째 장면에 넣는다(게임). url: 마지막 카드 주소(https:// 없이).
 export const SHORTS = {
   "secret-santa-generator": {
     bg: "#173a2c", accent: "#b3262d", tag: "OIYO 도구 · 송년회·크리스마스",
@@ -53,9 +53,34 @@ export const SHORTS = {
     lines: ["설날 2월 7일(일), 연휴 2/6~9", "조카·자녀·부모님 봉투별 합계", "바꿀 신권 장수와 덕담까지"],
     cta: "봉투를 넣어<br>계산해 보세요", foot: "은행 가기 전에 한 번에 정리", url: "oiyo.net/ko/sebaetdon-2027",
   },
+  "rampart-keeper": {
+    bg: "#1f2340", accent: "#c98a2b", tag: "OIYO 게임 · 물리 디펜스", art: "rampart-keeper",
+    hook: ["성문 앞에 돌을 쌓고", "몰려오는 적에게", "바위를 떨어뜨린다면?"],
+    lines: ["나무·돌·들보를 쌓아 성문 지키기", "공성추·거인·폭탄 수레", "30웨이브, 설치 없이 바로"],
+    cta: "성문을 지켜 보세요", foot: "무료 · 브라우저에서 바로", url: "game.oiyo.net/ko/rampart-keeper",
+  },
+  "season-workshop": {
+    bg: "#2c2418", accent: "#a8412c", tag: "OIYO 게임 · 24절기 방치형", art: "season-workshop",
+    hook: ["입춘첩부터", "동지 팥죽까지,", "24절기 공방을 차린다면?"],
+    lines: ["절기마다 그때 만들던 물건", "연장·일꾼·아궁이 늘리기", "창을 닫아도 일꾼이 일해요"],
+    cta: "공방을 열어 보세요", foot: "무료 · 동지 팥죽까지 24절기", url: "game.oiyo.net/ko/season-workshop",
+  },
+  "tidy-nook": {
+    bg: "#3a2c28", accent: "#7d9b6a", tag: "OIYO 게임 · 코지 수납 퍼즐", art: "tidy-nook",
+    hook: ["머그잔·책·곰 인형,", "선반 빈칸 없이", "다 넣을 수 있을까?"],
+    lines: ["물건을 돌려 가며 꼭 맞게", "신발장부터 다락방까지 20개 방", "시간 제한 없는 느긋한 퍼즐"],
+    cta: "방을 정리해 보세요", foot: "무료 · 브라우저에서 바로", url: "game.oiyo.net/ko/tidy-nook",
+  },
+  "link-duel": {
+    bg: "#1b2d3a", accent: "#d14b5a", tag: "OIYO 게임 · 친구와 링크 대결", art: "link-duel",
+    hook: ["링크 하나 보내면", "친구가 똑같은 10판으로", "내 점수에 도전!"],
+    lines: ["암산·멈추기·점 세기·색 찾기", "같은 판으로 점수 겨루기", "서버·가입 없이 12리그"],
+    cta: "10판 하고<br>링크 보내기", foot: "무료 · 단톡방에 던져 보세요", url: "game.oiyo.net/ko/link-duel",
+  },
 };
 
 const W = 1080, H = 1920;
+const art = (s) => s.art ? `file://${join(root, `public/images/shorts/${s.art}-keyart.webp`)}` : null;
 const css = (s) => `@font-face{font-family:G;src:url(${font})}*{margin:0;box-sizing:border-box;word-break:keep-all}
 body{width:${W}px;height:${H}px;overflow:hidden;font-family:G,serif;color:#fff;position:relative;
 background:radial-gradient(circle at 30% 20%,${s.accent}55,transparent 55%),radial-gradient(circle at 80% 85%,${s.accent}44,transparent 50%),${s.bg}}
@@ -65,13 +90,16 @@ p{font-size:46px;opacity:.85;line-height:1.4}
 .tag{font-size:42px;opacity:.8;letter-spacing:2px}
 ul{list-style:none;display:flex;flex-direction:column;gap:34px;width:100%}
 li{background:#ffffff14;border-left:12px solid ${s.accent};border-radius:18px;padding:40px 44px;font-size:58px;text-align:left;line-height:1.35}
+img{width:960px;border-radius:24px;box-shadow:0 20px 60px #000a}
 .url{background:${s.accent};padding:28px 36px;border-radius:20px;font-size:${s.url.length > 30 ? 40 : 52}px;white-space:nowrap}`;
 
 function scenes(s) {
   const wrap = (inner) => `<!doctype html><meta charset=utf-8><style>${css(s)}</style><div class=c>${inner}</div>`;
   return [
     wrap(`<div class=tag>${s.tag}</div><h1>${s.hook.join("<br>")}</h1>`),
-    wrap(`<div class=tag>${s.tag}</div><ul>${s.lines.map((l) => `<li>${l}</li>`).join("")}</ul>`),
+    s.art
+      ? wrap(`<div class=tag>${s.tag}</div><img src="${art(s)}"><ul>${s.lines.map((l) => `<li>${l}</li>`).join("")}</ul>`)
+      : wrap(`<div class=tag>${s.tag}</div><ul>${s.lines.map((l) => `<li>${l}</li>`).join("")}</ul>`),
     wrap(`<h1>${s.cta}</h1><div class=url>${s.url}</div><p>${s.foot}</p>`),
   ];
 }
