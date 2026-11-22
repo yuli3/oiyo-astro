@@ -93,6 +93,8 @@ const RARITY: Record<Rarity, { label: Six; variant: "default" | "secondary" | "o
 export const rarityLabel = (n: number, l: L) => pick(RARITY[rarityTier(n)].label, l);
 
 export const EPISODE_LABELS: Record<EpisodeId, { icon: string; label: Six }> = {
+  "hanyang-fire-1426": { icon: "🔥", label: { ko: "1426 한양 대화재로 회귀", en: "Back to the 1426 Hanyang fire", ja: "1426漢陽大火へ回帰", zh: "回到1426汉阳大火", fr: "Retour au grand incendie de 1426", es: "Regreso al gran incendio de 1426" } },
+  "cotton-1426": { icon: "🧵", label: { ko: "면포 환율 계산기", en: "Cotton exchange 1426", ja: "綿布レート計算機", zh: "棉布汇率计算器", fr: "Change en coton 1426", es: "Cambio en algodón 1426" } },
   "sillok-name-hanja": { icon: "🖋️", label: { ko: "실록 속 내 이름 한자", en: "My name in the 1426 Annals", ja: "実録の中の私の名前の漢字", zh: "实录里我名字的汉字", fr: "Mon nom dans les Annales de 1426", es: "Mi nombre en los Anales de 1426" } },
   "night-sky-1426": { icon: "🌌", label: { ko: "내 생일 밤 1426 하늘", en: "The 1426 sky on my birthday", ja: "誕生日の夜の1426年の空", zh: "生日那晚的1426年星空", fr: "Le ciel de 1426 à mon anniversaire", es: "El cielo de 1426 en mi cumpleaños" } },
   "gyeonggongjang": { icon: "🔨", label: { ko: "경공장 장적 속 나", en: "Me in the royal artisan register", ja: "京工匠の匠籍の中の私", zh: "京工匠匠籍里的我", fr: "Moi, artisan royal de Joseon", es: "Yo, artesano real de Joseon" } },
