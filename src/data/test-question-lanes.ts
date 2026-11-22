@@ -242,6 +242,7 @@ export const SEARCH_ONLY_PATHS: Record<string, string> = {
   "/us-birth-state": "출생 통계 가중 추첨",
   "/silla-golpum": "역사 제도 상한 추첨(골품 비율은 놀이용)",
   "/france-1789": "역사 인구 추정 가중 추첨",
+  "/huangce-1391": "추첨(명 초 호적 비율, 생일 고정 시드)",
   "/census-1911": "추첨(1911 남녀별 직업 비율, 생일 고정 시드)",
   "/ellis-1907": "추첨(1907 출신국 비율, 생일 고정 시드)",
   "/parallel-lives": "기록 모음(이 브라우저에 저장한 회차 결과)",
