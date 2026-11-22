@@ -108,3 +108,14 @@ export function parseSillok(search: string): SillokQuery | null {
   if (!Number.isInteger(month) || !Number.isInteger(day) || month < 1 || month > 12 || day < 1 || day > 31) return null;
   return { kind: p.get("c") === "l" ? "lunar" : "solar", month, day };
 }
+
+/** Weather, quake and rain-prayer notices: [lunar month, day, kind, original text]. */
+export type WeatherKind = "pray" | "thanks" | "quake" | "hail" | "storm" | "thunder" | "fog" | "wind" | "drought" | "rain";
+export type WeatherNote = [number, number, WeatherKind, string];
+
+/** Notices within `span` days of a day (by JDN), nearest first; if none, the single nearest one. */
+export function weatherNear(j: number, notes: readonly WeatherNote[], starts: readonly number[], span = 10, max = 4): { note: WeatherNote; delta: number }[] {
+  const all = notes.map((note) => ({ note, delta: lunarToJdn(note[0], note[1], starts) - j })).sort((a, b) => Math.abs(a.delta) - Math.abs(b.delta) || a.delta - b.delta);
+  const close = all.filter((x) => Math.abs(x.delta) <= span);
+  return (close.length ? close : all.slice(0, 1)).slice(0, max);
+}

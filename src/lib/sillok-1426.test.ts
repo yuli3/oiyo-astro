@@ -60,3 +60,16 @@ describe("query", () => {
     expect(parseSillok("?m=13&d=1")).toBeNull();
   });
 });
+
+describe("weatherNear", async () => {
+  const { weatherNear, monthStarts, lunarToJdn } = await import("./sillok-1426");
+  const data = (await import("../../public/data/sillok-1426.json")).default as unknown as { shuo: string[]; w: [number, number, string, string][] };
+  const starts = monthStarts(data.shuo);
+  it("finds the June 1426 flood near lunar 6/4 and falls back to the nearest notice", () => {
+    const near = weatherNear(lunarToJdn(6, 3, starts), data.w as never, starts);
+    expect(near[0]!.note[3]).toContain("大雨");
+    expect(near.every((x) => Math.abs(x.delta) <= 10)).toBe(true);
+    const far = weatherNear(lunarToJdn(8, 20, starts), data.w as never, starts, 3);
+    expect(far).toHaveLength(1);
+  });
+});
