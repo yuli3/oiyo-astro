@@ -97,8 +97,10 @@ export const GRADE_LABELS: Record<Lang, Record<Grade, string>> = {
   es: { great: 'Excelente', good: 'Bueno', normal: 'Regular', careful: 'Precaución' },
 };
 
+// 2026-11-22 접근성: 600 계열은 옅은 카드 배경 위 글자 대비가 3:1 남짓이라(axe color-contrast)
+// 700 계열(보통 등급 청록은 800)로 내렸다. PeriodicFortune 의 GRADE_COLOR 와 같은 값을 유지한다.
 export const GRADE_COLORS: Record<Grade, string> = {
-  great: '#d97706', good: '#16a34a', normal: '#0891b2', careful: '#7c3aed',
+  great: '#b45309', good: '#15803d', normal: '#155e75', careful: '#6d28d9',
 };
 
 const PERIODS: Period[] = ['today', 'weekly', 'monthly', 'yearly'];

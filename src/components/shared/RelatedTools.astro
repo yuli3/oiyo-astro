@@ -342,12 +342,12 @@ const items = tools
 
 {items.length > 0 && (
   <nav class="mx-auto mt-8 w-full max-w-2xl px-4" aria-label={HEADING[locale]}>
-    <p class="mb-2 text-center text-xs font-bold uppercase tracking-wider text-slate-400">{HEADING[locale]}</p>
+    <p class="mb-2 text-center text-xs font-bold uppercase tracking-wider text-muted-foreground">{HEADING[locale]}</p>
     <div class="flex flex-wrap justify-center gap-2">
       {items.map((tool) => (
         <a
           href={localePath(locale, tool.href)}
-          class="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-green-300 hover:bg-surface-subtle"
+          class="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition hover:border-primary hover:bg-surface-subtle"
         >
           <span aria-hidden="true">{tool.icon}</span>
           {tool.label[locale]}
