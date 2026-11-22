@@ -12,7 +12,6 @@ import TestAnswerBlock from '../components/shared/TestAnswerBlock.astro';
 import { getAnswerBlock } from '../data/test-answer-blocks';
 import { LANE_BY_PATH } from '../data/test-question-lanes';
 import { getTestSourceNote } from '../data/test-source-notes';
-import TestPlayBeacon from '../components/shared/TestPlayBeacon';
 import BirthSavedToast from '../components/shared/BirthSavedToast.astro';
 import ManualAds from '../components/ads/ManualAds.astro';
 import { GENERATED_OG } from '../data/generated-art';
@@ -272,7 +271,7 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       </nav>
     )}
     <main id="main-content">
-      {looksLikeTest && <TestPlayBeacon client:load testId={testId} />}
+      {looksLikeTest && <span hidden data-test-beacon={testId} />}
       {/* intro 를 heading 에서 분리한다. 공용 questionnaire UI 가 이미 h1 을 내는
           페이지에서는 heading 을 넘기지 않아 H1 중복을 피하는데, 예전 구조에서는
           그때 intro 도 함께 사라져 visible prose 가 없어졌다. */}
@@ -302,8 +301,11 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
     <script>
       import { removeStoredTestInputs } from '../lib/user/test-results';
       import { installSiteParticles } from '../lib/particles/install';
+      import { initTestPlayBeacon } from '../lib/analytics/test-play-beacon';
       removeStoredTestInputs('political-compass');
       installSiteParticles();
+      const beacon = document.querySelector<HTMLElement>('[data-test-beacon]');
+      if (beacon?.dataset.testBeacon) initTestPlayBeacon(beacon.dataset.testBeacon);
     </script>
   </body>
 </html>
