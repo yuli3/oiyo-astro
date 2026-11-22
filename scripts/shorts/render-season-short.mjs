@@ -107,6 +107,12 @@ export const SHORTS = {
     lines: ["옆집 꼬마부터 할머니까지 AI 10단계", "한 폰으로 가족과 둘이서", "빽도·업기·잡기·지름길 그대로"],
     cta: "윷을<br>던져 보세요", foot: "무료 · 설치 없이 바로", url: "game.oiyo.net/ko/yut-nori",
   },
+  "son-eomneun-nal-2027": {
+    bg: "#23301f", accent: "#c9a227", tag: "OIYO · 2027 이사 날짜", art: "calendar-2027",
+    hook: ["2027년 이사,", "손 없는 날 중", "주말은 며칠?"],
+    lines: ["손 없는 날 68일, 토·일은 17일", "음력 끝자리 9·0일이 손 없는 날", "날짜 넣으면 그날 손 방향까지"],
+    cta: "이사 날짜<br>미리 골라 보세요", foot: "월별 손 없는 날 · 공휴일 표시", url: "oiyo.net/ko/son-eomneun-nal-2027",
+  },
 };
 
 const W = 1080, H = 1920;

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fromLunar, holidays, longWeekends, monthGrid, solarTerms, toLunar } from './calendar-2027';
+import { fromLunar, holidays, longWeekends, monthGrid, solarTerms, sonDirection, sonEomneunDays, toLunar } from './calendar-2027';
 
 describe('calendar-2027', () => {
   it('lunar dates match the KASI-published 2027 holidays', () => {
@@ -46,5 +46,23 @@ describe('calendar-2027', () => {
     expect(jan.slice(0, 5).every((c) => c === null)).toBe(true); // 1/1 금요일
     expect(jan[5]!.holiday).toBe('신정');
     expect(jan.length % 7).toBe(0);
+  });
+});
+
+describe('손 없는 날 2027', () => {
+  it('방향은 음력 끝자리로 돈다', () => {
+    expect(sonDirection({ month: 1, day: 1, leap: false })).toBe('동');
+    expect(sonDirection({ month: 1, day: 14, leap: false })).toBe('남');
+    expect(sonDirection({ month: 1, day: 26, leap: false })).toBe('서');
+    expect(sonDirection({ month: 1, day: 18, leap: false })).toBe('북');
+    expect(sonDirection({ month: 1, day: 30, leap: false })).toBeNull();
+  });
+  it('모든 손 없는 날은 음력 9·0일이고, 한 달에 5~6번', () => {
+    const days = sonEomneunDays();
+    expect(days.every((d) => d.lunar.day % 10 === 9 || d.lunar.day % 10 === 0)).toBe(true);
+    expect(days.length).toBeGreaterThanOrEqual(65);
+    expect(days.length).toBeLessThanOrEqual(75);
+    // 설 전날(2/6)은 음력 12월 30일 → 손 없는 날
+    expect(days.some((d) => d.date === '2027-02-06')).toBe(true);
   });
 });

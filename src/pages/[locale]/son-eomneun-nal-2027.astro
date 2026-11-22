@@ -1,0 +1,140 @@
+---
+/**
+ * 2027 손 없는 날 — 이사·입주 날짜 고르기. 음력 끝자리 9·0일, 요일·공휴일 표시, 날짜별 손 방향 찾기.
+ * 값은 빌드 때 lib/calendar-2027.ts로 계산. 한국 풍습이라 ko만. 다음 작업 3차 #1 (2026-11-22).
+ */
+import Layout from '../../layouts/Layout.astro';
+import { localePath, type Locale } from '../../i18n';
+import { sonEomneunDays, toLunar } from '../../lib/calendar-2027';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'ko' } }];
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const WD = ['일', '월', '화', '수', '목', '금', '토'];
+const days = sonEomneunDays();
+const weekend = days.filter((d) => d.dow === 0 || d.dow === 6);
+const weekday = days.filter((d) => d.dow !== 0 && d.dow !== 6 && !d.holiday);
+const months = Array.from({ length: 12 }, (_, i) => ({ month: i + 1, days: days.filter((d) => Number(d.date.slice(5, 7)) === i + 1) }));
+const md = (d: string) => {
+  const [, m, day] = d.split('-').map(Number);
+  return `${m}월 ${day}일(${WD[new Date(`${d}T00:00:00Z`).getUTCDay()]})`;
+};
+const lunarLabel = (l: { month: number; day: number; leap: boolean }) => `음력 ${l.leap ? '윤' : ''}${l.month}월 ${l.day}일`;
+
+// 날짜별 음력 날짜(손 방향 찾기용): 1월 1일부터 하루씩, 음력 일을 두 자리로 이어 붙인 문자열
+const lunarDays: string[] = [];
+for (let t = Date.UTC(2027, 0, 1); t <= Date.UTC(2027, 11, 31); t += 86_400_000) {
+  lunarDays.push(String(toLunar(new Date(t).toISOString().slice(0, 10)).day).padStart(2, '0'));
+}
+const lunarData = lunarDays.join('');
+
+const title = '2027 손 없는 날 — 이사 날짜 달력, 주말 손 없는 날과 날짜별 손 방향';
+const description = `2027년 손 없는 날은 모두 ${days.length}일, 그중 토·일요일은 ${weekend.length}일이에요. 월별 손 없는 날과 요일, 공휴일 겹치는 날, 이사 날짜를 넣으면 그날 손이 있는 방향까지 알려 드려요.`;
+
+const faqs = [
+  { q: '손 없는 날은 어떻게 정하나요?', a: '음력 날짜 끝자리가 9나 0인 날(9·10·19·20·29·30일)이에요. 손은 날짜에 따라 동·남·서·북으로 옮겨 다니며 사람 일을 방해한다고 믿었던 귀신인데, 끝자리 9·0일에는 하늘로 올라가 어느 방향에도 없다고 여겨 이사·혼례·개업 날로 골랐어요.' },
+  { q: '2027년 손 없는 날은 며칠인가요?', a: `모두 ${days.length}일이에요. 토요일 ${weekend.filter((d) => d.dow === 6).length}일, 일요일 ${weekend.filter((d) => d.dow === 0).length}일이고 공휴일과 겹치지 않는 평일은 ${weekday.length}일이에요.` },
+  { q: '손 없는 날이 아니면 이사하면 안 되나요?', a: '풍습일 뿐이에요. 손 방향을 피해서 이사하면 된다고 보는 집도 많아요. 1·2일은 동쪽, 3·4일은 남쪽, 5·6일은 서쪽, 7·8일은 북쪽(음력 끝자리 기준)에 손이 있다고 보니, 새 집이 그 방향이 아니면 괜찮다고 여겨요.' },
+  { q: '손 없는 날 이삿짐 비용이 정말 비싼가요?', a: '이삿짐 업체 예약이 몰려 견적이 오르는 경우가 많아요. 특히 주말과 겹치는 손 없는 날, 월말, 봄·가을 이사철이 바빠요. 평일 손 없는 날이나 손 방향만 피한 날을 고르면 예약과 비용이 수월해요.' },
+  { q: '음력은 어떻게 계산했나요?', a: '천문 계산으로 합삭(초하루)과 중기를 구해 한국천문연구원 역서와 같은 원리로 매겼고, 설날·부처님오신날·추석 날짜가 정부 발표와 같은지 확인했어요.' },
+];
+const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+const firstWeekend = weekend[0];
+---
+<Layout title={title} description={description} locale={locale} availableLocales={['ko']}>
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <section class="mx-auto max-w-4xl px-4 py-10">
+    <p class="text-xs font-black tracking-widest text-primary">2027 정미년 · 이사 날짜</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight">2027 손 없는 날</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground">음력 끝자리가 9·0인 날을 월별로 모았어요. 주말과 공휴일은 표시했고, 원하는 날짜를 넣으면 그날 손이 어느 방향에 있는지도 알려 드려요.</p>
+
+    <div class="mt-6 grid gap-3 sm:grid-cols-3">
+      <div class="rounded-2xl border bg-card p-4"><p class="text-xs text-muted-foreground">손 없는 날</p><p class="mt-1 text-2xl font-black">{days.length}일</p></div>
+      <div class="rounded-2xl border bg-card p-4"><p class="text-xs text-muted-foreground">그중 토·일요일</p><p class="mt-1 text-2xl font-black">{weekend.length}일</p></div>
+      <div class="rounded-2xl border bg-card p-4"><p class="text-xs text-muted-foreground">공휴일 아닌 평일</p><p class="mt-1 text-2xl font-black">{weekday.length}일</p></div>
+    </div>
+
+    <section class="mt-8 rounded-2xl border bg-card p-4" aria-labelledby="dir-h">
+      <h2 id="dir-h" class="text-lg font-black">내 이사 날짜, 손은 어느 쪽?</h2>
+      <div class="mt-3 flex flex-wrap items-center gap-3">
+        <label class="text-sm font-bold" for="son-date">이사 날짜</label>
+        <input id="son-date" type="date" min="2027-01-01" max="2027-12-31" value={firstWeekend?.date ?? '2027-01-01'} class="min-h-11 rounded-xl border bg-background px-3 text-base" data-son-input data-lunar={lunarData} />
+      </div>
+      <p class="mt-3 text-base font-black" aria-live="polite" data-son-out></p>
+      <p class="mt-1 text-xs text-muted-foreground">음력 끝자리 1·2 동쪽, 3·4 남쪽, 5·6 서쪽, 7·8 북쪽, 9·0 손 없음</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">월별 손 없는 날</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        {months.map(({ month, days: list }) => (
+          <section class="rounded-2xl border bg-card p-4" aria-label={`2027년 ${month}월 손 없는 날`}>
+            <h3 class="text-lg font-black">{month}월 <span class="text-sm font-bold text-muted-foreground">{list.length}일</span></h3>
+            <ul class="mt-2 space-y-1.5">
+              {list.map((d) => (
+                <li class="flex flex-wrap items-baseline gap-x-2 text-sm">
+                  <span class={`font-black tabular-nums ${d.dow === 0 || d.holiday ? 'text-destructive' : d.dow === 6 ? 'text-primary' : 'text-foreground'}`}>{md(d.date)}</span>
+                  <span class="text-xs text-muted-foreground">{lunarLabel(d.lunar)}</span>
+                  {d.holiday && <span class="text-xs font-bold text-destructive">{d.holiday}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+      <p class="mt-2 text-xs text-muted-foreground"><span class="font-black text-destructive">빨간 글씨</span> 일요일·공휴일 · <span class="font-black text-primary">초록 글씨</span> 토요일</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">주말 손 없는 날 {weekend.length}일</h2>
+      <p class="mt-2 text-sm leading-relaxed text-muted-foreground">예약이 가장 먼저 차는 날이에요. 이삿짐 업체는 두세 달 전에 알아보는 게 좋아요.</p>
+      <ul class="mt-4 flex flex-wrap gap-2">
+        {weekend.map((d) => <li class="rounded-xl border bg-card px-3 py-2 text-sm font-bold tabular-nums">{md(d.date)}</li>)}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">자주 묻는 질문</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {faqs.map((f) => (
+          <details class="group p-4"><summary class="cursor-pointer text-sm font-black">{f.q}</summary><p class="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p></details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs leading-5 text-muted-foreground">손 없는 날은 민간 풍습이에요. 음력은 천문 계산값이며 <a class="underline" href="https://astro.kasi.re.kr/kor/life/post/calendarData?year=2027" rel="noopener">한국천문연구원 2027 월력 자료</a>로 확인할 수 있어요.</p>
+
+    <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="함께 보기">
+      <a href={localePath(locale, '/calendar-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">📅 2027년 달력 (공휴일·절기·음력)</a>
+      <a href="https://tools.oiyo.net/ko/annual-leave-combo-2027/" class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🏖️ 2027 연차 붙여 쉬기 계산</a>
+      <a href={localePath(locale, '/mandalart-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🎯 2027 만다라트 계획표</a>
+      <a href={localePath(locale, '/new-year-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">🐑 2027 신년운세 모음</a>
+    </nav>
+  </section>
+</Layout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>('[data-son-input]');
+  const out = document.querySelector<HTMLElement>('[data-son-out]');
+  const DIR = ['없음', '동쪽', '동쪽', '남쪽', '남쪽', '서쪽', '서쪽', '북쪽', '북쪽', '없음'];
+  const WD = ['일', '월', '화', '수', '목', '금', '토'];
+  const show = () => {
+    if (!input || !out) return;
+    const data = input.dataset.lunar ?? '';
+    const t = Date.parse(`${input.value}T00:00:00Z`);
+    const i = Math.round((t - Date.UTC(2027, 0, 1)) / 86_400_000);
+    if (!Number.isFinite(i) || i < 0 || i * 2 >= data.length) {
+      out.textContent = '2027년 날짜를 골라 주세요.';
+      return;
+    }
+    const day = Number(data.slice(i * 2, i * 2 + 2));
+    const d = new Date(t);
+    const label = `${d.getUTCMonth() + 1}월 ${d.getUTCDate()}일(${WD[d.getUTCDay()]}) · 음력 ${day}일`;
+    const dir = DIR[day % 10];
+    out.textContent = dir === '없음' ? `${label}: 손 없는 날이에요 🎉` : `${label}: 손이 ${dir}에 있어요. 새 집이 ${dir}이 아니면 괜찮다고 봐요.`;
+  };
+  input?.addEventListener('input', show);
+  show();
+</script>
