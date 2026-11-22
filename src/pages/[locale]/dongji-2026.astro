@@ -1,4 +1,5 @@
 ---
+import CalendarSubscribe from '@/components/seasonal/CalendarSubscribe.astro';
 /**
  * 2026 동지 팥죽 한 해 정리 — 한국 세시풍속이라 ko 한 로케일만 낸다(나라별 특화 원칙,
  * 2026-10-19 세운). 세시풍속 시리즈(company-brain think-tank/2026-11-03-oiyo-other-series-brainstorm.md 2번).
@@ -110,6 +111,8 @@ const faqJsonLd = {
     </section>
 
     <p class="mt-8 text-xs leading-5 text-muted-foreground">{DONGJI_LIMIT} 날짜 출처: <a class="underline" href="https://astro.kasi.re.kr/kor/life/post/calendarData?year=2026" rel="noopener">한국천문연구원 2026 월력 자료</a>.</p>
+
+    <CalendarSubscribe feeds={['kr-solar-terms', 'kr-holidays']} />
 
     <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="함께 보기">
       <a href="https://game.oiyo.net/ko/snowman-stack/" class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">⛄ 눈사람 쌓기 게임</a>

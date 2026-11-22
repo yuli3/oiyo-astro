@@ -1,4 +1,5 @@
 ---
+import CalendarSubscribe from '@/components/seasonal/CalendarSubscribe.astro';
 /**
  * 2027 손 없는 날 — 이사·입주 날짜 고르기. 음력 끝자리 9·0일, 요일·공휴일 표시, 날짜별 손 방향 찾기.
  * 값은 빌드 때 lib/calendar-2027.ts로 계산. 한국 풍습이라 ko만. 다음 작업 3차 #1 (2026-11-22).
@@ -105,6 +106,8 @@ const firstWeekend = weekend[0];
     </section>
 
     <p class="mt-8 text-xs leading-5 text-muted-foreground">손 없는 날은 민간 풍습이에요. 음력은 천문 계산값이며 <a class="underline" href="https://astro.kasi.re.kr/kor/life/post/calendarData?year=2027" rel="noopener">한국천문연구원 2027 월력 자료</a>로 확인할 수 있어요.</p>
+
+    <CalendarSubscribe feeds={['kr-holidays']} />
 
     <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="함께 보기">
       <a href={localePath(locale, '/calendar-2027')} class="rounded-xl border bg-card p-4 text-sm font-black transition hover:border-primary">📅 2027년 달력 (공휴일·절기·음력)</a>
