@@ -505,6 +505,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "골품별 승진 상한과 공복 색으로 나의 관등과 골품의 벽을 보여줘요.", "en": "Your court rank under the real bone-rank ceilings and robe colours.", "ja": "骨品ごとの上限と公服の色で官位を見せます。", "zh": "按骨品上限与公服颜色展示你的官等。", "fr": "Votre rang sous les vrais plafonds du rang d'os.", "es": "Tu rango bajo los techos reales del rango de hueso."},
   },
   {
+    slug: "birthday-calendars",
+    title: {"ko": "내 생일, 옛 달력 7개로 — 프랑스 혁명력 '당근의 날'부터 마야력까지", "en": "My birthday in 7 old calendars", "ja": "誕生日を7つの暦で", "zh": "我的生日，7种历法", "fr": "Mon anniversaire en 7 calendriers", "es": "Mi cumpleaños en 7 calendarios"},
+    description: {"ko": "생일을 프랑스 혁명력(그날의 식물·동물 이름), 60갑자, 마야 장주기력, 율리우스력, 이슬람력, 히브리력, 일본 연호로 한 번에 바꿔요.", "en": "French Republican day name, sexagenary cycle, Maya Long Count, Julian, Islamic, Hebrew and Japanese era dates for your birthday.", "ja": "革命暦の日の名前、干支、マヤ長期暦、ユリウス暦、イスラム暦、ヘブライ暦、元号に一度に変換。", "zh": "一次换算成法国共和历日名、干支、玛雅长纪历、儒略历、伊斯兰历、希伯来历和日本年号。", "fr": "Le nom de votre jour dans le calendrier républicain, et six autres calendriers.", "es": "El nombre de tu día en el calendario republicano y seis calendarios más."},
+  },
+  {
     slug: "hoebinghwan-1789",
     title: {"ko": "회빙환 시뮬레이터 — 1789년 정조 시대로 넘어가면 내 기술은 통할까", "en": "Isekai simulator: 1789 Joseon", "ja": "転生シミュレーター 1789", "zh": "穿越模拟器 1789", "fr": "Simulateur d'isekai : 1789", "es": "Simulador isekai: 1789"},
     description: {"ko": "빙의·환생·타임슬립으로 1789년 조선에 가서, 가져간 현대 기술(한글·영어·요리·코딩…)이 통하는지 실제 역사로 판정해요.", "en": "Cross into 1789 Joseon and see which modern skills would work, judged on dated facts.", "ja": "1789年の朝鮮へ渡り、現代の技術が通じるかを史実で判定します。", "zh": "穿越到1789年的朝鲜，按史实判定你的现代技能是否管用。", "fr": "Passez en 1789 et voyez quels talents modernes serviraient.", "es": "Cruza a 1789 y mira qué habilidades modernas servirían."},
