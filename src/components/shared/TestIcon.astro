@@ -1,4 +1,5 @@
 ---
+import { thumbSrc } from '../../lib/images/thumb';
 interface Props {
   fallback: string;
   src?: string;
@@ -9,7 +10,7 @@ const { fallback, src } = Astro.props;
 
 {src ? (
   <img
-    src={src}
+    src={thumbSrc(src)}
     alt=""
     aria-hidden="true"
     width="48"

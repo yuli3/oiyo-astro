@@ -6,6 +6,7 @@ import type { Locale } from '../../../i18n';
 import { ZODIACS, ZODIAC_ORDER, type ZodiacAnimal } from '../../../components/tools/ChineseZodiac';
 // 2026-09-28 O4: 띠 칩의 이모지 대신 결과 심볼 이미지를 쓴다.
 import { resultSymbolSrc } from '../../../components/shared/ResultSymbol';
+import { thumbSrc } from '../../../lib/images/thumb';
 // 2026-10-19: 한국어 띠 페이지에 2027 운세 칸을 넣고 신년운세 미리보기로 잇는다. 원고는 쇼츠와 같이 쓴다.
 import { YEAR as YEAR_2027, ZODIAC_2027 } from '../../../lib/fortune/zodiac-2027-copy.mjs';
 // 2026-11-11: 12띠 관계 원(만지면서 이해하기)과 다른 언어의 2027 칸, ko 2027 쇼츠 영상을 붙인다.
@@ -328,7 +329,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
           <p class="mt-2 flex flex-wrap gap-2">
             {z.bestMatch.map((a) => (
               <a href={localePath(`/chinese-zodiac/${a}`)} class="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-sm font-semibold text-green-800 hover:bg-green-100">
-                <img src={resultSymbolSrc("chinese-zodiac", a)} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 rounded-full object-cover" /> {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
+                <img src={thumbSrc(resultSymbolSrc("chinese-zodiac", a))} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 rounded-full object-cover" /> {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
               </a>
             ))}
           </p>
@@ -338,7 +339,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
           <p class="mt-2 flex flex-wrap gap-2">
             {z.worstMatch.map((a) => (
               <a href={localePath(`/chinese-zodiac/${a}`)} class="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-sm font-semibold text-amber-800 hover:bg-amber-100">
-                <img src={resultSymbolSrc("chinese-zodiac", a)} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 rounded-full object-cover" /> {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
+                <img src={thumbSrc(resultSymbolSrc("chinese-zodiac", a))} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-5 w-5 rounded-full object-cover" /> {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
               </a>
             ))}
           </p>
@@ -395,7 +396,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
             href={localePath(`/chinese-zodiac/${a}`)}
             class="flex flex-col items-center gap-1 rounded-lg border border-border bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
           >
-            <img src={resultSymbolSrc("chinese-zodiac", a)} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-7 w-7 rounded-full object-cover" />
+            <img src={thumbSrc(resultSymbolSrc("chinese-zodiac", a))} alt="" width="20" height="20" loading="lazy" decoding="async" class="h-7 w-7 rounded-full object-cover" />
             {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
           </a>
         ))}
