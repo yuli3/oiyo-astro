@@ -18,6 +18,11 @@ import { WINTER_OUTFIT } from "./winter-outfit";
 import { HOLIDAY_MOVIE } from "./holiday-movie";
 import { NEW_YEAR_WORKOUT } from "./new-year-workout";
 import { CHRISTMAS_DATE } from "./christmas-date";
+import { CHRISTMAS_TREE } from "./christmas-tree";
+import { SUNRISE_SPOT } from "./sunrise-spot";
+import { SNOWMAN_STYLE } from "./snowman-style";
+import { NEW_YEAR_PLANNER } from "./new-year-planner";
+import { WINTER_SPORT } from "./winter-sport";
 
 export const SEASON_QUIZZES: SeasonQuiz[] = [
   NEW_YEAR_RESOLUTION,
@@ -38,4 +43,9 @@ export const SEASON_QUIZZES: SeasonQuiz[] = [
   HOLIDAY_MOVIE,
   NEW_YEAR_WORKOUT,
   CHRISTMAS_DATE,
+  CHRISTMAS_TREE,
+  SUNRISE_SPOT,
+  SNOWMAN_STYLE,
+  NEW_YEAR_PLANNER,
+  WINTER_SPORT,
 ] as SeasonQuiz[];

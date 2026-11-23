@@ -1,0 +1,12 @@
+---
+// 시즌 유형 테스트 (2026-11-24, 4차). 6개 언어. 재미용, 진단 아님. 문항·결과: data/season-quizzes/snowman-style.ts
+import SeasonQuizPage from '../../components/tests/SeasonQuizPage.astro';
+import { LOCALES, type Locale } from '../../i18n';
+import { SNOWMAN_STYLE } from '../../data/season-quizzes/snowman-style';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+---
+<SeasonQuizPage quiz={SNOWMAN_STYLE} locale={locale} />
