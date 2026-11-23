@@ -12,6 +12,7 @@ import { Wand2, Sun, FlaskConical, Lock, Globe2, Hourglass, ArrowRight, MoonStar
 import { exploreLinks, seasonHeading, seasonLinks } from '../../config/explore';
 import { buildTestsByPath } from '../../data/test-hub-directory';
 import { testIconSrc } from '../../data/test-icons';
+import { thumbSrc } from '../../lib/images/thumb';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -197,7 +198,7 @@ const fortuneHeading = txt({ ko: '12지신·별자리 운세', en: 'Chinese zodi
         <li>
           <a href={test.href} class="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-card p-3 text-sm font-bold text-foreground transition-colors hover:border-primary hover:bg-surface-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
             {test.icon
-              ? <img src={test.icon} alt="" width="36" height="36" loading="lazy" decoding="async" class="h-9 w-9 shrink-0 rounded-xl object-cover" />
+              ? <img src={thumbSrc(test.icon)} alt="" width="36" height="36" loading="lazy" decoding="async" class="h-9 w-9 shrink-0 rounded-xl object-cover" />
               : <span class="h-9 w-9 shrink-0 rounded-xl bg-surface-subtle" aria-hidden="true"></span>}
             <span class="min-w-0 leading-snug">{test.title}</span>
           </a>

@@ -255,7 +255,26 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       <>
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
-        <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9541920090543312" data-overlays="bottom" crossorigin="anonymous"></script>
+        <script is:inline>
+          // 2026-11-23 LCP 작업: async 로 head 에서 받으면 광고 스크립트(수백 KB, 뒤이어
+          // show_ads_impl 등)가 제목 서체·CSS와 같은 시점에 대역폭을 나눠 써서 모바일 첫
+          // 화면 제목(LCP)이 늦어졌다. 자동 광고는 페이지가 다 그려진 뒤(load) 붙여도
+          // 같은 자리에 같은 광고가 뜬다. 상단 앵커는 그대로 끈다(data-overlays, CLS 감사).
+          (function () {
+            var done = false;
+            function loadAds() {
+              if (done) return; done = true;
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9541920090543312';
+              s.crossOrigin = 'anonymous';
+              s.setAttribute('data-overlays', 'bottom');
+              document.head.appendChild(s);
+            }
+            if (document.readyState === 'complete') loadAds();
+            else window.addEventListener('load', loadAds, { once: true });
+          })();
+        </script>
       </>
     )}
   </head>

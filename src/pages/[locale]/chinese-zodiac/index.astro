@@ -7,6 +7,7 @@ import ChineseZodiac from '../../../components/tools/ChineseZodiac';
 import { ZODIACS, ZODIAC_ORDER } from '../../../components/tools/ChineseZodiac';
 // 2026-09-28 O4: 띠 목록 이모지 대신 결과 심볼 이미지.
 import { resultSymbolSrc } from '../../../components/shared/ResultSymbol';
+import { thumbSrc } from '../../../lib/images/thumb';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -441,7 +442,7 @@ const faqJsonLd = {
             href={`/${locale}/chinese-zodiac/${animal}`}
             class="flex flex-col items-center gap-1 rounded-xl border border-border bg-card px-2 py-3 text-center hover:border-green-300 hover:bg-surface-subtle"
           >
-            <img src={resultSymbolSrc("chinese-zodiac", animal)} alt="" width="40" height="40" loading="lazy" decoding="async" class="h-10 w-10 rounded-full object-cover" />
+            <img src={thumbSrc(resultSymbolSrc("chinese-zodiac", animal))} alt="" width="40" height="40" loading="lazy" decoding="async" class="h-10 w-10 rounded-full object-cover" />
             <span class="text-xs font-bold text-green-900">{ZODIACS[animal].name[locale] ?? ZODIACS[animal].name.en}</span>
           </a>
         ))}

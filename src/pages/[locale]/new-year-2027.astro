@@ -5,6 +5,7 @@
  * 나라마다 새해를 맞는 날과 쓰는 말이 달라서 언어별로 안내와 모음 목록을 따로 둔다.
  */
 import Layout from '../../layouts/Layout.astro';
+import { thumbSrc } from '../../lib/images/thumb';
 import NewYear2027Hub from '../../components/tools/new-year/NewYear2027Hub';
 import ZodiacRelationWheel from '../../components/tools/zodiac/ZodiacRelationWheel';
 import { LOCALES, type Locale } from '../../i18n';
@@ -273,7 +274,7 @@ const animals = ANIMAL_SLUG.map((slug, i) => {
         {animals.map((a) => (
           <li>
             <a href={`/${locale}/chinese-zodiac/${a.slug}/`} class="flex flex-col items-center gap-1 rounded-xl border border-border bg-card p-3 text-center hover:border-primary/50">
-              <img src={a.img} alt="" width="48" height="48" class="size-12 rounded-lg" loading="lazy" />
+              <img src={thumbSrc(a.img)} alt="" width="48" height="48" class="size-12 rounded-lg" loading="lazy" />
               <span class="text-sm font-bold text-foreground">{a.name}</span>
               {a.tag && <span class="rounded-full border border-border px-2 text-xs text-muted-foreground">{a.tag}</span>}
             </a>
