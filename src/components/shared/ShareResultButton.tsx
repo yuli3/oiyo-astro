@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { shareResultImage, type ShareCardPayload } from '../../lib/share-result-image';
 import { gaEvent, gaEventOnce } from '@/lib/analytics/ga-event';
+import ResultToolLink from './ResultToolLink';
 
 type Locale = 'en' | 'ko' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -73,6 +74,7 @@ export default function ShareResultButton({ locale, heading, resultTitle, emoji,
   };
 
   return (
+    <>
     <button
       type="button"
       onClick={onShare}
@@ -84,5 +86,8 @@ export default function ShareResultButton({ locale, heading, resultTitle, emoji,
       {state === 'done' && <>✅ {t.downloaded}</>}
       {state === 'error' && t.failed}
     </button>
+    {/* 2026-11-23: one related tools.oiyo.net calculator under the result (test pages only). */}
+    <ResultToolLink locale={locale} />
+    </>
   );
 }
