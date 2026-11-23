@@ -134,6 +134,13 @@
         "body": [
           "Des questions sur cette politique de confidentialité ? Écrivez-nous à support@oiyo.net. La date de la dernière modification figure en haut de cette page."
         ]
+      },
+      {
+        "heading": "8. Services d'API YouTube",
+        "body": [
+          "OIYO utilise les services d'API YouTube uniquement pour publier une vidéo Shorts par jour sur la chaîne YouTube de l'exploitant (« OIYO 경제 속보 »). Cette fonction ne concerne que le compte de l'exploitant ; nous n'accédons à aucun compte ni à aucune donnée des visiteurs ou d'autres utilisateurs de YouTube, et nous ne les collectons, stockons ou partageons pas.",
+          "En utilisant les parties d'OIYO qui reposent sur les services d'API YouTube, vous acceptez les Conditions d'utilisation de YouTube, et les informations traitées par Google sont régies par les Règles de confidentialité de Google. L'autorisation d'envoi (jeton OAuth) est conservée uniquement dans le coffre chiffré de l'exploitant et peut être révoquée à tout moment depuis la page d'accès tiers du compte Google. En cas de révocation ou d'arrêt de la fonction, le jeton est supprimé immédiatement."
+        ]
       }
     ],
     "test": {
@@ -159,7 +166,7 @@
     "title": "Politique de confidentialité",
     "description": "Comment nous collectons, utilisons et protégeons vos informations.",
     "keywords": "confidentialité, sécurité, protection des données",
-    "lastUpdated": "6 octobre 2026",
+    "lastUpdated": "23 novembre 2026",
     "lastUpdatedLabel": "Dernière mise à jour",
     "seeLabel": "Voir :",
     "badge": "Mentions légales"

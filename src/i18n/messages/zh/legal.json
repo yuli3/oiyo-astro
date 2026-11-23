@@ -134,6 +134,13 @@
         "body": [
           "对本隐私政策有疑问？请发送邮件至 support@oiyo.net。最新变更日期显示在本页面顶部。"
         ]
+      },
+      {
+        "heading": "8. YouTube API 服务",
+        "body": [
+          "OIYO 仅使用 YouTube API 服务，每天向运营者自己的 YouTube 频道（“OIYO 경제 속보”）自动上传一条短视频。该功能仅用于运营者账户，我们不会访问、收集、存储或共享任何访客或其他 YouTube 用户的账户或数据。",
+          "使用依赖 YouTube API 服务的部分即表示同意 YouTube 服务条款，Google 处理的信息受 Google 隐私权政策约束。上传授权（OAuth 令牌）仅保存在运营者的加密密钥存储中，可随时在 Google 账号的第三方访问页面撤销。撤销或停用该功能后，已存储的令牌会立即删除。"
+        ]
       }
     ],
     "test": {
@@ -159,7 +166,7 @@
     "title": "隐私政策",
     "description": "我们如何收集、使用和保护您的信息。",
     "keywords": "隐私, 安全, 数据保护",
-    "lastUpdated": "2026年10月6日",
+    "lastUpdated": "2026年11月23日",
     "lastUpdatedLabel": "最后更新",
     "seeLabel": "参见：",
     "badge": "法律信息"

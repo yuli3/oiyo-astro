@@ -134,6 +134,13 @@
         "body": [
           "Questions about this Privacy Policy? Email us at support@oiyo.net. The date of the latest change is shown at the top of this page."
         ]
+      },
+      {
+        "heading": "8. YouTube API Services",
+        "body": [
+          "OIYO uses YouTube API Services only to upload one Shorts video per day to the operator's own YouTube channel (\"OIYO 경제 속보\"). This is used for the operator's account only; we do not access, collect, store or share any visitor's or other YouTube user's account or data.",
+          "By using the parts of OIYO that rely on YouTube API Services, you agree to the YouTube Terms of Service, and information processed by Google is governed by the Google Privacy Policy. The upload authorization (OAuth token) is kept only in the operator's encrypted secret store, and can be revoked at any time from the Google Account third-party access page. When access is revoked or the feature is stopped, the stored token is deleted immediately."
+        ]
       }
     ],
     "test": {
@@ -159,7 +166,7 @@
     "title": "Privacy Policy",
     "description": "How we collect, use, and protect your information.",
     "keywords": "privacy, security, data protection",
-    "lastUpdated": "October 6, 2026",
+    "lastUpdated": "November 23, 2026",
     "lastUpdatedLabel": "Last Updated",
     "seeLabel": "See:",
     "badge": "Legal"

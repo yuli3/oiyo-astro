@@ -134,6 +134,13 @@
         "body": [
           "¿Tienes preguntas sobre esta Política de Privacidad? Escríbenos a support@oiyo.net. La fecha del último cambio aparece en la parte superior de esta página."
         ]
+      },
+      {
+        "heading": "8. Servicios de la API de YouTube",
+        "body": [
+          "OIYO usa los Servicios de la API de YouTube solo para subir un video Shorts al día al canal de YouTube del propio operador («OIYO 경제 속보»). Se usa únicamente con la cuenta del operador; no accedemos, recopilamos, almacenamos ni compartimos cuentas o datos de visitantes ni de otros usuarios de YouTube.",
+          "Al usar las partes de OIYO que dependen de los Servicios de la API de YouTube, aceptas los Términos del Servicio de YouTube, y la información que procesa Google se rige por la Política de Privacidad de Google. La autorización de subida (token OAuth) se guarda solo en el almacén cifrado de secretos del operador y puede revocarse en cualquier momento desde la página de acceso de terceros de la cuenta de Google. Al revocarla o detener la función, el token guardado se elimina de inmediato."
+        ]
       }
     ],
     "test": {
@@ -159,7 +166,7 @@
     "title": "Política de privacidad",
     "description": "Cómo recopilamos, usamos y protegemos tu información.",
     "keywords": "privacidad, seguridad, protección de datos",
-    "lastUpdated": "6 de octubre de 2026",
+    "lastUpdated": "23 de noviembre de 2026",
     "lastUpdatedLabel": "Última actualización",
     "seeLabel": "Consulta:",
     "badge": "Aviso legal"
