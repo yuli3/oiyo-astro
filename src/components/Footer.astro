@@ -13,6 +13,17 @@ const t = await getTranslations(locale);
 
 const year = new Date().getFullYear();
 const explore = exploreLinks(locale);
+// 2026-11-24 로드맵 0단계: tools 한국어 핵심 페이지가 Google에 '모르는 URL'로 남아 있어(GSC URL 검사),
+// 형제 사이트에서 깊은 링크를 직접 걸어 발견을 돕는다. 추적 파라미터 없이 정식 주소만 쓴다.
+const lifeLawLinks = locale === 'ko' ? [
+  ['https://tools.oiyo.net/ko/life-event-navigator/', '이런 일이 생기면 할 일'],
+  ['https://tools.oiyo.net/ko/job-exit-consult-prep/', '퇴사·해고·체불 상담 준비'],
+  ['https://tools.oiyo.net/ko/quit-one-stop-calculator/', '퇴사 원스톱 계산'],
+  ['https://tools.oiyo.net/ko/legal-aid-eligibility-check/', '무료 법률구조 대상 확인'],
+  ['https://tools.oiyo.net/ko/before-expert-visit/', '전문가 상담 전 준비'],
+  ['https://tools.oiyo.net/ko/job-desk/', '직업별 세금·노무 창구'],
+  ['https://tools.oiyo.net/ko/pro-office/', '실무 오피스'],
+] : [];
 const copy = {
   en: { site: 'Tests', info: 'Information', family: 'OIYO family', knowledge: 'Knowledge index', support: 'Support OIYO', disclaimer: 'All results across OIYO are for entertainment and self-reflection — symbolic tools, not a substitute for career, financial, medical, legal, or relationship decisions.', methodology: 'View methodology', license: 'License' },
   ko: { site: '검사', info: '안내', family: 'OIYO 패밀리', knowledge: '지식 목록', support: 'OIYO 후원', disclaimer: 'OIYO의 모든 결과는 오락과 자기 성찰을 위한 상징 도구이며, 진로·투자·의료·법률·관계 등 중요한 결정을 대신하지 않아요.', methodology: '방법론 보기', license: '라이선스' },
@@ -56,6 +67,12 @@ const copy = {
           </a>
         ))}
       </nav>
+      {lifeLawLinks.length > 0 && (
+        <nav aria-label="생활 법령 도구" class="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+          <span class="w-full text-xs font-bold uppercase tracking-widest text-foreground">생활 법령 도구</span>
+          {lifeLawLinks.map(([href, label]) => <a href={href} class="hover:text-primary">{label}</a>)}
+        </nav>
+      )}
     </section>
   </div>
   <div class="mx-auto mt-8 max-w-6xl border-t border-border px-4 pt-5">
