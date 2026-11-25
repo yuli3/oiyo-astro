@@ -281,6 +281,7 @@ export const SEARCH_ONLY_PATHS: Record<string, string> = {
   "/ellis-1907": "추첨(1907 출신국 비율, 생일 고정 시드)",
   "/parallel-lives": "기록 모음(이 브라우저에 저장한 회차 결과)",
   "/birthday-calendars": "계산(달력 변환, 생일 입력)",
+  "/birth-sky": "계산(astronomy-engine 해·달 위치, 출생지 시간대)",
   "/hoebinghwan-1789": "추첨(1789 호적 신분 비율 + 기술 판정, 생일 고정 시드)",
   "/domesday-1086": "추첨(1086 기록 인구 신분 비율, 생일 고정 시드)",
   "/census-1850": "추첨(1850 미국 인구 구성, 생일 고정 시드)",

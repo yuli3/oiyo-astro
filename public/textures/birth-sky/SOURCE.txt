@@ -1,0 +1,3 @@
+Solar System Scope — planet textures (https://www.solarsystemscope.com/textures/)
+License: CC BY 4.0, based on NASA imagery. Re-encoded to WebP (same files as blog-oiyo src/features/space-science/textures).
+Files: earth-day, earth-night, earth-clouds, moon, sun, milky-way. Credit is shown under the /birth-sky/ scene.

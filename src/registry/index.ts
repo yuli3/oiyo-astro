@@ -321,6 +321,19 @@ const nightSky1426Manifest: FeatureManifest = {
   description: { ko: "1426년 내 생일 밤, 한양 하늘엔 어떤 달과 행성이 떠 있었을까? 실록 달력과 천문 계산으로 인정·파루 무렵 하늘을 그려요.", en: "What moon and planets hung over Hanyang on your birthday night in 1426? Drawn from the Annals calendar and orbital calculation.", ja: "1426年の誕生日の夜、漢陽の空にはどんな月と惑星が？実録の暦と天文計算で描きます。", zh: "1426年你生日那晚，汉阳上空有怎样的月亮和行星？用实录历法和天文计算画出来。", fr: "Quelle lune et quelles planètes au-dessus de Hanyang le soir de votre anniversaire en 1426 ?", es: "¿Qué luna y planetas había sobre Hanyang la noche de tu cumpleaños en 1426?" },
 };
 
+const birthSkyManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#0b1a3a",
+  domain: "ontology",
+  icon: "Orbit",
+  id: "birth-sky",
+  path: "/birth-sky",
+  status: "production",
+  name: { ko: "태어난 순간의 해와 달", en: "The Sun and Moon when you were born", ja: "生まれた瞬間の太陽と月", zh: "出生那一刻的太阳和月亮", fr: "Le Soleil et la Lune à votre naissance", es: "El Sol y la Luna cuando naciste" },
+  description: { ko: "태어난 날·시각·장소로 그 순간 해와 달의 실제 위치를 3D 우주로 그려요. 달 모양·출생지 하늘·절기와 공유 카드까지.", en: "See where the Sun and Moon really were at your birth moment, in 3D: Moon phase, your birthplace sky and a share card.", ja: "生まれた瞬間の太陽と月の本当の位置を3D宇宙で。月相・出生地の空・節気・シェアカード。", zh: "用3D宇宙看出生那一刻太阳和月亮的真实位置：月相、出生地天空、节气和分享卡片。", fr: "Où étaient vraiment le Soleil et la Lune à votre naissance, en 3D : phase, ciel du lieu, carte à partager.", es: "Dónde estaban de verdad el Sol y la Luna al nacer, en 3D: fase, cielo del lugar y tarjeta." },
+};
+
 const gyeonggongjangManifest: FeatureManifest = {
   badge: "new",
   category: ["ontology"],
@@ -790,6 +803,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   cotton1426Manifest,
   sillokNameHanjaManifest,
   nightSky1426Manifest,
+  birthSkyManifest,
   gyeonggongjangManifest,
   joseonTimeManifest,
   future2626Manifest,
