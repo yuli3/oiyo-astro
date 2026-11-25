@@ -1,6 +1,6 @@
 // 태어난 순간의 해·달 — 문구·장소·장면 색.
 // shadcn lint forbids hex colours in JSX attributes, so every scene/card colour lives in SCENE here.
-import { CITIES, SIGN_INFO, type City } from "../../../lib/ontology/natal/signs";
+import { SIGN_INFO } from "../../../lib/ontology/natal/signs";
 import type { PhaseKey } from "../../../lib/birth-sky";
 
 export type L = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -34,27 +34,7 @@ export const SCENE = {
   groundLine: "#3d5245",
 } as const;
 
-// Korean cities beyond the shared natal list (most visitors are Korean).
-const KR_EXTRA: City[] = [
-  { id: "incheon", label: { ko: "인천", en: "Incheon", ja: "仁川", zh: "仁川", fr: "Incheon", es: "Incheon" }, lat: 37.4563, lon: 126.7052, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "suwon", label: { ko: "수원", en: "Suwon", ja: "水原", zh: "水原", fr: "Suwon", es: "Suwon" }, lat: 37.2636, lon: 127.0286, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "daegu", label: { ko: "대구", en: "Daegu", ja: "大邱", zh: "大邱", fr: "Daegu", es: "Daegu" }, lat: 35.8714, lon: 128.6014, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "daejeon", label: { ko: "대전", en: "Daejeon", ja: "大田", zh: "大田", fr: "Daejeon", es: "Daejeon" }, lat: 36.3504, lon: 127.3845, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "gwangju", label: { ko: "광주", en: "Gwangju", ja: "光州", zh: "光州", fr: "Gwangju", es: "Gwangju" }, lat: 35.1595, lon: 126.8526, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "ulsan", label: { ko: "울산", en: "Ulsan", ja: "蔚山", zh: "蔚山", fr: "Ulsan", es: "Ulsan" }, lat: 35.5384, lon: 129.3114, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "cheongju", label: { ko: "청주", en: "Cheongju", ja: "清州", zh: "清州", fr: "Cheongju", es: "Cheongju" }, lat: 36.6424, lon: 127.489, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "jeonju", label: { ko: "전주", en: "Jeonju", ja: "全州", zh: "全州", fr: "Jeonju", es: "Jeonju" }, lat: 35.8242, lon: 127.148, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "chuncheon", label: { ko: "춘천", en: "Chuncheon", ja: "春川", zh: "春川", fr: "Chuncheon", es: "Chuncheon" }, lat: 37.8813, lon: 127.7298, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "gangneung", label: { ko: "강릉", en: "Gangneung", ja: "江陵", zh: "江陵", fr: "Gangneung", es: "Gangneung" }, lat: 37.7519, lon: 128.8761, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "changwon", label: { ko: "창원", en: "Changwon", ja: "昌原", zh: "昌原", fr: "Changwon", es: "Changwon" }, lat: 35.2281, lon: 128.6811, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "pohang", label: { ko: "포항", en: "Pohang", ja: "浦項", zh: "浦项", fr: "Pohang", es: "Pohang" }, lat: 36.019, lon: 129.3435, tz: 9, zoneId: "Asia/Seoul" },
-  { id: "jeju", label: { ko: "제주", en: "Jeju", ja: "済州", zh: "济州", fr: "Jeju", es: "Jeju" }, lat: 33.4996, lon: 126.5312, tz: 9, zoneId: "Asia/Seoul" },
-];
-
-const byId = new Map<string, City>();
-for (const c of [...CITIES.slice(0, 2), ...KR_EXTRA, ...CITIES.slice(2)]) if (!byId.has(c.id)) byId.set(c.id, c);
-export const PLACES: City[] = [...byId.values()];
-export const placeById = (id: string) => byId.get(id);
+export { PLACES, placeById } from "../../../lib/birth-sky-places";
 export const defaultPlaceFor = (l: L) => ({ ko: "seoul", en: "london", ja: "tokyo", zh: "beijing", fr: "paris", es: "madrid" })[l];
 
 export const SIGN_ORDER = ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"] as const;
@@ -141,7 +121,7 @@ export const C = {
   linkNote: { ko: "링크에는 날짜·시각·도시가 들어가요. 원할 때만 나눠 주세요.", en: "The link contains the date, time and city. Share it only if you want to.", ja: "リンクには日付・時刻・都市が入ります。", zh: "链接包含日期、时间和城市，请按需分享。", fr: "Le lien contient la date, l'heure et la ville.", es: "El enlace incluye fecha, hora y ciudad." },
   cardTitle: { ko: "내가 태어난 순간의 해와 달", en: "The Sun and Moon when I was born", ja: "私が生まれた瞬間の太陽と月", zh: "我出生那一刻的太阳和月亮", fr: "Le Soleil et la Lune à ma naissance", es: "El Sol y la Luna cuando nací" },
   sajuTitle: { ko: "사주와 이어 보기", en: "Connect it to Saju", ja: "四柱推命とつなげる", zh: "与八字联系起来", fr: "Lien avec le Saju", es: "Conexión con el Saju" },
-  saju: { ko: "사주의 달(월주)은 음력 날짜가 아니라 태양 황경, 곧 절기로 바뀌어요. 태어날 때 해가 {t} 자리에 있었으니, 사주 월주도 이 절기를 기준으로 세워져요. 사주 계산기에서 같은 날짜·시각으로 여덟 글자를 확인해 보세요.", en: "In Saju, the month pillar changes with the Sun's ecliptic longitude (the solar terms), not the lunar date. The Sun stood in {t} when you were born, so your month pillar is set from that term. Check your eight characters with the same date and time in the Saju calculator.", ja: "四柱推命の月柱は旧暦ではなく太陽黄経（節気）で切り替わります。誕生時、太陽は{t}にありました。同じ日時で四柱を確かめてみましょう。", zh: "八字的月柱不按农历，而按太阳黄经（节气）交替。你出生时太阳在{t}，月柱就以此节气为准。用同样的日期时间在八字计算器里看看。", fr: "Dans le Saju, le pilier du mois suit la longitude du Soleil (termes solaires), pas la date lunaire. À votre naissance, le Soleil était en {t}. Vérifiez vos huit caractères avec la même date.", es: "En el Saju, el pilar del mes sigue la longitud del Sol (términos solares), no la fecha lunar. Al nacer, el Sol estaba en {t}. Comprueba tus ocho caracteres con la misma fecha." },
+  saju: { ko: "사주의 달(월주)은 음력 날짜가 아니라 태양 황경, 곧 절기로 바뀌어요. 태어날 때 해가 {t} 자리에 있었으니, 사주 월주도 이 절기를 기준으로 세워져요. 입력한 생일은 사주 계산기로 그대로 넘어가니 버튼만 누르면 여덟 글자를 볼 수 있어요.", en: "In Saju, the month pillar changes with the Sun's ecliptic longitude (the solar terms), not the lunar date. The Sun stood in {t} when you were born, so your month pillar is set from that term. Check your eight characters with the same date and time in the Saju calculator.", ja: "四柱推命の月柱は旧暦ではなく太陽黄経（節気）で切り替わります。誕生時、太陽は{t}にありました。同じ日時で四柱を確かめてみましょう。", zh: "八字的月柱不按农历，而按太阳黄经（节气）交替。你出生时太阳在{t}，月柱就以此节气为准。用同样的日期时间在八字计算器里看看。", fr: "Dans le Saju, le pilier du mois suit la longitude du Soleil (termes solaires), pas la date lunaire. À votre naissance, le Soleil était en {t}. Vérifiez vos huit caractères avec la même date.", es: "En el Saju, el pilar del mes sigue la longitud del Sol (términos solares), no la fecha lunar. Al nacer, el Sol estaba en {t}. Comprueba tus ocho caracteres con la misma fecha." },
   sajuCta: { ko: "사주 계산기로 가기", en: "Open the Saju calculator", ja: "四柱推命計算機へ", zh: "打开八字计算器", fr: "Ouvrir le calculateur Saju", es: "Abrir la calculadora Saju" },
   natalCta: { ko: "행성까지 출생 차트 보기", en: "See all planets in a natal chart", ja: "惑星まで出生図で見る", zh: "在出生星盘看全部行星", fr: "Voir toutes les planètes (thème natal)", es: "Ver todos los planetas (carta natal)" },
   loading: { ko: "우주를 그리는 중…", en: "Drawing space…", ja: "宇宙を描いています…", zh: "正在绘制宇宙…", fr: "Dessin de l'espace…", es: "Dibujando el espacio…" },

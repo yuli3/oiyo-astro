@@ -207,28 +207,5 @@ export function separationDeg(a: Vec3, b: Vec3): number {
   return (Math.acos(Math.min(1, Math.max(-1, d))) * 180) / Math.PI;
 }
 
-// ---- share query ----
-
-const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
-
-export interface BirthSkyQuery {
-  date: string;
-  time: string | null;
-  place: string;
-}
-
-export function parseBirthSkyQuery(search: string): BirthSkyQuery | null {
-  const p = new URLSearchParams(search);
-  const date = p.get("d");
-  const time = p.get("t");
-  const place = p.get("p");
-  if (!date || !DATE_RE.test(date) || !place || !/^[a-z]{2,20}$/.test(place)) return null;
-  return { date, time: time && TIME_RE.test(time) ? time : null, place };
-}
-
-export function formatBirthSkyQuery(q: BirthSkyQuery): string {
-  const p = new URLSearchParams({ d: q.date, p: q.place });
-  if (q.time) p.set("t", q.time);
-  return `?${p.toString()}`;
-}
+// Share query lives with the place list so the saju calculator can read it without astronomy-engine.
+export { formatBirthSkyQuery, parseBirthSkyQuery, type BirthSkyQuery } from "./birth-sky-places";
