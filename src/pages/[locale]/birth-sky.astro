@@ -1,0 +1,123 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../i18n";
+import type { Locale } from "../../i18n";
+import BirthSky from "../../components/tools/birth-sky/BirthSky";
+import RelatedTools from "../../components/shared/RelatedTools.astro";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type Copy = { title: string; description: string; heading: string; sub: string; intro: string; howTitle: string; how: string[]; faqTitle: string; faq: { q: string; a: string }[] };
+const copy: Record<Locale, Copy> = {
+  ko: {
+    title: "태어난 순간의 해와 달 — 내 생일 그 시각 3D 우주",
+    description: "태어난 날·시각·장소를 넣으면 그 순간 해와 달이 실제로 어디 있었는지 3D 우주로 보여 줘요. 달 모양, 출생지에서 본 하늘, 절기와 사주 월주까지 한 번에. 공유 카드도 만들어요.",
+    heading: "태어난 순간의 해와 달",
+    sub: "내가 태어난 그 시각, 3D 우주로",
+    intro: "내가 태어난 순간, 지구는 어느 쪽으로 돌아 있었고 해와 달은 어디 있었을까요? 천문 계산으로 그 순간의 지구·달·해를 실제 방향 그대로 그려요. 처음엔 지금 이 순간의 우주가 보여요.",
+    howTitle: "어떻게 그리나요",
+    how: [
+      "태어난 곳의 시간대로 벽시계 시각을 실제 순간(UTC)으로 바꿔요. 1987–88년 한국 서머타임처럼 그때 쓰던 시간도 반영돼요.",
+      "astronomy-engine(VSOP87·ELP 기반)으로 그 순간 해와 달의 방향, 달까지 거리, 달의 밝은 면 비율을 계산해요. 정확도는 각도 1분 안팎이에요.",
+      "지구는 그 순간의 항성시만큼 돌려 놓아서, 출생지가 실제로 해·달을 바라본 각도가 그대로 나와요. 달의 모양도 같은 햇빛이 만든 결과라 실제와 같아요.",
+      "거리와 크기는 한 화면에 담으려고 줄였어요. 실제로 달은 지구 지름의 30배쯤 떨어져 있고, 해는 그보다 400배쯤 멀어요.",
+    ],
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "태어난 시각을 모르면요?", a: "'시각을 몰라요'를 고르면 낮 12시로 그려요. 달은 하루에 13°쯤 움직여서 달 모양은 거의 같지만, 해·달이 하늘 어디에 있었는지는 시각에 따라 크게 달라져요." },
+      { q: "사주와 무슨 관계가 있나요?", a: "사주의 월주는 음력 날짜가 아니라 태양 황경(24절기)으로 바뀌어요. 이 페이지가 보여 주는 태양 황경과 절기가 바로 월주의 기준이에요. 여덟 글자는 사주 계산기에서 확인할 수 있어요." },
+      { q: "입력한 생일은 저장되나요?", a: "아니요. 계산은 모두 이 브라우저 안에서 해요. '링크 복사'를 누를 때만 날짜·시각·도시가 든 링크가 만들어져요." },
+    ],
+  },
+  en: {
+    title: "The Sun and Moon at the moment you were born — 3D space view",
+    description: "Enter your birth date, time and place to see where the Sun and Moon really were at that moment, in 3D: Moon phase, the sky from your birthplace and the solar term. Make a share card.",
+    heading: "The Sun and Moon when you were born",
+    sub: "Your birth moment, in 3D space",
+    intro: "At the moment you were born, which way was Earth turned, and where were the Sun and Moon? Astronomical calculation draws Earth, Moon and Sun in their true directions. It opens on the sky right now.",
+    howTitle: "How it works",
+    how: [
+      "Your birthplace's time zone (including historical daylight saving) turns the wall-clock time into an exact instant.",
+      "astronomy-engine (VSOP87/ELP based, about 1 arcminute) gives the Sun and Moon directions, the Moon's distance and lit fraction.",
+      "Earth is rotated by the sidereal time of that instant, so your birthplace faces the Sun and Moon at the true angle; the Moon's phase comes from the same sunlight.",
+      "Distances and sizes are shrunk to fit one screen.",
+    ],
+    faqTitle: "FAQ",
+    faq: [
+      { q: "What if I don't know my birth time?", a: "Tick 'I don't know the time' and it is drawn at noon. The Moon's phase barely changes in a day, but where the Sun and Moon stand in the sky depends strongly on the hour." },
+      { q: "Is my birthday stored?", a: "No. Everything is calculated in your browser. A link with the date, time and city is made only when you press 'Copy link'." },
+    ],
+  },
+  ja: {
+    title: "生まれた瞬間の太陽と月 — 誕生日のその時刻を3D宇宙で",
+    description: "生年月日・時刻・場所を入れると、その瞬間の太陽と月の本当の位置を3Dで表示。月の満ち欠け、出生地の空、節気も。シェアカードも作れます。",
+    heading: "生まれた瞬間の太陽と月",
+    sub: "誕生のその時刻を3D宇宙で",
+    intro: "あなたが生まれた瞬間、地球はどちらを向き、太陽と月はどこにあったのでしょう。天文計算で実際の向きのまま描きます。最初は今この瞬間の宇宙です。",
+    howTitle: "仕組み",
+    how: ["出生地のタイムゾーン（過去の夏時間を含む）で正確な瞬間を求めます。", "astronomy-engine（約1分角）で太陽と月の方向・距離・輝面比を計算します。", "地球をその瞬間の恒星時だけ回すので、出生地が太陽と月に向いた角度が実際と同じになります。距離と大きさは縮めています。"],
+    faqTitle: "よくある質問",
+    faq: [{ q: "出生時刻が分からない場合は？", a: "「時刻が分からない」を選ぶと正午で描きます。" }, { q: "誕生日は保存されますか？", a: "いいえ。計算はすべてブラウザ内で行います。" }],
+  },
+  zh: {
+    title: "出生那一刻的太阳和月亮 — 用3D宇宙看你的生日时刻",
+    description: "输入出生日期、时间和地点，用3D显示那一刻太阳和月亮的真实位置：月相、出生地的天空、节气，还能生成分享卡片。",
+    heading: "出生那一刻的太阳和月亮",
+    sub: "把出生时刻放进3D宇宙",
+    intro: "你出生的那一刻，地球朝向哪边，太阳和月亮又在哪里？用天文计算按真实方向画出地球、月亮和太阳。默认先显示此刻的宇宙。",
+    howTitle: "怎么画",
+    how: ["按出生地时区（含历史夏令时）换算成准确的时刻。", "用 astronomy-engine（约1角分精度）计算太阳和月亮的方向、距离和亮面比例。", "地球按那一刻的恒星时旋转，出生地朝向日月的角度与真实一致。距离和大小已缩小。"],
+    faqTitle: "常见问题",
+    faq: [{ q: "不知道出生时间怎么办？", a: "勾选“不知道时间”，会按中午12点画。" }, { q: "生日会被保存吗？", a: "不会。所有计算都在浏览器里完成。" }],
+  },
+  fr: {
+    title: "Le Soleil et la Lune à l'instant de votre naissance — vue 3D",
+    description: "Entrez date, heure et lieu de naissance pour voir en 3D où se trouvaient vraiment le Soleil et la Lune : phase lunaire, ciel du lieu de naissance, terme solaire. Carte à partager.",
+    heading: "Le Soleil et la Lune à votre naissance",
+    sub: "L'instant de votre naissance, en 3D",
+    intro: "À l'instant de votre naissance, comment la Terre était-elle tournée, et où étaient le Soleil et la Lune ? Le calcul astronomique les dessine dans leurs vraies directions. La page s'ouvre sur le ciel de maintenant.",
+    howTitle: "Comment ça marche",
+    how: ["Le fuseau du lieu de naissance (heure d'été historique comprise) donne l'instant exact.", "astronomy-engine (environ 1 minute d'arc) calcule directions, distance et fraction éclairée.", "La Terre est tournée selon le temps sidéral : votre lieu fait face au Soleil et à la Lune sous le bon angle. Distances et tailles réduites."],
+    faqTitle: "Questions fréquentes",
+    faq: [{ q: "Et si je ne connais pas l'heure ?", a: "Cochez « Heure inconnue » : la scène est dessinée à midi." }, { q: "Ma date est-elle enregistrée ?", a: "Non. Tout est calculé dans votre navigateur." }],
+  },
+  es: {
+    title: "El Sol y la Luna en el instante en que naciste — vista 3D",
+    description: "Introduce fecha, hora y lugar de nacimiento para ver en 3D dónde estaban de verdad el Sol y la Luna: fase lunar, cielo del lugar de nacimiento y término solar. Crea una tarjeta.",
+    heading: "El Sol y la Luna cuando naciste",
+    sub: "Tu instante de nacimiento, en 3D",
+    intro: "En el instante en que naciste, ¿hacia dónde miraba la Tierra y dónde estaban el Sol y la Luna? El cálculo astronómico los dibuja en sus direcciones reales. La página abre con el cielo de ahora.",
+    howTitle: "Cómo funciona",
+    how: ["La zona horaria del lugar (con horario de verano histórico) da el instante exacto.", "astronomy-engine (aprox. 1 minuto de arco) calcula direcciones, distancia y fracción iluminada.", "La Tierra gira según el tiempo sidéreo: tu lugar mira al Sol y la Luna con el ángulo real. Distancias y tamaños reducidos."],
+    faqTitle: "Preguntas frecuentes",
+    faq: [{ q: "¿Y si no sé la hora?", a: "Marca «No sé la hora»: se dibuja a mediodía." }, { q: "¿Se guarda mi fecha?", a: "No. Todo se calcula en tu navegador." }],
+  },
+};
+const c = copy[locale] ?? copy.en;
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const appJsonLd = { "@context": "https://schema.org", "@type": "WebApplication", name: c.heading, description: c.description, applicationCategory: "EducationalApplication", operatingSystem: "Any", url: `https://oiyo.net${localePath(locale, "/birth-sky/")}`, offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } };
+---
+<Layout title={c.title} description={c.description} locale={locale} canonicalPath={localePath(locale, "/birth-sky/")}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(appJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <h1 class="text-4xl font-black tracking-tight text-foreground">
+      {c.heading}
+      <span class="mt-1 block text-xl font-bold text-muted-foreground">{c.sub}</span>
+    </h1>
+    <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">{c.intro}</p>
+    <div class="mt-6"><BirthSky locale={locale} client:load /></div>
+    <RelatedTools locale={locale} tools={["saju", "natal", "nightSky1426", "birthdayCalendars"]} current="birthSky" />
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.howTitle}</h2>
+      {c.how.map((p) => <p class="mt-2">{p}</p>)}
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-muted-foreground">
+      <h2 class="text-lg font-bold text-foreground">{c.faqTitle}</h2>
+      {c.faq.map((f) => (<div class="mt-4"><h3 class="font-bold text-foreground">{f.q}</h3><p class="mt-1">{f.a}</p></div>))}
+    </section>
+  </div>
+</Layout>

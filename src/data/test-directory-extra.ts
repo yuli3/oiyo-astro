@@ -575,6 +575,11 @@ export const TEST_DIRECTORY_EXTRA: TestDirectoryExtraEntry[] = [
     description: {"ko": "신라부터 오늘까지, 타임슬립 시리즈에서 뽑은 나를 시대순 연표로 모아 이미지로 저장해요.", "en": "Your time-slip results from Silla to today, in date order, saved as one image.", "ja": "新羅から今日まで、引いた結果を年表にして画像で保存。", "zh": "从新罗到今天，把抽到的结果排成年表并保存为图片。", "fr": "Vos résultats, de Silla à aujourd'hui, sur une frise à enregistrer.", "es": "Tus resultados, de Silla a hoy, en una línea para guardar."},
   },
   {
+    slug: "birth-sky",
+    title: {"ko": "태어난 순간의 해와 달 — 생일 그 시각 3D 우주", "en": "The Sun and Moon when you were born (3D)", "ja": "生まれた瞬間の太陽と月（3D）", "zh": "出生那一刻的太阳和月亮（3D）", "fr": "Le Soleil et la Lune à votre naissance (3D)", "es": "El Sol y la Luna cuando naciste (3D)"},
+    description: {"ko": "태어난 날·시각·장소로 그 순간 해·달의 실제 위치와 달 모양을 3D로 봐요.", "en": "Real Sun and Moon positions and Moon phase at your birth moment, in 3D.", "ja": "誕生の瞬間の太陽と月の位置と月相を3Dで。", "zh": "用3D看出生瞬间日月的位置和月相。", "fr": "Positions réelles du Soleil et de la Lune et phase lunaire, en 3D.", "es": "Posiciones reales del Sol y la Luna y fase lunar, en 3D."},
+  },
+  {
     slug: "birthday-calendars",
     title: {"ko": "내 생일, 옛 달력 7개로 — 프랑스 혁명력 '당근의 날'부터 마야력까지", "en": "My birthday in 7 old calendars", "ja": "誕生日を7つの暦で", "zh": "我的生日，7种历法", "fr": "Mon anniversaire en 7 calendriers", "es": "Mi cumpleaños en 7 calendarios"},
     description: {"ko": "생일을 프랑스 혁명력(그날의 식물·동물 이름), 60갑자, 마야 장주기력, 율리우스력, 이슬람력, 히브리력, 일본 연호로 한 번에 바꿔요.", "en": "French Republican day name, sexagenary cycle, Maya Long Count, Julian, Islamic, Hebrew and Japanese era dates for your birthday.", "ja": "革命暦の日の名前、干支、マヤ長期暦、ユリウス暦、イスラム暦、ヘブライ暦、元号に一度に変換。", "zh": "一次换算成法国共和历日名、干支、玛雅长纪历、儒略历、伊斯兰历、希伯来历和日本年号。", "fr": "Le nom de votre jour dans le calendrier républicain, et six autres calendriers.", "es": "El nombre de tu día en el calendario republicano y seis calendarios más."},
