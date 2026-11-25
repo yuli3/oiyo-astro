@@ -4,6 +4,8 @@ import { Component, Suspense, lazy, useEffect, useMemo, useRef, useState, type R
 import type { Locale } from "../../../i18n";
 import { gaEvent } from "../../../lib/analytics/ga-event";
 import { compassIndex, computeBirthSky, computeBirthSkyAt, formatBirthSkyQuery, parseBirthSkyQuery, type BirthSky as Sky } from "../../../lib/birth-sky";
+import { createBirthRecord, resolveBirthLocation, resolveBirthRecord } from "../../../lib/user/birth-record";
+import { useProfilePrefill } from "../../../lib/user/useProfilePrefill";
 import { Button } from "../../ui/button";
 import { C, CARDINAL, DIRS, PHASES, PHASE_EMOJI, PLACES, SCENE, TERMS, defaultPlaceFor, fill, pick, placeById, signName, toL, type L } from "./data";
 import { drawShareCard, moonPhasePath } from "./share-card";
@@ -134,12 +136,18 @@ export default function BirthSky({ locale }: { locale: Locale }) {
   const [card, setCard] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  // The site-wide profile is the birth record every tool reads (saju, natal…).
+  // Prefill from it; save to it only on the visitor's own submit, never from a shared ?d= link.
+  const { profile, parsed, saveBirthRecord } = useProfilePrefill();
+  const fromLink = useRef(false);
+  const touched = useRef(false);
   const resultRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setWebgl(hasWebGL());
     const q = parseBirthSkyQuery(window.location.search);
     if (q && placeById(q.place)) {
+      fromLink.current = true;
       setDate(q.date);
       setTime(q.time ?? "12:00");
       setUnknownTime(q.time === null);
@@ -149,6 +157,16 @@ export default function BirthSky({ locale }: { locale: Locale }) {
       setNow(new Date());
     }
   }, []);
+
+  useEffect(() => {
+    if (!parsed || fromLink.current || touched.current) return;
+    setDate(`${String(parsed.year).padStart(4, "0")}-${String(parsed.month).padStart(2, "0")}-${String(parsed.day).padStart(2, "0")}`);
+    if (parsed.hour === null) setUnknownTime(true);
+    else setTime(`${String(parsed.hour).padStart(2, "0")}:${String(parsed.minute ?? 0).padStart(2, "0")}`);
+    const record = resolveBirthRecord(profile);
+    const match = record?.zoneId ? PLACES.find((p) => p.zoneId === record.zoneId && Math.abs(p.lon - (record.longitude ?? 999)) < 0.01) : undefined;
+    if (match) setPlaceId(match.id);
+  }, [parsed, profile]);
 
   const place = placeById(submitted?.placeId ?? placeId) ?? PLACES[0]!;
   const result = useMemo(() => {
@@ -170,7 +188,14 @@ export default function BirthSky({ locale }: { locale: Locale }) {
     if (!date) return;
     setCard(null);
     setView("space");
-    setSubmitted({ date, time: unknownTime ? null : time, placeId });
+    const civilTime = unknownTime ? null : time;
+    setSubmitted({ date, time: civilTime, placeId });
+    touched.current = true;
+    const p = placeById(placeId);
+    if (p) {
+      const location = resolveBirthLocation({ civilDate: date, civilTime, longitude: p.lon, zoneId: p.zoneId });
+      if (location.status === "resolved") saveBirthRecord(createBirthRecord({ civilDate: date, civilTime, ...location.location }));
+    }
     gaEvent("tool_calculated", { tool_id: TOOL_ID, time_known: unknownTime ? "no" : "yes" });
     requestAnimationFrame(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };

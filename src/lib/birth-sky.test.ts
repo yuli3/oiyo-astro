@@ -57,3 +57,12 @@ describe("birth-sky", () => {
     expect(parseBirthSkyQuery("?d=bad&p=seoul")).toBeNull();
   });
 });
+
+describe("birth-sky places", () => {
+  it("knows the shared natal cities and the extra Korean ones", async () => {
+    const { placeById } = await import("./birth-sky-places");
+    expect(placeById("seoul")?.zoneId).toBe("Asia/Seoul");
+    expect(placeById("jeju")?.lat).toBeCloseTo(33.5, 1);
+    expect(placeById("nowhere")).toBeUndefined();
+  });
+});
